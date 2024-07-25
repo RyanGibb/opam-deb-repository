@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fathom_1.0+git.20190811.97fb5c-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fathom"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfathom1" {>= "1.0"}
+]
+extra-source "fathom_1.0+git.20190811.97fb5c-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fathom/fathom_1.0+git.20190811.97fb5c-1_amd64.deb"
+}

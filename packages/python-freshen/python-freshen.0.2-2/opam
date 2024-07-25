@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-freshen_0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-freshen"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  "python-nose"
+  "python-pyparsing"
+  "python-yaml"
+  ("python2-7" | "python2-6")
+]
+extra-source "python-freshen_0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freshen/python-freshen_0.2-2_all.deb"
+}

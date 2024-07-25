@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-webpacker_4.2.2-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-webpacker"]
+]
+depends: [
+  "ruby-activesupport" {>= "4.2"}
+  "ruby-bundler"
+  "ruby-rack-proxy" {>= "0.6.1"}
+  "ruby-railties" {>= "2-4.2~"}
+  "webpack"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-webpacker_4.2.2-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-webpacker/ruby-webpacker_4.2.2-7_all.deb"
+}

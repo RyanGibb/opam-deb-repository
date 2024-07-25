@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pypy-packaging_19.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pypy-packaging"]
+]
+depends: [
+  "pypy"
+  "pypy-pyparsing"
+  "pypy-six"
+]
+extra-source "pypy-packaging_19.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-packaging/pypy-packaging_19.0-1_all.deb"
+}

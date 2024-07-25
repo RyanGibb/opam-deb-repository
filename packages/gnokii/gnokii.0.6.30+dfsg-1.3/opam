@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnokii_0.6.30+dfsg-1.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnokii"]
+]
+depends: [
+  "gnokii-cli" {>= "0.6.30+dfsg-1.3"}
+  "gnokii-common" {= "0.6.30+dfsg-1.3"}
+  "xgnokii" {>= "0.6.30+dfsg-1.3"}
+]
+extra-source "gnokii_0.6.30+dfsg-1.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnokii/gnokii_0.6.30+dfsg-1.3_all.deb"
+}

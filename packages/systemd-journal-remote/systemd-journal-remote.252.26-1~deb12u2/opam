@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i systemd-journal-remote_252.26-1~deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r systemd-journal-remote"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcurl4" {>= "7.16.2"}
+  "libmicrohttpd12" {>= "0.9.50"}
+  "libsystemd-shared" {= "252.26-1~deb12u2"}
+  "systemd"
+]
+extra-source "systemd-journal-remote_252.26-1~deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/systemd/systemd-journal-remote_252.26-1~deb12u2_amd64.deb"
+}

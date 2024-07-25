@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libctf0_2.40-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libctf0"]
+]
+depends: [
+  "libbinutils" {= "2.40-2"}
+  "libc6" {>= "2.33"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "libctf0_2.40-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/binutils/libctf0_2.40-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dwarfdump_20180809-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dwarfdump"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdwarf1" {>= "20180809"}
+  "libelf1" {>= "0.131"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "dwarfdump_20180809-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dwarfutils/dwarfdump_20180809-1_amd64.deb"
+}

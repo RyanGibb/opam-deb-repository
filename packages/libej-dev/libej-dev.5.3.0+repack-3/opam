@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libej-dev_5.3.0+repack-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libej-dev"]
+]
+depends: [
+  "libej0" {< "5.3.0+repack-3.1~"}
+  "libej0" {>= "5.3.0+repack-3"}
+]
+extra-source "libej-dev_5.3.0+repack-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/expeyes/libej-dev_5.3.0+repack-3_amd64.deb"
+}

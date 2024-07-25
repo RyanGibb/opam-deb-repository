@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5texttospeech5-dev_5.15.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5texttospeech5-dev"]
+]
+depends: [
+  "libqt5texttospeech5" {= "5.15.8-2"}
+  "qtbase5-dev"
+  "qtdeclarative5-dev"
+]
+extra-source "libqt5texttospeech5-dev_5.15.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtspeech-opensource-src/libqt5texttospeech5-dev_5.15.8-2_amd64.deb"
+}

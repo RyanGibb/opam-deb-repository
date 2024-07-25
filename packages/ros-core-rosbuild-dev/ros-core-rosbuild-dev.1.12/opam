@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ros-core-rosbuild-dev_1.12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ros-core-rosbuild-dev"]
+]
+depends: [
+  "python-rosboost-cfg"
+  "python-rosdep2"
+  "python-rosmake"
+  "python-rostest"
+  "python-rosunit"
+  "ros-core-dev"
+  "ros-mk"
+  "rosbuild"
+  "roslang"
+]
+extra-source "ros-core-rosbuild-dev_1.12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-metapackages/ros-core-rosbuild-dev_1.12_all.deb"
+}

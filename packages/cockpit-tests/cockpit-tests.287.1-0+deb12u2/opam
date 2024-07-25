@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cockpit-tests_287.1-0+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cockpit-tests"]
+]
+depends: [
+  "cockpit-system" {>= "287.1-0+deb12u2"}
+  "libc6" {>= "2.4"}
+  "libpam0g" {>= "0.99.7.1"}
+  "openssh-client"
+]
+conflicts: [
+  "cockpit-test-assets"
+]
+extra-source "cockpit-tests_287.1-0+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cockpit/cockpit-tests_287.1-0+deb12u2_amd64.deb"
+}

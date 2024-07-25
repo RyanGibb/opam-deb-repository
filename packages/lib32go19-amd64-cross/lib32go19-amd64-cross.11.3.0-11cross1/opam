@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32go19-amd64-cross_11.3.0-11cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32go19-amd64-cross"]
+]
+depends: [
+  "gcc-11-cross-base" {>= "11.3.0-11"}
+  "lib32gcc-s1-amd64-cross"
+  "libc6-i386-amd64-cross" {>= "2.36"}
+]
+conflicts: [
+  "libc6-i386 (<< 2.9-22)"
+]
+extra-source "lib32go19-amd64-cross_11.3.0-11cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-11-cross/lib32go19-amd64-cross_11.3.0-11cross1_all.deb"
+}

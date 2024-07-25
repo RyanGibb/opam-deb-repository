@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-gmpy2_2.1.0~a4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-gmpy2"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgmp10" {>= "2-5.1.1"}
+  "libmpc3"
+  "libmpfr6" {>= "4.0.0"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-gmpy2-common"
+]
+extra-source "python-gmpy2_2.1.0~a4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-gmpy2/python-gmpy2_2.1.0~a4-1_amd64.deb"
+}

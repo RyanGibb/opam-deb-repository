@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ffmsindex_2.23-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ffmsindex"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libffms2-4" {>= "2.21"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "ffmsindex_2.23-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/ffms2/ffmsindex_2.23-4_amd64.deb"
+}

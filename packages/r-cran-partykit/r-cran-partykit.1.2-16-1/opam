@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-partykit_1.2-16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-partykit"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-1"}
+  "r-cran-formula" {>= "1.2-1"}
+  "r-cran-inum" {>= "1.0-0"}
+  "r-cran-libcoin" {>= "1.0-0"}
+  "r-cran-mvtnorm"
+  "r-cran-rpart" {>= "4.1-11"}
+  "r-cran-survival"
+]
+extra-source "r-cran-partykit_1.2-16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-partykit/r-cran-partykit_1.2-16-1_amd64.deb"
+}

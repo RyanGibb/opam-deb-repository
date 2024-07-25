@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-yaramod_3.6.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-yaramod"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libre2-9" {>= "20131024+dfsg"}
+  "libstdc++6" {>= "7"}
+  "libyaramod0" {>= "3.6.0"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+]
+extra-source "python3-yaramod_3.6.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yaramod/python3-yaramod_3.6.0-1+b2_amd64.deb"
+}

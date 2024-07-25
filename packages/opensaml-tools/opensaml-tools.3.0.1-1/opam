@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i opensaml-tools_3.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r opensaml-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "liblog4shib2"
+  "libsaml10"
+  "libstdc++6" {>= "5.2"}
+  "libxerces-c3-2"
+  "libxmltooling8"
+]
+extra-source "opensaml-tools_3.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opensaml/opensaml-tools_3.0.1-1_amd64.deb"
+}

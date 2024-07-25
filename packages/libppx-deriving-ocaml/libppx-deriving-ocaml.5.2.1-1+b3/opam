@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libppx-deriving-ocaml_5.2.1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libppx-deriving-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libresult-ocaml"
+  "libsexplib0-ocaml"
+  "ocaml-base"
+]
+extra-source "libppx-deriving-ocaml_5.2.1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/ppx-deriving/libppx-deriving-ocaml_5.2.1-1+b3_amd64.deb"
+}

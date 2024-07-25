@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-generator-spec_0.9.3-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-generator-spec"]
+]
+depends: [
+  "ruby-activesupport" {>= "3.0.0"}
+  "ruby-railties" {>= "3.0.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-generator-spec_0.9.3-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-generator-spec/ruby-generator-spec_0.9.3-1.1_all.deb"
+}

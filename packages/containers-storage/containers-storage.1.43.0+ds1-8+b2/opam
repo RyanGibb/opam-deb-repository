@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i containers-storage_1.43.0+ds1-8+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r containers-storage"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdevmapper1-02-1" {>= "2-1.02.97"}
+]
+extra-source "containers-storage_1.43.0+ds1-8+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-containers-storage/containers-storage_1.43.0+ds1-8+b2_amd64.deb"
+}

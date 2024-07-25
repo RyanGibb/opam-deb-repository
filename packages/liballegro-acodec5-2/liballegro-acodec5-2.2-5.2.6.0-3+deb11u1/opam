@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liballegro-acodec5.2_2:5.2.6.0-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liballegro-acodec5.2"]
+]
+depends: [
+  "liballegro-audio5-2" {>= "2-5.0.6"}
+  "liballegro5-2" {= "2-5.2.6.0-3+deb11u1"}
+  "libc6" {>= "2.14"}
+  "libdumb1"
+  "libflac8" {>= "1.3.0"}
+  "libopusfile0" {>= "0.5"}
+  "libvorbisfile3" {>= "1.1.2"}
+]
+extra-source "liballegro-acodec5.2_2:5.2.6.0-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/allegro5/liballegro-acodec5.2_5.2.6.0-3+deb11u1_amd64.deb"
+}

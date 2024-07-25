@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xandikos_0.2.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xandikos"]
+]
+depends: [
+  "python3-aiohttp"
+  "python3-any"
+  "python3-defusedxml"
+  "python3-dulwich" {>= "0.19.1"}
+  "python3-icalendar"
+  "python3-jinja2"
+  "python3-multidict"
+]
+extra-source "xandikos_0.2.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xandikos/xandikos_0.2.8-1_all.deb"
+}

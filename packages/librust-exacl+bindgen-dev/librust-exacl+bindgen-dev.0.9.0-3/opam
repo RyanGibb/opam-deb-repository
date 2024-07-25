@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-exacl+bindgen-dev_0.9.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-exacl+bindgen-dev"]
+]
+depends: [
+  "librust-bindgen+default-dev"
+  "librust-exacl-dev" {= "0.9.0-3"}
+]
+extra-source "librust-exacl+bindgen-dev_0.9.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-exacl/librust-exacl+bindgen-dev_0.9.0-3_amd64.deb"
+}

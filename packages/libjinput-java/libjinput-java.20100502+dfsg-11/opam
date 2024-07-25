@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjinput-java_20100502+dfsg-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjinput-java"]
+]
+depends: [
+  "libjinput-jni" {>= "20100502+dfsg-11"}
+  "libjutils-java"
+]
+extra-source "libjinput-java_20100502+dfsg-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jinput/libjinput-java_20100502+dfsg-11_all.deb"
+}

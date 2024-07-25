@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhtml-restrict-perl_3.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhtml-restrict-perl"]
+]
+depends: [
+  "libdata-dump-perl"
+  "libhtml-parser-perl"
+  "libmoo-perl"
+  "libnamespace-clean-perl"
+  "libscalar-list-utils-perl"
+  "libsub-quote-perl"
+  "libtype-tiny-perl" {>= "1.002001"}
+  "liburi-perl"
+  "perl"
+]
+extra-source "libhtml-restrict-perl_3.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhtml-restrict-perl/libhtml-restrict-perl_3.0.0-1_all.deb"
+}

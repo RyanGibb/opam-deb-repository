@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lsp-plugins_1.1.29-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lsp-plugins"]
+]
+depends: [
+  "lsp-plugins-jack"
+  "lsp-plugins-ladspa"
+  "lsp-plugins-lv2"
+  "lsp-plugins-vst"
+]
+extra-source "lsp-plugins_1.1.29-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lsp-plugins/lsp-plugins_1.1.29-1_amd64.deb"
+}

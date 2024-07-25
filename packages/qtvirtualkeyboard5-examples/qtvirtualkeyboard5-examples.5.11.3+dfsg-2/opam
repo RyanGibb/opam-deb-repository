@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qtvirtualkeyboard5-examples_5.11.3+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qtvirtualkeyboard5-examples"]
+]
+depends: [
+  "qml-module-qtquick-virtualkeyboard" {= "5.11.3+dfsg-2"}
+  "qtvirtualkeyboard-plugin" {= "5.11.3+dfsg-2"}
+]
+extra-source "qtvirtualkeyboard5-examples_5.11.3+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtvirtualkeyboard-opensource-src/qtvirtualkeyboard5-examples_5.11.3+dfsg-2_amd64.deb"
+}

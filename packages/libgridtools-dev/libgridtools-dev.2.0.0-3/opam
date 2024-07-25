@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgridtools-dev_2.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgridtools-dev"]
+]
+depends: [
+  "ecbuild"
+  "libboost-dev" {>= "1.58.0"}
+  "mpi-default-dev"
+  "pybind11-dev"
+]
+extra-source "libgridtools-dev_2.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gridtools/libgridtools-dev_2.0.0-3_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pyao-dbg_0.82-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pyao-dbg"]
+]
+depends: [
+  "libao4" {>= "1.1.0"}
+  "libc6" {>= "2.2.5"}
+  "python-dbg" {< "2.8"}
+  "python-dbg" {>= "2.6.6-3~"}
+  "python-pyao" {= "0.82-5"}
+  ("python2-7-dbg" | "python2-6-dbg")
+]
+extra-source "python-pyao-dbg_0.82-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyao/python-pyao-dbg_0.82-5_amd64.deb"
+}

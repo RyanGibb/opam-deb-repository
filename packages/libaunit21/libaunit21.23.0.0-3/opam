@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaunit21_23.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaunit21"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnat-12" {>= "12.2.0"}
+]
+extra-source "libaunit21_23.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaunit/libaunit21_23.0.0-3_amd64.deb"
+}

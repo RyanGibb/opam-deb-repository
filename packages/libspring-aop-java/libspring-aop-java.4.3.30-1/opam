@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspring-aop-java_4.3.30-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspring-aop-java"]
+]
+depends: [
+  "libspring-beans-java" {= "4.3.30-1"}
+  "libspring-core-java" {= "4.3.30-1"}
+]
+extra-source "libspring-aop-java_4.3.30-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libspring-java/libspring-aop-java_4.3.30-1_all.deb"
+}

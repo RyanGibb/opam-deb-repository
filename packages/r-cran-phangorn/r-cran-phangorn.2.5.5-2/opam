@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-phangorn_2.5.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-phangorn"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  "r-cran-ape" {>= "5.0"}
+  "r-cran-fastmatch"
+  "r-cran-igraph" {>= "1.0"}
+  "r-cran-magrittr"
+  "r-cran-matrix"
+  "r-cran-quadprog"
+  "r-cran-rcpp" {>= "0.12.0"}
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "r-cran-phangorn_2.5.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-phangorn/r-cran-phangorn_2.5.5-2_amd64.deb"
+}

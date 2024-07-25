@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pkexec_122-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pkexec"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpolkit-agent-1-0" {= "122-3"}
+  "libpolkit-gobject-1-0" {= "122-3"}
+  "polkitd" {= "122-3"}
+]
+extra-source "pkexec_122-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/policykit-1/pkexec_122-3_amd64.deb"
+}

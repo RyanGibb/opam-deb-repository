@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mdbtools_1.0.0+dfsg-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mdbtools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.14.0"}
+  "libmdb3" {= "1.0.0+dfsg-1.1"}
+  "libmdbsql3" {>= "0.5.99.0.6pre1.0.20051109"}
+  "libreadline8" {>= "6.0"}
+]
+extra-source "mdbtools_1.0.0+dfsg-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mdbtools/mdbtools_1.0.0+dfsg-1.1_amd64.deb"
+}

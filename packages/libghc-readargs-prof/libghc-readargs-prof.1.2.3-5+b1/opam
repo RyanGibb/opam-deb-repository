@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-readargs-prof_1.2.3-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-readargs-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-readargs-dev" {= "1.2.3-5+b1"}
+  "libghc-system-filepath-prof"
+]
+extra-source "libghc-readargs-prof_1.2.3-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-readargs/libghc-readargs-prof_1.2.3-5+b1_amd64.deb"
+}

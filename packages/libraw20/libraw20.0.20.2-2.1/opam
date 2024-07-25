@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libraw20_0.20.2-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libraw20"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "6"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "liblcms2-2" {>= "2.2+git20110628"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libraw20_0.20.2-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libraw/libraw20_0.20.2-2.1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i i810switch_0.6.5-7.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r i810switch"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "pciutils" {>= "1-2.1.11-6"}
+]
+extra-source "i810switch_0.6.5-7.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/i810switch/i810switch_0.6.5-7.1+b1_amd64.deb"
+}

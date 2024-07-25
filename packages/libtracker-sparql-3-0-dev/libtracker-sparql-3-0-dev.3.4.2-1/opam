@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtracker-sparql-3.0-dev_3.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtracker-sparql-3.0-dev"]
+]
+depends: [
+  "gir1-2-tracker-3-0" {= "3.4.2-1"}
+  "libglib2-0-dev" {>= "2.52.0"}
+  "libicu-dev" {>= "4.8.1.1"}
+  "libjson-glib-dev" {>= "1.4"}
+  "libsoup-3-0-dev" {>= "2.40"}
+  "libsqlite3-dev" {>= "3.15.0"}
+  "libtracker-sparql-3-0-0" {= "3.4.2-1"}
+  "libxml2-dev" {>= "2.6"}
+]
+extra-source "libtracker-sparql-3.0-dev_3.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tracker/libtracker-sparql-3.0-dev_3.4.2-1_amd64.deb"
+}

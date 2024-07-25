@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php8.2-mongodb_1.15.0+1.11.1+1.9.2+1.7.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php8.2-mongodb"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libsasl2-2" {>= "2.1.28+dfsg"}
+  "libsnappy1v5" {>= "1.1.9"}
+  "libssl3" {>= "3.0.0"}
+  "libzstd1" {>= "1.5.2"}
+  "php8-2-common"
+  "ucf"
+  "zlib1g" {>= "1-1.2.0"}
+  ("libapache2-mod-php8-2" | "libphp8-2-embed" | "php8-2-cgi" | "php8-2-cli" | "php8-2-fpm" | "php8-2-phpdbg")
+]
+extra-source "php8.2-mongodb_1.15.0+1.11.1+1.9.2+1.7.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-mongodb/php8.2-mongodb_1.15.0+1.11.1+1.9.2+1.7.5-1_amd64.deb"
+}

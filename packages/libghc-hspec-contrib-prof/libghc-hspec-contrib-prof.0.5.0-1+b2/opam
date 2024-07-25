@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hspec-contrib-prof_0.5.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hspec-contrib-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hspec-contrib-dev" {= "0.5.0-1+b2"}
+  "libghc-hspec-core-prof"
+  "libghc-hunit-prof"
+]
+extra-source "libghc-hspec-contrib-prof_0.5.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hspec-contrib/libghc-hspec-contrib-prof_0.5.0-1+b2_amd64.deb"
+}

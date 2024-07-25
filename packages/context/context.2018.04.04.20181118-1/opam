@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i context_2018.04.04.20181118-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r context"]
+]
+depends: [
+  "lmodern" {>= "2.004.4"}
+  "tex-common" {>= "6"}
+  "tex-gyre"
+  "texlive-base" {>= "2018"}
+  "texlive-binaries" {>= "2018"}
+  "texlive-metapost" {>= "2018"}
+  ("ruby" | "ruby-interpreter")
+]
+conflicts: [
+  "tetex-bin (<< 2007)"
+  "texlive-context"
+  "texlive-xetex (<< 2009)"
+]
+extra-source "context_2018.04.04.20181118-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/context/context_2018.04.04.20181118-1_all.deb"
+}

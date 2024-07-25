@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coinor-libclp-dev_1.16.11+repack1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coinor-libclp-dev"]
+]
+depends: [
+  "coinor-libclp1" {= "1.16.11+repack1-1"}
+  "coinor-libcoinutils-dev" {>= "2.9.4"}
+  "coinor-libosi-dev" {>= "0.106.1"}
+]
+extra-source "coinor-libclp-dev_1.16.11+repack1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clp/coinor-libclp-dev_1.16.11+repack1-1_amd64.deb"
+}

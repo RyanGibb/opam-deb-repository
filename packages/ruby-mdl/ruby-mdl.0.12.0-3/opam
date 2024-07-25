@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-mdl_0.12.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-mdl"]
+]
+depends: [
+  "ruby"
+  "ruby-kramdown" {>= "2.3"}
+  "ruby-kramdown-parser-gfm" {>= "1.1"}
+  "ruby-mixlib-cli" {>= "2.1.1"}
+  "ruby-mixlib-config" {< "4"}
+  "ruby-mixlib-config" {>= "2.2.1"}
+  "ruby-mixlib-shellout"
+]
+extra-source "ruby-mdl_0.12.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-mdl/ruby-mdl_0.12.0-3_all.deb"
+}

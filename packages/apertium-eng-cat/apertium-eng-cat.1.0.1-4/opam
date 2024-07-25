@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-eng-cat_1.0.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-eng-cat"]
+]
+depends: [
+  "apertium" {>= "3.6.0"}
+  "apertium-anaphora"
+  "apertium-lex-tools"
+  "apertium-separable"
+  "cg3"
+]
+conflicts: [
+  "apertium-cat-eng"
+]
+extra-source "apertium-eng-cat_1.0.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-eng-cat/apertium-eng-cat_1.0.1-4_all.deb"
+}

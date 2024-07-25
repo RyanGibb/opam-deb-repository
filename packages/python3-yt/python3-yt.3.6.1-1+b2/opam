@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-yt_3.6.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-yt"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgomp1" {>= "6"}
+  "libjs-jquery"
+  "libjs-leaflet"
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-h5py"
+  "python3-ipython"
+  "python3-matplotlib"
+  "python3-numpy"
+  "python3-pkg-resources"
+  "python3-sympy"
+]
+extra-source "python3-yt_3.6.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yt/python3-yt_3.6.1-1+b2_amd64.deb"
+}

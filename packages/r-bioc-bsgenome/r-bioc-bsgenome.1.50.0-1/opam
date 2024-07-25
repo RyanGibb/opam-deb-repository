@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-bsgenome_1.50.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-bsgenome"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+  "r-bioc-biocgenerics" {>= "0.13.8"}
+  "r-bioc-biostrings" {>= "2.47.6"}
+  "r-bioc-genomeinfodb" {>= "1.15.2"}
+  "r-bioc-genomicranges" {>= "1.31.10"}
+  "r-bioc-iranges" {>= "2.13.16"}
+  "r-bioc-rsamtools"
+  "r-bioc-rtracklayer" {>= "1.39.7"}
+  "r-bioc-s4vectors" {>= "0.17.28"}
+  "r-bioc-xvector"
+]
+extra-source "r-bioc-bsgenome_1.50.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-bsgenome/r-bioc-bsgenome_1.50.0-1_all.deb"
+}

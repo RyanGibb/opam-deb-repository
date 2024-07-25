@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenipmi-dev_2.0.33-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenipmi-dev"]
+]
+depends: [
+  "libgdbm-dev"
+  "libopenipmi0" {= "2.0.33-1+b1"}
+]
+extra-source "libopenipmi-dev_2.0.33-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openipmi/libopenipmi-dev_2.0.33-1+b1_amd64.deb"
+}

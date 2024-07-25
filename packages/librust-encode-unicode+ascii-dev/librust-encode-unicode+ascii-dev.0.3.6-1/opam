@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-encode-unicode+ascii-dev_0.3.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-encode-unicode+ascii-dev"]
+]
+depends: [
+  "librust-encode-unicode-dev" {= "0.3.6-1"}
+  ("librust-ascii-1-dev" | "librust-ascii-0-dev" {>= "0.8-~~"})
+]
+extra-source "librust-encode-unicode+ascii-dev_0.3.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-encode-unicode/librust-encode-unicode+ascii-dev_0.3.6-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmosquitto1_1.5.7-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmosquitto1"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "libmosquitto1_1.5.7-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mosquitto/libmosquitto1_1.5.7-1+deb10u1_amd64.deb"
+}

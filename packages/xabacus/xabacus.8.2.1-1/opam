@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xabacus_8.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xabacus"]
+]
+depends: [
+  "libaudiofile1" {>= "0.3.6"}
+  "libc6" {>= "2.23"}
+  "libice6" {>= "1-1.0.0"}
+  "libsm6"
+  "libx11-6"
+  "libxpm4"
+  "libxt6"
+]
+conflicts: [
+  "xabacus"
+]
+extra-source "xabacus_8.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xabacus/xabacus_8.2.1-1_amd64.deb"
+}

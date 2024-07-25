@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cinnamon-common_5.6.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cinnamon-common"]
+]
+depends: [
+  "gettext"
+  "gir1-2-cinnamondesktop-3-0" {>= "5.6"}
+  "gir1-2-meta-muffin-0-0" {>= "5.6~"}
+  "libglib2-0-bin"
+  "python3-any"
+  "python3-xapp"
+  "xdg-utils"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "cinnamon-common_5.6.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cinnamon/cinnamon-common_5.6.8-1_all.deb"
+}

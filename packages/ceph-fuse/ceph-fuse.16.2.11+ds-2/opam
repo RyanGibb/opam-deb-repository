@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ceph-fuse_16.2.11+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ceph-fuse"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfmt9" {>= "9.1.0+ds1"}
+  "libfuse2" {>= "2.9"}
+  "libgcc-s1" {>= "3.0"}
+  "librados2" {>= "16.2.11+ds"}
+  "libstdc++6" {>= "12"}
+  "python3"
+]
+extra-source "ceph-fuse_16.2.11+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/ceph-fuse_16.2.11+ds-2_amd64.deb"
+}

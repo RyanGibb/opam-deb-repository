@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tar-conduit-prof_0.3.2-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tar-conduit-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-conduit-prof"
+  "libghc-safe-exceptions-prof"
+  "libghc-tar-conduit-dev" {= "0.3.2-2+b2"}
+]
+extra-source "libghc-tar-conduit-prof_0.3.2-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tar-conduit/libghc-tar-conduit-prof_0.3.2-2+b2_amd64.deb"
+}

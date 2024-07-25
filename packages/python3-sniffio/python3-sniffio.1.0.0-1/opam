@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sniffio_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sniffio"]
+]
+depends: [
+  ("python3" {>= "3.7~"} | "python3-7")
+]
+extra-source "python3-sniffio_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-sniffio/python3-sniffio_1.0.0-1_all.deb"
+}

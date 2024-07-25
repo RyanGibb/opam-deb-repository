@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaudio-flac-header-perl_2.4-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaudio-flac-header-perl"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libflac12" {>= "1.3.0"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libaudio-flac-header-perl_2.4-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaudio-flac-header-perl/libaudio-flac-header-perl_2.4-5_amd64.deb"
+}

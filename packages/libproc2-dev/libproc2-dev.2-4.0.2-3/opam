@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libproc2-dev_2:4.0.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libproc2-dev"]
+]
+depends: [
+  "libproc2-0" {= "2-4.0.2-3"}
+]
+conflicts: [
+  "libproc-2-dev"
+]
+extra-source "libproc2-dev_2:4.0.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/procps/libproc2-dev_4.0.2-3_amd64.deb"
+}

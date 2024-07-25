@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencv3.2-jni_3.2.0+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencv3.2-jni"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libopencv-calib3d3-2" {= "3.2.0+dfsg-6"}
+  "libopencv-contrib3-2"
+  "libopencv-core3-2"
+  "libopencv-features2d3-2"
+  "libopencv-flann3-2"
+  "libopencv-highgui3-2" {= "3.2.0+dfsg-6"}
+  "libopencv-imgcodecs3-2"
+  "libopencv-imgproc3-2"
+  "libopencv-ml3-2" {= "3.2.0+dfsg-6"}
+  "libopencv-objdetect3-2" {= "3.2.0+dfsg-6"}
+  "libopencv-photo3-2" {= "3.2.0+dfsg-6"}
+  "libopencv-video3-2" {= "3.2.0+dfsg-6"}
+  "libopencv-videoio3-2"
+  "libopencv-viz3-2"
+  "libstdc++6" {>= "5.2"}
+  "libtbb2" {>= "2017~U7"}
+]
+extra-source "libopencv3.2-jni_3.2.0+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencv/libopencv3.2-jni_3.2.0+dfsg-6_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libiv-unidraw2_2.0.4a1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libiv-unidraw2"]
+]
+depends: [
+  "libace-6-5-12" {>= "6.5.12+dfsg"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libiv2" {>= "2.0.4a1"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+]
+conflicts: [
+  "ivtools"
+]
+extra-source "libiv-unidraw2_2.0.4a1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ivtools/libiv-unidraw2_2.0.4a1-2_amd64.deb"
+}

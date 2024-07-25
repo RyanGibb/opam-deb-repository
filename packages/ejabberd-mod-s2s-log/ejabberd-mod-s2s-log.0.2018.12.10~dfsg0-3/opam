@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ejabberd-mod-s2s-log_0.2018.12.10~dfsg0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ejabberd-mod-s2s-log"]
+]
+depends: [
+  "ejabberd" {= "18.12.1-2"}
+  ("erlang-base" {>= "1-17"} | "erlang-abi-17-0")
+  ("erlang-base" {>= "1-21.2.2+dfsg"} | "erlang-base-hipe" {>= "1-21.2.2+dfsg"})
+]
+extra-source "ejabberd-mod-s2s-log_0.2018.12.10~dfsg0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ejabberd-contrib/ejabberd-mod-s2s-log_0.2018.12.10~dfsg0-3_amd64.deb"
+}

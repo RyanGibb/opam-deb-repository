@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-gtk-vnc-2.0_0.9.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-gtk-vnc-2.0"]
+]
+depends: [
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-3-0"
+  "libgtk-vnc-2-0-0" {>= "0.7.1"}
+  "libgvnc-1-0-0" {>= "0.5.3"}
+]
+extra-source "gir1.2-gtk-vnc-2.0_0.9.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtk-vnc/gir1.2-gtk-vnc-2.0_0.9.0-1.1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ros-perception-python-dev_1.16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ros-perception-python-dev"]
+]
+depends: [
+  "python3-cv-bridge"
+  "python3-image-geometry"
+  "python3-laser-geometry"
+  "python3-opencv"
+  "python3-pcl-msgs"
+  "python3-polled-camera"
+  "ros-base-python-dev"
+]
+extra-source "ros-perception-python-dev_1.16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-metapackages/ros-perception-python-dev_1.16_all.deb"
+}

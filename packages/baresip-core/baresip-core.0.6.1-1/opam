@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i baresip-core_0.6.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r baresip-core"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libavahi-client3" {>= "0.6.16"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libc6" {>= "2.14"}
+  "libcodec2-0-8-1"
+  "libdirectfb-1-7-7" {>= "1.7.7"}
+  "libgsm1" {>= "1.0.18"}
+  "libmosquitto1" {>= "1.0"}
+  "libmpg123-0" {>= "1.6.2"}
+  "libopencore-amrnb0"
+  "libopencore-amrwb0"
+  "libopus0" {>= "1.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libportaudio2" {>= "19+svn20101113"}
+  "libre0" {>= "0.5.5"}
+  "librem0" {>= "0.4.7"}
+  "libsndfile1" {>= "1.0.20"}
+  "libsndio7-0" {>= "1.1.0"}
+  "libspandsp2" {>= "0.0.6~pre18"}
+  "libspeexdsp1" {>= "1.2~beta3.2-1"}
+  "libssl1-1" {>= "1.1.0"}
+  "libtwolame0" {>= "0.3.6"}
+  "libvo-amrwbenc0"
+  "libvpx5" {>= "1.6.0"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "baresip-core_0.6.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/baresip/baresip-core_0.6.1-1_amd64.deb"
+}

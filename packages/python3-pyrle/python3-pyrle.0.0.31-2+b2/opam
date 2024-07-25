@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyrle_0.0.31-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyrle"]
+]
+depends: [
+  "cython3"
+  "libc6" {>= "2.14"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-natsort"
+  "python3-numpy"
+  "python3-pandas"
+  "python3-tabulate"
+]
+extra-source "python3-pyrle_0.0.31-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyrle/python3-pyrle_0.0.31-2+b2_amd64.deb"
+}

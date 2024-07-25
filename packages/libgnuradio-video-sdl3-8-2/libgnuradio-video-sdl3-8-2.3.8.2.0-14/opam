@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnuradio-video-sdl3.8.2_3.8.2.0-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnuradio-video-sdl3.8.2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnuradio-pmt3-8-2" {>= "3.8.2.0"}
+  "libgnuradio-runtime3-8-2" {>= "3.8.2.0"}
+  "liblog4cpp5v5" {>= "1.1.3"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libgnuradio-video-sdl3.8.2_3.8.2.0-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnuradio/libgnuradio-video-sdl3.8.2_3.8.2.0-14_amd64.deb"
+}

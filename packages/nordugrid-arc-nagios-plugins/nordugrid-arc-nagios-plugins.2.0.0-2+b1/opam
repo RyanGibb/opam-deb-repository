@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nordugrid-arc-nagios-plugins_2.0.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nordugrid-arc-nagios-plugins"]
+]
+depends: [
+  "glue-schema" {>= "2.0.8"}
+  "nordugrid-arc-client" {>= "1.0.0"}
+  "python3-any"
+  "python3-cryptography"
+  "python3-jinja2"
+  "python3-ldap3"
+]
+extra-source "nordugrid-arc-nagios-plugins_2.0.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nordugrid-arc-nagios-plugins/nordugrid-arc-nagios-plugins_2.0.0-2+b1_amd64.deb"
+}

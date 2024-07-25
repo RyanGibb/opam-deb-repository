@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmojo-server-fastcgi-perl_0.50-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmojo-server-fastcgi-perl"]
+]
+depends: [
+  "libmojolicious-perl" {>= "3.21"}
+  "perl"
+]
+extra-source "libmojo-server-fastcgi-perl_0.50-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmojo-server-fastcgi-perl/libmojo-server-fastcgi-perl_0.50-1_all.deb"
+}

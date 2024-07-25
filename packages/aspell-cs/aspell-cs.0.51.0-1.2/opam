@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aspell-cs_0.51.0-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aspell-cs"]
+]
+depends: [
+  "aspell"
+  "dictionaries-common" {>= "1.23~"}
+]
+extra-source "aspell-cs_0.51.0-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aspell-cs/aspell-cs_0.51.0-1.2_all.deb"
+}

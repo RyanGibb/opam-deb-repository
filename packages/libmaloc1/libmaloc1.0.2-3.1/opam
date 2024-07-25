@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmaloc1_0.2-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmaloc1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libmaloc1_0.2-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maloc/libmaloc1_0.2-3.1_amd64.deb"
+}

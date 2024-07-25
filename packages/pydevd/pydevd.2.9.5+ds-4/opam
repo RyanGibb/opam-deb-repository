@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pydevd_2.9.5+ds-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pydevd"]
+]
+depends: [
+  "python3-any"
+  "python3-pydevd" {>= "2.9.5+ds-4"}
+]
+extra-source "pydevd_2.9.5+ds-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pydevd/pydevd_2.9.5+ds-4_all.deb"
+}

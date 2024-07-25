@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i espctag_0.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r espctag"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libspctag1" {>= "0.2"}
+]
+extra-source "espctag_0.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/espctag/espctag_0.4-1+b1_amd64.deb"
+}

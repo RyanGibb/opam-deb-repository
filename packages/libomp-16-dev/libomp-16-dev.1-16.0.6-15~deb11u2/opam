@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libomp-16-dev_1:16.0.6-15~deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libomp-16-dev"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc-s1" {>= "3.3"}
+  "libllvm16"
+  "libomp5-16" {= "1-16.0.6-15~deb11u2"}
+  "libpython3-9" {>= "3.9.1"}
+  "libstdc++6" {>= "9"}
+  "libtinfo6" {>= "6"}
+  "libz3-4" {>= "4.8.10"}
+  "libzstd1" {>= "1.4.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libomp-x.y-dev"
+]
+extra-source "libomp-16-dev_1:16.0.6-15~deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-16/libomp-16-dev_16.0.6-15~deb11u2_amd64.deb"
+}

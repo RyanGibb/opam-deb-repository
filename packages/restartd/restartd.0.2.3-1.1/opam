@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i restartd_0.2.3-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r restartd"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+]
+extra-source "restartd_0.2.3-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/restartd/restartd_0.2.3-1.1_amd64.deb"
+}

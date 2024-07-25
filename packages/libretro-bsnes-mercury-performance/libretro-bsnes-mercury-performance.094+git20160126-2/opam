@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libretro-bsnes-mercury-performance_094+git20160126-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libretro-bsnes-mercury-performance"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  ("retroarch" | "libretro-frontend")
+]
+extra-source "libretro-bsnes-mercury-performance_094+git20160126-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libretro-bsnes-mercury/libretro-bsnes-mercury-performance_094+git20160126-2_amd64.deb"
+}

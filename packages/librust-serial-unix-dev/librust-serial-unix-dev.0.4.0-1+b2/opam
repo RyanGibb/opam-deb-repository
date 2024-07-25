@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-serial-unix-dev_0.4.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-serial-unix-dev"]
+]
+depends: [
+  "librust-ioctl-rs-0-2+default-dev"
+  "librust-libc-dev"
+  "librust-serial-core-0-4+default-dev"
+  "librust-termios-dev"
+]
+extra-source "librust-serial-unix-dev_0.4.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-serial-unix/librust-serial-unix-dev_0.4.0-1+b2_amd64.deb"
+}

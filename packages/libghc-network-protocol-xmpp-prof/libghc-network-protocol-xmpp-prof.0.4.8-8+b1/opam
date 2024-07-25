@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-network-protocol-xmpp-prof_0.4.8-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-network-protocol-xmpp-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-gnuidn-prof"
+  "libghc-gnutls-prof"
+  "libghc-gsasl-prof"
+  "libghc-libxml-sax-prof"
+  "libghc-monads-tf-prof"
+  "libghc-network-prof"
+  "libghc-network-protocol-xmpp-dev" {= "0.4.8-8+b1"}
+  "libghc-xml-types-prof"
+]
+extra-source "libghc-network-protocol-xmpp-prof_0.4.8-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-network-protocol-xmpp/libghc-network-protocol-xmpp-prof_0.4.8-8+b1_amd64.deb"
+}

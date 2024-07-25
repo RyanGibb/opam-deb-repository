@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-memprof_0.3.6-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-memprof"]
+]
+depends: [
+  "cython3"
+  "libc6" {>= "2.4"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-matplotlib"
+  "python3-pkg-resources"
+]
+extra-source "python3-memprof_0.3.6-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-memprof/python3-memprof_0.3.6-5+b1_amd64.deb"
+}

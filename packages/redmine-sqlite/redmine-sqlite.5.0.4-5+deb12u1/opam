@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i redmine-sqlite_5.0.4-5+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r redmine-sqlite"]
+]
+depends: [
+  "ruby-sqlite3" {>= "1.4.0~"}
+  "sqlite3"
+  ("dbconfig-sqlite3" | "dbconfig-no-thanks")
+]
+extra-source "redmine-sqlite_5.0.4-5+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/redmine/redmine-sqlite_5.0.4-5+deb12u1_all.deb"
+}

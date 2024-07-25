@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfido2-dev_1.6.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfido2-dev"]
+]
+depends: [
+  "libfido2-1" {= "1.6.0-2"}
+]
+extra-source "libfido2-dev_1.6.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfido2/libfido2-dev_1.6.0-2_amd64.deb"
+}

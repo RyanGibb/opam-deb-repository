@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtypes-datetime-perl_0.002-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtypes-datetime-perl"]
+]
+depends: [
+  "libdatetime-locale-perl" {>= "1-1"}
+  "libdatetime-perl"
+  "libdatetime-timezone-perl"
+  "libmodule-runtime-perl"
+  "libtype-tiny-perl"
+  "perl-any"
+  "sgml-base" {>= "1.28"}
+]
+extra-source "libtypes-datetime-perl_0.002-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtypes-datetime-perl/libtypes-datetime-perl_0.002-2_all.deb"
+}

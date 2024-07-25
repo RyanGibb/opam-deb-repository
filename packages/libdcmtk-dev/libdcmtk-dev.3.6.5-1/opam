@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdcmtk-dev_3.6.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdcmtk-dev"]
+]
+depends: [
+  "libcharls-dev"
+  "libdcmtk15" {= "3.6.5-1"}
+  "libpng-dev"
+  "libssl-dev"
+  "libtiff-dev"
+  "libwrap0-dev"
+  "libxml2-dev"
+]
+conflicts: [
+  "libdcmtk2-dev"
+  "libdcmtk4-dev"
+]
+extra-source "libdcmtk-dev_3.6.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dcmtk/libdcmtk-dev_3.6.5-1_amd64.deb"
+}

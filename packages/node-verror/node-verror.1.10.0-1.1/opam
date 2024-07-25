@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-verror_1.10.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-verror"]
+]
+depends: [
+  "node-assert-plus" {>= "1.0.0"}
+  "node-core-util-is" {>= "1.0.2"}
+  "node-extsprintf" {>= "1.2.0"}
+  "nodejs"
+]
+extra-source "node-verror_1.10.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-verror/node-verror_1.10.0-1.1_all.deb"
+}

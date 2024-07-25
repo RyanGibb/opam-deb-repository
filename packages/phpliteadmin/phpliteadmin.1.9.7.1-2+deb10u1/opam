@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phpliteadmin_1.9.7.1-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phpliteadmin"]
+]
+depends: [
+  ("libapache2-mod-php" | "php-cgi" | "php-fpm")
+  ("php-sqlite3" | "php-pear")
+]
+extra-source "phpliteadmin_1.9.7.1-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phpliteadmin/phpliteadmin_1.9.7.1-2+deb10u1_all.deb"
+}

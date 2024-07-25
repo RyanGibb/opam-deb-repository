@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtifiles-dev_1.1.7-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtifiles-dev"]
+]
+depends: [
+  "libarchive-dev"
+  "libglib2-0-dev"
+  "libticonv-dev"
+  "libtifiles2-10" {= "1.1.7-2+b1"}
+  "pkg-config"
+  "zlib1g-dev"
+]
+extra-source "libtifiles-dev_1.1.7-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtifiles/libtifiles-dev_1.1.7-2+b1_amd64.deb"
+}

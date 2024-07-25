@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsundials-kinsol3_3.1.2+dfsg-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsundials-kinsol3"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+extra-source "libsundials-kinsol3_3.1.2+dfsg-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sundials/libsundials-kinsol3_3.1.2+dfsg-3+b1_amd64.deb"
+}

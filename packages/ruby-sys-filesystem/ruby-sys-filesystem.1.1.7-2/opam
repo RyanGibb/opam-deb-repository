@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-sys-filesystem_1.1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-sys-filesystem"]
+]
+depends: [
+  "ruby-ffi"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-sys-filesystem_1.1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-sys-filesystem/ruby-sys-filesystem_1.1.7-2_all.deb"
+}

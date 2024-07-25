@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rasdaemon_0.6.0-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rasdaemon"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdbd-sqlite3-perl"
+  "libsqlite3-0" {>= "3.6.0"}
+  "perl-any"
+  "sqlite3"
+  "systemd"
+]
+extra-source "rasdaemon_0.6.0-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rasdaemon/rasdaemon_0.6.0-1.2_amd64.deb"
+}

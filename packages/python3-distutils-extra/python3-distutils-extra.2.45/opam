@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-distutils-extra_2.45_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-distutils-extra"]
+]
+depends: [
+  "intltool"
+  "python3-any"
+  "python3-distutils"
+  "python3-pkg-resources"
+]
+extra-source "python3-distutils-extra_2.45_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-distutils-extra/python3-distutils-extra_2.45_all.deb"
+}

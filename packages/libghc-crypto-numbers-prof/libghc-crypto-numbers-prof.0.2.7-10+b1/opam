@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-crypto-numbers-prof_0.2.7-10+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-crypto-numbers-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-crypto-numbers-dev" {= "0.2.7-10+b1"}
+  "libghc-crypto-random-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-crypto-numbers-prof_0.2.7-10+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-crypto-numbers/libghc-crypto-numbers-prof_0.2.7-10+b1_amd64.deb"
+}

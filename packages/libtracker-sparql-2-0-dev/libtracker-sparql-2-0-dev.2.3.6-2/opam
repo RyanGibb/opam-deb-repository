@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtracker-sparql-2.0-dev_2.3.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtracker-sparql-2.0-dev"]
+]
+depends: [
+  "gir1-2-tracker-2-0" {= "2.3.6-2"}
+  "libglib2-0-dev"
+  "libtracker-sparql-2-0-0" {= "2.3.6-2"}
+]
+extra-source "libtracker-sparql-2.0-dev_2.3.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tracker/libtracker-sparql-2.0-dev_2.3.6-2_amd64.deb"
+}

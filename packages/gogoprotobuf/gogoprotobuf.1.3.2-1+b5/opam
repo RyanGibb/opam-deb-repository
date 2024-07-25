@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gogoprotobuf_1.3.2-1+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gogoprotobuf"]
+]
+depends: [
+  "golang-github-gogo-protobuf-dev" {= "1.3.2-1"}
+  "protobuf-compiler"
+]
+extra-source "gogoprotobuf_1.3.2-1+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-gogoprotobuf/gogoprotobuf_1.3.2-1+b5_amd64.deb"
+}

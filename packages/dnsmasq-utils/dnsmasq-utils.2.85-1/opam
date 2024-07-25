@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dnsmasq-utils_2.85-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dnsmasq-utils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "dnsmasq (<< 2.40)"
+]
+extra-source "dnsmasq-utils_2.85-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dnsmasq/dnsmasq-utils_2.85-1_amd64.deb"
+}

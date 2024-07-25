@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i redis-redisearch_1:1.2.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r redis-redisearch"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "redis-server"
+]
+extra-source "redis-redisearch_1:1.2.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/redisearch/redis-redisearch_1.2.2-4_amd64.deb"
+}

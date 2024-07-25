@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i inetutils-tools_2:1.9.4-7+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r inetutils-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "inetutils-tools_2:1.9.4-7+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/inetutils/inetutils-tools_1.9.4-7+deb10u1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i llvm-6.0-examples_1:6.0.1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r llvm-6.0-examples"]
+]
+depends: [
+  "llvm-6-0-dev" {< "1-6.0.1-10+c~"}
+  "llvm-6-0-dev" {>= "1-6.0.1-10"}
+]
+extra-source "llvm-6.0-examples_1:6.0.1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-6.0/llvm-6.0-examples_6.0.1-10_all.deb"
+}

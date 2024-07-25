@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wbar-config_2.3.4-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wbar-config"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglade2-0" {>= "1-2.6.4-2~"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.12.0"}
+  "libstdc++6" {>= "5.2"}
+  "wbar" {= "2.3.4-10"}
+]
+extra-source "wbar-config_2.3.4-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wbar/wbar-config_2.3.4-10_amd64.deb"
+}

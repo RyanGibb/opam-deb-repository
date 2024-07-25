@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mhddfs_0.1.39+nmu2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mhddfs"]
+]
+depends: [
+  "fuse"
+  "libc6" {>= "2.33"}
+  "libfuse2" {>= "2.8"}
+]
+extra-source "mhddfs_0.1.39+nmu2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mhddfs/mhddfs_0.1.39+nmu2_amd64.deb"
+}

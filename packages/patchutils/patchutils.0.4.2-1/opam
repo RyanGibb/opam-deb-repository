@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i patchutils_0.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r patchutils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "patch"
+  "perl-any"
+  "sensible-utils"
+]
+extra-source "patchutils_0.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/patchutils/patchutils_0.4.2-1_amd64.deb"
+}

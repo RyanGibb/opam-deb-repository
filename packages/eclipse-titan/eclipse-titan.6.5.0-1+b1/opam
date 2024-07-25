@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eclipse-titan_6.5.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eclipse-titan"]
+]
+depends: [
+  "default-jdk"
+  "expect"
+  "gcc" {< "4-8.3.0.0"}
+  "gcc" {>= "4-8.3.0"}
+  "libc6" {>= "2.15"}
+  "libgcc1" {>= "1-3.0"}
+  "libncurses6" {>= "6"}
+  "libpcap-dev"
+  "libpcre3-dev"
+  "libsctp-dev"
+  "libssl-dev"
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+  "libxml2" {>= "2.7.4"}
+  "libxml2-dev"
+  "make"
+  "perl"
+  "python"
+]
+extra-source "eclipse-titan_6.5.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eclipse-titan/eclipse-titan_6.5.0-1+b1_amd64.deb"
+}

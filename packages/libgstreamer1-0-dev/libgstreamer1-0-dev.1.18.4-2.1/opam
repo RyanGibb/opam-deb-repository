@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgstreamer1.0-dev_1.18.4-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgstreamer1.0-dev"]
+]
+depends: [
+  "gir1-2-gstreamer-1-0" {= "1.18.4-2.1"}
+  "libc6" {>= "2.4"}
+  "libdw-dev"
+  "libglib2-0-0" {>= "2.44"}
+  "libglib2-0-dev"
+  "libgstreamer1-0-0" {= "1.18.4-2.1"}
+  "libunwind-dev"
+  "pkg-config"
+  ("libc6-dev" | "libc-dev")
+]
+conflicts: [
+  "libgstreamer-plugins-bad1.0-dev (<< 1.13.1)"
+  "libgstreamer0.10-dev"
+]
+extra-source "libgstreamer1.0-dev_1.18.4-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gstreamer1.0/libgstreamer1.0-dev_1.18.4-2.1_amd64.deb"
+}

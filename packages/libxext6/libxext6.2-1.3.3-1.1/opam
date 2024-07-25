@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxext6_2:1.3.3-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxext6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libx11-6" {>= "2-1.6.0"}
+]
+extra-source "libxext6_2:1.3.3-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxext/libxext6_1.3.3-1.1_amd64.deb"
+}

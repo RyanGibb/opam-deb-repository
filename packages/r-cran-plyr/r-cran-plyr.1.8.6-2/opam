@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-plyr_1.8.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-plyr"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-rcpp" {>= "0.11.0"}
+]
+extra-source "r-cran-plyr_1.8.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-plyr/r-cran-plyr_1.8.6-2_amd64.deb"
+}

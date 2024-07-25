@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tryton-modules-web-shortener_6.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tryton-modules-web-shortener"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "5.2"}
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-sql"
+  "python3-werkzeug"
+  "tryton-server"
+  "tryton-server" {>= "6.0"}
+]
+extra-source "tryton-modules-web-shortener_6.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tryton-modules-web-shortener/tryton-modules-web-shortener_6.0.1-3_all.deb"
+}

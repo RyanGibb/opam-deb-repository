@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libccp4-dev_8.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libccp4-dev"]
+]
+depends: [
+  "libccp4c0" {= "8.0.0-2"}
+  "libccp4f0" {= "8.0.0-2"}
+]
+extra-source "libccp4-dev_8.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libccp4/libccp4-dev_8.0.0-2_amd64.deb"
+}

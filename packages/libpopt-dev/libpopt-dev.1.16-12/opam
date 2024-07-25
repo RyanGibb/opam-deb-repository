@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpopt-dev_1.16-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpopt-dev"]
+]
+depends: [
+  "libpopt0" {= "1.16-12"}
+  ("libc6-dev" | "libc-dev")
+]
+conflicts: [
+  "popt"
+]
+extra-source "libpopt-dev_1.16-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/popt/libpopt-dev_1.16-12_amd64.deb"
+}

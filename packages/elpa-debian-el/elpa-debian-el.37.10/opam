@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-debian-el_37.10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-debian-el"]
+]
+depends: [
+  "bzip2"
+  "dh-elpa-helper"
+  "dpkg" {>= "1.17.14"}
+  "emacsen-common"
+  "reportbug" {>= "4.12"}
+  "xz-utils"
+]
+extra-source "elpa-debian-el_37.10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-el/elpa-debian-el_37.10_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpoe-filter-http-parser-perl_1.08-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpoe-filter-http-parser-perl"]
+]
+depends: [
+  "libhttp-parser-perl" {>= "0.06"}
+  "libpoe-perl"
+  "libwww-perl"
+  "perl"
+]
+extra-source "libpoe-filter-http-parser-perl_1.08-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpoe-filter-http-parser-perl/libpoe-filter-http-parser-perl_1.08-1_all.deb"
+}

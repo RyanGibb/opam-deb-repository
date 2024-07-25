@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtiff-dev_4.1.0+git191117-2~deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtiff-dev"]
+]
+depends: [
+  "libjbig-dev"
+  "libjpeg-dev"
+  "liblzma-dev"
+  "libtiff5" {= "4.1.0+git191117-2~deb10u4"}
+  "libtiffxx5" {= "4.1.0+git191117-2~deb10u4"}
+  "zlib1g-dev"
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "libtiff-dev_4.1.0+git191117-2~deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tiff/libtiff-dev_4.1.0+git191117-2~deb10u4_amd64.deb"
+}

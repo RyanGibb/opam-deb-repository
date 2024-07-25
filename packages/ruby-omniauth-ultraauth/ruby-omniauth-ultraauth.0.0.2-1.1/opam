@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-omniauth-ultraauth_0.0.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-omniauth-ultraauth"]
+]
+depends: [
+  "ruby-omniauth-openid-connect" {>= "0.3.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-omniauth-ultraauth_0.0.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-omniauth-ultraauth/ruby-omniauth-ultraauth_0.0.2-1.1_all.deb"
+}

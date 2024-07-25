@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsnacc0c2_1.3.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsnacc0c2"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+]
+conflicts: [
+  "libsnacc0"
+]
+extra-source "libsnacc0c2_1.3.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snacc/libsnacc0c2_1.3.1-9_amd64.deb"
+}

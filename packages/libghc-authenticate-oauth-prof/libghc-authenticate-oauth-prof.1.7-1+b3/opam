@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-authenticate-oauth-prof_1.7-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-authenticate-oauth-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-authenticate-oauth-dev" {= "1.7-1+b3"}
+  "libghc-base64-bytestring-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-crypto-pubkey-types-prof"
+  "libghc-data-default-prof"
+  "libghc-http-client-prof"
+  "libghc-http-types-prof"
+  "libghc-random-prof"
+  "libghc-rsa-prof"
+  "libghc-sha-prof"
+  "libghc-transformers-compat-prof"
+]
+extra-source "libghc-authenticate-oauth-prof_1.7-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-authenticate-oauth/libghc-authenticate-oauth-prof_1.7-1+b3_amd64.deb"
+}

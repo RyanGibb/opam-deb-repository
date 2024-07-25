@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i trx_0.5-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r trx"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.4"}
+  "libopus0" {>= "1.1"}
+  "libortp15" {< "1-4.5.0"}
+  "libortp15" {>= "1-4.4.0"}
+]
+extra-source "trx_0.5-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trx/trx_0.5-3+b1_amd64.deb"
+}

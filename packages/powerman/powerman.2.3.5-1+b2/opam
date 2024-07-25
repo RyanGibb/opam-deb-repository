@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i powerman_2.3.5-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r powerman"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgenders0"
+  "libwrap0" {>= "7.6-4~"}
+]
+extra-source "powerman_2.3.5-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/powerman/powerman_2.3.5-1+b2_amd64.deb"
+}

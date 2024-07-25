@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i claws-mail-perl-filter_4.1.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r claws-mail-perl-filter"]
+]
+depends: [
+  "claws-mail" {= "4.1.1-2+b1"}
+  "libc6" {>= "2.33"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libperl5-36" {>= "5.36.0"}
+]
+extra-source "claws-mail-perl-filter_4.1.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/claws-mail/claws-mail-perl-filter_4.1.1-2+b1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-dbus-hslogger-dev_0.1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-dbus-hslogger-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-dbus-dev"
+  "libghc-hslogger-dev"
+  "libgmp10"
+  "libxml2" {>= "2.6.27"}
+]
+extra-source "libghc-dbus-hslogger-dev_0.1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-dbus-hslogger/libghc-dbus-hslogger-dev_0.1.0.1-1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plover_4.0.0~dev8~66~g685bd33-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plover"]
+]
+depends: [
+  "python3-any"
+  "python3-appdirs" {>= "1.3.0"}
+  "python3-dbus"
+  "python3-hid"
+  "python3-pkg-resources"
+  "python3-pyqt5"
+  "python3-serial" {>= "2.7"}
+  "python3-wcwidth" {>= "0.1.7"}
+  "python3-xlib" {>= "0.16"}
+]
+extra-source "plover_4.0.0~dev8~66~g685bd33-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plover/plover_4.0.0~dev8~66~g685bd33-2_all.deb"
+}

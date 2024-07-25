@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-text-show-prof_3.7.4-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-text-show-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-base-compat-batteries-prof"
+  "libghc-bifunctors-prof"
+  "libghc-contravariant-prof"
+  "libghc-generic-deriving-prof"
+  "libghc-semigroups-prof"
+  "libghc-tagged-prof"
+  "libghc-text-show-dev" {= "3.7.4-2+b1"}
+  "libghc-th-abstraction-prof"
+  "libghc-th-lift-prof"
+  "libghc-transformers-compat-prof"
+  "libghc-void-prof"
+]
+extra-source "libghc-text-show-prof_3.7.4-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-text-show/libghc-text-show-prof_3.7.4-2+b1_amd64.deb"
+}

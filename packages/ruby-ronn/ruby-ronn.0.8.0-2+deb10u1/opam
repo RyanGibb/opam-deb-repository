@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-ronn_0.8.0-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-ronn"]
+]
+depends: [
+  "groff"
+  "ruby-mustache" {>= "0.7.0"}
+  "ruby-nokogiri" {>= "1.9.0"}
+  "ruby-rdiscount" {>= "2.0.7"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-ronn_0.8.0-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-ronn/ruby-ronn_0.8.0-2+deb10u1_all.deb"
+}

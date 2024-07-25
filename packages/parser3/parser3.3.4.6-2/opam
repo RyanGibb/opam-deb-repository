@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i parser3_3.4.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r parser3"]
+]
+depends: [
+  "parser3-cgi" {>= "3.4.6-2"}
+  "parser3-common" {>= "3.4.6-2"}
+]
+extra-source "parser3_3.4.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/parser/parser3_3.4.6-2_all.deb"
+}

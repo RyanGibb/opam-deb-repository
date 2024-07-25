@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gphoto2_2.5.27-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gphoto2"]
+]
+depends: [
+  "libaa1" {>= "1.4p5"}
+  "libc6" {>= "2.14"}
+  "libcdk5nc6" {>= "5.0.20180306"}
+  "libexif12" {>= "0.6.21-1~"}
+  "libgphoto2-6" {>= "2.5.10"}
+  "libgphoto2-port12" {>= "2.5.10"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libncurses6" {>= "6"}
+  "libpopt0" {>= "1.14"}
+  "libreadline8" {>= "6.0"}
+]
+extra-source "gphoto2_2.5.27-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gphoto2/gphoto2_2.5.27-1_amd64.deb"
+}

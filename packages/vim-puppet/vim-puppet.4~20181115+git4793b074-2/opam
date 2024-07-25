@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vim-puppet_4~20181115+git4793b074-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vim-puppet"]
+]
+depends: [
+  ("vim" {>= "2-8.1.0693-2~"} | "neovim" {>= "0.2.2-1~"})
+]
+extra-source "vim-puppet_4~20181115+git4793b074-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vim-puppet/vim-puppet_4~20181115+git4793b074-2_all.deb"
+}

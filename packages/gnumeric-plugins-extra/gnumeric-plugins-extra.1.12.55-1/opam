@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnumeric-plugins-extra_1.12.55-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnumeric-plugins-extra"]
+]
+depends: [
+  "gir1-2-gtk-3-0"
+  "gnumeric" {= "1.12.55-1"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.28.0"}
+  "libperl5-36" {>= "5.36.0"}
+  "libpython3-11" {>= "3.11.0"}
+  "perl-any"
+  "python3-gi"
+]
+extra-source "gnumeric-plugins-extra_1.12.55-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnumeric/gnumeric-plugins-extra_1.12.55-1_amd64.deb"
+}

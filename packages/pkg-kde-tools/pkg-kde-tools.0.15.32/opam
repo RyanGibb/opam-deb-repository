@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pkg-kde-tools_0.15.32_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pkg-kde-tools"]
+]
+depends: [
+  "libdpkg-perl" {>= "1.19.0~"}
+  "perl-any"
+  "python3-any" {>= "3.3.2-2~"}
+]
+extra-source "pkg-kde-tools_0.15.32_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pkg-kde-tools/pkg-kde-tools_0.15.32_all.deb"
+}

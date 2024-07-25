@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nfs-ganesha-ceph_4.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nfs-ganesha-ceph"]
+]
+depends: [
+  "libacl1" {>= "2.2.23"}
+  "libc6" {>= "2.34"}
+  "libcephfs2" {>= "16.2.6+ds"}
+  "librados2" {>= "16.2.11+ds"}
+  "liburcu8" {>= "0.13.0"}
+  "nfs-ganesha" {= "4.3-2"}
+]
+extra-source "nfs-ganesha-ceph_4.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nfs-ganesha/nfs-ganesha-ceph_4.3-2_amd64.deb"
+}

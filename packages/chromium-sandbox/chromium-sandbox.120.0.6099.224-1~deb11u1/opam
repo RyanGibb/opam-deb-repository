@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i chromium-sandbox_120.0.6099.224-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r chromium-sandbox"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "chromium-sandbox_120.0.6099.224-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chromium/chromium-sandbox_120.0.6099.224-1~deb11u1_amd64.deb"
+}

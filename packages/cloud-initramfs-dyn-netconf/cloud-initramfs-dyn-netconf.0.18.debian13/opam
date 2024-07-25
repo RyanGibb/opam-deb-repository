@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cloud-initramfs-dyn-netconf_0.18.debian13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cloud-initramfs-dyn-netconf"]
+]
+depends: [
+  "initramfs-tools"
+]
+extra-source "cloud-initramfs-dyn-netconf_0.18.debian13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cloud-initramfs-tools/cloud-initramfs-dyn-netconf_0.18.debian13_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ipaclient_4.9.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ipaclient"]
+]
+depends: [
+  "freeipa-common" {= "4.9.11-1"}
+  "python3-any"
+  "python3-augeas"
+  "python3-cryptography" {>= "1.6"}
+  "python3-dnspython"
+  "python3-ipalib" {>= "4.9.11-1"}
+  "python3-jinja2"
+  "python3-qrcode" {>= "5.0.0"}
+  "python3-six"
+]
+extra-source "python3-ipaclient_4.9.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeipa/python3-ipaclient_4.9.11-1_all.deb"
+}

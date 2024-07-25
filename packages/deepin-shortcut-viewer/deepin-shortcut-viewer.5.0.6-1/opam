@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i deepin-shortcut-viewer_5.0.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r deepin-shortcut-viewer"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdtkcore5" {>= "5.5.31~"}
+  "libdtkgui5" {>= "5.5.22~"}
+  "libdtkwidget5" {>= "5.5.45~"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.9.0~beta"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "deepin-shortcut-viewer_5.0.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/deepin-shortcut-viewer/deepin-shortcut-viewer_5.0.6-1_amd64.deb"
+}

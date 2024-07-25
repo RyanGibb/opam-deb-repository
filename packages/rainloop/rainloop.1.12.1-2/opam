@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rainloop_1.12.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rainloop"]
+]
+depends: [
+  "ckeditor"
+  "php-curl"
+  "php-json"
+  "php-nrk-predis"
+  "php-pclzip"
+  "php-seclib"
+  "php-xml"
+  ("nginx" | "apache2" | "httpd")
+  ("php-fpm" | "libapache2-mod-php")
+]
+extra-source "rainloop_1.12.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rainloop/rainloop_1.12.1-2_all.deb"
+}

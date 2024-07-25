@@ -1,0 +1,44 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i peruse_1.80+dfsg-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r peruse"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libkf5archive5" {>= "5.75.0~"}
+  "libkf5baloo5" {>= "5.75.0~"}
+  "libkf5configcore5" {>= "5.75.0~"}
+  "libkf5coreaddons5" {>= "5.75.0~"}
+  "libkf5crash5" {>= "5.75.0~"}
+  "libkf5declarative5" {>= "5.75.0~"}
+  "libkf5filemetadata3" {>= "5.1.0.1"}
+  "libkf5guiaddons5" {>= "5.75.0~"}
+  "libkf5i18n5" {>= "5.75.0~"}
+  "libkf5kiocore5" {>= "5.93.0"}
+  "libkf5kiowidgets5" {>= "5.75.0~"}
+  "libkf5newstuffcore5" {>= "5.75.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5"
+  "libqt5qml5" {>= "5.14.0~"}
+  "libqt5sql5" {>= "5.14.0~"}
+  "libqt5widgets5" {>= "5.14.0~"}
+  "libstdc++6" {>= "4.5"}
+  "peruse-common" {>= "1.80+dfsg-2"}
+  "qml-module-org-kde-kcm"
+  "qml-module-org-kde-kirigami2"
+  "qml-module-org-kde-newstuff"
+  "qml-module-qt-labs-folderlistmodel"
+  "qml-module-qt-labs-settings"
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-dialogs"
+  "qml-module-qtquick-layouts"
+  ("libqt5gui5" {>= "5.14.0~"} | "libqt5gui5-gles" {>= "5.14.0~"})
+  ("libqt5quick5" {>= "5.14.0~"} | "libqt5quick5-gles" {>= "5.14.0~"})
+]
+extra-source "peruse_1.80+dfsg-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/peruse/peruse_1.80+dfsg-2+b4_amd64.deb"
+}

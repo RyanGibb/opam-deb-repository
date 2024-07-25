@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clonalorigin_1.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clonalorigin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgsl23" {>= "2.5"}
+  "libgslcblas0" {>= "2.4"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "clonalorigin_1.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clonalorigin/clonalorigin_1.0-3_amd64.deb"
+}

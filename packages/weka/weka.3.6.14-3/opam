@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i weka_3.6.14-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r weka"]
+]
+depends: [
+  "cup" {>= "0.11a+20060608"}
+  "java-wrappers"
+  ("default-jre" | "java7-runtime" | "java6-runtime")
+]
+extra-source "weka_3.6.14-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/weka/weka_3.6.14-3_all.deb"
+}

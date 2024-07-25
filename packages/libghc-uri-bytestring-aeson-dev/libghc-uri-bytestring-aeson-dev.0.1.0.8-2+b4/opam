@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-uri-bytestring-aeson-dev_0.1.0.8-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-uri-bytestring-aeson-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-aeson-dev"
+  "libghc-uri-bytestring-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-uri-bytestring-aeson-dev_0.1.0.8-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-uri-bytestring-aeson/libghc-uri-bytestring-aeson-dev_0.1.0.8-2+b4_amd64.deb"
+}

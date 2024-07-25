@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i calamaris_2.99.4.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r calamaris"]
+]
+depends: [
+  "bc"
+  "perl"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "calamaris_2.99.4.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/calamaris/calamaris_2.99.4.5-3_all.deb"
+}

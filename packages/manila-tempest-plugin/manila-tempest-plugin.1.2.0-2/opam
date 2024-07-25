@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i manila-tempest-plugin_1.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r manila-tempest-plugin"]
+]
+depends: [
+  "python3-any"
+  "python3-ddt"
+  "python3-oslo-log"
+  "python3-pbr"
+  "python3-tempest"
+  "tempest"
+]
+extra-source "manila-tempest-plugin_1.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/manila-tempest-plugin/manila-tempest-plugin_1.2.0-2_all.deb"
+}

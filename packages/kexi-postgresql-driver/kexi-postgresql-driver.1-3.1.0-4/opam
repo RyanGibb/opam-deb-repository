@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kexi-postgresql-driver_1:3.1.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kexi-postgresql-driver"]
+]
+depends: [
+  "kexi" {= "1-3.1.0-4"}
+  "libc6" {>= "2.14"}
+  "libkdb3-4" {>= "3.1.0~"}
+  "libkdb3-driver-postgresql"
+  "libkf5coreaddons5" {>= "4.99.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "kexi-postgresql-driver_1:3.1.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kexi/kexi-postgresql-driver_3.1.0-4_amd64.deb"
+}

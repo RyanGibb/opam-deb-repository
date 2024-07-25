@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aqbanking-tools_5.7.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aqbanking-tools"]
+]
+depends: [
+  "libaqbanking35" {>= "5.6.11"}
+  "libaqbanking35-plugins"
+  "libaqebics0" {>= "5.3.2beta"}
+  "libaqhbci24" {>= "5.5.1"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgwenhywfar60" {>= "4.17.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "aqbanking-tools_5.7.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaqbanking/aqbanking-tools_5.7.8-3_amd64.deb"
+}

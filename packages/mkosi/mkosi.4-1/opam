@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mkosi_4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mkosi"]
+]
+depends: [
+  "btrfs-progs"
+  "debootstrap"
+  "dosfstools"
+  "e2fsprogs"
+  "python3-any" {>= "3.5~"}
+  "systemd-container" {>= "233-1"}
+  "xz-utils"
+  ("fdisk" | "util-linux" {< "2.29.2-3~"})
+]
+extra-source "mkosi_4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mkosi/mkosi_4-1_all.deb"
+}

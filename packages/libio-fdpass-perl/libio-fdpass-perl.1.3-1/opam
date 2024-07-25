@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libio-fdpass-perl_1.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libio-fdpass-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "perl"
+  "perl-base"
+]
+extra-source "libio-fdpass-perl_1.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libio-fdpass-perl/libio-fdpass-perl_1.3-1_amd64.deb"
+}

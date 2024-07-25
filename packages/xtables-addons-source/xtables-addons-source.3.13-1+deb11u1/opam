@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xtables-addons-source_3.13-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xtables-addons-source"]
+]
+depends: [
+  "bzip2"
+  "debhelper" {>= "8"}
+  "libxtables-dev"
+  "make"
+  "pkg-config"
+]
+extra-source "xtables-addons-source_3.13-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xtables-addons/xtables-addons-source_3.13-1+deb11u1_all.deb"
+}

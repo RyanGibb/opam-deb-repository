@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-trust-dns-server+dns-over-https-dev_0.22.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-trust-dns-server+dns-over-https-dev"]
+]
+depends: [
+  "librust-trust-dns-proto-0-22+dns-over-https-dev"
+  "librust-trust-dns-server+h2-dev" {= "0.22.0-2"}
+  "librust-trust-dns-server+http-dev" {= "0.22.0-2"}
+  "librust-trust-dns-server-dev" {= "0.22.0-2"}
+]
+extra-source "librust-trust-dns-server+dns-over-https-dev_0.22.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-trust-dns-server/librust-trust-dns-server+dns-over-https-dev_0.22.0-2_amd64.deb"
+}

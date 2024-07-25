@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-simple-dev_1.0.0-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-simple-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-aeson-dev"
+  "libghc-base64-bytestring-dev"
+  "libghc-blaze-builder-dev"
+  "libghc-http-types-dev"
+  "libghc-mime-types-dev"
+  "libghc-monad-control-dev"
+  "libghc-simple-templates-dev"
+  "libghc-transformers-base-dev"
+  "libghc-unordered-containers-dev"
+  "libghc-vector-dev"
+  "libghc-wai-dev"
+  "libghc-wai-extra-dev"
+  "libgmp10"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-simple-dev_1.0.0-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-simple/libghc-simple-dev_1.0.0-1+b4_amd64.deb"
+}

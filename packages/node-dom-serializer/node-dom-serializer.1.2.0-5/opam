@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-dom-serializer_1.2.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-dom-serializer"]
+]
+depends: [
+  "node-domelementtype" {>= "2.0.1~"}
+  "node-domhandler" {>= "4.0.0~"}
+  "node-entities" {>= "2.0.0~"}
+]
+extra-source "node-dom-serializer_1.2.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-dom-serializer/node-dom-serializer_1.2.0-5_all.deb"
+}

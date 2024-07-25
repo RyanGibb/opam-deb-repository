@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i compface_1:1.5.2-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r compface"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libcompfaceg1"
+]
+extra-source "compface_1:1.5.2-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcompface/compface_1.5.2-5.1_amd64.deb"
+}

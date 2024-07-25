@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdockapp-dev_1:0.7.2-1+b11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdockapp-dev"]
+]
+depends: [
+  "libdockapp3" {= "1-0.7.2-1+b11"}
+  "libx11-dev"
+  "libxpm-dev"
+]
+extra-source "libdockapp-dev_1:0.7.2-1+b11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdockapp/libdockapp-dev_0.7.2-1+b11_amd64.deb"
+}

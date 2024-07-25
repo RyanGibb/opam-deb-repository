@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-networkmanager_2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-networkmanager"]
+]
+depends: [
+  "network-manager"
+  "python3-any"
+  "python3-dbus"
+  "python3-six"
+]
+extra-source "python3-networkmanager_2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-networkmanager/python3-networkmanager_2.2-2_all.deb"
+}

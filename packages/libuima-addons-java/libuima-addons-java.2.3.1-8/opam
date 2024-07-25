@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libuima-addons-java_2.3.1-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libuima-addons-java"]
+]
+depends: [
+  "libbsh-java" {>= "2.0b4"}
+  "libcommons-digester-java"
+  "libcommons-lang-java" {>= "2.6"}
+  "libcommons-logging-java"
+  "libguava-java"
+  "liblog4j1-2-java" {>= "1.2.17"}
+  "librhino-java"
+  "libservlet3-1-java"
+  "libslf4j-java" {>= "1.7.25"}
+  "libuima-core-java" {>= "2.10.1"}
+  "libxmlbeans-java"
+]
+extra-source "libuima-addons-java_2.3.1-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uima-addons/libuima-addons-java_2.3.1-8_all.deb"
+}

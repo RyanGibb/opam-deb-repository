@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tclsoldout_0.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tclsoldout"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsoldout1" {>= "1.3"}
+  "tcl" {>= "8.6.0-2"}
+  ("libtcl8-6" {>= "8.6.11+dfsg-1~"} | "libtcl")
+]
+extra-source "tclsoldout_0.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tclsoldout/tclsoldout_0.1.1-2_amd64.deb"
+}

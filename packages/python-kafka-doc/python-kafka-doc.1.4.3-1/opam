@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-kafka-doc_1.4.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-kafka-doc"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "1.0"}
+  "python3-lz4"
+  "python3-six"
+  "python3-snappy"
+  "sphinx-rtd-theme-common" {>= "0.4.0+dfsg"}
+]
+extra-source "python-kafka-doc_1.4.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-kafka/python-kafka-doc_1.4.3-1_all.deb"
+}

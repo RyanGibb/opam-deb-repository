@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xwatch_2.11-15+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xwatch"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libforms2"
+  "libx11-6"
+]
+extra-source "xwatch_2.11-15+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xwatch/xwatch_2.11-15+b2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-limma_3.54.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-limma"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-bioc-biocgenerics"
+]
+extra-source "r-bioc-limma_3.54.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-limma/r-bioc-limma_3.54.1+dfsg-1_amd64.deb"
+}

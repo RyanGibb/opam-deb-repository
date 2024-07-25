@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ocsinventory-reports_2.8.1+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ocsinventory-reports"]
+]
+depends: [
+  "ieee-data"
+  "javascript-common"
+  "libjs-bootstrap"
+  "libjs-jquery"
+  "libjs-jquery-datatables"
+  "libjs-jquery-file-upload"
+  "libjs-jquery-migrate-1"
+  "libjs-jquery-ui"
+  "libjs-select2-js"
+  "libphp-phpmailer"
+  "perl-any"
+  "php"
+  "php-cas"
+  "php-cli"
+  "php-gd"
+  "php-imap"
+  "php-ldap"
+  "php-mbstring"
+  "php-mysql"
+  "php-pclzip"
+  "php-soap"
+  "php-xml"
+  "php-zip"
+  "phpqrcode"
+  ("default-mysql-client" | "virtual-mysql-client")
+  ("libapache2-mod-php" | "php-cgi" | "php-fpm")
+]
+extra-source "ocsinventory-reports_2.8.1+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocsinventory-server/ocsinventory-reports_2.8.1+dfsg1-1_all.deb"
+}

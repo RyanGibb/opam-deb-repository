@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-node-expat_2.3.18+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-node-expat"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libexpat1" {>= "2.0.1"}
+  "libnode72" {>= "12.18.1~dfsg"}
+  "libstdc++6" {>= "5"}
+  "node-bindings"
+  "nodejs" {>= "12.18.1~dfsg"}
+]
+extra-source "node-node-expat_2.3.18+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-expat/node-node-expat_2.3.18+ds-3_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librpc-xml-perl_0.80-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librpc-xml-perl"]
+]
+depends: [
+  "libdatetime-format-iso8601-perl"
+  "libio-socket-ip-perl"
+  "libwww-perl"
+  "perl" {>= "5.17.9"}
+  ("libhttp-daemon-perl" | "libwww-perl" {< "6"})
+  ("libxml-parser-perl" | "libxml-libxml-perl")
+]
+extra-source "librpc-xml-perl_0.80-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librpc-xml-perl/librpc-xml-perl_0.80-2_all.deb"
+}

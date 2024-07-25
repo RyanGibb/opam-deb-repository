@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-digest-prof_0.0.1.2-9+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-digest-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-digest-dev" {= "0.0.1.2-9+b2"}
+]
+extra-source "libghc-digest-prof_0.0.1.2-9+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-digest/libghc-digest-prof_0.0.1.2-9+b2_amd64.deb"
+}

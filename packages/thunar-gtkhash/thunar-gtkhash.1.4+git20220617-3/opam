@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i thunar-gtkhash_1.4+git20220617-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r thunar-gtkhash"]
+]
+depends: [
+  "gtkhash" {= "1.4+git20220617-3"}
+  "libb2-1" {>= "0.98.1"}
+  "libc6" {>= "2.14"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libglib2-0-0" {>= "2.67.3"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libnettle8"
+  "libthunarx-3-0" {>= "1.1.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "thunar-gtkhash_1.4+git20220617-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtkhash/thunar-gtkhash_1.4+git20220617-3_amd64.deb"
+}

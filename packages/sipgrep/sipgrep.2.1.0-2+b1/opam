@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sipgrep_2.1.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sipgrep"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcap0-8" {>= "0.9.8"}
+  "libpcre3"
+]
+extra-source "sipgrep_2.1.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sipgrep/sipgrep_2.1.0-2+b1_amd64.deb"
+}

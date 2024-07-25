@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hlint_2.1.10-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hlint"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.27"}
+  "libffi6" {>= "3.0.4"}
+  "libgmp10"
+  "libyaml-0-2"
+]
+extra-source "hlint_2.1.10-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hlint/hlint_2.1.10-2+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-aio-pika_8.2.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-aio-pika"]
+]
+depends: [
+  "python3-aiormq"
+  "python3-any"
+  "python3-yarl"
+  ("python3-typing-extensions" | "python3" {> "3.8.0"})
+]
+extra-source "python3-aio-pika_8.2.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-aio-pika/python3-aio-pika_8.2.5-1_all.deb"
+}

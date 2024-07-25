@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfreefem++_3.61.1+dfsg1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfreefem++"]
+]
+depends: [
+  "coinor-libipopt1v5"
+  "libc6" {>= "2.14"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc1" {>= "1-4.0"}
+  "libgfortran5" {>= "8"}
+  "libgsl23" {>= "2.5"}
+  "libmetis5"
+  "libmumps-seq-5-1-2"
+  "libstdc++6" {>= "5.2"}
+  "libtet1-5"
+  "libumfpack5" {>= "1-4.5.2"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libfreefem++_3.61.1+dfsg1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freefem++/libfreefem++_3.61.1+dfsg1-4_amd64.deb"
+}

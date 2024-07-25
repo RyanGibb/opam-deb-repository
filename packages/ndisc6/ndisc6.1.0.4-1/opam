@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ndisc6_1.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ndisc6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "perl-any"
+]
+conflicts: [
+  "iputils-tracepath (<< 3:20070202)"
+]
+extra-source "ndisc6_1.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ndisc6/ndisc6_1.0.4-1_amd64.deb"
+}

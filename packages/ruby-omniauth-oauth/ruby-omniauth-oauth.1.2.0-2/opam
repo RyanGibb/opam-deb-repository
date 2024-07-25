@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-omniauth-oauth_1.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-omniauth-oauth"]
+]
+depends: [
+  "ruby-oauth"
+  "ruby-omniauth" {< "3"}
+  "ruby-omniauth" {>= "1.0"}
+]
+extra-source "ruby-omniauth-oauth_1.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-omniauth-oauth/ruby-omniauth-oauth_1.2.0-2_all.deb"
+}

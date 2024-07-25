@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rustc-web_1.70.0+dfsg1-7~deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rustc-web"]
+]
+depends: [
+  "binutils" {>= "2.26"}
+  "gcc"
+  "libc-dev"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "4.2"}
+  "libstd-rust-web-dev" {= "1.70.0+dfsg1-7~deb12u2"}
+]
+conflicts: [
+  "rustc"
+  "rustc-mozilla"
+]
+extra-source "rustc-web_1.70.0+dfsg1-7~deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rustc-web/rustc-web_1.70.0+dfsg1-7~deb12u2_amd64.deb"
+}

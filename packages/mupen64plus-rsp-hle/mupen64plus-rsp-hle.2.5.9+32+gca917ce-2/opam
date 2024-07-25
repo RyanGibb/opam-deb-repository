@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mupen64plus-rsp-hle_2.5.9+32+gca917ce-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mupen64plus-rsp-hle"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libmupen64plus2"
+]
+extra-source "mupen64plus-rsp-hle_2.5.9+32+gca917ce-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mupen64plus-rsp-hle/mupen64plus-rsp-hle_2.5.9+32+gca917ce-2_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-ipython_5.8.0-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-ipython"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-backports-shutil-get-terminal-size"
+  "python-decorator"
+  "python-pathlib2"
+  "python-pexpect"
+  "python-pickleshare"
+  "python-pkg-resources"
+  "python-prompt-toolkit"
+  "python-pygments"
+  "python-simplegeneric"
+  "python-traitlets"
+]
+extra-source "python-ipython_5.8.0-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ipython/python-ipython_5.8.0-1+deb10u1_all.deb"
+}

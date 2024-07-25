@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-libpq_1.8.12+~1.8.10-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-libpq"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libnode108" {>= "18.10.0+dfsg"}
+  "libpq5" {>= "9.0~"}
+  "libstdc++6" {>= "5"}
+  "node-bindings"
+]
+extra-source "node-libpq_1.8.12+~1.8.10-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-libpq/node-libpq_1.8.12+~1.8.10-2_amd64.deb"
+}

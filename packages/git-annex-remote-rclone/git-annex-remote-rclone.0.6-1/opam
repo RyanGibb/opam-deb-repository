@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i git-annex-remote-rclone_0.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r git-annex-remote-rclone"]
+]
+depends: [
+  "rclone"
+  ("git-annex" | "git-annex-standalone")
+]
+extra-source "git-annex-remote-rclone_0.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/git-annex-remote-rclone/git-annex-remote-rclone_0.6-1_all.deb"
+}

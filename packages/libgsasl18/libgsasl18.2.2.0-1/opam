@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgsasl18_2.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgsasl18"]
+]
+depends: [
+  "libc6" {>= "2.26"}
+  "libgssglue1" {>= "0.4"}
+  "libidn12" {>= "1.13"}
+  "libntlm0" {>= "1.2"}
+]
+extra-source "libgsasl18_2.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gsasl/libgsasl18_2.2.0-1_amd64.deb"
+}

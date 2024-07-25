@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qemu-user_1:5.2+dfsg-11+deb11u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qemu-user"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "libcapstone4" {>= "4"}
+  "libgcc-s1" {>= "4.7"}
+  "libglib2-0-0" {>= "2.37.1"}
+  "libgnutls30" {>= "3.7.0"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "qemu-user_1:5.2+dfsg-11+deb11u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qemu/qemu-user_5.2+dfsg-11+deb11u3_amd64.deb"
+}

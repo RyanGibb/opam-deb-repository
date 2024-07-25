@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xfsprogs_6.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xfsprogs"]
+]
+depends: [
+  "libblkid1" {>= "2.17.2"}
+  "libc6" {>= "2.34"}
+  "libdevmapper1-02-1" {>= "2-1.02.20"}
+  "libedit2" {>= "2.11-20080614-0"}
+  "libicu72" {>= "72.1~rc-1~"}
+  "libinih1" {>= "53"}
+  "liburcu8" {>= "0.13.0"}
+  "libuuid1" {>= "2.16"}
+  "python3-any"
+]
+extra-source "xfsprogs_6.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xfsprogs/xfsprogs_6.1.0-1_amd64.deb"
+}

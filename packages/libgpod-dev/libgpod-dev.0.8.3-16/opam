@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgpod-dev_0.8.3-16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgpod-dev"]
+]
+depends: [
+  "libglib2-0-dev"
+  "libgpod4" {= "0.8.3-16"}
+  "libimobiledevice-dev"
+  ("libgdk-pixbuf-2-0-dev" | "libgdk-pixbuf2-0-dev")
+]
+extra-source "libgpod-dev_0.8.3-16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgpod/libgpod-dev_0.8.3-16_amd64.deb"
+}

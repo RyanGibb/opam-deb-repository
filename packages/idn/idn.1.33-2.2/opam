@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i idn_1.33-2.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r idn"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libidn11" {>= "1.13"}
+]
+extra-source "idn_1.33-2.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libidn/idn_1.33-2.2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-network-byte-order-prof_0.1.5-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-network-byte-order-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-network-byte-order-dev" {= "0.1.5-1+b1"}
+]
+extra-source "libghc-network-byte-order-prof_0.1.5-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-network-byte-order/libghc-network-byte-order-prof_0.1.5-1+b1_amd64.deb"
+}

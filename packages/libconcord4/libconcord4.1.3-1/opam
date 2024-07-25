@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libconcord4_1.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libconcord4"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc1" {>= "1-3.0"}
+  "libhidapi-libusb0" {>= "0.8.0~rc1+git20140201.3a66d4e+dfsg"}
+  "libstdc++6" {>= "5.2"}
+  "libzip4" {>= "0.10"}
+]
+extra-source "libconcord4_1.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/concordance/libconcord4_1.3-1_amd64.deb"
+}

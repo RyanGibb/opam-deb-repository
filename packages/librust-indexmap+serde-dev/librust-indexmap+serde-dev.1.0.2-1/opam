@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-indexmap+serde-dev_1.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-indexmap+serde-dev"]
+]
+depends: [
+  "librust-indexmap-dev" {= "1.0.2-1"}
+  "librust-serde-1+default-dev"
+]
+extra-source "librust-indexmap+serde-dev_1.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-indexmap/librust-indexmap+serde-dev_1.0.2-1_amd64.deb"
+}

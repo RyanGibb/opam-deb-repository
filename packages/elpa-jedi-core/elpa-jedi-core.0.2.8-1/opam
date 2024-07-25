@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-jedi-core_0.2.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-jedi-core"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-epc" {>= "0.1.0"}
+  "elpa-python-environment" {>= "0.0.2"}
+  "emacsen-common"
+  "python3"
+  "python3-epc"
+  "python3-jedi"
+  "python3-sexpdata"
+  "virtualenv"
+]
+extra-source "elpa-jedi-core_0.2.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emacs-jedi/elpa-jedi-core_0.2.8-1_all.deb"
+}

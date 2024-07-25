@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-rvar-prof_0.2.0.6-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-rvar-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-monadprompt-prof"
+  "libghc-random-source-prof"
+  "libghc-rvar-dev" {= "0.2.0.6-1+b1"}
+]
+extra-source "libghc-rvar-prof_0.2.0.6-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-rvar/libghc-rvar-prof_0.2.0.6-1+b1_amd64.deb"
+}

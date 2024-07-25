@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i adns-tools_1.6.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r adns-tools"]
+]
+depends: [
+  "libadns1" {>= "1.5.0~"}
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "libadns0"
+  "libadns1-bin"
+]
+extra-source "adns-tools_1.6.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/adns/adns-tools_1.6.0-2_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbot-training-perl_0.07-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbot-training-perl"]
+]
+depends: [
+  "libdir-self-perl"
+  "libfile-sharedir-perl"
+  "libmoose-perl"
+  "libmoosex-getopt-perl"
+  "libmouse-perl"
+  "libmousex-getopt-perl"
+  "libnamespace-clean-perl"
+  "perl"
+  ("libmodule-pluggable-perl" | "perl" {< "5.17.9"})
+]
+extra-source "libbot-training-perl_0.07-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbot-training-perl/libbot-training-perl_0.07-1_all.deb"
+}

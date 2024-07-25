@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nwchem_7.0.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nwchem"]
+]
+depends: [
+  "mpi-default-bin"
+  ("nwchem-openmpi" | "nwchem-mpich" | "nwchem-openmpi")
+]
+extra-source "nwchem_7.0.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nwchem/nwchem_7.0.2-4_all.deb"
+}

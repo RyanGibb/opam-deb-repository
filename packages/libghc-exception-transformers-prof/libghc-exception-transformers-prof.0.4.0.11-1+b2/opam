@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-exception-transformers-prof_0.4.0.11-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-exception-transformers-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-exception-transformers-dev" {= "0.4.0.11-1+b2"}
+  "libghc-transformers-compat-prof"
+]
+extra-source "libghc-exception-transformers-prof_0.4.0.11-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-exception-transformers/libghc-exception-transformers-prof_0.4.0.11-1+b2_amd64.deb"
+}

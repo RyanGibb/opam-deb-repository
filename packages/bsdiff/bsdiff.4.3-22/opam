@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bsdiff_4.3-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bsdiff"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.4"}
+]
+extra-source "bsdiff_4.3-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bsdiff/bsdiff_4.3-22_amd64.deb"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i progress-linux-host_20210101-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r progress-linux-host"]
+]
+depends: [
+  "cryptsetup-bin"
+  "dmidecode"
+  "ethtool"
+  "firmware-linux-free"
+  "gpm"
+  "hdparm"
+  "keyutils"
+  "ntp"
+  "nvme-cli"
+  "parted"
+  "plymouth"
+  "progress-linux-base-system"
+  "smartmontools"
+  "spectre-meltdown-checker"
+  ("rng-tools" | "rng-tools5")
+]
+extra-source "progress-linux-host_20210101-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/progress-linux-metapackages/progress-linux-host_20210101-2_amd64.deb"
+}

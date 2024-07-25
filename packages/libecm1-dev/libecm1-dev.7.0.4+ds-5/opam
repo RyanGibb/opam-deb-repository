@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libecm1-dev_7.0.4+ds-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libecm1-dev"]
+]
+depends: [
+  "libecm1" {= "7.0.4+ds-5"}
+  "libecm1-dev-common" {= "7.0.4+ds-5"}
+  "libgmp-dev"
+]
+extra-source "libecm1-dev_7.0.4+ds-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gmp-ecm/libecm1-dev_7.0.4+ds-5_amd64.deb"
+}

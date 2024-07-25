@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mozilla-devscripts_0.54.2+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mozilla-devscripts"]
+]
+depends: [
+  "perl-any"
+  "python3-any"
+  "python3-librdf"
+  "unzip"
+  "zip"
+]
+extra-source "mozilla-devscripts_0.54.2+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mozilla-devscripts/mozilla-devscripts_0.54.2+nmu1_all.deb"
+}

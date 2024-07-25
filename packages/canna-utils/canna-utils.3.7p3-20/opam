@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i canna-utils_3.7p3-20_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r canna-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcanna1g" {>= "3.7p3"}
+]
+extra-source "canna-utils_3.7p3-20_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/canna/canna-utils_3.7p3-20_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxml-saxon-xslt2-perl_0.010-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxml-saxon-xslt2-perl"]
+]
+depends: [
+  "libinline-java-perl"
+  "libxml-libxml-perl"
+  "perl"
+  ("libsaxonhe-java" | "libsaxonb-java")
+]
+extra-source "libxml-saxon-xslt2-perl_0.010-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxml-saxon-xslt2-perl/libxml-saxon-xslt2-perl_0.010-3_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcgiwrap_1.1.0-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcgiwrap"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libfcgi0ldbl"
+  "libsystemd0"
+  "lsb-base" {>= "3.0-6"}
+  ("spawn-fcgi" {>= "1.6.1"} | "systemd")
+]
+extra-source "fcgiwrap_1.1.0-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcgiwrap/fcgiwrap_1.1.0-12_amd64.deb"
+}

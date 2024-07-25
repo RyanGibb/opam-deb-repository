@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-htmlparser2_3.9.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-htmlparser2"]
+]
+depends: [
+  "node-domelementtype" {>= "1.3.0"}
+  "node-domhandler" {>= "2.3.0"}
+  "node-domutils" {>= "1.5.1"}
+  "node-entities" {>= "1.1.1"}
+  "node-inherits" {>= "2.0.1"}
+  "nodejs"
+]
+extra-source "node-htmlparser2_3.9.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-htmlparser2/node-htmlparser2_3.9.2-1_all.deb"
+}

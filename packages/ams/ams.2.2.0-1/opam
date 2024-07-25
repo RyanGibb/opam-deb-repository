@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ams_2.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ams"]
+]
+depends: [
+  "cmt"
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.29"}
+  "libclalsadrv2"
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc-s1" {>= "3.0"}
+  "liblo7" {>= "0.26~repack"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5opengl5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.2.0"}
+  "libstdc++6" {>= "5.2"}
+  "mcp-plugins"
+  "swh-plugins"
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+]
+extra-source "ams_2.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ams/ams_2.2.0-1_amd64.deb"
+}

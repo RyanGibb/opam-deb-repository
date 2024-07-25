@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i josm_0.0.svn14760+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r josm"]
+]
+depends: [
+  "fonts-noto"
+  "jmapviewer" {>= "2.9"}
+  "libcommons-compress-java"
+  "libcommons-logging-java"
+  "libgettext-commons-java" {>= "0.9.6"}
+  "liboauth-signpost-java" {>= "1.2"}
+  "openjfx"
+  "proj-data"
+  ("default-jre" {>= "2-1.9"} | "java9-runtime")
+]
+conflicts: [
+  "josm-plugins"
+]
+extra-source "josm_0.0.svn14760+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/josm/josm_0.0.svn14760+dfsg-1_all.deb"
+}

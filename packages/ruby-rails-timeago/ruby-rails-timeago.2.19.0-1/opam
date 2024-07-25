@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rails-timeago_2.19.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rails-timeago"]
+]
+depends: [
+  "libjs-jquery-timeago" {>= "1.6.7~"}
+  "ruby-actionpack" {>= "2-3.1~"}
+  "ruby-activesupport" {>= "2-3.1~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-rails-timeago_2.19.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rails-timeago/ruby-rails-timeago_2.19.0-1_all.deb"
+}

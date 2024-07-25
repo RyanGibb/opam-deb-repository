@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-zeroc-ice_3.7.8-2.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-zeroc-ice"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libzeroc-ice3-7" {= "3.7.8-2.1+b1"}
+  "php-common" {>= "1-7.0+33~"}
+  ("libapache2-mod-php8-2" | "libphp8-2-embed" | "php8-2-cgi" | "php8-2-cli" | "php8-2-fpm" | "php8-2-phpdbg")
+]
+extra-source "php-zeroc-ice_3.7.8-2.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zeroc-ice/php-zeroc-ice_3.7.8-2.1+b1_amd64.deb"
+}

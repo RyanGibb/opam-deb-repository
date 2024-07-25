@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-k8s-utils-dev_0.0~git20221128.99ec85e-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-k8s-utils-dev"]
+]
+depends: [
+  "golang-github-davecgh-go-spew-dev"
+  "golang-github-spf13-afero-dev"
+  "golang-github-stretchr-testify-dev"
+  "golang-k8s-klog-dev"
+]
+extra-source "golang-k8s-utils-dev_0.0~git20221128.99ec85e-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-k8s-utils/golang-k8s-utils-dev_0.0~git20221128.99ec85e-1_all.deb"
+}

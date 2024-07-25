@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gqrx-sdr_2.11.5-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gqrx-sdr"]
+]
+depends: [
+  "libboost-program-options1-67-0"
+  "libboost-system1-67-0"
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-4.0"}
+  "libgnuradio-analog3-7-13"
+  "libgnuradio-audio3-7-13"
+  "libgnuradio-blocks3-7-13"
+  "libgnuradio-digital3-7-13"
+  "libgnuradio-fft3-7-13"
+  "libgnuradio-filter3-7-13"
+  "libgnuradio-osmosdr0-1-4" {>= "0.1.4-13"}
+  "libgnuradio-pmt3-7-13"
+  "libgnuradio-runtime3-7-13"
+  "liblog4cpp5v5"
+  "libpulse0" {>= "0.99.1"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.2.0"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "5.2"}
+  "libvolk1-4"
+  "pulseaudio"
+]
+conflicts: [
+  "gqrx (<= 2.3.0-0kali4)"
+]
+extra-source "gqrx-sdr_2.11.5-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gqrx-sdr/gqrx-sdr_2.11.5-1+b2_amd64.deb"
+}

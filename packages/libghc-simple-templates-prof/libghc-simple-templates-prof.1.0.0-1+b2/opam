@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-simple-templates-prof_1.0.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-simple-templates-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-attoparsec-prof"
+  "libghc-scientific-prof"
+  "libghc-simple-templates-dev" {= "1.0.0-1+b2"}
+  "libghc-unordered-containers-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-simple-templates-prof_1.0.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-simple-templates/libghc-simple-templates-prof_1.0.0-1+b2_amd64.deb"
+}

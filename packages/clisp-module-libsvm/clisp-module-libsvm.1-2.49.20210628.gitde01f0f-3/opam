@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clisp-module-libsvm_1:2.49.20210628.gitde01f0f-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clisp-module-libsvm"]
+]
+depends: [
+  "clisp" {= "1-2.49.20210628.gitde01f0f-3"}
+  "libsvm3" {>= "3.21+ds"}
+]
+extra-source "clisp-module-libsvm_1:2.49.20210628.gitde01f0f-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clisp/clisp-module-libsvm_2.49.20210628.gitde01f0f-3_amd64.deb"
+}

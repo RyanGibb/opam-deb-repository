@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libresteasy3.0-java_3.0.26-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libresteasy3.0-java"]
+]
+depends: [
+  "junit4" {>= "4.13.2"}
+  "libcommons-io-java" {>= "2.11.0"}
+  "libgeronimo-annotation-1-3-spec-java"
+  "libhttpclient-java" {>= "4.5.14"}
+  "libjackson2-annotations-java" {>= "2.14.0"}
+  "libjackson2-core-java" {>= "2.14.1"}
+  "libjackson2-databind-java"
+  "libjackson2-jaxrs-providers-java" {>= "2.12.1"}
+  "libjakarta-activation-java"
+  "libjaxb-api-java" {>= "2.3.1"}
+  "libjaxrs-api-java"
+  "libjboss-logging-java"
+  "libjboss-logging-tools-java"
+  "libservlet-api-java" {>= "4.0.1"}
+]
+conflicts: [
+  "libresteasy-java"
+]
+extra-source "libresteasy3.0-java_3.0.26-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/resteasy3.0/libresteasy3.0-java_3.0.26-6_all.deb"
+}

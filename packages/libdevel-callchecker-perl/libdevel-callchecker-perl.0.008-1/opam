@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdevel-callchecker-perl_0.008-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdevel-callchecker-perl"]
+]
+depends: [
+  "libb-hooks-op-check-perl"
+  "libc6" {>= "2.2.5"}
+  "libdynaloader-functions-perl"
+  "perl" {>= "5.28.1-4"}
+  "perl-base"
+]
+extra-source "libdevel-callchecker-perl_0.008-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdevel-callchecker-perl/libdevel-callchecker-perl_0.008-1_amd64.deb"
+}

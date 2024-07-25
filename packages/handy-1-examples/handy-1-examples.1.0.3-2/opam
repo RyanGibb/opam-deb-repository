@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i handy-1-examples_1.0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r handy-1-examples"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.43.4"}
+  "libgtk-3-0" {>= "3.16.2"}
+  "libhandy-1-0" {>= "0.85.0"}
+]
+extra-source "handy-1-examples_1.0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhandy-1/handy-1-examples_1.0.3-2_amd64.deb"
+}

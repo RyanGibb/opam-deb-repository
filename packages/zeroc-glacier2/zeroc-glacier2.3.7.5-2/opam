@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zeroc-glacier2_3.7.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zeroc-glacier2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "libzeroc-ice3-7" {= "3.7.5-2"}
+]
+extra-source "zeroc-glacier2_3.7.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zeroc-ice/zeroc-glacier2_3.7.5-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-ofxparse_0.19-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-ofxparse"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-bs4"
+  "python-lxml"
+  "python-six"
+]
+extra-source "python-ofxparse_0.19-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-ofxparse/python-ofxparse_0.19-1_all.deb"
+}

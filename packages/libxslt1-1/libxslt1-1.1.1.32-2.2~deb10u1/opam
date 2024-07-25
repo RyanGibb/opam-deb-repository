@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxslt1.1_1.1.32-2.2~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxslt1.1"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libxml2" {>= "2.9.0"}
+]
+extra-source "libxslt1.1_1.1.32-2.2~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxslt/libxslt1.1_1.1.32-2.2~deb10u1_amd64.deb"
+}

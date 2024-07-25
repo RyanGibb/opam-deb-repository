@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i netris_0.52-10+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r netris"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "netris_0.52-10+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netris/netris_0.52-10+b3_amd64.deb"
+}

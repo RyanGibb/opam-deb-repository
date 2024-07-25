@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-camera-calibration-parsers_1.12.0-12+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-camera-calibration-parsers"]
+]
+depends: [
+  "libboost-python1-74-0"
+  "libboost-python1-74-0" {>= "1.74.0+ds1"}
+  "libc6" {>= "2.14"}
+  "libcamera-calibration-parsers0d" {>= "1.12.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libpython3-11" {>= "3.11.0"}
+  "libroscpp-serialization0d" {>= "0.7.2"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-sensor-msgs"
+]
+extra-source "python3-camera-calibration-parsers_1.12.0-12+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-image-common/python3-camera-calibration-parsers_1.12.0-12+b5_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sniproxy_0.6.0-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sniproxy"]
+]
+depends: [
+  "init-system-helpers" {>= "1.51"}
+  "libc6" {>= "2.14"}
+  "libev4" {>= "1-4.04"}
+  "libpcre3"
+  "libudns0" {>= "0.4"}
+  "lsb-base"
+]
+extra-source "sniproxy_0.6.0-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sniproxy/sniproxy_0.6.0-2+deb11u1_amd64.deb"
+}

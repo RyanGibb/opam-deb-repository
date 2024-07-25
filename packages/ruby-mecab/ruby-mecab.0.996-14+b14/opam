@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-mecab_0.996-14+b14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-mecab"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libmecab2" {>= "0.996"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.2"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "ruby-mecab_0.996-14+b14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mecab/ruby-mecab_0.996-14+b14_amd64.deb"
+}

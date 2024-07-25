@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-twitter-types-lens-prof_0.11.0-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-twitter-types-lens-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-lens-prof"
+  "libghc-twitter-types-lens-dev" {= "0.11.0-1+b4"}
+  "libghc-twitter-types-prof"
+]
+extra-source "libghc-twitter-types-lens-prof_0.11.0-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-twitter-types-lens/libghc-twitter-types-lens-prof_0.11.0-1+b4_amd64.deb"
+}

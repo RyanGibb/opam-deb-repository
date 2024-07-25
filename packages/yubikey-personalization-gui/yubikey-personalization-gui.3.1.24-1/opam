@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yubikey-personalization-gui_3.1.24-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yubikey-personalization-gui"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt5core5a" {>= "5.6.0~beta"}
+  "libqt5gui5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  "libykpers-1-1" {>= "1.14.0"}
+  "libyubikey0" {>= "1.5"}
+  ("libgl1-mesa-glx" | "libgl1")
+]
+extra-source "yubikey-personalization-gui_3.1.24-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yubikey-personalization-gui/yubikey-personalization-gui_3.1.24-1_amd64.deb"
+}

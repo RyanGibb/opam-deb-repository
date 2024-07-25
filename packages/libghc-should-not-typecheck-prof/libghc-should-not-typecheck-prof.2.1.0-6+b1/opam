@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-should-not-typecheck-prof_2.1.0-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-should-not-typecheck-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hunit-prof"
+  "libghc-should-not-typecheck-dev" {= "2.1.0-6+b1"}
+]
+extra-source "libghc-should-not-typecheck-prof_2.1.0-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-should-not-typecheck/libghc-should-not-typecheck-prof_2.1.0-6+b1_amd64.deb"
+}

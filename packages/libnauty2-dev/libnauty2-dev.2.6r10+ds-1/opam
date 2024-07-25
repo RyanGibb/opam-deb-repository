@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnauty2-dev_2.6r10+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnauty2-dev"]
+]
+depends: [
+  "libnauty2" {= "2.6r10+ds-1"}
+]
+conflicts: [
+  "libnauty-dev"
+]
+extra-source "libnauty2-dev_2.6r10+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nauty/libnauty2-dev_2.6r10+ds-1_amd64.deb"
+}

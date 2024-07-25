@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libobject-remote-perl_0.004000-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libobject-remote-perl"]
+]
+depends: [
+  "libclass-c3-perl"
+  "libexporter-declare-perl"
+  "libfuture-perl" {>= "0.29"}
+  "liblog-contextual-perl" {>= "0.005000"}
+  "libmodule-runtime-perl"
+  "libmoo-perl" {>= "1.006"}
+  "libmro-compat-perl"
+  "libstring-shellquote-perl"
+  "perl"
+  ("perl" {>= "5.13.9"} | "libjson-pp-perl")
+]
+extra-source "libobject-remote-perl_0.004000-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libobject-remote-perl/libobject-remote-perl_0.004000-1_all.deb"
+}

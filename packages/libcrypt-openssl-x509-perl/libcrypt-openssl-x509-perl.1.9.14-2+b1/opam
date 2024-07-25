@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypt-openssl-x509-perl_1.9.14-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypt-openssl-x509-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libconvert-asn1-perl" {>= "0.33"}
+  "libssl3" {>= "3.0.0"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+  "perl-openssl-defaults"
+]
+extra-source "libcrypt-openssl-x509-perl_1.9.14-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcrypt-openssl-x509-perl/libcrypt-openssl-x509-perl_1.9.14-2+b1_amd64.deb"
+}

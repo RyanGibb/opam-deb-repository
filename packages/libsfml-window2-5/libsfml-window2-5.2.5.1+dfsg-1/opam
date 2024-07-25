@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsfml-window2.5_2.5.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsfml-window2.5"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc-s1"
+  "libgl1"
+  "libsfml-system2-5"
+  "libstdc++6" {>= "5.2"}
+  "libudev1" {>= "183"}
+  "libx11-6"
+  "libxrandr2" {>= "2-1.2.99.3"}
+]
+extra-source "libsfml-window2.5_2.5.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsfml/libsfml-window2.5_2.5.1+dfsg-1_amd64.deb"
+}

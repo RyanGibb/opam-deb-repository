@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxenmisc4.11_4.11.4+107-gef32c7afa2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxenmisc4.11"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libext2fs2" {>= "1.37"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libuuid1" {>= "2.16"}
+  "libxencall1"
+  "libxendevicemodel1"
+  "libxenevtchn1"
+  "libxenforeignmemory1"
+  "libxengnttab1"
+  "libxenstore3-0" {>= "4.2~"}
+  "libxentoolcore1"
+  "libxentoollog1"
+  "libyajl2" {>= "2.0.4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libxenmisc4.11_4.11.4+107-gef32c7afa2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xen/libxenmisc4.11_4.11.4+107-gef32c7afa2-1_amd64.deb"
+}

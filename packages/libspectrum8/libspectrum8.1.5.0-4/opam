@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspectrum8_1.5.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspectrum8"]
+]
+depends: [
+  "libaudiofile1" {>= "0.3.6"}
+  "libbz2-1-0"
+  "libc6" {>= "2.29"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libspectrum8_1.5.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libspectrum/libspectrum8_1.5.0-4_amd64.deb"
+}

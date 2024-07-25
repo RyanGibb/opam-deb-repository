@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfcitx5core-dev_5.0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfcitx5core-dev"]
+]
+depends: [
+  "libfcitx5config-dev" {= "5.0.5-1"}
+  "libfcitx5core7" {= "5.0.5-1"}
+  "libfcitx5utils-dev" {= "5.0.5-1"}
+]
+extra-source "libfcitx5core-dev_5.0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx5/libfcitx5core-dev_5.0.5-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scanssh_2.0-4.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scanssh"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdumbnet1" {>= "1.8"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "scanssh_2.0-4.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scanssh/scanssh_2.0-4.1+b2_amd64.deb"
+}

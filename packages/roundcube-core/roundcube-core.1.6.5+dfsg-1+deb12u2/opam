@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i roundcube-core_1.6.5+dfsg-1+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r roundcube-core"]
+]
+depends: [
+  "dbconfig-common"
+  "debconf"
+  "libjs-bootstrap4" {>= "4.5.2~"}
+  "libjs-codemirror" {>= "5.58.3~"}
+  "libjs-jquery" {>= "3.5.1~"}
+  "libjs-jquery-minicolors" {>= "2.2.6~"}
+  "libjs-jquery-ui" {>= "1.12.0~"}
+  "libjs-jstimezonedetect" {>= "1.0.6~"}
+  "libmagic1"
+  "php"
+  "php-auth-sasl" {>= "1.1.0"}
+  "php-cli"
+  "php-common"
+  "php-guzzlehttp-guzzle" {>= "7.3.0"}
+  "php-intl"
+  "php-json"
+  "php-mail-mime" {>= "1.10.0"}
+  "php-masterminds-html5" {>= "2.7.0"}
+  "php-mbstring"
+  "php-net-sieve" {>= "1.4.5"}
+  "php-net-smtp" {>= "1.10.0"}
+  "php-pear" {>= "1-1.10.1"}
+  "ucf"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("roundcube-mysql" {= "1.6.5+dfsg-1+deb12u2"} | "roundcube-sqlite3" {= "1.6.5+dfsg-1+deb12u2"} | "roundcube-pgsql" {= "1.6.5+dfsg-1+deb12u2"})
+]
+extra-source "roundcube-core_1.6.5+dfsg-1+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/roundcube/roundcube-core_1.6.5+dfsg-1+deb12u2_all.deb"
+}

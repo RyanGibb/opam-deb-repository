@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-gegl-0.4_1:0.4.42-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-gegl-0.4"]
+]
+depends: [
+  "gir1-2-babl-0-1" {>= "1-0.1.90"}
+  "gir1-2-glib-2-0" {>= "1.32.0"}
+  "libgegl-0-4-0" {>= "1-0.4.26"}
+]
+extra-source "gir1.2-gegl-0.4_1:0.4.42-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gegl/gir1.2-gegl-0.4_0.4.42-2_amd64.deb"
+}

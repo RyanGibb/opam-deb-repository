@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kup-server_0.3.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kup-server"]
+]
+depends: [
+  "base-files" {>= "6.4"}
+  "git"
+  "gnupg"
+  "libbsd-resource-perl"
+  "libconfig-simple-perl"
+  "perl-any"
+  ("openssh-server" | "ssh-server")
+]
+extra-source "kup-server_0.3.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kup/kup-server_0.3.4-3_all.deb"
+}

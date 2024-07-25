@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pokerth-server_1.1.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pokerth-server"]
+]
+depends: [
+  "adduser"
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-iostreams1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libboost-random1-74-0" {>= "1.74.0"}
+  "libboost-regex1-74-0"
+  "libboost-thread1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.25"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libgsasl7" {>= "1.1"}
+  "libircclient1" {>= "1.8"}
+  "libprotobuf23" {>= "3.12.3"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "9"}
+  "libtinyxml2-6-2v5"
+  "pokerth-data" {= "1.1.2-1.1"}
+]
+extra-source "pokerth-server_1.1.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pokerth/pokerth-server_1.1.2-1.1_amd64.deb"
+}

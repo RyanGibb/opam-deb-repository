@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i i3lock-fancy_0.0~git20160228.0.0fcb933-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r i3lock-fancy"]
+]
+depends: [
+  "i3lock"
+  "imagemagick"
+  "scrot"
+  ("gawk" | "cpl-plugin-hawki-calib" | "cpl-plugin-hawki-doc" | "mawk" | "original-awk")
+]
+extra-source "i3lock-fancy_0.0~git20160228.0.0fcb933-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/i3lock-fancy/i3lock-fancy_0.0~git20160228.0.0fcb933-3_amd64.deb"
+}

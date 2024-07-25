@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i direwolf_1.4+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r direwolf"]
+]
+depends: [
+  "adduser"
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.15"}
+  "libgps23" {>= "3.3"}
+]
+extra-source "direwolf_1.4+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/direwolf/direwolf_1.4+dfsg-1+b1_amd64.deb"
+}

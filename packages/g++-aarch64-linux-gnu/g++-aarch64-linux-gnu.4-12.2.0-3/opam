@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i g++-aarch64-linux-gnu_4:12.2.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r g++-aarch64-linux-gnu"]
+]
+depends: [
+  "cpp-aarch64-linux-gnu" {= "4-12.2.0-3"}
+  "g++-12-aarch64-linux-gnu" {>= "12.2.0-1~"}
+  "gcc-aarch64-linux-gnu" {= "4-12.2.0-3"}
+]
+extra-source "g++-aarch64-linux-gnu_4:12.2.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults/g++-aarch64-linux-gnu_12.2.0-3_amd64.deb"
+}

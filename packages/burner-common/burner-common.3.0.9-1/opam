@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i burner-common_3.0.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r burner-common"]
+]
+depends: [
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "burner-common_3.0.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kylin-burner/burner-common_3.0.9-1_all.deb"
+}

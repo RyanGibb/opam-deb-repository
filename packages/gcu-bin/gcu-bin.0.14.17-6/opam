@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcu-bin_0.14.17-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcu-bin"]
+]
+depends: [
+  "chemical-mime-data"
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.6.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libgcu0v5" {= "0.14.17-6"}
+  "libglib2-0-0" {>= "2.36.0"}
+  "libgoffice-0-10-10" {>= "0.10.12"}
+  "libgsf-1-114" {>= "1.14.9"}
+  "libgtk-3-0" {>= "3.9.10"}
+  "libstdc++6" {>= "5.2"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "gcu-bin_0.14.17-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-chemistry-utils/gcu-bin_0.14.17-6_amd64.deb"
+}

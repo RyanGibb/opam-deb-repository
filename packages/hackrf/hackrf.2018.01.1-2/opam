@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hackrf_2018.01.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hackrf"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libhackrf0" {= "2018.01.1-2"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+]
+extra-source "hackrf_2018.01.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hackrf/hackrf_2018.01.1-2_amd64.deb"
+}

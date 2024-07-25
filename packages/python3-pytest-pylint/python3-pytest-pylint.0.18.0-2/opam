@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pytest-pylint_0.18.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pytest-pylint"]
+]
+depends: [
+  "pylint" {>= "2.2.2-2"}
+  "python3-any"
+  "python3-pytest" {>= "6.0"}
+  "python3-toml"
+]
+extra-source "python3-pytest-pylint_0.18.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pytest-pylint/python3-pytest-pylint_0.18.0-2_all.deb"
+}

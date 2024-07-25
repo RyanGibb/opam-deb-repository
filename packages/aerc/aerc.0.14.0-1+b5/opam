@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aerc_0.14.0-1+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aerc"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libnotmuch5" {>= "0.26~rc0"}
+]
+extra-source "aerc_0.14.0-1+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aerc/aerc_0.14.0-1+b5_amd64.deb"
+}

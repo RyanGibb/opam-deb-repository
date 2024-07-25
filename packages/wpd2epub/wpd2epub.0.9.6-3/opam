@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wpd2epub_0.9.6-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wpd2epub"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libepubgen-0-1-1"
+  "libgcc-s1" {>= "3.0"}
+  "librevenge-0-0-0"
+  "libstdc++6" {>= "5.2"}
+  "libwpd-0-10-10"
+]
+extra-source "wpd2epub_0.9.6-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/writerperfect/wpd2epub_0.9.6-3_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mailscripts_0.23-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mailscripts"]
+]
+depends: [
+  "libconfig-tiny-perl"
+  "libfile-which-perl"
+  "libipc-system-simple-perl"
+  "liblist-moreutils-perl"
+  "libmail-box-perl"
+  "perl-any"
+  "python3"
+]
+extra-source "mailscripts_0.23-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mailscripts/mailscripts_0.23-1_all.deb"
+}

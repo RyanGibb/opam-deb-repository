@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openhpi-plugin-dynamic-simulator_3.8.0-2.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openhpi-plugin-dynamic-simulator"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libopenhpi3" {= "3.8.0-2.1+b1"}
+  "libstdc++6" {>= "5"}
+]
+conflicts: [
+  "libopenhpi"
+  "libopenhpi2"
+]
+extra-source "openhpi-plugin-dynamic-simulator_3.8.0-2.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openhpi/openhpi-plugin-dynamic-simulator_3.8.0-2.1+b1_amd64.deb"
+}

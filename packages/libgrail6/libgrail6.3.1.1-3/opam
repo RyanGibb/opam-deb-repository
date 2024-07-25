@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgrail6_3.1.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgrail6"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libframe6" {>= "2.5.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libgrail6_3.1.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grail/libgrail6_3.1.1-3_amd64.deb"
+}

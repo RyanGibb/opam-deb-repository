@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libelogind-dev_239.3+20190131-1+debian1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libelogind-dev"]
+]
+depends: [
+  "libelogind0" {= "239.3+20190131-1+debian1"}
+]
+extra-source "libelogind-dev_239.3+20190131-1+debian1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elogind/libelogind-dev_239.3+20190131-1+debian1_amd64.deb"
+}

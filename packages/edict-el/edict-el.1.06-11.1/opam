@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i edict-el_1.06-11.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r edict-el"]
+]
+depends: [
+  "edict"
+  ("emacs" | "emacsen")
+]
+extra-source "edict-el_1.06-11.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/edict-el/edict-el_1.06-11.1_all.deb"
+}

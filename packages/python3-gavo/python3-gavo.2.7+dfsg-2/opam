@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-gavo_2.7+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-gavo"]
+]
+depends: [
+  "libjs-jquery"
+  "libjs-jquery-flot"
+  "python3-any"
+  "python3-cryptography"
+  "python3-docutils"
+  "python3-gavo-stc" {= "2.7+dfsg-2"}
+  "python3-gavo-utils" {= "2.7+dfsg-2"}
+  "python3-gavo-votable" {= "2.7+dfsg-2"}
+  "python3-lxml"
+  "python3-matplotlib"
+  "python3-pkg-resources"
+  "python3-psycopg2"
+  "python3-pymoc"
+  "python3-rjsmin"
+  "python3-testresources"
+  "python3-twisted"
+]
+conflicts: [
+  "python-gavodachs"
+]
+extra-source "python3-gavo_2.7+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gavodachs/python3-gavo_2.7+dfsg-2_all.deb"
+}

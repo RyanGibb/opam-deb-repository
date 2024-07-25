@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i recode_3.6-25_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r recode"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "librecode0" {>= "3.6"}
+]
+extra-source "recode_3.6-25_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/recode/recode_3.6-25_amd64.deb"
+}

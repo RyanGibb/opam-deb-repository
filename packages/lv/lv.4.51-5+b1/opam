@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lv_4.51-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lv"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "lv_4.51-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lv/lv_4.51-5+b1_amd64.deb"
+}

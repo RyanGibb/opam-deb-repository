@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-geiser_0.8.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-geiser"]
+]
+depends: [
+  "emacsen-common"
+  "install-info"
+  ("emacs" | "emacsen")
+]
+extra-source "elpa-geiser_0.8.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/geiser/elpa-geiser_0.8.1-4_all.deb"
+}

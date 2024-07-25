@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-cmenu-3.0_3.8.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-cmenu-3.0"]
+]
+depends: [
+  "libcinnamon-menu-3-0" {= "3.8.2-1"}
+]
+conflicts: [
+  "gobject-introspection-repository"
+]
+extra-source "gir1.2-cmenu-3.0_3.8.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cinnamon-menus/gir1.2-cmenu-3.0_3.8.2-1_amd64.deb"
+}

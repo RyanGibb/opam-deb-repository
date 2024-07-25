@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i klayout_0.26.2-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r klayout"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5designer5" {>= "5.6.0~beta"}
+  "libqt5multimedia5" {>= "5.6.0~beta"}
+  "libqt5multimediawidgets5" {>= "5.6.0~beta"}
+  "libqt5network5" {>= "5.14.1"}
+  "libqt5printsupport5" {>= "5.4.0"}
+  "libqt5sql5" {>= "5.10.0"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libqt5xml5" {>= "5.1.0"}
+  "libqt5xmlpatterns5" {>= "5.9.0"}
+  "libruby2-7" {>= "2.7.0"}
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "klayout_0.26.2-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/klayout/klayout_0.26.2-3+b1_amd64.deb"
+}

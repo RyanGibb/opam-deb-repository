@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvips-dev_8.10.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvips-dev"]
+]
+depends: [
+  "gettext"
+  "gir1-2-vips-8-0" {= "8.10.5-2"}
+  "libcfitsio-dev"
+  "libexpat1-dev"
+  "libfontconfig1-dev"
+  "libfreetype6-dev"
+  "libgif-dev" {>= "5.1"}
+  "libglib2-0-dev"
+  "libgsf-1-dev"
+  "libheif-dev"
+  "libice-dev"
+  "libimagequant-dev"
+  "libjpeg-dev"
+  "liblcms2-dev"
+  "libmagickcore-dev"
+  "libmagickwand-dev"
+  "libmatio-dev"
+  "libopenexr-dev"
+  "libopenslide-dev"
+  "liborc-0-4-dev"
+  "libpango1-0-dev"
+  "libpng-dev"
+  "libpoppler-glib-dev"
+  "librsvg2-dev" {>= "2.40.0"}
+  "libtiff-dev"
+  "libvips42" {= "8.10.5-2"}
+  "libwebp-dev"
+  "pkg-config"
+  "zlib1g-dev"
+  ("fftw3-dev" | "libfftw3-dev")
+]
+extra-source "libvips-dev_8.10.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vips/libvips-dev_8.10.5-2_amd64.deb"
+}

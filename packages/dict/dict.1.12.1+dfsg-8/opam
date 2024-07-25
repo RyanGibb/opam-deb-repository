@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dict_1.12.1+dfsg-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dict"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmaa4" {>= "1.2.0"}
+  "netbase"
+  "recode"
+]
+extra-source "dict_1.12.1+dfsg-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dictd/dict_1.12.1+dfsg-8_amd64.deb"
+}

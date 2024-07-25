@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ptunnel_0.72-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ptunnel"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libpcap0-8" {>= "0.9.8"}
+  "libselinux1" {>= "1.32"}
+  "sysvinit-utils"
+]
+extra-source "ptunnel_0.72-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/ptunnel/ptunnel_0.72-3+b1_amd64.deb"
+}

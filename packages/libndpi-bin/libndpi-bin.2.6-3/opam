@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libndpi-bin_2.6-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libndpi-bin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libjson-c3" {>= "0.10"}
+  "libndpi2-6" {>= "2.6"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "libndpi-bin_2.6-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ndpi/libndpi-bin_2.6-3_amd64.deb"
+}

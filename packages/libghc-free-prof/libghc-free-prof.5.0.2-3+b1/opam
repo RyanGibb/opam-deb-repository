@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-free-prof_5.0.2-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-free-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-bifunctors-prof"
+  "libghc-comonad-prof"
+  "libghc-distributive-prof"
+  "libghc-exceptions-prof"
+  "libghc-free-dev" {= "5.0.2-3+b1"}
+  "libghc-profunctors-prof"
+  "libghc-semigroupoids-prof"
+  "libghc-semigroups-prof"
+  "libghc-transformers-base-prof"
+  "libghc-transformers-compat-prof"
+]
+extra-source "libghc-free-prof_5.0.2-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-free/libghc-free-prof_5.0.2-3+b1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libncarg-dev_6.6.2.dfsg.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libncarg-dev"]
+]
+depends: [
+  "libhdf4-alt-dev"
+  "libncarg0" {= "6.6.2.dfsg.1-1"}
+  "libsphere-dev"
+  "libudunits2-dev"
+  "ncl-ncarg"
+  ("ksh" | "mksh" | "pdksh" | "zsh")
+]
+extra-source "libncarg-dev_6.6.2.dfsg.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ncl/libncarg-dev_6.6.2.dfsg.1-1_amd64.deb"
+}

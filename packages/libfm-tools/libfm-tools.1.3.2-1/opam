@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfm-tools_1.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfm-tools"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfm-gtk4" {>= "1.2.0"}
+  "libfm-modules"
+  "libfm4" {>= "0.1.99"}
+  "libglib2-0-0" {>= "2.28.0"}
+  "libgtk2-0-0" {>= "2.12.0"}
+]
+conflicts: [
+  "libfm-gtk-bin"
+  "lxshortcut"
+]
+extra-source "libfm-tools_1.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfm/libfm-tools_1.3.2-1_amd64.deb"
+}

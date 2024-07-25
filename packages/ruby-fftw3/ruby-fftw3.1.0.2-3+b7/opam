@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-fftw3_1.0.2-3+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-fftw3"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfftw3-double3" {>= "3.3.10"}
+  "libfftw3-single3" {>= "3.3.10"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.0~preview1"}
+  "ruby-narray"
+]
+extra-source "ruby-fftw3_1.0.2-3+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-fftw3/ruby-fftw3_1.0.2-3+b7_amd64.deb"
+}

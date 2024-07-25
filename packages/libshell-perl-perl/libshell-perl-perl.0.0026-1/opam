@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libshell-perl-perl_0.0026-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libshell-perl-perl"]
+]
+depends: [
+  "libclass-accessor-perl"
+  "libfile-homedir-perl"
+  "libpath-class-perl" {>= "0.34"}
+  "perl" {>= "5.21.8"}
+]
+extra-source "libshell-perl-perl_0.0026-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libshell-perl-perl/libshell-perl-perl_0.0026-1_all.deb"
+}

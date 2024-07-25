@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bird-bgp_1.6.8-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bird-bgp"]
+]
+depends: [
+  "adduser"
+  "bird" {>= "1.6.8-2.1~"}
+]
+extra-source "bird-bgp_1.6.8-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bird/bird-bgp_1.6.8-2.1_all.deb"
+}

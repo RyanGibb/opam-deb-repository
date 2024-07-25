@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libandroid-tools-repository-java_2.2.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libandroid-tools-repository-java"]
+]
+depends: [
+  "libandroid-tools-common-java" {>= "2.2.2-4"}
+  "libcommons-compress-java"
+  "libjaxb-api-java"
+]
+extra-source "libandroid-tools-repository-java_2.2.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-tools-base/libandroid-tools-repository-java_2.2.2-4_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gdc-multilib-x86-64-linux-gnux32_4:10.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gdc-multilib-x86-64-linux-gnux32"]
+]
+depends: [
+  "cpp-x86-64-linux-gnux32" {>= "4-10.2.1-1"}
+  "gdc-10-multilib-x86-64-linux-gnux32" {>= "10.2.1-3~"}
+  "gdc-x86-64-linux-gnux32" {>= "10.2.1-1"}
+]
+extra-source "gdc-multilib-x86-64-linux-gnux32_4:10.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-ports/gdc-multilib-x86-64-linux-gnux32_10.2.1-1_amd64.deb"
+}

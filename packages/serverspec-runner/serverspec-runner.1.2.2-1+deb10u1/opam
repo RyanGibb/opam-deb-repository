@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i serverspec-runner_1.2.2-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r serverspec-runner"]
+]
+depends: [
+  "ruby-net-ssh"
+  "ruby-serverspec"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "serverspec-runner_1.2.2-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/serverspec-runner/serverspec-runner_1.2.2-1+deb10u1_all.deb"
+}

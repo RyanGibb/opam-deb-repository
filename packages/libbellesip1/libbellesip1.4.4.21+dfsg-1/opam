@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbellesip1_4.4.21+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbellesip1"]
+]
+depends: [
+  "libbctoolbox1" {< "4.5.0"}
+  "libbctoolbox1" {>= "4.4.0"}
+  "libc6" {>= "2.17"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libantlr3c-3-4-0" | "libantlr3c-antlrdbg-3-4-0")
+]
+extra-source "libbellesip1_4.4.21+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/belle-sip/libbellesip1_4.4.21+dfsg-1_amd64.deb"
+}

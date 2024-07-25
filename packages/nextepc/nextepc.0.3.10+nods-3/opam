@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nextepc_0.3.10+nods-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nextepc"]
+]
+depends: [
+  "nextepc-core" {< "0.3.10+nods.0~"}
+  "nextepc-core" {>= "0.3.10+nods-3"}
+  "nextepc-hss" {< "0.3.10+nods.0~"}
+  "nextepc-hss" {>= "0.3.10+nods-3"}
+  "nextepc-mme" {< "0.3.10+nods.0~"}
+  "nextepc-mme" {>= "0.3.10+nods-3"}
+  "nextepc-pcrf" {< "0.3.10+nods.0~"}
+  "nextepc-pcrf" {>= "0.3.10+nods-3"}
+  "nextepc-pgw" {< "0.3.10+nods.0~"}
+  "nextepc-pgw" {>= "0.3.10+nods-3"}
+  "nextepc-sgw" {< "0.3.10+nods.0~"}
+  "nextepc-sgw" {>= "0.3.10+nods-3"}
+]
+extra-source "nextepc_0.3.10+nods-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nextepc/nextepc_0.3.10+nods-3_all.deb"
+}

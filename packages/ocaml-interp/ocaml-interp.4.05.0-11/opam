@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ocaml-interp_4.05.0-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ocaml-interp"]
+]
+depends: [
+  "ocaml-base-nox"
+  "ocaml-compiler-libs" {= "4.05.0-11"}
+]
+extra-source "ocaml-interp_4.05.0-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml/ocaml-interp_4.05.0-11_amd64.deb"
+}

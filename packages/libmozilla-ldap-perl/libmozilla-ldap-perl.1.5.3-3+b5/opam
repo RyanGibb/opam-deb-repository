@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmozilla-ldap-perl_1.5.3-3+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmozilla-ldap-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libmozilla-ldap-perl_1.5.3-3+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmozilla-ldap-perl/libmozilla-ldap-perl_1.5.3-3+b5_amd64.deb"
+}

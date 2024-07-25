@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libicu-dev_67.1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libicu-dev"]
+]
+depends: [
+  "icu-devtools" {>= "67.1-7"}
+  "libicu67" {= "67.1-7"}
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "libicu-dev_67.1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/icu/libicu-dev_67.1-7_amd64.deb"
+}

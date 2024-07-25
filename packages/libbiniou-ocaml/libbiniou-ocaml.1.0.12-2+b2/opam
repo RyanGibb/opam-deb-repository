@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbiniou-ocaml_1.0.12-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbiniou-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libeasy-format-ocaml"
+  "ocaml-base-nox"
+]
+extra-source "libbiniou-ocaml_1.0.12-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/biniou/libbiniou-ocaml_1.0.12-2+b2_amd64.deb"
+}

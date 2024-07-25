@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yorick-mpy-mpich2_2.2.04+dfsg1-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yorick-mpy-mpich2"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libmpich12"
+  "libx11-6"
+  "mpich"
+  "yorick" {= "2.2.04+dfsg1-12"}
+  "yorick-mpy-common" {= "2.2.04+dfsg1-12"}
+]
+extra-source "yorick-mpy-mpich2_2.2.04+dfsg1-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yorick/yorick-mpy-mpich2_2.2.04+dfsg1-12_amd64.deb"
+}

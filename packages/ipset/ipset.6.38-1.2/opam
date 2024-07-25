@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ipset_6.38-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ipset"]
+]
+depends: [
+  "iptables"
+  "libc6" {>= "2.4"}
+  "libipset11" {>= "6.38-1~"}
+]
+extra-source "ipset_6.38-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ipset/ipset_6.38-1.2_amd64.deb"
+}

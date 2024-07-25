@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-ess_18.10.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-ess"]
+]
+depends: [
+  "dh-elpa-helper"
+  "emacsen-common" {>= "2.0.8"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+conflicts: [
+  "dhelp (<= 0.3.12)"
+]
+extra-source "elpa-ess_18.10.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ess/elpa-ess_18.10.2-2_all.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-nordugrid-arc_6.10.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-nordugrid-arc"]
+]
+depends: [
+  "libarccommon3v5" {= "6.10.2-1"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libglibmm-2-4-1v5" {>= "2.64.2"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libsigc++-2-0-0v5" {>= "2.2.0"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "python3-nordugrid-arc_6.10.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nordugrid-arc/python3-nordugrid-arc_6.10.2-1_amd64.deb"
+}

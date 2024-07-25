@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmaven-shared-jar-java_1.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmaven-shared-jar-java"]
+]
+depends: [
+  "libbcel-java"
+  "libcommons-collections3-java"
+  "libmaven-shared-utils-java" {>= "3.1.0"}
+  "libmaven3-core-java" {>= "3.5.0"}
+  "libplexus-container-default1-5-java" {>= "1.5.5"}
+  "libplexus-digest-java" {>= "1.1"}
+  "libplexus-utils-java"
+]
+extra-source "libmaven-shared-jar-java_1.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maven-shared-jar/libmaven-shared-jar-java_1.2-3_all.deb"
+}

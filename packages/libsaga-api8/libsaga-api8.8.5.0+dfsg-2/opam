@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsaga-api8_8.5.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsaga-api8"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "11"}
+  "libwxbase3-2-1" {>= "3.2.1+dfsg"}
+]
+extra-source "libsaga-api8_8.5.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/saga/libsaga-api8_8.5.0+dfsg-2_amd64.deb"
+}

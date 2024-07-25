@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-osprofiler_2.3.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-osprofiler"]
+]
+depends: [
+  "python3-any"
+  "python3-netaddr"
+  "python3-oslo-concurrency" {>= "3.26.0"}
+  "python3-oslo-serialization" {>= "2.18.0"}
+  "python3-oslo-utils" {>= "3.33.0"}
+  "python3-prettytable"
+  "python3-requests" {>= "2.14.2"}
+  "python3-six" {>= "1.10.0"}
+  "python3-webob" {>= "1.7.1"}
+]
+extra-source "python3-osprofiler_2.3.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-osprofiler/python3-osprofiler_2.3.0-3_all.deb"
+}

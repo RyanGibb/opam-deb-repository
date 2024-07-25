@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx-dbus-status_2016062301-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx-dbus-status"]
+]
+depends: [
+  "dbus"
+  "fcitx"
+  "libc6" {>= "2.4"}
+]
+extra-source "fcitx-dbus-status_2016062301-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx-dbus-status/fcitx-dbus-status_2016062301-2_amd64.deb"
+}

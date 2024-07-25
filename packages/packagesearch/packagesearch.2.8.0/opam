@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i packagesearch_2.8.0_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r packagesearch"]
+]
+depends: [
+  "apt" {>= "0.6.46.1"}
+  "apt-xapian-index"
+  "debtags" {>= "1.6.1"}
+  "libapt-pkg6-0" {>= "1.9~"}
+  "libc6" {>= "2.34"}
+  "libept1-6-0" {>= "1.2.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt6core6" {>= "6.3.0"}
+  "libqt6gui6" {>= "6.3"}
+  "libqt6network6" {>= "6.3"}
+  "libqt6widgets6" {>= "6.3.0"}
+  "libqt6xml6" {>= "6.3"}
+  "libstdc++6" {>= "11"}
+  "libxapian30" {>= "1.4.19~"}
+  "xterm"
+]
+extra-source "packagesearch_2.8.0_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/packagesearch/packagesearch_2.8.0_amd64.deb"
+}

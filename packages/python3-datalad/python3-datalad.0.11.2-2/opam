@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-datalad_0.11.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-datalad"]
+]
+depends: [
+  "patool"
+  "python3-any"
+  "python3-appdirs"
+  "python3-boto"
+  "python3-chardet"
+  "python3-fasteners"
+  "python3-git" {>= "2.1.6~"}
+  "python3-humanize"
+  "python3-iso8601"
+  "python3-keyring"
+  "python3-mock"
+  "python3-msgpack"
+  "python3-pil"
+  "python3-requests"
+  "python3-secretstorage"
+  "python3-simplejson"
+  "python3-six" {>= "1.8.0"}
+  "python3-tqdm"
+  "python3-wrapt"
+  ("git-annex" {>= "6.20180913~"} | "git-annex-standalone" {>= "6.20180913~"})
+  ("python3-distutils" | "libpython3-stdlib" {<= "3.6.4~rc1-2"})
+  ("python3-keyrings-alt" | "python3-keyring" {<= "8"})
+]
+extra-source "python3-datalad_0.11.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/datalad/python3-datalad_0.11.2-2_all.deb"
+}

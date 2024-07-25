@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfluidsynth2_2.1.7-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfluidsynth2"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.29"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libinstpatch-1-0-2" {>= "1.1.2"}
+  "libpulse0" {>= "0.99.1"}
+  "libreadline8" {>= "6.0"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libsndfile1" {>= "1.0.20"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+  ("timgm6mb-soundfont" {>= "1.3-3~"} | "sf3-soundfont-gm")
+]
+extra-source "libfluidsynth2_2.1.7-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fluidsynth/libfluidsynth2_2.1.7-1.1_amd64.deb"
+}

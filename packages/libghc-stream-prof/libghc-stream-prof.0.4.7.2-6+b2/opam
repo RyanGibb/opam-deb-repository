@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-stream-prof_0.4.7.2-6+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-stream-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-lazysmallcheck-prof"
+  "libghc-quickcheck2-prof"
+  "libghc-stream-dev" {= "0.4.7.2-6+b2"}
+]
+extra-source "libghc-stream-prof_0.4.7.2-6+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-stream/libghc-stream-prof_0.4.7.2-6+b2_amd64.deb"
+}

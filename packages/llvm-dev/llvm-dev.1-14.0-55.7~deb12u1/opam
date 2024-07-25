@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i llvm-dev_1:14.0-55.7~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r llvm-dev"]
+]
+depends: [
+  "llvm"
+  "llvm-14-dev" {>= "14~"}
+  "llvm-runtime" {= "1-14.0-55.7~deb12u1"}
+]
+extra-source "llvm-dev_1:14.0-55.7~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-defaults/llvm-dev_14.0-55.7~deb12u1_amd64.deb"
+}

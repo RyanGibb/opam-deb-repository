@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5sysguard-dev_4:5.27.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5sysguard-dev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5config-dev" {>= "5.102.0~"}
+  "libkf5i18n-dev" {>= "5.102.0~"}
+  "libkf5sysguard-bin" {= "4-5.27.5-2"}
+  "libksgrd9" {= "4-5.27.5-2"}
+  "libksignalplotter9" {= "4-5.27.5-2"}
+  "libksysguardformatter1" {= "4-5.27.5-2"}
+  "libksysguardsensorfaces1" {= "4-5.27.5-2"}
+  "libksysguardsensors1" {= "4-5.27.5-2"}
+  "libksysguardsystemstats1" {= "4-5.27.5-2"}
+  "liblsofui9" {= "4-5.27.5-2"}
+  "libprocesscore9" {= "4-5.27.5-2"}
+  "libprocessui9" {= "4-5.27.5-2"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  "qml-module-org-kde-ksysguard" {= "4-5.27.5-2"}
+  "qtbase5-dev" {>= "5.15.2~"}
+  "qtdeclarative5-dev" {>= "5.15.2~"}
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "libkf5sysguard-dev_4:5.27.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libksysguard/libkf5sysguard-dev_5.27.5-2_amd64.deb"
+}

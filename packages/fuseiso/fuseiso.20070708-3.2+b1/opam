@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fuseiso_20070708-3.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fuseiso"]
+]
+depends: [
+  "fuse"
+  "libc6" {>= "2.14"}
+  "libfuse2" {>= "2.5"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "fuseiso_20070708-3.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fuseiso/fuseiso_20070708-3.2+b1_amd64.deb"
+}

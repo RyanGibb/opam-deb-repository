@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jskeus_1.2.4+dfsg-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jskeus"]
+]
+depends: [
+  "euslisp"
+  "libbullet-dev"
+  "libbullet3-24" {>= "3.24+dfsg"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "jskeus_1.2.4+dfsg-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jskeus/jskeus_1.2.4+dfsg-3+b1_amd64.deb"
+}

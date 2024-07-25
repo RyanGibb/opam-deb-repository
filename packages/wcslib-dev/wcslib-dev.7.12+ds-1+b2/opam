@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wcslib-dev_7.12+ds-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wcslib-dev"]
+]
+depends: [
+  "libpgsbox7" {= "7.12+ds-1+b2"}
+  "libwcs7" {= "7.12+ds-1+b2"}
+]
+extra-source "wcslib-dev_7.12+ds-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wcslib/wcslib-dev_7.12+ds-1+b2_amd64.deb"
+}

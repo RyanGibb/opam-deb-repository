@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgcu0v5_0.14.17-6.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgcu0v5"]
+]
+depends: [
+  "bodr" {>= "5"}
+  "chemical-mime-data"
+  "gnumeric" {>= "1.12.50"}
+  "libc6" {>= "2.33"}
+  "libcairo2" {>= "1.6.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libgl1"
+  "libglib2-0-0" {>= "2.41.1"}
+  "libgoffice-0-10-10" {>= "0.10.12"}
+  "libgsf-1-114" {>= "1.14.9"}
+  "libgtk-3-0" {>= "3.19.12"}
+  "libopenbabel7" {>= "3.1.1+dfsg"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libstdc++6" {>= "11"}
+  "libx11-6"
+  "libxml2" {>= "2.7.4"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+conflicts: [
+  "libgcu0"
+]
+extra-source "libgcu0v5_0.14.17-6.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-chemistry-utils/libgcu0v5_0.14.17-6.1_amd64.deb"
+}

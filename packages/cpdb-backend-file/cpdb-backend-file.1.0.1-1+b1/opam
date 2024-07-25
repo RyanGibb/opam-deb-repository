@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cpdb-backend-file_1.0.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cpdb-backend-file"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcpdb-libs-common1" {>= "1.2.0"}
+  "libglib2-0-0" {>= "2.30.0"}
+]
+extra-source "cpdb-backend-file_1.0.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cpdb-backend-file/cpdb-backend-file_1.0.1-1+b1_amd64.deb"
+}

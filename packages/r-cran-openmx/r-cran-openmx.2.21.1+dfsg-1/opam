@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-openmx_2.21.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-openmx"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgomp1" {>= "6"}
+  "libstdc++6" {>= "12"}
+  "python3"
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-bh" {>= "1.69.0-1"}
+  "r-cran-digest"
+  "r-cran-lifecycle"
+  "r-cran-mass"
+  "r-cran-matrix" {>= "1.2-16"}
+  "r-cran-rcpp"
+  "r-cran-rcppeigen"
+  "r-cran-rcppparallel"
+  "r-cran-rpf" {>= "0.45"}
+  "r-cran-stanheaders" {>= "2.10.0.2"}
+]
+extra-source "r-cran-openmx_2.21.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-openmx/r-cran-openmx_2.21.1+dfsg-1_amd64.deb"
+}

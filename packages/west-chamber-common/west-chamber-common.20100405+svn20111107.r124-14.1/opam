@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i west-chamber-common_20100405+svn20111107.r124-14.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r west-chamber-common"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libxtables12" {>= "1.6.0+snapshot20161117"}
+  "xtables-addons-common"
+]
+extra-source "west-chamber-common_20100405+svn20111107.r124-14.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/west-chamber/west-chamber-common_20100405+svn20111107.r124-14.1_amd64.deb"
+}

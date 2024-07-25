@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stalin_0.11-6+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stalin"]
+]
+depends: [
+  "dpkg-dev"
+  "libc6" {>= "2.29"}
+  "libgc-dev"
+  "libgc1" {>= "1-7.2d"}
+]
+extra-source "stalin_0.11-6+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stalin/stalin_0.11-6+b2_amd64.deb"
+}

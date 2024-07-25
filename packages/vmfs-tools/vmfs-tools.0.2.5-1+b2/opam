@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vmfs-tools_0.2.5-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vmfs-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfuse2" {>= "2.6"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "vmfs-tools_0.2.5-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vmfs-tools/vmfs-tools_0.2.5-1+b2_amd64.deb"
+}

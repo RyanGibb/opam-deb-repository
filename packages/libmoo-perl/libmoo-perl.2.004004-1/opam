@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmoo-perl_2.004004-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmoo-perl"]
+]
+depends: [
+  "libclass-method-modifiers-perl"
+  "libimport-into-perl"
+  "librole-tiny-perl" {>= "2.001004"}
+  "libscalar-list-utils-perl"
+  "libstrictures-perl" {>= "2"}
+  "libsub-quote-perl" {>= "2.006006"}
+  "perl-any"
+]
+extra-source "libmoo-perl_2.004004-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmoo-perl/libmoo-perl_2.004004-1_all.deb"
+}

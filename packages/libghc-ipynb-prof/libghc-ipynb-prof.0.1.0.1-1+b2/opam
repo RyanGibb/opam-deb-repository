@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-ipynb-prof_0.1.0.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-ipynb-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-base64-bytestring-prof"
+  "libghc-ipynb-dev" {= "0.1.0.1-1+b2"}
+  "libghc-unordered-containers-prof"
+]
+extra-source "libghc-ipynb-prof_0.1.0.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-ipynb/libghc-ipynb-prof_0.1.0.1-1+b2_amd64.deb"
+}

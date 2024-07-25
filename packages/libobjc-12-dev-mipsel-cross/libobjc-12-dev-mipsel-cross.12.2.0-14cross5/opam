@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libobjc-12-dev-mipsel-cross_12.2.0-14cross5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libobjc-12-dev-mipsel-cross"]
+]
+depends: [
+  "gcc-12-cross-base-mipsen" {= "12.2.0-14cross5"}
+  "libgcc-12-dev-mipsel-cross" {= "12.2.0-14cross5"}
+  "libobjc4-mipsel-cross" {>= "12.2.0-14cross5"}
+]
+extra-source "libobjc-12-dev-mipsel-cross_12.2.0-14cross5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12-cross-mipsen/libobjc-12-dev-mipsel-cross_12.2.0-14cross5_all.deb"
+}

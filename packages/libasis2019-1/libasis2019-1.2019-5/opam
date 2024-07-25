@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libasis2019.1_2019-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libasis2019.1"]
+]
+depends: [
+  "gnat"
+  "gnat-10"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnat-10" {>= "10.2.1"}
+  "libgnat-util10" {>= "10.2.1-1"}
+]
+extra-source "libasis2019.1_2019-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/asis/libasis2019.1_2019-5_amd64.deb"
+}

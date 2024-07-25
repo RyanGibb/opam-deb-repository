@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmaven-script-interpreter-java_1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmaven-script-interpreter-java"]
+]
+depends: [
+  "ant"
+  "groovy"
+  "libbsh-java" {>= "2.0b4"}
+  "libmaven-shared-utils-java" {>= "3.1.0"}
+  "libmaven3-core-java" {>= "3.5.0"}
+  "libplexus-component-annotations-java" {>= "1.5.5"}
+]
+extra-source "libmaven-script-interpreter-java_1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maven-script-interpreter/libmaven-script-interpreter-java_1.2-1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i transifex-client_0.13.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r transifex-client"]
+]
+depends: [
+  "python3-any" {>= "3.5~"}
+  "python3-openssl"
+  "python3-pkg-resources"
+  "python3-requests"
+  "python3-six" {>= "1.11.0"}
+  "python3-slugify"
+  "python3-urllib3"
+]
+extra-source "transifex-client_0.13.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/transifex-client/transifex-client_0.13.5-2_all.deb"
+}

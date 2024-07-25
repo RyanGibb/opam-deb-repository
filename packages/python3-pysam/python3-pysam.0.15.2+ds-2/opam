@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pysam_0.15.2+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pysam"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libhts2" {>= "1.9"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "python3-pysam_0.15.2+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pysam/python3-pysam_0.15.2+ds-2_amd64.deb"
+}

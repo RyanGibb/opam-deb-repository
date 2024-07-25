@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-list-dev_0.6.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-list-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-list-dev_0.6.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-list/libghc-list-dev_0.6.2-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-wayland-sys-dev_0.29.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-wayland-sys-dev"]
+]
+depends: [
+  "librust-dlib-0-5+default-dev"
+  "librust-lazy-static-dev"
+  "librust-libc-0-2+default-dev"
+  "librust-memoffset-dev"
+  "librust-pkg-config-dev"
+  "libwayland-dev"
+]
+extra-source "librust-wayland-sys-dev_0.29.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-wayland-sys/librust-wayland-sys-dev_0.29.4-1_amd64.deb"
+}

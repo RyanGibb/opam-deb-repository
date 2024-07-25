@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guile-lzlib_0.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guile-lzlib"]
+]
+depends: [
+  "liblz-dev"
+  ("guile-3-0" | "guile-2-2")
+]
+extra-source "guile-lzlib_0.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guile-lzlib/guile-lzlib_0.0.2-2_amd64.deb"
+}

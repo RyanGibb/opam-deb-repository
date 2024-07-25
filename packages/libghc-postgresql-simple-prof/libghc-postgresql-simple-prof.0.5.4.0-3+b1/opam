@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-postgresql-simple-prof_0.5.4.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-postgresql-simple-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-attoparsec-prof"
+  "libghc-case-insensitive-prof"
+  "libghc-hashable-prof"
+  "libghc-postgresql-libpq-prof"
+  "libghc-postgresql-simple-dev" {= "0.5.4.0-3+b1"}
+  "libghc-scientific-prof"
+  "libghc-uuid-types-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-postgresql-simple-prof_0.5.4.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-postgresql-simple/libghc-postgresql-simple-prof_0.5.4.0-3+b1_amd64.deb"
+}

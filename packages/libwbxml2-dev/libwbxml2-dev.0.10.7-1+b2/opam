@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwbxml2-dev_0.10.7-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwbxml2-dev"]
+]
+depends: [
+  "libpopt-dev"
+  "libwbxml2-0" {= "0.10.7-1+b2"}
+  ("libexpat1-dev" | "libexpat-dev")
+  ("zlib1g-dev" | "libz-dev")
+]
+extra-source "libwbxml2-dev_0.10.7-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wbxml2/libwbxml2-dev_0.10.7-1+b2_amd64.deb"
+}

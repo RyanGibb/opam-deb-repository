@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-binary-heap-plus+serde-dev_0.4.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-binary-heap-plus+serde-dev"]
+]
+depends: [
+  "librust-binary-heap-plus-dev" {= "0.4.1-1+b1"}
+  "librust-serde+serde-derive-dev"
+  "librust-serde-dev"
+]
+extra-source "librust-binary-heap-plus+serde-dev_0.4.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-binary-heap-plus/librust-binary-heap-plus+serde-dev_0.4.1-1+b1_amd64.deb"
+}

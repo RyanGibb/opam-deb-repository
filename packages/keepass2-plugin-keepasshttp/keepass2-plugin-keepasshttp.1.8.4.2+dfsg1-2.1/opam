@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i keepass2-plugin-keepasshttp_1.8.4.2+dfsg1-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r keepass2-plugin-keepasshttp"]
+]
+depends: [
+  "keepass2"
+  "libmono-corlib4-5-cil" {>= "5.18.0.240"}
+  "libmono-system-core4-0-cil" {>= "5.18.0.240"}
+  "libmono-system-drawing4-0-cil" {>= "5.12.0.309"}
+  "libmono-system-windows-forms4-0-cil" {>= "5.16.0.220"}
+  "libmono-system4-0-cil" {>= "5.18.0.240"}
+  "libnewtonsoft-json5-0-cil" {>= "5.0r6"}
+]
+extra-source "keepass2-plugin-keepasshttp_1.8.4.2+dfsg1-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/keepass2-plugin-keepasshttp/keepass2-plugin-keepasshttp_1.8.4.2+dfsg1-2.1_all.deb"
+}

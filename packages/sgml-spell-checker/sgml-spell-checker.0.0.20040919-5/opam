@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sgml-spell-checker_0.0.20040919-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sgml-spell-checker"]
+]
+depends: [
+  "aspell"
+  "perl-any"
+  "sgmlspl"
+  ("opensp" | "sp")
+]
+extra-source "sgml-spell-checker_0.0.20040919-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sgml-spell-checker/sgml-spell-checker_0.0.20040919-5_all.deb"
+}

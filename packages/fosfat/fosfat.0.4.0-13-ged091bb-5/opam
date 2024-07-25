@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fosfat_0.4.0-13-ged091bb-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fosfat"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfosfat0" {>= "0.3.2"}
+  "libfosgra0" {>= "0.4.0"}
+  "libfuse2" {>= "2.6"}
+]
+extra-source "fosfat_0.4.0-13-ged091bb-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fosfat/fosfat_0.4.0-13-ged091bb-5_amd64.deb"
+}

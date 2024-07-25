@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libflint-arb-dev_1:2.23.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libflint-arb-dev"]
+]
+depends: [
+  "libflint-arb2" {= "1-2.23.0-1+b1"}
+  "libflint-dev"
+]
+extra-source "libflint-arb-dev_1:2.23.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flint-arb/libflint-arb-dev_2.23.0-1+b1_amd64.deb"
+}

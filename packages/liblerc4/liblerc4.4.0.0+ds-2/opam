@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblerc4_4.0.0+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblerc4"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "liblerc4_4.0.0+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lerc/liblerc4_4.0.0+ds-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libotbmathparserx-8.1-1_8.1.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libotbmathparserx-8.1-1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libinsighttoolkit4-13" {>= "4.13.3withdata-dfsg2"}
+  "libmuparserx4-0-11" {>= "4.0.11"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libotbmathparserx-8.1-1_8.1.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/otb/libotbmathparserx-8.1-1_8.1.1+dfsg-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-memotrie-prof_0.6.10-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-memotrie-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-memotrie-dev" {= "0.6.10-1+b1"}
+  "libghc-newtype-generics-prof"
+]
+extra-source "libghc-memotrie-prof_0.6.10-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-memotrie/libghc-memotrie-prof_0.6.10-1+b1_amd64.deb"
+}

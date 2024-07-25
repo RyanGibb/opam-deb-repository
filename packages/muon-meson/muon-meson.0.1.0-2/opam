@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i muon-meson_0.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r muon-meson"]
+]
+depends: [
+  "libarchive13" {>= "3.0.4"}
+  "libc6" {>= "2.34"}
+  "libcurl4" {>= "7.16.2"}
+  "libpkgconf3" {>= "1.6.3"}
+  "ninja-build"
+]
+extra-source "muon-meson_0.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/muon-meson/muon-meson_0.1.0-2_amd64.deb"
+}

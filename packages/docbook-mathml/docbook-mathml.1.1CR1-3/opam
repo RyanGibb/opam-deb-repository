@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i docbook-mathml_1.1CR1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r docbook-mathml"]
+]
+depends: [
+  "docbook-xml" {>= "4.1.2-4"}
+  "sgml-base" {>= "1.28"}
+  "w3c-sgml-lib"
+  "xml-core" {>= "0.14"}
+]
+extra-source "docbook-mathml_1.1CR1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/docbook-mathml/docbook-mathml_1.1CR1-3_all.deb"
+}

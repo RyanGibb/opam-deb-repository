@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rsvg2_3.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rsvg2"]
+]
+depends: [
+  "gir1-2-rsvg-2-0"
+  "ruby-cairo-gobject" {>= "3.3.2-1"}
+  "ruby-gdk-pixbuf2" {>= "3.3.2-1"}
+  "ruby-gio2" {>= "3.3.2-1"}
+  "ruby-glib2" {>= "3.3.2-1"}
+  "ruby-pango" {>= "3.3.2-1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-rsvg2_3.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-gnome2/ruby-rsvg2_3.3.2-1_all.deb"
+}

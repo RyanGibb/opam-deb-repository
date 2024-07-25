@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i odbc-mdbtools_0.7.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r odbc-mdbtools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libmdb2" {>= "0.7~rc1"}
+  "libmdbsql2" {>= "0.5.99.0.6pre1.0.20051109"}
+  "odbcinst1debian2" {>= "2.3.1"}
+]
+extra-source "odbc-mdbtools_0.7.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mdbtools/odbc-mdbtools_0.7.1-6_amd64.deb"
+}

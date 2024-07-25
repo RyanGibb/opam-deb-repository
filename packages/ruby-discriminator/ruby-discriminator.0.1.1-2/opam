@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-discriminator_0.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-discriminator"]
+]
+depends: [
+  "ruby-activerecord" {>= "2-4.0.2"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-discriminator_0.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-discriminator/ruby-discriminator_0.1.1-2_all.deb"
+}

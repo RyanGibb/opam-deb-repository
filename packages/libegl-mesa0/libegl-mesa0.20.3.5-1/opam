@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libegl-mesa0_20.3.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libegl-mesa0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libdrm2" {>= "2.4.81"}
+  "libexpat1" {>= "2.0.1"}
+  "libgbm1" {= "20.3.5-1"}
+  "libglapi-mesa" {= "20.3.5-1"}
+  "libwayland-client0" {>= "1.15.0"}
+  "libwayland-server0" {>= "1.15.0"}
+  "libx11-xcb1" {>= "2-1.7.0"}
+  "libxcb-dri2-0" {>= "1.8"}
+  "libxcb-dri3-0" {>= "1.13"}
+  "libxcb-present0"
+  "libxcb-sync1"
+  "libxcb-xfixes0"
+  "libxcb1" {>= "1.9.2"}
+  "libxshmfence1"
+]
+extra-source "libegl-mesa0_20.3.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mesa/libegl-mesa0_20.3.5-1_amd64.deb"
+}

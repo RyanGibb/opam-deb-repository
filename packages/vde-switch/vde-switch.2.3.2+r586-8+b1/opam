@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vde-switch_2.3.2+r586-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vde-switch"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libvdeplug2"
+  "sgml-base" {>= "1.28"}
+]
+extra-source "vde-switch_2.3.2+r586-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vde2/vde-switch_2.3.2+r586-8+b1_amd64.deb"
+}

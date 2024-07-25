@@ -1,0 +1,46 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freeipa-client_4.7.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freeipa-client"]
+]
+depends: [
+  "bind9utils"
+  "certmonger" {>= "0.79.5-2"}
+  "curl"
+  "dnsutils"
+  "freeipa-common" {= "4.7.2-3"}
+  "krb5-user"
+  "libbasicobjects0" {>= "0.4.0"}
+  "libc6" {>= "2.14"}
+  "libcollection4" {>= "0.4.0"}
+  "libcom-err2" {>= "1.43.9"}
+  "libini-config5" {>= "0.4.0"}
+  "libk5crypto3" {>= "1.9+dfsg~beta1"}
+  "libkrb5-3" {>= "1.13~alpha1+dfsg"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss-sss"
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libnss3-tools"
+  "libpam-sss"
+  "libpopt0" {>= "1.14"}
+  "libref-array1" {>= "0.4.0"}
+  "libsasl2-2" {>= "2.1.27+dfsg"}
+  "libsasl2-modules-gssapi-mit"
+  "libssl1-1" {>= "1.1.0"}
+  "libsss-sudo"
+  "libxmlrpc-core-c3" {>= "1.16.33-3.1ubuntu5"}
+  "oddjob-mkhomedir"
+  "python-any"
+  "python-dnspython"
+  "python-gssapi"
+  "python-ipaclient" {= "4.7.2-3"}
+  "python-ldap"
+  "python-sss"
+  "sssd" {>= "1.14.0"}
+]
+extra-source "freeipa-client_4.7.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeipa/freeipa-client_4.7.2-3_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-linux-raw-sys+rustc-dep-of-std-dev_0.0.46-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-linux-raw-sys+rustc-dep-of-std-dev"]
+]
+depends: [
+  "librust-linux-raw-sys+compiler-builtins-dev" {= "0.0.46-3"}
+  "librust-linux-raw-sys+core-dev" {= "0.0.46-3"}
+  "librust-linux-raw-sys-dev"
+  "librust-linux-raw-sys-dev" {= "0.0.46-3"}
+]
+extra-source "librust-linux-raw-sys+rustc-dep-of-std-dev_0.0.46-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-linux-raw-sys/librust-linux-raw-sys+rustc-dep-of-std-dev_0.0.46-3_amd64.deb"
+}

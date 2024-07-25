@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-scales_1.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-scales"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+  "r-cran-labeling"
+  "r-cran-munsell" {>= "0.5"}
+  "r-cran-r6"
+  "r-cran-rcolorbrewer"
+  "r-cran-rcpp"
+  "r-cran-viridislite"
+]
+extra-source "r-cran-scales_1.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-scales/r-cran-scales_1.0.0-2_amd64.deb"
+}

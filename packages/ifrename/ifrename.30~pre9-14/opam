@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ifrename_30~pre9-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ifrename"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libiw30" {>= "30~pre1"}
+]
+conflicts: [
+  "wireless-tools (<< 27+28pre9)"
+]
+extra-source "ifrename_30~pre9-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wireless-tools/ifrename_30~pre9-14_amd64.deb"
+}

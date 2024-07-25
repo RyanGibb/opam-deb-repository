@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aspell-bn_1:0.01.1-1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aspell-bn"]
+]
+depends: [
+  "aspell" {>= "0.60.3-2"}
+  "dictionaries-common" {>= "0.9.1"}
+]
+extra-source "aspell-bn_1:0.01.1-1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aspell-bn/aspell-bn_0.01.1-1-4_all.deb"
+}

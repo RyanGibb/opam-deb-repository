@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scrollz_2.2.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scrollz"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libgnutls30" {>= "3.7.0"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "scrollz_2.2.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scrollz/scrollz_2.2.3-2_amd64.deb"
+}

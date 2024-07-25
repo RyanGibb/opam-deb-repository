@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i 389-ds_1.4.0.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r 389-ds"]
+]
+depends: [
+  "389-ds-base"
+  "cockpit-389-ds"
+]
+extra-source "389-ds_1.4.0.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/3/389-ds-base/389-ds_1.4.0.21-1_all.deb"
+}

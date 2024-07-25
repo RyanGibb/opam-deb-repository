@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zabbix-cli_1.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zabbix-cli"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-any" {>= "2.6.6-7~"}
+  "python-ipaddr"
+  "python-requests"
+]
+extra-source "zabbix-cli_1.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zabbix-cli/zabbix-cli_1.7.0-1_all.deb"
+}

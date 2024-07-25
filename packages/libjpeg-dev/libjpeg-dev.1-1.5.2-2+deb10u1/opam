@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjpeg-dev_1:1.5.2-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjpeg-dev"]
+]
+depends: [
+  "libjpeg62-turbo-dev" {>= "1-1.5.2-2+deb10u1"}
+]
+conflicts: [
+  "libjpeg62-dev"
+  "libjpeg7-dev"
+  "libjpeg8-dev"
+  "libjpeg9-dev"
+]
+extra-source "libjpeg-dev_1:1.5.2-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg-dev_1.5.2-2+deb10u1_all.deb"
+}

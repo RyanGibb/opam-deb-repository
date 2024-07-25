@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i maliit-keyboard_2.3.1-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r maliit-keyboard"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libchewing3" {>= "0.4.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.67.3"}
+  "libhunspell-1-7-0"
+  "libmaliit-plugins2" {>= "2.0.0"}
+  "libpinyin15" {>= "2.7.92"}
+  "libpresage1v5" {>= "0.8.3"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5feedback5" {>= "5.0~git20180329.a14bd0bb"}
+  "libqt5multimedia5" {>= "5.6.0~beta"}
+  "libqt5qml5" {>= "5.14.1"}
+  "libqt5quickcontrols2-5" {>= "5.7.1"}
+  "libstdc++6" {>= "5.2"}
+  "maliit-framework" {>= "2.3.0"}
+  "qml-module-qtgraphicaleffects"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick2"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+  ("libqt5quick5" {>= "5.0.2"} | "libqt5quick5-gles" {>= "5.0.2"})
+]
+extra-source "maliit-keyboard_2.3.1-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maliit-keyboard/maliit-keyboard_2.3.1-3.1_amd64.deb"
+}

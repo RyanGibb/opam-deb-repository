@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-net-smtp_1.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-net-smtp"]
+]
+depends: [
+  "php-common"
+  "php-net-socket" {>= "1.0.7"}
+]
+extra-source "php-net-smtp_1.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-net-smtp/php-net-smtp_1.8.0-1_all.deb"
+}

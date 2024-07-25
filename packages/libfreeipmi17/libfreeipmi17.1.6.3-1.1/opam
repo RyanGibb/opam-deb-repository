@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfreeipmi17_1.6.3-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfreeipmi17"]
+]
+depends: [
+  "freeipmi-common" {= "1.6.3-1.1"}
+  "libc6" {>= "2.15"}
+  "libgcrypt20" {>= "1.8.0"}
+]
+extra-source "libfreeipmi17_1.6.3-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeipmi/libfreeipmi17_1.6.3-1.1_amd64.deb"
+}

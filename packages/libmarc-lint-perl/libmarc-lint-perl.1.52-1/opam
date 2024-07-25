@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmarc-lint-perl_1.52-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmarc-lint-perl"]
+]
+depends: [
+  "libbusiness-isbn-perl" {>= "2.010"}
+  "libmarc-record-perl"
+  "perl"
+]
+extra-source "libmarc-lint-perl_1.52-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmarc-lint-perl/libmarc-lint-perl_1.52-1_all.deb"
+}

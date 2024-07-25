@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clustalx_2.1+lgpl-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clustalx"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+]
+extra-source "clustalx_2.1+lgpl-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clustalx/clustalx_2.1+lgpl-9_amd64.deb"
+}

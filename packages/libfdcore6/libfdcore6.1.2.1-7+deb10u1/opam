@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfdcore6_1.2.1-7+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfdcore6"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libfdproto6" {>= "1.2.1"}
+  "libgnutls30" {>= "3.6.6"}
+  "libsctp1" {>= "1.0.12+dfsg"}
+]
+extra-source "libfdcore6_1.2.1-7+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freediameter/libfdcore6_1.2.1-7+deb10u1_amd64.deb"
+}

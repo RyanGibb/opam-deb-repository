@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phpliteadmin_1.9.8.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phpliteadmin"]
+]
+depends: [
+  "libjs-codemirror" {>= "5.25.0"}
+  "php-mbstring"
+  "php-sqlite3"
+  ("libapache2-mod-php" | "php-cgi" | "php-fpm")
+]
+extra-source "phpliteadmin_1.9.8.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phpliteadmin/phpliteadmin_1.9.8.2-2_all.deb"
+}

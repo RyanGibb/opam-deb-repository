@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxnee-dev_3.19-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxnee-dev"]
+]
+depends: [
+  "libxnee0" {= "3.19-9"}
+  "sgml-base" {>= "1.28"}
+]
+extra-source "libxnee-dev_3.19-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xnee/libxnee-dev_3.19-9_amd64.deb"
+}

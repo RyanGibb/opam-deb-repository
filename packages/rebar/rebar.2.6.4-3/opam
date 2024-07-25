@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rebar_2.6.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rebar"]
+]
+depends: [
+  "erlang-asn1"
+  "erlang-crypto"
+  "erlang-dev"
+  "erlang-dialyzer"
+  "erlang-diameter"
+  "erlang-edoc"
+  "erlang-eunit"
+  "erlang-reltool"
+  "erlang-snmp"
+  "erlang-syntax-tools"
+  "erlang-tools"
+  ("erlang-base" | "erlang-base-hipe")
+]
+extra-source "rebar_2.6.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rebar/rebar_2.6.4-3_amd64.deb"
+}

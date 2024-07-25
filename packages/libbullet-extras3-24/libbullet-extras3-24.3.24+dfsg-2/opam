@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbullet-extras3.24_3.24+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbullet-extras3.24"]
+]
+depends: [
+  "libbullet3-24" {>= "3.24+dfsg"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libtinyxml2-9" {>= "8.0.0"}
+]
+extra-source "libbullet-extras3.24_3.24+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bullet/libbullet-extras3.24_3.24+dfsg-2_amd64.deb"
+}

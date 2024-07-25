@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i quodlibet_4.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r quodlibet"]
+]
+depends: [
+  "exfalso" {= "4.3.0-1"}
+  "gir1-2-gst-plugins-base-1-0"
+  "gir1-2-gstreamer-1-0"
+  "gir1-2-keybinder-3-0"
+  "gstreamer1-0-alsa"
+  "gstreamer1-0-plugins-base"
+  "gstreamer1-0-plugins-good"
+  "gstreamer1-0-plugins-ugly"
+  "gstreamer1-0-pulseaudio"
+  "python3" {>= "3.5"}
+  "python3-any"
+]
+extra-source "quodlibet_4.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/quodlibet/quodlibet_4.3.0-1_all.deb"
+}

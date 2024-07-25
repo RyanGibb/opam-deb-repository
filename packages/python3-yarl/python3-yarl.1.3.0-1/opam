@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-yarl_1.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-yarl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+  "python3-idna"
+  "python3-multidict" {>= "4.0.0"}
+]
+extra-source "python3-yarl_1.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yarl/python3-yarl_1.3.0-1_amd64.deb"
+}

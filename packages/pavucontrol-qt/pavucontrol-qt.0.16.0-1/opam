@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pavucontrol-qt_0.16.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pavucontrol-qt"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libpulse-mainloop-glib0" {>= "0.99.1"}
+  "libpulse0" {>= "4.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  "pulseaudio"
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+]
+extra-source "pavucontrol-qt_0.16.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pavucontrol-qt/pavucontrol-qt_0.16.0-1_amd64.deb"
+}

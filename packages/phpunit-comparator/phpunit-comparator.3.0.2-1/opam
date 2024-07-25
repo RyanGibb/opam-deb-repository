@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phpunit-comparator_3.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phpunit-comparator"]
+]
+depends: [
+  "php-common"
+  "phpunit-diff" {< "4~~"}
+  "phpunit-diff" {>= "3.0"}
+  "phpunit-exporter" {< "4~~"}
+  "phpunit-exporter" {>= "3.1"}
+]
+extra-source "phpunit-comparator_3.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phpunit-comparator/phpunit-comparator_3.0.2-1_all.deb"
+}

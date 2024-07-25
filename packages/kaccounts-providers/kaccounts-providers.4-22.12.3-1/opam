@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kaccounts-providers_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kaccounts-providers"]
+]
+depends: [
+  "kio"
+  "kpackagetool5"
+  "libc6" {>= "2.14"}
+  "libkaccounts2" {>= "4-20.12.0"}
+  "libkf5coreaddons5" {>= "5.2.0"}
+  "libkf5declarative5" {>= "5.85.0~"}
+  "libkf5i18n5" {>= "5.85.0~"}
+  "libkf5kiocore5" {>= "5.85.0~"}
+  "libkf5package5" {>= "5.85.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.15.0~"}
+  "libqt5webengine5" {>= "5.15.0~"}
+  "libqt5webenginecore5" {>= "5.15.0~"}
+  "libqt5xml5" {>= "5.15.0~"}
+  "libstdc++6" {>= "5"}
+  "plasma-framework"
+  "qml-module-org-kde-kirigami2"
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick2"
+  "qml-module-qtwebengine"
+  "signon-plugin-oauth2"
+  ("libqt5gui5" {>= "5.15.0~"} | "libqt5gui5-gles" {>= "5.15.0~"})
+]
+extra-source "kaccounts-providers_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kaccounts-providers/kaccounts-providers_22.12.3-1_amd64.deb"
+}

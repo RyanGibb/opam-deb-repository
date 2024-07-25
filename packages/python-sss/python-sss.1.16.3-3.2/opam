@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-sss_1.16.3-3.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-sss"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libldb1" {>= "0.9.21"}
+  "libpopt0" {>= "1.14"}
+  "libpython2-7" {>= "2.7"}
+  "libselinux1" {>= "1.32"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-sss_1.16.3-3.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sssd/python-sss_1.16.3-3.2_amd64.deb"
+}

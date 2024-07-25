@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsundials-nvecparallel-hypre6_6.4.1+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsundials-nvecparallel-hypre6"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libhypre-2-26-0" {>= "2.26.0"}
+  "libopenmpi3" {>= "4.1.4"}
+]
+extra-source "libsundials-nvecparallel-hypre6_6.4.1+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sundials/libsundials-nvecparallel-hypre6_6.4.1+dfsg1-3_amd64.deb"
+}

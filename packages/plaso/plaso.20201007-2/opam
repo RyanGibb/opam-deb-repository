@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plaso_20201007-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plaso"]
+]
+depends: [
+  "python3-plaso" {>= "20201007-2"}
+]
+extra-source "plaso_20201007-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plaso/plaso_20201007-2_all.deb"
+}

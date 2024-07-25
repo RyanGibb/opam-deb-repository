@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i groonga-server-gqtp_13.0.0+dfsg-3~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r groonga-server-gqtp"]
+]
+depends: [
+  "adduser"
+  "groonga-server-common" {= "13.0.0+dfsg-3~deb12u1"}
+  "sysvinit-utils" {>= "3.05-4"}
+]
+extra-source "groonga-server-gqtp_13.0.0+dfsg-3~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/groonga/groonga-server-gqtp_13.0.0+dfsg-3~deb12u1_all.deb"
+}

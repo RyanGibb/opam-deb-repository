@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qemu-block-extra_1:7.2+dfsg-7+deb12u6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qemu-block-extra"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcurl3-gnutls" {>= "7.16.3"}
+  "libgfapi0" {>= "10.3"}
+  "libiscsi7" {>= "1.18.0"}
+  "libnfs13" {>= "1.11.0"}
+  "librados2" {>= "16.2.11+ds"}
+  "librbd1" {>= "16.2.6+ds"}
+  "libssh-4" {>= "0.8.4"}
+  ("qemu-system-x86" {= "1-7.2+dfsg-7+deb12u6"} | "qemu-system-arm" {= "1-7.2+dfsg-7+deb12u6"} | "qemu-system-mips" {= "1-7.2+dfsg-7+deb12u6"} | "qemu-system-ppc" {= "1-7.2+dfsg-7+deb12u6"} | "qemu-system-sparc" {= "1-7.2+dfsg-7+deb12u6"} | "qemu-system-misc" {= "1-7.2+dfsg-7+deb12u6"} | "qemu-utils" {= "1-7.2+dfsg-7+deb12u6"})
+]
+extra-source "qemu-block-extra_1:7.2+dfsg-7+deb12u6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qemu/qemu-block-extra_7.2+dfsg-7+deb12u6_amd64.deb"
+}

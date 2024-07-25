@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgphobos-12-dev-mips-cross_12.2.0-14cross5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgphobos-12-dev-mips-cross"]
+]
+depends: [
+  "gcc-12-cross-base-mipsen" {= "12.2.0-14cross5"}
+  "libgphobos3-mips-cross" {>= "12.2.0-14cross5"}
+  "zlib1g-dev"
+]
+extra-source "libgphobos-12-dev-mips-cross_12.2.0-14cross5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12-cross-mipsen/libgphobos-12-dev-mips-cross_12.2.0-14cross5_all.deb"
+}

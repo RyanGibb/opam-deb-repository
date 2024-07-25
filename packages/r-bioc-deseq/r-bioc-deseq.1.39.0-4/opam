@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-deseq_1.39.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-deseq"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-bioc-biobase" {>= "2.21.7"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.7.5"}
+  "r-bioc-genefilter"
+  "r-bioc-geneplotter"
+  "r-cran-lattice"
+  "r-cran-locfit"
+  "r-cran-mass"
+  "r-cran-rcolorbrewer"
+]
+extra-source "r-bioc-deseq_1.39.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-deseq/r-bioc-deseq_1.39.0-4_amd64.deb"
+}

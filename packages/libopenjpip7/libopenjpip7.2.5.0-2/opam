@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenjpip7_2.5.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenjpip7"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libopenjp2-7" {>= "2.0.0"}
+]
+extra-source "libopenjpip7_2.5.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openjpeg2/libopenjpip7_2.5.0-2_amd64.deb"
+}

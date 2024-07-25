@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pg-cloudconfig_0.10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pg-cloudconfig"]
+]
+depends: [
+  "postgresql-common"
+  "python3-any" {>= "3.2~"}
+  "python3-pint"
+]
+extra-source "pg-cloudconfig_0.10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pg-cloudconfig/pg-cloudconfig_0.10_all.deb"
+}

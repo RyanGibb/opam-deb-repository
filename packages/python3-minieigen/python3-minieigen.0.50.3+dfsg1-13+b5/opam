@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-minieigen_0.50.3+dfsg1-13+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-minieigen"]
+]
+depends: [
+  "libboost-python1-74-0"
+  "libboost-python1-74-0" {>= "1.74.0+ds1"}
+  "libc6" {>= "2.32"}
+  "libdouble-conversion3" {>= "2.0.0"}
+  "libgcc-s1" {>= "4.0"}
+  "libjs-sphinxdoc" {>= "5.2"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+]
+extra-source "python3-minieigen_0.50.3+dfsg1-13+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/minieigen/python3-minieigen_0.50.3+dfsg1-13+b5_amd64.deb"
+}

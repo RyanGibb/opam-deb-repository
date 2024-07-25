@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dextractor_1.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dextractor"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libhdf5-103-1"
+]
+extra-source "dextractor_1.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dextractor/dextractor_1.0-6_amd64.deb"
+}

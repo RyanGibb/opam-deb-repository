@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnome-games-support-1-3_1.8.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnome-games-support-1-3"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgee-0-8-2" {>= "0.8.3"}
+  "libglib2-0-0" {>= "2.43.92"}
+  "libgnome-games-support-common"
+  "libgtk-3-0" {>= "3.19.12"}
+]
+extra-source "libgnome-games-support-1-3_1.8.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnome-games-support/libgnome-games-support-1-3_1.8.2-1+b1_amd64.deb"
+}

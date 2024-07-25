@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i grilo-plugins-dvb-daemon_1:0.2.91~git20170110-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r grilo-plugins-dvb-daemon"]
+]
+depends: [
+  "gnome-dvb-client" {>= "1-0.2.91~git20170110-4"}
+  "gnome-dvb-daemon" {>= "1-0.2.91~git20170110-4"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgrilo-0-3-0" {>= "0.3.0"}
+]
+extra-source "grilo-plugins-dvb-daemon_1:0.2.91~git20170110-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-dvb-daemon/grilo-plugins-dvb-daemon_0.2.91~git20170110-4_amd64.deb"
+}

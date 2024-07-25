@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cryptsetup-bin_2:2.3.7-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cryptsetup-bin"]
+]
+depends: [
+  "libblkid1" {>= "2.24.2"}
+  "libc6" {>= "2.15"}
+  "libcryptsetup12" {>= "2-2.3"}
+  "libpopt0" {>= "1.14"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "cryptsetup-bin_2:2.3.7-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cryptsetup/cryptsetup-bin_2.3.7-1+deb11u1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcommons-jci-rhino-java_1.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcommons-jci-rhino-java"]
+]
+depends: [
+  "libcommons-jci-java" {= "1.1-6"}
+  "librhino-java"
+]
+extra-source "libcommons-jci-rhino-java_1.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/commons-jci/libcommons-jci-rhino-java_1.1-6_all.deb"
+}

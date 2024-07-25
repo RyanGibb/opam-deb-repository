@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqmi-proxy_1.22.0-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqmi-proxy"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.36"}
+  "libqmi-glib5" {= "1.22.0-1.2"}
+]
+extra-source "libqmi-proxy_1.22.0-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libq/libqmi/libqmi-proxy_1.22.0-1.2_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pianobar_2022.04.01-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pianobar"]
+]
+depends: [
+  "libao4" {>= "1.1.0"}
+  "libavcodec-extra59"
+  "libavfilter-extra8"
+  "libavformat-extra59"
+  "libavutil57" {>= "7-5.0"}
+  "libc6" {>= "2.33"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libpiano0" {>= "2020.11.28"}
+]
+extra-source "pianobar_2022.04.01-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pianobar/pianobar_2022.04.01-1+b1_amd64.deb"
+}

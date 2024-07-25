@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdiagnostic-aggregator-tools_1.10.1+ds1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdiagnostic-aggregator-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdiagnostic-aggregator1d" {>= "1.10.1+ds1"}
+  "libgcc-s1" {>= "3.0"}
+  "librosconsole3d" {>= "1.14.3"}
+  "libroscpp3d" {>= "1.15.9+ds1"}
+  "librostime1d" {>= "0.7.2"}
+  "libstdc++6" {>= "9"}
+  "python3"
+]
+extra-source "libdiagnostic-aggregator-tools_1.10.1+ds1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-diagnostics/libdiagnostic-aggregator-tools_1.10.1+ds1-3_amd64.deb"
+}

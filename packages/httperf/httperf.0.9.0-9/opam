@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i httperf_0.9.0-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r httperf"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "httperf_0.9.0-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/httperf/httperf_0.9.0-9_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libphonenumber-dev_8.12.16-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libphonenumber-dev"]
+]
+depends: [
+  "libboost-thread-dev"
+  "libgeocoding8" {= "8.12.16-4"}
+  "libphonenumber8" {= "8.12.16-4"}
+  "libprotobuf-dev"
+]
+conflicts: [
+  "libphonenumber6-dev"
+]
+extra-source "libphonenumber-dev_8.12.16-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libphonenumber/libphonenumber-dev_8.12.16-4_amd64.deb"
+}

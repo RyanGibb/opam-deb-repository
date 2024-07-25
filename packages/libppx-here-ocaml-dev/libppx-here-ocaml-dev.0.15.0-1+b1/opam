@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libppx-here-ocaml-dev_0.15.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libppx-here-ocaml-dev"]
+]
+depends: [
+  "libbase-ocaml-dev"
+  "libc6" {>= "2.35"}
+  "libocaml-compiler-libs-ocaml-dev"
+  "libppx-here-ocaml"
+  "libppxlib-ocaml-dev"
+  "libsexplib0-ocaml-dev"
+  "ocaml"
+]
+extra-source "libppx-here-ocaml-dev_0.15.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/ppx-here/libppx-here-ocaml-dev_0.15.0-1+b1_amd64.deb"
+}

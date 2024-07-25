@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-h2_4.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-h2"]
+]
+depends: [
+  "python3-any"
+  "python3-hpack" {>= "4.0"}
+  "python3-hyperframe" {>= "6.0"}
+]
+extra-source "python3-h2_4.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-h2/python3-h2_4.0.0-3_all.deb"
+}

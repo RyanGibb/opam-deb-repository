@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnetsnmptrapd40_5.9+dfsg-4+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnetsnmptrapd40"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmariadb3" {>= "3.0.0"}
+  "libsnmp-base"
+  "libsnmp40" {= "5.9+dfsg-4+deb11u1"}
+]
+extra-source "libnetsnmptrapd40_5.9+dfsg-4+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/net-snmp/libnetsnmptrapd40_5.9+dfsg-4+deb11u1_amd64.deb"
+}

@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5akonadicore5abi2_4:20.08.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5akonadicore5abi2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libkf5akonadi-data" {= "4-20.08.3-3"}
+  "libkf5akonadiprivate5abi2"
+  "libkf5akonadiprivate5abi2" {>= "4-20.08.3"}
+  "libkf5configcore5" {>= "5.71.0~"}
+  "libkf5coreaddons5" {>= "5.71.0~"}
+  "libkf5i18n5" {>= "5.71.0~"}
+  "libkf5iconthemes5" {>= "5.71.0~"}
+  "libkf5itemmodels5" {>= "5.71.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5network5" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.13.0~"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.13.0~"} | "libqt5gui5-gles" {>= "5.13.0~"})
+]
+extra-source "libkf5akonadicore5abi2_4:20.08.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/akonadi/libkf5akonadicore5abi2_20.08.3-3_amd64.deb"
+}

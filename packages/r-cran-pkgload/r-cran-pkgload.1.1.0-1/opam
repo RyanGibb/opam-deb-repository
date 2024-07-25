@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-pkgload_1.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-pkgload"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.0.20200530-1"}
+  "r-cran-cli"
+  "r-cran-crayon"
+  "r-cran-desc"
+  "r-cran-pkgbuild"
+  "r-cran-rlang"
+  "r-cran-rprojroot"
+  "r-cran-rstudioapi"
+  "r-cran-withr"
+]
+extra-source "r-cran-pkgload_1.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-pkgload/r-cran-pkgload_1.1.0-1_amd64.deb"
+}

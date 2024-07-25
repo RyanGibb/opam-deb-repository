@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-amazon-sqs-messenger_5.4.23+dfsg-1+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-amazon-sqs-messenger"]
+]
+depends: [
+  "php-async-aws-core" {< "2~~"}
+  "php-async-aws-core" {>= "1.5"}
+  "php-async-aws-sqs" {< "2~~"}
+  "php-async-aws-sqs" {>= "1.0"}
+  "php-common"
+  "php-psr-log"
+  "php-symfony-messenger"
+  "php-symfony-service-contracts"
+]
+extra-source "php-symfony-amazon-sqs-messenger_5.4.23+dfsg-1+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/symfony/php-symfony-amazon-sqs-messenger_5.4.23+dfsg-1+deb12u2_all.deb"
+}

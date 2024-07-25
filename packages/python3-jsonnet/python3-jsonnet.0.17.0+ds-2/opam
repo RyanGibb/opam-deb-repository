@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-jsonnet_0.17.0+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-jsonnet"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+]
+extra-source "python3-jsonnet_0.17.0+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jsonnet/python3-jsonnet_0.17.0+ds-2_amd64.deb"
+}

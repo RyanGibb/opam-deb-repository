@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libldns-dev_1.7.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libldns-dev"]
+]
+depends: [
+  "libldns3" {= "1.7.1-2+b1"}
+  "libssl-dev"
+]
+extra-source "libldns-dev_1.7.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ldns/libldns-dev_1.7.1-2+b1_amd64.deb"
+}

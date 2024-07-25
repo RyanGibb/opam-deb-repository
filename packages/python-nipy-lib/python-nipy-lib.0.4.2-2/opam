@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-nipy-lib_0.4.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-nipy-lib"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-numpy"
+  "python-numpy" {>= "1-1.16.0~rc1"}
+]
+extra-source "python-nipy-lib_0.4.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nipy/python-nipy-lib_0.4.2-2_amd64.deb"
+}

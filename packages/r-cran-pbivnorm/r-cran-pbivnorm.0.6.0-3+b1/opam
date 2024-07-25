@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-pbivnorm_0.6.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-pbivnorm"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+]
+extra-source "r-cran-pbivnorm_0.6.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-pbivnorm/r-cran-pbivnorm_0.6.0-3+b1_amd64.deb"
+}

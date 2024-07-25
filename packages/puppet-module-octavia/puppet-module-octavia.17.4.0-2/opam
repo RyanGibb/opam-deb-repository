@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-octavia_17.4.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-octavia"]
+]
+depends: [
+  "puppet"
+  "puppet-module-keystone" {>= "17.4.0"}
+  "puppet-module-nova" {>= "17.4.0"}
+  "puppet-module-openstacklib" {>= "17.4.0"}
+  "puppet-module-oslo" {>= "17.4.0"}
+  "puppet-module-puppetlabs-inifile"
+  "puppet-module-puppetlabs-stdlib"
+  "puppet-module-voxpupuli-ssh-keygen"
+]
+extra-source "puppet-module-octavia_17.4.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-octavia/puppet-module-octavia_17.4.0-2_all.deb"
+}

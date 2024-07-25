@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i quagga-core_1.2.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r quagga-core"]
+]
+depends: [
+  "iproute2"
+  "libc6" {>= "2.15"}
+  "libcap2" {>= "1-2.10"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libreadline7" {>= "6.0"}
+  "libtinfo6" {>= "6"}
+]
+conflicts: [
+  "zebra"
+  "zebra-pj"
+]
+extra-source "quagga-core_1.2.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/quagga/quagga-core_1.2.4-3_amd64.deb"
+}

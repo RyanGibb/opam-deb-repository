@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-word-wrap-dev_0.4.1-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-word-wrap-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libgmp10"
+]
+extra-source "libghc-word-wrap-dev_0.4.1-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-word-wrap/libghc-word-wrap-dev_0.4.1-3+b2_amd64.deb"
+}

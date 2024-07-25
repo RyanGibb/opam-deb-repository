@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-falafel_2.1.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-falafel"]
+]
+depends: [
+  "node-acorn" {>= "5.5.3+ds3"}
+  "node-isarray" {>= "0.0.1"}
+  "node-lodash-packages" {>= "4.15.0"}
+  "nodejs" {>= "8"}
+]
+extra-source "node-falafel_2.1.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-falafel/node-falafel_2.1.0-6_all.deb"
+}

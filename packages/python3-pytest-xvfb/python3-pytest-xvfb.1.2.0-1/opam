@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pytest-xvfb_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pytest-xvfb"]
+]
+depends: [
+  "python3-any"
+  "python3-pytest" {>= "3.6.0"}
+  "python3-pyvirtualdisplay"
+  "xauth"
+  "xvfb"
+]
+extra-source "python3-pytest-xvfb_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pytest-xvfb/python3-pytest-xvfb_1.2.0-1_all.deb"
+}

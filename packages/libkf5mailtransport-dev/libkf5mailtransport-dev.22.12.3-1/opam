@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5mailtransport-dev_22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5mailtransport-dev"]
+]
+depends: [
+  "libkf5akonadimime-dev" {>= "4-22.12.3~"}
+  "libkf5completion-dev"
+  "libkf5configwidgets-dev" {>= "5.99.0~"}
+  "libkf5coreaddons-dev"
+  "libkf5i18n-dev" {>= "5.99.0~"}
+  "libkf5mailtransport5" {= "22.12.3-1"}
+  "libkf5mailtransportakonadi5" {= "22.12.3-1"}
+  "libkf5mime-dev" {>= "22.12.3~"}
+  "libkf5wallet-dev" {>= "5.99.0~"}
+  "libkf5widgetsaddons-dev"
+  "libsasl2-dev"
+  "qtbase5-dev" {>= "5.7.0~"}
+]
+extra-source "libkf5mailtransport-dev_22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kmailtransport/libkf5mailtransport-dev_22.12.3-1_amd64.deb"
+}

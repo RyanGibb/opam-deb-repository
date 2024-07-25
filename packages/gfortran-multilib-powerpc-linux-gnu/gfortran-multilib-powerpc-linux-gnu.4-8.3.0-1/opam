@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gfortran-multilib-powerpc-linux-gnu_4:8.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gfortran-multilib-powerpc-linux-gnu"]
+]
+depends: [
+  "cpp-powerpc-linux-gnu" {= "4-8.3.0-1"}
+  "gcc-multilib-powerpc-linux-gnu" {= "4-8.3.0-1"}
+  "gfortran-8-multilib-powerpc-linux-gnu" {>= "8.3.0-1~"}
+  "gfortran-powerpc-linux-gnu" {= "4-8.3.0-1"}
+]
+extra-source "gfortran-multilib-powerpc-linux-gnu_4:8.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-ports/gfortran-multilib-powerpc-linux-gnu_8.3.0-1_amd64.deb"
+}

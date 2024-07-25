@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aapt_1:10.0.0+r36-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aapt"]
+]
+depends: [
+  "android-libaapt"
+  "android-libandroidfw"
+  "android-libbase" {>= "29.0.6"}
+  "android-liblog" {>= "29.0.6"}
+  "android-libutils" {>= "29.0.6"}
+  "android-libziparchive" {>= "29.0.6"}
+  "libc6" {>= "2.34"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libprotobuf-lite32" {>= "3.21.10"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "aapt_1:10.0.0+r36-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-frameworks-base/aapt_10.0.0+r36-10_amd64.deb"
+}

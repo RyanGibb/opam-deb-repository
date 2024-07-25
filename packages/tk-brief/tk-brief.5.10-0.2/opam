@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tk-brief_5.10-0.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tk-brief"]
+]
+depends: [
+  "texlive"
+  "texlive-latex-extra"
+  "texlive-latex-recommended"
+  ("tk8-3" | "wish")
+  ("xterm" | "x-terminal-emulator")
+]
+extra-source "tk-brief_5.10-0.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tk-brief/tk-brief_5.10-0.2_all.deb"
+}

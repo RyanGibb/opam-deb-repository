@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-coreos-pkg-dev_4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-coreos-pkg-dev"]
+]
+depends: [
+  "golang-github-coreos-go-systemd-dev"
+  "golang-golang-x-crypto-dev"
+  "golang-gopkg-yaml-v2-dev"
+]
+extra-source "golang-github-coreos-pkg-dev_4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-coreos-pkg/golang-github-coreos-pkg-dev_4-3_all.deb"
+}

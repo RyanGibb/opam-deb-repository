@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jardiff_0.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jardiff"]
+]
+depends: [
+  "java-wrappers"
+  "libasm-java" {>= "5.0"}
+  "libcommons-cli-java"
+  ("default-jre-headless" | "java2-runtime-headless")
+]
+extra-source "jardiff_0.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jardiff/jardiff_0.2-5_all.deb"
+}

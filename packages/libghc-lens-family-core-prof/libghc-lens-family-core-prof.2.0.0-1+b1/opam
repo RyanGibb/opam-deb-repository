@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-lens-family-core-prof_2.0.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-lens-family-core-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-lens-family-core-dev" {= "2.0.0-1+b1"}
+]
+extra-source "libghc-lens-family-core-prof_2.0.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-lens-family-core/libghc-lens-family-core-prof_2.0.0-1+b1_amd64.deb"
+}

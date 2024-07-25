@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bpftrace_0.8+git60-gccac69c2239b-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bpftrace"]
+]
+depends: [
+  "libbpfcc"
+  "libc6" {>= "2.16"}
+  "libclang1-7" {>= "1-5.0~svn298832-1~"}
+  "libelf1" {>= "0.131"}
+  "libgcc1" {>= "1-3.0"}
+  "libllvm7" {>= "1-7~svn298832-1~"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "bpftrace_0.8+git60-gccac69c2239b-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bpftrace/bpftrace_0.8+git60-gccac69c2239b-2_amd64.deb"
+}

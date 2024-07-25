@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfungw-duktape1_1.2.1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfungw-duktape1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libduktape207" {>= "2.0.3"}
+  "libfungw1" {< "1.2.1-2.1~"}
+  "libfungw1" {>= "1.2.1-2"}
+]
+extra-source "libfungw-duktape1_1.2.1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fungw/libfungw-duktape1_1.2.1-2+b2_amd64.deb"
+}

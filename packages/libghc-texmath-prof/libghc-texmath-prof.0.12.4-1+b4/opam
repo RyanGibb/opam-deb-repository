@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-texmath-prof_0.12.4-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-texmath-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-pandoc-types-prof"
+  "libghc-split-prof"
+  "libghc-syb-prof"
+  "libghc-texmath-dev" {= "0.12.4-1+b4"}
+  "libghc-xml-prof"
+]
+extra-source "libghc-texmath-prof_0.12.4-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-texmath/libghc-texmath-prof_0.12.4-1+b4_amd64.deb"
+}

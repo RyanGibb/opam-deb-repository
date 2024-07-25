@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i goplay_0.9.1+nmu1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r goplay"]
+]
+depends: [
+  "apt-xapian-index"
+  "libapt-pkg5-0" {>= "0.8.0"}
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libept1-5-0"
+  "libfltk-images1-3"
+  "libfltk1-3" {>= "1.3.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "libxapian30"
+  "zlib1g" {>= "1-1.1.4"}
+  ("debtags" {>= "1.12.2"} | "debtags" {<= "1.12"})
+]
+conflicts: [
+  "golearn"
+]
+extra-source "goplay_0.9.1+nmu1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/goplay/goplay_0.9.1+nmu1+b2_amd64.deb"
+}

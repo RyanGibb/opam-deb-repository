@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tetgen_1.5.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tetgen"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+  "libtet1-5"
+]
+extra-source "tetgen_1.5.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tetgen/tetgen_1.5.0-5_amd64.deb"
+}

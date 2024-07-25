@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liballegro4.4_2:4.4.2-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liballegro4.4"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.15"}
+  "libx11-6"
+  "libxcursor1" {> "1.1.2"}
+  "libxext6"
+  "libxpm4"
+  "libxxf86dga1"
+  "libxxf86vm1"
+]
+extra-source "liballegro4.4_2:4.4.2-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/allegro4.4/liballegro4.4_4.4.2-13_amd64.deb"
+}

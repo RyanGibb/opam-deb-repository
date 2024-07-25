@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lfc-server-mysql_1.10.0-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lfc-server-mysql"]
+]
+depends: [
+  "adduser"
+  "finger"
+  "libc6" {>= "2.15"}
+  "liblcgdm1"
+  "liblfc1" {= "1.10.0-2+b3"}
+  "libmariadb3" {>= "3.0.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "libuuid1" {>= "2.16"}
+  ("default-mysql-client" | "virtual-mysql-client")
+]
+conflicts: [
+  "lfc-mysql (<< 1.8.1.2-2~)"
+]
+extra-source "lfc-server-mysql_1.10.0-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lcgdm/lfc-server-mysql_1.10.0-2+b3_amd64.deb"
+}

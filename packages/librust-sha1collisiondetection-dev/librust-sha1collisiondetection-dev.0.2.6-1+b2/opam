@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-sha1collisiondetection-dev_0.2.6-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-sha1collisiondetection-dev"]
+]
+depends: [
+  "librust-structopt-0-3+default-dev"
+  ("librust-generic-array-0-14+default-dev" | "librust-generic-array-0-13+default-dev" | "librust-generic-array-0-12+default-dev")
+]
+extra-source "librust-sha1collisiondetection-dev_0.2.6-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-sha1collisiondetection/librust-sha1collisiondetection-dev_0.2.6-1+b2_amd64.deb"
+}

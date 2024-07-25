@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bzr-builddeb_2.8.11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bzr-builddeb"]
+]
+depends: [
+  "bzr" {>= "2.1~"}
+  "devscripts" {>= "2.10.59"}
+  "dpkg-dev"
+  "fakeroot"
+  "patchutils"
+  "pristine-tar"
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-any" {>= "2.6.6-7~"}
+  "python-apt"
+  "python-debian" {>= "0.1.11"}
+  "quilt"
+]
+extra-source "bzr-builddeb_2.8.11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bzr-builddeb/bzr-builddeb_2.8.11_all.deb"
+}

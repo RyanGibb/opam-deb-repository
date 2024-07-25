@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnginx-mod-http-lua_1:0.10.23-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnginx-mod-http-lua"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libnginx-mod-http-ndk"
+  "libpcre3"
+  "lua-resty-core" {< "0.1.25.1~"}
+  "lua-resty-core" {>= "0.1.25"}
+  "nginx"
+  ("libluajit2-5-1-2" {>= "2.1-20220411"} | "libluajit-5-1-2" {>= "2.1.0~beta3"})
+]
+extra-source "libnginx-mod-http-lua_1:0.10.23-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnginx-mod-http-lua/libnginx-mod-http-lua_0.10.23-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-project-template-prof_0.2.1.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-project-template-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-base64-bytestring-prof"
+  "libghc-conduit-extra-prof"
+  "libghc-conduit-prof"
+  "libghc-project-template-dev" {= "0.2.1.0-1+b1"}
+  "libghc-resourcet-prof"
+]
+extra-source "libghc-project-template-prof_0.2.1.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-project-template/libghc-project-template-prof_0.2.1.0-1+b1_amd64.deb"
+}

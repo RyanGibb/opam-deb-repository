@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-openssl-streams-prof_1.2.3.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-openssl-streams-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hsopenssl-prof"
+  "libghc-io-streams-prof"
+  "libghc-network-prof"
+  "libghc-openssl-streams-dev" {= "1.2.3.0-1+b2"}
+]
+extra-source "libghc-openssl-streams-prof_1.2.3.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-openssl-streams/libghc-openssl-streams-prof_1.2.3.0-1+b2_amd64.deb"
+}

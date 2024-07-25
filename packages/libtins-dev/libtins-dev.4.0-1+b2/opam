@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtins-dev_4.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtins-dev"]
+]
+depends: [
+  "libpcap-dev"
+  "libtins4-0" {= "4.0-1+b2"}
+]
+extra-source "libtins-dev_4.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtins/libtins-dev_4.0-1+b2_amd64.deb"
+}

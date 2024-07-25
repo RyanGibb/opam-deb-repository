@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkido-dev_0.1.0+dfsg-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkido-dev"]
+]
+depends: [
+  "libassimp-dev" {>= "3"}
+  "libboost-all-dev"
+  "libbullet-dev"
+  "libeigen3-dev"
+  "libfcl-dev"
+  "libkido0-1" {= "0.1.0+dfsg-6+b1"}
+]
+extra-source "libkido-dev_0.1.0+dfsg-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kido/libkido-dev_0.1.0+dfsg-6+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpf-plugins-ladspa_1.6+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpf-plugins-ladspa"]
+]
+depends: [
+  "dpf-plugins-common"
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "dpf-plugins-ladspa_1.6+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpf-plugins/dpf-plugins-ladspa_1.6+ds-2_amd64.deb"
+}

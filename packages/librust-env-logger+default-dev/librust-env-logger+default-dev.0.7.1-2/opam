@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-env-logger+default-dev_0.7.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-env-logger+default-dev"]
+]
+depends: [
+  "librust-atty-dev"
+  "librust-env-logger-dev" {= "0.7.1-2"}
+  "librust-regex+default-dev"
+  "librust-termcolor-dev"
+  ("librust-humantime-2+default-dev" | "librust-humantime-1+default-dev" {>= "1.3-~~"})
+]
+extra-source "librust-env-logger+default-dev_0.7.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-env-logger/librust-env-logger+default-dev_0.7.1-2_amd64.deb"
+}

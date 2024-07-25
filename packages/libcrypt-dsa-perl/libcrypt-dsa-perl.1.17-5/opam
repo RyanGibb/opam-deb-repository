@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypt-dsa-perl_1.17-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypt-dsa-perl"]
+]
+depends: [
+  "libconvert-asn1-perl"
+  "libconvert-pem-perl"
+  "libdata-buffer-perl"
+  "libfile-which-perl"
+  "perl"
+  "perl-any"
+]
+extra-source "libcrypt-dsa-perl_1.17-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcrypt-dsa-perl/libcrypt-dsa-perl_1.17-5_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libimage-sane-perl_5-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libimage-sane-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libexception-class-perl"
+  "libreadonly-perl"
+  "libsane1" {>= "1.0.27"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libimage-sane-perl_5-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libimage-sane-perl/libimage-sane-perl_5-1+b1_amd64.deb"
+}

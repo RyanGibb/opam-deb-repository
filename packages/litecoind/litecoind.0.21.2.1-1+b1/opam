@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i litecoind_0.21.2.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r litecoind"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-thread1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.34"}
+  "libdb5-3++"
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "libevent-pthreads-2-1-7" {>= "2.1.8-stable"}
+  "libfmt9" {>= "9.0.0+ds1"}
+  "libgcc-s1" {>= "3.4"}
+  "libleveldb1d" {>= "1.23"}
+  "libminiupnpc17" {>= "1.9.20140610"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "12"}
+]
+extra-source "litecoind_0.21.2.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/litecoin/litecoind_0.21.2.1-1+b1_amd64.deb"
+}

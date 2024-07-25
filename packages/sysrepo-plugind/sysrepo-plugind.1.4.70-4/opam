@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sysrepo-plugind_1.4.70-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sysrepo-plugind"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libsysrepo5" {= "1.4.70-4"}
+]
+extra-source "sysrepo-plugind_1.4.70-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sysrepo/sysrepo-plugind_1.4.70-4_amd64.deb"
+}

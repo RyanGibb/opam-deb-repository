@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-xkbcommon-sys-dev_0.7.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-xkbcommon-sys-dev"]
+]
+depends: [
+  "librust-bindgen-0-60+default-dev"
+  "librust-libc-0-2+default-dev"
+  "librust-pkg-config-0-3+default-dev"
+  "libxkbcommon-dev"
+  "libxkbcommon-x11-dev"
+]
+extra-source "librust-xkbcommon-sys-dev_0.7.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-xkbcommon-sys/librust-xkbcommon-sys-dev_0.7.5-2_amd64.deb"
+}

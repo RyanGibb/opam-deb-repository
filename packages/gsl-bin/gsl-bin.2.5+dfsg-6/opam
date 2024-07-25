@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gsl-bin_2.5+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gsl-bin"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libgsl23" {>= "2.5"}
+  "libgslcblas0" {>= "2.4"}
+]
+conflicts: [
+  "gsl"
+]
+extra-source "gsl-bin_2.5+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gsl/gsl-bin_2.5+dfsg-6_amd64.deb"
+}

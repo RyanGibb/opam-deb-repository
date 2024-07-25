@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcasa-derivedmscal3_3.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcasa-derivedmscal3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcasa-casa3"
+  "libcasa-measures3"
+  "libcasa-ms3"
+  "libcasa-tables3"
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libcasa-derivedmscal3_3.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/casacore/libcasa-derivedmscal3_3.0.0-4_amd64.deb"
+}

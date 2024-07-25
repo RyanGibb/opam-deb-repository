@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i soapysdr0.6-module-uhd_0.3.4-1+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r soapysdr0.6-module-uhd"]
+]
+depends: [
+  "libboost-system1-67-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libsoapysdr0-6"
+  "libstdc++6" {>= "5.2"}
+  "libuhd3-13-1"
+]
+extra-source "soapysdr0.6-module-uhd_0.3.4-1+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/soapyuhd/soapysdr0.6-module-uhd_0.3.4-1+b7_amd64.deb"
+}

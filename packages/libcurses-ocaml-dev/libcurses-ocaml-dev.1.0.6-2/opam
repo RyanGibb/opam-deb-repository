@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcurses-ocaml-dev_1.0.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcurses-ocaml-dev"]
+]
+depends: [
+  "libcurses-ocaml"
+  "libcurses-ocaml" {= "1.0.6-2"}
+  "libncursesw5-dev"
+  "ocaml-nox"
+]
+extra-source "libcurses-ocaml-dev_1.0.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-curses/libcurses-ocaml-dev_1.0.6-2_amd64.deb"
+}

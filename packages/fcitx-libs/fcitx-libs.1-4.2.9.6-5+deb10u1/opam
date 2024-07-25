@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx-libs_1:4.2.9.6-5+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx-libs"]
+]
+depends: [
+  "libfcitx-config4" {>= "1-4.2.9.6-5+deb10u1"}
+  "libfcitx-core0" {>= "1-4.2.9.6-5+deb10u1"}
+  "libfcitx-gclient1" {>= "1-4.2.9.6-5+deb10u1"}
+  "libfcitx-qt0" {>= "1-4.2.9.6-5+deb10u1"}
+  "libfcitx-utils0" {>= "1-4.2.9.6-5+deb10u1"}
+]
+extra-source "fcitx-libs_1:4.2.9.6-5+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx/fcitx-libs_4.2.9.6-5+deb10u1_all.deb"
+}

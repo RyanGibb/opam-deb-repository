@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-yesod-auth-oauth2-prof_0.5.2.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-yesod-auth-oauth2-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-errors-prof"
+  "libghc-hoauth2-prof"
+  "libghc-http-client-prof"
+  "libghc-http-conduit-prof"
+  "libghc-http-types-prof"
+  "libghc-microlens-prof"
+  "libghc-random-prof"
+  "libghc-safe-exceptions-prof"
+  "libghc-uri-bytestring-prof"
+  "libghc-yesod-auth-oauth2-dev" {= "0.5.2.0-2+b1"}
+  "libghc-yesod-auth-prof"
+  "libghc-yesod-core-prof"
+]
+extra-source "libghc-yesod-auth-oauth2-prof_0.5.2.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-yesod-auth-oauth2/libghc-yesod-auth-oauth2-prof_0.5.2.0-2+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-mvtnorm_1.0-8-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-mvtnorm"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+]
+extra-source "r-cran-mvtnorm_1.0-8-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mvtnorm/r-cran-mvtnorm_1.0-8-1+b1_amd64.deb"
+}

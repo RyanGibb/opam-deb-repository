@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tboot_1.10.5-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tboot"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libssl3" {>= "3.0.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "tboot_1.10.5-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tboot/tboot_1.10.5-4_amd64.deb"
+}

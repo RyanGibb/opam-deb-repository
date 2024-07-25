@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-mutable-containers-prof_0.3.4-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-mutable-containers-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-mono-traversable-prof"
+  "libghc-mutable-containers-dev" {= "0.3.4-3+b1"}
+  "libghc-primitive-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-mutable-containers-prof_0.3.4-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-mutable-containers/libghc-mutable-containers-prof_0.3.4-3+b1_amd64.deb"
+}

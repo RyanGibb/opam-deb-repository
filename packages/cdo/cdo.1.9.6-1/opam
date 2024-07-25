@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cdo_1.9.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cdo"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libcdi0" {= "1.9.6-1"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc1" {>= "1-3.0"}
+  "libgomp1" {>= "4.9"}
+  "libhdf5-103"
+  "libmagplus3v5" {>= "2.34.1-2~"}
+  "libnetcdf13" {>= "4.0.1"}
+  "libproj13" {>= "4.8.0"}
+  "libstdc++6" {>= "5.2"}
+  "libudunits2-0" {>= "2.2.14"}
+]
+extra-source "cdo_1.9.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cdo/cdo_1.9.6-1_amd64.deb"
+}

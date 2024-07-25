@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-datetime-dev_0.5.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-datetime-dev"]
+]
+depends: [
+  "librust-iso8601-0-4+default-dev"
+  "librust-libc-0-2+default-dev"
+  "librust-locale-0-2+default-dev"
+  "librust-pad-0-1+default-dev"
+]
+extra-source "librust-datetime-dev_0.5.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-datetime/librust-datetime-dev_0.5.2-5_amd64.deb"
+}

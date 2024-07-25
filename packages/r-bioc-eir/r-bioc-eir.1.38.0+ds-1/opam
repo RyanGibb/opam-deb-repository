@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-eir_1.38.0+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-eir"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-chemminer" {>= "2.15.15"}
+  "r-cran-dbi"
+  "r-cran-digest"
+  "r-cran-rcppannoy" {>= "0.0.9"}
+  "r-cran-rcurl"
+  "r-cran-runit"
+  "r-cran-snow"
+  "r-cran-snowfall"
+]
+extra-source "r-bioc-eir_1.38.0+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-eir/r-bioc-eir_1.38.0+ds-1_amd64.deb"
+}

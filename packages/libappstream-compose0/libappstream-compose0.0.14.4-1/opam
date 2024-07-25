@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libappstream-compose0_0.14.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libappstream-compose0"]
+]
+depends: [
+  "libappstream4" {>= "0.14.2"}
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.65.1"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "librsvg2-2" {>= "2.32.0"}
+]
+extra-source "libappstream-compose0_0.14.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/appstream/libappstream-compose0_0.14.4-1_amd64.deb"
+}

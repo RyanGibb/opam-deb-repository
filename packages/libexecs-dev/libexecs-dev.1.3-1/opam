@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libexecs-dev_1.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libexecs-dev"]
+]
+depends: [
+  "libexecs-embedded0" {= "1.3-1"}
+  "libexecs0" {= "1.3-1"}
+]
+extra-source "libexecs-dev_1.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libexecs/libexecs-dev_1.3-1_amd64.deb"
+}

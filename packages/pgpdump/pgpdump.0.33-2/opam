@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pgpdump_0.33-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pgpdump"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "pgpdump_0.33-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pgpdump/pgpdump_0.33-2_amd64.deb"
+}

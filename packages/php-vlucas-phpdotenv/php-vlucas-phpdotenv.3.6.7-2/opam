@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-vlucas-phpdotenv_3.6.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-vlucas-phpdotenv"]
+]
+depends: [
+  "php-common"
+  "php-phpoption" {< "2~~"}
+  "php-phpoption" {>= "1.5.2"}
+]
+extra-source "php-vlucas-phpdotenv_3.6.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-vlucas-phpdotenv/php-vlucas-phpdotenv_3.6.7-2_all.deb"
+}

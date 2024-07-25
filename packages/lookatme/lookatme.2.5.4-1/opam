@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lookatme_2.5.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lookatme"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "4.3"}
+  "python3-any"
+  "python3-click"
+  "python3-marshmallow"
+  "python3-mistune"
+  "python3-pygments"
+  "python3-urwid"
+  "python3-yaml"
+]
+extra-source "lookatme_2.5.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lookatme/lookatme_2.5.4-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i upse123_1.0.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r upse123"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libupse2" {>= "1.0.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "upse123_1.0.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/upse/upse123_1.0.0-2+b1_amd64.deb"
+}

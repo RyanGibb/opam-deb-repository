@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-doctrine-data-fixtures_1.2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-doctrine-data-fixtures"]
+]
+depends: [
+  "php-common"
+  "php-doctrine-common" {< "3~~"}
+  "php-doctrine-common" {>= "2.2"}
+]
+extra-source "php-doctrine-data-fixtures_1.2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-doctrine-data-fixtures/php-doctrine-data-fixtures_1.2.2-2_all.deb"
+}

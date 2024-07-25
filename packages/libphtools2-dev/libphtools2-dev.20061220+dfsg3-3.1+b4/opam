@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libphtools2-dev_20061220+dfsg3-3.1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libphtools2-dev"]
+]
+depends: [
+  "cernlib-base-dev" {>= "2006.dfsg.2-7"}
+  "libmathlib2-dev" {>= "2006.dfsg.2-7"}
+  "libphtools2-gfortran" {= "20061220+dfsg3-3.1+b4"}
+]
+extra-source "libphtools2-dev_20061220+dfsg3-3.1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mclibs/libphtools2-dev_20061220+dfsg3-3.1+b4_amd64.deb"
+}

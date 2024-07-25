@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i m17n-lib-mimx_1.8.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r m17n-lib-mimx"]
+]
+depends: [
+  "anthy"
+  "ispell"
+  "libanthy1"
+  "libc6" {>= "2.7"}
+  "libm17n-0" {= "1.8.0-2"}
+]
+extra-source "m17n-lib-mimx_1.8.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/m17n-lib/m17n-lib-mimx_1.8.0-2_amd64.deb"
+}

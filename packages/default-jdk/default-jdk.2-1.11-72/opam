@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i default-jdk_2:1.11-72_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r default-jdk"]
+]
+depends: [
+  "default-jdk-headless" {= "2-1.11-72"}
+  "default-jre" {= "2-1.11-72"}
+  "openjdk-11-jdk"
+]
+extra-source "default-jdk_2:1.11-72_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/java-common/default-jdk_1.11-72_amd64.deb"
+}

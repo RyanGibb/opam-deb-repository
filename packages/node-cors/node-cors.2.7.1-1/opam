@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-cors_2.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-cors"]
+]
+depends: [
+  "node-vary" {>= "1.0.0"}
+  "nodejs"
+]
+extra-source "node-cors_2.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-cors/node-cors_2.7.1-1_all.deb"
+}

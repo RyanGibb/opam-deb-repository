@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxvmc1_2:1.0.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxvmc1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6" {>= "2-1.6.0"}
+  "libxext6"
+  "libxv1"
+  "x11-common"
+]
+extra-source "libxvmc1_2:1.0.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxvmc/libxvmc1_1.0.10-1_amd64.deb"
+}

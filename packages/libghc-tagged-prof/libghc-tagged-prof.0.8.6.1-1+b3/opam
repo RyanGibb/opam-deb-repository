@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tagged-prof_0.8.6.1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tagged-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-tagged-dev" {= "0.8.6.1-1+b3"}
+]
+extra-source "libghc-tagged-prof_0.8.6.1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tagged/libghc-tagged-prof_0.8.6.1-1+b3_amd64.deb"
+}

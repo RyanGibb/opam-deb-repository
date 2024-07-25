@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i argonaut-common_1.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r argonaut-common"]
+]
+depends: [
+  "coreutils" {>= "6.10-1"}
+  "libapp-daemon-perl"
+  "libconfig-inifiles-perl"
+  "libdigest-sha-perl"
+  "libfile-pid-perl"
+  "libio-socket-ssl-perl"
+  "libjson-perl" {>= "2.07-1"}
+  "libjson-rpc-perl"
+  "liblog-handler-perl"
+  "libmodule-pluggable-perl"
+  "libnet-ldap-perl"
+  "libpath-class-perl"
+  "libxml-sax-expatxs-perl"
+]
+extra-source "argonaut-common_1.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/argonaut/argonaut-common_1.3-2_all.deb"
+}

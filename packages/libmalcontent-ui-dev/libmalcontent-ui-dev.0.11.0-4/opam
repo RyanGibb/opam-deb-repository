@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmalcontent-ui-dev_0.11.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmalcontent-ui-dev"]
+]
+depends: [
+  "gir1-2-malcontentui-1" {= "0.11.0-4"}
+  "libaccountsservice-dev"
+  "libadwaita-1-dev"
+  "libappstream-dev"
+  "libflatpak-dev"
+  "libglib2-0-dev" {>= "2.60"}
+  "libgtk-4-dev"
+  "libmalcontent-0-dev" {= "0.11.0-4"}
+  "libmalcontent-ui-1-1" {= "0.11.0-4"}
+]
+extra-source "libmalcontent-ui-dev_0.11.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/malcontent/libmalcontent-ui-dev_0.11.0-4_amd64.deb"
+}

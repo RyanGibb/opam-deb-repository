@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libiptc-dev_1.8.9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libiptc-dev"]
+]
+depends: [
+  "libip4tc-dev" {= "1.8.9-2"}
+  "libip6tc-dev" {= "1.8.9-2"}
+]
+extra-source "libiptc-dev_1.8.9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iptables/libiptc-dev_1.8.9-2_amd64.deb"
+}

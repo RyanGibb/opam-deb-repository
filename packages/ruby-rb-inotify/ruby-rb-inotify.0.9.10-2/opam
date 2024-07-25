@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rb-inotify_0.9.10-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rb-inotify"]
+]
+depends: [
+  "ruby-ffi" {>= "0.5.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-rb-inotify_0.9.10-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rb-inotify/ruby-rb-inotify_0.9.10-2_all.deb"
+}

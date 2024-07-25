@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5libkdepim-dev_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5libkdepim-dev"]
+]
+depends: [
+  "libkf5completion-dev" {>= "5.99.0~"}
+  "libkf5coreaddons-dev" {>= "5.99.0~"}
+  "libkf5ldap-dev" {>= "20.04.1~"}
+  "libkf5libkdepim5" {= "4-22.12.3-1"}
+  "qtbase5-dev" {>= "5.15.2~"}
+]
+extra-source "libkf5libkdepim-dev_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkf5libkdepim/libkf5libkdepim-dev_22.12.3-1_amd64.deb"
+}

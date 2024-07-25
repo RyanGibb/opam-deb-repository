@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest-nicedump-perl_1.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest-nicedump-perl"]
+]
+depends: [
+  "libdata-dump-perl"
+  "libsafe-isa-perl" {>= "1.000010"}
+  "libtest-simple-perl"
+  "perl"
+]
+extra-source "libtest-nicedump-perl_1.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest-nicedump-perl/libtest-nicedump-perl_1.0.1-2_all.deb"
+}

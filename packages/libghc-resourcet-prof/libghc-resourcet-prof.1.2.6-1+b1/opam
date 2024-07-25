@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-resourcet-prof_1.2.6-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-resourcet-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-primitive-prof"
+  "libghc-resourcet-dev" {= "1.2.6-1+b1"}
+  "libghc-unliftio-core-prof"
+]
+extra-source "libghc-resourcet-prof_1.2.6-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-resourcet/libghc-resourcet-prof_1.2.6-1+b1_amd64.deb"
+}

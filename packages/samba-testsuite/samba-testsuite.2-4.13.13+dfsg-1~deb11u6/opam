@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i samba-testsuite_2:4.13.13+dfsg-1~deb11u6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r samba-testsuite"]
+]
+depends: [
+  "libbsd0" {>= "0.4.0"}
+  "libc6" {>= "2.17"}
+  "libgnutls30" {>= "3.7.0"}
+  "libldb2" {>= "2-2.2.3-2~deb11u2~"}
+  "libpopt0" {>= "1.14"}
+  "libreadline8" {>= "6.0"}
+  "libsmbclient" {>= "2-4.12.0+dfsg"}
+  "libtalloc2" {>= "2.3.1~"}
+  "libtdb1" {>= "1.4.3~"}
+  "libtevent0" {>= "0.10.2~"}
+  "libwbclient0" {= "2-4.13.13+dfsg-1~deb11u6"}
+  "samba-common-bin"
+  "samba-libs" {= "2-4.13.13+dfsg-1~deb11u6"}
+]
+extra-source "samba-testsuite_2:4.13.13+dfsg-1~deb11u6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/samba/samba-testsuite_4.13.13+dfsg-1~deb11u6_amd64.deb"
+}

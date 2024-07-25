@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgcab-1.0-0_1.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgcab-1.0-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.61.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libgcab-1.0-0_1.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcab/libgcab-1.0-0_1.4-3_amd64.deb"
+}

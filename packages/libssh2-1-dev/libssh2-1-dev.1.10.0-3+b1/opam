@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libssh2-1-dev_1.10.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libssh2-1-dev"]
+]
+depends: [
+  "libssh2-1" {= "1.10.0-3+b1"}
+  "libssl-dev"
+  "zlib1g-dev"
+]
+extra-source "libssh2-1-dev_1.10.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libssh2/libssh2-1-dev_1.10.0-3+b1_amd64.deb"
+}

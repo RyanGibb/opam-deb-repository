@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libasm-dev_0.176-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libasm-dev"]
+]
+depends: [
+  "libasm1" {= "0.176-1.1"}
+  "libelf-dev"
+]
+conflicts: [
+  "libasm0-dev"
+  "libelfsh0-dev"
+]
+extra-source "libasm-dev_0.176-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elfutils/libasm-dev_0.176-1.1_amd64.deb"
+}

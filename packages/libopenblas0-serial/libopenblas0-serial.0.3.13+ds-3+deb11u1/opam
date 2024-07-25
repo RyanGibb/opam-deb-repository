@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenblas0-serial_0.3.13+ds-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenblas0-serial"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgfortran5" {>= "8"}
+]
+extra-source "libopenblas0-serial_0.3.13+ds-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openblas/libopenblas0-serial_0.3.13+ds-3+deb11u1_amd64.deb"
+}

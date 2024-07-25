@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmimetic0v5_0.9.8-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmimetic0v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libmimetic0"
+]
+extra-source "libmimetic0v5_0.9.8-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mimetic/libmimetic0v5_0.9.8-7_amd64.deb"
+}

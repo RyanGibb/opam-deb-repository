@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcstruct-ocaml_6.1.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcstruct-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "liblwt-ocaml"
+  "libparsexp-ocaml"
+  "libsexplib-ocaml"
+  "libsexplib0-ocaml"
+  "ocaml-base"
+]
+extra-source "libcstruct-ocaml_6.1.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-cstruct/libcstruct-ocaml_6.1.1-1+b1_amd64.deb"
+}

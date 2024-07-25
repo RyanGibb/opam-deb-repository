@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i badger_2.2007.2-3+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r badger"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libzstd1" {>= "1.5.2"}
+]
+extra-source "badger_2.2007.2-3+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/badger/badger_2.2007.2-3+b6_amd64.deb"
+}

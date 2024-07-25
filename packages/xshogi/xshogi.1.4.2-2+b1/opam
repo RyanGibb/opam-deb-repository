@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xshogi_1.4.2-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xshogi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libx11-6"
+  "libxaw7"
+  "libxext6"
+  "libxmu6"
+  "libxt6"
+]
+extra-source "xshogi_1.4.2-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xshogi/xshogi_1.4.2-2+b1_amd64.deb"
+}

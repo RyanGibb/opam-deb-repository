@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmaven-common-artifact-filters-java_3.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmaven-common-artifact-filters-java"]
+]
+depends: [
+  "libcommons-io-java" {>= "2.8.0"}
+  "libmaven-shared-utils-java" {>= "3.3.0"}
+  "libmaven3-core-java" {>= "3.6.3"}
+]
+extra-source "libmaven-common-artifact-filters-java_3.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maven-common-artifact-filters/libmaven-common-artifact-filters-java_3.1.1-1_all.deb"
+}

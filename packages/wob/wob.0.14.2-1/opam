@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wob_0.14.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wob"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libinih1" {>= "40"}
+  "libwayland-client0" {>= "1.20.0"}
+]
+extra-source "wob_0.14.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wob/wob_0.14.2-1_amd64.deb"
+}

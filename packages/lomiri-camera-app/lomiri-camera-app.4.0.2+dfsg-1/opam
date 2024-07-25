@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lomiri-camera-app_4.0.2+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lomiri-camera-app"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libexiv2-27" {>= "0.25"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5multimedia5" {>= "5.6.0~beta"}
+  "libqt5qml5" {>= "5.1.0"}
+  "libqzxing3" {>= "3.3.0"}
+  "libstdc++6" {>= "5.2"}
+  "qml-module-lomiri-action"
+  "qml-module-lomiri-components"
+  "qml-module-lomiri-components-extras"
+  "qml-module-lomiri-content"
+  "qml-module-lomiri-thumbnailer"
+  "qml-module-qtpositioning"
+  "qml-module-qtquick-window2"
+  "qml-module-qtquick2"
+  "qml-module-qtsensors"
+  "qml-module-qzxing"
+  "qml-module-usermetrics"
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+  ("qml-module-qtmultimedia" | "qml-module-qtmultimedia-gles")
+]
+extra-source "lomiri-camera-app_4.0.2+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri-camera-app/lomiri-camera-app_4.0.2+dfsg-1_amd64.deb"
+}

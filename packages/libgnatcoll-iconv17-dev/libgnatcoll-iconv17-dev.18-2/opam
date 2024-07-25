@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatcoll-iconv17-dev_18-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatcoll-iconv17-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-8"
+  "libgnatcoll-iconv18" {= "18-2"}
+  "libgnatcoll17-dev"
+]
+extra-source "libgnatcoll-iconv17-dev_18-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnatcoll-bindings/libgnatcoll-iconv17-dev_18-2_amd64.deb"
+}

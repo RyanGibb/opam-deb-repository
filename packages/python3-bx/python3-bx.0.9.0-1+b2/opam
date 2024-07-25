@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-bx_0.9.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-bx"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-lzo"
+  "python3-numpy"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "python3-bx_0.9.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-bx/python3-bx_0.9.0-1+b2_amd64.deb"
+}

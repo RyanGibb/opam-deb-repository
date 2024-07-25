@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgcc-10-dev_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgcc-10-dev"]
+]
+depends: [
+  "gcc-10-base" {= "10.2.1-6"}
+  "libasan6" {>= "10.2.1-6"}
+  "libatomic1" {>= "10.2.1-6"}
+  "libgcc-s1" {>= "10.2.1-6"}
+  "libgomp1" {>= "10.2.1-6"}
+  "libitm1" {>= "10.2.1-6"}
+  "liblsan0" {>= "10.2.1-6"}
+  "libquadmath0" {>= "10.2.1-6"}
+  "libtsan0" {>= "10.2.1-6"}
+  "libubsan1" {>= "10.2.1-6"}
+]
+extra-source "libgcc-10-dev_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/libgcc-10-dev_10.2.1-6_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblomiri-thumbnailer-qt1.0_3.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblomiri-thumbnailer-qt1.0"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0+ds1"}
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  "lomiri-thumbnailer-service"
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "liblomiri-thumbnailer-qt1.0_3.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri-thumbnailer/liblomiri-thumbnailer-qt1.0_3.0.1-1_amd64.deb"
+}

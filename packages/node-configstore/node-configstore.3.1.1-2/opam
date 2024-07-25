@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-configstore_3.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-configstore"]
+]
+depends: [
+  "node-dot-prop" {>= "4.1.0"}
+  "node-graceful-fs" {>= "4.1.2"}
+  "node-make-dir" {>= "1.0.0"}
+  "node-unique-string" {>= "1.0.0"}
+  "node-write-file-atomic" {>= "2.0.0"}
+  "node-xdg-basedir" {>= "3.0.0"}
+  "nodejs"
+]
+extra-source "node-configstore_3.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-configstore/node-configstore_3.1.1-2_all.deb"
+}

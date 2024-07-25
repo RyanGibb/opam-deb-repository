@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplplotada3-dev_5.15.0+dfsg-19_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplplotada3-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-10"
+  "libfreetype6-dev"
+  "libltdl-dev"
+  "libplplot17" {= "5.15.0+dfsg-19"}
+  "libplplotada4-1" {= "5.15.0+dfsg-19"}
+  "libqhull-dev"
+  "libqsastime-dev"
+]
+extra-source "libplplotada3-dev_5.15.0+dfsg-19_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plplot/libplplotada3-dev_5.15.0+dfsg-19_amd64.deb"
+}

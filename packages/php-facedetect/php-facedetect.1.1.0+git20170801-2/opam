@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-facedetect_1.1.0+git20170801-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-facedetect"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libopencv-calib3d3-2"
+  "libopencv-contrib3-2"
+  "libopencv-core3-2"
+  "libopencv-features2d3-2"
+  "libopencv-flann3-2"
+  "libopencv-highgui3-2"
+  "libopencv-imgcodecs3-2"
+  "libopencv-imgproc3-2"
+  "libopencv-ml3-2"
+  "libopencv-objdetect3-2"
+  "libopencv-photo3-2"
+  "libopencv-shape3-2"
+  "libopencv-stitching3-2"
+  "libopencv-superres3-2"
+  "libopencv-video3-2"
+  "libopencv-videoio3-2"
+  "libopencv-videostab3-2"
+  "libopencv-viz3-2"
+  "php-common" {>= "1-7.0+33~"}
+  ("libapache2-mod-php7-3" | "libphp7-3-embed" | "php7-3-cgi" | "php7-3-cli" | "php7-3-fpm" | "php7-3-phpdbg")
+]
+extra-source "php-facedetect_1.1.0+git20170801-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-facedetect/php-facedetect_1.1.0+git20170801-2_amd64.deb"
+}

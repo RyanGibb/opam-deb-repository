@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libepub0_0.2.2-4+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libepub0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libxml2" {>= "2.7.4"}
+  "libzip4" {>= "0.10"}
+]
+extra-source "libepub0_0.2.2-4+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ebook-tools/libepub0_0.2.2-4+b4_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xdemineur_2.1.1-21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xdemineur"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libx11-6"
+  "libxpm4"
+]
+extra-source "xdemineur_2.1.1-21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xdemineur/xdemineur_2.1.1-21_amd64.deb"
+}

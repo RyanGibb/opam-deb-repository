@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i squashfuse_0.1.103-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r squashfuse"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfuse2" {>= "2.8"}
+  "liblz4-1" {>= "0.0~r113"}
+  "liblzma5" {>= "5.1.1alpha+20110809"}
+  "liblzo2-2"
+  "libsquashfuse0" {= "0.1.103-1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "squashfuse_0.1.103-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/squashfuse/squashfuse_0.1.103-1_amd64.deb"
+}

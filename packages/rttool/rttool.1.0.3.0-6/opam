@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rttool_1.0.3.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rttool"]
+]
+depends: [
+  "ruby-rt" {= "1.0.3.0-6"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "rttool_1.0.3.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rttool/rttool_1.0.3.0-6_all.deb"
+}

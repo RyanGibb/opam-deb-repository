@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-gass-cache5_10.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-gass-cache5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglobus-common0" {>= "17"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "libglobus-gass-cache5_10.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gass-cache/libglobus-gass-cache5_10.2-1_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbi1_0.9.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbi1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libdbi1_0.9.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdbi/libdbi1_0.9.0-6_amd64.deb"
+}

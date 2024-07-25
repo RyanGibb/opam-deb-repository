@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i the_3.3~rc1-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r the"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libncurses6" {>= "6"}
+  "libregina3" {>= "3.5"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "the_3.3~rc1-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/the/the_3.3~rc1-3.1_amd64.deb"
+}

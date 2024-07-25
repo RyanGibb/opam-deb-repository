@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5x11extras5_5.15.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5x11extras5"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libqt5core5a" {>= "5.15.8+dfsg~"}
+  ("libqt5gui5" {>= "5.15.8+dfsg~"} | "libqt5gui5-gles" {>= "5.15.8+dfsg~"})
+]
+extra-source "libqt5x11extras5_5.15.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtx11extras-opensource-src/libqt5x11extras5_5.15.8-2_amd64.deb"
+}

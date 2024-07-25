@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-em-synchrony_1.0.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-em-synchrony"]
+]
+depends: [
+  "ruby-activerecord"
+  "ruby-amq-protocol"
+  "ruby-amqp"
+  "ruby-em-hiredis"
+  "ruby-em-http-request"
+  "ruby-em-mongo"
+  "ruby-eventmachine"
+  "ruby-mongo"
+  "ruby-mysql2"
+  "ruby-remcached"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-em-synchrony_1.0.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-em-synchrony/ruby-em-synchrony_1.0.5-2_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-libvirt-php_0.5.4-3+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-libvirt-php"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libvirt0" {>= "1.2.8~rc2"}
+  "libxml2" {>= "2.7.4"}
+  "php-common" {>= "1-7.0+33~"}
+  "php-imagick"
+  ("libapache2-mod-php7-3" | "libphp7-3-embed" | "php7-3-cgi" | "php7-3-cli" | "php7-3-fpm" | "php7-3-phpdbg")
+]
+extra-source "php-libvirt-php_0.5.4-3+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvirt-php/php-libvirt-php_0.5.4-3+deb10u1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt6keychain1_0.13.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt6keychain1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libqt6core6" {>= "6.2.0"}
+  "libqt6dbus6" {>= "6.1.2"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libqt6keychain1_0.13.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtkeychain/libqt6keychain1_0.13.2-5_amd64.deb"
+}

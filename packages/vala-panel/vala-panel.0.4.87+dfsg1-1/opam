@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vala-panel_0.4.87+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vala-panel"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.43.4"}
+  "libgtk-3-0" {>= "3.22.0"}
+  "libvalapanel0" {= "0.4.87+dfsg1-1"}
+  "vala-panel-common" {= "0.4.87+dfsg1-1"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "vala-panel_0.4.87+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vala-panel/vala-panel_0.4.87+dfsg1-1_amd64.deb"
+}

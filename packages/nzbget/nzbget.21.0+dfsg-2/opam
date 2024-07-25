@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nzbget_21.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nzbget"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc-s1"
+  "libjs-elycharts" {>= "2.1.5"}
+  "libjs-raphael" {>= "2.1.0"}
+  "libncurses6" {>= "6"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "nzbget_21.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nzbget/nzbget_21.0+dfsg-2_amd64.deb"
+}

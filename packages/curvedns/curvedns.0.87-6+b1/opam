@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i curvedns_0.87-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r curvedns"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libev4" {>= "1-4.04"}
+  "libsodium23" {>= "0.6.0"}
+  "lsb-base"
+]
+extra-source "curvedns_0.87-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/curvedns/curvedns_0.87-6+b1_amd64.deb"
+}

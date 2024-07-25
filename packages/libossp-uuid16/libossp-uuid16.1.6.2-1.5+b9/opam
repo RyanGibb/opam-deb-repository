@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libossp-uuid16_1.6.2-1.5+b9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libossp-uuid16"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libossp-uuid16_1.6.2-1.5+b9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ossp-uuid/libossp-uuid16_1.6.2-1.5+b9_amd64.deb"
+}

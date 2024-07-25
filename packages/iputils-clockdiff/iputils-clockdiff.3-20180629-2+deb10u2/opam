@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iputils-clockdiff_3:20180629-2+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iputils-clockdiff"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libcap2" {>= "1-2.10"}
+]
+extra-source "iputils-clockdiff_3:20180629-2+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iputils/iputils-clockdiff_20180629-2+deb10u2_amd64.deb"
+}

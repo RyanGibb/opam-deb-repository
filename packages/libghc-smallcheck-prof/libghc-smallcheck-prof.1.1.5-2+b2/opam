@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-smallcheck-prof_1.1.5-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-smallcheck-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-logict-prof"
+  "libghc-smallcheck-dev" {= "1.1.5-2+b2"}
+]
+extra-source "libghc-smallcheck-prof_1.1.5-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-smallcheck/libghc-smallcheck-prof_1.1.5-2+b2_amd64.deb"
+}

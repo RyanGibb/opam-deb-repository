@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclc-14_1:14.0.6-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclc-14"]
+]
+depends: [
+  "libclang-common-14-dev"
+  "libclc-14-dev" {= "1-14.0.6-12"}
+]
+conflicts: [
+  "libclc-x.y"
+]
+extra-source "libclc-14_1:14.0.6-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-14/libclc-14_14.0.6-12_all.deb"
+}

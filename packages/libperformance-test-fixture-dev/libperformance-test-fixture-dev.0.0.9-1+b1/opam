@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libperformance-test-fixture-dev_0.0.9-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libperformance-test-fixture-dev"]
+]
+depends: [
+  "libosrf-testing-tools-cpp-dev"
+  "libperformance-test-fixture0d" {= "0.0.9-1+b1"}
+  "python3-ament-cmake-google-benchmark"
+]
+extra-source "libperformance-test-fixture-dev_0.0.9-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros2-performance-test-fixture/libperformance-test-fixture-dev_0.0.9-1+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-olm_2.2.2+git20170526.0fd768e+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-olm"]
+]
+depends: [
+  "libolm2" {< "2.2.2+git20170526.0fd768e+dfsg-1.1~"}
+  "libolm2" {>= "2.2.2+git20170526.0fd768e+dfsg-1"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-yaml"
+]
+extra-source "python-olm_2.2.2+git20170526.0fd768e+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/olm/python-olm_2.2.2+git20170526.0fd768e+dfsg-1_all.deb"
+}

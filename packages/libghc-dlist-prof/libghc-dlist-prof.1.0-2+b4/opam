@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-dlist-prof_1.0-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-dlist-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-dlist-dev" {= "1.0-2+b4"}
+]
+extra-source "libghc-dlist-prof_1.0-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-dlist/libghc-dlist-prof_1.0-2+b4_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-backbone_1.4.0~dfsg+~1.4.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-backbone"]
+]
+depends: [
+  "libjs-backbone"
+  "nodejs"
+  ("node-underscore" {>= "1.8.3~dfsg"} | "node-lodash")
+]
+extra-source "node-backbone_1.4.0~dfsg+~1.4.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/backbone/node-backbone_1.4.0~dfsg+~1.4.5-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rbibutils_2.2.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rbibutils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+]
+extra-source "r-cran-rbibutils_2.2.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-rbibutils/r-cran-rbibutils_2.2.13-1_amd64.deb"
+}

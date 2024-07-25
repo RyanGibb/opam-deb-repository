@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iraf-noao-dev_2.16.1+2018.11.01-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iraf-noao-dev"]
+]
+depends: [
+  "iraf-dev" {= "2.16.1+2018.11.01-2"}
+  "iraf-noao" {= "2.16.1+2018.11.01-2"}
+]
+extra-source "iraf-noao-dev_2.16.1+2018.11.01-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iraf/iraf-noao-dev_2.16.1+2018.11.01-2_amd64.deb"
+}

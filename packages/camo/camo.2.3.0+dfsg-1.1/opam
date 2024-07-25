@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i camo_2.3.0+dfsg-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r camo"]
+]
+depends: [
+  "nodejs" {>= "0.10.0"}
+  "openssl"
+]
+extra-source "camo_2.3.0+dfsg-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/camo/camo_2.3.0+dfsg-1.1_all.deb"
+}

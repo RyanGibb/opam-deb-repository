@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgcc-10-dev-mipsel-cross_10.2.1-6cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgcc-10-dev-mipsel-cross"]
+]
+depends: [
+  "gcc-10-cross-base-mipsen" {= "10.2.1-6cross1"}
+  "libatomic1-mipsel-cross" {>= "10.2.1-6cross1"}
+  "libgcc-s1-mipsel-cross" {>= "10.2.1-6cross1"}
+  "libgomp1-mipsel-cross" {>= "10.2.1-6cross1"}
+]
+extra-source "libgcc-10-dev-mipsel-cross_10.2.1-6cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10-cross-mipsen/libgcc-10-dev-mipsel-cross_10.2.1-6cross1_all.deb"
+}

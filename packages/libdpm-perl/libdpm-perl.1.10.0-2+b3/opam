@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdpm-perl_1.10.0-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdpm-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdpm1" {= "1.10.0-2+b3"}
+  "liblcgdm1"
+  "libperl5-28" {>= "5.28.0"}
+  "perl" {>= "5.28.1-3"}
+  "perl-base"
+]
+extra-source "libdpm-perl_1.10.0-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lcgdm/libdpm-perl_1.10.0-2+b3_amd64.deb"
+}

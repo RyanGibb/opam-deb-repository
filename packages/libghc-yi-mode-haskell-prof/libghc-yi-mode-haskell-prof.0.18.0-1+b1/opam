@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-yi-mode-haskell-prof_0.18.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-yi-mode-haskell-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-data-default-prof"
+  "libghc-microlens-platform-prof"
+  "libghc-yi-core-prof"
+  "libghc-yi-language-prof"
+  "libghc-yi-mode-haskell-dev" {= "0.18.0-1+b1"}
+  "libghc-yi-rope-prof"
+]
+extra-source "libghc-yi-mode-haskell-prof_0.18.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-yi-mode-haskell/libghc-yi-mode-haskell-prof_0.18.0-1+b1_amd64.deb"
+}

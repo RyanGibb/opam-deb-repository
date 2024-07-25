@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplplot17_5.15.0+dfsg-19_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplplot17"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcsirocsa0" {>= "5.15.0+dfsg"}
+  "libcsironn0" {>= "5.15.0+dfsg"}
+  "libfreetype6" {>= "2.2.1"}
+  "libltdl7" {>= "2.4.6"}
+  "libplplot-data" {= "5.15.0+dfsg-19"}
+  "libqsastime0" {>= "5.15.0+dfsg"}
+  "libshp2" {>= "1.3.0"}
+]
+extra-source "libplplot17_5.15.0+dfsg-19_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plplot/libplplot17_5.15.0+dfsg-19_amd64.deb"
+}

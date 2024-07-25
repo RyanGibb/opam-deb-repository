@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i flang-16_1:16.0.6-15~deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r flang-16"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libclang-cpp16" {>= "1-16.0.6"}
+  "libflang-16-dev" {= "1-16.0.6-15~deb11u2"}
+  "libgcc-10-dev"
+  "libgcc-s1" {>= "3.0"}
+  "libllvm16"
+  "libstdc++-10-dev"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "flang-16_1:16.0.6-15~deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-16/flang-16_16.0.6-15~deb11u2_amd64.deb"
+}

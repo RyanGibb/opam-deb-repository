@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ament-clang-tidy_0.13.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ament-clang-tidy"]
+]
+depends: [
+  "clang-tidy"
+  "python3-ament-lint"
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-yaml"
+]
+extra-source "python3-ament-clang-tidy_0.13.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros2-ament-lint/python3-ament-clang-tidy_0.13.2-4_all.deb"
+}

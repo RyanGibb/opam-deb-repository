@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hunspell_1.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hunspell"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libhunspell-1-7-0"
+  "libncursesw6" {>= "6"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+  ("hunspell-en-us" | "hunspell-dictionary" | "myspell-dictionary")
+]
+extra-source "hunspell_1.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hunspell/hunspell_1.7.0-3_amd64.deb"
+}

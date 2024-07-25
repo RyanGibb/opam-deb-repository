@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libecore-bin_1.21.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libecore-bin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libecore1" {>= "1.21.1-0~eo"}
+  "libeina1a" {>= "1.21.1-0~eo"}
+]
+extra-source "libecore-bin_1.21.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/efl/libecore-bin_1.21.1-5_amd64.deb"
+}

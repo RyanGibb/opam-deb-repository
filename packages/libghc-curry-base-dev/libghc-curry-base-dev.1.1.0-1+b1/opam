@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-curry-base-dev_1.1.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-curry-base-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-extra-dev"
+  "libgmp10"
+]
+extra-source "libghc-curry-base-dev_1.1.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/curry-base/libghc-curry-base-dev_1.1.0-1+b1_amd64.deb"
+}

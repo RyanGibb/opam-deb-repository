@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-13-ogr-fdw_1.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-13-ogr-fdw"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgdal28" {>= "2.2.0"}
+  "postgresql-13"
+]
+extra-source "postgresql-13-ogr-fdw_1.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pgsql-ogr-fdw/postgresql-13-ogr-fdw_1.1.0-1_amd64.deb"
+}

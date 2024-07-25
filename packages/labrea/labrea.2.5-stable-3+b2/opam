@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i labrea_2.5-stable-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r labrea"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdumbnet1" {>= "1.8"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "labrea_2.5-stable-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/labrea/labrea_2.5-stable-3+b2_amd64.deb"
+}

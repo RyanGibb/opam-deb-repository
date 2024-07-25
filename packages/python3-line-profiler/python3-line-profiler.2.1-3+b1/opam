@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-line-profiler_2.1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-line-profiler"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-ipython"
+]
+extra-source "python3-line-profiler_2.1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-line-profiler/python3-line-profiler_2.1-3+b1_amd64.deb"
+}

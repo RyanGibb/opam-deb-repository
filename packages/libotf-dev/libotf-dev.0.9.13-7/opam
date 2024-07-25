@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libotf-dev_0.9.13-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libotf-dev"]
+]
+depends: [
+  "libotf0" {= "0.9.13-7"}
+  "pkg-config"
+]
+extra-source "libotf-dev_0.9.13-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libotf/libotf-dev_0.9.13-7_amd64.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dsda-doom_0.25.6+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dsda-doom"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdumb1"
+  "libfluidsynth3" {>= "2.0.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libmad0" {>= "0.15.1b-3"}
+  "libportmidi0"
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libsdl2-image-2-0-0" {>= "2.0.5"}
+  "libsdl2-mixer-2-0-0" {>= "2.0.4"}
+  "libstdc++6" {>= "5"}
+  "libvorbisfile3" {>= "1.1.2"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "dsda-doom_0.25.6+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dsda-doom/dsda-doom_0.25.6+dfsg-1_amd64.deb"
+}

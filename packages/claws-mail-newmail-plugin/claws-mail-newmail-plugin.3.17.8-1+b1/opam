@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i claws-mail-newmail-plugin_3.17.8-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r claws-mail-newmail-plugin"]
+]
+depends: [
+  "claws-mail" {= "3.17.8-1+b1"}
+  "libc6" {>= "2.3.4"}
+]
+extra-source "claws-mail-newmail-plugin_3.17.8-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/claws-mail/claws-mail-newmail-plugin_3.17.8-1+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i grub-pc-dbg_2.06-3~deb11u6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r grub-pc-dbg"]
+]
+depends: [
+  "grub-common" {= "2.06-3~deb11u6"}
+  "grub-pc-bin" {= "2.06-3~deb11u6"}
+]
+extra-source "grub-pc-dbg_2.06-3~deb11u6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grub2/grub-pc-dbg_2.06-3~deb11u6_amd64.deb"
+}

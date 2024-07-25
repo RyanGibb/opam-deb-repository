@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-django-postorius_1.2.4-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-django-postorius"]
+]
+depends: [
+  "fonts-glewlwyd"
+  "libjs-bootstrap"
+  "libjs-jquery"
+  "libjs-sphinxdoc" {>= "1.0"}
+  "python3-any"
+  "python3-django" {>= "1-1.11"}
+  "python3-django-allauth"
+  "python3-django-mailman3" {>= "1.2.0"}
+  "python3-mailmanclient" {>= "3.2.2"}
+  "sphinx-rtd-theme-common" {>= "0.4.3+dfsg"}
+]
+conflicts: [
+  "python-django-postorius"
+]
+extra-source "python3-django-postorius_1.2.4-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postorius/python3-django-postorius_1.2.4-1+deb10u1_all.deb"
+}

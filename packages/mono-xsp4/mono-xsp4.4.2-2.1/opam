@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mono-xsp4_4.2-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mono-xsp4"]
+]
+depends: [
+  "libmono-corlib4-5-cil" {>= "4.6.1.3"}
+  "libmono-security4-0-cil" {>= "4.6.1.3"}
+  "libmono-system-configuration4-0-cil" {>= "4.0.0~alpha1"}
+  "libmono-system-data4-0-cil" {>= "4.6.1.3"}
+  "libmono-system-web4-0-cil" {>= "2.10.3"}
+  "libmono-system4-0-cil" {>= "4.6.1.3"}
+  "mono-runtime" {>= "3.0~"}
+  "mono-xsp4-base" {= "4.2-2.1"}
+  "procps"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("libc6" {>= "2.24"} | "libc6-1" {>= "2.24"} | "libc0-1" {>= "2.24"})
+]
+extra-source "mono-xsp4_4.2-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xsp/mono-xsp4_4.2-2.1_all.deb"
+}

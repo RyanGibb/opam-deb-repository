@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-haskell-src-prof_1.0.3.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-haskell-src-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-haskell-src-dev" {= "1.0.3.0-2+b2"}
+  "libghc-syb-prof"
+]
+extra-source "libghc-haskell-src-prof_1.0.3.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-haskell-src/libghc-haskell-src-prof_1.0.3.0-2+b2_amd64.deb"
+}

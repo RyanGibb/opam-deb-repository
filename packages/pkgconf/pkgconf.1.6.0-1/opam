@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pkgconf_1.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pkgconf"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdpkg-perl"
+]
+extra-source "pkgconf_1.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pkgconf/pkgconf_1.6.0-1_amd64.deb"
+}

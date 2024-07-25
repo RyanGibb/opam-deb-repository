@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bacula-bscan_9.6.7-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bacula-bscan"]
+]
+depends: [
+  "bacula-common" {= "9.6.7-3"}
+  "bacula-sd" {= "9.6.7-3"}
+  "libc6" {>= "2.4"}
+  "libstdc++6" {>= "5"}
+  ("bacula-common-pgsql" {= "9.6.7-3"} | "bacula-common-mysql" {= "9.6.7-3"} | "bacula-common-sqlite3" {= "9.6.7-3"})
+]
+extra-source "bacula-bscan_9.6.7-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bacula/bacula-bscan_9.6.7-3_amd64.deb"
+}

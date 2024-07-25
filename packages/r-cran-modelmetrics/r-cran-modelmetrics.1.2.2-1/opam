@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-modelmetrics_1.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-modelmetrics"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-2"}
+  "r-cran-data-table"
+  "r-cran-rcpp"
+]
+extra-source "r-cran-modelmetrics_1.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-modelmetrics/r-cran-modelmetrics_1.2.2-1_amd64.deb"
+}

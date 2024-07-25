@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlada-dom8-dev_18-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlada-dom8-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-8"
+  "libxmlada-dom5"
+  "libxmlada-sax8-dev" {= "18-4"}
+  "libxmlada-unicode8-dev" {= "18-4"}
+]
+extra-source "libxmlada-dom8-dev_18-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxmlada/libxmlada-dom8-dev_18-4_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i proot_5.1.0-1.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r proot"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "proot_5.1.0-1.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/proot/proot_5.1.0-1.3_amd64.deb"
+}

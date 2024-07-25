@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-semigroupoids-dev_5.3.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-semigroupoids-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-base-orphans-dev"
+  "libghc-bifunctors-dev"
+  "libghc-comonad-dev"
+  "libghc-contravariant-dev"
+  "libghc-distributive-dev"
+  "libghc-hashable-dev"
+  "libghc-tagged-dev"
+  "libghc-transformers-compat-dev"
+  "libghc-unordered-containers-dev"
+  "libgmp10"
+]
+extra-source "libghc-semigroupoids-dev_5.3.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-semigroupoids/libghc-semigroupoids-dev_5.3.4-1+b1_amd64.deb"
+}

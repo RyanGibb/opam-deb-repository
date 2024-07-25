@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-moksha.hub_1.4.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-moksha.hub"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-moksha-common" {>= "1.0.6"}
+  "python-six"
+  "python-twisted-core"
+  "python-txws"
+  "python-txzmq"
+  "python-zmq"
+]
+extra-source "python-moksha.hub_1.4.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/moksha.hub/python-moksha.hub_1.4.1-2_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ftp-cloudfs_0.25.2+20140217+git2a90c1a2eb-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ftp-cloudfs"]
+]
+depends: [
+  "adduser"
+  "lsb-base"
+  "python-any"
+  "python-ftp-cloudfs" {= "0.25.2+20140217+git2a90c1a2eb-1"}
+]
+extra-source "ftp-cloudfs_0.25.2+20140217+git2a90c1a2eb-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/ftp-cloudfs/ftp-cloudfs_0.25.2+20140217+git2a90c1a2eb-1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-qtpublishsubscribe_5.0~git20181230.e3332ee3-4+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-qtpublishsubscribe"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5publishsubscribe5" {>= "5.0~git20181230.e3332ee3"}
+  "libqt5qml5" {>= "5.5.1~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qml-module-qtpublishsubscribe_5.0~git20181230.e3332ee3-4+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtsystems-opensource-src/qml-module-qtpublishsubscribe_5.0~git20181230.e3332ee3-4+b3_amd64.deb"
+}

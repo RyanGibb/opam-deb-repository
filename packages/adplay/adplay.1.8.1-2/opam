@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i adplay_1.8.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r adplay"]
+]
+depends: [
+  "libadplug-2-3-3-0" {>= "2.3.3+dfsg"}
+  "libasound2" {>= "1.0.16"}
+  "libbinio1v5" {>= "1.4+dfsg1"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "adplay_1.8.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/adplay/adplay_1.8.1-2_amd64.deb"
+}

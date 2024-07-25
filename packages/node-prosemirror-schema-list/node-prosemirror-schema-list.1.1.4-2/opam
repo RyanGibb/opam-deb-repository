@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-prosemirror-schema-list_1.1.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-prosemirror-schema-list"]
+]
+depends: [
+  "node-prosemirror-model" {>= "1.0~"}
+  "node-prosemirror-transform" {>= "1.0~"}
+  "nodejs" {>= "6"}
+]
+extra-source "node-prosemirror-schema-list_1.1.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-prosemirror-schema-list/node-prosemirror-schema-list_1.1.4-2_all.deb"
+}

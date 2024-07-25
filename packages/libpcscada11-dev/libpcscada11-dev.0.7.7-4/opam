@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcscada11-dev_0.7.7-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcscada11-dev"]
+]
+depends: [
+  "gnat" {< "13"}
+  "gnat" {>= "12"}
+  "libpcscada0-7-6" {= "0.7.7-4"}
+  "libpcsclite-dev"
+]
+extra-source "libpcscada11-dev_0.7.7-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcscada/libpcscada11-dev_0.7.7-4_amd64.deb"
+}

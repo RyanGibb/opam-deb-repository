@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xrootd-voms-plugins_5.0.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xrootd-voms-plugins"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libvomsapi1v5"
+  "libxrdcrypto2" {>= "5.0.3"}
+]
+extra-source "xrootd-voms-plugins_5.0.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xrootd/xrootd-voms-plugins_5.0.3-4_amd64.deb"
+}

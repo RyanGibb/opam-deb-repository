@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-trafficserver-exporter_0.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-trafficserver-exporter"]
+]
+depends: [
+  "python3-any"
+  "python3-prometheus-client"
+  "python3-requests"
+  "python3-yaml"
+]
+extra-source "prometheus-trafficserver-exporter_0.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-trafficserver-exporter/prometheus-trafficserver-exporter_0.3.2-1_all.deb"
+}

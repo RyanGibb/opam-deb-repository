@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i snmptt_1.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r snmptt"]
+]
+depends: [
+  "adduser"
+  "libconfig-inifiles-perl"
+  "libsnmp-perl"
+  "snmptrapd"
+]
+extra-source "snmptt_1.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snmptt/snmptt_1.5-1_all.deb"
+}

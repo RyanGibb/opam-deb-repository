@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-lens-aeson-dev_1.1.3-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-lens-aeson-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-aeson-dev"
+  "libghc-attoparsec-dev"
+  "libghc-lens-dev"
+  "libghc-scientific-dev"
+  "libghc-unordered-containers-dev"
+  "libghc-vector-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-lens-aeson-dev_1.1.3-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-lens-aeson/libghc-lens-aeson-dev_1.1.3-1+b4_amd64.deb"
+}

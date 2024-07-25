@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hunspell-nl_2:2.10-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hunspell-nl"]
+]
+depends: [
+  ("dictionaries-common" | "openoffice-org-updatedicts")
+]
+conflicts: [
+  "myspell-nl"
+]
+extra-source "hunspell-nl_2:2.10-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dutch/hunspell-nl_2.10-6_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyrsistent_0.15.5-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyrsistent"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-six"
+]
+extra-source "python3-pyrsistent_0.15.5-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyrsistent/python3-pyrsistent_0.15.5-1+b3_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gfortran-i686-linux-gnu_4:8.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gfortran-i686-linux-gnu"]
+]
+depends: [
+  "cpp-i686-linux-gnu" {= "4-8.3.0-1"}
+  "gcc-i686-linux-gnu" {= "4-8.3.0-1"}
+  "gfortran-8-i686-linux-gnu" {>= "8.3.0-1~"}
+]
+extra-source "gfortran-i686-linux-gnu_4:8.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults/gfortran-i686-linux-gnu_8.3.0-1_amd64.deb"
+}

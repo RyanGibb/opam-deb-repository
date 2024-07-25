@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblttng-ctl-dev_2.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblttng-ctl-dev"]
+]
+depends: [
+  "liblttng-ctl0" {= "2.12.3-1"}
+]
+extra-source "liblttng-ctl-dev_2.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ltt-control/liblttng-ctl-dev_2.12.3-1_amd64.deb"
+}

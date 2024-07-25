@@ -1,0 +1,60 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvtk9-dev_9.0.1+dfsg1-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvtk9-dev"]
+]
+depends: [
+  "default-jdk"
+  "default-libmysqlclient-dev"
+  "libavcodec-dev"
+  "libavformat-dev"
+  "libavutil-dev"
+  "libc6-dev"
+  "libdouble-conversion-dev"
+  "libeigen3-dev"
+  "libexpat1-dev"
+  "libfreetype6-dev"
+  "libgdal-dev"
+  "libgl2ps-dev"
+  "libglew-dev"
+  "libhdf5-mpi-dev"
+  "libjpeg-dev"
+  "libjsoncpp-dev"
+  "liblz4-dev"
+  "libnetcdf-cxx-legacy-dev"
+  "libnetcdf-dev"
+  "libpng-dev"
+  "libpq-dev"
+  "libproj-dev"
+  "libpython3-dev"
+  "libswscale-dev"
+  "libtheora-dev"
+  "libtiff-dev"
+  "libutfcpp-dev"
+  "libvtk9" {= "9.0.1+dfsg1-8"}
+  "libvtk9-java" {= "9.0.1+dfsg1-8"}
+  "libx11-dev"
+  "libxft-dev"
+  "libxml2-dev"
+  "libxss-dev"
+  "libxt-dev"
+  "mpi-default-dev"
+  "python3-vtk9" {= "9.0.1+dfsg1-8"}
+  "tcl-dev"
+  "tk-dev"
+  "vtk9" {= "9.0.1+dfsg1-8"}
+  "x11proto-core-dev"
+  "zlib1g-dev"
+  ("libgl1-mesa-dev" | "libgl-dev")
+  ("libglu1-mesa-dev" | "libglu-dev")
+]
+conflicts: [
+  "libvtk5-dev"
+  "libvtk6-dev"
+  "libvtk7-dev"
+]
+extra-source "libvtk9-dev_9.0.1+dfsg1-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vtk9/libvtk9-dev_9.0.1+dfsg1-8_amd64.deb"
+}

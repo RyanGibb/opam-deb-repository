@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pipewire-media-session_0.4.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pipewire-media-session"]
+]
+depends: [
+  "init-system-helpers" {>= "1.52"}
+  "libasound2" {>= "1.0.24.1"}
+  "libc6" {>= "2.34"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libpipewire-0-3-0" {>= "0.3.44"}
+  "libsystemd0"
+  "pipewire" {>= "0.3.44"}
+]
+conflicts: [
+  "wireplumber"
+]
+extra-source "pipewire-media-session_0.4.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pipewire-media-session/pipewire-media-session_0.4.2-3_amd64.deb"
+}

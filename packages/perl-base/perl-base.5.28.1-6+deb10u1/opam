@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i perl-base_5.28.1-6+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r perl-base"]
+]
+conflicts: [
+  "defoma (<< 0.11.12)"
+  "doc-base (<< 0.10.3)"
+  "mono-gac (<< 2.10.8.1-3)"
+  "safe-rm (<< 0.8)"
+  "update-inetd (<< 4.41)"
+]
+extra-source "perl-base_5.28.1-6+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/perl/perl-base_5.28.1-6+deb10u1_amd64.deb"
+}

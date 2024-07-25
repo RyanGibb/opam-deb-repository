@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i webkit2gtk-driver_2.36.4-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r webkit2gtk-driver"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-7"}
+  "libglib2-0-0" {>= "2.44.0"}
+  "libicu63" {>= "63.1-1~"}
+  "libsoup2-4-1" {>= "2.54.0"}
+  "libstdc++6" {>= "6"}
+  "libsystemd0"
+  "libwebkit2gtk-4-0-37" {= "2.36.4-1~deb10u1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "webkit2gtk-driver_2.36.4-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/webkit2gtk/webkit2gtk-driver_2.36.4-1~deb10u1_amd64.deb"
+}

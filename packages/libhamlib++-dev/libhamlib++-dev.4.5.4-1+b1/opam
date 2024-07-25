@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhamlib++-dev_4.5.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhamlib++-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libhamlib++4" {= "4.5.4-1+b1"}
+  "libhamlib-dev" {= "4.5.4-1+b1"}
+  "libhamlib4" {= "4.5.4-1+b1"}
+]
+extra-source "libhamlib++-dev_4.5.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hamlib/libhamlib++-dev_4.5.4-1+b1_amd64.deb"
+}

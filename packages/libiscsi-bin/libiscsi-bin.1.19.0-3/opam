@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libiscsi-bin_1.19.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libiscsi-bin"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcunit1"
+  "libiscsi7" {>= "1.18.0"}
+]
+extra-source "libiscsi-bin_1.19.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libiscsi/libiscsi-bin_1.19.0-3_amd64.deb"
+}

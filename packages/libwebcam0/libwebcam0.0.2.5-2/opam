@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwebcam0_0.2.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwebcam0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libwebcam0_0.2.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libw/libwebcam/libwebcam0_0.2.5-2_amd64.deb"
+}

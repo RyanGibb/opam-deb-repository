@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-snowplow-tracker_0.6.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-snowplow-tracker"]
+]
+depends: [
+  "ruby-contracts" {>= "0.7"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-snowplow-tracker_0.6.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-snowplow-tracker/ruby-snowplow-tracker_0.6.1-2_all.deb"
+}

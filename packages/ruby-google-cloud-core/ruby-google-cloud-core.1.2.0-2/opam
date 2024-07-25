@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-google-cloud-core_1.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-google-cloud-core"]
+]
+depends: [
+  "ruby-google-cloud-env"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-google-cloud-core_1.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-google-cloud-core/ruby-google-cloud-core_1.2.0-2_all.deb"
+}

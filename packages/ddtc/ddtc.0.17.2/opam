@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ddtc_0.17.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ddtc"]
+]
+depends: [
+  "libalgorithm-diff-perl" {>= "1.13"}
+  "libconfig-general-perl"
+  "libmime-tools-perl"
+  "libtext-iconv-perl"
+  "perl"
+]
+conflicts: [
+  "ddts-script"
+]
+extra-source "ddtc_0.17.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/ddtc/ddtc_0.17.2_all.deb"
+}

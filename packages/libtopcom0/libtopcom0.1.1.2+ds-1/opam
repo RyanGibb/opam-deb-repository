@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtopcom0_1.1.2+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtopcom0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcdd0d"
+  "libgcc-s1" {>= "3.0"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libgmpxx4ldbl" {>= "2-6.2.1+dfsg1"}
+  "libqsopt-ex2"
+  "libstdc++6" {>= "12"}
+]
+extra-source "libtopcom0_1.1.2+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/topcom/libtopcom0_1.1.2+ds-1_amd64.deb"
+}

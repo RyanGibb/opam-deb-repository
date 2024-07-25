@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblinphone10_4.4.21-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblinphone10"]
+]
+depends: [
+  "libbctoolbox1" {< "4.5.0"}
+  "libbctoolbox1" {>= "4.4.0"}
+  "libbelcard1" {>= "4.4.13"}
+  "libbellesip1" {< "4.5.0"}
+  "libbellesip1" {>= "4.4.0"}
+  "libbelr1"
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libmediastreamer11" {>= "1-4.4.21"}
+  "libortp15" {< "1-4.5.0"}
+  "libortp15" {>= "1-4.4.0"}
+  "libsoci-sqlite3-4-0" {>= "4.0.1"}
+  "libsqlite3-0" {>= "3.6.0"}
+  "libstdc++6" {>= "5.2"}
+  "libxml2" {>= "2.8.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "liblinphone10_4.4.21-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linphone/liblinphone10_4.4.21-2_amd64.deb"
+}

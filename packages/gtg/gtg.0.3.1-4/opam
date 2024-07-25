@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtg_0.3.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtg"]
+]
+depends: [
+  "python-any" {>= "2.7.5-5~"}
+  "python-configobj"
+  "python-dbus"
+  "python-glade2"
+  "python-gtk2" {>= "2.14"}
+  "python-liblarch" {>= "2.1.0"}
+  "python-notify"
+  "python-xdg"
+]
+extra-source "gtg_0.3.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtg/gtg_0.3.1-4_all.deb"
+}

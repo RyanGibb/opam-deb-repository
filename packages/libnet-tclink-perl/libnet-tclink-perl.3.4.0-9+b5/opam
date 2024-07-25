@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-tclink-perl_3.4.0-9+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-tclink-perl"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libssl1-1" {>= "1.1.0"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libnet-tclink-perl_3.4.0-9+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-tclink-perl/libnet-tclink-perl_3.4.0-9+b5_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-dns-sec-perl_1.18-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-dns-sec-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libnet-dns-perl" {>= "1.08"}
+  "libssl1-1" {>= "1.1.1"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libnet-dns-sec-perl_1.18-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-dns-sec-perl/libnet-dns-sec-perl_1.18-1+b1_amd64.deb"
+}

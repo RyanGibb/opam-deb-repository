@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i haskell-devscripts-minimal_0.16.0_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r haskell-devscripts-minimal"]
+]
+depends: [
+  "cdbs"
+  "dctrl-tools"
+  "debhelper" {>= "10"}
+  "dh-buildinfo"
+  "ghc"
+  "html-xml-utils"
+]
+extra-source "haskell-devscripts-minimal_0.16.0_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-devscripts/haskell-devscripts-minimal_0.16.0_all.deb"
+}

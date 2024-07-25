@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libx32go11_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libx32go11"]
+]
+depends: [
+  "gcc-7-base" {= "7.4.0-6"}
+  "libc6-x32" {>= "2.28"}
+  "libx32gcc1"
+]
+extra-source "libx32go11_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/libx32go11_7.4.0-6_amd64.deb"
+}

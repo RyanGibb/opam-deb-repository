@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfolks25_0.11.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfolks25"]
+]
+depends: [
+  "folks-common" {= "0.11.4-1"}
+  "libc6" {>= "2.4"}
+  "libgee-0-8-2" {>= "0.8.3"}
+  "libglib2-0-0" {>= "2.40"}
+]
+extra-source "libfolks25_0.11.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/folks/libfolks25_0.11.4-1+b2_amd64.deb"
+}

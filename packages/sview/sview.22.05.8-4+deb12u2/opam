@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sview_22.05.8-4+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sview"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libgtk2-0-0" {>= "2.18.0"}
+  "slurm-client" {= "22.05.8-4+deb12u2"}
+]
+extra-source "sview_22.05.8-4+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-wlm/sview_22.05.8-4+deb12u2_amd64.deb"
+}

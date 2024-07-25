@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstaden-read13_1.14.11-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstaden-read13"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "zlib1g" {>= "1-1.2.0.2"}
+]
+extra-source "libstaden-read13_1.14.11-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/staden-io-lib/libstaden-read13_1.14.11-6_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libitext-rtf-java_2.1.7-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libitext-rtf-java"]
+]
+depends: [
+  "libdom4j-java"
+  "libitext-java" {= "2.1.7-14"}
+  "libpdfrenderer-java"
+]
+extra-source "libitext-rtf-java_2.1.7-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libitext-java/libitext-rtf-java_2.1.7-14_all.deb"
+}

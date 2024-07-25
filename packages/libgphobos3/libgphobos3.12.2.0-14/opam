@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgphobos3_12.2.0-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgphobos3"]
+]
+depends: [
+  "gcc-12-base" {= "12.2.0-14"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "4.2"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "libgphobos3_12.2.0-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12/libgphobos3_12.2.0-14_amd64.deb"
+}

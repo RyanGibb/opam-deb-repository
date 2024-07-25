@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rsyslog-kubernetes_8.2302.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rsyslog-kubernetes"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libcurl4" {>= "7.16.2"}
+  "libfastjson4" {>= "0.99.8"}
+  "liblognorm5" {>= "2.0.3"}
+  "rsyslog" {= "8.2302.0-1"}
+]
+extra-source "rsyslog-kubernetes_8.2302.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rsyslog/rsyslog-kubernetes_8.2302.0-1_amd64.deb"
+}

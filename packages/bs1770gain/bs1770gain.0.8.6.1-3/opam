@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bs1770gain_0.8.6.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bs1770gain"]
+]
+depends: [
+  "libavcodec-extra59"
+  "libavfilter-extra8"
+  "libavformat-extra59"
+  "libavutil57" {>= "7-5.0"}
+  "libc6" {>= "2.34"}
+  "libpostproc56" {>= "7-5.0"}
+  "libswresample4" {>= "7-5.0"}
+  "libswscale6" {>= "7-5.0"}
+]
+extra-source "bs1770gain_0.8.6.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bs1770gain/bs1770gain_0.8.6.1-3_amd64.deb"
+}

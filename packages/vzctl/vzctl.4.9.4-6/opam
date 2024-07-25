@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vzctl_4.9.4-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vzctl"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "libcgroup1" {>= "0.36.2"}
+  "libxml2" {>= "2.7.4"}
+  "vzquota"
+  ("iproute2" | "iproute")
+]
+extra-source "vzctl_4.9.4-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vzctl/vzctl_4.9.4-6_amd64.deb"
+}

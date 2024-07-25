@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-mmap2_2.2.7-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-mmap2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgmp10"
+  "libruby2-5" {>= "2.5.0~preview1"}
+  "ruby" {< "1-2.6~"}
+  "ruby" {>= "1-2.5~0"}
+]
+extra-source "ruby-mmap2_2.2.7-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-mmap2/ruby-mmap2_2.2.7-1+b2_amd64.deb"
+}

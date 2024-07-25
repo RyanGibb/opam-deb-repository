@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i s3dfm_0.2.2-16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r s3dfm"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libs3d2" {>= "0.2.1"}
+  "libs3dw2" {>= "0.2.1"}
+]
+extra-source "s3dfm_0.2.2-16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/s3d/s3dfm_0.2.2-16_amd64.deb"
+}

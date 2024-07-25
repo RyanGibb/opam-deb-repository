@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtuxcap-dev_1.4.0.dfsg2-2.3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtuxcap-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libgl1-mesa-dev"
+  "libglu1-mesa-dev"
+  "libmagick++-dev"
+  "libmagickwand-dev"
+  "libsdl-mixer1-2-dev"
+  "libsdl1-2-dev"
+  "libtuxcap4-0" {= "1.4.0.dfsg2-2.3+b3"}
+  "python-dev"
+]
+extra-source "libtuxcap-dev_1.4.0.dfsg2-2.3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtuxcap/libtuxcap-dev_1.4.0.dfsg2-2.3+b3_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i open-infrastructure-storage-tools_20190301-lts1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r open-infrastructure-storage-tools"]
+]
+depends: [
+  "open-infrastructure-ceph-tools" {= "20190301-lts1-2"}
+]
+extra-source "open-infrastructure-storage-tools_20190301-lts1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/open-infrastructure-storage-tools/open-infrastructure-storage-tools_20190301-lts1-2_all.deb"
+}

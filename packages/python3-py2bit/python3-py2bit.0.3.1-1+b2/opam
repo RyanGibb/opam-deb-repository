@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-py2bit_0.3.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-py2bit"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-py2bit_0.3.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-py2bit/python3-py2bit_0.3.1-1+b2_amd64.deb"
+}

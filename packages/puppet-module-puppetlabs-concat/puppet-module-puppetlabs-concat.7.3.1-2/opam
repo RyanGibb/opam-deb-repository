@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-puppetlabs-concat_7.3.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-puppetlabs-concat"]
+]
+depends: [
+  "puppet-agent"
+  "puppet-module-puppetlabs-stdlib"
+]
+extra-source "puppet-module-puppetlabs-concat_7.3.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-puppetlabs-concat/puppet-module-puppetlabs-concat_7.3.1-2_all.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mp3diags_1.2.03-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mp3diags"]
+]
+depends: [
+  "libboost-program-options1-67-0"
+  "libboost-serialization1-67-0"
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt4-network" {>= "4-4.5.3"}
+  "libqt4-svg"
+  "libqt4-xml" {>= "4-4.5.3"}
+  "libqtcore4" {>= "4-4.8.0"}
+  "libqtgui4" {>= "4-4.5.3"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "mp3diags_1.2.03-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mp3diags/mp3diags_1.2.03-1+b3_amd64.deb"
+}

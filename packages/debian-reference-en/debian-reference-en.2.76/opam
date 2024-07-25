@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debian-reference-en_2.76_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debian-reference-en"]
+]
+depends: [
+  "debian-reference-common" {>= "2.51"}
+]
+extra-source "debian-reference-en_2.76_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-reference/debian-reference-en_2.76_all.deb"
+}

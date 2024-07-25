@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcpluff0-dev_0.2.0+ds1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcpluff0-dev"]
+]
+depends: [
+  "cpluff-loader"
+  "libc6" {>= "2.4"}
+  "libcpluff0" {= "0.2.0+ds1-1"}
+  "libreadline8" {>= "6.0"}
+]
+conflicts: [
+  "libcpluff-dev"
+]
+extra-source "libcpluff0-dev_0.2.0+ds1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cpluff/libcpluff0-dev_0.2.0+ds1-1_amd64.deb"
+}

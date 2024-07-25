@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-cy-en_0.1.1~r57554-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-cy-en"]
+]
+depends: [
+  "apertium" {>= "3.7"}
+  "cg3"
+]
+conflicts: [
+  "apertium-en-cy"
+]
+extra-source "apertium-cy-en_0.1.1~r57554-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-cy-en/apertium-cy-en_0.1.1~r57554-7_all.deb"
+}

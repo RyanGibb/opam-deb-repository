@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpoe-filter-ssl-perl_0.41-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpoe-filter-ssl-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libhttp-message-perl"
+  "libnet-ssleay-perl"
+  "libpoe-perl"
+  "libssl3" {>= "3.0.0"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libpoe-filter-ssl-perl_0.41-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpoe-filter-ssl-perl/libpoe-filter-ssl-perl_0.41-3_amd64.deb"
+}

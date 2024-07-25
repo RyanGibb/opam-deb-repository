@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libodb-mysql-2.4_2.4.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libodb-mysql-2.4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libmariadb3" {>= "3.0.0"}
+  "libodb-2-4"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libodb-mysql-2.4_2.4.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libodb-mysql/libodb-mysql-2.4_2.4.0-5_amd64.deb"
+}

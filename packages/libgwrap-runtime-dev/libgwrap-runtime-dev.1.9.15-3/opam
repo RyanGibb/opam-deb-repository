@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgwrap-runtime-dev_1.9.15-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgwrap-runtime-dev"]
+]
+depends: [
+  "guile-2-2-dev"
+  "libc6-dev"
+  "libffi-dev"
+  "libgwrap-runtime2" {= "1.9.15-3"}
+]
+conflicts: [
+  "libgwrap-runtime0-dev"
+  "libgwrapguile-dev"
+]
+extra-source "libgwrap-runtime-dev_1.9.15-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/g-wrap/libgwrap-runtime-dev_1.9.15-3_amd64.deb"
+}

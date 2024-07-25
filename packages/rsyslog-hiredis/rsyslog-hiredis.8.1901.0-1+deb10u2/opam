@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rsyslog-hiredis_8.1901.0-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rsyslog-hiredis"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libhiredis0-14" {>= "0.14.0"}
+  "rsyslog" {= "8.1901.0-1+deb10u2"}
+]
+extra-source "rsyslog-hiredis_8.1901.0-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rsyslog/rsyslog-hiredis_8.1901.0-1+deb10u2_amd64.deb"
+}

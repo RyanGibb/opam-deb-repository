@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibus-chewing_1.6.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibus-chewing"]
+]
+depends: [
+  "ibus" {>= "1.5.22-2"}
+  "libc6" {>= "2.4"}
+  "libchewing3" {>= "0.4.0"}
+  "libglib2-0-0" {>= "2.37.0"}
+  "libgtk2-0-0" {>= "2.16.0"}
+  "libibus-1-0-5" {>= "1.5.1"}
+  "libx11-6"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "ibus-chewing_1.6.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibus-chewing/ibus-chewing_1.6.1-2_amd64.deb"
+}

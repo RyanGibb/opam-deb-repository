@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iwd_2.3-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iwd"]
+]
+depends: [
+  "init-system-helpers" {>= "1.51"}
+  "libc6" {>= "2.34"}
+  "libell0" {>= "0.56"}
+  "libreadline8" {>= "6.0"}
+]
+extra-source "iwd_2.3-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iwd/iwd_2.3-1+deb12u1_amd64.deb"
+}

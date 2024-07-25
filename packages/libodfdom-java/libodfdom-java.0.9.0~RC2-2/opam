@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libodfdom-java_0.9.0~RC2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libodfdom-java"]
+]
+depends: [
+  "libapache-jena-java"
+  "libcommons-validator-java" {>= "1.6"}
+  "librdfa-java"
+  "libxerces2-java" {>= "2.12.0"}
+]
+extra-source "libodfdom-java_0.9.0~RC2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libodfdom-java/libodfdom-java_0.9.0~RC2-2_all.deb"
+}

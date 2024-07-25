@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i science-geography_1.14.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r science-geography"]
+]
+depends: [
+  "science-config" {= "1.14.5"}
+  "science-tasks" {= "1.14.5"}
+]
+extra-source "science-geography_1.14.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-science/science-geography_1.14.5_all.deb"
+}

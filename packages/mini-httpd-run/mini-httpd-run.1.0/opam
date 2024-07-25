@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mini-httpd-run_1.0_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mini-httpd-run"]
+]
+depends: [
+  "mini-httpd"
+  "runit" {>= "2.1.2-7"}
+  "runit-helper"
+  "sysuser-helper" {< "1.4"}
+]
+extra-source "mini-httpd-run_1.0_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mini-httpd-run/mini-httpd-run_1.0_all.deb"
+}

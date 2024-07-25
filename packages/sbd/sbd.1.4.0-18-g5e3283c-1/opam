@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sbd_1.4.0-18-g5e3283c-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sbd"]
+]
+depends: [
+  "libaio1" {>= "0.3.93"}
+  "libc6" {>= "2.17"}
+  "libcib27" {>= "1.1.12"}
+  "libcmap4" {>= "1.99.9"}
+  "libcrmcluster29" {>= "1.1.10"}
+  "libcrmcommon34" {>= "1.1.11"}
+  "libglib2-0-0" {>= "2.35.8"}
+  "libpe-status28" {>= "2.0.1~rc2"}
+  "libqb0" {>= "0.17.1"}
+  "libuuid1" {>= "2.16"}
+  "lsb-base"
+]
+extra-source "sbd_1.4.0-18-g5e3283c-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sbd/sbd_1.4.0-18-g5e3283c-1_amd64.deb"
+}

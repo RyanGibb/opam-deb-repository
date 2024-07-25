@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32stdc++6-9-dbg_9.3.0-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32stdc++6-9-dbg"]
+]
+depends: [
+  "gcc-9-base" {= "9.3.0-22"}
+  "lib32gcc-s1"
+  "lib32stdc++6" {>= "9.3.0-22"}
+  "libc6-i386" {>= "2.18"}
+  "libstdc++-9-dev" {= "9.3.0-22"}
+]
+conflicts: [
+  "lib32stdc++6-4.0-dbg"
+  "lib32stdc++6-4.1-dbg"
+  "lib32stdc++6-4.2-dbg"
+  "lib32stdc++6-4.3-dbg"
+  "lib32stdc++6-4.4-dbg"
+  "lib32stdc++6-4.5-dbg"
+  "lib32stdc++6-4.6-dbg"
+  "lib32stdc++6-4.7-dbg"
+  "lib32stdc++6-4.8-dbg"
+  "lib32stdc++6-4.9-dbg"
+  "lib32stdc++6-5-dbg"
+  "lib32stdc++6-6-dbg"
+  "lib32stdc++6-7-dbg"
+  "lib32stdc++6-8-dbg"
+  "lib32stdc++6-dbg"
+]
+extra-source "lib32stdc++6-9-dbg_9.3.0-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-9/lib32stdc++6-9-dbg_9.3.0-22_amd64.deb"
+}

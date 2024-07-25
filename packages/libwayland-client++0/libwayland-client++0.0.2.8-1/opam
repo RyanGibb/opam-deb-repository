@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwayland-client++0_0.2.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwayland-client++0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libwayland-client0" {>= "1.11.0"}
+]
+extra-source "libwayland-client++0_0.2.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/waylandpp/libwayland-client++0_0.2.8-1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i charybdis_4.1.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r charybdis"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.15"}
+  "libltdl7" {>= "2.4.6"}
+  "libmbedcrypto3" {>= "2.13"}
+  "libmbedtls12" {>= "2.13"}
+  "libmbedx509-0" {>= "2.0"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "lsb-base" {>= "3.0-6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "charybdis_4.1.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/charybdis/charybdis_4.1.1-1+b1_amd64.deb"
+}

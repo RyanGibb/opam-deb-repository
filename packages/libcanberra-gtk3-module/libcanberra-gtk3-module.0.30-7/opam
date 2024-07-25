@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcanberra-gtk3-module_0.30-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcanberra-gtk3-module"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.4"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libcanberra-gtk3-0" {>= "0.25"}
+  "libcanberra0" {>= "0.2"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libgtk-3-0" {>= "3.2.2-3"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libx11-6"
+]
+extra-source "libcanberra-gtk3-module_0.30-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcanberra/libcanberra-gtk3-module_0.30-7_amd64.deb"
+}

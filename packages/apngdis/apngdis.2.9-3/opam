@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apngdis_2.9-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apngdis"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "apngdis_2.9-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apngdis/apngdis_2.9-3_amd64.deb"
+}

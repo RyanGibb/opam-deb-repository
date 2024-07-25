@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sagan_1.2.0-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sagan"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.14"}
+  "libfastjson4" {>= "0.99.3"}
+  "liblognorm5" {>= "0.3.0"}
+  "libpcre3"
+  "libyaml-0-2"
+  "sagan-rules"
+  "sysvinit-utils"
+]
+extra-source "sagan_1.2.0-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sagan/sagan_1.2.0-1.2_amd64.deb"
+}

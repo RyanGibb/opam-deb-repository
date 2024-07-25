@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaugeas0_1.11.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaugeas0"]
+]
+depends: [
+  "augeas-lenses"
+  "libc6" {>= "2.27"}
+  "libselinux1" {>= "1.32"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libaugeas0_1.11.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/augeas/libaugeas0_1.11.0-3_amd64.deb"
+}

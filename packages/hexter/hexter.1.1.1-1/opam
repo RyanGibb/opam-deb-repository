@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hexter_1.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hexter"]
+]
+depends: [
+  "dssi-host-jack"
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.18.0"}
+  "liblo7" {>= "0.26~repack"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+]
+extra-source "hexter_1.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hexter/hexter_1.1.1-1_amd64.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rxvt-unicode_9.30-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rxvt-unicode"]
+]
+depends: [
+  "base-passwd" {>= "2.0.3.4"}
+  "libc6" {>= "2.34"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libgcc-s1" {>= "4.2"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libperl5-36" {>= "5.36.0"}
+  "libptytty0" {>= "2.0"}
+  "libstartup-notification0" {>= "0.2"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+  "libxmu6" {>= "2-1.1.3"}
+  "libxrender1"
+  ("ncurses-base" {>= "6.1+20180210-4"} | "ncurses-term" {>= "5.8-1"})
+]
+extra-source "rxvt-unicode_9.30-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rxvt-unicode/rxvt-unicode_9.30-2+b4_amd64.deb"
+}

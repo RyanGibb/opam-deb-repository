@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgtp3_1.2.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgtp3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libosmocore11" {>= "0.10.2"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "libgtp3_1.2.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmo-ggsn/libgtp3_1.2.2-4_amd64.deb"
+}

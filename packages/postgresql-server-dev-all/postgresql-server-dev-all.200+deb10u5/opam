@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-server-dev-all_200+deb10u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-server-dev-all"]
+]
+depends: [
+  "dctrl-tools"
+  "lsb-release"
+  "make"
+  "postgresql-common" {>= "117~"}
+  "postgresql-server-dev-11"
+]
+extra-source "postgresql-server-dev-all_200+deb10u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-common/postgresql-server-dev-all_200+deb10u5_all.deb"
+}

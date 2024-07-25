@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-cli-truncate_2.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-cli-truncate"]
+]
+depends: [
+  "node-slice-ansi"
+  "node-string-width" {>= "4.2.0~"}
+  "nodejs"
+]
+extra-source "node-cli-truncate_2.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-cli-truncate/node-cli-truncate_2.1.0-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libocamlgsl-ocaml_1.19.1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libocamlgsl-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgsl23"
+  "libgslcblas0"
+  "ocaml-base-nox"
+]
+extra-source "libocamlgsl-ocaml_1.19.1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocamlgsl/libocamlgsl-ocaml_1.19.1-2+b2_amd64.deb"
+}

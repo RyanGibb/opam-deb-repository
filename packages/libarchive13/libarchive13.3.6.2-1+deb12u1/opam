@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libarchive13_3.6.2-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libarchive13"]
+]
+depends: [
+  "libacl1" {>= "2.2.23"}
+  "libbz2-1-0"
+  "libc6" {>= "2.36"}
+  "liblz4-1" {>= "0.0~r130"}
+  "liblzma5" {>= "5.2.2"}
+  "libnettle8"
+  "libxml2" {>= "2.7.4"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libarchive13_3.6.2-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libarchive/libarchive13_3.6.2-1+deb12u1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openstack-tempest-ci_0.25_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openstack-tempest-ci"]
+]
+depends: [
+  "ipmitool"
+  "lsb-release"
+  "nmap"
+  "openstack-clients"
+]
+extra-source "openstack-tempest-ci_0.25_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openstack-meta-packages/openstack-tempest-ci_0.25_all.deb"
+}

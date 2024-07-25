@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-cairosvg_1.0.20-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-cairosvg"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-cairocffi"
+  "python-lxml"
+]
+extra-source "python-cairosvg_1.0.20-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cairosvg/python-cairosvg_1.0.20-1_all.deb"
+}

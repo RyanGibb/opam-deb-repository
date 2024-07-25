@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsgutils2-dev_1.45-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsgutils2-dev"]
+]
+depends: [
+  "libsgutils2-2" {= "1.45-1"}
+]
+conflicts: [
+  "libsgutils1-dev"
+]
+extra-source "libsgutils2-dev_1.45-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sg3-utils/libsgutils2-dev_1.45-1_amd64.deb"
+}

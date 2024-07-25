@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-klaw_3.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-klaw"]
+]
+depends: [
+  "node-graceful-fs" {>= "4.1.9"}
+]
+extra-source "node-klaw_3.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-klaw/node-klaw_3.0.0-4_all.deb"
+}

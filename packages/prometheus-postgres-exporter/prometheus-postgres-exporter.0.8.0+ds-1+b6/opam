@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-postgres-exporter_0.8.0+ds-1+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-postgres-exporter"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  ("daemon" | "systemd-sysv")
+]
+extra-source "prometheus-postgres-exporter_0.8.0+ds-1+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-postgres-exporter/prometheus-postgres-exporter_0.8.0+ds-1+b6_amd64.deb"
+}

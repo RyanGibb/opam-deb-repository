@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-regex-compat-doc_0.95.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-regex-compat-doc"]
+]
+depends: [
+  "ghc"
+]
+conflicts: [
+  "haskell-regex-compat-doc (<< 0.92-5)"
+]
+extra-source "libghc-regex-compat-doc_0.95.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-regex-compat/libghc-regex-compat-doc_0.95.2.0-1_all.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-lambdabot-irc-plugins-dev_5.1.0.1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-lambdabot-irc-plugins-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-lambdabot-core-dev"
+  "libghc-lifted-base-dev"
+  "libghc-network-dev"
+  "libghc-safesemaphore-dev"
+  "libghc-split-dev"
+  "libgmp10"
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-lambdabot-irc-plugins-dev_5.1.0.1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-lambdabot-irc-plugins/libghc-lambdabot-irc-plugins-dev_5.1.0.1-4+b1_amd64.deb"
+}

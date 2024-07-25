@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpicard-java_2.18.25+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpicard-java"]
+]
+depends: [
+  "libbarclay-java"
+  "libcommons-lang3-java"
+  "libcommons-math3-java"
+  "libgatk-native-bindings-java"
+  "libgkl-java"
+  "libguava-java" {>= "15.0"}
+  "libhtsjdk-java" {>= "2.18.2~"}
+]
+extra-source "libpicard-java_2.18.25+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/picard-tools/libpicard-java_2.18.25+dfsg-2_amd64.deb"
+}

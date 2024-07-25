@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libblockdev-mdraid-dev_2.25-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libblockdev-mdraid-dev"]
+]
+depends: [
+  "libblockdev-mdraid2" {= "2.25-2"}
+  "libblockdev-utils-dev" {= "2.25-2"}
+  "libglib2-0-dev"
+]
+extra-source "libblockdev-mdraid-dev_2.25-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libblockdev/libblockdev-mdraid-dev_2.25-2_amd64.deb"
+}

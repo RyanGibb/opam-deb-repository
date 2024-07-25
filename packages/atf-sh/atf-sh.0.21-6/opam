@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i atf-sh_0.21-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r atf-sh"]
+]
+depends: [
+  "libatf-c++-2" {>= "0.21"}
+  "libatf-c-1" {>= "0.21"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "atf-sh_0.21-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/atf/atf-sh_0.21-6_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cvs-fast-export_1.55-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cvs-fast-export"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "python3-any"
+]
+extra-source "cvs-fast-export_1.55-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cvs-fast-export/cvs-fast-export_1.55-1_amd64.deb"
+}

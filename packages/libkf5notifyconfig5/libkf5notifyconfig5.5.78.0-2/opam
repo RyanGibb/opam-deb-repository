@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5notifyconfig5_5.78.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5notifyconfig5"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libkf5configcore5" {>= "5.78.0~"}
+  "libkf5i18n5" {>= "5.78.0~"}
+  "libkf5kiowidgets5" {>= "5.78.0~"}
+  "libkf5notifyconfig-data" {= "5.78.0-2"}
+  "libphonon4qt5-4" {>= "4-4.8.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.0~"}
+  "libqt5widgets5" {>= "5.14.0~"}
+  "libstdc++6" {>= "4.1.1"}
+  "phonon4qt5"
+  ("libqt5gui5" {>= "5.14.0~"} | "libqt5gui5-gles" {>= "5.14.0~"})
+]
+extra-source "libkf5notifyconfig5_5.78.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/knotifyconfig/libkf5notifyconfig5_5.78.0-2_amd64.deb"
+}

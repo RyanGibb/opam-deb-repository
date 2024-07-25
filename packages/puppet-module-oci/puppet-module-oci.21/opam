@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-oci_21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-oci"]
+]
+depends: [
+  "openstack-puppet-modules"
+]
+extra-source "puppet-module-oci_21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openstack-cluster-installer/puppet-module-oci_21_all.deb"
+}

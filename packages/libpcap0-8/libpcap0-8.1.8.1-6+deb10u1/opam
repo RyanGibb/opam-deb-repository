@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcap0.8_1.8.1-6+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcap0.8"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libpcap0.8_1.8.1-6+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpcap/libpcap0.8_1.8.1-6+deb10u1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openstack-cloud-services_0.25_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openstack-cloud-services"]
+]
+depends: [
+  "dbconfig-common"
+  "ntp"
+  "rabbitmq-server"
+  ("default-mysql-server" | "mysql-server")
+]
+extra-source "openstack-cloud-services_0.25_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openstack-meta-packages/openstack-cloud-services_0.25_all.deb"
+}

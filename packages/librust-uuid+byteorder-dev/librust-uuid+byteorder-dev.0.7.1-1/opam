@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-uuid+byteorder-dev_0.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-uuid+byteorder-dev"]
+]
+depends: [
+  "librust-byteorder-1+i128-dev"
+  "librust-uuid-dev" {= "0.7.1-1"}
+]
+extra-source "librust-uuid+byteorder-dev_0.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-uuid/librust-uuid+byteorder-dev_0.7.1-1_amd64.deb"
+}

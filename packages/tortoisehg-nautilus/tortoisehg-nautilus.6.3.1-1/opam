@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tortoisehg-nautilus_6.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tortoisehg-nautilus"]
+]
+depends: [
+  "python3-gi"
+  "python3-nautilus" {>= "1.1-2"}
+  "tortoisehg" {>= "6.3.1-1"}
+  ("gnome-icon-theme-full" | "gnome-icon-theme")
+]
+extra-source "tortoisehg-nautilus_6.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tortoisehg/tortoisehg-nautilus_6.3.1-1_all.deb"
+}

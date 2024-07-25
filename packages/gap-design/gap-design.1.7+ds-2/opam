@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gap-design_1.7+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gap-design"]
+]
+depends: [
+  "gap" {>= "4r10p2-1~"}
+  "gap-gapdoc"
+  "gap-grape" {>= "4.8.2"}
+  "gap-transgrp"
+]
+extra-source "gap-design_1.7+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gap-design/gap-design_1.7+ds-2_all.deb"
+}

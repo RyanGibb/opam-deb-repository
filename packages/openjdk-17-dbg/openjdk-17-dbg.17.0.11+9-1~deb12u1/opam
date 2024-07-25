@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openjdk-17-dbg_17.0.11+9-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openjdk-17-dbg"]
+]
+depends: [
+  "openjdk-17-jre-headless" {= "17.0.11+9-1~deb12u1"}
+]
+extra-source "openjdk-17-dbg_17.0.11+9-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openjdk-17/openjdk-17-dbg_17.0.11+9-1~deb12u1_amd64.deb"
+}

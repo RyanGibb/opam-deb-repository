@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vim-pathogen_2.4-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vim-pathogen"]
+]
+depends: [
+  "vim-addon-manager"
+  ("vim-gtk3" | "vim-athena" | "vim-nox")
+]
+extra-source "vim-pathogen_2.4-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vim-pathogen/vim-pathogen_2.4-5_all.deb"
+}

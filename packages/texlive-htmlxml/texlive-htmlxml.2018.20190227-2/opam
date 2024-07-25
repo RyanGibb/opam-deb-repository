@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i texlive-htmlxml_2018.20190227-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r texlive-htmlxml"]
+]
+depends: [
+  "texlive-formats-extra" {>= "2018.20190227"}
+  "texlive-latex-extra" {>= "2018.20190227"}
+  "texlive-latex-recommended" {>= "2018.20190227"}
+  "texlive-plain-generic" {>= "2018.20190227"}
+]
+extra-source "texlive-htmlxml_2018.20190227-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/texlive-base/texlive-htmlxml_2018.20190227-2_all.deb"
+}

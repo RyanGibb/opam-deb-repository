@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cborg-prof_0.2.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cborg-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-cborg-dev" {= "0.2.4.0-1"}
+  "libghc-half-prof"
+  "libghc-primitive-prof"
+]
+extra-source "libghc-cborg-prof_0.2.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cborg/libghc-cborg-prof_0.2.4.0-1_amd64.deb"
+}

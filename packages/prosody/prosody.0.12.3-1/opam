@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prosody_0.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prosody"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libicu72" {>= "72.1~rc-1~"}
+  "libssl3" {>= "3.0.0"}
+  "lua-bitop"
+  "lua-expat"
+  "lua-expat" {>= "1.2.0"}
+  "lua-filesystem"
+  "lua-filesystem" {>= "1.4.2-3~"}
+  "lua-sec"
+  "lua-socket"
+  "lua5-4"
+  "ssl-cert"
+]
+conflicts: [
+  "prosody-modules (<< 0.0~hg20220330.b45c23ce24ba+dfsg-1)"
+]
+extra-source "prosody_0.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prosody/prosody_0.12.3-1_amd64.deb"
+}

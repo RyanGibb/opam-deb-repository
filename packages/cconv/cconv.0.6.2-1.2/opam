@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cconv_0.6.2-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cconv"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "cconv_0.6.2-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cconv/cconv_0.6.2-1.2_amd64.deb"
+}

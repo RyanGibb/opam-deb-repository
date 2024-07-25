@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-urd-hin_0.1.0~r64379-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-urd-hin"]
+]
+depends: [
+  "apertium" {>= "3.4"}
+  "apertium-lex-tools"
+  "cg3"
+]
+conflicts: [
+  "apertium-hin-urd"
+]
+extra-source "apertium-urd-hin_0.1.0~r64379-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-urd-hin/apertium-urd-hin_0.1.0~r64379-2.1_all.deb"
+}

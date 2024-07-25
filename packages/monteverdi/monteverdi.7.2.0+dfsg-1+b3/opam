@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i monteverdi_7.2.0+dfsg-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r monteverdi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libinsighttoolkit4-13" {>= "4.13.3withdata-dfsg1"}
+  "libotb" {= "7.2.0+dfsg-1+b3"}
+  "libotbcommon-7-2-1" {>= "6.6.1"}
+  "libotbmapla-7-2-1" {>= "6.2.0"}
+  "libotbmonteverdi-7-2-1" {>= "6.6.0"}
+  "libotbmonteverdicore-7-2-1" {>= "5.8.0"}
+  "libotbmonteverdigui-7-2-1" {>= "5.8.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5sql5-sqlite"
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  "otb-bin-qt" {= "7.2.0+dfsg-1+b3"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "monteverdi_7.2.0+dfsg-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/otb/monteverdi_7.2.0+dfsg-1+b3_amd64.deb"
+}

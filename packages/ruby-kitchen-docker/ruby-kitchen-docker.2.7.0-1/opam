@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-kitchen-docker_2.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-kitchen-docker"]
+]
+depends: [
+  "test-kitchen" {>= "1.0.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-kitchen-docker_2.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-kitchen-docker/ruby-kitchen-docker_2.7.0-1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtkatlantic_0.6.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtkatlantic"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.6.0"}
+  "libgdk-pixbuf2-0-0" {>= "2.31.1"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "gtkatlantic_0.6.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtkatlantic/gtkatlantic_0.6.3-1_amd64.deb"
+}

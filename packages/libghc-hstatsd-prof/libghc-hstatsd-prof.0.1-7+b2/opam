@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hstatsd-prof_0.1-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hstatsd-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hstatsd-dev" {= "0.1-7+b2"}
+  "libghc-network-prof"
+]
+extra-source "libghc-hstatsd-prof_0.1-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hstatsd/libghc-hstatsd-prof_0.1-7+b2_amd64.deb"
+}

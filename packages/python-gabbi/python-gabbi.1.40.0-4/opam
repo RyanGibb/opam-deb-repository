@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-gabbi_1.40.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-gabbi"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-colorama"
+  "python-httplib2"
+  "python-jsonpath-rw"
+  "python-jsonpath-rw-ext"
+  "python-pbr"
+  "python-pytest"
+  "python-six"
+  "python-testtools"
+  "python-urllib3"
+  "python-wsgi-intercept" {>= "1.0.0"}
+  "python-yaml"
+  "python2-7-any"
+]
+extra-source "python-gabbi_1.40.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-gabbi/python-gabbi_1.40.0-4_all.deb"
+}

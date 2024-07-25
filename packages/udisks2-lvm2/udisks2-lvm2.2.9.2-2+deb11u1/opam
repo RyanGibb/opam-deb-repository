@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i udisks2-lvm2_2.9.2-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r udisks2-lvm2"]
+]
+depends: [
+  "libblockdev-lvm2"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.50"}
+  "libgudev-1-0-0" {>= "165"}
+  "udisks2" {= "2.9.2-2+deb11u1"}
+]
+extra-source "udisks2-lvm2_2.9.2-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/udisks2/udisks2-lvm2_2.9.2-2+deb11u1_amd64.deb"
+}

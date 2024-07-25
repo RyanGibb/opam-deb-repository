@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debugedit_1:5.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debugedit"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libdw1" {>= "0.167"}
+  "libelf1" {>= "0.144"}
+]
+extra-source "debugedit_1:5.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debugedit/debugedit_5.0-5_amd64.deb"
+}

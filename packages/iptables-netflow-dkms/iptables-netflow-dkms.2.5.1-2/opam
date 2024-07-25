@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iptables-netflow-dkms_2.5.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iptables-netflow-dkms"]
+]
+depends: [
+  "dkms" {>= "2.8.4-3~"}
+  "libc6" {>= "2.3.4"}
+  "libc6-dev"
+  "libxtables-dev"
+  "pkg-config"
+]
+extra-source "iptables-netflow-dkms_2.5.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iptables-netflow/iptables-netflow-dkms_2.5.1-2_amd64.deb"
+}

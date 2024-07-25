@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-doctrine-annotations_2.0.1-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-doctrine-annotations"]
+]
+depends: [
+  "php-common"
+  "php-doctrine-lexer" {> "2"}
+  "php-psr-cache"
+]
+extra-source "php-doctrine-annotations_2.0.1-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-doctrine-annotations/php-doctrine-annotations_2.0.1-1+deb12u1_all.deb"
+}

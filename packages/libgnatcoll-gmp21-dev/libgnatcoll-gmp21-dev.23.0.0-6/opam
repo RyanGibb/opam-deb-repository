@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatcoll-gmp21-dev_23.0.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatcoll-gmp21-dev"]
+]
+depends: [
+  "gnat" {< "13"}
+  "gnat" {>= "12"}
+  "libgmp-dev"
+  "libgnatcoll-gmp20" {= "23.0.0-6"}
+  "libgnatcoll21-dev"
+  "libgnatprj10-dev"
+  "libxmlada-dom12-dev"
+  "libxmlada-input12-dev"
+  "libxmlada-sax12-dev"
+  "libxmlada-schema12-dev"
+  "libxmlada-unicode12-dev"
+]
+extra-source "libgnatcoll-gmp21-dev_23.0.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnatcoll-bindings/libgnatcoll-gmp21-dev_23.0.0-6_amd64.deb"
+}

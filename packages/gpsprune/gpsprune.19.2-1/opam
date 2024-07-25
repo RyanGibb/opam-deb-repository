@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gpsprune_19.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gpsprune"]
+]
+depends: [
+  ("default-jre" | "java7-runtime" | "java8-runtime" | "java9-runtime" | "java10-runtime" | "java11-runtime")
+]
+extra-source "gpsprune_19.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gpsprune/gpsprune_19.2-1_all.deb"
+}

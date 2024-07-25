@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libasync-http-client-java_2.12.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libasync-http-client-java"]
+]
+depends: [
+  "libactivation-java" {>= "1.2.0"}
+  "libnetty-java"
+  "libnetty-reactive-streams-java" {>= "2.0.4"}
+  "libreactive-streams-java" {>= "1.0.3"}
+  "libslf4j-java" {>= "1.7.30"}
+]
+extra-source "libasync-http-client-java_2.12.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/async-http-client/libasync-http-client-java_2.12.2-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-type-is_1.6.19-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-type-is"]
+]
+depends: [
+  "node-content-type"
+  "node-media-typer" {>= "1.1.0"}
+  "node-mime-types"
+  "nodejs"
+]
+extra-source "node-type-is_1.6.19-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-type-is/node-type-is_1.6.19-1_all.deb"
+}

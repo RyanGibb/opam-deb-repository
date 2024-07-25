@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmrpt-nanogui2.1_1:2.1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmrpt-nanogui2.1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libgl1"
+  "libglfw3" {>= "3.1"}
+  "libstdc++6" {>= "6"}
+]
+extra-source "libmrpt-nanogui2.1_1:2.1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrpt/libmrpt-nanogui2.1_2.1.7-2_amd64.deb"
+}

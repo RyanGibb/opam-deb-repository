@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i netpanzer_0.8.7+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r netpanzer"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "liblua5-1-0"
+  "libphysfs1" {>= "3.0.2"}
+  "libsdl-mixer1-2"
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "9"}
+  "netpanzer-data" {= "0.8.7+ds-3"}
+]
+extra-source "netpanzer_0.8.7+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netpanzer/netpanzer_0.8.7+ds-3_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libc6-dev-mips64r6-cross_2.31-11cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libc6-dev-mips64r6-cross"]
+]
+depends: [
+  "libc6-mips64r6-cross" {= "2.31-11cross1"}
+  "linux-libc-dev-mips64r6-cross"
+]
+conflicts: [
+  "libc0.1-dev-mips64r6-cross"
+  "libc0.3-dev-mips64r6-cross"
+  "libc6.1-dev-mips64r6-cross"
+]
+extra-source "libc6-dev-mips64r6-cross_2.31-11cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cross-toolchain-base-mipsen/libc6-dev-mips64r6-cross_2.31-11cross1_all.deb"
+}

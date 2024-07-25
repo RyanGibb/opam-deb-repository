@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnustep-gui-dev_0.27.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnustep-gui-dev"]
+]
+depends: [
+  "gnustep-gui-runtime" {= "0.27.0-5"}
+  "libgnustep-base-dev" {>= "1.26"}
+  "libgnustep-gui0-27" {= "0.27.0-5"}
+]
+extra-source "libgnustep-gui-dev_0.27.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnustep-gui/libgnustep-gui-dev_0.27.0-5_amd64.deb"
+}

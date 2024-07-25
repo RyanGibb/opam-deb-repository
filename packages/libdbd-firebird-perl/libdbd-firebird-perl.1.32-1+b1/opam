@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbd-firebird-perl_1.32-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbd-firebird-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdbi-perl"
+  "libfbclient2" {>= "3.0.1.32609.ds4-4"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libdbd-firebird-perl_1.32-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdbd-firebird-perl/libdbd-firebird-perl_1.32-1+b1_amd64.deb"
+}

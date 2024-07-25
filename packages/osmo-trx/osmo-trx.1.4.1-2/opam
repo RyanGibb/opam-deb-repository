@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osmo-trx_1.4.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osmo-trx"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc-s1" {>= "3.0"}
+  "liblimesuite22-09-1" {>= "22.09.0+dfsg"}
+  "libosmocore19" {>= "1.7.0"}
+  "libosmoctrl0" {>= "1.7.0"}
+  "libosmogsm18" {>= "1.7.0"}
+  "libosmovty9" {>= "1.7.0"}
+  "libstdc++6" {>= "11"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "osmo-trx_1.4.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmo-trx/osmo-trx_1.4.1-2_amd64.deb"
+}

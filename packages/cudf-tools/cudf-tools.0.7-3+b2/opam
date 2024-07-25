@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cudf-tools_0.7-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cudf-tools"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "ocaml-base-nox"
+]
+extra-source "cudf-tools_0.7-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cudf/cudf-tools_0.7-3+b2_amd64.deb"
+}

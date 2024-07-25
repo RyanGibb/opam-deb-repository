@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-get_1.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-get"]
+]
+depends: [
+  "apertium-dev" {>= "3.7.0"}
+  "python3"
+]
+extra-source "apertium-get_1.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-get/apertium-get_1.0.0-2_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtexluajit2_2020.20200327.54578-7+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtexluajit2"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.3"}
+]
+extra-source "libtexluajit2_2020.20200327.54578-7+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/texlive-bin/libtexluajit2_2020.20200327.54578-7+deb11u1_amd64.deb"
+}

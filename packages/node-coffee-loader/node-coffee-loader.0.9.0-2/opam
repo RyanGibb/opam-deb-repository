@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-coffee-loader_0.9.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-coffee-loader"]
+]
+depends: [
+  "coffeescript"
+  "node-loader-utils" {>= "1.0.2"}
+  "nodejs"
+]
+extra-source "node-coffee-loader_0.9.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-coffee-loader/node-coffee-loader_0.9.0-2_all.deb"
+}

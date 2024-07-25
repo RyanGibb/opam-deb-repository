@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i onionshare_2.2-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r onionshare"]
+]
+depends: [
+  "obfs4proxy"
+  "python3-any"
+  "python3-flask"
+  "python3-flask-httpauth"
+  "python3-pycryptodome"
+  "python3-pyqt5"
+  "python3-socks"
+  "python3-stem" {>= "1.4.0"}
+  "tor"
+]
+extra-source "onionshare_2.2-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/onionshare/onionshare_2.2-3+deb11u1_all.deb"
+}

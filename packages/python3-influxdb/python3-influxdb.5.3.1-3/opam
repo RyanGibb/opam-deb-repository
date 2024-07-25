@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-influxdb_5.3.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-influxdb"]
+]
+depends: [
+  "python3-any"
+  "python3-dateutil"
+  "python3-msgpack"
+  "python3-requests"
+  "python3-six" {>= "1.10.0"}
+  "python3-tz"
+]
+extra-source "python3-influxdb_5.3.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/influxdb-python/python3-influxdb_5.3.1-3_all.deb"
+}

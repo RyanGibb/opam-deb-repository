@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i netpbm_2:11.01.00-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r netpbm"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libnetpbm11" {= "2-11.01.00-2"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libtiff6" {>= "4.0.3"}
+  "libx11-6"
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "netpbm_2:11.01.00-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netpbm-free/netpbm_11.01.00-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-versionist_1.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-versionist"]
+]
+depends: [
+  "ruby-activesupport" {>= "3"}
+  "ruby-railties" {>= "3"}
+  "yard" {>= "0.7"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-versionist_1.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-versionist/ruby-versionist_1.7.0-1_all.deb"
+}

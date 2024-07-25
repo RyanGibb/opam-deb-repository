@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openssh-client_1:9.2p1-2+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openssh-client"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.36"}
+  "libedit2" {>= "2.11-20080614-0"}
+  "libfido2-1" {>= "1.8.0"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libselinux1" {>= "3.1~"}
+  "libssl3" {>= "3.0.11"}
+  "passwd"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "sftp"
+]
+extra-source "openssh-client_1:9.2p1-2+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openssh/openssh-client_9.2p1-2+deb12u2_amd64.deb"
+}

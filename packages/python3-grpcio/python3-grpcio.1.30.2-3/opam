@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-grpcio_1.30.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-grpcio"]
+]
+depends: [
+  "libabsl20200923" {>= "0~20200923-1"}
+  "libc-ares2" {>= "1.11.0~rc1"}
+  "libc6" {>= "2.29"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-protobuf" {>= "3.11.4~"}
+  "python3-six" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "python3-grpcio_1.30.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grpc/python3-grpcio_1.30.2-3_amd64.deb"
+}

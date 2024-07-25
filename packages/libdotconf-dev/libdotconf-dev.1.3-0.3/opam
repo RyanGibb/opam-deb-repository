@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdotconf-dev_1.3-0.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdotconf-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libdotconf0" {= "1.3-0.3"}
+]
+extra-source "libdotconf-dev_1.3-0.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dotconf/libdotconf-dev_1.3-0.3_amd64.deb"
+}

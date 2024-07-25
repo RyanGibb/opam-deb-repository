@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i filezilla_3.63.0-1+deb12u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r filezilla"]
+]
+depends: [
+  "filezilla-common" {= "3.63.0-1+deb12u3"}
+  "libc6" {>= "2.34"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libfilezilla34" {>= "0.41.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libnettle8"
+  "libpugixml1v5" {>= "1.6"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "11"}
+  "libwxbase3-2-1" {>= "3.2.2+dfsg"}
+  "libwxgtk3-2-1" {>= "3.2.1+dfsg-2"}
+]
+extra-source "filezilla_3.63.0-1+deb12u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/filezilla/filezilla_3.63.0-1+deb12u3_amd64.deb"
+}

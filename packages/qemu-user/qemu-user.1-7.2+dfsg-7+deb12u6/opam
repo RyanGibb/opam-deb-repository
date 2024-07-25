@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qemu-user_1:7.2+dfsg-7+deb12u6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qemu-user"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcapstone4" {>= "4"}
+  "libgcc-s1" {>= "3.4"}
+  "libglib2-0-0" {>= "2.61.2"}
+  "libgnutls30" {>= "3.7.2"}
+  "libnuma1" {>= "2.0.11"}
+  "liburing2" {>= "2.3"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "qemu-user_1:7.2+dfsg-7+deb12u6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qemu/qemu-user_7.2+dfsg-7+deb12u6_amd64.deb"
+}

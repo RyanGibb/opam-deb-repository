@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt6-quick3d-assetimporters-plugin_6.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt6-quick3d-assetimporters-plugin"]
+]
+depends: [
+  "libassimp5" {>= "5.2.5~ds0"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6gui6" {>= "6.4.2+dfsg~"}
+  "libqt6quick3d6" {= "6.4.2-1"}
+  "libqt6quick3dassetimport6" {>= "6.2.2"}
+  "libqt6quick3dassetutils6" {>= "6.4.0"}
+  "libqt6quick3dutils6" {>= "6.4.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "qt6-quick3d-assetimporters-plugin_6.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-quick3d/qt6-quick3d-assetimporters-plugin_6.4.2-1_amd64.deb"
+}

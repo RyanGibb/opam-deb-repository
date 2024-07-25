@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gdc-multilib_4:12.2.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gdc-multilib"]
+]
+depends: [
+  "cpp" {>= "4-12.2.0-3"}
+  "gcc-multilib" {>= "4-12.2.0-3"}
+  "gdc" {>= "4-12.2.0-3"}
+  "gdc-12-multilib" {>= "12.2.0-1~"}
+]
+extra-source "gdc-multilib_4:12.2.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults/gdc-multilib_12.2.0-3_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgrey_1.36-5.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgrey"]
+]
+depends: [
+  "adduser"
+  "debconf"
+  "libberkeleydb-perl"
+  "libnet-dns-perl"
+  "libnet-server-perl" {>= "0.87"}
+  "libnetaddr-ip-perl"
+  "perl"
+  "ucf" {>= "0.28"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "postgrey_1.36-5.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgrey/postgrey_1.36-5.2_all.deb"
+}

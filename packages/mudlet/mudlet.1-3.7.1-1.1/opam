@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mudlet_1:3.7.1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mudlet"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libhunspell-1-7-0"
+  "liblua5-1-0"
+  "libpcre3"
+  "libqt5concurrent5" {>= "5.0.2"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.8.0"}
+  "libqt5multimedia5" {>= "5.6.0~beta"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5opengl5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "5.2"}
+  "libyajl2" {>= "2.0.4"}
+  "libzip4" {>= "0.10"}
+  "lua-filesystem"
+  "lua-rex-pcre"
+  "lua-sql-sqlite3"
+  "lua-zip"
+  "zlib1g" {>= "1-1.1.4"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "mudlet_1:3.7.1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mudlet/mudlet_3.7.1-1.1_amd64.deb"
+}

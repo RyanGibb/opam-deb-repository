@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-lua-doc_2.1.0+ds1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-lua-doc"]
+]
+depends: [
+  "ghc"
+  "sgml-base" {>= "1.28"}
+]
+extra-source "libghc-lua-doc_2.1.0+ds1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-lua/libghc-lua-doc_2.1.0+ds1-2_all.deb"
+}

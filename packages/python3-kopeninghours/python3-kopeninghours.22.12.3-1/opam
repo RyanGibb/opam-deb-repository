@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-kopeninghours_22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-kopeninghours"]
+]
+depends: [
+  "libboost-python1-74-0"
+  "libboost-python1-74-0" {>= "1.74.0+ds1"}
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libkopeninghours1" {>= "22.08.2"}
+  "libpython3-11" {>= "3.11.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "5"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-kopeninghours_22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kopeninghours/python3-kopeninghours_22.12.3-1_amd64.deb"
+}

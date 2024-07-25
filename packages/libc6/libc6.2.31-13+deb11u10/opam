@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libc6_2.31-13+deb11u10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libc6"]
+]
+depends: [
+  "libcrypt1"
+  "libgcc-s1"
+]
+extra-source "libc6_2.31-13+deb11u10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glibc/libc6_2.31-13+deb11u10_amd64.deb"
+}

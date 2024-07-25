@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i racon_1.4.20-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r racon"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libedlib0" {>= "1.2.3"}
+  "libgcc-s1" {>= "3.0"}
+  "libspoa7-0-0" {>= "4.0.5+ds"}
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "racon_1.4.20-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/racon/racon_1.4.20-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pen_0.34.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pen"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgeoip1"
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "pen_0.34.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pen/pen_0.34.1-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i krb5-multidev_1.17-3+deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r krb5-multidev"]
+]
+depends: [
+  "comerr-dev"
+  "libgssapi-krb5-2" {= "1.17-3+deb10u4"}
+  "libgssrpc4" {= "1.17-3+deb10u4"}
+  "libk5crypto3" {= "1.17-3+deb10u4"}
+  "libkadm5clnt-mit11" {= "1.17-3+deb10u4"}
+  "libkadm5srv-mit11" {= "1.17-3+deb10u4"}
+  "libkrb5-3" {= "1.17-3+deb10u4"}
+]
+extra-source "krb5-multidev_1.17-3+deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/krb5/krb5-multidev_1.17-3+deb10u4_amd64.deb"
+}

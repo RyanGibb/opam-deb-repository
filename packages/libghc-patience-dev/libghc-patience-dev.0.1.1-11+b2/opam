@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-patience-dev_0.1.1-11+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-patience-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libgmp10"
+]
+extra-source "libghc-patience-dev_0.1.1-11+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-patience/libghc-patience-dev_0.1.1-11+b2_amd64.deb"
+}

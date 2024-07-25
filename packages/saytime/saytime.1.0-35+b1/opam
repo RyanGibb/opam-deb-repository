@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i saytime_1.0-35+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r saytime"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "oss-compat"
+  "sox"
+  ("libsox-fmt-oss" | "libsox-fmt-alsa")
+]
+extra-source "saytime_1.0-35+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/saytime/saytime_1.0-35+b1_amd64.deb"
+}

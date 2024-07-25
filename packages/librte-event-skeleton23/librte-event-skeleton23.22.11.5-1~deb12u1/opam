@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-event-skeleton23_22.11.5-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-event-skeleton23"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.4"}
+  "libfdt1" {>= "1.6.1"}
+  "libnuma1" {>= "2.0.11"}
+  "librte-bus-pci23" {>= "22.11"}
+  "librte-bus-vdev23" {>= "22.11"}
+  "librte-cryptodev23" {>= "18.05"}
+  "librte-eal23" {>= "22.11"}
+  "librte-ethdev23" {>= "17.11"}
+  "librte-eventdev23" {>= "22.11"}
+  "librte-hash23" {>= "18.11"}
+  "librte-kvargs23" {>= "18.08"}
+  "librte-mbuf23" {>= "19.08"}
+  "librte-mempool23" {>= "18.05"}
+  "librte-meter23" {>= "22.11~rc2"}
+  "librte-net23" {>= "22.11~rc2"}
+  "librte-pci23" {>= "22.11"}
+  "librte-rcu23" {>= "19.11"}
+  "librte-ring23" {>= "22.11~rc2"}
+  "librte-telemetry23" {>= "21.08"}
+  "librte-timer23" {>= "19.08"}
+]
+conflicts: [
+  "libdpdk0"
+]
+extra-source "librte-event-skeleton23_22.11.5-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-event-skeleton23_22.11.5-1~deb12u1_amd64.deb"
+}

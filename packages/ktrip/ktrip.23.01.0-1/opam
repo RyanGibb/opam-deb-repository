@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ktrip_23.01.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ktrip"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libkf5configcore5" {>= "5.88.0~"}
+  "libkf5configgui5" {>= "5.88.0~"}
+  "libkf5coreaddons5" {>= "5.88.0~"}
+  "libkf5i18n5" {>= "5.88.0~"}
+  "libkpublictransport1" {>= "21.12.3"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.15.0~"}
+  "libqt5quickcontrols2-5" {>= "5.15.0~"}
+  "libqt5widgets5" {>= "5.15.0~"}
+  "libstdc++6" {>= "5"}
+  "qml-module-org-kde-i18n-localedata" {>= "5.60"}
+  "qml-module-org-kde-kirigami-addons-datetime" {>= "0.2"}
+  "qml-module-org-kde-kpublictransport" {>= "21.12.3"}
+  ("libqt5gui5" {>= "5.15.0~"} | "libqt5gui5-gles" {>= "5.15.0~"})
+]
+extra-source "ktrip_23.01.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/ktrip/ktrip_23.01.0-1_amd64.deb"
+}

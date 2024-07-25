@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libccfits-dev_2.5+dfsg-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libccfits-dev"]
+]
+depends: [
+  "libccfits0v5" {= "2.5+dfsg-2+b1"}
+  "libcfitsio-dev"
+]
+extra-source "libccfits-dev_2.5+dfsg-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ccfits/libccfits-dev_2.5+dfsg-2+b1_amd64.deb"
+}

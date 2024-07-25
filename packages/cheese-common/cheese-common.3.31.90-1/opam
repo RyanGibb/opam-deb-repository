@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cheese-common_3.31.90-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cheese-common"]
+]
+depends: [
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "cheese-common_3.31.90-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cheese/cheese-common_3.31.90-1_all.deb"
+}

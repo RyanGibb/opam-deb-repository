@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bwctl-client_1.5.4+dfsg1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bwctl-client"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+]
+extra-source "bwctl-client_1.5.4+dfsg1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bwctl/bwctl-client_1.5.4+dfsg1-1+b1_amd64.deb"
+}

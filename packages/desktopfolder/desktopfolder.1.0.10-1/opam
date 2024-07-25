@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i desktopfolder_1.0.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r desktopfolder"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.25.2"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.22"}
+  "libgtksourceview-3-0-1" {>= "2.91.4"}
+  "libjson-glib-1-0-0" {>= "0.12.0"}
+  "libwnck-3-0" {>= "2.91.6"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "desktopfolder_1.0.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/desktopfolder/desktopfolder_1.0.10-1_amd64.deb"
+}

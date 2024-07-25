@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i selektor_3.13.72-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r selektor"]
+]
+depends: [
+  "libglib2-0-bin"
+  "libnotify-bin"
+  "tor"
+  "tor-geoipdb"
+  ("default-jre" | "java8-runtime" | "java9-runtime" | "java10-runtime" | "java11-runtime")
+]
+extra-source "selektor_3.13.72-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/selektor/selektor_3.13.72-2.1_all.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-tempestconf_2.5.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-tempestconf"]
+]
+depends: [
+  "python3-any"
+  "python3-openstacksdk"
+  "python3-os-client-config" {>= "1.26.0"}
+  "python3-oslo-config" {>= "3.23.0"}
+  "python3-pbr" {>= "1.8"}
+  "python3-requests"
+  "python3-six" {>= "1.10.0"}
+  "python3-tempest"
+  "python3-yaml"
+  "tempest"
+]
+extra-source "python3-tempestconf_2.5.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-tempestconf/python3-tempestconf_2.5.0-4_all.deb"
+}

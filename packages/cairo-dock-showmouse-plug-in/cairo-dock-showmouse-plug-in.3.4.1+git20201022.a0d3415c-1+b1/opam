@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cairo-dock-showmouse-plug-in_3.4.1+git20201022.a0d3415c-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cairo-dock-showmouse-plug-in"]
+]
+depends: [
+  "cairo-dock-plug-in-data" {= "3.4.1+git20201022.a0d3415c-1"}
+  "libc6" {>= "2.4"}
+  "libgl1"
+  "libglib2-0-0" {>= "2.24.0"}
+  "sgml-base" {>= "1.28"}
+]
+extra-source "cairo-dock-showmouse-plug-in_3.4.1+git20201022.a0d3415c-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cairo-dock-plug-ins/cairo-dock-showmouse-plug-in_3.4.1+git20201022.a0d3415c-1+b1_amd64.deb"
+}

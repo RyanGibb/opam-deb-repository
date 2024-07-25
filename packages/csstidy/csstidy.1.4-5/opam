@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i csstidy_1.4-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r csstidy"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "csstidy_1.4-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/csstidy/csstidy_1.4-5_amd64.deb"
+}

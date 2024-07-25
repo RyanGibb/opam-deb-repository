@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdleyna-connector-dbus-1.0-1_0.2.0-1+b11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdleyna-connector-dbus-1.0-1"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libdleyna-core-1-0-3" {>= "0.4.0"}
+  "libglib2-0-0" {>= "2.26.0"}
+  "libgupnp-1-0-4" {>= "0.18.0"}
+]
+extra-source "libdleyna-connector-dbus-1.0-1_0.2.0-1+b11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dleyna-connector-dbus/libdleyna-connector-dbus-1.0-1_0.2.0-1+b11_amd64.deb"
+}

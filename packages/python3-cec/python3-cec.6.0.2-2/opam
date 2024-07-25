@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-cec_6.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-cec"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcec6" {= "6.0.2-2"}
+  "libgcc-s1" {>= "3.0"}
+  "libp8-platform2" {>= "1.0.10"}
+  "libpython3-9" {>= "3.9.1"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+]
+extra-source "python3-cec_6.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcec/python3-cec_6.0.2-2_amd64.deb"
+}

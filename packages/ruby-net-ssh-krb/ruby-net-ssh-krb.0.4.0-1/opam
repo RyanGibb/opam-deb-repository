@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-net-ssh-krb_0.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-net-ssh-krb"]
+]
+depends: [
+  "ruby-gssapi" {>= "1.2.0"}
+  "ruby-net-ssh" {>= "2.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-net-ssh-krb_0.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-net-ssh-krb/ruby-net-ssh-krb_0.4.0-1_all.deb"
+}

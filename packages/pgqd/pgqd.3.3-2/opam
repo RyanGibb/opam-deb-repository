@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pgqd_3.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pgqd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libevent-2-1-6" {>= "2.1.8-stable"}
+  "libpq5"
+  "lsb-base"
+  "postgresql-common"
+]
+conflicts: [
+  "skytools3-ticker (<< 3.3)"
+]
+extra-source "pgqd_3.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pgqd/pgqd_3.3-2_amd64.deb"
+}

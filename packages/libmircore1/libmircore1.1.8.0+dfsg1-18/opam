@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmircore1_1.8.0+dfsg1-18_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmircore1"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libmircore1_1.8.0+dfsg1-18_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mir/libmircore1_1.8.0+dfsg1-18_amd64.deb"
+}

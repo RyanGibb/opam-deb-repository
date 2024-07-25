@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libforks-perl_0.36-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libforks-perl"]
+]
+depends: [
+  "libacme-damn-perl"
+  "libc6" {>= "2.4"}
+  "liblist-moreutils-perl"
+  "libsys-sigaction-perl"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libforks-perl_0.36-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libforks-perl/libforks-perl_0.36-3+b1_amd64.deb"
+}

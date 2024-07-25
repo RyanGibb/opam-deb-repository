@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libyara3_3.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libyara3"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libjansson4" {>= "2.1"}
+  "libmagic1" {>= "5.12"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "libyara3_3.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yara/libyara3_3.9.0-1_amd64.deb"
+}

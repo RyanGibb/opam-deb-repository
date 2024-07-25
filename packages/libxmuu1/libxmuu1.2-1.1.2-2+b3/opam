@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmuu1_2:1.1.2-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmuu1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6"
+]
+extra-source "libxmuu1_2:1.1.2-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxmu/libxmuu1_1.1.2-2+b3_amd64.deb"
+}

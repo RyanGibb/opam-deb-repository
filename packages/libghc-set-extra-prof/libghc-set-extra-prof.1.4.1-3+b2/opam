@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-set-extra-prof_1.4.1-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-set-extra-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-set-extra-dev" {= "1.4.1-3+b2"}
+  "libghc-syb-prof"
+]
+extra-source "libghc-set-extra-prof_1.4.1-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-set-extra/libghc-set-extra-prof_1.4.1-3+b2_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-persistent-sqlite-prof_2.13.1.0-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-persistent-sqlite-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-conduit-prof"
+  "libghc-microlens-th-prof"
+  "libghc-monad-logger-prof"
+  "libghc-persistent-prof"
+  "libghc-persistent-sqlite-dev" {= "2.13.1.0-1+b4"}
+  "libghc-resource-pool-prof"
+  "libghc-resourcet-prof"
+  "libghc-unliftio-core-prof"
+  "libghc-unordered-containers-prof"
+]
+extra-source "libghc-persistent-sqlite-prof_2.13.1.0-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-persistent-sqlite/libghc-persistent-sqlite-prof_2.13.1.0-1+b4_amd64.deb"
+}

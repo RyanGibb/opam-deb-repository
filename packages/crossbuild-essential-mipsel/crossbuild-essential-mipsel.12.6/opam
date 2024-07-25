@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i crossbuild-essential-mipsel_12.6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r crossbuild-essential-mipsel"]
+]
+depends: [
+  "dpkg-cross"
+  ("g++-mipsel-linux-gnu" {>= "4-8.3"} | "g++-mipsel")
+  ("gcc-mipsel-linux-gnu" {>= "4-8.3"} | "gcc-mipsel")
+]
+extra-source "crossbuild-essential-mipsel_12.6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/build-essential/crossbuild-essential-mipsel_12.6_all.deb"
+}

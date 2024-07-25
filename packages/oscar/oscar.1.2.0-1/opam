@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i oscar_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r oscar"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5opengl5" {>= "5.0.2"}
+  "libqt5printsupport5" {>= "5.2.0"}
+  "libqt5serialport5" {>= "5.6.0"}
+  "libqt5widgets5" {>= "5.6.0~beta"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.9"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "oscar_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oscar/oscar_1.2.0-1_amd64.deb"
+}

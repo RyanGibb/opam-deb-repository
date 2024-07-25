@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i emacs-common_1:28.2+1-15+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r emacs-common"]
+]
+depends: [
+  "emacs-el"
+  "emacsen-common" {>= "3.0.0"}
+  "init-system-helpers" {>= "1.52"}
+  "install-info"
+]
+conflicts: [
+  "cedet"
+  "eieio"
+  "emacs-el (<< 1:28.2+1-15+deb12u2)"
+  "gnus-bonus-el"
+  "speedbar"
+]
+extra-source "emacs-common_1:28.2+1-15+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emacs/emacs-common_28.2+1-15+deb12u2_all.deb"
+}

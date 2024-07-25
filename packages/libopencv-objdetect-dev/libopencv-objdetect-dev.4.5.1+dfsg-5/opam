@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencv-objdetect-dev_4.5.1+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencv-objdetect-dev"]
+]
+depends: [
+  "libopencv-highgui-dev" {= "4.5.1+dfsg-5"}
+  "libopencv-ml-dev" {= "4.5.1+dfsg-5"}
+  "libopencv-objdetect4-5" {= "4.5.1+dfsg-5"}
+]
+extra-source "libopencv-objdetect-dev_4.5.1+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencv/libopencv-objdetect-dev_4.5.1+dfsg-5_amd64.deb"
+}

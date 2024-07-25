@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rtags_2.38-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rtags"]
+]
+depends: [
+  "init-system-helpers" {>= "1.52"}
+  "libc6" {>= "2.34"}
+  "libclang1-14" {>= "1-5.0~svn298832-1~"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "12"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "rtags_2.38-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rtags/rtags_2.38-7_amd64.deb"
+}

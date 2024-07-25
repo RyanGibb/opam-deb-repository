@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libscalapack-openmpi-dev_2.1.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libscalapack-openmpi-dev"]
+]
+depends: [
+  "libscalapack-openmpi2-1" {= "2.1.0-4"}
+]
+extra-source "libscalapack-openmpi-dev_2.1.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scalapack/libscalapack-openmpi-dev_2.1.0-4_amd64.deb"
+}

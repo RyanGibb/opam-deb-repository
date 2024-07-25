@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i font-viewer_0.8.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r font-viewer"]
+]
+depends: [
+  "font-manager-common" {= "0.8.8-2"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.44"}
+  "libgtk-3-0" {>= "3.22"}
+  "libsqlite3-0" {>= "3.5.9"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "font-viewer_0.8.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/font-manager/font-viewer_0.8.8-2_amd64.deb"
+}

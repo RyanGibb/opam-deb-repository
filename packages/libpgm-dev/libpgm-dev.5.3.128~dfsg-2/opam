@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpgm-dev_5.3.128~dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpgm-dev"]
+]
+depends: [
+  "libpgm-5-3-0" {= "5.3.128~dfsg-2"}
+]
+conflicts: [
+  "libnetpbm9-dev"
+]
+extra-source "libpgm-dev_5.3.128~dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpgm/libpgm-dev_5.3.128~dfsg-2_amd64.deb"
+}

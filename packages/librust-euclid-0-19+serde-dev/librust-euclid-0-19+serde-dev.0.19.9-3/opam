@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-euclid-0.19+serde-dev_0.19.9-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-euclid-0.19+serde-dev"]
+]
+depends: [
+  "librust-euclid-0-19-dev" {= "0.19.9-3"}
+  "librust-serde-1+default-dev"
+  "librust-serde-1+serde-derive-dev"
+]
+extra-source "librust-euclid-0.19+serde-dev_0.19.9-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-euclid-0.19/librust-euclid-0.19+serde-dev_0.19.9-3_amd64.deb"
+}

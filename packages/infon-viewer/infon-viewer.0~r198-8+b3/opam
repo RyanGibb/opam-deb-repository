@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i infon-viewer_0~r198-8+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r infon-viewer"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libevent-2-1-6" {>= "2.1.8-stable"}
+  "libsdl-gfx1-2-5" {>= "2.0.25"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-sge" {>= "030809-1"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "ssft"
+  "zlib1g" {>= "1-1.1.4"}
+  ("zenity" | "kdebase-bin")
+]
+extra-source "infon-viewer_0~r198-8+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/infon/infon-viewer_0~r198-8+b3_amd64.deb"
+}

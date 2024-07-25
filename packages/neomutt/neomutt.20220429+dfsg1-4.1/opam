@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i neomutt_20220429+dfsg1-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r neomutt"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgnutls30" {>= "3.7.5"}
+  "libgpg-error0" {>= "1.33"}
+  "libgpgme11" {>= "1.11.1"}
+  "libgsasl18" {>= "1.1"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libidn12" {>= "1.13"}
+  "liblua5-4-0" {>= "5.4.4"}
+  "libncursesw6" {>= "6"}
+  "libnotmuch5" {>= "0.32~rc0"}
+  "libsqlite3-0" {>= "3.20.0"}
+  "libtinfo6" {>= "6"}
+  "libtokyocabinet9" {>= "1.4.47"}
+  "sensible-utils"
+]
+extra-source "neomutt_20220429+dfsg1-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neomutt/neomutt_20220429+dfsg1-4.1_amd64.deb"
+}

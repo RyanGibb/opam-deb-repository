@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-active-model-serializers_0.10.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-active-model-serializers"]
+]
+depends: [
+  "ruby-actionpack" {< "2-6.2"}
+  "ruby-actionpack" {>= "2-4.1"}
+  "ruby-activemodel" {< "2-6.2"}
+  "ruby-activemodel" {>= "2-4.1"}
+  "ruby-case-transform" {>= "0.2"}
+  "ruby-jsonapi-renderer" {< "0.3"}
+  "ruby-jsonapi-renderer" {>= "0.1.1.beta1"}
+]
+extra-source "ruby-active-model-serializers_0.10.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-active-model-serializers/ruby-active-model-serializers_0.10.12-1_all.deb"
+}

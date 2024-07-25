@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lxc-dev_1:3.1.0+really3.0.3-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lxc-dev"]
+]
+depends: [
+  "liblxc1" {= "1-3.1.0+really3.0.3-8"}
+  "lxc" {= "1-3.1.0+really3.0.3-8"}
+]
+extra-source "lxc-dev_1:3.1.0+really3.0.3-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxc/lxc-dev_3.1.0+really3.0.3-8_amd64.deb"
+}

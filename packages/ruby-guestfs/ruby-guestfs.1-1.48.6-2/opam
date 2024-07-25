@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-guestfs_1:1.48.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-guestfs"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libguestfs0" {>= "1-1.43.3"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.2"}
+  ("ruby" | "ruby-interpreter")
+]
+conflicts: [
+  "libguestfs-dev (<< 1:1.15.15-1~)"
+]
+extra-source "ruby-guestfs_1:1.48.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libguestfs/ruby-guestfs_1.48.6-2_amd64.deb"
+}

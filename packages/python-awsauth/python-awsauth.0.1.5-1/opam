@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-awsauth_0.1.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-awsauth"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-requests" {>= "0.14.0"}
+]
+extra-source "python-awsauth_0.1.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/requests-aws/python-awsauth_0.1.5-1_all.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-gitlib-prof_3.1.2-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-gitlib-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-base16-bytestring-prof"
+  "libghc-conduit-prof"
+  "libghc-exceptions-prof"
+  "libghc-gitlib-dev" {= "3.1.2-3+b2"}
+  "libghc-hashable-prof"
+  "libghc-resourcet-prof"
+  "libghc-semigroups-prof"
+  "libghc-tagged-prof"
+  "libghc-unliftio-core-prof"
+  "libghc-unliftio-prof"
+  "libghc-unordered-containers-prof"
+]
+extra-source "libghc-gitlib-prof_3.1.2-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-gitlib/libghc-gitlib-prof_3.1.2-3+b2_amd64.deb"
+}

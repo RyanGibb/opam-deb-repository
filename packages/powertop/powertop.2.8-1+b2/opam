@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i powertop_2.8-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r powertop"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc1" {>= "1-3.0"}
+  "libncurses6" {>= "6"}
+  "libncursesw6" {>= "6"}
+  "libnl-3-200" {>= "3.2.7"}
+  "libnl-genl-3-200" {>= "3.2.7"}
+  "libpci3" {>= "1-3.5.2-1"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "powertop_2.8-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/powertop/powertop_2.8-1+b2_amd64.deb"
+}

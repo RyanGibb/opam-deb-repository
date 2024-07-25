@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zam-plugins_4.1+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zam-plugins"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libgl1"
+  "libsamplerate0" {>= "0.1.7"}
+  "libstdc++6" {>= "4.6"}
+  "libx11-6"
+  "libzita-convolver4" {>= "4.0.3"}
+]
+extra-source "zam-plugins_4.1+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zam-plugins/zam-plugins_4.1+ds-1_amd64.deb"
+}

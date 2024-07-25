@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i antimony_0.9.3-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r antimony"]
+]
+depends: [
+  "libboost-python1-74-0"
+  "libboost-python1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.14.1"}
+  "libqt5widgets5" {>= "5.3.0"}
+  "libstdc++6" {>= "5.2"}
+  "python3-any"
+  ("libqt5gui5" {>= "5.8.0"} | "libqt5gui5-gles" {>= "5.8.0"})
+]
+extra-source "antimony_0.9.3-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/antimony/antimony_0.9.3-2+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cryptohash-sha1-prof_0.11.100.1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cryptohash-sha1-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-cryptohash-sha1-dev" {= "0.11.100.1-4+b1"}
+]
+extra-source "libghc-cryptohash-sha1-prof_0.11.100.1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cryptohash-sha1/libghc-cryptohash-sha1-prof_0.11.100.1-4+b1_amd64.deb"
+}

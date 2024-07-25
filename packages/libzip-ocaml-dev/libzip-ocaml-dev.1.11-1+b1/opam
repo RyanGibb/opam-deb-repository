@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzip-ocaml-dev_1.11-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzip-ocaml-dev"]
+]
+depends: [
+  "libzip-ocaml"
+  "ocaml"
+  "zlib1g-dev" {> "1.1.4"}
+]
+extra-source "libzip-ocaml-dev_1.11-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/camlzip/libzip-ocaml-dev_1.11-1+b1_amd64.deb"
+}

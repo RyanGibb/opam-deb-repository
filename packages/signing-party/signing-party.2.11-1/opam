@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i signing-party_2.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r signing-party"]
+]
+depends: [
+  "gnupg"
+  "libc6" {>= "2.14"}
+  "libclass-methodmaker-perl"
+  "libgnupg-interface-perl"
+  "libmailtools-perl"
+  "libmd0" {>= "0.0.0"}
+  "libmime-tools-perl"
+  "libnet-idn-encode-perl"
+  "libterm-readkey-perl"
+  "libtext-template-perl"
+  "perl-any"
+  "python3-any"
+  "qprint"
+]
+extra-source "signing-party_2.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/signing-party/signing-party_2.11-1_amd64.deb"
+}

@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqgis-3d3.10.14_3.10.14+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqgis-3d3.10.14"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdal28" {>= "1.11"}
+  "libqgis-core3-10-14" {>= "3.10.2"}
+  "libqt53dcore5" {>= "5.7.1~20161122"}
+  "libqt53dextras5" {>= "5.14.2"}
+  "libqt53dinput5" {>= "5.7.1~20161122"}
+  "libqt53dlogic5" {>= "5.7.1~20161122"}
+  "libqt53drender5" {>= "5.14.2"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5webkit5" {>= "5.212.0~alpha3"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.1.1"}
+  "qt3d-assimpsceneimport-plugin"
+  "qt3d-defaultgeometryloader-plugin"
+  "qt3d-gltfsceneio-plugin"
+  "qt3d-scene2d-plugin"
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "libqgis-3d3.10.14_3.10.14+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qgis/libqgis-3d3.10.14_3.10.14+dfsg-1_amd64.deb"
+}

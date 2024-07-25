@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblogback-java_1:1.2.11-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblogback-java"]
+]
+depends: [
+  "libslf4j-java" {>= "1.7.32"}
+]
+extra-source "liblogback-java_1:1.2.11-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/logback/liblogback-java_1.2.11-3_all.deb"
+}

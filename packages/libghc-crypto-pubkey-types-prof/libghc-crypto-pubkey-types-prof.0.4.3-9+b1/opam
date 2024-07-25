@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-crypto-pubkey-types-prof_0.4.3-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-crypto-pubkey-types-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-asn1-encoding-prof"
+  "libghc-asn1-types-prof"
+  "libghc-crypto-pubkey-types-dev" {= "0.4.3-9+b1"}
+]
+extra-source "libghc-crypto-pubkey-types-prof_0.4.3-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-crypto-pubkey-types/libghc-crypto-pubkey-types-prof_0.4.3-9+b1_amd64.deb"
+}

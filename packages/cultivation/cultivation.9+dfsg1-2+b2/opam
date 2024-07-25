@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cultivation_9+dfsg1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cultivation"]
+]
+depends: [
+  "freeglut3"
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libgl1"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libportaudio2" {>= "19+svn20101113"}
+  "libstdc++6" {>= "5"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "cultivation_9+dfsg1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cultivation/cultivation_9+dfsg1-2+b2_amd64.deb"
+}

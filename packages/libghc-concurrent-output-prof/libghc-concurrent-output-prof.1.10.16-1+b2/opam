@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-concurrent-output-prof_1.10.16-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-concurrent-output-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-ansi-terminal-prof"
+  "libghc-async-prof"
+  "libghc-concurrent-output-dev" {= "1.10.16-1+b2"}
+  "libghc-terminal-size-prof"
+]
+extra-source "libghc-concurrent-output-prof_1.10.16-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-concurrent-output/libghc-concurrent-output-prof_1.10.16-1+b2_amd64.deb"
+}

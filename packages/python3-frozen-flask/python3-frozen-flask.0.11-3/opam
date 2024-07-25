@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-frozen-flask_0.11-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-frozen-flask"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-flask" {>= "0.7"}
+]
+extra-source "python3-frozen-flask_0.11-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/frozen-flask/python3-frozen-flask_0.11-3_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcgi-application-plugin-anytemplate-perl_0.18-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcgi-application-plugin-anytemplate-perl"]
+]
+depends: [
+  "libcgi-application-basic-plugin-bundle-perl"
+  "libcgi-application-perl"
+  "perl-any"
+  ("libclone-perl" | "libclone-pp-perl")
+]
+extra-source "libcgi-application-plugin-anytemplate-perl_0.18-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcgi-application-plugin-anytemplate-perl/libcgi-application-plugin-anytemplate-perl_0.18-3_all.deb"
+}

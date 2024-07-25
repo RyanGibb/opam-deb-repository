@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjose0_11-2+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjose0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libjansson4" {>= "2.14"}
+  "libssl3" {>= "3.0.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libjose0_11-2+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jose/libjose0_11-2+deb12u1_amd64.deb"
+}

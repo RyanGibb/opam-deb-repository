@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblist-keywords-perl_0.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblist-keywords-perl"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libxs-parse-keyword-perl"
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "liblist-keywords-perl_0.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblist-keywords-perl/liblist-keywords-perl_0.10-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-dotenv+clap-dev_0.15.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-dotenv+clap-dev"]
+]
+depends: [
+  "librust-clap-2+default-dev"
+  "librust-dotenv-dev" {= "0.15.0-2+b2"}
+]
+extra-source "librust-dotenv+clap-dev_0.15.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-dotenv/librust-dotenv+clap-dev_0.15.0-2+b2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-webflash_0.1a9-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-webflash"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+]
+conflicts: [
+  "python-json"
+]
+extra-source "python-webflash_0.1a9-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-webflash/python-webflash_0.1a9-5_all.deb"
+}

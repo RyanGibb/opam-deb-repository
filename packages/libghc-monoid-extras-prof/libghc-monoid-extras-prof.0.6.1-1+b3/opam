@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-monoid-extras-prof_0.6.1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-monoid-extras-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-groups-prof"
+  "libghc-monoid-extras-dev" {= "0.6.1-1+b3"}
+  "libghc-semigroupoids-prof"
+]
+extra-source "libghc-monoid-extras-prof_0.6.1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-monoid-extras/libghc-monoid-extras-prof_0.6.1-1+b3_amd64.deb"
+}

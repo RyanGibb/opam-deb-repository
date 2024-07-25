@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i selinux-policy-dev_2:2.20221101-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r selinux-policy-dev"]
+]
+depends: [
+  "checkpolicy" {>= "3.4"}
+  "gawk"
+  "m4"
+  "make"
+  "policycoreutils" {>= "3.4"}
+  "policycoreutils-dev" {>= "3.4"}
+  "policycoreutils-python-utils" {>= "3.4"}
+  "python3"
+  "selinux-utils" {>= "3.4"}
+]
+extra-source "selinux-policy-dev_2:2.20221101-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/refpolicy/selinux-policy-dev_2.20221101-9_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-mandrill_1.0.57-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-mandrill"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-docopt"
+  "python-requests"
+]
+extra-source "python-mandrill_1.0.57-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mandrill/python-mandrill_1.0.57-1_all.deb"
+}

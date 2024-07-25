@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbpfcc_0.8.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbpfcc"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libelf1" {>= "0.144"}
+  "libgcc1" {>= "1-4.2"}
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "libbpfcc_0.8.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bpfcc/libbpfcc_0.8.0-4_amd64.deb"
+}

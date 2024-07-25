@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ipband_0.8.1-5.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ipband"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libpcap0-8" {>= "0.9.8"}
+  "sysvinit-utils"
+  ("exim4" | "mail-transport-agent")
+]
+extra-source "ipband_0.8.1-5.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ipband/ipband_0.8.1-5.1+b1_amd64.deb"
+}

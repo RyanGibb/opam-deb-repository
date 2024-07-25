@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postfix-mta-sts-resolver_1.1.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postfix-mta-sts-resolver"]
+]
+depends: [
+  "adduser"
+  "ca-certificates"
+  "python3-aiodns"
+  "python3-aiohttp"
+  "python3-aioredis"
+  "python3-aiosqlite"
+  "python3-any"
+  "python3-yaml"
+]
+extra-source "postfix-mta-sts-resolver_1.1.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postfix-mta-sts-resolver/postfix-mta-sts-resolver_1.1.2-1.1_all.deb"
+}

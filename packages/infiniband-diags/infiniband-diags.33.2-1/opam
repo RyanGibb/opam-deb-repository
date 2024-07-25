@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i infiniband-diags_33.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r infiniband-diags"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libibmad5" {>= "1.3.12"}
+  "libibnetdisc5" {= "33.2-1"}
+  "libibumad3" {>= "3.2.30"}
+  "perl-any"
+]
+extra-source "infiniband-diags_33.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rdma-core/infiniband-diags_33.2-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nemo-font-manager_0.8.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nemo-font-manager"]
+]
+depends: [
+  "font-manager-common" {>= "0.8.4"}
+  "font-viewer" {= "0.8.4-1"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.44"}
+  "libnemo-extension1" {>= "1.1.2"}
+  "nemo" {>= "3.0"}
+]
+extra-source "nemo-font-manager_0.8.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/font-manager/nemo-font-manager_0.8.4-1_amd64.deb"
+}

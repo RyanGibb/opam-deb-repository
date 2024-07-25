@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaudit-dev_1:3.0.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaudit-dev"]
+]
+depends: [
+  "libaudit1" {= "1-3.0.9-1"}
+  "libcap-ng-dev"
+]
+extra-source "libaudit-dev_1:3.0.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/audit/libaudit-dev_3.0.9-1_amd64.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i whitedune_0.30.10-2.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r whitedune"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc-s1"
+  "libgl1"
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  "libxi6"
+  "libxm4" {>= "2.3.4"}
+  "libxmu6"
+  "libxt6"
+  "zlib1g" {>= "1-1.1.4"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "whitedune_0.30.10-2.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/whitedune/whitedune_0.30.10-2.2_amd64.deb"
+}

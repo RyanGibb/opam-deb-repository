@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-11-repmgr_4.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-11-repmgr"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libpq5" {>= "9.3~"}
+  "postgresql-11"
+  "repmgr-common" {>= "4.2.0-2"}
+]
+extra-source "postgresql-11-repmgr_4.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/repmgr/postgresql-11-repmgr_4.2.0-2_amd64.deb"
+}

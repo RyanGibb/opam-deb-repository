@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bsdmainutils_12.1.8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bsdmainutils"]
+]
+depends: [
+  "bsdextrautils" {>= "2.35.2-7"}
+  "bsdutils" {>= "3.0-0"}
+  "debianutils" {>= "1.8"}
+  "ncal"
+]
+extra-source "bsdmainutils_12.1.8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bsdmainutils/bsdmainutils_12.1.8_all.deb"
+}

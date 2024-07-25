@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvkd3d1_1.2-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvkd3d1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libvkd3d-shader1" {>= "1.2"}
+  "libvulkan1" {>= "1.1.70"}
+]
+extra-source "libvkd3d1_1.2-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vkd3d/libvkd3d1_1.2-15_amd64.deb"
+}

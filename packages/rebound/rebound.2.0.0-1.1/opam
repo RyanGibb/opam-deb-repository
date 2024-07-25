@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rebound_2.0.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rebound"]
+]
+depends: [
+  "python3"
+  "python3-any"
+  "python3-bs4"
+  "python3-requests"
+  "python3-urllib3"
+  "python3-urwid"
+]
+extra-source "rebound_2.0.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rebound/rebound_2.0.0-1.1_all.deb"
+}

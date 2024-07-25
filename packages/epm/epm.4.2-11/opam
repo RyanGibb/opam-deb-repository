@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i epm_4.2-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r epm"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "libx11-6" {>= "2-1.6.0"}
+  "libxft2" {> "2.1.1"}
+  "libxinerama1"
+]
+extra-source "epm_4.2-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/epm/epm_4.2-11_amd64.deb"
+}

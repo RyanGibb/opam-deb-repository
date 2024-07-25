@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmo-abis-dev_0.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmo-abis-dev"]
+]
+depends: [
+  "libosmoabis6" {= "0.5.1-1"}
+  "libosmotrau2" {= "0.5.1-1"}
+]
+extra-source "libosmo-abis-dev_0.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libosmo-abis/libosmo-abis-dev_0.5.1-1_amd64.deb"
+}

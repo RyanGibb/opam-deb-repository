@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qtxdg-tools_3.10.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qtxdg-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5xdg3" {>= "3.10.0~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qtxdg-tools_3.10.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtxdg-tools/qtxdg-tools_3.10.0-2_amd64.deb"
+}

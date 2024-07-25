@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libiptc0_1.8.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libiptc0"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libip4tc0" {>= "1.6.0+snapshot20161117"}
+  "libip6tc0" {>= "1.6.0+snapshot2016111"}
+]
+extra-source "libiptc0_1.8.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iptables/libiptc0_1.8.2-4_amd64.deb"
+}

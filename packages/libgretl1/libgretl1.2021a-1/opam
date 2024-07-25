@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgretl1_2021a-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgretl1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libglib2-0-0" {>= "2.33.14"}
+  "libgmp10"
+  "libgomp1" {>= "4.9"}
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.2.0.2"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+conflicts: [
+  "libesl0"
+  "libgretl0"
+]
+extra-source "libgretl1_2021a-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gretl/libgretl1_2021a-1_amd64.deb"
+}

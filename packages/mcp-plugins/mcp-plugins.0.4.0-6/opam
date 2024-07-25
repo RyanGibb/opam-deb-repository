@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mcp-plugins_0.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mcp-plugins"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+]
+extra-source "mcp-plugins_0.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mcp-plugins/mcp-plugins_0.4.0-6_amd64.deb"
+}

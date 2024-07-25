@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sweethome3d_6.4.2+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sweethome3d"]
+]
+depends: [
+  "java-wrappers"
+  "libbatik-java"
+  "libfreehep-graphics2d-java"
+  "libfreehep-graphicsbase-java"
+  "libfreehep-graphicsio-java"
+  "libfreehep-graphicsio-svg-java"
+  "libitext-java"
+  "libjava3d-java"
+  "libsunflow-java" {>= "0.07.2.svn396+dfsg-11"}
+  ("default-jre" | "java8-runtime")
+  ("icedtea-netx" | "sun-java6-bin")
+]
+extra-source "sweethome3d_6.4.2+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sweethome3d/sweethome3d_6.4.2+dfsg-2_all.deb"
+}

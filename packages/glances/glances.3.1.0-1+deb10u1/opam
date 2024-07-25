@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i glances_3.1.0-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r glances"]
+]
+depends: [
+  "adduser"
+  "lsb-base" {>= "3.0-6"}
+  "node-normalize-css"
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-psutil" {>= "2.0.0"}
+]
+extra-source "glances_3.1.0-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glances/glances_3.1.0-1+deb10u1_all.deb"
+}

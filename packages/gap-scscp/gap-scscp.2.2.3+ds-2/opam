@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gap-scscp_2.2.3+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gap-scscp"]
+]
+depends: [
+  "adduser"
+  "gap" {>= "4r10p0-4"}
+  "gap-gapdoc" {>= "1.6.2"}
+  "gap-io" {>= "4.5.4"}
+  "gap-openmath" {>= "11.4.2+ds-3"}
+  "lsb-base"
+]
+extra-source "gap-scscp_2.2.3+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gap-scscp/gap-scscp_2.2.3+ds-2_all.deb"
+}

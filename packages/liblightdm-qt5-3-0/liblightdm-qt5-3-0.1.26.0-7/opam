@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblightdm-qt5-3-0_1.26.0-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblightdm-qt5-3-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "liblightdm-gobject-1-0" {>= "1.26.0"}
+  "libqt5core5a" {>= "5.12.2"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "liblightdm-qt5-3-0_1.26.0-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lightdm/liblightdm-qt5-3-0_1.26.0-7_amd64.deb"
+}

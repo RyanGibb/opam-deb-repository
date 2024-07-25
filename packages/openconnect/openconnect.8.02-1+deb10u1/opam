@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openconnect_8.02-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openconnect"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgnutls30" {>= "3.6.5"}
+  "libopenconnect5" {>= "8.01"}
+  "libproxy1v5" {>= "0.4.14"}
+  "libxml2" {>= "2.7.4"}
+  "vpnc-scripts"
+]
+extra-source "openconnect_8.02-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openconnect/openconnect_8.02-1+deb10u1_amd64.deb"
+}

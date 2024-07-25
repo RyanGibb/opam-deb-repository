@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgrss-dev_0.7.0-2+b11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgrss-dev"]
+]
+depends: [
+  "libgrss0" {= "0.7.0-2+b11"}
+  "libsoup2-4-dev"
+  "libxml2-dev"
+]
+extra-source "libgrss-dev_0.7.0-2+b11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgrss/libgrss-dev_0.7.0-2+b11_amd64.deb"
+}

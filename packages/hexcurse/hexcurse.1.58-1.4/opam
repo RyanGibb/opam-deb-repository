@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hexcurse_1.58-1.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hexcurse"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "hexcurse_1.58-1.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hexcurse/hexcurse_1.58-1.4_amd64.deb"
+}

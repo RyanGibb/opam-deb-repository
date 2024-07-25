@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-nettle-prof_0.3.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-nettle-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-byteable-prof"
+  "libghc-crypto-cipher-types-prof"
+  "libghc-nettle-dev" {= "0.3.0-2+b2"}
+  "libghc-securemem-prof"
+  "libghc-tagged-prof"
+]
+extra-source "libghc-nettle-prof_0.3.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-nettle/libghc-nettle-prof_0.3.0-2+b2_amd64.deb"
+}

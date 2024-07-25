@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mesa-utils_8.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mesa-utils"]
+]
+depends: [
+  "mesa-utils-bin"
+]
+conflicts: [
+  "mesa-utils-extra"
+]
+extra-source "mesa-utils_8.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mesa-demos/mesa-utils_8.5.0-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ipset_7.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ipset"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libipset13" {>= "7.0-1~"}
+]
+extra-source "ipset_7.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ipset/ipset_7.10-1_amd64.deb"
+}

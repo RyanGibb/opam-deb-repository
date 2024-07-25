@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sludge-engine_2.2.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sludge-engine"]
+]
+depends: [
+  "libalure1" {>= "1.1"}
+  "libc6" {>= "2.14"}
+  "libdumb1"
+  "libgcc-s1"
+  "libgl1"
+  "libglew2-1" {>= "1.12.0"}
+  "libopenal1" {>= "1.14"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "4.9"}
+  "libvorbis0a" {>= "1.1.2"}
+  "libvpx6" {>= "1.6.0"}
+  "xdg-utils"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "sludge-engine_2.2.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sludge/sludge-engine_2.2.2-3_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-inline-c-prof_0.9.1.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-inline-c-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-ansi-wl-pprint-prof"
+  "libghc-hashable-prof"
+  "libghc-inline-c-dev" {= "0.9.1.0-2+b1"}
+  "libghc-parsers-prof"
+  "libghc-unordered-containers-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-inline-c-prof_0.9.1.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-inline-c/libghc-inline-c-prof_0.9.1.0-2+b1_amd64.deb"
+}

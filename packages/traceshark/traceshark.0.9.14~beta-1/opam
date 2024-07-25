@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i traceshark_0.9.14~beta-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r traceshark"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libqcustomplot2-1" {>= "2.1.0+dfsg1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "traceshark_0.9.14~beta-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/traceshark/traceshark_0.9.14~beta-1_amd64.deb"
+}

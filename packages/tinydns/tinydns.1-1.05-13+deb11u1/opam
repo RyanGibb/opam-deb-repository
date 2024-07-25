@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tinydns_1:1.05-13+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tinydns"]
+]
+depends: [
+  "init-system-helpers" {>= "1.51"}
+  "libc6" {>= "2.4"}
+  "runit-helper" {>= "2.10.0~"}
+  "sysuser-helper" {< "1.4"}
+]
+extra-source "tinydns_1:1.05-13+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/djbdns/tinydns_1.05-13+deb11u1_amd64.deb"
+}

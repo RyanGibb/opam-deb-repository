@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-unifrac_1.2-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-unifrac"]
+]
+depends: [
+  "cython3"
+  "libc6" {>= "2.14"}
+  "libssu0" {>= "1.2"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-biom-format"
+  "python3-h5py" {>= "3.3.0"}
+  "python3-iow"
+  "python3-numpy"
+  "python3-skbio" {>= "0.5.8-3~"}
+]
+extra-source "python3-unifrac_1.2-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unifrac/python3-unifrac_1.2-3+b1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcdk5nc6_5.0.20180306-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcdk5nc6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+conflicts: [
+  "libcdk5"
+]
+extra-source "libcdk5nc6_5.0.20180306-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcdk5/libcdk5nc6_5.0.20180306-3_amd64.deb"
+}

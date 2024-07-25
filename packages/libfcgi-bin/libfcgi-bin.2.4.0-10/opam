@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfcgi-bin_2.4.0-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfcgi-bin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfcgi0ldbl"
+]
+extra-source "libfcgi-bin_2.4.0-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfcgi/libfcgi-bin_2.4.0-10_amd64.deb"
+}

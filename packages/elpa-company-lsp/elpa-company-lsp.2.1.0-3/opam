@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-company-lsp_2.1.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-company-lsp"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-company" {>= "0.9.0"}
+  "elpa-dash" {>= "2.11.0"}
+  "elpa-lsp-mode" {>= "6.0"}
+  "elpa-s" {>= "1.2.0"}
+  "emacsen-common"
+]
+extra-source "elpa-company-lsp_2.1.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/company-lsp/elpa-company-lsp_2.1.0-3_all.deb"
+}

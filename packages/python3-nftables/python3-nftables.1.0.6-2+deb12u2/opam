@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-nftables_1.0.6-2+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-nftables"]
+]
+depends: [
+  "libnftables1" {= "1.0.6-2+deb12u2"}
+  "python3-any"
+  "python3-jsonschema"
+]
+extra-source "python3-nftables_1.0.6-2+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nftables/python3-nftables_1.0.6-2+deb12u2_amd64.deb"
+}

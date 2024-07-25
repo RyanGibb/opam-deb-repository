@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libprelude-lua_5.2.0-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libprelude-lua"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "liblua5-1-0"
+  "libprelude28" {= "5.2.0-3+deb11u1"}
+  "libpreludecpp12"
+  "libstdc++6" {>= "5.2"}
+  "lua5-1"
+]
+extra-source "libprelude-lua_5.2.0-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libprelude/libprelude-lua_5.2.0-3+deb11u1_amd64.deb"
+}

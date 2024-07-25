@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml6-module-qtquick-pdf_6.4.2-final+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml6-module-qtquick-pdf"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6pdfquick6" {>= "6.4.0"}
+  "libqt6qml6" {>= "6.4.2+dfsg~"}
+  "libstdc++6" {>= "5"}
+  "qml6-module-qtquick" {>= "6.4.2+dfsg~"}
+  "qml6-module-qtquick-controls" {>= "6.4.2+dfsg~"}
+  "qml6-module-qtquick-shapes" {>= "6.4.2+dfsg~"}
+  "qml6-module-qtquick-templates" {>= "6.4.2+dfsg~"}
+  "qml6-module-qtquick-window" {>= "6.4.2+dfsg~"}
+  "qt6-image-formats-plugin-pdf"
+]
+extra-source "qml6-module-qtquick-pdf_6.4.2-final+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-webengine/qml6-module-qtquick-pdf_6.4.2-final+dfsg-1_amd64.deb"
+}

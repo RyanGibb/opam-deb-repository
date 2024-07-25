@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-wayland-server+use-system-lib-dev_0.29.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-wayland-server+use-system-lib-dev"]
+]
+depends: [
+  "librust-wayland-server+lazy-static-dev" {= "0.29.4-3"}
+  "librust-wayland-server+parking-lot-dev" {= "0.29.4-3"}
+  "librust-wayland-server+scoped-tls-dev" {= "0.29.4-3"}
+  "librust-wayland-server-dev" {= "0.29.4-3"}
+  "librust-wayland-sys-dev"
+]
+extra-source "librust-wayland-server+use-system-lib-dev_0.29.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-wayland-server/librust-wayland-server+use-system-lib-dev_0.29.4-3_amd64.deb"
+}

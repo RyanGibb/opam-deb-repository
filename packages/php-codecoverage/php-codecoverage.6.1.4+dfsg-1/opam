@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-codecoverage_6.1.4+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-codecoverage"]
+]
+depends: [
+  "libjs-bootstrap"
+  "libjs-jquery"
+  "php-common"
+  "php-file-iterator" {< "3~~"}
+  "php-file-iterator" {>= "2.0"}
+  "php-text-template" {< "2~~"}
+  "php-text-template" {>= "1.2.1"}
+  "php-token-stream" {< "4~~"}
+  "php-token-stream" {>= "3.0"}
+  "php-tokenizer" {< "2~~"}
+  "php-tokenizer" {>= "1.1"}
+  "php-xml"
+  "phpunit-code-unit-reverse-lookup" {< "2~~"}
+  "phpunit-code-unit-reverse-lookup" {>= "1.0.1"}
+  "phpunit-environment"
+  "phpunit-version" {< "3~~"}
+  "phpunit-version" {>= "2.0.1"}
+]
+extra-source "php-codecoverage_6.1.4+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-codecoverage/php-codecoverage_6.1.4+dfsg-1_all.deb"
+}

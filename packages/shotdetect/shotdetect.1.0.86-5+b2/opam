@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shotdetect_1.0.86-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shotdetect"]
+]
+depends: [
+  "libavformat58" {>= "7-4.0"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgd3" {>= "2.1.0~alpha~"}
+  "libstdc++6" {>= "5.2"}
+  "libswscale5" {>= "7-4.0"}
+  "libxml2" {>= "2.7.4"}
+  "libxslt1-1" {>= "1.1.25"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libavcodec58" {>= "7-4.0"} | "libavcodec-extra58" {>= "7-4.0"})
+]
+extra-source "shotdetect_1.0.86-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shotdetect/shotdetect_1.0.86-5+b2_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mono-upnp-bin_0.1.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mono-upnp-bin"]
+]
+depends: [
+  "libglib2-0-cil" {>= "2.12.10-1ubuntu1"}
+  "libgtk2-0-cil" {>= "2.12.10-1ubuntu1"}
+  "libmono-addins0-2-cil" {>= "0.6"}
+  "libmono-corlib4-5-cil" {>= "1.0"}
+  "libmono-posix4-0-cil" {>= "3.0.6"}
+  "libmono-system-xml4-0-cil" {>= "3.0.6"}
+  "libmono-system4-0-cil" {>= "3.0.6"}
+  "libmono-upnp-cil" {= "0.1.2-2"}
+  "mono-runtime" {>= "2.10.1"}
+]
+extra-source "mono-upnp-bin_0.1.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mono-upnp/mono-upnp-bin_0.1.2-2_all.deb"
+}

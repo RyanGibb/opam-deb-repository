@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-liblinear_2.1.0+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-liblinear"]
+]
+depends: [
+  "liblinear3" {< "2.1.0+dfsg-4.1~"}
+  "liblinear3" {>= "2.1.0+dfsg-4"}
+  "python3-any"
+]
+extra-source "python3-liblinear_2.1.0+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblinear/python3-liblinear_2.1.0+dfsg-4_all.deb"
+}

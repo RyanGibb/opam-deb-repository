@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-glut-prof_2.7.0.15-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-glut-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-glut-dev" {= "2.7.0.15-2+b1"}
+  "libghc-opengl-prof"
+  "libghc-statevar-prof"
+]
+extra-source "libghc-glut-prof_2.7.0.15-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-glut/libghc-glut-prof_2.7.0.15-2+b1_amd64.deb"
+}

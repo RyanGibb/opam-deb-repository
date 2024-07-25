@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i chntpw_1.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r chntpw"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcrypt20" {>= "1.7.0"}
+]
+extra-source "chntpw_1.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chntpw/chntpw_1.0-1.1_amd64.deb"
+}

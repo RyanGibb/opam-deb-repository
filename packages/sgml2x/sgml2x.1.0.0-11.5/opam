@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sgml2x_1.0.0-11.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sgml2x"]
+]
+depends: [
+  "openjade"
+  "opensp"
+  "sgml-base" {>= "1.28"}
+  "texlive-formats-extra"
+]
+conflicts: [
+  "alcovebook-sgml (<< 0.0.999)"
+]
+extra-source "sgml2x_1.0.0-11.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sgml2x/sgml2x_1.0.0-11.5_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencsd-bin_0.10.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencsd-bin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libopencsd0"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libopencsd-bin_0.10.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libopencsd/libopencsd-bin_0.10.1-1_amd64.deb"
+}

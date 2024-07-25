@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pacemaker-dev_2.0.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pacemaker-dev"]
+]
+depends: [
+  "libcfg-dev"
+  "libcib27" {= "2.0.5-2"}
+  "libcmap-dev"
+  "libcpg-dev"
+  "libcrmcluster29" {= "2.0.5-2"}
+  "libcrmcommon34" {= "2.0.5-2"}
+  "libcrmservice28" {= "2.0.5-2"}
+  "libdbus-1-dev"
+  "libglib2-0-dev"
+  "libgnutls28-dev"
+  "liblrmd28" {= "2.0.5-2"}
+  "libncurses-dev"
+  "libpacemaker1" {= "2.0.5-2"}
+  "libpe-rules26" {= "2.0.5-2"}
+  "libpe-status28" {= "2.0.5-2"}
+  "libqb-dev"
+  "libquorum-dev"
+  "libstonithd26" {= "2.0.5-2"}
+  "libxml2-dev"
+  "libxslt1-dev"
+  "uuid-dev"
+]
+extra-source "pacemaker-dev_2.0.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pacemaker/pacemaker-dev_2.0.5-2_amd64.deb"
+}

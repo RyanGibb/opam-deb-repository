@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdc1394-22-dev_2.2.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdc1394-22-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libdc1394-22" {= "2.2.5-1"}
+  "libraw1394-dev"
+]
+conflicts: [
+  "libdc1394-20-dev"
+]
+extra-source "libdc1394-22-dev_2.2.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdc1394-22/libdc1394-22-dev_2.2.5-1_amd64.deb"
+}

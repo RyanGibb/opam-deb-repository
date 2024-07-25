@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmbt1_3.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmbt1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "5.2"}
+  "libticcutils5"
+  "libtimbl4"
+]
+extra-source "libmbt1_3.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mbt/libmbt1_3.4-1_amd64.deb"
+}

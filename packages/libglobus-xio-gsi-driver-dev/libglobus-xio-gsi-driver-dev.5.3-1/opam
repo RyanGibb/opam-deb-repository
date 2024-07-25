@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-xio-gsi-driver-dev_5.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-xio-gsi-driver-dev"]
+]
+depends: [
+  "libglobus-common-dev" {>= "15"}
+  "libglobus-gss-assist-dev" {>= "11"}
+  "libglobus-gssapi-error-dev" {>= "4"}
+  "libglobus-gssapi-gsi-dev" {>= "13"}
+  "libglobus-xio-dev" {>= "3"}
+  "libglobus-xio-gsi-driver" {= "5.3-1"}
+]
+extra-source "libglobus-xio-gsi-driver-dev_5.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-xio-gsi-driver/libglobus-xio-gsi-driver-dev_5.3-1_amd64.deb"
+}

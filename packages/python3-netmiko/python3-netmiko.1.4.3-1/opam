@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-netmiko_1.4.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-netmiko"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-paramiko"
+  "python3-scp"
+  "python3-yaml"
+]
+extra-source "python3-netmiko_1.4.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netmiko/python3-netmiko_1.4.3-1_all.deb"
+}

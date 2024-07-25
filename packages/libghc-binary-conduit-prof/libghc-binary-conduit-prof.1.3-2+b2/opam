@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-binary-conduit-prof_1.3-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-binary-conduit-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-binary-conduit-dev" {= "1.3-2+b2"}
+  "libghc-conduit-prof"
+  "libghc-exceptions-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-binary-conduit-prof_1.3-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-binary-conduit/libghc-binary-conduit-prof_1.3-2+b2_amd64.deb"
+}

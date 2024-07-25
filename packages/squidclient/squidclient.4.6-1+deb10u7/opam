@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i squidclient_4.6-1+deb10u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r squidclient"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnutls30" {>= "3.6.6"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libnettle6"
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "squid3-client"
+]
+extra-source "squidclient_4.6-1+deb10u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/squid/squidclient_4.6-1+deb10u7_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblbfgsb-examples_3.0+dfsg.3-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblbfgsb-examples"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libgfortran5" {>= "8"}
+  "liblbfgsb0"
+  "libquadmath0" {>= "4.6"}
+]
+extra-source "liblbfgsb-examples_3.0+dfsg.3-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lbfgsb/liblbfgsb-examples_3.0+dfsg.3-3+b1_amd64.deb"
+}

@@ -1,0 +1,51 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phpmyadmin_4:5.0.4+dfsg2-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phpmyadmin"]
+]
+depends: [
+  "libjs-bootstrap4"
+  "libjs-codemirror"
+  "libjs-jquery"
+  "libjs-jquery-mousewheel"
+  "libjs-jquery-timepicker"
+  "libjs-jquery-ui"
+  "libjs-openlayers"
+  "libjs-sphinxdoc" {>= "2.4.3-5~"}
+  "php-cli"
+  "php-common"
+  "php-google-recaptcha" {< "2~~"}
+  "php-google-recaptcha" {>= "1.1"}
+  "php-json"
+  "php-mariadb-mysql-kbs" {< "2~~"}
+  "php-mariadb-mysql-kbs" {>= "1.2"}
+  "php-mbstring"
+  "php-mysql"
+  "php-phpmyadmin-motranslator" {< "6~~"}
+  "php-phpmyadmin-shapefile" {< "3~~"}
+  "php-phpmyadmin-shapefile" {>= "2.0"}
+  "php-phpmyadmin-sql-parser" {< "6~~"}
+  "php-phpmyadmin-sql-parser" {>= "5.0"}
+  "php-phpseclib" {< "3~~"}
+  "php-phpseclib" {>= "2.0"}
+  "php-symfony-config" {< "5~~"}
+  "php-symfony-config" {>= "4.2.8"}
+  "php-symfony-dependency-injection" {< "5~~"}
+  "php-symfony-dependency-injection" {>= "4.2.8"}
+  "php-symfony-expression-language" {< "5~~"}
+  "php-symfony-expression-language" {>= "4.2"}
+  "php-symfony-yaml" {< "5~~"}
+  "php-symfony-yaml" {>= "4.2.8"}
+  "php-twig" {< "4~~"}
+  "php-twig-i18n-extension"
+  "php-xml"
+  "sensible-utils"
+  "ucf"
+  ("dbconfig-mysql" | "dbconfig-no-thanks" | "dbconfig-common" {< "2.0.0"})
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "phpmyadmin_4:5.0.4+dfsg2-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phpmyadmin/phpmyadmin_5.0.4+dfsg2-2+deb11u1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-weechat_0.5.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-weechat"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-circe" {>= "1.2"}
+  "elpa-s" {>= "1.3.1"}
+  "emacsen-common" {>= "2.0.8"}
+]
+extra-source "elpa-weechat_0.5.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/weechat-el/elpa-weechat_0.5.0-5_all.deb"
+}

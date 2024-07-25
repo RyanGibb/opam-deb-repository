@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libeccodes0_2.28.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libeccodes0"]
+]
+depends: [
+  "libaec0" {>= "1.0.6"}
+  "libc6" {>= "2.35"}
+  "libeccodes-data"
+  "libgfortran5" {>= "10"}
+  "libgomp1" {>= "4.4"}
+  "libopenjp2-7" {>= "2.0.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+]
+extra-source "libeccodes0_2.28.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eccodes/libeccodes0_2.28.0-1_amd64.deb"
+}

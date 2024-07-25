@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i purify_2.0.0-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r purify"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcasa-casa3"
+  "libcasa-measures3"
+  "libcasa-ms3"
+  "libcasa-scimath-f3"
+  "libcasa-scimath3"
+  "libcasa-tables3"
+  "libccfits0v5"
+  "libcfitsio7" {>= "3.450~"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc1" {>= "1-4.0"}
+  "libgomp1" {>= "4.9"}
+  "libpurify2-0"
+  "libsopt2-0"
+  "libstdc++6" {>= "5.2"}
+  "libtiff5" {>= "4.0.3"}
+]
+extra-source "purify_2.0.0-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/purify/purify_2.0.0-4+b1_amd64.deb"
+}

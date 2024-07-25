@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nbdkit-plugin-python_1.24.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nbdkit-plugin-python"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpython3-9" {>= "3.9.1"}
+  "nbdkit"
+  "python3-boto3"
+]
+conflicts: [
+  "nbdkit (<< 1.1.5-2~)"
+]
+extra-source "nbdkit-plugin-python_1.24.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nbdkit/nbdkit-plugin-python_1.24.1-2_amd64.deb"
+}

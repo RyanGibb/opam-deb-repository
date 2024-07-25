@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgetdata-perl_0.10.0-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgetdata-perl"]
+]
+depends: [
+  "libgetdata8" {= "0.10.0-10"}
+  "perl"
+  "perl-base"
+]
+extra-source "libgetdata-perl_0.10.0-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgetdata/libgetdata-perl_0.10.0-10_amd64.deb"
+}

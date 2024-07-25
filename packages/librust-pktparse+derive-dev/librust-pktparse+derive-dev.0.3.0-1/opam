@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-pktparse+derive-dev_0.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-pktparse+derive-dev"]
+]
+depends: [
+  "librust-pktparse-dev" {= "0.3.0-1"}
+  "librust-serde-1+default-dev"
+  "librust-serde-derive-1+default-dev"
+]
+extra-source "librust-pktparse+derive-dev_0.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-pktparse/librust-pktparse+derive-dev_0.3.0-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-testing.mysqld_1.4.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-testing.mysqld"]
+]
+depends: [
+  "python3-any"
+  "python3-pymysql"
+  "python3-testing-common-database" {>= "1.1.0"}
+  ("default-mysql-server" {>= "1.0.2"} | "virtual-mysql-server")
+]
+extra-source "python3-testing.mysqld_1.4.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-testing.mysqld/python3-testing.mysqld_1.4.0-3_all.deb"
+}

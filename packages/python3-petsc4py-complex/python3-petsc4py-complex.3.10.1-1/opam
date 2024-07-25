@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-petsc4py-complex_3.10.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-petsc4py-complex"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libopenmpi3"
+  "libpetsc-complex3-10" {>= "3.10.3+dfsg1"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  "swig"
+]
+conflicts: [
+  "python3-petsc4py (<< 3.10)"
+]
+extra-source "python3-petsc4py-complex_3.10.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/petsc4py/python3-petsc4py-complex_3.10.1-1_amd64.deb"
+}

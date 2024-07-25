@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-iproute-prof_1.7.9-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-iproute-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-appar-prof"
+  "libghc-byteorder-prof"
+  "libghc-iproute-dev" {= "1.7.9-1+b1"}
+  "libghc-network-prof"
+]
+extra-source "libghc-iproute-prof_1.7.9-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-iproute/libghc-iproute-prof_1.7.9-1+b1_amd64.deb"
+}

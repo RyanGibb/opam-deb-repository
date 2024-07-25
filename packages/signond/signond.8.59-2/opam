@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i signond_8.59-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r signond"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libproxy1v5" {>= "0.4.14"}
+  "libqt5core5a" {>= "5.10.0"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5sql5" {>= "5.0.2"}
+  "libqt5sql5-sqlite"
+  "libsignon-extension1" {>= "8.57+20150423"}
+  "libsignon-plugins-common1" {>= "8.57+20150423"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "signond_8.59-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/signond/signond_8.59-2_amd64.deb"
+}

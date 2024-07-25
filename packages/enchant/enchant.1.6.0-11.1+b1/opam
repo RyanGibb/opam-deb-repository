@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i enchant_1.6.0-11.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r enchant"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libenchant1c2a" {>= "1.6.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+]
+extra-source "enchant_1.6.0-11.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/enchant/enchant_1.6.0-11.1+b1_amd64.deb"
+}

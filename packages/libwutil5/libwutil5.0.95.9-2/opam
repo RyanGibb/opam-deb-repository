@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwutil5_0.95.9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwutil5"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "wmaker-common" {>= "0.95.9-2"}
+]
+extra-source "libwutil5_0.95.9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmaker/libwutil5_0.95.9-2_amd64.deb"
+}

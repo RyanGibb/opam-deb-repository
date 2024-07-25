@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i printer-driver-cups-pdf_3.0.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r printer-driver-cups-pdf"]
+]
+depends: [
+  "cups"
+  "cups-client"
+  "ghostscript"
+  "libc6" {>= "2.7"}
+  "libcups2" {>= "1.4.0"}
+  "libpaper-utils"
+]
+extra-source "printer-driver-cups-pdf_3.0.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cups-pdf/printer-driver-cups-pdf_3.0.1-9_amd64.deb"
+}

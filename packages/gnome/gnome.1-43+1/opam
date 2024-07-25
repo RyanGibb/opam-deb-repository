@@ -1,0 +1,48 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome_1:43+1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome"]
+]
+depends: [
+  "avahi-daemon"
+  "cheese" {>= "3.38"}
+  "cups-pk-helper" {>= "0.2"}
+  "desktop-base"
+  "evolution" {>= "3.36"}
+  "evolution-plugins" {>= "3.36"}
+  "file-roller" {>= "3.38"}
+  "gnome-calendar" {>= "3.38"}
+  "gnome-clocks" {>= "3.38"}
+  "gnome-color-manager" {>= "3.36"}
+  "gnome-core" {= "1-43+1"}
+  "gnome-maps" {>= "3.38"}
+  "gnome-music" {>= "3.36"}
+  "gnome-sound-recorder"
+  "gnome-tweaks" {>= "3.30"}
+  "gnome-weather" {>= "3.36"}
+  "gstreamer1-0-libav" {>= "1.10"}
+  "gstreamer1-0-plugins-ugly" {>= "1.10"}
+  "libgsf-bin"
+  "libproxy1-plugin-networkmanager"
+  "libreoffice-calc"
+  "libreoffice-gnome"
+  "libreoffice-impress"
+  "libreoffice-writer"
+  "network-manager-gnome" {>= "1.8"}
+  "orca" {>= "3.38"}
+  "rhythmbox" {>= "3.0"}
+  "rhythmbox-plugin-cdrecorder"
+  "rhythmbox-plugins"
+  "rygel-playbin" {>= "0.36"}
+  "rygel-tracker" {>= "0.36"}
+  "seahorse" {>= "3.36"}
+  "simple-scan" {>= "3.36"}
+  "totem-plugins"
+  "xdg-user-dirs-gtk"
+  ("shotwell" | "gnome-photos" {>= "3.36"})
+]
+extra-source "gnome_1:43+1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-gnome3/gnome_43+1_amd64.deb"
+}

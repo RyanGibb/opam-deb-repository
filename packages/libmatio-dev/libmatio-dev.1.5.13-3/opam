@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmatio-dev_1.5.13-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmatio-dev"]
+]
+depends: [
+  "libhdf5-dev"
+  "libmatio4" {= "1.5.13-3"}
+  "zlib1g-dev"
+]
+extra-source "libmatio-dev_1.5.13-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmatio/libmatio-dev_1.5.13-3_amd64.deb"
+}

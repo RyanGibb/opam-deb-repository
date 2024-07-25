@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-ghc-mtl-prof_1.2.1.0-10+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-ghc-mtl-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-exceptions-prof"
+  "libghc-extensible-exceptions-prof"
+  "libghc-ghc-mtl-dev" {= "1.2.1.0-10+b3"}
+]
+extra-source "libghc-ghc-mtl-prof_1.2.1.0-10+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-ghc-mtl/libghc-ghc-mtl-prof_1.2.1.0-10+b3_amd64.deb"
+}

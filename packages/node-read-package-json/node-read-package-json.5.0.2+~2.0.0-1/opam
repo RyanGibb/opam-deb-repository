@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-read-package-json_5.0.2+~2.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-read-package-json"]
+]
+depends: [
+  "node-glob"
+  "node-json-parse-better-errors"
+  "node-normalize-package-data" {>= "4"}
+  "node-slash"
+]
+extra-source "node-read-package-json_5.0.2+~2.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-read-package-json/node-read-package-json_5.0.2+~2.0.0-1_all.deb"
+}

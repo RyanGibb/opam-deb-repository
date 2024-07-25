@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqtassistantclient4_4.6.3-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqtassistantclient4"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt4-network" {>= "4-4.8.1"}
+  "libqtcore4" {>= "4-4.8.1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libqtassistantclient4_4.6.3-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt-assistant-compat/libqtassistantclient4_4.6.3-7+b1_amd64.deb"
+}

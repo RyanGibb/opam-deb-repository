@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblaser-geometry-dev_1.6.7-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblaser-geometry-dev"]
+]
+depends: [
+  "libangles-dev"
+  "libboost-system-dev"
+  "libboost-thread-dev"
+  "libeigen3-dev"
+  "liblaser-geometry0d" {= "1.6.7-5"}
+  "libroscpp-dev"
+  "libsensor-msgs-dev"
+  "libtf-dev"
+  "libtf2-dev"
+]
+extra-source "liblaser-geometry-dev_1.6.7-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-laser-geometry/liblaser-geometry-dev_1.6.7-5_amd64.deb"
+}

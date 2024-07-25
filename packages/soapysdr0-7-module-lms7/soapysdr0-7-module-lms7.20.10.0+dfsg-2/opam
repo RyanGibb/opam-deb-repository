@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i soapysdr0.7-module-lms7_20.10.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r soapysdr0.7-module-lms7"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "liblimesuite20-10-1" {>= "20.10.0+dfsg-2"}
+  "libsoapysdr0-7" {>= "0.7.2"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "soapysdr0.7-module-lms7_20.10.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/limesuite/soapysdr0.7-module-lms7_20.10.0+dfsg-2_amd64.deb"
+}

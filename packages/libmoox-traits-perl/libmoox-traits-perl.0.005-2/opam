@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmoox-traits-perl_0.005-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmoox-traits-perl"]
+]
+depends: [
+  "libexporter-tiny-perl"
+  "libmodule-runtime-perl"
+  "perl-any"
+  ("librole-tiny-perl" {>= "2.002004"} | "librole-tiny-perl" {< "2.002000"})
+]
+extra-source "libmoox-traits-perl_0.005-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmoox-traits-perl/libmoox-traits-perl_0.005-2_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qemu-user-binfmt_1:7.2+dfsg-7+deb12u6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qemu-user-binfmt"]
+]
+depends: [
+  "qemu-user" {= "1-7.2+dfsg-7+deb12u6"}
+  ("systemd" | "binfmt-support")
+]
+conflicts: [
+  "qemu-user-static"
+]
+extra-source "qemu-user-binfmt_1:7.2+dfsg-7+deb12u6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qemu/qemu-user-binfmt_7.2+dfsg-7+deb12u6_amd64.deb"
+}

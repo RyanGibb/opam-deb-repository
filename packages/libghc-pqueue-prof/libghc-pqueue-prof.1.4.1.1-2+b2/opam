@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-pqueue-prof_1.4.1.1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-pqueue-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-pqueue-dev" {= "1.4.1.1-2+b2"}
+]
+extra-source "libghc-pqueue-prof_1.4.1.1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pqueue/libghc-pqueue-prof_1.4.1.1-2+b2_amd64.deb"
+}

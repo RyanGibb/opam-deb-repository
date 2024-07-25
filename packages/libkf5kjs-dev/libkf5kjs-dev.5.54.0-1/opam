@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5kjs-dev_5.54.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5kjs-dev"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libkf5js5" {= "5.54.0-1"}
+  "libkf5jsapi5" {= "5.54.0-1"}
+  "libpcre3-dev"
+  "libstdc++6" {>= "4.1.1"}
+  "qtbase5-dev" {>= "5.9.0~"}
+]
+extra-source "libkf5kjs-dev_5.54.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kjs/libkf5kjs-dev_5.54.0-1_amd64.deb"
+}

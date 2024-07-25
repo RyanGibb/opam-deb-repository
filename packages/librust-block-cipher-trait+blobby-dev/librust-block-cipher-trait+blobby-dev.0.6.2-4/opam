@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-block-cipher-trait+blobby-dev_0.6.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-block-cipher-trait+blobby-dev"]
+]
+depends: [
+  "librust-blobby-0-3+default-dev"
+  "librust-block-cipher-trait-dev" {= "0.6.2-4"}
+]
+extra-source "librust-block-cipher-trait+blobby-dev_0.6.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-block-cipher-trait/librust-block-cipher-trait+blobby-dev_0.6.2-4_amd64.deb"
+}

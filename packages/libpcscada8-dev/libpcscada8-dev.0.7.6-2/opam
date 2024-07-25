@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcscada8-dev_0.7.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcscada8-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-10"
+  "libpcscada0-7-6" {= "0.7.6-2"}
+  "libpcsclite-dev"
+]
+extra-source "libpcscada8-dev_0.7.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcscada/libpcscada8-dev_0.7.6-2_amd64.deb"
+}

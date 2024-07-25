@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tcpxtract_1.0.1-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tcpxtract"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfl2" {>= "2.5.33"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "tcpxtract_1.0.1-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tcpxtract/tcpxtract_1.0.1-15_amd64.deb"
+}

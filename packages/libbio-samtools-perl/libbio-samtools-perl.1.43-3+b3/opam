@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbio-samtools-perl_1.43-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbio-samtools-perl"]
+]
+depends: [
+  "libbio-perl-perl"
+  "libc6" {>= "2.34"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+  "zlib1g" {>= "1-1.2.3.3"}
+]
+extra-source "libbio-samtools-perl_1.43-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbio-samtools-perl/libbio-samtools-perl_1.43-3+b3_amd64.deb"
+}

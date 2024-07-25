@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pushpin_1.36.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pushpin"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.3"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.1.1"}
+  "libzmq5" {>= "4.1.2"}
+  "sysvinit-utils"
+  "ucf"
+  "zurl" {>= "1.3.0-2"}
+  ("condure" | "mongrel2-core" {>= "1.9.0"})
+]
+extra-source "pushpin_1.36.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pushpin/pushpin_1.36.0-2_amd64.deb"
+}

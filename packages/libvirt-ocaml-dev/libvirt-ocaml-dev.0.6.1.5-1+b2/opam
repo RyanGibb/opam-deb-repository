@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvirt-ocaml-dev_0.6.1.5-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvirt-ocaml-dev"]
+]
+depends: [
+  "libvirt-dev"
+  "libvirt-ocaml"
+  "libvirt-ocaml" {= "0.6.1.5-1+b2"}
+  "ocaml-findlib"
+  "ocaml-nox"
+]
+extra-source "libvirt-ocaml-dev_0.6.1.5-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-libvirt/libvirt-ocaml-dev_0.6.1.5-1+b2_amd64.deb"
+}

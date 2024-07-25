@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i veyon-plugins_4.7.5+repack1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r veyon-plugins"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libfakekey0" {>= "0.1"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "libproc2-0" {>= "2-4.0.2"}
+  "libqca-qt5-2" {>= "2.0.2"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5network5" {>= "5.14.1"}
+  "libqt5widgets5" {>= "5.9.0~beta"}
+  "libsasl2-2" {>= "2.1.28+dfsg"}
+  "libstdc++6" {>= "11"}
+  "libvncserver1" {>= "0.9.13"}
+  "libx11-6"
+  "libxext6"
+  ("libqt5gui5" {>= "5.9.0~beta"} | "libqt5gui5-gles" {>= "5.9.0~beta"})
+]
+extra-source "veyon-plugins_4.7.5+repack1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/veyon/veyon-plugins_4.7.5+repack1-1_amd64.deb"
+}

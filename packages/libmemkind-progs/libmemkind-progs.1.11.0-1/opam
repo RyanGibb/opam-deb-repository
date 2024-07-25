@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmemkind-progs_1.11.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmemkind-progs"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmemkind0" {>= "1.10"}
+  "libnuma1" {>= "2.0.11"}
+]
+extra-source "libmemkind-progs_1.11.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/memkind/libmemkind-progs_1.11.0-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxfixes-dev_1:6.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxfixes-dev"]
+]
+depends: [
+  "libx11-dev"
+  "libxfixes3" {= "1-6.0.0-2"}
+  "x11proto-dev"
+]
+extra-source "libxfixes-dev_1:6.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxfixes/libxfixes-dev_6.0.0-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sitecopy_1:0.16.6-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sitecopy"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libneon27-gnutls"
+]
+extra-source "sitecopy_1:0.16.6-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sitecopy/sitecopy_0.16.6-9_amd64.deb"
+}

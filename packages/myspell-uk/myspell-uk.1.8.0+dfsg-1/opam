@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i myspell-uk_1.8.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r myspell-uk"]
+]
+depends: [
+  "dictionaries-common" {>= "1.11.2~"}
+]
+extra-source "myspell-uk_1.8.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ispell-uk/myspell-uk_1.8.0+dfsg-1_all.deb"
+}

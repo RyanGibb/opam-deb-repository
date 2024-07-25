@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i graywolf_0.1.6-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r graywolf"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgsl25" {>= "2.6"}
+  "libycadgraywolf1" {= "0.1.6-4"}
+]
+extra-source "graywolf_0.1.6-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/graywolf/graywolf_0.1.6-4_amd64.deb"
+}

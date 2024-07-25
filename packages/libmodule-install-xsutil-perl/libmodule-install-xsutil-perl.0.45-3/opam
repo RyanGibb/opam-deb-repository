@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmodule-install-xsutil-perl_0.45-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmodule-install-xsutil-perl"]
+]
+depends: [
+  "libmodule-install-perl"
+  "perl-any"
+  ("perl" | "libextutils-parsexs-perl" {>= "3.180000"})
+]
+extra-source "libmodule-install-xsutil-perl_0.45-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmodule-install-xsutil-perl/libmodule-install-xsutil-perl_0.45-3_all.deb"
+}

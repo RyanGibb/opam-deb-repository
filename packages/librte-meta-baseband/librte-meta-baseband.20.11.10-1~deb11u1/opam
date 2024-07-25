@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-meta-baseband_20.11.10-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-meta-baseband"]
+]
+depends: [
+  "librte-baseband-acc100-21" {= "20.11.10-1~deb11u1"}
+  "librte-baseband-fpga-5gnr-fec21" {= "20.11.10-1~deb11u1"}
+  "librte-baseband-fpga-lte-fec21" {= "20.11.10-1~deb11u1"}
+  "librte-baseband-null21" {= "20.11.10-1~deb11u1"}
+  "librte-baseband-turbo-sw21" {= "20.11.10-1~deb11u1"}
+]
+extra-source "librte-meta-baseband_20.11.10-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-meta-baseband_20.11.10-1~deb11u1_amd64.deb"
+}

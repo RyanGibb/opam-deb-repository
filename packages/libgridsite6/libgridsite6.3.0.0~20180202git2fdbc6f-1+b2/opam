@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgridsite6_3.0.0~20180202git2fdbc6f-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgridsite6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcanl-c4"
+  "libssl1-1" {>= "1.1.0"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libgridsite6_3.0.0~20180202git2fdbc6f-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gridsite/libgridsite6_3.0.0~20180202git2fdbc6f-1+b2_amd64.deb"
+}

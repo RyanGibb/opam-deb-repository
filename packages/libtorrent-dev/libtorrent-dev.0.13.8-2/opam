@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtorrent-dev_0.13.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtorrent-dev"]
+]
+depends: [
+  "libsigc++-2-0-dev"
+  "libtorrent21" {= "0.13.8-2"}
+]
+extra-source "libtorrent-dev_0.13.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtorrent/libtorrent-dev_0.13.8-2_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmmsclient6_0.8+dfsg-18.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmmsclient6"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+]
+conflicts: [
+  "libxmmsclient2"
+  "libxmmsclient3"
+  "libxmmsclient4"
+  "libxmmsclient5"
+]
+extra-source "libxmmsclient6_0.8+dfsg-18.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmms2/libxmmsclient6_0.8+dfsg-18.2_amd64.deb"
+}

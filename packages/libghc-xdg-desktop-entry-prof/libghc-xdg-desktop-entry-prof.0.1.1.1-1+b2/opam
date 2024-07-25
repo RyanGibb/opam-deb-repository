@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-xdg-desktop-entry-prof_0.1.1.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-xdg-desktop-entry-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-configfile-prof"
+  "libghc-either-prof"
+  "libghc-multimap-prof"
+  "libghc-safe-prof"
+  "libghc-xdg-desktop-entry-dev" {= "0.1.1.1-1+b2"}
+]
+extra-source "libghc-xdg-desktop-entry-prof_0.1.1.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-xdg-desktop-entry/libghc-xdg-desktop-entry-prof_0.1.1.1-1+b2_amd64.deb"
+}

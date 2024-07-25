@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblmdb-dev_0.9.22-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblmdb-dev"]
+]
+depends: [
+  "liblmdb0" {= "0.9.22-1"}
+]
+extra-source "liblmdb-dev_0.9.22-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lmdb/liblmdb-dev_0.9.22-1_amd64.deb"
+}

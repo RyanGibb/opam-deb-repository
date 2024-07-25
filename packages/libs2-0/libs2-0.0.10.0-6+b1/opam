@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libs2-0_0.10.0-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libs2-0"]
+]
+depends: [
+  "libabsl20220623" {>= "0~20220623.0-1"}
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.4"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libs2-0_0.10.0-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/s2geometry/libs2-0_0.10.0-6+b1_amd64.deb"
+}

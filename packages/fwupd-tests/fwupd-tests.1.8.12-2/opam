@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fwupd-tests_1.8.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fwupd-tests"]
+]
+depends: [
+  "ca-certificates"
+  "dbus-x11"
+  "fwupd"
+  "gnome-desktop-testing"
+  "libc6" {>= "2.34"}
+  "libcurl3-gnutls" {>= "7.63.0"}
+  "libfwupd2" {>= "1.8.1"}
+  "libglib2-0-0" {>= "2.55.1"}
+  "libgnutls30" {>= "3.7.3"}
+  "libgudev-1-0-0" {>= "146"}
+  "libgusb2" {>= "0.3.6"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libxmlb2" {>= "0.1.5"}
+  "policykit-1"
+  "python3"
+  "python3-gi"
+  "python3-requests"
+]
+extra-source "fwupd-tests_1.8.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fwupd/fwupd-tests_1.8.12-2_amd64.deb"
+}

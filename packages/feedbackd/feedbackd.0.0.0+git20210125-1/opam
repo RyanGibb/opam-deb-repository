@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i feedbackd_0.0.0+git20210125-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r feedbackd"]
+]
+depends: [
+  "feedbackd-common" {>= "0.0.0+git20210125-1"}
+  "libc6" {>= "2.4"}
+  "libfeedback-0-0-0" {>= "0.0.0+git20200707"}
+  "libglib2-0-0" {>= "2.53.1"}
+  "libgsound0" {>= "1.0.1"}
+  "libgudev-1-0-0" {>= "232"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "sound-theme-freedesktop"
+]
+extra-source "feedbackd_0.0.0+git20210125-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/feedbackd/feedbackd_0.0.0+git20210125-1_amd64.deb"
+}

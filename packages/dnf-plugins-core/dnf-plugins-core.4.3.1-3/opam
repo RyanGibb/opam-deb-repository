@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dnf-plugins-core_4.3.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dnf-plugins-core"]
+]
+depends: [
+  "dnf"
+  "python3-any"
+  "python3-dateutil"
+  "python3-dbus"
+  "python3-dnf"
+  "python3-hawkey"
+  "python3-libcomps"
+  "python3-libdnf"
+  "python3-rpm"
+]
+extra-source "dnf-plugins-core_4.3.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dnf-plugins-core/dnf-plugins-core_4.3.1-3_all.deb"
+}

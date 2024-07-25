@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkiten-dev_4:17.08.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkiten-dev"]
+]
+depends: [
+  "libkf5completion-dev" {>= "5.15~"}
+  "libkiten5" {= "4-17.08.3-1"}
+  "qtbase5-dev" {>= "5.4"}
+]
+extra-source "libkiten-dev_4:17.08.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kiten/libkiten-dev_17.08.3-1_amd64.deb"
+}

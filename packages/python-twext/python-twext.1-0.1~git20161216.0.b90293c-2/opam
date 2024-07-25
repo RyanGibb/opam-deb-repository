@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-twext_1:0.1~git20161216.0.b90293c-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-twext"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-cffi"
+  "python-twisted" {>= "16.6.0"}
+  "python-twisted-core"
+]
+extra-source "python-twext_1:0.1~git20161216.0.b90293c-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/twextpy/python-twext_0.1~git20161216.0.b90293c-2_all.deb"
+}

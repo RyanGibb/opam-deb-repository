@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmeep-mpi-default-dev_1.17.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmeep-mpi-default-dev"]
+]
+depends: [
+  "libmeep-mpi-default23" {= "1.17.1-2"}
+]
+conflicts: [
+  "libmeep-dev"
+  "libmeep-lam4-dev"
+  "libmeep-mpi-dev"
+  "libmeep-mpich-dev"
+  "libmeep-mpich2-dev"
+  "libmeep-openmpi-dev"
+]
+extra-source "libmeep-mpi-default-dev_1.17.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meep-mpi-default/libmeep-mpi-default-dev_1.17.1-2_amd64.deb"
+}

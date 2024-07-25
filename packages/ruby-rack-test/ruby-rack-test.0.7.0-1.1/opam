@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rack-test_0.7.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rack-test"]
+]
+depends: [
+  ("ruby" | "ruby-interpreter")
+  ("ruby-rack" {>= "1.0"} | "ruby-rack1-4")
+]
+extra-source "ruby-rack-test_0.7.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rack-test/ruby-rack-test_0.7.0-1.1_all.deb"
+}

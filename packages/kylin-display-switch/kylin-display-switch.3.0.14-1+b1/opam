@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kylin-display-switch_3.0.14-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kylin-display-switch"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgsettings-qt1" {>= "0.1+14.04.20140408"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libkf5screen-bin" {>= "4-5.17.5~"}
+  "libkf5screen8" {>= "4-5.17.5"}
+  "libkf5windowsystem5" {>= "4.96.0"}
+  "libmate-desktop-2-17" {>= "1.10.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  "libxi6" {>= "2-1.2.0"}
+  "libxtst6"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+]
+extra-source "kylin-display-switch_3.0.14-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kylin-display-switch/kylin-display-switch_3.0.14-1+b1_amd64.deb"
+}

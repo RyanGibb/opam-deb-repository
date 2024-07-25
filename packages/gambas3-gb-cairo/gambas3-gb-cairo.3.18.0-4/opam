@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gambas3-gb-cairo_3.18.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gambas3-gb-cairo"]
+]
+depends: [
+  "gambas3-gb-image" {>= "3.18.0-4"}
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.10.0"}
+]
+extra-source "gambas3-gb-cairo_3.18.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gambas3/gambas3-gb-cairo_3.18.0-4_amd64.deb"
+}

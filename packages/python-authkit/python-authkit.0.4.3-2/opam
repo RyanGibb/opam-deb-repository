@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-authkit_0.4.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-authkit"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-beaker" {>= "0.7.3"}
+  "python-decorator" {>= "2.1.0"}
+  "python-nose"
+  "python-openid" {>= "2.0.1"}
+  "python-paste" {>= "1.4"}
+  "python-pastedeploy" {>= "1.1"}
+  "python-pastescript" {>= "1.1"}
+  "python-webob" {>= "0.9.3"}
+]
+extra-source "python-authkit_0.4.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-authkit/python-authkit_0.4.3-2_all.deb"
+}

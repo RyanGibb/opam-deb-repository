@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gegl_1:0.4.26-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gegl"]
+]
+depends: [
+  "libbabl-0-1-0" {>= "0.1.78"}
+  "libc6" {>= "2.14"}
+  "libgegl-0-4-0" {>= "0.3.8"}
+  "libglib2-0-0" {>= "2.37.0"}
+  "libspiro1" {>= "20190731"}
+]
+extra-source "gegl_1:0.4.26-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gegl/gegl_0.4.26-2_amd64.deb"
+}

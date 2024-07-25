@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-shell-extension-desktop-icons-ng_46+really47.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-shell-extension-desktop-icons-ng"]
+]
+depends: [
+  "gir1-2-gnomeautoar-0-1"
+  "gjs"
+  "gnome-shell" {< "45~"}
+  "gnome-shell" {>= "3.38"}
+  "nautilus" {>= "3.38"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-shell-extension-desktop-icons-ng_46+really47.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-shell-extension-desktop-icons-ng/gnome-shell-extension-desktop-icons-ng_46+really47.0.2-2_all.deb"
+}

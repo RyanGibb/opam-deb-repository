@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i memcached_1.6.18-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r memcached"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "libsasl2-2" {>= "2.1.28+dfsg"}
+  "libssl3" {>= "3.0.0"}
+  "lsb-base"
+  "perl"
+  "perl-any"
+]
+extra-source "memcached_1.6.18-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/memcached/memcached_1.6.18-1_amd64.deb"
+}

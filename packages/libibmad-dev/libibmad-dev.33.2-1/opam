@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libibmad-dev_33.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libibmad-dev"]
+]
+depends: [
+  "libibmad5" {= "33.2-1"}
+]
+extra-source "libibmad-dev_33.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rdma-core/libibmad-dev_33.2-1_amd64.deb"
+}

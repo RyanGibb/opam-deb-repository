@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblingua-en-fathom-perl_1.22-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblingua-en-fathom-perl"]
+]
+depends: [
+  "liblingua-en-sentence-perl"
+  "liblingua-en-syllable-perl" {>= "0.280"}
+  "perl-any"
+]
+extra-source "liblingua-en-fathom-perl_1.22-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblingua-en-fathom-perl/liblingua-en-fathom-perl_1.22-1.1_all.deb"
+}

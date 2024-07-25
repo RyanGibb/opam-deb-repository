@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-zope.schema_6.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-zope.schema"]
+]
+depends: [
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-zope-event"
+  "python3-zope-interface" {>= "5.0"}
+]
+conflicts: [
+  "zope3"
+]
+extra-source "python3-zope.schema_6.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zope.schema/python3-zope.schema_6.0.0-1_all.deb"
+}

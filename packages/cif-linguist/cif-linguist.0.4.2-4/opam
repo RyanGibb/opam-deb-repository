@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cif-linguist_0.4.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cif-linguist"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcif1" {>= "0.4.2"}
+  "libicu72" {>= "72.1~rc-1~"}
+]
+extra-source "cif-linguist_0.4.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cif-api/cif-linguist_0.4.2-4_amd64.deb"
+}

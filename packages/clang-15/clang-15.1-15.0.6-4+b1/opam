@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clang-15_1:15.0.6-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clang-15"]
+]
+depends: [
+  "binutils"
+  "libc6" {>= "2.34"}
+  "libc6-dev"
+  "libclang-common-15-dev" {= "1-15.0.6-4+b1"}
+  "libclang-cpp15" {>= "1-15.0.6"}
+  "libclang1-15" {= "1-15.0.6-4+b1"}
+  "libgcc-12-dev"
+  "libgcc-s1" {>= "3.0"}
+  "libllvm15"
+  "libobjc-12-dev"
+  "libstdc++-12-dev"
+  "libstdc++6" {>= "11"}
+  "llvm-15-linker-tools" {= "1-15.0.6-4+b1"}
+]
+extra-source "clang-15_1:15.0.6-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-15/clang-15_15.0.6-4+b1_amd64.deb"
+}

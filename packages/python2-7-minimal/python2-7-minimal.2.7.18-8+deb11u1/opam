@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python2.7-minimal_2.7.18-8+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python2.7-minimal"]
+]
+depends: [
+  "libpython2-7-minimal" {= "2.7.18-8+deb11u1"}
+]
+conflicts: [
+  "binfmt-support (<< 1.1.2)"
+]
+extra-source "python2.7-minimal_2.7.18-8+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python2.7/python2.7-minimal_2.7.18-8+deb11u1_amd64.deb"
+}

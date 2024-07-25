@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-biobase_2.42.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-biobase"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+  "r-bioc-biocgenerics" {>= "0.27.1"}
+]
+extra-source "r-bioc-biobase_2.42.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-biobase/r-bioc-biobase_2.42.0-1_amd64.deb"
+}

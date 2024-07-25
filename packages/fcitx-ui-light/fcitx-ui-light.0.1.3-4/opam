@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx-ui-light_0.1.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx-ui-light"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+  "libxpm4"
+]
+extra-source "fcitx-ui-light_0.1.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx-ui-light/fcitx-ui-light_0.1.3-4_amd64.deb"
+}

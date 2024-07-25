@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-omemo_0.10.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-omemo"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-cryptography" {>= "2"}
+  "python-x3dh"
+]
+extra-source "python-omemo_0.10.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-omemo/python-omemo_0.10.3-1_all.deb"
+}

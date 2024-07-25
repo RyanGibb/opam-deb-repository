@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cups-filters-core-drivers_1.28.17-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cups-filters-core-drivers"]
+]
+depends: [
+  "bc"
+  "cups-ipp-utils"
+  "libc6" {>= "2.34"}
+  "libcups2" {>= "2.3~b6"}
+  "libcupsfilters1" {>= "1.28.0"}
+  "libgcc-s1" {>= "3.0"}
+  "liblcms2-2" {>= "2.2+git20110628"}
+  "libpoppler-cpp0v5" {>= "22.12.0"}
+  "libqpdf29" {> "11.3~"}
+  "libstdc++6" {>= "11"}
+  "poppler-utils"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "cups-filters-core-drivers_1.28.17-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cups-filters/cups-filters-core-drivers_1.28.17-3_amd64.deb"
+}

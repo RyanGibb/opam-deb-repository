@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcinnamon-desktop-dev_3.8.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcinnamon-desktop-dev"]
+]
+depends: [
+  "gir1-2-cinnamondesktop-3-0" {= "3.8.1-2"}
+  "gir1-2-cvc-1-0" {= "3.8.1-2"}
+  "libcinnamon-desktop4" {= "3.8.1-2"}
+  "libcvc0" {= "3.8.1-2"}
+  "libgtk-3-dev" {>= "3.3.16"}
+  "libpulse-dev"
+  "libxkbfile-dev"
+]
+extra-source "libcinnamon-desktop-dev_3.8.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cinnamon-desktop/libcinnamon-desktop-dev_3.8.1-2_amd64.deb"
+}

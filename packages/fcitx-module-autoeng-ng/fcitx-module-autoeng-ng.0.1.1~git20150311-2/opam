@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx-module-autoeng-ng_0.1.1~git20150311-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx-module-autoeng-ng"]
+]
+depends: [
+  "fcitx-bin"
+  "fcitx-data" {>= "1-4.2.8"}
+  "fcitx-modules"
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "sogoupinyin"
+]
+extra-source "fcitx-module-autoeng-ng_0.1.1~git20150311-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx-autoeng-ng/fcitx-module-autoeng-ng_0.1.1~git20150311-2_amd64.deb"
+}

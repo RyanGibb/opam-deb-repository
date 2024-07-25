@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dvd-slideshow_0.8.6.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dvd-slideshow"]
+]
+depends: [
+  "cdrskin"
+  "dvdauthor" {>= "0.6.9"}
+  "ffmpeg"
+  "genisoimage"
+  "gsfonts"
+  "imagemagick"
+  "libavcodec-extra"
+  "mjpegtools" {>= "1.8.0"}
+  "netpbm"
+  "sox"
+  "vorbis-tools"
+]
+extra-source "dvd-slideshow_0.8.6.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dvd-slideshow/dvd-slideshow_0.8.6.1-1_all.deb"
+}

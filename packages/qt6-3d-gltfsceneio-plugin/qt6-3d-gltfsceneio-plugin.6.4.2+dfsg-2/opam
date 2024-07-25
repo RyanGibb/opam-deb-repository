@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt6-3d-gltfsceneio-plugin_6.4.2+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt6-3d-gltfsceneio-plugin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt63dcore6" {= "6.4.2+dfsg-2"}
+  "libqt63dextras6" {>= "6.2.1"}
+  "libqt63drender6" {>= "6.2.1"}
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6gui6" {>= "6.4.2+dfsg~"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "qt6-3d-gltfsceneio-plugin_6.4.2+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-3d/qt6-3d-gltfsceneio-plugin_6.4.2+dfsg-2_amd64.deb"
+}

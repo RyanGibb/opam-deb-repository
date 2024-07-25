@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mate-user-share-common_1.26.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mate-user-share-common"]
+]
+depends: [
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "mate-user-share-common_1.26.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mate-user-share/mate-user-share-common_1.26.0-1_all.deb"
+}

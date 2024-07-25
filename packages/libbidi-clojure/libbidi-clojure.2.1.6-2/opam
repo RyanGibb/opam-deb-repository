@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbidi-clojure_2.1.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbidi-clojure"]
+]
+depends: [
+  "libclojure-java"
+  "libprismatic-schema-clojure" {>= "1.1.12"}
+  "libring-core-clojure" {>= "1.6.2-4"}
+]
+extra-source "libbidi-clojure_2.1.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bidi-clojure/libbidi-clojure_2.1.6-2_all.deb"
+}

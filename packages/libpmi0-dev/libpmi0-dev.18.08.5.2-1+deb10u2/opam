@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpmi0-dev_18.08.5.2-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpmi0-dev"]
+]
+depends: [
+  "libpmi0" {= "18.08.5.2-1+deb10u2"}
+  "libslurm33" {= "18.08.5.2-1+deb10u2"}
+]
+extra-source "libpmi0-dev_18.08.5.2-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-llnl/libpmi0-dev_18.08.5.2-1+deb10u2_amd64.deb"
+}

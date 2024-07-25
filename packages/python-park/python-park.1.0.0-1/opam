@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-park_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-park"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+]
+extra-source "python-park_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-park/python-park_1.0.0-1_all.deb"
+}

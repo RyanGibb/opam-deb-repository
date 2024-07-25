@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-babel-preset-es3_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-babel-preset-es3"]
+]
+depends: [
+  "node-babel-plugin-transform-es3-member-expression-literals" {>= "6.8.0"}
+  "node-babel-plugin-transform-es3-property-literals" {>= "6.8.0"}
+  "nodejs"
+]
+extra-source "node-babel-preset-es3_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-babel-preset-es3/node-babel-preset-es3_1.0.1-1_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i faustworks_0.5~repack0-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r faustworks"]
+]
+depends: [
+  "faust"
+  "libc6" {>= "2.29"}
+  "libgcc-s1"
+  "libqt5core5a" {>= "5.12.2"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.2.0"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+]
+extra-source "faustworks_0.5~repack0-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/faustworks/faustworks_0.5~repack0-6+b1_amd64.deb"
+}

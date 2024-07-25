@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mrbayes_3.2.7a-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mrbayes"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libhmsbeagle1v5" {>= "3.1.2+dfsg"}
+  "libreadline8" {>= "6.0"}
+]
+extra-source "mrbayes_3.2.7a-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrbayes/mrbayes_3.2.7a-4_amd64.deb"
+}

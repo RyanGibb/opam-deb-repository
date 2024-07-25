@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libklibc-dev_2.0.6-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libklibc-dev"]
+]
+depends: [
+  "libklibc" {= "2.0.6-1+deb10u1"}
+  "linux-libc-dev"
+]
+extra-source "libklibc-dev_2.0.6-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/klibc/libklibc-dev_2.0.6-1+deb10u1_amd64.deb"
+}

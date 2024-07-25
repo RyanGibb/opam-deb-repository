@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-en-gl_0.5.2~r57551-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-en-gl"]
+]
+depends: [
+  "apertium" {>= "3.4"}
+]
+conflicts: [
+  "apertium-gl-en"
+]
+extra-source "apertium-en-gl_0.5.2~r57551-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-en-gl/apertium-en-gl_0.5.2~r57551-2_all.deb"
+}

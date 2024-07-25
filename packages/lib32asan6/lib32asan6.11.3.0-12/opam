@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32asan6_11.3.0-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32asan6"]
+]
+depends: [
+  "gcc-11-base" {= "11.3.0-12"}
+  "lib32gcc-s1"
+  "libc6-i386" {>= "2.34"}
+]
+conflicts: [
+  "libc6-i386 (<< 2.9-22)"
+]
+extra-source "lib32asan6_11.3.0-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-11/lib32asan6_11.3.0-12_amd64.deb"
+}

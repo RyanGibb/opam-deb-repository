@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-ansi-terminal-dev_0.8.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-ansi-terminal-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-colour-dev"
+  "libgmp10"
+]
+extra-source "libghc-ansi-terminal-dev_0.8.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-ansi-terminal/libghc-ansi-terminal-dev_0.8.1-1+b2_amd64.deb"
+}

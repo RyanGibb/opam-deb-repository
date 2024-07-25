@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaosd2_0.2.7-1.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaosd2"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libcairo2" {>= "1.2.4"}
+  "libx11-6"
+  "libxcomposite1" {>= "1-0.3-1"}
+  "libxrender1"
+]
+extra-source "libaosd2_0.2.7-1.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaosd/libaosd2_0.2.7-1.1+b1_amd64.deb"
+}

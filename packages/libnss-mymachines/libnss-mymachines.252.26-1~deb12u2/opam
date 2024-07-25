@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnss-mymachines_252.26-1~deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnss-mymachines"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcap2" {>= "1-2.10"}
+  "systemd-container" {= "252.26-1~deb12u2"}
+]
+extra-source "libnss-mymachines_252.26-1~deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/systemd/libnss-mymachines_252.26-1~deb12u2_amd64.deb"
+}

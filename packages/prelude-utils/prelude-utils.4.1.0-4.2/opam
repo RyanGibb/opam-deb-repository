@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prelude-utils_4.1.0-4.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prelude-utils"]
+]
+depends: [
+  "libc6" {>= "2.16"}
+  "libgnutls30" {>= "3.5.6"}
+  "libprelude23" {>= "4.1"}
+]
+extra-source "prelude-utils_4.1.0-4.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libprelude/prelude-utils_4.1.0-4.2_amd64.deb"
+}

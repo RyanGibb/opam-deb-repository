@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-wikidiff2_1.13.0-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-wikidiff2"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "4.9"}
+  "libthai0" {>= "0.1.25"}
+  "php-common" {>= "1-7.0+33~"}
+  ("libapache2-mod-php8-2" | "libphp8-2-embed" | "php8-2-cgi" | "php8-2-cli" | "php8-2-fpm" | "php8-2-phpdbg")
+  ("php" | "php-cli")
+]
+extra-source "php-wikidiff2_1.13.0-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wikidiff2/php-wikidiff2_1.13.0-1+b3_amd64.deb"
+}

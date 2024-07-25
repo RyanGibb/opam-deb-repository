@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-scattermore_0.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-scattermore"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "r-base-core"
+  "r-base-core" {>= "4.1.2-2"}
+  "r-cran-ggplot2"
+  "r-cran-scales"
+]
+extra-source "r-cran-scattermore_0.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-scattermore/r-cran-scattermore_0.8-1_amd64.deb"
+}

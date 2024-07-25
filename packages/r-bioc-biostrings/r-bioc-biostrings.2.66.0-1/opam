@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-biostrings_2.66.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-biostrings"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.37.0"}
+  "r-bioc-genomeinfodb"
+  "r-bioc-iranges" {>= "2.31.2"}
+  "r-bioc-s4vectors" {>= "0.27.12"}
+  "r-bioc-xvector" {>= "0.37.1"}
+  "r-cran-crayon"
+]
+extra-source "r-bioc-biostrings_2.66.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-biostrings/r-bioc-biostrings_2.66.0-1_amd64.deb"
+}

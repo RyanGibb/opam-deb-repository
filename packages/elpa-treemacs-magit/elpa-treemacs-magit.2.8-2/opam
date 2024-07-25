@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-treemacs-magit_2.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-treemacs-magit"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-magit" {>= "2.90.0"}
+  "elpa-pfuture" {>= "1.3"}
+  "elpa-treemacs" {= "2.8-2"}
+  "emacsen-common"
+]
+extra-source "elpa-treemacs-magit_2.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/treemacs/elpa-treemacs-magit_2.8-2_all.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i snmptrapd_5.7.3+dfsg-5+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r snmptrapd"]
+]
+depends: [
+  "init-system-helpers" {>= "1.51"}
+  "libc6" {>= "2.4"}
+  "libmariadb3" {>= "3.0.0"}
+  "libsnmp30" {= "5.7.3+dfsg-5+deb10u2"}
+  "libwrap0" {>= "7.6-4~"}
+  "snmpd"
+]
+conflicts: [
+  "snmp (<< 5.7.2.1~dfsg-1)"
+  "snmpd (<< 5.7.2.1~dfsg-1)"
+]
+extra-source "snmptrapd_5.7.3+dfsg-5+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/net-snmp/snmptrapd_5.7.3+dfsg-5+deb10u2_amd64.deb"
+}

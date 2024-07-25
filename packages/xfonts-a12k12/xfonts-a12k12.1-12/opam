@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xfonts-a12k12_1-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xfonts-a12k12"]
+]
+depends: [
+  "xfonts-utils" {>= "1-7.5+2"}
+]
+conflicts: [
+  "a12k12"
+  "xbase-clients (<< 4.0)"
+]
+extra-source "xfonts-a12k12_1-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xfonts-a12k12/xfonts-a12k12_1-12_all.deb"
+}

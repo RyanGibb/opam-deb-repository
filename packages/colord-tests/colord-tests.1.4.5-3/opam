@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i colord-tests_1.4.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r colord-tests"]
+]
+depends: [
+  "colord"
+  "libc6" {>= "2.4"}
+  "libcolord2" {>= "1.4.3"}
+  "libglib2-0-0" {>= "2.37.6"}
+  "liblcms2-2" {>= "2.2+git20110628"}
+]
+extra-source "colord-tests_1.4.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/colord/colord-tests_1.4.5-3_amd64.deb"
+}

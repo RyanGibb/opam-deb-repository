@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i texlive-pstricks-doc_2018.20190227-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r texlive-pstricks-doc"]
+]
+depends: [
+  "tex-common" {>= "6"}
+  "texlive-base" {>= "2018.20190227"}
+]
+extra-source "texlive-pstricks-doc_2018.20190227-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/texlive-extra/texlive-pstricks-doc_2018.20190227-2_all.deb"
+}

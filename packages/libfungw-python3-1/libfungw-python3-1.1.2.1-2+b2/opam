@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfungw-python3-1_1.2.1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfungw-python3-1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfungw1" {< "1.2.1-2.1~"}
+  "libfungw1" {>= "1.2.1-2"}
+  "libpython3-11" {>= "3.11.0"}
+]
+extra-source "libfungw-python3-1_1.2.1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fungw/libfungw-python3-1_1.2.1-2+b2_amd64.deb"
+}

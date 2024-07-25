@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtuiwidgets0a_0.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtuiwidgets0a"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libposixsignalmanager0a" {>= "0.3~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "11"}
+  "libtermpaint0a" {>= "0.3.0~"}
+]
+extra-source "libtuiwidgets0a_0.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tuiwidgets/libtuiwidgets0a_0.2-1.1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libslang2-pic_2.3.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libslang2-pic"]
+]
+depends: [
+  "libslang2-dev" {= "2.3.3-3"}
+]
+conflicts: [
+  "libslang1-pic"
+  "slang-pic"
+  "slang1-utf8-pic"
+]
+extra-source "libslang2-pic_2.3.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slang2/libslang2-pic_2.3.3-3_amd64.deb"
+}

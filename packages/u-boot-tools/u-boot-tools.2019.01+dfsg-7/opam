@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i u-boot-tools_2019.01+dfsg-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r u-boot-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "u-boot-tools_2019.01+dfsg-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/u-boot/u-boot-tools_2019.01+dfsg-7_amd64.deb"
+}

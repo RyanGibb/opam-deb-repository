@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-prawn-svg_0.28.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-prawn-svg"]
+]
+depends: [
+  "ruby-css-parser" {>= "1.6"}
+  "ruby-prawn" {< "3"}
+  "ruby-prawn" {>= "0.11.1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-prawn-svg_0.28.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-prawn-svg/ruby-prawn-svg_0.28.0-3_all.deb"
+}

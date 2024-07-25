@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libroscpp-dev_1.14.3+ds1-5+deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libroscpp-dev"]
+]
+depends: [
+  "libboost-filesystem-dev"
+  "libboost-signals-dev"
+  "libboost-system-dev"
+  "libros-rosgraph-msgs-dev"
+  "librosconsole-dev"
+  "libroscpp-msg-dev"
+  "libroscpp2d" {= "1.14.3+ds1-5+deb10u3"}
+  "libxmlrpcpp-dev"
+  "python"
+]
+extra-source "libroscpp-dev_1.14.3+ds1-5+deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-ros-comm/libroscpp-dev_1.14.3+ds1-5+deb10u3_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-classifier_1.3.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-classifier"]
+]
+depends: [
+  "ruby-fast-stemmer"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-classifier_1.3.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-classifier/ruby-classifier_1.3.4-2_all.deb"
+}

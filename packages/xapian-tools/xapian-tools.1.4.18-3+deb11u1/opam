@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xapian-tools_1.4.18-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xapian-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libxapian30" {= "1.4.18-3+deb11u1"}
+]
+extra-source "xapian-tools_1.4.18-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xapian-core/xapian-tools_1.4.18-3+deb11u1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnuais_0.3.3-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnuais"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.14"}
+  "libcurl4" {>= "7.16.2"}
+  "libmariadb3" {>= "3.0.0"}
+  "libpulse0" {>= "0.99.1"}
+]
+extra-source "gnuais_0.3.3-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnuais/gnuais_0.3.3-8+b1_amd64.deb"
+}

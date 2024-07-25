@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i graphicsmagick-libmagick-dev-compat_1.4+really1.3.35-1~deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r graphicsmagick-libmagick-dev-compat"]
+]
+depends: [
+  "libgraphics-magick-perl"
+  "libgraphicsmagick++1-dev"
+  "libgraphicsmagick1-dev"
+]
+conflicts: [
+  "libmagick++-dev"
+  "libmagick++6-dev"
+  "libmagick++9-dev"
+  "libmagick-dev"
+  "libmagick6-dev"
+  "libmagick9-dev"
+  "libmagickcore-dev"
+  "perlmagick"
+]
+extra-source "graphicsmagick-libmagick-dev-compat_1.4+really1.3.35-1~deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/graphicsmagick/graphicsmagick-libmagick-dev-compat_1.4+really1.3.35-1~deb10u2_all.deb"
+}

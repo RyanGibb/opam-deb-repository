@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenapi-client-perl_1.07-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenapi-client-perl"]
+]
+depends: [
+  "libjson-validator-perl" {>= "5.09"}
+  "libmojolicious-plugin-openapi-perl" {>= "5.05"}
+  "perl-any"
+]
+extra-source "libopenapi-client-perl_1.07-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libopenapi-client-perl/libopenapi-client-perl_1.07-1_all.deb"
+}

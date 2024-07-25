@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-factory-girl_4.7.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-factory-girl"]
+]
+depends: [
+  "ruby-activesupport"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-factory-girl_4.7.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-factory-girl/ruby-factory-girl_4.7.0-2_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpsm2-2_11.2.78-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpsm2-2"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libnuma1" {>= "2.0.11"}
+]
+extra-source "libpsm2-2_11.2.78-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpsm2/libpsm2-2_11.2.78-1_amd64.deb"
+}

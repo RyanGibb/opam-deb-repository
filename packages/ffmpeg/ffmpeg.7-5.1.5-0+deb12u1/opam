@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ffmpeg_7:5.1.5-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ffmpeg"]
+]
+depends: [
+  "libavcodec-extra59"
+  "libavdevice59" {>= "7-5.0"}
+  "libavfilter-extra8"
+  "libavformat-extra59"
+  "libavutil57" {>= "7-5.1"}
+  "libc6" {>= "2.35"}
+  "libpostproc56" {>= "7-5.0"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libswresample4" {>= "7-5.1"}
+  "libswscale6" {>= "7-5.0"}
+]
+extra-source "ffmpeg_7:5.1.5-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/ffmpeg/ffmpeg_5.1.5-0+deb12u1_amd64.deb"
+}

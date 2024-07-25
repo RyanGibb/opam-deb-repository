@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-map-msgs_1.13.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-map-msgs"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-nav-msgs"
+  "python-sensor-msgs"
+]
+extra-source "python-map-msgs_1.13.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-navigation-msgs/python-map-msgs_1.13.0-8_all.deb"
+}

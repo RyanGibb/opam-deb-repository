@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i thin_1.7.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r thin"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgmp10"
+  "libruby2-5" {>= "2.5.0~preview1"}
+  "ruby" {< "1-2.6~"}
+  "ruby" {>= "1-2.5~0"}
+  "ruby-daemons" {>= "1.0.9"}
+  "ruby-eventmachine" {>= "1.0.4"}
+  "ruby-rack" {< "3"}
+  "ruby-rack" {>= "1"}
+]
+extra-source "thin_1.7.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/thin/thin_1.7.2-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-slurm_18.08.5.2-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-slurm"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libslurm33" {>= "2.6.2"}
+]
+extra-source "libpam-slurm_18.08.5.2-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-llnl/libpam-slurm_18.08.5.2-1+deb10u2_amd64.deb"
+}

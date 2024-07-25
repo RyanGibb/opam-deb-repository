@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i notmuch-addrlookup_9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r notmuch-addrlookup"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.43.1"}
+  "libnotmuch5" {>= "0.13~rc1"}
+]
+extra-source "notmuch-addrlookup_9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/notmuch-addrlookup/notmuch-addrlookup_9-2_amd64.deb"
+}

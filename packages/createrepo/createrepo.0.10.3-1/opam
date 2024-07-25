@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i createrepo_0.10.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r createrepo"]
+]
+depends: [
+  "deltarpm"
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-deltarpm"
+  "python-libxml2"
+  "python-lzma"
+  "python-rpm"
+  "python-sqlitecachec"
+  "rpm" {>= "4.1.1"}
+  "yum" {>= "3.2.29"}
+]
+extra-source "createrepo_0.10.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/createrepo/createrepo_0.10.3-1_all.deb"
+}

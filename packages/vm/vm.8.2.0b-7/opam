@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vm_8.2.0b-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vm"]
+]
+depends: [
+  "emacsen-common" {>= "2.0.8"}
+  "make"
+  "ucf" {>= "0.08"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+conflicts: [
+  "semi"
+  "semi1.12"
+  "wemi"
+  "wemi1.12"
+]
+extra-source "vm_8.2.0b-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vm/vm_8.2.0b-7_all.deb"
+}

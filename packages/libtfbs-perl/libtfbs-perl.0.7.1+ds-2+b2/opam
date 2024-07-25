@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtfbs-perl_0.7.1+ds-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtfbs-perl"]
+]
+depends: [
+  "bioperl"
+  "libc6" {>= "2.14"}
+  "libdbi-perl"
+  "libwww-perl"
+  "pdl"
+  "pdl" {>= "1-2.080-3+b1"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libtfbs-perl_0.7.1+ds-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtfbs-perl/libtfbs-perl_0.7.1+ds-2+b2_amd64.deb"
+}

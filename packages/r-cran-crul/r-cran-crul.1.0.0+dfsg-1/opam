@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-crul_1.0.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-crul"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  "r-cran-curl" {>= "3.3"}
+  "r-cran-httpcode" {>= "0.2.0"}
+  "r-cran-jsonlite"
+  "r-cran-mime"
+  "r-cran-r6" {>= "2.2.0"}
+  "r-cran-urltools" {>= "1.6.0"}
+]
+extra-source "r-cran-crul_1.0.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-crul/r-cran-crul_1.0.0+dfsg-1_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i click_0.5.0-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r click"]
+]
+depends: [
+  "adduser"
+  "init-system-helpers" {>= "1.52"}
+  "libc6" {>= "2.34"}
+  "python3-any"
+  "python3-click-package" {= "0.5.0-9"}
+]
+conflicts: [
+  "click-package"
+  "packagekit-plugin-click"
+]
+extra-source "click_0.5.0-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/click/click_0.5.0-9_amd64.deb"
+}

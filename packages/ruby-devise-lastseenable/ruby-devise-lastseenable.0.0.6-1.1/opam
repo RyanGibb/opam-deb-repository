@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-devise-lastseenable_0.0.6-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-devise-lastseenable"]
+]
+depends: [
+  "ruby-devise"
+  "ruby-rails" {>= "3.0.4"}
+  "ruby-warden"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-devise-lastseenable_0.0.6-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-devise-lastseenable/ruby-devise-lastseenable_0.0.6-1.1_all.deb"
+}

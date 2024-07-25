@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libinputsynth-0.15-0_0.15.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libinputsynth-0.15-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libx11-6"
+  "libxdo3" {>= "1-3.20130104.1"}
+  "libxi6" {>= "2-1.2.99.4"}
+  "libxtst6"
+]
+extra-source "libinputsynth-0.15-0_0.15.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libinputsynth/libinputsynth-0.15-0_0.15.0-2_amd64.deb"
+}

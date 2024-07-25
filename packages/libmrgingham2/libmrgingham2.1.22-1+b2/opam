@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmrgingham2_1.22-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmrgingham2"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.0"}
+  "libopencv-core406" {>= "4.6.0+dfsg"}
+  "libopencv-features2d406" {>= "4.6.0+dfsg"}
+  "libopencv-imgcodecs406" {>= "4.6.0+dfsg"}
+  "libopencv-imgproc406" {>= "4.6.0+dfsg"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libmrgingham2_1.22-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrgingham/libmrgingham2_1.22-1+b2_amd64.deb"
+}

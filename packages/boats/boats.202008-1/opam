@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i boats_202008-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r boats"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgif7" {>= "5.1"}
+  "libqt5core5a" {>= "5.14.1"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.2.0"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.3.0"} | "libqt5gui5-gles" {>= "5.3.0"})
+]
+extra-source "boats_202008-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boats/boats_202008-1_amd64.deb"
+}

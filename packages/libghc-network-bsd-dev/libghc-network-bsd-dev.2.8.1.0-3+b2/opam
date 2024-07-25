@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-network-bsd-dev_2.8.1.0-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-network-bsd-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-network-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-network-bsd-dev_2.8.1.0-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-network-bsd/libghc-network-bsd-dev_2.8.1.0-3+b2_amd64.deb"
+}

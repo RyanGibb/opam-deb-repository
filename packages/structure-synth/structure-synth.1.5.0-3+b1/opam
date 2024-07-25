@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i structure-synth_1.5.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r structure-synth"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt4-opengl" {>= "4-4.6.1"}
+  "libqt4-script" {>= "4-4.5.3"}
+  "libqt4-xml" {>= "4-4.5.3"}
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libqtgui4" {>= "4-4.5.3"}
+  "libstdc++6" {>= "5"}
+  ("libgl1-mesa-glx" | "libgl1")
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "structure-synth_1.5.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/structure-synth/structure-synth_1.5.0-3+b1_amd64.deb"
+}

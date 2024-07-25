@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-fuse_2:1.0.5-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-fuse"]
+]
+depends: [
+  "fuse"
+  "libc6" {>= "2.14"}
+  "libfuse2" {>= "2.8"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-fuse_2:1.0.5-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-fuse/python3-fuse_1.0.5-1+b3_amd64.deb"
+}

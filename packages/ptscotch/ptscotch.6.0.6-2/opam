@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ptscotch_6.0.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ptscotch"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.4"}
+  "liblzma5" {>= "5.1.1alpha+20110809"}
+  "libopenmpi3"
+  "libptscotch-6-0"
+  "libscotch-6-0"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "ptscotch_6.0.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scotch/ptscotch_6.0.6-2_amd64.deb"
+}

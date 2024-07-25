@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i virtinst_1:3.2.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r virtinst"]
+]
+depends: [
+  "e2fsprogs"
+  "genisoimage"
+  "gir1-2-libosinfo-1-0"
+  "python3-any"
+  "python3-gi"
+  "python3-libvirt" {>= "0.4.6"}
+  "python3-libxml2"
+  "python3-requests"
+]
+extra-source "virtinst_1:3.2.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/virt-manager/virtinst_3.2.0-3_all.deb"
+}

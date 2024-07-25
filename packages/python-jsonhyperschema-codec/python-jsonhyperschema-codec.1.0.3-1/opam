@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-jsonhyperschema-codec_1.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-jsonhyperschema-codec"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-coreapi"
+]
+extra-source "python-jsonhyperschema-codec_1.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jsonhyperschema-codec/python-jsonhyperschema-codec_1.0.3-1_all.deb"
+}

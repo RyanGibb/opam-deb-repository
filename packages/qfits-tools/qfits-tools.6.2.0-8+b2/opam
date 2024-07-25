@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qfits-tools_6.2.0-8+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qfits-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqfits0"
+]
+extra-source "qfits-tools_6.2.0-8+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qfits/qfits-tools_6.2.0-8+b2_amd64.deb"
+}

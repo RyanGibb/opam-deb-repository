@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenvdb-dev_10.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenvdb-dev"]
+]
+depends: [
+  "libblosc-dev"
+  "libimath-dev"
+  "libopenvdb10-0" {= "10.0.1-2"}
+  "libtbb-dev"
+]
+extra-source "libopenvdb-dev_10.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openvdb/libopenvdb-dev_10.0.1-2_amd64.deb"
+}

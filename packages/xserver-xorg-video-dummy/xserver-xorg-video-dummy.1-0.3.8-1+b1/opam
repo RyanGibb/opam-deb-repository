@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xserver-xorg-video-dummy_1:0.3.8-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xserver-xorg-video-dummy"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "xserver-xorg-core"
+  "xserver-xorg-core" {>= "2-1.18.99.901"}
+]
+extra-source "xserver-xorg-video-dummy_1:0.3.8-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xserver-xorg-video-dummy/xserver-xorg-video-dummy_0.3.8-1+b1_amd64.deb"
+}

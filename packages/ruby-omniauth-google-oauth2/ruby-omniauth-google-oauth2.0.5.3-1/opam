@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-omniauth-google-oauth2_0.5.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-omniauth-google-oauth2"]
+]
+depends: [
+  "ruby-jwt" {>= "1.5.2~"}
+  "ruby-omniauth" {>= "1.1.1~"}
+  "ruby-omniauth-oauth2" {>= "1.5~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-omniauth-google-oauth2_0.5.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-omniauth-google-oauth2/ruby-omniauth-google-oauth2_0.5.3-1_all.deb"
+}

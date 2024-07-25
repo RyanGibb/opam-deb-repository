@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plasma-firewall_5.27.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plasma-firewall"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libkf5authcore5" {>= "5.102.0~"}
+  "libkf5configcore5" {>= "5.102.0~"}
+  "libkf5coreaddons5" {>= "5.102.0~"}
+  "libkf5i18n5" {>= "5.102.0~"}
+  "libkf5quickaddons5" {>= "5.102.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5dbus5" {>= "5.15.2~"}
+  "libqt5network5" {>= "5.15.2~"}
+  "libqt5qml5" {>= "5.15.2~"}
+  "libstdc++6" {>= "4.1.1"}
+  "python3-11"
+  "python3-any"
+  "qml-module-org-kde-kcm"
+  "qml-module-org-kde-kirigami2"
+  "qml-module-org-kde-kitemmodels"
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick2"
+  "systemsettings"
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "plasma-firewall_5.27.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plasma-firewall/plasma-firewall_5.27.5-2_amd64.deb"
+}

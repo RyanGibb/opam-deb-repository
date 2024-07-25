@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libblockdev-fs2_2.20-7+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libblockdev-fs2"]
+]
+depends: [
+  "e2fsprogs"
+  "libblkid1" {>= "2.24.2"}
+  "libblockdev-part-err2" {>= "2.14"}
+  "libblockdev-utils2" {>= "2.20"}
+  "libc6" {>= "2.7"}
+  "libglib2-0-0" {>= "2.42.2"}
+  "libmount1" {>= "2.30.2"}
+  "libparted-fs-resize0" {>= "3.1"}
+  "libparted2" {>= "3.1"}
+]
+extra-source "libblockdev-fs2_2.20-7+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libblockdev/libblockdev-fs2_2.20-7+deb10u1_amd64.deb"
+}

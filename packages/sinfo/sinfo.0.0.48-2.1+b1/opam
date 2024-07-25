@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sinfo_0.0.48-2.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sinfo"]
+]
+depends: [
+  "debconf"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libncursesw6" {>= "6"}
+  "libstdc++6" {>= "11"}
+  "libtinfo6" {>= "6"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "sinfo_0.0.48-2.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sinfo/sinfo_0.0.48-2.1+b1_amd64.deb"
+}

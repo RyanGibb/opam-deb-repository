@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-pem-prof_0.2.4-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-pem-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-basement-prof"
+  "libghc-memory-prof"
+  "libghc-pem-dev" {= "0.2.4-3+b1"}
+]
+extra-source "libghc-pem-prof_0.2.4-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pem/libghc-pem-prof_0.2.4-3+b1_amd64.deb"
+}

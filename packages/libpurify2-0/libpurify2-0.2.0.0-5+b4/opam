@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpurify2.0_2.0.0-5+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpurify2.0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcasa-casa5" {>= "3.3.0"}
+  "libcasa-tables5" {>= "3.3.0"}
+  "libccfits0v5"
+  "libcfitsio9" {>= "3.480~"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libfmt7" {>= "7.1.3+ds1"}
+  "libgcc-s1" {>= "4.0"}
+  "libgomp1" {>= "6"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libpurify2.0_2.0.0-5+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/purify/libpurify2.0_2.0.0-5+b4_amd64.deb"
+}

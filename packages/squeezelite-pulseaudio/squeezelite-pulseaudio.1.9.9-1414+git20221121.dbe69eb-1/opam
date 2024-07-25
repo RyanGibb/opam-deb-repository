@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i squeezelite-pulseaudio_1.9.9-1414+git20221121.dbe69eb-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r squeezelite-pulseaudio"]
+]
+depends: [
+  "libavcodec-extra59"
+  "libavformat-extra59"
+  "libavutil57" {>= "7-5.0"}
+  "libc6" {>= "2.34"}
+  "libfaad2" {>= "2.7"}
+  "libflac12" {>= "1.3.0"}
+  "liblirc-client0"
+  "libmad0" {>= "0.15.1b-3"}
+  "libmpg123-0" {>= "1.26.0"}
+  "libopusfile0" {>= "0.5"}
+  "libpulse0" {>= "0.99.1"}
+  "libsoxr0" {>= "0.1.0"}
+  "libssl3" {>= "3.0.0"}
+  "libvorbisfile3" {>= "1.1.2"}
+  "lsb-base"
+]
+conflicts: [
+  "squeezelite"
+  "squeezelite-pa"
+]
+extra-source "squeezelite-pulseaudio_1.9.9-1414+git20221121.dbe69eb-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/squeezelite/squeezelite-pulseaudio_1.9.9-1414+git20221121.dbe69eb-1_amd64.deb"
+}

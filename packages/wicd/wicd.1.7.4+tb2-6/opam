@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wicd_1.7.4+tb2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wicd"]
+]
+depends: [
+  "wicd-daemon" {= "1.7.4+tb2-6"}
+  ("wicd-gtk" {= "1.7.4+tb2-6"} | "wicd-curses" {= "1.7.4+tb2-6"} | "wicd-cli" {= "1.7.4+tb2-6"} | "wicd-client")
+]
+extra-source "wicd_1.7.4+tb2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wicd/wicd_1.7.4+tb2-6_all.deb"
+}

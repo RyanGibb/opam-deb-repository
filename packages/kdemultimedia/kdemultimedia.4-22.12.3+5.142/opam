@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kdemultimedia_4:22.12.3+5.142_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kdemultimedia"]
+]
+depends: [
+  "dragonplayer" {>= "4-22.12.3"}
+  "elisa" {>= "22.12.3"}
+  "juk" {>= "4-22.12.3"}
+  "kde-config-cddb" {>= "4-22.12.3"}
+  "kio-audiocd" {>= "4-22.12.3"}
+  ("plasma-pa" {>= "5.27.2"} | "kmix" {>= "4-22.12.3"})
+]
+extra-source "kdemultimedia_4:22.12.3+5.142_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-kde/kdemultimedia_22.12.3+5.142_amd64.deb"
+}

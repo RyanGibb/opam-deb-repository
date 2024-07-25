@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-liblog-dev_1:10.0.0+r36-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-liblog-dev"]
+]
+depends: [
+  "android-liblog" {< "1-10.0.0+r36-7.1~"}
+  "android-liblog" {>= "1-10.0.0+r36-7"}
+]
+extra-source "android-liblog-dev_1:10.0.0+r36-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-system-core/android-liblog-dev_10.0.0+r36-7_all.deb"
+}

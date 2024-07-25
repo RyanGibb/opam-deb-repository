@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tix-dev_8.4.3-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tix-dev"]
+]
+depends: [
+  "tcl-dev"
+  "tix" {= "8.4.3-11"}
+  "tk-dev"
+]
+extra-source "tix-dev_8.4.3-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tix/tix-dev_8.4.3-11_amd64.deb"
+}

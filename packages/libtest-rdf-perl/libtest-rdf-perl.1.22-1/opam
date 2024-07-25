@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest-rdf-perl_1.22-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest-rdf-perl"]
+]
+depends: [
+  "librdf-trine-perl"
+  "perl"
+  ("perl" {>= "5.16.1"} | "libscalar-list-utils-perl" {>= "1-1.24"})
+]
+extra-source "libtest-rdf-perl_1.22-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest-rdf-perl/libtest-rdf-perl_1.22-1_all.deb"
+}

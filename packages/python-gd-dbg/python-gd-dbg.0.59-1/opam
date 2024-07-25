@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-gd-dbg_0.59-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-gd-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgd3" {>= "2.1.0~alpha~"}
+  "libgif7" {>= "5.1"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libx11-6"
+  "libxpm4"
+  "python-dbg" {< "2.8"}
+  "python-dbg" {>= "2.7~"}
+  "python-dbg-any" {< "2.8"}
+  "python-dbg-any" {>= "2.7~"}
+  "python-gd" {= "0.59-1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "python-gd-dbg_0.59-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-gd/python-gd-dbg_0.59-1_amd64.deb"
+}

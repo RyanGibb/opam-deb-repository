@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-rvar-dev_0.2.0.3-6+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-rvar-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-monadprompt-dev"
+  "libghc-random-source-dev"
+  "libgmp10"
+]
+extra-source "libghc-rvar-dev_0.2.0.3-6+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-rvar/libghc-rvar-dev_0.2.0.3-6+b2_amd64.deb"
+}

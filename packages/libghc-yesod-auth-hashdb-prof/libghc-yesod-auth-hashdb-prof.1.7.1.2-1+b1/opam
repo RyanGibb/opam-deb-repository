@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-yesod-auth-hashdb-prof_1.7.1.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-yesod-auth-hashdb-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-persistent-prof"
+  "libghc-yesod-auth-hashdb-dev" {= "1.7.1.2-1+b1"}
+  "libghc-yesod-auth-prof"
+  "libghc-yesod-core-prof"
+  "libghc-yesod-form-prof"
+  "libghc-yesod-persistent-prof"
+]
+extra-source "libghc-yesod-auth-hashdb-prof_1.7.1.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-yesod-auth-hashdb/libghc-yesod-auth-hashdb-prof_1.7.1.2-1+b1_amd64.deb"
+}

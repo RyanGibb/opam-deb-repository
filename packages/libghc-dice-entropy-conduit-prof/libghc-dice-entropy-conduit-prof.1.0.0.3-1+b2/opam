@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-dice-entropy-conduit-prof_1.0.0.3-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-dice-entropy-conduit-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-conduit-prof"
+  "libghc-dice-entropy-conduit-dev" {= "1.0.0.3-1+b2"}
+  "libghc-entropy-prof"
+]
+extra-source "libghc-dice-entropy-conduit-prof_1.0.0.3-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-dice-entropy-conduit/libghc-dice-entropy-conduit-prof_1.0.0.3-1+b2_amd64.deb"
+}

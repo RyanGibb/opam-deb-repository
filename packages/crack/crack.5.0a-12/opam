@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i crack_5.0a-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r crack"]
+]
+depends: [
+  "crack-common"
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "crack-md5"
+]
+extra-source "crack_5.0a-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/crack/crack_5.0a-12_amd64.deb"
+}

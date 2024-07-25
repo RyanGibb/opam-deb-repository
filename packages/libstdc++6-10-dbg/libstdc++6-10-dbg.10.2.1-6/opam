@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstdc++6-10-dbg_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstdc++6-10-dbg"]
+]
+depends: [
+  "gcc-10-base" {= "10.2.1-6"}
+  "libc6" {>= "2.18"}
+  "libgcc-s1" {>= "4.2"}
+  "libstdc++6" {>= "10.2.1-6"}
+]
+conflicts: [
+  "libstdc++5-3.3-dbg"
+  "libstdc++5-dbg"
+  "libstdc++6-4.0-dbg"
+  "libstdc++6-4.1-dbg"
+  "libstdc++6-4.2-dbg"
+  "libstdc++6-4.3-dbg"
+  "libstdc++6-4.4-dbg"
+  "libstdc++6-4.5-dbg"
+  "libstdc++6-4.6-dbg"
+  "libstdc++6-4.7-dbg"
+  "libstdc++6-4.8-dbg"
+  "libstdc++6-4.9-dbg"
+  "libstdc++6-5-dbg"
+  "libstdc++6-6-dbg"
+  "libstdc++6-7-dbg"
+  "libstdc++6-8-dbg"
+  "libstdc++6-9-dbg"
+  "libstdc++6-dbg"
+]
+extra-source "libstdc++6-10-dbg_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/libstdc++6-10-dbg_10.2.1-6_amd64.deb"
+}

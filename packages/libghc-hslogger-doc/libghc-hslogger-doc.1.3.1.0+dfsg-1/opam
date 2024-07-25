@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hslogger-doc_1.3.1.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hslogger-doc"]
+]
+depends: [
+  "ghc"
+  "sgml-base" {>= "1.28"}
+]
+conflicts: [
+  "hslogger-doc"
+]
+extra-source "libghc-hslogger-doc_1.3.1.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hslogger/libghc-hslogger-doc_1.3.1.0+dfsg-1_all.deb"
+}

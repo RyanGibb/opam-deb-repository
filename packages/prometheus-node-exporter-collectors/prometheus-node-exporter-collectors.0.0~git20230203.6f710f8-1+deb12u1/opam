@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-node-exporter-collectors_0.0~git20230203.6f710f8-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-node-exporter-collectors"]
+]
+depends: [
+  "moreutils"
+  "prometheus-node-exporter"
+  "python3-apt"
+  ("daemon" | "systemd-sysv")
+]
+extra-source "prometheus-node-exporter-collectors_0.0~git20230203.6f710f8-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-node-exporter-collectors/prometheus-node-exporter-collectors_0.0~git20230203.6f710f8-1+deb12u1_all.deb"
+}

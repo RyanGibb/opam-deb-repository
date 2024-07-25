@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhugs-time-bundled_98.200609.21-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhugs-time-bundled"]
+]
+depends: [
+  "hugs" {= "98.200609.21-6+b1"}
+  "libc6" {>= "2.2.5"}
+  "libhugs-base-bundled"
+]
+conflicts: [
+  "libhugs-time"
+]
+extra-source "libhugs-time-bundled_98.200609.21-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hugs98/libhugs-time-bundled_98.200609.21-6+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnginx-mod-nchan_1:1.3.6+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnginx-mod-nchan"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "nginx"
+]
+extra-source "libnginx-mod-nchan_1:1.3.6+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnginx-mod-nchan/libnginx-mod-nchan_1.3.6+dfsg-2_amd64.deb"
+}

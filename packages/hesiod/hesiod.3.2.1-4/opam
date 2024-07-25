@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hesiod_3.2.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hesiod"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libhesiod0"
+]
+extra-source "hesiod_3.2.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hesiod/hesiod_3.2.1-4_amd64.deb"
+}

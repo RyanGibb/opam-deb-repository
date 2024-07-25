@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i knot-module-geoip_3.0.5-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r knot-module-geoip"]
+]
+depends: [
+  "knot" {= "3.0.5-1+deb11u1"}
+  "libc6" {>= "2.25"}
+  "libmaxminddb0" {>= "1.0.2"}
+]
+extra-source "knot-module-geoip_3.0.5-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/knot/knot-module-geoip_3.0.5-1+deb11u1_amd64.deb"
+}

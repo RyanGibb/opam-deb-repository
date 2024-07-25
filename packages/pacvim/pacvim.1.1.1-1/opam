@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pacvim_1.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pacvim"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libncurses6" {>= "6"}
+  "libstdc++6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "pacvim_1.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pacvim/pacvim_1.1.1-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnupg-pkcs11-scd_0.10.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnupg-pkcs11-scd"]
+]
+depends: [
+  "libassuan0" {>= "2.0.1"}
+  "libc6" {>= "2.34"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libgpg-error0" {>= "1.14"}
+  "libpkcs11-helper1" {>= "1.28"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "gnupg-pkcs11-scd_0.10.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnupg-pkcs11-scd/gnupg-pkcs11-scd_0.10.0-2_amd64.deb"
+}

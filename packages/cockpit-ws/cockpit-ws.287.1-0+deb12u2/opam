@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cockpit-ws_287.1-0+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cockpit-ws"]
+]
+depends: [
+  "adduser"
+  "glib-networking"
+  "libc6" {>= "2.34"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libelogind0"
+  "libglib2-0-0" {>= "2.67.1"}
+  "libgnutls30" {>= "3.7.5"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libpam0g" {>= "1.3.1"}
+  "openssl"
+  "systemd" {>= "235"}
+]
+extra-source "cockpit-ws_287.1-0+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cockpit/cockpit-ws_287.1-0+deb12u2_amd64.deb"
+}

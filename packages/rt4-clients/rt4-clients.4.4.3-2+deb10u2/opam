@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rt4-clients_4.4.3-2+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rt4-clients"]
+]
+depends: [
+  "libterm-readkey-perl"
+  "libwww-perl"
+  "perl-any"
+  ("exim4" | "mail-transport-agent")
+  ("libterm-readline-perl-perl" | "libterm-readline-gnu-perl")
+]
+extra-source "rt4-clients_4.4.3-2+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/request-tracker4/rt4-clients_4.4.3-2+deb10u2_all.deb"
+}

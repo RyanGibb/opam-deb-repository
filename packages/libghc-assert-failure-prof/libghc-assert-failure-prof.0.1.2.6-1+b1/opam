@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-assert-failure-prof_0.1.2.6-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-assert-failure-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-assert-failure-dev" {= "0.1.2.6-1+b1"}
+  "libghc-pretty-show-prof"
+]
+extra-source "libghc-assert-failure-prof_0.1.2.6-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-assert-failure/libghc-assert-failure-prof_0.1.2.6-1+b1_amd64.deb"
+}

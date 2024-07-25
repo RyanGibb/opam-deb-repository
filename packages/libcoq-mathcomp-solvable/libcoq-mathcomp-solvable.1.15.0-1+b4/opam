@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcoq-mathcomp-solvable_1.15.0-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcoq-mathcomp-solvable"]
+]
+depends: [
+  "libcoq-mathcomp-algebra" {= "1.15.0-1+b4"}
+  "libcoq-stdlib"
+]
+extra-source "libcoq-mathcomp-solvable_1.15.0-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/ssreflect/libcoq-mathcomp-solvable_1.15.0-1+b4_amd64.deb"
+}

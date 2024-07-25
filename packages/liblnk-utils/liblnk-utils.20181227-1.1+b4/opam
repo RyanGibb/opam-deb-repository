@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblnk-utils_20181227-1.1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblnk-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "liblnk1" {>= "20170111"}
+]
+extra-source "liblnk-utils_20181227-1.1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblnk/liblnk-utils_20181227-1.1+b4_amd64.deb"
+}

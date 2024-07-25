@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpetsc3.18-dev-common_3.18.5+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpetsc3.18-dev-common"]
+]
+depends: [
+  "libfftw3-dev"
+  "libfftw3-mpi-dev"
+  "libhdf5-mpi-dev" {>= "1.8.8"}
+  "libjs-jquery"
+  "libjs-jquery-ui"
+  "libjs-mathjax"
+  "libptscotch-dev"
+  "libscalapack-mpi-dev"
+  "libssl-dev"
+  "libsuitesparse-dev"
+  "libsuperlu-dev" {>= "5.2"}
+  "libsuperlu-dist-dev"
+  "libx11-dev"
+  "libyaml-dev"
+  "python3-any"
+  ("libblas-dev" | "libopenblas-dev" | "libatlas-base-dev" | "libblas-so")
+  ("liblapack-dev" | "libopenblas-dev" | "libatlas-base-dev" | "liblapack-so")
+  ("ocl-icd-opencl-dev" | "opencl-dev")
+]
+extra-source "libpetsc3.18-dev-common_3.18.5+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/petsc/libpetsc3.18-dev-common_3.18.5+dfsg1-1_all.deb"
+}

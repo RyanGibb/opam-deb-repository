@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libobus-ocaml-bin_1.2.4-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libobus-ocaml-bin"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libev4" {>= "1-4.04"}
+]
+extra-source "libobus-ocaml-bin_1.2.4-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/obus/libobus-ocaml-bin_1.2.4-1+b3_amd64.deb"
+}

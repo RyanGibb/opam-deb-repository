@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i batctl_2019.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r batctl"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libnl-3-200" {>= "3.2.7"}
+  "libnl-genl-3-200" {>= "3.2.7"}
+]
+extra-source "batctl_2019.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/batctl/batctl_2019.0-1_amd64.deb"
+}

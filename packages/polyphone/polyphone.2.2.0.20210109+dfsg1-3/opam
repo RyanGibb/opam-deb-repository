@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i polyphone_2.2.0.20210109+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r polyphone"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libflac12" {>= "1.3.0"}
+  "libgcc-s1" {>= "4.0"}
+  "libportaudio2" {>= "19+svn20101113"}
+  "libqcustomplot2-1" {>= "2.1.0+dfsg1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.4.0"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "librtmidi6" {>= "5.0.0"}
+  "libsfark0"
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "5.2"}
+  "libstk-4-6-2" {>= "4.6.2+dfsg"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "polyphone_2.2.0.20210109+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/polyphone/polyphone_2.2.0.20210109+dfsg1-3_amd64.deb"
+}

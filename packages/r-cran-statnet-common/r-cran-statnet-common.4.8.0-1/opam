@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-statnet.common_4.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-statnet.common"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-coda"
+]
+extra-source "r-cran-statnet.common_4.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-statnet.common/r-cran-statnet.common_4.8.0-1_amd64.deb"
+}

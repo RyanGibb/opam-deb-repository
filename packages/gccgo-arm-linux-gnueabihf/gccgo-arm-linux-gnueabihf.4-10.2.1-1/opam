@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gccgo-arm-linux-gnueabihf_4:10.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gccgo-arm-linux-gnueabihf"]
+]
+depends: [
+  "cpp-arm-linux-gnueabihf" {>= "4-10.2.1-1"}
+  "g++-arm-linux-gnueabihf" {>= "4-10.2.1-1"}
+  "gccgo-10-arm-linux-gnueabihf" {>= "10.2.1-3~"}
+]
+extra-source "gccgo-arm-linux-gnueabihf_4:10.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults/gccgo-arm-linux-gnueabihf_10.2.1-1_amd64.deb"
+}

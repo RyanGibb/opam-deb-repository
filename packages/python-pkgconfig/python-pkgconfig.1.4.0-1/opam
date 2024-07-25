@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pkgconfig_1.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pkgconfig"]
+]
+depends: [
+  "pkgconf"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-pkgconfig_1.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pkgconfig/python-pkgconfig_1.4.0-1_all.deb"
+}

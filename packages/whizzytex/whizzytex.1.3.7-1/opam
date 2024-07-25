@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i whizzytex_1.3.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r whizzytex"]
+]
+depends: [
+  "advi"
+  "texlive-latex-base"
+  ("emacs" | "emacsen")
+]
+extra-source "whizzytex_1.3.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/whizzytex/whizzytex_1.3.7-1_all.deb"
+}

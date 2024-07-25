@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tntdb-sqlite4v5_1.3-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tntdb-sqlite4v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcxxtools9v5"
+  "libgcc-s1"
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+  "libtntdb4v5"
+]
+extra-source "tntdb-sqlite4v5_1.3-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tntdb/tntdb-sqlite4v5_1.3-4+b1_amd64.deb"
+}

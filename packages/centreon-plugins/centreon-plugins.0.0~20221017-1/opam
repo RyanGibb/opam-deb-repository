@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i centreon-plugins_0.0~20221017-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r centreon-plugins"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "4.3"}
+  "perl-any"
+]
+extra-source "centreon-plugins_0.0~20221017-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/centreon-plugins/centreon-plugins_0.0~20221017-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tudu_0.10.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tudu"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libncursesw6" {>= "6"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "tudu_0.10.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tudu/tudu_0.10.2-1+b1_amd64.deb"
+}

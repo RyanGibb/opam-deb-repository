@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i reportbug_7.5.3~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r reportbug"]
+]
+depends: [
+  "apt"
+  "python3-any"
+  "python3-reportbug" {= "7.5.3~deb10u1"}
+  "sensible-utils"
+]
+extra-source "reportbug_7.5.3~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/reportbug/reportbug_7.5.3~deb10u1_all.deb"
+}

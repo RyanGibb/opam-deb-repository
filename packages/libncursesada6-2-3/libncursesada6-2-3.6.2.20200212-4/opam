@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libncursesada6.2.3_6.2.20200212-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libncursesada6.2.3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnat-10" {>= "10.2.1"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "libncursesada6.2.3_6.2.20200212-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libncursesada/libncursesada6.2.3_6.2.20200212-4_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mapcache-cgi_1.10.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mapcache-cgi"]
+]
+depends: [
+  "libapr1" {>= "1.2.7"}
+  "libaprutil1" {>= "1.2.7+dfsg"}
+  "libc6" {>= "2.4"}
+  "libfcgi0ldbl"
+  "libmapcache1" {>= "1.6.0"}
+]
+extra-source "mapcache-cgi_1.10.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mapcache/mapcache-cgi_1.10.0-2+b1_amd64.deb"
+}

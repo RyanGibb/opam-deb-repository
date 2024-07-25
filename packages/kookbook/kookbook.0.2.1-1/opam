@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kookbook_0.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kookbook"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libmarkdown2" {>= "2.0.6"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.7.0"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5qml5" {>= "5.1.0"}
+  "libqt5widgets5" {>= "5.2.0~alpha1"}
+  "libstdc++6" {>= "7"}
+  "qml-module-org-kde-kirigami2"
+  "qml-module-qtquick-layouts"
+]
+extra-source "kookbook_0.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kookbook/kookbook_0.2.1-1_amd64.deb"
+}

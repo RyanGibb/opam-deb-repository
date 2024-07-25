@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i knot_3.2.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r knot"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libcap-ng0" {>= "0.7.9"}
+  "libdnssec9" {= "3.2.6-1"}
+  "libedit2" {>= "2.11-20080614-0"}
+  "libelogind0"
+  "libgnutls30" {>= "3.7.0"}
+  "libknot13" {= "3.2.6-1"}
+  "liblmdb0" {>= "0.9.7"}
+  "liburcu8" {>= "0.13.0"}
+  "libzscanner4" {= "3.2.6-1"}
+]
+extra-source "knot_3.2.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/knot/knot_3.2.6-1_amd64.deb"
+}

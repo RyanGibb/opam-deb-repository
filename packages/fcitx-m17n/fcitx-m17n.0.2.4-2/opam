@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx-m17n_0.2.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx-m17n"]
+]
+depends: [
+  "fcitx-modules"
+  "libc6" {>= "2.8"}
+  "libm17n-0" {>= "1.6.3"}
+]
+extra-source "fcitx-m17n_0.2.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx-m17n/fcitx-m17n_0.2.4-2_amd64.deb"
+}

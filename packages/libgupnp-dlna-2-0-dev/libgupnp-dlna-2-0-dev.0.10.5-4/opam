@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgupnp-dlna-2.0-dev_0.10.5-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgupnp-dlna-2.0-dev"]
+]
+depends: [
+  "gir1-2-gupnpdlna-2-0" {= "0.10.5-4"}
+  "libgstreamer-plugins-base1-0-dev"
+  "libgupnp-dlna-2-0-3" {= "0.10.5-4"}
+]
+extra-source "libgupnp-dlna-2.0-dev_0.10.5-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gupnp-dlna/libgupnp-dlna-2.0-dev_0.10.5-4_amd64.deb"
+}

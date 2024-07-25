@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cloudflare-ddns_2.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cloudflare-ddns"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcloudflare-ddns2" {>= "2.0.0"}
+  "libcurl4" {>= "7.16.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libinireader0" {>= "48"}
+  "libsimdjson14" {>= "2.0.1"}
+  "libstdc++6" {>= "5.2"}
+  ("systemd" | "systemd-standalone-sysusers" | "systemd-sysusers")
+]
+extra-source "cloudflare-ddns_2.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cloudflare-ddns/cloudflare-ddns_2.0.0-4_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pyvorbis-dbg_1.5-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pyvorbis-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libvorbis0a" {>= "1.1.2"}
+  "libvorbisenc2" {>= "1.1.2"}
+  "libvorbisfile3" {>= "1.1.2"}
+  "python-dbg"
+  "python-ogg-dbg"
+  "python-pyvorbis" {= "1.5-5"}
+]
+extra-source "python-pyvorbis-dbg_1.5-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyvorbis/python-pyvorbis-dbg_1.5-5_amd64.deb"
+}

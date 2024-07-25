@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zbackup_1.5-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zbackup"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "liblzo2-2" {>= "2.02"}
+  "libprotobuf32" {>= "3.21.9"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "zbackup_1.5-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zbackup/zbackup_1.5-2+b1_amd64.deb"
+}

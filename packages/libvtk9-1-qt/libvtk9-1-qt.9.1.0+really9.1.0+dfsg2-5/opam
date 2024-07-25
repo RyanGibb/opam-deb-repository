@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvtk9.1-qt_9.1.0+really9.1.0+dfsg2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvtk9.1-qt"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libstdc++6" {>= "5.2"}
+  "libvtk9-1" {>= "9.1.0+really9.1.0+dfsg2"}
+  ("libqt5gui5" {>= "5.11.0~rc1"} | "libqt5gui5-gles" {>= "5.11.0~rc1"})
+]
+extra-source "libvtk9.1-qt_9.1.0+really9.1.0+dfsg2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vtk9/libvtk9.1-qt_9.1.0+really9.1.0+dfsg2-5_amd64.deb"
+}

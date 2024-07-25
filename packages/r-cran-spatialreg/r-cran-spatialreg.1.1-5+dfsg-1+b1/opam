@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-spatialreg_1.1-5+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-spatialreg"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-boot"
+  "r-cran-coda"
+  "r-cran-expm"
+  "r-cran-gmodels"
+  "r-cran-learnbayes"
+  "r-cran-mass"
+  "r-cran-matrix"
+  "r-cran-nlme"
+  "r-cran-spdata"
+  "r-cran-spdep"
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "r-cran-spatialreg_1.1-5+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-spatialreg/r-cran-spatialreg_1.1-5+dfsg-1+b1_amd64.deb"
+}

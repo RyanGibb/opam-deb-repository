@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ksh_2020.0.0+really93u+20120801-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ksh"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+]
+conflicts: [
+  "ksh93"
+]
+extra-source "ksh_2020.0.0+really93u+20120801-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/ksh/ksh_2020.0.0+really93u+20120801-9_amd64.deb"
+}

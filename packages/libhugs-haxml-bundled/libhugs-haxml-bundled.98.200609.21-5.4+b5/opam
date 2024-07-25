@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhugs-haxml-bundled_98.200609.21-5.4+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhugs-haxml-bundled"]
+]
+depends: [
+  "hugs" {= "98.200609.21-5.4+b5"}
+  "libhugs-base-bundled"
+  "libhugs-haskell98-bundled"
+]
+conflicts: [
+  "libhugs-haxml"
+]
+extra-source "libhugs-haxml-bundled_98.200609.21-5.4+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hugs98/libhugs-haxml-bundled_98.200609.21-5.4+b5_amd64.deb"
+}

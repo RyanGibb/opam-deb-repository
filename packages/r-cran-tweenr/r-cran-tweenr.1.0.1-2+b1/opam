@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-tweenr_1.0.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-tweenr"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-farver"
+  "r-cran-magrittr"
+  "r-cran-rcpp" {>= "0.12.3"}
+  "r-cran-rlang"
+]
+extra-source "r-cran-tweenr_1.0.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-tweenr/r-cran-tweenr_1.0.1-2+b1_amd64.deb"
+}

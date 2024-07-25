@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i antlr3_3.5.2-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r antlr3"]
+]
+depends: [
+  "libantlr3-runtime-java" {= "3.5.2-9"}
+  "libstringtemplate4-java"
+  ("default-jre-headless" | "java7-runtime-headless")
+]
+extra-source "antlr3_3.5.2-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/antlr3/antlr3_3.5.2-9_all.deb"
+}

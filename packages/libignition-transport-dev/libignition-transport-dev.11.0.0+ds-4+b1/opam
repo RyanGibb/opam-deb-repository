@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libignition-transport-dev_11.0.0+ds-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libignition-transport-dev"]
+]
+depends: [
+  "cppzmq-dev"
+  "libignition-cmake-dev" {>= "2.8"}
+  "libignition-msgs-dev" {>= "8"}
+  "libignition-transport11-11" {= "11.0.0+ds-4+b1"}
+  "libignition-utils-dev" {>= "1.1.0+ds-3"}
+  "libprotobuf-dev"
+  "uuid-dev"
+]
+extra-source "libignition-transport-dev_11.0.0+ds-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ignition-transport/libignition-transport-dev_11.0.0+ds-4+b1_amd64.deb"
+}

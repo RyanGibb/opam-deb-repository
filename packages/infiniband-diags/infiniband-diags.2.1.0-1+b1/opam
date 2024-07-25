@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i infiniband-diags_2.1.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r infiniband-diags"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libibmad5" {>= "1.3.12"}
+  "libibnetdisc5" {= "2.1.0-1+b1"}
+  "libibumad3" {>= "1.3.9"}
+  "libosmcomp4" {>= "3.3.21"}
+  "perl"
+]
+extra-source "infiniband-diags_2.1.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/infiniband-diags/infiniband-diags_2.1.0-1+b1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i chaksem_1.7b-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r chaksem"]
+]
+depends: [
+  "dpkg" {>= "1.14.18"}
+  "tex-common" {>= "3"}
+  "texlive-binaries"
+  "texlive-fonts-recommended"
+  "texlive-latex-base"
+  "texlive-latex-recommended"
+]
+extra-source "chaksem_1.7b-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chaksem/chaksem_1.7b-5.1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xfonts-utils_1:7.7+6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xfonts-utils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfontenc1"
+  "libfreetype6" {>= "2.2.1"}
+  "x11-common"
+  "xfonts-encodings"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "xfonts-utils_1:7.7+6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xfonts-utils/xfonts-utils_7.7+6_amd64.deb"
+}

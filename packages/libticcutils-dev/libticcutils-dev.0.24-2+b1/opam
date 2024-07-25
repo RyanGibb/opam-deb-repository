@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libticcutils-dev_0.24-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libticcutils-dev"]
+]
+depends: [
+  "libticcutils8" {= "0.24-2+b1"}
+]
+conflicts: [
+  "libticcutils1-dev"
+  "libticcutils2-dev"
+]
+extra-source "libticcutils-dev_0.24-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/ticcutils/libticcutils-dev_0.24-2+b1_amd64.deb"
+}

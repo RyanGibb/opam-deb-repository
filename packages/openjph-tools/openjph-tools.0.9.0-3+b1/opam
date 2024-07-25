@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openjph-tools_0.9.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openjph-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libopenjph0-9" {>= "0.9.0"}
+  "libstdc++6" {>= "4.2.1"}
+  "libtiff6" {>= "4.0.3"}
+]
+extra-source "openjph-tools_0.9.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openjph/openjph-tools_0.9.0-3+b1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i myspell-fo_0.4.2+repack1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r myspell-fo"]
+]
+depends: [
+  "dictionaries-common" {>= "1.0"}
+]
+conflicts: [
+  "hunspell-fo"
+  "myspell-fo-fo"
+  "openoffice.org-spellcheck-fo"
+]
+extra-source "myspell-fo_0.4.2+repack1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ispell-fo/myspell-fo_0.4.2+repack1-2_all.deb"
+}

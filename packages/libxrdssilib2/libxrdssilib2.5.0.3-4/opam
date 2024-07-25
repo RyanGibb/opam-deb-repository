@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxrdssilib2_5.0.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxrdssilib2"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libxrdcl3" {>= "5.0.3"}
+  "libxrdutils3" {>= "5.0.3"}
+]
+extra-source "libxrdssilib2_5.0.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xrootd/libxrdssilib2_5.0.3-4_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibus-hangul_1.5.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibus-hangul"]
+]
+depends: [
+  "gir1-2-gtk-3-0"
+  "gir1-2-ibus-1-0"
+  "ibus" {>= "1.5.20~"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.57.2"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libhangul1" {>= "0.1.0+git20191003-2"}
+  "libibus-1-0-5" {>= "1.5.20~"}
+  "python3-any"
+  "python3-gi" {>= "3.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "ibus-hangul_1.5.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibus-hangul/ibus-hangul_1.5.4-2_amd64.deb"
+}

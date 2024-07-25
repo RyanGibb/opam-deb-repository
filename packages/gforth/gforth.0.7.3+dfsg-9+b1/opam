@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gforth_0.7.3+dfsg-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gforth"]
+]
+depends: [
+  "emacsen-common" {>= "2.0.7"}
+  "gforth-common" {= "0.7.3+dfsg-9"}
+  "gforth-lib" {= "0.7.3+dfsg-9+b1"}
+  "libc6" {>= "2.29"}
+  "libltdl7" {>= "2.4.6"}
+]
+extra-source "gforth_0.7.3+dfsg-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gforth/gforth_0.7.3+dfsg-9+b1_amd64.deb"
+}

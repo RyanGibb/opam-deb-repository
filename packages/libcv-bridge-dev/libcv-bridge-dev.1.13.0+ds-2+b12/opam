@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcv-bridge-dev_1.13.0+ds-2+b12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcv-bridge-dev"]
+]
+depends: [
+  "libcv-bridge1d" {= "1.13.0+ds-2+b12"}
+  "libopencv-dev"
+  "librosconsole-dev"
+  "libsensor-msgs-dev"
+]
+extra-source "libcv-bridge-dev_1.13.0+ds-2+b12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-vision-opencv/libcv-bridge-dev_1.13.0+ds-2+b12_amd64.deb"
+}

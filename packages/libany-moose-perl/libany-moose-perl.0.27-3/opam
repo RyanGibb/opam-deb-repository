@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libany-moose-perl_0.27-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libany-moose-perl"]
+]
+depends: [
+  "perl-any"
+  ("libmouse-perl" | "libmoose-perl")
+]
+extra-source "libany-moose-perl_0.27-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libany-moose-perl/libany-moose-perl_0.27-3_all.deb"
+}

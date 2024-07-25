@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iraf-sptable_1.0~pre20180612-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iraf-sptable"]
+]
+depends: [
+  "iraf"
+  "iraf-noao"
+  "libc6" {>= "2.34"}
+  "libcfitsio10" {>= "4.2.0~"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libexpat1" {>= "2.0.1"}
+]
+extra-source "iraf-sptable_1.0~pre20180612-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iraf-sptable/iraf-sptable_1.0~pre20180612-2+b2_amd64.deb"
+}

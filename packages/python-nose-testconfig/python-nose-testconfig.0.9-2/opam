@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-nose-testconfig_0.9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-nose-testconfig"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-any" {>= "2.6.6-7~"}
+  "python-nose"
+]
+extra-source "python-nose-testconfig_0.9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-nose-testconfig/python-nose-testconfig_0.9-2_all.deb"
+}

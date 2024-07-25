@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i maki-plugins_1.4.0+git20160822+dfsg-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r maki-plugins"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libglib2-0-0" {>= "2.40"}
+  "libgupnp-1-0-4" {>= "0.18.0"}
+  "libgupnp-igd-1-0-4" {>= "0.2.1"}
+  "libminiupnpc17" {>= "1.9.20140610"}
+  "maki" {= "1.4.0+git20160822+dfsg-4.1"}
+]
+extra-source "maki-plugins_1.4.0+git20160822+dfsg-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sushi/maki-plugins_1.4.0+git20160822+dfsg-4.1_amd64.deb"
+}

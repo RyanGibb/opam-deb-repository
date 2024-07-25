@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i caffe_1.0.0+git20180821.99bd997-8+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r caffe"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-thread1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libcaffe1" {= "1.0.0+git20180821.99bd997-8+b2"}
+  "libgcc-s1" {>= "3.0"}
+  "libgflags2-2"
+  "libgoogle-glog0v5"
+  "libhdf5-103-1"
+  "libleveldb1d"
+  "libopencv-core4-5" {>= "4.5.0+dfsg"}
+  "libopencv-imgcodecs4-5" {>= "4.5.0+dfsg"}
+  "libopencv-imgproc4-5" {>= "4.5.0+dfsg"}
+  "libprotobuf23" {>= "3.12.3"}
+  "libstdc++6" {>= "9"}
+]
+conflicts: [
+  "caffe-tools-cuda"
+]
+extra-source "caffe_1.0.0+git20180821.99bd997-8+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/caffe/caffe_1.0.0+git20180821.99bd997-8+b2_amd64.deb"
+}

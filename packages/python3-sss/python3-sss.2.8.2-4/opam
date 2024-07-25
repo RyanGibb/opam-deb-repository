@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sss_2.8.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sss"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libldb2" {>= "0.9.21"}
+  "libpopt0" {>= "1.14"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-sss_2.8.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sssd/python3-sss_2.8.2-4_amd64.deb"
+}

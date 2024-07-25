@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pydf_12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pydf"]
+]
+depends: [
+  "python"
+  ("python" {>= "2.2"} | "python3")
+]
+extra-source "pydf_12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pydf/pydf_12_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbus-ocaml-dev_0.29-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbus-ocaml-dev"]
+]
+depends: [
+  "libdbus-1-dev" {>= "1.2.24"}
+  "libdbus-ocaml"
+  "ocaml-nox"
+]
+extra-source "libdbus-ocaml-dev_0.29-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-dbus/libdbus-ocaml-dev_0.29-3+b2_amd64.deb"
+}

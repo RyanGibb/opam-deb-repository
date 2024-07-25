@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnma-gtk4-dev_1.10.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnma-gtk4-dev"]
+]
+depends: [
+  "gir1-2-nma4-1-0" {= "1.10.6-1"}
+  "libnm-dev"
+  "libnma-gtk4-0" {= "1.10.6-1"}
+  "libnma-headers" {= "1.10.6-1"}
+]
+extra-source "libnma-gtk4-dev_1.10.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnma/libnma-gtk4-dev_1.10.6-1_amd64.deb"
+}

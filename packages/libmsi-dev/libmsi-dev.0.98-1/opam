@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmsi-dev_0.98-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmsi-dev"]
+]
+depends: [
+  "gir1-2-libmsi-1-0" {= "0.98-1"}
+  "libmsi0" {= "0.98-1"}
+]
+extra-source "libmsi-dev_0.98-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/msitools/libmsi-dev_0.98-1_amd64.deb"
+}

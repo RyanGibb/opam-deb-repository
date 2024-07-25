@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-pdf-tools_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-pdf-tools"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-let-alist" {>= "1.0.4"}
+  "elpa-pdf-tools-server"
+  "elpa-tablist" {>= "1.0"}
+  "emacs"
+  "emacsen-common" {>= "2.0.8"}
+]
+extra-source "elpa-pdf-tools_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emacs-pdf-tools/elpa-pdf-tools_1.0.0-1_all.deb"
+}

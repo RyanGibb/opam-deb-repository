@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gdc-8-multilib_8.3.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gdc-8-multilib"]
+]
+depends: [
+  "gcc-8-base" {>= "8"}
+  "gcc-8-multilib" {= "8.3.0-6"}
+  "gdc-8" {= "8.3.0-6"}
+  "lib32gphobos-8-dev" {= "8.3.0-6"}
+  "libx32gphobos-8-dev" {= "8.3.0-6"}
+]
+extra-source "gdc-8-multilib_8.3.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8/gdc-8-multilib_8.3.0-6_amd64.deb"
+}

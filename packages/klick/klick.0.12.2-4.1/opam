@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i klick_0.12.2-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r klick"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "liblo7" {>= "0.26~repack"}
+  "librubberband2" {>= "1.8.2"}
+  "libsamplerate0" {>= "0.1.7"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "9"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "klick_0.12.2-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/klick/klick_0.12.2-4.1_amd64.deb"
+}

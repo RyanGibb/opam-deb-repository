@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i piuparts-master-from-git-deps_1.1.7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r piuparts-master-from-git-deps"]
+]
+depends: [
+  "adduser"
+  "git"
+  "openssh-server"
+  "python3-apt"
+  "python3-debianbts"
+  "python3-distro-info"
+  "python3-rpy2"
+  "python3-setproctitle"
+  "python3-yaml"
+  "tango-icon-theme"
+  "xz-utils"
+  ("apache2" | "httpd")
+]
+extra-source "piuparts-master-from-git-deps_1.1.7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/piuparts/piuparts-master-from-git-deps_1.1.7_all.deb"
+}

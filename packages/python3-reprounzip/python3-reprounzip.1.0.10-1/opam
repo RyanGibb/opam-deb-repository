@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-reprounzip_1.0.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-reprounzip"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-requests"
+  "python3-rpaths"
+  "python3-usagestats"
+  "python3-yaml"
+]
+extra-source "python3-reprounzip_1.0.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/reprounzip/python3-reprounzip_1.0.10-1_all.deb"
+}

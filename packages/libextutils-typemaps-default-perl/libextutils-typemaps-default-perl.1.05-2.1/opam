@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libextutils-typemaps-default-perl_1.05-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libextutils-typemaps-default-perl"]
+]
+depends: [
+  "perl-any"
+  ("perl" {>= "5.17.9"} | "libextutils-parsexs-perl" {>= "3.180030"})
+]
+extra-source "libextutils-typemaps-default-perl_1.05-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libextutils-typemaps-default-perl/libextutils-typemaps-default-perl_1.05-2.1_all.deb"
+}

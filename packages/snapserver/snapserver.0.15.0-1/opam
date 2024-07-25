@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i snapserver_0.15.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r snapserver"]
+]
+depends: [
+  "adduser"
+  "libavahi-client3" {>= "0.6.16"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libc6" {>= "2.14"}
+  "libflac8" {>= "1.3.0"}
+  "libgcc1" {>= "1-3.0"}
+  "libogg0" {>= "1.0rc3"}
+  "libstdc++6" {>= "6"}
+  "libvorbis0a" {>= "1.1.2"}
+  "libvorbisenc2" {>= "1.1.2"}
+]
+extra-source "snapserver_0.15.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snapcast/snapserver_0.15.0-1_amd64.deb"
+}

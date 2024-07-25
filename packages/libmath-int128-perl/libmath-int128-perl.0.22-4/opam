@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmath-int128-perl_0.22-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmath-int128-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmath-int64-perl"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libmath-int128-perl_0.22-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmath-int128-perl/libmath-int128-perl_0.22-4_amd64.deb"
+}

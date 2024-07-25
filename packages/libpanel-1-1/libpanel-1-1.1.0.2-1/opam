@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpanel-1-1_1.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpanel-1-1"]
+]
+depends: [
+  "libadwaita-1-0" {>= "1.2~beta"}
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.71.2"}
+  "libgraphene-1-0-0" {>= "1.5.4"}
+  "libgtk-4-1" {>= "4.7"}
+  "libpanel-common" {>= "1.0.2-1"}
+]
+extra-source "libpanel-1-1_1.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpanel/libpanel-1-1_1.0.2-1_amd64.deb"
+}

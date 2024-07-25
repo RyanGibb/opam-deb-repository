@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfastjet-fortran-dev_3.0.6+dfsg-3+b13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfastjet-fortran-dev"]
+]
+depends: [
+  "gfortran"
+  "libfastjet-fortran0" {= "3.0.6+dfsg-3+b13"}
+]
+extra-source "libfastjet-fortran-dev_3.0.6+dfsg-3+b13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fastjet/libfastjet-fortran-dev_3.0.6+dfsg-3+b13_amd64.deb"
+}

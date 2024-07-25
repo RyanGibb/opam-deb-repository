@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-fra-cat_1.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-fra-cat"]
+]
+depends: [
+  "apertium" {>= "3.6.0"}
+  "apertium-lex-tools"
+  "apertium-separable"
+  "cg3"
+]
+conflicts: [
+  "apertium-ca-fr"
+  "apertium-cat-fra"
+  "apertium-fr-ca"
+]
+extra-source "apertium-fra-cat_1.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-fra-cat/apertium-fra-cat_1.9.0-1_all.deb"
+}

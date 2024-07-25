@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phpsysinfo_3.2.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phpsysinfo"]
+]
+depends: [
+  "libjs-jquery"
+  ("apache2" | "httpd")
+  ("php" | "php5")
+  ("php-xml" | "php5-xsl")
+]
+extra-source "phpsysinfo_3.2.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phpsysinfo/phpsysinfo_3.2.5-3_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openvswitch-ipsec_2.15.0+ds1-2+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openvswitch-ipsec"]
+]
+depends: [
+  "iproute2"
+  "lsb-base"
+  "openvswitch-common" {= "2.15.0+ds1-2+deb11u5"}
+  "openvswitch-switch" {= "2.15.0+ds1-2+deb11u5"}
+  "python3-openvswitch" {= "2.15.0+ds1-2+deb11u5"}
+  "strongswan"
+]
+extra-source "openvswitch-ipsec_2.15.0+ds1-2+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openvswitch/openvswitch-ipsec_2.15.0+ds1-2+deb11u5_amd64.deb"
+}

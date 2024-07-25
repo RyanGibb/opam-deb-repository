@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-multimatch_2.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-multimatch"]
+]
+depends: [
+  "node-array-differ" {>= "1.0.0"}
+  "node-array-union" {>= "1.0.1"}
+  "node-arrify" {>= "1.0.0"}
+  "node-minimatch" {>= "3.0.0"}
+  "nodejs"
+]
+extra-source "node-multimatch_2.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-multimatch/node-multimatch_2.1.0-1_all.deb"
+}

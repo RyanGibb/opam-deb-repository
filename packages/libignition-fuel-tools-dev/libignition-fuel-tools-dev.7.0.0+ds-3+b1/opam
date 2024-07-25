@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libignition-fuel-tools-dev_7.0.0+ds-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libignition-fuel-tools-dev"]
+]
+depends: [
+  "libignition-cmake-dev" {>= "2.3.0"}
+  "libignition-common-core-dev" {>= "4"}
+  "libignition-fuel-tools7-7" {= "7.0.0+ds-3+b1"}
+  "libignition-msgs-dev" {>= "8"}
+  "libjsoncpp-dev"
+  "libtinyxml2-dev"
+  "libyaml-dev"
+  "libzip-dev"
+  ("libcurl4-openssl-dev" | "libcurl-dev")
+]
+extra-source "libignition-fuel-tools-dev_7.0.0+ds-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ignition-fuel-tools/libignition-fuel-tools-dev_7.0.0+ds-3+b1_amd64.deb"
+}

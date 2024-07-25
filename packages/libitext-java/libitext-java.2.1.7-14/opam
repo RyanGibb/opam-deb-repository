@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libitext-java_2.1.7-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libitext-java"]
+]
+depends: [
+  "libbcmail-java"
+  "libbcpkix-java"
+  "libbcprov-java" {>= "1.48"}
+]
+extra-source "libitext-java_2.1.7-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libitext-java/libitext-java_2.1.7-14_all.deb"
+}

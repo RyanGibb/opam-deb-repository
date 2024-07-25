@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yubico-piv-tool_2.2.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yubico-piv-tool"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libssl3" {>= "3.0.0"}
+  "libykpiv2" {>= "2.1.1"}
+]
+extra-source "yubico-piv-tool_2.2.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yubico-piv-tool/yubico-piv-tool_2.2.0-1.1_amd64.deb"
+}

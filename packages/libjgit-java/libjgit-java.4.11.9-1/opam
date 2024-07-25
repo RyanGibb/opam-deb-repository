@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjgit-java_4.11.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjgit-java"]
+]
+depends: [
+  "libeclipse-jdt-annotation-java"
+  "libgoogle-gson-java"
+  "libhttpclient-java"
+  "libjavaewah-java" {>= "0.8.6"}
+  "libjetty9-java"
+  "libjsch-java"
+  "libslf4j-java"
+]
+extra-source "libjgit-java_4.11.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jgit/libjgit-java_4.11.9-1_all.deb"
+}

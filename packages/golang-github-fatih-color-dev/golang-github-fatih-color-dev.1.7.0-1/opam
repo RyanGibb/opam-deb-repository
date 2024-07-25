@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-fatih-color-dev_1.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-fatih-color-dev"]
+]
+depends: [
+  "golang-github-mattn-go-colorable-dev"
+  "golang-github-mattn-go-isatty-dev" {>= "0.0.2"}
+]
+extra-source "golang-github-fatih-color-dev_1.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-fatih-color/golang-github-fatih-color-dev_1.7.0-1_all.deb"
+}

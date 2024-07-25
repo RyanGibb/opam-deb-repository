@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libscalar-does-perl_0.203-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libscalar-does-perl"]
+]
+depends: [
+  "libexporter-tiny-perl"
+  "liblexical-underscore-perl"
+  "libnamespace-clean-perl" {>= "0.19"}
+  "libtype-tiny-perl"
+  "liburi-perl"
+  "perl-any"
+  "sgml-base" {>= "1.28"}
+  ("perl" {>= "5.16.1"} | "libscalar-list-utils-perl" {>= "1-1.24"})
+]
+extra-source "libscalar-does-perl_0.203-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libscalar-does-perl/libscalar-does-perl_0.203-2_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjconv-bin_2.8-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjconv-bin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libjconv2"
+]
+extra-source "libjconv-bin_2.8-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libj/libjconv/libjconv-bin_2.8-7+b1_amd64.deb"
+}

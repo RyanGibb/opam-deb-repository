@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i indi-orion-ssg3_0.1+20221222180647-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r indi-orion-ssg3"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libindidriver1" {>= "1.9.9+dfsg"}
+  "libstdc++6" {>= "5.2"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+]
+extra-source "indi-orion-ssg3_0.1+20221222180647-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/indi-orion-ssg3/indi-orion-ssg3_0.1+20221222180647-1_amd64.deb"
+}

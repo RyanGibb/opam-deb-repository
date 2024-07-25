@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblink-grammar5_5.5.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblink-grammar5"]
+]
+depends: [
+  "libc6" {>= "2.16"}
+  "libgcc1" {>= "1-3.0"}
+  "libhunspell-1-7-0"
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+  "link-grammar-dictionaries-en"
+  "minisat"
+]
+extra-source "liblink-grammar5_5.5.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/link-grammar/liblink-grammar5_5.5.1-6_amd64.deb"
+}

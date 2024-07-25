@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgcr410_2.4.0-9.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgcr410"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "pcscd" {> "1.2.0"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "libgcr410_2.4.0-9.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgcr410/libgcr410_2.4.0-9.2+b1_amd64.deb"
+}

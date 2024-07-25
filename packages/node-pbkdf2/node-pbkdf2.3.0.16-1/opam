@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-pbkdf2_3.0.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-pbkdf2"]
+]
+depends: [
+  "node-create-hash" {>= "1.1.2"}
+  "node-create-hmac" {>= "1.1.4"}
+  "node-ripemd160" {>= "2.0.1"}
+  "node-safe-buffer" {>= "5.0.1"}
+  "node-sha-js" {>= "2.4.8"}
+  "nodejs"
+]
+extra-source "node-pbkdf2_3.0.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-pbkdf2/node-pbkdf2_3.0.16-1_all.deb"
+}

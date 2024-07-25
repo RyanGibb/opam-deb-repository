@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvdeplug-pcap_0.1.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvdeplug-pcap"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcap0-8" {>= "1.5.1"}
+  "libvdeplug2" {>= "4"}
+]
+extra-source "libvdeplug-pcap_0.1.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vdeplug-pcap/libvdeplug-pcap_0.1.0-2+b1_amd64.deb"
+}

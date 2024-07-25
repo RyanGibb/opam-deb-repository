@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rt4-extension-smsnotify_1.04-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rt4-extension-smsnotify"]
+]
+depends: [
+  "libsms-send-perl" {>= "1.06"}
+]
+extra-source "rt4-extension-smsnotify_1.04-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rt-extension-smsnotify/rt4-extension-smsnotify_1.04-1_all.deb"
+}

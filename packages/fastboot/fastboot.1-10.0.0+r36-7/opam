@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fastboot_1:10.0.0+r36-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fastboot"]
+]
+depends: [
+  "android-libadb" {>= "1-10.0.0+r36"}
+  "android-libbase" {>= "1-10.0.0+r36"}
+  "android-libboringssl" {>= "10.0.0+r36"}
+  "android-libcutils" {>= "1-10.0.0+r36"}
+  "android-libext4-utils" {>= "10.0.0+r36+ds"}
+  "android-libsparse" {>= "1-10.0.0+r36"}
+  "android-libunwind" {>= "10.0.0+r36-4~"}
+  "android-libziparchive" {>= "1-10.0.0+r36"}
+  "android-sdk-platform-tools-common" {>= "28.0.2~"}
+  "libc6" {>= "2.15"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "fastboot_1:10.0.0+r36-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-system-core/fastboot_10.0.0+r36-7_amd64.deb"
+}

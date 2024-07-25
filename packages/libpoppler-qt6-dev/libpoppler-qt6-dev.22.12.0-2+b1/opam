@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpoppler-qt6-dev_22.12.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpoppler-qt6-dev"]
+]
+depends: [
+  "libpoppler-dev" {= "22.12.0-2+b1"}
+  "libpoppler-qt6-3" {= "22.12.0-2+b1"}
+  "qt6-base-dev"
+]
+extra-source "libpoppler-qt6-dev_22.12.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poppler/libpoppler-qt6-dev_22.12.0-2+b1_amd64.deb"
+}

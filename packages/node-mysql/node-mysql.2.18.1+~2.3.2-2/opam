@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-mysql_2.18.1+~2.3.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-mysql"]
+]
+depends: [
+  "node-bignumber"
+  "node-readable-stream"
+]
+extra-source "node-mysql_2.18.1+~2.3.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-mysql/node-mysql_2.18.1+~2.3.2-2_all.deb"
+}

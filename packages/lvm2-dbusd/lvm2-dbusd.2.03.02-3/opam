@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lvm2-dbusd_2.03.02-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lvm2-dbusd"]
+]
+depends: [
+  "dbus"
+  "lvm2" {= "2.03.02-3"}
+  "python3-any"
+  "python3-dbus"
+  "python3-gi"
+  "python3-pyudev"
+]
+extra-source "lvm2-dbusd_2.03.02-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lvm2/lvm2-dbusd_2.03.02-3_amd64.deb"
+}

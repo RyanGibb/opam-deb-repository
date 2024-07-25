@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i giada_0.22.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r giada"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libfltk1-3" {>= "1.3.4"}
+  "libfmt9" {>= "9.1.0+ds1"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "librtaudio6" {>= "5.2.0~ds1"}
+  "librtmidi6" {>= "5.0.0"}
+  "libsamplerate0" {>= "0.1.7"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "12"}
+  "libx11-6"
+  "libxpm4"
+  "zlib1g" {>= "1-1.1.4"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "giada_0.22.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/giada/giada_0.22.0-2+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i websimba_0.8.4-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r websimba"]
+]
+depends: [
+  "apache2"
+  "simba" {= "0.8.4-6"}
+  "wwwconfig-common"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "websimba_0.8.4-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/simba/websimba_0.8.4-6_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libappstream-glib-dev_0.7.18-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libappstream-glib-dev"]
+]
+depends: [
+  "gir1-2-appstreamglib-1-0" {= "0.7.18-1+deb11u1"}
+  "libappstream-glib8" {= "0.7.18-1+deb11u1"}
+  "libarchive-dev"
+  "libgcab-dev" {>= "0.6"}
+  "libglib2-0-dev" {>= "2.58.0"}
+  "libsoup2-4-dev" {>= "2.52"}
+  "libyaml-dev"
+  "uuid-dev"
+  ("libgdk-pixbuf-2-0-dev" | "libgdk-pixbuf2-0-dev")
+]
+extra-source "libappstream-glib-dev_0.7.18-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/appstream-glib/libappstream-glib-dev_0.7.18-1+deb11u1_amd64.deb"
+}

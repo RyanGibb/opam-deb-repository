@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgbm1_20.3.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgbm1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libdrm2" {>= "2.4.75"}
+  "libexpat1" {>= "2.0.1"}
+  "libwayland-server0" {>= "1.15.0"}
+]
+extra-source "libgbm1_20.3.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mesa/libgbm1_20.3.5-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-parse-glob_3.0.4+dfsg-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-parse-glob"]
+]
+depends: [
+  "node-glob-base" {>= "0.3.0"}
+  "node-is-dotfile" {>= "1.0.0"}
+  "node-is-extglob" {>= "1.0.0"}
+  "node-is-glob" {>= "2.0.0"}
+  "nodejs"
+]
+extra-source "node-parse-glob_3.0.4+dfsg-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-parse-glob/node-parse-glob_3.0.4+dfsg-1.1_all.deb"
+}

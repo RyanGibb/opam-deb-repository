@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i writeboost_1.20170616-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r writeboost"]
+]
+depends: [
+  "dm-writeboost-dkms"
+  "dmsetup"
+]
+extra-source "writeboost_1.20170616-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/writeboost/writeboost_1.20170616-1_all.deb"
+}

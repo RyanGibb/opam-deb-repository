@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librpmsign9_4.16.1.2+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librpmsign9"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libpopt0" {>= "1.14"}
+  "librpm9" {= "4.16.1.2+dfsg1-3"}
+  "librpmio9" {= "4.16.1.2+dfsg1-3"}
+]
+extra-source "librpmsign9_4.16.1.2+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rpm/librpmsign9_4.16.1.2+dfsg1-3_amd64.deb"
+}

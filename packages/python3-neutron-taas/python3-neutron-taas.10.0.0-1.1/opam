@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-neutron-taas_10.0.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-neutron-taas"]
+]
+depends: [
+  "python3-any"
+  "python3-babel"
+  "python3-neutron"
+  "python3-neutron-lib" {>= "2.11.0"}
+  "python3-pbr"
+]
+extra-source "python3-neutron-taas_10.0.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neutron-taas/python3-neutron-taas_10.0.0-1.1_all.deb"
+}

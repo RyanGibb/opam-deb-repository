@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapp-cmd-perl_0.331-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapp-cmd-perl"]
+]
+depends: [
+  "libcapture-tiny-perl"
+  "libclass-load-perl"
+  "libgetopt-long-descriptive-perl"
+  "libio-tiecombine-perl"
+  "libstring-rewriteprefix-perl"
+  "libsub-exporter-perl"
+  "libsub-install-perl"
+  "perl" {>= "5.17.10"}
+  ("libmodule-pluggable-perl" | "perl" {< "5.17.0"})
+]
+extra-source "libapp-cmd-perl_0.331-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapp-cmd-perl/libapp-cmd-perl_0.331-1_all.deb"
+}

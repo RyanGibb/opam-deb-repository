@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xaw3dg_1.5+E-18.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xaw3dg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libice6" {>= "1-1.0.0"}
+  "libsm6"
+  "libx11-6"
+  "libxext6"
+  "libxmu6"
+  "libxpm4"
+  "libxt6"
+]
+conflicts: [
+  "axe (<< 6.1.2-2)"
+  "gv (<< 1:3.5.8-30.1)"
+  "xaw3d (<= 1.3-6)"
+  "xfig (<< 1:3.2.4-rel-9)"
+]
+extra-source "xaw3dg_1.5+E-18.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xaw3d/xaw3dg_1.5+E-18.3_amd64.deb"
+}

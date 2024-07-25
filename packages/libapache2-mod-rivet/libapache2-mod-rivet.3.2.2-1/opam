@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-rivet_3.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-rivet"]
+]
+depends: [
+  "apache2-bin"
+  "apache2-bin" {>= "2.4.16"}
+  "libc6" {>= "2.14"}
+  "libtcl8-6" {>= "8.6.0"}
+  "tcllib"
+  ("tcl-itcl4" | "itcl3")
+]
+extra-source "libapache2-mod-rivet_3.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapache2-mod-rivet/libapache2-mod-rivet_3.2.2-1_amd64.deb"
+}

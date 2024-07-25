@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mongo-tools_3.4.14-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mongo-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcap0-8" {>= "1.5.1"}
+  "libsasl2-2" {>= "2.1.27+dfsg"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "mongo-tools_3.4.14-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mongo-tools/mongo-tools_3.4.14-4_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxfce4panel-2.0-4_4.18.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxfce4panel-2.0-4"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.55.2"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libxfce4util7" {>= "4.17.2"}
+]
+extra-source "libxfce4panel-2.0-4_4.18.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xfce4-panel/libxfce4panel-2.0-4_4.18.2-1_amd64.deb"
+}

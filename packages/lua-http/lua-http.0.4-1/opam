@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lua-http_0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lua-http"]
+]
+depends: [
+  "lua-basexx" {>= "0.2"}
+  "lua-binaryheap"
+  "lua-bit32"
+  "lua-compat53" {>= "0.3"}
+  "lua-cqueues" {>= "20161214"}
+  "lua-fifo"
+  "lua-lpeg-patterns" {>= "0.3"}
+  "lua-luaossl" {>= "20161208"}
+]
+extra-source "lua-http_0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lua-http/lua-http_0.4-1_all.deb"
+}

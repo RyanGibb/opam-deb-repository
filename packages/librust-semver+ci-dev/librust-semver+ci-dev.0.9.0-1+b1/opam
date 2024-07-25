@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-semver+ci-dev_0.9.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-semver+ci-dev"]
+]
+depends: [
+  "librust-semver-dev" {= "0.9.0-1+b1"}
+  "librust-serde-1+default-dev"
+]
+extra-source "librust-semver+ci-dev_0.9.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-semver/librust-semver+ci-dev_0.9.0-1+b1_amd64.deb"
+}

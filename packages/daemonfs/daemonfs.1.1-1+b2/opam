@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i daemonfs_1.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r daemonfs"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt4-network" {>= "4-4.5.3"}
+  "libqt4-svg"
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libqtgui4" {>= "4-4.5.3"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "daemonfs_1.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/daemonfs/daemonfs_1.1-1+b2_amd64.deb"
+}

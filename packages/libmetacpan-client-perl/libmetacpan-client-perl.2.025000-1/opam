@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmetacpan-client-perl_2.025000-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmetacpan-client-perl"]
+]
+depends: [
+  "libio-socket-ssl-perl"
+  "libjson-maybexs-perl"
+  "libmoo-perl"
+  "libnet-ssleay-perl" {>= "1.49"}
+  "libref-util-perl"
+  "libsafe-isa-perl"
+  "libtype-tiny-perl"
+  "liburi-perl"
+  "perl"
+  ("perl" {>= "5.23.0"} | "libhttp-tiny-perl" {>= "0.056"})
+]
+extra-source "libmetacpan-client-perl_2.025000-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmetacpan-client-perl/libmetacpan-client-perl_2.025000-1_all.deb"
+}

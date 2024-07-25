@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libuecc0_7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libuecc0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+extra-source "libuecc0_7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libuecc/libuecc0_7-1_amd64.deb"
+}

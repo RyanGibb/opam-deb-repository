@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-src-exts-util-dev_0.2.5-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-src-exts-util-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-data-default-dev"
+  "libghc-semigroups-dev"
+  "libghc-src-exts-dev"
+  "libghc-uniplate-dev"
+  "libgmp10"
+]
+extra-source "libghc-src-exts-util-dev_0.2.5-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-src-exts-util/libghc-src-exts-util-dev_0.2.5-2+b2_amd64.deb"
+}

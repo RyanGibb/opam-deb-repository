@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-tmb_1.9.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-tmb"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.2.1"}
+  "libstdc++6" {>= "11"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-matrix" {>= "1.5-3-1~"}
+  "r-cran-rcppeigen"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "r-cran-tmb_1.9.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-tmb/r-cran-tmb_1.9.2-1_amd64.deb"
+}

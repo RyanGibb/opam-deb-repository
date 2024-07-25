@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-glance_13.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-glance"]
+]
+depends: [
+  "puppet-common"
+  "puppet-module-keystone" {>= "13.1.0"}
+  "puppet-module-openstacklib" {>= "13.1.0"}
+  "puppet-module-oslo" {>= "13.1.0"}
+  "puppet-module-puppetlabs-inifile"
+  "puppet-module-puppetlabs-stdlib"
+  "puppet-module-swift" {>= "13.1.0"}
+]
+extra-source "puppet-module-glance_13.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-glance/puppet-module-glance_13.1.0-2_all.deb"
+}

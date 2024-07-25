@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-test-framework-th-dev_0.2.4-11+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-test-framework-th-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-language-haskell-extract-dev"
+  "libghc-regex-posix-dev"
+  "libghc-src-exts-dev"
+  "libghc-test-framework-dev"
+  "libgmp10"
+]
+extra-source "libghc-test-framework-th-dev_0.2.4-11+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-test-framework-th/libghc-test-framework-th-dev_0.2.4-11+b2_amd64.deb"
+}

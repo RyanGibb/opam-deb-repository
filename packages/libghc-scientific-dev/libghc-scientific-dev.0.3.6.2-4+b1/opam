@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-scientific-dev_0.3.6.2-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-scientific-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.29"}
+  "libghc-hashable-dev"
+  "libghc-integer-logarithms-dev"
+  "libghc-primitive-dev"
+  "libgmp10"
+]
+extra-source "libghc-scientific-dev_0.3.6.2-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-scientific/libghc-scientific-dev_0.3.6.2-4+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sharutils_1:4.15.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sharutils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "shar"
+  "uuencode"
+]
+extra-source "sharutils_1:4.15.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sharutils/sharutils_4.15.2-5_amd64.deb"
+}

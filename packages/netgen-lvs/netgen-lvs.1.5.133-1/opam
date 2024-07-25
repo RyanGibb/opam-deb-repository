@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i netgen-lvs_1.5.133-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r netgen-lvs"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libtcl8-6" {>= "8.6.0"}
+  "python3"
+  "python3-tk"
+]
+extra-source "netgen-lvs_1.5.133-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netgen-lvs/netgen-lvs_1.5.133-1_amd64.deb"
+}

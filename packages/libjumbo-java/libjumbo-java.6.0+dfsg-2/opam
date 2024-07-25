@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjumbo-java_6.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjumbo-java"]
+]
+depends: [
+  "libcmlxom-java" {>= "4.3"}
+  "libcommons-io-java" {>= "2.11.0"}
+  "libcommons-math-java" {>= "2.2"}
+  "libeuclid-java" {>= "2.3"}
+  "liblog4j1-2-java" {>= "1.2.17"}
+  "libxom-java"
+]
+extra-source "libjumbo-java_6.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jumbo/libjumbo-java_6.0+dfsg-2_all.deb"
+}

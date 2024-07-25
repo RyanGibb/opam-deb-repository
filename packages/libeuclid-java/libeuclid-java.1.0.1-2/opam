@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libeuclid-java_1.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libeuclid-java"]
+]
+depends: [
+  "libcommons-io-java" {>= "2.6"}
+  "libcommons-math-java" {>= "2.2"}
+  "libjoda-time-java" {>= "2.10.3"}
+  "liblog4j1-2-java" {>= "1.2.17"}
+]
+extra-source "libeuclid-java_1.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libeuclid-java/libeuclid-java_1.0.1-2_all.deb"
+}

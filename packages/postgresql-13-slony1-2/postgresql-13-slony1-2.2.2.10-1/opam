@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-13-slony1-2_2.2.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-13-slony1-2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "postgresql-13"
+]
+conflicts: [
+  "postgresql-13-slony1"
+]
+extra-source "postgresql-13-slony1-2_2.2.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slony1-2/postgresql-13-slony1-2_2.2.10-1_amd64.deb"
+}

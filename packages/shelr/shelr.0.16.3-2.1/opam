@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shelr_0.16.3-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shelr"]
+]
+depends: [
+  "sox"
+  ("ruby" | "ruby-interpreter")
+  ("ruby-json" | "libjson-ruby")
+]
+extra-source "shelr_0.16.3-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shelr/shelr_0.16.3-2.1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpsl5_0.21.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpsl5"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libidn2-0" {>= "0.16"}
+  "libunistring2" {>= "0.9.7"}
+]
+extra-source "libpsl5_0.21.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpsl/libpsl5_0.21.2-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-winutil-dev_0.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-winutil-dev"]
+]
+depends: [
+  "librust-winapi-0-3+default-dev"
+  "librust-winapi-0-3+processthreadsapi-dev"
+  "librust-winapi-0-3+winbase-dev"
+  "librust-winapi-0-3+wow64apiset-dev"
+]
+extra-source "librust-winutil-dev_0.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-winutil/librust-winutil-dev_0.1.1-2_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xrootd-plugins_5.5.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xrootd-plugins"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcom-err2" {>= "1.43.9"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libkrb5-3" {>= "1.10+dfsg~"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "5.2"}
+  "libxrdcrypto2" {>= "5.5.3"}
+  "libxrdcryptolite2" {>= "5.5.3"}
+  "libxrdutils3" {>= "5.5.3"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "xrootd-plugins_5.5.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xrootd/xrootd-plugins_5.5.3-1_amd64.deb"
+}

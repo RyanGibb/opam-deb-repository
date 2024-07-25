@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdr-tarantool-perl_0.45-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdr-tarantool-perl"]
+]
+depends: [
+  "libanyevent-perl"
+  "libc6" {>= "2.14"}
+  "libdevel-globaldestruction-perl"
+  "libjson-xs-perl"
+  "liblist-moreutils-perl"
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libdr-tarantool-perl_0.45-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdr-tarantool-perl/libdr-tarantool-perl_0.45-2+b2_amd64.deb"
+}

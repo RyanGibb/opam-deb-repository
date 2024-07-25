@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcogl-path20_1.22.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcogl-path20"]
+]
+depends: [
+  "libc6" {>= "2.11"}
+  "libcogl20" {= "1.22.8-2"}
+  "libglib2-0-0" {>= "2.32.0"}
+]
+extra-source "libcogl-path20_1.22.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cogl/libcogl-path20_1.22.8-2_amd64.deb"
+}

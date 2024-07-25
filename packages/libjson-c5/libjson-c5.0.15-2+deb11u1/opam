@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjson-c5_0.15-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjson-c5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libjson-c5_0.15-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/json-c/libjson-c5_0.15-2+deb11u1_amd64.deb"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-scipy_1.6.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-scipy"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgfortran5" {>= "8"}
+  "liblbfgsb0" {>= "3.0+dfsg.3"}
+  "libstdc++6" {>= "9"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-decorator"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "python3-scipy_1.6.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scipy/python3-scipy_1.6.0-2_amd64.deb"
+}

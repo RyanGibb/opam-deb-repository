@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lua-cgi_5.2~alpha2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lua-cgi"]
+]
+depends: [
+  "lua-expat"
+  "lua-filesystem"
+  "lua-socket"
+]
+extra-source "lua-cgi_5.2~alpha2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lua-cgi/lua-cgi_5.2~alpha2-1.1_all.deb"
+}

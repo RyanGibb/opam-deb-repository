@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-shell-timer_0.3.20+20171025-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-shell-timer"]
+]
+depends: [
+  "gnome-shell" {>= "3.12"}
+  "python-any"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-shell-timer_0.3.20+20171025-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-shell-timer/gnome-shell-timer_0.3.20+20171025-2_all.deb"
+}

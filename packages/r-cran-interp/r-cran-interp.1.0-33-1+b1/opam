@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-interp_1.0-33-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-interp"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-deldir"
+  "r-cran-rcpp" {>= "0.12.9"}
+  "r-cran-rcppeigen"
+]
+extra-source "r-cran-interp_1.0-33-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-interp/r-cran-interp_1.0-33-1+b1_amd64.deb"
+}

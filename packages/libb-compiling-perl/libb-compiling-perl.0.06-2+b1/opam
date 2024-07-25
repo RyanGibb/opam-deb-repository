@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libb-compiling-perl_0.06-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libb-compiling-perl"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  "libsub-exporter-perl"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libb-compiling-perl_0.06-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libb-compiling-perl/libb-compiling-perl_0.06-2+b1_amd64.deb"
+}

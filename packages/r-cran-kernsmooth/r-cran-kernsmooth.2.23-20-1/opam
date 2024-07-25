@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-kernsmooth_2.23-20-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-kernsmooth"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.4-1"}
+  "r-cran-mass"
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "r-cran-kernsmooth_2.23-20-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kernsmooth/r-cran-kernsmooth_2.23-20-1_amd64.deb"
+}

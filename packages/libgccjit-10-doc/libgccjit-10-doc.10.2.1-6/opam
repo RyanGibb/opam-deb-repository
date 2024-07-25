@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgccjit-10-doc_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgccjit-10-doc"]
+]
+depends: [
+  "gcc-10-base" {= "10.2.1-6"}
+]
+conflicts: [
+  "libgccjit-5-doc"
+  "libgccjit-6-doc"
+  "libgccjit-7-doc"
+  "libgccjit-8-doc"
+  "libgccjit-9-doc"
+]
+extra-source "libgccjit-10-doc_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/libgccjit-10-doc_10.2.1-6_all.deb"
+}

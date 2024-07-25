@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcbf-dev_0.9.5.18+dfsg1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcbf-dev"]
+]
+depends: [
+  "libcbf1" {= "0.9.5.18+dfsg1-1+b1"}
+  "libhdf5-dev"
+]
+extra-source "libcbf-dev_0.9.5.18+dfsg1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cbflib/libcbf-dev_0.9.5.18+dfsg1-1+b1_amd64.deb"
+}

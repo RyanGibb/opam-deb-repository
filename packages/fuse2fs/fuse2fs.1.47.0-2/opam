@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fuse2fs_1.47.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fuse2fs"]
+]
+depends: [
+  "libblkid1" {>= "2.16"}
+  "libc6" {>= "2.34"}
+  "libcom-err2" {>= "1.43.9"}
+  "libext2fs2" {= "1.47.0-2"}
+  "libfuse2" {>= "2.8"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "fuse2fs_1.47.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/e2fsprogs/fuse2fs_1.47.0-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i maqview_0.2.5-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r maqview"]
+]
+depends: [
+  "freeglut3" {>= "2.8.1"}
+  "libc6" {>= "2.15"}
+  "libgl1"
+  "libstdc++6" {>= "5"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "maqview_0.2.5-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maqview/maqview_0.2.5-10_amd64.deb"
+}

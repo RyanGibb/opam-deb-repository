@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i atom4_4.1-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r atom4"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc-s1"
+  "libncurses6" {>= "6"}
+  "libstdc++6" {>= "5"}
+  "libtinfo6" {>= "6"}
+  "libx11-6"
+  "libxpm4"
+]
+extra-source "atom4_4.1-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/atom4/atom4_4.1-9+b1_amd64.deb"
+}

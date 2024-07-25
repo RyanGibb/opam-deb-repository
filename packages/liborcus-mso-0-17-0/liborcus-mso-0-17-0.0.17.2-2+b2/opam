@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liborcus-mso-0.17-0_0.17.2-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liborcus-mso-0.17-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "liborcus-parser-0-17-0"
+  "libstdc++6" {>= "11"}
+]
+extra-source "liborcus-mso-0.17-0_0.17.2-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/liborcus/liborcus-mso-0.17-0_0.17.2-2+b2_amd64.deb"
+}

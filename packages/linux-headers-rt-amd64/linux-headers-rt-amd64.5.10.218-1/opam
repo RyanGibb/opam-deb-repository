@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i linux-headers-rt-amd64_5.10.218-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r linux-headers-rt-amd64"]
+]
+depends: [
+  "linux-headers-5-10-0-30-rt-amd64" {= "5.10.218-1"}
+]
+extra-source "linux-headers-rt-amd64_5.10.218-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linux-signed-amd64/linux-headers-rt-amd64_5.10.218-1_amd64.deb"
+}

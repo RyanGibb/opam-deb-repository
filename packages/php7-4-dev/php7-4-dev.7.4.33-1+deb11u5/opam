@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php7.4-dev_7.4.33-1+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php7.4-dev"]
+]
+depends: [
+  "autoconf" {>= "2.63"}
+  "automake" {>= "1.11"}
+  "libpcre2-dev" {>= "10.30"}
+  "libssl-dev"
+  "libtool" {>= "2.4.6-0.1~"}
+  "php7-4-cli" {>= "7.4.33-1+deb11u5"}
+  "php7-4-common" {= "7.4.33-1+deb11u5"}
+  "pkg-config"
+  "shtool"
+]
+extra-source "php7.4-dev_7.4.33-1+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php7.4/php7.4-dev_7.4.33-1+deb11u5_amd64.deb"
+}

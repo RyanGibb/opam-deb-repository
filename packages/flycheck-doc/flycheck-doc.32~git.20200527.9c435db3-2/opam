@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i flycheck-doc_32~git.20200527.9c435db3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r flycheck-doc"]
+]
+depends: [
+  "elpa-flycheck" {= "32~git.20200527.9c435db3-2"}
+  "libjs-sphinxdoc" {>= "2.4.3-5~"}
+]
+extra-source "flycheck-doc_32~git.20200527.9c435db3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flycheck/flycheck-doc_32~git.20200527.9c435db3-2_all.deb"
+}

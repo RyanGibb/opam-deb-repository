@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fbreader_0.12.10dfsg2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fbreader"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+  "libzlcore0-13"
+  "libzltext0-13"
+  ("libzlui-qt4" {>= "0.12.10dfsg2-3"} | "libzlui-gtk" {>= "0.12.10dfsg2-3"})
+]
+extra-source "fbreader_0.12.10dfsg2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fbreader/fbreader_0.12.10dfsg2-3_amd64.deb"
+}

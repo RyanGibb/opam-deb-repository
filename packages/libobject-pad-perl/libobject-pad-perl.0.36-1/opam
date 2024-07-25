@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libobject-pad-perl_0.36-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libobject-pad-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libindirect-perl"
+  "libxs-parse-sublike-perl" {>= "0.10"}
+  "perl"
+  "perl-base"
+]
+extra-source "libobject-pad-perl_0.36-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libobject-pad-perl/libobject-pad-perl_0.36-1_amd64.deb"
+}

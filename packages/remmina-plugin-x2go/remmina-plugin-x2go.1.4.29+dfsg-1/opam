@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i remmina-plugin-x2go_1.4.29+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r remmina-plugin-x2go"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libx11-6"
+  "pyhoca-cli"
+  "remmina" {= "1.4.29+dfsg-1"}
+]
+extra-source "remmina-plugin-x2go_1.4.29+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/remmina/remmina-plugin-x2go_1.4.29+dfsg-1_amd64.deb"
+}

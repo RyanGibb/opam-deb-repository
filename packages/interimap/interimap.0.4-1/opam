@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i interimap_0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r interimap"]
+]
+depends: [
+  "libdbd-sqlite3-perl"
+  "libdbi-perl"
+  "libinterimap" {>= "0.4~"}
+  "perl-any"
+]
+extra-source "interimap_0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/interimap/interimap_0.4-1_all.deb"
+}

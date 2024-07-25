@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pki-tps-client_10.10.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pki-tps-client"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libnspr4" {>= "2-4.10.9"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libstdc++6" {>= "5"}
+  "libsymkey-java" {>= "10.10.2-3"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "pki-tps-client_10.10.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dogtag-pki/pki-tps-client_10.10.2-3_amd64.deb"
+}

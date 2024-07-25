@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgettext-ocaml-dev_0.4.2-1+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgettext-ocaml-dev"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libcamomile-ocaml-dev"
+  "libfileutils-ocaml-dev"
+  "libgettext-ocaml"
+  "libgettext-ocaml" {= "0.4.2-1+b5"}
+  "ocaml"
+]
+extra-source "libgettext-ocaml-dev_0.4.2-1+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-gettext/libgettext-ocaml-dev_0.4.2-1+b5_amd64.deb"
+}

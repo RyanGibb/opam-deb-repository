@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tar-dev_0.5.1.0-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tar-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libgmp10"
+]
+extra-source "libghc-tar-dev_0.5.1.0-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tar/libghc-tar-dev_0.5.1.0-4+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mikmod_3.2.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mikmod"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmikmod3" {>= "3.3.3"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "mikmod_3.2.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mikmod/mikmod_3.2.8-3_amd64.deb"
+}

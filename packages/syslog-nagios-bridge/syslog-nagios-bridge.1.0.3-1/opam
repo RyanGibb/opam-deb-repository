@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i syslog-nagios-bridge_1.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r syslog-nagios-bridge"]
+]
+depends: [
+  "lsb-base"
+  "python"
+  "python-netsyslog"
+  "python-pynag" {>= "0.9.1"}
+  ("icinga2" | "icinga" | "nagios3")
+]
+extra-source "syslog-nagios-bridge_1.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/syslog-nagios-bridge/syslog-nagios-bridge_1.0.3-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblsan0-ppc64-cross_12.2.0-13cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblsan0-ppc64-cross"]
+]
+depends: [
+  "gcc-12-cross-base-ports" {= "12.2.0-13cross1"}
+  "libc6-ppc64-cross" {>= "2.36"}
+  "libgcc-s1-ppc64-cross" {>= "3.3"}
+]
+extra-source "liblsan0-ppc64-cross_12.2.0-13cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12-cross-ports/liblsan0-ppc64-cross_12.2.0-13cross1_all.deb"
+}

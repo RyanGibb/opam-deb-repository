@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclipper2_2.1.20160809-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclipper2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libccp4c0"
+  "libgcc1" {>= "1-4.0"}
+  "libmmdb2-0"
+  "libstdc++6" {>= "5.2"}
+  "sfftw2"
+]
+extra-source "libclipper2_2.1.20160809-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clipper/libclipper2_2.1.20160809-2_amd64.deb"
+}

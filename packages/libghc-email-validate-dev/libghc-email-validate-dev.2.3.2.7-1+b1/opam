@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-email-validate-dev_2.3.2.7-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-email-validate-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libghc-attoparsec-dev"
+  "libgmp10"
+]
+extra-source "libghc-email-validate-dev_2.3.2.7-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-email-validate/libghc-email-validate-dev_2.3.2.7-1+b1_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i worker_4.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r worker"]
+]
+depends: [
+  "avfs" {>= "1.1.1"}
+  "libc6" {>= "2.29"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libgcc-s1" {>= "3.0"}
+  "liblua5-2-0"
+  "libmagic1" {>= "5.12"}
+  "libstdc++6" {>= "7"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+  "worker-data"
+]
+extra-source "worker_4.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/worker/worker_4.4.0-1_amd64.deb"
+}

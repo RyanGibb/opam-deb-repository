@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-librdf_1.0.17.1+dfsg-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-librdf"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libraptor2-0" {>= "2.0.15"}
+  "librasqal3" {>= "0.9.31"}
+  "librdf0" {>= "1.0.17"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-librdf_1.0.17.1+dfsg-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/redland-bindings/python3-librdf_1.0.17.1+dfsg-4+b2_amd64.deb"
+}

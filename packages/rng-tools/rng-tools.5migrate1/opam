@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rng-tools_5migrate1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rng-tools"]
+]
+depends: [
+  "rng-tools-debian" {>= "2.2~"}
+]
+extra-source "rng-tools_5migrate1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rng-tools/rng-tools_5migrate1_all.deb"
+}

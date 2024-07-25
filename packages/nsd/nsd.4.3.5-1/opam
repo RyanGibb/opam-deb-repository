@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nsd_4.3.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nsd"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.27"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "libfstrm0" {>= "0.2.0"}
+  "libprotobuf-c1" {>= "1.0.1"}
+  "libssl1-1" {>= "1.1.0"}
+  "libsystemd0"
+  "lsb-base"
+  "openssl"
+]
+extra-source "nsd_4.3.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nsd/nsd_4.3.5-1_amd64.deb"
+}

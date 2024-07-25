@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmtemp_0.0.6-3.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmtemp"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libsensors5" {>= "1-3.5.0"}
+  "libx11-6"
+  "libxext6"
+  "libxpm4"
+  "lm-sensors"
+]
+extra-source "wmtemp_0.0.6-3.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmtemp/wmtemp_0.0.6-3.4_amd64.deb"
+}

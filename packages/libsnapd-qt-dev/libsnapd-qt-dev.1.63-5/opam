@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsnapd-qt-dev_1.63-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsnapd-qt-dev"]
+]
+depends: [
+  "libsnapd-qt-2-1" {= "1.63-5"}
+  "qtbase5-dev"
+]
+extra-source "libsnapd-qt-dev_1.63-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snapd-glib/libsnapd-qt-dev_1.63-5_amd64.deb"
+}

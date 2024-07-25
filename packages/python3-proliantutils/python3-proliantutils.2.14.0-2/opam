@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-proliantutils_2.14.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-proliantutils"]
+]
+depends: [
+  "python3-any"
+  "python3-jsonschema"
+  "python3-openssl" {>= "19.1.0"}
+  "python3-oslo-concurrency"
+  "python3-oslo-serialization"
+  "python3-oslo-utils"
+  "python3-pbr"
+  "python3-pysnmp4"
+  "python3-requests"
+  "python3-retrying"
+  "python3-six" {>= "1.9.0"}
+  "python3-sushy" {>= "4.1.0"}
+]
+extra-source "python3-proliantutils_2.14.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-proliantutils/python3-proliantutils_2.14.0-2_all.deb"
+}

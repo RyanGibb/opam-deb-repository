@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-certbot-dns-rfc2136_0.24.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-certbot-dns-rfc2136"]
+]
+depends: [
+  "python3-acme" {>= "0.22.0~"}
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-certbot" {>= "0.22.0~"}
+  "python3-dnspython"
+  "python3-mock"
+  "python3-pkg-resources"
+  "python3-zope-interface"
+]
+extra-source "python3-certbot-dns-rfc2136_0.24.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-certbot-dns-rfc2136/python3-certbot-dns-rfc2136_0.24.0-2_all.deb"
+}

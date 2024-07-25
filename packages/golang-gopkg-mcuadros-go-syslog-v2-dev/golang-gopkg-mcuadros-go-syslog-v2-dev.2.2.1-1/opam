@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-gopkg-mcuadros-go-syslog.v2-dev_2.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-gopkg-mcuadros-go-syslog.v2-dev"]
+]
+depends: [
+  "golang-github-jeromer-syslogparser-dev"
+  ("golang-check-v1-dev" | "golang-gopkg-check-v1-dev")
+]
+extra-source "golang-gopkg-mcuadros-go-syslog.v2-dev_2.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-gopkg-mcuadros-go-syslog.v2/golang-gopkg-mcuadros-go-syslog.v2-dev_2.2.1-1_all.deb"
+}

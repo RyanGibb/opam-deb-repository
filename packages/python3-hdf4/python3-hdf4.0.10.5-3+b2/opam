@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-hdf4_0.10.5-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-hdf4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libhdf4-0-alt" {>= "4.2r4"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+]
+extra-source "python3-hdf4_0.10.5-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-hdf4/python3-hdf4_0.10.5-3+b2_amd64.deb"
+}

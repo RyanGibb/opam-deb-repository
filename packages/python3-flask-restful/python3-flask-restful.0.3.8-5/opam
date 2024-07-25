@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-flask-restful_0.3.8-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-flask-restful"]
+]
+depends: [
+  "python3-aniso8601"
+  "python3-any"
+  "python3-flask" {>= "0.8"}
+  "python3-six" {>= "1.3.0"}
+  "python3-tz"
+]
+extra-source "python3-flask-restful_0.3.8-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flask-restful/python3-flask-restful_0.3.8-5_all.deb"
+}

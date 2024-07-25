@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elki-dev_0.7.1-10.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elki-dev"]
+]
+depends: [
+  "default-jdk" {>= "2-1.8"}
+  "elki"
+]
+extra-source "elki-dev_0.7.1-10.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elki/elki-dev_0.7.1-10.1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zsh_5.9-4+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zsh"]
+]
+depends: [
+  "debianutils" {>= "5.3-1~"}
+  "libc6" {>= "2.34"}
+  "libcap2" {>= "1-2.10"}
+  "libtinfo6" {>= "6"}
+  "zsh-common" {= "5.9-4"}
+]
+extra-source "zsh_5.9-4+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zsh/zsh_5.9-4+b5_amd64.deb"
+}

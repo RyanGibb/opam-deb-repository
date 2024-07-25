@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-oligo_1.62.2+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-oligo"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-bioc-affxparser" {>= "1.39.4"}
+  "r-bioc-affyio" {>= "1.35.0"}
+  "r-bioc-biobase" {>= "2.27.3"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.13.11"}
+  "r-bioc-biostrings" {>= "2.35.12"}
+  "r-bioc-oligoclasses" {>= "1.29.6"}
+  "r-bioc-preprocesscore" {>= "1.29.0"}
+  "r-bioc-zlibbioc"
+  "r-cran-dbi" {>= "0.3.1"}
+  "r-cran-ff"
+  "r-cran-rsqlite" {>= "1.0.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "r-bioc-oligo_1.62.2+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-oligo/r-bioc-oligo_1.62.2+ds-1_amd64.deb"
+}

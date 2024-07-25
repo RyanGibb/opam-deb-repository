@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnome-bluetooth13_3.28.2-4~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnome-bluetooth13"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcanberra-gtk3-0" {>= "0.25"}
+  "libcanberra0" {>= "0.2"}
+  "libglib2-0-0" {>= "2.38.0"}
+  "libgtk-3-0" {>= "3.16.2"}
+  "libnotify4" {>= "0.7.0"}
+  "libudev1" {>= "196"}
+]
+extra-source "libgnome-bluetooth13_3.28.2-4~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-bluetooth/libgnome-bluetooth13_3.28.2-4~deb10u1_amd64.deb"
+}

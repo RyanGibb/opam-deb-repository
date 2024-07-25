@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libverilog-perl_3.474-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libverilog-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libverilog-perl_3.474-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libverilog-perl/libverilog-perl_3.474-1+b1_amd64.deb"
+}

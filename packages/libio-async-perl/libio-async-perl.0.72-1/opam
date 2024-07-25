@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libio-async-perl_0.72-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libio-async-perl"]
+]
+depends: [
+  "libfuture-perl" {>= "0.33"}
+  "libstruct-dumb-perl"
+  "perl"
+  ("perl" {>= "5.17.8"} | "libsocket-perl" {>= "2.007"})
+]
+extra-source "libio-async-perl_0.72-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libio-async-perl/libio-async-perl_0.72-1_all.deb"
+}

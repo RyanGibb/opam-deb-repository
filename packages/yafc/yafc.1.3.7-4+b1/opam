@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yafc_1.3.7-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yafc"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.33"}
+  "libedit2" {>= "2.11-20080614-0"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libssh-4" {>= "0.8.0"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "yafc_1.3.7-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yafc/yafc_1.3.7-4+b1_amd64.deb"
+}

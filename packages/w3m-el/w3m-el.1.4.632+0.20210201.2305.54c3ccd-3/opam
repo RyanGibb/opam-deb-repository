@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i w3m-el_1.4.632+0.20210201.2305.54c3ccd-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r w3m-el"]
+]
+depends: [
+  "emacsen-common"
+  ("w3m" | "w3m-ssl" {>= "0.3"} | "w3mmee" {>= "0.3"})
+]
+conflicts: [
+  "w3m-el-snapshot"
+]
+extra-source "w3m-el_1.4.632+0.20210201.2305.54c3ccd-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/w3m-el/w3m-el_1.4.632+0.20210201.2305.54c3ccd-3_all.deb"
+}

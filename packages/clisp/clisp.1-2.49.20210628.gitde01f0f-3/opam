@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clisp_1:2.49.20210628.gitde01f0f-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clisp"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libffcall1b" {>= "2.4"}
+  "libreadline8" {>= "7.0~rc1"}
+  "libsigsegv2" {>= "2.11"}
+  "libtinfo6" {>= "6"}
+  "libunistring2" {>= "0.9.7"}
+  "sensible-utils"
+]
+extra-source "clisp_1:2.49.20210628.gitde01f0f-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clisp/clisp_2.49.20210628.gitde01f0f-3_amd64.deb"
+}

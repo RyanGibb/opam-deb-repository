@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxqdbm3c2_1.8.78-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxqdbm3c2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqdbm14" {>= "1.8.74"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libxqdbm3c2_1.8.78-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qdbm/libxqdbm3c2_1.8.78-10_amd64.deb"
+}

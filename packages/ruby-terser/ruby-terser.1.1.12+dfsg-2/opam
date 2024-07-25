@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-terser_1.1.12+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-terser"]
+]
+depends: [
+  "libjs-source-map" {>= "0.7.0++dfsg2+really.0.6.1-6~"}
+  "ruby-execjs" {< "3"}
+  "ruby-execjs" {>= "0.3.0"}
+]
+extra-source "ruby-terser_1.1.12+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-terser/ruby-terser_1.1.12+dfsg-2_all.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ipython_8.5.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ipython"]
+]
+depends: [
+  "python3-any"
+  "python3-backcall"
+  "python3-decorator"
+  "python3-jedi" {>= "0.16"}
+  "python3-matplotlib-inline"
+  "python3-pexpect"
+  "python3-pickleshare"
+  "python3-prompt-toolkit" {>= "2"}
+  "python3-pygments"
+  "python3-setuptools"
+  "python3-stack-data"
+  "python3-traitlets"
+]
+extra-source "python3-ipython_8.5.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ipython/python3-ipython_8.5.0-4_all.deb"
+}

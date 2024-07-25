@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvigraimpex-dev_1.10.0+git20160211.167be93+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvigraimpex-dev"]
+]
+depends: [
+  "libfftw3-dev"
+  "libhdf5-dev" {>= "1.8"}
+  "libjpeg-dev"
+  "libpng-dev"
+  "libtiff5-dev"
+  "libvigraimpex6" {= "1.10.0+git20160211.167be93+dfsg1-2"}
+]
+extra-source "libvigraimpex-dev_1.10.0+git20160211.167be93+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvigraimpex/libvigraimpex-dev_1.10.0+git20160211.167be93+dfsg1-2_amd64.deb"
+}

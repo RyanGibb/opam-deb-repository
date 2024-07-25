@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libignition-common-core-dev_4.5.1+ds-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libignition-common-core-dev"]
+]
+depends: [
+  "libignition-cmake-dev"
+  "libignition-common4-4" {= "4.5.1+ds-2+b1"}
+  "libtinyobjloader-dev"
+  "uuid-dev"
+]
+extra-source "libignition-common-core-dev_4.5.1+ds-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ignition-common/libignition-common-core-dev_4.5.1+ds-2+b1_amd64.deb"
+}

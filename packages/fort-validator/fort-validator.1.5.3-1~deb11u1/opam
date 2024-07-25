@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fort-validator_1.5.3-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fort-validator"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.14"}
+  "libcurl4" {>= "7.16.2"}
+  "libjansson4" {>= "2.0.1"}
+  "libssl1-1" {>= "1.1.0"}
+  "libxml2" {>= "2.8.0"}
+  "rpki-trust-anchors"
+  "rsync"
+]
+extra-source "fort-validator_1.5.3-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fort-validator/fort-validator_1.5.3-1~deb11u1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dnsviz_0.9.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dnsviz"]
+]
+depends: [
+  "dns-root-data"
+  "libjs-jquery"
+  "libjs-jquery-ui"
+  "libjs-jquery-ui-theme-redmond"
+  "libjs-raphael"
+  "python3-any"
+  "python3-dnspython" {>= "1.13.0~"}
+  "python3-m2crypto" {>= "0.37.1~"}
+  "python3-pygraphviz" {>= "1.4~"}
+]
+extra-source "dnsviz_0.9.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dnsviz/dnsviz_0.9.3-1_all.deb"
+}

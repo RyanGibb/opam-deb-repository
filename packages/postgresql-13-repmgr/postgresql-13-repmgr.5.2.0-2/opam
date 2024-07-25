@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-13-repmgr_5.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-13-repmgr"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libpq5" {>= "9.3~"}
+  "postgresql-13"
+  "repmgr-common" {>= "5.2.0-2"}
+]
+extra-source "postgresql-13-repmgr_5.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/repmgr/postgresql-13-repmgr_5.2.0-2_amd64.deb"
+}

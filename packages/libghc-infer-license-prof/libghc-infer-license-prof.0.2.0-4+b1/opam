@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-infer-license-prof_0.2.0-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-infer-license-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-infer-license-dev" {= "0.2.0-4+b1"}
+  "libghc-text-metrics-prof"
+]
+extra-source "libghc-infer-license-prof_0.2.0-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-infer-license/libghc-infer-license-prof_0.2.0-4+b1_amd64.deb"
+}

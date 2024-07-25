@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pgbackrest_2.33-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pgbackrest"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.15"}
+  "liblz4-1" {>= "0.0~r127"}
+  "libpq5"
+  "libssl1-1" {>= "1.1.0"}
+  "libxml2" {>= "2.7.4"}
+  "libzstd1" {>= "1.4.0"}
+  "postgresql-common"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "pgbackrest_2.33-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pgbackrest/pgbackrest_2.33-1_amd64.deb"
+}

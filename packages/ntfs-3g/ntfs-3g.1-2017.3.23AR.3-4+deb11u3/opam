@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ntfs-3g_1:2017.3.23AR.3-4+deb11u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ntfs-3g"]
+]
+depends: [
+  "fuse"
+  "libc6" {>= "2.17"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libgnutls30" {>= "3.7.0"}
+  "libntfs-3g883" {= "1-2017.3.23AR.3-4+deb11u3"}
+]
+extra-source "ntfs-3g_1:2017.3.23AR.3-4+deb11u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ntfs-3g/ntfs-3g_2017.3.23AR.3-4+deb11u3_amd64.deb"
+}

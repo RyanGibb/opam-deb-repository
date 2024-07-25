@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhoel1.4_1.4.17-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhoel1.4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libjansson4" {>= "2.7"}
+  "libmariadb3" {>= "3.0.0"}
+  "liborcania2-1" {>= "2.1.0"}
+  "libpq5" {>= "9.0~"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libyder2-0" {>= "1.4.10"}
+]
+extra-source "libhoel1.4_1.4.17-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hoel/libhoel1.4_1.4.17-2_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i network-manager-pptp-gnome_1.2.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r network-manager-pptp-gnome"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.34"}
+  "libgtk-3-0" {>= "3.4"}
+  "libgtk-4-1" {>= "4.0.0"}
+  "libnm0" {>= "1.2.0"}
+  "libnma-gtk4-0" {>= "1.8.34"}
+  "libnma0" {>= "1.2.0"}
+  "libsecret-1-0" {>= "0.18"}
+  "network-manager-pptp" {= "1.2.12-1"}
+]
+extra-source "network-manager-pptp-gnome_1.2.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/network-manager-pptp/network-manager-pptp-gnome_1.2.12-1_amd64.deb"
+}

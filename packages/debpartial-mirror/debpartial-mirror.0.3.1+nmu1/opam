@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debpartial-mirror_0.3.1+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debpartial-mirror"]
+]
+depends: [
+  "gnupg"
+  "python"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-apt" {>= "0.7.93.2~"}
+  "python-cdd" {>= "0.0.8"}
+  "python-pycurl"
+]
+extra-source "debpartial-mirror_0.3.1+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debpartial-mirror/debpartial-mirror_0.3.1+nmu1_all.deb"
+}

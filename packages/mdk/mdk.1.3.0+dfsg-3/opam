@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mdk_1.3.0+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mdk"]
+]
+depends: [
+  "emacsen-common"
+  "guile-3-0-libs"
+  "libc6" {>= "2.33"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgtk-3-0" {>= "3.9.10"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libreadline8" {>= "6.0"}
+  "sensible-utils"
+]
+extra-source "mdk_1.3.0+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mdk/mdk_1.3.0+dfsg-3_amd64.deb"
+}

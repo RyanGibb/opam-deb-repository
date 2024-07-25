@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gwave_20190116-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gwave"]
+]
+depends: [
+  "guile-2-2-libs"
+  "guile-gnome2-gtk"
+  "libc6" {>= "2.29"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libgtk2-0-0" {>= "2.14.0"}
+  "libreadline8" {>= "6.0"}
+  "libx11-6"
+]
+extra-source "gwave_20190116-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gwave/gwave_20190116-2+b2_amd64.deb"
+}

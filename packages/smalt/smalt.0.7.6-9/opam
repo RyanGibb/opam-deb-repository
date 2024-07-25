@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i smalt_0.7.6-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r smalt"]
+]
+depends: [
+  "libbambamc0"
+  "libc6" {>= "2.29"}
+  "zlib1g" {>= "1-1.2.0.2"}
+]
+extra-source "smalt_0.7.6-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/smalt/smalt_0.7.6-9_amd64.deb"
+}

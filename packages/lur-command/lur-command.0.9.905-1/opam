@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lur-command_0.9.905-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lur-command"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "liblur3" {>= "0.4"}
+]
+extra-source "lur-command_0.9.905-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libratbag/lur-command_0.9.905-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i globus-gram-job-manager-lsf-setup-seg_3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r globus-gram-job-manager-lsf-setup-seg"]
+]
+depends: [
+  "globus-gram-job-manager-lsf" {= "3.0-1"}
+  "globus-gram-job-manager-scripts" {>= "4"}
+  "globus-scheduler-event-generator-progs" {>= "4"}
+  "libc6" {>= "2.7"}
+  "libglobus-common0" {>= "17"}
+  "libglobus-scheduler-event-generator0" {>= "4"}
+]
+extra-source "globus-gram-job-manager-lsf-setup-seg_3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gram-job-manager-lsf/globus-gram-job-manager-lsf-setup-seg_3.0-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-slepc4py_3.14.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-slepc4py"]
+]
+depends: [
+  "python3-any"
+  "python3-numpy"
+  "python3-petsc4py"
+  ("python3-slepc4py-real" | "python3-slepc4py-complex" | "python3-slepc4py-real3-14" | "python3-slepc4py-complex3-14" | "python3-slepc4py-64-real" | "python3-slepc4py-64-complex" | "python3-slepc4py-64-real3-14" | "python3-slepc4py-64-complex3-14")
+]
+extra-source "python3-slepc4py_3.14.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slepc4py/python3-slepc4py_3.14.0-2_all.deb"
+}

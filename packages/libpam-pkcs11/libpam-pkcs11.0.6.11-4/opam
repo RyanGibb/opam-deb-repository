@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-pkcs11_0.6.11-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-pkcs11"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl4" {>= "7.16.2"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpcsclite1" {>= "1.4.4"}
+  "libssl1-1" {>= "1.1.1"}
+]
+extra-source "libpam-pkcs11_0.6.11-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pam-pkcs11/libpam-pkcs11_0.6.11-4_amd64.deb"
+}

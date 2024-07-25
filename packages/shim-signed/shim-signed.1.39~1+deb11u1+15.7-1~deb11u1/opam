@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shim-signed_1.39~1+deb11u1+15.7-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shim-signed"]
+]
+depends: [
+  "grub-efi-amd64-bin"
+  "grub2-common" {>= "2.06-3~deb11u5"}
+  "shim-helpers-amd64-signed" {>= "1+15.4+2"}
+  "shim-signed-common" {>= "1.39~1+deb11u1+15.7-1~deb11u1"}
+]
+extra-source "shim-signed_1.39~1+deb11u1+15.7-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shim-signed/shim-signed_1.39~1+deb11u1+15.7-1~deb11u1_amd64.deb"
+}

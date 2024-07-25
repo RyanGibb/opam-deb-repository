@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dictem_1.0.4-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dictem"]
+]
+depends: [
+  "dict" {> "1.9.14"}
+  "emacsen-common" {>= "2.0.0"}
+]
+conflicts: [
+  "emacsen-common (<= 2.0.0)"
+]
+extra-source "dictem_1.0.4-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dictem/dictem_1.0.4-4_all.deb"
+}

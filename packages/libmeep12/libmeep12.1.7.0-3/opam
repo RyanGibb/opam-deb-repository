@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmeep12_1.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmeep12"]
+]
+depends: [
+  "libatlas3-base"
+  "libc6" {>= "2.14"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc1" {>= "1-4.0"}
+  "libgfortran5" {>= "8"}
+  "libgsl23" {>= "2.5"}
+  "libgslcblas0" {>= "2.4"}
+  "libharminv3" {>= "1.4"}
+  "libhdf5-103"
+  "libquadmath0" {>= "4.6"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("liblapack3" | "liblapack-so-3")
+]
+conflicts: [
+  "libmeep1"
+  "libmeep10"
+  "libmeep2"
+  "libmeep6"
+  "libmeep7"
+  "libmeep8"
+]
+extra-source "libmeep12_1.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meep/libmeep12_1.7.0-3_amd64.deb"
+}

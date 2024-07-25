@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjxl-dev_0.7.0-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjxl-dev"]
+]
+depends: [
+  "libbrotli-dev"
+  "libhwy-dev"
+  "libjxl0-7" {= "0.7.0-10"}
+  "liblcms2-dev"
+]
+extra-source "libjxl-dev_0.7.0-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jpeg-xl/libjxl-dev_0.7.0-10_amd64.deb"
+}

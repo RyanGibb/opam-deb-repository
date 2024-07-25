@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatvsn8_8.3.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatvsn8"]
+]
+depends: [
+  "gcc-8-base" {= "8.3.0-6"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnat-8" {= "8.3.0-6"}
+]
+extra-source "libgnatvsn8_8.3.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8/libgnatvsn8_8.3.0-6_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzydis-dev_4.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzydis-dev"]
+]
+depends: [
+  "libzycore-dev" {>= "1.0.0-2"}
+  "libzydis4-0" {= "4.0.0-1"}
+]
+extra-source "libzydis-dev_4.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zydis/libzydis-dev_4.0.0-1_amd64.deb"
+}

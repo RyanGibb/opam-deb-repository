@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-first_2.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-first"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+]
+extra-source "python-first_2.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-first/python-first_2.0.0-2_all.deb"
+}

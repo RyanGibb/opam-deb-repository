@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-15-q3c_2.0.0-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-15-q3c"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "postgresql-15"
+]
+extra-source "postgresql-15-q3c_2.0.0-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-q3c/postgresql-15-q3c_2.0.0-7+b1_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i otpclient-cli_3.1.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r otpclient-cli"]
+]
+depends: [
+  "libbaseencode1" {>= "1.0.9"}
+  "libc6" {>= "2.34"}
+  "libcotp12" {>= "1.2.2"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libglib2-0-0" {>= "2.67.3+git20210214"}
+  "libgtk-3-0" {>= "3.19.12"}
+  "libjansson4" {>= "2.14"}
+  "libprotobuf-c1" {>= "1.0.1"}
+  "libsecret-1-0" {>= "0.7"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "otpclient-cli_3.1.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/otpclient/otpclient-cli_3.1.4-1_amd64.deb"
+}

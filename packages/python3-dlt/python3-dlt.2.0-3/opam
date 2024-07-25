@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-dlt_2.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-dlt"]
+]
+depends: [
+  "libdlt2" {< "2.18.7"}
+  "libdlt2" {>= "2.18.6"}
+  "python3-any" {>= "3.6~"}
+]
+conflicts: [
+  "python-dlt"
+]
+extra-source "python3-dlt_2.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-dlt/python3-dlt_2.0-3_all.deb"
+}

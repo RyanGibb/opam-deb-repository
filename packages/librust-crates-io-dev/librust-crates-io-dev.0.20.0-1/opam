@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-crates-io-dev_0.20.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-crates-io-dev"]
+]
+depends: [
+  "librust-curl-0-4+default-dev"
+  "librust-failure+default-dev"
+  "librust-serde-1+default-dev"
+  "librust-serde-derive-1+default-dev"
+  "librust-serde-json-1+default-dev"
+  "librust-url-1+default-dev"
+]
+extra-source "librust-crates-io-dev_0.20.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-crates-io/librust-crates-io-dev_0.20.0-1_amd64.deb"
+}

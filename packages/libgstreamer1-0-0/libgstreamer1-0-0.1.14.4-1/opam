@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgstreamer1.0-0_1.14.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgstreamer1.0-0"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libcap2" {>= "1-2.10"}
+  "libcap2-bin"
+  "libglib2-0-0" {>= "2.41.1"}
+]
+extra-source "libgstreamer1.0-0_1.14.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gstreamer1.0/libgstreamer1.0-0_1.14.4-1_amd64.deb"
+}

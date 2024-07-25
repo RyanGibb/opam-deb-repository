@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i linux-headers-4.19.0-21-all-amd64_4.19.249-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r linux-headers-4.19.0-21-all-amd64"]
+]
+depends: [
+  "linux-headers-4-19-0-21-amd64" {= "4.19.249-2"}
+  "linux-headers-4-19-0-21-cloud-amd64" {= "4.19.249-2"}
+  "linux-headers-4-19-0-21-rt-amd64" {= "4.19.249-2"}
+]
+extra-source "linux-headers-4.19.0-21-all-amd64_4.19.249-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linux/linux-headers-4.19.0-21-all-amd64_4.19.249-2_amd64.deb"
+}

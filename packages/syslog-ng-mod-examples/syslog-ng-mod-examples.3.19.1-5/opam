@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i syslog-ng-mod-examples_3.19.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r syslog-ng-mod-examples"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+  "libcap2" {>= "1-2.10"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libivykis0" {>= "0.42"}
+  "libpcre3"
+  "libssl1-1" {>= "1.1.0"}
+  "libsystemd0" {>= "209"}
+  "libuuid1" {>= "2.16"}
+  "syslog-ng-core" {< "3.19.1-5.1~"}
+  "syslog-ng-core" {>= "3.19.1-5"}
+]
+extra-source "syslog-ng-mod-examples_3.19.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/syslog-ng/syslog-ng-mod-examples_3.19.1-5_amd64.deb"
+}

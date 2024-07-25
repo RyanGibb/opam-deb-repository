@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i simba_0.8.4-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r simba"]
+]
+depends: [
+  "dbconfig-common" {>= "1.8.12"}
+  "libdatetime-perl"
+  "libhtml-template-perl"
+  "liblog-dispatch-perl"
+  "liblog-log4perl-perl"
+  "libmodule-pluggable-perl"
+  "libnumber-format-perl"
+  "libropkg-perl" {>= "0.4-1"}
+  "libsql-abstract-perl"
+  "libxml-rss-perl"
+  "mariadb-client-10-5"
+  "perl"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "simba_0.8.4-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/simba/simba_0.8.4-6_all.deb"
+}

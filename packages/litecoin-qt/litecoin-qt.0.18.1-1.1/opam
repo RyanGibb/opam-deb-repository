@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i litecoin-qt_0.18.1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r litecoin-qt"]
+]
+depends: [
+  "libboost-chrono1-74-0" {>= "1.74.0"}
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-thread1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.30"}
+  "libdb5-3++"
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "libevent-pthreads-2-1-7" {>= "2.1.8-stable"}
+  "libgcc-s1" {>= "3.0"}
+  "libleveldb1d"
+  "libminiupnpc17" {>= "1.9.20140610"}
+  "libprotobuf23" {>= "3.12.3"}
+  "libqrencode4" {>= "3.2.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5network5" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "9"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "litecoin-qt_0.18.1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/litecoin/litecoin-qt_0.18.1-1.1_amd64.deb"
+}

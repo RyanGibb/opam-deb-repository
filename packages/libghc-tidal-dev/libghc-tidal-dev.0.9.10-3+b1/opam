@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tidal-dev_0.9.10-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tidal-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-colour-dev"
+  "libghc-hashable-dev"
+  "libghc-hosc-dev"
+  "libghc-mersenne-random-pure64-dev"
+  "libghc-monad-loops-dev"
+  "libghc-safe-dev"
+  "libghc-websockets-dev"
+  "libgmp10"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-tidal-dev_0.9.10-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tidal/libghc-tidal-dev_0.9.10-3+b1_amd64.deb"
+}

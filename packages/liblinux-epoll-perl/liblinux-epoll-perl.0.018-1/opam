@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblinux-epoll-perl_0.018-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblinux-epoll-perl"]
+]
+depends: [
+  "libc6" {>= "2.9"}
+  "perl"
+  "perl-base"
+]
+extra-source "liblinux-epoll-perl_0.018-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblinux-epoll-perl/liblinux-epoll-perl_0.018-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guile-zlib_0.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guile-zlib"]
+]
+depends: [
+  "zlib1g-dev"
+  ("guile-3-0" | "guile-2-2")
+]
+extra-source "guile-zlib_0.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guile-zlib/guile-zlib_0.0.1-3_amd64.deb"
+}

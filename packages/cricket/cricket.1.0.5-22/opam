@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cricket_1.0.5-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cricket"]
+]
+depends: [
+  "cron"
+  "libc6" {>= "2.2.5"}
+  "libdigest-md5-perl"
+  "librrds-perl" {>= "1.0.10"}
+  "libsnmp-session-perl"
+  "libtimedate-perl"
+  "perl-any"
+]
+extra-source "cricket_1.0.5-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cricket/cricket_1.0.5-22_amd64.deb"
+}

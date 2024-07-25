@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt63drender6_6.4.2+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt63drender6"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.4"}
+  "libqt63dcore6" {= "6.4.2+dfsg-2"}
+  "libqt6concurrent6" {>= "6.4.2+dfsg~"}
+  "libqt6core6"
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6gui6" {>= "6.4.2+dfsg~"}
+  "libqt6opengl6" {>= "6.4.2+dfsg~"}
+  "libqt6shadertools6" {>= "6.2.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libqt63drender6_6.4.2+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-3d/libqt63drender6_6.4.2+dfsg-2_amd64.deb"
+}

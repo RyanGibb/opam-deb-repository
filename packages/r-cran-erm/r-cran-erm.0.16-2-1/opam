@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-erm_0.16-2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-erm"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+  "r-cran-lattice"
+  "r-cran-mass"
+  "r-cran-matrix"
+]
+extra-source "r-cran-erm_0.16-2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-erm/r-cran-erm_0.16-2-1_amd64.deb"
+}

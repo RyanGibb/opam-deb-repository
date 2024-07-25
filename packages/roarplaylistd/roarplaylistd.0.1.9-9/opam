@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i roarplaylistd_0.1.9-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r roarplaylistd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libroar2" {>= "1.0~beta12"}
+  "libxml2" {>= "2.7.4"}
+  "lsb-base"
+  ("roaraudio" | "roaraudio-server")
+]
+extra-source "roarplaylistd_0.1.9-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/roarplaylistd/roarplaylistd_0.1.9-9_amd64.deb"
+}

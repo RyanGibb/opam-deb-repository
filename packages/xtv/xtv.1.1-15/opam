@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xtv_1.1-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xtv"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libx11-6"
+  "libxaw7"
+  "libxt6"
+]
+extra-source "xtv_1.1-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xtv/xtv_1.1-15_amd64.deb"
+}

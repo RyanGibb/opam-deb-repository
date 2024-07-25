@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i progvis_0.6.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r progvis"]
+]
+depends: [
+  "storm-lang" {>= "0.6.2-1"}
+  "storm-lang-crypto" {>= "0.6.2-1"}
+  "storm-lang-layout" {>= "0.6.2-1"}
+  "storm-lang-sql" {>= "0.6.2-1"}
+  "storm-lang-ui" {>= "0.6.2-1"}
+]
+extra-source "progvis_0.6.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/storm-lang/progvis_0.6.2-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libanyevent-fork-perl_1.31-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libanyevent-fork-perl"]
+]
+depends: [
+  "libanyevent-perl" {>= "6"}
+  "libcommon-sense-perl" {>= "3.6"}
+  "libio-fdpass-perl" {>= "0.2"}
+  "libproc-fastspawn-perl" {>= "0.1"}
+  "perl"
+]
+extra-source "libanyevent-fork-perl_1.31-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libanyevent-fork-perl/libanyevent-fork-perl_1.31-1_all.deb"
+}

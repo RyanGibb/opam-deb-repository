@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i portfolio-filemanager_0.9.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r portfolio-filemanager"]
+]
+depends: [
+  "gir1-2-handy-1"
+  "python3-any"
+  "python3-gi"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "portfolio-filemanager_0.9.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/portfolio-filemanager/portfolio-filemanager_0.9.14-1_all.deb"
+}

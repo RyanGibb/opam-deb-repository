@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest-database-perl_1.113-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest-database-perl"]
+]
+depends: [
+  "libdbi-perl"
+  "libfile-homedir-perl"
+  "libyaml-tiny-perl" {>= "1.62"}
+  "perl"
+]
+extra-source "libtest-database-perl_1.113-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest-database-perl/libtest-database-perl_1.113-1_all.deb"
+}

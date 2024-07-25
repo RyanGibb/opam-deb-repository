@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-attoparsec-prof_0.14.4-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-attoparsec-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-attoparsec-dev" {= "0.14.4-2+b1"}
+  "libghc-scientific-prof"
+]
+extra-source "libghc-attoparsec-prof_0.14.4-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-attoparsec/libghc-attoparsec-prof_0.14.4-2+b1_amd64.deb"
+}

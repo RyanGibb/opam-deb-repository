@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kaccounts-integration_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kaccounts-integration"]
+]
+depends: [
+  "kio"
+  "libaccounts-qt5-1" {>= "1.13"}
+  "libc6" {>= "2.14"}
+  "libkaccounts2" {= "4-22.12.3-1"}
+  "libkf5configcore5" {>= "5.4.0~"}
+  "libkf5coreaddons5" {>= "5.97.0~"}
+  "libkf5dbusaddons5" {>= "5.97.0~"}
+  "libkf5i18n5" {>= "5.97.0~"}
+  "libkf5kiocore5" {>= "5.97.0~"}
+  "libkf5quickaddons5" {>= "5.97.0~"}
+  "libkf5wallet-bin"
+  "libkf5wallet5" {>= "5.97.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.15.0~"}
+  "libstdc++6" {>= "5"}
+  "qml-module-org-kde-kaccounts" {= "4-22.12.3-1"}
+  "qml-module-org-kde-kcm"
+  "qml-module-org-kde-kirigami2"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick2"
+  "signon-kwallet-extension"
+  "signon-plugin-oauth2"
+  "signon-plugin-password"
+  "signon-ui-x11"
+  "signond"
+]
+extra-source "kaccounts-integration_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kaccounts-integration/kaccounts-integration_22.12.3-1_amd64.deb"
+}

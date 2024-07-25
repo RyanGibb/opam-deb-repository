@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i enchant-2_2.2.15-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r enchant-2"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libenchant-2-2" {>= "2.2.3"}
+  "libglib2-0-0" {>= "2.12.0"}
+]
+extra-source "enchant-2_2.2.15-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/enchant-2/enchant-2_2.2.15-1_amd64.deb"
+}

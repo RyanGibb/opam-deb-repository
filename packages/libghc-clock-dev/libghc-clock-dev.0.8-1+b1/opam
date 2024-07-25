@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-clock-dev_0.8-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-clock-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.17"}
+  "libgmp10"
+]
+extra-source "libghc-clock-dev_0.8-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-clock/libghc-clock-dev_0.8-1+b1_amd64.deb"
+}

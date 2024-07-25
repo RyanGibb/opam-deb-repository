@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsoqt520_1.6.0+ds1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsoqt520"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcoin80c" {>= "4.0.0+ds"}
+  "libgcc-s1" {>= "3.0"}
+  "libopengl0"
+  "libqt5core5a" {>= "5.14.1"}
+  "libqt5opengl5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "libxi6"
+  ("libqt5gui5" {>= "5.3.0"} | "libqt5gui5-gles" {>= "5.3.0"})
+]
+extra-source "libsoqt520_1.6.0+ds1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/soqt/libsoqt520_1.6.0+ds1-3_amd64.deb"
+}

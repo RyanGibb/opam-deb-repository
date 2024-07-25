@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i calf-ladspa_1.1.3-8.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r calf-ladspa"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-4.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "calf-ladspa_1.1.3-8.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lmms/calf-ladspa_1.1.3-8.1_amd64.deb"
+}

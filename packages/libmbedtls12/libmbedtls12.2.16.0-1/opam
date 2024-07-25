@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmbedtls12_2.16.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmbedtls12"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libmbedcrypto3" {>= "2.16"}
+  "libmbedx509-0" {>= "2.14"}
+]
+extra-source "libmbedtls12_2.16.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mbedtls/libmbedtls12_2.16.0-1_amd64.deb"
+}

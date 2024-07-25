@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-csv-core+libc-dev_0.1.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-csv-core+libc-dev"]
+]
+depends: [
+  "librust-csv-core-dev" {= "0.1.6-1"}
+  "librust-memchr-2+libc-dev"
+]
+extra-source "librust-csv-core+libc-dev_0.1.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-csv-core/librust-csv-core+libc-dev_0.1.6-1_amd64.deb"
+}

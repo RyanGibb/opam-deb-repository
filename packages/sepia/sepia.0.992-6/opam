@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sepia_0.992-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sepia"]
+]
+depends: [
+  "libbsd-resource-perl"
+  "libdata-dump-perl"
+  "libdevel-lexalias-perl"
+  "libdevel-size-perl"
+  "libio-stringy-perl"
+  "libmodule-corelist-perl"
+  "libmodule-info-perl"
+  "libpadwalker-perl"
+  "libscope-upper-perl"
+  "libwww-perl"
+  "perl"
+  ("dpkg" {>= "1.15.4"} | "install-info")
+  ("emacs25-nox" | "emacs25" | "emacs24" | "emacs23" | "emacs22")
+  ("w3m-el" {>= "1.4.5"} | "w3m-el-snapshot")
+]
+extra-source "sepia_0.992-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sepia/sepia_0.992-6_all.deb"
+}

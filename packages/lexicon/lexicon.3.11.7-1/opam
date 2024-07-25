@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lexicon_3.11.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lexicon"]
+]
+depends: [
+  "python3-any"
+  "python3-lexicon" {= "3.11.7-1"}
+]
+extra-source "lexicon_3.11.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lexicon/lexicon_3.11.7-1_all.deb"
+}

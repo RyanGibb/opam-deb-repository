@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblapack-test_3.8.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblapack-test"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-4.0"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+  "libtmglib3"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "liblapack-test_3.8.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lapack/liblapack-test_3.8.0-2_amd64.deb"
+}

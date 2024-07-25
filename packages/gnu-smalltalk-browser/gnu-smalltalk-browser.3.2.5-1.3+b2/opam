@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnu-smalltalk-browser_3.2.5-1.3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnu-smalltalk-browser"]
+]
+depends: [
+  "gnu-smalltalk" {= "3.2.5-1.3+b2"}
+  "gnu-smalltalk-common" {>= "3.2.5"}
+  "libgtk2-gst" {= "3.2.5-1.3+b2"}
+]
+extra-source "gnu-smalltalk-browser_3.2.5-1.3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnu-smalltalk/gnu-smalltalk-browser_3.2.5-1.3+b2_amd64.deb"
+}

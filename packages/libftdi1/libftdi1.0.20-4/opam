@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libftdi1_0.20-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libftdi1"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libusb-0-1-4" {>= "2-0.1.12"}
+]
+extra-source "libftdi1_0.20-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libftdi/libftdi1_0.20-4_amd64.deb"
+}

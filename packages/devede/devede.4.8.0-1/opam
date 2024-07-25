@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i devede_4.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r devede"]
+]
+depends: [
+  "dvdauthor"
+  "ffmpeg"
+  "genisoimage"
+  "gir1-2-gtk-3-0"
+  "imagemagick"
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-dbus"
+  "python3-gi-cairo"
+  "python3-pkg-resources"
+  "python3-urllib3"
+  "vcdimager"
+  ("fonts-freefont-ttf" | "ttf-freefont")
+  ("mplayer" | "mpv")
+]
+extra-source "devede_4.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/devede/devede_4.8.0-1_all.deb"
+}

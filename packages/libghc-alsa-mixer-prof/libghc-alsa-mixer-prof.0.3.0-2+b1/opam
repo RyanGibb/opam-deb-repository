@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-alsa-mixer-prof_0.3.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-alsa-mixer-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-alsa-core-prof"
+  "libghc-alsa-mixer-dev" {= "0.3.0-2+b1"}
+]
+extra-source "libghc-alsa-mixer-prof_0.3.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-alsa-mixer/libghc-alsa-mixer-prof_0.3.0-2+b1_amd64.deb"
+}

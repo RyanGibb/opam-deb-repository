@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i afl++_2.68c-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r afl++"]
+]
+depends: [
+  "build-essential"
+  "libc6" {>= "2.15"}
+  "libpython3-9" {>= "3.9.0~b4"}
+]
+extra-source "afl++_2.68c-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aflplusplus/afl++_2.68c-1+b1_amd64.deb"
+}

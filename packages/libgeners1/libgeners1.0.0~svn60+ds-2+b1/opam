@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgeners1_0.0~svn60+ds-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgeners1"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libgeners1_0.0~svn60+ds-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/geners/libgeners1_0.0~svn60+ds-2+b1_amd64.deb"
+}

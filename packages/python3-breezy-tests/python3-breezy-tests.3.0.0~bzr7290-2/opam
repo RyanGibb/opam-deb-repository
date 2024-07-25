@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-breezy.tests_3.0.0~bzr7290-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-breezy.tests"]
+]
+depends: [
+  "python3-any"
+  "python3-breezy" {<= "3.0.0~bzr7290-2.1~"}
+  "python3-breezy" {>= "3.0.0~bzr7290-2"}
+  "python3-testtools" {>= "0.9.5~"}
+]
+extra-source "python3-breezy.tests_3.0.0~bzr7290-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/breezy/python3-breezy.tests_3.0.0~bzr7290-2_all.deb"
+}

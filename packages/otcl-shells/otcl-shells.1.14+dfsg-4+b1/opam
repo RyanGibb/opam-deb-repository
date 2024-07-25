@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i otcl-shells_1.14+dfsg-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r otcl-shells"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libotcl1" {>= "1.14"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libtk8-6" {>= "8.6.0"}
+]
+extra-source "otcl-shells_1.14+dfsg-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/otcl/otcl-shells_1.14+dfsg-4+b1_amd64.deb"
+}

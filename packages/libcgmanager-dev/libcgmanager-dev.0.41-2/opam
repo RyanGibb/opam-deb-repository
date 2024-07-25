@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcgmanager-dev_0.41-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcgmanager-dev"]
+]
+depends: [
+  "libcgmanager0" {= "0.41-2"}
+  "libdbus-1-dev"
+  "libnih-dbus-dev"
+]
+extra-source "libcgmanager-dev_0.41-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cgmanager/libcgmanager-dev_0.41-2_amd64.deb"
+}

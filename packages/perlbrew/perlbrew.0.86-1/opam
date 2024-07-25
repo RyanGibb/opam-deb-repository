@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i perlbrew_0.86-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r perlbrew"]
+]
+depends: [
+  "gcc"
+  "libcapture-tiny-perl" {>= "0.36"}
+  "libcpan-perl-releases-perl" {>= "3.66"}
+  "libdevel-patchperl-perl" {>= "1.52"}
+  "liblocal-lib-perl" {>= "2.000014"}
+  "make"
+  "perl" {>= "5.23.7"}
+  ("curl" | "wget")
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "perlbrew_0.86-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/perlbrew/perlbrew_0.86-1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qdbus-qt6_6.4.2~rc1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qdbus-qt6"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libqt6core6"
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6dbus6" {>= "6.4.2+dfsg~"}
+  "libqt6xml6" {>= "6.4.2+dfsg~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qdbus-qt6_6.4.2~rc1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-tools/qdbus-qt6_6.4.2~rc1-2_amd64.deb"
+}

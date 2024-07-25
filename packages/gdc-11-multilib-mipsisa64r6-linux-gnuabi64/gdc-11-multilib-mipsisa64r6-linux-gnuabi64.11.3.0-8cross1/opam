@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gdc-11-multilib-mipsisa64r6-linux-gnuabi64_11.3.0-8cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gdc-11-multilib-mipsisa64r6-linux-gnuabi64"]
+]
+depends: [
+  "gcc-11-mipsisa64r6-linux-gnuabi64-base" {>= "11"}
+  "gcc-11-multilib-mipsisa64r6-linux-gnuabi64" {= "11.3.0-8cross1"}
+  "gdc-11-mipsisa64r6-linux-gnuabi64" {= "11.3.0-8cross1"}
+  "lib32gphobos-11-dev-mips64r6-cross" {>= "11.3.0-8cross1"}
+  "libn32gphobos-11-dev-mips64r6-cross" {>= "11.3.0-8cross1"}
+]
+extra-source "gdc-11-multilib-mipsisa64r6-linux-gnuabi64_11.3.0-8cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-11-cross-mipsen/gdc-11-multilib-mipsisa64r6-linux-gnuabi64_11.3.0-8cross1_amd64.deb"
+}

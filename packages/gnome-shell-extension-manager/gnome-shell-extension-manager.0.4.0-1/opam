@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-shell-extension-manager_0.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-shell-extension-manager"]
+]
+depends: [
+  "gjs"
+  "gnome-shell"
+  "libadwaita-1-0" {>= "1.2~alpha"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.65.1"}
+  "libgtk-4-1" {>= "4.6.0"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libsoup-3-0-0" {>= "3.0.3"}
+  "libtext-engine-0-1-0" {>= "0.1.1"}
+  "unzip"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-shell-extension-manager_0.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-shell-extension-manager/gnome-shell-extension-manager_0.4.0-1_amd64.deb"
+}

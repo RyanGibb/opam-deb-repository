@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-rcrowley-go-metrics-dev_0.0~git20180125.8732c61-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-rcrowley-go-metrics-dev"]
+]
+depends: [
+  "golang-github-stathat-go-dev"
+]
+conflicts: [
+  "golang-metrics-dev"
+]
+extra-source "golang-github-rcrowley-go-metrics-dev_0.0~git20180125.8732c61-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-rcrowley-go-metrics/golang-github-rcrowley-go-metrics-dev_0.0~git20180125.8732c61-3_all.deb"
+}

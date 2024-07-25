@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-readline-dev_1.0.3.0-11+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-readline-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libgmp10"
+  "libncurses5-dev"
+  "libreadline-dev"
+]
+extra-source "libghc-readline-dev_1.0.3.0-11+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-readline/libghc-readline-dev_1.0.3.0-11+b1_amd64.deb"
+}

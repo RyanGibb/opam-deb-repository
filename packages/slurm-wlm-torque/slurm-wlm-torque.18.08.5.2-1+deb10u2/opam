@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slurm-wlm-torque_18.08.5.2-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slurm-wlm-torque"]
+]
+depends: [
+  "libslurm-perl" {>= "18.08.5.2-1+deb10u2"}
+  "libslurmdb-perl" {>= "18.08.5.2-1+deb10u2"}
+  "libswitch-perl"
+  "perl-any"
+  "slurm-client" {>= "18.08.5.2-1+deb10u2"}
+]
+conflicts: [
+  "gridengine-client"
+  "torque-client"
+  "torque-client-x11"
+]
+extra-source "slurm-wlm-torque_18.08.5.2-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-llnl/slurm-wlm-torque_18.08.5.2-1+deb10u2_all.deb"
+}

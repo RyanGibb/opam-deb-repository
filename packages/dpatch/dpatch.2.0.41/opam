@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpatch_2.0.41_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpatch"]
+]
+depends: [
+  "bash" {>= "3.0-6"}
+  "dpkg-dev"
+  "perl-any"
+]
+extra-source "dpatch_2.0.41_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpatch/dpatch_2.0.41_all.deb"
+}

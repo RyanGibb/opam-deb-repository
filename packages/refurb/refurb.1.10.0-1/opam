@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i refurb_1.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r refurb"]
+]
+depends: [
+  "python3-any"
+  "python3-refurb" {= "1.10.0-1"}
+]
+extra-source "refurb_1.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-refurb/refurb_1.10.0-1_all.deb"
+}

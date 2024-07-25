@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsimtkmolmodel3.0_3.0~svn842-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsimtkmolmodel3.0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libmmdb2-0"
+  "libsimbody3-6"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libsimtkmolmodel3.0_3.0~svn842-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/molmodel/libsimtkmolmodel3.0_3.0~svn842-2_amd64.deb"
+}

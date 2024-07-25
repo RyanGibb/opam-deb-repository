@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i isrcsubmit_2.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r isrcsubmit"]
+]
+depends: [
+  "python3-any"
+  "python3-libdiscid"
+  "python3-musicbrainzngs" {>= "0.4"}
+]
+extra-source "isrcsubmit_2.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/isrcsubmit/isrcsubmit_2.1.0-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-sha3-dev_0.9.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-sha3-dev"]
+]
+depends: [
+  "librust-block-buffer-0-9+default-dev"
+  "librust-block-padding-0-2+default-dev"
+  "librust-digest-0-9+default-dev"
+  "librust-keccak-0-1+default-dev"
+  "librust-opaque-debug-0-3+default-dev"
+]
+extra-source "librust-sha3-dev_0.9.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-sha3/librust-sha3-dev_0.9.1-1_amd64.deb"
+}

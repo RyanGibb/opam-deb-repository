@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eiskaltdcpp-gtk_2.4.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eiskaltdcpp-gtk"]
+]
+depends: [
+  "eiskaltdcpp-common"
+  "eiskaltdcpp-gtk-data"
+  "libc6" {>= "2.33"}
+  "libcanberra0" {>= "0.2"}
+  "libeiskaltdcpp2-4" {>= "2.4.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libnotify4" {>= "0.7.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libstdc++6" {>= "11"}
+]
+conflicts: [
+  "eiskaltdcpp-gtk3"
+]
+extra-source "eiskaltdcpp-gtk_2.4.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eiskaltdcpp/eiskaltdcpp-gtk_2.4.2-1+b2_amd64.deb"
+}

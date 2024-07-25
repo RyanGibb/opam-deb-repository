@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-http-server_14.1.1+~cs3.14.34-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-http-server"]
+]
+depends: [
+  "node-async"
+  "node-basic-auth"
+  "node-chalk"
+  "node-debug" {>= "4.3.4"}
+  "node-he" {>= "1.2.0"}
+  "node-http-proxy"
+  "node-jsdom" {>= "20.0.3"}
+  "node-mime"
+  "node-minimist"
+  "node-mkdirp" {>= "1.0.4"}
+  "node-qs"
+  "nodejs-any"
+]
+extra-source "node-http-server_14.1.1+~cs3.14.34-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-http-server/node-http-server_14.1.1+~cs3.14.34-2_all.deb"
+}

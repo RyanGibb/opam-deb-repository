@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vim-python-jedi_0.18.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vim-python-jedi"]
+]
+depends: [
+  "python3-any"
+  "python3-jedi"
+  ("vim" {>= "2-8.1.0693-2~"} | "neovim" {>= "0.2.2-1~"})
+  ("vim-nox" | "vim-python3" | "neovim")
+]
+extra-source "vim-python-jedi_0.18.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-jedi/vim-python-jedi_0.18.0-1_all.deb"
+}

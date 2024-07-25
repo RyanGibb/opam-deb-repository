@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmongo-client-dev_0.1.8-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmongo-client-dev"]
+]
+depends: [
+  "libglib2-0-dev"
+  "libmongo-client0" {= "0.1.8-4"}
+  "pkg-config"
+]
+extra-source "libmongo-client-dev_0.1.8-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmongo-client/libmongo-client-dev_0.1.8-4_amd64.deb"
+}

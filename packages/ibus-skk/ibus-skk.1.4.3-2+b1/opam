@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibus-skk_1.4.3-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibus-skk"]
+]
+depends: [
+  "ibus" {>= "1.4"}
+  "libc6" {>= "2.34"}
+  "libgee-0-8-2" {>= "0.8.3"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libibus-1-0-5" {>= "1.5.1"}
+  "libskk0" {>= "0.0.10"}
+  ("skkdic" | "skkserv")
+]
+extra-source "ibus-skk_1.4.3-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibus-skk/ibus-skk_1.4.3-2+b1_amd64.deb"
+}

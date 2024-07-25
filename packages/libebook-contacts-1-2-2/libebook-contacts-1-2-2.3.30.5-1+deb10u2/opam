@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libebook-contacts-1.2-2_3.30.5-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libebook-contacts-1.2-2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libedataserver-1-2-23" {= "3.30.5-1+deb10u2"}
+  "libgcc1" {>= "1-3.0"}
+  "libglib2-0-0" {>= "2.40"}
+  "libphonenumber7"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libebook-contacts-1.2-2_3.30.5-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/evolution-data-server/libebook-contacts-1.2-2_3.30.5-1+deb10u2_amd64.deb"
+}

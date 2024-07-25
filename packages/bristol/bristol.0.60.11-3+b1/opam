@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bristol_0.60.11-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bristol"]
+]
+depends: [
+  "bristol-data" {= "0.60.11-3"}
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.15"}
+  "libx11-6"
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "bristol_0.60.11-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bristol/bristol_0.60.11-3+b1_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pypy-backports.functools-lru-cache_1.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pypy-backports.functools-lru-cache"]
+]
+depends: [
+  "pypy" {>= "7.0.0+dfsg-3~"}
+]
+extra-source "pypy-backports.functools-lru-cache_1.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/backports.functools-lru-cache/pypy-backports.functools-lru-cache_1.5-3_all.deb"
+}

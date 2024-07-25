@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apktool_2.3.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apktool"]
+]
+depends: [
+  "aapt"
+  "android-framework-res"
+  "libantlr3-runtime-java"
+  "libcommons-cli-java"
+  "libcommons-io-java"
+  "libcommons-lang3-java"
+  "libguava-java"
+  "libsmali-java" {>= "2.2.1"}
+  "libstringtemplate-java"
+  "libxmlunit-java"
+  "libxpp3-java"
+  "libyaml-snake-java"
+  ("default-jre-headless" | "java7-runtime-headless")
+]
+extra-source "apktool_2.3.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apktool/apktool_2.3.4-1_all.deb"
+}

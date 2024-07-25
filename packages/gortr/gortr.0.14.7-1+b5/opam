@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gortr_0.14.7-1+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gortr"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.4"}
+]
+extra-source "gortr_0.14.7-1+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gortr/gortr_0.14.7-1+b5_amd64.deb"
+}

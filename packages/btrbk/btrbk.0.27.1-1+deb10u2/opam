@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i btrbk_0.27.1-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r btrbk"]
+]
+depends: [
+  "perl"
+  ("btrfs-progs" {>= "3.18.2"} | "btrfs-tools" {>= "3.18.2"})
+]
+extra-source "btrbk_0.27.1-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/btrbk/btrbk_0.27.1-1+deb10u2_all.deb"
+}

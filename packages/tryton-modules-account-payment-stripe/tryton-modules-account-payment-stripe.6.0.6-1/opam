@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tryton-modules-account-payment-stripe_6.0.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tryton-modules-account-payment-stripe"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "5.2"}
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-stripe"
+  "python3-werkzeug"
+  "tryton-modules-account" {>= "6.0"}
+  "tryton-modules-account-payment" {>= "6.0"}
+  "tryton-modules-party" {>= "6.0"}
+  "tryton-server"
+  "tryton-server" {>= "6.0"}
+]
+extra-source "tryton-modules-account-payment-stripe_6.0.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tryton-modules-account-payment-stripe/tryton-modules-account-payment-stripe_6.0.6-1_all.deb"
+}

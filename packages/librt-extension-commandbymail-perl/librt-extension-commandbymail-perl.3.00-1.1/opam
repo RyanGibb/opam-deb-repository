@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librt-extension-commandbymail-perl_3.00-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librt-extension-commandbymail-perl"]
+]
+depends: [
+  "libmime-tools-perl" {>= "5.420"}
+  "libuniversal-require-perl"
+  "request-tracker4"
+]
+extra-source "librt-extension-commandbymail-perl_3.00-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librt-extension-commandbymail-perl/librt-extension-commandbymail-perl_3.00-1.1_all.deb"
+}

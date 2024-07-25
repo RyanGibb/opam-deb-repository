@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i glance-tempest-plugin_0.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r glance-tempest-plugin"]
+]
+depends: [
+  "python3-any"
+  "python3-oslo-config"
+  "python3-oslo-serialization"
+  "python3-pbr"
+  "python3-six" {>= "1.10.0"}
+  "python3-tempest"
+  "tempest"
+]
+extra-source "glance-tempest-plugin_0.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glance-tempest-plugin/glance-tempest-plugin_0.5.0-1_all.deb"
+}

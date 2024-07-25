@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-proptest+rusty-fork-dev_0.8.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-proptest+rusty-fork-dev"]
+]
+depends: [
+  "librust-proptest-dev" {= "0.8.7-1"}
+  "librust-rusty-fork-dev"
+]
+extra-source "librust-proptest+rusty-fork-dev_0.8.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-proptest/librust-proptest+rusty-fork-dev_0.8.7-1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ggcov_0.10-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ggcov"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdatetime-perl"
+  "libdb5-3"
+  "libgd3" {>= "2.1.0~alpha~"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libpopt0" {>= "1.14"}
+  "libstdc++6" {>= "5"}
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "ggcov_0.10-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/ggcov/ggcov_0.10-3_amd64.deb"
+}

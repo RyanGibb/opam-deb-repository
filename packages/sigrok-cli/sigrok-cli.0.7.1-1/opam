@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sigrok-cli_0.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sigrok-cli"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libglib2-0-0" {>= "2.32.0"}
+  "libsigrok4"
+  "libsigrokdecode4"
+]
+extra-source "sigrok-cli_0.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sigrok-cli/sigrok-cli_0.7.1-1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i w3m_0.5.3+git20230121-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r w3m"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgc1" {>= "1-7.2d"}
+  "libgpm2" {>= "1.20.7"}
+  "libssl3" {>= "3.0.0"}
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "w3m-ssl"
+]
+extra-source "w3m_0.5.3+git20230121-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/w3m/w3m_0.5.3+git20230121-2_amd64.deb"
+}

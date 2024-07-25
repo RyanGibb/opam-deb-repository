@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdart-collision-bullet6.12_6.12.1+dfsg4-12+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdart-collision-bullet6.12"]
+]
+depends: [
+  "libbullet3-24" {>= "3.24+dfsg"}
+  "libc6" {>= "2.32"}
+  "libdart6-12" {>= "6.12.1+dfsg4"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libdart-collision-bullet6.12_6.12.1+dfsg4-12+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dart/libdart-collision-bullet6.12_6.12.1+dfsg4-12+b2_amd64.deb"
+}

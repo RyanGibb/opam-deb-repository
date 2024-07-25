@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pam-pkcs11-dbg_0.6.9-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pam-pkcs11-dbg"]
+]
+depends: [
+  "libpam-pkcs11" {= "0.6.9-3+b1"}
+]
+extra-source "pam-pkcs11-dbg_0.6.9-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pam-pkcs11/pam-pkcs11-dbg_0.6.9-3+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xcolors_1.5a-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xcolors"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libx11-6"
+  "libxaw7"
+  "libxt6"
+]
+extra-source "xcolors_1.5a-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xcolors/xcolors_1.5a-8+b1_amd64.deb"
+}

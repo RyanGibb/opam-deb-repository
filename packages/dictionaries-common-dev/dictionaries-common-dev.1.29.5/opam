@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dictionaries-common-dev_1.29.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dictionaries-common-dev"]
+]
+depends: [
+  "debhelper"
+  "dictionaries-common"
+]
+extra-source "dictionaries-common-dev_1.29.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dictionaries-common/dictionaries-common-dev_1.29.5_all.deb"
+}

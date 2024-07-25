@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nanoc_4.11.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nanoc"]
+]
+depends: [
+  "pry"
+  "ruby-addressable" {>= "2.5~"}
+  "ruby-adsf" {>= "1.3~"}
+  "ruby-brandur-json-schema"
+  "ruby-cri" {>= "2.15~"}
+  "ruby-ddmemoize"
+  "ruby-ddmetrics"
+  "ruby-ddplugin"
+  "ruby-hamster"
+  "ruby-listen"
+  "ruby-parallel" {>= "1.12~"}
+  "ruby-ref"
+  "ruby-slow-enumerator-tools"
+  "ruby-tomlrb" {>= "1.2~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "nanoc_4.11.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nanoc/nanoc_4.11.0-3_all.deb"
+}

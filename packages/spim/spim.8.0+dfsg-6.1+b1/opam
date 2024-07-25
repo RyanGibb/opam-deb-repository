@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i spim_8.0+dfsg-6.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r spim"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libx11-6"
+  "libxaw7"
+  "libxt6"
+]
+extra-source "spim_8.0+dfsg-6.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spim/spim_8.0+dfsg-6.1+b1_amd64.deb"
+}

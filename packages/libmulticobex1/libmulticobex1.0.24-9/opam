@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmulticobex1_0.24-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmulticobex1"]
+]
+depends: [
+  "libbfb0" {>= "0.24"}
+  "libc6" {>= "2.15"}
+]
+extra-source "libmulticobex1_0.24-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/obexftp/libmulticobex1_0.24-9_amd64.deb"
+}

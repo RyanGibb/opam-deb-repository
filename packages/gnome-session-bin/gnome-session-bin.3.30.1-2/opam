@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-session-bin_3.30.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-session-bin"]
+]
+depends: [
+  "dbus-x11"
+  "gsettings-desktop-schemas"
+  "libc6" {>= "2.28"}
+  "libegl1"
+  "libepoxy0" {>= "1.0"}
+  "libgl1"
+  "libgles2"
+  "libglib2-0-0" {>= "2.46.0"}
+  "libgnome-desktop-3-17" {>= "3.18.0"}
+  "libgtk-3-0" {>= "3.18.0"}
+  "libice6" {>= "1-1.0.0"}
+  "libjson-glib-1-0-0" {>= "0.12.0"}
+  "libsm6"
+  "libsystemd0" {>= "209"}
+  "libx11-6"
+  "libxcomposite1" {>= "1-0.3-1"}
+  "upower" {>= "0.9.0"}
+  "xwayland"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-session-bin_3.30.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-session/gnome-session-bin_3.30.1-2_amd64.deb"
+}

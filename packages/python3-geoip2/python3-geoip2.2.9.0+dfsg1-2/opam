@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-geoip2_2.9.0+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-geoip2"]
+]
+depends: [
+  "python3-any"
+  "python3-maxminddb" {>= "1.4.0"}
+  "python3-requests"
+]
+extra-source "python3-geoip2_2.9.0+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-geoip2/python3-geoip2_2.9.0+dfsg1-2_all.deb"
+}

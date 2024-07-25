@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcp-pmda-perl_4.3.2+really4.3.1-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcp-pmda-perl"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libpcp-pmda3" {= "4.3.2+really4.3.1-0.1"}
+  "libpcp3"
+  "perl" {>= "5.28.1-6"}
+  "perl-base"
+]
+extra-source "libpcp-pmda-perl_4.3.2+really4.3.1-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcp/libpcp-pmda-perl_4.3.2+really4.3.1-0.1_amd64.deb"
+}

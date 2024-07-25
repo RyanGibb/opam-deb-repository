@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmo-legacy-mgcp-dev_1.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmo-legacy-mgcp-dev"]
+]
+depends: [
+  "libosmo-legacy-mgcp0" {= "1.4.0-1"}
+]
+extra-source "libosmo-legacy-mgcp-dev_1.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmo-mgw/libosmo-legacy-mgcp-dev_1.4.0-1_amd64.deb"
+}

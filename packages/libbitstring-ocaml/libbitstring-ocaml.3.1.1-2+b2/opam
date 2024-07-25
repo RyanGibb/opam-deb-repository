@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbitstring-ocaml_3.1.1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbitstring-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libmigrate-parsetree-ocaml"
+  "libppx-tools-versioned-ocaml"
+  "ocaml-base-nox"
+]
+extra-source "libbitstring-ocaml_3.1.1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-bitstring/libbitstring-ocaml_3.1.1-2+b2_amd64.deb"
+}

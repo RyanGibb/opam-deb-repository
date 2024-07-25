@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpmemkv1_1.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpmemkv1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libmemkind0" {>= "1.9.0"}
+  "libpmemobj1" {>= "1.9~"}
+  "libstdc++6" {>= "9"}
+  "libtbb2" {>= "2017~U7"}
+]
+extra-source "libpmemkv1_1.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pmemkv/libpmemkv1_1.4-1_amd64.deb"
+}

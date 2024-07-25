@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-sunpinyin_3.0.0~rc1+ds1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-sunpinyin"]
+]
+depends: [
+  "libsunpinyin3v5"
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-any" {>= "2.6.6-7~"}
+]
+extra-source "python-sunpinyin_3.0.0~rc1+ds1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sunpinyin/python-sunpinyin_3.0.0~rc1+ds1-2_all.deb"
+}

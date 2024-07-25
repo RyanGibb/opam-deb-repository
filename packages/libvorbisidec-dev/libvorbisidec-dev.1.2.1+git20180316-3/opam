@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvorbisidec-dev_1.2.1+git20180316-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvorbisidec-dev"]
+]
+depends: [
+  "libogg-dev"
+  "libvorbisidec1" {= "1.2.1+git20180316-3"}
+]
+extra-source "libvorbisidec-dev_1.2.1+git20180316-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvorbisidec/libvorbisidec-dev_1.2.1+git20180316-3_amd64.deb"
+}

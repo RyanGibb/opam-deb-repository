@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i split-select_1:10.0.0+r36-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r split-select"]
+]
+depends: [
+  "android-libaapt"
+  "android-libandroidfw"
+  "android-liblog" {>= "29.0.6"}
+  "android-libutils" {>= "29.0.6"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "split-select_1:10.0.0+r36-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-frameworks-base/split-select_10.0.0+r36-10_amd64.deb"
+}

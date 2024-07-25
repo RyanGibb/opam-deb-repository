@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sleuthkit_4.11.1+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sleuthkit"]
+]
+depends: [
+  "file"
+  "libafflib0v5" {>= "3.7.6"}
+  "libc6" {>= "2.34"}
+  "libdate-manip-perl"
+  "libewf2" {>= "20130416"}
+  "libgcc-s1" {>= "4.2"}
+  "libstdc++6" {>= "11"}
+  "libtsk19" {>= "4.11.1+dfsg"}
+  "libvhdi1" {>= "20150110"}
+  "libvmdk1" {>= "20150516"}
+  "perl-any"
+]
+conflicts: [
+  "tct"
+]
+extra-source "sleuthkit_4.11.1+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sleuthkit/sleuthkit_4.11.1+dfsg-1+b1_amd64.deb"
+}

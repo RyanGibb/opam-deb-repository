@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pytest-cov_2.10.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pytest-cov"]
+]
+depends: [
+  "libjs-jquery"
+  "libjs-jquery-hotkeys"
+  "libjs-jquery-isonscreen"
+  "libjs-jquery-tablesorter"
+  "libjs-jquery-throttle-debounce"
+  "python3-any"
+  "python3-cov-core" {>= "1.12-1"}
+  "python3-coverage"
+  "python3-pytest" {>= "3.6"}
+]
+extra-source "python3-pytest-cov_2.10.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pytest-cov/python3-pytest-cov_2.10.1-1_all.deb"
+}

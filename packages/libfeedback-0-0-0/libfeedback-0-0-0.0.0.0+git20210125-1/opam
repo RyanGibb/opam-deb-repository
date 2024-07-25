@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfeedback-0.0-0_0.0.0+git20210125-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfeedback-0.0-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+]
+extra-source "libfeedback-0.0-0_0.0.0+git20210125-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/feedbackd/libfeedback-0.0-0_0.0.0+git20210125-1_amd64.deb"
+}

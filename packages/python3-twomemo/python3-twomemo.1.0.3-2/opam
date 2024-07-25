@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-twomemo_1.0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-twomemo"]
+]
+depends: [
+  "python3-any"
+  "python3-doubleratchet" {>= "1~"}
+  "python3-omemo" {>= "1~"}
+  "python3-protobuf"
+  "python3-typing-extensions"
+  "python3-x3dh" {>= "1~"}
+  "python3-xeddsa" {>= "1~"}
+]
+extra-source "python3-twomemo_1.0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-twomemo/python3-twomemo_1.0.3-2_all.deb"
+}

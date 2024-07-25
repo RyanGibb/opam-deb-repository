@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgeo-proj4-perl_1.09-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgeo-proj4-perl"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libproj13" {>= "4.8.0"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libgeo-proj4-perl_1.09-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgeo-proj4-perl/libgeo-proj4-perl_1.09-2+b1_amd64.deb"
+}

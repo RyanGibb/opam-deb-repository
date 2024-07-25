@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cassava-prof_0.5.2.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cassava-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-attoparsec-prof"
+  "libghc-cassava-dev" {= "0.5.2.0-1+b1"}
+  "libghc-hashable-prof"
+  "libghc-only-prof"
+  "libghc-scientific-prof"
+  "libghc-text-short-prof"
+  "libghc-unordered-containers-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-cassava-prof_0.5.2.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cassava/libghc-cassava-prof_0.5.2.0-1+b1_amd64.deb"
+}

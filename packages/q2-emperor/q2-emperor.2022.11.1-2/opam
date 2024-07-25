@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i q2-emperor_2022.11.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r q2-emperor"]
+]
+depends: [
+  "python3-any"
+  "python3-distutils"
+  "python3-emperor"
+  "python3-pandas"
+  "q2-types" {>= "2022.11.1"}
+  "q2templates" {>= "2022.11.1"}
+  "qiime" {>= "2022.11.1"}
+]
+extra-source "q2-emperor_2022.11.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/q2-emperor/q2-emperor_2022.11.1-2_all.deb"
+}

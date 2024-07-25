@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php7.4-cli_7.4.33-1+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php7.4-cli"]
+]
+depends: [
+  "libargon2-1" {>= "0~20171227"}
+  "libc6" {>= "2.29"}
+  "libedit2" {>= "2.11-20080614-4"}
+  "libmagic1"
+  "libpcre2-8-0" {>= "10.32"}
+  "libsodium23" {>= "1.0.14"}
+  "libssl1-1" {>= "1.1.0"}
+  "libxml2" {>= "2.8.0"}
+  "mime-support"
+  "php7-4-common" {= "7.4.33-1+deb11u5"}
+  "php7-4-json"
+  "php7-4-opcache"
+  "php7-4-readline"
+  "tzdata"
+  "ucf"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "php7.4-cli_7.4.33-1+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php7.4/php7.4-cli_7.4.33-1+deb11u5_amd64.deb"
+}

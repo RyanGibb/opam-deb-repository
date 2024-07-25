@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpmi0_20.11.7+really20.11.4-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpmi0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "slurm-wlm-basic-plugins" {= "20.11.7+really20.11.4-2+deb11u1"}
+]
+extra-source "libpmi0_20.11.7+really20.11.4-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-wlm/libpmi0_20.11.7+really20.11.4-2+deb11u1_amd64.deb"
+}

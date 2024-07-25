@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kblackbox_4:20.12.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kblackbox"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5archive5" {>= "5.55.0~"}
+  "libkf5configcore5" {>= "5.55.0~"}
+  "libkf5configgui5" {>= "5.55.0~"}
+  "libkf5configwidgets5" {>= "4.96.0"}
+  "libkf5coreaddons5" {>= "5.55.0~"}
+  "libkf5crash5" {>= "5.55.0~"}
+  "libkf5dbusaddons5" {>= "5.55.0~"}
+  "libkf5i18n5" {>= "5.55.0~"}
+  "libkf5kdegames7" {>= "4-14.12.50"}
+  "libkf5textwidgets5" {>= "5.55.0~"}
+  "libkf5widgetsaddons5" {>= "4.96.0"}
+  "libkf5xmlgui5" {>= "5.55.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5svg5" {>= "5.10.0~"}
+  "libqt5widgets5" {>= "5.10.0~"}
+  "libqt5xml5" {>= "5.10.0~"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.10.0~"} | "libqt5gui5-gles" {>= "5.10.0~"})
+]
+extra-source "kblackbox_4:20.12.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kblackbox/kblackbox_20.12.1-1_amd64.deb"
+}

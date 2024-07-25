@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-mdtraj_1.9.7-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-mdtraj"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-astunparse"
+  "python3-distutils"
+  "python3-networkx"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-pandas"
+  "python3-pyparsing"
+  "python3-scipy"
+  "python3-tables"
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "python3-mdtraj_1.9.7-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mdtraj/python3-mdtraj_1.9.7-6_amd64.deb"
+}

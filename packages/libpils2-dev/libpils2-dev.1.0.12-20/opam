@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpils2-dev_1.0.12-20_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpils2-dev"]
+]
+depends: [
+  "libltdl-dev"
+  "libpils2" {= "1.0.12-20"}
+]
+extra-source "libpils2-dev_1.0.12-20_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cluster-glue/libpils2-dev_1.0.12-20_amd64.deb"
+}

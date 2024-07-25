@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-clang-sys+clang-6-0-dev_0.27.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-clang-sys+clang-6-0-dev"]
+]
+depends: [
+  "librust-clang-sys-dev"
+  "librust-clang-sys-dev" {= "0.27.0-1"}
+]
+extra-source "librust-clang-sys+clang-6-0-dev_0.27.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-clang-sys/librust-clang-sys+clang-6-0-dev_0.27.0-1_amd64.deb"
+}

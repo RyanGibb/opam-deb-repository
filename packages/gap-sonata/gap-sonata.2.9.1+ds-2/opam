@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gap-sonata_2.9.1+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gap-sonata"]
+]
+depends: [
+  "gap" {>= "4r9p3"}
+  "gap-autpgrp"
+  "gap-smallgrp"
+]
+extra-source "gap-sonata_2.9.1+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gap-sonata/gap-sonata_2.9.1+ds-2_all.deb"
+}

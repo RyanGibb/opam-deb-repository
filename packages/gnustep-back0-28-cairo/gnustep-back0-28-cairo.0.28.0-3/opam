@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnustep-back0.28-cairo_0.28.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnustep-back0.28-cairo"]
+]
+depends: [
+  "gnustep-back-common" {>= "0.28.0"}
+  "gnustep-base-runtime" {>= "1.27.0"}
+  "gnustep-gui-runtime" {>= "0.28.0"}
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.4.10"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgl1"
+  "libgnustep-base1-27" {>= "1.27.0"}
+  "libgnustep-gui0-28" {>= "0.28.0"}
+  "libobjc4" {>= "4.2.1"}
+  "libx11-6"
+  "libxcursor1" {> "1.1.2"}
+  "libxext6"
+  "libxfixes3"
+  "libxmu6"
+  "libxrandr2" {>= "2-1.2.99.3"}
+  "libxrender1"
+]
+extra-source "gnustep-back0.28-cairo_0.28.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnustep-back/gnustep-back0.28-cairo_0.28.0-3_amd64.deb"
+}

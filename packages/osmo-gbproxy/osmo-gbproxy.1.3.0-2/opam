@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osmo-gbproxy_1.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osmo-gbproxy"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libosmocore11" {>= "0.11.0"}
+  "libosmogb6" {>= "0.10.2"}
+  "libosmogsm10" {>= "0.11.0"}
+  "libosmovty4" {>= "0.10.2"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+conflicts: [
+  "osmocom-gbproxy"
+]
+extra-source "osmo-gbproxy_1.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmo-sgsn/osmo-gbproxy_1.3.0-2_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrmcluster29_2.0.1-5+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrmcluster29"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libcmap4" {>= "1.99.9"}
+  "libcorosync-common4" {>= "1.99.9"}
+  "libcpg4" {>= "1.99"}
+  "libcrmcommon34" {>= "2.0.1-3~"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libqb0" {>= "0.17.1"}
+  "libquorum5" {>= "1.99.9"}
+  "libstonithd26" {>= "1.1.9"}
+]
+extra-source "libcrmcluster29_2.0.1-5+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pacemaker/libcrmcluster29_2.0.1-5+deb10u2_amd64.deb"
+}

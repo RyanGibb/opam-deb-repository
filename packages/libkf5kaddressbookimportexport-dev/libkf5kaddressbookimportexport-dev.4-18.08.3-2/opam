@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5kaddressbookimportexport-dev_4:18.08.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5kaddressbookimportexport-dev"]
+]
+depends: [
+  "libkf5akonadi-dev" {>= "4-18.08.3~"}
+  "libkf5config-dev" {>= "5.47.0~"}
+  "libkf5kaddressbookimportexport5" {= "4-18.08.3-2"}
+]
+extra-source "libkf5kaddressbookimportexport-dev_4:18.08.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kf5-kdepim-apps-libs/libkf5kaddressbookimportexport-dev_18.08.3-2_amd64.deb"
+}

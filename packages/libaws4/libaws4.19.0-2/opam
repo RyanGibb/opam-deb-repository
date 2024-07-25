@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaws4_19.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaws4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnat-8" {>= "8.2.0-9"}
+  "libgnutls30" {>= "3.5.6"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libtemplates-parser18"
+  "libxmlada-dom5"
+  "libxmlada-input5"
+  "libxmlada-sax5"
+  "libxmlada-unicode5"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libaws4_19.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaws/libaws4_19.0-2_amd64.deb"
+}

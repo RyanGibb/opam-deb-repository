@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libphp-jpgraph_1.5.2-13.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libphp-jpgraph"]
+]
+depends: [
+  "fonts-arkpandora"
+  "fonts-liberation"
+  "php-gd"
+  ("libapache2-mod-php" | "php" | "php-cgi")
+]
+extra-source "libphp-jpgraph_1.5.2-13.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libphp-jpgraph/libphp-jpgraph_1.5.2-13.1_all.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fluxbox_1.3.5-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fluxbox"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfribidi0" {>= "0.19.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libimlib2" {>= "1.4.5"}
+  "libstdc++6" {>= "11"}
+  "libx11-6"
+  "libxext6"
+  "libxft2" {> "2.1.1"}
+  "libxinerama1"
+  "libxpm4"
+  "libxrandr2"
+  "libxrender1"
+  "menu" {>= "2.1.19"}
+]
+extra-source "fluxbox_1.3.5-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fluxbox/fluxbox_1.3.5-2.1_amd64.deb"
+}

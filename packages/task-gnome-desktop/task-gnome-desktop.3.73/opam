@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i task-gnome-desktop_3.73_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r task-gnome-desktop"]
+]
+depends: [
+  "gnome-core"
+  "task-desktop"
+  "tasksel" {= "3.73"}
+]
+extra-source "task-gnome-desktop_3.73_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tasksel/task-gnome-desktop_3.73_all.deb"
+}

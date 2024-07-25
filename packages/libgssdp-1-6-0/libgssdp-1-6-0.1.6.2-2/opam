@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgssdp-1.6-0_1.6.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgssdp-1.6-0"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libglib2-0-0" {>= "2.67.3"}
+  "libsoup-3-0-0" {>= "3.0.3"}
+]
+extra-source "libgssdp-1.6-0_1.6.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gssdp/libgssdp-1.6-0_1.6.2-2_amd64.deb"
+}

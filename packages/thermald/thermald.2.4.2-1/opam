@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i thermald_2.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r thermald"]
+]
+depends: [
+  "libc6" {>= "2.16"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libdbus-glib-1-2" {>= "0.88"}
+  "libevdev2" {>= "0.9.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libstdc++6" {>= "5.2"}
+  "libupower-glib3" {>= "0.99.0"}
+  "libxml2" {>= "2.7.4"}
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "thermald_2.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/thermald/thermald_2.4.2-1_amd64.deb"
+}

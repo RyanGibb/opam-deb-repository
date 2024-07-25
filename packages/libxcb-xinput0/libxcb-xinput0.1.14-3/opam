@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxcb-xinput0_1.14-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxcb-xinput0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libxcb1" {>= "1.8"}
+]
+extra-source "libxcb-xinput0_1.14-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxcb/libxcb-xinput0_1.14-3_amd64.deb"
+}

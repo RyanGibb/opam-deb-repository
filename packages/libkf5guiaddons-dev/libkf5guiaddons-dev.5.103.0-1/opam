@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5guiaddons-dev_5.103.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5guiaddons-dev"]
+]
+depends: [
+  "libkf5coreaddons-dev" {>= "5.84.0~"}
+  "libkf5guiaddons5" {= "5.103.0-1"}
+  "qtbase5-dev" {>= "5.15.2~"}
+]
+extra-source "libkf5guiaddons-dev_5.103.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kguiaddons/libkf5guiaddons-dev_5.103.0-1_amd64.deb"
+}

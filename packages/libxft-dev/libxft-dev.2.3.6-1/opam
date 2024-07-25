@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxft-dev_2.3.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxft-dev"]
+]
+depends: [
+  "libfontconfig1-dev"
+  "libfreetype6-dev"
+  "libx11-dev" {>= "2-1.0.0"}
+  "libxft2" {= "2.3.6-1"}
+  "libxrender-dev"
+  ("libc6-dev" | "libc-dev")
+  ("zlib1g-dev" | "libz-dev")
+]
+extra-source "libxft-dev_2.3.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xft/libxft-dev_2.3.6-1_amd64.deb"
+}

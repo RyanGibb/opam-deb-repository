@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dxvk_0.96+ds1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dxvk"]
+]
+depends: [
+  ("dxvk-wine64-development" {>= "0.96+ds1-1"} | "dxvk-wine32-development" {>= "0.96+ds1-1"})
+]
+extra-source "dxvk_0.96+ds1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dxvk/dxvk_0.96+ds1-1_all.deb"
+}

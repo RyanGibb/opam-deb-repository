@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i docbook-slides_3.4.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r docbook-slides"]
+]
+depends: [
+  "docbook-simple" {>= "1.0.0-1"}
+  "docbook-xml" {>= "4.2-7"}
+  "docbook-xsl"
+  "sgml-base" {>= "1.26+nmu2"}
+  "xml-core" {>= "0.12"}
+]
+conflicts: [
+  "docbook-xml-slides"
+]
+extra-source "docbook-slides_3.4.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/docbook-slides/docbook-slides_3.4.0-5_all.deb"
+}

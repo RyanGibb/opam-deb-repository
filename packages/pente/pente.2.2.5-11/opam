@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pente_2.2.5-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pente"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libx11-6"
+]
+extra-source "pente_2.2.5-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pente/pente_2.2.5-11_amd64.deb"
+}

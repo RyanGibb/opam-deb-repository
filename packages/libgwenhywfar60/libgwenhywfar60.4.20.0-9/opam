@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgwenhywfar60_4.20.0-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgwenhywfar60"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libgnutls30" {>= "3.6.6"}
+  "libgpg-error0" {>= "1.14"}
+  "libgwenhywfar-data" {>= "4.20.0-9"}
+]
+extra-source "libgwenhywfar60_4.20.0-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgwenhywfar/libgwenhywfar60_4.20.0-9_amd64.deb"
+}

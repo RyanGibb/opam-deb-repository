@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgzstream0_1.5+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgzstream0"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libgzstream0_1.5+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgzstream/libgzstream0_1.5+dfsg-5_amd64.deb"
+}

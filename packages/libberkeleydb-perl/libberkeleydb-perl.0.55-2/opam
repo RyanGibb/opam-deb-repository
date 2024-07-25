@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libberkeleydb-perl_0.55-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libberkeleydb-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdb5-3"
+  "perl" {>= "5.28.1-4"}
+  "perl-base"
+]
+extra-source "libberkeleydb-perl_0.55-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libberkeleydb-perl/libberkeleydb-perl_0.55-2_amd64.deb"
+}

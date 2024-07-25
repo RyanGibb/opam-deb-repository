@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjreen-qt5-1_1.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjreen-qt5-1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgsasl7" {>= "1.1"}
+  "libqt5core5a" {>= "5.6.0~beta"}
+  "libqt5network5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.1.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libjreen-qt5-1_1.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jreen/libjreen-qt5-1_1.2.0-2_amd64.deb"
+}

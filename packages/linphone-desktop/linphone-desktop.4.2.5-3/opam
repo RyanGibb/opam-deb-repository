@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i linphone-desktop_4.2.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r linphone-desktop"]
+]
+depends: [
+  "libbctoolbox1" {< "4.5.0"}
+  "libbctoolbox1" {>= "4.4.0"}
+  "libbelcard1" {>= "4.4.13"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "liblinphone++10" {>= "4.4.21"}
+  "liblinphone10" {>= "4.4.21"}
+  "libmediastreamer11" {>= "1-4.4.21"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5qml5"
+  "libqt5qml5" {>= "5.7.0"}
+  "libqt5quickcontrols2-5" {>= "5.7.1"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  "linphone-common" {>= "4.4.0~"}
+  "qml-module-qt-labs-platform"
+  "qml-module-qtgraphicaleffects"
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-dialogs"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick-window2"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.8.0"} | "libqt5gui5-gles" {>= "5.8.0"})
+  ("libqt5quick5" {>= "5.6.0~beta"} | "libqt5quick5-gles" {>= "5.6.0~beta"})
+]
+extra-source "linphone-desktop_4.2.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linphone-desktop/linphone-desktop_4.2.5-3_amd64.deb"
+}

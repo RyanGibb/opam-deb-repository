@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgvc6_2.40.1-6+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgvc6"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libcairo2" {>= "1.2.4"}
+  "libcdt5"
+  "libcgraph6"
+  "libexpat1" {>= "2.0.1"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgd3" {>= "2.1.0~alpha~"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libgts-0-7-5" {>= "0.7.6"}
+  "libltdl7" {>= "2.4.6"}
+  "libpango-1-0-0" {>= "1.22.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpangoft2-1-0-0" {>= "1.14.0"}
+  "libpathplan4"
+  "libx11-6"
+  "libxdot4"
+  "libxrender1"
+  "zlib1g" {>= "1-1.2.0"}
+]
+conflicts: [
+  "libgraphviz4"
+  "libgvc5"
+]
+extra-source "libgvc6_2.40.1-6+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/graphviz/libgvc6_2.40.1-6+deb10u1_amd64.deb"
+}

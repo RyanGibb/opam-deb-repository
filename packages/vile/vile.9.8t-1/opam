@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vile_9.8t-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vile"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libperl5-28" {>= "5.28.0"}
+  "libtinfo6" {>= "6"}
+  "vile-common" {= "9.8t-1"}
+]
+extra-source "vile_9.8t-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vile/vile_9.8t-1_amd64.deb"
+}

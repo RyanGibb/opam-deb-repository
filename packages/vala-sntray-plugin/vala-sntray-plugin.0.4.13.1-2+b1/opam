@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vala-sntray-plugin_0.4.13.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vala-sntray-plugin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.6.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.50"}
+  "libgtk-3-0" {>= "3.22"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libvalapanel0" {>= "0.4.92"}
+  "xfce4-sntray-plugin-common"
+]
+extra-source "vala-sntray-plugin_0.4.13.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xfce4-sntray-plugin/vala-sntray-plugin_0.4.13.1-2+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kodi-audioencoder-flac_3.0.0+ds1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kodi-audioencoder-flac"]
+]
+depends: [
+  "kodi"
+  "libc6" {>= "2.14"}
+  "libflac8" {>= "1.3.0"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "kodi-audioencoder-flac_3.0.0+ds1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kodi-audioencoder-flac/kodi-audioencoder-flac_3.0.0+ds1-2_amd64.deb"
+}

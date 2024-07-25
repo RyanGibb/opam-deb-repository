@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tp-smapi-dkms_0.43-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tp-smapi-dkms"]
+]
+depends: [
+  "dkms" {>= "2.1.0.0"}
+]
+extra-source "tp-smapi-dkms_0.43-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tp-smapi/tp-smapi-dkms_0.43-1_all.deb"
+}

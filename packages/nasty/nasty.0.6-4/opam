@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nasty_0.6-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nasty"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgpgme11" {>= "1.2.0"}
+]
+extra-source "nasty_0.6-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nasty/nasty_0.6-4_amd64.deb"
+}

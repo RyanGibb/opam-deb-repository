@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-th-bang-compat-prof_0.0.1.0-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-th-bang-compat-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-th-bang-compat-dev" {= "0.0.1.0-3+b2"}
+]
+extra-source "libghc-th-bang-compat-prof_0.0.1.0-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-th-bang-compat/libghc-th-bang-compat-prof_0.0.1.0-3+b2_amd64.deb"
+}

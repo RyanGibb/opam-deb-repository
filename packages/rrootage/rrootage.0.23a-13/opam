@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rrootage_0.23a-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rrootage"]
+]
+depends: [
+  "libbulletml0v5"
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libsdl-mixer1-2"
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "5"}
+  "rrootage-data" {= "0.23a-13"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "rrootage_0.23a-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rrootage/rrootage_0.23a-13_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libois-1.3.0v5_1.3.0+dfsg0-6+b11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libois-1.3.0v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+]
+conflicts: [
+  "libois-1.3.0"
+]
+extra-source "libois-1.3.0v5_1.3.0+dfsg0-6+b11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ois/libois-1.3.0v5_1.3.0+dfsg0-6+b11_amd64.deb"
+}

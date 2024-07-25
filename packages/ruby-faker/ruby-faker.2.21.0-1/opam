@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-faker_2.21.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-faker"]
+]
+depends: [
+  "ruby-i18n" {< "2"}
+  "ruby-i18n" {>= "1.8.11"}
+]
+extra-source "ruby-faker_2.21.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-faker/ruby-faker_2.21.0-1_all.deb"
+}

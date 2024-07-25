@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cairo-perf-utils_1.16.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cairo-perf-utils"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcairo-script-interpreter2" {= "1.16.0-5"}
+  "libcairo2" {= "1.16.0-5"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libpixman-1-0" {>= "0.10.0"}
+  "libx11-6"
+  "libxcb-render0"
+  "libxcb1"
+  "libxrender1"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "cairo-perf-utils_1.16.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cairo/cairo-perf-utils_1.16.0-5_amd64.deb"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i js8call_2.2.0+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r js8call"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libgfortran5" {>= "10"}
+  "libgomp1" {>= "4.2.1"}
+  "libhamlib-utils"
+  "libhamlib4"
+  "libqcustomplot2-0" {>= "2.0.1+dfsg1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5multimedia5" {>= "5.6.0~beta"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5serialport5" {>= "5.6.0"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+  "wsjtx-data"
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "js8call_2.2.0+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/js8call/js8call_2.2.0+ds-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpdk_18.11.11-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpdk"]
+]
+depends: [
+  "hwdata"
+  "lsb-base" {>= "3.2-14"}
+  "pciutils"
+  "python3-any"
+]
+extra-source "dpdk_18.11.11-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/dpdk_18.11.11-1~deb10u1_amd64.deb"
+}

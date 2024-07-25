@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxau-dev_1:1.0.8-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxau-dev"]
+]
+depends: [
+  "libxau6" {= "1-1.0.8-1+b2"}
+  "x11proto-core-dev"
+]
+extra-source "libxau-dev_1:1.0.8-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxau/libxau-dev_1.0.8-1+b2_amd64.deb"
+}

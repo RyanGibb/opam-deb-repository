@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsnapper-dev_0.8.15-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsnapper-dev"]
+]
+depends: [
+  "libsnapper5" {= "0.8.15-1"}
+]
+extra-source "libsnapper-dev_0.8.15-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snapper/libsnapper-dev_0.8.15-1_amd64.deb"
+}

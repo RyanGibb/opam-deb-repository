@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lierolibre_0.5-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lierolibre"]
+]
+depends: [
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libconfig++9v5" {>= "1.5-0.4~"}
+  "libgcc-s1" {>= "3.0"}
+  "libsdl-mixer1-2"
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "5.2"}
+  "lierolibre-data"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "lierolibre_0.5-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lierolibre/lierolibre_0.5-3+b3_amd64.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i chromium-driver_121.0.6167.139-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r chromium-driver"]
+]
+depends: [
+  "chromium" {= "121.0.6167.139-1~deb12u1"}
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.34"}
+  "libdouble-conversion3" {>= "2.0.0"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.22.0"}
+  "libjsoncpp25" {>= "1.9.5"}
+  "libminizip1" {>= "1.1"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.30"}
+  "libstdc++6" {>= "12"}
+  "libxcb1" {>= "1.9.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "chromium-driver_121.0.6167.139-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chromium/chromium-driver_121.0.6167.139-1~deb12u1_amd64.deb"
+}

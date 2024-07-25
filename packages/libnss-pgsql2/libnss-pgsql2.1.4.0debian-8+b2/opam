@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnss-pgsql2_1.4.0debian-8+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnss-pgsql2"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libpq5"
+]
+conflicts: [
+  "libnss-pgsql1"
+]
+extra-source "libnss-pgsql2_1.4.0debian-8+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnss-pgsql/libnss-pgsql2_1.4.0debian-8+b2_amd64.deb"
+}

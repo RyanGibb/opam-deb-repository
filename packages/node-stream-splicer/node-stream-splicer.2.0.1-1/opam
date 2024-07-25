@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-stream-splicer_2.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-stream-splicer"]
+]
+depends: [
+  "node-inherits"
+  "node-readable-stream"
+  "nodejs" {>= "6"}
+]
+extra-source "node-stream-splicer_2.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-stream-splicer/node-stream-splicer_2.0.1-1_all.deb"
+}

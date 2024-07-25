@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vflib3-dev_3.6.14.dfsg-3+nmu4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vflib3-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libfreetype6-dev"
+  "libkpathsea-dev"
+  "vflib3" {= "3.6.14.dfsg-3+nmu4"}
+]
+extra-source "vflib3-dev_3.6.14.dfsg-3+nmu4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vflib3/vflib3-dev_3.6.14.dfsg-3+nmu4_amd64.deb"
+}

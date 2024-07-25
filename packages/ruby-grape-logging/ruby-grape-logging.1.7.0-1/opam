@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-grape-logging_1.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-grape-logging"]
+]
+depends: [
+  "ruby-grape"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-grape-logging_1.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-grape-logging/ruby-grape-logging_1.7.0-1_all.deb"
+}

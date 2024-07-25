@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qtdeclarative5-dev_5.11.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qtdeclarative5-dev"]
+]
+depends: [
+  "libqt5qml5" {= "5.11.3-4"}
+  "libqt5quick5" {= "5.11.3-4"}
+  "libqt5quickparticles5" {= "5.11.3-4"}
+  "libqt5quicktest5" {= "5.11.3-4"}
+  "libqt5quickwidgets5" {= "5.11.3-4"}
+  "qt5-qmltooling-plugins"
+  "qtbase5-dev"
+  "qtdeclarative5-dev-tools"
+]
+extra-source "qtdeclarative5-dev_5.11.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtdeclarative-opensource-src/qtdeclarative5-dev_5.11.3-4_amd64.deb"
+}

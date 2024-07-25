@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam0g-dev_1.5.2-6+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam0g-dev"]
+]
+depends: [
+  "libpam0g" {= "1.5.2-6+deb12u1"}
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "libpam0g-dev_1.5.2-6+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pam/libpam0g-dev_1.5.2-6+deb12u1_amd64.deb"
+}

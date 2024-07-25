@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-roxml_4.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-roxml"]
+]
+depends: [
+  "ruby-activesupport" {>= "2-4.0"}
+  "ruby-libxml"
+  "ruby-nokogiri" {>= "1.3.3"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-roxml_4.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-roxml/ruby-roxml_4.0.0-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pristine-lfs_20210222.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pristine-lfs"]
+]
+depends: [
+  "git"
+  "git-lfs"
+  "python3-any" {>= "3.9~"}
+  "python3-debian"
+  "python3-sh"
+]
+extra-source "pristine-lfs_20210222.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pristine-lfs/pristine-lfs_20210222.0-1_amd64.deb"
+}

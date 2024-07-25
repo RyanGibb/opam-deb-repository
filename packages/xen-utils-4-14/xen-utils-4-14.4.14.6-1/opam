@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xen-utils-4.14_4.14.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xen-utils-4.14"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libxencall1"
+  "libxenevtchn1"
+  "libxengnttab1"
+  "libxenmisc4-14"
+  "libxenstore3-0" {>= "4.2~"}
+  "libxentoollog1"
+  "libyajl2" {>= "2.0.4"}
+  "python3"
+  "xen-utils-common" {>= "4.14.6-1"}
+]
+extra-source "xen-utils-4.14_4.14.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xen/xen-utils-4.14_4.14.6-1_amd64.deb"
+}

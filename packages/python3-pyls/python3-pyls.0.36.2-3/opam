@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyls_0.36.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyls"]
+]
+depends: [
+  "python3-any"
+  "python3-jedi"
+  "python3-pluggy"
+  "python3-pyls-jsonrpc"
+]
+extra-source "python3-pyls_0.36.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-language-server/python3-pyls_0.36.2-3_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxv1_2:1.0.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxv1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libx11-6" {>= "2-1.6.0"}
+  "libxext6"
+]
+extra-source "libxv1_2:1.0.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxv/libxv1_1.0.11-1_amd64.deb"
+}

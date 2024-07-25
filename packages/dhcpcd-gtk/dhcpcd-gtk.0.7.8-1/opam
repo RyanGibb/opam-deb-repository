@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dhcpcd-gtk_0.7.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dhcpcd-gtk"]
+]
+depends: [
+  "dhcpcd-dbus"
+  "libc6" {>= "2.17"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libnotify4" {>= "0.7.0"}
+]
+extra-source "dhcpcd-gtk_0.7.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dhcpcd-ui/dhcpcd-gtk_0.7.8-1_amd64.deb"
+}

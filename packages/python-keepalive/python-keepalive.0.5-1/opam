@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-keepalive_0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-keepalive"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+]
+extra-source "python-keepalive_0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-keepalive/python-keepalive_0.5-1_all.deb"
+}

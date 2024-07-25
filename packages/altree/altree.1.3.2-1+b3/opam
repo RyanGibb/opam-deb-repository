@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i altree_1.3.2-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r altree"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgsl27" {>= "2.7.1"}
+  "libmath-tamuanova-perl"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "altree_1.3.2-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/altree/altree_1.3.2-1+b3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatcoll-syslog1-dev_18-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatcoll-syslog1-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-8"
+  "libc6-dev"
+  "libgnatcoll-syslog1" {= "18-2"}
+  "libgnatcoll17-dev"
+]
+extra-source "libgnatcoll-syslog1-dev_18-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnatcoll-bindings/libgnatcoll-syslog1-dev_18-2_amd64.deb"
+}

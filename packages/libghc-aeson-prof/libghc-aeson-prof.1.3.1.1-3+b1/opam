@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-aeson-prof_1.3.1.1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-aeson-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-dev" {= "1.3.1.1-3+b1"}
+  "libghc-attoparsec-prof"
+  "libghc-base-compat-prof"
+  "libghc-dlist-prof"
+  "libghc-hashable-prof"
+  "libghc-scientific-prof"
+  "libghc-tagged-prof"
+  "libghc-th-abstraction-prof"
+  "libghc-time-locale-compat-prof"
+  "libghc-unordered-containers-prof"
+  "libghc-uuid-types-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-aeson-prof_1.3.1.1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-aeson/libghc-aeson-prof_1.3.1.1-3+b1_amd64.deb"
+}

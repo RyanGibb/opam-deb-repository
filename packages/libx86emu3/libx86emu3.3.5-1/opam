@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libx86emu3_3.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libx86emu3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libx86emu3_3.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libx86emu/libx86emu3_3.5-1_amd64.deb"
+}

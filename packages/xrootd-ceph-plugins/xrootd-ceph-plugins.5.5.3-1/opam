@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xrootd-ceph-plugins_5.5.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xrootd-ceph-plugins"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "libxrdcephposix0" {>= "5.5.3"}
+  "libxrdutils3" {>= "5.5.3"}
+]
+extra-source "xrootd-ceph-plugins_5.5.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xrootd/xrootd-ceph-plugins_5.5.3-1_amd64.deb"
+}

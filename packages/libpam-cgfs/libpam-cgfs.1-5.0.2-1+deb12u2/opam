@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-cgfs_1:5.0.2-1+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-cgfs"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcap2" {>= "1-2.10"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libpam-runtime"
+  "libpam0g" {>= "0.99.7.1"}
+  "libseccomp2" {>= "0.0.0~20120605"}
+  "libselinux1" {>= "3.1~"}
+]
+conflicts: [
+  "libpam-cgm"
+]
+extra-source "libpam-cgfs_1:5.0.2-1+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxc/libpam-cgfs_5.0.2-1+deb12u2_amd64.deb"
+}

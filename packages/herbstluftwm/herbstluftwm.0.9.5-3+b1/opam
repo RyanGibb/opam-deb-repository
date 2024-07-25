@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i herbstluftwm_0.9.5-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r herbstluftwm"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libx11-6"
+  "libxext6"
+  "libxfixes3"
+  "libxft2" {> "2.1.1"}
+  "libxinerama1" {>= "2-1.1.4"}
+  "libxrandr2" {>= "2-1.5.0"}
+  "libxrender1"
+]
+extra-source "herbstluftwm_0.9.5-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/herbstluftwm/herbstluftwm_0.9.5-3+b1_amd64.deb"
+}

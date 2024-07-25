@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mdfinder.app_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mdfinder.app"]
+]
+depends: [
+  "gnustep-back0-29" {>= "0.29.0"}
+  "gnustep-base-runtime" {>= "1.28.0"}
+  "gnustep-gui-runtime" {>= "0.29.0"}
+  "gworkspace-app" {= "1.0.0-1"}
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnustep-base1-28" {>= "1.28.0"}
+  "libgnustep-gui0-29" {>= "0.29.0"}
+  "libobjc4" {>= "4.6"}
+  "libpreferencepanes1"
+  "libsqlite3-0" {>= "3.5.9"}
+  "unzip"
+]
+extra-source "mdfinder.app_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gworkspace/mdfinder.app_1.0.0-1_amd64.deb"
+}

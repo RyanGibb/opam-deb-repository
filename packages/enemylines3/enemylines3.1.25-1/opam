@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i enemylines3_1.25-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r enemylines3"]
+]
+depends: [
+  "fonts-dejavu"
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcc-s1"
+  "libgl1"
+  "libsdl-mixer1-2"
+  "libsdl-ttf2-0-0"
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "5.2"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "enemylines3_1.25-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/enemylines3/enemylines3_1.25-1_amd64.deb"
+}

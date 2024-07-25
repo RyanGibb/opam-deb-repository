@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvisp-vision-dev_3.1.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvisp-vision-dev"]
+]
+depends: [
+  "libvisp-io-dev" {= "3.1.0-2+b2"}
+  "libvisp-vision3-1" {= "3.1.0-2+b2"}
+  "libvisp-visual-features-dev" {= "3.1.0-2+b2"}
+]
+extra-source "libvisp-vision-dev_3.1.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/visp/libvisp-vision-dev_3.1.0-2+b2_amd64.deb"
+}

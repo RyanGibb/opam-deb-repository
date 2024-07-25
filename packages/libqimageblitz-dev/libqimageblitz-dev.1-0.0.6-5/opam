@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqimageblitz-dev_1:0.0.6-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqimageblitz-dev"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libqimageblitz4" {= "1-0.0.6-5"}
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libqtgui4" {>= "4-4.5.3"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libqimageblitz-dev_1:0.0.6-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qimageblitz/libqimageblitz-dev_0.0.6-5_amd64.deb"
+}

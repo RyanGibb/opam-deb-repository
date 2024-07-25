@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gedit-plugin-bookmarks_3.38.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gedit-plugin-bookmarks"]
+]
+depends: [
+  "gedit" {< "3.39"}
+  "gedit" {>= "3.38.1"}
+  "gedit-plugins-common" {>= "3.38.1-1"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.11.5"}
+  "libgtksourceview-4-0" {>= "2.91.4"}
+  "libpeas-1-0-0" {>= "1.14.1"}
+]
+extra-source "gedit-plugin-bookmarks_3.38.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gedit-plugins/gedit-plugin-bookmarks_3.38.1-1_amd64.deb"
+}

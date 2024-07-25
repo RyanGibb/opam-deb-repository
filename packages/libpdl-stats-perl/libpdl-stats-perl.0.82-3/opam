@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpdl-stats-perl_0.82-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpdl-stats-perl"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgsl27" {>= "2.7.1"}
+  "pdl"
+  "pdl" {>= "1-2.081-1"}
+  "perl" {>= "5.36.0-6"}
+  "perl-base"
+]
+extra-source "libpdl-stats-perl_0.82-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpdl-stats-perl/libpdl-stats-perl_0.82-3_amd64.deb"
+}

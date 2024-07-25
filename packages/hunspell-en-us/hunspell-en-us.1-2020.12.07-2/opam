@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hunspell-en-us_1:2020.12.07-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hunspell-en-us"]
+]
+depends: [
+  "dictionaries-common" {>= "0.10"}
+]
+conflicts: [
+  "firefox (<< 2.0.0.3-2)"
+  "iceape-browser (<< 1.1.1-2)"
+  "icedove (<< 2.0.0.0-4)"
+  "iceweasel (<< 2.0.0.3-2)"
+  "libxul0d (= 1.8.0.11-3)"
+  "mozilla-browser (<< 1.8+1.1.1-2)"
+  "myspell-en-us"
+  "openoffice.org (<= 1.0.3-2)"
+  "openoffice.org-core (<< 2.1~m190-1)"
+  "thunderbird (<< 2.0.0.1+dfsg-0)"
+]
+extra-source "hunspell-en-us_1:2020.12.07-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scowl/hunspell-en-us_2020.12.07-2_all.deb"
+}

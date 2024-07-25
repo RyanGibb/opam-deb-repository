@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hxt-curl-prof_9.1.1.1-9+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hxt-curl-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-curl-prof"
+  "libghc-hxt-curl-dev" {= "9.1.1.1-9+b2"}
+  "libghc-hxt-prof"
+]
+extra-source "libghc-hxt-curl-prof_9.1.1.1-9+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hxt-curl/libghc-hxt-curl-prof_9.1.1.1-9+b2_amd64.deb"
+}

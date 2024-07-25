@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5kdepimdbusinterfaces5_4:18.08.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5kdepimdbusinterfaces5"]
+]
+depends: [
+  "kf5-kdepim-apps-libs-data" {= "4-18.08.3-2"}
+  "kio"
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libkf5akonadicontact5" {>= "4-17.12.2"}
+  "libkf5akonadicore5abi2" {>= "4-18.08.3~"}
+  "libkf5kiowidgets5" {>= "4.96.0"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "4.96.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5dbus5" {>= "5.9.0~"}
+  "libqt5gui5" {>= "5.9.0~"}
+  "libqt5widgets5" {>= "5.9.0~"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libkf5kdepimdbusinterfaces5_4:18.08.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kf5-kdepim-apps-libs/libkf5kdepimdbusinterfaces5_18.08.3-2_amd64.deb"
+}

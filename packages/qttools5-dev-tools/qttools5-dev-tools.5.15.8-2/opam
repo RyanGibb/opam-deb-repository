@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qttools5-dev-tools_5.15.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qttools5-dev-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5designer5" {>= "5.14.1"}
+  "libqt5designercomponents5"
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5qml5"
+  "libqt5quickwidgets5" {>= "5.15.8+dfsg~"}
+  "libqt5webkit5" {>= "5.212.0~alpha4-8~"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  "qdoc-qt5" {= "5.15.8-2"}
+  "qhelpgenerator-qt5" {= "5.15.8-2"}
+  "qt5-assistant" {= "5.15.8-2"}
+  "qtattributionsscanner-qt5" {= "5.15.8-2"}
+  "qtchooser"
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+  ("libqt5quick5" {>= "5.15.8+dfsg~"} | "libqt5quick5-gles" {>= "5.15.8+dfsg~"})
+]
+extra-source "qttools5-dev-tools_5.15.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qttools-opensource-src/qttools5-dev-tools_5.15.8-2_amd64.deb"
+}

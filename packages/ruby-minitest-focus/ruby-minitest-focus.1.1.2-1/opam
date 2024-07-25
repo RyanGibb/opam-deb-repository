@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-minitest-focus_1.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-minitest-focus"]
+]
+depends: [
+  "ruby-minitest" {< "6"}
+  "ruby-minitest" {>= "4"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-minitest-focus_1.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-minitest-focus/ruby-minitest-focus_1.1.2-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ndg-httpsclient_0.5.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ndg-httpsclient"]
+]
+depends: [
+  "python3-any"
+  "python3-openssl"
+  "python3-pyasn1" {>= "0.1.1"}
+]
+extra-source "python3-ndg-httpsclient_0.5.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ndg-httpsclient/python3-ndg-httpsclient_0.5.1-6_all.deb"
+}

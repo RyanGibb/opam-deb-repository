@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pki-base_10.10.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pki-base"]
+]
+depends: [
+  "openssl"
+  "python3-any"
+  "python3-cryptography"
+  "python3-ldap"
+  "python3-nss"
+  "python3-requests"
+  "python3-urllib3"
+]
+extra-source "python3-pki-base_10.10.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dogtag-pki/python3-pki-base_10.10.2-3_all.deb"
+}

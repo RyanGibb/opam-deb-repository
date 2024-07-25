@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ss-dev_2.0-1.46.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ss-dev"]
+]
+depends: [
+  "comerr-dev"
+  "libss2" {= "1.46.2-2"}
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "ss-dev_2.0-1.46.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/e2fsprogs/ss-dev_2.0-1.46.2-2_amd64.deb"
+}

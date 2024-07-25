@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qgis-server-wcs_3.22.16+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qgis-server-wcs"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqgis-core3-22-16" {>= "3.22.4"}
+  "libqgis-server3-22-16" {>= "3.22.4"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  "qgis-server-bin" {= "3.22.16+dfsg-1"}
+]
+extra-source "qgis-server-wcs_3.22.16+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qgis/qgis-server-wcs_3.22.16+dfsg-1_amd64.deb"
+}

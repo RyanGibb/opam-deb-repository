@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpthreadpool0_0.0~git20200615.029c886-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpthreadpool0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libpthreadpool0_0.0~git20200615.029c886-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pthreadpool/libpthreadpool0_0.0~git20200615.029c886-2_amd64.deb"
+}

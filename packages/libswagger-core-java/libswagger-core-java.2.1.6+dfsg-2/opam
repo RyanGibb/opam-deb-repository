@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libswagger-core-java_2.1.6+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libswagger-core-java"]
+]
+depends: [
+  "libcommons-lang3-java" {>= "3.11"}
+  "libgeronimo-validation-1-1-spec-java"
+  "libjackson2-annotations-java" {>= "2.12.1"}
+  "libjackson2-dataformat-yaml" {>= "2.8.11"}
+  "libjaxb-api-java" {>= "2.3.1"}
+  "libslf4j-java" {>= "1.7.30"}
+]
+extra-source "libswagger-core-java_2.1.6+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/swagger-core/libswagger-core-java_2.1.6+dfsg-2_all.deb"
+}

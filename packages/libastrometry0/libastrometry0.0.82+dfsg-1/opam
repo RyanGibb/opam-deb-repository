@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libastrometry0_0.82+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libastrometry0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgsl25" {>= "2.6"}
+  "libwcs7" {>= "4.8.2"}
+]
+extra-source "libastrometry0_0.82+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/astrometry.net/libastrometry0_0.82+dfsg-1_amd64.deb"
+}

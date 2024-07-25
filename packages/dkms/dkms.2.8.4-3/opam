@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dkms_2.8.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dkms"]
+]
+depends: [
+  "coreutils" {>= "7.4"}
+  "dctrl-tools"
+  "dpkg-dev"
+  "patch"
+  ("gcc" | "c-compiler")
+  ("kmod" | "kldutils")
+  ("make" | "build-essential")
+]
+extra-source "dkms_2.8.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dkms/dkms_2.8.4-3_all.deb"
+}

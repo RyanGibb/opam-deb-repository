@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-siconos_4.4.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-siconos"]
+]
+depends: [
+  "libboost-serialization1-74-0" {>= "1.74.0"}
+  "libbullet3-24" {>= "3.24+dfsg"}
+  "libc6" {>= "2.32"}
+  "libcxsparse3" {>= "1-5.1.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libsiconos-control7" {>= "4.4.0+dfsg"}
+  "libsiconos-io7" {>= "4.4.0+dfsg"}
+  "libsiconos-kernel7" {>= "4.4.0+dfsg"}
+  "libsiconos-mechanics7" {>= "4.4.0+dfsg"}
+  "libsiconos-numerics7" {>= "4.4.0+dfsg"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any" {>= "3.8~"}
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "siconos" {>= "4.4.0+dfsg-2"}
+]
+extra-source "python3-siconos_4.4.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/siconos/python3-siconos_4.4.0+dfsg-2_amd64.deb"
+}

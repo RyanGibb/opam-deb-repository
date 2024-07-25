@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dnscache_1:1.05-15+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dnscache"]
+]
+depends: [
+  "init-system-helpers" {>= "1.51"}
+  "libc6" {>= "2.34"}
+  "runit-helper" {>= "2.14.0~"}
+  "sysuser-helper" {< "2.0"}
+]
+extra-source "dnscache_1:1.05-15+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/djbdns/dnscache_1.05-15+b2_amd64.deb"
+}

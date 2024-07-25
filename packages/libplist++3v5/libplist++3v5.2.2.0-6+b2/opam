@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplist++3v5_2.2.0-6+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplist++3v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libplist3" {>= "2.2.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libplist++3v5_2.2.0-6+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libplist/libplist++3v5_2.2.0-6+b2_amd64.deb"
+}

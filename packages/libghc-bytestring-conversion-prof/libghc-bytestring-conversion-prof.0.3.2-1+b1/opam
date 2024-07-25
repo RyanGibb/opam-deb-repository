@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-bytestring-conversion-prof_0.3.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-bytestring-conversion-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-attoparsec-prof"
+  "libghc-bytestring-conversion-dev" {= "0.3.2-1+b1"}
+  "libghc-case-insensitive-prof"
+  "libghc-double-conversion-prof"
+]
+extra-source "libghc-bytestring-conversion-prof_0.3.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-bytestring-conversion/libghc-bytestring-conversion-prof_0.3.2-1+b1_amd64.deb"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lintian-brush_0.147_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lintian-brush"]
+]
+depends: [
+  "devscripts"
+  "python3-any"
+  "python3-asyncpg"
+  "python3-breezy" {>= "3.3.0~"}
+  "python3-debian"
+  "python3-debmutate" {>= "0.57"}
+  "python3-distro-info"
+  "python3-dulwich"
+  "python3-iniparse"
+  "python3-iso8601"
+  "python3-levenshtein"
+  "python3-pyinotify"
+  "python3-ruamel-yaml"
+  "python3-semver"
+  "python3-tomlkit"
+  "python3-tqdm"
+  "python3-upstream-ontologist" {>= "0.1.30"}
+]
+extra-source "lintian-brush_0.147_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lintian-brush/lintian-brush_0.147_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-hachoir-subfile_0.5.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-hachoir-subfile"]
+]
+depends: [
+  "python"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-hachoir-parser" {>= "1.1"}
+  "python-hachoir-regex" {>= "1.0.3"}
+]
+extra-source "python-hachoir-subfile_0.5.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hachoir-subfile/python-hachoir-subfile_0.5.3-3_all.deb"
+}

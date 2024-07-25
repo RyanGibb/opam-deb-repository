@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i votca-csg_1.6.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r votca-csg"]
+]
+depends: [
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libvotca-csg6" {>= "1.6.4"}
+  "libvotca-tools6" {>= "1.6.4"}
+  "votca-csg-scripts" {= "1.6.4-1"}
+]
+extra-source "votca-csg_1.6.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/votca-csg/votca-csg_1.6.4-1_amd64.deb"
+}

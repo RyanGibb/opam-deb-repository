@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-synstructure+proc-macro-dev_0.12.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-synstructure+proc-macro-dev"]
+]
+depends: [
+  "librust-proc-macro2-1+proc-macro-dev"
+  "librust-quote-1+proc-macro-dev"
+  "librust-syn-1+proc-macro-dev"
+  "librust-synstructure-dev" {= "0.12.3-2"}
+]
+extra-source "librust-synstructure+proc-macro-dev_0.12.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-synstructure/librust-synstructure+proc-macro-dev_0.12.3-2_amd64.deb"
+}

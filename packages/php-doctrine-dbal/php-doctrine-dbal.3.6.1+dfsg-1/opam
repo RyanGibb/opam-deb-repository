@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-doctrine-dbal_3.6.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-doctrine-dbal"]
+]
+depends: [
+  "php-cli"
+  "php-common"
+  "php-doctrine-cache"
+  "php-doctrine-deprecations"
+  "php-doctrine-event-manager"
+  "php-psr-cache"
+  "php-psr-log"
+]
+extra-source "php-doctrine-dbal_3.6.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-doctrine-dbal/php-doctrine-dbal_3.6.1+dfsg-1_all.deb"
+}

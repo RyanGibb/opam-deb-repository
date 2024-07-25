@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gspell-1-tests_1.8.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gspell-1-tests"]
+]
+depends: [
+  "iso-codes"
+  "libc6" {>= "2.4"}
+  "libenchant-2-2" {>= "2.2.3"}
+  "libglib2-0-0" {>= "2.44"}
+  "libgtk-3-0" {>= "3.19.12"}
+  "libpango-1-0-0" {>= "1.18.0"}
+]
+extra-source "gspell-1-tests_1.8.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gspell/gspell-1-tests_1.8.4-1_amd64.deb"
+}

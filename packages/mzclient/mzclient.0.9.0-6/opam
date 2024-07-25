@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mzclient_0.9.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mzclient"]
+]
+depends: [
+  "libmono-corlib4-5-cil" {>= "4.2.0"}
+  "libmono-system4-0-cil" {>= "4.2.0"}
+  "libmono-zeroconf1-0-cil" {= "0.9.0-6"}
+  "mono-runtime" {>= "3.0~"}
+]
+extra-source "mzclient_0.9.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mono-zeroconf/mzclient_0.9.0-6_all.deb"
+}

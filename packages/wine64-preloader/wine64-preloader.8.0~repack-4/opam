@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wine64-preloader_8.0~repack-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wine64-preloader"]
+]
+depends: [
+  "wine64" {= "8.0~repack-4"}
+]
+extra-source "wine64-preloader_8.0~repack-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wine/wine64-preloader_8.0~repack-4_amd64.deb"
+}

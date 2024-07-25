@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tablix2_0.3.5-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tablix2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpvm3"
+  "libxml2" {>= "2.7.4"}
+  "pvm"
+]
+extra-source "tablix2_0.3.5-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tablix2/tablix2_0.3.5-7_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcolamd2_1:5.8.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcolamd2"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libsuitesparseconfig5" {>= "1-5.0.0"}
+]
+extra-source "libcolamd2_1:5.8.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/suitesparse/libcolamd2_5.8.1+dfsg-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aeson-pretty_0.8.8-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aeson-pretty"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libffi7" {>= "3.3~20180313"}
+  "libgmp10"
+]
+extra-source "aeson-pretty_0.8.8-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-aeson-pretty/aeson-pretty_0.8.8-1+b2_amd64.deb"
+}

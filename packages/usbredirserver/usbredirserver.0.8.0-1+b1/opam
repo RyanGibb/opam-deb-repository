@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i usbredirserver_0.8.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r usbredirserver"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libusb-1-0-0" {>= "2-1.0.22"}
+  "libusbredirhost1" {>= "0.4.3"}
+]
+extra-source "usbredirserver_0.8.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/usbredir/usbredirserver_0.8.0-1+b1_amd64.deb"
+}

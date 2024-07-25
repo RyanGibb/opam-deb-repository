@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tsdecrypt_10.0-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tsdecrypt"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libdvbcsa1" {>= "1.1.0"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "tsdecrypt_10.0-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tsdecrypt/tsdecrypt_10.0-2+b3_amd64.deb"
+}

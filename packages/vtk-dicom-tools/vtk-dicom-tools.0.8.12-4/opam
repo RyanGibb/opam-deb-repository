@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vtk-dicom-tools_0.8.12-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vtk-dicom-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libvtk7-1p"
+  "libvtkdicom0-8" {>= "0.8.12"}
+]
+extra-source "vtk-dicom-tools_0.8.12-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vtk-dicom/vtk-dicom-tools_0.8.12-4_amd64.deb"
+}

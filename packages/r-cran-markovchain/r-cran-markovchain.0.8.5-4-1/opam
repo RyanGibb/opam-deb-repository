@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-markovchain_0.8.5-4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-markovchain"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "libtbb2" {>= "2017~U7"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-cran-expm"
+  "r-cran-igraph"
+  "r-cran-matlab"
+  "r-cran-matrix"
+  "r-cran-rcpp" {>= "1.0.2"}
+  "r-cran-rcpparmadillo" {>= "0.9.600.4.0"}
+  "r-cran-rcppparallel"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "r-cran-markovchain_0.8.5-4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-markovchain/r-cran-markovchain_0.8.5-4-1_amd64.deb"
+}

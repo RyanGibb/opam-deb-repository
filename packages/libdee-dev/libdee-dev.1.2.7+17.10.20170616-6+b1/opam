@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdee-dev_1.2.7+17.10.20170616-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdee-dev"]
+]
+depends: [
+  "gir1-2-dee-1-0" {= "1.2.7+17.10.20170616-6+b1"}
+  "libdbus-glib-1-dev" {>= "0.80"}
+  "libdee-1-0-4" {= "1.2.7+17.10.20170616-6+b1"}
+  "libglib2-0-dev" {>= "2.22.0"}
+]
+extra-source "libdee-dev_1.2.7+17.10.20170616-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dee/libdee-dev_1.2.7+17.10.20170616-6+b1_amd64.deb"
+}

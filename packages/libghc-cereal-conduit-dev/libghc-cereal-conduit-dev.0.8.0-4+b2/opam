@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cereal-conduit-dev_0.8.0-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cereal-conduit-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-cereal-dev"
+  "libghc-conduit-dev"
+  "libghc-resourcet-dev"
+  "libgmp10"
+]
+extra-source "libghc-cereal-conduit-dev_0.8.0-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cereal-conduit/libghc-cereal-conduit-dev_0.8.0-4+b2_amd64.deb"
+}

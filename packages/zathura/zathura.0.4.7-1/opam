@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zathura_0.4.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zathura"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.14.0"}
+  "libgirara-gtk3-3" {>= "0.3.3"}
+  "libglib2-0-0" {>= "2.50"}
+  "libgtk-3-0" {>= "3.22"}
+  "libmagic1" {>= "5.12"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libseccomp2" {>= "0.0.0~20120605"}
+  "libsqlite3-0" {>= "3.6.23"}
+  "libsynctex2" {>= "2020.20200327.54578"}
+  "zathura-pdf-poppler"
+]
+extra-source "zathura_0.4.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zathura/zathura_0.4.7-1_amd64.deb"
+}

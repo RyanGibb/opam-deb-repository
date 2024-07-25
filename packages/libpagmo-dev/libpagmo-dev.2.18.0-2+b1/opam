@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpagmo-dev_2.18.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpagmo-dev"]
+]
+depends: [
+  "libboost-serialization-dev"
+  "libeigen3-dev"
+  "libpagmo8" {= "2.18.0-2+b1"}
+  "libtbb-dev"
+]
+extra-source "libpagmo-dev_2.18.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pagmo/libpagmo-dev_2.18.0-2+b1_amd64.deb"
+}

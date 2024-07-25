@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guile-2.2-doc_2.2.7+1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guile-2.2-doc"]
+]
+depends: [
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "guile-2.2-doc_2.2.7+1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guile-2.2/guile-2.2-doc_2.2.7+1-6_all.deb"
+}

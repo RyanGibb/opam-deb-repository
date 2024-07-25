@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libinput-dev_1.12.6-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libinput-dev"]
+]
+depends: [
+  "libevdev-dev" {>= "0.4"}
+  "libinput10" {= "1.12.6-2+deb10u1"}
+  "libmtdev-dev" {>= "1.1.0"}
+  "libudev-dev"
+  "libwacom-dev" {>= "0.20"}
+]
+extra-source "libinput-dev_1.12.6-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libinput/libinput-dev_1.12.6-2+deb10u1_amd64.deb"
+}

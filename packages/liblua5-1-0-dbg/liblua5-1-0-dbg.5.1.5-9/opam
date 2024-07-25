@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblua5.1-0-dbg_5.1.5-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblua5.1-0-dbg"]
+]
+depends: [
+  "liblua5-1-0" {= "5.1.5-9"}
+]
+extra-source "liblua5.1-0-dbg_5.1.5-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lua5.1/liblua5.1-0-dbg_5.1.5-9_amd64.deb"
+}

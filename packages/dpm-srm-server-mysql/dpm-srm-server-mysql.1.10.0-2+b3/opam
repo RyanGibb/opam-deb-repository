@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpm-srm-server-mysql_1.10.0-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpm-srm-server-mysql"]
+]
+depends: [
+  "adduser"
+  "finger"
+  "libc6" {>= "2.14"}
+  "libcgsi-gsoap1"
+  "libdpm1" {= "1.10.0-2+b3"}
+  "libgsoap-2-8-75"
+  "liblcgdm1"
+  "libmariadb3" {>= "3.0.0"}
+  "libuuid1" {>= "2.16"}
+]
+conflicts: [
+  "dpm-mysql-srmv1 (<< 1.8.1.2-2~)"
+  "dpm-mysql-srmv2 (<< 1.8.1.2-2~)"
+  "dpm-mysql-srmv22 (<< 1.8.1.2-2~)"
+]
+extra-source "dpm-srm-server-mysql_1.10.0-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lcgdm/dpm-srm-server-mysql_1.10.0-2+b3_amd64.deb"
+}

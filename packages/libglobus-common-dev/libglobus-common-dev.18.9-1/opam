@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-common-dev_18.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-common-dev"]
+]
+depends: [
+  "libglobus-common0" {= "18.9-1"}
+  "libltdl-dev"
+  "perl-any"
+]
+conflicts: [
+  "globus-core (<< 10)"
+  "libglobus-usage-dev (<< 6)"
+]
+extra-source "libglobus-common-dev_18.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-common/libglobus-common-dev_18.9-1_amd64.deb"
+}

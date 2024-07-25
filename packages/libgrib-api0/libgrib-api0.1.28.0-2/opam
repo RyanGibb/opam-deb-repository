@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgrib-api0_1.28.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgrib-api0"]
+]
+depends: [
+  "libaec0"
+  "libc6" {>= "2.14"}
+  "libgfortran5" {>= "8"}
+  "libgomp1" {>= "4.4"}
+  "libopenjp2-7" {>= "2.0.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+]
+conflicts: [
+  "libgrib-api-0d-0"
+  "libgrib-api-0d-1"
+  "libgrib-api-1.10.4"
+  "libgrib-api-1.9.16"
+  "libgrib-api-1.9.9"
+]
+extra-source "libgrib-api0_1.28.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grib-api/libgrib-api0_1.28.0-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i globus-gram-job-manager-lsf-setup-poll_3.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r globus-gram-job-manager-lsf-setup-poll"]
+]
+depends: [
+  "globus-gram-job-manager-lsf" {= "3.0-3"}
+  "globus-gram-job-manager-scripts" {>= "4"}
+]
+extra-source "globus-gram-job-manager-lsf-setup-poll_3.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gram-job-manager-lsf/globus-gram-job-manager-lsf-setup-poll_3.0-3_all.deb"
+}

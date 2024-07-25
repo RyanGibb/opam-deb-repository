@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ircd-irc2_2.11.2p3~dfsg-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ircd-irc2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "lsb-base"
+  "m4"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "dancer-ircd"
+  "ircd"
+  "ircd-dalnet"
+]
+extra-source "ircd-irc2_2.11.2p3~dfsg-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ircd-irc2/ircd-irc2_2.11.2p3~dfsg-7+b2_amd64.deb"
+}

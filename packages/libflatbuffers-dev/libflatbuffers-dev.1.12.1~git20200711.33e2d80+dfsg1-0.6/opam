@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libflatbuffers-dev_1.12.1~git20200711.33e2d80+dfsg1-0.6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libflatbuffers-dev"]
+]
+depends: [
+  "flatbuffers-compiler-dev" {= "1.12.1~git20200711.33e2d80+dfsg1-0.6"}
+  "libflatbuffers1" {= "1.12.1~git20200711.33e2d80+dfsg1-0.6"}
+]
+extra-source "libflatbuffers-dev_1.12.1~git20200711.33e2d80+dfsg1-0.6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flatbuffers/libflatbuffers-dev_1.12.1~git20200711.33e2d80+dfsg1-0.6_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-futures-locks-dev_0.7.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-futures-locks-dev"]
+]
+depends: [
+  "librust-futures-channel-dev"
+  "librust-futures-task-dev"
+  "librust-tokio-1+default-dev"
+  "librust-tokio-1+rt-dev"
+]
+extra-source "librust-futures-locks-dev_0.7.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-futures-locks/librust-futures-locks-dev_0.7.1-1+b1_amd64.deb"
+}

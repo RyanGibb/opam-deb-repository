@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cockpit-dashboard_188-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cockpit-dashboard"]
+]
+depends: [
+  "cockpit-bridge" {>= "170.x"}
+  "cockpit-ws" {< "188-1.1~"}
+  "cockpit-ws" {>= "188-1"}
+]
+extra-source "cockpit-dashboard_188-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cockpit/cockpit-dashboard_188-1_all.deb"
+}

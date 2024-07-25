@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ora2pg_20.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ora2pg"]
+]
+depends: [
+  "libdbd-pg-perl"
+  "libdbi-perl"
+  "libio-compress-perl"
+  "perl"
+  ("libdbd-mysql-perl" | "libdbd-oracle-perl")
+]
+extra-source "ora2pg_20.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ora2pg/ora2pg_20.0-1_all.deb"
+}

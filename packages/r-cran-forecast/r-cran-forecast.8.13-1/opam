@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-forecast_8.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-forecast"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  "r-cran-colorspace"
+  "r-cran-fracdiff"
+  "r-cran-ggplot2" {>= "2.2.1"}
+  "r-cran-lmtest"
+  "r-cran-magrittr"
+  "r-cran-nnet"
+  "r-cran-rcpp" {>= "0.11.0"}
+  "r-cran-rcpparmadillo" {>= "0.2.35"}
+  "r-cran-timedate"
+  "r-cran-tseries"
+  "r-cran-urca"
+  "r-cran-zoo"
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "r-cran-forecast_8.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-forecast/r-cran-forecast_8.13-1_amd64.deb"
+}

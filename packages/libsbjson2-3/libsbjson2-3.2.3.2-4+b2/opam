@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsbjson2.3_2.3.2-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsbjson2.3"]
+]
+depends: [
+  "gnustep-base-runtime" {>= "1.27.0"}
+  "libc6" {>= "2.4"}
+  "libgnustep-base1-27" {>= "1.27.0"}
+  "libobjc4" {>= "4.2.1"}
+]
+extra-source "libsbjson2.3_2.3.2-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sbjson/libsbjson2.3_2.3.2-4+b2_amd64.deb"
+}

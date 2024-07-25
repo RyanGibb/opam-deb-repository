@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libndp0_1.6-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libndp0"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+]
+extra-source "libndp0_1.6-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libndp/libndp0_1.6-1+b1_amd64.deb"
+}

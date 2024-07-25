@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i smpeg-plaympeg_0.4.5+cvs20030824-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r smpeg-plaympeg"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libsmpeg0"
+]
+extra-source "smpeg-plaympeg_0.4.5+cvs20030824-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/smpeg/smpeg-plaympeg_0.4.5+cvs20030824-8_amd64.deb"
+}

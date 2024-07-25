@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-syslogd-perl_0.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-syslogd-perl"]
+]
+depends: [
+  "libterm-readkey-perl"
+  "perl"
+  ("perl" {>= "5.19.8"} | "libio-socket-ip-perl")
+]
+extra-source "libnet-syslogd-perl_0.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-syslogd-perl/libnet-syslogd-perl_0.16-1_all.deb"
+}

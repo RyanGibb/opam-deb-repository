@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzstd1_1.3.8+dfsg-3+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzstd1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libzstd1_1.3.8+dfsg-3+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libz/libzstd/libzstd1_1.3.8+dfsg-3+deb10u2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openbox-kde-session_3.6.1-9+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openbox-kde-session"]
+]
+depends: [
+  "openbox" {>= "3.6.1-9+deb11u1"}
+  "plasma-workspace"
+  "x11-utils"
+]
+extra-source "openbox-kde-session_3.6.1-9+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openbox/openbox-kde-session_3.6.1-9+deb11u1_all.deb"
+}

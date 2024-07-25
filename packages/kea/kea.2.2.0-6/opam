@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kea_2.2.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kea"]
+]
+depends: [
+  "kea-admin"
+  "kea-ctrl-agent"
+  "kea-dhcp-ddns-server"
+  "kea-dhcp4-server"
+  "kea-dhcp6-server"
+]
+extra-source "kea_2.2.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/isc-kea/kea_2.2.0-6_all.deb"
+}

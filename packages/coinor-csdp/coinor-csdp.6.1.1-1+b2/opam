@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coinor-csdp_6.1.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coinor-csdp"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgomp1" {>= "4.9"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "coinor-csdp_6.1.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coinor-csdp/coinor-csdp_6.1.1-1+b2_amd64.deb"
+}

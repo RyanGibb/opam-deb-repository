@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-acid-state-prof_0.16.0.1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-acid-state-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-acid-state-dev" {= "0.16.0.1-1+b3"}
+  "libghc-cereal-prof"
+  "libghc-filelock-prof"
+  "libghc-network-bsd-prof"
+  "libghc-network-prof"
+  "libghc-safecopy-prof"
+  "libghc-th-expand-syns-prof"
+]
+extra-source "libghc-acid-state-prof_0.16.0.1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-acid-state/libghc-acid-state-prof_0.16.0.1-1+b3_amd64.deb"
+}

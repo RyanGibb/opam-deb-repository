@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cd-paranoia_10.2+2.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cd-paranoia"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcdio-cdda2" {>= "10.2+2.0.0"}
+  "libcdio-paranoia2" {>= "10.2+2.0.0"}
+  "libcdio19" {>= "2.1.0"}
+]
+extra-source "cd-paranoia_10.2+2.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcdio-paranoia/cd-paranoia_10.2+2.0.1-1_amd64.deb"
+}

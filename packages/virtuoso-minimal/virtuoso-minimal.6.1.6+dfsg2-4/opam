@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i virtuoso-minimal_6.1.6+dfsg2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r virtuoso-minimal"]
+]
+depends: [
+  "libvirtodbc0" {>= "6.1.6+dfsg2-4"}
+  "virtuoso-opensource-6-1-bin" {>= "6.1.6+dfsg2-4"}
+]
+extra-source "virtuoso-minimal_6.1.6+dfsg2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/virtuoso-opensource/virtuoso-minimal_6.1.6+dfsg2-4_all.deb"
+}

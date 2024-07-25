@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-azure-kusto-data_1.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-azure-kusto-data"]
+]
+depends: [
+  "python3-adal" {>= "1.0.0~"}
+  "python3-any"
+  "python3-azure" {>= "20200519+git-1~"}
+  "python3-dateutil" {>= "2.7.0~"}
+  "python3-requests" {>= "2.13.0~"}
+]
+extra-source "python3-azure-kusto-data_1.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/azure-kusto-python/python3-azure-kusto-data_1.0.3-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-flask-assets_0.12-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-flask-assets"]
+]
+depends: [
+  "python3-any"
+  "python3-flask" {>= "0.8"}
+  "python3-webassets"
+]
+extra-source "python3-flask-assets_0.12-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flask-assets/python3-flask-assets_0.12-3_all.deb"
+}

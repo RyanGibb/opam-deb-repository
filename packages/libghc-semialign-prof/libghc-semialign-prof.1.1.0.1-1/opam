@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-semialign-prof_1.1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-semialign-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hashable-prof"
+  "libghc-semialign-dev" {= "1.1.0.1-1"}
+  "libghc-semigroupoids-prof"
+  "libghc-tagged-prof"
+  "libghc-these-prof"
+  "libghc-unordered-containers-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-semialign-prof_1.1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-semialign/libghc-semialign-prof_1.1.0.1-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-constraints-doc_0.13.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-constraints-doc"]
+]
+depends: [
+  "ghc"
+  "sgml-base" {>= "1.28"}
+]
+extra-source "libghc-constraints-doc_0.13.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-constraints/libghc-constraints-doc_0.13.4-1_all.deb"
+}

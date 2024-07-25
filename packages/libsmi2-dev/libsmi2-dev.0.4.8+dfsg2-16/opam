@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsmi2-dev_0.4.8+dfsg2-16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsmi2-dev"]
+]
+depends: [
+  "libsmi2ldbl" {= "0.4.8+dfsg2-16"}
+]
+conflicts: [
+  "libsmi-dev"
+]
+extra-source "libsmi2-dev_0.4.8+dfsg2-16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsmi/libsmi2-dev_0.4.8+dfsg2-16_amd64.deb"
+}

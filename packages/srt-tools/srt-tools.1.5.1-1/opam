@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i srt-tools_1.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r srt-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnutls30" {>= "3.7.0"}
+  "libnettle8"
+  "libsrt1-5-gnutls" {= "1.5.1-1"}
+  "libstdc++6" {>= "12"}
+]
+extra-source "srt-tools_1.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/srt/srt-tools_1.5.1-1_amd64.deb"
+}

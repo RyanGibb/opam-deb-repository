@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openscad-testing_2019.01~RC2-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openscad-testing"]
+]
+depends: [
+  "cmake"
+  "imagemagick" {>= "6.5.9.3"}
+  "libgl1-mesa-dri"
+  "openscad"
+  "openscad-testing-data"
+  "python3"
+  "unzip"
+  "xauth"
+  ("xserver-xorg-core" | "xvfb")
+]
+extra-source "openscad-testing_2019.01~RC2-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openscad/openscad-testing_2019.01~RC2-2+deb10u1_amd64.deb"
+}

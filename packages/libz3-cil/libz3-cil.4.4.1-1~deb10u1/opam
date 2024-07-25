@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libz3-cil_4.4.1-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libz3-cil"]
+]
+depends: [
+  "libmono-corlib4-5-cil" {>= "5.18.0.240"}
+  "libmono-system-numerics4-0-cil" {>= "5.16.0.220"}
+  "libz3-dev" {= "4.4.1-1~deb10u1"}
+]
+extra-source "libz3-cil_4.4.1-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/z3/libz3-cil_4.4.1-1~deb10u1_amd64.deb"
+}

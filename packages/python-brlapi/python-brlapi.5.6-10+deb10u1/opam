@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-brlapi_5.6-10+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-brlapi"]
+]
+depends: [
+  "libbrlapi0-6"
+  "libc6" {>= "2.14"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-brlapi_5.6-10+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/brltty/python-brlapi_5.6-10+deb10u1_amd64.deb"
+}

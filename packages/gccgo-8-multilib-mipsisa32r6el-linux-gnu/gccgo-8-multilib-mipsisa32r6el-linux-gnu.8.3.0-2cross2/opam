@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gccgo-8-multilib-mipsisa32r6el-linux-gnu_8.3.0-2cross2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gccgo-8-multilib-mipsisa32r6el-linux-gnu"]
+]
+depends: [
+  "gcc-8-mipsisa32r6el-linux-gnu-base" {= "8.3.0-2cross2"}
+  "gcc-8-multilib-mipsisa32r6el-linux-gnu" {= "8.3.0-2cross2"}
+  "gccgo-8-mipsisa32r6el-linux-gnu" {= "8.3.0-2cross2"}
+  "lib64go13-mipsr6el-cross" {>= "8.3.0-2cross2"}
+  "libn32go13-mipsr6el-cross" {>= "8.3.0-2cross2"}
+]
+extra-source "gccgo-8-multilib-mipsisa32r6el-linux-gnu_8.3.0-2cross2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross-mipsen/gccgo-8-multilib-mipsisa32r6el-linux-gnu_8.3.0-2cross2_amd64.deb"
+}

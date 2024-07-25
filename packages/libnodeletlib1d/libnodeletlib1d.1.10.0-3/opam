@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnodeletlib1d_1.10.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnodeletlib1d"]
+]
+depends: [
+  "libbondcpp1d" {>= "1.8.6"}
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-thread1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libclass-loader1d" {>= "0.5.0"}
+  "libconsole-bridge0-4"
+  "libgcc-s1" {>= "3.0"}
+  "librosconsole3d" {>= "1.14.3"}
+  "libroscpp-serialization0d" {>= "0.7.2"}
+  "libroscpp3d" {>= "1.15.9+ds1"}
+  "libroslib0d" {>= "1.15.7"}
+  "libstdc++6" {>= "9"}
+  "libtinyxml2-8" {>= "8.0.0"}
+]
+extra-source "libnodeletlib1d_1.10.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-nodelet-core/libnodeletlib1d_1.10.0-3_amd64.deb"
+}

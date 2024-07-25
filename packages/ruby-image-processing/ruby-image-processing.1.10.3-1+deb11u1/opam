@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-image-processing_1.10.3-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-image-processing"]
+]
+depends: [
+  "imagemagick"
+  "ruby-mini-magick" {< "5"}
+  "ruby-mini-magick" {>= "4.9.3"}
+  "ruby-vips" {< "3"}
+  "ruby-vips" {>= "2.0.17"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-image-processing_1.10.3-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-image-processing/ruby-image-processing_1.10.3-1+deb11u1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmo-gsup-client0_1.2.1+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmo-gsup-client0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libosmoabis9" {>= "1.0.1"}
+  "libosmocore16" {>= "1.4.0"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "libosmo-gsup-client0_1.2.1+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmo-hlr/libosmo-gsup-client0_1.2.1+dfsg1-1_amd64.deb"
+}

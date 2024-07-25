@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-testtools_2.4.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-testtools"]
+]
+depends: [
+  "python3-any"
+  "python3-extras"
+  "python3-fixtures"
+  "python3-linecache2"
+  "python3-mimeparse"
+  "python3-pbr"
+  "python3-pkg-resources"
+  "python3-six" {>= "1.4.0"}
+  "python3-traceback2"
+  "python3-unittest2"
+  ("python3-distutils" | "libpython3-5-stdlib")
+]
+extra-source "python3-testtools_2.4.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-testtools/python3-testtools_2.4.0-2_all.deb"
+}

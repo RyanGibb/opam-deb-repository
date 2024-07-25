@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rspamd_1.8.1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rspamd"]
+]
+depends: [
+  "adduser"
+  "ca-certificates"
+  "libc6" {>= "2.27"}
+  "libevent-2-1-6" {>= "2.1.8-stable"}
+  "libglib2-0-0" {>= "2.39.4"}
+  "libicu63" {>= "63.1-1~"}
+  "libjemalloc2" {>= "3.5.0"}
+  "libjs-bootstrap"
+  "libjs-d3"
+  "libjs-jquery"
+  "libjs-requirejs"
+  "libluajit-5-1-2" {>= "2.0.4+dfsg"}
+  "libmagic1" {>= "5.12"}
+  "libpcre2-8-0" {>= "10.32"}
+  "libsqlite3-0" {>= "3.7.15"}
+  "libssl1-1" {>= "1.1.1"}
+  "libunwind8"
+  "lsb-base"
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "rspamd_1.8.1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rspamd/rspamd_1.8.1-2+b2_amd64.deb"
+}

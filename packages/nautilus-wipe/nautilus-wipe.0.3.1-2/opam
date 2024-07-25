@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nautilus-wipe_0.3.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nautilus-wipe"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgsecuredelete0" {>= "0.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libnautilus-extension1a" {>= "3.14.1"}
+]
+extra-source "nautilus-wipe_0.3.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nautilus-wipe/nautilus-wipe_0.3.1-2_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenvdb-ax10.0_10.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenvdb-ax10.0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libimath-3-1-29" {>= "3.1.6"}
+  "libllvm14"
+  "liblog4cplus-2-0-5" {>= "2.0.8"}
+  "libopenvdb10-0" {>= "10.0.1"}
+  "libstdc++6" {>= "11"}
+  "libtbb12" {>= "2021.4.0"}
+]
+extra-source "libopenvdb-ax10.0_10.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openvdb/libopenvdb-ax10.0_10.0.1-2_amd64.deb"
+}

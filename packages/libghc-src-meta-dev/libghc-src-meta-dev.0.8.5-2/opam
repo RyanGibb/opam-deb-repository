@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-src-meta-dev_0.8.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-src-meta-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-src-exts-dev"
+  "libghc-syb-dev"
+  "libghc-th-orphans-dev"
+  "libgmp10"
+]
+extra-source "libghc-src-meta-dev_0.8.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-src-meta/libghc-src-meta-dev_0.8.5-2_amd64.deb"
+}

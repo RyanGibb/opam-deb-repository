@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-ldap-prof_0.6.11-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-ldap-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-ldap-dev" {= "0.6.11-4+b1"}
+]
+extra-source "libghc-ldap-prof_0.6.11-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ldap-haskell/libghc-ldap-prof_0.6.11-4+b1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pachi_1:1.0-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pachi"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libsdl-mixer1-2"
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "4.1.1"}
+  "pachi-data" {= "1-1.0-9"}
+]
+extra-source "pachi_1:1.0-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pachi/pachi_1.0-9_amd64.deb"
+}

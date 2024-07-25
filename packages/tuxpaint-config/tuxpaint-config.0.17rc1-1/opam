@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tuxpaint-config_0.17rc1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tuxpaint-config"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfltk1-3" {>= "1.3.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libpaper1"
+  "libstdc++6" {>= "5"}
+]
+extra-source "tuxpaint-config_0.17rc1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tuxpaint-config/tuxpaint-config_0.17rc1-1_amd64.deb"
+}

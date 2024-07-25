@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i crossbuild-essential-ppc64el_12.9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r crossbuild-essential-ppc64el"]
+]
+depends: [
+  "dpkg-cross"
+  ("g++-powerpc64le-linux-gnu" {>= "4-10.2"} | "g++-ppc64el")
+  ("gcc-powerpc64le-linux-gnu" {>= "4-10.2"} | "gcc-ppc64el")
+]
+extra-source "crossbuild-essential-ppc64el_12.9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/build-essential/crossbuild-essential-ppc64el_12.9_all.deb"
+}

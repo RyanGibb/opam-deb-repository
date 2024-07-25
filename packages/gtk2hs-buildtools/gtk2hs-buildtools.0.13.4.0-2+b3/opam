@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtk2hs-buildtools_0.13.4.0-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtk2hs-buildtools"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.27"}
+  "libffi6" {>= "3.0.4"}
+  "libgmp10"
+]
+extra-source "gtk2hs-buildtools_0.13.4.0-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtk2hs-buildtools/gtk2hs-buildtools_0.13.4.0-2+b3_amd64.deb"
+}

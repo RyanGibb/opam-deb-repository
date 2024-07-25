@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tuxguitar-synth-lv2_1.5.6+dfsg1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tuxguitar-synth-lv2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "liblilv-0-0" {>= "0.22.0~dfsg0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  "libsuil-0-0" {>= "0.10.0~dfsg0"}
+  "tuxguitar" {= "1.5.6+dfsg1-6"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "tuxguitar-synth-lv2_1.5.6+dfsg1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tuxguitar/tuxguitar-synth-lv2_1.5.6+dfsg1-6_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yorick_2.2.04+dfsg1-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yorick"]
+]
+depends: [
+  "debconf"
+  "libc6" {>= "2.29"}
+  "libx11-6"
+  "yorick-data" {= "2.2.04+dfsg1-12"}
+]
+extra-source "yorick_2.2.04+dfsg1-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yorick/yorick_2.2.04+dfsg1-12_amd64.deb"
+}

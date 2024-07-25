@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kodi-visualization-spectrum_1.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kodi-visualization-spectrum"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libgl1-mesa-glx" | "libgl1")
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "kodi-visualization-spectrum_1.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kodi-visualization-spectrum/kodi-visualization-spectrum_1.1.1-1_amd64.deb"
+}

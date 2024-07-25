@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-duo_1.11.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-duo"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libduo3" {= "1.11.3-1+b1"}
+  "libpam-runtime" {>= "1.1.1-3~"}
+  "libpam0g" {>= "0.99.7.1"}
+]
+extra-source "libpam-duo_1.11.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/duo-unix/libpam-duo_1.11.3-1+b1_amd64.deb"
+}

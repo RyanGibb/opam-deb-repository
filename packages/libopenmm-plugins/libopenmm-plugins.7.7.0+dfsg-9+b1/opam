@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenmm-plugins_7.7.0+dfsg-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenmm-plugins"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "4.0"}
+  "libopenmm7-7" {>= "7.7.0+dfsg"}
+  "libstdc++6" {>= "11"}
+  ("ocl-icd-libopencl1" {>= "1.0"} | "libopencl-1-2-1")
+  ("ocl-icd-libopencl1" | "libopencl1")
+]
+extra-source "libopenmm-plugins_7.7.0+dfsg-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openmm/libopenmm-plugins_7.7.0+dfsg-9+b1_amd64.deb"
+}

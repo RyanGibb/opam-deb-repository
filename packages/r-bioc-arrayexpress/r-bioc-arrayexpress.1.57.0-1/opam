@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-arrayexpress_1.57.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-arrayexpress"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biobase" {>= "2.4.0"}
+  "r-bioc-limma"
+  "r-bioc-oligo"
+  "r-cran-xml"
+]
+extra-source "r-bioc-arrayexpress_1.57.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-arrayexpress/r-bioc-arrayexpress_1.57.0-1_all.deb"
+}

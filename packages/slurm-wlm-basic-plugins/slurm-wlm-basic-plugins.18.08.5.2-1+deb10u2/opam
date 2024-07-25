@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slurm-wlm-basic-plugins_18.08.5.2-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slurm-wlm-basic-plugins"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.27"}
+  "libcurl4" {>= "7.16.2"}
+  "libfreeipmi17" {>= "1.4.4"}
+  "libhdf5-103"
+  "libipmimonitoring6" {>= "1.1.5"}
+  "liblua5-1-0"
+  "libmariadb3" {>= "3.0.0"}
+  "libmunge2" {>= "0.5.8"}
+  "libnuma1" {>= "2.0.11"}
+  "librrd8" {>= "1.3.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libsz2"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "slurm-wlm-basic-plugins_18.08.5.2-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-llnl/slurm-wlm-basic-plugins_18.08.5.2-1+deb10u2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libiceoryx-posh-gateway2_2.0.3+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libiceoryx-posh-gateway2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libiceoryx-hoofs2" {>= "2.0.3+dfsg"}
+  "libiceoryx-posh2" {>= "2.0.3+dfsg"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libiceoryx-posh-gateway2_2.0.3+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iceoryx/libiceoryx-posh-gateway2_2.0.3+dfsg-1_amd64.deb"
+}

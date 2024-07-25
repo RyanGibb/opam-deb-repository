@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gmult_8.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gmult"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+]
+extra-source "gmult_8.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gmult/gmult_8.0-2+b1_amd64.deb"
+}

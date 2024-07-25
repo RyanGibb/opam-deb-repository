@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkpipewire-dev_5.27.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkpipewire-dev"]
+]
+depends: [
+  "libkpipewire5" {= "5.27.5-3"}
+  "libkpipewiredmabuf5" {= "5.27.5-3"}
+  "libkpipewirerecord5" {= "5.27.5-3"}
+  "qtbase5-dev"
+]
+extra-source "libkpipewire-dev_5.27.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kpipewire/libkpipewire-dev_5.27.5-3_amd64.deb"
+}

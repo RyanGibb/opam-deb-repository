@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsession-token-perl_1.503-1+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsession-token-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libsession-token-perl_1.503-1+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsession-token-perl/libsession-token-perl_1.503-1+b6_amd64.deb"
+}

@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i budgie-applications-menu-applet_1.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r budgie-applications-menu-applet"]
+]
+depends: [
+  "budgie-extras-common"
+  "gnome-menus"
+  "libbudgie-plugin0" {>= "10.4"}
+  "libc6" {>= "2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libgee-0-8-2" {>= "0.10.1"}
+  "libglib2-0-0" {>= "2.56"}
+  "libgnome-menu-3-0" {>= "3.2.0.1"}
+  "libgranite5" {>= "5.2.1"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libhandy-1-0" {>= "0.80.0"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libpeas-1-0-0" {>= "1.0.0"}
+  "libplank1" {>= "0.11.2"}
+  "libzeitgeist-2-0-0" {>= "0.9.9"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "budgie-applications-menu-applet_1.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/budgie-extras/budgie-applications-menu-applet_1.1.0-1_amd64.deb"
+}

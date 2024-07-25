@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkdecorations2-dev_4:5.27.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkdecorations2-dev"]
+]
+depends: [
+  "libkdecorations2-5v5" {= "4-5.27.5-2"}
+  "libkdecorations2private10" {= "4-5.27.5-2"}
+  "qtbase5-dev" {>= "5.15.2~"}
+]
+extra-source "libkdecorations2-dev_4:5.27.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdecoration/libkdecorations2-dev_5.27.5-2_amd64.deb"
+}

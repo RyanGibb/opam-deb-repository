@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dh-puredata_3.0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dh-puredata"]
+]
+depends: [
+  "libdebhelper-perl"
+  "libfile-find-rule-perl"
+  "pd-lib-builder"
+  "perl-any"
+  "puredata-dev"
+]
+extra-source "dh-puredata_3.0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dh-puredata/dh-puredata_3.0.1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libunity-tools_7.1.4+19.04.20190319-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libunity-tools"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdee-1-0-4" {>= "1.2.5~"}
+  "libglib2-0-0" {>= "2.43.92"}
+  "libgtk-3-0" {>= "3.3.16"}
+  "libunity-protocol-private0" {>= "7.1.4+19.04.20190319"}
+  "libunity9" {>= "4.0.0"}
+]
+extra-source "libunity-tools_7.1.4+19.04.20190319-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libunity/libunity-tools_7.1.4+19.04.20190319-5_amd64.deb"
+}

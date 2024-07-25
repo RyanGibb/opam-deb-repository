@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-licensee_8.9.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-licensee"]
+]
+depends: [
+  "ruby-rugged" {>= "0.24~b"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-licensee_8.9.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-licensee/ruby-licensee_8.9.2-2_all.deb"
+}

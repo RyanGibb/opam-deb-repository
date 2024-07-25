@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5qmlmodels5_5.15.8+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5qmlmodels5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5"
+  "libqt5qml5" {>= "5.15.1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libqt5qmlmodels5_5.15.8+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtdeclarative-opensource-src/libqt5qmlmodels5_5.15.8+dfsg-3_amd64.deb"
+}

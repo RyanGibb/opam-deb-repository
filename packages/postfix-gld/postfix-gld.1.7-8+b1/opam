@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postfix-gld_1.7-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postfix-gld"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.15"}
+  "libmariadb3" {>= "3.0.0"}
+  "lsb-base" {>= "3.0-6"}
+  "psmisc"
+]
+extra-source "postfix-gld_1.7-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postfix-gld/postfix-gld_1.7-8+b1_amd64.deb"
+}

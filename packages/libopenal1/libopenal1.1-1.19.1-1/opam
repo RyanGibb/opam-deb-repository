@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenal1_1:1.19.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenal1"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.27"}
+  "libopenal-data" {= "1-1.19.1-1"}
+  "libsndio7-0" {>= "1.1.0"}
+]
+extra-source "libopenal1_1:1.19.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openal-soft/libopenal1_1.19.1-1_amd64.deb"
+}

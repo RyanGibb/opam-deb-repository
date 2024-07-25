@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xtalk_1.3-15.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xtalk"]
+]
+depends: [
+  "python"
+  "python-any" {>= "2.7.5-5~"}
+  "python-tk"
+]
+extra-source "xtalk_1.3-15.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xtalk/xtalk_1.3-15.3_all.deb"
+}

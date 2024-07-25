@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpoe-component-server-soap-perl_1.14-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpoe-component-server-soap-perl"]
+]
+depends: [
+  "libpoe-component-server-simplehttp-perl"
+  "libpoe-perl"
+  "libsoap-lite-perl"
+  "perl-any"
+]
+extra-source "libpoe-component-server-soap-perl_1.14-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpoe-component-server-soap-perl/libpoe-component-server-soap-perl_1.14-2.1_all.deb"
+}

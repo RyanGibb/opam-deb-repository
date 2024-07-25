@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i castxml_0.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r castxml"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libclang-cpp14" {>= "1-14.0.6"}
+  "libllvm14"
+  "libstdc++6" {>= "11"}
+]
+extra-source "castxml_0.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/castxml/castxml_0.5.1-1_amd64.deb"
+}

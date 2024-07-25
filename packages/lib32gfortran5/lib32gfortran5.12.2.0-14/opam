@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32gfortran5_12.2.0-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32gfortran5"]
+]
+depends: [
+  "gcc-12-base" {= "12.2.0-14"}
+  "lib32gcc-s1" {>= "4.4"}
+  "lib32quadmath0" {>= "4.6"}
+  "libc6-i386" {>= "2.34"}
+]
+conflicts: [
+  "libc6-i386 (<< 2.9-22)"
+]
+extra-source "lib32gfortran5_12.2.0-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12/lib32gfortran5_12.2.0-14_amd64.deb"
+}

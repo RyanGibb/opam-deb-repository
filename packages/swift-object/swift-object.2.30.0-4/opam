@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i swift-object_2.30.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r swift-object"]
+]
+depends: [
+  "lsb-base"
+  "python3-any"
+  "python3-swift" {= "2.30.0-4"}
+  "rsync"
+  "swift" {= "2.30.0-4"}
+]
+extra-source "swift-object_2.30.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/swift/swift-object_2.30.0-4_all.deb"
+}

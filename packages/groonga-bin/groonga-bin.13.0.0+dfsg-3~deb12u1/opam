@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i groonga-bin_13.0.0+dfsg-3~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r groonga-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgroonga0" {= "13.0.0+dfsg-3~deb12u1"}
+  "libjs-jquery"
+  "libjs-jquery-flot"
+  "libjs-jquery-ui"
+]
+extra-source "groonga-bin_13.0.0+dfsg-3~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/groonga/groonga-bin_13.0.0+dfsg-3~deb12u1_amd64.deb"
+}

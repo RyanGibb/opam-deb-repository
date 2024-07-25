@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clazy_1.9-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clazy"]
+]
+depends: [
+  "clang-11"
+  "libc6" {>= "2.14"}
+  "libclang-cpp11" {>= "1-11.0.1"}
+  "libllvm11" {>= "1-9~svn298832-1~"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "clazy_1.9-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clazy/clazy_1.9-3_amd64.deb"
+}

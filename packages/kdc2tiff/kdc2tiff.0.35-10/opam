@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kdc2tiff_0.35-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kdc2tiff"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-4.1.1"}
+  "libjpeg62-turbo" {>= "1-1.3.1"}
+  "libstdc++6" {>= "4.1.1"}
+  "libtiff5" {>= "4.0.3"}
+]
+extra-source "kdc2tiff_0.35-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdc2tiff/kdc2tiff_0.35-10_amd64.deb"
+}

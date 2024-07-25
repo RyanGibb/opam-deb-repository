@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libokhttp-java_3.13.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libokhttp-java"]
+]
+depends: [
+  "libbcprov-java" {>= "1.68"}
+  "libokio-java"
+]
+extra-source "libokhttp-java_3.13.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libokhttp-java/libokhttp-java_3.13.1-3_all.deb"
+}

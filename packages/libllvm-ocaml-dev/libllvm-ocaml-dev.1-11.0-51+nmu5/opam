@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libllvm-ocaml-dev_1:11.0-51+nmu5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libllvm-ocaml-dev"]
+]
+depends: [
+  "libllvm-11-ocaml-dev" {>= "11~"}
+  "llvm-runtime" {= "1-11.0-51+nmu5"}
+]
+extra-source "libllvm-ocaml-dev_1:11.0-51+nmu5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-defaults/libllvm-ocaml-dev_11.0-51+nmu5_amd64.deb"
+}

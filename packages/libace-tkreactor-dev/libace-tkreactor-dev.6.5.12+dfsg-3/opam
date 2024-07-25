@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libace-tkreactor-dev_6.5.12+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libace-tkreactor-dev"]
+]
+depends: [
+  "libace-dev" {= "6.5.12+dfsg-3"}
+  "libace-tkreactor-6-5-12" {= "6.5.12+dfsg-3"}
+  "tk-dev" {>= "8.5"}
+]
+extra-source "libace-tkreactor-dev_6.5.12+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ace/libace-tkreactor-dev_6.5.12+dfsg-3_amd64.deb"
+}

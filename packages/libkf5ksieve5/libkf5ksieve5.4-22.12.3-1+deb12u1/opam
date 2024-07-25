@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5ksieve5_4:22.12.3-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5ksieve5"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libkf5i18n5" {>= "5.99.0~"}
+  "libkf5ksieve-data" {= "4-22.12.3-1+deb12u1"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libkf5ksieve5_4:22.12.3-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkf5ksieve/libkf5ksieve5_22.12.3-1+deb12u1_amd64.deb"
+}

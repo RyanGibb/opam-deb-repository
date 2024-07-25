@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i deja-dup_38.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r deja-dup"]
+]
+depends: [
+  "duplicity" {>= "0.7.14"}
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.49.2"}
+  "libgoa-1-0-0b" {>= "3.8.0"}
+  "libgoa-backend-1-0-1" {>= "3.10.0"}
+  "libgtk-3-0" {>= "3.22"}
+  "libnautilus-extension1a" {>= "3.21.92-3~"}
+  "libpackagekit-glib2-18" {>= "1.1.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpeas-1-0-0" {>= "1.0.0"}
+  "libsecret-1-0" {>= "0.7"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "deja-dup_38.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/deja-dup/deja-dup_38.3-1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnucobol_2.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnucobol"]
+]
+depends: [
+  "gcc"
+  "libc6" {>= "2.14"}
+  "libcob4"
+  "libcob4-dev" {= "2.2-5"}
+  "libgmp-dev"
+  "libncurses5-dev"
+]
+conflicts: [
+  "open-cobol (<< 2.2)"
+]
+extra-source "gnucobol_2.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnucobol/gnucobol_2.2-5_amd64.deb"
+}

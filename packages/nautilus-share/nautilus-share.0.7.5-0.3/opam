@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nautilus-share_0.7.5-0.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nautilus-share"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgtk-4-1" {>= "4.6.0"}
+  "libnautilus-extension4" {>= "43~rc"}
+  "nautilus" {>= "43~rc"}
+  "samba"
+]
+extra-source "nautilus-share_0.7.5-0.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nautilus-share/nautilus-share_0.7.5-0.3_amd64.deb"
+}

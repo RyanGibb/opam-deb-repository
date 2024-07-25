@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnjb-dev_2.2.7~dfsg0-4+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnjb-dev"]
+]
+depends: [
+  "libnjb5" {= "2.2.7~dfsg0-4+b3"}
+  "libusb-dev" {> "0.1.7"}
+]
+extra-source "libnjb-dev_2.2.7~dfsg0-4+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnjb/libnjb-dev_2.2.7~dfsg0-4+b3_amd64.deb"
+}

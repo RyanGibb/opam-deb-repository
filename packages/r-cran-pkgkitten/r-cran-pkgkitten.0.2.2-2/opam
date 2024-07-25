@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-pkgkitten_0.2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-pkgkitten"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.1.1-2"}
+]
+extra-source "r-cran-pkgkitten_0.2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-pkgkitten/r-cran-pkgkitten_0.2.2-2_all.deb"
+}

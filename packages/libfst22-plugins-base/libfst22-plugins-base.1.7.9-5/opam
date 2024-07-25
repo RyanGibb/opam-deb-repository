@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfst22-plugins-base_1.7.9-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfst22-plugins-base"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfst22" {= "1.7.9-5"}
+  "libgcc-s1" {>= "3.4"}
+  "libstdc++6" {>= "11"}
+]
+conflicts: [
+  "libfst8-plugins-base"
+]
+extra-source "libfst22-plugins-base_1.7.9-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openfst/libfst22-plugins-base_1.7.9-5_amd64.deb"
+}

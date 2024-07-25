@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-phf-shared+uncased-dev_0.10.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-phf-shared+uncased-dev"]
+]
+depends: [
+  "librust-phf-shared-dev" {= "0.10.0-2"}
+  "librust-uncased-dev"
+]
+extra-source "librust-phf-shared+uncased-dev_0.10.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-phf-shared/librust-phf-shared+uncased-dev_0.10.0-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-gio+purge-lgpl-docs-dev_0.5.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-gio+purge-lgpl-docs-dev"]
+]
+depends: [
+  "librust-gio-dev" {= "0.5.1-2"}
+  "librust-gtk-rs-lgpl-docs-dev"
+]
+extra-source "librust-gio+purge-lgpl-docs-dev_0.5.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-gio/librust-gio+purge-lgpl-docs-dev_0.5.1-2_amd64.deb"
+}

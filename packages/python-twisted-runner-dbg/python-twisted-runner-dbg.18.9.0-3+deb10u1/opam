@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-twisted-runner-dbg_18.9.0-3+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-twisted-runner-dbg"]
+]
+depends: [
+  "python-dbg-any"
+  "python-twisted-runner" {= "18.9.0-3+deb10u1"}
+]
+extra-source "python-twisted-runner-dbg_18.9.0-3+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/twisted/python-twisted-runner-dbg_18.9.0-3+deb10u1_all.deb"
+}

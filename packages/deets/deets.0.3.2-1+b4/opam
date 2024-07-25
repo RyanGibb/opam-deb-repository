@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i deets_0.3.2-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r deets"]
+]
+depends: [
+  "augeas-tools"
+  "libc6" {>= "2.34"}
+  "liblua5-1-0"
+  "libmd0" {>= "0.0.0"}
+  "lua-augeas"
+  "lua-cosmo" {>= "10.04.06"}
+  "lua-md5"
+]
+extra-source "deets_0.3.2-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/deets/deets_0.3.2-1+b4_amd64.deb"
+}

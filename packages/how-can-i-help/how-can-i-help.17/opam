@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i how-can-i-help_17_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r how-can-i-help"]
+]
+depends: [
+  "libruby3-1"
+  "ruby" {>= "1-1.9.3"}
+  "ruby-debian" {>= "0.3.8~"}
+]
+extra-source "how-can-i-help_17_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/how-can-i-help/how-can-i-help_17_all.deb"
+}

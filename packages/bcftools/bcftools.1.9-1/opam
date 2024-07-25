@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bcftools_1.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bcftools"]
+]
+depends: [
+  "libc6" {>= "2.23"}
+  "libhts2" {>= "1.6"}
+  "perl-any"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "bcftools_1.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bcftools/bcftools_1.9-1_amd64.deb"
+}

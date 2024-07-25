@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopm-models-dev_2022.10+ds-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopm-models-dev"]
+]
+depends: [
+  "libdune-grid-dev"
+  "libdune-istl-dev"
+  "libdune-localfunctions-dev"
+  "libopm-grid-dev" {>= "2022.10"}
+  "libopm-material-dev" {>= "2022.10"}
+]
+extra-source "libopm-models-dev_2022.10+ds-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opm-models/libopm-models-dev_2022.10+ds-4_amd64.deb"
+}

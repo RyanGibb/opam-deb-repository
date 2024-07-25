@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-filepath-bytestring-prof_1.4.2.1.6-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-filepath-bytestring-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-filepath-bytestring-dev" {= "1.4.2.1.6-2+b1"}
+]
+extra-source "libghc-filepath-bytestring-prof_1.4.2.1.6-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-filepath-bytestring/libghc-filepath-bytestring-prof_1.4.2.1.6-2+b1_amd64.deb"
+}

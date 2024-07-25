@@ -1,0 +1,39 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i arctica-greeter_0.99.1.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r arctica-greeter"]
+]
+depends: [
+  "fonts-cabin"
+  "fonts-cantarell"
+  "libatk1-0-0" {>= "1.12.4"}
+  "libayatana-ido3-0-4-0" {>= "0.4.0"}
+  "libayatana-indicator3-7" {>= "0.6.0"}
+  "libc6" {>= "2.29"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.14.0"}
+  "libcanberra0" {>= "0.2"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.43.92"}
+  "libgtk-3-0" {>= "3.21.4"}
+  "liblightdm-gobject-1-0" {>= "1.16.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libx11-6"
+  "libxext6"
+  "lightdm"
+  "marco"
+  "mate-settings-daemon"
+  "network-manager"
+  "numix-gtk-theme"
+  "numix-icon-theme"
+  "python3"
+  "systemd"
+  "x11-xkb-utils"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "arctica-greeter_0.99.1.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/arctica-greeter/arctica-greeter_0.99.1.5-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-base16-bytestring-prof_1.0.2.0-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-base16-bytestring-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-base16-bytestring-dev" {= "1.0.2.0-1+b3"}
+]
+extra-source "libghc-base16-bytestring-prof_1.0.2.0-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-base16-bytestring/libghc-base16-bytestring-prof_1.0.2.0-1+b3_amd64.deb"
+}

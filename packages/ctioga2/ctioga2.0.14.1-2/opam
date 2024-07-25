@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ctioga2_0.14.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ctioga2"]
+]
+depends: [
+  "ruby-tioga" {>= "1.19"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ctioga2_0.14.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ctioga2/ctioga2_0.14.1-2_all.deb"
+}

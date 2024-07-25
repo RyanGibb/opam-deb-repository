@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ipmiutil_3.1.8-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ipmiutil"]
+]
+depends: [
+  "anacron"
+  "libc6" {>= "2.34"}
+  "libssl3" {>= "3.0.0"}
+  "rpcbind"
+]
+extra-source "ipmiutil_3.1.8-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ipmiutil/ipmiutil_3.1.8-4_amd64.deb"
+}

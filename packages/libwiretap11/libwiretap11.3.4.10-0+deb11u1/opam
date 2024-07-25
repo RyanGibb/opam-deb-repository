@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwiretap11_3.4.10-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwiretap11"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libwsutil12" {>= "2.9.0"}
+  "zlib1g" {>= "1-1.2.2.4"}
+]
+extra-source "libwiretap11_3.4.10-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wireshark/libwiretap11_3.4.10-0+deb11u1_amd64.deb"
+}

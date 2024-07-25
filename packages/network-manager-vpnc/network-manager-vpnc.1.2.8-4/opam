@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i network-manager-vpnc_1.2.8-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r network-manager-vpnc"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.34"}
+  "libnm0" {>= "1.2.0"}
+  "network-manager"
+  "vpnc"
+]
+extra-source "network-manager-vpnc_1.2.8-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/network-manager-vpnc/network-manager-vpnc_1.2.8-4_amd64.deb"
+}

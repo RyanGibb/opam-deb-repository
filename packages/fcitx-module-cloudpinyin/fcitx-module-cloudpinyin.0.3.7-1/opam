@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx-module-cloudpinyin_0.3.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx-module-cloudpinyin"]
+]
+depends: [
+  "fcitx-modules" {>= "1-4.2.9"}
+  "libc6" {>= "2.15"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+]
+extra-source "fcitx-module-cloudpinyin_0.3.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx-cloudpinyin/fcitx-module-cloudpinyin_0.3.7-1_amd64.deb"
+}

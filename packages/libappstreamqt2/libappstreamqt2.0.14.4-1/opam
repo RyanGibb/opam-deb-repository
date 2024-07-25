@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libappstreamqt2_0.14.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libappstreamqt2"]
+]
+depends: [
+  "libappstream4" {>= "0.14.0"}
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.58"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libappstreamqt2_0.14.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/appstream/libappstreamqt2_0.14.4-1_amd64.deb"
+}

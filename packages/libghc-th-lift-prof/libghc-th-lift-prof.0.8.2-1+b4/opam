@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-th-lift-prof_0.8.2-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-th-lift-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-th-abstraction-prof"
+  "libghc-th-lift-dev" {= "0.8.2-1+b4"}
+]
+extra-source "libghc-th-lift-prof_0.8.2-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-th-lift/libghc-th-lift-prof_0.8.2-1+b4_amd64.deb"
+}

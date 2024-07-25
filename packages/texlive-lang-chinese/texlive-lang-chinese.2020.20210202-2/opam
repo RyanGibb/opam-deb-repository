@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i texlive-lang-chinese_2020.20210202-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r texlive-lang-chinese"]
+]
+depends: [
+  "fonts-arphic-bkai00mp"
+  "fonts-arphic-bsmi00lp"
+  "fonts-arphic-gbsn00lp"
+  "fonts-arphic-gkai00mp"
+  "tex-common" {>= "6.13"}
+  "texlive-base" {>= "2020.20200417"}
+  "texlive-lang-cjk" {>= "2020.20200417"}
+]
+extra-source "texlive-lang-chinese_2020.20210202-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/texlive-lang/texlive-lang-chinese_2020.20210202-2_all.deb"
+}

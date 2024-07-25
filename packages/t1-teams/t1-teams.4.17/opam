@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i t1-teams_4.17_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r t1-teams"]
+]
+depends: [
+  "xfonts-utils" {>= "1-7.5+2"}
+]
+conflicts: [
+  "scalable-cyrfonts"
+  "scalable-cyrfonts-x11"
+  "xbase-clients (<< 4.0)"
+]
+extra-source "t1-teams_4.17_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scalable-cyrfonts/t1-teams_4.17_all.deb"
+}

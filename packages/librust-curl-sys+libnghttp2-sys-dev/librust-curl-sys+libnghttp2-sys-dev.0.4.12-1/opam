@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-curl-sys+libnghttp2-sys-dev_0.4.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-curl-sys+libnghttp2-sys-dev"]
+]
+depends: [
+  "librust-curl-sys-dev" {= "0.4.12-1"}
+  "librust-libnghttp2-sys-0-1+default-dev"
+]
+extra-source "librust-curl-sys+libnghttp2-sys-dev_0.4.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-curl-sys/librust-curl-sys+libnghttp2-sys-dev_0.4.12-1_amd64.deb"
+}

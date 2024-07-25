@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-http2-prof_1.6.3-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-http2-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-case-insensitive-prof"
+  "libghc-http2-dev" {= "1.6.3-4+b1"}
+  "libghc-psqueues-prof"
+]
+extra-source "libghc-http2-prof_1.6.3-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-http2/libghc-http2-prof_1.6.3-4+b1_amd64.deb"
+}

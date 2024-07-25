@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblibreofficekitgtk_4:7.4.7-1+deb12u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblibreofficekitgtk"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.10.0"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libglib2-0-0" {>= "2.59.0"}
+  "libgtk-3-0" {>= "3.20.0"}
+  "libreofficekit-data"
+  "libstdc++6" {>= "11"}
+]
+extra-source "liblibreofficekitgtk_4:7.4.7-1+deb12u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/liblibreofficekitgtk_7.4.7-1+deb12u3_amd64.deb"
+}

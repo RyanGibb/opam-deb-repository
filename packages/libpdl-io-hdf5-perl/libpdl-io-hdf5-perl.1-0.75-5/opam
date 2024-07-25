@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpdl-io-hdf5-perl_1:0.75-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpdl-io-hdf5-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libhdf5-103-1"
+  "pdl"
+  "pdl" {>= "1-2.081-1"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+  "perl-tk"
+]
+extra-source "libpdl-io-hdf5-perl_1:0.75-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpdl-io-hdf5-perl/libpdl-io-hdf5-perl_0.75-5_amd64.deb"
+}

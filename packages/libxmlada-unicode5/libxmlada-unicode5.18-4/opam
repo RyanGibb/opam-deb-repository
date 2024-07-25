@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlada-unicode5_18-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlada-unicode5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnat-8" {>= "8.3.0"}
+]
+extra-source "libxmlada-unicode5_18-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxmlada/libxmlada-unicode5_18-4_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libscope-upper-perl_0.34-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libscope-upper-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "libscope-upper-perl_0.34-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libscope-upper-perl/libscope-upper-perl_0.34-1_amd64.deb"
+}

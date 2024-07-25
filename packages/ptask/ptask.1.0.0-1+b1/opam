@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ptask_1.0.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ptask"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.26.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libjson-c3" {>= "0.10"}
+  "taskwarrior" {>= "2.2.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "ptask_1.0.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/ptask/ptask_1.0.0-1+b1_amd64.deb"
+}

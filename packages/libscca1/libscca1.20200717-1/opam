@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libscca1_20200717-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libscca1"]
+]
+depends: [
+  "libbfio1" {>= "20120425"}
+  "libc6" {>= "2.17"}
+]
+extra-source "libscca1_20200717-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libscca/libscca1_20200717-1_amd64.deb"
+}

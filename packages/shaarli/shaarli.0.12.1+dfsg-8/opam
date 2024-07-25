@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shaarli_0.12.1+dfsg-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shaarli"]
+]
+depends: [
+  "gettext"
+  "javascript-common"
+  "libjs-jquery"
+  "libjs-jquery-lazyload"
+  "libjs-jquery-ui"
+  "php-arthurhoaro-web-thumbnailer"
+  "php-common"
+  "php-curl"
+  "php-gd"
+  "php-intl"
+  "php-json"
+  "php-klogger" {< "2~~"}
+  "php-klogger" {>= "1.2"}
+  "php-ldap"
+  "php-malkusch-lock" {< "3~~"}
+  "php-malkusch-lock" {>= "2.1"}
+  "php-mbstring"
+  "php-netscape-bookmark-parser" {< "4~~"}
+  "php-netscape-bookmark-parser" {>= "3.0"}
+  "php-oscarotero-gettext" {< "5~~"}
+  "php-oscarotero-gettext" {>= "4.4"}
+  "php-parsedown" {< "2~~"}
+  "php-parsedown" {>= "1.6"}
+  "php-parsedown-extra" {< "0.9~~"}
+  "php-parsedown-extra" {>= "0.8.1"}
+  "php-pubsubhubbub-publisher"
+  "php-slim" {< "4~~"}
+  "php-slim" {>= "3.0"}
+  ("libapache2-mod-php" | "php-cgi" | "php-fpm" | "php")
+]
+extra-source "shaarli_0.12.1+dfsg-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shaarli/shaarli_0.12.1+dfsg-8_all.deb"
+}

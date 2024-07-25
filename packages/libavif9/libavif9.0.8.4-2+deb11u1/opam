@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libavif9_0.8.4-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libavif9"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdav1d4" {>= "0.1.0"}
+  "libgav1-0" {>= "0.16.0"}
+]
+extra-source "libavif9_0.8.4-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libavif/libavif9_0.8.4-2+deb11u1_amd64.deb"
+}

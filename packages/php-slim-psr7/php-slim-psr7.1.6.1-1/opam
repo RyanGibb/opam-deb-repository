@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-slim-psr7_1.6.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-slim-psr7"]
+]
+depends: [
+  "php-common"
+  "php-fig-http-message-util" {< "2~~"}
+  "php-fig-http-message-util" {>= "1.1.5"}
+  "php-getallheaders" {< "4~~"}
+  "php-getallheaders" {>= "3.0"}
+  "php-psr-http-factory" {< "2~~"}
+  "php-psr-http-factory" {>= "1.0"}
+  "php-psr-http-message" {< "2~~"}
+  "php-psr-http-message" {>= "1.0"}
+  "php-symfony-polyfill-php80" {< "2~~"}
+  "php-symfony-polyfill-php80" {>= "1.26"}
+]
+extra-source "php-slim-psr7_1.6.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-slim-psr7/php-slim-psr7_1.6.1-1_all.deb"
+}

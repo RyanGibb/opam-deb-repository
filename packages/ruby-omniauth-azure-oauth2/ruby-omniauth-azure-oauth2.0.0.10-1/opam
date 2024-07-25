@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-omniauth-azure-oauth2_0.0.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-omniauth-azure-oauth2"]
+]
+depends: [
+  "ruby-jwt" {>= "1.0"}
+  "ruby-omniauth" {>= "1.0"}
+  "ruby-omniauth-oauth2" {>= "1.1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-omniauth-azure-oauth2_0.0.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-omniauth-azure-oauth2/ruby-omniauth-azure-oauth2_0.0.10-1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i flam3-utils_3.1.1+ds2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r flam3-utils"]
+]
+depends: [
+  "flam3-palette"
+  "libc6" {>= "2.34"}
+  "libflam3-0" {>= "3.1.1"}
+  "libxml2" {>= "2.7.4"}
+]
+conflicts: [
+  "flam3"
+]
+extra-source "flam3-utils_3.1.1+ds2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flam3/flam3-utils_3.1.1+ds2-2_amd64.deb"
+}

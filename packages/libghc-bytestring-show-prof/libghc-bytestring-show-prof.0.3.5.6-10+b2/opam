@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-bytestring-show-prof_0.3.5.6-10+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-bytestring-show-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-bytestring-show-dev" {= "0.3.5.6-10+b2"}
+]
+extra-source "libghc-bytestring-show-prof_0.3.5.6-10+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-bytestring-show/libghc-bytestring-show-prof_0.3.5.6-10+b2_amd64.deb"
+}

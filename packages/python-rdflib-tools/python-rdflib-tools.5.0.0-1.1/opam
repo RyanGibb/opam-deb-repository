@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-rdflib-tools_5.0.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-rdflib-tools"]
+]
+depends: [
+  "python3"
+  "python3-pkg-resources"
+  "python3-rdflib" {>= "4.0.1-1"}
+]
+extra-source "python-rdflib-tools_5.0.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rdflib/python-rdflib-tools_5.0.0-1.1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnomecanvasmm-2.6-doc_2.26.0-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnomecanvasmm-2.6-doc"]
+]
+depends: [
+  "doc-base"
+  ("lynx" | "www-browser")
+]
+conflicts: [
+  "libgnomecanvasmm-2.6-dev (<< 2.20.0-1)"
+]
+extra-source "libgnomecanvasmm-2.6-doc_2.26.0-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnomecanvasmm2.6/libgnomecanvasmm-2.6-doc_2.26.0-3.1_all.deb"
+}

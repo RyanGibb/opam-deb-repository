@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmath-random-secure-perl_0.080001-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmath-random-secure-perl"]
+]
+depends: [
+  "libcrypt-random-source-perl"
+  "libmath-random-isaac-perl"
+  "libmoo-perl" {>= "2"}
+  "perl"
+]
+extra-source "libmath-random-secure-perl_0.080001-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmath-random-secure-perl/libmath-random-secure-perl_0.080001-1_all.deb"
+}

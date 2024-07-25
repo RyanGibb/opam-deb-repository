@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nagios4-cgi_4.4.6-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nagios4-cgi"]
+]
+depends: [
+  "adduser"
+  "apache2-utils"
+  "coreutils" {>= "4.5.3"}
+  "libc6" {>= "2.14"}
+  "libgd3" {>= "2.1.0~alpha~"}
+  "libjs-jquery"
+  "nagios4-common" {= "4.4.6-4"}
+  "ucf" {>= "0.28"}
+  ("libapache2-mod-php" | "php" | "php-cgi")
+]
+extra-source "nagios4-cgi_4.4.6-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nagios4/nagios4-cgi_4.4.6-4_amd64.deb"
+}

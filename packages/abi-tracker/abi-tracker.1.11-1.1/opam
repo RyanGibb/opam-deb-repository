@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i abi-tracker_1.11-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r abi-tracker"]
+]
+depends: [
+  "abi-compliance-checker" {>= "2.2"}
+  "abi-dumper" {>= "1.1"}
+  "abi-monitor" {>= "1.12"}
+  "elfutils"
+  "perl-any"
+  "pkgdiff" {>= "1.6.4"}
+  "rfcdiff" {>= "1.41"}
+  "vtable-dumper" {>= "1.1"}
+]
+extra-source "abi-tracker_1.11-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/abi-tracker/abi-tracker_1.11-1.1_all.deb"
+}

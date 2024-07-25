@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-por-cat_0.10.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-por-cat"]
+]
+depends: [
+  "apertium" {>= "3.8.1"}
+  "apertium-lex-tools" {>= "0.4.1"}
+  "cg3" {>= "1.3.6"}
+]
+conflicts: [
+  "apertium-cat-por"
+]
+extra-source "apertium-por-cat_0.10.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-por-cat/apertium-por-cat_0.10.1-2_all.deb"
+}

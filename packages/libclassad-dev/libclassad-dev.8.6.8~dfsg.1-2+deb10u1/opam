@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclassad-dev_8.6.8~dfsg.1-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclassad-dev"]
+]
+depends: [
+  "libclassad8" {= "8.6.8~dfsg.1-2+deb10u1"}
+]
+conflicts: [
+  "libclassad0-dev"
+]
+extra-source "libclassad-dev_8.6.8~dfsg.1-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/condor/libclassad-dev_8.6.8~dfsg.1-2+deb10u1_amd64.deb"
+}

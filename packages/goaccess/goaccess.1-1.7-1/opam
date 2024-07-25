@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i goaccess_1:1.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r goaccess"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libmaxminddb0" {>= "1.0.2"}
+  "libncursesw6" {>= "6"}
+  "libssl3" {>= "3.0.0"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "goaccess_1:1.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/goaccess/goaccess_1.7-1_amd64.deb"
+}

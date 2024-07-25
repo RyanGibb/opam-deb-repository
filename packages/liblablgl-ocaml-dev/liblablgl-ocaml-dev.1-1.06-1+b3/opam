@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblablgl-ocaml-dev_1:1.06-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblablgl-ocaml-dev"]
+]
+depends: [
+  "freeglut3-dev"
+  "liblablgl-ocaml"
+  "liblabltk-ocaml-dev"
+  "libxmu-dev"
+  "ocaml-findlib"
+  "ocaml-nox"
+  "tk-dev"
+  ("libgl1-mesa-dev" | "libgl-dev")
+  ("libglu1-mesa-dev" | "xlibmesa-glu-dev" | "libglu-dev")
+]
+extra-source "liblablgl-ocaml-dev_1:1.06-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lablgl/liblablgl-ocaml-dev_1.06-1+b3_amd64.deb"
+}

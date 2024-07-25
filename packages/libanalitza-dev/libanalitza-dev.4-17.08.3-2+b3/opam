@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libanalitza-dev_4:17.08.3-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libanalitza-dev"]
+]
+depends: [
+  "libanalitza8" {= "4-17.08.3-2+b3"}
+  "libanalitzagui8" {= "4-17.08.3-2+b3"}
+  "libanalitzaplot8" {= "4-17.08.3-2+b3"}
+  "libanalitzawidgets8" {= "4-17.08.3-2+b3"}
+  "qml-module-org-kde-analitza" {= "4-17.08.3-2+b3"}
+  "qtbase5-dev" {>= "5.4"}
+]
+conflicts: [
+  "kalgebra-dev"
+]
+extra-source "libanalitza-dev_4:17.08.3-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/analitza/libanalitza-dev_17.08.3-2+b3_amd64.deb"
+}

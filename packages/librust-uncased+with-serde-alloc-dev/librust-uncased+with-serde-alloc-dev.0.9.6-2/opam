@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-uncased+with-serde-alloc-dev_0.9.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-uncased+with-serde-alloc-dev"]
+]
+depends: [
+  "librust-serde-1+alloc-dev"
+  "librust-uncased+serde-dev" {= "0.9.6-2"}
+  "librust-uncased-dev"
+  "librust-uncased-dev" {= "0.9.6-2"}
+]
+extra-source "librust-uncased+with-serde-alloc-dev_0.9.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-uncased/librust-uncased+with-serde-alloc-dev_0.9.6-2_amd64.deb"
+}

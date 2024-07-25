@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i whiptail_0.52.20-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r whiptail"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libnewt0-52" {>= "0.52.20"}
+  "libpopt0" {>= "1.14"}
+  "libslang2" {>= "2.2.4"}
+]
+extra-source "whiptail_0.52.20-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/newt/whiptail_0.52.20-8_amd64.deb"
+}

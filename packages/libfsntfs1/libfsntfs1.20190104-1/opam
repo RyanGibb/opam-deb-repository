@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfsntfs1_20190104-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfsntfs1"]
+]
+depends: [
+  "libbfio1" {>= "20120425"}
+  "libc6" {>= "2.17"}
+]
+extra-source "libfsntfs1_20190104-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfsntfs/libfsntfs1_20190104-1_amd64.deb"
+}

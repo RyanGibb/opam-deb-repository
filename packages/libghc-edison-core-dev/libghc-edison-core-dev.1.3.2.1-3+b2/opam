@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-edison-core-dev_1.3.2.1-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-edison-core-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-edison-api-dev"
+  "libghc-quickcheck2-dev"
+  "libgmp10"
+]
+extra-source "libghc-edison-core-dev_1.3.2.1-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-edison-core/libghc-edison-core-dev_1.3.2.1-3+b2_amd64.deb"
+}

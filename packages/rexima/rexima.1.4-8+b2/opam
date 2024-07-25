@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rexima_1.4-8+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rexima"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "rexima_1.4-8+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rexima/rexima_1.4-8+b2_amd64.deb"
+}

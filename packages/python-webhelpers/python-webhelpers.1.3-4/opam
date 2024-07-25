@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-webhelpers_1.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-webhelpers"]
+]
+depends: [
+  "libjs-scriptaculous"
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  "python-markupsafe"
+  "python-routes" {>= "1.1"}
+  "python-simplejson" {>= "1.4"}
+]
+extra-source "python-webhelpers_1.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/webhelpers/python-webhelpers_1.3-4_all.deb"
+}

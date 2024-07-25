@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfcl-dev_0.6.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfcl-dev"]
+]
+depends: [
+  "libccd-dev"
+  "libeigen3-dev"
+  "libfcl0-6" {= "0.6.1-5"}
+  "liboctomap-dev"
+]
+extra-source "libfcl-dev_0.6.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcl/libfcl-dev_0.6.1-5_amd64.deb"
+}

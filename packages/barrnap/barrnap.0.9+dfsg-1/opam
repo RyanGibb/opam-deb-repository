@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i barrnap_0.9+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r barrnap"]
+]
+depends: [
+  "bedtools"
+  "hmmer" {>= "3.1"}
+  "perl-any"
+]
+extra-source "barrnap_0.9+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/barrnap/barrnap_0.9+dfsg-1_all.deb"
+}

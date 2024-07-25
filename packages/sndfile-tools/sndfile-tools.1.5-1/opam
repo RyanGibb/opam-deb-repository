@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sndfile-tools_1.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sndfile-tools"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.2.4"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libsamplerate0" {>= "0.1.7"}
+  "libsndfile1" {>= "1.0.20"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "sndfile-tools_1.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sndfile-tools/sndfile-tools_1.5-1_amd64.deb"
+}

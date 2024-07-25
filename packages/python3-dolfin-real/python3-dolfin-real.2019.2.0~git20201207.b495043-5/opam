@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-dolfin-real_2019.2.0~git20201207.b495043-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-dolfin-real"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libdolfin-dev" {= "2019.2.0~git20201207.b495043-5"}
+  "libdolfin2019-2" {= "2019.2.0~git20201207.b495043-5"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libopenmpi3" {>= "4.1.0"}
+  "libpetsc-real3-14" {>= "3.14.5+dfsg1"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  "python3-petsc4py-real" {< "3.15"}
+  "python3-petsc4py-real" {>= "3.14"}
+  "python3-slepc4py-real" {< "3.15"}
+  "python3-slepc4py-real" {>= "3.14"}
+]
+extra-source "python3-dolfin-real_2019.2.0~git20201207.b495043-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dolfin/python3-dolfin-real_2019.2.0~git20201207.b495043-5_amd64.deb"
+}

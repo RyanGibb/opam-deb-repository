@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libchise1_0.3.0-2.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libchise1"]
+]
+depends: [
+  "chise-db"
+  "libc6" {>= "2.33"}
+  "libdb5-3"
+]
+extra-source "libchise1_0.3.0-2.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chise-base/libchise1_0.3.0-2.2_amd64.deb"
+}

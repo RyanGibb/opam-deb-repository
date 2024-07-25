@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pegasus-wms_4.4.0+dfsg-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pegasus-wms"]
+]
+depends: [
+  "default-jre"
+  "libc6" {>= "2.14"}
+  "libcommons-logging-java"
+  "libcommons-pool-java"
+  "libgcc1" {>= "1-3.0"}
+  "libgetopt-java"
+  "libgoogle-gson-java"
+  "libjglobus-gram-java"
+  "libjglobus-gridftp-java"
+  "libjglobus-gss-java"
+  "libjglobus-jsse-java"
+  "libjglobus-ssl-proxies-java"
+  "liblog4j1-2-java"
+  "libmariadb-java"
+  "libstdc++6" {>= "4.1.1"}
+  "libxerces2-java"
+  "libxml-commons-resolver1-1-java"
+  "libxmlrpc3-common-java"
+  "perl"
+  "python"
+  "python-boto"
+  "python-sqlalchemy"
+]
+extra-source "pegasus-wms_4.4.0+dfsg-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pegasus-wms/pegasus-wms_4.4.0+dfsg-8_amd64.deb"
+}

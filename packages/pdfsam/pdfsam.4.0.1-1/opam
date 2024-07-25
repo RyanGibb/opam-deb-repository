@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pdfsam_4.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pdfsam"]
+]
+depends: [
+  "libatinject-jsr330-api-java"
+  "libbcmail-java" {>= "1.58"}
+  "libbcprov-java" {>= "1.58"}
+  "libcommons-io-java" {>= "2.6"}
+  "libcommons-lang3-java" {>= "3.8"}
+  "libfontawesomefx-java" {>= "9.1.2"}
+  "libgettext-commons-java"
+  "libhibernate-validator-java" {>= "4.3.3-2"}
+  "libjackson2-jr-java"
+  "liblogback-java"
+  "libopenjfx-java"
+  "libsambox-java" {>= "1.1.41"}
+  "libsejda-eventstudio-java" {>= "1.0.6"}
+  "libsejda-injector-java" {>= "1.0.2"}
+  "libsejda-java" {>= "3.2.56"}
+  "libslf4j-java" {>= "1.7.25"}
+  "openjfx" {>= "11"}
+  ("default-jre" {>= "2-1.9"} | "java9-runtime")
+]
+extra-source "pdfsam_4.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdfsam/pdfsam_4.0.1-1_all.deb"
+}

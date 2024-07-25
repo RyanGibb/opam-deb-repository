@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libeclipse-e4-ui-ide-java_3.16.200+eclipse4.26-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libeclipse-e4-ui-ide-java"]
+]
+depends: [
+  "libeclipse-core-jobs-java" {>= "3.13"}
+  "libeclipse-core-resources-java"
+  "libeclipse-core-runtime-java"
+  "libequinox-common-java"
+]
+extra-source "libeclipse-e4-ui-ide-java_3.16.200+eclipse4.26-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eclipse-platform-ui/libeclipse-e4-ui-ide-java_3.16.200+eclipse4.26-1_all.deb"
+}

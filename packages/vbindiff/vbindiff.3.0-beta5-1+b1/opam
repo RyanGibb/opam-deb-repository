@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vbindiff_3.0-beta5-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vbindiff"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libncurses6" {>= "6"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "vbindiff_3.0-beta5-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vbindiff/vbindiff_3.0-beta5-1+b1_amd64.deb"
+}

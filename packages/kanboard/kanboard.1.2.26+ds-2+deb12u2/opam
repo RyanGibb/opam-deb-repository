@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kanboard_1.2.26+ds-2+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kanboard"]
+]
+depends: [
+  "architecture-properties"
+  "composer"
+  "fonts-font-awesome"
+  "php-christianriesen-otp"
+  "php-cli"
+  "php-common"
+  "php-eluceo-ical"
+  "php-gd"
+  "php-gregwar-captcha"
+  "php-json"
+  "php-matthiasmullie-minify"
+  "php-mbstring"
+  "php-parsedown"
+  "php-pimple"
+  "php-psr-log"
+  "php-swiftmailer"
+  "php-symfony-console"
+  "php-symfony-event-dispatcher"
+  "php-symfony-finder"
+  "php-xml"
+  ("lighttpd" | "libapache2-mod-php" | "httpd-cgi")
+  ("php-sqlite3" | "php-pgsql" | "php-mysql")
+]
+extra-source "kanboard_1.2.26+ds-2+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kanboard/kanboard_1.2.26+ds-2+deb12u2_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpoe-component-schedule-perl_0.95-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpoe-component-schedule-perl"]
+]
+depends: [
+  "libdatetime-perl" {>= "0.48"}
+  "libdatetime-set-perl" {>= "0.25"}
+  "libdatetime-timezone-perl" {>= "1.13"}
+  "libpoe-perl" {>= "1.287"}
+  "perl"
+]
+extra-source "libpoe-component-schedule-perl_0.95-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpoe-component-schedule-perl/libpoe-component-schedule-perl_0.95-3_all.deb"
+}

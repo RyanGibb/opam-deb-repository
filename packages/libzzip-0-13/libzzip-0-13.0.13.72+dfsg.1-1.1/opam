@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzzip-0-13_0.13.72+dfsg.1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzzip-0-13"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libzzip-0-13_0.13.72+dfsg.1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zziplib/libzzip-0-13_0.13.72+dfsg.1-1.1_amd64.deb"
+}

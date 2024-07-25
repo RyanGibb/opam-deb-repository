@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sphinx-doc_1.8.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sphinx-doc"]
+]
+depends: [
+  "docutils-doc"
+  "libjs-sphinxdoc" {>= "1.0"}
+]
+conflicts: [
+  "python-sphinx (<< 1.1)"
+]
+extra-source "sphinx-doc_1.8.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sphinx/sphinx-doc_1.8.4-1_all.deb"
+}

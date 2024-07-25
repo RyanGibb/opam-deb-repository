@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nginx_1.14.2-2+deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nginx"]
+]
+depends: [
+  ("nginx-full" {< "1.14.2-2+deb10u4.1~"} | "nginx-light" {< "1.14.2-2+deb10u4.1~"} | "nginx-extras" {< "1.14.2-2+deb10u4.1~"})
+  ("nginx-full" {>= "1.14.2-2+deb10u4"} | "nginx-light" {>= "1.14.2-2+deb10u4"} | "nginx-extras" {>= "1.14.2-2+deb10u4"})
+]
+extra-source "nginx_1.14.2-2+deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nginx/nginx_1.14.2-2+deb10u4_all.deb"
+}

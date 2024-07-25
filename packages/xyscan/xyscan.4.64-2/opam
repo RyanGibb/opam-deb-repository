@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xyscan_4.64-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xyscan"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libpoppler-qt5-1" {>= "0.24.5"}
+  "libqt5charts5" {>= "5.7.1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5multimedia5" {>= "5.6.0~beta"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.12.2"}
+  "libstdc++6" {>= "11"}
+  "qttranslations5-l10n"
+  ("libqt5gui5" {>= "5.11.0~rc1"} | "libqt5gui5-gles" {>= "5.11.0~rc1"})
+]
+extra-source "xyscan_4.64-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xyscan/xyscan_4.64-2_amd64.deb"
+}

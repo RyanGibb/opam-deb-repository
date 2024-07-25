@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freeglut3_2.8.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freeglut3"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgl1"
+  "libx11-6" {>= "2-1.2.99.901"}
+  "libxi6" {>= "2-1.2.99.4"}
+  "libxxf86vm1"
+]
+extra-source "freeglut3_2.8.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeglut/freeglut3_2.8.1-6_amd64.deb"
+}

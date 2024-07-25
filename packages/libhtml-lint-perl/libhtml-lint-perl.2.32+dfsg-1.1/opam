@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhtml-lint-perl_2.32+dfsg-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhtml-lint-perl"]
+]
+depends: [
+  "libhtml-parser-perl" {>= "3.47"}
+  "libhtml-tagset-perl" {>= "3.03"}
+  "perl-any"
+]
+extra-source "libhtml-lint-perl_2.32+dfsg-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhtml-lint-perl/libhtml-lint-perl_2.32+dfsg-1.1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libluv-ocaml_0.5.10-2+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libluv-ocaml"]
+]
+depends: [
+  "libbigarray-compat-ocaml"
+  "libc6" {>= "2.14"}
+  "libctypes-ocaml"
+  "libintegers-ocaml"
+  "libresult-ocaml"
+  "libuv1" {>= "1.42.0"}
+  "ocaml-base"
+]
+extra-source "libluv-ocaml_0.5.10-2+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-luv/libluv-ocaml_0.5.10-2+b6_amd64.deb"
+}

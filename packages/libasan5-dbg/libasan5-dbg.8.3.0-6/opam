@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libasan5-dbg_8.3.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libasan5-dbg"]
+]
+depends: [
+  "gcc-8-base" {= "8.3.0-6"}
+  "libasan5" {= "8.3.0-6"}
+]
+extra-source "libasan5-dbg_8.3.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8/libasan5-dbg_8.3.0-6_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ipgrab_0.9.10-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ipgrab"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "ipgrab_0.9.10-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ipgrab/ipgrab_0.9.10-2_amd64.deb"
+}

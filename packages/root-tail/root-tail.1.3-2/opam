@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i root-tail_1.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r root-tail"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libx11-6"
+  "libxfixes3"
+]
+extra-source "root-tail_1.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/root-tail/root-tail_1.3-2_amd64.deb"
+}

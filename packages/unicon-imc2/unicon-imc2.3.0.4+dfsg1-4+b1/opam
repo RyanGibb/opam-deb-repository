@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i unicon-imc2_3.0.4+dfsg1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r unicon-imc2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+]
+conflicts: [
+  "unicon-im"
+]
+extra-source "unicon-imc2_3.0.4+dfsg1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unicon/unicon-imc2_3.0.4+dfsg1-4+b1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i epic5_2.1.6-1+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r epic5"]
+]
+depends: [
+  "libc6" {>= "2.36"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libperl5-36" {>= "5.36.0"}
+  "libruby3-1" {>= "3.1.0~preview1"}
+  "libssl3" {>= "3.0.0"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "epic5_2.1.6-1+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/epic5/epic5_2.1.6-1+b6_amd64.deb"
+}

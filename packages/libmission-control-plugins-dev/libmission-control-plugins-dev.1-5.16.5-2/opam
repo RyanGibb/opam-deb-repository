@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmission-control-plugins-dev_1:5.16.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmission-control-plugins-dev"]
+]
+depends: [
+  "libmission-control-plugins0" {= "1-5.16.5-2"}
+  "libtelepathy-glib-dev"
+]
+extra-source "libmission-control-plugins-dev_1:5.16.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/telepathy-mission-control-5/libmission-control-plugins-dev_5.16.5-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lua-scrypt_1.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lua-scrypt"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libscrypt0" {>= "1"}
+]
+extra-source "lua-scrypt_1.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lua-scrypt/lua-scrypt_1.1-3_amd64.deb"
+}

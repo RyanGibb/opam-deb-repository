@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosgearth-dev_2.10.0+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosgearth-dev"]
+]
+depends: [
+  "libgeos-dev"
+  "libopenscenegraph-3-4-dev"
+  "libosgearth5" {= "2.10.0+dfsg-1+b1"}
+  "libosgearthannotation5" {= "2.10.0+dfsg-1+b1"}
+  "libosgearthfeatures5" {= "2.10.0+dfsg-1+b1"}
+  "libosgearthsplat5" {= "2.10.0+dfsg-1+b1"}
+  "libosgearthsymbology5" {= "2.10.0+dfsg-1+b1"}
+  "libosgearthutil5" {= "2.10.0+dfsg-1+b1"}
+]
+extra-source "libosgearth-dev_2.10.0+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osgearth/libosgearth-dev_2.10.0+dfsg-1+b1_amd64.deb"
+}

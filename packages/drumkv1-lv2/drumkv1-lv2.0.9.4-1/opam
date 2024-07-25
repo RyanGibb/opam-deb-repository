@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i drumkv1-lv2_0.9.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r drumkv1-lv2"]
+]
+depends: [
+  "drumkv1-common" {= "0.9.4-1"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.2.0"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "drumkv1-lv2_0.9.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/drumkv1/drumkv1-lv2_0.9.4-1_amd64.deb"
+}

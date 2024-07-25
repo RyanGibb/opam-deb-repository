@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblime0_5.1.64+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblime0"]
+]
+depends: [
+  "libbctoolbox1" {< "5.2.0"}
+  "libbctoolbox1" {>= "5.1.64"}
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libsoci-core4-0" {>= "4.0.3"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "liblime0_5.1.64+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lime/liblime0_5.1.64+dfsg-2_amd64.deb"
+}

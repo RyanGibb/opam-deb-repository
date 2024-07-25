@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-compression-webpack-plugin_6.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-compression-webpack-plugin"]
+]
+depends: [
+  "node-cacache" {>= "15.0~"}
+  "node-find-cache-dir" {>= "3.3~"}
+  "node-neo-async"
+  "node-schema-utils" {>= "3.0~"}
+  "node-serialize-javascript" {>= "5.0~"}
+  "node-webpack-sources" {>= "1.4~"}
+  "nodejs"
+  "webpack" {>= "4.0~"}
+]
+extra-source "node-compression-webpack-plugin_6.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-compression-webpack-plugin/node-compression-webpack-plugin_6.1.1-1_all.deb"
+}

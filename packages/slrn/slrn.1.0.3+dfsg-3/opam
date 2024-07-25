@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slrn_1.0.3+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slrn"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libcanlock3" {>= "2b"}
+  "libgnutls-openssl27" {>= "3.0-0"}
+  "libgnutls30" {>= "3.5.0"}
+  "libslang2" {>= "2.2.4"}
+  "libuu0"
+]
+extra-source "slrn_1.0.3+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slrn/slrn_1.0.3+dfsg-3_amd64.deb"
+}

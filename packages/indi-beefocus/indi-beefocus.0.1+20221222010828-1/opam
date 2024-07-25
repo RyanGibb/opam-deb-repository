@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i indi-beefocus_0.1+20221222010828-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r indi-beefocus"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libindidriver1" {>= "1.9.9+dfsg"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "indi-beefocus_0.1+20221222010828-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/indi-beefocus/indi-beefocus_0.1+20221222010828-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-mime-types_3.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-mime-types"]
+]
+depends: [
+  "ruby-mime-types-data" {>= "3.2015~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-mime-types_3.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-mime-types/ruby-mime-types_3.2.2-1_all.deb"
+}

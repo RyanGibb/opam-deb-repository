@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i p0f_3.09b-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r p0f"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "p0f_3.09b-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/p0f/p0f_3.09b-3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcppdb-mysql0_0.3.1+dfsg-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcppdb-mysql0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcppdb0"
+  "libgcc-s1"
+  "libmariadb3" {>= "3.0.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libcppdb-mysql0_0.3.1+dfsg-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cppdb/libcppdb-mysql0_0.3.1+dfsg-8+b1_amd64.deb"
+}

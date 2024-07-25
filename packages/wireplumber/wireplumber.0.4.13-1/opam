@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wireplumber_0.4.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wireplumber"]
+]
+depends: [
+  "init-system-helpers" {>= "1.52"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.62"}
+  "libpipewire-0-3-0" {>= "0.3.52"}
+  "libwireplumber-0-4-0" {= "0.4.13-1"}
+  "pipewire" {>= "0.3.52"}
+]
+conflicts: [
+  "pipewire-media-session"
+]
+extra-source "wireplumber_0.4.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wireplumber/wireplumber_0.4.13-1_amd64.deb"
+}

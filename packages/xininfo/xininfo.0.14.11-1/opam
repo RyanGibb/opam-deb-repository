@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xininfo_0.14.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xininfo"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6"
+  "libxinerama1"
+  "libxrandr2" {>= "2-1.2.0"}
+]
+extra-source "xininfo_0.14.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xininfo/xininfo_0.14.11-1_amd64.deb"
+}

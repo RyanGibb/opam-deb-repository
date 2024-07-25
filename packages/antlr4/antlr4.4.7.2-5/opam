@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i antlr4_4.7.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r antlr4"]
+]
+depends: [
+  "libantlr3-runtime-java"
+  "libantlr4-runtime-java" {= "4.7.2-5"}
+  "libicu4j-java"
+  "libjsonp-java"
+  "libstringtemplate4-java"
+  "libtreelayout-java"
+  ("default-jre-headless" | "java6-runtime-headless")
+]
+extra-source "antlr4_4.7.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/antlr4/antlr4_4.7.2-5_all.deb"
+}

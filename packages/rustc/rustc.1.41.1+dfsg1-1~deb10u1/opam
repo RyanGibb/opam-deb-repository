@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rustc_1.41.1+dfsg1-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rustc"]
+]
+depends: [
+  "binutils" {>= "2.26"}
+  "gcc"
+  "libc6" {>= "2.14"}
+  "libc6-dev"
+  "libgcc1" {>= "1-3.0"}
+  "libstd-rust-dev" {= "1.41.1+dfsg1-1~deb10u1"}
+]
+extra-source "rustc_1.41.1+dfsg1-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rustc/rustc_1.41.1+dfsg1-1~deb10u1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtermpaint0a_0.3.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtermpaint0a"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libtermpaint0a_0.3.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/termpaint/libtermpaint0a_0.3.0-2+b1_amd64.deb"
+}

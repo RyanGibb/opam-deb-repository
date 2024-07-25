@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kde-config-screenlocker_5.20.5-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kde-config-screenlocker"]
+]
+depends: [
+  "kpackagetool5"
+  "libc6" {>= "2.14"}
+  "libkf5configcore5" {>= "5.69.0"}
+  "libkf5configgui5" {>= "4.97.0"}
+  "libkf5coreaddons5" {>= "5.2.0"}
+  "libkf5declarative5" {>= "5.74.0"}
+  "libkf5globalaccel-bin"
+  "libkf5globalaccel5" {>= "5.74~"}
+  "libkf5i18n5" {>= "5.74~"}
+  "libkf5package5" {>= "5.42.0"}
+  "libkf5quickaddons5" {>= "5.74~"}
+  "libkf5xmlgui5" {>= "5.74~"}
+  "libkscreenlocker5" {= "5.20.5-1+deb11u1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.15.0~"}
+  "libqt5qml5" {>= "5.15.0~"}
+  "libqt5widgets5" {>= "5.15.0~"}
+  "libstdc++6" {>= "4.1.1"}
+  "perl-any"
+  ("libqt5gui5" {>= "5.15.0~"} | "libqt5gui5-gles" {>= "5.15.0~"})
+]
+extra-source "kde-config-screenlocker_5.20.5-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kscreenlocker/kde-config-screenlocker_5.20.5-1+deb11u1_amd64.deb"
+}

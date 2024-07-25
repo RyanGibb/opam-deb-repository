@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i voms-mysql-plugin_3.1.7-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r voms-mysql-plugin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libmariadb3" {>= "3.0.0"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "5.2"}
+  "voms-server"
+]
+extra-source "voms-mysql-plugin_3.1.7-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/voms-mysql-plugin/voms-mysql-plugin_3.1.7-3_amd64.deb"
+}

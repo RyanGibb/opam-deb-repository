@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbd-mariadb-perl_1.11-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbd-mariadb-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdbi-perl"
+  "libdbi-perl" {>= "1.642"}
+  "libmariadb3" {>= "3.0.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "perl" {>= "5.28.1-3"}
+  "perl-base"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libdbd-mariadb-perl_1.11-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdbd-mariadb-perl/libdbd-mariadb-perl_1.11-3_amd64.deb"
+}

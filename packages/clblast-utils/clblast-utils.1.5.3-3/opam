@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clblast-utils_1.5.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clblast-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libclblast1" {>= "1.5.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  ("ocl-icd-libopencl1" | "libopencl1")
+]
+extra-source "clblast-utils_1.5.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clblast/clblast-utils_1.5.3-3_amd64.deb"
+}

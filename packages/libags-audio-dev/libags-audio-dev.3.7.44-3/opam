@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libags-audio-dev_3.7.44-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libags-audio-dev"]
+]
+depends: [
+  "gir1-2-agsaudio-3-0" {= "3.7.44-3"}
+  "libags-audio3" {= "3.7.44-3"}
+  "libags-dev"
+]
+extra-source "libags-audio-dev_3.7.44-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gsequencer/libags-audio-dev_3.7.44-3_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fort77_1.15-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fort77"]
+]
+depends: [
+  "cpp"
+  "f2c"
+  ("perl" | "perl5")
+]
+extra-source "fort77_1.15-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fort77/fort77_1.15-12_all.deb"
+}

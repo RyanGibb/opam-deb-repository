@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcotp12_1.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcotp12"]
+]
+depends: [
+  "libbaseencode1" {>= "1.0.9"}
+  "libc6" {>= "2.4"}
+  "libgcrypt20" {>= "1.8.0"}
+]
+extra-source "libcotp12_1.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcotp/libcotp12_1.2.3-1_amd64.deb"
+}

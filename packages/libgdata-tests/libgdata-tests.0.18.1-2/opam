@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgdata-tests_0.18.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgdata-tests"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgdata22" {= "0.18.1-2"}
+  "libglib2-0-0" {>= "2.44.0"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libsoup2-4-1" {>= "2.56.0"}
+  "libuhttpmock-0-0-0" {>= "0.5.3"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libgdata-tests_0.18.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgdata/libgdata-tests_0.18.1-2_amd64.deb"
+}

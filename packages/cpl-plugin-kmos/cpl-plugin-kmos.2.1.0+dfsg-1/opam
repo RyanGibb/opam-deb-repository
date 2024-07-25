@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cpl-plugin-kmos_2.1.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cpl-plugin-kmos"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libcplcore26" {>= "6.4"}
+  "libcpldfs26" {>= "6.0"}
+  "libcpldrs26" {>= "6.4"}
+  "libcplui26" {>= "6.4"}
+]
+extra-source "cpl-plugin-kmos_2.1.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cpl-plugin-kmos/cpl-plugin-kmos_2.1.0+dfsg-1_amd64.deb"
+}

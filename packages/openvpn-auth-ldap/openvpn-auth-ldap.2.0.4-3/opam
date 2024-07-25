@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openvpn-auth-ldap_2.0.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openvpn-auth-ldap"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "libobjc4" {>= "4.6"}
+  "openvpn"
+]
+extra-source "openvpn-auth-ldap_2.0.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openvpn-auth-ldap/openvpn-auth-ldap_2.0.4-3_amd64.deb"
+}

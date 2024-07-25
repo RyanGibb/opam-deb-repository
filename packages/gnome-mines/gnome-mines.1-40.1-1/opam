@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-mines_1:40.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-mines"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.40.0"}
+  "libgnome-games-support-1-3" {>= "1.8.0"}
+  "libgtk-3-0" {>= "3.24"}
+  "libhandy-1-0" {>= "1.5.90"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-mines_1:40.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-mines/gnome-mines_40.1-1_amd64.deb"
+}

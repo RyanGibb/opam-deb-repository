@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-jsonschema_3.2.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-jsonschema"]
+]
+depends: [
+  "python3-any"
+  "python3-attr"
+  "python3-importlib-metadata"
+  "python3-pkg-resources"
+  "python3-pyrsistent"
+  "python3-setuptools"
+  "python3-six" {>= "1.11.0"}
+]
+extra-source "python3-jsonschema_3.2.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-jsonschema/python3-jsonschema_3.2.0-3_all.deb"
+}

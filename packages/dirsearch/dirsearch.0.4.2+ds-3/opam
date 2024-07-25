@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dirsearch_0.4.2+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dirsearch"]
+]
+depends: [
+  "python3-any"
+  "python3-certifi"
+  "python3-cffi"
+  "python3-chardet"
+  "python3-colorama"
+  "python3-cryptography" {>= "2.8"}
+  "python3-jinja2"
+  "python3-pyparsing"
+  "python3-requests"
+  "python3-requests-ntlm"
+  "python3-socks"
+  "python3-urllib3"
+]
+extra-source "dirsearch_0.4.2+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dirsearch/dirsearch_0.4.2+ds-3_all.deb"
+}

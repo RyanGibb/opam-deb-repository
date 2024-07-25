@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libinline-java-perl_0.67-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libinline-java-perl"]
+]
+depends: [
+  "default-jdk"
+  "libc6" {>= "2.4"}
+  "libinline-perl"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libinline-java-perl_0.67-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libinline-java-perl/libinline-java-perl_0.67-1+b1_amd64.deb"
+}

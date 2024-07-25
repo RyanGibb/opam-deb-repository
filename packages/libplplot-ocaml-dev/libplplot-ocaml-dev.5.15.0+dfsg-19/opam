@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplplot-ocaml-dev_5.15.0+dfsg-19_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplplot-ocaml-dev"]
+]
+depends: [
+  "libplplot-ocaml"
+  "libplplot-ocaml" {= "5.15.0+dfsg-19"}
+  "ocaml-nox"
+]
+extra-source "libplplot-ocaml-dev_5.15.0+dfsg-19_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plplot/libplplot-ocaml-dev_5.15.0+dfsg-19_amd64.deb"
+}

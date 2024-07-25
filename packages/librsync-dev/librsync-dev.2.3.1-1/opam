@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librsync-dev_2.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librsync-dev"]
+]
+depends: [
+  "libpopt-dev"
+  "librsync2" {= "2.3.1-1"}
+]
+conflicts: [
+  "librsync1"
+]
+extra-source "librsync-dev_2.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librsync/librsync-dev_2.3.1-1_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gccbrig-7_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gccbrig-7"]
+]
+depends: [
+  "gcc-7" {= "7.4.0-6"}
+  "gcc-7-base" {= "7.4.0-6"}
+  "hsail-tools"
+  "libc6" {>= "2.14"}
+  "libc6-dev" {>= "2.13-5"}
+  "libgmp10" {>= "2-5.0.1~"}
+  "libhsail-rt-7-dev" {= "7.4.0-6"}
+  "libisl19" {>= "0.15"}
+  "libmpc3"
+  "libmpfr6" {>= "3.1.3"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gccbrig-7_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/gccbrig-7_7.4.0-6_amd64.deb"
+}

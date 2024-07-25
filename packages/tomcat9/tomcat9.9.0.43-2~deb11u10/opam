@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tomcat9_9.0.43-2~deb11u10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tomcat9"]
+]
+depends: [
+  "lsb-base" {>= "3.0-6"}
+  "systemd" {>= "238"}
+  "tomcat9-common" {>= "9.0.43-2~deb11u10"}
+  "ucf"
+]
+extra-source "tomcat9_9.0.43-2~deb11u10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tomcat9/tomcat9_9.0.43-2~deb11u10_all.deb"
+}

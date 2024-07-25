@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lxqt-config_1.2.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lxqt-config"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libkf5screen-bin" {>= "4-5.17.5~"}
+  "libkf5screen8" {>= "4-5.6.2"}
+  "liblxqt1" {>= "1.2.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libqt5x11extras5" {>= "5.6.0"}
+  "libqt5xdg3" {>= "3.10.0~"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  "libudev1" {>= "183"}
+  "libx11-6"
+  "libxcb-randr0" {>= "1.3"}
+  "libxcb1"
+  "libxcursor1" {> "1.1.2"}
+  "libxfixes3"
+  "libxi6" {>= "2-1.2.99.4"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "lxqt-config_1.2.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxqt-config/lxqt-config_1.2.0-1+b1_amd64.deb"
+}

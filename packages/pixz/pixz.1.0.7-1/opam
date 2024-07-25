@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pixz_1.0.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pixz"]
+]
+depends: [
+  "libarchive13" {>= "3.0.4"}
+  "libc6" {>= "2.14"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+]
+extra-source "pixz_1.0.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pixz/pixz_1.0.7-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i weechat-ruby_2.3-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r weechat-ruby"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgmp10"
+  "libruby2-5" {>= "2.5.0~preview1"}
+  ("weechat-curses" {= "2.3-1+deb10u1"} | "weechat-headless" {= "2.3-1+deb10u1"})
+]
+extra-source "weechat-ruby_2.3-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/weechat/weechat-ruby_2.3-1+deb10u1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-incidence_1.7.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-incidence"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-cran-aweek" {>= "0.2.0"}
+  "r-cran-ggplot2" {>= "3.3.2"}
+]
+extra-source "r-cran-incidence_1.7.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-incidence/r-cran-incidence_1.7.3-1_all.deb"
+}

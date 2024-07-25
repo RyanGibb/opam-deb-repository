@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i partclone_0.3.13+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r partclone"]
+]
+depends: [
+  "libblkid1" {>= "2.17.2"}
+  "libc6" {>= "2.14"}
+  "libext2fs2" {>= "1.42"}
+  "libncursesw6" {>= "6"}
+  "libntfs-3g883"
+  "libssl1-1" {>= "1.1.0"}
+  "libtinfo6" {>= "6"}
+  "libuuid1" {>= "2.16"}
+  "nilfs-tools" {>= "2.2.8"}
+]
+extra-source "partclone_0.3.13+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/partclone/partclone_0.3.13+dfsg-5_amd64.deb"
+}

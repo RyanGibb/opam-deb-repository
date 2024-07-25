@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ulogd2-mysql_2.0.7-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ulogd2-mysql"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmariadb3" {>= "3.0.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "ulogd2" {= "2.0.7-1+b1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "ulogd2-mysql_2.0.7-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ulogd2/ulogd2-mysql_2.0.7-1+b1_amd64.deb"
+}

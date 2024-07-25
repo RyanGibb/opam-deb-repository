@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-select2-rails_3.5.9.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-select2-rails"]
+]
+depends: [
+  "ruby-thor" {>= "0.14"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-select2-rails_3.5.9.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-select2-rails/ruby-select2-rails_3.5.9.3-2_all.deb"
+}

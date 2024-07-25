@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i weechat-core_3.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r weechat-core"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libgnutls30" {>= "3.7.5"}
+]
+extra-source "weechat-core_3.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/weechat/weechat-core_3.8-1_amd64.deb"
+}

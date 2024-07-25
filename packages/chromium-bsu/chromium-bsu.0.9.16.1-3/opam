@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i chromium-bsu_0.9.16.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r chromium-bsu"]
+]
+depends: [
+  "chromium-bsu-data" {>= "0.9.14"}
+  "libalut0" {>= "1.0.1"}
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libglc0" {>= "0.7.1"}
+  "libopenal1" {>= "1.14"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libsdl2-image-2-0-0" {>= "2.0.5"}
+  "libstdc++6" {>= "5"}
+  ("fonts-uralic" | "ttf-uralic")
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "chromium-bsu_0.9.16.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chromium-bsu/chromium-bsu_0.9.16.1-3_amd64.deb"
+}

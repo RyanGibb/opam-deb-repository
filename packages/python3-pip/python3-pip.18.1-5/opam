@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pip_18.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pip"]
+]
+depends: [
+  "ca-certificates"
+  "python-pip-whl" {= "18.1-5"}
+  "python3-any"
+  "python3-distutils"
+]
+extra-source "python3-pip_18.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pip/python3-pip_18.1-5_all.deb"
+}

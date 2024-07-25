@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rt5-db-mysql_5.0.3+dfsg-3~deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rt5-db-mysql"]
+]
+depends: [
+  "libdbd-mysql-perl"
+  ("dbconfig-mysql" | "dbconfig-no-thanks")
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("default-mysql-client" | "virtual-mysql-client")
+]
+extra-source "rt5-db-mysql_5.0.3+dfsg-3~deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/request-tracker5/rt5-db-mysql_5.0.3+dfsg-3~deb12u2_all.deb"
+}

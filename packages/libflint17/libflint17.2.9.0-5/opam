@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libflint17_2.9.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libflint17"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.4"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libmpfr6" {>= "4.0.0"}
+  "libntl44" {>= "11.5.1"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libflint17_2.9.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flint/libflint17_2.9.0-5_amd64.deb"
+}

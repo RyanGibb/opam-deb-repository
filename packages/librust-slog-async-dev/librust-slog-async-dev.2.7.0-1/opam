@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-slog-async-dev_2.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-slog-async-dev"]
+]
+depends: [
+  "librust-crossbeam-channel-0-5+default-dev"
+  "librust-slog+erased-serde-dev"
+  "librust-slog-dev"
+  "librust-take-mut-0-2+default-dev"
+  "librust-thread-local-1+default-dev"
+]
+extra-source "librust-slog-async-dev_2.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-slog-async/librust-slog-async-dev_2.7.0-1_amd64.deb"
+}

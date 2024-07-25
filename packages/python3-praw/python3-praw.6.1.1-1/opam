@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-praw_6.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-praw"]
+]
+depends: [
+  "python3-any"
+  "python3-prawcore" {>= "0.13.0"}
+  "python3-websocket"
+]
+extra-source "python3-praw_6.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/praw/python3-praw_6.1.1-1_all.deb"
+}

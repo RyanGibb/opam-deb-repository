@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pure-ftpd_1.0.47-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pure-ftpd"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+  "libcap2" {>= "1-2.10"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libssl1-1" {>= "1.1.0"}
+  "lsb-base" {>= "3.2-14"}
+  "pure-ftpd-common" {= "1.0.47-3"}
+  ("openbsd-inetd" | "inet-superserver")
+]
+conflicts: [
+  "ftp-server"
+]
+extra-source "pure-ftpd_1.0.47-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pure-ftpd/pure-ftpd_1.0.47-3_amd64.deb"
+}

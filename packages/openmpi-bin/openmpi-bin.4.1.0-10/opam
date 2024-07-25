@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openmpi-bin_4.1.0-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openmpi-bin"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libevent-core-2-1-7" {>= "2.1.8-stable"}
+  "libopenmpi3" {>= "4.1.0"}
+  "openmpi-common" {>= "4.1.0-10"}
+  ("openssh-client" | "ssh-client")
+]
+conflicts: [
+  "openmpi-bin"
+]
+extra-source "openmpi-bin_4.1.0-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openmpi/openmpi-bin_4.1.0-10_amd64.deb"
+}

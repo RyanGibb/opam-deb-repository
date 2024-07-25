@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-plperl-13_13.15-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-plperl-13"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libperl5-32" {>= "5.32.0~rc1"}
+  "perl"
+  "postgresql-13" {= "13.15-0+deb11u1"}
+]
+extra-source "postgresql-plperl-13_13.15-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-13/postgresql-plperl-13_13.15-0+deb11u1_amd64.deb"
+}

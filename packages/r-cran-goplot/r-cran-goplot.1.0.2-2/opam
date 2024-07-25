@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-goplot_1.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-goplot"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.1-1"}
+  "r-cran-ggdendro" {>= "0.1-17"}
+  "r-cran-ggplot2" {>= "2.0.0"}
+  "r-cran-gridextra" {>= "2.0.0"}
+  "r-cran-rcolorbrewer" {>= "1.1-2"}
+]
+extra-source "r-cran-goplot_1.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-goplot/r-cran-goplot_1.0.2-2_all.deb"
+}

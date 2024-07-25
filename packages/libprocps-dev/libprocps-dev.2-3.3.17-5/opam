@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libprocps-dev_2:3.3.17-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libprocps-dev"]
+]
+depends: [
+  "libprocps8" {= "2-3.3.17-5"}
+]
+conflicts: [
+  "libproc-dev"
+  "libprocps0-dev"
+  "libprocps1-dev"
+  "libprocps3-dev"
+  "libprocps4-dev"
+]
+extra-source "libprocps-dev_2:3.3.17-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/procps/libprocps-dev_3.3.17-5_amd64.deb"
+}

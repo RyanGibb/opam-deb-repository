@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nmrpflash_0.9.14-16-ge95526d-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nmrpflash"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libnl-3-200" {>= "3.2.7"}
+  "libnl-route-3-200" {>= "3.2.7"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "nmrpflash_0.9.14-16-ge95526d-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nmrpflash/nmrpflash_0.9.14-16-ge95526d-4_amd64.deb"
+}

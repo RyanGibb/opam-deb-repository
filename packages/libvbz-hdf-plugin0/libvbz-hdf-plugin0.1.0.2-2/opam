@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvbz-hdf-plugin0_1.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvbz-hdf-plugin0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "4.4"}
+  "libzstd1" {>= "1.5.2"}
+]
+extra-source "libvbz-hdf-plugin0_1.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvbz-hdf-plugin/libvbz-hdf-plugin0_1.0.2-2_amd64.deb"
+}

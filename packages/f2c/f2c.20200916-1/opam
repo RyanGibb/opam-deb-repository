@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i f2c_20200916-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r f2c"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libf2c2-dev"
+]
+extra-source "f2c_20200916-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/f2c/f2c_20200916-1_amd64.deb"
+}

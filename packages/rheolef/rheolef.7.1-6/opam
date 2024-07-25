@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rheolef_7.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rheolef"]
+]
+depends: [
+  "libboost-iostreams1-74-0" {>= "1.74.0"}
+  "libboost-mpi1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.17"}
+  "libcholmod3" {>= "1-4.5.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libgmp10"
+  "libmumps-ptscotch-5-3" {>= "5.3.5"}
+  "libopenmpi3" {>= "4.1.0"}
+  "libptscotch-6-1" {>= "6.1.0"}
+  "librheolef-dev" {= "7.1-6"}
+  "librheolef1"
+  "libstdc++6" {>= "5.2"}
+  "libumfpack5" {>= "1-4.5.2"}
+  "rheolef-doc" {= "7.1-6"}
+]
+extra-source "rheolef_7.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rheolef/rheolef_7.1-6_amd64.deb"
+}

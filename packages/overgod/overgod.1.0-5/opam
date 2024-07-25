@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i overgod_1.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r overgod"]
+]
+depends: [
+  "liballegro4-4"
+  "libc6" {>= "2.4"}
+  "overgod-data" {>= "1.0-5"}
+]
+extra-source "overgod_1.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/overgod/overgod_1.0-5_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-session_3.38.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-session"]
+]
+depends: [
+  "gnome-session-bin" {< "3.39"}
+  "gnome-session-bin" {>= "3.38.0-4"}
+  "gnome-session-common" {= "3.38.0-4"}
+  "gnome-settings-daemon" {>= "3.37.0"}
+  "gnome-shell" {>= "3.37.91"}
+]
+extra-source "gnome-session_3.38.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-session/gnome-session_3.38.0-4_all.deb"
+}

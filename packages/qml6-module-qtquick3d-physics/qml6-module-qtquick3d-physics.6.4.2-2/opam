@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml6-module-qtquick3d-physics_6.4.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml6-module-qtquick3d-physics"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6qml6" {>= "6.4.2+dfsg~"}
+  "libqt6quick3dphysics6" {>= "6.4.0"}
+  "libqt6quick3dphysicshelpers6" {>= "6.4.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qml6-module-qtquick3d-physics_6.4.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-quick3dphysics/qml6-module-qtquick3d-physics_6.4.2-2_amd64.deb"
+}

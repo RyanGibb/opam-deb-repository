@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libyubikey-dev_1.13-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libyubikey-dev"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libyubikey0" {= "1.13-4"}
+]
+extra-source "libyubikey-dev_1.13-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liby/libyubikey/libyubikey-dev_1.13-4_amd64.deb"
+}

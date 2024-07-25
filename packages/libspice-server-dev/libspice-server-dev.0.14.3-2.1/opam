@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspice-server-dev_0.14.3-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspice-server-dev"]
+]
+depends: [
+  "libspice-protocol-dev" {>= "0.14.0~"}
+  "libspice-server1" {= "0.14.3-2.1"}
+]
+extra-source "libspice-server-dev_0.14.3-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spice/libspice-server-dev_0.14.3-2.1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-xdo_0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-xdo"]
+]
+depends: [
+  "libxdo3"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-six"
+]
+extra-source "python-xdo_0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-xdo/python-xdo_0.4-1_all.deb"
+}

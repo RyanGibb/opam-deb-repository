@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopm-simulators-dev_2022.10+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopm-simulators-dev"]
+]
+depends: [
+  "libboost-date-time-dev"
+  "libopm-grid-dev" {>= "2022.10"}
+  "libopm-models-dev" {>= "2022.10"}
+  "libopm-simulators"
+]
+extra-source "libopm-simulators-dev_2022.10+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opm-simulators/libopm-simulators-dev_2022.10+ds-2_amd64.deb"
+}

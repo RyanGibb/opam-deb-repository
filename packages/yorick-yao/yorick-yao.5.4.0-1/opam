@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yorick-yao_5.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yorick-yao"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfftw3-single3"
+  "python"
+  "python-glade2"
+  "yorick" {>= "2.1.05"}
+  "yorick-imutil" {>= "0.5.3"}
+  "yorick-yutils" {>= "1.3.0"}
+]
+extra-source "yorick-yao_5.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yorick-yao/yorick-yao_5.4.0-1_amd64.deb"
+}

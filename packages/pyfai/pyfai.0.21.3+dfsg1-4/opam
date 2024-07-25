@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pyfai_0.21.3+dfsg1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pyfai"]
+]
+depends: [
+  "python3-any"
+  "python3-numpy"
+  "python3-pyfai" {>= "0.21.3+dfsg1-4"}
+]
+extra-source "pyfai_0.21.3+dfsg1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyfai/pyfai_0.21.3+dfsg1-4_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-jobserver-dev_0.1.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-jobserver-dev"]
+]
+depends: [
+  "librust-libc-0-2+default-dev"
+  "librust-log-0-4+default-dev"
+  ("librust-rand-0-5+default-dev" | "librust-rand-0-4+default-dev")
+]
+extra-source "librust-jobserver-dev_0.1.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-jobserver/librust-jobserver-dev_0.1.11-1_amd64.deb"
+}

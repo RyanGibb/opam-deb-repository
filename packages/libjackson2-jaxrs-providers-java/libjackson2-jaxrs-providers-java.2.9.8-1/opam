@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjackson2-jaxrs-providers-java_2.9.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjackson2-jaxrs-providers-java"]
+]
+depends: [
+  "libjackson2-core-java" {>= "2.9.8"}
+  "libjackson2-databind-java"
+  "libjackson2-dataformat-cbor" {>= "2.7.8"}
+  "libjackson2-dataformat-smile" {>= "2.7.8"}
+  "libjackson2-dataformat-xml-java"
+  "libjackson2-dataformat-yaml" {>= "2.8.10"}
+  "libjackson2-module-jaxb-annotations-java" {>= "2.8.10"}
+  "libstax2-api-java"
+  "libwoodstox-java"
+]
+extra-source "libjackson2-jaxrs-providers-java_2.9.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jackson-jaxrs-providers/libjackson2-jaxrs-providers-java_2.9.8-1_all.deb"
+}

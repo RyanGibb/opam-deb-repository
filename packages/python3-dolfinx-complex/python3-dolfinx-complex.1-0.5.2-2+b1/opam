@@ -1,0 +1,43 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-dolfinx-complex_1:0.5.2-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-dolfinx-complex"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libdolfinx-complex-dev" {= "1-0.5.2-2+b1"}
+  "libdolfinx-complex0-5" {>= "1-0.5.2"}
+  "libdolfinx-dev" {= "1-0.5.2-2+b1"}
+  "libgcc-s1" {>= "4.0"}
+  "libopenmpi3" {>= "4.1.4"}
+  "libpetsc-complex3-18" {>= "3.18.3+dfsg1"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-cffi"
+  "python3-cffi-backend"
+  "python3-ffcx" {< "1-0.6.0"}
+  "python3-ffcx" {>= "1-0.5.0~"}
+  "python3-mpi4py"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-petsc4py"
+  "python3-petsc4py-complex" {< "3.19"}
+  "python3-petsc4py-complex" {>= "3.18"}
+  "python3-ply"
+  "python3-pybind11" {< "3"}
+  "python3-pybind11" {>= "2.10"}
+  "python3-scipy"
+  "python3-six"
+  "python3-slepc4py"
+  "python3-slepc4py-complex" {< "3.19"}
+  "python3-slepc4py-complex" {>= "3.18"}
+  "python3-sympy"
+  "python3-ufl" {>= "2022.2.0~"}
+]
+extra-source "python3-dolfinx-complex_1:0.5.2-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fenics-dolfinx/python3-dolfinx-complex_0.5.2-2+b1_amd64.deb"
+}

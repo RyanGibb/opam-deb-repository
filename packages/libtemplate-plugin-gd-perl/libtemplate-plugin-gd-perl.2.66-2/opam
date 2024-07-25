@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtemplate-plugin-gd-perl_2.66-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtemplate-plugin-gd-perl"]
+]
+depends: [
+  "libgd-graph-perl"
+  "libgd-graph3d-perl"
+  "libgd-text-perl"
+  "libtemplate-perl" {>= "2.15"}
+  "perl" {>= "5.6.0-16"}
+  ("libgd-gd2-perl" | "libgd-noxpm-perl")
+]
+conflicts: [
+  "libtemplate-perl (<< 2.15)"
+]
+extra-source "libtemplate-plugin-gd-perl_2.66-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtemplate-plugin-gd-perl/libtemplate-plugin-gd-perl_2.66-2_all.deb"
+}

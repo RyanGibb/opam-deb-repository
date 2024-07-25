@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcoe-utils_1.0.34-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcoe-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpciaccess0"
+  "lsb-base"
+]
+extra-source "fcoe-utils_1.0.34-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcoe-utils/fcoe-utils_1.0.34-2+b1_amd64.deb"
+}

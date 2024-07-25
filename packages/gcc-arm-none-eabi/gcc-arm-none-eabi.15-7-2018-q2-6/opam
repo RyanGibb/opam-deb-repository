@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-arm-none-eabi_15:7-2018-q2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-arm-none-eabi"]
+]
+depends: [
+  "binutils-arm-none-eabi"
+  "libc6" {>= "2.15"}
+  "libgcc1" {>= "1-3.0"}
+  "libgmp10"
+  "libmpc3"
+  "libmpfr6" {>= "3.1.3"}
+  "libstdc++6" {>= "5"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gcc-arm-none-eabi_15:7-2018-q2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-arm-none-eabi/gcc-arm-none-eabi_7-2018-q2-6_amd64.deb"
+}

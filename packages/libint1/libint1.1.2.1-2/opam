@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libint1_1.2.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libint1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libint1_1.2.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libint/libint1_1.2.1-2_amd64.deb"
+}

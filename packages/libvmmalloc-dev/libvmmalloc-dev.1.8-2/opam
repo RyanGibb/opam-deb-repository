@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvmmalloc-dev_1.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvmmalloc-dev"]
+]
+depends: [
+  "libvmmalloc1" {= "1.8-2"}
+]
+extra-source "libvmmalloc-dev_1.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vmem/libvmmalloc-dev_1.8-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-djangorestframework-generators_0.2.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-djangorestframework-generators"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-django"
+]
+extra-source "python-djangorestframework-generators_0.2.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/drf-generators/python-djangorestframework-generators_0.2.8-2_all.deb"
+}

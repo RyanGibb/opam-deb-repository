@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libldb-dev_2:1.5.1+really1.4.6-3+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libldb-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libldb1" {= "2-1.5.1+really1.4.6-3+deb10u1"}
+  "libtalloc-dev"
+  "libtdb-dev"
+  "pkg-config"
+]
+extra-source "libldb-dev_2:1.5.1+really1.4.6-3+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ldb/libldb-dev_1.5.1+really1.4.6-3+deb10u1_amd64.deb"
+}

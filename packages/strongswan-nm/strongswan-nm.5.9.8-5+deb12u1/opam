@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i strongswan-nm_5.9.8-5+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r strongswan-nm"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libnm0" {>= "1.2.0"}
+  "libstrongswan" {>= "5.9.8"}
+  "strongswan-libcharon" {>= "5.9.8"}
+]
+extra-source "strongswan-nm_5.9.8-5+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/strongswan/strongswan-nm_5.9.8-5+deb12u1_amd64.deb"
+}

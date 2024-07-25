@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt5-default_5.11.3+dfsg1-1+deb10u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt5-default"]
+]
+depends: [
+  "qtbase5-dev"
+  "qtchooser" {>= "55-gc9562a1-1~"}
+]
+conflicts: [
+  "qt4-default"
+]
+extra-source "qt5-default_5.11.3+dfsg1-1+deb10u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtbase-opensource-src/qt5-default_5.11.3+dfsg1-1+deb10u5_amd64.deb"
+}

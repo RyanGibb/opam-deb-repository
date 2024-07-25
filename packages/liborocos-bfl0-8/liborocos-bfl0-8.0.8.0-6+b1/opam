@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liborocos-bfl0.8_0.8.0-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liborocos-bfl0.8"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "liborocos-bfl0.8_0.8.0-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/orocos-bfl/liborocos-bfl0.8_0.8.0-6+b1_amd64.deb"
+}

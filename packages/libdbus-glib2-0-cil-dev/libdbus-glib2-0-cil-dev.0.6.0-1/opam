@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbus-glib2.0-cil-dev_0.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbus-glib2.0-cil-dev"]
+]
+depends: [
+  "libdbus-glib2-0-cil" {= "0.6.0-1"}
+  "libdbus2-0-cil-dev"
+]
+extra-source "libdbus-glib2.0-cil-dev_0.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dbus-sharp-glib/libdbus-glib2.0-cil-dev_0.6.0-1_all.deb"
+}

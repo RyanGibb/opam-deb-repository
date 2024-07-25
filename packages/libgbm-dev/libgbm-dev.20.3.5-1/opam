@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgbm-dev_20.3.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgbm-dev"]
+]
+depends: [
+  "libgbm1" {= "20.3.5-1"}
+]
+extra-source "libgbm-dev_20.3.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mesa/libgbm-dev_20.3.5-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libiceoryx-posh-roudi2_2.0.3+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libiceoryx-posh-roudi2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libiceoryx-hoofs2" {>= "2.0.3+dfsg"}
+  "libiceoryx-posh2" {>= "2.0.3+dfsg"}
+  "libstdc++6" {>= "6"}
+]
+extra-source "libiceoryx-posh-roudi2_2.0.3+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iceoryx/libiceoryx-posh-roudi2_2.0.3+dfsg-1_amd64.deb"
+}

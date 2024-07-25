@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scmutils_0~20230125+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scmutils"]
+]
+depends: [
+  "mit-scheme"
+  "texlive-binaries"
+  ("gnuplot-x11" | "gnuplot")
+]
+extra-source "scmutils_0~20230125+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scmutils/scmutils_0~20230125+dfsg-1_amd64.deb"
+}

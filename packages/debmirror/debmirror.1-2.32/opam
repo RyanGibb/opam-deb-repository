@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debmirror_1:2.32_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debmirror"]
+]
+depends: [
+  "bzip2"
+  "libdigest-md5-perl"
+  "libdigest-sha-perl"
+  "liblockfile-simple-perl"
+  "libnet-perl"
+  "libwww-perl" {>= "5.815"}
+  "perl" {>= "5.10"}
+  "rsync"
+  "xz-utils"
+  ("perl" {>= "5.22"} | "libnet-inet6glue-perl")
+]
+extra-source "debmirror_1:2.32_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debmirror/debmirror_2.32_all.deb"
+}

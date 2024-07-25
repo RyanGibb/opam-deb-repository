@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mediawiki-extension-codemirror_4.0.0~git20221204.b897975-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mediawiki-extension-codemirror"]
+]
+depends: [
+  "mediawiki" {>= "1-1.39.0~"}
+]
+extra-source "mediawiki-extension-codemirror_4.0.0~git20221204.b897975-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mediawiki-extension-codemirror/mediawiki-extension-codemirror_4.0.0~git20221204.b897975-1_all.deb"
+}

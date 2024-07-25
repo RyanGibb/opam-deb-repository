@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qutebrowser_1.6.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qutebrowser"]
+]
+depends: [
+  "libqt5core5a" {>= "5.7.1"}
+  "libqt5sql5-sqlite"
+  "python3-any"
+  "python3-attr"
+  "python3-jinja2"
+  "python3-pkg-resources"
+  "python3-pygments"
+  "python3-pypeg2"
+  "python3-pyqt5"
+  "python3-pyqt5-qtopengl"
+  "python3-pyqt5-qtquick"
+  "python3-pyqt5-qtsql"
+  "python3-ruamel-yaml"
+  "python3-sip"
+  "python3-yaml"
+  ("qutebrowser-qtwebengine" | "qutebrowser-qtwebkit")
+]
+extra-source "qutebrowser_1.6.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qutebrowser/qutebrowser_1.6.1-2_all.deb"
+}

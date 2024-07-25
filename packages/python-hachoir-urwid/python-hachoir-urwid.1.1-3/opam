@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-hachoir-urwid_1.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-hachoir-urwid"]
+]
+depends: [
+  "python"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-hachoir-parser" {>= "1.0"}
+  "python-urwid" {>= "0.9.4"}
+]
+extra-source "python-hachoir-urwid_1.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hachoir-urwid/python-hachoir-urwid_1.1-3_all.deb"
+}

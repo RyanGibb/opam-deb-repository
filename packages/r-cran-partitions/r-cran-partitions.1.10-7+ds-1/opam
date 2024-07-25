@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-partitions_1.10-7+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-partitions"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-1"}
+  "r-cran-gmp"
+  "r-cran-mathjaxr"
+  "r-cran-polynom"
+  "r-cran-rdpack"
+  "r-cran-sets"
+]
+extra-source "r-cran-partitions_1.10-7+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-partitions/r-cran-partitions_1.10-7+ds-1_amd64.deb"
+}

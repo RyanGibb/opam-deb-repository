@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i navit-gui-internal_0.5.3+dfsg.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r navit-gui-internal"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "navit-graphics-gtk-drawing-area" {= "0.5.3+dfsg.1-1"}
+]
+extra-source "navit-gui-internal_0.5.3+dfsg.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/navit/navit-gui-internal_0.5.3+dfsg.1-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clevis-tpm2_19-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clevis-tpm2"]
+]
+depends: [
+  "clevis" {= "19-2"}
+  "tpm2-tools"
+]
+extra-source "clevis-tpm2_19-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clevis/clevis-tpm2_19-2_amd64.deb"
+}

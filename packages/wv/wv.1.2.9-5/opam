@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wv_1.2.9-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wv"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgsf-1-114" {>= "1.14.8"}
+  "libwmf-0-2-7" {>= "0.2.12"}
+  "libwmflite-0-2-7" {>= "0.2.12"}
+  "libwv-1-2-4" {= "1.2.9-5"}
+]
+extra-source "wv_1.2.9-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wv/wv_1.2.9-5_amd64.deb"
+}

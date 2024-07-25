@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libv4l-dev_1.16.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libv4l-dev"]
+]
+depends: [
+  "libv4l-0" {= "1.16.3-3"}
+  "libv4l2rds0" {= "1.16.3-3"}
+  "libv4lconvert0" {= "1.16.3-3"}
+]
+extra-source "libv4l-dev_1.16.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/v4l-utils/libv4l-dev_1.16.3-3_amd64.deb"
+}

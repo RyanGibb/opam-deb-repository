@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bluez_5.50-1.2~deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bluez"]
+]
+depends: [
+  "dbus"
+  "kmod"
+  "libasound2" {>= "1.0.17"}
+  "libc6" {>= "2.15"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libdw1" {>= "0.127"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libreadline7" {>= "6.0"}
+  "libudev1" {>= "196"}
+  "lsb-base"
+  "udev"
+]
+conflicts: [
+  "bluez-audio (<= 3.36-3)"
+  "bluez-utils (<= 3.36-3)"
+]
+extra-source "bluez_5.50-1.2~deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bluez/bluez_5.50-1.2~deb10u2_amd64.deb"
+}

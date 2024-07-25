@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libldns3_1.8.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libldns3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "libldns3_1.8.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ldns/libldns3_1.8.3-1+b1_amd64.deb"
+}

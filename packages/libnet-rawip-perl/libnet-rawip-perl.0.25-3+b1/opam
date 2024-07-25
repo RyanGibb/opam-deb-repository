@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-rawip-perl_0.25-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-rawip-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcap0-8" {>= "0.9.8"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libnet-rawip-perl_0.25-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-rawip-perl/libnet-rawip-perl_0.25-3+b1_amd64.deb"
+}

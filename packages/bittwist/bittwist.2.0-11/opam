@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bittwist_2.0-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bittwist"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "bittwist_2.0-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bittwist/bittwist_2.0-11_amd64.deb"
+}

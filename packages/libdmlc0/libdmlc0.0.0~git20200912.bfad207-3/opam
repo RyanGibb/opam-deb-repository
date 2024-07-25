@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdmlc0_0.0~git20200912.bfad207-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdmlc0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.2.1"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libdmlc0_0.0~git20200912.bfad207-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dmlc-core/libdmlc0_0.0~git20200912.bfad207-3_amd64.deb"
+}

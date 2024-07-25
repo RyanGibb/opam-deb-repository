@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmyproxy6_6.2.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmyproxy6"]
+]
+depends: [
+  "globus-proxy-utils"
+  "libc6" {>= "2.15"}
+  "libglobus-common0" {>= "17"}
+  "libglobus-gsi-callback0" {>= "4"}
+  "libglobus-gsi-cert-utils0" {>= "8"}
+  "libglobus-gsi-credential1" {>= "6"}
+  "libglobus-gsi-proxy-core0" {>= "8"}
+  "libglobus-gsi-sysconfig1" {>= "8"}
+  "libglobus-gss-assist3" {>= "11"}
+  "libglobus-gssapi-gsi4" {>= "13"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libsasl2-2" {>= "2.1.27+dfsg"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "libmyproxy6_6.2.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/myproxy/libmyproxy6_6.2.4-1_amd64.deb"
+}

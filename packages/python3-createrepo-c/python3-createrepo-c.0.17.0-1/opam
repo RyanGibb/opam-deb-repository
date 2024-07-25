@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-createrepo-c_0.17.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-createrepo-c"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcreaterepo-c0" {= "0.17.0-1"}
+  "libglib2-0-0" {>= "2.14.0"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+]
+extra-source "python3-createrepo-c_0.17.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/createrepo-c/python3-createrepo-c_0.17.0-1_amd64.deb"
+}

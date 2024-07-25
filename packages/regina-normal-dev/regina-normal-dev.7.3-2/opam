@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i regina-normal-dev_7.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r regina-normal-dev"]
+]
+depends: [
+  "libgmp-dev"
+  "libxml2-dev"
+  "regina-normal" {= "7.3-2"}
+  "zlib1g-dev"
+]
+extra-source "regina-normal-dev_7.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/regina-normal/regina-normal-dev_7.3-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsynfig-dev_1.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsynfig-dev"]
+]
+depends: [
+  "etl-dev" {>= "1.2.1"}
+  "libsigc++-2-0-dev"
+  "libsynfig0a" {= "1.2.2-1"}
+  "libxml++2-6-dev"
+]
+extra-source "libsynfig-dev_1.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/synfig/libsynfig-dev_1.2.2-1_amd64.deb"
+}

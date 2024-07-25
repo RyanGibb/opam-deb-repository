@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkunitconversion4_4:4.14.38-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkunitconversion4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkdecore5" {= "4-4.14.38-3"}
+  "libqt4-xml" {>= "4-4.8.0"}
+  "libqtcore4" {>= "4-4.8.0"}
+  "libsolid4" {= "4-4.14.38-3"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libkunitconversion4_4:4.14.38-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kde4libs/libkunitconversion4_4.14.38-3_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmifinfo_0.10-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmifinfo"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libx11-6"
+  "libxext6"
+  "libxpm4"
+]
+extra-source "wmifinfo_0.10-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmifinfo/wmifinfo_0.10-2+b1_amd64.deb"
+}

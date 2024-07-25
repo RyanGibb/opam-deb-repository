@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zssh_1.5c.debian.1-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zssh"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libreadline8" {>= "6.0"}
+  "lrzsz"
+  ("openssh-client" | "telnet" | "telnet-ssl")
+]
+extra-source "zssh_1.5c.debian.1-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zssh/zssh_1.5c.debian.1-8_amd64.deb"
+}

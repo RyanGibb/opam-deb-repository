@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fwupd-amd64-signed-template_1.5.7-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fwupd-amd64-signed-template"]
+]
+depends: [
+  ("make" | "build-essential" | "dpkg-dev")
+]
+extra-source "fwupd-amd64-signed-template_1.5.7-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fwupd/fwupd-amd64-signed-template_1.5.7-4_amd64.deb"
+}

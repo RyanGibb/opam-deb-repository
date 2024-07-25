@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librm0_2.1.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librm0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcapi20-3"
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.55.2"}
+  "libgssdp-1-2-0" {>= "0.12.0"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.0.0"}
+  "libgstreamer1-0-0" {>= "1.4.0"}
+  "libgupnp-1-2-0" {>= "0.18.0"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libsecret-1-0" {>= "0.7"}
+  "libsndfile1" {>= "1.0.20"}
+  "libsoup2-4-1" {>= "2.41.90"}
+  "libspandsp2" {>= "0.0.6~pre18"}
+  "libspeex1" {>= "1.2~beta3-1"}
+  "libtiff5" {>= "4.0.3"}
+  "libxml2" {>= "2.7.4"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "librm0_2.1.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librm/librm0_2.1.4-1_amd64.deb"
+}

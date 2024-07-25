@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i modemmanager_1.20.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r modemmanager"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libelogind0"
+  "libglib2-0-0" {>= "2.55.2"}
+  "libgudev-1-0-0" {>= "212"}
+  "libmbim-glib4" {>= "1.28.0"}
+  "libmbim-proxy"
+  "libmm-glib0" {>= "1.20.0"}
+  "libpolkit-gobject-1-0" {>= "0.99"}
+  "libqmi-glib5" {>= "1.32.0"}
+  "libqmi-proxy"
+  "libqrtr-glib0" {>= "1.0.0"}
+  ("polkitd" | "policykit-1")
+]
+extra-source "modemmanager_1.20.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/modemmanager/modemmanager_1.20.4-1_amd64.deb"
+}

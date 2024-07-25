@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libroutino-slim0_3.3.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libroutino-slim0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "routino-common" {= "3.3.3-1"}
+]
+extra-source "libroutino-slim0_3.3.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/routino/libroutino-slim0_3.3.3-1_amd64.deb"
+}

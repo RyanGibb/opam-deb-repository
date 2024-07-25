@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libemf1_1.0.9+git.10.3231442-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libemf1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libemf1_1.0.9+git.10.3231442-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libemf/libemf1_1.0.9+git.10.3231442-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jvim-canna_3.0-2.1b-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jvim-canna"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcanna1g" {>= "3.7p3"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libx11-6"
+]
+extra-source "jvim-canna_3.0-2.1b-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jvim/jvim-canna_3.0-2.1b-3+b3_amd64.deb"
+}

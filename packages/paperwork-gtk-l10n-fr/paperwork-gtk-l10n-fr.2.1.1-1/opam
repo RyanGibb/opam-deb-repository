@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i paperwork-gtk-l10n-fr_2.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r paperwork-gtk-l10n-fr"]
+]
+depends: [
+  "aspell-fr"
+  "paperwork-gtk"
+  ("tesseract-ocr-fra" | "cuneiform")
+]
+extra-source "paperwork-gtk-l10n-fr_2.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/paperwork/paperwork-gtk-l10n-fr_2.1.1-1_all.deb"
+}

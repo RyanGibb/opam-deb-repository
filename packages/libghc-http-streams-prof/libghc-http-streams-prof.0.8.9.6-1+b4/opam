@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-http-streams-prof_0.8.9.6-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-http-streams-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-attoparsec-prof"
+  "libghc-base64-bytestring-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-case-insensitive-prof"
+  "libghc-hsopenssl-prof"
+  "libghc-http-common-prof"
+  "libghc-http-streams-dev" {= "0.8.9.6-1+b4"}
+  "libghc-io-streams-prof"
+  "libghc-network-prof"
+  "libghc-network-uri-prof"
+  "libghc-openssl-streams-prof"
+  "libghc-unordered-containers-prof"
+]
+extra-source "libghc-http-streams-prof_0.8.9.6-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-http-streams/libghc-http-streams-prof_0.8.9.6-1+b4_amd64.deb"
+}

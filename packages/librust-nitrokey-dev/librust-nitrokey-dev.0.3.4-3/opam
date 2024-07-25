@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-nitrokey-dev_0.3.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-nitrokey-dev"]
+]
+depends: [
+  "librust-libc-0-2+default-dev"
+  "librust-nitrokey-sys-dev"
+  "librust-rand-core-0-6+default-dev"
+  "librust-rand-core-0-6+getrandom-dev"
+]
+extra-source "librust-nitrokey-dev_0.3.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-nitrokey/librust-nitrokey-dev_0.3.4-3_amd64.deb"
+}

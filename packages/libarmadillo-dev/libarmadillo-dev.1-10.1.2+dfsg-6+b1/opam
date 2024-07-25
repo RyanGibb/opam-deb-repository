@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libarmadillo-dev_1:10.1.2+dfsg-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libarmadillo-dev"]
+]
+depends: [
+  "libarmadillo10" {= "1-10.1.2+dfsg-6+b1"}
+  "libarpack2-dev"
+  "libhdf5-dev"
+  "libsuperlu-dev" {>= "5.2"}
+]
+conflicts: [
+  "libarmadillo-doc"
+]
+extra-source "libarmadillo-dev_1:10.1.2+dfsg-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/armadillo/libarmadillo-dev_10.1.2+dfsg-6+b1_amd64.deb"
+}

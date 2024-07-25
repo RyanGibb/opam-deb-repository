@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bdii_5.2.23-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bdii"]
+]
+depends: [
+  "glue-schema" {>= "2.0.10"}
+  "ldap-utils"
+  "lsb-base" {>= "3.0-6"}
+  "python-any"
+  "slapd"
+  "ucf"
+  "whois"
+]
+extra-source "bdii_5.2.23-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bdii/bdii_5.2.23-2_all.deb"
+}

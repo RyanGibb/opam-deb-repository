@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i btrfs-compsize_1.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r btrfs-compsize"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+extra-source "btrfs-compsize_1.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/btrfs-compsize/btrfs-compsize_1.3-1_amd64.deb"
+}

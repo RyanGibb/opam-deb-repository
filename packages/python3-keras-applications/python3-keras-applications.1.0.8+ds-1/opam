@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-keras-applications_1.0.8+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-keras-applications"]
+]
+depends: [
+  "python3-any" {>= "3.6~"}
+  "python3-h5py"
+  "python3-numpy"
+]
+extra-source "python3-keras-applications_1.0.8+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/keras-applications/python3-keras-applications_1.0.8+ds-1_all.deb"
+}

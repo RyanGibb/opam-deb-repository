@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pbhoney_15.8.24+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pbhoney"]
+]
+depends: [
+  "blasr" {>= "5.3"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-h5py"
+  "python-intervaltree-bio"
+  "python-networkx"
+  "python-numpy"
+  "python-pbbanana" {= "15.8.24+dfsg-3"}
+  "python-pbsuite-utils" {= "15.8.24+dfsg-3"}
+  "python-pysam" {>= "0.8.0"}
+  "samtools"
+]
+extra-source "pbhoney_15.8.24+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pbsuite/pbhoney_15.8.24+dfsg-3_all.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i context_2020.03.10.20200331-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r context"]
+]
+depends: [
+  "lmodern" {>= "2.004.4"}
+  "tex-common" {>= "6.13"}
+  "tex-gyre"
+  "texlive-base" {>= "2019"}
+  "texlive-binaries" {>= "2019"}
+  "texlive-metapost" {>= "2019"}
+  ("ruby" | "ruby-interpreter")
+]
+conflicts: [
+  "tetex-bin (<< 2007)"
+  "texlive-context"
+  "texlive-xetex (<< 2009)"
+]
+extra-source "context_2020.03.10.20200331-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/context/context_2020.03.10.20200331-1_all.deb"
+}

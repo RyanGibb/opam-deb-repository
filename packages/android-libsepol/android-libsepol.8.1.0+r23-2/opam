@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-libsepol_8.1.0+r23-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-libsepol"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "android-libsepol_8.1.0+r23-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-external-libselinux/android-libsepol_8.1.0+r23-2_amd64.deb"
+}

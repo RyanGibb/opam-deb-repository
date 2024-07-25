@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmapscript-perl_7.6.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmapscript-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmapserver2" {>= "7.0.5"}
+  "libperl5-32" {>= "5.32.0~rc1"}
+  "perl"
+  "perl-base"
+]
+conflicts: [
+  "perl-mapscript"
+]
+extra-source "libmapscript-perl_7.6.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mapserver/libmapscript-perl_7.6.2-1_amd64.deb"
+}

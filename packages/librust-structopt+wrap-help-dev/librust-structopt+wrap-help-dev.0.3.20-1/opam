@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-structopt+wrap-help-dev_0.3.20-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-structopt+wrap-help-dev"]
+]
+depends: [
+  "librust-clap+wrap-help-dev"
+  "librust-structopt-dev" {= "0.3.20-1"}
+]
+extra-source "librust-structopt+wrap-help-dev_0.3.20-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-structopt/librust-structopt+wrap-help-dev_0.3.20-1_amd64.deb"
+}

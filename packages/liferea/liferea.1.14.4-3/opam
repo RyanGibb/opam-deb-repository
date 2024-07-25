@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liferea_1.14.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liferea"]
+]
+depends: [
+  "gir1-2-freedesktop"
+  "gir1-2-gtk-3-0"
+  "gir1-2-peas-1-0"
+  "libc6" {>= "2.35"}
+  "libfribidi0" {>= "0.19.2"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libgirepository-1-0-1" {>= "0.9.3"}
+  "libglib2-0-0" {>= "2.68.0"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libjavascriptcoregtk-4-0-18" {>= "2.40.0"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpeas-1-0-0" {>= "1.1.0"}
+  "libsoup2-4-1" {>= "2.41.90"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libwebkit2gtk-4-0-37" {>= "2.31.1"}
+  "libxml2" {>= "2.9.0"}
+  "libxslt1-1" {>= "1.1.25"}
+  "liferea-data" {< "1.14.4.0~"}
+  "liferea-data" {>= "1.14.4~"}
+  "python3-11"
+  "python3-any"
+  "python3-cairo"
+  "python3-gi"
+  "python3-gi-cairo"
+  "python3-notify2"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("default-dbus-session-bus" | "dbus-session-bus")
+]
+extra-source "liferea_1.14.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/liferea/liferea_1.14.4-3_amd64.deb"
+}

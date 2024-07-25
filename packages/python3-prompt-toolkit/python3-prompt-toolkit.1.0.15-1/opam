@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-prompt-toolkit_1.0.15-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-prompt-toolkit"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-six" {>= "1.9.0"}
+  "python3-wcwidth"
+]
+extra-source "python3-prompt-toolkit_1.0.15-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prompt-toolkit/python3-prompt-toolkit_1.0.15-1_all.deb"
+}

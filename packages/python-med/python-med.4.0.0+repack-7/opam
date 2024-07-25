@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-med_4.0.0+repack-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-med"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libmed11"
+  "libopenmpi3"
+  "libstdc++6" {>= "5.2"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-med_4.0.0+repack-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/med-fichier/python-med_4.0.0+repack-7_amd64.deb"
+}

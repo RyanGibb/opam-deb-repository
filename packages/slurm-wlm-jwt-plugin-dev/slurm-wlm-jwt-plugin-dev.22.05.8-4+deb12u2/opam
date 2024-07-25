@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slurm-wlm-jwt-plugin-dev_22.05.8-4+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slurm-wlm-jwt-plugin-dev"]
+]
+depends: [
+  "slurm-wlm-basic-plugins-dev" {= "22.05.8-4+deb12u2"}
+  "slurm-wlm-jwt-plugin" {= "22.05.8-4+deb12u2"}
+]
+extra-source "slurm-wlm-jwt-plugin-dev_22.05.8-4+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-wlm/slurm-wlm-jwt-plugin-dev_22.05.8-4+deb12u2_amd64.deb"
+}

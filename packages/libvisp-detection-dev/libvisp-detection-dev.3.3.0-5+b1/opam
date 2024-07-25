@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvisp-detection-dev_3.3.0-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvisp-detection-dev"]
+]
+depends: [
+  "libdmtx-dev"
+  "libopencv-dev"
+  "libvisp-core-dev" {= "3.3.0-5+b1"}
+  "libvisp-detection3-3" {= "3.3.0-5+b1"}
+  "libzbar-dev"
+]
+extra-source "libvisp-detection-dev_3.3.0-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/visp/libvisp-detection-dev_3.3.0-5+b1_amd64.deb"
+}

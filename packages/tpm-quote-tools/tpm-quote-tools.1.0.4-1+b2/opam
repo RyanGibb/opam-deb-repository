@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tpm-quote-tools_1.0.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tpm-quote-tools"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libssl3" {>= "3.0.0"}
+  "libtspi1" {>= "0.3.1"}
+]
+extra-source "tpm-quote-tools_1.0.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tpm-quote-tools/tpm-quote-tools_1.0.4-1+b2_amd64.deb"
+}

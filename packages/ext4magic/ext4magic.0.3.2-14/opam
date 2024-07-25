@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ext4magic_0.3.2-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ext4magic"]
+]
+depends: [
+  "libblkid1" {>= "2.16"}
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libext2fs2" {>= "1.42"}
+  "libmagic1" {>= "5.12"}
+  "libuuid1" {>= "2.16"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "ext4magic_0.3.2-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ext4magic/ext4magic_0.3.2-14_amd64.deb"
+}

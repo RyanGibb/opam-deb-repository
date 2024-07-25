@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puredata-extra_0.53.1+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puredata-extra"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "puredata-core" {< "0.53.1+ds+1~"}
+  "puredata-core" {>= "0.53.1+ds-2"}
+]
+extra-source "puredata-extra_0.53.1+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puredata/puredata-extra_0.53.1+ds-2_amd64.deb"
+}

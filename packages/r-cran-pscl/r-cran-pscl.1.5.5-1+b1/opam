@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-pscl_1.5.5-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-pscl"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-mass"
+]
+extra-source "r-cran-pscl_1.5.5-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-pscl/r-cran-pscl_1.5.5-1+b1_amd64.deb"
+}

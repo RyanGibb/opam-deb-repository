@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfplll-dev_5.2.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfplll-dev"]
+]
+depends: [
+  "libfplll5" {= "5.2.1-2"}
+  "libgmp-dev"
+  "libmpfr-dev"
+]
+extra-source "libfplll-dev_5.2.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fplll/libfplll-dev_5.2.1-2_amd64.deb"
+}

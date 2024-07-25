@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ptex-base_1:2.5-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ptex-base"]
+]
+depends: [
+  "tex-common" {>= "6.13"}
+  "texlive-base"
+  "texlive-binaries"
+]
+conflicts: [
+  "platex-base"
+]
+extra-source "ptex-base_1:2.5-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/ptex-base/ptex-base_2.5-3.1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-treemacs-evil_2.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-treemacs-evil"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-evil" {>= "1.2.12"}
+  "elpa-treemacs" {= "2.8-2"}
+  "emacsen-common"
+]
+extra-source "elpa-treemacs-evil_2.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/treemacs/elpa-treemacs-evil_2.8-2_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnewmat10ldbl_1.10.4-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnewmat10ldbl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "4.2.1"}
+]
+conflicts: [
+  "libnewmat10"
+]
+extra-source "libnewmat10ldbl_1.10.4-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/newmat/libnewmat10ldbl_1.10.4-8_amd64.deb"
+}

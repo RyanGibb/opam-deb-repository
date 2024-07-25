@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-xmlgen-prof_0.6.2.2-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-xmlgen-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-xmlgen-dev" {= "0.6.2.2-3+b2"}
+]
+extra-source "libghc-xmlgen-prof_0.6.2.2-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-xmlgen/libghc-xmlgen-prof_0.6.2.2-3+b2_amd64.deb"
+}

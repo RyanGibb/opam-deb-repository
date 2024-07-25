@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i znc-tcl_1.7.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r znc-tcl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtcl8-6" {>= "8.6.0"}
+  "znc" {= "1.7.2-3"}
+]
+extra-source "znc-tcl_1.7.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/znc/znc-tcl_1.7.2-3_amd64.deb"
+}

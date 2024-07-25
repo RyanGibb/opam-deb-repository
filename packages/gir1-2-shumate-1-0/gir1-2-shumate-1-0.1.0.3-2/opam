@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-shumate-1.0_1.0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-shumate-1.0"]
+]
+depends: [
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-4-0"
+  "libshumate-1-0-1" {>= "1.0.0~alpha.1+20220818"}
+]
+extra-source "gir1.2-shumate-1.0_1.0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libshumate/gir1.2-shumate-1.0_1.0.3-2_amd64.deb"
+}

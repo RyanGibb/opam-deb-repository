@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aodh-api_11.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aodh-api"]
+]
+depends: [
+  "adduser"
+  "aodh-common" {= "11.0.0-2"}
+  "debconf"
+  "lsb-base"
+  "python3-keystoneclient"
+  "python3-openstackclient"
+  "python3-pastescript"
+  "python3-q-text-as-data"
+  "uwsgi-plugin-python3"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "aodh-api_11.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aodh/aodh-api_11.0.0-2_all.deb"
+}

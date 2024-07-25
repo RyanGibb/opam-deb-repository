@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i localslackirc_1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r localslackirc"]
+]
+depends: [
+  "python3-any" {>= "3.6~"}
+  "python3-requests"
+  "python3-typedload"
+  "python3-websocket"
+]
+extra-source "localslackirc_1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/localslackirc/localslackirc_1.2-1_all.deb"
+}

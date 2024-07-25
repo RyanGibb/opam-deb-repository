@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfdisk1_2.38.1-5+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfdisk1"]
+]
+depends: [
+  "libblkid1" {>= "2.24.2"}
+  "libc6" {>= "2.33"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "libfdisk1_2.38.1-5+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/util-linux/libfdisk1_2.38.1-5+deb12u1_amd64.deb"
+}

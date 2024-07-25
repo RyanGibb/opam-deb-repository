@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgstrtspserver-1.0-dev_1.22.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgstrtspserver-1.0-dev"]
+]
+depends: [
+  "gir1-2-gst-rtsp-server-1-0" {= "1.22.0-2"}
+  "libglib2-0-dev"
+  "libgstreamer-plugins-base1-0-dev"
+  "libgstreamer1-0-dev"
+  "libgstrtspserver-1-0-0" {= "1.22.0-2"}
+]
+extra-source "libgstrtspserver-1.0-dev_1.22.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gst-rtsp-server1.0/libgstrtspserver-1.0-dev_1.22.0-2_amd64.deb"
+}

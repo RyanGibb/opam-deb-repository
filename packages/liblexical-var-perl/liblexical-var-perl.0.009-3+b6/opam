@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblexical-var-perl_0.009-3+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblexical-var-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "liblexical-sealrequirehints-perl"
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "liblexical-var-perl_0.009-3+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblexical-var-perl/liblexical-var-perl_0.009-3+b6_amd64.deb"
+}

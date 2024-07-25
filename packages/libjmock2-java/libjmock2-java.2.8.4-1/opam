@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjmock2-java_2.8.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjmock2-java"]
+]
+depends: [
+  "libasm-java" {>= "6.2.1"}
+  "libbsh-java" {>= "2.0b4"}
+  "libcglib-java" {>= "3.2.6"}
+  "libhamcrest-java"
+  "libobjenesis-java" {>= "2.6"}
+]
+extra-source "libjmock2-java_2.8.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jmock2/libjmock2-java_2.8.4-1_all.deb"
+}

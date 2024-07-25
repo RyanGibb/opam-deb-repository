@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nordlicht_0.4.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nordlicht"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libnordlicht0" {= "0.4.5-2"}
+  "libpopt0" {>= "1.14"}
+]
+extra-source "nordlicht_0.4.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nordlicht/nordlicht_0.4.5-2_amd64.deb"
+}

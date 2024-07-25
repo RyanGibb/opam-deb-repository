@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibus-table_1.16.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibus-table"]
+]
+depends: [
+  "ibus" {>= "1.5.22-2~"}
+  "python3-any"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "ibus-table_1.16.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibus-table/ibus-table_1.16.14-1_all.deb"
+}

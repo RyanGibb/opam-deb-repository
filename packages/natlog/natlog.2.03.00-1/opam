@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i natlog_2.03.00-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r natlog"]
+]
+depends: [
+  "libbobcat5" {>= "5.02.00"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libpcap0-8" {>= "0.9.8"}
+  "libstdc++6" {>= "9"}
+  "lsb-base" {>= "3.2-14"}
+]
+extra-source "natlog_2.03.00-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/natlog/natlog_2.03.00-1_amd64.deb"
+}

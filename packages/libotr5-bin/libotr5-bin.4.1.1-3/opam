@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libotr5-bin_4.1.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libotr5-bin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libotr5" {>= "4.0.0"}
+]
+conflicts: [
+  "libotr2-bin"
+]
+extra-source "libotr5-bin_4.1.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libotr/libotr5-bin_4.1.1-3_amd64.deb"
+}

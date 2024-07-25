@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-ivy-rtags_2.38-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-ivy-rtags"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-ivy" {>= "0.7.0"}
+  "elpa-rtags" {= "2.38-3"}
+  "emacsen-common"
+]
+extra-source "elpa-ivy-rtags_2.38-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rtags/elpa-ivy-rtags_2.38-3_all.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kdepimlibs-kio-plugins_4:4.14.10-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kdepimlibs-kio-plugins"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libkdecore5" {>= "4-4.14.2"}
+  "libkimap4" {= "4-4.14.10-11"}
+  "libkio5" {>= "4-4.14.2"}
+  "libkldap4" {= "4-4.14.10-11"}
+  "libkmime4" {= "4-4.14.10-11"}
+  "libqt4-network" {>= "4-4.8"}
+  "libqtcore4" {>= "4-4.8.0"}
+  "libsasl2-2" {>= "2.1.27+dfsg"}
+  "libsasl2-modules"
+  "libstdc++6" {>= "5"}
+]
+extra-source "kdepimlibs-kio-plugins_4:4.14.10-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdepimlibs/kdepimlibs-kio-plugins_4.14.10-11_amd64.deb"
+}

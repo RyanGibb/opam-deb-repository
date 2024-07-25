@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-puppet-mode_0.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-puppet-mode"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-pkg-info" {>= "0.4"}
+  "emacsen-common"
+]
+extra-source "elpa-puppet-mode_0.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-mode/elpa-puppet-mode_0.4-2_all.deb"
+}

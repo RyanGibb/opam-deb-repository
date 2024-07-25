@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hslua-marshalling-prof_2.1.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hslua-marshalling-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hslua-core-prof"
+  "libghc-hslua-marshalling-dev" {= "2.1.0-2+b1"}
+]
+extra-source "libghc-hslua-marshalling-prof_2.1.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hslua-marshalling/libghc-hslua-marshalling-prof_2.1.0-2+b1_amd64.deb"
+}

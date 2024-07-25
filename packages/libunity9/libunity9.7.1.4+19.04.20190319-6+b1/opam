@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libunity9_7.1.4+19.04.20190319-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libunity9"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdbusmenu-glib4" {>= "0.4.90"}
+  "libdee-1-0-4" {>= "1.2.7+15.04.20150304"}
+  "libglib2-0-0" {>= "2.43.92"}
+  "libunity-protocol-private0" {= "7.1.4+19.04.20190319-6+b1"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("libunity-scopes-json-def-desktop" {>= "7.1.4+19.04.20190319-6"} | "unity-scopes-json-def")
+]
+extra-source "libunity9_7.1.4+19.04.20190319-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libunity/libunity9_7.1.4+19.04.20190319-6+b1_amd64.deb"
+}

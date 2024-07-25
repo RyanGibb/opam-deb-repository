@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqdjango-doc_0.6.2-3.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqdjango-doc"]
+]
+depends: [
+  "libjs-jquery"
+  ("lynx" | "www-browser")
+]
+extra-source "libqdjango-doc_0.6.2-3.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qdjango/libqdjango-doc_0.6.2-3.3_all.deb"
+}

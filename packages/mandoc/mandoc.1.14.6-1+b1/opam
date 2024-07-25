@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mandoc_1.14.6-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mandoc"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "mandoc_1.14.6-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mdocml/mandoc_1.14.6-1+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-kwallet5_5.27.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-kwallet5"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libpam-kwallet-common" {>= "5.27.5-2"}
+  "libpam0g" {>= "0.99.7.1"}
+]
+extra-source "libpam-kwallet5_5.27.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kwallet-pam/libpam-kwallet5_5.27.5-2_amd64.deb"
+}

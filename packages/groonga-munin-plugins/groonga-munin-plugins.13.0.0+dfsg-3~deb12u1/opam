@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i groonga-munin-plugins_13.0.0+dfsg-3~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r groonga-munin-plugins"]
+]
+depends: [
+  "groonga-bin" {>= "13.0.0+dfsg-3~deb12u1"}
+  "munin-node"
+  "ruby"
+]
+extra-source "groonga-munin-plugins_13.0.0+dfsg-3~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/groonga/groonga-munin-plugins_13.0.0+dfsg-3~deb12u1_all.deb"
+}

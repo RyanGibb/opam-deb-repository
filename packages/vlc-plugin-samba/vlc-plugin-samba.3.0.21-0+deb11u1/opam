@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vlc-plugin-samba_3.0.21-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vlc-plugin-samba"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libsmbclient" {>= "2-4.0.3+dfsg1"}
+  "libvlccore9"
+  "libvlccore9" {>= "3.0.21"}
+]
+extra-source "vlc-plugin-samba_3.0.21-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vlc/vlc-plugin-samba_3.0.21-0+deb11u1_amd64.deb"
+}

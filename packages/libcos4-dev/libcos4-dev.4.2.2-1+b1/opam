@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcos4-dev_4.2.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcos4-dev"]
+]
+depends: [
+  "libcos4-2" {= "4.2.2-1+b1"}
+  "libomniorb4-dev" {= "4.2.2-1+b1"}
+  "pkg-config"
+]
+extra-source "libcos4-dev_4.2.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/omniorb-dfsg/libcos4-dev_4.2.2-1+b1_amd64.deb"
+}

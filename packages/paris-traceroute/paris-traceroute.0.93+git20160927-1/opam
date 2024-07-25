@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i paris-traceroute_0.93+git20160927-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r paris-traceroute"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libcap2-bin"
+  "libparistraceroute1" {= "0.93+git20160927-1"}
+]
+extra-source "paris-traceroute_0.93+git20160927-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/paris-traceroute/paris-traceroute_0.93+git20160927-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-prosemirror-view_1.23.13-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-prosemirror-view"]
+]
+depends: [
+  "node-prosemirror-model" {>= "1.16.0"}
+  "node-prosemirror-state" {>= "1.0.0"}
+  "node-prosemirror-transform" {>= "1.1.0"}
+]
+extra-source "node-prosemirror-view_1.23.13-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-prosemirror-view/node-prosemirror-view_1.23.13-2_all.deb"
+}

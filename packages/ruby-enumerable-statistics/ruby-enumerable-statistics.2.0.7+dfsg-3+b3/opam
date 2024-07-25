@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-enumerable-statistics_2.0.7+dfsg-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-enumerable-statistics"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.0~preview2"}
+]
+extra-source "ruby-enumerable-statistics_2.0.7+dfsg-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-enumerable-statistics/ruby-enumerable-statistics_2.0.7+dfsg-3+b3_amd64.deb"
+}

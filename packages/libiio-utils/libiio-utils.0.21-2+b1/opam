@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libiio-utils_0.21-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libiio-utils"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libiio0" {>= "0.21-2+b1"}
+]
+extra-source "libiio-utils_0.21-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libiio/libiio-utils_0.21-2+b1_amd64.deb"
+}

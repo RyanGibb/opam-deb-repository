@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fuse_2.9.9-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fuse"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.28"}
+  "libfuse2" {= "2.9.9-5"}
+  "mount" {>= "2.19.1"}
+  "sed" {>= "4"}
+]
+extra-source "fuse_2.9.9-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fuse/fuse_2.9.9-5_amd64.deb"
+}

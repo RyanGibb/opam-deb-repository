@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-7-multilib_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-7-multilib"]
+]
+depends: [
+  "gcc-7" {= "7.4.0-6"}
+  "gcc-7-base" {= "7.4.0-6"}
+  "lib32gcc-7-dev" {= "7.4.0-6"}
+  "libc6-dev-i386" {>= "2.11"}
+  "libc6-dev-x32" {>= "2.11"}
+  "libx32gcc-7-dev" {= "7.4.0-6"}
+]
+extra-source "gcc-7-multilib_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/gcc-7-multilib_7.4.0-6_amd64.deb"
+}

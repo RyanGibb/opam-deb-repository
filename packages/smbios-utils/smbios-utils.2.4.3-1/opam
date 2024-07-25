@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i smbios-utils_2.4.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r smbios-utils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsmbios-c2"
+  "python3"
+  "python3-any"
+  "python3-libsmbios"
+]
+conflicts: [
+  "libsmbios-bin"
+]
+extra-source "smbios-utils_2.4.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsmbios/smbios-utils_2.4.3-1_amd64.deb"
+}

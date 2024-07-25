@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libamazon-s3-perl_0.60-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libamazon-s3-perl"]
+]
+depends: [
+  "libclass-accessor-perl"
+  "libdigest-hmac-perl" {>= "1.04"}
+  "libdigest-md5-file-perl"
+  "libhttp-date-perl"
+  "libio-stringy-perl"
+  "libjson-pp-perl"
+  "liblwp-protocol-https-perl"
+  "liblwp-useragent-determined-perl"
+  "libnet-amazon-signature-v4-perl"
+  "libreadonly-perl"
+  "libscalar-list-utils-perl"
+  "liburi-perl" {>= "5.10"}
+  "libwww-perl"
+  "libxml-simple-perl"
+  "perl-any"
+]
+extra-source "libamazon-s3-perl_0.60-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libamazon-s3-perl/libamazon-s3-perl_0.60-1_all.deb"
+}

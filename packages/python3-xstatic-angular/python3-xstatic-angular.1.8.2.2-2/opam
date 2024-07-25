@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-xstatic-angular_1.8.2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-xstatic-angular"]
+]
+depends: [
+  "libjs-angularjs" {< "1.9"}
+  "libjs-angularjs" {>= "1.8.2"}
+  "python3-any"
+  "python3-xstatic"
+]
+extra-source "python3-xstatic-angular_1.8.2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-xstatic-angular/python3-xstatic-angular_1.8.2.2-2_all.deb"
+}

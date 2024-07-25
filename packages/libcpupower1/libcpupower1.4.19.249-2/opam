@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcpupower1_4.19.249-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcpupower1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+extra-source "libcpupower1_4.19.249-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linux/libcpupower1_4.19.249-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i monkeysign-doc_2.2.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r monkeysign-doc"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "1.0"}
+  "python-sphinx-rtd-theme"
+  "sphinx-rtd-theme-common"
+]
+extra-source "monkeysign-doc_2.2.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/monkeysign/monkeysign-doc_2.2.4_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml6-module-qtquick-scene2d_6.4.2+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml6-module-qtquick-scene2d"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libqt63dcore6" {>= "6.2.1"}
+  "libqt63dquickscene2d6" {>= "6.2.1"}
+  "libqt63drender6" {>= "6.2.1"}
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6qml6" {>= "6.4.2+dfsg~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qml6-module-qtquick-scene2d_6.4.2+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-3d/qml6-module-qtquick-scene2d_6.4.2+dfsg-2_amd64.deb"
+}

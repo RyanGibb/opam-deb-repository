@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i billard-gl_1.75-17_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r billard-gl"]
+]
+depends: [
+  "billard-gl-data" {= "1.75-17"}
+  "freeglut3"
+  "libc6" {>= "2.4"}
+  "libgcc-s1"
+  "libgl1"
+  "libstdc++6" {>= "5"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "billard-gl_1.75-17_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/billard-gl/billard-gl_1.75-17_amd64.deb"
+}

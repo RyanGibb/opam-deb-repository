@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ocamlbuild_0.11.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ocamlbuild"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "ocaml-base-nox"
+]
+extra-source "ocamlbuild_0.11.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocamlbuild/ocamlbuild_0.11.0-3_amd64.deb"
+}

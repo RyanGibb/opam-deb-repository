@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libomp5-13_1:13.0.1-6~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libomp5-13"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "libomp-x.y"
+]
+extra-source "libomp5-13_1:13.0.1-6~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-13/libomp5-13_13.0.1-6~deb11u1_amd64.deb"
+}

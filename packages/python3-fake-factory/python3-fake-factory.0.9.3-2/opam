@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-fake-factory_0.9.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-fake-factory"]
+]
+depends: [
+  "python3-any"
+  "python3-dateutil"
+  "python3-six" {>= "1.10"}
+  "python3-unidecode"
+]
+extra-source "python3-fake-factory_0.9.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/faker/python3-fake-factory_0.9.3-2_all.deb"
+}

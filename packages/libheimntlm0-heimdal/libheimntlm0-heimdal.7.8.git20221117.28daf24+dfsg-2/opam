@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libheimntlm0-heimdal_7.8.git20221117.28daf24+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libheimntlm0-heimdal"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libhcrypto5-heimdal" {>= "1.4.0+git20110226"}
+  "libkrb5-26-heimdal" {>= "1.4.0+git20110226"}
+  "libroken19-heimdal" {>= "1.7~git20150920"}
+  "libwind0-heimdal" {>= "1.4.0+git20110226"}
+]
+extra-source "libheimntlm0-heimdal_7.8.git20221117.28daf24+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heimdal/libheimntlm0-heimdal_7.8.git20221117.28daf24+dfsg-2_amd64.deb"
+}

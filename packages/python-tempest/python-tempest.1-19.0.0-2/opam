@@ -1,0 +1,44 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-tempest_1:19.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-tempest"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-cliff" {>= "2.8.0"}
+  "python-ddt"
+  "python-debtcollector" {>= "1.2.0"}
+  "python-fixtures" {>= "3.0.0"}
+  "python-gabbi"
+  "python-jsonschema" {>= "2.6.0"}
+  "python-netaddr"
+  "python-os-testr" {>= "1.0.0"}
+  "python-oslo-concurrency" {>= "3.26.0"}
+  "python-oslo-config" {>= "1-5.2.0"}
+  "python-oslo-log" {>= "3.36.0"}
+  "python-oslo-serialization" {>= "2.18.0"}
+  "python-oslo-utils" {>= "3.33.0"}
+  "python-oslotest" {>= "1-3.2.0"}
+  "python-paramiko"
+  "python-pbr" {>= "2.0.0"}
+  "python-prettytable"
+  "python-six" {>= "1.10.0"}
+  "python-stestr"
+  "python-stevedore" {>= "1.20.0"}
+  "python-subunit"
+  "python-swiftclient"
+  "python-testscenarios"
+  "python-testtools" {>= "2.2.0"}
+  "python-unittest2"
+  "python-urllib3" {>= "1.21.1"}
+  "python-yaml"
+  "python2-7-any"
+  "subunit"
+  "testrepository"
+]
+extra-source "python-tempest_1:19.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tempest/python-tempest_19.0.0-2_all.deb"
+}

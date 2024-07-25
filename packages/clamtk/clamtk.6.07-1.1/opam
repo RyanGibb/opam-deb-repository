@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clamtk_6.07-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clamtk"]
+]
+depends: [
+  "clamav" {>= "0.95"}
+  "gnome-icon-theme"
+  "libgtk3-perl"
+  "libjson-perl"
+  "liblocale-gettext-perl"
+  "liblwp-protocol-https-perl"
+  "libtext-csv-perl"
+  "libwww-perl"
+  "perl-any"
+  ("clamav-freshclam" {>= "0.95"} | "clamav-data")
+  ("cron" | "cron-daemon" | "anacron")
+]
+extra-source "clamtk_6.07-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clamtk/clamtk_6.07-1.1_all.deb"
+}

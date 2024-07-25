@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librosconsole-bridge-dev_0.5.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librosconsole-bridge-dev"]
+]
+depends: [
+  "libconsole-bridge-dev"
+  "librosconsole-bridge0d" {= "0.5.4-2"}
+  "librosconsole-dev"
+]
+extra-source "librosconsole-bridge-dev_0.5.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-rosconsole-bridge/librosconsole-bridge-dev_0.5.4-2_amd64.deb"
+}

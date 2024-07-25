@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfbclient2_3.0.7.33374.ds4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfbclient2"]
+]
+depends: [
+  "firebird3-0-common" {= "3.0.7.33374.ds4-2"}
+  "firebird3-0-common-doc" {= "3.0.7.33374.ds4-2"}
+  "libc6" {>= "2.28"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "libtommath1" {>= "1.1.0"}
+]
+extra-source "libfbclient2_3.0.7.33374.ds4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/firebird3.0/libfbclient2_3.0.7.33374.ds4-2_amd64.deb"
+}

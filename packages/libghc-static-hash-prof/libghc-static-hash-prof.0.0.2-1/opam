@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-static-hash-prof_0.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-static-hash-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hashable-prof"
+  "libghc-primes-prof"
+  "libghc-static-hash-dev" {= "0.0.2-1"}
+]
+extra-source "libghc-static-hash-prof_0.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-static-hash/libghc-static-hash-prof_0.0.2-1_amd64.deb"
+}

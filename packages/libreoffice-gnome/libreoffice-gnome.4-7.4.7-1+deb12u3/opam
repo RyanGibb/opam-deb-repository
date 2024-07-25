@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-gnome_4:7.4.7-1+deb12u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-gnome"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libglib2-0-0" {>= "2.38.0"}
+  "libreoffice-common" {>= "1-7.0.0~alpha~"}
+  "libreoffice-core" {= "4-7.4.7-1+deb12u3"}
+  "libstdc++6" {>= "5"}
+  "libuno-cppu3" {>= "4.4.0~alpha"}
+  "libuno-cppuhelpergcc3-3" {>= "4.0.0~alpha"}
+  "libuno-sal3" {>= "1-7.3.0~beta1"}
+  "libuno-salhelpergcc3-3" {>= "1.4.0"}
+  "ucf" {>= "0.8"}
+  "uno-libs-private"
+]
+conflicts: [
+  "libreoffice-gtk3 (<< 1:7.2.0~)"
+]
+extra-source "libreoffice-gnome_4:7.4.7-1+deb12u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-gnome_7.4.7-1+deb12u3_amd64.deb"
+}

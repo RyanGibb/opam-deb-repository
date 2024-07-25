@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i chemical-structures_2.2.dfsg.0-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r chemical-structures"]
+]
+depends: [
+  "debconf"
+  "openbabel"
+  "python"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "chemical-structures_2.2.dfsg.0-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chemical-structures/chemical-structures_2.2.dfsg.0-13_all.deb"
+}

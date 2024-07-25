@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgv-lua_2.42.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgv-lua"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcgraph6"
+  "libgvc6"
+  "liblua5-2-0"
+]
+extra-source "libgv-lua_2.42.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/graphviz/libgv-lua_2.42.2-5_amd64.deb"
+}

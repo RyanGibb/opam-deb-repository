@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plasma-browser-integration_5.20.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plasma-browser-integration"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libkf5activities5" {>= "5.72.0~"}
+  "libkf5configcore5" {>= "5.72.0~"}
+  "libkf5coreaddons5" {>= "5.72.0~"}
+  "libkf5crash5" {>= "5.72.0~"}
+  "libkf5dbusaddons5" {>= "5.72.0~"}
+  "libkf5filemetadata3" {>= "5.72.0~"}
+  "libkf5i18n5" {>= "5.72.0~"}
+  "libkf5kiocore5" {>= "5.72.0~"}
+  "libkf5kiogui5" {>= "5.72.0~"}
+  "libkf5notifications5" {>= "5.72.0~"}
+  "libkf5purpose-bin"
+  "libkf5purpose5" {>= "5.72.0~"}
+  "libkf5runner5" {>= "5.72.0~"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "4.96.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.9.0~"}
+  "libqt5widgets5" {>= "5.9.0~"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.9.0~"} | "libqt5gui5-gles" {>= "5.9.0~"})
+]
+extra-source "plasma-browser-integration_5.20.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plasma-browser-integration/plasma-browser-integration_5.20.5-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i psurface_2.0.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r psurface"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libpsurface0v5"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "psurface_2.0.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/psurface/psurface_2.0.0-2+b1_amd64.deb"
+}

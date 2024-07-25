@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtkmm-documentation_3.24.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtkmm-documentation"]
+]
+depends: [
+  "doc-base"
+  "libgtkmm-3-0-doc" {>= "3.24.0"}
+]
+extra-source "gtkmm-documentation_3.24.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtkmm-documentation/gtkmm-documentation_3.24.0-1_all.deb"
+}

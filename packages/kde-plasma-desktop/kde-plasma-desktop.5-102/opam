@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kde-plasma-desktop_5:102_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kde-plasma-desktop"]
+]
+depends: [
+  "kde-baseapps" {>= "4-17.08.3"}
+  "plasma-desktop" {>= "4-5.10"}
+  "plasma-workspace" {>= "4-5.10"}
+  "udisks2"
+  "upower"
+]
+extra-source "kde-plasma-desktop_5:102_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-kde/kde-plasma-desktop_102_amd64.deb"
+}

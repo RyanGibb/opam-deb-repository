@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmrpt-slam-dev_1:2.1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmrpt-slam-dev"]
+]
+depends: [
+  "libmrpt-common-dev"
+  "libmrpt-maps-dev"
+  "libmrpt-slam2-1" {= "1-2.1.7-2"}
+  "libmrpt-vision-dev"
+]
+extra-source "libmrpt-slam-dev_1:2.1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrpt/libmrpt-slam-dev_2.1.7-2_amd64.deb"
+}

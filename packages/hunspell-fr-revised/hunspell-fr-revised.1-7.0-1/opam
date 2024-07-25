@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hunspell-fr-revised_1:7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hunspell-fr-revised"]
+]
+depends: [
+  "dictionaries-common"
+]
+conflicts: [
+  "hunspell-fr-classical"
+  "hunspell-fr-comprehensive"
+  "hunspell-fr-modern"
+  "myspell-fr"
+  "myspell-fr-gut"
+]
+extra-source "hunspell-fr-revised_1:7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hunspell-fr/hunspell-fr-revised_7.0-1_all.deb"
+}

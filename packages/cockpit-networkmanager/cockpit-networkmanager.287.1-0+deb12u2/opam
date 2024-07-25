@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cockpit-networkmanager_287.1-0+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cockpit-networkmanager"]
+]
+depends: [
+  "cockpit-bridge" {>= "287.1-0+deb12u2"}
+  "network-manager" {>= "1.6"}
+]
+extra-source "cockpit-networkmanager_287.1-0+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cockpit/cockpit-networkmanager_287.1-0+deb12u2_all.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-grohmm_1.32.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-grohmm"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-genomeinfodb"
+  "r-bioc-genomicalignments" {>= "1.15.6"}
+  "r-bioc-genomicranges" {>= "1.31.8"}
+  "r-bioc-iranges" {>= "2.13.12"}
+  "r-bioc-rtracklayer" {>= "1.39.7"}
+  "r-bioc-s4vectors" {>= "0.17.25"}
+  "r-cran-mass"
+]
+extra-source "r-bioc-grohmm_1.32.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-grohmm/r-bioc-grohmm_1.32.0-1_amd64.deb"
+}

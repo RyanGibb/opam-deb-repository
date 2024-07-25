@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libimobiledevice6_1.3.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libimobiledevice6"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libplist3" {>= "2.2.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libusbmuxd6" {>= "2.0.2"}
+]
+conflicts: [
+  "libiphone0"
+]
+extra-source "libimobiledevice6_1.3.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libimobiledevice/libimobiledevice6_1.3.0-6_amd64.deb"
+}

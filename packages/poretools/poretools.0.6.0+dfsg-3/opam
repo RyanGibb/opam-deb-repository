@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i poretools_0.6.0+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r poretools"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-h5py"
+  "python-matplotlib"
+  "python-pandas"
+  "python-pkg-resources"
+  "python-seaborn"
+]
+extra-source "poretools_0.6.0+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poretools/poretools_0.6.0+dfsg-3_all.deb"
+}

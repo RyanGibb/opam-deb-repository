@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dkimpy-milter_1.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dkimpy-milter"]
+]
+depends: [
+  "adduser"
+  "python3-any"
+  "python3-authres"
+  "python3-dkim" {>= "1.1"}
+  "python3-dnspython"
+  "python3-milter" {>= "1.0.5"}
+  "python3-nacl"
+  "python3-pkg-resources"
+]
+extra-source "dkimpy-milter_1.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dkimpy-milter/dkimpy-milter_1.2.3-1_all.deb"
+}

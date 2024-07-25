@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wordnet_1:3.0-37_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wordnet"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "wordnet-base" {= "1-3.0-37"}
+]
+extra-source "wordnet_1:3.0-37_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wordnet/wordnet_3.0-37_amd64.deb"
+}

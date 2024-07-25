@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-15-powa_4.1.4-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-15-powa"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "postgresql-15"
+]
+extra-source "postgresql-15-powa_4.1.4-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/powa-archivist/postgresql-15-powa_4.1.4-2+b1_amd64.deb"
+}

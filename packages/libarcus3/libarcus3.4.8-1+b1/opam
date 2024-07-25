@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libarcus3_4.8-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libarcus3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libprotobuf23" {>= "3.12.3"}
+  "libstdc++6" {>= "6"}
+]
+extra-source "libarcus3_4.8-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libarcus/libarcus3_4.8-1+b1_amd64.deb"
+}

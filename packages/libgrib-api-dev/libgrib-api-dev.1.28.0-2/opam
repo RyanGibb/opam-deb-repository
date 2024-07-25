@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgrib-api-dev_1.28.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgrib-api-dev"]
+]
+depends: [
+  "libaec-dev"
+  "libgrib-api0" {= "1.28.0-2"}
+  "libjpeg-dev"
+  "libpng-dev"
+  "zlib1g-dev"
+]
+conflicts: [
+  "libeccodes-dev"
+]
+extra-source "libgrib-api-dev_1.28.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grib-api/libgrib-api-dev_1.28.0-2_amd64.deb"
+}

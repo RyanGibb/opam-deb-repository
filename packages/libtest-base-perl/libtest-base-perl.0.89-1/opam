@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest-base-perl_0.89-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest-base-perl"]
+]
+depends: [
+  "libalgorithm-diff-perl"
+  "libspiffy-perl" {>= "0.40"}
+  "libtext-diff-perl"
+  "perl"
+]
+extra-source "libtest-base-perl_0.89-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest-base-perl/libtest-base-perl_0.89-1_all.deb"
+}

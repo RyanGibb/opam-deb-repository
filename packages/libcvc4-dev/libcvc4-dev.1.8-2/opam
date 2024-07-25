@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcvc4-dev_1.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcvc4-dev"]
+]
+depends: [
+  "libcvc4-7" {= "1.8-2"}
+  "libcvc4parser7" {= "1.8-2"}
+  "libgmp-dev"
+]
+extra-source "libcvc4-dev_1.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cvc4/libcvc4-dev_1.8-2_amd64.deb"
+}

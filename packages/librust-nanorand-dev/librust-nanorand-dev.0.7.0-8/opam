@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-nanorand-dev_0.7.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-nanorand-dev"]
+]
+depends: [
+  "librust-getrandom-dev"
+  "librust-zeroize-1+default-dev"
+  "librust-zeroize-1+zeroize-derive-dev"
+]
+extra-source "librust-nanorand-dev_0.7.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-nanorand/librust-nanorand-dev_0.7.0-8_all.deb"
+}

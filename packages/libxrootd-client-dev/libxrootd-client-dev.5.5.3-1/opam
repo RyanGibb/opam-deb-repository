@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxrootd-client-dev_5.5.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxrootd-client-dev"]
+]
+depends: [
+  "libxrdcl3" {= "5.5.3-1"}
+  "libxrdffs3" {= "5.5.3-1"}
+  "libxrdposix3" {= "5.5.3-1"}
+  "libxrootd-dev" {= "5.5.3-1"}
+]
+extra-source "libxrootd-client-dev_5.5.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xrootd/libxrootd-client-dev_5.5.3-1_amd64.deb"
+}

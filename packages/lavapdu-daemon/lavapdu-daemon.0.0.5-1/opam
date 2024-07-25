@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lavapdu-daemon_0.0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lavapdu-daemon"]
+]
+depends: [
+  "postgresql"
+  "postgresql-client"
+  "python"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-daemon"
+  "python-lockfile"
+  "python-pexpect"
+  "python-psycopg2"
+  "python2-7"
+  "telnet"
+]
+conflicts: [
+  "lavapdu"
+]
+extra-source "lavapdu-daemon_0.0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lavapdu/lavapdu-daemon_0.0.5-1_all.deb"
+}

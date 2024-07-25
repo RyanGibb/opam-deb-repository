@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-packer-community-winrmcp-dev_0.0~git20180921.c76d91c-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-packer-community-winrmcp-dev"]
+]
+depends: [
+  "golang-github-dylanmei-iso8601-dev"
+  "golang-github-gofrs-uuid-dev"
+  "golang-github-masterzen-winrm-dev" {>= "0.0~git20170601.0.1ca0ba6"}
+]
+extra-source "golang-github-packer-community-winrmcp-dev_0.0~git20180921.c76d91c-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/winrmcp/golang-github-packer-community-winrmcp-dev_0.0~git20180921.c76d91c-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxine2-console_1.2.10-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxine2-console"]
+]
+depends: [
+  "libaa1" {>= "1.4p5"}
+  "libc6" {>= "2.4"}
+  "libcaca0" {>= "0.99.beta17-1"}
+  "libdirectfb-1-7-7" {>= "1.7.7"}
+  "libxine2-bin" {= "1.2.10-4+b1"}
+]
+extra-source "libxine2-console_1.2.10-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xine-lib-1.2/libxine2-console_1.2.10-4+b1_amd64.deb"
+}

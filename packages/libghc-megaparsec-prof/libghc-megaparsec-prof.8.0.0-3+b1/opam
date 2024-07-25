@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-megaparsec-prof_8.0.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-megaparsec-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-case-insensitive-prof"
+  "libghc-megaparsec-dev" {= "8.0.0-3+b1"}
+  "libghc-parser-combinators-prof"
+  "libghc-scientific-prof"
+]
+extra-source "libghc-megaparsec-prof_8.0.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-megaparsec/libghc-megaparsec-prof_8.0.0-3+b1_amd64.deb"
+}

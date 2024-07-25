@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mailto_1.3.2-3.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mailto"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  ("apache" | "httpd")
+  ("exim4" | "mail-transport-agent")
+]
+extra-source "mailto_1.3.2-3.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mailto/mailto_1.3.2-3.1+b1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i suckless-tools_46-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r suckless-tools"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+  "libcap2-bin"
+  "libfontconfig1" {>= "2.12.6"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+  "libxinerama1"
+  "libxrandr2"
+  "libxss1"
+]
+extra-source "suckless-tools_46-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/suckless-tools/suckless-tools_46-1_amd64.deb"
+}

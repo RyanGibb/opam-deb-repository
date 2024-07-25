@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nemo-owncloud_2.5.1.10973+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nemo-owncloud"]
+]
+depends: [
+  "nemo"
+  "nemo-python"
+  "owncloud-client" {< "2.5.1.10973+dfsg-1.1~"}
+  "owncloud-client" {>= "2.5.1.10973+dfsg-1"}
+  "owncloud-client-data"
+  "python3-any"
+]
+extra-source "nemo-owncloud_2.5.1.10973+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/owncloud-client/nemo-owncloud_2.5.1.10973+dfsg-1_all.deb"
+}

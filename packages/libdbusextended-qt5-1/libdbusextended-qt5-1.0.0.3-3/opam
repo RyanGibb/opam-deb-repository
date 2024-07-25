@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbusextended-qt5-1_0.0.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbusextended-qt5-1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt5core5a" {>= "5.10.0"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libdbusextended-qt5-1_0.0.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtdbusextended/libdbusextended-qt5-1_0.0.3-3_amd64.deb"
+}

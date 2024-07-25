@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-magit-forge_0.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-magit-forge"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-closql" {>= "1.2.0"}
+  "elpa-dash" {>= "2.19.1"}
+  "elpa-emacsql-sqlite" {>= "3.0.0"}
+  "elpa-ghub" {>= "3.5.4"}
+  "elpa-let-alist" {>= "1.0.6"}
+  "elpa-magit" {>= "3.3.0"}
+  "elpa-markdown-mode" {>= "2.4"}
+  "elpa-yaml" {>= "0.3.4"}
+  "emacsen-common"
+]
+extra-source "elpa-magit-forge_0.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/magit-forge-el/elpa-magit-forge_0.3.2-1_all.deb"
+}

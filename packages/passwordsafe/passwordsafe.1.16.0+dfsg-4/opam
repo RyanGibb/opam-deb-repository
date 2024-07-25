@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i passwordsafe_1.16.0+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r passwordsafe"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.4"}
+  "libmagic1" {>= "5.12"}
+  "libqrencode4" {>= "3.2.0"}
+  "libstdc++6" {>= "11"}
+  "libuuid1" {>= "2.16"}
+  "libwxbase3-2-1" {>= "3.2.2+dfsg"}
+  "libwxgtk3-2-1" {>= "3.2.1+dfsg-2"}
+  "libx11-6"
+  "libxerces-c3-2"
+  "libxtst6"
+  "libykpers-1-1" {>= "1.15.0"}
+  "passwordsafe-common"
+]
+conflicts: [
+  "pwsafe"
+]
+extra-source "passwordsafe_1.16.0+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/passwordsafe/passwordsafe_1.16.0+dfsg-4_amd64.deb"
+}

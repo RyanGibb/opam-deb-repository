@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-xattr_0.9.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-xattr"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-cffi-backend"
+]
+conflicts: [
+  "python-pyxattr"
+]
+extra-source "python-xattr_0.9.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-xattr/python-xattr_0.9.6-1_amd64.deb"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32gcc-9-dev_9.3.0-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32gcc-9-dev"]
+]
+depends: [
+  "gcc-9-base" {= "9.3.0-22"}
+  "lib32asan5" {>= "9.3.0-22"}
+  "lib32atomic1" {>= "9.3.0-22"}
+  "lib32gcc-s1" {>= "9.3.0-22"}
+  "lib32gomp1" {>= "9.3.0-22"}
+  "lib32itm1" {>= "9.3.0-22"}
+  "lib32quadmath0" {>= "9.3.0-22"}
+  "lib32ubsan1" {>= "9.3.0-22"}
+  "libx32asan5" {>= "9.3.0-22"}
+  "libx32atomic1" {>= "9.3.0-22"}
+  "libx32gcc-s1" {>= "9.3.0-22"}
+  "libx32gomp1" {>= "9.3.0-22"}
+  "libx32itm1" {>= "9.3.0-22"}
+  "libx32quadmath0" {>= "9.3.0-22"}
+  "libx32ubsan1" {>= "9.3.0-22"}
+]
+extra-source "lib32gcc-9-dev_9.3.0-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-9/lib32gcc-9-dev_9.3.0-22_amd64.deb"
+}

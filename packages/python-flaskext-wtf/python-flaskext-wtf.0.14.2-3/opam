@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-flaskext.wtf_0.14.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-flaskext.wtf"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-flask"
+  "python-wtforms"
+]
+conflicts: [
+  "python-flaskext-wtf"
+]
+extra-source "python-flaskext.wtf_0.14.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flask-wtf/python-flaskext.wtf_0.14.2-3_all.deb"
+}

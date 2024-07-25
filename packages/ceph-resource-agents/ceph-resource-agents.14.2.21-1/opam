@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ceph-resource-agents_14.2.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ceph-resource-agents"]
+]
+depends: [
+  "ceph" {>= "14.2.21-1"}
+  "resource-agents"
+]
+extra-source "ceph-resource-agents_14.2.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/ceph-resource-agents_14.2.21-1_all.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mjpegtools_1:2.1.0+debian-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mjpegtools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdv4" {>= "1.0.0"}
+  "libgcc-s1"
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "liblavfile-2-1-0"
+  "liblavjpeg-2-1-0"
+  "liblavplay-2-1-0"
+  "libmjpegutils-2-1-0"
+  "libmpeg2encpp-2-1-0"
+  "libmplex2-2-1-0"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "5.2"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "mjpegtools_1:2.1.0+debian-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mjpegtools/mjpegtools_2.1.0+debian-6_amd64.deb"
+}

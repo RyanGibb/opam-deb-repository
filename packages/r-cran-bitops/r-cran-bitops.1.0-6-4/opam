@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-bitops_1.0-6-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-bitops"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.0-5"}
+]
+extra-source "r-cran-bitops_1.0-6-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-bitops/r-cran-bitops_1.0-6-4_amd64.deb"
+}

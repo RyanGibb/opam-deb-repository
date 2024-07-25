@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i multiarch-support_2.28-10+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r multiarch-support"]
+]
+depends: [
+  "libc6" {>= "2.3.6-2"}
+]
+extra-source "multiarch-support_2.28-10+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glibc/multiarch-support_2.28-10+deb10u1_amd64.deb"
+}

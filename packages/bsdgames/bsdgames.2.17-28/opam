@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bsdgames_2.17-28_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bsdgames"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfl2" {>= "2.5.33"}
+  "libgcc-s1"
+  "libncurses6" {>= "6"}
+  "libstdc++6" {>= "5"}
+  "libtinfo6" {>= "6"}
+  ("wamerican" | "wordlist")
+]
+extra-source "bsdgames_2.17-28_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bsdgames/bsdgames_2.17-28_amd64.deb"
+}

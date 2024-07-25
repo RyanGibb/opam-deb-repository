@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i redmine-pgsql_5.0.4-5+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r redmine-pgsql"]
+]
+depends: [
+  "postgresql-client"
+  "ruby-pg" {>= "1.2~"}
+  ("dbconfig-pgsql" | "dbconfig-no-thanks")
+]
+extra-source "redmine-pgsql_5.0.4-5+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/redmine/redmine-pgsql_5.0.4-5+deb12u1_all.deb"
+}

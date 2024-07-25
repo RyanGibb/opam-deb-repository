@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pytest-mpl_0.16.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pytest-mpl"]
+]
+depends: [
+  "python3-any"
+  "python3-jinja2"
+  "python3-matplotlib"
+  "python3-nose"
+  "python3-packaging"
+  "python3-pil"
+  "python3-pytest"
+  ("python3-importlib-resources" | "python3" {> "3.8"})
+]
+extra-source "python3-pytest-mpl_0.16.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pytest-mpl/python3-pytest-mpl_0.16.1-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbackuppc-xs-perl_0.62-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbackuppc-xs-perl"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libbackuppc-xs-perl_0.62-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbackuppc-xs-perl/libbackuppc-xs-perl_0.62-2+b2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pizzly_0.37.3+ds-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pizzly"]
+]
+depends: [
+  "kallisto"
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "python3"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "pizzly_0.37.3+ds-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pizzly/pizzly_0.37.3+ds-5_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i auto-install-el_1.58-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r auto-install-el"]
+]
+depends: [
+  "emacsen-common" {>= "2.0.8"}
+  ("emacs" | "emacs25")
+]
+extra-source "auto-install-el_1.58-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/auto-install-el/auto-install-el_1.58-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopendht-c2_2.4.12-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopendht-c2"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libopendht2" {= "2.4.12-7"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libopendht-c2_2.4.12-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opendht/libopendht-c2_2.4.12-7_amd64.deb"
+}

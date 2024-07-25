@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sgt-puzzles_20191231.79a5378-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sgt-puzzles"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.10.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.21.4"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+]
+extra-source "sgt-puzzles_20191231.79a5378-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sgt-puzzles/sgt-puzzles_20191231.79a5378-3+deb11u1_amd64.deb"
+}

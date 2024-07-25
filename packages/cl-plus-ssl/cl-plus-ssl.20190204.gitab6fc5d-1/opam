@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cl-plus-ssl_20190204.gitab6fc5d-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cl-plus-ssl"]
+]
+depends: [
+  "cl-alexandria"
+  "cl-bordeaux-threads"
+  "cl-cffi"
+  "cl-flexi-streams"
+  "cl-trivial-features"
+  "cl-trivial-garbage"
+  "cl-trivial-gray-streams"
+  "libssl1-1"
+]
+extra-source "cl-plus-ssl_20190204.gitab6fc5d-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cl-plus-ssl/cl-plus-ssl_20190204.gitab6fc5d-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdapclient6v5_3.20.7-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdapclient6v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libdap27" {= "3.20.7-6"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libdapclient6v5_3.20.7-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdap/libdapclient6v5_3.20.7-6_amd64.deb"
+}

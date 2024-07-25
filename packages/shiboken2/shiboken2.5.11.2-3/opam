@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shiboken2_5.11.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shiboken2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libclang1-7" {>= "1-5.0~+rc1~"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libqt5xmlpatterns5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.9"}
+  "libxml2" {>= "2.7.4"}
+  "libxslt1-1" {>= "1.1.25"}
+]
+extra-source "shiboken2_5.11.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyside2/shiboken2_5.11.2-3_amd64.deb"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dvi2ps_5.1j-1.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dvi2ps"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfreetype6" {>= "2.2.1"}
+  "libkpathsea6" {>= "2022.20220321.62855"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("texlive-base-bin" | "tetex-bin")
+]
+conflicts: [
+  "dvi2ps-fontdata-a2n (<< 1.0-6)"
+  "dvi2ps-fontdata-ja (<< 1.0-6)"
+  "dvi2ps-fontdata-rrs (<< 1.0-6)"
+  "dvi2ps-fontdata-rsp (<< 1.0-6)"
+  "dvi2ps-fontdata-tbank (<< 1.0-6)"
+  "dvi2ps-j"
+]
+extra-source "dvi2ps_5.1j-1.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dvi2ps/dvi2ps_5.1j-1.5_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-aws-sdk-core_3.168.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-aws-sdk-core"]
+]
+depends: [
+  "ruby-aws-eventstream" {>= "1.0.2"}
+  "ruby-aws-partitions" {>= "1.651.0"}
+  "ruby-aws-sigv4" {>= "1.5"}
+  "ruby-jmespath" {>= "1.6.1"}
+]
+extra-source "ruby-aws-sdk-core_3.168.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-aws-sdk-core/ruby-aws-sdk-core_3.168.1-2_all.deb"
+}

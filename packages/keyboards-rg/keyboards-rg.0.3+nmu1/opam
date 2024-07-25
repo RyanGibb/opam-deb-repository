@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i keyboards-rg_0.3+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r keyboards-rg"]
+]
+depends: [
+  "xkb-data" {>= "0.8-8"}
+  "xserver-xorg"
+]
+extra-source "keyboards-rg_0.3+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/keyboards-rg/keyboards-rg_0.3+nmu1_all.deb"
+}

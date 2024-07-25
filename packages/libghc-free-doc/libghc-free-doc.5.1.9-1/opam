@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-free-doc_5.1.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-free-doc"]
+]
+depends: [
+  "ghc"
+  "sgml-base" {>= "1.28"}
+]
+extra-source "libghc-free-doc_5.1.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-free/libghc-free-doc_5.1.9-1_all.deb"
+}

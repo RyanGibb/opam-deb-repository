@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rmail_8.15.2-22+deb11u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rmail"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  ("sendmail-bin" | "mail-transport-agent")
+]
+conflicts: [
+  "courier-mta"
+  "exim"
+  "exim-tls"
+  "exim4"
+  "exim4-daemon-custom"
+  "exim4-daemon-heavy"
+  "exim4-daemon-light"
+  "masqmail"
+  "postfix"
+  "smail"
+  "zmailer"
+]
+extra-source "rmail_8.15.2-22+deb11u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sendmail/rmail_8.15.2-22+deb11u3_amd64.deb"
+}

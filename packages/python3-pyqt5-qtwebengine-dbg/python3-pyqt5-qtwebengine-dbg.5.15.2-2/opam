@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyqt5.qtwebengine-dbg_5.15.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyqt5.qtwebengine-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5webengine5" {>= "5.14.1"}
+  "libqt5webenginecore5" {>= "5.14.1"}
+  "libqt5webenginewidgets5" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  "python3-dbg" {< "3.10"}
+  "python3-dbg" {>= "3.9~"}
+  "python3-pyqt5-qtwebchannel-dbg" {>= "5.15.1"}
+  "python3-pyqt5-qtwebengine" {= "5.15.2-2"}
+  ("libqt5gui5" {>= "5.3.0"} | "libqt5gui5-gles" {>= "5.3.0"})
+]
+extra-source "python3-pyqt5.qtwebengine-dbg_5.15.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyqt5webengine/python3-pyqt5.qtwebengine-dbg_5.15.2-2_amd64.deb"
+}

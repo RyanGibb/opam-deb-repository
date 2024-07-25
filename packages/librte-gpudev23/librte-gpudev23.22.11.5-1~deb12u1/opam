@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-gpudev23_22.11.5-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-gpudev23"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.4"}
+  "libfdt1" {>= "1.6.1"}
+  "libnuma1" {>= "2.0.11"}
+  "librte-eal23" {>= "22.11"}
+  "librte-kvargs23" {>= "18.08"}
+  "librte-mbuf23" {>= "19.08"}
+  "librte-mempool23" {>= "18.05"}
+  "librte-ring23" {>= "22.11~rc2"}
+  "librte-telemetry23" {>= "21.08"}
+]
+conflicts: [
+  "libdpdk0"
+]
+extra-source "librte-gpudev23_22.11.5-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-gpudev23_22.11.5-1~deb12u1_amd64.deb"
+}

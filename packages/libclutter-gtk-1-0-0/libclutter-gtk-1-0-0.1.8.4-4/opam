@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclutter-gtk-1.0-0_1.8.4-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclutter-gtk-1.0-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.2.4"}
+  "libclutter-1-0-0" {>= "1.23.7"}
+  "libcogl20" {>= "1.17.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.21.0"}
+  "libwayland-client0" {>= "1.9.91"}
+]
+extra-source "libclutter-gtk-1.0-0_1.8.4-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clutter-gtk/libclutter-gtk-1.0-0_1.8.4-4_amd64.deb"
+}

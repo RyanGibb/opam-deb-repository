@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rtorrent_0.9.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rtorrent"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcppunit-1-14-0"
+  "libcurl4" {>= "7.16.3"}
+  "libgcc1" {>= "1-3.0"}
+  "libncursesw6" {>= "6"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+  "libtorrent20"
+  "libxmlrpc-core-c3"
+]
+extra-source "rtorrent_0.9.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rtorrent/rtorrent_0.9.7-1_amd64.deb"
+}

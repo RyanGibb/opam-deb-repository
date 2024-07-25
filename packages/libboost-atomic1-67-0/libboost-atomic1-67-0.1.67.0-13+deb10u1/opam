@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libboost-atomic1.67.0_1.67.0-13+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libboost-atomic1.67.0"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libboost-atomic1.67.0_1.67.0-13+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boost1.67/libboost-atomic1.67.0_1.67.0-13+deb10u1_amd64.deb"
+}

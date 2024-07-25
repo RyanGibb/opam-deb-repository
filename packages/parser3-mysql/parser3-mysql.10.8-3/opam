@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i parser3-mysql_10.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r parser3-mysql"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libltdl7" {>= "2.4.6"}
+  "libmariadb-dev-compat"
+  "libstdc++6" {>= "4.1.1"}
+  "parser3-common" {>= "3.3.0"}
+]
+extra-source "parser3-mysql_10.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/parser-mysql/parser3-mysql_10.8-3_amd64.deb"
+}

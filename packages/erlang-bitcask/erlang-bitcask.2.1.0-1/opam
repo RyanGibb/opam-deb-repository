@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-bitcask_2.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-bitcask"]
+]
+depends: [
+  "erlang-base" {>= "1-24.2+dfsg"}
+  "erlang-cuttlefish" {>= "3"}
+  "erlang-meck"
+  "libc6" {>= "2.33"}
+]
+extra-source "erlang-bitcask_2.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/erlang-bitcask/erlang-bitcask_2.1.0-1_amd64.deb"
+}

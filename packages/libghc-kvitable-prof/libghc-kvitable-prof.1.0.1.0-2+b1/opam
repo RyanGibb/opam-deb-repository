@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-kvitable-prof_1.0.1.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-kvitable-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-kvitable-dev" {= "1.0.1.0-2+b1"}
+  "libghc-lucid-prof"
+  "libghc-microlens-prof"
+  "libghc-prettyprinter-prof"
+]
+extra-source "libghc-kvitable-prof_1.0.1.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-kvitable/libghc-kvitable-prof_1.0.1.0-2+b1_amd64.deb"
+}

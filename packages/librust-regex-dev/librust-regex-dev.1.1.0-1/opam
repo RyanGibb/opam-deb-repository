@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-regex-dev_1.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-regex-dev"]
+]
+depends: [
+  "librust-aho-corasick-dev"
+  "librust-memchr+default-dev"
+  "librust-regex-syntax-dev"
+  "librust-thread-local-dev"
+  "librust-utf8-ranges-dev"
+]
+extra-source "librust-regex-dev_1.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-regex/librust-regex-dev_1.1.0-1_amd64.deb"
+}

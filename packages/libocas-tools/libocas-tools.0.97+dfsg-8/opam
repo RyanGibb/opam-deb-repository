@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libocas-tools_0.97+dfsg-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libocas-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libocas0" {= "0.97+dfsg-8"}
+]
+extra-source "libocas-tools_0.97+dfsg-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libocas/libocas-tools_0.97+dfsg-8_amd64.deb"
+}

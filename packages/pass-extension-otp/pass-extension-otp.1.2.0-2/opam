@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pass-extension-otp_1.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pass-extension-otp"]
+]
+depends: [
+  "pass" {>= "1.7.0"}
+]
+extra-source "pass-extension-otp_1.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pass-otp/pass-extension-otp_1.2.0-2_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-pundit_2.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-pundit"]
+]
+depends: [
+  "ruby-activesupport"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-pundit_2.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-pundit/ruby-pundit_2.0.0-1_all.deb"
+}

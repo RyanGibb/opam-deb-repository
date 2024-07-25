@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsdformat6-dev_6.2.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsdformat6-dev"]
+]
+depends: [
+  "libboost-filesystem-dev"
+  "libboost-program-options-dev"
+  "libboost-regex-dev"
+  "libboost-system-dev"
+  "libignition-math4-dev"
+  "libsdformat6" {= "6.2.0+dfsg-1"}
+  "libtinyxml-dev"
+  "liburdfdom-dev"
+]
+extra-source "libsdformat6-dev_6.2.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sdformat/libsdformat6-dev_6.2.0+dfsg-1_amd64.deb"
+}

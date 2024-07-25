@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-userid-dev_0.1.3.7-1+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-userid-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-aeson-dev"
+  "libghc-boomerang-dev"
+  "libghc-cereal-dev"
+  "libghc-safecopy-dev"
+  "libghc-web-routes-dev"
+  "libghc-web-routes-th-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-userid-dev_0.1.3.7-1+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-userid/libghc-userid-dev_0.1.3.7-1+b5_amd64.deb"
+}

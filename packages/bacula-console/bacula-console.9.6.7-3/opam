@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bacula-console_9.6.7-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bacula-console"]
+]
+depends: [
+  "bacula-common" {= "9.6.7-3"}
+  "libc6" {>= "2.14"}
+  "libreadline8" {>= "6.0"}
+  "ucf"
+]
+extra-source "bacula-console_9.6.7-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bacula/bacula-console_9.6.7-3_amd64.deb"
+}

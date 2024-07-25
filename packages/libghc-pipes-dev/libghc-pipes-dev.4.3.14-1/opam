@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-pipes-dev_4.3.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-pipes-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-exceptions-dev"
+  "libghc-mmorph-dev"
+  "libghc-void-dev"
+  "libgmp10"
+]
+extra-source "libghc-pipes-dev_4.3.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pipes/libghc-pipes-dev_4.3.14-1_amd64.deb"
+}

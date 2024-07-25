@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clevis_19-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clevis"]
+]
+depends: [
+  "cracklib-runtime"
+  "curl"
+  "jose"
+  "libc6" {>= "2.34"}
+  "libjansson4" {>= "2.14"}
+  "libjose0" {>= "10"}
+  "libpwquality-tools"
+  "libssl3" {>= "3.0.0"}
+  "luksmeta"
+]
+extra-source "clevis_19-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clevis/clevis_19-2_amd64.deb"
+}

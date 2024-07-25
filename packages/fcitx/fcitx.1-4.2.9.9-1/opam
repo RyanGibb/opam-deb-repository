@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx_1:4.2.9.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx"]
+]
+depends: [
+  "fcitx-bin"
+  "fcitx-data"
+  "fcitx-modules"
+]
+conflicts: [
+  "fcitx5"
+]
+extra-source "fcitx_1:4.2.9.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx/fcitx_4.2.9.9-1_all.deb"
+}

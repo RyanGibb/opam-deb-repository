@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i task-web-server_3.68+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r task-web-server"]
+]
+depends: [
+  "apache2"
+  "tasksel" {= "3.68+deb11u1"}
+]
+extra-source "task-web-server_3.68+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tasksel/task-web-server_3.68+deb11u1_all.deb"
+}

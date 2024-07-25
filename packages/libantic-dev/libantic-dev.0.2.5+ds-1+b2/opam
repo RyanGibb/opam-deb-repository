@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libantic-dev_0.2.5+ds-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libantic-dev"]
+]
+depends: [
+  "libantic0" {= "0.2.5+ds-1+b2"}
+  "libflint-dev"
+]
+conflicts: [
+  "libantic-dev"
+]
+extra-source "libantic-dev_0.2.5+ds-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/antic/libantic-dev_0.2.5+ds-1+b2_amd64.deb"
+}

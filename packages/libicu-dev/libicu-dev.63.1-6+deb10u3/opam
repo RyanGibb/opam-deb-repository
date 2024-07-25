@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libicu-dev_63.1-6+deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libicu-dev"]
+]
+depends: [
+  "icu-devtools" {>= "63.1-6+deb10u3"}
+  "libicu63" {= "63.1-6+deb10u3"}
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "libicu-dev_63.1-6+deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/icu/libicu-dev_63.1-6+deb10u3_amd64.deb"
+}

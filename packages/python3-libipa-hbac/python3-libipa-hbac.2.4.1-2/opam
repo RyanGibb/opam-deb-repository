@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-libipa-hbac_2.4.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-libipa-hbac"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libipa-hbac0" {= "2.4.1-2"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+]
+extra-source "python3-libipa-hbac_2.4.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sssd/python3-libipa-hbac_2.4.1-2_amd64.deb"
+}

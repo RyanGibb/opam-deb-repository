@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fsm-lite_1.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fsm-lite"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdivsufsort3" {>= "2.0.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libsdsl3" {>= "2.1.1+dfsg"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "fsm-lite_1.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fsm-lite/fsm-lite_1.0-8_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfsext1_20201107-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfsext1"]
+]
+depends: [
+  "libbfio1" {>= "20120425"}
+  "libc6" {>= "2.17"}
+]
+extra-source "libfsext1_20201107-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfsext/libfsext1_20201107-1+b2_amd64.deb"
+}

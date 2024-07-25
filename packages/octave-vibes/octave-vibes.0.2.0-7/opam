@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-vibes_0.2.0-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-vibes"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "liboctave8"
+  "libstdc++6" {>= "5.2"}
+  "octave" {>= "6.1.1~hg.2020.12.27-1"}
+]
+extra-source "octave-vibes_0.2.0-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave-vibes/octave-vibes_0.2.0-7_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcre++0v5_0.9.5-6.1+b11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcre++0v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libpcre3"
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libpcre++0"
+]
+extra-source "libpcre++0v5_0.9.5-6.1+b11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpcre++/libpcre++0v5_0.9.5-6.1+b11_amd64.deb"
+}

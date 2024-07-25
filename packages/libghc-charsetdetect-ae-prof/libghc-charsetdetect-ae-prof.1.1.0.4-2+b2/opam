@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-charsetdetect-ae-prof_1.1.0.4-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-charsetdetect-ae-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-charsetdetect-ae-dev" {= "1.1.0.4-2+b2"}
+]
+extra-source "libghc-charsetdetect-ae-prof_1.1.0.4-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-charsetdetect-ae/libghc-charsetdetect-ae-prof_1.1.0.4-2+b2_amd64.deb"
+}

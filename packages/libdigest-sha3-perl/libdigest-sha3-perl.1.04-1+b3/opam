@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdigest-sha3-perl_1.04-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdigest-sha3-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libdigest-sha3-perl_1.04-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdigest-sha3-perl/libdigest-sha3-perl_1.04-1+b3_amd64.deb"
+}

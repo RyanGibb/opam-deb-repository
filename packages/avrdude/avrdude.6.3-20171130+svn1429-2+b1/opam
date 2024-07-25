@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i avrdude_6.3-20171130+svn1429-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r avrdude"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libelf1" {>= "0.142"}
+  "libftdi1"
+  "libhidapi-libusb0" {>= "0.8.0~rc1+git20140201.3a66d4e+dfsg"}
+  "libncurses6" {>= "6"}
+  "libreadline8" {>= "6.0"}
+  "libtinfo6" {>= "6"}
+  "libusb-0-1-4" {>= "2-0.1.12"}
+]
+extra-source "avrdude_6.3-20171130+svn1429-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/avrdude/avrdude_6.3-20171130+svn1429-2+b1_amd64.deb"
+}

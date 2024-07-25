@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-browser-pack_6.1.0+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-browser-pack"]
+]
+depends: [
+  "node-combine-source-map" {>= "0.8.0"}
+  "node-defined" {>= "1.0.0"}
+  "node-jsonstream" {>= "1.0.3"}
+  "node-safe-buffer" {>= "5.1.1"}
+  "node-through2" {>= "2.0.0"}
+  "node-umd" {>= "3.0.0"}
+  "nodejs" {>= "6"}
+]
+extra-source "node-browser-pack_6.1.0+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-browser-pack/node-browser-pack_6.1.0+ds-3_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tkmib_5.9+dfsg-4+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tkmib"]
+]
+depends: [
+  "libsnmp-perl" {>= "5.9+dfsg-4+deb11u1"}
+  "perl-tk"
+]
+extra-source "tkmib_5.9+dfsg-4+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/net-snmp/tkmib_5.9+dfsg-4+deb11u1_all.deb"
+}

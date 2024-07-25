@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-lockfile_1:0.12.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-lockfile"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+]
+extra-source "python-lockfile_1:0.12.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-lockfile/python-lockfile_0.12.2-2_all.deb"
+}

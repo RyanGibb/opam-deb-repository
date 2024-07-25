@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-uno_1:7.0.4-4+deb11u9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-uno"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpython3-9" {>= "3.9.1"}
+  "libreoffice-common" {>= "1-7.0.0~alpha~"}
+  "libstdc++6" {>= "5.2"}
+  "libuno-cppu3" {>= "4.4.0~alpha"}
+  "libuno-cppuhelpergcc3-3" {>= "5.3.0~alpha"}
+  "libuno-sal3" {>= "5.4.0~alpha"}
+  "libuno-salhelpergcc3-3" {>= "3.6.0~beta"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-9"
+  "python3-any"
+  "ucf" {>= "0.8"}
+  "uno-libs-private"
+  ("libreoffice-core-nogui" {= "1-7.0.4-4+deb11u9"} | "libreoffice-core" {= "1-7.0.4-4+deb11u9"})
+]
+conflicts: [
+  "python-uno"
+]
+extra-source "python3-uno_1:7.0.4-4+deb11u9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/python3-uno_7.0.4-4+deb11u9_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsingular4-dev_1:4.1.1-p2+ds-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsingular4-dev"]
+]
+depends: [
+  "libsingular4-dev-common" {= "1-4.1.1-p2+ds-4"}
+  "libsingular4m1" {= "1-4.1.1-p2+ds-4+b2"}
+]
+conflicts: [
+  "libsingular-dev"
+]
+extra-source "libsingular4-dev_1:4.1.1-p2+ds-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/singular/libsingular4-dev_4.1.1-p2+ds-4+b2_amd64.deb"
+}

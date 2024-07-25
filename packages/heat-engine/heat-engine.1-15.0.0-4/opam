@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i heat-engine_1:15.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r heat-engine"]
+]
+depends: [
+  "adduser"
+  "heat-common" {= "1-15.0.0-4"}
+  "lsb-base"
+  "python3-any"
+]
+extra-source "heat-engine_1:15.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heat/heat-engine_15.0.0-4_all.deb"
+}

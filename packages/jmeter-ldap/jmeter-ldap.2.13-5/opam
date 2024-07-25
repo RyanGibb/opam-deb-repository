@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jmeter-ldap_2.13-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jmeter-ldap"]
+]
+depends: [
+  "jmeter" {= "2.13-5"}
+  "libcommons-lang3-java"
+  "libexcalibur-logkit-java"
+]
+extra-source "jmeter-ldap_2.13-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jakarta-jmeter/jmeter-ldap_2.13-5_all.deb"
+}

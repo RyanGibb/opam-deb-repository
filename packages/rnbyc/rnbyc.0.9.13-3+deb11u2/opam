@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rnbyc_0.9.13-3+deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rnbyc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgnutls30" {>= "3.7.0"}
+  "libjansson4" {>= "2.7"}
+  "liborcania2-1" {>= "2.1.0"}
+  "librhonabwy0-9" {= "0.9.13-3+deb11u2"}
+  "libyder2-0" {>= "1.4.10"}
+]
+extra-source "rnbyc_0.9.13-3+deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rhonabwy/rnbyc_0.9.13-3+deb11u2_amd64.deb"
+}

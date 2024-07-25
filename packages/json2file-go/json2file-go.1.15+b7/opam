@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i json2file-go_1.15+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r json2file-go"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcap2-bin"
+]
+extra-source "json2file-go_1.15+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/json2file-go/json2file-go_1.15+b7_amd64.deb"
+}

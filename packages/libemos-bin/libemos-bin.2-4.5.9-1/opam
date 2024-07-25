@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libemos-bin_2:4.5.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libemos-bin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libeccodes-tools"
+  "libeccodes0"
+  "libemos-data"
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc1" {>= "1-4.0"}
+  "libgfortran5" {>= "8"}
+]
+extra-source "libemos-bin_2:4.5.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emoslib/libemos-bin_4.5.9-1_amd64.deb"
+}

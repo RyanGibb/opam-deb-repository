@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-sqlkit_0.9.6.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-sqlkit"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-babel"
+  "python-dateutil"
+  "python-gtk2"
+  "python-pkg-resources"
+  "python-sqlalchemy"
+]
+extra-source "python-sqlkit_0.9.6.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sqlkit/python-sqlkit_0.9.6.1-2_all.deb"
+}

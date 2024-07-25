@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xpilot-ng-server_1:4.7.3-2.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xpilot-ng-server"]
+]
+depends: [
+  "adduser" {>= "3.34"}
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "xpilot-ng-common (<< 1:4.7.3~cvs20070805-1)"
+]
+extra-source "xpilot-ng-server_1:4.7.3-2.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xpilot-ng/xpilot-ng-server_4.7.3-2.3_amd64.deb"
+}

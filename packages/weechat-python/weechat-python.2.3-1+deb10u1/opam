@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i weechat-python_2.3-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r weechat-python"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpython2-7" {>= "2.7"}
+  ("weechat-curses" {= "2.3-1+deb10u1"} | "weechat-headless" {= "2.3-1+deb10u1"})
+]
+extra-source "weechat-python_2.3-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/weechat/weechat-python_2.3-1+deb10u1_amd64.deb"
+}

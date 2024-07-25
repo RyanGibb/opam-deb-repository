@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-mi_1.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-mi"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-arm" {>= "1.4-11"}
+  "r-cran-matrix"
+]
+extra-source "r-cran-mi_1.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-mi/r-cran-mi_1.0-8_all.deb"
+}

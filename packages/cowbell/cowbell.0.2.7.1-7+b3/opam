@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cowbell_0.2.7.1-7+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cowbell"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc-s1"
+  "libglade2-0-cil" {>= "2.12.40"}
+  "libglib2-0-0" {>= "2.60.6"}
+  "libglib2-0-cil" {>= "2.12.40"}
+  "libgtk2-0-cil" {>= "2.12.40"}
+  "libmono-corlib4-5-cil" {>= "5.18.0.240"}
+  "libmono-system-web-services4-0-cil" {>= "4.2.0"}
+  "libmono-system-xml4-0-cil" {>= "4.6.1.3"}
+  "libmono-system4-0-cil" {>= "5.18.0.240"}
+  "libstdc++6" {>= "4.1.1"}
+  "libtag1v5" {>= "1.9.1-2.2~"}
+  "libtagc0"
+  "mono-runtime" {>= "3.0~"}
+  ("libc6" {>= "2.28"} | "libc6-1" {>= "2.28"} | "libc0-1" {>= "2.28"})
+]
+extra-source "cowbell_0.2.7.1-7+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cowbell/cowbell_0.2.7.1-7+b3_amd64.deb"
+}

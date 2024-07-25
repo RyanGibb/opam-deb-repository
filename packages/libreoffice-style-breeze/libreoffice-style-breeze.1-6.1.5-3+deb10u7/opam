@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-style-breeze_1:6.1.5-3+deb10u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-style-breeze"]
+]
+depends: [
+  "libreoffice-common" {= "1-6.1.5-3+deb10u7"}
+  "libreoffice-style-tango"
+]
+extra-source "libreoffice-style-breeze_1:6.1.5-3+deb10u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-style-breeze_6.1.5-3+deb10u7_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblinux-fd-perl_0.014-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblinux-fd-perl"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libsub-exporter-perl"
+  "perl" {>= "5.36.0-6"}
+  "perl-base"
+]
+extra-source "liblinux-fd-perl_0.014-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblinux-fd-perl/liblinux-fd-perl_0.014-1_amd64.deb"
+}

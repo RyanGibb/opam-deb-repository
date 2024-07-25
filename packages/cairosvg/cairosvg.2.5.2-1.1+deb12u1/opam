@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cairosvg_2.5.2-1.1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cairosvg"]
+]
+depends: [
+  "python3-any"
+  "python3-cairosvg" {= "2.5.2-1.1+deb12u1"}
+]
+extra-source "cairosvg_2.5.2-1.1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cairosvg/cairosvg_2.5.2-1.1+deb12u1_all.deb"
+}

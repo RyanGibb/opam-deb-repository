@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gv_1:3.7.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gv"]
+]
+depends: [
+  "ghostscript-x"
+  "libc6" {>= "2.14"}
+  "libx11-6"
+  "libxinerama1"
+  "libxmu6"
+  "libxt6"
+  "xaw3dg" {>= "1.5+E-1"}
+]
+extra-source "gv_1:3.7.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gv/gv_3.7.4-2_amd64.deb"
+}

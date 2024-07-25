@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-fedora_0.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-fedora"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-bs4"
+  "python3-kitchen"
+  "python3-lockfile"
+  "python3-munch"
+  "python3-requests"
+  "python3-six" {>= "1.4.0"}
+  "python3-urllib3"
+]
+extra-source "python3-fedora_0.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-fedora/python3-fedora_0.10.0-1_all.deb"
+}

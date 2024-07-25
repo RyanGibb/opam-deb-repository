@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i atig_0.6.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r atig"]
+]
+depends: [
+  "ruby-net-irc"
+  "ruby-oauth"
+  "ruby-sqlite3"
+  "ruby-twitter-text"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "atig_0.6.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/atig/atig_0.6.1-3_amd64.deb"
+}

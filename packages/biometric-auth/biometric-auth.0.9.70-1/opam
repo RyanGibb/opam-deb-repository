@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i biometric-auth_0.9.70-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r biometric-auth"]
+]
+depends: [
+  "libbiometric0" {= "0.9.70-1"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libpolkit-gobject-1-0" {>= "0.99"}
+  "libusb-1-0-0" {>= "2-1.0.9"}
+  "systemd"
+]
+extra-source "biometric-auth_0.9.70-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/biometric-authentication/biometric-auth_0.9.70-1_amd64.deb"
+}

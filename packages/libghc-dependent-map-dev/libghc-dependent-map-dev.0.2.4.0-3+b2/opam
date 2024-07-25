@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-dependent-map-dev_0.2.4.0-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-dependent-map-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-dependent-sum-dev"
+  "libgmp10"
+]
+extra-source "libghc-dependent-map-dev_0.2.4.0-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-dependent-map/libghc-dependent-map-dev_0.2.4.0-3+b2_amd64.deb"
+}

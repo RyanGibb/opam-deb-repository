@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-color-string_1.5.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-color-string"]
+]
+depends: [
+  "node-color-name" {>= "1.0.0"}
+  "node-simple-swizzle" {>= "0.2.2"}
+  "nodejs"
+]
+extra-source "node-color-string_1.5.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-color-string/node-color-string_1.5.2-1_all.deb"
+}

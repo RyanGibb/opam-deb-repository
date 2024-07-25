@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgio-qt0_0.0.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgio-qt0"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libglibmm-2-4-1v5" {>= "2.64.2"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libsigc++-2-0-0v5" {>= "2.2.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libgio-qt0_0.0.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gio-qt/libgio-qt0_0.0.11-1_amd64.deb"
+}

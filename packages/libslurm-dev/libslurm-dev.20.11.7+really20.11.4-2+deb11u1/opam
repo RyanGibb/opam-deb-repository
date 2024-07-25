@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libslurm-dev_20.11.7+really20.11.4-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libslurm-dev"]
+]
+depends: [
+  "libslurm36" {= "20.11.7+really20.11.4-2+deb11u1"}
+]
+conflicts: [
+  "libslurm10-dev"
+  "libslurm11-dev"
+  "libslurm12-dev"
+  "libslurm13-dev"
+  "libslurm20-dev"
+  "libslurm21-dev"
+]
+extra-source "libslurm-dev_20.11.7+really20.11.4-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-wlm/libslurm-dev_20.11.7+really20.11.4-2+deb11u1_amd64.deb"
+}

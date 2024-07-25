@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreadline-java_0.8.0.1+dfsg-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreadline-java"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libedit2" {>= "2.11-20080614"}
+  "libreadline7" {>= "6.0"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "libreadline-java_0.8.0.1+dfsg-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreadline-java/libreadline-java_0.8.0.1+dfsg-9_amd64.deb"
+}

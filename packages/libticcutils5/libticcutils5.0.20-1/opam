@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libticcutils5_0.20-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libticcutils5"]
+]
+depends: [
+  "libboost-regex1-67-0" {>= "1.67.0-10"}
+  "libbz2-1-0"
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libgomp1" {>= "4.2.1"}
+  "libicu63" {>= "63.1-1~"}
+  "libstdc++6" {>= "5.2"}
+  "libtar0"
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libticcutils5_0.20-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/ticcutils/libticcutils5_0.20-1_amd64.deb"
+}

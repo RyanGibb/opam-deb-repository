@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i murano-cfapi_1:14.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r murano-cfapi"]
+]
+depends: [
+  "adduser"
+  "murano-common" {= "1-14.0.0-3"}
+  "sysvinit-utils"
+]
+extra-source "murano-cfapi_1:14.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/murano/murano-cfapi_14.0.0-3_all.deb"
+}

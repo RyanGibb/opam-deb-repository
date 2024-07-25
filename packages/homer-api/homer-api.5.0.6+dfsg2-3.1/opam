@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i homer-api_5.0.6+dfsg2-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r homer-api"]
+]
+depends: [
+  "adduser"
+  "kamailio" {>= "4.3.0"}
+  "kamailio-extra-modules" {>= "4.3.0"}
+  "kamailio-geoip-modules" {>= "4.3.0"}
+  ("apache" | "apache-ssl" | "apache-perl" | "apache2" | "httpd-cgi")
+  ("apache2" {>= "2.4.6-4~"} | "httpd")
+  ("homer-api-mysql" | "homer-api-postgresql")
+  ("php" | "php5" | "php-cgi" | "libapache2-mod-php")
+]
+extra-source "homer-api_5.0.6+dfsg2-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/homer-api/homer-api_5.0.6+dfsg2-3.1_amd64.deb"
+}

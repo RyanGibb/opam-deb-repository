@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-dired-rsync_0.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-dired-rsync"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-dash" {>= "2.0.0"}
+  "elpa-s" {>= "1.12.0"}
+  "emacsen-common"
+  "rsync"
+]
+extra-source "elpa-dired-rsync_0.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dired-rsync/elpa-dired-rsync_0.6-1_all.deb"
+}

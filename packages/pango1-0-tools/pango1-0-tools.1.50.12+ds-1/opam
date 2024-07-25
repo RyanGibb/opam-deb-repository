@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pango1.0-tools_1.50.12+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pango1.0-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.12.10"}
+  "libfontconfig1" {>= "2.13.0"}
+  "libglib2-0-0" {>= "2.62.0"}
+  "libharfbuzz0b" {>= "5.1.0"}
+  "libpango-1-0-0" {= "1.50.12+ds-1"}
+  "libpangocairo-1-0-0" {= "1.50.12+ds-1"}
+  "libpangoft2-1-0-0" {= "1.50.12+ds-1"}
+  "libpangoxft-1-0-0" {= "1.50.12+ds-1"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+]
+extra-source "pango1.0-tools_1.50.12+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pango1.0/pango1.0-tools_1.50.12+ds-1_amd64.deb"
+}

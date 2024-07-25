@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i varnish-vmod-digest_6.4+20220108-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r varnish-vmod-digest"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmhash2" {>= "0.9.9.9"}
+  "varnish"
+]
+extra-source "varnish-vmod-digest_6.4+20220108-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/varnish-vmod-digest/varnish-vmod-digest_6.4+20220108-1_amd64.deb"
+}

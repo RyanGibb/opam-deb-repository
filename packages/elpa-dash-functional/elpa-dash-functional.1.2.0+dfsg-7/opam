@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-dash-functional_1.2.0+dfsg-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-dash-functional"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-dash" {>= "2.0.0"}
+  "emacsen-common" {>= "2.0.8"}
+]
+extra-source "elpa-dash-functional_1.2.0+dfsg-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dash-functional-el/elpa-dash-functional_1.2.0+dfsg-7_all.deb"
+}

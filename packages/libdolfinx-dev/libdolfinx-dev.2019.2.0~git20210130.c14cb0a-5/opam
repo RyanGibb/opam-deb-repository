@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdolfinx-dev_2019.2.0~git20210130.c14cb0a-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdolfinx-dev"]
+]
+depends: [
+  "cmake" {>= "2.8.0"}
+  "libboost-chrono-dev"
+  "libboost-dev"
+  "libboost-filesystem-dev"
+  "libboost-iostreams-dev"
+  "libboost-math-dev"
+  "libboost-mpi-dev"
+  "libboost-program-options-dev"
+  "libboost-serialization-dev"
+  "libboost-thread-dev"
+  "libboost-timer-dev"
+  "libeigen3-dev"
+  "libhdf5-mpi-dev"
+  "libscotch-dev"
+  "libsuitesparse-dev"
+  "libxml2-dev"
+  "pkg-config"
+  "python3-ffcx" {< "2019.3~"}
+  "python3-ffcx" {>= "2019.2.0~git20210116"}
+  ("g++" | "c++-compiler")
+  ("libdolfinx-real-dev" | "libdolfinx-complex-dev")
+]
+conflicts: [
+  "libdolfin0-dev"
+  "libdolfin1.0-dev"
+  "libdolfin1.1-dev"
+  "libdolfin1.2-dev"
+  "libdolfin1.3-dev"
+  "libdolfin1.4-dev"
+]
+extra-source "libdolfinx-dev_2019.2.0~git20210130.c14cb0a-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dolfinx/libdolfinx-dev_2019.2.0~git20210130.c14cb0a-5_all.deb"
+}

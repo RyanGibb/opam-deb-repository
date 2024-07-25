@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sahara-engine_1:16.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sahara-engine"]
+]
+depends: [
+  "adduser"
+  "dbconfig-common"
+  "sahara-common" {= "1-16.0.0-2"}
+  "sysvinit-utils"
+]
+extra-source "sahara-engine_1:16.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sahara/sahara-engine_16.0.0-2_all.deb"
+}

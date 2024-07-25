@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apt_1.8.2.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apt"]
+]
+depends: [
+  "adduser"
+  "debian-archive-keyring"
+  "libapt-pkg5-0" {>= "1.7.0~alpha3~"}
+  "libc6" {>= "2.15"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnutls30" {>= "3.6.6"}
+  "libseccomp2" {>= "1.0.1"}
+  "libstdc++6" {>= "5.2"}
+  ("gpgv" | "gpgv2" | "gpgv1")
+]
+extra-source "apt_1.8.2.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apt/apt_1.8.2.3_amd64.deb"
+}

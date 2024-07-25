@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-here_1.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-here"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.1.1-2"}
+  "r-cran-rprojroot" {>= "2.0.2"}
+]
+extra-source "r-cran-here_1.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-here/r-cran-here_1.0.1-2_all.deb"
+}

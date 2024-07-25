@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libparse-keyword-perl_0.08-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libparse-keyword-perl"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libdevel-callparser-perl"
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libparse-keyword-perl_0.08-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libparse-keyword-perl/libparse-keyword-perl_0.08-2+b4_amd64.deb"
+}

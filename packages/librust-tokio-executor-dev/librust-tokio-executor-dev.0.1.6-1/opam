@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-tokio-executor-dev_0.1.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-tokio-executor-dev"]
+]
+depends: [
+  "librust-crossbeam-utils+std-dev"
+  "librust-futures+default-dev"
+]
+extra-source "librust-tokio-executor-dev_0.1.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-tokio-executor/librust-tokio-executor-dev_0.1.6-1_amd64.deb"
+}

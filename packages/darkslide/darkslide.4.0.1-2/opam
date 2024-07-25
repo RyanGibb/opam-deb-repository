@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i darkslide_4.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r darkslide"]
+]
+depends: [
+  "python3-any"
+  "python3-docutils"
+  "python3-jinja2"
+  "python3-markdown" {>= "3.0"}
+  "python3-pygments"
+  "python3-qrcode"
+  "python3-six"
+]
+extra-source "darkslide_4.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-darkslide/darkslide_4.0.1-2_all.deb"
+}

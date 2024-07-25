@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mira-assembler_4.9.6-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mira-assembler"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-regex1-74-0"
+  "libboost-thread1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.2.6"}
+]
+extra-source "mira-assembler_4.9.6-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mira/mira-assembler_4.9.6-5+b1_amd64.deb"
+}

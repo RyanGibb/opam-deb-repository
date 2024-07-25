@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i g++-10-multilib-mipsisa64r6-linux-gnuabi64_10.2.1-6cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r g++-10-multilib-mipsisa64r6-linux-gnuabi64"]
+]
+depends: [
+  "g++-10-mipsisa64r6-linux-gnuabi64" {= "10.2.1-6cross1"}
+  "gcc-10-mipsisa64r6-linux-gnuabi64-base" {= "10.2.1-6cross1"}
+  "gcc-10-multilib-mipsisa64r6-linux-gnuabi64" {= "10.2.1-6cross1"}
+  "lib32stdc++-10-dev-mips64r6-cross" {>= "10.2.1-6cross1"}
+  "libn32stdc++-10-dev-mips64r6-cross" {>= "10.2.1-6cross1"}
+]
+extra-source "g++-10-multilib-mipsisa64r6-linux-gnuabi64_10.2.1-6cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10-cross-mipsen/g++-10-multilib-mipsisa64r6-linux-gnuabi64_10.2.1-6cross1_amd64.deb"
+}

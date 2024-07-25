@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i subversion_1.14.1-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r subversion"]
+]
+depends: [
+  "libapr1" {>= "1.5.0"}
+  "libaprutil1" {>= "1.3.2+dfsg"}
+  "libc6" {>= "2.14"}
+  "libsvn1" {= "1.14.1-3+deb11u1"}
+]
+extra-source "subversion_1.14.1-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/subversion/subversion_1.14.1-3+deb11u1_amd64.deb"
+}

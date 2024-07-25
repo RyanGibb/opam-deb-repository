@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i naist-jdic-utf8_1:0.4.3-20_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r naist-jdic-utf8"]
+]
+depends: [
+  "chasen-dictutils" {>= "2.3.2"}
+  "naist-jdic" {= "1-0.4.3-20"}
+]
+extra-source "naist-jdic-utf8_1:0.4.3-20_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/naist-jdic/naist-jdic-utf8_0.4.3-20_all.deb"
+}

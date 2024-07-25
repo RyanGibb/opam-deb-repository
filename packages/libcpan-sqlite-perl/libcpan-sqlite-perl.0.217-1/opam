@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcpan-sqlite-perl_0.217-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcpan-sqlite-perl"]
+]
+depends: [
+  "libcpan-distnameinfo-perl"
+  "libdbd-sqlite3-perl"
+  "libdbi-perl"
+  "libfile-homedir-perl"
+  "libwww-perl"
+  "perl"
+]
+extra-source "libcpan-sqlite-perl_0.217-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcpan-sqlite-perl/libcpan-sqlite-perl_0.217-1_all.deb"
+}

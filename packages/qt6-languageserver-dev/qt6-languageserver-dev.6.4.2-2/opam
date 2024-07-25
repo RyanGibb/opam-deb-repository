@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt6-languageserver-dev_6.4.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt6-languageserver-dev"]
+]
+depends: [
+  "libqt6jsonrpc6" {= "6.4.2-2"}
+  "libqt6languageserver6" {= "6.4.2-2"}
+  "qt6-base-dev"
+]
+extra-source "qt6-languageserver-dev_6.4.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-languageserver/qt6-languageserver-dev_6.4.2-2_amd64.deb"
+}

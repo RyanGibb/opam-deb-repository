@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tdiary-style-rd_0.0.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tdiary-style-rd"]
+]
+depends: [
+  "ruby-rd"
+  "tdiary-core"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "tdiary-style-rd_0.0.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tdiary-style-rd/tdiary-style-rd_0.0.3-4_all.deb"
+}

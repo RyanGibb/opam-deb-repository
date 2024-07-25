@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-esdl_1.3.1-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-esdl"]
+]
+depends: [
+  "erlang-base"
+  "libc6" {>= "2.14"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-ttf2-0-0"
+  "libsdl1-2-compat-shim"
+  ("erlang-base" {>= "1-23.2.1+dfsg"} | "erlang-base-hipe" {>= "1-23.2.1+dfsg"})
+]
+conflicts: [
+  "libsdl-erlang"
+]
+extra-source "erlang-esdl_1.3.1-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/esdl/erlang-esdl_1.3.1-4.1_amd64.deb"
+}

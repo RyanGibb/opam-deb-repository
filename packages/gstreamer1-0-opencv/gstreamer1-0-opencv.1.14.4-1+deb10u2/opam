@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gstreamer1.0-opencv_1.14.4-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gstreamer1.0-opencv"]
+]
+depends: [
+  "gstreamer1-0-plugins-base"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libglib2-0-0" {>= "2.40"}
+  "libgstreamer-opencv1-0-0" {= "1.14.4-1+deb10u2"}
+  "libgstreamer-plugins-bad1-0-0" {= "1.14.4-1+deb10u2"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.14.4"}
+  "libgstreamer1-0-0" {>= "1.14.4"}
+  "libopencv-calib3d3-2"
+  "libopencv-contrib3-2"
+  "libopencv-core3-2"
+  "libopencv-imgcodecs3-2"
+  "libopencv-imgproc3-2"
+  "libopencv-objdetect3-2"
+  "libopencv-video3-2"
+  "libstdc++6" {>= "5"}
+]
+conflicts: [
+  "gstreamer1.0-plugins-bad (<< 1.13.1)"
+]
+extra-source "gstreamer1.0-opencv_1.14.4-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gst-plugins-bad1.0/gstreamer1.0-opencv_1.14.4-1+deb10u2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i switchconf_0.0.17-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r switchconf"]
+]
+depends: [
+  "liblockfile1"
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "switchconf_0.0.17-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/switchconf/switchconf_0.0.17-1_all.deb"
+}

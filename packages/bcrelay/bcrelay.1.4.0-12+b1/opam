@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bcrelay_1.4.0-12+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bcrelay"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+]
+extra-source "bcrelay_1.4.0-12+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pptpd/bcrelay_1.4.0-12+b1_amd64.deb"
+}

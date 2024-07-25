@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i swell-foop_1:3.34.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r swell-foop"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libclutter-1-0-0" {>= "1.14.0"}
+  "libclutter-gtk-1-0-0" {>= "1.5.0"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.12"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "swell-foop_1:3.34.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/swell-foop/swell-foop_3.34.1-1_amd64.deb"
+}

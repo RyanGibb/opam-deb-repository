@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgsound-dev_1.0.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgsound-dev"]
+]
+depends: [
+  "gir1-2-gsound-1-0" {= "1.0.2-5"}
+  "libgsound0" {= "1.0.2-5"}
+]
+extra-source "libgsound-dev_1.0.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gsound/libgsound-dev_1.0.2-5_amd64.deb"
+}

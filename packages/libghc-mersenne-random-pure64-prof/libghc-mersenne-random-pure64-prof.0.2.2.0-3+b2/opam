@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-mersenne-random-pure64-prof_0.2.2.0-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-mersenne-random-pure64-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-mersenne-random-pure64-dev" {= "0.2.2.0-3+b2"}
+  "libghc-random-prof"
+]
+extra-source "libghc-mersenne-random-pure64-prof_0.2.2.0-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-mersenne-random-pure64/libghc-mersenne-random-pure64-prof_0.2.2.0-3+b2_amd64.deb"
+}

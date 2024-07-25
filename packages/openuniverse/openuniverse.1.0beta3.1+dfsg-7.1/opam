@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openuniverse_1.0beta3.1+dfsg-7.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openuniverse"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libglut3-12" {>= "3.4.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libplib1" {>= "1.8.5"}
+  "libstdc++6" {>= "5"}
+  "openuniverse-common"
+  ("libglu1-mesa" | "libglu1")
+]
+conflicts: [
+  "openuniverse-common (<= 1.0beta3.1-3)"
+]
+extra-source "openuniverse_1.0beta3.1+dfsg-7.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openuniverse/openuniverse_1.0beta3.1+dfsg-7.1_amd64.deb"
+}

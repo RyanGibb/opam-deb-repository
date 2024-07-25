@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plink1.9_1.90~b6.26-220402-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plink1.9"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "zlib1g" {>= "1-1.2.6"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "plink1.9_1.90~b6.26-220402-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plink1.9/plink1.9_1.90~b6.26-220402-1_amd64.deb"
+}

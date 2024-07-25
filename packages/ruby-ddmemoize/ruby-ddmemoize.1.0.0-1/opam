@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-ddmemoize_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-ddmemoize"]
+]
+depends: [
+  "ruby-ddmetrics" {>= "1.0"}
+  "ruby-ref" {>= "2.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-ddmemoize_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-ddmemoize/ruby-ddmemoize_1.0.0-1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-typing_3.6.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-typing"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-typing_3.6.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-typing/python-typing_3.6.6-1_all.deb"
+}

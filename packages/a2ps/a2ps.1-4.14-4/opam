@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i a2ps_1:4.14-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r a2ps"]
+]
+depends: [
+  "file"
+  "libc6" {>= "2.14"}
+  "libpaper1"
+  "psutils"
+]
+extra-source "a2ps_1:4.14-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/a2ps/a2ps_4.14-4_amd64.deb"
+}

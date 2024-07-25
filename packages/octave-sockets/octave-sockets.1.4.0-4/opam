@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-sockets_1.4.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-sockets"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "octave"
+  "octave" {>= "7.3.0"}
+]
+extra-source "octave-sockets_1.4.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave-sockets/octave-sockets_1.4.0-4_amd64.deb"
+}

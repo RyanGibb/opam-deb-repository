@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i checkbot_1.80-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r checkbot"]
+]
+depends: [
+  "libcrypt-ssleay-perl"
+  "libhtml-parser-perl" {>= "3.10"}
+  "libmailtools-perl"
+  "libnet-perl"
+  "libtime-duration-perl"
+  "liburi-perl" {>= "1.10"}
+  "libwww-perl" {>= "5.70"}
+  "perl"
+]
+extra-source "checkbot_1.80-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/checkbot/checkbot_1.80-3_all.deb"
+}

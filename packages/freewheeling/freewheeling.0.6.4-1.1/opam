@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freewheeling_0.6.4-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freewheeling"]
+]
+depends: [
+  "jackd"
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.27"}
+  "libfluidsynth2" {>= "2.0.5"}
+  "libgcc-s1" {>= "3.0"}
+  "liblo7" {>= "0.26~repack"}
+  "libnettle8"
+  "libogg0" {>= "1.0rc3"}
+  "libsdl-gfx1-2-5" {>= "2.0.25"}
+  "libsdl-ttf2-0-0"
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "5.2"}
+  "libvorbis0a" {>= "1.1.2"}
+  "libvorbisenc2" {>= "1.1.2"}
+  "libvorbisfile3" {>= "1.1.2"}
+  "libx11-6"
+  "libxml2" {>= "2.7.4"}
+  "ttf-bitstream-vera"
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "freewheeling_0.6.4-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freewheeling/freewheeling_0.6.4-1.1_amd64.deb"
+}

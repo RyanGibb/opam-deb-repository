@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i penguin-command_1.6.11-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r penguin-command"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2"
+  "libsdl1-2-compat-shim"
+]
+extra-source "penguin-command_1.6.11-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/penguin-command/penguin-command_1.6.11-3+b1_amd64.deb"
+}

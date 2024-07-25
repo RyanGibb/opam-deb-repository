@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mistral-executor_15.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mistral-executor"]
+]
+depends: [
+  "adduser"
+  "mistral-common" {= "15.0.0-1"}
+  "sysvinit-utils"
+]
+extra-source "mistral-executor_15.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mistral/mistral-executor_15.0.0-1_all.deb"
+}

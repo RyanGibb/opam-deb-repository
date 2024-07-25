@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-thinc_6.12.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-thinc"]
+]
+depends: [
+  "cython3"
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.6~"}
+  "python3-any"
+  "python3-cymem"
+  "python3-cytoolz"
+  "python3-dill"
+  "python3-hypothesis"
+  "python3-mock"
+  "python3-msgpack"
+  "python3-msgpack-numpy"
+  "python3-murmurhash"
+  "python3-numpy"
+  "python3-plac"
+  "python3-preshed"
+  "python3-pytest"
+  "python3-six" {< "2.0.0"}
+  "python3-six" {>= "1.10.0"}
+  "python3-tqdm"
+  "python3-wrapt"
+]
+extra-source "python3-thinc_6.12.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-thinc/python3-thinc_6.12.1-1_amd64.deb"
+}

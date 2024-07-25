@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspatialite7_5.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspatialite7"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfreexl1" {>= "1.0.1"}
+  "libgeos-c1v5" {>= "3.7.0"}
+  "libminizip1" {>= "1.1"}
+  "libproj19" {>= "6.1.0"}
+  "librttopo1" {>= "1.1.0"}
+  "libsqlite3-0" {>= "3.10.0"}
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "libspatialite7_5.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spatialite/libspatialite7_5.0.1-2_amd64.deb"
+}

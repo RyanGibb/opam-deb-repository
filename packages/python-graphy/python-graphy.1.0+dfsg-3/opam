@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-graphy_1.0+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-graphy"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  ("python2-6" | "python2-7")
+]
+extra-source "python-graphy_1.0+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/graphy/python-graphy_1.0+dfsg-3_all.deb"
+}

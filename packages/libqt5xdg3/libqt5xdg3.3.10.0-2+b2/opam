@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5xdg3_3.10.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5xdg3"]
+]
+depends: [
+  "file"
+  "libc6" {>= "2.14"}
+  "libfile-mimeinfo-perl"
+  "libglib2-0-0" {>= "2.39.4"}
+  "libglib2-0-bin"
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.1.0"}
+  "libqt5xdgiconloader3" {>= "3.10.0~"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  "shared-mime-info"
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "libqt5xdg3_3.10.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libq/libqtxdg/libqt5xdg3_3.10.0-2+b2_amd64.deb"
+}

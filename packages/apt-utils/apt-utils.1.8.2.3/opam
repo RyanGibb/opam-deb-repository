@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apt-utils_1.8.2.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apt-utils"]
+]
+depends: [
+  "apt" {= "1.8.2.3"}
+  "libapt-inst2-0" {>= "1.0.5"}
+  "libapt-pkg5-0" {>= "1.3~rc2"}
+  "libc6" {>= "2.14"}
+  "libdb5-3"
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "apt-utils_1.8.2.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apt/apt-utils_1.8.2.3_amd64.deb"
+}

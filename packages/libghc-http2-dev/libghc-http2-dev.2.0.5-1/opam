@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-http2-dev_2.0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-http2-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-case-insensitive-dev"
+  "libghc-http-types-dev"
+  "libghc-network-byte-order-dev"
+  "libghc-network-dev"
+  "libghc-psqueues-dev"
+  "libghc-time-manager-dev"
+  "libgmp10"
+]
+extra-source "libghc-http2-dev_2.0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-http2/libghc-http2-dev_2.0.5-1_amd64.deb"
+}

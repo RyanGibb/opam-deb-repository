@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vboot-kernel-utils_0~R106-15054.B-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vboot-kernel-utils"]
+]
+depends: [
+  "coreboot-utils"
+  "flashrom"
+  "libc6" {>= "2.34"}
+  "libflashrom1"
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "vboot-kernel-utils_0~R106-15054.B-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vboot-utils/vboot-kernel-utils_0~R106-15054.B-1_amd64.deb"
+}

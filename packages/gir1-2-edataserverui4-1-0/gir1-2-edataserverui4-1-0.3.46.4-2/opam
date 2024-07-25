@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-edataserverui4-1.0_3.46.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-edataserverui4-1.0"]
+]
+depends: [
+  "gir1-2-camel-1-2" {= "3.46.4-2"}
+  "gir1-2-ecal-2-0" {= "3.46.4-2"}
+  "gir1-2-edataserver-1-2" {= "3.46.4-2"}
+  "gir1-2-glib-2-0" {>= "1.59.1"}
+  "gir1-2-gtk-4-0" {>= "4.4"}
+  "gir1-2-soup-3-0" {>= "3.1.1"}
+  "libedataserverui4-1-0-0" {>= "3.45.3"}
+]
+extra-source "gir1.2-edataserverui4-1.0_3.46.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/evolution-data-server/gir1.2-edataserverui4-1.0_3.46.4-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fastd-doc_22-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fastd-doc"]
+]
+depends: [
+  "libjs-mathjax"
+  "libjs-sphinxdoc" {>= "5.2"}
+  "sphinx-rtd-theme-common" {>= "1.2.0~rc1+dfsg"}
+]
+extra-source "fastd-doc_22-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fastd/fastd-doc_22-4_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vdr-plugin-femon_2.4.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vdr-plugin-femon"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+  "vdr"
+]
+extra-source "vdr-plugin-femon_2.4.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vdr-plugin-femon/vdr-plugin-femon_2.4.0-3_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-yaml-dbg_3.13-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-yaml-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libyaml-0-2"
+  "python-dbg"
+  "python-yaml" {= "3.13-2"}
+]
+extra-source "python-yaml-dbg_3.13-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyyaml/python-yaml-dbg_3.13-2_amd64.deb"
+}

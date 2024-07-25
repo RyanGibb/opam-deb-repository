@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i courier-authdaemon_0.71.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r courier-authdaemon"]
+]
+depends: [
+  "courier-authlib" {>= "0.71.4-1+b2"}
+  "libc6" {>= "2.34"}
+  "sysvinit-utils"
+  ("sysvinit-utils" {>= "2.88dsf-50"} | "init-d-script")
+]
+extra-source "courier-authdaemon_0.71.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/courier-authlib/courier-authdaemon_0.71.4-1+b2_amd64.deb"
+}

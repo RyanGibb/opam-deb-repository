@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i radon_5.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r radon"]
+]
+depends: [
+  "python3-any"
+  "python3-future"
+  "python3-mando" {>= "0.6"}
+  "python3-pkg-resources"
+  ("python3-colorama" | "python3" {< "3.5"})
+  ("python3-colorama" | "python3" {> "3.5"})
+]
+extra-source "radon_5.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/radon/radon_5.1.0-2_all.deb"
+}

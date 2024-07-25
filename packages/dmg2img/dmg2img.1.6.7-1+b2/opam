@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dmg2img_1.6.7-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dmg2img"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libssl3" {>= "3.0.0"}
+  "sgml-base" {>= "1.28"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "dmg2img_1.6.7-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dmg2img/dmg2img_1.6.7-1+b2_amd64.deb"
+}

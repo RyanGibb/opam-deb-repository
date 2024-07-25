@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-mongodb_3.6.4+~cs11.13.19-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-mongodb"]
+]
+depends: [
+  "node-bl"
+  "node-resolve-from"
+  "node-safe-buffer"
+  "node-semver"
+]
+extra-source "node-mongodb_3.6.4+~cs11.13.19-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-mongodb/node-mongodb_3.6.4+~cs11.13.19-2_all.deb"
+}

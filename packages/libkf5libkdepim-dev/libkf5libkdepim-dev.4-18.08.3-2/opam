@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5libkdepim-dev_4:18.08.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5libkdepim-dev"]
+]
+depends: [
+  "libkf5akonadi-dev" {>= "4-18.08.3~"}
+  "libkf5akonadicontact-dev" {>= "4-18.08.3~"}
+  "libkf5completion-dev" {>= "5.47.0~"}
+  "libkf5contacts-dev" {>= "4-18.08.3~"}
+  "libkf5coreaddons-dev" {>= "5.47.0~"}
+  "libkf5ldap-dev" {>= "18.08.3~"}
+  "libkf5libkdepim5" {= "4-18.08.3-2"}
+  "libkf5libkdepimakonadi5" {= "4-18.08.3-2"}
+  "qtbase5-dev" {>= "5.9.0~"}
+]
+extra-source "libkf5libkdepim-dev_4:18.08.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkf5libkdepim/libkf5libkdepim-dev_18.08.3-2_amd64.deb"
+}

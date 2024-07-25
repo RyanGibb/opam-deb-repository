@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nmon_16i+debian-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nmon"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "nmon_16i+debian-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nmon/nmon_16i+debian-2_amd64.deb"
+}

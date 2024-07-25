@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt-advanced-docking-system3.8.3_3.8.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt-advanced-docking-system3.8.3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libstdc++6" {>= "5"}
+  "libxcb1"
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "libqt-advanced-docking-system3.8.3_3.8.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt-advanced-docking-system/libqt-advanced-docking-system3.8.3_3.8.3-1+b1_amd64.deb"
+}

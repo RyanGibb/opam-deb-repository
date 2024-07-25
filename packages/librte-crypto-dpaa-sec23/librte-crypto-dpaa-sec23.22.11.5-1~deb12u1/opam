@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-crypto-dpaa-sec23_22.11.5-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-crypto-dpaa-sec23"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.14"}
+  "libfdt1" {>= "1.6.1"}
+  "libnuma1" {>= "2.0.11"}
+  "librte-bus-dpaa23" {>= "22.11.5"}
+  "librte-common-dpaax23" {>= "20.08"}
+  "librte-cryptodev23" {>= "21.11"}
+  "librte-eal23" {>= "22.11"}
+  "librte-ethdev23" {>= "17.11"}
+  "librte-eventdev23" {>= "20.08"}
+  "librte-hash23" {>= "18.11"}
+  "librte-kvargs23" {>= "22.11"}
+  "librte-mbuf23" {>= "22.11"}
+  "librte-mempool-dpaa23" {>= "22.11.5"}
+  "librte-mempool23" {>= "22.11"}
+  "librte-meter23" {>= "22.11~rc2"}
+  "librte-net23" {>= "22.11~rc2"}
+  "librte-rcu23" {>= "19.11"}
+  "librte-ring23" {>= "22.11~rc2"}
+  "librte-security23" {>= "18.11"}
+  "librte-telemetry23" {>= "21.08"}
+  "librte-timer23" {>= "19.08"}
+]
+conflicts: [
+  "libdpdk0"
+]
+extra-source "librte-crypto-dpaa-sec23_22.11.5-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-crypto-dpaa-sec23_22.11.5-1~deb12u1_amd64.deb"
+}

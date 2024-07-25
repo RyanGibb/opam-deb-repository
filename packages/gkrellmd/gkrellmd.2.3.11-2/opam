@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gkrellmd_2.3.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gkrellmd"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.15"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libsensors5" {>= "1-3.5.0"}
+]
+extra-source "gkrellmd_2.3.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gkrellm/gkrellmd_2.3.11-2_amd64.deb"
+}

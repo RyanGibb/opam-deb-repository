@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-twitch-player-backend-gstreamer-clutter_0.4.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-twitch-player-backend-gstreamer-clutter"]
+]
+depends: [
+  "gnome-twitch" {= "0.4.1-3"}
+  "gstreamer1-0-libav"
+  "gstreamer1-0-plugins-bad"
+  "gstreamer1-0-plugins-base"
+  "gstreamer1-0-plugins-good"
+  "libc6" {>= "2.4"}
+  "libclutter-1-0-0" {>= "1.10.0"}
+  "libclutter-gst-3-0-0" {>= "3.0.4"}
+  "libclutter-gtk-1-0-0" {>= "0.91.8"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libpeas-1-0-0" {>= "1.0.0"}
+]
+extra-source "gnome-twitch-player-backend-gstreamer-clutter_0.4.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-twitch/gnome-twitch-player-backend-gstreamer-clutter_0.4.1-3_amd64.deb"
+}

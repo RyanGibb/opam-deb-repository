@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrilinos-piro-dev_13.2.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrilinos-piro-dev"]
+]
+depends: [
+  "libtrilinos-piro-13-2" {= "13.2.0-4"}
+  "trilinos-dev"
+]
+extra-source "libtrilinos-piro-dev_13.2.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trilinos/libtrilinos-piro-dev_13.2.0-4_amd64.deb"
+}

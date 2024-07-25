@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgdcm2.8_2.8.8-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgdcm2.8"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libcharls2" {>= "2.0.0+dfsg"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libjson-c3" {>= "0.11"}
+  "libopenjp2-7" {>= "2.0.0"}
+  "libsocket++1"
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+  "libuuid1" {>= "2.16"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libgdcm2.8_2.8.8-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gdcm/libgdcm2.8_2.8.8-9_amd64.deb"
+}

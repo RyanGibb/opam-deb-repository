@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnma-gtk4-0_1.10.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnma-gtk4-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libgck-1-0" {>= "3.3.90"}
+  "libgcr-base-3-1" {>= "3.8.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-4-1" {>= "4.0.0"}
+  "libnm0" {>= "1.8.0"}
+  "libnma-common" {= "1.10.6-1"}
+]
+extra-source "libnma-gtk4-0_1.10.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnma/libnma-gtk4-0_1.10.6-1_amd64.deb"
+}

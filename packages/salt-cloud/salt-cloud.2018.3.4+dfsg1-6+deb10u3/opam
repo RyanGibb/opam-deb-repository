@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i salt-cloud_2018.3.4+dfsg1-6+deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r salt-cloud"]
+]
+depends: [
+  "python3-any"
+  "python3-libcloud" {>= "0.14.1-1"}
+  "salt-common" {= "2018.3.4+dfsg1-6+deb10u3"}
+]
+extra-source "salt-cloud_2018.3.4+dfsg1-6+deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/salt/salt-cloud_2018.3.4+dfsg1-6+deb10u3_all.deb"
+}

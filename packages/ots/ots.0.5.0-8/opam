@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ots_0.5.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ots"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libots0" {= "0.5.0-8"}
+]
+extra-source "ots_0.5.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ots/ots_0.5.0-8_amd64.deb"
+}

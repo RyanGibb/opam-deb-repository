@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i solo1-cli_0.1.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r solo1-cli"]
+]
+depends: [
+  "python3-any"
+  "python3-click" {>= "7.1"}
+  "python3-cryptography"
+  "python3-ecdsa"
+  "python3-fido2" {>= "0.9.1"}
+  "python3-intelhex"
+  "python3-requests"
+  "python3-serial"
+  "python3-usb"
+]
+extra-source "solo1-cli_0.1.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/solo1-cli/solo1-cli_0.1.1-4_all.deb"
+}

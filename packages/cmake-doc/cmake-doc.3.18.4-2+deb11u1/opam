@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cmake-doc_3.18.4-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cmake-doc"]
+]
+depends: [
+  "cmake-data" {= "3.18.4-2+deb11u1"}
+  "libjs-sphinxdoc" {>= "2.4.3-5~"}
+]
+extra-source "cmake-doc_3.18.4-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cmake/cmake-doc_3.18.4-2+deb11u1_all.deb"
+}

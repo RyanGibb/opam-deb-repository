@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-org-kde-kquickcontrols_5.78.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-org-kde-kquickcontrols"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5configgui5" {>= "5.78.0~"}
+  "libkf5declarative5" {>= "5.78.0-2"}
+  "libkf5globalaccel-bin"
+  "libkf5globalaccel5" {>= "5.78.0~"}
+  "libkf5guiaddons5" {>= "5.78.0~"}
+  "libkf5i18n5" {>= "5.78.0~"}
+  "libkf5widgetsaddons5" {>= "5.78.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.14.0~"}
+  "libstdc++6" {>= "4.1.1"}
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-dialogs"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.14.0~"} | "libqt5gui5-gles" {>= "5.14.0~"})
+  ("libqt5quick5" {>= "5.14.0~"} | "libqt5quick5-gles" {>= "5.14.0~"})
+]
+extra-source "qml-module-org-kde-kquickcontrols_5.78.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdeclarative/qml-module-org-kde-kquickcontrols_5.78.0-2_amd64.deb"
+}

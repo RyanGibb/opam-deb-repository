@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-fimport_4021.86-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-fimport"]
+]
+depends: [
+  "lynx"
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-1"}
+  "r-cran-timedate"
+  "r-cran-timeseries"
+]
+extra-source "r-cran-fimport_4021.86-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fimport/r-cran-fimport_4021.86-1_all.deb"
+}

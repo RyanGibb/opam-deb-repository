@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pinentry-gnome3_1.1.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pinentry-gnome3"]
+]
+depends: [
+  "gcr"
+  "libassuan0" {>= "2.1.0"}
+  "libc6" {>= "2.14"}
+  "libgcr-base-3-1" {>= "3.8.0"}
+  "libglib2-0-0" {>= "2.26.0"}
+  "libgpg-error0" {>= "1.16"}
+  "libncursesw6" {>= "6"}
+  "libsecret-1-0" {>= "0.7"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "pinentry-gnome3_1.1.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pinentry/pinentry-gnome3_1.1.0-4_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i timeshift_22.11.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r timeshift"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libgee-0-8-2" {>= "0.8.3"}
+  "libglib2-0-0" {>= "2.39.4"}
+  "libgtk-3-0" {>= "3.16.2"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libvte-2-91-0"
+  "libxapp1" {>= "1.0.4"}
+  "psmisc"
+  "rsync"
+  ("cron-daemon" | "cron")
+]
+extra-source "timeshift_22.11.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/timeshift/timeshift_22.11.2-1_amd64.deb"
+}

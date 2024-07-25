@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libatdgen-ocaml-dev_2.10.0-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libatdgen-ocaml-dev"]
+]
+depends: [
+  "libatdgen-ocaml"
+  "libbiniou-ocaml-dev"
+  "libc6" {>= "2.35"}
+  "libyojson-ocaml-dev"
+  "ocaml"
+]
+extra-source "libatdgen-ocaml-dev_2.10.0-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-atd/libatdgen-ocaml-dev_2.10.0-2+b3_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slurm-client_22.05.8-4+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slurm-client"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libreadline8" {>= "6.0"}
+  "munge"
+  "slurm-wlm-basic-plugins" {= "22.05.8-4+deb12u2"}
+  "ucf"
+]
+conflicts: [
+  "sinfo (<< 0.0.47-4)"
+]
+extra-source "slurm-client_22.05.8-4+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-wlm/slurm-client_22.05.8-4+deb12u2_amd64.deb"
+}

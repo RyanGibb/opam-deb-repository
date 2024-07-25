@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i juffed_0.10-89-g3690b60-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r juffed"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libenca0" {>= "1.9"}
+  "libgcc-s1"
+  "libqscintilla2-qt5-15" {>= "2.11.2"}
+  "libqt5core5a" {>= "5.12.2"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+]
+extra-source "juffed_0.10-89-g3690b60-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/juffed/juffed_0.10-89-g3690b60-5+b1_amd64.deb"
+}

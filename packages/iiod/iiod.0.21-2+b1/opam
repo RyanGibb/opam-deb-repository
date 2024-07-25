@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iiod_0.21-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iiod"]
+]
+depends: [
+  "libaio1" {>= "0.3.93"}
+  "libavahi-client3" {>= "0.6.16"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libc6" {>= "2.16"}
+  "libiio0" {>= "0.21-2+b1"}
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "iiod_0.21-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libiio/iiod_0.21-2+b1_amd64.deb"
+}

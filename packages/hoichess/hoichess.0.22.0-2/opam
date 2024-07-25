@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hoichess_0.22.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hoichess"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "hoichess_0.22.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hoichess/hoichess_0.22.0-2_amd64.deb"
+}

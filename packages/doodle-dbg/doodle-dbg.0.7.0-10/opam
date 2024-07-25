@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i doodle-dbg_0.7.0-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r doodle-dbg"]
+]
+depends: [
+  "doodle" {= "0.7.0-10"}
+  "doodled" {= "0.7.0-10"}
+  "libdoodle-dev" {= "0.7.0-10"}
+  "libdoodle1" {= "0.7.0-10"}
+]
+extra-source "doodle-dbg_0.7.0-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/doodle/doodle-dbg_0.7.0-10_amd64.deb"
+}

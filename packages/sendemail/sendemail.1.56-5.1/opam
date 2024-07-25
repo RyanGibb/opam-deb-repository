@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sendemail_1.56-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sendemail"]
+]
+depends: [
+  "libio-socket-inet6-perl"
+  "perl-any"
+]
+extra-source "sendemail_1.56-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sendemail/sendemail_1.56-5.1_all.deb"
+}

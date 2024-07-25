@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcl-segmentation1.13_1.13.0+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcl-segmentation1.13"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libpcl-common1-13" {>= "1.13.0+dfsg"}
+  "libpcl-features1-13" {>= "1.13.0+dfsg"}
+  "libpcl-filters1-13" {>= "1.13.0+dfsg"}
+  "libpcl-ml1-13" {>= "1.13.0+dfsg"}
+  "libpcl-sample-consensus1-13" {>= "1.13.0+dfsg"}
+  "libpcl-search1-13" {>= "1.13.0+dfsg"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libpcl-segmentation1.13_1.13.0+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcl/libpcl-segmentation1.13_1.13.0+dfsg-3_amd64.deb"
+}

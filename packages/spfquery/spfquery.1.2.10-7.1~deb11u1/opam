@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i spfquery_1.2.10-7.1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r spfquery"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libspf2-2" {= "1.2.10-7.1~deb11u1"}
+]
+conflicts: [
+  "libmail-spf-query-perl (<< 1:1.999.1-3)"
+]
+extra-source "spfquery_1.2.10-7.1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libspf2/spfquery_1.2.10-7.1~deb11u1_amd64.deb"
+}

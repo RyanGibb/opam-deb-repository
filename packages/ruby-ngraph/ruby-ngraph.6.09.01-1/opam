@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-ngraph_6.09.01-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-ngraph"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libngraph0" {>= "6.07.02"}
+  "libruby2-7" {>= "2.7.0"}
+  "ngraph-gtk"
+]
+extra-source "ruby-ngraph_6.09.01-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ngraph-gtk/ruby-ngraph_6.09.01-1_amd64.deb"
+}

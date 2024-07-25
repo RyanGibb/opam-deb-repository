@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvisp-gui-dev_3.3.0-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvisp-gui-dev"]
+]
+depends: [
+  "libvisp-core-dev" {= "3.3.0-5+b1"}
+  "libvisp-gui3-3" {= "3.3.0-5+b1"}
+  "libx11-dev"
+]
+extra-source "libvisp-gui-dev_3.3.0-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/visp/libvisp-gui-dev_3.3.0-5+b1_amd64.deb"
+}

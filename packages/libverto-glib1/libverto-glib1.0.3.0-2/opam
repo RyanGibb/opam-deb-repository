@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libverto-glib1_0.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libverto-glib1"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libverto1" {>= "0.2.4"}
+]
+extra-source "libverto-glib1_0.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libverto/libverto-glib1_0.3.0-2_amd64.deb"
+}

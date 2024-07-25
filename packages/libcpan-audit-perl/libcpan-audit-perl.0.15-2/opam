@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcpan-audit-perl_0.15-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcpan-audit-perl"]
+]
+depends: [
+  "libcpan-distnameinfo-perl"
+  "libmodule-cpanfile-perl"
+  "libversion-perl"
+  "perl"
+  "perl" {>= "5.25.2"}
+]
+extra-source "libcpan-audit-perl_0.15-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcpan-audit-perl/libcpan-audit-perl_0.15-2_all.deb"
+}

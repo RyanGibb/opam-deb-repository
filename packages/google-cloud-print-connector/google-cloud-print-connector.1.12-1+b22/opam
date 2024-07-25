@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i google-cloud-print-connector_1.12-1+b22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r google-cloud-print-connector"]
+]
+depends: [
+  "libavahi-client3" {>= "0.6.16"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libc6" {>= "2.3.2"}
+  "libcups2" {>= "1.7.0"}
+  "libsnmp30"
+]
+extra-source "google-cloud-print-connector_1.12-1+b22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/google-cloud-print-connector/google-cloud-print-connector_1.12-1+b22_amd64.deb"
+}

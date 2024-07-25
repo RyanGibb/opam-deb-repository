@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nemo-data_5.6.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nemo-data"]
+]
+depends: [
+  "python3-any"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "nemo-data_5.6.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nemo/nemo-data_5.6.4-1_all.deb"
+}

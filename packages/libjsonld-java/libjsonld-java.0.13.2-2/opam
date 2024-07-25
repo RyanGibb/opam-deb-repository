@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjsonld-java_0.13.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjsonld-java"]
+]
+depends: [
+  "libcommons-io-java" {>= "2.8.0"}
+  "libguava-java"
+  "libhttpclient-java" {>= "4.5.13"}
+  "libjackson2-core-java" {>= "2.11.3"}
+  "libjackson2-databind-java"
+  "libmaven-bundle-plugin-java" {>= "3.5.1"}
+  "libmaven-jar-plugin-java" {>= "3.1.2"}
+  "libmaven-shade-plugin-java" {>= "3.1.1"}
+  "libslf4j-java" {>= "1.7.25"}
+]
+extra-source "libjsonld-java_0.13.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jsonld-java/libjsonld-java_0.13.2-2_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-swiftsc_0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-swiftsc"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-magic"
+  "python-pkg-resources"
+  "python-requests"
+]
+extra-source "python-swiftsc_0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/swiftsc/python-swiftsc_0.5-1_all.deb"
+}

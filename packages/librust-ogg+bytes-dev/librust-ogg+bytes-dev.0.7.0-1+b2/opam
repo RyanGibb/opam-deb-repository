@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-ogg+bytes-dev_0.7.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-ogg+bytes-dev"]
+]
+depends: [
+  "librust-bytes-0-4+default-dev"
+  "librust-ogg-dev" {= "0.7.0-1+b2"}
+]
+extra-source "librust-ogg+bytes-dev_0.7.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-ogg/librust-ogg+bytes-dev_0.7.0-1+b2_amd64.deb"
+}

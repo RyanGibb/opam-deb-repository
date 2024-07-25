@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnat-8-sjlj-arm-linux-gnueabihf_8.3.0-2cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnat-8-sjlj-arm-linux-gnueabihf"]
+]
+depends: [
+  "gcc-8-arm-linux-gnueabihf-base" {= "8.3.0-2cross1"}
+  "gnat-8-arm-linux-gnueabihf" {= "8.3.0-2cross1"}
+]
+extra-source "gnat-8-sjlj-arm-linux-gnueabihf_8.3.0-2cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross/gnat-8-sjlj-arm-linux-gnueabihf_8.3.0-2cross1_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-cairo-gobject_3.4.3-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-cairo-gobject"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.0~preview1"}
+  "ruby-cairo"
+  "ruby-glib2" {= "3.4.3-2+b2"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-cairo-gobject_3.4.3-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-gnome/ruby-cairo-gobject_3.4.3-2+b2_amd64.deb"
+}

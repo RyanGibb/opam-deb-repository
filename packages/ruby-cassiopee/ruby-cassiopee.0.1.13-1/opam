@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-cassiopee_0.1.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-cassiopee"]
+]
+depends: [
+  "ruby-text" {>= "0.2.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-cassiopee_0.1.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-cassiopee/ruby-cassiopee_0.1.13-1_all.deb"
+}

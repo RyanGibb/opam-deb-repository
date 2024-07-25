@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnuradio-funcube3.10.0_3.10.0~rc3-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnuradio-funcube3.10.0"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libfmt9" {>= "9.1.0+ds1"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnuradio-audio3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-blocks3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-pmt3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-runtime3-10-5" {>= "3.10.5.0"}
+  "libhidapi-libusb0" {>= "0.8.0~rc1+git20140201.3a66d4e+dfsg"}
+  "libspdlog1-10"
+  "libstdc++6" {>= "11"}
+]
+extra-source "libgnuradio-funcube3.10.0_3.10.0~rc3-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gr-funcube/libgnuradio-funcube3.10.0_3.10.0~rc3-2+b2_amd64.deb"
+}

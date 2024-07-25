@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lua-lxc_1:3.0.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lua-lxc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "liblua5-2-0"
+  "liblxc1" {>= "1-3.0.2-1~exp+1"}
+  "lua-filesystem"
+  "lua5-2"
+]
+extra-source "lua-lxc_1:3.0.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lua-lxc/lua-lxc_3.0.2-1+b1_amd64.deb"
+}

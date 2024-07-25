@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-viridis_0.6.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-viridis"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.1.1-2"}
+  "r-cran-ggplot2" {>= "1.0.1"}
+  "r-cran-gridextra"
+  "r-cran-viridislite" {>= "0.4.0"}
+]
+extra-source "r-cran-viridis_0.6.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-viridis/r-cran-viridis_0.6.2-1_all.deb"
+}

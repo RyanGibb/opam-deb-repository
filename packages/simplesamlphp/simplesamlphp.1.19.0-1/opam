@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i simplesamlphp_1.19.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r simplesamlphp"]
+]
+depends: [
+  "perl-any"
+  "php"
+  ("apache2" | "httpd")
+]
+extra-source "simplesamlphp_1.19.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/simplesamlphp/simplesamlphp_1.19.0-1_all.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsimgrid-dev_3.32-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsimgrid-dev"]
+]
+depends: [
+  "libboost-dev"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libsimgrid3-32" {= "3.32-2+b2"}
+  "libstdc++6" {>= "5.2"}
+  "perl-any"
+  "python3-any"
+]
+conflicts: [
+  "simgrid"
+]
+extra-source "libsimgrid-dev_3.32-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/simgrid/libsimgrid-dev_3.32-2+b2_amd64.deb"
+}

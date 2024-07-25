@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblilv-0-0_0.24.2~dfsg0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblilv-0-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libserd-0-0" {>= "0.14.0~dfsg0"}
+  "libsord-0-0" {>= "0.14.0~dfsg0"}
+  "libsratom-0-0" {>= "0.4.6~dfsg0"}
+]
+extra-source "liblilv-0-0_0.24.2~dfsg0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lilv/liblilv-0-0_0.24.2~dfsg0-2_amd64.deb"
+}

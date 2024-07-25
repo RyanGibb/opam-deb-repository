@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsodium23_1.0.18-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsodium23"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+]
+extra-source "libsodium23_1.0.18-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsodium/libsodium23_1.0.18-1_amd64.deb"
+}

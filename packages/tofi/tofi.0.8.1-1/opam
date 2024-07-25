@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tofi_0.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tofi"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libfreetype6" {>= "2.2.1"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libharfbuzz0b" {>= "5.1.0"}
+  "libpango-1-0-0" {>= "1.42.0"}
+  "libpangocairo-1-0-0" {>= "1.22.0"}
+  "libwayland-client0" {>= "1.20.0"}
+  "libxkbcommon0" {>= "0.5.0"}
+]
+extra-source "tofi_0.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tofi/tofi_0.8.1-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i grep_3.6-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r grep"]
+]
+depends: [
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+conflicts: [
+  "rgrep"
+]
+extra-source "grep_3.6-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grep/grep_3.6-1+deb11u1_amd64.deb"
+}

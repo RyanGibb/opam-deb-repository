@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-cache-contracts_1.1.10-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-cache-contracts"]
+]
+depends: [
+  "php-common"
+  "php-psr-cache" {< "2~~"}
+  "php-psr-cache" {>= "1.0"}
+]
+extra-source "php-symfony-cache-contracts_1.1.10-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-symfony-contracts/php-symfony-cache-contracts_1.1.10-2+deb11u1_all.deb"
+}

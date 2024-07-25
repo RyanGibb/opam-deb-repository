@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vdirsyncer_0.16.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vdirsyncer"]
+]
+depends: [
+  "python3-any"
+  "python3-atomicwrites" {>= "0.1.7"}
+  "python3-click" {>= "5.0"}
+  "python3-click-log" {>= "0.2.0"}
+  "python3-click-threading" {>= "0.2"}
+  "python3-requests" {>= "2.4.1"}
+  "python3-requests-toolbelt" {>= "0.4.0"}
+]
+extra-source "vdirsyncer_0.16.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vdirsyncer/vdirsyncer_0.16.7-2_all.deb"
+}

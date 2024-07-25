@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cephfs-top_16.2.11+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cephfs-top"]
+]
+depends: [
+  "python3-any"
+  "python3-rados"
+]
+extra-source "cephfs-top_16.2.11+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/cephfs-top_16.2.11+ds-2_all.deb"
+}

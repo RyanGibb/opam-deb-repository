@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-regex-base-prof_0.94.0.2-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-regex-base-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-regex-base-dev" {= "0.94.0.2-1+b3"}
+]
+extra-source "libghc-regex-base-prof_0.94.0.2-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-regex-base/libghc-regex-base-prof_0.94.0.2-1+b3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgap7_4.11.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgap7"]
+]
+depends: [
+  "gap-libs" {= "4.11.0-4"}
+  "libc6" {>= "2.29"}
+  "libgmp10"
+  "libreadline8" {>= "6.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libgap7_4.11.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gap/libgap7_4.11.0-4_amd64.deb"
+}

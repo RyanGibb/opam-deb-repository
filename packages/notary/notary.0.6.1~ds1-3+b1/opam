@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i notary_0.6.1~ds1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r notary"]
+]
+depends: [
+  "libc6" {>= "2.3.2"}
+  "libltdl7" {>= "2.4.6"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.13.4-2~"}
+]
+extra-source "notary_0.6.1~ds1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/notary/notary_0.6.1~ds1-3+b1_amd64.deb"
+}

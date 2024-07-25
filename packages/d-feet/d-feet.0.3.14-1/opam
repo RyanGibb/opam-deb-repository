@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i d-feet_0.3.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r d-feet"]
+]
+depends: [
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-3-0" {>= "3.6"}
+  "python3-any"
+  "python3-gi" {>= "3.3.91"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "d-feet_0.3.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/d-feet/d-feet_0.3.14-1_all.deb"
+}

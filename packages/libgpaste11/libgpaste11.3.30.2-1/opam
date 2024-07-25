@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgpaste11_3.30.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgpaste11"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.4"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.31.1"}
+  "libglib2-0-0" {>= "2.58.0~"}
+  "libgtk-3-0" {>= "3.24"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libx11-6"
+  "libxi6" {>= "2-1.2.99.4"}
+]
+extra-source "libgpaste11_3.30.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gpaste/libgpaste11_3.30.2-1_amd64.deb"
+}

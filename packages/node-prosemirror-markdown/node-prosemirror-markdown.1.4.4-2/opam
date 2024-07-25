@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-prosemirror-markdown_1.4.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-prosemirror-markdown"]
+]
+depends: [
+  "node-markdown-it"
+  "node-prosemirror-model"
+  "nodejs" {>= "6"}
+]
+extra-source "node-prosemirror-markdown_1.4.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-prosemirror-markdown/node-prosemirror-markdown_1.4.4-2_all.deb"
+}

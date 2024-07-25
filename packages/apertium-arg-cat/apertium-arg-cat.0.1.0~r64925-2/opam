@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-arg-cat_0.1.0~r64925-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-arg-cat"]
+]
+depends: [
+  "apertium" {>= "3.4"}
+  "apertium-lex-tools"
+  "cg3"
+]
+conflicts: [
+  "apertium-cat-arg"
+]
+extra-source "apertium-arg-cat_0.1.0~r64925-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-arg-cat/apertium-arg-cat_0.1.0~r64925-2_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-lockfile_1.0.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-lockfile"]
+]
+depends: [
+  "node-signal-exit" {>= "3.0.2~"}
+  "nodejs"
+]
+extra-source "node-lockfile_1.0.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-lockfile/node-lockfile_1.0.4-3_all.deb"
+}

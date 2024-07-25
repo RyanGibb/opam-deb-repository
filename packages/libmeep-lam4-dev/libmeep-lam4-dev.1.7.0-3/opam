@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmeep-lam4-dev_1.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmeep-lam4-dev"]
+]
+depends: [
+  "libmeep-lam4-12" {= "1.7.0-3"}
+]
+conflicts: [
+  "libmeep-dev"
+  "libmeep-mpi-default-dev"
+  "libmeep-mpi-dev"
+  "libmeep-mpich-dev"
+  "libmeep-mpich2-dev"
+  "libmeep-openmpi-dev"
+]
+extra-source "libmeep-lam4-dev_1.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meep-lam4/libmeep-lam4-dev_1.7.0-3_amd64.deb"
+}

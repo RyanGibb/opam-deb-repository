@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libespeak1_1.48.04+dfsg-7+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libespeak1"]
+]
+depends: [
+  "espeak-data" {= "1.48.04+dfsg-7+deb10u1"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libportaudio2" {>= "19+svn20101113"}
+  "libpulse0" {>= "0.99.1"}
+  "libsonic0" {>= "0.1.10"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libespeak1_1.48.04+dfsg-7+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/espeak/libespeak1_1.48.04+dfsg-7+deb10u1_amd64.deb"
+}

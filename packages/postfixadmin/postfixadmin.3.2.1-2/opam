@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postfixadmin_3.2.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postfixadmin"]
+]
+depends: [
+  "dbconfig-common"
+  "debconf" {>= "0.5"}
+  "php-imap"
+  "php-mbstring"
+  "wwwconfig-common"
+  ("apache2" | "lighttpd" | "httpd")
+  ("default-mysql-client" | "postgresql-client" | "mariadb-client")
+  ("libapache2-mod-php" | "php-cgi" | "php-fpm" | "php")
+  ("php-mysql" | "php-mysqlnd" | "php-pgsql" | "php-sqlite3")
+]
+extra-source "postfixadmin_3.2.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postfixadmin/postfixadmin_3.2.1-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i serf_0.8.1+git20180508.80ab4877~ds-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r serf"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.3.2"}
+  "lsb-base"
+]
+extra-source "serf_0.8.1+git20180508.80ab4877~ds-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-hashicorp-serf/serf_0.8.1+git20180508.80ab4877~ds-1+b2_amd64.deb"
+}

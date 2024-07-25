@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yoshimi_2.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yoshimi"]
+]
+depends: [
+  "libasound2" {>= "1.0.17"}
+  "libc6" {>= "2.35"}
+  "libcairo2" {>= "1.2.4"}
+  "libfftw3-single3" {>= "3.3.10"}
+  "libfltk-images1-3" {>= "1.3.0"}
+  "libfltk1-3" {>= "1.3.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libmxml1" {>= "3.3.1"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "11"}
+  "libtinfo6" {>= "6"}
+  "yoshimi-data" {= "2.2.3-1"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "yoshimi_2.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yoshimi/yoshimi_2.2.3-1_amd64.deb"
+}

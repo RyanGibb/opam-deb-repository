@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dbench_4.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dbench"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpopt0" {>= "1.14"}
+]
+extra-source "dbench_4.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dbench/dbench_4.0-2+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nasm_2.15.05-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nasm"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "nasm_2.15.05-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nasm/nasm_2.15.05-1_amd64.deb"
+}

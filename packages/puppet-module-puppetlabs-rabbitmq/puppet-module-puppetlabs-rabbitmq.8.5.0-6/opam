@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-puppetlabs-rabbitmq_8.5.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-puppetlabs-rabbitmq"]
+]
+depends: [
+  "puppet"
+  "puppet-module-nanliu-staging"
+  "puppet-module-puppetlabs-apt"
+  "puppet-module-puppetlabs-stdlib"
+]
+extra-source "puppet-module-puppetlabs-rabbitmq_8.5.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-puppetlabs-rabbitmq/puppet-module-puppetlabs-rabbitmq_8.5.0-6_all.deb"
+}

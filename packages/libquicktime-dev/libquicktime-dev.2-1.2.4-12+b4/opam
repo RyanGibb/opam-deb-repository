@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libquicktime-dev_2:1.2.4-12+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libquicktime-dev"]
+]
+depends: [
+  "libquicktime2" {= "2-1.2.4-12+b4"}
+  "zlib1g-dev"
+  ("libgl1-mesa-dev" | "libgl-dev")
+]
+extra-source "libquicktime-dev_2:1.2.4-12+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libq/libquicktime/libquicktime-dev_1.2.4-12+b4_amd64.deb"
+}

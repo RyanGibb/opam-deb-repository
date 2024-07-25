@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sssd-tools_2.8.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sssd-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdhash1" {>= "0.4.0"}
+  "libldb2" {>= "0.9.21"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpopt0" {>= "1.14"}
+  "libref-array1" {>= "0.4.0"}
+  "libsss-certmap0" {>= "2.8.2"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+  "python3"
+  "python3-sss"
+  "python3-systemd"
+  "sssd-common" {= "2.8.2-4"}
+]
+extra-source "sssd-tools_2.8.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sssd/sssd-tools_2.8.2-4_amd64.deb"
+}

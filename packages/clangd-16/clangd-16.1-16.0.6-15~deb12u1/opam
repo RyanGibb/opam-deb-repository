@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clangd-16_1:16.0.6-15~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clangd-16"]
+]
+depends: [
+  "libabsl20220623" {>= "0~20220623.0-1"}
+  "libc6" {>= "2.34"}
+  "libclang-common-16-dev" {= "1-16.0.6-15~deb12u1"}
+  "libclang-cpp16" {>= "1-16.0.6"}
+  "libgcc-s1" {>= "3.0"}
+  "libgrpc++1-51" {>= "1.51.1"}
+  "libgrpc29" {>= "1.51.1"}
+  "libllvm16"
+  "libprotobuf32" {>= "3.21.12"}
+  "libstdc++6" {>= "12"}
+]
+extra-source "clangd-16_1:16.0.6-15~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-16/clangd-16_16.0.6-15~deb12u1_amd64.deb"
+}

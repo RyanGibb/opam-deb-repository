@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openbox-lxde-session_0.99.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openbox-lxde-session"]
+]
+depends: [
+  "lxde-common" {>= "0.99.2-1"}
+  "lxsession"
+  "openbox"
+]
+extra-source "openbox-lxde-session_0.99.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxde-common/openbox-lxde-session_0.99.2-4_all.deb"
+}

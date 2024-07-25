@@ -1,0 +1,39 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jenkins-debian-glue-buildenv_0.21.0_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jenkins-debian-glue-buildenv"]
+]
+depends: [
+  "build-essential"
+  "cowbuilder"
+  "devscripts"
+  "dpkg-dev"
+  "eatmydata"
+  "fakeroot"
+  "file"
+  "git-buildpackage"
+  "gnupg"
+  "jenkins-debian-glue"
+  "lintian"
+  "piuparts"
+  "pristine-tar"
+  "quilt"
+  "rsync"
+  "ruby"
+  ("parallel" | "moreutils")
+  ("reprepro" | "freight")
+  ("subversion-tools" {<= "1.6.18dfsg-1"} | "svn2cl")
+]
+conflicts: [
+  "jenkins-debian-glue-buildenv-git"
+  "jenkins-debian-glue-buildenv-lintian"
+  "jenkins-debian-glue-buildenv-piuparts"
+  "jenkins-debian-glue-buildenv-slave"
+  "jenkins-debian-glue-buildenv-svn"
+  "jenkins-debian-glue-buildenv-taptools"
+]
+extra-source "jenkins-debian-glue-buildenv_0.21.0_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jenkins-debian-glue/jenkins-debian-glue-buildenv_0.21.0_all.deb"
+}

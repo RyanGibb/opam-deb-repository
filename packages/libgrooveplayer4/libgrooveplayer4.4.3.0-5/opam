@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgrooveplayer4_4.3.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgrooveplayer4"]
+]
+depends: [
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.14"}
+  "libgroove4" {>= "4.3.0"}
+  "libsdl2-2-0-0" {>= "2.0.8"}
+]
+extra-source "libgrooveplayer4_4.3.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgroove/libgrooveplayer4_4.3.0-5_amd64.deb"
+}

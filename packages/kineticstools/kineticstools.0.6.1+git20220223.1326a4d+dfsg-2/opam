@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kineticstools_0.6.1+git20220223.1326a4d+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kineticstools"]
+]
+depends: [
+  "python3-any"
+  "python3-kineticstools" {>= "0.6.1+git20220223.1326a4d+dfsg-2"}
+  "python3-pkg-resources"
+]
+extra-source "kineticstools_0.6.1+git20220223.1326a4d+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kineticstools/kineticstools_0.6.1+git20220223.1326a4d+dfsg-2_all.deb"
+}

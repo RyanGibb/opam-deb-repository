@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xmms2-plugin-sid_0.8+dfsg-21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xmms2-plugin-sid"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libresid-builder0c2a"
+  "libsidplay2"
+  "libstdc++6" {>= "5"}
+  "xmms2-core" {= "0.8+dfsg-21"}
+]
+extra-source "xmms2-plugin-sid_0.8+dfsg-21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmms2/xmms2-plugin-sid_0.8+dfsg-21_amd64.deb"
+}

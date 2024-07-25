@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsharyanto-utils-perl_0.77-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsharyanto-utils-perl"]
+]
+depends: [
+  "libfile-slurp-tiny-perl"
+  "libhtml-parser-perl"
+  "libperinci-sub-util-perl"
+  "libtemplate-tiny-perl"
+  "liburi-perl"
+  "perl-any"
+  ("perl" | "libexperimental-perl")
+]
+extra-source "libsharyanto-utils-perl_0.77-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsharyanto-utils-perl/libsharyanto-utils-perl_0.77-2_all.deb"
+}

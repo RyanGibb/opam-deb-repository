@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-hilbertvis_1.56.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-hilbertvis"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biocgenerics"
+  "r-cran-lattice"
+]
+extra-source "r-bioc-hilbertvis_1.56.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-hilbertvis/r-bioc-hilbertvis_1.56.0-1_amd64.deb"
+}

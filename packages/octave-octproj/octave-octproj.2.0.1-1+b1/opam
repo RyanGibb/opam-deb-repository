@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-octproj_2.0.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-octproj"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libgcc-s1" {>= "3.0"}
+  "liboctave8"
+  "libproj19" {>= "6.1.0"}
+  "libstdc++6" {>= "5.2"}
+  "octave" {>= "6.1.0"}
+]
+extra-source "octave-octproj_2.0.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave-octproj/octave-octproj_2.0.1-1+b1_amd64.deb"
+}

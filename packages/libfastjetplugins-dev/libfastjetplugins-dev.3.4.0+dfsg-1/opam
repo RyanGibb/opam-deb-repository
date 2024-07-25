@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfastjetplugins-dev_3.4.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfastjetplugins-dev"]
+]
+depends: [
+  "libfastjet-dev" {= "3.4.0+dfsg-1"}
+  "libfastjetplugins0" {= "3.4.0+dfsg-1"}
+  "libsiscone-dev"
+  "libsiscone-spherical-dev"
+]
+extra-source "libfastjetplugins-dev_3.4.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fastjet/libfastjetplugins-dev_3.4.0+dfsg-1_amd64.deb"
+}

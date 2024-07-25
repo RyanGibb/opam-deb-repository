@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-mysqld-exporter_0.11.0+ds-1+b20_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-mysqld-exporter"]
+]
+depends: [
+  "daemon"
+  "libc6" {>= "2.3.2"}
+]
+extra-source "prometheus-mysqld-exporter_0.11.0+ds-1+b20_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-mysqld-exporter/prometheus-mysqld-exporter_0.11.0+ds-1+b20_amd64.deb"
+}

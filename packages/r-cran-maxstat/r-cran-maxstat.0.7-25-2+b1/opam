@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-maxstat_0.7-25-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-maxstat"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-exactranktests" {>= "0.8-23"}
+  "r-cran-mvtnorm" {>= "0.5-10"}
+]
+extra-source "r-cran-maxstat_0.7-25-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-maxstat/r-cran-maxstat_0.7-25-2+b1_amd64.deb"
+}

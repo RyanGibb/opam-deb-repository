@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-multilib-mips-linux-gnu_4:12.2.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-multilib-mips-linux-gnu"]
+]
+depends: [
+  "cpp-mips-linux-gnu" {= "4-12.2.0-4"}
+  "gcc-12-multilib-mips-linux-gnu" {>= "12.2.0-1~"}
+  "gcc-mips-linux-gnu" {= "4-12.2.0-4"}
+]
+extra-source "gcc-multilib-mips-linux-gnu_4:12.2.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-mipsen/gcc-multilib-mips-linux-gnu_12.2.0-4_amd64.deb"
+}

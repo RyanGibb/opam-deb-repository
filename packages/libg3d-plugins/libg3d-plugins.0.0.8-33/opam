@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libg3d-plugins_0.0.8-33_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libg3d-plugins"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libg3d0" {= "0.0.8-33"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libg3d-plugins_0.0.8-33_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libg3d/libg3d-plugins_0.0.8-33_amd64.deb"
+}

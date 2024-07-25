@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-freerdp2_2.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-freerdp2"]
+]
+depends: [
+  "freerdp2-x11"
+  "libc6" {>= "2.7"}
+  "libfreerdp2-2" {>= "2.0.0~git20160317.1.75ae3f5+dfsg1"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libwinpr2-2" {>= "2.0.0~git20160317.1.75ae3f5+dfsg1"}
+]
+extra-source "libpam-freerdp2_2.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpam-freerdp2/libpam-freerdp2_2.0.0-2_amd64.deb"
+}

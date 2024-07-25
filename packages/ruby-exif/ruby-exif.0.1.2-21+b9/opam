@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-exif_0.1.2-21+b9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-exif"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libexif12" {>= "0.6.21-1~"}
+  "libgmp10"
+  "libruby2-5" {>= "2.5.0~preview1"}
+  "ruby" {< "1-2.6~"}
+  "ruby" {>= "1-2.5~0"}
+]
+extra-source "ruby-exif_0.1.2-21+b9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-exif/ruby-exif_0.1.2-21+b9_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libc6-dev_2.31-13+deb11u10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libc6-dev"]
+]
+depends: [
+  "libc-dev-bin" {= "2.31-13+deb11u10"}
+  "libc6" {= "2.31-13+deb11u10"}
+  "libcrypt-dev"
+  "libnsl-dev"
+  "linux-libc-dev"
+]
+conflicts: [
+  "libc0.1-dev"
+  "libc0.3-dev"
+  "libc6.1-dev"
+]
+extra-source "libc6-dev_2.31-13+deb11u10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glibc/libc6-dev_2.31-13+deb11u10_amd64.deb"
+}

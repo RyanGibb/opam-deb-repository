@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibus-clutter_0.0+git20090728.a936bacf-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibus-clutter"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libclutter-1-0-0" {>= "1.10.0"}
+  "libclutter-imcontext-0-1-0"
+  "libclutter-imcontext-0-1-bin"
+  "libglib2-0-0" {>= "2.66.8"}
+  "libibus-1-0-5" {>= "1.5.1"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libx11-6"
+]
+extra-source "ibus-clutter_0.0+git20090728.a936bacf-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibus-client-clutter/ibus-clutter_0.0+git20090728.a936bacf-7_amd64.deb"
+}

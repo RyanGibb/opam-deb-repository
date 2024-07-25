@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwww-oauth-perl_1.000-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwww-oauth-perl"]
+]
+depends: [
+  "libclass-tiny-chained-perl"
+  "libmodule-runtime-perl"
+  "librole-tiny-perl" {>= "2.000000"}
+  "liburi-perl"
+  "libwww-form-urlencoded-perl"
+  "perl"
+  ("perl" {>= "5.19.5"} | "libscalar-list-utils-perl" {>= "1-1.33"})
+]
+extra-source "libwww-oauth-perl_1.000-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libw/libwww-oauth-perl/libwww-oauth-perl_1.000-1_all.deb"
+}

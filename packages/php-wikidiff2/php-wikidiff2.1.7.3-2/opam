@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-wikidiff2_1.7.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-wikidiff2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "4.9"}
+  "libthai0" {>= "0.1.12"}
+  "php-common" {>= "1-7.0+33~"}
+  ("libapache2-mod-php7-3" | "libphp7-3-embed" | "php7-3-cgi" | "php7-3-cli" | "php7-3-fpm" | "php7-3-phpdbg")
+  ("php" | "php-cli")
+]
+extra-source "php-wikidiff2_1.7.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wikidiff2/php-wikidiff2_1.7.3-2_amd64.deb"
+}

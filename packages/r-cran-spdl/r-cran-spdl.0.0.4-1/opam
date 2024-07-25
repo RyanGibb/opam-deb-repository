@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-spdl_0.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-spdl"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-cran-rcppspdlog" {>= "0.0.11"}
+]
+extra-source "r-cran-spdl_0.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-spdl/r-cran-spdl_0.0.4-1_all.deb"
+}

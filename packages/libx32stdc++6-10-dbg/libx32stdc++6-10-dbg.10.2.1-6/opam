@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libx32stdc++6-10-dbg_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libx32stdc++6-10-dbg"]
+]
+depends: [
+  "gcc-10-base" {= "10.2.1-6"}
+  "libc6-x32" {>= "2.18"}
+  "libstdc++-10-dev" {= "10.2.1-6"}
+  "libx32gcc-s1" {>= "4.2"}
+  "libx32stdc++6" {>= "10.2.1-6"}
+]
+conflicts: [
+  "libx32stdc++6-4.6-dbg"
+  "libx32stdc++6-4.7-dbg"
+  "libx32stdc++6-4.8-dbg"
+  "libx32stdc++6-4.9-dbg"
+  "libx32stdc++6-5-dbg"
+  "libx32stdc++6-6-dbg"
+  "libx32stdc++6-7-dbg"
+  "libx32stdc++6-8-dbg"
+  "libx32stdc++6-9-dbg"
+  "libx32stdc++6-dbg"
+]
+extra-source "libx32stdc++6-10-dbg_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/libx32stdc++6-10-dbg_10.2.1-6_amd64.deb"
+}

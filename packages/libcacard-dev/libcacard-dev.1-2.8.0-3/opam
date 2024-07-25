@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcacard-dev_1:2.8.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcacard-dev"]
+]
+depends: [
+  "libcacard0" {= "1-2.8.0-3"}
+  "libglib2-0-dev"
+  "libnss3-dev"
+  "libpcsclite-dev"
+]
+extra-source "libcacard-dev_1:2.8.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcacard/libcacard-dev_2.8.0-3_amd64.deb"
+}

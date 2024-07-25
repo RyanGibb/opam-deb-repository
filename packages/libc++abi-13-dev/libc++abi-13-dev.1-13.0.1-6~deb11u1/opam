@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libc++abi-13-dev_1:13.0.1-6~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libc++abi-13-dev"]
+]
+depends: [
+  "libc++abi1-13" {= "1-13.0.1-6~deb11u1"}
+]
+conflicts: [
+  "libc++abi-x.y-dev"
+]
+extra-source "libc++abi-13-dev_1:13.0.1-6~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-13/libc++abi-13-dev_13.0.1-6~deb11u1_amd64.deb"
+}

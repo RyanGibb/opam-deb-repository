@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i globus-gass-copy-progs_10.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r globus-gass-copy-progs"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglobus-common0" {>= "17"}
+  "libglobus-ftp-client2" {>= "7"}
+  "libglobus-gass-copy2" {>= "8"}
+  "libglobus-gass-transfer2" {>= "7"}
+  "libglobus-gsi-sysconfig1" {>= "8"}
+  "libglobus-gssapi-error2" {>= "4"}
+  "libglobus-gssapi-gsi4" {>= "13"}
+  "libglobus-io3" {>= "11"}
+  "libltdl7" {>= "2.4.6"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "globus-gass-copy-progs_10.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gass-copy/globus-gass-copy-progs_10.4-1_amd64.deb"
+}

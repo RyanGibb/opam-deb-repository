@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coinor-libcgl-dev_0.59.10+repack1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coinor-libcgl-dev"]
+]
+depends: [
+  "coinor-libcgl1" {= "0.59.10+repack1-1"}
+  "coinor-libclp-dev" {>= "1.16.10"}
+  "coinor-libcoinutils-dev" {>= "2.10.13"}
+]
+extra-source "coinor-libcgl-dev_0.59.10+repack1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coinor-cgl/coinor-libcgl-dev_0.59.10+repack1-1_amd64.deb"
+}

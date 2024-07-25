@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i geneagrapher_1.0c2+git20180919-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r geneagrapher"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-bs4"
+  "python-lxml"
+]
+extra-source "geneagrapher_1.0c2+git20180919-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/geneagrapher/geneagrapher_1.0c2+git20180919-1_all.deb"
+}

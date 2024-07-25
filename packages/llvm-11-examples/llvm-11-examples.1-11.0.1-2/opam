@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i llvm-11-examples_1:11.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r llvm-11-examples"]
+]
+depends: [
+  "llvm-11-dev" {< "1-11.0.1-2+c~"}
+  "llvm-11-dev" {>= "1-11.0.1-2"}
+]
+extra-source "llvm-11-examples_1:11.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-11/llvm-11-examples_11.0.1-2_all.deb"
+}

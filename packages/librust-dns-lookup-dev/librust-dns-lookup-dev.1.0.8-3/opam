@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-dns-lookup-dev_1.0.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-dns-lookup-dev"]
+]
+depends: [
+  "librust-cfg-if-1+default-dev"
+  "librust-libc-0-2+default-dev"
+  "librust-socket2-0-4+default-dev"
+  "librust-winapi-0-3+windef-dev"
+  "librust-winapi-0-3+ws2def-dev"
+  "librust-winapi-0-3+ws2tcpip-dev"
+]
+extra-source "librust-dns-lookup-dev_1.0.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-dns-lookup/librust-dns-lookup-dev_1.0.8-3_amd64.deb"
+}

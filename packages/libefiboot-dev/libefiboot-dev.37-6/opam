@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libefiboot-dev_37-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libefiboot-dev"]
+]
+depends: [
+  "libefiboot1" {= "37-6"}
+]
+conflicts: [
+  "libefivar-dev (<< 27-1)"
+]
+extra-source "libefiboot-dev_37-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/efivar/libefiboot-dev_37-6_amd64.deb"
+}

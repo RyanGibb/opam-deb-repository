@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i texlive-science_2020.20210202-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r texlive-science"]
+]
+depends: [
+  "python3"
+  "tex-common" {>= "6.13"}
+  "texlive-base" {>= "2020.20200417"}
+  "texlive-binaries" {>= "2020.20200327"}
+  "texlive-fonts-recommended" {>= "2020.20200417"}
+  "texlive-lang-greek" {>= "2020.20200417"}
+  "texlive-latex-base" {>= "2020.20200417"}
+  "texlive-latex-recommended" {>= "2020.20200417"}
+]
+conflicts: [
+  "texlive-math-extra (<< 2017)"
+]
+extra-source "texlive-science_2020.20210202-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/texlive-extra/texlive-science_2020.20210202-3_all.deb"
+}

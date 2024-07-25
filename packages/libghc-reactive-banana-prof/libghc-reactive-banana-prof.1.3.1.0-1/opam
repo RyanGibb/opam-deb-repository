@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-reactive-banana-prof_1.3.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-reactive-banana-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hashable-prof"
+  "libghc-pqueue-prof"
+  "libghc-reactive-banana-dev" {= "1.3.1.0-1"}
+  "libghc-semigroups-prof"
+  "libghc-these-prof"
+  "libghc-unordered-containers-prof"
+  "libghc-vault-prof"
+]
+extra-source "libghc-reactive-banana-prof_1.3.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-reactive-banana/libghc-reactive-banana-prof_1.3.1.0-1_amd64.deb"
+}

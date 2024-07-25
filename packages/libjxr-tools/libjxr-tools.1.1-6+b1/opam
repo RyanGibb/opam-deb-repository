@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjxr-tools_1.1-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjxr-tools"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libjxr0" {>= "1.0"}
+]
+extra-source "libjxr-tools_1.1-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jxrlib/libjxr-tools_1.1-6+b1_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phosh-plugins_0.24.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phosh-plugins"]
+]
+depends: [
+  "gsettings-desktop-schemas"
+  "libadwaita-1-0" {>= "1.0.0"}
+  "libc6" {>= "2.28"}
+  "libevdocument3-4" {>= "3.5.2"}
+  "libevview3-3" {>= "3.0.2"}
+  "libglib2-0-0" {>= "2.72.0"}
+  "libgtk-3-0" {>= "3.19.12"}
+  "libgtk-4-1" {>= "4.0.0"}
+  "libhandy-1-0" {>= "1.1.90"}
+  "phoc" {>= "0.13.1"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "phosh-plugins_0.24.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phosh/phosh-plugins_0.24.0-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-qscintilla2-dbg_2.10.4+dfsg-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-qscintilla2-dbg"]
+]
+depends: [
+  "python-dbg"
+  "python-qscintilla2" {= "2.10.4+dfsg-2.1"}
+  "python-qt4-dbg"
+  "python-sip-dbg"
+]
+extra-source "python-qscintilla2-dbg_2.10.4+dfsg-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qscintilla2/python-qscintilla2-dbg_2.10.4+dfsg-2.1_amd64.deb"
+}

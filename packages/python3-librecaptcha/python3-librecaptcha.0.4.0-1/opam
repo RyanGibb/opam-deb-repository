@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-librecaptcha_0.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-librecaptcha"]
+]
+depends: [
+  "imagemagick"
+  "python3-any" {>= "3.4~"}
+  "python3-pil" {>= "4.1.1~"}
+  "python3-requests" {>= "2.18.1~"}
+  "python3-slimit"
+]
+extra-source "python3-librecaptcha_0.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librecaptcha/python3-librecaptcha_0.4.0-1_all.deb"
+}

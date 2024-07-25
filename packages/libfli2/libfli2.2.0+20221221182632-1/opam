@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfli2_2.0+20221221182632-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfli2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libusb-1-0-0" {>= "2-1.0.16"}
+]
+extra-source "libfli2_2.0+20221221182632-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfli/libfli2_2.0+20221221182632-1_amd64.deb"
+}

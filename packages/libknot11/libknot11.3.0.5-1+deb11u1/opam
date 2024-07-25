@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libknot11_3.0.5-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libknot11"]
+]
+depends: [
+  "libbpf0" {>= "5.5"}
+  "libc6" {>= "2.29"}
+  "libdnssec8" {>= "3.0.1"}
+  "liblmdb0" {>= "0.9.7"}
+]
+extra-source "libknot11_3.0.5-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/knot/libknot11_3.0.5-1+deb11u1_amd64.deb"
+}

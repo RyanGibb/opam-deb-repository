@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zeitgeist-core_1.0.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zeitgeist-core"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdee-1-0-4" {>= "1.0.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.43.92"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+  "libxapian30" {>= "1.4.17~"}
+  "libzeitgeist-2-0-0" {>= "0.9.14"}
+]
+extra-source "zeitgeist-core_1.0.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zeitgeist/zeitgeist-core_1.0.3-4_amd64.deb"
+}

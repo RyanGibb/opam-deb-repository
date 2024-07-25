@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hddemux_0.4-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hddemux"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.4"}
+  "libsystemd0"
+  "libuv1" {>= "1.4.2"}
+]
+extra-source "hddemux_0.4-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hddemux/hddemux_0.4-7_amd64.deb"
+}

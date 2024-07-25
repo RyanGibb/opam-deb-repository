@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hsetroot_1.0.2-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hsetroot"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libimlib2" {>= "1.4.5"}
+  "libx11-6"
+]
+extra-source "hsetroot_1.0.2-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hsetroot/hsetroot_1.0.2-9_amd64.deb"
+}

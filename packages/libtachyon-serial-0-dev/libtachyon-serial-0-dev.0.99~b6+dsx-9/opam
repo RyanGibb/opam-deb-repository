@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtachyon-serial-0-dev_0.99~b6+dsx-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtachyon-serial-0-dev"]
+]
+depends: [
+  "libtachyon-dev-common" {= "0.99~b6+dsx-9"}
+  "libtachyon-serial-0" {= "0.99~b6+dsx-9"}
+]
+extra-source "libtachyon-serial-0-dev_0.99~b6+dsx-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tachyon/libtachyon-serial-0-dev_0.99~b6+dsx-9_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xiccd_0.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xiccd"]
+]
+depends: [
+  "colord"
+  "libc6" {>= "2.4"}
+  "libcolord2" {>= "1.4.3"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libx11-6"
+  "libxrandr2" {>= "2-1.2.99.3"}
+]
+extra-source "xiccd_0.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xiccd/xiccd_0.3.0-1_amd64.deb"
+}

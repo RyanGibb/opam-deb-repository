@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i raku-librarycheck_0.0.11-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r raku-librarycheck"]
+]
+depends: [
+  "rakudo"
+  "rakudo" {>= "2022.07-2"}
+]
+extra-source "raku-librarycheck_0.0.11-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/raku-librarycheck/raku-librarycheck_0.0.11-1+b1_amd64.deb"
+}

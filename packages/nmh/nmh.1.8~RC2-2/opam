@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nmh_1.8~RC2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nmh"]
+]
+depends: [
+  "libc6" {>= "2.36"}
+  "libcurl4" {>= "7.16.2"}
+  "libdb5-3"
+  "liblockfile1" {>= "1.0"}
+  "libreadline8" {>= "6.0"}
+  "libsasl2-2" {>= "2.1.28+dfsg"}
+  "libsasl2-modules"
+  "libssl3" {>= "3.0.0"}
+  "libtinfo6" {>= "6"}
+  "mailcap"
+  "netbase" {>= "3.16-1"}
+  "sensible-utils"
+]
+conflicts: [
+  "mh"
+]
+extra-source "nmh_1.8~RC2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nmh/nmh_1.8~RC2-2_amd64.deb"
+}

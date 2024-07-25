@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i smokeping_2.7.3-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r smokeping"]
+]
+depends: [
+  "adduser"
+  "fping"
+  "libcgi-fast-perl"
+  "libconfig-grammar-perl"
+  "libdigest-hmac-perl"
+  "libjs-cropper"
+  "libjs-prototype"
+  "libjs-scriptaculous"
+  "librrds-perl" {>= "1.2"}
+  "libsnmp-session-perl"
+  "liburi-perl"
+  "libwww-perl"
+  "perl-any"
+  "sysvinit-utils"
+  "ucf"
+  ("default-mta" | "mail-transport-agent")
+]
+extra-source "smokeping_2.7.3-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/smokeping/smokeping_2.7.3-4.1_all.deb"
+}

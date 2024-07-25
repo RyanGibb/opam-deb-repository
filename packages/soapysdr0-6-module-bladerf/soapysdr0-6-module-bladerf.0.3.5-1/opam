@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i soapysdr0.6-module-bladerf_0.3.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r soapysdr0.6-module-bladerf"]
+]
+depends: [
+  "libbladerf1"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libsoapysdr0-6"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "soapysdr0.6-module-bladerf_0.3.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/soapybladerf/soapysdr0.6-module-bladerf_0.3.5-1_amd64.deb"
+}

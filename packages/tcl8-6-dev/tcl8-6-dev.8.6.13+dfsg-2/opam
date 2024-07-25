@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tcl8.6-dev_8.6.13+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tcl8.6-dev"]
+]
+depends: [
+  "dpkg-dev" {>= "1.16.1~"}
+  "libtcl8-6" {= "8.6.13+dfsg-2"}
+  "tcl8-6"
+  "zlib1g-dev"
+]
+extra-source "tcl8.6-dev_8.6.13+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tcl8.6/tcl8.6-dev_8.6.13+dfsg-2_amd64.deb"
+}

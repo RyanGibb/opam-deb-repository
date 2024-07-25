@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrilinos-intrepid2-13.2_13.2.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrilinos-intrepid2-13.2"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libtrilinos-intrepid2-13.2_13.2.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trilinos/libtrilinos-intrepid2-13.2_13.2.0-4_amd64.deb"
+}

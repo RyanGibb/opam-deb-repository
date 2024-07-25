@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i adcli_0.8.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r adcli"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcom-err2"
+  "libgssapi-krb5-2" {>= "1.6.dfsg.2"}
+  "libk5crypto3" {>= "1.7+dfsg"}
+  "libkrb5-3" {>= "1.10+dfsg~alpha1"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libsasl2-modules-gssapi-mit"
+]
+extra-source "adcli_0.8.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/adcli/adcli_0.8.2-1+b1_amd64.deb"
+}

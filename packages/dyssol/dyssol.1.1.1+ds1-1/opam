@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dyssol_1.1.1+ds1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dyssol"]
+]
+depends: [
+  "dyssol-data"
+  "libc6" {>= "2.34"}
+  "libdyssol1-0" {= "1.1.1+ds1-1"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libsundials-nvecserial6" {>= "6.4.1+dfsg1"}
+]
+extra-source "dyssol_1.1.1+ds1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dyssol/dyssol_1.1.1+ds1-1_amd64.deb"
+}

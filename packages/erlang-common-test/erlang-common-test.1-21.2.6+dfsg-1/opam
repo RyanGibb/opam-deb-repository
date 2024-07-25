@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-common-test_1:21.2.6+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-common-test"]
+]
+depends: [
+  "erlang-crypto" {= "1-21.2.6+dfsg-1"}
+  "erlang-debugger" {= "1-21.2.6+dfsg-1"}
+  "erlang-ftp" {= "1-21.2.6+dfsg-1"}
+  "erlang-inets" {= "1-21.2.6+dfsg-1"}
+  "erlang-observer" {= "1-21.2.6+dfsg-1"}
+  "erlang-runtime-tools" {= "1-21.2.6+dfsg-1"}
+  "erlang-snmp" {= "1-21.2.6+dfsg-1"}
+  "erlang-ssh" {= "1-21.2.6+dfsg-1"}
+  "erlang-syntax-tools" {= "1-21.2.6+dfsg-1"}
+  "erlang-tools" {= "1-21.2.6+dfsg-1"}
+  "erlang-xmerl" {= "1-21.2.6+dfsg-1"}
+  "libc6" {>= "2.14"}
+  "libjs-jquery"
+  "libjs-jquery-tablesorter"
+  ("erlang-base" {= "1-21.2.6+dfsg-1"} | "erlang-base-hipe" {= "1-21.2.6+dfsg-1"})
+]
+extra-source "erlang-common-test_1:21.2.6+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-common-test_21.2.6+dfsg-1_amd64.deb"
+}

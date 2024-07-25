@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i evolution-plugin-bogofilter_3.46.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r evolution-plugin-bogofilter"]
+]
+depends: [
+  "bogofilter"
+  "evolution" {= "3.46.4-2"}
+  "libc6" {>= "2.4"}
+  "libcamel-1-2-64" {>= "3.46.4"}
+  "libedataserver-1-2-27" {>= "3.46.4"}
+  "libevolution" {< "3.47"}
+  "libevolution" {>= "3.46.4"}
+  "libglib2-0-0" {>= "2.66"}
+  "libgtk-3-0" {>= "3.10.0"}
+]
+extra-source "evolution-plugin-bogofilter_3.46.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/evolution/evolution-plugin-bogofilter_3.46.4-2_amd64.deb"
+}

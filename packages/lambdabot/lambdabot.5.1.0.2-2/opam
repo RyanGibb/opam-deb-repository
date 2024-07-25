@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lambdabot_5.1.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lambdabot"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.27"}
+  "libffi6" {>= "3.0.4"}
+  "libgmp10"
+  "libpcre3"
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "lambdabot_5.1.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lambdabot/lambdabot_5.1.0.2-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-create-ecdh_4.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-create-ecdh"]
+]
+depends: [
+  "node-bn-js" {>= "4.1.0"}
+  "node-elliptic" {>= "6.0.0"}
+  "nodejs"
+]
+extra-source "node-create-ecdh_4.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-create-ecdh/node-create-ecdh_4.0.0-2_all.deb"
+}

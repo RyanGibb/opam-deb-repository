@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dot2tex_2.11.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dot2tex"]
+]
+depends: [
+  "graphviz"
+  "libjs-sphinxdoc" {>= "1.0"}
+  "python3-any"
+  "python3-pyparsing" {>= "0.4.8"}
+]
+extra-source "dot2tex_2.11.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dot2tex/dot2tex_2.11.3-2_all.deb"
+}

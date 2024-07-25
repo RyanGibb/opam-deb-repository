@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcld2-0_0.0.0-git20150806-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcld2-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libcld2-0_0.0.0-git20150806-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cld2/libcld2-0_0.0.0-git20150806-6_amd64.deb"
+}

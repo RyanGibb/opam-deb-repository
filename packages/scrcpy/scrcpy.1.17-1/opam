@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scrcpy_1.17-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scrcpy"]
+]
+depends: [
+  "libavcodec-extra58"
+  "libavformat58" {>= "7-4.2"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.28"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "scrcpy-server"
+]
+extra-source "scrcpy_1.17-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scrcpy/scrcpy_1.17-1_amd64.deb"
+}

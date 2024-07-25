@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-os-refresh-config_0.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-os-refresh-config"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-pbr" {>= "0.6"}
+]
+extra-source "python-os-refresh-config_0.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-os-refresh-config/python-os-refresh-config_0.1.2-1_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-epr-dbg_0.9.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-epr-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libepr-api2" {>= "2.2"}
+  "python-dbg" {< "2.8"}
+  "python-dbg" {>= "2.7~"}
+  "python-dbg-any" {< "2.8"}
+  "python-dbg-any" {>= "2.7~"}
+  "python-epr" {= "0.9.5-2"}
+  "python-numpy"
+  "python-numpy" {>= "1-1.16.0~rc1"}
+]
+extra-source "python-epr-dbg_0.9.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyepr/python-epr-dbg_0.9.5-2_amd64.deb"
+}

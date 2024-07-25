@@ -1,0 +1,48 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i x11-apps_7.7+8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r x11-apps"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsm6"
+  "libx11-6"
+  "libxaw7"
+  "libxcursor1" {> "1.1.2"}
+  "libxext6"
+  "libxft2" {> "2.1.1"}
+  "libxkbfile1"
+  "libxmu6"
+  "libxmuu1"
+  "libxrender1"
+  "libxt6" {>= "1-1.1.0"}
+  "man-db"
+]
+conflicts: [
+  "bitmap"
+  "oclock"
+  "transset"
+  "x11perf"
+  "xbiff"
+  "xcalc"
+  "xclipboard"
+  "xclock"
+  "xconsole"
+  "xcursorgen"
+  "xditview"
+  "xeyes"
+  "xgc"
+  "xload"
+  "xlogo"
+  "xmag"
+  "xman"
+  "xmore"
+  "xwd"
+  "xwud"
+]
+extra-source "x11-apps_7.7+8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/x11-apps/x11-apps_7.7+8_amd64.deb"
+}

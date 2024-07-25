@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzimg2_3.0.4+ds1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzimg2"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libzimg2_3.0.4+ds1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zimg/libzimg2_3.0.4+ds1-1_amd64.deb"
+}

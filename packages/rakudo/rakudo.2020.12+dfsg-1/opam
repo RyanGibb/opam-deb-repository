@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rakudo_2020.12+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rakudo"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgraph-perl"
+  "libipc-system-simple-perl"
+  "libpath-tiny-perl"
+  "moarvm" {< "2021.01"}
+  "moarvm" {>= "2020.12"}
+  "nqp" {< "2021.01"}
+  "nqp" {>= "2020.12+dfsg-1"}
+]
+extra-source "rakudo_2020.12+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rakudo/rakudo_2020.12+dfsg-1_amd64.deb"
+}

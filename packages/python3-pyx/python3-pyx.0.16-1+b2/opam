@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyx_0.16-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyx"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libkpathsea6" {>= "2022.20220321.62855"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-pyx_0.16-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyx3/python3-pyx_0.16-1+b2_amd64.deb"
+}

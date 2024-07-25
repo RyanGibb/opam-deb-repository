@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglw1-mesa-dev_8.0.0-1.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglw1-mesa-dev"]
+]
+depends: [
+  "libglw1-mesa" {= "8.0.0-1.1+b1"}
+  "libx11-dev"
+  "libxt-dev"
+  "mesa-common-dev"
+  ("libmotif-dev" | "lesstif2-dev")
+]
+conflicts: [
+  "libgl1-mesa-swx11-dev (<< 6.5.2-4)"
+  "libglw-dev"
+]
+extra-source "libglw1-mesa-dev_8.0.0-1.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glw/libglw1-mesa-dev_8.0.0-1.1+b1_amd64.deb"
+}

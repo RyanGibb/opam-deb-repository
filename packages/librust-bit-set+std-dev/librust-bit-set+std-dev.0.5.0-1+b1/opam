@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-bit-set+std-dev_0.5.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-bit-set+std-dev"]
+]
+depends: [
+  "librust-bit-set-dev" {= "0.5.0-1+b1"}
+  "librust-bit-vec-0-5+std-dev"
+]
+extra-source "librust-bit-set+std-dev_0.5.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-bit-set/librust-bit-set+std-dev_0.5.0-1+b1_amd64.deb"
+}

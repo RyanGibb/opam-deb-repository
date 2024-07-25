@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdist-metadata-perl_0.927-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdist-metadata-perl"]
+]
+depends: [
+  "libarchive-zip-perl"
+  "libcpan-distnameinfo-perl"
+  "libfile-spec-native-perl"
+  "libpath-class-perl"
+  "libtry-tiny-perl"
+  "perl-any"
+  ("perl" {>= "5.15.8"} | "libmodule-metadata-perl")
+]
+extra-source "libdist-metadata-perl_0.927-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdist-metadata-perl/libdist-metadata-perl_0.927-1.1_all.deb"
+}

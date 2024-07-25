@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i autocutsel_0.10.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r autocutsel"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libice6" {>= "1-1.0.0"}
+  "libsm6"
+  "libx11-6"
+  "libxaw7"
+  "libxext6"
+  "libxmu6"
+  "libxt6"
+]
+extra-source "autocutsel_0.10.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/autocutsel/autocutsel_0.10.0-2_amd64.deb"
+}

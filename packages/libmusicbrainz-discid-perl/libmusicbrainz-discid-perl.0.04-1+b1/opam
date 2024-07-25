@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmusicbrainz-discid-perl_0.04-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmusicbrainz-discid-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdiscid0" {>= "0.2.2"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libmusicbrainz-discid-perl_0.04-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmusicbrainz-discid-perl/libmusicbrainz-discid-perl_0.04-1+b1_amd64.deb"
+}

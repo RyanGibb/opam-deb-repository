@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gedit-latex-plugin_3.20.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gedit-latex-plugin"]
+]
+depends: [
+  "gedit" {>= "3.20"}
+  "libglib2-0-bin"
+  "python3-any"
+  "python3-dbus"
+  "python3-gi"
+  "rubber"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gedit-latex-plugin_3.20.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gedit-latex-plugin/gedit-latex-plugin_3.20.0-2_all.deb"
+}

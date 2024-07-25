@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-apsw_3.24.0-r1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-apsw"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsqlite3-0" {>= "3.24.0"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.6~"}
+]
+extra-source "python3-apsw_3.24.0-r1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-apsw/python3-apsw_3.24.0-r1-1_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yorick-gyoto_1.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yorick-gyoto"]
+]
+depends: [
+  "gir1-2-gtk-3-0"
+  "libc6" {>= "2.14"}
+  "libcfitsio7" {>= "3.450~"}
+  "libgcc1" {>= "1-3.0"}
+  "libgyoto7" {>= "1.3.1"}
+  "libopenmpi3"
+  "libstdc++6" {>= "5.2"}
+  "libudunits2-0" {>= "2.2.14"}
+  "libxerces-c3-2"
+  "yorick" {>= "2.1.05"}
+  "yorick-gy"
+  "yorick-yutils" {>= "1.3"}
+]
+extra-source "yorick-gyoto_1.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gyoto/yorick-gyoto_1.3.1-1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmm-ocaml_0.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmm-ocaml"]
+]
+depends: [
+  "libalsa-ocaml"
+  "libao-ocaml"
+  "libc6" {>= "2.14"}
+  "libmad-ocaml"
+  "libogg-ocaml"
+  "libpulse-ocaml"
+  "libsdl-ocaml"
+  "libtheora-ocaml"
+  "ocaml-base"
+]
+extra-source "libmm-ocaml_0.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-mm/libmm-ocaml_0.8.1-1_amd64.deb"
+}

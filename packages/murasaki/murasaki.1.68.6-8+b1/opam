@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i murasaki_1.68.6-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r murasaki"]
+]
+depends: [
+  "libboost-filesystem1-67-0"
+  "libboost-iostreams1-67-0"
+  "libboost-regex1-67-0" {>= "1.67.0-10"}
+  "libboost-system1-67-0"
+  "libc6" {>= "2.14"}
+  "libcrypto++6"
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "murasaki-common"
+]
+extra-source "murasaki_1.68.6-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/murasaki/murasaki_1.68.6-8+b1_amd64.deb"
+}

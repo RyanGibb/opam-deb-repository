@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-msm_1.6.8-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-msm"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-expm"
+  "r-cran-mvtnorm"
+  "r-cran-survival"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "r-cran-msm_1.6.8-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-msm/r-cran-msm_1.6.8-1+b1_amd64.deb"
+}

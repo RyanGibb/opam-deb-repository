@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-m2r_1.0.2+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-m2r"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "macaulay2"
+  "net-tools"
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-2"}
+  "r-cran-gmp"
+  "r-cran-memoise"
+  "r-cran-mpoly" {>= "1.0.5"}
+  "r-cran-rcpp"
+  "r-cran-stringr"
+  "r-cran-usethis"
+]
+extra-source "r-cran-m2r_1.0.2+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-m2r/r-cran-m2r_1.0.2+dfsg-3_amd64.deb"
+}

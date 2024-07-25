@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i util-vserver_0.30.216-pre3120-1.4+b11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r util-vserver"]
+]
+depends: [
+  "debconf"
+  "iproute2"
+  "libc6" {>= "2.28"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "lsb-base" {>= "3.0-6"}
+  "make"
+  "net-tools"
+  "util-linux" {>= "2.13.1.1-1"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+conflicts: [
+  "vpopmail-bin"
+  "vserver"
+]
+extra-source "util-vserver_0.30.216-pre3120-1.4+b11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/util-vserver/util-vserver_0.30.216-pre3120-1.4+b11_amd64.deb"
+}

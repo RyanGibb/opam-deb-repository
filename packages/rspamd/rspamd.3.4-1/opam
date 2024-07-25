@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rspamd_3.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rspamd"]
+]
+depends: [
+  "adduser"
+  "ca-certificates"
+  "fonts-glyphicons-halflings"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.4"}
+  "libglib2-0-0" {>= "2.70.0"}
+  "libhyperscan5" {>= "5.4.0"}
+  "libicu72" {>= "72.1~rc-1~"}
+  "libjs-bootstrap4"
+  "libjs-jquery"
+  "libjs-requirejs"
+  "libpcre2-8-0" {>= "10.22"}
+  "libsodium23" {>= "0.6.1"}
+  "libsqlite3-0" {>= "3.7.15"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "11"}
+  "libunwind8"
+  "perl-any"
+  "zlib1g" {>= "1-1.2.0"}
+  ("libluajit-5-1-2" {>= "2.0.4+dfsg"} | "libluajit2-5-1-2" {>= "2.1~"})
+]
+extra-source "rspamd_3.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rspamd/rspamd_3.4-1_amd64.deb"
+}

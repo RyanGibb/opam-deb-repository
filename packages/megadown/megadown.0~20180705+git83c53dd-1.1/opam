@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i megadown_0~20180705+git83c53dd-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r megadown"]
+]
+depends: [
+  "bash" {>= "3"}
+  "openssl"
+  "pv"
+  "python3-any"
+  ("wget" | "curl")
+]
+extra-source "megadown_0~20180705+git83c53dd-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/megadown/megadown_0~20180705+git83c53dd-1.1_all.deb"
+}

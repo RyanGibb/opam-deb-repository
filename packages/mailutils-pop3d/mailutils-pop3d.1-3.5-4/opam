@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mailutils-pop3d_1:3.5-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mailutils-pop3d"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgnutls30" {>= "3.6.5"}
+  "libgsasl7" {>= "1.1"}
+  "libkyotocabinet16v5" {>= "1.2.76"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libmailutils5"
+  "libpam0g" {>= "0.99.7.1"}
+  "libwrap0" {>= "7.6-4~"}
+  "mailutils-common" {= "1-3.5-4"}
+  "netbase"
+  "update-inetd"
+]
+conflicts: [
+  "pop3-server"
+]
+extra-source "mailutils-pop3d_1:3.5-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mailutils/mailutils-pop3d_3.5-4_amd64.deb"
+}

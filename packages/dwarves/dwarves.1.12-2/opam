@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dwarves_1.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dwarves"]
+]
+depends: [
+  "libc6" {>= "2.22"}
+  "libdw1" {>= "0.148"}
+  "libelf1" {>= "0.142"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "dwarves_1.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dwarves-dfsg/dwarves_1.12-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-nock_13.2.9-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-nock"]
+]
+depends: [
+  "node-debug" {>= "4.1.0"}
+  "node-json-stringify-safe"
+  "node-lodash"
+  "node-lodash-packages"
+  "node-propagate"
+]
+extra-source "node-nock_13.2.9-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-nock/node-nock_13.2.9-3_all.deb"
+}

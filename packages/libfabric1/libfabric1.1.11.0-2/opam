@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfabric1_1.11.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfabric1"]
+]
+depends: [
+  "ibverbs-providers" {>= "26"}
+  "libc6" {>= "2.27"}
+  "libibverbs1" {>= "24"}
+  "libpsm-infinipath1" {>= "3.3+7.gec1d6d2"}
+  "libpsm2-2" {>= "11.2.68"}
+  "librdmacm1" {>= "23"}
+]
+extra-source "libfabric1_1.11.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfabric/libfabric1_1.11.0-2_amd64.deb"
+}

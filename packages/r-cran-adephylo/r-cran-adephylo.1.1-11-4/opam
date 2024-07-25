@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-adephylo_1.1-11-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-adephylo"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  "r-cran-ade4" {>= "1.7-10"}
+  "r-cran-adegenet"
+  "r-cran-ape"
+  "r-cran-phylobase"
+]
+extra-source "r-cran-adephylo_1.1-11-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-adephylo/r-cran-adephylo_1.1-11-4_amd64.deb"
+}

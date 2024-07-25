@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ncdc_1.23.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ncdc"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgnutls30" {>= "3.7.5"}
+  "libncursesw6" {>= "6"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "ncdc_1.23.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ncdc/ncdc_1.23.1-1_amd64.deb"
+}

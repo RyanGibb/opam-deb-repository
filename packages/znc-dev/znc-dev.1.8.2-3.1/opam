@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i znc-dev_1.8.2-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r znc-dev"]
+]
+depends: [
+  "cmake"
+  "libicu-dev"
+  "libssl-dev"
+  "pkg-config"
+  "python3-dev"
+  "tcl-dev"
+  "znc" {>= "1.8.2-3.1"}
+]
+extra-source "znc-dev_1.8.2-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/znc/znc-dev_1.8.2-3.1_amd64.deb"
+}

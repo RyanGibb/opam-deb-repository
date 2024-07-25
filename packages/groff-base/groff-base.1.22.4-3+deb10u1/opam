@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i groff-base_1.22.4-3+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r groff-base"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-4.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "libuchardet0" {>= "0.0.1"}
+]
+extra-source "groff-base_1.22.4-3+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/groff/groff-base_1.22.4-3+deb10u1_amd64.deb"
+}

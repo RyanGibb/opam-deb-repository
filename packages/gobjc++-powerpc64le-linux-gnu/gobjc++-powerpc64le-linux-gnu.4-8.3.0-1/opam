@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gobjc++-powerpc64le-linux-gnu_4:8.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gobjc++-powerpc64le-linux-gnu"]
+]
+depends: [
+  "cpp-powerpc64le-linux-gnu" {>= "4-8.3.0-1"}
+  "gcc-powerpc64le-linux-gnu" {>= "4-8.3.0-1"}
+  "gobjc++-8-powerpc64le-linux-gnu" {>= "8.3.0-1~"}
+]
+extra-source "gobjc++-powerpc64le-linux-gnu_4:8.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults/gobjc++-powerpc64le-linux-gnu_8.3.0-1_amd64.deb"
+}

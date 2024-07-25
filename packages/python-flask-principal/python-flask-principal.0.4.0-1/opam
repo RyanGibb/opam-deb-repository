@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-flask-principal_0.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-flask-principal"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-blinker"
+  "python-flask"
+]
+extra-source "python-flask-principal_0.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flask-principal/python-flask-principal_0.4.0-1_all.deb"
+}

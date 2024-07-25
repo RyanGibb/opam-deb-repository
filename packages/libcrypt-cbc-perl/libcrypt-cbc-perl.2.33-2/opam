@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypt-cbc-perl_2.33-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypt-cbc-perl"]
+]
+depends: [
+  "perl"
+  ("libcrypt-rijndael-perl" | "libcrypt-blowfish-perl" | "libcrypt-des-perl" | "libcrypt-des-ede3-perl" | "libcrypt-cast5-perl")
+]
+extra-source "libcrypt-cbc-perl_2.33-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcrypt-cbc-perl/libcrypt-cbc-perl_2.33-2_all.deb"
+}

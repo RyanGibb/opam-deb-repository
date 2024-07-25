@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ejabberd-mod-post-log_0.2023.01.25~dfsg0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ejabberd-mod-post-log"]
+]
+depends: [
+  "ejabberd" {= "23.01-1"}
+  "erlang-base"
+  "erlang-base" {>= "1-25.2.2+dfsg"}
+  "erlang-inets" {>= "1-25.2.2+dfsg"}
+]
+extra-source "ejabberd-mod-post-log_0.2023.01.25~dfsg0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ejabberd-contrib/ejabberd-mod-post-log_0.2023.01.25~dfsg0-1_amd64.deb"
+}

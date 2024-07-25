@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqpid-proton-cpp12_0.22.0-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqpid-proton-cpp12"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqpid-proton11"
+  "libstdc++6" {>= "9"}
+]
+extra-source "libqpid-proton-cpp12_0.22.0-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qpid-proton/libqpid-proton-cpp12_0.22.0-5.1_amd64.deb"
+}

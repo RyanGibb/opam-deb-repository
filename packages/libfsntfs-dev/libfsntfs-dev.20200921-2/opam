@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfsntfs-dev_20200921-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfsntfs-dev"]
+]
+depends: [
+  "libfsntfs1" {= "20200921-2"}
+]
+extra-source "libfsntfs-dev_20200921-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfsntfs/libfsntfs-dev_20200921-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtopic-tools2d_1.15.15+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtopic-tools2d"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "librosconsole3d" {>= "1.14.3"}
+  "libroscpp4d" {>= "1.15.15+ds"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libtopic-tools2d_1.15.15+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-ros-comm/libtopic-tools2d_1.15.15+ds-2_amd64.deb"
+}

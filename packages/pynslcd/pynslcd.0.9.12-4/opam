@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pynslcd_0.9.12-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pynslcd"]
+]
+depends: [
+  "adduser"
+  "python3-any"
+  "python3-daemon"
+  "python3-ldap"
+  "python3-pyasn1"
+  "python3-pyasn1-modules"
+  "python3-setproctitle"
+]
+conflicts: [
+  "nslcd"
+  "nslcd-2"
+]
+extra-source "pynslcd_0.9.12-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nss-pam-ldapd/pynslcd_0.9.12-4_all.deb"
+}

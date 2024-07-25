@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdtkcore-dev_5.5.33-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdtkcore-dev"]
+]
+depends: [
+  "libdtkcommon-dev"
+  "libdtkcore5" {= "5.5.33-1+b3"}
+]
+extra-source "libdtkcore-dev_5.5.33-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dtkcore/libdtkcore-dev_5.5.33-1+b3_amd64.deb"
+}

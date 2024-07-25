@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnuradio-wavelet3.10.5_3.10.5.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnuradio-wavelet3.10.5"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnuradio-pmt3-10-5" {>= "3.10.5.1"}
+  "libgnuradio-runtime3-10-5" {>= "3.10.5.1"}
+  "libgsl27" {>= "2.7.1"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libgnuradio-wavelet3.10.5_3.10.5.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnuradio/libgnuradio-wavelet3.10.5_3.10.5.1-3_amd64.deb"
+}

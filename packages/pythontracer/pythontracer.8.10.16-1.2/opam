@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pythontracer_8.10.16-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pythontracer"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-gtk2"
+]
+extra-source "pythontracer_8.10.16-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pythontracer/pythontracer_8.10.16-1.2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnxml0-dev_0.18.3-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnxml0-dev"]
+]
+depends: [
+  "libnxml0" {= "0.18.3-7"}
+  ("libcurl4-gnutls-dev" | "libcurl-dev")
+]
+extra-source "libnxml0-dev_0.18.3-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnxml/libnxml0-dev_0.18.3-7_amd64.deb"
+}

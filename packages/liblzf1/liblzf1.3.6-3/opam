@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblzf1_3.6-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblzf1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+extra-source "liblzf1_3.6-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblzf/liblzf1_3.6-3_amd64.deb"
+}

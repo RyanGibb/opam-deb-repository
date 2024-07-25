@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libevent-perl_1.27-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libevent-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libevent-perl_1.27-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libevent-perl/libevent-perl_1.27-1+b2_amd64.deb"
+}

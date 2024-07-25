@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clangd-13_1:13.0.1-6~deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clangd-13"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libclang-common-13-dev" {= "1-13.0.1-6~deb10u4"}
+  "libclang-cpp13" {>= "1-13.0.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libllvm13"
+  "libstdc++6" {>= "6"}
+]
+extra-source "clangd-13_1:13.0.1-6~deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-13/clangd-13_13.0.1-6~deb10u4_amd64.deb"
+}

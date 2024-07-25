@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-marked-man_1.3.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-marked-man"]
+]
+depends: [
+  "node-marked" {>= "4.2.2"}
+  "node-read-pkg-up"
+  "nodejs-any"
+]
+extra-source "node-marked-man_1.3.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-marked-man/node-marked-man_1.3.3-1_all.deb"
+}

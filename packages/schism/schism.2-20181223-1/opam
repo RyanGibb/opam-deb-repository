@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i schism_2:20181223-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r schism"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libx11-6"
+  "libxext6"
+]
+extra-source "schism_2:20181223-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/schism/schism_20181223-1_amd64.deb"
+}

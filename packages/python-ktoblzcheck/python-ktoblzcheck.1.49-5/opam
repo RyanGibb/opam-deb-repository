@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-ktoblzcheck_1.49-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-ktoblzcheck"]
+]
+depends: [
+  "libktoblzcheck1v5"
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-any" {>= "2.6.6-7~"}
+]
+extra-source "python-ktoblzcheck_1.49-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libktoblzcheck/python-ktoblzcheck_1.49-5_all.deb"
+}

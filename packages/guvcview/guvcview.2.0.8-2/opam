@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guvcview_2.0.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guvcview"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.21.4"}
+  "libguvcview-2-1-2" {>= "2.0.8"}
+]
+extra-source "guvcview_2.0.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guvcview/guvcview_2.0.8-2_amd64.deb"
+}

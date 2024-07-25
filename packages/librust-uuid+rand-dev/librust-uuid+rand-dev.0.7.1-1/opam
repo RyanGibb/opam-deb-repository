@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-uuid+rand-dev_0.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-uuid+rand-dev"]
+]
+depends: [
+  "librust-rand-0-5+default-dev"
+  "librust-uuid-dev" {= "0.7.1-1"}
+]
+extra-source "librust-uuid+rand-dev_0.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-uuid/librust-uuid+rand-dev_0.7.1-1_amd64.deb"
+}

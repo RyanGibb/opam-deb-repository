@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvisp-ar-dev_3.5.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvisp-ar-dev"]
+]
+depends: [
+  "libcoin-dev"
+  "libvisp-ar3-5" {= "3.5.0-4"}
+  "libvisp-core-dev" {= "3.5.0-4"}
+  "libvisp-io-dev" {= "3.5.0-4"}
+]
+extra-source "libvisp-ar-dev_3.5.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/visp/libvisp-ar-dev_3.5.0-4_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbrial-dev_1.2.10-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbrial-dev"]
+]
+depends: [
+  "libboost-dev"
+  "libbrial3" {= "1.2.10-1+b1"}
+  "libgd-dev"
+  "libm4ri-dev"
+  "libpng-dev"
+]
+extra-source "libbrial-dev_1.2.10-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/brial/libbrial-dev_1.2.10-1+b1_amd64.deb"
+}

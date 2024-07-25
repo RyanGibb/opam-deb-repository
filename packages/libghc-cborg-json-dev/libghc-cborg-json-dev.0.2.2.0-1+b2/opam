@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cborg-json-dev_0.2.2.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cborg-json-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-aeson-dev"
+  "libghc-aeson-pretty-dev"
+  "libghc-cborg-dev"
+  "libghc-scientific-dev"
+  "libghc-unordered-containers-dev"
+  "libghc-vector-dev"
+  "libgmp10"
+]
+extra-source "libghc-cborg-json-dev_0.2.2.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cborg-json/libghc-cborg-json-dev_0.2.2.0-1+b2_amd64.deb"
+}

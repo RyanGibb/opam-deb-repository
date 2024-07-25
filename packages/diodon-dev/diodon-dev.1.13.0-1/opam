@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i diodon-dev_1.13.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r diodon-dev"]
+]
+depends: [
+  "gir1-2-diodon-1-0" {= "1.13.0-1"}
+  "libdiodon0" {= "1.13.0-1"}
+  "libpeas-dev" {>= "1.1.1"}
+]
+extra-source "diodon-dev_1.13.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/diodon/diodon-dev_1.13.0-1_amd64.deb"
+}

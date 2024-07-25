@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-veusz_3.6.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-veusz"]
+]
+depends: [
+  "python3-any"
+  "python3-numpy"
+  "python3-pyqt5" {>= "5.15.0+dfsg-1+exp2"}
+  "python3-pyqt5-qtsvg"
+  "python3-veusz-helpers" {>= "3.6.2-1"}
+]
+extra-source "python3-veusz_3.6.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/veusz/python3-veusz_3.6.2-1_all.deb"
+}

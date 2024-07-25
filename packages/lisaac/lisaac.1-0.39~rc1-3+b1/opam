@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lisaac_1:0.39~rc1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lisaac"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "lisaac-common"
+]
+extra-source "lisaac_1:0.39~rc1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lisaac/lisaac_0.39~rc1-3+b1_amd64.deb"
+}

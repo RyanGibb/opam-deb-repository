@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dante-client_1.4.2+dfsg-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dante-client"]
+]
+depends: [
+  "libdsocksd0" {>= "1.4.2+dfsg-7"}
+  "libfile-which-perl"
+]
+extra-source "dante-client_1.4.2+dfsg-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dante/dante-client_1.4.2+dfsg-7_all.deb"
+}

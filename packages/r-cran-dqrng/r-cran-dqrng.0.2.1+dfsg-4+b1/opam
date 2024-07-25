@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-dqrng_0.2.1+dfsg-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-dqrng"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-bh" {>= "1.64.0-1"}
+  "r-cran-rcpp" {>= "0.12.16"}
+  "r-cran-sitmo" {>= "2.0.0"}
+]
+extra-source "r-cran-dqrng_0.2.1+dfsg-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-dqrng/r-cran-dqrng_0.2.1+dfsg-4+b1_amd64.deb"
+}

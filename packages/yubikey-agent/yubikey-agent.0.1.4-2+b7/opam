@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yubikey-agent_0.1.4-2+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yubikey-agent"]
+]
+depends: [
+  "init-system-helpers" {>= "1.52"}
+  "libc6" {>= "2.34"}
+  "libpcsclite1" {>= "1.0.0"}
+]
+extra-source "yubikey-agent_0.1.4-2+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yubikey-agent/yubikey-agent_0.1.4-2+b7_amd64.deb"
+}

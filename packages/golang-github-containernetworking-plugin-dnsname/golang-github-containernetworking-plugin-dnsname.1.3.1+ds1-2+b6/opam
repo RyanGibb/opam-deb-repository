@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-containernetworking-plugin-dnsname_1.3.1+ds1-2+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-containernetworking-plugin-dnsname"]
+]
+depends: [
+  "dnsmasq-base"
+  "libc6" {>= "2.34"}
+]
+extra-source "golang-github-containernetworking-plugin-dnsname_1.3.1+ds1-2+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-containers-dnsname/golang-github-containernetworking-plugin-dnsname_1.3.1+ds1-2+b6_amd64.deb"
+}

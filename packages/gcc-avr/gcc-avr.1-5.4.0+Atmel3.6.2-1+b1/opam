@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-avr_1:5.4.0+Atmel3.6.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-avr"]
+]
+depends: [
+  "binutils-avr" {>= "2.26.20160125+Atmel3.6.2"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgmp10"
+  "libmpc3" {>= "1.1.0"}
+  "libmpfr6" {>= "3.1.3"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "avr-libc (<= 1:1.7.1-2)"
+]
+extra-source "gcc-avr_1:5.4.0+Atmel3.6.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-avr/gcc-avr_5.4.0+Atmel3.6.2-1+b1_amd64.deb"
+}

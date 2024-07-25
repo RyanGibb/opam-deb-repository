@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nis_4.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nis"]
+]
+depends: [
+  "lsb-base"
+  "yp-tools" {>= "4.2.3-3~"}
+  "ypbind-mt"
+  "ypserv"
+]
+extra-source "nis_4.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nis/nis_4.5_all.deb"
+}

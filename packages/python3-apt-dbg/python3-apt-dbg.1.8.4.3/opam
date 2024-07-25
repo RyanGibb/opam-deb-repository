@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-apt-dbg_1.8.4.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-apt-dbg"]
+]
+depends: [
+  "libapt-inst2-0" {>= "1.7~alpha2ubuntu1~"}
+  "libapt-pkg5-0" {>= "1.7.0~alpha3~"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "python3-apt" {= "1.8.4.3"}
+  "python3-dbg" {< "3.8"}
+  "python3-dbg" {>= "3.7~"}
+  "python3-dbg-any" {>= "3.3~"}
+]
+extra-source "python3-apt-dbg_1.8.4.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-apt/python3-apt-dbg_1.8.4.3_amd64.deb"
+}

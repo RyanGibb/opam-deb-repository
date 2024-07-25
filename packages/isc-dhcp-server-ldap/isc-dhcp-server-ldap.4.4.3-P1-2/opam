@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i isc-dhcp-server-ldap_4.4.3-P1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r isc-dhcp-server-ldap"]
+]
+depends: [
+  "debianutils" {>= "2.8.2"}
+  "isc-dhcp-server" {= "4.4.3-P1-2"}
+  "libc6" {>= "2.36"}
+  "libldap-2-5-0" {>= "2.5.4"}
+]
+conflicts: [
+  "dhcp"
+]
+extra-source "isc-dhcp-server-ldap_4.4.3-P1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/isc-dhcp/isc-dhcp-server-ldap_4.4.3-P1-2_amd64.deb"
+}

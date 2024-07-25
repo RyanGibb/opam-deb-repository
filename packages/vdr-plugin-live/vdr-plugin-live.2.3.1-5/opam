@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vdr-plugin-live_2.3.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vdr-plugin-live"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libcxxtools9v5"
+  "libgcc-s1"
+  "libpcrecpp0v5" {>= "7.7"}
+  "libstdc++6" {>= "9"}
+  "libtntnet12v5"
+  "vdr"
+]
+extra-source "vdr-plugin-live_2.3.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vdr-plugin-live/vdr-plugin-live_2.3.1-5_amd64.deb"
+}

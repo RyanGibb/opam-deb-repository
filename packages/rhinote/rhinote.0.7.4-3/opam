@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rhinote_0.7.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rhinote"]
+]
+depends: [
+  "enscript"
+  "python"
+  "python-tk"
+  ("cups-client" | "lpr")
+]
+extra-source "rhinote_0.7.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rhinote/rhinote_0.7.4-3_all.deb"
+}

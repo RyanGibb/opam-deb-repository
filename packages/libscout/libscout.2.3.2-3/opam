@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libscout_2.3.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libscout"]
+]
+depends: [
+  "jarwrapper" {>= "0.5"}
+  "libandroid-23-java"
+  "libcava-java"
+  "libcommons-cli-java" {>= "1.2"}
+  "libcommons-io-java" {>= "2.6"}
+  "libgoogle-gson-java" {>= "2.8.0"}
+  "libguava-java"
+  "liblogback-java"
+  "libsemver-java"
+  "libslf4j-java"
+  "libwala-java" {>= "1.5.1"}
+  ("default-jre" | "java11-runtime")
+]
+extra-source "libscout_2.3.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libscout/libscout_2.3.2-3_all.deb"
+}

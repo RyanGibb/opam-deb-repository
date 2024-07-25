@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i z-push-backend-caldav_2.4.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r z-push-backend-caldav"]
+]
+depends: [
+  "libawl-php"
+  "php-curl"
+  "z-push-common" {= "2.4.5-2"}
+]
+extra-source "z-push-backend-caldav_2.4.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/z-push/z-push-backend-caldav_2.4.5-2_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-easygui_0.96-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-easygui"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  "python-tk"
+  ("python2-7" | "python2-6")
+]
+extra-source "python-easygui_0.96-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-easygui/python-easygui_0.96-3_all.deb"
+}

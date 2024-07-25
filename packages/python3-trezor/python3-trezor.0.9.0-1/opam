@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-trezor_0.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-trezor"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-click"
+  "python3-ecdsa"
+  "python3-hid" {>= "0.7.99.post20"}
+  "python3-libusb1"
+  "python3-mnemonic"
+  "python3-pkg-resources"
+  "python3-requests"
+]
+extra-source "python3-trezor_0.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-trezor/python3-trezor_0.9.0-1_all.deb"
+}

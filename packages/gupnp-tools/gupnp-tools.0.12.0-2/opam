@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gupnp-tools_0.12.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gupnp-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgdk-pixbuf-2-0-0" {>= "2.30.1"}
+  "libglib2-0-0" {>= "2.68"}
+  "libgssdp-1-6-0" {>= "1.6.0"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libgtksourceview-4-0" {>= "3.2.0"}
+  "libgupnp-1-6-0" {>= "1.6.0"}
+  "libgupnp-av-1-0-3" {>= "0.11.5"}
+  "libsoup-3-0-0" {>= "2.41.90"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "gupnp-tools_0.12.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gupnp-tools/gupnp-tools_0.12.0-2_amd64.deb"
+}

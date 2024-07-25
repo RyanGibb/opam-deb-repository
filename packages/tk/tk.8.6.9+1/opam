@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tk_8.6.9+1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tk"]
+]
+depends: [
+  "tcl"
+  "tk8-6" {>= "8.6.9-2"}
+]
+extra-source "tk_8.6.9+1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tcltk-defaults/tk_8.6.9+1_amd64.deb"
+}

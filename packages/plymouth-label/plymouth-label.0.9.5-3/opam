@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plymouth-label_0.9.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plymouth-label"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.14.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libplymouth5" {>= "0.9.5"}
+  "plymouth" {= "0.9.5-3"}
+]
+extra-source "plymouth-label_0.9.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plymouth/plymouth-label_0.9.5-3_amd64.deb"
+}

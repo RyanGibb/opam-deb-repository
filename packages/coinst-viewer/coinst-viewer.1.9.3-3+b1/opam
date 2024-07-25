@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coinst-viewer_1.9.3-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coinst-viewer"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgtk2-0-0" {>= "2.24.32"}
+  "libpango-1-0-0" {>= "1.22.0"}
+]
+extra-source "coinst-viewer_1.9.3-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coinst/coinst-viewer_1.9.3-3+b1_amd64.deb"
+}

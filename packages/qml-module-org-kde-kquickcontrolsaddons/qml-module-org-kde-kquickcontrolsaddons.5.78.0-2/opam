@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-org-kde-kquickcontrolsaddons_5.78.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-org-kde-kquickcontrolsaddons"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libepoxy0" {>= "1.0"}
+  "libkf5configcore5" {>= "5.78.0~"}
+  "libkf5declarative5" {>= "5.78.0-2"}
+  "libkf5iconthemes5" {>= "5.78.0~"}
+  "libkf5kiogui5" {>= "5.78.0~"}
+  "libkf5quickaddons5" {>= "5.3.0+git20141016.0334"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "4.96.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.14.0~"}
+  "libqt5widgets5" {>= "5.14.0~"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.14.0~"} | "libqt5gui5-gles" {>= "5.14.0~"})
+  ("libqt5quick5" {>= "5.14.0~"} | "libqt5quick5-gles" {>= "5.14.0~"})
+]
+extra-source "qml-module-org-kde-kquickcontrolsaddons_5.78.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdeclarative/qml-module-org-kde-kquickcontrolsaddons_5.78.0-2_amd64.deb"
+}

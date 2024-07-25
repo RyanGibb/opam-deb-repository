@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcasa-meas5_3.3.0-4+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcasa-meas5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcasa-casa5" {>= "3.3.0"}
+  "libcasa-measures5" {>= "3.3.0"}
+  "libcasa-tables5" {>= "3.3.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libcasa-meas5_3.3.0-4+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/casacore/libcasa-meas5_3.3.0-4+b3_amd64.deb"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mate-terminal_1.26.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mate-terminal"]
+]
+depends: [
+  "gsettings-desktop-schemas"
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libdconf1" {>= "0.14.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.50"}
+  "libgtk-3-0" {>= "3.22"}
+  "libice6" {>= "1-1.0.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libsm6"
+  "libvte-2-91-0" {>= "0.51.90"}
+  "libx11-6"
+  "mate-desktop-common"
+  "mate-terminal-common" {= "1.26.0-2"}
+]
+extra-source "mate-terminal_1.26.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mate-terminal/mate-terminal_1.26.0-2_amd64.deb"
+}

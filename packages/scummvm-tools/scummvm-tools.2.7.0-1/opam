@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scummvm-tools_2.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scummvm-tools"]
+]
+depends: [
+  "libboost-program-options1-74-0" {>= "1.74.0+ds1"}
+  "libc6" {>= "2.34"}
+  "libflac12" {>= "1.3.0"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc-s1" {>= "3.4"}
+  "libogg0" {>= "1.0rc3"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "11"}
+  "libvorbis0a" {>= "1.1.2"}
+  "libvorbisenc2" {>= "1.1.2"}
+  "libwxbase3-2-1" {>= "3.2.2+dfsg"}
+  "libwxgtk3-2-1" {>= "3.2.1+dfsg-2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "scummvm-tools_2.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scummvm-tools/scummvm-tools_2.7.0-1_amd64.deb"
+}

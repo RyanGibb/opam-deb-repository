@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lastpass-cli_1.3.1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lastpass-cli"]
+]
+depends: [
+  "binutils"
+  "ca-certificates"
+  "libc6" {>= "2.14"}
+  "libcurl4" {>= "7.16.2"}
+  "libssl1-1" {>= "1.1.0"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "lastpass-cli_1.3.1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lastpass-cli/lastpass-cli_1.3.1-7_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kaccessible_4:17.08.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kaccessible"]
+]
+depends: [
+  "kde-runtime" {> "4-4.10"}
+  "libc6" {>= "2.14"}
+  "libkdecore5" {>= "4-4.4.0"}
+  "libkdeui5" {>= "4-4.3.4"}
+  "libqt4-dbus" {>= "4-4.5.3"}
+  "libqtcore4" {>= "4-4.8.0"}
+  "libqtgui4" {>= "4-4.5.3"}
+  "libspeechd2" {>= "0.7.1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "kaccessible_4:17.08.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kaccessible/kaccessible_17.08.3-1_amd64.deb"
+}

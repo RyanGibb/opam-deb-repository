@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gfal2-plugin-http_2.19.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gfal2-plugin-http"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdavix0v5" {>= "0.7.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libgfal-transfer2" {= "2.19.0-3"}
+  "libgfal2-2" {= "2.19.0-3"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libjson-c5" {>= "0.15"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "gfal2-plugin-http_2.19.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gfal2/gfal2-plugin-http_2.19.0-3_amd64.deb"
+}

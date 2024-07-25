@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatcoll-sql1-dev_18-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatcoll-sql1-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-8"
+  "libgnatcoll-sql1" {= "18-4"}
+  "libgnatcoll17-dev"
+]
+extra-source "libgnatcoll-sql1-dev_18-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnatcoll-db/libgnatcoll-sql1-dev_18-4_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pipewire-audio_0.3.65-3+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pipewire-audio"]
+]
+depends: [
+  "libspa-0-2-bluetooth"
+  "pipewire-alsa"
+  "pipewire-pulse"
+  "wireplumber"
+]
+conflicts: [
+  "pulseaudio"
+  "pulseaudio-module-bluetooth"
+]
+extra-source "pipewire-audio_0.3.65-3+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pipewire/pipewire-audio_0.3.65-3+deb12u1_all.deb"
+}

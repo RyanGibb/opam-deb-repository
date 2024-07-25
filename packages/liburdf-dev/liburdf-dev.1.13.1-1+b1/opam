@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liburdf-dev_1.13.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liburdf-dev"]
+]
+depends: [
+  "librosconsole-bridge-dev"
+  "libroscpp-dev"
+  "libtinyxml2-dev"
+  "liburdf0d" {= "1.13.1-1+b1"}
+  "liburdfdom-dev"
+  "liburdfdom-headers-dev"
+  "ros-cmake-modules"
+]
+extra-source "liburdf-dev_1.13.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-urdf/liburdf-dev_1.13.1-1+b1_amd64.deb"
+}

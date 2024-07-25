@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scilab-cli_6.0.1-10+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scilab-cli"]
+]
+depends: [
+  "scilab-data" {= "6.0.1-10+deb10u1"}
+  "scilab-include" {>= "6.0.1-10+deb10u1"}
+  "scilab-minimal-bin" {>= "6.0.1-10+deb10u1"}
+]
+extra-source "scilab-cli_6.0.1-10+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scilab/scilab-cli_6.0.1-10+deb10u1_all.deb"
+}

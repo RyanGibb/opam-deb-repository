@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhsm-bin_1:2.1.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhsm-bin"]
+]
+depends: [
+  "libc6" {>= "2.36"}
+  "libldns3" {>= "1.7.1"}
+  "libxml2" {>= "2.7.4"}
+  "opendnssec-common" {= "1-2.1.12-2"}
+]
+extra-source "libhsm-bin_1:2.1.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opendnssec/libhsm-bin_2.1.12-2_amd64.deb"
+}

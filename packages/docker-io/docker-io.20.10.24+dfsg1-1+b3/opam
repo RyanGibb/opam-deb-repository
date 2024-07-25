@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i docker.io_20.10.24+dfsg1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r docker.io"]
+]
+depends: [
+  "adduser"
+  "containerd" {>= "1.4~"}
+  "iptables"
+  "libc6" {>= "2.34"}
+  "libdevmapper1-02-1" {>= "2-1.02.97"}
+  "libsystemd0"
+  "lsb-base"
+  "runc" {>= "1.0.0~rc8~"}
+  "tini"
+]
+conflicts: [
+  "docker-ce"
+  "docker-ce-cli"
+  "docker-ce-rootless-extras"
+]
+extra-source "docker.io_20.10.24+dfsg1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/docker.io/docker.io_20.10.24+dfsg1-1+b3_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-numeric-extras-prof_0.1-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-numeric-extras-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-numeric-extras-dev" {= "0.1-7+b2"}
+]
+extra-source "libghc-numeric-extras-prof_0.1-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-numeric-extras/libghc-numeric-extras-prof_0.1-7+b2_amd64.deb"
+}

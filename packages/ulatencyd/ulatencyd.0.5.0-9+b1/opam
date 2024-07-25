@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ulatencyd_0.5.0-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ulatencyd"]
+]
+depends: [
+  "dbus"
+  "libc6" {>= "2.17"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libdbus-glib-1-2" {>= "0.78"}
+  "libglib2-0-0" {>= "2.22.0"}
+  "liblua5-1-0"
+  "libpolkit-gobject-1-0" {>= "0.99"}
+  "libxau6"
+  "libxcb1"
+  "lua-posix"
+  ("lua5-1" | "lua")
+]
+extra-source "ulatencyd_0.5.0-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ulatencyd/ulatencyd_0.5.0-9+b1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i trovacap_0.2.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r trovacap"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfltk1-3" {>= "1.3.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "libxext6"
+  "libxpm4"
+  "trovacap-data" {= "0.2.2-1"}
+]
+extra-source "trovacap_0.2.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trovacap/trovacap_0.2.2-1+b2_amd64.deb"
+}

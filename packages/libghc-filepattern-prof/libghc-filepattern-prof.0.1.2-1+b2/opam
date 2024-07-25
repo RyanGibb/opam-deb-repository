@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-filepattern-prof_0.1.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-filepattern-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-extra-prof"
+  "libghc-filepattern-dev" {= "0.1.2-1+b2"}
+]
+extra-source "libghc-filepattern-prof_0.1.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-filepattern/libghc-filepattern-prof_0.1.2-1+b2_amd64.deb"
+}

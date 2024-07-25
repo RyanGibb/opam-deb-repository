@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5texteditor-dev_5.54.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5texteditor-dev"]
+]
+depends: [
+  "libkf5parts-dev" {>= "5.54.0~"}
+  "libkf5texteditor5" {= "5.54.0-1"}
+  "qtbase5-dev" {>= "5.9.0~"}
+]
+extra-source "libkf5texteditor-dev_5.54.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/ktexteditor/libkf5texteditor-dev_5.54.0-1_amd64.deb"
+}

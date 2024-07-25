@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i muchsync_5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r muchsync"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libnotmuch5" {>= "0.13~rc1"}
+  "libsqlite3-0" {>= "3.7.15"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "6"}
+  "libxapian30"
+]
+extra-source "muchsync_5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/muchsync/muchsync_5-1_amd64.deb"
+}

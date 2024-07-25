@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openstereogram_0.1+20080921-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openstereogram"]
+]
+depends: [
+  "jarwrapper" {>= "0.5"}
+  "libnb-absolutelayout-java"
+  ("default-jre" | "java6-runtime" | "java7-runtime" | "java8-runtime" | "java9-runtime" | "java10-runtime" | "java11-runtime")
+]
+extra-source "openstereogram_0.1+20080921-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openstereogram/openstereogram_0.1+20080921-3_all.deb"
+}

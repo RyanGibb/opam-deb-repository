@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libshine-ocaml-dev_0.2.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libshine-ocaml-dev"]
+]
+depends: [
+  "libshine-dev"
+  "libshine-ocaml"
+  "libshine-ocaml" {= "0.2.0-1+b2"}
+  "ocaml-findlib"
+  "ocaml-nox"
+]
+extra-source "libshine-ocaml-dev_0.2.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-shine/libshine-ocaml-dev_0.2.0-1+b2_amd64.deb"
+}

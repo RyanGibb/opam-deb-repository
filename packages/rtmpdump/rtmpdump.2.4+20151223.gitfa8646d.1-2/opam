@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rtmpdump_2.4+20151223.gitfa8646d.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rtmpdump"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "librtmp1" {>= "2.4+20131018.git79459a2"}
+]
+extra-source "rtmpdump_2.4+20151223.gitfa8646d.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rtmpdump/rtmpdump_2.4+20151223.gitfa8646d.1-2_amd64.deb"
+}

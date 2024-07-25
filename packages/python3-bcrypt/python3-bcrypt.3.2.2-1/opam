@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-bcrypt_3.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-bcrypt"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3" {>= "3~"}
+  "python3-any"
+  "python3-cffi-backend"
+]
+extra-source "python3-bcrypt_3.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-bcrypt/python3-bcrypt_3.2.2-1_amd64.deb"
+}

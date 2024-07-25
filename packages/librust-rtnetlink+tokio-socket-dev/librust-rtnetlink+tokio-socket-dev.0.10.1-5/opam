@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-rtnetlink+tokio-socket-dev_0.10.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-rtnetlink+tokio-socket-dev"]
+]
+depends: [
+  "librust-netlink-proto-0-10+tokio-socket-dev"
+  "librust-rtnetlink+tokio-dev" {= "0.10.1-5"}
+  "librust-rtnetlink-dev" {= "0.10.1-5"}
+]
+extra-source "librust-rtnetlink+tokio-socket-dev_0.10.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-rtnetlink/librust-rtnetlink+tokio-socket-dev_0.10.1-5_amd64.deb"
+}

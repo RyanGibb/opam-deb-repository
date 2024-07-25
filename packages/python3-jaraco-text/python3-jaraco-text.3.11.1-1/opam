@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-jaraco.text_3.11.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-jaraco.text"]
+]
+depends: [
+  "python3-any"
+  "python3-autocommand"
+  "python3-inflect"
+  "python3-jaraco-context"
+  "python3-jaraco-functools"
+  "python3-more-itertools"
+  ("python3-importlib-resources" | "python3" {> "3.9"})
+]
+extra-source "python3-jaraco.text_3.11.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jaraco.text/python3-jaraco.text_3.11.1-1_all.deb"
+}

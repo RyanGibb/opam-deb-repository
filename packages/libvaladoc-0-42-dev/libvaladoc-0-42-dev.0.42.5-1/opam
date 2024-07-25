@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvaladoc-0.42-dev_0.42.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvaladoc-0.42-dev"]
+]
+depends: [
+  "libgraphviz-dev" {>= "2.16"}
+  "libvala-0-42-dev" {= "0.42.5-1"}
+  "libvaladoc-0-42-0" {= "0.42.5-1"}
+]
+extra-source "libvaladoc-0.42-dev_0.42.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vala/libvaladoc-0.42-dev_0.42.5-1_amd64.deb"
+}

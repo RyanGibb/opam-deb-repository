@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libinnodb3_1.0.6.6750-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libinnodb3"]
+]
+depends: [
+  "libc6" {>= "2.3.2"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "libinnodb3_1.0.6.6750-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libinnodb/libinnodb3_1.0.6.6750-1_amd64.deb"
+}

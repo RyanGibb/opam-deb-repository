@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvisp-detection3.5_3.5.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvisp-detection3.5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdmtx0b" {>= "0.7.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libopencv-core406" {>= "4.6.0+dfsg"}
+  "libopencv-dnn406" {>= "4.6.0+dfsg"}
+  "libopencv-objdetect406" {>= "4.6.0+dfsg"}
+  "libstdc++6" {>= "11"}
+  "libvisp-core3-5" {= "3.5.0-4"}
+  "libvisp-vision3-5" {>= "3.5.0"}
+]
+extra-source "libvisp-detection3.5_3.5.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/visp/libvisp-detection3.5_3.5.0-4_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i doclava-aosp_6.0.1+r55-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r doclava-aosp"]
+]
+depends: [
+  "libantlr3-runtime-java"
+  "libguava-java"
+  "libjsilver-aosp-java"
+  "libtagsoup-java"
+  ("default-jre-headless" {>= "2-1.7"} | "java7-runtime-headless")
+]
+extra-source "doclava-aosp_6.0.1+r55-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-external-doclava/doclava-aosp_6.0.1+r55-1.1_all.deb"
+}

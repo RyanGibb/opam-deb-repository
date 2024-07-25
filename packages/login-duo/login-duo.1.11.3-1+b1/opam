@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i login-duo_1.11.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r login-duo"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libduo3" {= "1.11.3-1+b1"}
+  "openssh-server"
+]
+extra-source "login-duo_1.11.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/duo-unix/login-duo_1.11.3-1+b1_amd64.deb"
+}

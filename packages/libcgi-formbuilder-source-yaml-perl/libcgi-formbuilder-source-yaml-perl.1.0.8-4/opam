@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcgi-formbuilder-source-yaml-perl_1.0.8-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcgi-formbuilder-source-yaml-perl"]
+]
+depends: [
+  "libcgi-formbuilder-perl"
+  "libyaml-syck-perl"
+  "perl"
+  ("libcgi-pm-perl" | "perl" {< "5.19"})
+]
+extra-source "libcgi-formbuilder-source-yaml-perl_1.0.8-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcgi-formbuilder-source-yaml-perl/libcgi-formbuilder-source-yaml-perl_1.0.8-4_all.deb"
+}

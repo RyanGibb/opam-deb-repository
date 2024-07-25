@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libyaramod0_3.6.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libyaramod0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libre2-9" {>= "20160901"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libyaramod0_3.6.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yaramod/libyaramod0_3.6.0-1+b2_amd64.deb"
+}

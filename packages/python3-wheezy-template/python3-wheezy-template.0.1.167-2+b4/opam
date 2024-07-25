@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-wheezy.template_0.1.167-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-wheezy.template"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+]
+extra-source "python3-wheezy.template_0.1.167-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-wheezy.template/python3-wheezy.template_0.1.167-2+b4_amd64.deb"
+}

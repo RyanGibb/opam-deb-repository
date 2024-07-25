@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i console-setup_1.221_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r console-setup"]
+]
+depends: [
+  "keyboard-configuration" {= "1.221"}
+  "xkb-data" {>= "0.9"}
+  ("console-setup-linux" | "console-setup-freebsd" | "hurd")
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+conflicts: [
+  "console-setup-mini"
+]
+extra-source "console-setup_1.221_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/console-setup/console-setup_1.221_all.deb"
+}

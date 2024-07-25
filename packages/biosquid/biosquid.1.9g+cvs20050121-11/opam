@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i biosquid_1.9g+cvs20050121-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r biosquid"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libsquid1" {= "1.9g+cvs20050121-11"}
+]
+extra-source "biosquid_1.9g+cvs20050121-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/biosquid/biosquid_1.9g+cvs20050121-11_amd64.deb"
+}

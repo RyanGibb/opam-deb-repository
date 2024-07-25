@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmoosex-types-perl-perl_0.101343-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmoosex-types-perl-perl"]
+]
+depends: [
+  "libmoosex-types-perl"
+  "libparams-util-perl"
+  "perl-any"
+  ("perl" {>= "5.11.5"} | "libversion-perl" {>= "1-0.8200"})
+]
+extra-source "libmoosex-types-perl-perl_0.101343-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmoosex-types-perl-perl/libmoosex-types-perl-perl_0.101343-1.1_all.deb"
+}

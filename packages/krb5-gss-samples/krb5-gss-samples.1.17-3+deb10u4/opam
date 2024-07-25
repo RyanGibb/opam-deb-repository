@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i krb5-gss-samples_1.17-3+deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r krb5-gss-samples"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libcom-err2" {>= "1.43.9"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libk5crypto3" {>= "1.6.dfsg.2"}
+  "libkeyutils1" {>= "1.4"}
+  "libkrb5-3" {>= "1.6.dfsg.2"}
+  "libkrb5support0" {>= "1.7dfsg~beta2"}
+]
+extra-source "krb5-gss-samples_1.17-3+deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/krb5/krb5-gss-samples_1.17-3+deb10u4_amd64.deb"
+}

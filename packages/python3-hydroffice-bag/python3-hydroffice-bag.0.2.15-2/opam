@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-hydroffice.bag_0.2.15-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-hydroffice.bag"]
+]
+depends: [
+  "python3-any" {>= "3.4~"}
+  "python3-gdal"
+  "python3-h5py"
+  "python3-lxml"
+  "python3-numpy"
+]
+extra-source "python3-hydroffice.bag_0.2.15-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hydroffice.bag/python3-hydroffice.bag_0.2.15-2_all.deb"
+}

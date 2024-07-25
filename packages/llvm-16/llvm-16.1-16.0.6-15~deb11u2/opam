@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i llvm-16_1:16.0.6-15~deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r llvm-16"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcurl4" {>= "7.16.2"}
+  "libgcc-s1" {>= "3.3"}
+  "libllvm16"
+  "libpfm4"
+  "libstdc++6" {>= "9"}
+  "libtinfo6" {>= "6"}
+  "libz3-4" {>= "4.8.10"}
+  "libzstd1" {>= "1.4.0"}
+  "llvm-16-linker-tools" {= "1-16.0.6-15~deb11u2"}
+  "llvm-16-runtime" {= "1-16.0.6-15~deb11u2"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "llvm-16_1:16.0.6-15~deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-16/llvm-16_16.0.6-15~deb11u2_amd64.deb"
+}

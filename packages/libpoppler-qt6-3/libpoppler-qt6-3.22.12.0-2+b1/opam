@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpoppler-qt6-3_22.12.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpoppler-qt6-3"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libfreetype6" {>= "2.2.1"}
+  "liblcms2-2" {>= "2.2+git20110628"}
+  "libpoppler126" {= "22.12.0-2+b1"}
+  "libqt6core6" {>= "6.4.0"}
+  "libqt6gui6" {>= "6.1.2"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libpoppler-qt6-3_22.12.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poppler/libpoppler-qt6-3_22.12.0-2+b1_amd64.deb"
+}

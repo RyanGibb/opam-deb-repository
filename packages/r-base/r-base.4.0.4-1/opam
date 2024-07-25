@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-base_4.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-base"]
+]
+depends: [
+  "r-base-core" {>= "4.0.4-1"}
+  "r-recommended" {= "4.0.4-1"}
+]
+extra-source "r-base_4.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-base/r-base_4.0.4-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dir2ogg_0.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dir2ogg"]
+]
+depends: [
+  "python" {>= "2.4"}
+  "python-mutagen"
+  "vorbis-tools"
+  ("mpg123" | "mpg321")
+]
+extra-source "dir2ogg_0.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dir2ogg/dir2ogg_0.12-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libalsa-ocaml-dev_0.3.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libalsa-ocaml-dev"]
+]
+depends: [
+  "libalsa-ocaml"
+  "libalsa-ocaml" {= "0.3.0-1+b1"}
+  "libasound2-dev"
+  "ocaml-findlib"
+  "ocaml-nox"
+]
+extra-source "libalsa-ocaml-dev_0.3.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-alsa/libalsa-ocaml-dev_0.3.0-1+b1_amd64.deb"
+}

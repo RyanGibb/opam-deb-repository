@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phpunit-global-state_5.0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phpunit-global-state"]
+]
+depends: [
+  "php-common"
+  "phpunit-object-reflector" {< "3~~"}
+  "phpunit-object-reflector" {>= "2.0"}
+  "phpunit-recursion-context" {< "5~~"}
+  "phpunit-recursion-context" {>= "4.0"}
+]
+extra-source "phpunit-global-state_5.0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phpunit-global-state/phpunit-global-state_5.0.5-1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-lxml_4.6.3+dfsg-0.1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-lxml"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libxml2" {>= "2.9.0"}
+  "libxslt1-1" {>= "1.1.26"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+]
+extra-source "python3-lxml_4.6.3+dfsg-0.1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxml/python3-lxml_4.6.3+dfsg-0.1+deb11u1_amd64.deb"
+}

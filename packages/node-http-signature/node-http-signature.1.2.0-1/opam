@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-http-signature_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-http-signature"]
+]
+depends: [
+  "node-assert-plus" {>= "1.0~"}
+  "node-jsprim" {>= "1.2.2~"}
+  "node-sshpk" {>= "1.7~"}
+  "nodejs"
+]
+extra-source "node-http-signature_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-http-signature/node-http-signature_1.2.0-1_all.deb"
+}

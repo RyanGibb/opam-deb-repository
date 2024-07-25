@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-connection-prof_0.2.8-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-connection-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-byteable-prof"
+  "libghc-connection-dev" {= "0.2.8-3+b1"}
+  "libghc-data-default-class-prof"
+  "libghc-network-prof"
+  "libghc-socks-prof"
+  "libghc-tls-prof"
+  "libghc-x509-prof"
+  "libghc-x509-store-prof"
+  "libghc-x509-system-prof"
+  "libghc-x509-validation-prof"
+]
+extra-source "libghc-connection-prof_0.2.8-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-connection/libghc-connection-prof_0.2.8-3+b1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lbreakout2_2.6.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lbreakout2"]
+]
+depends: [
+  "lbreakout2-data" {= "2.6.5-2"}
+  "libc6" {>= "2.14"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl-mixer1-2"
+  "libsdl1-2-compat-shim"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "lbreakout2_2.6.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lbreakout2/lbreakout2_2.6.5-2_amd64.deb"
+}

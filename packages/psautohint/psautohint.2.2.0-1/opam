@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i psautohint_2.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r psautohint"]
+]
+depends: [
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-psautohint" {>= "2.2.0-1"}
+]
+extra-source "psautohint_2.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/psautohint/psautohint_2.2.0-1_all.deb"
+}

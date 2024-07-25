@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tsung_1.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tsung"]
+]
+depends: [
+  "erlang-crypto" {>= "1-20.1.4+dfsg"}
+  "erlang-eldap" {>= "1-20.1.4+dfsg"}
+  "erlang-inets" {>= "1-20.1.4+dfsg"}
+  "erlang-os-mon" {>= "1-20.1.4+dfsg"}
+  "erlang-public-key" {>= "1-20.1.4+dfsg"}
+  "erlang-snmp" {>= "1-20.1.4+dfsg"}
+  "erlang-ssl" {>= "1-20.1.4+dfsg"}
+  "erlang-xmerl" {>= "1-20.1.4+dfsg"}
+  "gnuplot"
+  "libjs-jquery"
+  "libjs-underscore"
+  "libtemplate-perl"
+  "python-any"
+  "python-matplotlib"
+  ("erlang-base" {>= "1-20.1.4+dfsg"} | "erlang-base-hipe" {>= "1-20.1.4+dfsg"})
+]
+extra-source "tsung_1.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tsung/tsung_1.7.0-3_amd64.deb"
+}

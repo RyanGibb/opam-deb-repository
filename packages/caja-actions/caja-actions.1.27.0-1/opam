@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i caja-actions_1.27.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r caja-actions"]
+]
+depends: [
+  "caja-actions-common" {= "1.27.0-1"}
+  "libc6" {>= "2.34"}
+  "libcaja-extension1" {>= "1.17.1"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.65.1"}
+  "libgtk-3-0" {>= "3.21.4"}
+  "libgtop-2-0-11" {>= "2.22.3"}
+  "libice6" {>= "1-1.0.0"}
+  "libsm6"
+  "libuuid1" {>= "2.16"}
+]
+extra-source "caja-actions_1.27.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/caja-actions/caja-actions_1.27.0-1_amd64.deb"
+}

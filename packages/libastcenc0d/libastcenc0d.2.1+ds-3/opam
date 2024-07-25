@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libastcenc0d_2.1+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libastcenc0d"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libastcenc0d_2.1+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/astc-encoder/libastcenc0d_2.1+ds-3_amd64.deb"
+}

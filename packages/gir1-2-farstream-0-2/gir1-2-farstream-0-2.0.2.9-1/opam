@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-farstream-0.2_0.2.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-farstream-0.2"]
+]
+depends: [
+  "gir1-2-glib-2-0"
+  "gir1-2-gstreamer-1-0" {>= "1.4"}
+  "libfarstream-0-2-5" {>= "0.2.8"}
+]
+extra-source "gir1.2-farstream-0.2_0.2.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/farstream-0.2/gir1.2-farstream-0.2_0.2.9-1_amd64.deb"
+}

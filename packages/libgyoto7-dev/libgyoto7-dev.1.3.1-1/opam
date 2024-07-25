@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgyoto7-dev_1.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgyoto7-dev"]
+]
+depends: [
+  "libboost-dev" {>= "1.53.1"}
+  "libboost-mpi-dev"
+  "libc6-dev"
+  "libcfitsio-dev"
+  "libgyoto7" {= "1.3.1-1"}
+  "libudunits2-dev"
+  "libxerces-c-dev"
+  "mpi-default-dev"
+  "pkg-config"
+]
+extra-source "libgyoto7-dev_1.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gyoto/libgyoto7-dev_1.3.1-1_amd64.deb"
+}

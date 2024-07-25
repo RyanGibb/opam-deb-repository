@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clevis_11-2+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clevis"]
+]
+depends: [
+  "cracklib-runtime"
+  "curl"
+  "jose"
+  "libc6" {>= "2.14"}
+  "libjansson4" {>= "2.7"}
+  "libjose0" {>= "10"}
+  "libpwquality-tools"
+  "libssl1-1" {>= "1.1.0"}
+  "luksmeta"
+]
+extra-source "clevis_11-2+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clevis/clevis_11-2+deb10u2_amd64.deb"
+}

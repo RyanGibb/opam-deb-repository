@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-crypto-numbers-dev_0.2.7-10+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-crypto-numbers-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-crypto-random-dev"
+  "libghc-vector-dev"
+  "libgmp10"
+]
+extra-source "libghc-crypto-numbers-dev_0.2.7-10+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-crypto-numbers/libghc-crypto-numbers-dev_0.2.7-10+b1_amd64.deb"
+}

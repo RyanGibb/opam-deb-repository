@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-swd_1.0.1-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-swd"]
+]
+depends: [
+  "libruby3-1"
+  "ruby-activesupport" {>= "3"}
+  "ruby-attr-required" {>= "0.0.5"}
+  "ruby-httpclient" {>= "2.4"}
+  "ruby-i18n"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-swd_1.0.1-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-swd/ruby-swd_1.0.1-2.1_all.deb"
+}

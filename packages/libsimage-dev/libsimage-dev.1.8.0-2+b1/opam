@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsimage-dev_1.8.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsimage-dev"]
+]
+depends: [
+  "libgif-dev"
+  "libjpeg-dev"
+  "libpng-dev"
+  "libsimage20" {= "1.8.0-2+b1"}
+  "libsndfile1-dev"
+  "libtiff-dev"
+  "libvorbis-dev"
+  "pkg-config"
+  "zlib1g-dev"
+]
+extra-source "libsimage-dev_1.8.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/simage/libsimage-dev_1.8.0-2+b1_amd64.deb"
+}

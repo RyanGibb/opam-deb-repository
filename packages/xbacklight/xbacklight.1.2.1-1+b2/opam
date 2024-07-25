@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xbacklight_1.2.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xbacklight"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  "libxcb-randr0" {>= "1.1"}
+  "libxcb-util0" {>= "0.3.8"}
+  "libxcb1"
+]
+extra-source "xbacklight_1.2.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xbacklight/xbacklight_1.2.1-1+b2_amd64.deb"
+}

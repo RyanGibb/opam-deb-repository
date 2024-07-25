@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-copilot-prof_3.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-copilot-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-copilot-c99-prof"
+  "libghc-copilot-core-prof"
+  "libghc-copilot-dev" {= "3.13-1"}
+  "libghc-copilot-language-prof"
+  "libghc-copilot-libraries-prof"
+  "libghc-copilot-theorem-prof"
+  "libghc-optparse-applicative-prof"
+]
+extra-source "libghc-copilot-prof_3.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-copilot/libghc-copilot-prof_3.13-1_amd64.deb"
+}

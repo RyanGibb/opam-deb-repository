@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i console-log_1.2-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r console-log"]
+]
+depends: [
+  "adduser" {> "3.51"}
+  "daemon"
+  "kbd"
+  "less"
+  "lsb-base"
+  "passwd" {>= "1-4.0.3-23"}
+]
+extra-source "console-log_1.2-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/console-log/console-log_1.2-2.1_all.deb"
+}

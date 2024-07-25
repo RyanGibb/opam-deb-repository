@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-asdf-standard_1.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-asdf-standard"]
+]
+depends: [
+  "python3-any"
+  ("python3-importlib-resources" | "python3" {> "3.9"})
+]
+extra-source "python3-asdf-standard_1.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/asdf-standard/python3-asdf-standard_1.0.3-1_all.deb"
+}

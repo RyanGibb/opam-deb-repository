@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i loggerhead_2.0.1+bzr541+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r loggerhead"]
+]
+depends: [
+  "adduser"
+  "libjs-jquery"
+  "python3-any"
+  "python3-bleach"
+  "python3-breezy" {>= "3.0.0~"}
+  "python3-chameleon"
+  "python3-dulwich"
+  "python3-packaging"
+  "python3-paste" {>= "1.6"}
+  "python3-pkg-resources"
+  "python3-simplejson"
+  ("python3-importlib-metadata" | "python3" {> "3.8"})
+]
+extra-source "loggerhead_2.0.1+bzr541+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/loggerhead/loggerhead_2.0.1+bzr541+ds-2_all.deb"
+}

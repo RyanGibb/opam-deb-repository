@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sysprof_3.30.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sysprof"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.47.1"}
+  "libgtk-3-0" {>= "3.22.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpolkit-gobject-1-0" {>= "0.99"}
+  "libstdc++6" {>= "4.1.1"}
+  "libsystemd0" {>= "221"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "sysprof_3.30.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sysprof/sysprof_3.30.2-2_amd64.deb"
+}

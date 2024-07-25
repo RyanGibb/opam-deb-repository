@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-lbdb_0.49_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-lbdb"]
+]
+depends: [
+  "bbdb"
+  "dh-elpa-helper"
+  "emacsen-common" {>= "2.0.8"}
+  "lbdb"
+]
+extra-source "elpa-lbdb_0.49_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lbdb/elpa-lbdb_0.49_all.deb"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-tango_9.3.6-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-tango"]
+]
+depends: [
+  "libboost-python1-74-0"
+  "libboost-python1-74-0" {>= "1.74.0+ds1"}
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libomniorb4-2" {>= "4.2.5+ds1"}
+  "libomnithread4" {>= "4.2.5+ds1"}
+  "libstdc++6" {>= "11"}
+  "libtango9" {>= "9.3.4+dfsg1"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-gevent"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-six" {>= "1.10"}
+]
+extra-source "python3-tango_9.3.6-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pytango/python3-tango_9.3.6-2.1_amd64.deb"
+}

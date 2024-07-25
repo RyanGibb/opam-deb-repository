@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mccs_1:1.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mccs"]
+]
+depends: [
+  "coinor-cbc"
+  "libc6" {>= "2.29"}
+  "libcolamd2" {>= "1-4.5.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "mccs_1:1.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mccs/mccs_1.1-9_amd64.deb"
+}

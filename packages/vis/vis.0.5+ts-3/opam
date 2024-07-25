@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vis_0.5+ts-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vis"]
+]
+depends: [
+  "libacl1" {>= "2.2.51-8"}
+  "libc6" {>= "2.15"}
+  "liblua5-3-0"
+  "libncursesw6" {>= "6"}
+  "libselinux1" {>= "1.32"}
+  "libtermkey1" {>= "0.14"}
+  "libtinfo6" {>= "6"}
+  "libtre5"
+]
+extra-source "vis_0.5+ts-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vis/vis_0.5+ts-3_amd64.deb"
+}

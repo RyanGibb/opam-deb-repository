@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i compiz-plugins-experimental_2:0.8.18-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r compiz-plugins-experimental"]
+]
+depends: [
+  "compiz-core"
+  "compiz-plugins-extra" {>= "2-0.8.14-0~"}
+  "compiz-plugins-main" {>= "2-0.8.14-0~"}
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.2.4"}
+  "libcurl4" {>= "7.16.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libglew2-1" {>= "1.12.0"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  "libxext6"
+  "libxss1"
+  ("libglu1-mesa" | "libglu1")
+]
+conflicts: [
+  "compiz-plugins (<< 2:0.8.14-1)"
+]
+extra-source "compiz-plugins-experimental_2:0.8.18-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/compiz-plugins-experimental/compiz-plugins-experimental_0.8.18-1_amd64.deb"
+}

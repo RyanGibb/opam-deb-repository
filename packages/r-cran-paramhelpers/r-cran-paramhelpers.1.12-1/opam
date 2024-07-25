@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-paramhelpers_1.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-paramhelpers"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.2-1"}
+  "r-cran-backports"
+  "r-cran-bbmisc" {>= "1.10"}
+  "r-cran-checkmate" {>= "1.8.2"}
+  "r-cran-fastmatch"
+]
+extra-source "r-cran-paramhelpers_1.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-paramhelpers/r-cran-paramhelpers_1.12-1_amd64.deb"
+}

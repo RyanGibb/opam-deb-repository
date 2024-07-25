@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtemplates-parser12-dev_19-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtemplates-parser12-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-8"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnat-8" {>= "8.2.0-13"}
+  "libtemplates-parser18" {= "19-3"}
+]
+extra-source "libtemplates-parser12-dev_19-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtemplates-parser/libtemplates-parser12-dev_19-3_amd64.deb"
+}

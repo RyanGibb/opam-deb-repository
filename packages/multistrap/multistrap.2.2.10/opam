@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i multistrap_2.2.10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r multistrap"]
+]
+depends: [
+  "apt"
+  "libconfig-auto-perl"
+  "liblocale-gettext-perl"
+  "libparse-debian-packages-perl"
+  "perl-any"
+]
+extra-source "multistrap_2.2.10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/multistrap/multistrap_2.2.10_all.deb"
+}

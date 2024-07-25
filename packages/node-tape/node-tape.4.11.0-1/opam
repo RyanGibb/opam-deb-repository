@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-tape_4.11.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-tape"]
+]
+depends: [
+  "node-deep-equal"
+  "node-defined"
+  "node-function-bind" {>= "1.1.1"}
+  "node-glob" {>= "7.1.2"}
+  "node-inherits" {>= "2.0.3"}
+  "node-lodash-packages"
+  "node-minimist"
+  "node-object-inspect" {>= "1.5.0"}
+  "node-resolve" {>= "1.4.0"}
+  "node-resumer"
+  "node-through"
+  "nodejs" {>= "4.7"}
+]
+extra-source "node-tape_4.11.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-tape/node-tape_4.11.0-1_all.deb"
+}

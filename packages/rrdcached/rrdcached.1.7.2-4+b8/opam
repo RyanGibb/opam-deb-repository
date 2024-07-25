@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rrdcached_1.7.2-4+b8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rrdcached"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "librrd8" {>= "1.7.0"}
+  "lsb-base"
+]
+extra-source "rrdcached_1.7.2-4+b8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rrdtool/rrdcached_1.7.2-4+b8_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnucleotidelikelihoodcore0_1.10.4+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnucleotidelikelihoodcore0"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+]
+conflicts: [
+  "beast-mcmc-lib"
+]
+extra-source "libnucleotidelikelihoodcore0_1.10.4+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/beast-mcmc/libnucleotidelikelihoodcore0_1.10.4+dfsg-1_amd64.deb"
+}

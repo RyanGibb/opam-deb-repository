@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-mastodon_1.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-mastodon"]
+]
+depends: [
+  "python3-any"
+  "python3-cryptography"
+  "python3-dateutil"
+  "python3-decorator"
+  "python3-requests"
+  "python3-six"
+  "python3-tz"
+]
+extra-source "python3-mastodon_1.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-mastodon/python3-mastodon_1.3.1-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-recaptcha-prof_0.1.0.4-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-recaptcha-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-http-prof"
+  "libghc-network-prof"
+  "libghc-network-uri-prof"
+  "libghc-recaptcha-dev" {= "0.1.0.4-2+b2"}
+]
+extra-source "libghc-recaptcha-prof_0.1.0.4-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-recaptcha/libghc-recaptcha-prof_0.1.0.4-2+b2_amd64.deb"
+}

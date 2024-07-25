@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-os-locale_5.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-os-locale"]
+]
+depends: [
+  "node-execa"
+  "node-lcid"
+  "node-mem"
+]
+extra-source "node-os-locale_5.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-os-locale/node-os-locale_5.0.0-1_all.deb"
+}

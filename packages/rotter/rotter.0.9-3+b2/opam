@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rotter_0.9-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rotter"]
+]
+depends: [
+  "jackd"
+  "libc6" {>= "2.3"}
+  "libmp3lame0"
+  "libsndfile1" {>= "1.0.20"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "rotter_0.9-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rotter/rotter_0.9-3+b2_amd64.deb"
+}

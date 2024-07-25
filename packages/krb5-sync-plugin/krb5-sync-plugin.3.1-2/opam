@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i krb5-sync-plugin_3.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r krb5-sync-plugin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkadm5srv-mit11" {>= "1.15~beta1"}
+  "libkrb5-3" {>= "1.10+dfsg~alpha1"}
+  "libldap-2-4-2" {>= "2.4.7"}
+]
+extra-source "krb5-sync-plugin_3.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/krb5-sync/krb5-sync-plugin_3.1-2_amd64.deb"
+}

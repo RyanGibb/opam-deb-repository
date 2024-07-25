@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-manilaclient_2.3.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-manilaclient"]
+]
+depends: [
+  "python3-any"
+  "python3-babel"
+  "python3-debtcollector"
+  "python3-docutils"
+  "python3-iso8601"
+  "python3-keystoneclient"
+  "python3-osc-lib"
+  "python3-oslo-config"
+  "python3-oslo-log"
+  "python3-oslo-serialization"
+  "python3-oslo-utils"
+  "python3-pbr"
+  "python3-prettytable"
+  "python3-requests"
+  "python3-simplejson"
+  "python3-six" {>= "1.10.0"}
+]
+extra-source "python3-manilaclient_2.3.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-manilaclient/python3-manilaclient_2.3.0-3_all.deb"
+}

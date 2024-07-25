@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i g++-11-multilib_11.3.0-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r g++-11-multilib"]
+]
+depends: [
+  "g++-11" {= "11.3.0-12"}
+  "gcc-11-base" {= "11.3.0-12"}
+  "gcc-11-multilib" {= "11.3.0-12"}
+  "lib32stdc++-11-dev" {= "11.3.0-12"}
+  "libx32stdc++-11-dev" {= "11.3.0-12"}
+]
+extra-source "g++-11-multilib_11.3.0-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-11/g++-11-multilib_11.3.0-12_amd64.deb"
+}

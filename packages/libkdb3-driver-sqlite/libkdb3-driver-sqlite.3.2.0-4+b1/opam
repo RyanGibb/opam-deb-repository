@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkdb3-driver-sqlite_3.2.0-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkdb3-driver-sqlite"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libicu67" {>= "67.1-1~"}
+  "libkdb3-4abi1" {= "3.2.0-4+b1"}
+  "libkf5coreaddons5" {>= "5.16.0"}
+  "libqt5core5a" {>= "5.12.2"}
+  "libqt5widgets5" {>= "5.4.0"}
+  "libsqlite3-0" {>= "3.7.3"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.4.0"} | "libqt5gui5-gles" {>= "5.4.0"})
+]
+extra-source "libkdb3-driver-sqlite_3.2.0-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdb/libkdb3-driver-sqlite_3.2.0-4+b1_amd64.deb"
+}

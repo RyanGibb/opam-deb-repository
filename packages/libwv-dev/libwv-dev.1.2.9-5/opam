@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwv-dev_1.2.9-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwv-dev"]
+]
+depends: [
+  "libglib2-0-dev"
+  "libgsf-1-dev"
+  "libpng-dev"
+  "libwmf-dev"
+  "libwv-1-2-4" {= "1.2.9-5"}
+  "libxml2-dev"
+  "zlib1g-dev"
+]
+extra-source "libwv-dev_1.2.9-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wv/libwv-dev_1.2.9-5_amd64.deb"
+}

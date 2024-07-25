@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librttopo1_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librttopo1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgeos-c1v5" {>= "3.5.0"}
+]
+extra-source "librttopo1_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librttopo/librttopo1_1.0.0-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaa1-dev_1.4p5-50_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaa1-dev"]
+]
+depends: [
+  "libaa1" {= "1.4p5-50"}
+  "libncurses5-dev"
+  "libslang2-dev"
+  "libx11-dev"
+]
+conflicts: [
+  "aalib1-dev"
+]
+extra-source "libaa1-dev_1.4p5-50_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aalib/libaa1-dev_1.4p5-50_amd64.deb"
+}

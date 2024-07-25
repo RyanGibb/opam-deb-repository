@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pypcap_1.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pypcap"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libpcap0-8" {>= "1.5.1"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+conflicts: [
+  "python-libpcap"
+]
+extra-source "python-pypcap_1.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pypcap/python-pypcap_1.2.2-1_amd64.deb"
+}

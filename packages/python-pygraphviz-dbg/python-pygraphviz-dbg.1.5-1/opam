@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pygraphviz-dbg_1.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pygraphviz-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcdt5"
+  "libcgraph6"
+  "python-dbg"
+  "python-pygraphviz" {= "1.5-1"}
+]
+extra-source "python-pygraphviz-dbg_1.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pygraphviz/python-pygraphviz-dbg_1.5-1_amd64.deb"
+}

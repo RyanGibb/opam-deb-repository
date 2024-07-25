@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-qtquick-pdf_5.15.13+dfsg-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-qtquick-pdf"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a" {>= "5.15.8+dfsg~"}
+  "libqt5pdf5" {>= "5.15.1"}
+  "libqt5qml5"
+  "libqt5qml5" {>= "5.15.8+dfsg~"}
+  "libstdc++6" {>= "5"}
+  "qml-module-qtgraphicaleffects" {>= "5.12"}
+  "qml-module-qtquick-controls2" {>= "5.14"}
+  "qml-module-qtquick-shapes" {>= "5.14"}
+  "qml-module-qtquick-templates2" {>= "5.14"}
+  "qml-module-qtquick-window2"
+  "qml-module-qtquick2" {>= "5.14"}
+  "qt5-image-formats-plugin-pdf"
+  ("libqt5gui5" {>= "5.15.8+dfsg~"} | "libqt5gui5-gles" {>= "5.15.8+dfsg~"})
+  ("libqt5quick5" {>= "5.15.8+dfsg~"} | "libqt5quick5-gles" {>= "5.15.8+dfsg~"})
+]
+extra-source "qml-module-qtquick-pdf_5.15.13+dfsg-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtwebengine-opensource-src/qml-module-qtquick-pdf_5.15.13+dfsg-1~deb12u1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i geotranz_3.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r geotranz"]
+]
+depends: [
+  "default-jre"
+  "libgeotranz3-3" {>= "3.3"}
+]
+extra-source "geotranz_3.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/geotranz/geotranz_3.3-2_all.deb"
+}

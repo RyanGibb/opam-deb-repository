@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-jake_0.7.9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-jake"]
+]
+depends: [
+  "node-minimatch"
+  "node-utilities"
+  "nodejs" {>= "0.6.19~dfsg1-3~"}
+]
+extra-source "node-jake_0.7.9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-jake/node-jake_0.7.9-2_all.deb"
+}

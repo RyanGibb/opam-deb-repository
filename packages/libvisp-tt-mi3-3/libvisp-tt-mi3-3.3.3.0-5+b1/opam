@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvisp-tt-mi3.3_3.3.0-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvisp-tt-mi3.3"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "5.2"}
+  "libvisp-core3-3" {>= "3.3.0"}
+  "libvisp-tt3-3" {= "3.3.0-5+b1"}
+]
+extra-source "libvisp-tt-mi3.3_3.3.0-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/visp/libvisp-tt-mi3.3_3.3.0-5+b1_amd64.deb"
+}

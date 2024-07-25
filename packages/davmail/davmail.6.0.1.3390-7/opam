@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i davmail_6.0.1.3390-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r davmail"]
+]
+depends: [
+  "davmail-server" {= "6.0.1.3390-7"}
+  "default-jre"
+  "libopenjfx-java"
+  "libswt-cairo-gtk-4-jni"
+]
+extra-source "davmail_6.0.1.3390-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/davmail/davmail_6.0.1.3390-7_all.deb"
+}

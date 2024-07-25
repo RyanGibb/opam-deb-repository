@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osspd_1.3.2-13.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osspd"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfuse2" {>= "2.8"}
+  ("osspd-pulseaudio" | "osspd-backend")
+]
+conflicts: [
+  "oss-compat"
+]
+extra-source "osspd_1.3.2-13.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osspd/osspd_1.3.2-13.1_amd64.deb"
+}

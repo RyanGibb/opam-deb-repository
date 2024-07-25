@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-gconf-2.0_3.2.6-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-gconf-2.0"]
+]
+depends: [
+  "gconf-service"
+  "gir1-2-glib-2-0" {>= "0.10.7-1~"}
+  "libgconf-2-4" {>= "3.2.5"}
+]
+conflicts: [
+  "gir1.0-gconf-2.0"
+]
+extra-source "gir1.2-gconf-2.0_3.2.6-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gconf/gir1.2-gconf-2.0_3.2.6-8_amd64.deb"
+}

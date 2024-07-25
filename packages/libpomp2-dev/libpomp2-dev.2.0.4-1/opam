@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpomp2-dev_2.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpomp2-dev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "mawk"
+]
+conflicts: [
+  "libpomp-dev"
+]
+extra-source "libpomp2-dev_2.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opari2/libpomp2-dev_2.0.4-1_amd64.deb"
+}

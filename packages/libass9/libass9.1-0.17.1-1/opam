@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libass9_1:0.17.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libass9"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfontconfig1" {>= "2.13.0"}
+  "libfreetype6" {>= "2.3.5"}
+  "libfribidi0" {>= "1.0.0"}
+  "libharfbuzz0b" {>= "1.2.6"}
+]
+extra-source "libass9_1:0.17.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libass/libass9_0.17.1-1_amd64.deb"
+}

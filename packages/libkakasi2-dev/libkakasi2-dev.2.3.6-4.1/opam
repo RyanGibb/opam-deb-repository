@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkakasi2-dev_2.3.6-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkakasi2-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libkakasi2" {= "2.3.6-4.1"}
+]
+conflicts: [
+  "kakasi-dev"
+]
+extra-source "libkakasi2-dev_2.3.6-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kakasi/libkakasi2-dev_2.3.6-4.1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i smbc_1.2.2-4+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r smbc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libncurses6" {>= "6"}
+  "libpopt0" {>= "1.14"}
+  "libsmbclient" {>= "2-4.0.3+dfsg1"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "smbc_1.2.2-4+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/smbc/smbc_1.2.2-4+b3_amd64.deb"
+}

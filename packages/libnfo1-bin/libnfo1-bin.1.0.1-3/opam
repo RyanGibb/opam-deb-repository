@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnfo1-bin_1.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnfo1-bin"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libnfo1" {= "1.0.1-3"}
+]
+extra-source "libnfo1-bin_1.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnfo/libnfo1-bin_1.0.1-3_amd64.deb"
+}

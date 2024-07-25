@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-affxparser_1.70.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-affxparser"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "12.2.0-9"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biocgenerics"
+]
+extra-source "r-bioc-affxparser_1.70.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-affxparser/r-bioc-affxparser_1.70.0-1_amd64.deb"
+}

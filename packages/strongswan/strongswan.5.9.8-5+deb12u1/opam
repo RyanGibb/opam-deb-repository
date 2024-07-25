@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i strongswan_5.9.8-5+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r strongswan"]
+]
+depends: [
+  "strongswan-charon"
+  "strongswan-starter"
+]
+extra-source "strongswan_5.9.8-5+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/strongswan/strongswan_5.9.8-5+deb12u1_all.deb"
+}

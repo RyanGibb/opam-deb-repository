@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcinnamon-menu-3-dev_5.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcinnamon-menu-3-dev"]
+]
+depends: [
+  "gir1-2-cmenu-3-0" {= "5.6.0-1"}
+  "libcinnamon-menu-3-0" {= "5.6.0-1"}
+  "libglib2-0-dev"
+]
+extra-source "libcinnamon-menu-3-dev_5.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cinnamon-menus/libcinnamon-menu-3-dev_5.6.0-1_amd64.deb"
+}

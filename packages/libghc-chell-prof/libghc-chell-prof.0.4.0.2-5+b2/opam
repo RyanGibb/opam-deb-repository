@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-chell-prof_0.4.0.2-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-chell-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-ansi-terminal-prof"
+  "libghc-chell-dev" {= "0.4.0.2-5+b2"}
+  "libghc-options-prof"
+  "libghc-patience-prof"
+  "libghc-random-prof"
+]
+extra-source "libghc-chell-prof_0.4.0.2-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-chell/libghc-chell-prof_0.4.0.2-5+b2_amd64.deb"
+}

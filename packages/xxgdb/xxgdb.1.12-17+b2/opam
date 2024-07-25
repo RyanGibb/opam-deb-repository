@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xxgdb_1.12-17+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xxgdb"]
+]
+depends: [
+  "gdb"
+  "libc6" {>= "2.14"}
+  "libx11-6"
+  "libxaw7"
+  "libxt6"
+]
+extra-source "xxgdb_1.12-17+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xxgdb/xxgdb_1.12-17+b2_amd64.deb"
+}

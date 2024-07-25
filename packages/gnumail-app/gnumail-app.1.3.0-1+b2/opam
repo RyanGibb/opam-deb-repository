@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnumail.app_1.3.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnumail.app"]
+]
+depends: [
+  "addressmanager-app"
+  "gnumail-app-common" {= "1.3.0-1"}
+  "gnustep-back0-28" {>= "0.28.0"}
+  "gnustep-base-runtime" {>= "1.27.0"}
+  "gnustep-gui-runtime" {>= "0.28.0"}
+  "libaddresses0"
+  "libaddressview0"
+  "libc6" {>= "2.7"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnustep-base1-27" {>= "1.27.0"}
+  "libgnustep-gui0-28" {>= "0.28.0"}
+  "libobjc4" {>= "4.6"}
+  "libpantomime1-3" {>= "1.3.0+dfsg1"}
+]
+extra-source "gnumail.app_1.3.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnumail/gnumail.app_1.3.0-1+b2_amd64.deb"
+}

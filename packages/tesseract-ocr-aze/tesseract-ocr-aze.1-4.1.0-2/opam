@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tesseract-ocr-aze_1:4.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tesseract-ocr-aze"]
+]
+depends: [
+  "tesseract-ocr-aze-cyrl" {>= "4.0.9"}
+]
+extra-source "tesseract-ocr-aze_1:4.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tesseract-lang/tesseract-ocr-aze_4.1.0-2_all.deb"
+}

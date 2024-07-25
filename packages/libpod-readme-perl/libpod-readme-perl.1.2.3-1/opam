@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpod-readme-perl_1.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpod-readme-perl"]
+]
+depends: [
+  "libclass-method-modifiers-perl" {>= "2.00"}
+  "libcpan-changes-perl" {>= "0.30"}
+  "libfile-slurp-perl"
+  "libgetopt-long-descriptive-perl"
+  "libmoo-perl" {>= "1.004005"}
+  "libmoox-handlesvia-perl"
+  "libnamespace-autoclean-perl"
+  "libpath-tiny-perl"
+  "librole-tiny-perl"
+  "libtry-tiny-perl"
+  "libtype-tiny-perl"
+  "perl"
+  ("perl" {>= "5.19.5"} | "libscalar-list-utils-perl" {>= "1-1.33"})
+]
+extra-source "libpod-readme-perl_1.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpod-readme-perl/libpod-readme-perl_1.2.3-1_all.deb"
+}

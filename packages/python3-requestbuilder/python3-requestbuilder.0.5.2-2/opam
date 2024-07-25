@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-requestbuilder_0.5.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-requestbuilder"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-requests" {>= "2.4"}
+  "python3-six"
+]
+extra-source "python3-requestbuilder_0.5.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-requestbuilder/python3-requestbuilder_0.5.2-2_all.deb"
+}

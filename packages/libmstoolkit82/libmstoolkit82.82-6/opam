@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmstoolkit82_82-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmstoolkit82"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.2.2.4"}
+]
+conflicts: [
+  "libmstoolkit77"
+]
+extra-source "libmstoolkit82_82-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmstoolkit/libmstoolkit82_82-6_amd64.deb"
+}

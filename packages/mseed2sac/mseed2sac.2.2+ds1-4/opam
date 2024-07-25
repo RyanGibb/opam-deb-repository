@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mseed2sac_2.2+ds1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mseed2sac"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmseed2" {>= "2.18"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "mseed2sac_2.2+ds1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mseed2sac/mseed2sac_2.2+ds1-4_amd64.deb"
+}

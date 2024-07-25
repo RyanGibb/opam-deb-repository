@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrilinos-globipack-dev_12.18.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrilinos-globipack-dev"]
+]
+depends: [
+  "libtrilinos-globipack12" {= "12.18.1-2"}
+  "trilinos-dev"
+]
+extra-source "libtrilinos-globipack-dev_12.18.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trilinos/libtrilinos-globipack-dev_12.18.1-2_amd64.deb"
+}

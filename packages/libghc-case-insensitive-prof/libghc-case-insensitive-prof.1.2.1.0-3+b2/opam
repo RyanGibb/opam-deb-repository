@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-case-insensitive-prof_1.2.1.0-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-case-insensitive-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-case-insensitive-dev" {= "1.2.1.0-3+b2"}
+  "libghc-hashable-prof"
+]
+extra-source "libghc-case-insensitive-prof_1.2.1.0-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-case-insensitive/libghc-case-insensitive-prof_1.2.1.0-3+b2_amd64.deb"
+}

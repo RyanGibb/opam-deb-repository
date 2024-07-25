@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-trust-dns-server+dns-over-openssl-dev_0.22.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-trust-dns-server+dns-over-openssl-dev"]
+]
+depends: [
+  "librust-trust-dns-client-0-22+dns-over-openssl-dev"
+  "librust-trust-dns-proto-0-22+dns-over-openssl-dev"
+  "librust-trust-dns-resolver-0-22+dns-over-openssl-dev"
+  "librust-trust-dns-resolver-0-22+serde-config-dev"
+  "librust-trust-dns-server+dnssec-openssl-dev" {= "0.22.0-2"}
+  "librust-trust-dns-server+tokio-openssl-dev" {= "0.22.0-2"}
+  "librust-trust-dns-server-dev"
+  "librust-trust-dns-server-dev" {= "0.22.0-2"}
+]
+extra-source "librust-trust-dns-server+dns-over-openssl-dev_0.22.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-trust-dns-server/librust-trust-dns-server+dns-over-openssl-dev_0.22.0-2_amd64.deb"
+}

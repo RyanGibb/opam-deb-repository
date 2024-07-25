@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-lazr.restfulclient_0.14.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-lazr.restfulclient"]
+]
+depends: [
+  "python3-any"
+  "python3-distro"
+  "python3-httplib2" {>= "0.7.7"}
+  "python3-lazr-uri"
+  "python3-oauthlib"
+  "python3-pkg-resources"
+  "python3-six"
+  "python3-wadllib" {>= "1.1.4"}
+  ("python3-importlib-metadata" | "python3" {> "3.8"})
+]
+extra-source "python3-lazr.restfulclient_0.14.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lazr.restfulclient/python3-lazr.restfulclient_0.14.5-1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fbb_7.07-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fbb"]
+]
+depends: [
+  "libax25" {>= "0.0.12-rc4"}
+  "libc6" {>= "2.15"}
+]
+extra-source "fbb_7.07-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fbb/fbb_7.07-3+b1_amd64.deb"
+}

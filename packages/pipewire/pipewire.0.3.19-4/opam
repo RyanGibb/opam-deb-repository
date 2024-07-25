@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pipewire_0.3.19-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pipewire"]
+]
+depends: [
+  "init-system-helpers" {>= "1.52"}
+  "libpipewire-0-3-modules" {= "0.3.19-4"}
+  "pipewire-bin" {= "0.3.19-4"}
+]
+extra-source "pipewire_0.3.19-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pipewire/pipewire_0.3.19-4_amd64.deb"
+}

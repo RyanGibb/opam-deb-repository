@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-prettyprinter-ansi-terminal-dev_1.1.3-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-prettyprinter-ansi-terminal-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-ansi-terminal-dev"
+  "libghc-prettyprinter-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-prettyprinter-ansi-terminal-dev_1.1.3-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-prettyprinter-ansi-terminal/libghc-prettyprinter-ansi-terminal-dev_1.1.3-1+b2_amd64.deb"
+}

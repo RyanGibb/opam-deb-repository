@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i civetweb_1.15+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r civetweb"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcivetweb1" {= "1.15+dfsg-4"}
+]
+extra-source "civetweb_1.15+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/civetweb/civetweb_1.15+dfsg-4_amd64.deb"
+}

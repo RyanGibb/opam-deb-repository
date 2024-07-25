@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pika-pool_0.1.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pika-pool"]
+]
+depends: [
+  "python3-any"
+  "python3-pika" {>= "0.9"}
+]
+extra-source "python3-pika-pool_0.1.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pika-pool/python3-pika-pool_0.1.3-4_all.deb"
+}

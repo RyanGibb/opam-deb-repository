@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cpanminus_1.7044-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cpanminus"]
+]
+depends: [
+  "libcpan-distnameinfo-perl"
+  "libcpan-meta-check-perl" {>= "0.012"}
+  "libfile-pushd-perl" {>= "1.009"}
+  "liblocal-lib-perl" {>= "2.000015"}
+  "libmodule-cpanfile-perl" {>= "1.1000"}
+  "libparse-pmfile-perl" {>= "0.36"}
+  "libstring-shellquote-perl"
+  "perl" {>= "5.19.4"}
+  ("perl" {>= "5.19.10"} | "libparse-cpan-meta-perl" {>= "1.4414"})
+  ("perl" {>= "5.21.5"} | "libjson-pp-perl" {>= "2.27300"})
+  ("perl" {>= "5.23.0"} | "libcpan-meta-perl" {>= "2.150005"})
+  ("perl" {>= "5.23.0"} | "libcpan-meta-requirements-perl" {>= "2.133"})
+  ("perl" {>= "5.23.0"} | "libcpan-meta-yaml-perl" {>= "0.016"})
+  ("perl" {>= "5.23.0"} | "libhttp-tiny-perl" {>= "0.056"} | "curl" | "wget")
+  ("perl" {>= "5.23.0"} | "libmodule-metadata-perl" {>= "1.000027"})
+  ("perl" {>= "5.23.9"} | "libversion-perl" {>= "1-0.9912"})
+]
+extra-source "cpanminus_1.7044-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cpanminus/cpanminus_1.7044-1_all.deb"
+}

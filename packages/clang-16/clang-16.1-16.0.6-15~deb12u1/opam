@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clang-16_1:16.0.6-15~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clang-16"]
+]
+depends: [
+  "binutils"
+  "libc6" {>= "2.34"}
+  "libc6-dev"
+  "libclang-common-16-dev" {= "1-16.0.6-15~deb12u1"}
+  "libclang-cpp16" {>= "1-16.0.6"}
+  "libclang1-16" {= "1-16.0.6-15~deb12u1"}
+  "libgcc-12-dev"
+  "libgcc-s1" {>= "3.0"}
+  "libllvm16"
+  "libobjc-12-dev"
+  "libstdc++-12-dev"
+  "libstdc++6" {>= "11"}
+  "llvm-16-linker-tools" {= "1-16.0.6-15~deb12u1"}
+]
+extra-source "clang-16_1:16.0.6-15~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-16/clang-16_16.0.6-15~deb12u1_amd64.deb"
+}

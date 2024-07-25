@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jupyter-client_5.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jupyter-client"]
+]
+depends: [
+  "jupyter-core"
+  "python3-any" {>= "3.3~"}
+  "python3-jupyter-client" {= "5.2.3-1"}
+]
+extra-source "jupyter-client_5.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jupyter-client/jupyter-client_5.2.3-1_all.deb"
+}

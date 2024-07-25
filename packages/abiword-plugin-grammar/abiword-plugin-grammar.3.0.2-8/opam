@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i abiword-plugin-grammar_3.0.2-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r abiword-plugin-grammar"]
+]
+depends: [
+  "abiword" {= "3.0.2-8"}
+  "libabiword-3-0" {>= "3.0.2"}
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "liblink-grammar5" {>= "4.2.2"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "abiword-plugin-grammar_3.0.2-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/abiword/abiword-plugin-grammar_3.0.2-8_amd64.deb"
+}

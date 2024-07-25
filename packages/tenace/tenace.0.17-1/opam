@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tenace_0.17-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tenace"]
+]
+depends: [
+  "gnome-cards-data"
+  "libc6" {>= "2.6"}
+  "libcairo2" {>= "1.2.4"}
+  "libdds0"
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libgtk2-0-0" {>= "2.20.0"}
+  "librsvg2-common"
+]
+extra-source "tenace_0.17-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tenace/tenace_0.17-1_amd64.deb"
+}

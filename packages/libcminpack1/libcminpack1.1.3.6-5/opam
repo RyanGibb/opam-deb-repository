@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcminpack1_1.3.6-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcminpack1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+]
+extra-source "libcminpack1_1.3.6-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cminpack/libcminpack1_1.3.6-5_amd64.deb"
+}

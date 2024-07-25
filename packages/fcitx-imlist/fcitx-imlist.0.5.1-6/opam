@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx-imlist_0.5.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx-imlist"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfcitx-gclient1" {>= "1-4.2.9.5"}
+  "libfcitx-utils0" {>= "4.2.7"}
+  "libglib2-0-0" {>= "2.26.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "fcitx-imlist_0.5.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx-imlist/fcitx-imlist_0.5.1-6_amd64.deb"
+}

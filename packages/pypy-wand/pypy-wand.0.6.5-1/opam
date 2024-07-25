@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pypy-wand_0.6.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pypy-wand"]
+]
+depends: [
+  "pypy"
+  ("libmagickwand-6-q16-6" | "libmagickwand-6-q16hdri-6")
+]
+extra-source "pypy-wand_0.6.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wand/pypy-wand_0.6.5-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-http-interop-http-factory-tests_0.9.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-http-interop-http-factory-tests"]
+]
+depends: [
+  "php-common"
+  "php-psr-http-factory" {< "2~~"}
+  "php-psr-http-factory" {>= "1.0"}
+  "phpunit"
+]
+extra-source "php-http-interop-http-factory-tests_0.9.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-http-interop-http-factory-tests/php-http-interop-http-factory-tests_0.9.0-3_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i keyman_16.0.138-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r keyman"]
+]
+depends: [
+  "ibus-keyman" {< "16.0.138-4.1~"}
+  "ibus-keyman" {>= "16.0.138-4"}
+  "libglib2-0-bin"
+  "python3-keyman-config" {= "16.0.138-4"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "keyman_16.0.138-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/keyman/keyman_16.0.138-4_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sope-bin_5.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sope-bin"]
+]
+depends: [
+  "gnustep-base-runtime" {>= "1.28.0"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnustep-base1-28" {>= "1.28.0"}
+  "libobjc4" {>= "4.6"}
+  "libsope1" {>= "5.8.0"}
+]
+extra-source "sope-bin_5.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sope/sope-bin_5.8.0-1_amd64.deb"
+}

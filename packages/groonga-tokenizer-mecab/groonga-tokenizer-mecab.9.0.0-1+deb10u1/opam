@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i groonga-tokenizer-mecab_9.0.0-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r groonga-tokenizer-mecab"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgroonga0" {= "9.0.0-1+deb10u1"}
+  "libmecab2"
+  ("mecab-naist-jdic" | "mecab-jumandic-utf8")
+]
+extra-source "groonga-tokenizer-mecab_9.0.0-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/groonga/groonga-tokenizer-mecab_9.0.0-1+deb10u1_amd64.deb"
+}

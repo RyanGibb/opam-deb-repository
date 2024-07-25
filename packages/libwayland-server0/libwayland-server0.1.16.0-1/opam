@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwayland-server0_1.16.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwayland-server0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libffi6" {>= "3.0.4"}
+]
+conflicts: [
+  "libwayland0 (<< 1.1.0-1)"
+]
+extra-source "libwayland-server0_1.16.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wayland/libwayland-server0_1.16.0-1_amd64.deb"
+}

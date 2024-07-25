@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libokteta2gui2_5:0.25.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libokteta2gui2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5configwidgets5" {>= "4.96.0"}
+  "libkf5i18n5" {>= "4.97.0"}
+  "libokteta2core2" {= "5-0.25.5-1"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.9.0~"}
+  "libqt5widgets5" {>= "5.9.0~"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libokteta2gui2_5:0.25.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/okteta/libokteta2gui2_0.25.5-1_amd64.deb"
+}

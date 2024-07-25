@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xserver-xorg-input-mtrack_0.3.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xserver-xorg-input-mtrack"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmtdev1" {>= "1.0.10"}
+  "xserver-xorg-core"
+  "xserver-xorg-core" {>= "2-1.18.99.901"}
+]
+conflicts: [
+  "xserver-xorg-input-multitouch"
+]
+extra-source "xserver-xorg-input-mtrack_0.3.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xf86-input-mtrack/xserver-xorg-input-mtrack_0.3.1-1+b2_amd64.deb"
+}

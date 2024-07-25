@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i diod_1.0.24-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r diod"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcap2" {>= "1-2.10"}
+  "liblua5-1-0"
+  "libmunge2" {>= "0.5.8"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libwrap0" {>= "7.6-4~"}
+  "lsb-base"
+]
+extra-source "diod_1.0.24-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/diod/diod_1.0.24-4_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcre2-dev_10.42-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcre2-dev"]
+]
+depends: [
+  "libc-dev"
+  "libpcre2-16-0" {= "10.42-1"}
+  "libpcre2-32-0" {= "10.42-1"}
+  "libpcre2-8-0" {= "10.42-1"}
+  "libpcre2-posix3" {= "10.42-1"}
+]
+conflicts: [
+  "libpcre3-dev (<< 2:8.35-8)"
+]
+extra-source "libpcre2-dev_10.42-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcre2/libpcre2-dev_10.42-1_amd64.deb"
+}

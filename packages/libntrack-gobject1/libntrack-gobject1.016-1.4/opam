@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libntrack-gobject1_016-1.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libntrack-gobject1"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libntrack-glib2" {>= "004"}
+]
+extra-source "libntrack-gobject1_016-1.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ntrack/libntrack-gobject1_016-1.4_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i selinux-policy-doc_2:2.20190201-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r selinux-policy-doc"]
+]
+conflicts: [
+  "selinux-policy-refpolicy-doc"
+]
+extra-source "selinux-policy-doc_2:2.20190201-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/refpolicy/selinux-policy-doc_2.20190201-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ejabberd-mod-spam-filter_0.2020.10.21~dfsg0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ejabberd-mod-spam-filter"]
+]
+depends: [
+  "ejabberd" {= "21.01-2"}
+  ("erlang-base" {>= "1-17"} | "erlang-abi" {= "17.0"})
+  ("erlang-base" {>= "1-23.2.3+dfsg"} | "erlang-base-hipe" {>= "1-23.2.3+dfsg"})
+]
+extra-source "ejabberd-mod-spam-filter_0.2020.10.21~dfsg0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ejabberd-contrib/ejabberd-mod-spam-filter_0.2020.10.21~dfsg0-5_amd64.deb"
+}

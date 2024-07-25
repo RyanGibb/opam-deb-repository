@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-gtk-traymanager-prof_1.0.1-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-gtk-traymanager-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-glib-prof"
+  "libghc-gtk-traymanager-dev" {= "1.0.1-5+b1"}
+  "libghc-gtk3-prof"
+]
+extra-source "libghc-gtk-traymanager-prof_1.0.1-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-gtk-traymanager/libghc-gtk-traymanager-prof_1.0.1-5+b1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wireshark-dev_3.4.10-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wireshark-dev"]
+]
+depends: [
+  "libglib2-0-dev"
+  "libpcap0-8-dev"
+  "libtool"
+  "libwireshark-dev"
+  "libwiretap-dev"
+  "omniidl" {>= "4.0.1-2"}
+  "python3-any"
+  "python3-ply"
+  "snacc"
+]
+extra-source "wireshark-dev_3.4.10-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wireshark/wireshark-dev_3.4.10-0+deb11u1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsnack-oss_2.2.10.20090623-dfsg-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsnack-oss"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libx11-6"
+  ("osspd" | "oss-compat")
+]
+conflicts: [
+  "libsnack-alsa"
+]
+extra-source "libsnack-oss_2.2.10.20090623-dfsg-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snack/libsnack-oss_2.2.10.20090623-dfsg-8_amd64.deb"
+}

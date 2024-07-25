@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rails-deprecated-sanitizer_1.0.3-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rails-deprecated-sanitizer"]
+]
+depends: [
+  "ruby-activesupport" {>= "2-4.2.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-rails-deprecated-sanitizer_1.0.3-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rails-deprecated-sanitizer/ruby-rails-deprecated-sanitizer_1.0.3-3.1_all.deb"
+}

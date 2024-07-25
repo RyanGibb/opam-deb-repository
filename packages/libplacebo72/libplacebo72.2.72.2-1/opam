@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplacebo72_2.72.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplacebo72"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libepoxy0" {>= "1.0"}
+  "libgcc-s1" {>= "3.4"}
+  "liblcms2-2" {>= "2.6"}
+  "libstdc++6" {>= "9"}
+  "libvulkan1" {>= "1.2.131.2"}
+]
+extra-source "libplacebo72_2.72.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libplacebo/libplacebo72_2.72.2-1_amd64.deb"
+}

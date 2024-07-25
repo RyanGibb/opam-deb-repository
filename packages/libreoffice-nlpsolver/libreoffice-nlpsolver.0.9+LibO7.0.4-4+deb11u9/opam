@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-nlpsolver_0.9+LibO7.0.4-4+deb11u9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-nlpsolver"]
+]
+depends: [
+  "liblibreoffice-java"
+  "libreoffice-calc"
+  "libreoffice-core"
+  "libreoffice-java-common"
+  ("default-jre" {>= "2-1.8"} | "java8-runtime" | "jre")
+]
+extra-source "libreoffice-nlpsolver_0.9+LibO7.0.4-4+deb11u9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-nlpsolver_0.9+LibO7.0.4-4+deb11u9_all.deb"
+}

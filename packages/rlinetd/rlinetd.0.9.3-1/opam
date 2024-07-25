@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rlinetd_0.9.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rlinetd"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libcap2" {>= "1-2.10"}
+  "libwrap0" {>= "7.6-4~"}
+  "lsb-base"
+  "netbase"
+  "perl-any"
+  "psmisc"
+  "ucf"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+conflicts: [
+  "inet-superserver"
+  "netkit-inetd"
+  "xinetd"
+]
+extra-source "rlinetd_0.9.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rlinetd/rlinetd_0.9.3-1_amd64.deb"
+}

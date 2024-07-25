@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkdsoap-dev_1.9.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkdsoap-dev"]
+]
+depends: [
+  "libkdsoap-bin" {= "1.9.1+dfsg-2"}
+  "libkdsoap-server1" {= "1.9.1+dfsg-2"}
+  "libkdsoap1" {= "1.9.1+dfsg-2"}
+  "qtbase5-dev" {>= "5.11.0~"}
+]
+extra-source "libkdsoap-dev_1.9.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdsoap/libkdsoap-dev_1.9.1+dfsg-2_amd64.deb"
+}

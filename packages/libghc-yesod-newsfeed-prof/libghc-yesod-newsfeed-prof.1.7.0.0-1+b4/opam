@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-yesod-newsfeed-prof_1.7.0.0-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-yesod-newsfeed-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-blaze-html-prof"
+  "libghc-blaze-markup-prof"
+  "libghc-shakespeare-prof"
+  "libghc-xml-conduit-prof"
+  "libghc-yesod-core-prof"
+  "libghc-yesod-newsfeed-dev" {= "1.7.0.0-1+b4"}
+]
+extra-source "libghc-yesod-newsfeed-prof_1.7.0.0-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-yesod-newsfeed/libghc-yesod-newsfeed-prof_1.7.0.0-1+b4_amd64.deb"
+}

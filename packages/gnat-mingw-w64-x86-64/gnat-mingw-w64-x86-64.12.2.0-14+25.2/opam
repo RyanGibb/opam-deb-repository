@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnat-mingw-w64-x86-64_12.2.0-14+25.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnat-mingw-w64-x86-64"]
+]
+depends: [
+  "gnat-mingw-w64-x86-64-posix"
+  "gnat-mingw-w64-x86-64-win32"
+]
+extra-source "gnat-mingw-w64-x86-64_12.2.0-14+25.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-mingw-w64/gnat-mingw-w64-x86-64_12.2.0-14+25.2_all.deb"
+}

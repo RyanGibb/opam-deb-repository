@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnunet-gtk_0.13.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnunet-gtk"]
+]
+depends: [
+  "gnunet" {>= "0.13.1"}
+  "libc6" {>= "2.15"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgnutls30" {>= "3.7.0"}
+  "libgtk-3-0" {>= "3.22.0"}
+  "libqrencode4" {>= "3.2.0"}
+  "policykit-1"
+]
+extra-source "gnunet-gtk_0.13.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnunet-gtk/gnunet-gtk_0.13.1-2_amd64.deb"
+}

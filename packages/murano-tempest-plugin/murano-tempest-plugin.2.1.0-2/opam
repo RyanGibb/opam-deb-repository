@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i murano-tempest-plugin_2.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r murano-tempest-plugin"]
+]
+depends: [
+  "python3-any"
+  "python3-gabbi"
+  "python3-heatclient"
+  "python3-keystoneclient"
+  "python3-mistralclient"
+  "python3-muranoclient"
+  "python3-neutronclient"
+  "python3-oslo-config"
+  "python3-oslo-serialization"
+  "python3-oslo-utils"
+  "python3-pbr"
+  "python3-requests"
+  "python3-six"
+  "python3-tempest"
+  "python3-testresources"
+  "python3-testtools"
+  "tempest"
+]
+extra-source "murano-tempest-plugin_2.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/murano-tempest-plugin/murano-tempest-plugin_2.1.0-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-charmbracelet-keygen-dev_0.1.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-charmbracelet-keygen-dev"]
+]
+depends: [
+  "golang-github-mikesmitty-edkey-dev" {>= "0.0~git20170222.3356ea4"}
+  "golang-github-mitchellh-go-homedir-dev" {>= "1.1.0"}
+  "golang-golang-x-crypto-dev" {>= "1-0.0~git20210817.32db794"}
+]
+extra-source "golang-github-charmbracelet-keygen-dev_0.1.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-charmbracelet-keygen/golang-github-charmbracelet-keygen-dev_0.1.2-2_all.deb"
+}

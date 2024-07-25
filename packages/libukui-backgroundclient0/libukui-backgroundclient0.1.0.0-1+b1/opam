@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libukui-backgroundclient0_1.0.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libukui-backgroundclient0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libukui-gsettings0" {= "1.0.0-1+b1"}
+  "libukui-print0" {= "1.0.0-1+b1"}
+  "ukui-backgroundserver" {= "1.0.0-1+b1"}
+]
+extra-source "libukui-backgroundclient0_1.0.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ukui-interface/libukui-backgroundclient0_1.0.0-1+b1_amd64.deb"
+}

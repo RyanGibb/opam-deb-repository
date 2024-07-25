@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-xss-sanitize-prof_0.3.7-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-xss-sanitize-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-attoparsec-prof"
+  "libghc-css-text-prof"
+  "libghc-network-uri-prof"
+  "libghc-tagsoup-prof"
+  "libghc-utf8-string-prof"
+  "libghc-xss-sanitize-dev" {= "0.3.7-1+b2"}
+]
+extra-source "libghc-xss-sanitize-prof_0.3.7-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-xss-sanitize/libghc-xss-sanitize-prof_0.3.7-1+b2_amd64.deb"
+}

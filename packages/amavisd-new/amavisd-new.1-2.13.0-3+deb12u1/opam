@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i amavisd-new_1:2.13.0-3+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r amavisd-new"]
+]
+depends: [
+  "file"
+  "init-system-helpers" {>= "1.51"}
+  "libarchive-tar-perl"
+  "libarchive-zip-perl"
+  "libberkeleydb-perl"
+  "libconvert-tnef-perl"
+  "libconvert-uulib-perl"
+  "libdigest-md5-perl"
+  "libio-stringy-perl"
+  "libmail-dkim-perl"
+  "libmailtools-perl"
+  "libmime-base64-perl"
+  "libmime-tools-perl"
+  "libnet-libidn-perl"
+  "libnet-server-perl"
+  "libnet-snmp-perl"
+  "libtime-hires-perl"
+  "libunix-syslog-perl"
+  "pax"
+  "perl-any"
+  ("debconf" | "debconf-2-0")
+  ("perl" | "libcompress-raw-zlib-perl")
+  ("systemd" | "systemd-standalone-sysusers" | "systemd-sysusers")
+]
+conflicts: [
+  "amavis"
+]
+extra-source "amavisd-new_1:2.13.0-3+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/amavisd-new/amavisd-new_2.13.0-3+deb12u1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcompare-camlp4-dev_113.00.00-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcompare-camlp4-dev"]
+]
+depends: [
+  "camlp4"
+  "libc6" {>= "2.2.5"}
+  "libcamlp4-ocaml-dev"
+  "libtype-conv-camlp4-dev"
+  "ocaml-findlib"
+  "ocaml-nox"
+]
+extra-source "libcompare-camlp4-dev_113.00.00-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/comparelib/libcompare-camlp4-dev_113.00.00-2+b1_amd64.deb"
+}

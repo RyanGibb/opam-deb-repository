@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xfoil_6.99.dfsg+1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xfoil"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-4.0"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+  "libx11-6"
+]
+extra-source "xfoil_6.99.dfsg+1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xfoil/xfoil_6.99.dfsg+1-1_amd64.deb"
+}

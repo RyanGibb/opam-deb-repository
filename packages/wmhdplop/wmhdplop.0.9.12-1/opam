@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmhdplop_0.9.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmhdplop"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libimlib2" {>= "1.4.5"}
+  "libx11-6"
+  "libxext6"
+]
+extra-source "wmhdplop_0.9.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmhdplop/wmhdplop_0.9.12-1_amd64.deb"
+}

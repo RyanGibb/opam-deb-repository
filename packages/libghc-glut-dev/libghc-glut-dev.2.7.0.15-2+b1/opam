@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-glut-dev_2.7.0.15-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-glut-dev"]
+]
+depends: [
+  "freeglut3" {>= "2.8.1"}
+  "freeglut3-dev"
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-opengl-dev"
+  "libghc-statevar-dev"
+  "libgl1"
+  "libgmp10"
+  "libice-dev"
+  "libsm-dev"
+  "libxi-dev"
+  "libxmu-dev"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "libghc-glut-dev_2.7.0.15-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-glut/libghc-glut-dev_2.7.0.15-2+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-regex-tdfa-text-prof_1.0.0.3-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-regex-tdfa-text-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-regex-base-prof"
+  "libghc-regex-tdfa-prof"
+  "libghc-regex-tdfa-text-dev" {= "1.0.0.3-4+b2"}
+]
+extra-source "libghc-regex-tdfa-text-prof_1.0.0.3-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-regex-tdfa-text/libghc-regex-tdfa-text-prof_1.0.0.3-4+b2_amd64.deb"
+}

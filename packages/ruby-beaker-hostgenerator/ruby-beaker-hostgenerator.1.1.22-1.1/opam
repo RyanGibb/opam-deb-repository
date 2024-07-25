@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-beaker-hostgenerator_1.1.22-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-beaker-hostgenerator"]
+]
+depends: [
+  "ruby-deep-merge"
+  "ruby-stringify-hash"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-beaker-hostgenerator_1.1.22-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-beaker-hostgenerator/ruby-beaker-hostgenerator_1.1.22-1.1_all.deb"
+}

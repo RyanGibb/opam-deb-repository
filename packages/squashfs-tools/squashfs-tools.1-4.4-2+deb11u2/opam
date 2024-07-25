@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i squashfs-tools_1:4.4-2+deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r squashfs-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "liblz4-1" {>= "0.0~r130"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "liblzo2-2" {>= "2.02"}
+  "libzstd1" {>= "1.4.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "squashfs-tools_1:4.4-2+deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/squashfs-tools/squashfs-tools_4.4-2+deb11u2_amd64.deb"
+}

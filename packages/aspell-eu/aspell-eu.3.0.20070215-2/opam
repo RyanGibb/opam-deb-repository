@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aspell-eu_3.0.20070215-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aspell-eu"]
+]
+depends: [
+  "aspell"
+  "dictionaries-common" {>= "1.23~"}
+]
+extra-source "aspell-eu_3.0.20070215-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xuxen-eu-spell/aspell-eu_3.0.20070215-2_all.deb"
+}

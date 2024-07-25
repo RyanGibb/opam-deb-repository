@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dcap-tunnel-gsi_2.47.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dcap-tunnel-gsi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdcap1" {= "2.47.14-1"}
+  "libglobus-gssapi-gsi4" {>= "13"}
+]
+extra-source "dcap-tunnel-gsi_2.47.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dcap/dcap-tunnel-gsi_2.47.14-1_amd64.deb"
+}

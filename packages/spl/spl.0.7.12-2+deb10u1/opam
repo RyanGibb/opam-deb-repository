@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i spl_0.7.12-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r spl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+conflicts: [
+  "spl-dev"
+  "splat"
+]
+extra-source "spl_0.7.12-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spl-linux/spl_0.7.12-2+deb10u1_amd64.deb"
+}

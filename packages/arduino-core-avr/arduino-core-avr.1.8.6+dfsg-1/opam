@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i arduino-core-avr_1.8.6+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r arduino-core-avr"]
+]
+depends: [
+  "avr-libc"
+  "gcc-avr"
+]
+extra-source "arduino-core-avr_1.8.6+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/arduino-core-avr/arduino-core-avr_1.8.6+dfsg-1_all.deb"
+}

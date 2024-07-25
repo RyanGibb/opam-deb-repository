@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblo-tools_0.31-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblo-tools"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "liblo7" {>= "0.27"}
+]
+extra-source "liblo-tools_0.31-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblo/liblo-tools_0.31-1_amd64.deb"
+}

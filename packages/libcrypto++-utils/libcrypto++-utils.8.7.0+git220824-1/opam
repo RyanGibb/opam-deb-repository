@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypto++-utils_8.7.0+git220824-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypto++-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+conflicts: [
+  "libcrypto++-dev (= 5.2.1c2-1)"
+]
+extra-source "libcrypto++-utils_8.7.0+git220824-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcrypto++/libcrypto++-utils_8.7.0+git220824-1_amd64.deb"
+}

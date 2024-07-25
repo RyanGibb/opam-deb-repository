@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdb4o8.0-cil_8.0.184.15484+dfsg2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdb4o8.0-cil"]
+]
+depends: [
+  "cli-common" {>= "0.5.1"}
+  "libmono-corlib4-5-cil" {>= "4.2.0"}
+  "libmono-system-core4-0-cil" {>= "4.2.0"}
+  "libmono-system4-0-cil" {>= "4.2.0"}
+]
+conflicts: [
+  "libdb4o6.0-cil"
+  "libdb4o6.1-cil"
+]
+extra-source "libdb4o8.0-cil_8.0.184.15484+dfsg2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/db4o/libdb4o8.0-cil_8.0.184.15484+dfsg2-3_all.deb"
+}

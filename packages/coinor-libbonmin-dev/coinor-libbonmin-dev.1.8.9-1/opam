@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coinor-libbonmin-dev_1.8.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coinor-libbonmin-dev"]
+]
+depends: [
+  "coinor-libbonmin4" {= "1.8.9-1"}
+  "coinor-libcbc-dev"
+  "coinor-libipopt-dev"
+]
+extra-source "coinor-libbonmin-dev_1.8.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coinor-bonmin/coinor-libbonmin-dev_1.8.9-1_amd64.deb"
+}

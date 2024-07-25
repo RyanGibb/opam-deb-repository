@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i searchandrescue_1.5.0-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r searchandrescue"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgl1"
+  "libsdl1-2-compat-shim"
+  "libx11-6"
+  "libxext6"
+  "libxpm4"
+  "libxxf86vm1"
+  "searchandrescue-common" {= "1.5.0-2.1"}
+  "searchandrescue-data" {>= "1.3.0-1"}
+  ("libglu1-mesa" | "libglu1")
+]
+conflicts: [
+  "sar"
+]
+extra-source "searchandrescue_1.5.0-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/searchandrescue/searchandrescue_1.5.0-2.1_amd64.deb"
+}

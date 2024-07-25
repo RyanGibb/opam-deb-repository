@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tf-random-prof_0.5-11+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tf-random-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-primitive-prof"
+  "libghc-random-prof"
+  "libghc-tf-random-dev" {= "0.5-11+b3"}
+]
+extra-source "libghc-tf-random-prof_0.5-11+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tf-random/libghc-tf-random-prof_0.5-11+b3_amd64.deb"
+}

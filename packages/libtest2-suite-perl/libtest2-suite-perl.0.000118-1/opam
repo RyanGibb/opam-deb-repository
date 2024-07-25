@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest2-suite-perl_0.000118-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest2-suite-perl"]
+]
+depends: [
+  "libimporter-perl"
+  "libscope-guard-perl"
+  "libsub-info-perl"
+  "libterm-table-perl"
+  "perl"
+  ("libmodule-pluggable-perl" | "perl" {< "5.17.9"})
+]
+extra-source "libtest2-suite-perl_0.000118-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest2-suite-perl/libtest2-suite-perl_0.000118-1_all.deb"
+}

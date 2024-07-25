@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sphinxcontrib.blockdiag_1.5.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sphinxcontrib.blockdiag"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-blockdiag" {>= "1.5.0"}
+  "python3-sphinx" {>= "0.6"}
+]
+extra-source "python3-sphinxcontrib.blockdiag_1.5.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sphinxcontrib-blockdiag/python3-sphinxcontrib.blockdiag_1.5.5-1_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bosixnet-webui_2.0-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bosixnet-webui"]
+]
+depends: [
+  "adduser"
+  "curl"
+  "libc6" {>= "2.34"}
+  "libfcgi0ldbl" {>= "2.4.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "sed" {>= "4.2"}
+  "spawn-fcgi"
+  "sysvinit-utils"
+]
+extra-source "bosixnet-webui_2.0-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bosixnet/bosixnet-webui_2.0-2.1_amd64.deb"
+}

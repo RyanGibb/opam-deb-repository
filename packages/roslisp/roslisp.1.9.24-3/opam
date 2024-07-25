@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i roslisp_1.9.24-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r roslisp"]
+]
+depends: [
+  "cl-rosgraph-msgs"
+  "cl-std-srvs"
+  "python3"
+  "rospack-tools"
+  ("sbcl" | "lisp-compiler")
+]
+extra-source "roslisp_1.9.24-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-roslisp/roslisp_1.9.24-3_all.deb"
+}

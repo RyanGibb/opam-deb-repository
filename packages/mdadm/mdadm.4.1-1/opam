@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mdadm_4.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mdadm"]
+]
+depends: [
+  "debconf"
+  "libc6" {>= "2.28"}
+  "lsb-base"
+  "udev"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "mdadm_4.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mdadm/mdadm_4.1-1_amd64.deb"
+}

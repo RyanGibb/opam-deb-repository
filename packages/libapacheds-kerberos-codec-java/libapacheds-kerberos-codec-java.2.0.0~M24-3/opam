@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapacheds-kerberos-codec-java_2.0.0~M24-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapacheds-kerberos-codec-java"]
+]
+depends: [
+  "libapacheds-i18n-java" {= "2.0.0~M24-3"}
+  "libehcache-java" {>= "2.6.11-2~"}
+]
+extra-source "libapacheds-kerberos-codec-java_2.0.0~M24-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apache-directory-server/libapacheds-kerberos-codec-java_2.0.0~M24-3_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eog-plugin-maximize-windows_3.26.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eog-plugin-maximize-windows"]
+]
+depends: [
+  "eog" {>= "3.20.3-1~"}
+  "eog-plugins-common" {>= "3.26.5-1"}
+  "gir1-2-glib-2-0"
+  "python3-any"
+  "python3-gi"
+]
+extra-source "eog-plugin-maximize-windows_3.26.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eog-plugins/eog-plugin-maximize-windows_3.26.5-1_amd64.deb"
+}

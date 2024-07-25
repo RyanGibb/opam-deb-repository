@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i soundscaperenderer-nox_0.5.0~dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r soundscaperenderer-nox"]
+]
+depends: [
+  "jackd"
+  "libc6" {>= "2.27"}
+  "libecasoundc1v5"
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc1" {>= "1-4.0"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "6"}
+  "libxml2" {>= "2.7.4"}
+  "soundscaperenderer-common" {= "0.5.0~dfsg-4"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "soundscaperenderer-nox_0.5.0~dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/soundscaperenderer/soundscaperenderer-nox_0.5.0~dfsg-4_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i btest_0.58-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r btest"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-any" {>= "2.6.6-7~"}
+]
+extra-source "btest_0.58-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/btest/btest_0.58-1_all.deb"
+}

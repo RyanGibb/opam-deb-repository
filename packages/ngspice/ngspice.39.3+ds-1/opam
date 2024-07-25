@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ngspice_39.3+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ngspice"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libedit2" {>= "2.11-20080614-0"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "4.5"}
+  "libtinfo6" {>= "6"}
+  "libx11-6"
+  "libxaw7" {>= "2-1.0.14"}
+  "libxft2" {> "2.1.1"}
+  "libxt6"
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "ngspice_39.3+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ngspice/ngspice_39.3+ds-1_amd64.deb"
+}

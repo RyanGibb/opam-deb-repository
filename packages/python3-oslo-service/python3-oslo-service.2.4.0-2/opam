@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-oslo.service_2.4.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-oslo.service"]
+]
+depends: [
+  "procps"
+  "python3-any"
+  "python3-babel"
+  "python3-debtcollector"
+  "python3-eventlet" {>= "0.25.2"}
+  "python3-fixtures"
+  "python3-greenlet"
+  "python3-oslo-concurrency"
+  "python3-oslo-config"
+  "python3-oslo-i18n"
+  "python3-oslo-log"
+  "python3-oslo-utils" {>= "3.40.2"}
+  "python3-paste"
+  "python3-pastedeploy"
+  "python3-routes"
+  "python3-webob"
+  "python3-yappi"
+]
+extra-source "python3-oslo.service_2.4.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-oslo.service/python3-oslo.service_2.4.0-2_all.deb"
+}

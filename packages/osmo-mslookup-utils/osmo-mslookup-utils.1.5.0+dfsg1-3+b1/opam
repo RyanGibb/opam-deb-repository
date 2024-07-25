@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osmo-mslookup-utils_1.5.0+dfsg1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osmo-mslookup-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libosmo-mslookup0" {= "1.5.0+dfsg1-3+b1"}
+  "libosmocore19" {>= "1.7.0"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "osmo-mslookup-utils_1.5.0+dfsg1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmo-hlr/osmo-mslookup-utils_1.5.0+dfsg1-3+b1_amd64.deb"
+}

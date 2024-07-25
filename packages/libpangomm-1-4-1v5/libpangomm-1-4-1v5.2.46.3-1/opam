@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpangomm-1.4-1v5_2.46.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpangomm-1.4-1v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairomm-1-0-1v5" {>= "1.14.3"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.33.14"}
+  "libglibmm-2-4-1v5" {>= "2.66.5"}
+  "libpango-1-0-0" {>= "1.45.5"}
+  "libpangocairo-1-0-0" {>= "1.41.0"}
+  "libsigc++-2-0-0v5" {>= "2.2.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libpangomm-1.4-1"
+]
+extra-source "libpangomm-1.4-1v5_2.46.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pangomm/libpangomm-1.4-1v5_2.46.3-1_amd64.deb"
+}

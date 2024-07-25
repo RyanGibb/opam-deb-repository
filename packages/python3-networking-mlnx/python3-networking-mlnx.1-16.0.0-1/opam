@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-networking-mlnx_1:16.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-networking-mlnx"]
+]
+depends: [
+  "python3-any"
+  "python3-babel"
+  "python3-defusedxml"
+  "python3-ethtool"
+  "python3-eventlet"
+  "python3-netaddr"
+  "python3-neutron" {>= "2-16.0.0"}
+  "python3-neutron-lib" {>= "1.28.0"}
+  "python3-neutronclient"
+  "python3-openstackclient"
+  "python3-oslo-concurrency"
+  "python3-oslo-config"
+  "python3-oslo-privsep"
+  "python3-pbr"
+  "python3-pyroute2"
+  "python3-six" {>= "1.10.0"}
+  "python3-sqlalchemy"
+  "python3-zmq"
+]
+extra-source "python3-networking-mlnx_1:16.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/networking-mlnx/python3-networking-mlnx_16.0.0-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i inetutils-traceroute_2:1.9.4-7+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r inetutils-traceroute"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libidn11" {>= "1.13"}
+  "netbase"
+]
+extra-source "inetutils-traceroute_2:1.9.4-7+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/inetutils/inetutils-traceroute_1.9.4-7+deb10u1_amd64.deb"
+}

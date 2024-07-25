@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mariadb-plugin-cracklib-password-check_1:10.5.23-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mariadb-plugin-cracklib-password-check"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcrack2" {>= "2.9.0"}
+  "mariadb-server-10-5"
+]
+extra-source "mariadb-plugin-cracklib-password-check_1:10.5.23-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-plugin-cracklib-password-check_10.5.23-0+deb11u1_amd64.deb"
+}

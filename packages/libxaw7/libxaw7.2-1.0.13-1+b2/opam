@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxaw7_2:1.0.13-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxaw7"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libx11-6"
+  "libxext6"
+  "libxmu6"
+  "libxpm4"
+  "libxt6"
+]
+extra-source "libxaw7_2:1.0.13-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxaw/libxaw7_1.0.13-1+b2_amd64.deb"
+}

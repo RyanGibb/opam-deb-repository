@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i systemd-journal-remote_247.3-7+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r systemd-journal-remote"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgnutls30" {>= "3.7.0"}
+  "libmicrohttpd12" {>= "0.9.50"}
+  "systemd" {= "247.3-7+deb11u5"}
+]
+extra-source "systemd-journal-remote_247.3-7+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/systemd/systemd-journal-remote_247.3-7+deb11u5_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcmap-dev_3.1.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcmap-dev"]
+]
+depends: [
+  "libcmap4" {= "3.1.7-1"}
+  "libcorosync-common-dev" {= "3.1.7-1"}
+]
+extra-source "libcmap-dev_3.1.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/corosync/libcmap-dev_3.1.7-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-rtcninja_0.6.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-rtcninja"]
+]
+depends: [
+  "libjs-rtcninja"
+  "node-bowser"
+  "node-debug"
+  "node-merge"
+  "nodejs" {>= "0.6.19~dfsg1-3"}
+]
+extra-source "node-rtcninja_0.6.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rtcninjajs/node-rtcninja_0.6.2-2_all.deb"
+}

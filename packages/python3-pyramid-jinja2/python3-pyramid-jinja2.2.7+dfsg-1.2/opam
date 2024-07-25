@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyramid-jinja2_2.7+dfsg-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyramid-jinja2"]
+]
+depends: [
+  "python3-any" {>= "3.2~"}
+  "python3-jinja2"
+  "python3-markupsafe"
+  "python3-pyramid"
+  "python3-zope-deprecation"
+]
+extra-source "python3-pyramid-jinja2_2.7+dfsg-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyramid-jinja2/python3-pyramid-jinja2_2.7+dfsg-1.2_all.deb"
+}

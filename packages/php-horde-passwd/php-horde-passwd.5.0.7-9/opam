@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-horde-passwd_5.0.7-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-horde-passwd"]
+]
+depends: [
+  "php-common"
+  "php-horde" {< "6.0.0~alpha1"}
+  "php-horde" {>= "5.2.23+debian0-2~"}
+  "php-horde-auth" {< "3.0.0~alpha1"}
+  "php-horde-auth" {>= "2.0.0"}
+  "php-horde-core" {< "3.0.0~alpha1"}
+  "php-horde-core" {>= "2.30.0"}
+  "php-horde-exception" {< "3.0.0~alpha1"}
+  "php-horde-exception" {>= "2.0.0"}
+  "php-horde-injector" {< "3.0.0~alpha1"}
+  "php-horde-injector" {>= "2.0.0"}
+  "php-horde-util" {< "3.0.0~alpha1"}
+  "php-horde-util" {>= "2.0.0"}
+  "php-horde-view" {< "3.0.0~alpha1"}
+  "php-horde-view" {>= "2.0.0"}
+]
+extra-source "php-horde-passwd_5.0.7-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-horde-passwd/php-horde-passwd_5.0.7-9_all.deb"
+}

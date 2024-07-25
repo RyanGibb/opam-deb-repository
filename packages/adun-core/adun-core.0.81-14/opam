@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i adun-core_0.81-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r adun-core"]
+]
+depends: [
+  "gnustep-base-runtime" {>= "1.27.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnustep-base1-27" {>= "1.27.0"}
+  "libgsl25" {>= "2.6"}
+  "libobjc4" {>= "4.2.1"}
+]
+extra-source "adun-core_0.81-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/adun.app/adun-core_0.81-14_amd64.deb"
+}

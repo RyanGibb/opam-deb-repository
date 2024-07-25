@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcb-rnd-import-geo_3.0.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcb-rnd-import-geo"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfreetype6" {>= "2.2.1"}
+  "libfungw1"
+  "pcb-rnd-core" {= "3.0.6-1"}
+]
+extra-source "pcb-rnd-import-geo_3.0.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcb-rnd/pcb-rnd-import-geo_3.0.6-1_amd64.deb"
+}

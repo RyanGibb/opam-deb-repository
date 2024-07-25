@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i salt-common_2018.3.4+dfsg1-6+deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r salt-common"]
+]
+depends: [
+  "python3-any"
+  "python3-apt"
+  "python3-dateutil"
+  "python3-jinja2"
+  "python3-msgpack"
+  "python3-pkg-resources"
+  "python3-psutil"
+  "python3-requests" {>= "1.0.0"}
+  "python3-yaml"
+  ("python3-tornado4" {>= "4.2"} | "python3-tornado" {< "5"})
+  ("python3-tornado4" {>= "4.2"} | "python3-tornado" {>= "4.2"})
+]
+extra-source "salt-common_2018.3.4+dfsg1-6+deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/salt/salt-common_2018.3.4+dfsg1-6+deb10u3_all.deb"
+}

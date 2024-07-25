@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtaktuk3_3.7.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtaktuk3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "taktuk" {= "3.7.7-1"}
+]
+extra-source "libtaktuk3_3.7.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/taktuk/libtaktuk3_3.7.7-1_amd64.deb"
+}

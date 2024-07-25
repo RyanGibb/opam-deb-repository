@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-tokio-vsock-dev_0.3.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-tokio-vsock-dev"]
+]
+depends: [
+  "librust-bytes-dev"
+  "librust-futures-0-3+default-dev"
+  "librust-libc-dev"
+  "librust-tokio-1+default-dev"
+  "librust-tokio-1+net-dev"
+  "librust-vsock-dev"
+]
+extra-source "librust-tokio-vsock-dev_0.3.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-tokio-vsock/librust-tokio-vsock-dev_0.3.1-2+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ipwatchd-gnotify_1.0.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ipwatchd-gnotify"]
+]
+depends: [
+  "ipwatchd"
+  "libc6" {>= "2.14"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libnotify4" {>= "0.7.0"}
+]
+extra-source "ipwatchd-gnotify_1.0.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ipwatchd-gnotify/ipwatchd-gnotify_1.0.1-1+b2_amd64.deb"
+}

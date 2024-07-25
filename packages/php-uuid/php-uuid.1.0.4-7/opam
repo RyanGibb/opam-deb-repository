@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-uuid_1.0.4-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-uuid"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libuuid1" {>= "2.16"}
+  "php-common" {>= "1-7.0+33~"}
+  "ucf"
+  ("libapache2-mod-php7-3" | "libphp7-3-embed" | "php7-3-cgi" | "php7-3-cli" | "php7-3-fpm" | "php7-3-phpdbg")
+]
+extra-source "php-uuid_1.0.4-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-uuid/php-uuid_1.0.4-7_amd64.deb"
+}

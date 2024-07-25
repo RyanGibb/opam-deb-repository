@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hamradio-morse_0.8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hamradio-morse"]
+]
+depends: [
+  "hamradio-tasks" {= "0.8"}
+]
+extra-source "hamradio-morse_0.8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-hamradio/hamradio-morse_0.8_all.deb"
+}

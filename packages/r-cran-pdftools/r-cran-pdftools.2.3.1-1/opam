@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-pdftools_2.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-pdftools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpoppler-cpp0v5" {>= "0.46.0"}
+  "libstdc++6" {>= "9"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  "r-cran-qpdf"
+  "r-cran-rcpp" {>= "0.12.12"}
+]
+extra-source "r-cran-pdftools_2.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-pdftools/r-cran-pdftools_2.3.1-1_amd64.deb"
+}

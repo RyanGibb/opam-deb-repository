@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kodi-pvr-iptvsimple_20.6.1+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kodi-pvr-iptvsimple"]
+]
+depends: [
+  "kodi"
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libpugixml1v5" {>= "1.6"}
+  "libstdc++6" {>= "11"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "kodi-pvr-iptvsimple_20.6.1+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kodi-pvr-iptvsimple/kodi-pvr-iptvsimple_20.6.1+ds-1_amd64.deb"
+}

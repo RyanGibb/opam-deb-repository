@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcvc4parser7_1.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcvc4parser7"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcln6"
+  "libcvc4-7" {>= "1.8"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  ("libantlr3c-3-4-0" | "libantlr3c-antlrdbg-3-4-0")
+]
+extra-source "libcvc4parser7_1.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cvc4/libcvc4parser7_1.8-2_amd64.deb"
+}

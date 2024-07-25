@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbi-perl_1.643-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbi-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libdbi-perl_1.643-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdbi-perl/libdbi-perl_1.643-4_amd64.deb"
+}

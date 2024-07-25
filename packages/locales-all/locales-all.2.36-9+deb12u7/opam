@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i locales-all_2.36-9+deb12u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r locales-all"]
+]
+depends: [
+  "libc-l10n" {> "2.36"}
+]
+extra-source "locales-all_2.36-9+deb12u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glibc/locales-all_2.36-9+deb12u7_amd64.deb"
+}

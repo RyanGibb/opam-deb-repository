@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xzgv_0.9.1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xzgv"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.24.0"}
+  "libx11-6"
+]
+extra-source "xzgv_0.9.1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xzgv/xzgv_0.9.1-4+b1_amd64.deb"
+}

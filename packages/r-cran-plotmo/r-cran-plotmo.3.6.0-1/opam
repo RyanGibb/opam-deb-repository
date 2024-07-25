@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-plotmo_3.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-plotmo"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  "r-cran-formula" {>= "1.2-3"}
+  "r-cran-plotrix"
+  "r-cran-teachingdemos"
+]
+extra-source "r-cran-plotmo_3.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-plotmo/r-cran-plotmo_3.6.0-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnu-smalltalk_3.2.5-1.3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnu-smalltalk"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgnutls30" {>= "3.6.6"}
+  "libgst7"
+  "unzip"
+  "zip"
+]
+extra-source "gnu-smalltalk_3.2.5-1.3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnu-smalltalk/gnu-smalltalk_3.2.5-1.3+b2_amd64.deb"
+}

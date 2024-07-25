@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i resvg_0.8.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r resvg"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.4.10"}
+  "libgcc-s1" {>= "4.2"}
+  "libharfbuzz0b" {>= "0.9.28"}
+  "libqt5core5a" {>= "5.0.2"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "resvg_0.8.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/resvg/resvg_0.8.0-4_amd64.deb"
+}

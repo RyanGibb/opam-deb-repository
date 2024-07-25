@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenvas-dev_9.0.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenvas-dev"]
+]
+depends: [
+  "libgcrypt20-dev"
+  "libglib2-0-dev"
+  "libgnutls28-dev"
+  "libgpgme-dev"
+  "libhiredis-dev"
+  "libksba-dev"
+  "libopenvas9" {= "9.0.3-1+b1"}
+  "libpcap-dev"
+  "libsnmp-dev"
+  "libssh-dev"
+  "uuid-dev"
+]
+extra-source "libopenvas-dev_9.0.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openvas-libraries/libopenvas-dev_9.0.3-1+b1_amd64.deb"
+}

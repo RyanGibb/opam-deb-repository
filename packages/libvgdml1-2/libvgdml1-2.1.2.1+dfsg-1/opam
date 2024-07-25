@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvgdml1.2_1.2.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvgdml1.2"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libembree3-3" {>= "3.13.5+dfsg"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libvecgeom1-2" {>= "1.2.1+dfsg"}
+  "libxerces-c3-2"
+  "sse4-2-support"
+]
+extra-source "libvgdml1.2_1.2.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vecgeom/libvgdml1.2_1.2.1+dfsg-1_amd64.deb"
+}

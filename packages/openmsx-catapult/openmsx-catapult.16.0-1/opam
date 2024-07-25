@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openmsx-catapult_16.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openmsx-catapult"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libwxbase3-0-0v5" {>= "3.0.5.1+dfsg"}
+  "libwxgtk3-0-gtk3-0v5" {>= "3.0.5.1+dfsg"}
+  "libxml2" {>= "2.7.4"}
+  "openmsx" {< "16.1~"}
+  "openmsx" {>= "16.0"}
+]
+extra-source "openmsx-catapult_16.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openmsx-catapult/openmsx-catapult_16.0-1_amd64.deb"
+}

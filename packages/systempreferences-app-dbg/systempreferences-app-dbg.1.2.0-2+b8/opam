@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i systempreferences.app-dbg_1.2.0-2+b8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r systempreferences.app-dbg"]
+]
+depends: [
+  ("systempreferences-app" {= "1.2.0-2+b8"} | "libpreferencepanes1" {= "1.2.0-2+b8"})
+]
+extra-source "systempreferences.app-dbg_1.2.0-2+b8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/systempreferences.app/systempreferences.app-dbg_1.2.0-2+b8_amd64.deb"
+}

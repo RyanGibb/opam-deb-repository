@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libchromaprint1_1.5.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libchromaprint1"]
+]
+depends: [
+  "libavcodec-extra58"
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.4"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libchromaprint1_1.5.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chromaprint/libchromaprint1_1.5.0-2_amd64.deb"
+}

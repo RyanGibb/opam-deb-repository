@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i camv-rnd_1.1.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r camv-rnd"]
+]
+depends: [
+  "camv-rnd-core" {= "1.1.0-3"}
+  "camv-rnd-doc" {= "1.1.0-3"}
+  "camv-rnd-export-gd" {= "1.1.0-3"}
+  "camv-rnd-export-vector" {= "1.1.0-3"}
+  "camv-rnd-import" {= "1.1.0-3"}
+  "camv-rnd-lib-gui" {= "1.1.0-3"}
+  "librnd3-hid-gtk2-gdk" {>= "3.2.0"}
+  "librnd3-hid-gtk2-gl" {>= "3.2.0"}
+]
+extra-source "camv-rnd_1.1.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/camv-rnd/camv-rnd_1.1.0-3_amd64.deb"
+}

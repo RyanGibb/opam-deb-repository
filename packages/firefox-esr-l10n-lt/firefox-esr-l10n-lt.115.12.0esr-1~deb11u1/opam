@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i firefox-esr-l10n-lt_115.12.0esr-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r firefox-esr-l10n-lt"]
+]
+depends: [
+  "firefox-esr" {< "115.12.0esr-1~deb11u1.1~"}
+  "firefox-esr" {>= "115.12.0esr-1~deb11u1"}
+]
+extra-source "firefox-esr-l10n-lt_115.12.0esr-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/firefox-esr/firefox-esr-l10n-lt_115.12.0esr-1~deb11u1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mokutil_0.6.0-2~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mokutil"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libefivar1" {>= "37"}
+  "libkeyutils1" {>= "1.5.9"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "mokutil_0.6.0-2~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mokutil/mokutil_0.6.0-2~deb11u1_amd64.deb"
+}

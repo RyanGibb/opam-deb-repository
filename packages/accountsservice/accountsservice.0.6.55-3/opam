@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i accountsservice_0.6.55-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r accountsservice"]
+]
+depends: [
+  "dbus" {>= "1.9.18"}
+  "libaccountsservice0" {= "0.6.55-3"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.44"}
+  "libpolkit-gobject-1-0" {>= "0.99"}
+]
+extra-source "accountsservice_0.6.55-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/accountsservice/accountsservice_0.6.55-3_amd64.deb"
+}

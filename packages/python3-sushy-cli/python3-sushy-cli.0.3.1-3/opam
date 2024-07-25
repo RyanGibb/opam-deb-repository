@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sushy-cli_0.3.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sushy-cli"]
+]
+depends: [
+  "python3-any"
+  "python3-cliff" {>= "2.17.0"}
+  "python3-sushy" {>= "3.2.0"}
+  "python3-urllib3"
+]
+extra-source "python3-sushy-cli_0.3.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-sushy-cli/python3-sushy-cli_0.3.1-3_all.deb"
+}

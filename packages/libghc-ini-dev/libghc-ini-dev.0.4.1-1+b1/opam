@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-ini-dev_0.4.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-ini-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-attoparsec-dev"
+  "libghc-unordered-containers-dev"
+  "libgmp10"
+]
+extra-source "libghc-ini-dev_0.4.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-ini/libghc-ini-dev_0.4.1-1+b1_amd64.deb"
+}

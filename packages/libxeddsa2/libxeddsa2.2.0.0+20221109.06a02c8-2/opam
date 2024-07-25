@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxeddsa2_2.0.0+20221109.06a02c8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxeddsa2"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+  "libsodium23" {>= "1.0.16"}
+]
+extra-source "libxeddsa2_2.0.0+20221109.06a02c8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxeddsa/libxeddsa2_2.0.0+20221109.06a02c8-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjflex-maven-plugin-java_1.7.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjflex-maven-plugin-java"]
+]
+depends: [
+  "jflex"
+  "libcommons-io-java" {>= "2.8.0"}
+  "libmaven3-core-java" {>= "3.6.3"}
+]
+extra-source "libjflex-maven-plugin-java_1.7.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maven-jflex-plugin/libjflex-maven-plugin-java_1.7.0-2_all.deb"
+}

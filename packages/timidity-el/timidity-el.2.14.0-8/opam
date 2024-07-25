@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i timidity-el_2.14.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r timidity-el"]
+]
+depends: [
+  "emacsen-common"
+  "timidity" {>= "2.14.0-8"}
+]
+extra-source "timidity-el_2.14.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/timidity/timidity-el_2.14.0-8_all.deb"
+}

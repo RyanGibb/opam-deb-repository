@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnotcurses2_2.2.3+dfsg.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnotcurses2"]
+]
+depends: [
+  "libavcodec-extra58"
+  "libavformat58" {>= "7-4.2.1"}
+  "libavutil56" {>= "7-4.2.1"}
+  "libc6" {>= "2.17"}
+  "libnotcurses-core2" {>= "2.2.3"}
+  "libstdc++6" {>= "5"}
+  "libswscale5" {>= "7-4.2.1"}
+]
+extra-source "libnotcurses2_2.2.3+dfsg.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/notcurses/libnotcurses2_2.2.3+dfsg.1-1_amd64.deb"
+}

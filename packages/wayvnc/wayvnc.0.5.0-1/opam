@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wayvnc_0.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wayvnc"]
+]
+depends: [
+  "libaml0" {>= "0.2.2"}
+  "libc6" {>= "2.29"}
+  "libneatvnc0" {>= "0.5.1+dfsg"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpixman-1-0" {>= "0.25.2"}
+  "libwayland-client0" {>= "1.20.0"}
+  "libxkbcommon0" {>= "1.0.0"}
+]
+extra-source "wayvnc_0.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wayvnc/wayvnc_0.5.0-1_amd64.deb"
+}

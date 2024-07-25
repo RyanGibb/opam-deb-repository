@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pmw_1.3.2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pmw"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  "python-tk" {>= "2.4.3"}
+  ("python2-6" | "python2-7")
+]
+extra-source "python-pmw_1.3.2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pmw/python-pmw_1.3.2-6_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmo-sabp1_1.3.0+dfsg1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmo-sabp1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libosmocore19" {>= "1.7.0"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+  "osmo-libasn1c1" {>= "0.9.30"}
+]
+extra-source "libosmo-sabp1_1.3.0+dfsg1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmo-iuh/libosmo-sabp1_1.3.0+dfsg1-5_amd64.deb"
+}

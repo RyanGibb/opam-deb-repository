@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ttyplot_1.4+77.g1a1693b-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ttyplot"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "ttyplot_1.4+77.g1a1693b-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/ttyplot/ttyplot_1.4+77.g1a1693b-2_amd64.deb"
+}

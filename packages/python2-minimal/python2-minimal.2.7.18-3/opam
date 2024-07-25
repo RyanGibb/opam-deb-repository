@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python2-minimal_2.7.18-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python2-minimal"]
+]
+depends: [
+  "dpkg" {>= "1.13.20"}
+  "python2-7-minimal" {>= "2.7.18~"}
+]
+conflicts: [
+  "python-central (<< 0.5.5)"
+]
+extra-source "python2-minimal_2.7.18-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-defaults/python2-minimal_2.7.18-3_amd64.deb"
+}

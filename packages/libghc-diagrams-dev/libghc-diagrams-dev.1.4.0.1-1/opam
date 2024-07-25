@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-diagrams-dev_1.4.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-diagrams-dev"]
+]
+depends: [
+  "libghc-diagrams-cairo-dev" {< "1.5"}
+  "libghc-diagrams-cairo-dev" {>= "1.4"}
+  "libghc-diagrams-core-dev" {< "1.6"}
+  "libghc-diagrams-core-dev" {>= "1.4"}
+  "libghc-diagrams-lib-dev" {< "1.5"}
+  "libghc-diagrams-lib-dev" {>= "1.4"}
+  "libghc-diagrams-svg-dev" {< "1.5"}
+  "libghc-diagrams-svg-dev" {>= "1.4"}
+]
+extra-source "libghc-diagrams-dev_1.4.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-diagrams/libghc-diagrams-dev_1.4.0.1-1_all.deb"
+}

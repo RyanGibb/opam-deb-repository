@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-iconv_2.3.5-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-iconv"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libnode72" {>= "12.19.0~dfsg"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "node-iconv_2.3.5-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-iconv/node-iconv_2.3.5-5_amd64.deb"
+}

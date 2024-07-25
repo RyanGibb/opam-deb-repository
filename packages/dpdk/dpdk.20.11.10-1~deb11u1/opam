@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpdk_20.11.10-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpdk"]
+]
+depends: [
+  "lsb-base" {>= "3.2-14"}
+  "pciutils"
+  "procps"
+  "python3-any"
+  ("pci-ids" | "hwdata")
+]
+extra-source "dpdk_20.11.10-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/dpdk_20.11.10-1~deb11u1_amd64.deb"
+}

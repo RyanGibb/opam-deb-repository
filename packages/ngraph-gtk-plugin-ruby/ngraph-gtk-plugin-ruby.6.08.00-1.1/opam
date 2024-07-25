@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ngraph-gtk-plugin-ruby_6.08.00-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ngraph-gtk-plugin-ruby"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libruby2-5" {>= "2.5.0~preview1"}
+  "ngraph-gtk"
+  "ruby-ngraph"
+]
+extra-source "ngraph-gtk-plugin-ruby_6.08.00-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ngraph-gtk/ngraph-gtk-plugin-ruby_6.08.00-1.1_amd64.deb"
+}

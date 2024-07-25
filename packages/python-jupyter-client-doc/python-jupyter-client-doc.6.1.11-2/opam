@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-jupyter-client-doc_6.1.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-jupyter-client-doc"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "2.4.3-5~"}
+  "sphinx-rtd-theme-common" {>= "0.5.1+dfsg"}
+]
+extra-source "python-jupyter-client-doc_6.1.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jupyter-client/python-jupyter-client-doc_6.1.11-2_all.deb"
+}

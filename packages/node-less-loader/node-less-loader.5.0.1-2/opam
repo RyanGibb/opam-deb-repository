@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-less-loader_5.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-less-loader"]
+]
+depends: [
+  "node-clone" {>= "2.1.1"}
+  "node-less"
+  "node-loader-utils" {>= "1.1.0"}
+  "node-pify" {>= "3.0.0"}
+  "nodejs" {>= "6"}
+]
+extra-source "node-less-loader_5.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-less-loader/node-less-loader_5.0.1-2_all.deb"
+}

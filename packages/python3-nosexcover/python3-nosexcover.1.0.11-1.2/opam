@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-nosexcover_1.0.11-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-nosexcover"]
+]
+depends: [
+  "python3-any"
+  "python3-coverage" {>= "3.4"}
+  "python3-nose"
+]
+extra-source "python3-nosexcover_1.0.11-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nosexcover/python3-nosexcover_1.0.11-1.2_all.deb"
+}

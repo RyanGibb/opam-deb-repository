@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i moarvm_2018.12+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r moarvm"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "libffi6" {>= "3.0.4"}
+  "libtommath1" {>= "1.1.0"}
+  "libuv1" {>= "1.23.0"}
+]
+extra-source "moarvm_2018.12+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/moarvm/moarvm_2018.12+dfsg-3_amd64.deb"
+}

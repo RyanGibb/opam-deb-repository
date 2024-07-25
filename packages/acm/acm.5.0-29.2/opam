@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i acm_5.0-29.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r acm"]
+]
+depends: [
+  "libaudio2"
+  "libc6" {>= "2.14"}
+  "libx11-6"
+  "libxext6"
+]
+extra-source "acm_5.0-29.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/acm/acm_5.0-29.2_amd64.deb"
+}

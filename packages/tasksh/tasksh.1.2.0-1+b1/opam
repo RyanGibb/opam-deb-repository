@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tasksh_1.2.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tasksh"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc-s1"
+  "libncurses6" {>= "6"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+  "taskwarrior"
+]
+extra-source "tasksh_1.2.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tasksh/tasksh_1.2.0-1+b1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i didjvu_0.8.2-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r didjvu"]
+]
+depends: [
+  "djvulibre-bin"
+  "minidjvu"
+  "python-any"
+  "python-gamera"
+  "python-pil"
+  ("python" {>= "2.7"} | "python-argparse")
+]
+extra-source "didjvu_0.8.2-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/didjvu/didjvu_0.8.2-2+deb10u1_all.deb"
+}

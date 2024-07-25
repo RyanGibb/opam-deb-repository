@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxendevicemodel1_4.14.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxendevicemodel1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libxencall1"
+  "libxentoolcore1"
+  "libxentoollog1"
+]
+extra-source "libxendevicemodel1_4.14.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xen/libxendevicemodel1_4.14.6-1_amd64.deb"
+}

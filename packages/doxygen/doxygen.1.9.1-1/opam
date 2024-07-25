@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i doxygen_1.9.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r doxygen"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libclang-cpp11" {>= "1-11.0.1"}
+  "libclang1-11" {>= "1-5.0~svn298832-1~"}
+  "libgcc-s1" {>= "3.0"}
+  "libllvm11" {>= "1-9~svn298832-1~"}
+  "libstdc++6" {>= "7"}
+  "libxapian30" {>= "1.4.14~"}
+]
+conflicts: [
+  "graphviz (<< 1.12)"
+]
+extra-source "doxygen_1.9.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/doxygen/doxygen_1.9.1-1_amd64.deb"
+}

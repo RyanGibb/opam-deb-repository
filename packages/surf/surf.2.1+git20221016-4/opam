@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i surf_2.1+git20221016-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r surf"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcr-base-3-1" {>= "3.8.0"}
+  "libgcr-ui-3-1" {>= "3.8.0"}
+  "libglib2-0-0" {>= "2.28.0"}
+  "libgtk-3-0" {>= "3.19.12"}
+  "libjavascriptcoregtk-4-1-0" {>= "2.38.2"}
+  "libwebkit2gtk-4-1-0" {>= "2.27.2"}
+  "libx11-6"
+]
+extra-source "surf_2.1+git20221016-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/surf/surf_2.1+git20221016-4_amd64.deb"
+}

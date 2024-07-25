@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i globus-gatekeeper_11.4-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r globus-gatekeeper"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglobus-common0" {>= "17"}
+  "libglobus-gss-assist3" {>= "11"}
+  "libglobus-gssapi-gsi4" {>= "13"}
+  "libssl3" {>= "3.0.0"}
+  "sysvinit-utils"
+]
+extra-source "globus-gatekeeper_11.4-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gatekeeper/globus-gatekeeper_11.4-2+b2_amd64.deb"
+}

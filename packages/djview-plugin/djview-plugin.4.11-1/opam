@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i djview-plugin_4.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r djview-plugin"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  ("djview4" | "djview3")
+]
+conflicts: [
+  "djvulibre-bin (<< 3.5.19)"
+  "djvulibre-plugin (<= 3.5.23-4)"
+]
+extra-source "djview-plugin_4.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/djview4/djview-plugin_4.11-1_amd64.deb"
+}

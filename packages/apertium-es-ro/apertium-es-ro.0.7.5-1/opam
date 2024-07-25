@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-es-ro_0.7.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-es-ro"]
+]
+depends: [
+  "apertium" {>= "3.8.1"}
+]
+conflicts: [
+  "apertium-ro-es"
+  "apertium-ron-spa"
+  "apertium-spa-ron"
+]
+extra-source "apertium-es-ro_0.7.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-es-ro/apertium-es-ro_0.7.5-1_all.deb"
+}

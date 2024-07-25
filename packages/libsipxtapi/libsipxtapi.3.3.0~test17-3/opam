@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsipxtapi_3.3.0~test17-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsipxtapi"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libopus0" {>= "1.1"}
+  "libpcre3"
+  "libspeex1" {>= "1.2~beta3-1"}
+  "libspeexdsp1" {>= "1.2~beta3.2-1"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libsipxtapi_3.3.0~test17-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sipxtapi/libsipxtapi_3.3.0~test17-3_amd64.deb"
+}

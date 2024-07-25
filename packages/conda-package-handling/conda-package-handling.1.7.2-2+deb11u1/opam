@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i conda-package-handling_1.7.2-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r conda-package-handling"]
+]
+depends: [
+  "libarchive13" {>= "3.1.2"}
+  "libc6" {>= "2.4"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-six"
+  "python3-tqdm"
+]
+extra-source "conda-package-handling_1.7.2-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/conda-package-handling/conda-package-handling_1.7.2-2+deb11u1_amd64.deb"
+}

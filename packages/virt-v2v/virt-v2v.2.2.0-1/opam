@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i virt-v2v_2.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r virt-v2v"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libguestfs0" {>= "1-1.43.3"}
+  "libjansson4" {>= "2.14"}
+  "libnbd0" {>= "1.12.0"}
+  "libosinfo-1-0-0" {>= "1.7.1~"}
+  "libpcre2-8-0" {>= "10.22"}
+  "libvirt0" {>= "1.2.8~rc2"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "virt-v2v_2.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/virt-v2v/virt-v2v_2.2.0-1_amd64.deb"
+}

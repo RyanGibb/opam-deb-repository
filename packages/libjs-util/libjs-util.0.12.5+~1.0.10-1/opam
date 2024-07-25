@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjs-util_0.12.5+~1.0.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjs-util"]
+]
+depends: [
+  "node-deep-equal" {>= "2.0~"}
+  "node-inherits"
+]
+extra-source "libjs-util_0.12.5+~1.0.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-util/libjs-util_0.12.5+~1.0.10-1_all.deb"
+}

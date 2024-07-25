@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-sna_2.7-1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-sna"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-network"
+  "r-cran-statnet-common"
+]
+extra-source "r-cran-sna_2.7-1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-sna/r-cran-sna_2.7-1-1_amd64.deb"
+}

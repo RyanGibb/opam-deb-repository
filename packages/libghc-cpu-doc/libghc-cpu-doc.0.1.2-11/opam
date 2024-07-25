@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cpu-doc_0.1.2-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cpu-doc"]
+]
+depends: [
+  "ghc"
+  "sgml-base" {>= "1.28"}
+]
+extra-source "libghc-cpu-doc_0.1.2-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cpu/libghc-cpu-doc_0.1.2-11_all.deb"
+}

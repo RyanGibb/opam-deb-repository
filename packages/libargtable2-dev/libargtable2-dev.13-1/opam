@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libargtable2-dev_13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libargtable2-dev"]
+]
+depends: [
+  "libargtable2-0" {= "13-1"}
+  "libargtable2-docs" {= "13-1"}
+]
+conflicts: [
+  "argtable"
+  "argtable2"
+]
+extra-source "libargtable2-dev_13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/argtable2/libargtable2-dev_13-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgtp6_1.6.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgtp6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libosmocore16" {>= "1.4.0"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "libgtp6_1.6.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmo-ggsn/libgtp6_1.6.0-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i expat_2.2.10-2+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r expat"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+]
+extra-source "expat_2.2.10-2+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/expat/expat_2.2.10-2+deb11u5_amd64.deb"
+}

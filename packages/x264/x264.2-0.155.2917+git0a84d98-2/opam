@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i x264_2:0.155.2917+git0a84d98-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r x264"]
+]
+depends: [
+  "libavcodec-extra58"
+  "libavformat58" {>= "7-4.0"}
+  "libavresample4" {>= "7-4.0"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.15"}
+  "libffms2-4" {>= "2.21"}
+  "libgpac4" {>= "0.5.2"}
+  "libswresample3" {>= "7-4.0"}
+  "libswscale5" {>= "7-4.0"}
+  "libx264-155"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "x264_2:0.155.2917+git0a84d98-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/x264/x264_0.155.2917+git0a84d98-2_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i neverball-data_1.6.0+git20180603-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r neverball-data"]
+]
+depends: [
+  "neverball-common" {= "1.6.0+git20180603-2"}
+]
+extra-source "neverball-data_1.6.0+git20180603-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neverball/neverball-data_1.6.0+git20180603-2_all.deb"
+}

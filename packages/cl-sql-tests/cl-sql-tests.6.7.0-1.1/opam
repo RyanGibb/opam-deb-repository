@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cl-sql-tests_6.7.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cl-sql-tests"]
+]
+depends: [
+  "cl-rt"
+  "cl-sql"
+  "cl-sql-mysql"
+  "cl-sql-odbc"
+  "cl-sql-postgresql"
+  "cl-sql-postgresql-socket"
+  "cl-sql-sqlite"
+]
+extra-source "cl-sql-tests_6.7.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cl-sql/cl-sql-tests_6.7.0-1.1_all.deb"
+}

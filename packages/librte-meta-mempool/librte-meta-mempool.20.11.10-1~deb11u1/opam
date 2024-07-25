@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-meta-mempool_20.11.10-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-meta-mempool"]
+]
+depends: [
+  "librte-mempool-bucket21" {= "20.11.10-1~deb11u1"}
+  "librte-mempool-dpaa2-21" {= "20.11.10-1~deb11u1"}
+  "librte-mempool-dpaa21" {= "20.11.10-1~deb11u1"}
+  "librte-mempool-octeontx2-21" {= "20.11.10-1~deb11u1"}
+  "librte-mempool-octeontx21" {= "20.11.10-1~deb11u1"}
+  "librte-mempool-ring21" {= "20.11.10-1~deb11u1"}
+  "librte-mempool-stack21" {= "20.11.10-1~deb11u1"}
+]
+extra-source "librte-meta-mempool_20.11.10-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-meta-mempool_20.11.10-1~deb11u1_amd64.deb"
+}

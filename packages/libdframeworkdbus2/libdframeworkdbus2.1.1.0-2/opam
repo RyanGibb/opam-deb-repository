@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdframeworkdbus2_1.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdframeworkdbus2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libdframeworkdbus2_1.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dde-qt-dbus-factory/libdframeworkdbus2_1.1.0-2_amd64.deb"
+}

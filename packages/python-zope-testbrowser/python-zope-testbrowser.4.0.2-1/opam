@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-zope.testbrowser_4.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-zope.testbrowser"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  "python-mechanize" {>= "0.2.0"}
+  "python-pkg-resources"
+  "python-tz"
+  "python-webtest"
+  "python-zope-interface"
+  "python-zope-schema"
+  ("python2-6" | "python2-7")
+]
+conflicts: [
+  "zope3"
+]
+extra-source "python-zope.testbrowser_4.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zope.testbrowser/python-zope.testbrowser_4.0.2-1_all.deb"
+}

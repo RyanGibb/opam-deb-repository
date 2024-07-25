@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stk_4.6.1+dfsg-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stk"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "librtaudio6" {>= "5.1.0~ds1"}
+  "librtmidi5" {>= "4.0.0"}
+  "libstdc++6" {>= "9"}
+  "libstk-4-6-1" {= "4.6.1+dfsg-3+b1"}
+  "tk"
+]
+extra-source "stk_4.6.1+dfsg-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stk/stk_4.6.1+dfsg-3+b1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aptly_1.5.0+ds1-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aptly"]
+]
+depends: [
+  "bzip2"
+  "gnupg"
+  "gpgv"
+  "libc6" {>= "2.34"}
+  "xz-utils"
+]
+conflicts: [
+  "gnupg1"
+  "gpgv1"
+]
+extra-source "aptly_1.5.0+ds1-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aptly/aptly_1.5.0+ds1-1+b4_amd64.deb"
+}

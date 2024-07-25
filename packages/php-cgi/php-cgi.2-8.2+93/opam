@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-cgi_2:8.2+93_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-cgi"]
+]
+depends: [
+  "php8-2-cgi"
+]
+extra-source "php-cgi_2:8.2+93_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-defaults/php-cgi_8.2+93_all.deb"
+}

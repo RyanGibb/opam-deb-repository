@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdistro-info-perl_1.5+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdistro-info-perl"]
+]
+depends: [
+  "distro-info-data" {>= "0.46"}
+  "perl-any"
+]
+extra-source "libdistro-info-perl_1.5+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/distro-info/libdistro-info-perl_1.5+deb12u1_all.deb"
+}

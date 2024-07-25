@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmaven-remote-resources-plugin-java_3.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmaven-remote-resources-plugin-java"]
+]
+depends: [
+  "libcommons-io-java" {>= "2.11.0"}
+  "libmaven-archiver-java" {>= "3.6.0"}
+  "libmaven-artifact-transfer-java" {>= "0.13.1"}
+  "libmaven-common-artifact-filters-java" {>= "3.3.2"}
+  "libmaven-filtering-java" {>= "3.3.0"}
+  "libmaven-parent-java" {>= "35"}
+  "libplexus-resources-java" {>= "1.1.0"}
+  "velocity" {>= "1.7"}
+]
+extra-source "libmaven-remote-resources-plugin-java_3.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maven-remote-resources-plugin/libmaven-remote-resources-plugin-java_3.0.0-1_all.deb"
+}

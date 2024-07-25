@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-lexicon_3.3.17-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-lexicon"]
+]
+depends: [
+  "python3-any"
+  "python3-cryptography" {>= "1.3.4"}
+  "python3-future"
+  "python3-requests"
+  "python3-tldextract"
+  "python3-yaml"
+]
+extra-source "python3-lexicon_3.3.17-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lexicon/python3-lexicon_3.3.17-1_all.deb"
+}

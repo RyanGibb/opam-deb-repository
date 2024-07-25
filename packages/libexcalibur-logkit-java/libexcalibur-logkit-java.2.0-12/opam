@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libexcalibur-logkit-java_2.0-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libexcalibur-logkit-java"]
+]
+depends: [
+  "liblog4j1-2-java"
+  "libmail-java"
+]
+conflicts: [
+  "liblogkit-java"
+]
+extra-source "libexcalibur-logkit-java_2.0-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/excalibur-logkit/libexcalibur-logkit-java_2.0-12_all.deb"
+}

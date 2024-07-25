@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-arp-perl_1.0.12-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-arp-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libnet-arp-perl_1.0.12-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-arp-perl/libnet-arp-perl_1.0.12-1+b1_amd64.deb"
+}

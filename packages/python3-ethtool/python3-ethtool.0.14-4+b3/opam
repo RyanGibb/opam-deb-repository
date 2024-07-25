@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ethtool_0.14-4+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ethtool"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "libnl-3-200" {>= "3.2.7"}
+  "libnl-route-3-200" {>= "3.2.7"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-ethtool_0.14-4+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-ethtool/python3-ethtool_0.14-4+b3_amd64.deb"
+}

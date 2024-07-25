@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pspresent_1.3-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pspresent"]
+]
+depends: [
+  "ghostscript-x"
+  "libc6" {>= "2.2.5"}
+  "libx11-6"
+  "libxinerama1"
+]
+extra-source "pspresent_1.3-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pspresent/pspresent_1.3-4+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcfg-dev_3.0.1-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcfg-dev"]
+]
+depends: [
+  "libcfg7" {= "3.0.1-2+deb10u1"}
+  "libcorosync-common-dev" {= "3.0.1-2+deb10u1"}
+]
+extra-source "libcfg-dev_3.0.1-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/corosync/libcfg-dev_3.0.1-2+deb10u1_amd64.deb"
+}

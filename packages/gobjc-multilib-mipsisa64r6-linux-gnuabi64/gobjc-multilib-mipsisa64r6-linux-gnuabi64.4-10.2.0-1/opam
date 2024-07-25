@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gobjc-multilib-mipsisa64r6-linux-gnuabi64_4:10.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gobjc-multilib-mipsisa64r6-linux-gnuabi64"]
+]
+depends: [
+  "cpp-mipsisa64r6-linux-gnuabi64" {>= "4-10.2.0-1"}
+  "gcc-multilib-mipsisa64r6-linux-gnuabi64" {>= "4-10.2.0-1"}
+  "gobjc-10-multilib-mipsisa64r6-linux-gnuabi64" {>= "10.2.0-8~"}
+  "gobjc-mipsisa64r6-linux-gnuabi64" {>= "4-10.2.0-1"}
+]
+extra-source "gobjc-multilib-mipsisa64r6-linux-gnuabi64_4:10.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-mipsen/gobjc-multilib-mipsisa64r6-linux-gnuabi64_10.2.0-1_amd64.deb"
+}

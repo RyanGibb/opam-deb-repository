@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i olive-editor_20221024+ds-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r olive-editor"]
+]
+depends: [
+  "ffmpeg"
+  "frei0r-plugins"
+  "libavcodec-extra59"
+  "libavfilter-extra8"
+  "libavformat-extra59"
+  "libavutil57" {>= "7-5.0"}
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.0"}
+  "libopencolorio2-1" {>= "2.1.2+dfsg1"}
+  "libopenexr-3-1-30" {>= "3.1.5"}
+  "libopenimageio2-4" {>= "2.4.7.1+dfsg"}
+  "libportaudio2" {>= "19+svn20101113"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5multimedia5-plugins"
+  "libqt5widgets5" {>= "5.15.1"}
+  "libstdc++6" {>= "11"}
+  "libswresample4" {>= "7-5.0"}
+  "libswscale6" {>= "7-5.0"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "olive-editor_20221024+ds-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/olive-editor/olive-editor_20221024+ds-1+b1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-gss-assist-dev_12.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-gss-assist-dev"]
+]
+depends: [
+  "libglobus-callout-dev" {>= "3"}
+  "libglobus-common-dev" {>= "15"}
+  "libglobus-gsi-cert-utils-dev" {>= "8"}
+  "libglobus-gsi-credential-dev" {>= "6"}
+  "libglobus-gsi-sysconfig-dev" {>= "7"}
+  "libglobus-gss-assist3" {= "12.2-1"}
+  "libglobus-gssapi-gsi-dev" {>= "13"}
+]
+extra-source "libglobus-gss-assist-dev_12.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gss-assist/libglobus-gss-assist-dev_12.2-1_amd64.deb"
+}

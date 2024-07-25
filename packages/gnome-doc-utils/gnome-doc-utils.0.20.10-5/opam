@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-doc-utils_0.20.10-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-doc-utils"]
+]
+depends: [
+  "libxml2-utils"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-libxml2"
+  "xsltproc"
+]
+extra-source "gnome-doc-utils_0.20.10-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-doc-utils/gnome-doc-utils_0.20.10-5_all.deb"
+}

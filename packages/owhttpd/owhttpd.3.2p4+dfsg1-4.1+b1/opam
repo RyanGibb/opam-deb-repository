@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i owhttpd_3.2p4+dfsg1-4.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r owhttpd"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libow-3-2-4" {>= "3.2p4+dfsg1"}
+  "lsb-base"
+  "owfs-common" {>= "3.2p3-1~"}
+]
+extra-source "owhttpd_3.2p4+dfsg1-4.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/owfs/owhttpd_3.2p4+dfsg1-4.1+b1_amd64.deb"
+}

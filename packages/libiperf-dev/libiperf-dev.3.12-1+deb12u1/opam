@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libiperf-dev_3.12-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libiperf-dev"]
+]
+depends: [
+  "libiperf0" {= "3.12-1+deb12u1"}
+]
+extra-source "libiperf-dev_3.12-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iperf3/libiperf-dev_3.12-1+deb12u1_amd64.deb"
+}

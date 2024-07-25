@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debcargo_2.2.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debcargo"]
+]
+depends: [
+  "libc6" {>= "2.18"}
+  "libcurl3-gnutls" {>= "7.28.0"}
+  "libgcc1" {>= "1-4.2"}
+  "libgit2-27" {>= "0.26.0"}
+  "libssh2-1" {>= "1.2.5"}
+  "libssl1-1" {>= "1.1.0"}
+  "quilt"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "debcargo_2.2.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-debcargo/debcargo_2.2.10-1_amd64.deb"
+}

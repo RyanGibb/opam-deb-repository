@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-uploadprogress_1.0.3.1-4-g95d8a0f-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-uploadprogress"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "php-common" {>= "1-7.0+33~"}
+  "ucf"
+  ("phpapi-20180731" | "phpapi-20170718")
+]
+extra-source "php-uploadprogress_1.0.3.1-4-g95d8a0f-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-uploadprogress/php-uploadprogress_1.0.3.1-4-g95d8a0f-5+b1_amd64.deb"
+}

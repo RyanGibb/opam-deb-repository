@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clfft-client_2.12.2-3.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clfft-client"]
+]
+depends: [
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libclfft2" {= "2.12.2-3.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  ("ocl-icd-libopencl1" | "libopencl1")
+]
+extra-source "clfft-client_2.12.2-3.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clfft/clfft-client_2.12.2-3.2_amd64.deb"
+}

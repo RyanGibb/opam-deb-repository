@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-libxml-sax-prof_0.7.5-10+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-libxml-sax-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-libxml-sax-dev" {= "0.7.5-10+b1"}
+  "libghc-xml-types-prof"
+]
+extra-source "libghc-libxml-sax-prof_0.7.5-10+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-libxml-sax/libghc-libxml-sax-prof_0.7.5-10+b1_amd64.deb"
+}

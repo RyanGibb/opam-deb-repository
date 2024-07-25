@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gimp-help-fa_2.10.34-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gimp-help-fa"]
+]
+depends: [
+  "gimp-help-common" {= "2.10.34-2"}
+  ("gimp-helpbrowser" | "www-browser")
+]
+extra-source "gimp-help-fa_2.10.34-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gimp-help/gimp-help-fa_2.10.34-2_all.deb"
+}

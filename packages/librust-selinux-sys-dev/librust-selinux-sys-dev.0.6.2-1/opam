@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-selinux-sys-dev_0.6.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-selinux-sys-dev"]
+]
+depends: [
+  "librust-bindgen+default-dev"
+  "librust-cc-1+default-dev"
+  "librust-dunce-1+default-dev"
+  "librust-walkdir-dev"
+  "libselinux1-dev"
+]
+extra-source "librust-selinux-sys-dev_0.6.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-selinux-sys/librust-selinux-sys-dev_0.6.2-1_amd64.deb"
+}

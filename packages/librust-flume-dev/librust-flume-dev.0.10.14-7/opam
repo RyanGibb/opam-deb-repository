@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-flume-dev_0.10.14-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-flume-dev"]
+]
+depends: [
+  "librust-futures-core-0-3-dev"
+  "librust-futures-sink-0-3-dev"
+  "librust-nanorand-0-7+default-dev"
+  "librust-nanorand-0-7+getrandom-dev"
+  "librust-spin-0-9+default-dev"
+  "librust-spin-0-9+mutex-dev"
+]
+extra-source "librust-flume-dev_0.10.14-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-flume/librust-flume-dev_0.10.14-7_all.deb"
+}

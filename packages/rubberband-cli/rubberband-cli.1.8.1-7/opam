@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rubberband-cli_1.8.1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rubberband-cli"]
+]
+depends: [
+  "dpkg" {>= "1.17.14"}
+  "libc6" {>= "2.14"}
+  "libfftw3-double3"
+  "libgcc1" {>= "1-3.0"}
+  "libsamplerate0" {>= "0.1.7"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "rubberband-cli_1.8.1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rubberband/rubberband-cli_1.8.1-7_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyproj_3.4.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyproj"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libproj25" {>= "9.1.0"}
+  "proj-data"
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-certifi"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+]
+extra-source "python3-pyproj_3.4.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pyproj/python3-pyproj_3.4.1-1+b1_amd64.deb"
+}

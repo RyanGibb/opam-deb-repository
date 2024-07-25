@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zabbix-frontend-php_1:6.0.14+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zabbix-frontend-php"]
+]
+depends: [
+  "fonts-dejavu-core" {>= "2.37"}
+  "php"
+  "php-bcmath"
+  "php-gd"
+  "php-mbstring"
+  "php-xml"
+  "ucf"
+  ("php-pgsql" | "php-mysql" | "php-sqlite3")
+]
+extra-source "zabbix-frontend-php_1:6.0.14+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zabbix/zabbix-frontend-php_6.0.14+dfsg-1_all.deb"
+}

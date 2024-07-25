@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcifti-dev_1.5.1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcifti-dev"]
+]
+depends: [
+  "libboost-dev"
+  "libcifti0" {= "1.5.1-3+b1"}
+  "libxml++2-6-dev"
+]
+extra-source "libcifti-dev_1.5.1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ciftilib/libcifti-dev_1.5.1-3+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qdbm-cgi_1.8.78-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qdbm-cgi"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libqdbm14" {>= "1.8.74"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "qdbm-cgi_1.8.78-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qdbm/qdbm-cgi_1.8.78-9+b1_amd64.deb"
+}

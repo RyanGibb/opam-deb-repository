@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r10k_3.7.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r10k"]
+]
+depends: [
+  "ruby-colored2"
+  "ruby-cri" {>= "2.6.1"}
+  "ruby-gettext-setup" {>= "0.5"}
+  "ruby-log4r" {>= "1.1.10"}
+  "ruby-minitar" {>= "0.6.1"}
+  "ruby-multi-json" {>= "1.10"}
+  "ruby-puppet-forge" {>= "3.0.0~"}
+  "ruby-rugged" {>= "0.24.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "r10k_3.7.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r10k/r10k_3.7.0-2_all.deb"
+}

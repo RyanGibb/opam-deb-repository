@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-getspg_1.16.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-getspg"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libruby2-7" {>= "2.7.0"}
+  "libsymspg1" {>= "1.16.1"}
+  "ruby" {< "1-2.8~"}
+  "ruby" {>= "1-2.7~0"}
+]
+extra-source "ruby-getspg_1.16.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spglib/ruby-getspg_1.16.1-1_amd64.deb"
+}

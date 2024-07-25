@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i most_5.0.0a-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r most"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libslang2" {>= "2.2.4"}
+]
+extra-source "most_5.0.0a-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/most/most_5.0.0a-4_amd64.deb"
+}

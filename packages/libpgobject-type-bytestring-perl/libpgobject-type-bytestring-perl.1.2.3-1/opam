@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpgobject-type-bytestring-perl_1.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpgobject-type-bytestring-perl"]
+]
+depends: [
+  "libdbd-pg-perl"
+  "libpgobject-perl" {>= "1.403.2"}
+  "libref-util-perl"
+  "perl"
+]
+extra-source "libpgobject-type-bytestring-perl_1.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpgobject-type-bytestring-perl/libpgobject-type-bytestring-perl_1.2.3-1_all.deb"
+}

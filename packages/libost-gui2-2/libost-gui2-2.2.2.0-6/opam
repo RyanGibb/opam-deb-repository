@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libost-gui2.2_2.2.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libost-gui2.2"]
+]
+depends: [
+  "libboost-python1-74-0"
+  "libboost-python1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.27"}
+  "libgcc-s1" {>= "3.0"}
+  "libopengl0"
+  "libost-base2-2" {>= "2.2.0"}
+  "libost-conop2-2" {>= "2.2.0"}
+  "libost-geom2-2" {>= "2.2.0"}
+  "libost-gfx2-2" {>= "2.2.0"}
+  "libost-img-alg2-2" {>= "2.2.0"}
+  "libost-img2-2" {>= "2.2.0"}
+  "libost-io2-2" {>= "2.2.0"}
+  "libost-mol-alg2-2" {>= "2.2.0"}
+  "libost-mol2-2" {>= "2.2.0"}
+  "libost-seq-alg2-2" {>= "2.2.0"}
+  "libost-seq2-2" {>= "2.2.0"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "9"}
+  ("libglu1-mesa" | "libglu1")
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "libost-gui2.2_2.2.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openstructure/libost-gui2.2_2.2.0-6_amd64.deb"
+}

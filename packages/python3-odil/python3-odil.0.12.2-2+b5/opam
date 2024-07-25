@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-odil_0.12.2-2+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-odil"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libjsoncpp25" {>= "1.9.5"}
+  "libodil0" {= "0.12.2-2+b5"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-odil_0.12.2-2+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/odil/python3-odil_0.12.2-2+b5_amd64.deb"
+}

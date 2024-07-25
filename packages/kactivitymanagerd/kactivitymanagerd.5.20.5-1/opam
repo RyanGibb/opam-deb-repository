@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kactivitymanagerd_5.20.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kactivitymanagerd"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.29"}
+  "libkf5configcore5" {>= "5.74~"}
+  "libkf5coreaddons5" {>= "5.74~"}
+  "libkf5crash5" {>= "5.74~"}
+  "libkf5dbusaddons5" {>= "5.74~"}
+  "libkf5globalaccel-bin"
+  "libkf5globalaccel5" {>= "5.74~"}
+  "libkf5i18n5" {>= "5.74~"}
+  "libkf5kiocore5" {>= "5.74~"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "4.96.0"}
+  "libkf5windowsystem5" {>= "5.74~"}
+  "libkf5xmlgui5" {>= "5.74~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.15.0~"}
+  "libqt5sql5" {>= "5.15.0~"}
+  "libqt5sql5-sqlite"
+  "libqt5widgets5" {>= "5.15.0~"}
+  "libqt5xml5" {>= "5.15.0~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.0~"} | "libqt5gui5-gles" {>= "5.15.0~"})
+]
+extra-source "kactivitymanagerd_5.20.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kactivitymanagerd/kactivitymanagerd_5.20.5-1_amd64.deb"
+}

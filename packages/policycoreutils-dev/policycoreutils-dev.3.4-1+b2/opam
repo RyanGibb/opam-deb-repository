@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i policycoreutils-dev_3.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r policycoreutils-dev"]
+]
+depends: [
+  "binutils"
+  "libc6" {>= "2.34"}
+  "libselinux1" {>= "3.4"}
+  "policycoreutils" {>= "3.4"}
+  "python3-any"
+  "python3-selinux" {>= "3.4"}
+  "python3-sepolgen" {= "3.4-1"}
+  "python3-sepolicy" {= "3.4-1"}
+  "semodule-utils" {>= "3.4"}
+]
+extra-source "policycoreutils-dev_3.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/selinux-python/policycoreutils-dev_3.4-1+b2_amd64.deb"
+}

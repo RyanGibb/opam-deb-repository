@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ace-gperf_6.4.5+dfsg-1+b12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ace-gperf"]
+]
+depends: [
+  "libace-6-4-5"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "ace-gperf_6.4.5+dfsg-1+b12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ace/ace-gperf_6.4.5+dfsg-1+b12_amd64.deb"
+}

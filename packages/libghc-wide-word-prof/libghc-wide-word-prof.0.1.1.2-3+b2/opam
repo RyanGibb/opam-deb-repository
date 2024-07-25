@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-wide-word-prof_0.1.1.2-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-wide-word-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-primitive-prof"
+  "libghc-wide-word-dev" {= "0.1.1.2-3+b2"}
+]
+extra-source "libghc-wide-word-prof_0.1.1.2-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-wide-word/libghc-wide-word-prof_0.1.1.2-3+b2_amd64.deb"
+}

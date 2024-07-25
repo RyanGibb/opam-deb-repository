@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i advi_1.10.2-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r advi"]
+]
+depends: [
+  "ghostscript-x" {>= "7.05"}
+  "libc6" {>= "2.33"}
+  "libfreetype6" {>= "2.2.1"}
+  "libx11-6"
+  "libxinerama1"
+  "perl"
+  "tex-common" {>= "6.13"}
+  "texlive-base"
+  "texlive-binaries"
+]
+extra-source "advi_1.10.2-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/advi/advi_1.10.2-9+b1_amd64.deb"
+}

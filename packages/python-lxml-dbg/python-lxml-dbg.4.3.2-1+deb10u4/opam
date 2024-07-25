@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-lxml-dbg_4.3.2-1+deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-lxml-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libxml2" {>= "2.9.0"}
+  "libxslt1-1" {>= "1.1.26"}
+  "python-dbg"
+  "python-lxml" {= "4.3.2-1+deb10u4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "python-lxml-dbg_4.3.2-1+deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxml/python-lxml-dbg_4.3.2-1+deb10u4_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-domain-name_0.5.20190701-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-domain-name"]
+]
+depends: [
+  "ruby"
+  "ruby-unf" {< "1.0.0"}
+  "ruby-unf" {>= "0.0.5"}
+]
+extra-source "ruby-domain-name_0.5.20190701-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-domain-name/ruby-domain-name_0.5.20190701-1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pexec_1.0~rc8-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pexec"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "pexec_1.0~rc8-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pexec/pexec_1.0~rc8-4_amd64.deb"
+}

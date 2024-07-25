@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-dolfinx_1:0.5.2-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-dolfinx"]
+]
+depends: [
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  ("python3-dolfinx-real" | "python3-dolfinx-complex")
+]
+extra-source "python3-dolfinx_1:0.5.2-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fenics-dolfinx/python3-dolfinx_0.5.2-2+b1_amd64.deb"
+}

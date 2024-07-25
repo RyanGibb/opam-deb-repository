@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-br-fr_0.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-br-fr"]
+]
+depends: [
+  "apertium" {>= "3.7.1"}
+  "cg3" {>= "1.3.2"}
+]
+conflicts: [
+  "apertium-bre-fra"
+  "apertium-fr-br"
+  "apertium-fra-bre"
+]
+extra-source "apertium-br-fr_0.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-br-fr/apertium-br-fr_0.5.1-1_all.deb"
+}

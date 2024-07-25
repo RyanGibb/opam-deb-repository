@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tiptop_2.3.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tiptop"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "tiptop_2.3.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tiptop/tiptop_2.3.1-5_amd64.deb"
+}

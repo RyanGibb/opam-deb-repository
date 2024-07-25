@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlada-dom10-dev_21.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlada-dom10-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-10"
+  "libxmlada-dom7"
+  "libxmlada-sax10-dev" {= "21.0.0-4"}
+  "libxmlada-unicode10-dev" {= "21.0.0-4"}
+]
+extra-source "libxmlada-dom10-dev_21.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxmlada/libxmlada-dom10-dev_21.0.0-4_amd64.deb"
+}

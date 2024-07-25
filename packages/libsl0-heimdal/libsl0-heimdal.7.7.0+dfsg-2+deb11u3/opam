@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsl0-heimdal_7.7.0+dfsg-2+deb11u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsl0-heimdal"]
+]
+depends: [
+  "libc6" {>= "2.11"}
+  "libedit2" {>= "2.11-20080614-0"}
+]
+conflicts: [
+  "libsl0-kerberos4kth"
+]
+extra-source "libsl0-heimdal_7.7.0+dfsg-2+deb11u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heimdal/libsl0-heimdal_7.7.0+dfsg-2+deb11u3_amd64.deb"
+}

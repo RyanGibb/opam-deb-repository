@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lz4_1.9.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lz4"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "liblz4-1" {= "1.9.3-2"}
+]
+conflicts: [
+  "liblz4-tool (<< 1.8.0-1)"
+]
+extra-source "lz4_1.9.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lz4/lz4_1.9.3-2_amd64.deb"
+}

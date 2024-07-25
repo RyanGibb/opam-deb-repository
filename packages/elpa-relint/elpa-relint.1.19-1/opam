@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-relint_1.19-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-relint"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-xr" {>= "1.20"}
+  "emacsen-common"
+]
+extra-source "elpa-relint_1.19-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/relint-el/elpa-relint_1.19-1_all.deb"
+}

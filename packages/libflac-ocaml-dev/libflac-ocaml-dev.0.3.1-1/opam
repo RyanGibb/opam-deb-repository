@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libflac-ocaml-dev_0.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libflac-ocaml-dev"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libflac-dev"
+  "libflac-ocaml"
+  "libflac-ocaml" {= "0.3.1-1"}
+  "libflac12" {>= "1.3.0"}
+  "libogg-ocaml-dev"
+  "libogg0" {>= "1.0rc3"}
+  "ocaml"
+  "ocaml-findlib"
+]
+extra-source "libflac-ocaml-dev_0.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-flac/libflac-ocaml-dev_0.3.1-1_amd64.deb"
+}

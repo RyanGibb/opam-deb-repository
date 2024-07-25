@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liburi-namespacemap-perl_1.06-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liburi-namespacemap-perl"]
+]
+depends: [
+  "libiri-perl"
+  "libmoo-perl"
+  "libnamespace-autoclean-perl"
+  "libtry-tiny-perl"
+  "libtypes-uri-perl"
+  "liburi-perl"
+  "perl"
+  ("libsub-quote-perl" | "libmoo-perl" {< "2.003000"})
+]
+extra-source "liburi-namespacemap-perl_1.06-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/liburi-namespacemap-perl/liburi-namespacemap-perl_1.06-2_all.deb"
+}

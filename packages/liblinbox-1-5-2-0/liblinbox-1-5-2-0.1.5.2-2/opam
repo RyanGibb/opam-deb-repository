@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblinbox-1.5.2-0_1.5.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblinbox-1.5.2-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgivaro9" {>= "4.0.2-8~"}
+  "libgmp10"
+  "libgmpxx4ldbl"
+  "libgomp1" {>= "4.2.1"}
+  "libiml0"
+  "libmpfr6" {>= "3.1.3"}
+  "libntl35"
+  "libstdc++6" {>= "5.2"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "liblinbox-1.5.2-0_1.5.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linbox/liblinbox-1.5.2-0_1.5.2-2_amd64.deb"
+}

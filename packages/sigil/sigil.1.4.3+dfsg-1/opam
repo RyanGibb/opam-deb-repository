@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sigil_1.4.3+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sigil"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libhunspell-1-7-0"
+  "libhunspell-dev"
+  "libjs-jquery-scrollto"
+  "libjs-mathjax" {>= "2.7.0"}
+  "libminizip1" {>= "1.1"}
+  "libpcre16-3" {>= "2-8.35-4"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libqt5concurrent5" {>= "5.9.4"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5printsupport5" {>= "5.9.4"}
+  "libqt5webenginecore5" {>= "5.9.4"}
+  "libqt5webenginewidgets5" {>= "5.14.1"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libstdc++6" {>= "5.2"}
+  "python3-dulwich" {>= "0.19"}
+  "python3-lxml"
+  "sigil-data" {= "1.4.3+dfsg-1"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "sigil_1.4.3+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sigil/sigil_1.4.3+dfsg-1_amd64.deb"
+}

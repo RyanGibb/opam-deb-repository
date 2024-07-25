@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i k3d-data_0.8.0.6-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r k3d-data"]
+]
+depends: [
+  "ttf-bitstream-vera" {>= "1.10"}
+]
+extra-source "k3d-data_0.8.0.6-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/k3d/k3d-data_0.8.0.6-8_all.deb"
+}

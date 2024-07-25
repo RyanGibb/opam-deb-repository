@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-org-kde-kaccounts_4:17.08.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-org-kde-kaccounts"]
+]
+depends: [
+  "libaccounts-qt5-1" {>= "1.13"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libkaccounts1" {>= "0.0"}
+  "libkf5coreaddons5" {>= "4.97.0"}
+  "libkf5i18n5" {>= "4.97.0"}
+  "libqt5core5a" {>= "5.9.0~beta"}
+  "libqt5gui5" {>= "5.4"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libsignon-qt5-1" {>= "8.57+20150423"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "qml-module-org-kde-kaccounts_4:17.08.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kaccounts-integration/qml-module-org-kde-kaccounts_17.08.3-1_amd64.deb"
+}

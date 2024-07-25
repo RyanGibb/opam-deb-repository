@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-some-doc_1.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-some-doc"]
+]
+depends: [
+  "ghc"
+  "sgml-base" {>= "1.28"}
+]
+extra-source "libghc-some-doc_1.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-some/libghc-some-doc_1.0.3-1_all.deb"
+}

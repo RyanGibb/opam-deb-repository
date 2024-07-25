@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mate-applet-appmenu_0.7.1+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mate-applet-appmenu"]
+]
+depends: [
+  "appmenu-registrar" {>= "0.7.1"}
+  "bamfdaemon"
+  "libatk1-0-0" {>= "1.12.4"}
+  "libbamf3-2" {>= "0.2.110"}
+  "libc6" {>= "2.7"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.47.1"}
+  "libgtk-3-0" {>= "3.21.6"}
+  "libmate-panel-applet-4-1" {>= "1.20.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libwnck-3-0" {>= "3.4.0"}
+  "vala-panel-appmenu-common" {= "0.7.1+dfsg1-1"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "mate-applet-appmenu_0.7.1+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vala-panel-appmenu/mate-applet-appmenu_0.7.1+dfsg1-1_amd64.deb"
+}

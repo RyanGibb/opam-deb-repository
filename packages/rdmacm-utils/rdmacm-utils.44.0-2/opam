@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rdmacm-utils_44.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rdmacm-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libibverbs1" {>= "1.1.6"}
+  "librdmacm1" {>= "23"}
+]
+extra-source "rdmacm-utils_44.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rdma-core/rdmacm-utils_44.0-2_amd64.deb"
+}

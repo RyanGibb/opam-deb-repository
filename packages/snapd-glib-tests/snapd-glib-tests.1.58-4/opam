@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i snapd-glib-tests_1.58-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r snapd-glib-tests"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.46"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libsnapd-glib1" {>= "1.58"}
+  "libsnapd-qt1" {>= "1.58"}
+  "libsoup2-4-1" {>= "2.49.91.1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "snapd-glib-tests_1.58-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snapd-glib/snapd-glib-tests_1.58-4_amd64.deb"
+}

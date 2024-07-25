@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-snap-server-prof_1.1.2.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-snap-server-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-attoparsec-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-case-insensitive-prof"
+  "libghc-clock-prof"
+  "libghc-io-streams-haproxy-prof"
+  "libghc-io-streams-prof"
+  "libghc-lifted-base-prof"
+  "libghc-network-prof"
+  "libghc-old-locale-prof"
+  "libghc-snap-core-prof"
+  "libghc-snap-server-dev" {= "1.1.2.0-2+b2"}
+  "libghc-unix-compat-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-snap-server-prof_1.1.2.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-snap-server/libghc-snap-server-prof_1.1.2.0-2+b2_amd64.deb"
+}

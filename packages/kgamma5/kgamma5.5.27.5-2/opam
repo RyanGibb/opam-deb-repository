@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kgamma5_5.27.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kgamma5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5configcore5" {>= "5.102.0~"}
+  "libkf5configwidgets5" {>= "5.102.0~"}
+  "libkf5coreaddons5" {>= "4.99.0"}
+  "libkf5i18n5" {>= "5.102.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "libxxf86vm1"
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "kgamma5_5.27.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kgamma5/kgamma5_5.27.5-2_amd64.deb"
+}

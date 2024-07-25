@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-gevent_22.10.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-gevent"]
+]
+depends: [
+  "libc-ares2" {>= "1.16.0"}
+  "libc6" {>= "2.4"}
+  "libev4" {>= "1-4.04"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-greenlet" {>= "2.0.0"}
+  "python3-pkg-resources"
+  "python3-zope-event"
+  "python3-zope-interface"
+]
+extra-source "python3-gevent_22.10.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-gevent/python3-gevent_22.10.2-3_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-factory-bot_5.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-factory-bot"]
+]
+depends: [
+  "ruby-activesupport"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-factory-bot_5.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-factory-bot/ruby-factory-bot_5.1.1-1_all.deb"
+}

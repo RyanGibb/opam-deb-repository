@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libatomic1-i386-cross_10.2.1-6cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libatomic1-i386-cross"]
+]
+depends: [
+  "gcc-10-cross-base" {>= "10.2.1-6"}
+  "libc6-i386-cross" {>= "2.31"}
+]
+extra-source "libatomic1-i386-cross_10.2.1-6cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10-cross/libatomic1-i386-cross_10.2.1-6cross1_all.deb"
+}

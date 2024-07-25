@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nip2_8.7.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nip2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcgraph6"
+  "libfftw3-double3" {>= "3.3.10"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgsl27" {>= "2.7.1"}
+  "libgtk2-0-0" {>= "2.24.0"}
+  "libgvc6"
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libvips42" {> "8.0.2-1~"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "nip2_8.7.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nip2/nip2_8.7.1-4_amd64.deb"
+}

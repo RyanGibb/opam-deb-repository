@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdevmapper-dev_2:1.02.155-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdevmapper-dev"]
+]
+depends: [
+  "libdevmapper-event1-02-1" {= "2-1.02.155-3"}
+  "libdevmapper1-02-1" {= "2-1.02.155-3"}
+  "libselinux1-dev"
+  "libudev-dev"
+]
+extra-source "libdevmapper-dev_2:1.02.155-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lvm2/libdevmapper-dev_1.02.155-3_amd64.deb"
+}

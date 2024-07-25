@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ser2net_4.3.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ser2net"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgensio4" {>= "2.6.2"}
+  "libyaml-0-2"
+]
+extra-source "ser2net_4.3.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/ser2net/ser2net_4.3.11-1_amd64.deb"
+}

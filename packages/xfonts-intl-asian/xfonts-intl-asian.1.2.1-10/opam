@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xfonts-intl-asian_1.2.1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xfonts-intl-asian"]
+]
+depends: [
+  "xfonts-utils"
+]
+conflicts: [
+  "intlfonts-asian"
+]
+extra-source "xfonts-intl-asian_1.2.1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/intlfonts/xfonts-intl-asian_1.2.1-10_all.deb"
+}

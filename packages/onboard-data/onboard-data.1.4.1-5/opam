@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i onboard-data_1.4.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r onboard-data"]
+]
+depends: [
+  "onboard" {< "1.4.1-5.1"}
+  "onboard" {>= "1.4.1-5"}
+]
+extra-source "onboard-data_1.4.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/onboard/onboard-data_1.4.1-5_all.deb"
+}

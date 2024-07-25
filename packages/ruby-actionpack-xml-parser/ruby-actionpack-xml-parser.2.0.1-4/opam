@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-actionpack-xml-parser_2.0.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-actionpack-xml-parser"]
+]
+depends: [
+  "ruby-actionpack" {< "2-7"}
+  "ruby-actionpack" {>= "2-5.0"}
+  "ruby-railties" {< "2-7"}
+  "ruby-railties" {>= "2-5.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-actionpack-xml-parser_2.0.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-actionpack-xml-parser/ruby-actionpack-xml-parser_2.0.1-4_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-skylighting-prof_0.12.3.1-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-skylighting-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-skylighting-core-prof"
+  "libghc-skylighting-dev" {= "0.12.3.1-1+b4"}
+]
+extra-source "libghc-skylighting-prof_0.12.3.1-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-skylighting/libghc-skylighting-prof_0.12.3.1-1+b4_amd64.deb"
+}

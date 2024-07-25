@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-oschwald-geoip2-golang-dev_1.1.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-oschwald-geoip2-golang-dev"]
+]
+depends: [
+  "golang-github-oschwald-maxminddb-golang-dev" {>= "1.2.0"}
+  "golang-go"
+  "golang-gopkg-check-v1-dev"
+]
+extra-source "golang-github-oschwald-geoip2-golang-dev_1.1.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-oschwald-geoip2-golang/golang-github-oschwald-geoip2-golang-dev_1.1.0-4_all.deb"
+}

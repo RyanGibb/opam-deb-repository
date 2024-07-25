@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i icecc_1.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r icecc"]
+]
+depends: [
+  "adduser"
+  "file"
+  "libarchive13" {>= "3.3.3"}
+  "libc6" {>= "2.33"}
+  "libcap-ng0" {>= "0.7.9"}
+  "libgcc-s1" {>= "3.0"}
+  "liblzo2-2" {>= "2.02"}
+  "libstdc++6" {>= "9"}
+  "libzstd1" {>= "1.4.0"}
+  "lsb-base"
+  ("g++" | "c++-compiler" | "c-compiler")
+]
+extra-source "icecc_1.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/icecc/icecc_1.4-1_amd64.deb"
+}

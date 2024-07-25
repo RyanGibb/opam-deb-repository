@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pan-control-systems_0.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pan-control-systems"]
+]
+depends: [
+  "pan-config" {= "0.4"}
+  "pan-tasks" {= "0.4"}
+]
+extra-source "pan-control-systems_0.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-pan/pan-control-systems_0.4_all.deb"
+}

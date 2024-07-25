@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i virtuoso-opensource-6.1-bin_6.1.6+dfsg2-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r virtuoso-opensource-6.1-bin"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libpcre3"
+  "libreadline7" {>= "6.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "virtuoso-opensource-6.1-bin_6.1.6+dfsg2-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/virtuoso-opensource/virtuoso-opensource-6.1-bin_6.1.6+dfsg2-4+b2_amd64.deb"
+}

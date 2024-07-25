@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i boinctui_2.5.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r boinctui"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnutls-openssl27" {>= "3.0-0"}
+  "libncursesw6" {>= "6"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "boinctui_2.5.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boinctui/boinctui_2.5.0-1+b1_amd64.deb"
+}

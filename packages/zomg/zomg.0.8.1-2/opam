@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zomg_0.8.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zomg"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libopusfile0" {>= "0.5"}
+  "libvorbisfile3" {>= "1.1.2"}
+  "libxml2" {>= "2.7.4"}
+  "lockfile-progs"
+  "wget"
+  "zsh"
+]
+extra-source "zomg_0.8.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zomg/zomg_0.8.1-2_amd64.deb"
+}

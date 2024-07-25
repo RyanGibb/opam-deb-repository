@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i metadata-json-lint_3.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r metadata-json-lint"]
+]
+depends: [
+  "ruby"
+  "ruby-json-schema" {>= "2.8"}
+  "ruby-spdx-licenses" {>= "1.0"}
+]
+extra-source "metadata-json-lint_3.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/metadata-json-lint/metadata-json-lint_3.0.0-2_all.deb"
+}

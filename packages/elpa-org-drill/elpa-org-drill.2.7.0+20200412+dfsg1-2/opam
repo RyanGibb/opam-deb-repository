@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-org-drill_2.7.0+20200412+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-org-drill"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-persist" {>= "0.3"}
+  "elpa-seq" {>= "2.14"}
+  "emacsen-common"
+]
+extra-source "elpa-org-drill_2.7.0+20200412+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/org-drill/elpa-org-drill_2.7.0+20200412+dfsg1-2_all.deb"
+}

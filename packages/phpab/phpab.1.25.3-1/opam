@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phpab_1.25.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phpab"]
+]
+depends: [
+  "php-cli"
+  "php-directory-scanner" {< "2~~"}
+  "php-directory-scanner" {>= "1.3"}
+  "php-zeta-console-tools" {< "2~~"}
+  "php-zeta-console-tools" {>= "1.7"}
+]
+extra-source "phpab_1.25.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phpab/phpab_1.25.3-1_all.deb"
+}

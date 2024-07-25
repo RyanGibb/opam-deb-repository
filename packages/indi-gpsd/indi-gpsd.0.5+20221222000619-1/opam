@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i indi-gpsd_0.5+20221222000619-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r indi-gpsd"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgps28" {>= "3.20"}
+  "libindidriver1" {>= "1.9.9+dfsg"}
+  "libnova-0-16-0" {>= "0.16"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "indi-gpsd_0.5+20221222000619-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/indi-gpsd/indi-gpsd_0.5+20221222000619-1_amd64.deb"
+}

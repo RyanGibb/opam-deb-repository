@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-binary-instances-dev_1.0.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-binary-instances-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-aeson-dev"
+  "libghc-binary-orphans-dev"
+  "libghc-case-insensitive-dev"
+  "libghc-hashable-dev"
+  "libghc-scientific-dev"
+  "libghc-tagged-dev"
+  "libghc-text-binary-dev"
+  "libghc-time-compat-dev"
+  "libghc-unordered-containers-dev"
+  "libghc-vector-binary-instances-dev"
+  "libghc-vector-dev"
+  "libgmp10"
+]
+extra-source "libghc-binary-instances-dev_1.0.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-binary-instances/libghc-binary-instances-dev_1.0.0.1-3_amd64.deb"
+}

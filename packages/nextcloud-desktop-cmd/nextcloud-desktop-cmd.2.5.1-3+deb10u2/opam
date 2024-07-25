@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nextcloud-desktop-cmd_2.5.1-3+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nextcloud-desktop-cmd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libnextcloudsync0" {= "2.5.1-3+deb10u2"}
+  "libqt5concurrent5" {>= "5.6~"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.6~"}
+  "libqt5keychain1" {>= "0.7.0"}
+  "libqt5network5" {>= "5.6~"}
+  "libqt5sql5-sqlite"
+  "libqt5widgets5" {>= "5.6~"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+  "nextcloud-desktop-common"
+  "nextcloud-desktop-l10n"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "nextcloud-desktop-cmd_2.5.1-3+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nextcloud-desktop/nextcloud-desktop-cmd_2.5.1-3+deb10u2_amd64.deb"
+}

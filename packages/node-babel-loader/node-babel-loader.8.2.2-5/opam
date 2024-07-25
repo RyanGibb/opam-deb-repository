@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-babel-loader_8.2.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-babel-loader"]
+]
+depends: [
+  "node-babel7"
+  "node-find-cache-dir" {>= "3.3.1~"}
+  "node-loader-utils" {>= "1.4~"}
+  "node-make-dir" {>= "3.1~"}
+  "node-schema-utils" {>= "3.0~"}
+]
+extra-source "node-babel-loader_8.2.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-babel-loader/node-babel-loader_8.2.2-5_all.deb"
+}

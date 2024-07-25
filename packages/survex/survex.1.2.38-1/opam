@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i survex_1.2.38-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r survex"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libproj13" {>= "4.8.0"}
+]
+extra-source "survex_1.2.38-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/survex/survex_1.2.38-1_amd64.deb"
+}

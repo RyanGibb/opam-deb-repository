@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pp-popularity-contest_1.0.6-4+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pp-popularity-contest"]
+]
+depends: [
+  "curl"
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "liburi-perl"
+  "perl-any"
+]
+extra-source "pp-popularity-contest_1.0.6-4+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pp-popularity-contest/pp-popularity-contest_1.0.6-4+b3_amd64.deb"
+}

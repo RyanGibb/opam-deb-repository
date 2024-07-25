@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-blosc_1.9.2+ds1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-blosc"]
+]
+depends: [
+  "libblosc1" {>= "1.20.1+ds1"}
+  "libc6" {>= "2.4"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+]
+extra-source "python3-blosc_1.9.2+ds1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-blosc/python3-blosc_1.9.2+ds1-3_amd64.deb"
+}

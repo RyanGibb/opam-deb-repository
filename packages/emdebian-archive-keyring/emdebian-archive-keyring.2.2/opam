@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i emdebian-archive-keyring_2.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r emdebian-archive-keyring"]
+]
+depends: [
+  "apt"
+  "gnupg"
+]
+extra-source "emdebian-archive-keyring_2.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emdebian-archive-keyring/emdebian-archive-keyring_2.2_all.deb"
+}

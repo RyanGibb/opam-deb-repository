@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgphobos-12-dev-powerpc-cross_12.2.0-13cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgphobos-12-dev-powerpc-cross"]
+]
+depends: [
+  "gcc-12-cross-base-ports" {= "12.2.0-13cross1"}
+  "libgphobos3-powerpc-cross" {>= "12.2.0-13cross1"}
+  "zlib1g-dev"
+]
+extra-source "libgphobos-12-dev-powerpc-cross_12.2.0-13cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12-cross-ports/libgphobos-12-dev-powerpc-cross_12.2.0-13cross1_all.deb"
+}

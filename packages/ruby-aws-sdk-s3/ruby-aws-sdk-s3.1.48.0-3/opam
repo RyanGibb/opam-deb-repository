@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-aws-sdk-s3_1.48.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-aws-sdk-s3"]
+]
+depends: [
+  "ruby-aws-sdk-core" {>= "3.61~"}
+  "ruby-aws-sdk-kms" {>= "1~"}
+  "ruby-aws-sigv4" {>= "1.1~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-aws-sdk-s3_1.48.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-aws-sdk-s3/ruby-aws-sdk-s3_1.48.0-3_all.deb"
+}

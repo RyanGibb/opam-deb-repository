@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-classifier-reborn_2.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-classifier-reborn"]
+]
+depends: [
+  "ruby-fast-stemmer" {>= "1.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-classifier-reborn_2.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-classifier-reborn/ruby-classifier-reborn_2.2.0-1_all.deb"
+}

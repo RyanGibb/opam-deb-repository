@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-rollup-plugin-node-resolve_15.0.1+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-rollup-plugin-node-resolve"]
+]
+depends: [
+  "node-deepmerge"
+  "node-is-builtin-module"
+  "node-is-module"
+  "node-resolve"
+  "node-rollup-pluginutils" {>= "3.1.0"}
+]
+extra-source "node-rollup-plugin-node-resolve_15.0.1+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-rollup-plugin-node-resolve/node-rollup-plugin-node-resolve_15.0.1+ds-1_all.deb"
+}

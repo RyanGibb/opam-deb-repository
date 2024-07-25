@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gr-limesdr_0.9~beta-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gr-limesdr"]
+]
+depends: [
+  "libboost-atomic1-67-0"
+  "libboost-chrono1-67-0"
+  "libboost-date-time1-67-0"
+  "libboost-system1-67-0"
+  "libboost-thread1-67-0"
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnuradio-limesdr0" {= "0.9~beta-1+b1"}
+  "libgnuradio-pmt3-7-13"
+  "libgnuradio-runtime3-7-13"
+  "liblimesuite18-06-1"
+  "liblog4cpp5v5"
+  "libpython2-7" {>= "2.7"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "gr-limesdr_0.9~beta-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gr-limesdr/gr-limesdr_0.9~beta-1+b1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yacas_1.3.6-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yacas"]
+]
+depends: [
+  "gnuplot"
+  "libc6" {>= "2.15"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "yacas-doc"
+  ("lynx" | "www-browser")
+]
+extra-source "yacas_1.3.6-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yacas/yacas_1.3.6-2+b1_amd64.deb"
+}

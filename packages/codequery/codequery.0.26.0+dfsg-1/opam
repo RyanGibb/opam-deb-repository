@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i codequery_0.26.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r codequery"]
+]
+depends: [
+  "cscope"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5concurrent5" {>= "5.6.0~rc"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "11"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+  ("universal-ctags" | "exuberant-ctags")
+]
+extra-source "codequery_0.26.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/codequery/codequery_0.26.0+dfsg-1_amd64.deb"
+}

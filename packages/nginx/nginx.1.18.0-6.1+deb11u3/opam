@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nginx_1.18.0-6.1+deb11u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nginx"]
+]
+depends: [
+  ("nginx-core" {< "1.18.0-6.1+deb11u3.1~"} | "nginx-full" {< "1.18.0-6.1+deb11u3.1~"} | "nginx-light" {< "1.18.0-6.1+deb11u3.1~"} | "nginx-extras" {< "1.18.0-6.1+deb11u3.1~"})
+  ("nginx-core" {>= "1.18.0-6.1+deb11u3"} | "nginx-full" {>= "1.18.0-6.1+deb11u3"} | "nginx-light" {>= "1.18.0-6.1+deb11u3"} | "nginx-extras" {>= "1.18.0-6.1+deb11u3"})
+]
+extra-source "nginx_1.18.0-6.1+deb11u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nginx/nginx_1.18.0-6.1+deb11u3_all.deb"
+}

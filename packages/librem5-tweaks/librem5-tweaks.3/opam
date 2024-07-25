@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librem5-tweaks_3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librem5-tweaks"]
+]
+depends: [
+  "mobile-tweaks-common" {>= "3"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+conflicts: [
+  "mobile-tweaks"
+]
+extra-source "librem5-tweaks_3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mobile-tweaks/librem5-tweaks_3_all.deb"
+}

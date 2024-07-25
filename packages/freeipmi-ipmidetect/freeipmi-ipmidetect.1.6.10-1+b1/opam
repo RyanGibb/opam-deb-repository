@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freeipmi-ipmidetect_1.6.10-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freeipmi-ipmidetect"]
+]
+depends: [
+  "freeipmi-common" {= "1.6.10-1"}
+  "libc6" {>= "2.34"}
+  "libfreeipmi17" {>= "1.1.5"}
+  "libipmidetect0" {>= "1.1.5"}
+]
+extra-source "freeipmi-ipmidetect_1.6.10-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeipmi/freeipmi-ipmidetect_1.6.10-1+b1_amd64.deb"
+}

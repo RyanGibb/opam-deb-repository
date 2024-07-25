@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx5-frontend-qt5_5.0.16-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx5-frontend-qt5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfcitx5-qt1" {= "5.0.16-1+b3"}
+  "libfcitx5utils2" {>= "5.0.21"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "11"}
+  "libxcb1"
+  "libxkbcommon0" {>= "0.5.0"}
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+]
+extra-source "fcitx5-frontend-qt5_5.0.16-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx5-qt/fcitx5-frontend-qt5_5.0.16-1+b3_amd64.deb"
+}

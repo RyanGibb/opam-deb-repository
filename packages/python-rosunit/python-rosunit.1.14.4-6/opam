@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-rosunit_1.14.4-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-rosunit"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-rospkg"
+]
+extra-source "python-rosunit_1.14.4-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-ros/python-rosunit_1.14.4-6_all.deb"
+}

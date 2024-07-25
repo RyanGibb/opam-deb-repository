@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblibrecast0.5_0.5.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblibrecast0.5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "liblcrq0-0" {>= "0.0.1"}
+  "libsodium23" {>= "0.6.0"}
+]
+extra-source "liblibrecast0.5_0.5.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librecast/liblibrecast0.5_0.5.1-4_amd64.deb"
+}

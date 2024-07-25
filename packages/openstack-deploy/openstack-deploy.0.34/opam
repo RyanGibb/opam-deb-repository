@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openstack-deploy_0.34_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openstack-deploy"]
+]
+depends: [
+  "e2fsprogs"
+  "ipcalc"
+  "openstack-pkg-tools"
+  "python3-keystoneclient"
+  "xfsprogs"
+]
+extra-source "openstack-deploy_0.34_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openstack-meta-packages/openstack-deploy_0.34_all.deb"
+}

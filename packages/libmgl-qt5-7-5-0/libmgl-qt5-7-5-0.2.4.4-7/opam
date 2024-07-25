@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmgl-qt5-7.5.0_2.4.4-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmgl-qt5-7.5.0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.2.1"}
+  "libmgl-data"
+  "libmgl7-5-0" {>= "2.4.4"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+]
+conflicts: [
+  "libmgl-qt5"
+  "libmgl-qt5-7.4.1"
+  "libmgl-qt7.1.0"
+  "libmgl-qt7.2.0"
+  "libmgl-qt7.4.0"
+]
+extra-source "libmgl-qt5-7.5.0_2.4.4-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mathgl/libmgl-qt5-7.5.0_2.4.4-7_amd64.deb"
+}

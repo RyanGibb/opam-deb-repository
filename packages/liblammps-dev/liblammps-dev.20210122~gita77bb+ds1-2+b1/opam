@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblammps-dev_20210122~gita77bb+ds1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblammps-dev"]
+]
+depends: [
+  "liblammps0" {= "20210122~gita77bb+ds1-2+b1"}
+  "mpi-default-dev"
+]
+extra-source "liblammps-dev_20210122~gita77bb+ds1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lammps/liblammps-dev_20210122~gita77bb+ds1-2+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i snappea-dev_3.0d3-24_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r snappea-dev"]
+]
+depends: [
+  "libc6-dev"
+  "snappea" {= "3.0d3-24"}
+]
+extra-source "snappea-dev_3.0d3-24_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snappea/snappea-dev_3.0d3-24_amd64.deb"
+}

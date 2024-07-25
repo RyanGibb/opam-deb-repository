@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rygel-ruih_0.36.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rygel-ruih"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.40.0"}
+  "librygel-core-2-6-2"
+  "librygel-ruih-2-0-1"
+  "rygel" {= "0.36.2-4"}
+]
+extra-source "rygel-ruih_0.36.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rygel/rygel-ruih_0.36.2-4_amd64.deb"
+}

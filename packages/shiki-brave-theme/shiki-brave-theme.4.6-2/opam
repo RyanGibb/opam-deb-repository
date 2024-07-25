@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shiki-brave-theme_4.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shiki-brave-theme"]
+]
+depends: [
+  "gnome-brave-icon-theme"
+  "gtk2-engines-murrine" {>= "0.90.3"}
+  ("shiki-colors-metacity-theme" | "shiki-colors-xfwm-theme")
+]
+extra-source "shiki-brave-theme_4.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shiki-colors-murrine/shiki-brave-theme_4.6-2_all.deb"
+}

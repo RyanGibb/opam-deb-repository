@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsybdb5_1.00.104-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsybdb5"]
+]
+depends: [
+  "freetds-common"
+  "libc6" {>= "2.17"}
+  "libgmp10"
+  "libgnutls30" {>= "3.6.6"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libhogweed4"
+  "libnettle6"
+]
+extra-source "libsybdb5_1.00.104-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freetds/libsybdb5_1.00.104-1+deb10u1_amd64.deb"
+}

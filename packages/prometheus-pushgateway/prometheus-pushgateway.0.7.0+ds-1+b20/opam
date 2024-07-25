@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-pushgateway_0.7.0+ds-1+b20_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-pushgateway"]
+]
+depends: [
+  "daemon"
+  "libc6" {>= "2.3.2"}
+  "libjs-bootstrap"
+  "libjs-jquery"
+]
+extra-source "prometheus-pushgateway_0.7.0+ds-1+b20_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-pushgateway/prometheus-pushgateway_0.7.0+ds-1+b20_amd64.deb"
+}

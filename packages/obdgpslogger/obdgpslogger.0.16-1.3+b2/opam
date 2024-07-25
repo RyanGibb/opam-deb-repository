@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i obdgpslogger_0.16-1.3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r obdgpslogger"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libfltk1-1" {>= "1.1.8~rc1"}
+  "libgcc1" {>= "1-3.0"}
+  "libgps23" {>= "3.3"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+]
+extra-source "obdgpslogger_0.16-1.3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/obdgpslogger/obdgpslogger_0.16-1.3+b2_amd64.deb"
+}

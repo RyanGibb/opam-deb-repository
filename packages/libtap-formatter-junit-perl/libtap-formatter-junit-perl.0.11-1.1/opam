@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtap-formatter-junit-perl_0.11-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtap-formatter-junit-perl"]
+]
+depends: [
+  "libfile-slurp-perl"
+  "libmoose-perl"
+  "libmoosex-nonmoose-perl"
+  "libxml-generator-perl"
+  "perl" {>= "5.10"}
+  "perl-any"
+  ("perl" {>= "5.10.1"} | "libtest-harness-perl" {>= "3.02"})
+]
+extra-source "libtap-formatter-junit-perl_0.11-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtap-formatter-junit-perl/libtap-formatter-junit-perl_0.11-1.1_all.deb"
+}

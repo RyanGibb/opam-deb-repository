@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdebian-installer-extra4_0.124_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdebian-installer-extra4"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libdebian-installer4" {= "0.124"}
+]
+extra-source "libdebian-installer-extra4_0.124_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdebian-installer/libdebian-installer-extra4_0.124_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liballegro-video5.2_2:5.2.4.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liballegro-video5.2"]
+]
+depends: [
+  "liballegro-audio5-2" {>= "2-5.0.6"}
+  "liballegro5-2" {= "2-5.2.4.0-3"}
+  "libc6" {>= "2.14"}
+  "libogg0" {>= "1.0rc3"}
+  "libtheora0" {>= "1.0"}
+  "libvorbis0a" {>= "1.1.2"}
+]
+extra-source "liballegro-video5.2_2:5.2.4.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/allegro5/liballegro-video5.2_5.2.4.0-3_amd64.deb"
+}

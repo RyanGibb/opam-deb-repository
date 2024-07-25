@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zynadd_1+git.20100609+dfsg0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zynadd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfftw3-double3"
+  "libgcc1" {>= "1-3.0"}
+  "liblv2dynparamplugin1-0" {>= "2-1~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "zynadd_1+git.20100609+dfsg0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zyn/zynadd_1+git.20100609+dfsg0-4_amd64.deb"
+}

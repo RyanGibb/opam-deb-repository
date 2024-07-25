@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debian-builder_1.8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debian-builder"]
+]
+depends: [
+  "build-essential"
+  "devscripts"
+  "dpkg-dev"
+  "perl"
+  "perl-modules-5-28"
+]
+extra-source "debian-builder_1.8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-builder/debian-builder_1.8_all.deb"
+}

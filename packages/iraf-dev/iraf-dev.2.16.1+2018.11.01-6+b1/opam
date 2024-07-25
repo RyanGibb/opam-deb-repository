@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iraf-dev_2.16.1+2018.11.01-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iraf-dev"]
+]
+depends: [
+  "gcc"
+  "iraf" {= "2.16.1+2018.11.01-6+b1"}
+  "libc6" {>= "2.15"}
+  "libc6-dev"
+  "libcfitsio-dev"
+  "libcurl4-gnutls-dev"
+  "libexpat1-dev"
+]
+extra-source "iraf-dev_2.16.1+2018.11.01-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iraf/iraf-dev_2.16.1+2018.11.01-6+b1_amd64.deb"
+}

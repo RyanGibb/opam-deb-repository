@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clang-tidy_1:11.0-51+nmu5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clang-tidy"]
+]
+depends: [
+  "clang-tidy-11" {>= "11~"}
+]
+extra-source "clang-tidy_1:11.0-51+nmu5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-defaults/clang-tidy_11.0-51+nmu5_amd64.deb"
+}

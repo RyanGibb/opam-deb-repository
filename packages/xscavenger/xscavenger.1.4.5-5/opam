@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xscavenger_1.4.5-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xscavenger"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.34"}
+  "libx11-6"
+]
+extra-source "xscavenger_1.4.5-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xscavenger/xscavenger_1.4.5-5_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-rhdf5_2.34.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-rhdf5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libhdf5-103-1"
+  "libstdc++6" {>= "4.1.1"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-rhdf5filters"
+  "r-bioc-rhdf5lib" {>= "1.11.0"}
+]
+extra-source "r-bioc-rhdf5_2.34.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-rhdf5/r-bioc-rhdf5_2.34.0+dfsg-1_amd64.deb"
+}

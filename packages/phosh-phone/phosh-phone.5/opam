@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phosh-phone_5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phosh-phone"]
+]
+depends: [
+  "chatty"
+  "gnome-calls"
+  "gnome-contacts"
+  "modemmanager"
+  "phosh-core" {= "5"}
+  "purple-mm-sms"
+  "wys"
+]
+extra-source "phosh-phone_5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-phosh/phosh-phone_5_amd64.deb"
+}

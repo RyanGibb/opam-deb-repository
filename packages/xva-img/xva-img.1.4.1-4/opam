@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xva-img_1.4.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xva-img"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "xva-img_1.4.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xva-img/xva-img_1.4.1-4_amd64.deb"
+}

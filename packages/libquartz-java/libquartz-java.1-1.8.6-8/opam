@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libquartz-java_1:1.8.6-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libquartz-java"]
+]
+depends: [
+  "libslf4j-java" {>= "1.7.32"}
+]
+extra-source "libquartz-java_1:1.8.6-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libq/libquartz-java/libquartz-java_1.8.6-8_all.deb"
+}

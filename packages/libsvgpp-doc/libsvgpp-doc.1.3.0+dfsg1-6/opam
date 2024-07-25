@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsvgpp-doc_1.3.0+dfsg1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsvgpp-doc"]
+]
+depends: [
+  "libjs-mathjax"
+  "libjs-sphinxdoc" {>= "5.2"}
+  "sphinx-rtd-theme-common" {>= "1.2.0+dfsg"}
+]
+extra-source "libsvgpp-doc_1.3.0+dfsg1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/svgpp/libsvgpp-doc_1.3.0+dfsg1-6_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgranite5_5.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgranite5"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.23.0"}
+  "libgee-0-8-2" {>= "0.8.3"}
+  "libglib2-0-0" {>= "2.43.92"}
+  "libgranite-common" {>= "5.5.0-1"}
+  "libgtk-3-0" {>= "3.22"}
+  "libpango-1-0-0" {>= "1.14.0"}
+]
+extra-source "libgranite5_5.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/granite/libgranite5_5.5.0-1_amd64.deb"
+}

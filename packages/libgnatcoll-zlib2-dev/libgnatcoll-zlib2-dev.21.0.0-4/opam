@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatcoll-zlib2-dev_21.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatcoll-zlib2-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-10"
+  "libgnatcoll-zlib2" {= "21.0.0-4"}
+  "libgnatcoll19-dev"
+  "zlib1g-dev"
+]
+extra-source "libgnatcoll-zlib2-dev_21.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnatcoll-bindings/libgnatcoll-zlib2-dev_21.0.0-4_amd64.deb"
+}

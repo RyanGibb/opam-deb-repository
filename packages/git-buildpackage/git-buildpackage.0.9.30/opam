@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i git-buildpackage_0.9.30_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r git-buildpackage"]
+]
+depends: [
+  "devscripts" {>= "2.13.5~"}
+  "git" {>= "1-1.7.9.1-1~"}
+  "man-db"
+  "python3-any" {>= "3.7~"}
+  "python3-dateutil"
+  "python3-pkg-resources"
+  "python3-yaml"
+  "sensible-utils"
+]
+extra-source "git-buildpackage_0.9.30_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/git-buildpackage/git-buildpackage_0.9.30_all.deb"
+}

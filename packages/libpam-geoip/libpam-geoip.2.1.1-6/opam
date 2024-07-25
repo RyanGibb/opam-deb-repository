@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-geoip_2.1.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-geoip"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libmaxminddb0" {>= "1.0.2"}
+  "libpam0g" {>= "0.99.7.1"}
+]
+extra-source "libpam-geoip_2.1.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pam-geoip/libpam-geoip_2.1.1-6_amd64.deb"
+}

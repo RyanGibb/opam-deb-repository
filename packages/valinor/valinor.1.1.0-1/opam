@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i valinor_1.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r valinor"]
+]
+depends: [
+  "gdb-multiarch"
+  "python3-any"
+  "python3-colorama"
+  "python3-jinja2"
+  "python3-pkg-resources"
+  "python3-project-generator"
+  "python3-pyelftools"
+  "python3-pyocd"
+  "python3-yaml"
+]
+extra-source "valinor_1.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/valinor/valinor_1.1.0-1_all.deb"
+}

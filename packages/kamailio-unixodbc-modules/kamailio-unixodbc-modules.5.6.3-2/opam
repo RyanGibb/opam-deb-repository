@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kamailio-unixodbc-modules_5.6.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kamailio-unixodbc-modules"]
+]
+depends: [
+  "kamailio" {= "5.6.3-2"}
+  "libc6" {>= "2.4"}
+  "libodbc2" {>= "2.3.1"}
+]
+extra-source "kamailio-unixodbc-modules_5.6.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kamailio/kamailio-unixodbc-modules_5.6.3-2_amd64.deb"
+}

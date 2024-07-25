@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-monad-loops-dev_0.4.3-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-monad-loops-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libgmp10"
+]
+extra-source "libghc-monad-loops-dev_0.4.3-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-monad-loops/libghc-monad-loops-dev_0.4.3-7+b1_amd64.deb"
+}

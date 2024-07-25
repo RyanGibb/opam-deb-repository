@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-rollup-plugin-inject_5.0.2~ds1+~3.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-rollup-plugin-inject"]
+]
+depends: [
+  "node-estree-walker" {>= "1.0.1"}
+  "node-magic-string" {>= "0.25.5"}
+  "node-rollup-pluginutils" {>= "3.0.4"}
+]
+extra-source "node-rollup-plugin-inject_5.0.2~ds1+~3.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-rollup-plugin-inject/node-rollup-plugin-inject_5.0.2~ds1+~3.0.2-1_all.deb"
+}

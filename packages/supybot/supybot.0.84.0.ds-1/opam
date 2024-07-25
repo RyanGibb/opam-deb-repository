@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i supybot_0.84.0.ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r supybot"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-dateutil"
+  "python-feedparser"
+]
+extra-source "supybot_0.84.0.ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/supybot/supybot_0.84.0.ds-1_all.deb"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-scrapy_1.5.1-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-scrapy"]
+]
+depends: [
+  "python3-any"
+  "python3-boto"
+  "python3-cssselect"
+  "python3-libxml2"
+  "python3-lxml"
+  "python3-openssl"
+  "python3-parsel" {>= "1.1.0-1~"}
+  "python3-pydispatch"
+  "python3-queuelib"
+  "python3-service-identity"
+  "python3-six" {>= "1.5.2"}
+  "python3-twisted" {>= "17.1.0"}
+  "python3-w3lib" {>= "1.16.0-1~"}
+]
+extra-source "python3-scrapy_1.5.1-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-scrapy/python3-scrapy_1.5.1-1+deb10u1_all.deb"
+}

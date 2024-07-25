@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkiwix9_9.4.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkiwix9"]
+]
+depends: [
+  "aria2"
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libicu67" {>= "67.1-1~"}
+  "libmicrohttpd12" {>= "0.9.50"}
+  "libpugixml1v5" {>= "1.6"}
+  "libstdc++6" {>= "5.2"}
+  "libzim6" {>= "6.3.0"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+conflicts: [
+  "libkiwix0"
+  "libkiwix3"
+]
+extra-source "libkiwix9_9.4.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkiwix/libkiwix9_9.4.1+dfsg-1_amd64.deb"
+}

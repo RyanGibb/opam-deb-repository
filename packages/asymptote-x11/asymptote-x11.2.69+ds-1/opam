@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i asymptote-x11_2.69+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r asymptote-x11"]
+]
+depends: [
+  "asymptote" {= "2.69+ds-1"}
+  "librsvg2-bin"
+  "python3-any"
+  "python3-cson"
+  "python3-numpy"
+  "python3-pyqt5"
+  "python3-pyqt5-qtsvg"
+]
+conflicts: [
+  "asymptote (<= 2.49-2)"
+]
+extra-source "asymptote-x11_2.69+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/asymptote/asymptote-x11_2.69+ds-1_amd64.deb"
+}

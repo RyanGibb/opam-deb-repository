@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cpl-plugin-amber_4.4.0+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cpl-plugin-amber"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcfitsio9" {>= "3.480~"}
+  "libcplcore26" {>= "6.0"}
+  "libcpldfs26" {>= "6.0"}
+  "libcplui26" {>= "6.4"}
+  "libfftw3-double3" {>= "3.3.5"}
+]
+extra-source "cpl-plugin-amber_4.4.0+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cpl-plugin-amber/cpl-plugin-amber_4.4.0+dfsg-4_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fwupdate_12-4+deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fwupdate"]
+]
+depends: [
+  "e2fsprogs"
+  "efibootmgr"
+  "libc6" {>= "2.4"}
+  "libefiboot1" {>= "37"}
+  "libefivar1" {>= "37"}
+  "libfwup1" {= "12-4+deb10u4"}
+  "libpopt0" {>= "1.14"}
+  "libsmbios-c2"
+]
+extra-source "fwupdate_12-4+deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fwupdate/fwupdate_12-4+deb10u4_amd64.deb"
+}

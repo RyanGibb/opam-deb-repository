@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i greetd_0.9.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r greetd"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.3"}
+  "libpam0g" {>= "0.99.7.1"}
+]
+extra-source "greetd_0.9.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/greetd/greetd_0.9.0-3_amd64.deb"
+}

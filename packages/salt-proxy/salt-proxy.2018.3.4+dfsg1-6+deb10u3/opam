@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i salt-proxy_2018.3.4+dfsg1-6+deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r salt-proxy"]
+]
+depends: [
+  "python3-any"
+  "salt-minion" {= "2018.3.4+dfsg1-6+deb10u3"}
+]
+extra-source "salt-proxy_2018.3.4+dfsg1-6+deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/salt/salt-proxy_2018.3.4+dfsg1-6+deb10u3_all.deb"
+}

@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jabberd2_2.7.0-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jabberd2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libdb5-3"
+  "libexpat1" {>= "2.1~beta3"}
+  "libgsasl18" {>= "1.1"}
+  "libhttp-parser2-9" {>= "2.1"}
+  "libidn12" {>= "1.13"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "libmariadb3" {>= "3.0.0"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpq5"
+  "libsqlite3-0" {>= "3.5.9"}
+  "libssl3" {>= "3.0.0"}
+  "libudns0" {>= "0.4"}
+  "sysvinit-utils"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "jabberd2-bdb"
+  "jabberd2-ldap-bdb"
+  "jabberd2-ldap-mysql"
+  "jabberd2-ldap-pgsql"
+  "jabberd2-mysql"
+  "jabberd2-pgsql"
+]
+extra-source "jabberd2_2.7.0-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jabberd2/jabberd2_2.7.0-4+b2_amd64.deb"
+}

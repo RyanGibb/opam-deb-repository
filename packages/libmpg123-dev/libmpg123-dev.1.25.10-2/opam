@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmpg123-dev_1.25.10-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmpg123-dev"]
+]
+depends: [
+  "libmpg123-0" {= "1.25.10-2"}
+  "libout123-0" {= "1.25.10-2"}
+]
+extra-source "libmpg123-dev_1.25.10-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpg123/libmpg123-dev_1.25.10-2_amd64.deb"
+}

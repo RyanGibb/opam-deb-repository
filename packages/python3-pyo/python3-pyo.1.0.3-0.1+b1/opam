@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyo_1.0.3-0.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyo"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "liblo7" {>= "0.26~repack"}
+  "libportaudio2" {>= "19+svn20101113"}
+  "libportmidi0"
+  "libsndfile1" {>= "1.0.20"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "python3-pyo_1.0.3-0.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pyo/python3-pyo_1.0.3-0.1+b1_amd64.deb"
+}

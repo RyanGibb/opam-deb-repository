@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-toml+indexmap-dev_0.5.5-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-toml+indexmap-dev"]
+]
+depends: [
+  "librust-indexmap-1+default-dev"
+  "librust-toml-dev" {= "0.5.5-1+b1"}
+]
+extra-source "librust-toml+indexmap-dev_0.5.5-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-toml/librust-toml+indexmap-dev_0.5.5-1+b1_amd64.deb"
+}

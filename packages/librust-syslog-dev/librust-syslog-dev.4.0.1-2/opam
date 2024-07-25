@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-syslog-dev_4.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-syslog-dev"]
+]
+depends: [
+  "librust-error-chain-0-12+default-dev"
+  "librust-libc-0-2+default-dev"
+  "librust-log-dev"
+  "librust-time-0-1+default-dev"
+]
+extra-source "librust-syslog-dev_4.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-syslog/librust-syslog-dev_4.0.1-2_amd64.deb"
+}

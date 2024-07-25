@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tang-xinetd_11-2+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tang-xinetd"]
+]
+depends: [
+  "adduser"
+  "moreutils"
+  "tang-common" {>= "11-2+deb12u1"}
+  "xinetd"
+]
+extra-source "tang-xinetd_11-2+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tang/tang-xinetd_11-2+deb12u1_all.deb"
+}

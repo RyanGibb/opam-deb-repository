@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlada-unicode12-dev_23.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlada-unicode12-dev"]
+]
+depends: [
+  "gnat" {< "13"}
+  "gnat" {>= "12"}
+  "libxmlada-unicode7" {= "23.0.0-3"}
+]
+extra-source "libxmlada-unicode12-dev_23.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxmlada/libxmlada-unicode12-dev_23.0.0-3_amd64.deb"
+}

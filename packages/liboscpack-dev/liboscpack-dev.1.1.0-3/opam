@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liboscpack-dev_1.1.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liboscpack-dev"]
+]
+depends: [
+  "libasound2-dev"
+  "liboscpack1" {= "1.1.0-3"}
+]
+extra-source "liboscpack-dev_1.1.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oscpack/liboscpack-dev_1.1.0-3_amd64.deb"
+}

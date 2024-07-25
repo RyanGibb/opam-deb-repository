@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ffado-dbus-server_2.4.1-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ffado-dbus-server"]
+]
+depends: [
+  "dbus" {>= "1.0.0"}
+  "libc6" {>= "2.14"}
+  "libdbus-c++-1-0v5"
+  "libffado2" {= "2.4.1-0.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "ffado-dbus-server_2.4.1-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libffado/ffado-dbus-server_2.4.1-0.1_amd64.deb"
+}

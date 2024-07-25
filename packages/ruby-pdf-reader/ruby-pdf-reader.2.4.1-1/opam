@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-pdf-reader_2.4.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-pdf-reader"]
+]
+depends: [
+  "ruby"
+  "ruby-afm" {>= "0.2.1"}
+  "ruby-ascii85" {>= "1.0.0"}
+  "ruby-hashery" {>= "2.0"}
+  "ruby-rc4"
+  "ruby-ttfunk"
+]
+extra-source "ruby-pdf-reader_2.4.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-pdf-reader/ruby-pdf-reader_2.4.1-1_all.deb"
+}

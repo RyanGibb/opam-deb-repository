@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tklib_0.7+20210111-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tklib"]
+]
+depends: [
+  "tcl" {>= "8.6.0-2"}
+  "tk" {>= "8.6.0-2"}
+]
+extra-source "tklib_0.7+20210111-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tklib/tklib_0.7+20210111-1_all.deb"
+}

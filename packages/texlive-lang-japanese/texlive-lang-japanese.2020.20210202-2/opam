@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i texlive-lang-japanese_2020.20210202-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r texlive-lang-japanese"]
+]
+depends: [
+  "fonts-ipaexfont-gothic"
+  "fonts-ipaexfont-mincho"
+  "fonts-ipafont-gothic"
+  "fonts-ipafont-mincho"
+  "ruby"
+  "tex-common" {>= "6.13"}
+  "texlive-base" {>= "2020.20200417"}
+  "texlive-binaries" {>= "2020.20200327"}
+  "texlive-lang-cjk" {>= "2020.20200417"}
+]
+conflicts: [
+  "ptex-jisfonts"
+]
+extra-source "texlive-lang-japanese_2020.20210202-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/texlive-lang/texlive-lang-japanese_2020.20210202-2_all.deb"
+}

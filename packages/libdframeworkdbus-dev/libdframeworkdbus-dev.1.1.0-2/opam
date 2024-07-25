@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdframeworkdbus-dev_1.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdframeworkdbus-dev"]
+]
+depends: [
+  "libdframeworkdbus2" {= "1.1.0-2"}
+]
+conflicts: [
+  "libdframeworkdbus"
+]
+extra-source "libdframeworkdbus-dev_1.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dde-qt-dbus-factory/libdframeworkdbus-dev_1.1.0-2_amd64.deb"
+}

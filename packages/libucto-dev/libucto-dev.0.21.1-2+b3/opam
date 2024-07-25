@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libucto-dev_0.21.1-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libucto-dev"]
+]
+depends: [
+  "libucto5" {= "0.21.1-2+b3"}
+]
+conflicts: [
+  "libucto1-dev"
+]
+extra-source "libucto-dev_0.21.1-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ucto/libucto-dev_0.21.1-2+b3_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libncursesada9-dev_6.2.20200212-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libncursesada9-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-10"
+  "libncurses-dev"
+  "libncursesada6-2-3" {= "6.2.20200212-4"}
+]
+extra-source "libncursesada9-dev_6.2.20200212-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libncursesada/libncursesada9-dev_6.2.20200212-4_amd64.deb"
+}

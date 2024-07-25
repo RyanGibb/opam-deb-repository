@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvirtualpg-dev_2.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvirtualpg-dev"]
+]
+depends: [
+  "libpq-dev"
+  "libsqlite3-dev"
+  "libvirtualpg0" {= "2.0.1-2"}
+]
+extra-source "libvirtualpg-dev_2.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/virtualpg/libvirtualpg-dev_2.0.1-2_amd64.deb"
+}

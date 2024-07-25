@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbase-ocaml_0.15.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbase-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libsexplib0-ocaml"
+  "ocaml-base"
+]
+extra-source "libbase-ocaml_0.15.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/janest-base/libbase-ocaml_0.15.1-1_amd64.deb"
+}

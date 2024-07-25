@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-dbus_0.2.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-dbus"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libdbus-1-3" {>= "1.0.2"}
+  "libdbus-glib-1-2" {>= "0.78"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libpam0g" {>= "0.99.7.1"}
+]
+extra-source "libpam-dbus_0.2.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pam-dbus/libpam-dbus_0.2.1-3_amd64.deb"
+}

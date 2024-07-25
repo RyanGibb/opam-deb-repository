@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbuffy-perl_0.16+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbuffy-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libstdc++6" {>= "5.2"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libbuffy-perl_0.16+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbuffy-bindings/libbuffy-perl_0.16+b6_amd64.deb"
+}

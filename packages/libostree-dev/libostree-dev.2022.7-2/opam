@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libostree-dev_2022.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libostree-dev"]
+]
+depends: [
+  "gir1-2-ostree-1-0" {= "2022.7-2"}
+  "libglib2-0-dev" {>= "2.66.0"}
+  "libostree-1-1" {= "2022.7-2"}
+  "pkg-config"
+]
+extra-source "libostree-dev_2022.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ostree/libostree-dev_2022.7-2_amd64.deb"
+}

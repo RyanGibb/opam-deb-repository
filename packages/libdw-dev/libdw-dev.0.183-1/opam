@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdw-dev_0.183-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdw-dev"]
+]
+depends: [
+  "libdw1" {= "0.183-1"}
+  "libelf-dev"
+  "liblzma-dev"
+  "zlib1g-dev"
+]
+extra-source "libdw-dev_0.183-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elfutils/libdw-dev_0.183-1_amd64.deb"
+}

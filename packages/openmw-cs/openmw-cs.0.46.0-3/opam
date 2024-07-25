@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openmw-cs_0.46.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openmw-cs"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-iostreams1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libopenscenegraph161" {>= "3.6.5+dfsg1"}
+  "libopenthreads21" {>= "3.6.5+dfsg1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5opengl5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libstdc++6" {>= "9"}
+  "openmw-data" {= "0.46.0-3"}
+  ("libqt5gui5" {>= "5.11.0~rc1"} | "libqt5gui5-gles" {>= "5.11.0~rc1"})
+]
+extra-source "openmw-cs_0.46.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openmw/openmw-cs_0.46.0-3_amd64.deb"
+}

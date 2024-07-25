@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-audio_2.0.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-audio"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "liboctave8"
+  "librtmidi5" {>= "4.0.0"}
+  "libstdc++6" {>= "5.2"}
+  "octave" {>= "6.1.0"}
+]
+extra-source "octave-audio_2.0.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave-audio/octave-audio_2.0.2-1+b2_amd64.deb"
+}

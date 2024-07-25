@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qmail-run_2.0.2+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qmail-run"]
+]
+depends: [
+  "daemontools" {> "1-0.76"}
+  "fastforward" {>= "1-0.51-3"}
+  "procmail"
+  "qmail" {>= "1.06-2.1"}
+  "ucspi-tcp" {> "1-0.88"}
+  ("runit" {> "1.8.0-2"} | "daemontools-run" {> "1-0.76"})
+]
+conflicts: [
+  "lsb-core"
+  "mail-transport-agent"
+]
+extra-source "qmail-run_2.0.2+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qmail-run/qmail-run_2.0.2+nmu1_all.deb"
+}

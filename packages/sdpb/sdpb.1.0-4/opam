@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sdpb_1.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sdpb"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libboost-serialization1-74-0" {>= "1.74.0"}
+  "libboost-timer1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgmp10"
+  "libgmpxx4ldbl" {>= "2-6.2.1+dfsg"}
+  "libgomp1" {>= "6"}
+  "libstdc++6" {>= "9"}
+  "libtinyxml2-8" {>= "8.0.0"}
+]
+extra-source "sdpb_1.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sdpb/sdpb_1.0-4_amd64.deb"
+}

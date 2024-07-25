@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i systraq_20160803-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r systraq"]
+]
+depends: [
+  "adduser"
+  "debsums"
+  "filetraq" {>= "0.2-10"}
+  "make"
+  "net-tools"
+  "procps"
+  ("bsd-mailx" | "heirloom-mailx")
+  ("exim4" | "mail-transport-agent")
+]
+extra-source "systraq_20160803-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/systraq/systraq_20160803-3_all.deb"
+}

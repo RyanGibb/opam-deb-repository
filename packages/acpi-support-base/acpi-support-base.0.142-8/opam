@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i acpi-support-base_0.142-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r acpi-support-base"]
+]
+depends: [
+  "acpid" {>= "1.0.4"}
+]
+extra-source "acpi-support-base_0.142-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/acpi-support/acpi-support-base_0.142-8_all.deb"
+}

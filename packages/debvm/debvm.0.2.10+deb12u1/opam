@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debvm_0.2.10+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debvm"]
+]
+depends: [
+  "e2fsprogs"
+  "genext2fs"
+  "ipxe-qemu"
+  "mmdebstrap" {>= "1.3.0"}
+  "passwd"
+  ("qemu-kvm" | "qemu-system-arm" | "qemu-system-mips" | "qemu-system-misc" | "qemu-system-ppc" | "qemu-system-sparc" | "qemu-system-x86")
+]
+extra-source "debvm_0.2.10+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debvm/debvm_0.2.10+deb12u1_all.deb"
+}

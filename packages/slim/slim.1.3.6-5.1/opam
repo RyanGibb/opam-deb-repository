@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slim_1.3.6-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slim"]
+]
+depends: [
+  "dbus"
+  "libc6" {>= "2.14"}
+  "libfontconfig1" {>= "2.11"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "libxext6"
+  "libxft2" {> "2.1.1"}
+  "libxmu6"
+  "libxrandr2" {>= "2-1.2.99.3"}
+  "libxrender1"
+  "lsb-base" {>= "3.0-6"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("debconf" {>= "1.2.9"} | "debconf-2-0")
+]
+extra-source "slim_1.3.6-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slim/slim_1.3.6-5.1_amd64.deb"
+}

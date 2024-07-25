@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-heini-wait-for_2.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-heini-wait-for"]
+]
+depends: [
+  "puppet"
+  "puppet-module-puppetlabs-stdlib"
+  "puppet-module-puppetlabs-xinetd"
+]
+extra-source "puppet-module-heini-wait-for_2.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-heini-wait-for/puppet-module-heini-wait-for_2.0.1-3_all.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xtrx-fft_0.0.1+git20191219.98458ce-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xtrx-fft"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libqcustomplot2-1" {>= "2.1.0+dfsg1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  "libxtrx0" {>= "0.0.1+git20191219.98458ce"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "xtrx-fft_0.0.1+git20191219.98458ce-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxtrx/xtrx-fft_0.0.1+git20191219.98458ce-3_amd64.deb"
+}

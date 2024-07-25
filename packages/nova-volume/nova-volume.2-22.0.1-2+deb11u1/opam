@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nova-volume_2:22.0.1-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nova-volume"]
+]
+depends: [
+  "cinder-api"
+  "cinder-scheduler"
+  "cinder-volume"
+]
+extra-source "nova-volume_2:22.0.1-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nova/nova-volume_22.0.1-2+deb11u1_all.deb"
+}

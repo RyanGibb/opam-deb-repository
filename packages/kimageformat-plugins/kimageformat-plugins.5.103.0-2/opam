@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kimageformat-plugins_5.103.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kimageformat-plugins"]
+]
+depends: [
+  "libavif15" {>= "0.11.1"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libheif1" {>= "1.13.0"}
+  "libimath-3-1-29" {>= "3.1.6"}
+  "libjxl0-7" {>= "0.7.0"}
+  "libkf5archive5" {>= "4.96.0"}
+  "libopenexr-3-1-30" {>= "3.1.5"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5printsupport5" {>= "5.15.2~"}
+  "libraw20" {>= "0.17.0"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "kimageformat-plugins_5.103.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kimageformats/kimageformat-plugins_5.103.0-2_amd64.deb"
+}

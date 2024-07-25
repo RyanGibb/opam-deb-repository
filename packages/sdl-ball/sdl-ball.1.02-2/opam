@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sdl-ball_1.02-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sdl-ball"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2"
+  "libsdl-ttf2-0-0"
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "5.2"}
+  "sdl-ball-data" {= "1.02-2"}
+  ("libgl1-mesa-glx" | "libgl1")
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "sdl-ball_1.02-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sdl-ball/sdl-ball_1.02-2_amd64.deb"
+}

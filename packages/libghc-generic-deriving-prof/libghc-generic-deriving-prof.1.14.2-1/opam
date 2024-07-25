@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-generic-deriving-prof_1.14.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-generic-deriving-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-generic-deriving-dev" {= "1.14.2-1"}
+  "libghc-th-abstraction-prof"
+]
+extra-source "libghc-generic-deriving-prof_1.14.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-generic-deriving/libghc-generic-deriving-prof_1.14.2-1_amd64.deb"
+}

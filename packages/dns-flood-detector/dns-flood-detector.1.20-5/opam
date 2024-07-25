@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dns-flood-detector_1.20-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dns-flood-detector"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpcap0-8" {>= "0.9.8"}
+  "lsb-base"
+]
+extra-source "dns-flood-detector_1.20-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dns-flood-detector/dns-flood-detector_1.20-5_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qca2-utils_2.1.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qca2-utils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libqca2" {= "2.1.3-2"}
+  "libqtcore4" {>= "4-4.8.0"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "qca2-utils_2.1.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qca2/qca2-utils_2.1.3-2_amd64.deb"
+}

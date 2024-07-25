@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i chktex_1.7.6-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r chktex"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcre3"
+  "libtinfo6" {>= "6"}
+]
+extra-source "chktex_1.7.6-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chktex/chktex_1.7.6-4_amd64.deb"
+}

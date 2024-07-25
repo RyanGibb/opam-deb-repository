@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-edison-core-prof_1.3.2.1-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-edison-core-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-edison-api-prof"
+  "libghc-edison-core-dev" {= "1.3.2.1-3+b2"}
+  "libghc-quickcheck2-prof"
+]
+extra-source "libghc-edison-core-prof_1.3.2.1-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-edison-core/libghc-edison-core-prof_1.3.2.1-3+b2_amd64.deb"
+}

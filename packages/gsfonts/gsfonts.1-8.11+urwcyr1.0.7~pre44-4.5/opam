@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gsfonts_1:8.11+urwcyr1.0.7~pre44-4.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gsfonts"]
+]
+conflicts: [
+  "gs (<< 5.50-5)"
+  "gs-aladdin (<< 6.50-4)"
+  "gsfonts-x11 (<< 0.13)"
+]
+extra-source "gsfonts_1:8.11+urwcyr1.0.7~pre44-4.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gsfonts/gsfonts_8.11+urwcyr1.0.7~pre44-4.5_all.deb"
+}

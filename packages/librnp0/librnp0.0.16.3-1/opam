@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librnp0_0.16.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librnp0"]
+]
+depends: [
+  "libbotan-2-19" {>= "2.19.3+dfsg"}
+  "libbz2-1-0"
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libjson-c5" {>= "0.15"}
+  "libstdc++6" {>= "11"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "librnp0_0.16.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rnp/librnp0_0.16.3-1_amd64.deb"
+}

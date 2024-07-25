@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mbuffer_20190127+ds1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mbuffer"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcrypt20"
+]
+extra-source "mbuffer_20190127+ds1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mbuffer/mbuffer_20190127+ds1-1_amd64.deb"
+}

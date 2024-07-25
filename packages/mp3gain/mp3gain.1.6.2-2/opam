@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mp3gain_1.6.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mp3gain"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libmpg123-0" {>= "1.6.2"}
+]
+extra-source "mp3gain_1.6.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mp3gain/mp3gain_1.6.2-2_amd64.deb"
+}

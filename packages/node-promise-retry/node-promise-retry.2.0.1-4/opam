@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-promise-retry_2.0.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-promise-retry"]
+]
+depends: [
+  "node-err-code" {>= "2.0.0"}
+  "node-retry" {>= "0.10.0"}
+]
+extra-source "node-promise-retry_2.0.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-promise-retry/node-promise-retry_2.0.1-4_all.deb"
+}

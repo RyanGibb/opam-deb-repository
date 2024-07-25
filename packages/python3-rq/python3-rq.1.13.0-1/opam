@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-rq_1.13.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-rq"]
+]
+depends: [
+  "python3-any"
+  "python3-click"
+  "python3-redis"
+]
+extra-source "python3-rq_1.13.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-rq/python3-rq_1.13.0-1_all.deb"
+}

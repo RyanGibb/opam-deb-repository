@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i claws-mail-multi-notifier_4.1.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r claws-mail-multi-notifier"]
+]
+depends: [
+  "claws-mail" {= "4.1.1-2+b1"}
+  "libc6" {>= "2.4"}
+  "libcanberra-gtk3-0" {>= "0.25"}
+  "libcanberra0" {>= "0.2"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libnotify4" {>= "0.7.0"}
+  "libx11-6"
+]
+extra-source "claws-mail-multi-notifier_4.1.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/claws-mail/claws-mail-multi-notifier_4.1.1-2+b1_amd64.deb"
+}

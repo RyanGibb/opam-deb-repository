@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhdf5-hl-100_1.10.8+repack1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhdf5-hl-100"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libhdf5-103-1"
+]
+conflicts: [
+  "libhdf5-100"
+  "libhdf5-101"
+  "libhdf5-102"
+  "libhdf5-103 (<< 1.10.5)"
+]
+extra-source "libhdf5-hl-100_1.10.8+repack1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hdf5/libhdf5-hl-100_1.10.8+repack1-1_amd64.deb"
+}

@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pdm_2.2.1+ds1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pdm"]
+]
+depends: [
+  "python3-any"
+  "python3-blinker"
+  "python3-cachecontrol"
+  "python3-certifi" {> "2022.6.15"}
+  "python3-dotenv"
+  "python3-findpython"
+  "python3-installer"
+  "python3-packaging"
+  "python3-pdm-pep517"
+  "python3-pep517"
+  "python3-platformdirs"
+  "python3-requests-toolbelt"
+  "python3-resolvelib"
+  "python3-rich"
+  "python3-shellingham"
+  "python3-tomlkit"
+  "python3-unearth"
+  "python3-virtualenv"
+  ("python3-importlib-metadata" | "python3" {> "3.10"})
+  ("python3-tomli" | "python3" {> "3.11"})
+  ("python3-typing-extensions" | "python3" {> "3.8"})
+]
+extra-source "python3-pdm_2.2.1+ds1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdm/python3-pdm_2.2.1+ds1-1_all.deb"
+}

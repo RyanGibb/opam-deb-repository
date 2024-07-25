@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencv-viz3.2_3.2.0+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencv-viz3.2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libgl2ps1-4"
+  "libice6" {>= "1-1.0.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libopencv-core3-2" {= "3.2.0+dfsg-6"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsm6"
+  "libstdc++6" {>= "5"}
+  "libtbb2" {>= "2017~U7"}
+  "libtiff5" {>= "4.0.3"}
+  "libvtk6-3"
+  "libx11-6"
+  "libxext6"
+  "libxt6"
+  "zlib1g" {>= "1-1.1.4"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "libopencv-viz3.2_3.2.0+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencv/libopencv-viz3.2_3.2.0+dfsg-6_amd64.deb"
+}

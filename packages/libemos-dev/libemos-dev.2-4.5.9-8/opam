@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libemos-dev_2:4.5.9-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libemos-dev"]
+]
+depends: [
+  "libemos0d" {= "2-4.5.9-8"}
+  ("libeccodes-tools" | "libemos-bin-any")
+]
+extra-source "libemos-dev_2:4.5.9-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emoslib/libemos-dev_4.5.9-8_amd64.deb"
+}

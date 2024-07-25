@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nordugrid-arc-community-rtes_6.10.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nordugrid-arc-community-rtes"]
+]
+depends: [
+  "nordugrid-arc-arcctl" {= "6.10.2-1"}
+  "nordugrid-arc-arex" {>= "6.10.2-1"}
+  "python3-any"
+  "python3-dns"
+]
+extra-source "nordugrid-arc-community-rtes_6.10.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nordugrid-arc/nordugrid-arc-community-rtes_6.10.2-1_all.deb"
+}

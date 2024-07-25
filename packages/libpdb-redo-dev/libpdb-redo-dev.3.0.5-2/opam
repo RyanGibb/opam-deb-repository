@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpdb-redo-dev_3.0.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpdb-redo-dev"]
+]
+depends: [
+  "libboost-regex-dev"
+  "libcifpp-dev"
+  "libclipper-dev"
+  "libgsl-dev"
+  "libnewuoa-dev"
+  "libpdb-redo3" {= "3.0.5-2"}
+  "zlib1g-dev"
+]
+extra-source "libpdb-redo-dev_3.0.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpdb-redo/libpdb-redo-dev_3.0.5-2_amd64.deb"
+}

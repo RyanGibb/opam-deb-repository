@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rabl-rails_0.6.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rabl-rails"]
+]
+depends: [
+  "ruby-activesupport" {>= "2-4.2"}
+  "ruby-concurrent" {>= "1.0.2"}
+  "ruby-railties" {>= "2-4.2"}
+  ("ruby-oj" | "ruby-json")
+]
+extra-source "ruby-rabl-rails_0.6.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rabl-rails/ruby-rabl-rails_0.6.2-1_all.deb"
+}

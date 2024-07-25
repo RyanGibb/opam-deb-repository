@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmath-cephes-perl_0.5305-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmath-cephes-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "perl"
+  "perl-base"
+]
+extra-source "libmath-cephes-perl_0.5305-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmath-cephes-perl/libmath-cephes-perl_0.5305-4_amd64.deb"
+}

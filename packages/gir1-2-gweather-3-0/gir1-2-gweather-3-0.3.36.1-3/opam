@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-gweather-3.0_3.36.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-gweather-3.0"]
+]
+depends: [
+  "gir1-2-glib-2-0" {>= "0.9.5"}
+  "gir1-2-gtk-3-0" {>= "3.13.5"}
+  "libgweather-3-16" {>= "3.36.0"}
+]
+extra-source "gir1.2-gweather-3.0_3.36.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgweather/gir1.2-gweather-3.0_3.36.1-3_amd64.deb"
+}

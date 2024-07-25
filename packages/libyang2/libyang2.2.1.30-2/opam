@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libyang2_2.1.30-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libyang2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpcre2-8-0" {>= "10.22"}
+]
+extra-source "libyang2_2.1.30-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liby/libyang2/libyang2_2.1.30-2_amd64.deb"
+}

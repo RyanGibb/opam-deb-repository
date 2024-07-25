@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-varia-model_0.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-varia-model"]
+]
+depends: [
+  "ruby-buff-extensions" {>= "2.0"}
+  "ruby-hashie" {< "4.0.0"}
+  "ruby-hashie" {>= "2.0.2"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-varia-model_0.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-varia-model/ruby-varia-model_0.6.0-1_all.deb"
+}

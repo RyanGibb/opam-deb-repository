@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i systemd-cron_1.5.14-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r systemd-cron"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python3-any"
+  "systemd-sysv" {>= "229"}
+]
+conflicts: [
+  "anacron"
+  "cron-daemon"
+]
+extra-source "systemd-cron_1.5.14-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/systemd-cron/systemd-cron_1.5.14-2_amd64.deb"
+}

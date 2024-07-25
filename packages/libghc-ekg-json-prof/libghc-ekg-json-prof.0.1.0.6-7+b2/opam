@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-ekg-json-prof_0.1.0.6-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-ekg-json-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-ekg-core-prof"
+  "libghc-ekg-json-dev" {= "0.1.0.6-7+b2"}
+  "libghc-unordered-containers-prof"
+]
+extra-source "libghc-ekg-json-prof_0.1.0.6-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-ekg-json/libghc-ekg-json-prof_0.1.0.6-7+b2_amd64.deb"
+}

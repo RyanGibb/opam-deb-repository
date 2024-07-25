@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libblitz0v5_1:1.0.1+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libblitz0v5"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libblitz0"
+  "libblitz0ldbl"
+]
+extra-source "libblitz0v5_1:1.0.1+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/blitz++/libblitz0v5_1.0.1+ds-3_amd64.deb"
+}

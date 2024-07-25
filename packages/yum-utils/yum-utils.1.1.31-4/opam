@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yum-utils_1.1.31-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yum-utils"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-iniparse"
+  "python-libxml2"
+  "python-rpm"
+  "python-urlgrabber"
+  "yum" {>= "3.2.29"}
+]
+extra-source "yum-utils_1.1.31-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yum-utils/yum-utils_1.1.31-4_all.deb"
+}

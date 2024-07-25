@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bb_1.3rc1-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bb"]
+]
+depends: [
+  "libaa1" {>= "1.4p5"}
+  "libc6" {>= "2.34"}
+  "libmikmod3" {>= "3.3.3"}
+]
+extra-source "bb_1.3rc1-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bb/bb_1.3rc1-13_amd64.deb"
+}

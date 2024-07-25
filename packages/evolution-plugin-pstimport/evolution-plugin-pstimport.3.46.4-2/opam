@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i evolution-plugin-pstimport_3.46.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r evolution-plugin-pstimport"]
+]
+depends: [
+  "evolution" {= "3.46.4-2"}
+  "libc6" {>= "2.33"}
+  "libcamel-1-2-64" {>= "3.46.4"}
+  "libebook-1-2-21" {>= "3.46.4"}
+  "libebook-contacts-1-2-4" {>= "3.16.2"}
+  "libecal-2-0-2" {>= "3.46.4"}
+  "libedataserver-1-2-27" {>= "3.46.4"}
+  "libevolution" {< "3.47"}
+  "libevolution" {>= "3.46.4"}
+  "libglib2-0-0" {>= "2.66"}
+  "libgtk-3-0" {>= "3.10.0"}
+  "libical3" {>= "3.0.0"}
+  "libpst4" {>= "0.6.54"}
+]
+extra-source "evolution-plugin-pstimport_3.46.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/evolution/evolution-plugin-pstimport_3.46.4-2_amd64.deb"
+}

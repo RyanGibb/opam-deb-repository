@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcamera-info-manager-dev_1.12.0-12+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcamera-info-manager-dev"]
+]
+depends: [
+  "libcamera-calibration-parsers-dev"
+  "libcamera-info-manager0d" {= "1.12.0-12+b5"}
+  "libimage-transport-dev"
+  "libroscpp-dev"
+  "libroslib-dev"
+  "libsensor-msgs-dev"
+]
+extra-source "libcamera-info-manager-dev_1.12.0-12+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-image-common/libcamera-info-manager-dev_1.12.0-12+b5_amd64.deb"
+}

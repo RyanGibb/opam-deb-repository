@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i darcs_2.14.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r darcs"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.27"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libffi6" {>= "3.0.4"}
+  "libgmp10"
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "darcs_2.14.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/darcs/darcs_2.14.1-3_amd64.deb"
+}

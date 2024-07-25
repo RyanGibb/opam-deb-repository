@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-language-javascript-prof_0.6.0.11-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-language-javascript-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-language-javascript-dev" {= "0.6.0.11-3+b2"}
+  "libghc-utf8-string-prof"
+]
+extra-source "libghc-language-javascript-prof_0.6.0.11-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-language-javascript/libghc-language-javascript-prof_0.6.0.11-3+b2_amd64.deb"
+}

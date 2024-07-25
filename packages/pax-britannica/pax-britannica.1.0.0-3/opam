@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pax-britannica_1.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pax-britannica"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.14"}
+  "libgl1"
+  "libglfw3" {>= "3.0"}
+  "liblua5-1-0"
+  "libx11-6"
+  "libxrandr2"
+  "pax-britannica-data"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "pax-britannica_1.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pax-britannica/pax-britannica_1.0.0-3_amd64.deb"
+}

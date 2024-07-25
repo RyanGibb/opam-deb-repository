@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libx11-guitest-perl_0.28-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libx11-guitest-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6"
+  "libxtst6"
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libx11-guitest-perl_0.28-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libx11-guitest-perl/libx11-guitest-perl_0.28-2+b1_amd64.deb"
+}

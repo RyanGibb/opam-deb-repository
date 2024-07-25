@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-nss_1.0.1-1+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-nss"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libnspr4" {>= "2-4.10.9"}
+  "libnss3" {>= "2-3.66"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-nss_1.0.1-1+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-nss/python3-nss_1.0.1-1+b5_amd64.deb"
+}

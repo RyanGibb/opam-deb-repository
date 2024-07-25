@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-earth_4.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-earth"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.2-1"}
+  "r-cran-plotmo" {>= "3.5.1"}
+  "r-cran-teachingdemos" {>= "2.10"}
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "r-cran-earth_4.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-earth/r-cran-earth_4.7.0-1_amd64.deb"
+}

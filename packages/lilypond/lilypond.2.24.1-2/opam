@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lilypond_2.24.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lilypond"]
+]
+depends: [
+  "ghostscript"
+  "guile-2-2"
+  "guile-2-2-libs" {>= "2.2.7+1"}
+  "libc6" {>= "2.35"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.6"}
+  "libgc1" {>= "1-7.2d"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libpango-1-0-0" {>= "1.37.2"}
+  "libpangoft2-1-0-0" {>= "1.37.2"}
+  "libstdc++6" {>= "11"}
+  "lilypond-data" {= "2.24.1-2"}
+  "python3-any"
+]
+extra-source "lilypond_2.24.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lilypond/lilypond_2.24.1-2_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i open-infrastructure-system-images_20190301-lts1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r open-infrastructure-system-images"]
+]
+depends: [
+  "open-infrastructure-system-build" {>= "20161115"}
+]
+extra-source "open-infrastructure-system-images_20190301-lts1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/open-infrastructure-system-tools/open-infrastructure-system-images_20190301-lts1-2_all.deb"
+}

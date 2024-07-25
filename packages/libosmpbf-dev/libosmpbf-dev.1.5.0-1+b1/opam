@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmpbf-dev_1.5.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmpbf-dev"]
+]
+depends: [
+  "libosmpbf1" {= "1.5.0-1+b1"}
+  "libprotobuf-dev"
+]
+extra-source "libosmpbf-dev_1.5.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmpbf/libosmpbf-dev_1.5.0-1+b1_amd64.deb"
+}

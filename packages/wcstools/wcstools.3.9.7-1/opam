@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wcstools_3.9.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wcstools"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libwcstools1" {= "3.9.7-1"}
+]
+extra-source "wcstools_3.9.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wcstools/wcstools_3.9.7-1_amd64.deb"
+}

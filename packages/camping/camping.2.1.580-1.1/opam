@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i camping_2.1.580-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r camping"]
+]
+depends: [
+  "fonts-lato"
+  "libjs-jquery"
+  "ruby-rack"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "camping_2.1.580-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/camping/camping_2.1.580-1.1_all.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-connection-dev_0.3.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-connection-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-basement-dev"
+  "libghc-data-default-class-dev"
+  "libghc-network-dev"
+  "libghc-socks-dev"
+  "libghc-tls-dev"
+  "libghc-x509-dev"
+  "libghc-x509-store-dev"
+  "libghc-x509-system-dev"
+  "libghc-x509-validation-dev"
+  "libgmp10"
+]
+extra-source "libghc-connection-dev_0.3.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-connection/libghc-connection-dev_0.3.1-2_amd64.deb"
+}

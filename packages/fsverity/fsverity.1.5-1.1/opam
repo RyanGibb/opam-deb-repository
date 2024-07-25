@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fsverity_1.5-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fsverity"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfsverity0" {= "1.5-1.1"}
+]
+extra-source "fsverity_1.5-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fsverity-utils/fsverity_1.5-1.1_amd64.deb"
+}

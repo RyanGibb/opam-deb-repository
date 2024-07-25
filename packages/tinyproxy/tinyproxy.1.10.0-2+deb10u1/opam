@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tinyproxy_1.10.0-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tinyproxy"]
+]
+depends: [
+  "adduser"
+  "logrotate"
+  "lsb-base" {>= "3.0-6"}
+  "tinyproxy-bin" {< "1.10.0-2+deb10u1.1~"}
+  "tinyproxy-bin" {>= "1.10.0-2+deb10u1"}
+]
+extra-source "tinyproxy_1.10.0-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tinyproxy/tinyproxy_1.10.0-2+deb10u1_all.deb"
+}

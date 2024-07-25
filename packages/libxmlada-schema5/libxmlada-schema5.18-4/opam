@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlada-schema5_18-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlada-schema5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnat-8" {>= "8.3.0"}
+  "libxmlada-dom5"
+  "libxmlada-input5"
+  "libxmlada-sax5"
+  "libxmlada-unicode5"
+]
+extra-source "libxmlada-schema5_18-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxmlada/libxmlada-schema5_18-4_amd64.deb"
+}

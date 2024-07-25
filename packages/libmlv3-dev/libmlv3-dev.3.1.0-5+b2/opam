@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmlv3-dev_3.1.0-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmlv3-dev"]
+]
+depends: [
+  "fonts-tlwg-garuda-ttf"
+  "libjs-jquery"
+  "libmlv3" {= "3.1.0-5+b2"}
+  "libsdl1-2-dev"
+]
+conflicts: [
+  "libmlv-0.2-dev"
+  "libmlv-0.4-dev"
+  "libmlv-dev"
+]
+extra-source "libmlv3-dev_3.1.0-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mlv/libmlv3-dev_3.1.0-5+b2_amd64.deb"
+}

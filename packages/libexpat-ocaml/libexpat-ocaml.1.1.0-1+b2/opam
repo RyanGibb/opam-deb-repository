@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libexpat-ocaml_1.1.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libexpat-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "ocaml-base"
+]
+extra-source "libexpat-ocaml_1.1.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-expat/libexpat-ocaml_1.1.0-1+b2_amd64.deb"
+}

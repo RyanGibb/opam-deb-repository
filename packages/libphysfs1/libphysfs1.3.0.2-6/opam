@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libphysfs1_3.0.2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libphysfs1"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+]
+conflicts: [
+  "libphysfs-1.0-0"
+]
+extra-source "libphysfs1_3.0.2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libphysfs/libphysfs1_3.0.2-6_amd64.deb"
+}

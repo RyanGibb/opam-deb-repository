@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xrootd-server-plugins_5.0.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xrootd-server-plugins"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcurl4" {>= "7.28.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libjson-c5" {>= "0.15"}
+  "libmacaroons0" {>= "0.3.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "9"}
+  "libuuid1" {>= "2.16"}
+  "libxrdcl3" {>= "5.0.3"}
+  "libxrdhttputils2" {>= "5.0.3"}
+  "libxrdposix3" {>= "5.0.3"}
+  "libxrdserver3" {>= "5.0.3"}
+  "libxrdssilib2" {>= "5.0.3"}
+  "libxrdutils3" {>= "5.0.3"}
+]
+extra-source "xrootd-server-plugins_5.0.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xrootd/xrootd-server-plugins_5.0.3-4_amd64.deb"
+}

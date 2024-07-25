@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-src-exts-dev_1.20.2-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-src-exts-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-cpphs-dev"
+  "libgmp10"
+]
+extra-source "libghc-src-exts-dev_1.20.2-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-src-exts/libghc-src-exts-dev_1.20.2-3+b2_amd64.deb"
+}

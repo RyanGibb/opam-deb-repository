@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stlink-gui_1.5.1+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stlink-gui"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.14"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libstlink1" {= "1.5.1+ds-1"}
+  "libusb-1-0-0" {>= "2-1.0.22"}
+  "stlink-tools" {= "1.5.1+ds-1"}
+]
+extra-source "stlink-gui_1.5.1+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stlink/stlink-gui_1.5.1+ds-1_amd64.deb"
+}

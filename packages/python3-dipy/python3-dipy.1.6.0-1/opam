@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-dipy_1.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-dipy"]
+]
+depends: [
+  "python3-any"
+  "python3-dipy-lib" {>= "1.6.0-1"}
+  "python3-h5py"
+  "python3-numpy"
+  "python3-packaging"
+  "python3-pandas"
+  "python3-scipy"
+  "python3-tqdm"
+]
+extra-source "python3-dipy_1.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dipy/python3-dipy_1.6.0-1_all.deb"
+}

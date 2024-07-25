@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i i965-va-driver_2.4.1+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r i965-va-driver"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libdrm-intel1" {>= "2.4.46"}
+  "libdrm2" {>= "2.3.1"}
+  "libva2"
+]
+extra-source "i965-va-driver_2.4.1+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/intel-vaapi-driver/i965-va-driver_2.4.1+dfsg1-1_amd64.deb"
+}

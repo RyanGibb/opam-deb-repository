@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-flycheck-rtags_2.38-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-flycheck-rtags"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-flycheck" {>= "0.23"}
+  "elpa-rtags" {= "2.38-3"}
+  "emacsen-common"
+]
+extra-source "elpa-flycheck-rtags_2.38-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rtags/elpa-flycheck-rtags_2.38-3_all.deb"
+}

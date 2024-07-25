@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qtquickcontrols5-examples_5.11.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qtquickcontrols5-examples"]
+]
+depends: [
+  "fonts-dejavu-core"
+  "libc6" {>= "2.14"}
+  "libqt5core5a" {>= "5.11.3+dfsg~"}
+  "libqt5gui5" {>= "5.11.3+dfsg~"}
+  "libqt5qml5" {>= "5.1.0"}
+  "libqt5quick5" {>= "5.1.0"}
+  "libqt5sql5" {>= "5.11.3+dfsg~"}
+  "libqt5widgets5" {>= "5.11.3+dfsg~"}
+  "libstdc++6" {>= "5"}
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-dialogs"
+  "qml-module-qtquick-extras"
+  "qml-module-qtquick-privatewidgets"
+  "qml-module-qttest"
+]
+extra-source "qtquickcontrols5-examples_5.11.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtquickcontrols-opensource-src/qtquickcontrols5-examples_5.11.3-2_amd64.deb"
+}

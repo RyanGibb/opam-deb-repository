@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-hbs-mkd_0.1.0~r76450-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-hbs-mkd"]
+]
+depends: [
+  "apertium" {>= "3.4"}
+  "apertium-lex-tools"
+  "cg3"
+]
+conflicts: [
+  "apertium-mkd-hbs"
+]
+extra-source "apertium-hbs-mkd_0.1.0~r76450-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-hbs-mkd/apertium-hbs-mkd_0.1.0~r76450-2.1_all.deb"
+}

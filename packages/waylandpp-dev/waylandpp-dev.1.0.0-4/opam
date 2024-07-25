@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i waylandpp-dev_1.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r waylandpp-dev"]
+]
+depends: [
+  "libwayland-client++1" {= "1.0.0-4"}
+  "libwayland-client-extra++1" {= "1.0.0-4"}
+  "libwayland-cursor++1" {= "1.0.0-4"}
+  "libwayland-egl++1" {= "1.0.0-4"}
+  "libwayland-server++1" {= "1.0.0-4"}
+  "wayland-scanner++-any" {= "1.0.0-4"}
+]
+extra-source "waylandpp-dev_1.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/waylandpp/waylandpp-dev_1.0.0-4_amd64.deb"
+}

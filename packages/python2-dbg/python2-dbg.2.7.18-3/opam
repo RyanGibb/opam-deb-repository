@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python2-dbg_2.7.18-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python2-dbg"]
+]
+depends: [
+  "libpython2-dbg" {= "2.7.18-3"}
+  "python2" {= "2.7.18-3"}
+  "python2-7-dbg" {>= "2.7.18~"}
+]
+extra-source "python2-dbg_2.7.18-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-defaults/python2-dbg_2.7.18-3_amd64.deb"
+}

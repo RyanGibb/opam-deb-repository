@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dbconfig-mysql_2.0.24_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dbconfig-mysql"]
+]
+depends: [
+  "dbconfig-common" {= "2.0.24"}
+  ("default-mysql-client" | "virtual-mysql-client")
+]
+conflicts: [
+  "dbconfig-no-thanks"
+]
+extra-source "dbconfig-mysql_2.0.24_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dbconfig-common/dbconfig-mysql_2.0.24_all.deb"
+}

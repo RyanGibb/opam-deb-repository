@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdrumstick-dev_1.1.3-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdrumstick-dev"]
+]
+depends: [
+  "libdrumstick-alsa1" {= "1.1.3-1+b2"}
+  "libdrumstick-file1" {= "1.1.3-1+b2"}
+  "libdrumstick-rt1" {= "1.1.3-1+b2"}
+]
+extra-source "libdrumstick-dev_1.1.3-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdrumstick/libdrumstick-dev_1.1.3-1+b2_amd64.deb"
+}

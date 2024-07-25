@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-dkim_1.1.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-dkim"]
+]
+depends: [
+  "python3-any"
+  "python3-dnspython"
+  "python3-nacl"
+  "python3-pkg-resources"
+]
+extra-source "python3-dkim_1.1.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dkimpy/python3-dkim_1.1.4-1_all.deb"
+}

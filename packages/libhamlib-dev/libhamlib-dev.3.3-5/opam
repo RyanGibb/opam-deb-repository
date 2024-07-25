@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhamlib-dev_3.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhamlib-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libhamlib2" {= "3.3-5"}
+  "libusb-1-0-0-dev"
+]
+extra-source "libhamlib-dev_3.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hamlib/libhamlib-dev_3.3-5_amd64.deb"
+}

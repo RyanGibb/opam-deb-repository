@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i contextfree_3.3+dfsg1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r contextfree"]
+]
+depends: [
+  "libagg2" {>= "1-2.6.1"}
+  "libavcodec-extra58"
+  "libavformat58" {>= "7-4.2"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libicu67" {>= "67.1-1~"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "9"}
+  "libswscale5" {>= "7-4.0"}
+]
+extra-source "contextfree_3.3+dfsg1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/contextfree/contextfree_3.3+dfsg1-1+b1_amd64.deb"
+}

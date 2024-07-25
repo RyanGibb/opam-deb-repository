@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ecatools_2.9.3-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ecatools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libecasoundc1v5" {>= "2.9.3"}
+  "libgcc-s1" {>= "3.0"}
+  "libncurses6" {>= "6"}
+  "libstdc++6" {>= "11"}
+  "libtinfo6" {>= "6"}
+  "python3-ecasound" {= "2.9.3-4"}
+]
+extra-source "ecatools_2.9.3-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ecasound/ecatools_2.9.3-4+b1_amd64.deb"
+}

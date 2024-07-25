@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i linux-headers-5.10.0-30-amd64_5.10.218-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r linux-headers-5.10.0-30-amd64"]
+]
+depends: [
+  "linux-compiler-gcc-10-x86"
+  "linux-headers-5-10-0-30-common" {= "5.10.218-1"}
+  "linux-kbuild-5-10" {>= "5.10.218-1"}
+]
+extra-source "linux-headers-5.10.0-30-amd64_5.10.218-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linux/linux-headers-5.10.0-30-amd64_5.10.218-1_amd64.deb"
+}

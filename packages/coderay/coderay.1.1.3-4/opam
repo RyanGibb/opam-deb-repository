@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coderay_1.1.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coderay"]
+]
+depends: [
+  "ruby-coderay"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "coderay_1.1.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coderay/coderay_1.1.3-4_all.deb"
+}

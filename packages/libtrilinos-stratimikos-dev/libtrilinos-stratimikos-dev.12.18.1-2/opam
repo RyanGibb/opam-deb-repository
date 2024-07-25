@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrilinos-stratimikos-dev_12.18.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrilinos-stratimikos-dev"]
+]
+depends: [
+  "libtrilinos-stratimikos12" {= "12.18.1-2"}
+  "libtrilinos-trilinosss-dev"
+  "trilinos-dev"
+]
+extra-source "libtrilinos-stratimikos-dev_12.18.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trilinos/libtrilinos-stratimikos-dev_12.18.1-2_amd64.deb"
+}

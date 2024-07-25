@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnftables0_0.9.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnftables0"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgmp10"
+  "libjansson4" {>= "2.3"}
+  "libmnl0" {>= "1.0.3-4~"}
+  "libnftnl11" {>= "1.1.2"}
+  "libreadline7" {>= "6.0"}
+  "libxtables12" {>= "1.6.1"}
+]
+extra-source "libnftables0_0.9.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nftables/libnftables0_0.9.0-2_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i llvm-6.0-tools_1:6.0.1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r llvm-6.0-tools"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc1" {>= "1-3.4"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+  "llvm-6-0-dev" {= "1-6.0.1-10"}
+  "python"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "llvm-6.0-tools_1:6.0.1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-6.0/llvm-6.0-tools_6.0.1-10_amd64.deb"
+}

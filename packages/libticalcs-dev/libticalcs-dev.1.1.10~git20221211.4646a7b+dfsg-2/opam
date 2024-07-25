@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libticalcs-dev_1.1.10~git20221211.4646a7b+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libticalcs-dev"]
+]
+depends: [
+  "libglib2-0-dev"
+  "libticables-dev"
+  "libticalcs2-13" {= "1.1.10~git20221211.4646a7b+dfsg-2"}
+  "libticonv-dev"
+  "libtifiles-dev"
+  "pkg-config"
+]
+extra-source "libticalcs-dev_1.1.10~git20221211.4646a7b+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libticalcs/libticalcs-dev_1.1.10~git20221211.4646a7b+dfsg-2_amd64.deb"
+}

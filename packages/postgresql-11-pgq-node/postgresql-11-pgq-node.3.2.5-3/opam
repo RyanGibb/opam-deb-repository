@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-11-pgq-node_3.2.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-11-pgq-node"]
+]
+depends: [
+  "postgresql-11"
+  "postgresql-11-pgq3"
+]
+extra-source "postgresql-11-pgq-node_3.2.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pgq-node/postgresql-11-pgq-node_3.2.5-3_all.deb"
+}

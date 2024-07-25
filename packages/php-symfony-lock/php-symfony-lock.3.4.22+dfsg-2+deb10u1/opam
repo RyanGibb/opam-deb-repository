@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-lock_3.4.22+dfsg-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-lock"]
+]
+depends: [
+  "php-common"
+  "php-psr-log" {< "2~~"}
+  "php-psr-log" {>= "1.0"}
+]
+extra-source "php-symfony-lock_3.4.22+dfsg-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/symfony/php-symfony-lock_3.4.22+dfsg-2+deb10u1_all.deb"
+}

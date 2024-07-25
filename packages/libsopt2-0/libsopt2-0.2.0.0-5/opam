@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsopt2.0_2.0.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsopt2.0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgomp1" {>= "4.2.1"}
+  "libstdc++6" {>= "5.2"}
+  "libtiff5" {>= "4.0.3"}
+]
+extra-source "libsopt2.0_2.0.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sopt/libsopt2.0_2.0.0-5_amd64.deb"
+}

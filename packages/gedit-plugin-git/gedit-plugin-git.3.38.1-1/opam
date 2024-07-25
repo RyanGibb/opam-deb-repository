@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gedit-plugin-git_3.38.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gedit-plugin-git"]
+]
+depends: [
+  "gedit" {< "3.39"}
+  "gedit" {>= "3.38"}
+  "gedit-plugins-common" {>= "3.38.1-1"}
+  "gir1-2-ggit-1-0"
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-3-0"
+  "gir1-2-gtksource-4"
+  "python3-any"
+  "python3-gi"
+  "python3-gi-cairo"
+]
+extra-source "gedit-plugin-git_3.38.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gedit-plugins/gedit-plugin-git_3.38.1-1_amd64.deb"
+}

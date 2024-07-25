@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ghc_8.8.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ghc"]
+]
+depends: [
+  "gcc"
+  "libbsd-dev"
+  "libc6" {>= "2.29"}
+  "libc6-dev"
+  "libffi-dev"
+  "libffi7" {>= "3.3~20180313"}
+  "libgmp-dev"
+  "libgmp10"
+  "libncurses5-dev"
+  "libtinfo6" {>= "6"}
+]
+conflicts: [
+  "ghc-dynamic (<< 7.8)"
+  "ghc6 (<< 7)"
+]
+extra-source "ghc_8.8.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/ghc/ghc_8.8.4-2_amd64.deb"
+}

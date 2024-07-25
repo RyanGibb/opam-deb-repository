@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-lyon-geom+serialization-dev_0.15.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-lyon-geom+serialization-dev"]
+]
+depends: [
+  "librust-euclid-0-20+serde-dev"
+  "librust-lyon-geom+serde-dev" {= "0.15.0-2"}
+  "librust-lyon-geom-dev" {= "0.15.0-2"}
+]
+extra-source "librust-lyon-geom+serialization-dev_0.15.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-lyon-geom/librust-lyon-geom+serialization-dev_0.15.0-2_amd64.deb"
+}

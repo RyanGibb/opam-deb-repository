@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i javamorph_0.0.20100201-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r javamorph"]
+]
+depends: [
+  "doc-base"
+  "java-wrappers"
+  ("default-jre" {>= "2-1.7"} | "java7-runtime")
+]
+extra-source "javamorph_0.0.20100201-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/javamorph/javamorph_0.0.20100201-3_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsaaj-ri-java_1.4.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsaaj-ri-java"]
+]
+depends: [
+  "libmimepull-java" {>= "1.9.7"}
+  "libsaaj-java" {>= "1.4.0"}
+  "libstax-ex-java" {>= "1.7.8"}
+]
+extra-source "libsaaj-ri-java_1.4.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/saaj-ri/libsaaj-ri-java_1.4.1-1_all.deb"
+}

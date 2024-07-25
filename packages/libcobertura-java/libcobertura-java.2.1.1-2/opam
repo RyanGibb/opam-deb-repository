@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcobertura-java_2.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcobertura-java"]
+]
+depends: [
+  "ant"
+  "ant-optional"
+  "junit4" {>= "4.12"}
+  "libasm-java" {>= "6.0"}
+  "libcommons-lang3-java" {>= "3.7"}
+  "libjaxen-java" {>= "1.1.6"}
+  "liblogback-java" {>= "1.2.3"}
+  "liboro-java"
+  "libservlet3-1-java"
+  "libslf4j-java" {>= "1.7.25"}
+]
+extra-source "libcobertura-java_2.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cobertura/libcobertura-java_2.1.1-2_all.deb"
+}

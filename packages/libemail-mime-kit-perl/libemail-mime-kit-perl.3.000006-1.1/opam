@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libemail-mime-kit-perl_3.000006-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libemail-mime-kit-perl"]
+]
+depends: [
+  "libemail-messageid-perl"
+  "libemail-mime-perl" {>= "1.930"}
+  "libjson-perl"
+  "libmodule-runtime-perl"
+  "libmoose-perl"
+  "libstring-rewriteprefix-perl"
+  "libyaml-libyaml-perl"
+  "perl-any"
+]
+extra-source "libemail-mime-kit-perl_3.000006-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libemail-mime-kit-perl/libemail-mime-kit-perl_3.000006-1.1_all.deb"
+}

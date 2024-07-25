@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tclcurl_7.22.0+hg20160822-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tclcurl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.22.0"}
+  "tcl" {>= "8.6.0-2"}
+]
+extra-source "tclcurl_7.22.0+hg20160822-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tclcurl/tclcurl_7.22.0+hg20160822-3_amd64.deb"
+}

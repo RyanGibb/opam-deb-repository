@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblcas-dev_1.3.19-2.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblcas-dev"]
+]
+depends: [
+  "lcas-interface" {= "1.3.19-2.1"}
+  "libglobus-gsi-cert-utils-dev"
+  "libglobus-gss-assist-dev"
+  "libglobus-gssapi-gsi-dev"
+  "liblcas0" {= "1.3.19-2.1+b1"}
+  "sgml-base" {>= "1.28"}
+]
+extra-source "liblcas-dev_1.3.19-2.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lcas/liblcas-dev_1.3.19-2.1+b1_amd64.deb"
+}

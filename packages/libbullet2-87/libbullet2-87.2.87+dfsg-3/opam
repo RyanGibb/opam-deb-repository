@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbullet2.87_2.87+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbullet2.87"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libbullet2.87_2.87+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bullet/libbullet2.87_2.87+dfsg-3_amd64.deb"
+}

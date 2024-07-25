@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-th-utilities-prof_0.2.4.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-th-utilities-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-primitive-prof"
+  "libghc-syb-prof"
+  "libghc-th-orphans-prof"
+  "libghc-th-utilities-dev" {= "0.2.4.0-1+b2"}
+]
+extra-source "libghc-th-utilities-prof_0.2.4.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-th-utilities/libghc-th-utilities-prof_0.2.4.0-1+b2_amd64.deb"
+}

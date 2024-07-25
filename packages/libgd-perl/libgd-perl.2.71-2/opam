@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgd-perl_2.71-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgd-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgd3" {>= "2.1.1"}
+  "perl" {>= "5.28.1-4"}
+  "perl-base"
+]
+extra-source "libgd-perl_2.71-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgd-perl/libgd-perl_2.71-2_amd64.deb"
+}

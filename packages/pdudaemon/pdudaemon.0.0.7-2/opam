@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pdudaemon_0.0.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pdudaemon"]
+]
+depends: [
+  "python3-any"
+  "python3-hid"
+  "python3-paramiko"
+  "python3-pexpect"
+  "python3-requests"
+  "python3-serial"
+  "python3-systemd"
+]
+extra-source "pdudaemon_0.0.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdudaemon/pdudaemon_0.0.7-2_all.deb"
+}

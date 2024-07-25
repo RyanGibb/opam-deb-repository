@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-acl2_8.5dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-acl2"]
+]
+depends: [
+  "acl2" {>= "8.5dfsg-5"}
+  "dh-elpa-helper"
+  "emacsen-common"
+  "tex-common" {>= "6.13"}
+  ("emacs-gtk" | "emacsen")
+]
+extra-source "elpa-acl2_8.5dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/acl2/elpa-acl2_8.5dfsg-5_all.deb"
+}

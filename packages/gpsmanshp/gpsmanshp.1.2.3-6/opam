@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gpsmanshp_1.2.3-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gpsmanshp"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libshp2" {>= "1.3.0"}
+  "libtcl8-6" {>= "8.6.0"}
+  "tcllib"
+]
+extra-source "gpsmanshp_1.2.3-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gpsmanshp/gpsmanshp_1.2.3-6_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sent_1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sent"]
+]
+depends: [
+  "farbfeld"
+  "libc6" {>= "2.27"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+]
+extra-source "sent_1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sent/sent_1-3+b1_amd64.deb"
+}

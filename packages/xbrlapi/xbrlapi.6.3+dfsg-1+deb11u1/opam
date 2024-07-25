@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xbrlapi_6.3+dfsg-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xbrlapi"]
+]
+depends: [
+  "libbrlapi0-8" {>= "6.3+dfsg"}
+  "libc6" {>= "2.17"}
+  "libicu67" {>= "67.1-1~"}
+  "libx11-6"
+  "libxfixes3"
+  "libxtst6"
+]
+extra-source "xbrlapi_6.3+dfsg-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/brltty/xbrlapi_6.3+dfsg-1+deb11u1_amd64.deb"
+}

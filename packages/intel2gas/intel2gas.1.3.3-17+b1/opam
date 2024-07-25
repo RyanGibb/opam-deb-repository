@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i intel2gas_1.3.3-17+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r intel2gas"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+]
+extra-source "intel2gas_1.3.3-17+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/intel2gas/intel2gas_1.3.3-17+b1_amd64.deb"
+}

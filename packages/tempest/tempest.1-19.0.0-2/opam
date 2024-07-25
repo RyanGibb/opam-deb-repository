@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tempest_1:19.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tempest"]
+]
+depends: [
+  "e2fsprogs"
+  ("python3-tempest" {= "1-19.0.0-2"} | "python-tempest" {= "1-19.0.0-2"})
+]
+extra-source "tempest_1:19.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tempest/tempest_19.0.0-2_all.deb"
+}

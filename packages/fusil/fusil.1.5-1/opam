@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fusil_1.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fusil"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-ptrace" {>= "0.5"}
+]
+extra-source "fusil_1.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fusil/fusil_1.5-1_all.deb"
+}

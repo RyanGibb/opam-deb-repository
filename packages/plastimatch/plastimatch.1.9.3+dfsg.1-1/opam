@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plastimatch_1.9.3+dfsg.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plastimatch"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libdcmtk15" {>= "3.6.5"}
+  "libdlib19"
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc-s1" {>= "4.0"}
+  "libgomp1" {>= "4.9"}
+  "libinsighttoolkit4-13" {>= "4.13.3withdata-dfsg1"}
+  "libstdc++6" {>= "9"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "plastimatch_1.9.3+dfsg.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plastimatch/plastimatch_1.9.3+dfsg.1-1_amd64.deb"
+}

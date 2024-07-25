@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lua-event_0.4.6-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lua-event"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "lua-socket"
+]
+extra-source "lua-event_0.4.6-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lua-event/lua-event_0.4.6-2+b1_amd64.deb"
+}

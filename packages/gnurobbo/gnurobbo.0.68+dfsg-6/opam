@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnurobbo_0.68+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnurobbo"]
+]
+depends: [
+  "gnurobbo-data"
+  "libc6" {>= "2.34"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2" {>= "1.2.12"}
+  "libsdl-ttf2-0-0"
+  "libsdl1-2-compat-shim"
+]
+extra-source "gnurobbo_0.68+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnurobbo/gnurobbo_0.68+dfsg-6_amd64.deb"
+}

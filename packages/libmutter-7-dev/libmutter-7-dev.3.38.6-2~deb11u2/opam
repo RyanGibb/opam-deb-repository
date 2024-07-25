@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmutter-7-dev_3.38.6-2~deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmutter-7-dev"]
+]
+depends: [
+  "gir1-2-mutter-7" {= "3.38.6-2~deb11u2"}
+  "gsettings-desktop-schemas-dev" {>= "3.37.2"}
+  "libatk1-0-dev"
+  "libcairo2-dev"
+  "libdrm-dev"
+  "libegl1-mesa-dev"
+  "libgbm-dev"
+  "libglib2-0-dev"
+  "libgraphene-1-0-dev" {>= "1.9.3"}
+  "libgtk-3-dev"
+  "libinput-dev" {>= "1.7"}
+  "libjson-glib-dev"
+  "libmutter-7-0" {= "3.38.6-2~deb11u2"}
+  "libpango1-0-dev"
+  "libwayland-dev"
+  "libx11-dev"
+  "libxcomposite-dev"
+  "libxdamage-dev"
+  "libxext-dev"
+  "libxfixes-dev"
+  "libxi-dev"
+  "libxrandr-dev"
+  ("libgdk-pixbuf-2-0-dev" | "libgdk-pixbuf2-0-dev")
+  ("libgles2-mesa-dev" {>= "7.1~rc3-1~"} | "libgles2-dev")
+]
+conflicts: [
+  "libmutter-0-dev"
+  "libmutter-1-dev"
+  "libmutter-2-dev"
+]
+extra-source "libmutter-7-dev_3.38.6-2~deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mutter/libmutter-7-dev_3.38.6-2~deb11u2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i flydraw_1:4.15d~dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r flydraw"]
+]
+depends: [
+  "libc6" {>= "2.23"}
+  "libgd3" {>= "2.1.0~alpha~"}
+  ("imagemagick" {>= "4-5.4.4.5-1"} | "graphicsmagick-imagemagick-compat")
+]
+extra-source "flydraw_1:4.15d~dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wims/flydraw_4.15d~dfsg1-3_amd64.deb"
+}

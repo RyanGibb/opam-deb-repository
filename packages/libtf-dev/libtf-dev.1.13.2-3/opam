@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtf-dev_1.13.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtf-dev"]
+]
+depends: [
+  "libgeometry-msgs-dev"
+  "libmessage-filters-dev"
+  "librosconsole-dev"
+  "libroscpp-dev"
+  "libsensor-msgs-dev"
+  "libstd-msgs-dev"
+  "libtf1d" {= "1.13.2-3"}
+  "libtf2-ros-dev"
+  "ros-message-runtime"
+]
+extra-source "libtf-dev_1.13.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-geometry/libtf-dev_1.13.2-3_amd64.deb"
+}

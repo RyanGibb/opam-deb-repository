@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tclxapian_1.4.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tclxapian"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libxapian30" {>= "1.4.11~"}
+  ("tcl" | "tclsh")
+]
+extra-source "tclxapian_1.4.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xapian-bindings/tclxapian_1.4.11-2_amd64.deb"
+}

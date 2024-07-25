@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i console-cyrillic_0.9-17.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r console-cyrillic"]
+]
+depends: [
+  "console-setup-linux"
+  "perl-base" {>= "5.8.3-2"}
+  ("debconf" | "debconf-2-0")
+  ("kbd" | "console-tools")
+]
+conflicts: [
+  "console-tools-cyrillic"
+]
+extra-source "console-cyrillic_0.9-17.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/console-cyrillic/console-cyrillic_0.9-17.1_all.deb"
+}

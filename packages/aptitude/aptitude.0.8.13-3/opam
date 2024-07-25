@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aptitude_0.8.13-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aptitude"]
+]
+depends: [
+  "aptitude-common" {= "0.8.13-3"}
+  "libapt-pkg6-0" {>= "1.9.0"}
+  "libboost-iostreams1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libcwidget4" {>= "0.5.18-1"}
+  "libgcc-s1" {>= "3.0"}
+  "libncursesw6" {>= "6.1+20180210"}
+  "libsigc++-2-0-0v5" {>= "2.8.0"}
+  "libsqlite3-0" {>= "3.6.5"}
+  "libstdc++6" {>= "9"}
+  "libtinfo6" {>= "6.1+20180210"}
+  "libxapian30" {>= "1.4.17~"}
+]
+extra-source "aptitude_0.8.13-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aptitude/aptitude_0.8.13-3_amd64.deb"
+}

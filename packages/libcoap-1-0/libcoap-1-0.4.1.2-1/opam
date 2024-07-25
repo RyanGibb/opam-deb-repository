@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcoap-1-0_4.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcoap-1-0"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+]
+extra-source "libcoap-1-0_4.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcoap/libcoap-1-0_4.1.2-1_amd64.deb"
+}

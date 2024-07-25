@@ -1,0 +1,46 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i smb4k_3.1.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r smb4k"]
+]
+depends: [
+  "cifs-utils" {>= "2-4.1"}
+  "kio"
+  "libc6" {>= "2.34"}
+  "libkf5authcore5" {>= "5.61.0"}
+  "libkf5completion5" {>= "5.44.0~"}
+  "libkf5configcore5" {>= "5.44.0~"}
+  "libkf5configgui5" {>= "5.44.0~"}
+  "libkf5configwidgets5" {>= "5.44.0~"}
+  "libkf5coreaddons5" {>= "5.44.0~"}
+  "libkf5crash5" {>= "5.44.0~"}
+  "libkf5dbusaddons5" {>= "5.44.0~"}
+  "libkf5dnssd5" {>= "5.44.0~"}
+  "libkf5i18n5" {>= "5.44.0~"}
+  "libkf5iconthemes5" {>= "5.44.0~"}
+  "libkf5jobwidgets5" {>= "5.44.0~"}
+  "libkf5kiocore5" {>= "5.93.0"}
+  "libkf5kiogui5" {>= "5.74.0"}
+  "libkf5kiowidgets5" {>= "5.69.0"}
+  "libkf5notifications5" {>= "5.44.0~"}
+  "libkf5solid5" {>= "5.44.0~"}
+  "libkf5wallet-bin"
+  "libkf5wallet5" {>= "5.44.0~"}
+  "libkf5widgetsaddons5" {>= "5.44.0~"}
+  "libkf5xmlgui5" {>= "5.44.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.9.0~"}
+  "libqt5network5" {>= "5.11.0~rc1"}
+  "libqt5printsupport5" {>= "5.9.0~"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libsmbclient" {>= "2-4.10.0+dfsg"}
+  "libstdc++6" {>= "4.1.1"}
+  "samba-common-bin" {>= "2-3.4.7~dfsg"}
+  "smbclient" {>= "2-3.4.7~dfsg"}
+  ("libqt5gui5" {>= "5.10.0"} | "libqt5gui5-gles" {>= "5.10.0"})
+]
+extra-source "smb4k_3.1.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/smb4k/smb4k_3.1.7-1_amd64.deb"
+}

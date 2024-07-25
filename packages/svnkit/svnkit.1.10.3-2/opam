@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i svnkit_1.10.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r svnkit"]
+]
+depends: [
+  "libjna-java"
+  "libsequence-library-java"
+  "libsvnkit-java" {= "1.10.3-2"}
+  "libtrilead-ssh2-java"
+  ("default-jre-headless" | "java7-runtime-headless")
+]
+extra-source "svnkit_1.10.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/svnkit/svnkit_1.10.3-2_all.deb"
+}

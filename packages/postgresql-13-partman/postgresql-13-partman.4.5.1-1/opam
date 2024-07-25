@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-13-partman_4.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-13-partman"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "postgresql-13"
+  "python3"
+  "python3-psycopg2"
+]
+extra-source "postgresql-13-partman_4.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pg-partman/postgresql-13-partman_4.5.1-1_amd64.deb"
+}

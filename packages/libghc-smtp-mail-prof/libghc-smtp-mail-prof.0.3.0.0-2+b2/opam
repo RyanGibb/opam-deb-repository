@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-smtp-mail-prof_0.3.0.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-smtp-mail-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-base16-bytestring-prof"
+  "libghc-base64-bytestring-prof"
+  "libghc-connection-prof"
+  "libghc-cryptonite-prof"
+  "libghc-memory-prof"
+  "libghc-mime-mail-prof"
+  "libghc-network-bsd-prof"
+  "libghc-network-prof"
+  "libghc-smtp-mail-dev" {= "0.3.0.0-2+b2"}
+]
+extra-source "libghc-smtp-mail-prof_0.3.0.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-smtp-mail/libghc-smtp-mail-prof_0.3.0.0-2+b2_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-jssip_0.6.34-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-jssip"]
+]
+depends: [
+  "libjs-jssip" {= "0.6.34-5"}
+  "node-debug"
+  "node-events"
+  "node-rtcninja"
+  "node-sdp-transform"
+  "node-util"
+  "node-websocket"
+]
+extra-source "node-jssip_0.6.34-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jssip/node-jssip_0.6.34-5_all.deb"
+}

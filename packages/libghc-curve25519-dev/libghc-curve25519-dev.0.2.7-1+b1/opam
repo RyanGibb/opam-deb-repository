@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-curve25519-dev_0.2.7-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-curve25519-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-crypto-api-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-curve25519-dev_0.2.7-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-curve25519/libghc-curve25519-dev_0.2.7-1+b1_amd64.deb"
+}

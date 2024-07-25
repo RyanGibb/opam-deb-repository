@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i siconos-mechanics-tools_4.3.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r siconos-mechanics-tools"]
+]
+depends: [
+  "python3-any" {>= "3.8~"}
+  "python3-h5py" {>= "2.8.0-1"}
+  "python3-siconos" {>= "4.3.1+dfsg-2"}
+  "python3-vtk7"
+]
+extra-source "siconos-mechanics-tools_4.3.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/siconos/siconos-mechanics-tools_4.3.1+dfsg-2_all.deb"
+}

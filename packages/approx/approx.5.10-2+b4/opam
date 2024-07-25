@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i approx_5.10-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r approx"]
+]
+depends: [
+  "adduser"
+  "bzip2"
+  "curl"
+  "libc6" {>= "2.29"}
+  "libpcre3"
+  "xz-utils"
+  ("rsyslog" | "system-log-daemon")
+]
+extra-source "approx_5.10-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/approx/approx_5.10-2+b4_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-interpolate-prof_0.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-interpolate-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-interpolate-dev" {= "0.2.1-1"}
+  "libghc-src-meta-prof"
+]
+extra-source "libghc-interpolate-prof_0.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-interpolate/libghc-interpolate-prof_0.2.1-1_amd64.deb"
+}

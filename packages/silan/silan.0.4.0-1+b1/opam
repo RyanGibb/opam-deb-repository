@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i silan_0.4.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r silan"]
+]
+depends: [
+  "libavformat58" {>= "7-4.0"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.14"}
+  "libsndfile1" {>= "1.0.20"}
+  ("libavcodec58" {>= "7-4.0"} | "libavcodec-extra58" {>= "7-4.0"})
+]
+extra-source "silan_0.4.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/silan/silan_0.4.0-1+b1_amd64.deb"
+}

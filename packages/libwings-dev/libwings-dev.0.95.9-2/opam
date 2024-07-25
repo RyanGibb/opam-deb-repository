@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwings-dev_0.95.9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwings-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libfontconfig1-dev"
+  "libwings3" {= "0.95.9-2"}
+  "libwraster-dev"
+  "libwutil5" {= "0.95.9-2"}
+  "libx11-dev"
+  "libxext-dev"
+  "libxft-dev"
+]
+extra-source "libwings-dev_0.95.9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmaker/libwings-dev_0.95.9-2_amd64.deb"
+}

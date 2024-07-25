@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-djvu-dbg_0.8.4-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-djvu-dbg"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdjvulibre21" {>= "3.5.28"}
+  "python3-dbg" {< "3.10"}
+  "python3-dbg" {>= "3.9~"}
+  "python3-djvu" {= "0.8.4-3+b3"}
+]
+extra-source "python3-djvu-dbg_0.8.4-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-djvulibre/python3-djvu-dbg_0.8.4-3+b3_amd64.deb"
+}

@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5runner5_5.103.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5runner5"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.29"}
+  "libkf5activities5" {>= "5.103.0~"}
+  "libkf5configcore5" {>= "5.103.0~"}
+  "libkf5coreaddons5" {>= "5.103.0~"}
+  "libkf5i18n5" {>= "5.103.0~"}
+  "libkf5kiocore5" {>= "5.103.0~"}
+  "libkf5plasma5" {>= "5.103.0~"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "5.103.0~"}
+  "libkf5threadweaver5" {>= "5.103.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5dbus5" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "libkf5runner5_5.103.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/krunner/libkf5runner5_5.103.0-1_amd64.deb"
+}

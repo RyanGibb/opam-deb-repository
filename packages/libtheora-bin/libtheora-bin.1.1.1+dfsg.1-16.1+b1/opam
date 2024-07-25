@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtheora-bin_1.1.1+dfsg.1-16.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtheora-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libogg0" {>= "1.0rc3"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl1-2-compat-shim"
+  "libtheora0" {>= "1.0"}
+  "libvorbis0a" {>= "1.1.2"}
+  "libvorbisenc2" {>= "1.1.2"}
+]
+extra-source "libtheora-bin_1.1.1+dfsg.1-16.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtheora/libtheora-bin_1.1.1+dfsg.1-16.1+b1_amd64.deb"
+}

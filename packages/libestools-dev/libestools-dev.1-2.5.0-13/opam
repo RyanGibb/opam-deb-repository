@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libestools-dev_1:2.5.0-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libestools-dev"]
+]
+depends: [
+  "libasound2-dev"
+  "libc6-dev"
+  "libestools2-5" {= "1-2.5.0-13"}
+  "libncurses-dev"
+]
+conflicts: [
+  "libestools2.1-dev"
+]
+extra-source "libestools-dev_1:2.5.0-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/speech-tools/libestools-dev_2.5.0-13_amd64.deb"
+}

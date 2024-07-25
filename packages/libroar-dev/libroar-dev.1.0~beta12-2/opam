@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libroar-dev_1.0~beta12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libroar-dev"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libroar-compat2" {= "1.0~beta12-2"}
+  "libroar2" {= "1.0~beta12-2"}
+  "libx11-6"
+  "libx11-dev"
+  "zlib1g" {>= "1-1.2.2"}
+]
+extra-source "libroar-dev_1.0~beta12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/roaraudio/libroar-dev_1.0~beta12-2_amd64.deb"
+}

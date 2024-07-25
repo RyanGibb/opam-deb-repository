@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-jekyll-data_1.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-jekyll-data"]
+]
+depends: [
+  "jekyll" {< "5.0.0"}
+  "jekyll" {>= "3.3"}
+]
+extra-source "ruby-jekyll-data_1.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-jekyll-data/ruby-jekyll-data_1.1.1-2_all.deb"
+}

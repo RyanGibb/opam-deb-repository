@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtomcat10-embed-java_10.1.6-1+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtomcat10-embed-java"]
+]
+depends: [
+  "libeclipse-jdt-core-java" {>= "3.26.0"}
+]
+extra-source "libtomcat10-embed-java_10.1.6-1+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tomcat10/libtomcat10-embed-java_10.1.6-1+deb12u2_all.deb"
+}

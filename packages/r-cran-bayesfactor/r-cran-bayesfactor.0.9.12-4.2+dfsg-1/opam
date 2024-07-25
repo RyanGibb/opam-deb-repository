@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-bayesfactor_0.9.12-4.2+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-bayesfactor"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  "r-cran-coda"
+  "r-cran-gtools"
+  "r-cran-hypergeo"
+  "r-cran-matrix" {>= "1.1-1"}
+  "r-cran-matrixmodels"
+  "r-cran-mvtnorm"
+  "r-cran-pbapply"
+  "r-cran-rcpp" {>= "0.11.2"}
+  "r-cran-rcppeigen" {>= "0.3.2.2.0"}
+  "r-cran-stringr"
+]
+extra-source "r-cran-bayesfactor_0.9.12-4.2+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-bayesfactor/r-cran-bayesfactor_0.9.12-4.2+dfsg-1_amd64.deb"
+}

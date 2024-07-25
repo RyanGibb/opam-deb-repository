@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i presage_0.9.1-2.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r presage"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libncurses6" {>= "6"}
+  "libpresage1v5" {>= "0.8.3"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "9"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "presage_0.9.1-2.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/presage/presage_0.9.1-2.2_amd64.deb"
+}

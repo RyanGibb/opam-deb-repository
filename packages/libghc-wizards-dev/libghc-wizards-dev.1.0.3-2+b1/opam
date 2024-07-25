@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-wizards-dev_1.0.3-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-wizards-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-control-monad-free-dev"
+  "libgmp10"
+  "libtinfo6" {>= "6"}
+]
+extra-source "libghc-wizards-dev_1.0.3-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-wizards/libghc-wizards-dev_1.0.3-2+b1_amd64.deb"
+}

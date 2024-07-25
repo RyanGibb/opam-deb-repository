@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pytc-dbg_0.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pytc-dbg"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libtokyocabinet9" {>= "1.4.47"}
+  "python-dbg"
+  "python-pytc" {= "0.8-3"}
+]
+extra-source "python-pytc-dbg_0.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pytc/python-pytc-dbg_0.8-3_amd64.deb"
+}

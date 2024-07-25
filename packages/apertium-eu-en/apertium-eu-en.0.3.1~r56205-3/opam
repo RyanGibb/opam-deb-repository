@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-eu-en_0.3.1~r56205-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-eu-en"]
+]
+depends: [
+  "apertium" {>= "3.6"}
+]
+conflicts: [
+  "apertium-en-eu"
+]
+extra-source "apertium-eu-en_0.3.1~r56205-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-eu-en/apertium-eu-en_0.3.1~r56205-3_all.deb"
+}

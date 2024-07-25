@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-jekyll-coffeescript_1.2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-jekyll-coffeescript"]
+]
+depends: [
+  "jekyll" {>= "2.0"}
+  "ruby-coffee-script" {< "3~"}
+  "ruby-coffee-script" {>= "2.2"}
+  "ruby-coffee-script-source" {< "2~"}
+  "ruby-coffee-script-source" {>= "1.12"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-jekyll-coffeescript_1.2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-jekyll-coffeescript/ruby-jekyll-coffeescript_1.2.2-2_all.deb"
+}

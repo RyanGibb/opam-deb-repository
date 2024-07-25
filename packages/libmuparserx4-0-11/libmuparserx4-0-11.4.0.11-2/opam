@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmuparserx4.0.11_4.0.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmuparserx4.0.11"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "4.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libmuparserx4.0.11_4.0.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/muparserx/libmuparserx4.0.11_4.0.11-2_amd64.deb"
+}

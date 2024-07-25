@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-shell-pomodoro_0.22.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-shell-pomodoro"]
+]
+depends: [
+  "gnome-shell" {< "44~"}
+  "gnome-shell" {>= "3.38"}
+  "gnome-shell-pomodoro-data" {= "0.22.1-1"}
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.10.0"}
+  "libcanberra0" {>= "0.2"}
+  "libglib2-0-0" {>= "2.55.1"}
+  "libgom-1-0-0" {>= "0.3.2"}
+  "libgstreamer1-0-0" {>= "1.0.0"}
+  "libgtk-3-0" {>= "3.19.12"}
+  "libpeas-1-0-0" {>= "1.0.0"}
+  "libsqlite3-0" {>= "3.5.9"}
+]
+extra-source "gnome-shell-pomodoro_0.22.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-shell-pomodoro/gnome-shell-pomodoro_0.22.1-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxrdcryptolite2_5.5.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxrdcryptolite2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "5"}
+  "libxrdutils3" {>= "5.5.3"}
+]
+extra-source "libxrdcryptolite2_5.5.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xrootd/libxrdcryptolite2_5.5.3-1_amd64.deb"
+}

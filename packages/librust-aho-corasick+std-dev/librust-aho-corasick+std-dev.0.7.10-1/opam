@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-aho-corasick+std-dev_0.7.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-aho-corasick+std-dev"]
+]
+depends: [
+  "librust-aho-corasick-dev" {= "0.7.10-1"}
+  "librust-memchr-dev"
+]
+extra-source "librust-aho-corasick+std-dev_0.7.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-aho-corasick/librust-aho-corasick+std-dev_0.7.10-1_amd64.deb"
+}

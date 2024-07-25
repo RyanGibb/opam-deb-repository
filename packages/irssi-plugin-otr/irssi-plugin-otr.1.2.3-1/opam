@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i irssi-plugin-otr_1.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r irssi-plugin-otr"]
+]
+depends: [
+  "irssi" {= "1.2.3-1"}
+  "libc6" {>= "2.14"}
+  "libgcrypt20" {>= "1.7.0"}
+  "libotr5" {>= "4.0.0"}
+]
+extra-source "irssi-plugin-otr_1.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/irssi/irssi-plugin-otr_1.2.3-1_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtango-dev_9.3.4+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtango-dev"]
+]
+depends: [
+  "cppzmq-dev"
+  "libcos4-dev"
+  "liblog4tango-dev" {= "9.3.4+dfsg1-2"}
+  "libtango9" {= "9.3.4+dfsg1-2"}
+]
+conflicts: [
+  "libtango7-dev"
+  "libtango8-dev"
+]
+extra-source "libtango-dev_9.3.4+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tango/libtango-dev_9.3.4+dfsg1-2_amd64.deb"
+}

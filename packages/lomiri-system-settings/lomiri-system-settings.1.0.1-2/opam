@@ -1,0 +1,59 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lomiri-system-settings_1.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lomiri-system-settings"]
+]
+depends: [
+  "accountsservice"
+  "bluez" {>= "5.23"}
+  "fonts-noto-core"
+  "gir1-2-glib-2-0"
+  "gsettings-desktop-schemas"
+  "libaccountsservice0" {>= "0.6.30"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgeonames0" {>= "0.1"}
+  "libglib2-0-0" {>= "2.39.4"}
+  "libgnome-desktop-3-20" {>= "3.17.92"}
+  "libgsettings-qt1" {>= "0.1+14.04.20140408"}
+  "libicu72" {>= "72.1~rc-1~"}
+  "liblomirisystemsettings1" {= "1.0.1-2"}
+  "liblomirisystemsettingsprivate0-0" {>= "1.0.1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  "libupower-glib3" {>= "0.99.8"}
+  "lomiri-indicator-network"
+  "lomiri-schemas"
+  "lomiri-wallpapers"
+  "maliit-keyboard"
+  "python3"
+  "python3-dbus"
+  "python3-gi"
+  "qmenumodel-qml"
+  "qml-module-gsettings1-0"
+  "qml-module-lomiri-components"
+  "qml-module-lomiri-components-extras"
+  "qml-module-lomiri-connectivity" {>= "0.7.1"}
+  "qml-module-lomiri-content"
+  "qml-module-lomiri-settings-components"
+  "qml-module-lomiri-settings-menus"
+  "qml-module-lomiri-settings-vpn"
+  "qml-module-ofono" {>= "0.90~"}
+  "qml-module-qt-labs-folderlistmodel"
+  "qml-module-qtsysteminfo"
+  "suru-icon-theme" {>= "14.04+15.04.20150813~"}
+  ("click" | "ubuntu-snappy-cli")
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+  ("libqt5quick5" {>= "5.0.2"} | "libqt5quick5-gles" {>= "5.0.2"})
+  ("qml-module-qtmultimedia" | "qml-module-qtmultimedia-gles")
+]
+extra-source "lomiri-system-settings_1.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri-system-settings/lomiri-system-settings_1.0.1-2_amd64.deb"
+}

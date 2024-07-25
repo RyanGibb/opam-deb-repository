@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-ase_3.17.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-ase"]
+]
+depends: [
+  "ase" {= "3.17.0-2"}
+  "fonts-font-awesome"
+  "libjs-bootstrap"
+  "libjs-jquery"
+  "libjs-jquery-ui"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-flask"
+  "python-matplotlib"
+  "python-numpy"
+  "python-scipy"
+]
+extra-source "python-ase_3.17.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-ase/python-ase_3.17.0-2_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-x509-system-prof_1.6.6-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-x509-system-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-pem-prof"
+  "libghc-x509-prof"
+  "libghc-x509-store-prof"
+  "libghc-x509-system-dev" {= "1.6.6-4+b1"}
+]
+extra-source "libghc-x509-system-prof_1.6.6-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-x509-system/libghc-x509-system-prof_1.6.6-4+b1_amd64.deb"
+}

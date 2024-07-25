@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i amqp-tools_0.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r amqp-tools"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libpopt0" {>= "1.14"}
+  "librabbitmq4" {= "0.10.0-1"}
+]
+extra-source "amqp-tools_0.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librabbitmq/amqp-tools_0.10.0-1_amd64.deb"
+}

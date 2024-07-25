@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dav1d_0.7.1-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dav1d"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libdav1d4" {>= "0.1.0"}
+]
+extra-source "dav1d_0.7.1-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dav1d/dav1d_0.7.1-3+deb11u1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i projectm-sdl_3.1.7-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r projectm-sdl"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libstdc++6" {>= "5.2"}
+  "projectm-data" {= "3.1.7-1.1"}
+]
+extra-source "projectm-sdl_3.1.7-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/projectm/projectm-sdl_3.1.7-1.1_amd64.deb"
+}

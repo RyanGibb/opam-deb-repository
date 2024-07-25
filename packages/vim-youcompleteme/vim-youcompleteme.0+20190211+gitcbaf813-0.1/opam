@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vim-youcompleteme_0+20190211+gitcbaf813-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vim-youcompleteme"]
+]
+depends: [
+  "python3-any"
+  "python3-future"
+  "python3-requests" {>= "2.2.1"}
+  "python3-requests-futures"
+  "ycmd"
+  ("vim-nox" | "vim-python")
+]
+extra-source "vim-youcompleteme_0+20190211+gitcbaf813-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vim-youcompleteme/vim-youcompleteme_0+20190211+gitcbaf813-0.1_all.deb"
+}

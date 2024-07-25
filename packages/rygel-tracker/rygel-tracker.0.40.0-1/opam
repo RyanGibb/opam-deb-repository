@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rygel-tracker_0.40.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rygel-tracker"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgee-0-8-2" {>= "0.8.3"}
+  "libglib2-0-0" {>= "2.56.0"}
+  "librygel-core-2-6-2" {>= "0.40.0"}
+  "librygel-server-2-6-2" {>= "0.40.0"}
+  "libtracker-sparql-2-0-0" {>= "0.10.0"}
+  "rygel" {= "0.40.0-1"}
+  "tracker" {>= "0.8"}
+]
+extra-source "rygel-tracker_0.40.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rygel/rygel-tracker_0.40.0-1_amd64.deb"
+}

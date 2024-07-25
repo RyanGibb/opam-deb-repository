@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tirex_0.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tirex"]
+]
+depends: [
+  "adduser"
+  "libapache2-mod-tile"
+  "libboost-filesystem1-74-0" {>= "1.74.0+ds1"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgd-perl"
+  "libipc-sharelite-perl"
+  "libjson-perl"
+  "libmapnik3-1" {>= "3.1.0+ds"}
+  "libstdc++6" {>= "5.2"}
+  "perl-any"
+]
+extra-source "tirex_0.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tirex/tirex_0.7.0-3_amd64.deb"
+}

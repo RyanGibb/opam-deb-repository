@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-microspec-prof_0.2.1.3-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-microspec-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-microspec-dev" {= "0.2.1.3-3+b2"}
+  "libghc-quickcheck2-prof"
+]
+extra-source "libghc-microspec-prof_0.2.1.3-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-microspec/libghc-microspec-prof_0.2.1.3-3+b2_amd64.deb"
+}

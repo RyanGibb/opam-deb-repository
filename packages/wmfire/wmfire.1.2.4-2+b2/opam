@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmfire_1.2.4-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmfire"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.24.0"}
+  "libgtop-2-0-11" {>= "2.22.3"}
+  "libx11-6"
+  "libxext6"
+]
+extra-source "wmfire_1.2.4-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmfire/wmfire_1.2.4-2+b2_amd64.deb"
+}

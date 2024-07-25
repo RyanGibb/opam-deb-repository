@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwaili1c2_19990723-22.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwaili1c2"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+  "libtiff5" {>= "4.0.3"}
+]
+conflicts: [
+  "libwaili"
+  "libwaili1"
+  "libwaili1c102"
+]
+extra-source "libwaili1c2_19990723-22.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/waili/libwaili1c2_19990723-22.1+b2_amd64.deb"
+}

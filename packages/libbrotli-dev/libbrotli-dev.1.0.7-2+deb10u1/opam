@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbrotli-dev_1.0.7-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbrotli-dev"]
+]
+depends: [
+  "libbrotli1" {= "1.0.7-2+deb10u1"}
+]
+extra-source "libbrotli-dev_1.0.7-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/brotli/libbrotli-dev_1.0.7-2+deb10u1_amd64.deb"
+}

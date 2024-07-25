@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i g++-mips64-linux-gnuabi64_4:10.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r g++-mips64-linux-gnuabi64"]
+]
+depends: [
+  "cpp-mips64-linux-gnuabi64" {= "4-10.2.0-1"}
+  "g++-10-mips64-linux-gnuabi64" {>= "10.2.0-8~"}
+  "gcc-mips64-linux-gnuabi64" {= "4-10.2.0-1"}
+]
+extra-source "g++-mips64-linux-gnuabi64_4:10.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-mipsen/g++-mips64-linux-gnuabi64_10.2.0-1_amd64.deb"
+}

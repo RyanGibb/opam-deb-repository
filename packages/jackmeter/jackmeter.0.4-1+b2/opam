@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jackmeter_0.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jackmeter"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "jackmeter_0.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jackmeter/jackmeter_0.4-1+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librtlsdr-dev_0.6.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librtlsdr-dev"]
+]
+depends: [
+  "librtlsdr0" {= "0.6.0-4"}
+  "libusb-1-0-0-dev"
+]
+extra-source "librtlsdr-dev_0.6.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rtl-sdr/librtlsdr-dev_0.6.0-4_amd64.deb"
+}

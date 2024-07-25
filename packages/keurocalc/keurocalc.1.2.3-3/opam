@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i keurocalc_1.2.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r keurocalc"]
+]
+depends: [
+  "kde-runtime" {> "4-4.10"}
+  "keurocalc-data" {= "1.2.3-3"}
+  "libc6" {>= "2.4"}
+  "libkdecore5" {>= "4-4.4.4"}
+  "libkdeui5" {>= "4-4.4.4"}
+  "libkio5" {>= "4-4.4.4"}
+  "libqt4-dbus" {>= "4-4.5.3"}
+  "libqt4-xml" {>= "4-4.5.3"}
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libqtgui4" {>= "4-4.5.3"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "keurocalc_1.2.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/keurocalc/keurocalc_1.2.3-3_amd64.deb"
+}

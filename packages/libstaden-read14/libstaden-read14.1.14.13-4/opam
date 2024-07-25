@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstaden-read14_1.14.13-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstaden-read14"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libhtscodecs2" {>= "0.5"}
+  "zlib1g" {>= "1-1.2.0.2"}
+]
+extra-source "libstaden-read14_1.14.13-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/staden-io-lib/libstaden-read14_1.14.13-4_amd64.deb"
+}

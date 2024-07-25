@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcurlpp0_0.8.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcurlpp0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl4" {>= "7.16.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libcurlpp0_0.8.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/curlpp/libcurlpp0_0.8.1-3_amd64.deb"
+}

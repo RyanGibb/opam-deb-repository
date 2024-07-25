@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-preludedb_4.1.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-preludedb"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnutls30" {>= "3.6.5"}
+  "libltdl7" {>= "2.4.6"}
+  "libprelude23" {>= "4.1"}
+  "libpreludecpp8" {>= "4.1"}
+  "libpreludedb7" {>= "4.1"}
+  "libpreludedbcpp2" {>= "4.1"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+  "python3-prelude" {>= "4.1.0"}
+]
+extra-source "python3-preludedb_4.1.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpreludedb/python3-preludedb_4.1.0-2+b2_amd64.deb"
+}

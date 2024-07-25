@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgtkglextmm-x11-1.2-0v5_1.2.0-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgtkglextmm-x11-1.2-0v5"]
+]
+depends: [
+  "libatkmm-1-6-1v5" {>= "2.24.0"}
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libglibmm-2-4-1v5" {>= "2.64.2"}
+  "libgtkglext1"
+  "libgtkmm-2-4-1v5" {>= "1-2.24.0"}
+  "libpangomm-1-4-1v5" {>= "2.42.0"}
+  "libsigc++-2-0-0v5" {>= "2.2.0"}
+  "libstdc++6" {>= "5"}
+]
+conflicts: [
+  "libgtkglextmm-x11-1.2-0"
+]
+extra-source "libgtkglextmm-x11-1.2-0v5_1.2.0-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtkglextmm/libgtkglextmm-x11-1.2-0v5_1.2.0-8+b1_amd64.deb"
+}

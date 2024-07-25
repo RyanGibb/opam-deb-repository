@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i proftpd-mod-autohost_0.6-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r proftpd-mod-autohost"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "proftpd-core"
+]
+extra-source "proftpd-mod-autohost_0.6-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/proftpd-mod-autohost/proftpd-mod-autohost_0.6-2+b2_amd64.deb"
+}

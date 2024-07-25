@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i boinc-app-seti_8.00~svn3725-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r boinc-app-seti"]
+]
+depends: [
+  "boinc-client"
+  "libboinc-app7" {>= "7.6.33"}
+  "libboinc7"
+  "libc6" {>= "2.14"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc1" {>= "1-3.3.1"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "boinc-app-seti-graphics"
+]
+extra-source "boinc-app-seti_8.00~svn3725-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boinc-app-seti/boinc-app-seti_8.00~svn3725-3_amd64.deb"
+}

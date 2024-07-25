@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcl-io1.11_1.11.1+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcl-io1.11"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-iostreams1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libopenni0" {>= "1.5.4.0+dfsg"}
+  "libopenni2-0" {>= "2.2.0.33+dfsg"}
+  "libpcap0-8" {>= "0.9.8"}
+  "libpcl-common1-11" {>= "1.11.1+dfsg"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "9"}
+  "libvtk7-1p"
+]
+extra-source "libpcl-io1.11_1.11.1+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcl/libpcl-io1.11_1.11.1+dfsg-1+b1_amd64.deb"
+}

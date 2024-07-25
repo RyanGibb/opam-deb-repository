@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-enclosed-exceptions-dev_1.0.3-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-enclosed-exceptions-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-lifted-base-dev"
+  "libghc-monad-control-dev"
+  "libghc-transformers-base-dev"
+  "libgmp10"
+]
+extra-source "libghc-enclosed-exceptions-dev_1.0.3-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-enclosed-exceptions/libghc-enclosed-exceptions-dev_1.0.3-3+b1_amd64.deb"
+}

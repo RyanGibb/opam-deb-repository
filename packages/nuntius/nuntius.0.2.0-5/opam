@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nuntius_0.2.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nuntius"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.4"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.39.90"}
+  "libgtk-3-0" {>= "3.13.7"}
+  "libjson-glib-1-0-0" {>= "0.12.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libqrencode4" {>= "3.2.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "nuntius_0.2.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nuntius-linux/nuntius_0.2.0-5_amd64.deb"
+}

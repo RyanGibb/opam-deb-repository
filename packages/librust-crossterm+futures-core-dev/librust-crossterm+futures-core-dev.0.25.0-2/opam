@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-crossterm+futures-core-dev_0.25.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-crossterm+futures-core-dev"]
+]
+depends: [
+  "librust-crossterm-dev" {= "0.25.0-2"}
+  "librust-futures-core-0-3-dev"
+]
+extra-source "librust-crossterm+futures-core-dev_0.25.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-crossterm/librust-crossterm+futures-core-dev_0.25.0-2_amd64.deb"
+}

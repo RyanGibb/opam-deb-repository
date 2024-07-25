@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libredis-fast-perl_0.22+dfsg-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libredis-fast-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libhiredis0-14" {>= "0.14.0"}
+  "libtry-tiny-perl"
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libredis-fast-perl_0.22+dfsg-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libredis-fast-perl/libredis-fast-perl_0.22+dfsg-1+b2_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwraster-dev_0.95.9-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwraster-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libgif-dev"
+  "libjpeg-dev"
+  "libpng-dev"
+  "libtiff5-dev"
+  "libwraster6" {= "0.95.9-3+b2"}
+  "libx11-dev"
+  "libxext-dev"
+  "libxpm-dev"
+]
+extra-source "libwraster-dev_0.95.9-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmaker/libwraster-dev_0.95.9-3+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libextlib-ocaml_1.7.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libextlib-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "ocaml-base-nox"
+]
+extra-source "libextlib-ocaml_1.7.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/extlib/libextlib-ocaml_1.7.0-3+b1_amd64.deb"
+}

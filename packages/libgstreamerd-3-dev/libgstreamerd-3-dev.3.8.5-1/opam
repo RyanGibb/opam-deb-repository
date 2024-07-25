@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgstreamerd-3-dev_3.8.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgstreamerd-3-dev"]
+]
+depends: [
+  "libgstreamer-plugins-base1-0-dev"
+  "libgstreamer1-0-dev"
+  "libgstreamerd-3-0" {= "3.8.5-1"}
+  "libgtkd-3-dev" {= "3.8.5-1"}
+]
+extra-source "libgstreamerd-3-dev_3.8.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtk-d/libgstreamerd-3-dev_3.8.5-1_amd64.deb"
+}

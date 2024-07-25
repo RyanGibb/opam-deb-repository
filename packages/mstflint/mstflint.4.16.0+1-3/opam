@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mstflint_4.16.0+1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mstflint"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libibmad5"
+  "libjsoncpp24" {>= "1.9.4"}
+  "libmuparser2v5" {>= "2.2.6.1+dfsg"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+  "python3"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "mstflint_4.16.0+1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mstflint/mstflint_4.16.0+1-3_amd64.deb"
+}

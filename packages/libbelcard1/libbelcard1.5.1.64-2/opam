@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbelcard1_5.1.64-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbelcard1"]
+]
+depends: [
+  "libbctoolbox1" {< "5.2.0"}
+  "libbctoolbox1" {>= "5.1.64"}
+  "libbelr1" {< "5.2.0"}
+  "libbelr1" {>= "5.1.64"}
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libbelcard1_5.1.64-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/belcard/libbelcard1_5.1.64-2_amd64.deb"
+}

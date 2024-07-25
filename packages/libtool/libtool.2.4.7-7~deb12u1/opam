@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtool_2.4.7-7~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtool"]
+]
+depends: [
+  "autotools-dev"
+  "cpp"
+  "file"
+  ("gcc" | "c-compiler")
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "libtool_2.4.7-7~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtool/libtool_2.4.7-7~deb12u1_all.deb"
+}

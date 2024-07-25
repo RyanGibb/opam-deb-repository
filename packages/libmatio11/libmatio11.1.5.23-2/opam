@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmatio11_1.5.23-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmatio11"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libhdf5-103-1"
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "libmatio11_1.5.23-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmatio/libmatio11_1.5.23-2_amd64.deb"
+}

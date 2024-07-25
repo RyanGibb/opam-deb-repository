@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i squeak-vm_1:4.10.2.2614+20120917~dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r squeak-vm"]
+]
+depends: [
+  "gettext-base"
+  "libc6" {>= "2.34"}
+  "libfreetype6" {>= "2.2.1"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpcre3"
+  "whiptail"
+  ("xterm" | "x-terminal-emulator")
+]
+extra-source "squeak-vm_1:4.10.2.2614+20120917~dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/squeak-vm/squeak-vm_4.10.2.2614+20120917~dfsg-1+b1_amd64.deb"
+}

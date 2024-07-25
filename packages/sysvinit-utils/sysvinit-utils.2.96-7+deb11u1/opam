@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sysvinit-utils_2.96-7+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sysvinit-utils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "lsb-base" {>= "11.0.0~"}
+]
+extra-source "sysvinit-utils_2.96-7+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sysvinit/sysvinit-utils_2.96-7+deb11u1_amd64.deb"
+}

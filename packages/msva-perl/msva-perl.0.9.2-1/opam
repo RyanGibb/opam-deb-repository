@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i msva-perl_0.9.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r msva-perl"]
+]
+depends: [
+  "libconfig-general-perl"
+  "libconvert-asn1-perl"
+  "libcrypt-x509-perl" {>= "0.50"}
+  "libfile-homedir-perl"
+  "libgnupg-interface-perl" {>= "0.43"}
+  "libhttp-server-simple-perl"
+  "libjson-perl"
+  "libnet-server-perl" {>= "2.00"}
+  "libparent-perl"
+  "libregexp-common-perl"
+]
+conflicts: [
+  "monkeysphere (<< 0.32)"
+]
+extra-source "msva-perl_0.9.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/msva-perl/msva-perl_0.9.2-1_all.deb"
+}

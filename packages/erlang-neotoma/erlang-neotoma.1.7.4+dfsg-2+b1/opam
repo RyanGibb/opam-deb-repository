@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-neotoma_1.7.4+dfsg-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-neotoma"]
+]
+depends: [
+  ("erlang-base" {>= "1-22.0.7+dfsg"} | "erlang-base-hipe" {>= "1-22.0.7+dfsg"})
+]
+extra-source "erlang-neotoma_1.7.4+dfsg-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neotoma/erlang-neotoma_1.7.4+dfsg-2+b1_amd64.deb"
+}

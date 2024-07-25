@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-dev_7.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-dev"]
+]
+depends: [
+  "g++"
+  "gcc"
+  "gfortran"
+  "libc6" {>= "2.34"}
+  "libfftw3-dev"
+  "libgcc-s1" {>= "3.0"}
+  "libncurses5-dev"
+  "libstdc++6" {>= "5.2"}
+  "octave" {= "7.3.0-2"}
+  ("libblas-dev" | "libblas-so")
+  ("libgl1-mesa-dev" | "libgl-dev")
+  ("libhdf5-dev" | "libhdf5-openmpi-dev" | "libhdf5-mpich-dev")
+  ("liblapack-dev" | "liblapack-so")
+  ("libreadline-dev" | "libreadline-gplv2-dev")
+]
+extra-source "octave-dev_7.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave/octave-dev_7.3.0-2_amd64.deb"
+}

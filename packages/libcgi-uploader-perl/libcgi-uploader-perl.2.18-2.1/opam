@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcgi-uploader-perl_2.18-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcgi-uploader-perl"]
+]
+depends: [
+  "libcarp-assert-perl"
+  "libhttp-browserdetect-perl"
+  "libimage-size-perl"
+  "libmime-types-perl"
+  "libparams-validate-perl"
+  "libsql-abstract-perl"
+  "perl-any"
+  ("libcgi-pm-perl" | "perl" {< "5.19"})
+]
+extra-source "libcgi-uploader-perl_2.18-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcgi-uploader-perl/libcgi-uploader-perl_2.18-2.1_all.deb"
+}

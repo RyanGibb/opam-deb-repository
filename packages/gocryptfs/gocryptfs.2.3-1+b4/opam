@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gocryptfs_2.3-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gocryptfs"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfuse2"
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "gocryptfs_2.3-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gocryptfs/gocryptfs_2.3-1+b4_amd64.deb"
+}

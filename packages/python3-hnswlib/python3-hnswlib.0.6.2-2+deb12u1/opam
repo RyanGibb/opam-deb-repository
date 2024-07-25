@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-hnswlib_0.6.2-2+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-hnswlib"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-numpy"
+  "python3-pybind11"
+]
+extra-source "python3-hnswlib_0.6.2-2+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hnswlib/python3-hnswlib_0.6.2-2+deb12u1_amd64.deb"
+}

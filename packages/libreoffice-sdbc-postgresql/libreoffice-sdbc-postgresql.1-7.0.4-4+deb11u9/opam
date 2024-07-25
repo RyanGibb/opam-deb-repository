@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-sdbc-postgresql_1:7.0.4-4+deb11u9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-sdbc-postgresql"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpq5" {>= "9.0~"}
+  "libreoffice-common" {>= "1-7.0.0~alpha"}
+  "libreoffice-core"
+  "libstdc++6" {>= "5"}
+  "libuno-cppu3" {>= "4.4.0~alpha"}
+  "libuno-cppuhelpergcc3-3" {>= "4.0.0~alpha"}
+  "libuno-sal3" {>= "5.1.0~alpha"}
+  "libuno-salhelpergcc3-3" {>= "1.4.0"}
+  "ucf" {>= "0.8"}
+  "uno-libs-private"
+]
+extra-source "libreoffice-sdbc-postgresql_1:7.0.4-4+deb11u9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-sdbc-postgresql_7.0.4-4+deb11u9_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mpich_3.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mpich"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libmpich12" {= "3.3-3"}
+  ("hwloc-nox" | "hwloc")
+]
+extra-source "mpich_3.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpich/mpich_3.3-3_amd64.deb"
+}

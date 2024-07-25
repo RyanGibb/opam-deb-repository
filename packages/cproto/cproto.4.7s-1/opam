@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cproto_4.7s-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cproto"]
+]
+depends: [
+  "gcc"
+  "libc6" {>= "2.14"}
+]
+extra-source "cproto_4.7s-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cproto/cproto_4.7s-1_amd64.deb"
+}

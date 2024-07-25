@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libretro-gtk-0.14-0_0.16.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libretro-gtk-0.14-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libepoxy0" {>= "1.0"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.49.3"}
+  "libgtk-3-0" {>= "3.21.4"}
+  "libpulse0" {>= "0.99.1"}
+]
+extra-source "libretro-gtk-0.14-0_0.16.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/retro-gtk/libretro-gtk-0.14-0_0.16.0-2_amd64.deb"
+}

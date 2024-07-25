@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-statistics-prof_0.14.0.2-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-statistics-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-base-orphans-prof"
+  "libghc-erf-prof"
+  "libghc-math-functions-prof"
+  "libghc-monad-par-prof"
+  "libghc-mwc-random-prof"
+  "libghc-primitive-prof"
+  "libghc-statistics-dev" {= "0.14.0.2-3+b1"}
+  "libghc-vector-algorithms-prof"
+  "libghc-vector-binary-instances-prof"
+  "libghc-vector-prof"
+  "libghc-vector-th-unbox-prof"
+]
+extra-source "libghc-statistics-prof_0.14.0.2-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-statistics/libghc-statistics-prof_0.14.0.2-3+b1_amd64.deb"
+}

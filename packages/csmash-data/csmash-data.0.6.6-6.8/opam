@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i csmash-data_0.6.6-6.8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r csmash-data"]
+]
+conflicts: [
+  "csmash (<< 0.6.6-3)"
+]
+extra-source "csmash-data_0.6.6-6.8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/csmash/csmash-data_0.6.6-6.8_all.deb"
+}

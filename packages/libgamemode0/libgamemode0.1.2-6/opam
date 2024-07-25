@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgamemode0_1.2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgamemode0"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libsystemd0" {>= "221"}
+]
+extra-source "libgamemode0_1.2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gamemode/libgamemode0_1.2-6_amd64.deb"
+}

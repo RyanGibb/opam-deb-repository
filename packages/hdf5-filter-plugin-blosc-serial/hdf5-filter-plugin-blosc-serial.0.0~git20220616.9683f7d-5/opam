@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hdf5-filter-plugin-blosc-serial_0.0~git20220616.9683f7d-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hdf5-filter-plugin-blosc-serial"]
+]
+depends: [
+  "libblosc1" {>= "1.7.0"}
+  "libc6" {>= "2.4"}
+  "libhdf5-103-1"
+]
+conflicts: [
+  "hdf5-filter-plugin-blosc"
+]
+extra-source "hdf5-filter-plugin-blosc-serial_0.0~git20220616.9683f7d-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hdf5-blosc/hdf5-filter-plugin-blosc-serial_0.0~git20220616.9683f7d-5_amd64.deb"
+}

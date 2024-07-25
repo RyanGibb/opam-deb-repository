@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i software-properties-common_0.99.30-4.1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r software-properties-common"]
+]
+depends: [
+  "ca-certificates"
+  "gir1-2-glib-2-0"
+  "gir1-2-packagekitglib-1-0" {>= "1.1.0-2"}
+  "packagekit"
+  "python-apt-common" {>= "0.9"}
+  "python3"
+  "python3-any"
+  "python3-dbus"
+  "python3-gi"
+  "python3-software-properties" {= "0.99.30-4.1~deb12u1"}
+]
+extra-source "software-properties-common_0.99.30-4.1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/software-properties/software-properties-common_0.99.30-4.1~deb12u1_all.deb"
+}

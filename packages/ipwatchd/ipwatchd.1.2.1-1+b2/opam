@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ipwatchd_1.2.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ipwatchd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libnet1" {>= "1.1.2.1"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "ipwatchd_1.2.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ipwatchd/ipwatchd_1.2.1-1+b2_amd64.deb"
+}

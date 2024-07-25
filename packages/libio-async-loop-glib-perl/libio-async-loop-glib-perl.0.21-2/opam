@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libio-async-loop-glib-perl_0.21-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libio-async-loop-glib-perl"]
+]
+depends: [
+  "libglib-perl"
+  "libio-async-perl" {>= "0.49"}
+  "perl"
+]
+extra-source "libio-async-loop-glib-perl_0.21-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libio-async-loop-glib-perl/libio-async-loop-glib-perl_0.21-2_all.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-agate_1.6.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-agate"]
+]
+depends: [
+  "python3-any"
+  "python3-babel"
+  "python3-isodate"
+  "python3-leather" {>= "0.3.2"}
+  "python3-parsedatetime"
+  "python3-pytimeparse"
+  "python3-six" {>= "1.9.0"}
+  "python3-slugify"
+]
+extra-source "python3-agate_1.6.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-agate/python3-agate_1.6.3-2_all.deb"
+}

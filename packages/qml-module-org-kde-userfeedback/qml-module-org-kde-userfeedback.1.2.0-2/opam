@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-org-kde-userfeedback_1.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-org-kde-userfeedback"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkuserfeedbackcore1" {>= "1.0.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qml-module-org-kde-userfeedback_1.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kuserfeedback/qml-module-org-kde-userfeedback_1.2.0-2_amd64.deb"
+}

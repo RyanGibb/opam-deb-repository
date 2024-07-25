@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i drop-seq-tools_2.4.0+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r drop-seq-tools"]
+]
+depends: [
+  "java-wrappers"
+  "libbarclay-java"
+  "libcommons-collections4-java"
+  "libcommons-io-java"
+  "libcommons-lang-java"
+  "libcommons-math3-java"
+  "libgoogle-gson-java"
+  "libguava-java"
+  "libhtsjdk-java"
+  "libla4j-java"
+  "libpicard-java"
+  "libyaml-snake-java"
+  "picard-tools"
+  ("default-jre" | "java-runtime")
+]
+extra-source "drop-seq-tools_2.4.0+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/drop-seq/drop-seq-tools_2.4.0+dfsg-6_all.deb"
+}

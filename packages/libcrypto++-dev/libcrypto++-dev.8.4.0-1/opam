@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypto++-dev_8.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypto++-dev"]
+]
+depends: [
+  "libcrypto++8" {= "8.4.0-1"}
+]
+extra-source "libcrypto++-dev_8.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcrypto++/libcrypto++-dev_8.4.0-1_amd64.deb"
+}

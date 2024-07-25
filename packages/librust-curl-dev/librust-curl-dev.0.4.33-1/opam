@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-curl-dev_0.4.33-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-curl-dev"]
+]
+depends: [
+  "librust-curl-sys-dev"
+  "librust-libc-dev"
+  "librust-schannel-dev"
+  "librust-socket2-dev"
+  "librust-winapi-0-3+default-dev"
+  "librust-winapi-0-3+libloaderapi-dev"
+  "librust-winapi-0-3+wincrypt-dev"
+]
+extra-source "librust-curl-dev_0.4.33-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-curl/librust-curl-dev_0.4.33-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbctoolbox1_0.6.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbctoolbox1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libmbedcrypto3" {>= "2.13"}
+  "libmbedtls12" {>= "2.13"}
+  "libmbedx509-0" {>= "2.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libbctoolbox1_0.6.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bctoolbox/libbctoolbox1_0.6.0-2+b2_amd64.deb"
+}

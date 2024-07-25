@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-swish-dev_0.10.0.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-swish-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.29"}
+  "libghc-hashable-dev"
+  "libghc-intern-dev"
+  "libghc-network-uri-dev"
+  "libghc-old-locale-dev"
+  "libghc-polyparse-dev"
+  "libgmp10"
+]
+extra-source "libghc-swish-dev_0.10.0.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-swish/libghc-swish-dev_0.10.0.4-1+b2_amd64.deb"
+}

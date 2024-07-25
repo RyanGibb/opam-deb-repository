@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlbeans-maven-plugin-java_2.3.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlbeans-maven-plugin-java"]
+]
+depends: [
+  "libmaven3-core-java" {>= "3.5.0"}
+  "libplexus-utils-java"
+  "libxml-commons-resolver1-1-java" {>= "1.2"}
+  "libxmlbeans-java"
+]
+extra-source "libxmlbeans-maven-plugin-java_2.3.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmlbeans-maven-plugin/libxmlbeans-maven-plugin-java_2.3.3-4_all.deb"
+}

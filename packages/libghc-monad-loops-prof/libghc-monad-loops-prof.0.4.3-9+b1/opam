@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-monad-loops-prof_0.4.3-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-monad-loops-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-monad-loops-dev" {= "0.4.3-9+b1"}
+]
+extra-source "libghc-monad-loops-prof_0.4.3-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-monad-loops/libghc-monad-loops-prof_0.4.3-9+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgeotiff-dev_1.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgeotiff-dev"]
+]
+depends: [
+  "libgeotiff5" {= "1.6.0-1"}
+  "libjpeg-dev"
+  "libproj-dev" {>= "6.0.0"}
+  "libtiff-dev"
+]
+extra-source "libgeotiff-dev_1.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgeotiff/libgeotiff-dev_1.6.0-1_amd64.deb"
+}

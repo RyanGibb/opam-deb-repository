@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i perl6_6.d.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r perl6"]
+]
+depends: [
+  "perl6-readline"
+  "perl6-zef"
+  "prove6"
+  "raku-getopt-long"
+  "raku-tap-harness"
+  "rakudo" {>= "2018.11"}
+]
+extra-source "perl6_6.d.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/perl6/perl6_6.d.3_all.deb"
+}

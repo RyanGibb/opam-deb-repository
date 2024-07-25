@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kiwi-dracut-lib_9.24.56-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kiwi-dracut-lib"]
+]
+depends: [
+  "bc"
+  "btrfs-progs"
+  "cryptsetup"
+  "dmsetup"
+  "dracut"
+  "dracut-network"
+  "e2fsprogs"
+  "gdisk"
+  "lvm2"
+  "mdadm"
+  "parted"
+  "xz-utils"
+]
+extra-source "kiwi-dracut-lib_9.24.56-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kiwi/kiwi-dracut-lib_9.24.56-1_amd64.deb"
+}

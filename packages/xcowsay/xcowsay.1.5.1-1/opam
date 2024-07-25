@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xcowsay_1.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xcowsay"]
+]
+depends: [
+  "fortune-mod"
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libdbus-glib-1-2" {>= "0.88"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+]
+extra-source "xcowsay_1.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xcowsay/xcowsay_1.5.1-1_amd64.deb"
+}

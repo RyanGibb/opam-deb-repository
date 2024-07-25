@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liboce-ocaf-lite11_0.18.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liboce-ocaf-lite11"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "liboce-foundation11" {>= "0.18.3"}
+  "liboce-modeling11" {>= "0.18.3"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "liboce-ocaf-lite11_0.18.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oce/liboce-ocaf-lite11_0.18.3-1_amd64.deb"
+}

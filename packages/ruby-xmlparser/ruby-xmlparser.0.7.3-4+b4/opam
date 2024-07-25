@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-xmlparser_0.7.3-4+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-xmlparser"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libexpat1" {>= "2.0.1"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.2"}
+]
+extra-source "ruby-xmlparser_0.7.3-4+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-xmlparser/ruby-xmlparser_0.7.3-4+b4_amd64.deb"
+}

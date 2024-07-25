@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i arping_2.19-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r arping"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libnet1" {>= "1.1.2.1"}
+  "libpcap0-8" {>= "1.5.1"}
+]
+conflicts: [
+  "iputils-arping"
+]
+extra-source "arping_2.19-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/arping/arping_2.19-6_amd64.deb"
+}

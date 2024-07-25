@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-phar-io-manifest_1.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-phar-io-manifest"]
+]
+depends: [
+  "php-common"
+  "php-phar-io-version" {< "3~~"}
+  "php-phar-io-version" {>= "2.0"}
+  "php-xml"
+]
+extra-source "php-phar-io-manifest_1.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-phar-io-manifest/php-phar-io-manifest_1.0.3-1_all.deb"
+}

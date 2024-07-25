@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-geographiclib_1.49-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-geographiclib"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-geographiclib_1.49-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/geographiclib/python-geographiclib_1.49-4_amd64.deb"
+}

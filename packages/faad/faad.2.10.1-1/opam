@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i faad_2.10.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r faad"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfaad2" {>= "2.8.2"}
+]
+conflicts: [
+  "faad2"
+]
+extra-source "faad_2.10.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/faad2/faad_2.10.1-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcomedi0_0.11.0+5-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcomedi0"]
+]
+depends: [
+  "adduser"
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgsl25" {>= "2.6"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libcomedi0_0.11.0+5-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/comedilib/libcomedi0_0.11.0+5-1+b3_amd64.deb"
+}

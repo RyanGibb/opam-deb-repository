@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsword-utils_1.9.0+dfsg-4+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsword-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libicu72" {>= "72.1~rc-1~"}
+  "libstdc++6" {>= "11"}
+  "libsword1-9-0" {>= "1.9.0+dfsg"}
+]
+conflicts: [
+  "libsword6"
+  "libsword7"
+  "libsword8"
+]
+extra-source "libsword-utils_1.9.0+dfsg-4+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sword/libsword-utils_1.9.0+dfsg-4+b4_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtk-layer-shell-examples_0.5.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtk-layer-shell-examples"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libgtk-layer-shell0" {>= "0.4.0"}
+]
+extra-source "gtk-layer-shell-examples_0.5.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtk-layer-shell/gtk-layer-shell-examples_0.5.2-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnice10_0.1.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnice10"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.48"}
+  "libgnutls30" {>= "3.6.9"}
+  "libgupnp-igd-1-0-4" {>= "0.2.4"}
+]
+extra-source "libnice10_0.1.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnice/libnice10_0.1.16-1_amd64.deb"
+}

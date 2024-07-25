@@ -1,0 +1,47 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i suricata_1:4.1.2-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r suricata"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libcap-ng0" {>= "0.7.9"}
+  "libevent-2-1-6" {>= "2.1.8-stable"}
+  "libevent-pthreads-2-1-6" {>= "2.1.8-stable"}
+  "libgcc1" {>= "1-4.2"}
+  "libgeoip1"
+  "libgnutls30" {>= "3.6.5"}
+  "libhiredis0-14" {>= "0.14.0"}
+  "libhtp2" {>= "0.5.24+1git0439eed"}
+  "libhyperscan5"
+  "libjansson4" {>= "2.3"}
+  "libltdl7" {>= "2.4.6"}
+  "libluajit-5-1-2" {>= "2.0.4+dfsg"}
+  "liblz4-1" {>= "0.0~r127"}
+  "libmagic1" {>= "5.12"}
+  "libnet1" {>= "1.1.5"}
+  "libnetfilter-log1"
+  "libnetfilter-queue1"
+  "libnfnetlink0"
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libpcap0-8" {>= "1.0.0"}
+  "libpcre3"
+  "libprelude23" {>= "4.1"}
+  "libyaml-0-2"
+  "lsb-base" {>= "3.0-6"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-simplejson"
+  "zlib1g" {>= "1-1.1.4"}
+  ("python" {>= "2.7"} | "python-argparse")
+]
+conflicts: [
+  "libhtp1 (<< 0.5.16)"
+  "suricata-hyperscan (<< 3.2)"
+]
+extra-source "suricata_1:4.1.2-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/suricata/suricata_4.1.2-2+deb10u1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbix-class-uuidcolumns-perl_0.02006-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbix-class-uuidcolumns-perl"]
+]
+depends: [
+  "libclass-accessor-grouped-perl"
+  "libdbix-class-perl"
+  "perl"
+  "perl-any"
+  ("libuuid-perl" | "libossp-uuid-perl")
+]
+extra-source "libdbix-class-uuidcolumns-perl_0.02006-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdbix-class-uuidcolumns-perl/libdbix-class-uuidcolumns-perl_0.02006-1.1_all.deb"
+}

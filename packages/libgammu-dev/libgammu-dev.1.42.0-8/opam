@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgammu-dev_1.42.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgammu-dev"]
+]
+depends: [
+  "libgammu8" {= "1.42.0-8"}
+  "libgsmsd8" {= "1.42.0-8"}
+]
+conflicts: [
+  "libgammu1-dev"
+]
+extra-source "libgammu-dev_1.42.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gammu/libgammu-dev_1.42.0-8_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coinor-symphony_5.6.16+repack1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coinor-symphony"]
+]
+depends: [
+  "coinor-libcgl1"
+  "coinor-libclp1"
+  "coinor-libcoinutils3v5"
+  "coinor-libosi1v5"
+  "coinor-libsymphony3"
+  "libbz2-1-0"
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "coinor-symphony_5.6.16+repack1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coinor-symphony/coinor-symphony_5.6.16+repack1-1.1_amd64.deb"
+}

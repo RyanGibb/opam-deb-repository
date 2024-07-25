@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcloudproviders-dev_0.3.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcloudproviders-dev"]
+]
+depends: [
+  "gir1-2-cloudproviders-0-3-0" {= "0.3.1-2"}
+  "libcloudproviders0" {= "0.3.1-2"}
+  "libglib2-0-dev" {>= "2.52.0"}
+]
+extra-source "libcloudproviders-dev_0.3.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcloudproviders/libcloudproviders-dev_0.3.1-2_amd64.deb"
+}

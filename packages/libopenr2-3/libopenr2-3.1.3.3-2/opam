@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenr2-3_1.3.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenr2-3"]
+]
+depends: [
+  "dahdi"
+  "libc6" {>= "2.27"}
+]
+extra-source "libopenr2-3_1.3.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openr2/libopenr2-3_1.3.3-2_amd64.deb"
+}

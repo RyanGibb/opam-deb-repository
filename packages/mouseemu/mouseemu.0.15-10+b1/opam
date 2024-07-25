@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mouseemu_0.15-10+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mouseemu"]
+]
+depends: [
+  "dmidecode"
+  "libc6" {>= "2.4"}
+  "procps"
+]
+extra-source "mouseemu_0.15-10+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mouseemu/mouseemu_0.15-10+b1_amd64.deb"
+}

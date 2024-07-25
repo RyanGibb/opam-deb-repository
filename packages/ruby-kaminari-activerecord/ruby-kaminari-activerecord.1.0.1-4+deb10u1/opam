@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-kaminari-activerecord_1.0.1-4+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-kaminari-activerecord"]
+]
+depends: [
+  "ruby-activerecord"
+  "ruby-kaminari-core" {>= "1.0.1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-kaminari-activerecord_1.0.1-4+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-kaminari/ruby-kaminari-activerecord_1.0.1-4+deb10u1_all.deb"
+}

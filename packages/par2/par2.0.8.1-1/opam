@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i par2_0.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r par2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "6"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "par2_0.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/par2cmdline/par2_0.8.1-1_amd64.deb"
+}

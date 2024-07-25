@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-tombuildsstuff-giovanni-dev_0.20.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-tombuildsstuff-giovanni-dev"]
+]
+depends: [
+  "golang-github-azure-azure-sdk-for-go-dev" {>= "68.0.0"}
+  "golang-github-azure-go-autorest-dev"
+  "golang-github-google-uuid-dev"
+  "golang-github-hashicorp-go-azure-helpers-dev"
+]
+extra-source "golang-github-tombuildsstuff-giovanni-dev_0.20.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-tombuildsstuff-giovanni/golang-github-tombuildsstuff-giovanni-dev_0.20.0-1_all.deb"
+}

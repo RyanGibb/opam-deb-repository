@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-xxhash-c-sys-dev_0.8.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-xxhash-c-sys-dev"]
+]
+depends: [
+  "librust-libc-0-2-dev"
+  "librust-pkg-config-0-3+default-dev"
+  "libxxhash-dev" {>= "0.8.1~~"}
+]
+extra-source "librust-xxhash-c-sys-dev_0.8.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-xxhash-c-sys/librust-xxhash-c-sys-dev_0.8.3-1+b1_amd64.deb"
+}

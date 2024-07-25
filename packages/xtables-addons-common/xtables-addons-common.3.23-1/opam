@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xtables-addons-common_3.23-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xtables-addons-common"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libxtables12" {>= "1.6.0+snapshot20161117"}
+  "perl-any"
+]
+extra-source "xtables-addons-common_3.23-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xtables-addons/xtables-addons-common_3.23-1_amd64.deb"
+}

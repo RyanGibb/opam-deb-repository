@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sphinx-testing_0.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sphinx-testing"]
+]
+depends: [
+  "python3-any"
+  "python3-six"
+  "python3-sphinx" {>= "0.6"}
+]
+extra-source "python3-sphinx-testing_0.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sphinx-testing/python3-sphinx-testing_0.8.1-1_all.deb"
+}

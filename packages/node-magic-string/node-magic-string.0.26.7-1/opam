@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-magic-string_0.26.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-magic-string"]
+]
+depends: [
+  "node-sourcemap-codec" {>= "1.4.5-2~"}
+  "node-vlq"
+]
+extra-source "node-magic-string_0.26.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-magic-string/node-magic-string_0.26.7-1_all.deb"
+}

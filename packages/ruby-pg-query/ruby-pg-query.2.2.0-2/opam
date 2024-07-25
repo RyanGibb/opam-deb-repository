@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-pg-query_2.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-pg-query"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libruby" {< "1-3.2~"}
+  "ruby-google-protobuf" {>= "3.19.2"}
+  ("libruby" {>= "1-3.0~0"} | "libruby" {>= "1-3.1~0"})
+  ("libruby3-0" {>= "3.0.0~preview1"} | "libruby3-1" {>= "3.1.0~preview1"})
+]
+extra-source "ruby-pg-query_2.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-pg-query/ruby-pg-query_2.2.0-2_amd64.deb"
+}

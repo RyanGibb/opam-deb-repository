@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-vector-space-prof_0.16-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-vector-space-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-boolean-prof"
+  "libghc-memotrie-prof"
+  "libghc-numinstances-prof"
+  "libghc-vector-space-dev" {= "0.16-1+b1"}
+]
+extra-source "libghc-vector-space-prof_0.16-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-vector-space/libghc-vector-space-prof_0.16-1+b1_amd64.deb"
+}

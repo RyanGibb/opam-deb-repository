@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liboptcomp-camlp4-dev_1.6-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liboptcomp-camlp4-dev"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libcamlp4-ocaml-dev"
+  "ocaml-nox"
+]
+extra-source "liboptcomp-camlp4-dev_1.6-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/optcomp/liboptcomp-camlp4-dev_1.6-2+b1_amd64.deb"
+}

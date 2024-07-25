@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgraph-d3-perl_0.03-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgraph-d3-perl"]
+]
+depends: [
+  "libgraph-perl" {>= "1-0.94"}
+  "libjson-perl"
+  "libmoo-perl" {>= "1.001000"}
+  "perl-any"
+]
+extra-source "libgraph-d3-perl_0.03-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgraph-d3-perl/libgraph-d3-perl_0.03-1.1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-streamlink_1.0.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-streamlink"]
+]
+depends: [
+  "python3-any"
+  "python3-crypto"
+  "python3-isodate"
+  "python3-pycountry" {>= "16.10.23"}
+  "python3-requests" {>= "1.0"}
+  "python3-socks"
+  "python3-websocket"
+]
+extra-source "python3-streamlink_1.0.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/streamlink/python3-streamlink_1.0.0+dfsg-1_all.deb"
+}

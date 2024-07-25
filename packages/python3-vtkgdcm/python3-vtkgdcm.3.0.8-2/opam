@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-vtkgdcm_3.0.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-vtkgdcm"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpython3-9" {>= "3.9.1"}
+  "libstdc++6" {>= "5.2"}
+  "libvtk7-1p"
+  "libvtkgdcm3-0" {= "3.0.8-2"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+]
+extra-source "python3-vtkgdcm_3.0.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gdcm/python3-vtkgdcm_3.0.8-2_amd64.deb"
+}

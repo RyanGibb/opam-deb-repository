@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ovn-controller-vtep_2.10.7+ds1-0+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ovn-controller-vtep"]
+]
+depends: [
+  "lsb-base"
+  "openvswitch-common" {= "2.10.7+ds1-0+deb10u1"}
+]
+extra-source "ovn-controller-vtep_2.10.7+ds1-0+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openvswitch/ovn-controller-vtep_2.10.7+ds1-0+deb10u1_amd64.deb"
+}

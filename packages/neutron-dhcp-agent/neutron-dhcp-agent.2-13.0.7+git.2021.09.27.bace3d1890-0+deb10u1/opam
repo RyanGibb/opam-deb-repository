@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i neutron-dhcp-agent_2:13.0.7+git.2021.09.27.bace3d1890-0+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r neutron-dhcp-agent"]
+]
+depends: [
+  "adduser"
+  "dnsmasq-base" {>= "2.76"}
+  "dnsmasq-utils" {>= "2.76"}
+  "lsb-base" {>= "3.0.6"}
+  "neutron-common" {= "2-13.0.7+git.2021.09.27.bace3d1890-0+deb10u1"}
+  "sudo"
+]
+extra-source "neutron-dhcp-agent_2:13.0.7+git.2021.09.27.bace3d1890-0+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neutron/neutron-dhcp-agent_13.0.7+git.2021.09.27.bace3d1890-0+deb10u1_all.deb"
+}

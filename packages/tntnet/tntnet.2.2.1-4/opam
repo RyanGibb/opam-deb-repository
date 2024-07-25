@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tntnet_2.2.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tntnet"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libcxxtools9v5"
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "libtntnet12v5"
+  "net-tools"
+  "tntnet-runtime" {= "2.2.1-4"}
+]
+extra-source "tntnet_2.2.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tntnet/tntnet_2.2.1-4_amd64.deb"
+}

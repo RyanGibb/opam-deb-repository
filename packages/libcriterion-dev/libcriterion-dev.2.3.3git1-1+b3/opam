@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcriterion-dev_2.3.3git1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcriterion-dev"]
+]
+depends: [
+  "libboxfort-dev"
+  "libcriterion3" {= "2.3.3git1-1+b3"}
+  "libffi-dev"
+  "libgit2-dev"
+  "libnanomsg-dev"
+  "pkg-config"
+]
+extra-source "libcriterion-dev_2.3.3git1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/criterion/libcriterion-dev_2.3.3git1-1+b3_amd64.deb"
+}

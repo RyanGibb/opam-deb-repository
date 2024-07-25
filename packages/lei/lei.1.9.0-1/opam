@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lei_1.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lei"]
+]
+depends: [
+  "libpublicinbox-perl" {= "1.9.0-1"}
+  "perl-any"
+]
+extra-source "lei_1.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/public-inbox/lei_1.9.0-1_all.deb"
+}

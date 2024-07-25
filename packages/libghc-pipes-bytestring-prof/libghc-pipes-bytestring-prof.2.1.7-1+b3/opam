@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-pipes-bytestring-prof_2.1.7-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-pipes-bytestring-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-pipes-bytestring-dev" {= "2.1.7-1+b3"}
+  "libghc-pipes-group-prof"
+  "libghc-pipes-parse-prof"
+  "libghc-pipes-prof"
+  "libghc-stringsearch-prof"
+]
+extra-source "libghc-pipes-bytestring-prof_2.1.7-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pipes-bytestring/libghc-pipes-bytestring-prof_2.1.7-1+b3_amd64.deb"
+}

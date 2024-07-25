@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librep16_0.92.5-3+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librep16"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libgmp10"
+]
+extra-source "librep16_0.92.5-3+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librep/librep16_0.92.5-3+b6_amd64.deb"
+}

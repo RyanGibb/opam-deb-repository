@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libx32asan5-dbg_8.3.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libx32asan5-dbg"]
+]
+depends: [
+  "gcc-8-base" {= "8.3.0-6"}
+  "libx32asan5" {= "8.3.0-6"}
+]
+extra-source "libx32asan5-dbg_8.3.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8/libx32asan5-dbg_8.3.0-6_amd64.deb"
+}

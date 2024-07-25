@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wl-beta_2.15.9+0.20210131-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wl-beta"]
+]
+depends: [
+  "apel" {>= "10.7"}
+  "emacsen-common" {>= "2.0.8"}
+  "flim" {>= "1-1.14.6"}
+  "semi" {>= "1.14.6+0.20100125"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+  ("emacs-nox" | "emacs" | "emacs25" | "emacs24" | "emacs-snapshot")
+]
+conflicts: [
+  "wanderlust2"
+  "wl"
+  "xbase (<< 3.3.2.3a-2)"
+]
+extra-source "wl-beta_2.15.9+0.20210131-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wl-beta/wl-beta_2.15.9+0.20210131-2_all.deb"
+}

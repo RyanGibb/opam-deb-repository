@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhipercontracer-dev_1.6.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhipercontracer-dev"]
+]
+depends: [
+  "libboost-date-time-dev"
+  "libboost-filesystem-dev"
+  "libboost-iostreams-dev"
+  "libboost-log-dev"
+  "libboost-system-dev"
+  "libboost-thread-dev"
+  "libhipercontracer1" {= "1.6.7-1"}
+]
+extra-source "libhipercontracer-dev_1.6.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hipercontracer/libhipercontracer-dev_1.6.7-1_amd64.deb"
+}

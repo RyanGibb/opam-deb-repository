@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liboauth-dev_1.0.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liboauth-dev"]
+]
+depends: [
+  "libnss3-dev"
+  "liboauth0" {= "1.0.3-5"}
+  ("libcurl4-gnutls-dev" | "libcurl4-dev")
+]
+extra-source "liboauth-dev_1.0.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/liboauth/liboauth-dev_1.0.3-5_amd64.deb"
+}

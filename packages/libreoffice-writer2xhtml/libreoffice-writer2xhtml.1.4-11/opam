@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-writer2xhtml_1.4-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-writer2xhtml"]
+]
+depends: [
+  "liblibreoffice-java"
+  "libreoffice-core"
+  "libreoffice-java-common"
+  "tex-common" {>= "6.13"}
+  ("default-jre" | "java6-runtime")
+]
+extra-source "libreoffice-writer2xhtml_1.4-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/writer2latex/libreoffice-writer2xhtml_1.4-11_all.deb"
+}

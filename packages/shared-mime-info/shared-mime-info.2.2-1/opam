@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shared-mime-info_2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shared-mime-info"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "shared-mime-info_2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_2.2-1_amd64.deb"
+}

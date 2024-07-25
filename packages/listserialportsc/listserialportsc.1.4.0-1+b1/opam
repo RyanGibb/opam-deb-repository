@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i listserialportsc_1.4.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r listserialportsc"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libserialport0"
+]
+extra-source "listserialportsc_1.4.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/listserialportsc/listserialportsc_1.4.0-1+b1_amd64.deb"
+}

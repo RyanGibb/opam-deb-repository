@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mrbayes-mpi_3.2.6+dfsg-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mrbayes-mpi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libhmsbeagle1v5"
+  "libopenmpi3"
+  "libreadline7" {>= "6.0"}
+  "mpi-default-bin"
+  "ssh"
+]
+extra-source "mrbayes-mpi_3.2.6+dfsg-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrbayes/mrbayes-mpi_3.2.6+dfsg-2+b1_amd64.deb"
+}

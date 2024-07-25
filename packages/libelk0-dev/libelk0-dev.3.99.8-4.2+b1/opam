@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libelk0-dev_3.99.8-4.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libelk0-dev"]
+]
+depends: [
+  "libelf-dev"
+  "libelk0" {= "3.99.8-4.2+b1"}
+  "libice-dev"
+  "libsm-dev"
+  "libx11-dev"
+  "libxext-dev"
+  "libxmu-dev"
+  "libxt-dev"
+]
+conflicts: [
+  "elk (<< 3.99-1)"
+]
+extra-source "libelk0-dev_3.99.8-4.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elk/libelk0-dev_3.99.8-4.2+b1_amd64.deb"
+}

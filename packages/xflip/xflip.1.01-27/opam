@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xflip_1.01-27_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xflip"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libx11-6"
+]
+extra-source "xflip_1.01-27_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xflip/xflip_1.01-27_amd64.deb"
+}

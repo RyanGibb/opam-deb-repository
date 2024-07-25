@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i trimmomatic_0.39+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r trimmomatic"]
+]
+depends: [
+  "default-jre"
+  "libjbzip2-java"
+]
+extra-source "trimmomatic_0.39+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trimmomatic/trimmomatic_0.39+dfsg-2_all.deb"
+}

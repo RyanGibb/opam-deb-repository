@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i google-compute-engine-oslogin_20210907.00-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r google-compute-engine-oslogin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcurl4" {>= "7.16.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libjson-c5" {>= "0.15"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "google-compute-engine-oslogin_20210907.00-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/google-compute-engine-oslogin/google-compute-engine-oslogin_20210907.00-1+b3_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kwayland-integration_5.14.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kwayland-integration"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5idletime5" {>= "5.13.0"}
+  "libkf5waylandclient5" {>= "4-5.28.0"}
+  "libkf5windowsystem5" {>= "5.13.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.11.0~"}
+  "libqt5widgets5" {>= "5.11.0~"}
+  "libstdc++6" {>= "4.1.1"}
+  "qtwayland5"
+]
+extra-source "kwayland-integration_5.14.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kwayland-integration/kwayland-integration_5.14.5-1_amd64.deb"
+}

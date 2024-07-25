@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nulib2_3.1.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nulib2"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "nulib2_3.1.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nulib2/nulib2_3.1.0-5_amd64.deb"
+}

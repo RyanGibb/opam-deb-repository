@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tuxmath_2.0.3-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tuxmath"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2"
+  "libsdl-net1-2"
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libt4k-common0" {>= "0.1.1"}
+  "tuxmath-data" {= "2.0.3-8"}
+]
+extra-source "tuxmath_2.0.3-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tuxmath/tuxmath_2.0.3-8_amd64.deb"
+}

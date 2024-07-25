@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhsdis0-fcml_1.2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhsdis0-fcml"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfcml0" {>= "1.0.0"}
+]
+extra-source "libhsdis0-fcml_1.2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcml/libhsdis0-fcml_1.2.2-2_amd64.deb"
+}

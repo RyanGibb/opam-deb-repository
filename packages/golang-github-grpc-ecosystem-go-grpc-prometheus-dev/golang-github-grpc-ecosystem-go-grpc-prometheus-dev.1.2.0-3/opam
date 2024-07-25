@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-grpc-ecosystem-go-grpc-prometheus-dev_1.2.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-grpc-ecosystem-go-grpc-prometheus-dev"]
+]
+depends: [
+  "golang-github-prometheus-client-golang-dev"
+  "golang-github-stretchr-testify-dev"
+  "golang-golang-x-net-dev"
+  "golang-google-grpc-dev"
+  "golang-goprotobuf-dev"
+]
+extra-source "golang-github-grpc-ecosystem-go-grpc-prometheus-dev_1.2.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-grpc-ecosystem-go-grpc-prometheus/golang-github-grpc-ecosystem-go-grpc-prometheus-dev_1.2.0-3_all.deb"
+}

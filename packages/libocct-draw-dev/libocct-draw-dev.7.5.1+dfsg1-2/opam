@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libocct-draw-dev_7.5.1+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libocct-draw-dev"]
+]
+depends: [
+  "libocct-draw-7-5" {< "7.5.1+dfsg1-2+1~"}
+  "libocct-draw-7-5" {>= "7.5.1+dfsg1-2"}
+]
+extra-source "libocct-draw-dev_7.5.1+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencascade/libocct-draw-dev_7.5.1+dfsg1-2_amd64.deb"
+}

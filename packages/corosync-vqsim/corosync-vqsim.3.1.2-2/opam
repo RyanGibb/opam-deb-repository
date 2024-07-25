@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i corosync-vqsim_3.1.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r corosync-vqsim"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcorosync-common4" {>= "1.99.9"}
+  "libqb100" {>= "2.0.3"}
+  "libreadline8" {>= "6.0"}
+]
+extra-source "corosync-vqsim_3.1.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/corosync/corosync-vqsim_3.1.2-2_amd64.deb"
+}

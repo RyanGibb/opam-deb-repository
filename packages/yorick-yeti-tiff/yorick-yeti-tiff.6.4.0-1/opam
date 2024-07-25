@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yorick-yeti-tiff_6.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yorick-yeti-tiff"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libtiff5" {>= "4.0.3"}
+  "yorick" {>= "1.6.02"}
+]
+extra-source "yorick-yeti-tiff_6.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yorick-yeti/yorick-yeti-tiff_6.4.0-1_amd64.deb"
+}

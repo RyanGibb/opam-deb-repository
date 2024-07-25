@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bitlbee-plugin-facebook_1.2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bitlbee-plugin-facebook"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  ("bitlbee" {>= "3.4"} | "bitlbee-libpurple" {>= "3.4"})
+]
+extra-source "bitlbee-plugin-facebook_1.2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bitlbee-facebook/bitlbee-plugin-facebook_1.2.2-2_amd64.deb"
+}

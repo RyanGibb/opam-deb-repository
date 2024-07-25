@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i grass-gui_8.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r grass-gui"]
+]
+depends: [
+  "grass-core"
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-opengl"
+  "python3-wxgtk4-0"
+  ("xterm" | "x-terminal-emulator")
+]
+extra-source "grass-gui_8.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grass/grass-gui_8.2.1-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-time-parsers-prof_0.1.2.0-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-time-parsers-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-parsers-prof"
+  "libghc-time-parsers-dev" {= "0.1.2.0-7+b1"}
+]
+extra-source "libghc-time-parsers-prof_0.1.2.0-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-time-parsers/libghc-time-parsers-prof_0.1.2.0-7+b1_amd64.deb"
+}

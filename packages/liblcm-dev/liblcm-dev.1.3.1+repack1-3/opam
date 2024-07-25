@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblcm-dev_1.3.1+repack1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblcm-dev"]
+]
+depends: [
+  "liblcm-bin"
+  "liblcm1" {= "1.3.1+repack1-3"}
+]
+extra-source "liblcm-dev_1.3.1+repack1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lcm/liblcm-dev_1.3.1+repack1-3_amd64.deb"
+}

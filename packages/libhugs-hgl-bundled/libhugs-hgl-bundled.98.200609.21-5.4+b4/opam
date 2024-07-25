@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhugs-hgl-bundled_98.200609.21-5.4+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhugs-hgl-bundled"]
+]
+depends: [
+  "hugs" {= "98.200609.21-5.4+b4"}
+  "libhugs-base-bundled"
+  "libhugs-x11-bundled"
+]
+conflicts: [
+  "libhugs-hgl"
+]
+extra-source "libhugs-hgl-bundled_98.200609.21-5.4+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hugs98/libhugs-hgl-bundled_98.200609.21-5.4+b4_amd64.deb"
+}

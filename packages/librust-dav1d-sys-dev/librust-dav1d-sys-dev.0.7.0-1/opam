@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-dav1d-sys-dev_0.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-dav1d-sys-dev"]
+]
+depends: [
+  "libdav1d-dev"
+  "librust-libc-0-2+default-dev"
+  "librust-system-deps-6+default-dev"
+]
+extra-source "librust-dav1d-sys-dev_0.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-dav1d-sys/librust-dav1d-sys-dev_0.7.0-1_amd64.deb"
+}

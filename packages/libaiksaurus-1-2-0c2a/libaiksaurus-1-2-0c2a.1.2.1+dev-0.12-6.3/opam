@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaiksaurus-1.2-0c2a_1.2.1+dev-0.12-6.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaiksaurus-1.2-0c2a"]
+]
+depends: [
+  "libaiksaurus-1-2-data"
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libaiksaurus-1.2-0"
+  "libaiksaurus0"
+  "libaiksaurus0c102"
+]
+extra-source "libaiksaurus-1.2-0c2a_1.2.1+dev-0.12-6.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aiksaurus/libaiksaurus-1.2-0c2a_1.2.1+dev-0.12-6.3_amd64.deb"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xterm_379-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xterm"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libice6" {>= "1-1.0.0"}
+  "libtinfo6" {>= "6"}
+  "libutempter0" {>= "1.1.5"}
+  "libx11-6"
+  "libxaw7" {>= "2-1.0.14"}
+  "libxext6"
+  "libxft2" {> "2.1.1"}
+  "libxinerama1" {>= "2-1.1.4"}
+  "libxmu6" {>= "2-1.1.3"}
+  "libxpm4"
+  "libxt6"
+  "xbitmaps"
+]
+extra-source "xterm_379-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xterm/xterm_379-1_amd64.deb"
+}

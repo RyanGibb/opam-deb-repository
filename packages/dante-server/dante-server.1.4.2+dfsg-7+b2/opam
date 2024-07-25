@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dante-server_1.4.2+dfsg-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dante-server"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libwrap0" {>= "7.6-4~"}
+  "lsb-base"
+]
+extra-source "dante-server_1.4.2+dfsg-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dante/dante-server_1.4.2+dfsg-7+b2_amd64.deb"
+}

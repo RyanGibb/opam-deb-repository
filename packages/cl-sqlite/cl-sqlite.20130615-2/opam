@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cl-sqlite_20130615-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cl-sqlite"]
+]
+depends: [
+  "cl-cffi"
+  "cl-iterate"
+  "libsqlite3-0"
+]
+extra-source "cl-sqlite_20130615-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cl-sqlite/cl-sqlite_20130615-2_all.deb"
+}

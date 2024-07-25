@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-src-exts-util-prof_0.2.5-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-src-exts-util-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-data-default-prof"
+  "libghc-semigroups-prof"
+  "libghc-src-exts-prof"
+  "libghc-src-exts-util-dev" {= "0.2.5-2+b2"}
+  "libghc-uniplate-prof"
+]
+extra-source "libghc-src-exts-util-prof_0.2.5-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-src-exts-util/libghc-src-exts-util-prof_0.2.5-2+b2_amd64.deb"
+}

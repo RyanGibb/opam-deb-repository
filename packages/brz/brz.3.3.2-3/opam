@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i brz_3.3.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r brz"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "4.2"}
+  "libpython3-11" {>= "3.11.0"}
+  "python3"
+  "python3-breezy" {<= "3.3.2-3.1~"}
+  "python3-breezy" {>= "3.3.2-3"}
+]
+conflicts: [
+  "bzr (<< 2.7.0+bzr6622-1)"
+  "bzr-git (<< 0.6.13+bzr1650+brz1)"
+  "git-remote-bzr"
+]
+extra-source "brz_3.3.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/breezy/brz_3.3.2-3_amd64.deb"
+}

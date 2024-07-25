@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fence-virtd_4.12.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fence-virtd"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcpg4" {>= "1.0.0"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libuuid1" {>= "2.16"}
+  "libvirt0" {>= "0.10.0~rc2"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "fence-virtd_4.12.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fence-agents/fence-virtd_4.12.1-1_amd64.deb"
+}

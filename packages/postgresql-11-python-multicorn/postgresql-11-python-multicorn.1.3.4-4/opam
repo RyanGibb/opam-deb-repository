@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-11-python-multicorn_1.3.4-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-11-python-multicorn"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpython2-7" {>= "2.7"}
+  "postgresql-11"
+  "python-multicorn"
+]
+conflicts: [
+  "postgresql-11-python3-multicorn"
+]
+extra-source "postgresql-11-python-multicorn_1.3.4-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-multicorn/postgresql-11-python-multicorn_1.3.4-4_amd64.deb"
+}

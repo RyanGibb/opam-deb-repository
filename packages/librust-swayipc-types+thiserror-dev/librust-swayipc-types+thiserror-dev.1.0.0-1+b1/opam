@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-swayipc-types+thiserror-dev_1.0.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-swayipc-types+thiserror-dev"]
+]
+depends: [
+  "librust-swayipc-types-dev" {= "1.0.0-1+b1"}
+  "librust-thiserror-dev"
+]
+extra-source "librust-swayipc-types+thiserror-dev_1.0.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-swayipc-types/librust-swayipc-types+thiserror-dev_1.0.0-1+b1_amd64.deb"
+}

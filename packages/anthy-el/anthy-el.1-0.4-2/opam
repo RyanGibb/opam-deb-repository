@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i anthy-el_1:0.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r anthy-el"]
+]
+depends: [
+  "anthy"
+  ("emacs24" | "emacsen")
+]
+conflicts: [
+  "xemacs21-nomule"
+]
+extra-source "anthy-el_1:0.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/anthy/anthy-el_0.4-2_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i arpwatch_2.1a15-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r arpwatch"]
+]
+depends: [
+  "adduser"
+  "gawk"
+  "libc6" {>= "2.14"}
+  "libpcap0-8" {>= "0.9.8"}
+  "lsb-base"
+]
+extra-source "arpwatch_2.1a15-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/arpwatch/arpwatch_2.1a15-7_amd64.deb"
+}

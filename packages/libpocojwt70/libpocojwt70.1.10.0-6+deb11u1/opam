@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpocojwt70_1.10.0-6+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpocojwt70"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpococrypto70" {>= "1.10.0"}
+  "libpocofoundation70" {>= "1.10.0"}
+  "libpocojson70" {>= "1.10.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libpocojwt70_1.10.0-6+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poco/libpocojwt70_1.10.0-6+deb11u1_amd64.deb"
+}

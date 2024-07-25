@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libblockdev-fs-dev_2.20-7+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libblockdev-fs-dev"]
+]
+depends: [
+  "libblkid-dev"
+  "libblockdev-fs2" {= "2.20-7+deb10u1"}
+  "libmount-dev"
+  "libparted-dev"
+]
+extra-source "libblockdev-fs-dev_2.20-7+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libblockdev/libblockdev-fs-dev_2.20-7+deb10u1_amd64.deb"
+}

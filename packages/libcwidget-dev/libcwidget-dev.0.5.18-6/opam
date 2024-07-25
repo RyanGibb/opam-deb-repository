@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcwidget-dev_0.5.18-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcwidget-dev"]
+]
+depends: [
+  "libcwidget4" {= "0.5.18-6"}
+  "libncursesw5-dev"
+  "libsigc++-2-0-dev"
+  "pkg-config"
+]
+extra-source "libcwidget-dev_0.5.18-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cwidget/libcwidget-dev_0.5.18-6_amd64.deb"
+}

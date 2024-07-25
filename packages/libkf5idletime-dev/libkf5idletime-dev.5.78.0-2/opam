@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5idletime-dev_5.78.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5idletime-dev"]
+]
+depends: [
+  "libkf5idletime5" {= "5.78.0-2"}
+  "qtbase5-dev" {>= "5.14.0~"}
+]
+extra-source "libkf5idletime-dev_5.78.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kidletime/libkf5idletime-dev_5.78.0-2_amd64.deb"
+}

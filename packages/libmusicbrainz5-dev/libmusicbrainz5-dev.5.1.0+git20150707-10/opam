@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmusicbrainz5-dev_5.1.0+git20150707-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmusicbrainz5-dev"]
+]
+depends: [
+  "libmusicbrainz5-2" {= "5.1.0+git20150707-10"}
+  "libmusicbrainz5cc2v5" {= "5.1.0+git20150707-10"}
+  "libxml2-dev"
+  ("libneon27-gnutls-dev" | "libneon-dev")
+]
+extra-source "libmusicbrainz5-dev_5.1.0+git20150707-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmusicbrainz5/libmusicbrainz5-dev_5.1.0+git20150707-10_amd64.deb"
+}

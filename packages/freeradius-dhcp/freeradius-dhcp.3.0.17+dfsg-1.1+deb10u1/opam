@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freeradius-dhcp_3.0.17+dfsg-1.1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freeradius-dhcp"]
+]
+depends: [
+  "freeradius" {= "3.0.17+dfsg-1.1+deb10u1"}
+  "libc6" {>= "2.14"}
+]
+extra-source "freeradius-dhcp_3.0.17+dfsg-1.1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeradius/freeradius-dhcp_3.0.17+dfsg-1.1+deb10u1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mir-graphics-drivers-desktop_1.8.0+dfsg1-18_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mir-graphics-drivers-desktop"]
+]
+depends: [
+  "mir-client-platform-mesa5"
+  "mir-platform-graphics-mesa-kms16"
+  "mir-platform-graphics-mesa-x16"
+  "mir-platform-graphics-wayland16"
+  "mir-platform-input-evdev7"
+]
+extra-source "mir-graphics-drivers-desktop_1.8.0+dfsg1-18_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mir/mir-graphics-drivers-desktop_1.8.0+dfsg1-18_amd64.deb"
+}

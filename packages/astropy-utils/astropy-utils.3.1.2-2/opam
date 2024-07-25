@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i astropy-utils_3.1.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r astropy-utils"]
+]
+depends: [
+  "python3-any" {>= "3.5~"}
+  "python3-astropy" {< "3.1.2-2.1~"}
+  "python3-astropy" {>= "3.1.2-2"}
+  "python3-pkg-resources"
+]
+extra-source "astropy-utils_3.1.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/astropy/astropy-utils_3.1.2-2_all.deb"
+}

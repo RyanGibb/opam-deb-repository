@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbpp-popgen8_2.4.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbpp-popgen8"]
+]
+depends: [
+  "libbpp-core4" {>= "2.4.1"}
+  "libbpp-seq12" {>= "2.4.1"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libbpp-popgen8_2.4.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbpp-popgen/libbpp-popgen8_2.4.1-4_amd64.deb"
+}

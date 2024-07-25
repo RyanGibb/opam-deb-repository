@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libphonenumber8-java_8.12.16-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libphonenumber8-java"]
+]
+depends: [
+  "libprotobuf-java"
+  "libservlet3-1-java"
+]
+conflicts: [
+  "libphonenumber-java"
+  "libphonenumber6-java"
+  "libphonenumber7-java"
+]
+extra-source "libphonenumber8-java_8.12.16-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libphonenumber/libphonenumber8-java_8.12.16-4_all.deb"
+}

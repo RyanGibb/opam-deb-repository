@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-zigpy_0.53.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-zigpy"]
+]
+depends: [
+  "python3-aiohttp"
+  "python3-aiosqlite" {>= "0.16.0"}
+  "python3-any"
+  "python3-async-timeout"
+  "python3-attr"
+  "python3-crccheck"
+  "python3-cryptography"
+  "python3-serial-asyncio"
+  "python3-voluptuous"
+  ("python3-importlib-resources" | "python3" {> "3.9"})
+]
+extra-source "python3-zigpy_0.53.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zigpy/python3-zigpy_0.53.1-1_all.deb"
+}

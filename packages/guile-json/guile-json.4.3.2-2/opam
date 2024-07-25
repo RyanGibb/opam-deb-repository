@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guile-json_4.3.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guile-json"]
+]
+depends: [
+  ("guile-3-0" | "guile-2-2")
+]
+extra-source "guile-json_4.3.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guile-json/guile-json_4.3.2-2_amd64.deb"
+}

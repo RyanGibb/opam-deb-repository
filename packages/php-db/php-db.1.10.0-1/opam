@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-db_1.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-db"]
+]
+depends: [
+  "php-common"
+  "php-pear" {>= "1.10.0"}
+]
+extra-source "php-db_1.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-db/php-db_1.10.0-1_all.deb"
+}

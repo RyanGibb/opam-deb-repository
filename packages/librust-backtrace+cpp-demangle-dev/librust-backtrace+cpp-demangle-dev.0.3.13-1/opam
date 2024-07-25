@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-backtrace+cpp-demangle-dev_0.3.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-backtrace+cpp-demangle-dev"]
+]
+depends: [
+  "librust-backtrace-dev" {= "0.3.13-1"}
+  "librust-cpp-demangle-dev"
+]
+extra-source "librust-backtrace+cpp-demangle-dev_0.3.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-backtrace/librust-backtrace+cpp-demangle-dev_0.3.13-1_amd64.deb"
+}

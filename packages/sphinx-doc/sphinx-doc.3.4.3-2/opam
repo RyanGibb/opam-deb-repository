@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sphinx-doc_3.4.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sphinx-doc"]
+]
+depends: [
+  "docutils-doc"
+  "libjs-mathjax"
+  "libjs-sphinxdoc" {>= "2.4.3-5~"}
+  "python-requests-doc"
+  "python3-doc"
+]
+conflicts: [
+  "python-sphinx (<< 1.1)"
+]
+extra-source "sphinx-doc_3.4.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sphinx/sphinx-doc_3.4.3-2_all.deb"
+}

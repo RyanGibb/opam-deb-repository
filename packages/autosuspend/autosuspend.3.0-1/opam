@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i autosuspend_3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r autosuspend"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "1.0"}
+  "python3-any"
+  "python3-portalocker"
+  "python3-psutil"
+  "sphinx-rtd-theme-common" {>= "0.4.3+dfsg"}
+]
+extra-source "autosuspend_3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/autosuspend/autosuspend_3.0-1_all.deb"
+}

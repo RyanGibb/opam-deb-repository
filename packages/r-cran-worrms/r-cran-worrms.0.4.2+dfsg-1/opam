@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-worrms_0.4.2+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-worrms"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  "r-cran-crul" {>= "0.6.0"}
+  "r-cran-data-table"
+  "r-cran-jsonlite" {>= "1.1"}
+  "r-cran-tibble" {>= "1.2"}
+]
+extra-source "r-cran-worrms_0.4.2+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-worrms/r-cran-worrms_0.4.2+dfsg-1_all.deb"
+}

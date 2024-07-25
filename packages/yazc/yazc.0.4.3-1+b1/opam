@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yazc_0.4.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yazc"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libzc6" {>= "0.4.3"}
+]
+extra-source "yazc_0.4.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libz/libzc/yazc_0.4.3-1+b1_amd64.deb"
+}

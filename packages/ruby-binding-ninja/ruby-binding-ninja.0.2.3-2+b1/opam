@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-binding-ninja_0.2.3-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-binding-ninja"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libruby2-7" {>= "2.7.0~preview2"}
+  "ruby" {< "1-2.8~"}
+  "ruby" {>= "1-2.7~0"}
+]
+extra-source "ruby-binding-ninja_0.2.3-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-binding-ninja/ruby-binding-ninja_0.2.3-2+b1_amd64.deb"
+}

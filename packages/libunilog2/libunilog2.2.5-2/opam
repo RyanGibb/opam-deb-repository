@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libunilog2_2.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libunilog2"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libgoogle-glog0v6" {>= "0.6.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libunilog2_2.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unilog/libunilog2_2.5-2_amd64.deb"
+}

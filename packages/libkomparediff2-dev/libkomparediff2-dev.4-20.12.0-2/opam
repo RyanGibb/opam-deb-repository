@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkomparediff2-dev_4:20.12.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkomparediff2-dev"]
+]
+depends: [
+  "libkf5config-dev" {>= "5.68.0~"}
+  "libkf5xmlgui-dev" {>= "5.68.0~"}
+  "libkomparediff2-5" {= "4-20.12.0-2"}
+  "qtbase5-dev" {>= "5.12.0~"}
+]
+extra-source "libkomparediff2-dev_4:20.12.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkomparediff2/libkomparediff2-dev_20.12.0-2_amd64.deb"
+}

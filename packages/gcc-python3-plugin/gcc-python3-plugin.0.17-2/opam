@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-python3-plugin_0.17-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-python3-plugin"]
+]
+depends: [
+  "g++-8"
+  "gcc-8"
+  "libc6" {>= "2.22"}
+  "libgcc1" {>= "1-3.0"}
+  "libpython3-7" {>= "3.7.0"}
+  "python3-any"
+  "python3-lxml"
+  "python3-pygments"
+  "python3-six"
+]
+extra-source "gcc-python3-plugin_0.17-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-python-plugin/gcc-python3-plugin_0.17-2_amd64.deb"
+}

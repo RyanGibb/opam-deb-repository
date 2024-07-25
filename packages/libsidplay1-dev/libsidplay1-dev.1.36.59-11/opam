@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsidplay1-dev_1.36.59-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsidplay1-dev"]
+]
+depends: [
+  "libsidplay1v5" {= "1.36.59-11"}
+]
+conflicts: [
+  "libsidplay1.36-dev"
+]
+extra-source "libsidplay1-dev_1.36.59-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsidplay/libsidplay1-dev_1.36.59-11_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i make-guile_4.2.1-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r make-guile"]
+]
+depends: [
+  "guile-2-0-libs"
+  "libc6" {>= "2.27"}
+  "libgc1c2" {>= "1-7.2d"}
+]
+conflicts: [
+  "make"
+]
+extra-source "make-guile_4.2.1-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/make-dfsg/make-guile_4.2.1-1.2_amd64.deb"
+}

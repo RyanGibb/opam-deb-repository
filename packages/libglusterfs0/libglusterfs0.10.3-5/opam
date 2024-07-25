@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglusterfs0_10.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglusterfs0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libssl3" {>= "3.0.0"}
+  "libuuid1" {>= "2.16"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libglusterfs0_10.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glusterfs/libglusterfs0_10.3-5_amd64.deb"
+}

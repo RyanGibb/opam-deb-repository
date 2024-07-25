@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libotbwavelet-6.6-1_6.6.1+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libotbwavelet-6.6-1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libinsighttoolkit4-12" {>= "4.12.0-dfsg1-2~"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libotbwavelet-6.6-1_6.6.1+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/otb/libotbwavelet-6.6-1_6.6.1+dfsg-1+b1_amd64.deb"
+}

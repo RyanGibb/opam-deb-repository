@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nbdkit_1.10.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nbdkit"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcom-err2" {>= "1.43.9"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libext2fs2" {>= "1.37"}
+  "libgnutls30" {>= "3.6.6"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libselinux1" {>= "1.32"}
+  "zlib1g" {>= "1-1.2.6"}
+]
+extra-source "nbdkit_1.10.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nbdkit/nbdkit_1.10.3-1_amd64.deb"
+}

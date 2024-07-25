@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i childsplay_3.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r childsplay"]
+]
+depends: [
+  "fonts-dejavu"
+  "python" {>= "2.4"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-numpy"
+  "python-pygame" {>= "1.7"}
+  "python-sqlalchemy"
+]
+extra-source "childsplay_3.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/childsplay/childsplay_3.3-2_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-ginkgo-dev_1.2.0+git20161006.acfa16a-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-ginkgo-dev"]
+]
+depends: [
+  "golang-gomega-dev"
+  "libc6" {>= "2.3.2"}
+]
+extra-source "golang-ginkgo-dev_1.2.0+git20161006.acfa16a-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-ginkgo/golang-ginkgo-dev_1.2.0+git20161006.acfa16a-1_amd64.deb"
+}

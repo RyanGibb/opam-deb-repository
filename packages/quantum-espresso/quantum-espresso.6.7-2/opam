@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i quantum-espresso_6.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r quantum-espresso"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc-s1" {>= "4.0"}
+  "libgfortran5" {>= "10"}
+  "libopenmpi3" {>= "4.1.0"}
+  "libscalapack-openmpi2-1" {>= "2.1.0"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "quantum-espresso_6.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/espresso/quantum-espresso_6.7-2_amd64.deb"
+}

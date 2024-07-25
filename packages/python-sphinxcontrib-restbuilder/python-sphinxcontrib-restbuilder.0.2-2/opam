@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-sphinxcontrib.restbuilder_0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-sphinxcontrib.restbuilder"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-sphinx"
+]
+extra-source "python-sphinxcontrib.restbuilder_0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sphinxcontrib-restbuilder/python-sphinxcontrib.restbuilder_0.2-2_all.deb"
+}

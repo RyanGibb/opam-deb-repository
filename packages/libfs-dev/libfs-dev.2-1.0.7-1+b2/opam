@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfs-dev_2:1.0.7-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfs-dev"]
+]
+depends: [
+  "libfs6" {= "2-1.0.7-1+b2"}
+  "x11proto-core-dev"
+  "x11proto-fonts-dev"
+]
+extra-source "libfs-dev_2:1.0.7-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfs/libfs-dev_1.0.7-1+b2_amd64.deb"
+}

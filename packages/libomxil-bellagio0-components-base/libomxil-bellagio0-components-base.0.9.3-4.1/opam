@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libomxil-bellagio0-components-base_0.9.3-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libomxil-bellagio0-components-base"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libomxil-bellagio-bin"
+  "libomxil-bellagio0"
+]
+extra-source "libomxil-bellagio0-components-base_0.9.3-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libomxil-bellagio/libomxil-bellagio0-components-base_0.9.3-4.1_amd64.deb"
+}

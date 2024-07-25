@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-raster_3.4-5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-raster"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-cran-rcpp"
+  "r-cran-sp" {>= "1.4.1"}
+]
+extra-source "r-cran-raster_3.4-5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-raster/r-cran-raster_3.4-5-1_amd64.deb"
+}

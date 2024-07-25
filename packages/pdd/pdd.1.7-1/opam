@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pdd_1.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pdd"]
+]
+depends: [
+  "python3" {>= "3.5"}
+  "python3-any"
+  "python3-dateutil"
+]
+extra-source "pdd_1.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdd/pdd_1.7-1_all.deb"
+}

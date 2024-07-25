@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tesseract-ocr_5.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tesseract-ocr"]
+]
+depends: [
+  "libarchive13" {>= "3.2.1"}
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libcurl4" {>= "7.16.2"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libharfbuzz0b" {>= "1.2.6"}
+  "libicu72" {>= "72.1~rc-1~"}
+  "liblept5" {>= "1.75.3"}
+  "libpango-1-0-0" {>= "1.44.3"}
+  "libpangocairo-1-0-0" {>= "1.22.0"}
+  "libstdc++6" {>= "11"}
+  "libtesseract5" {= "5.3.0-2"}
+  "tesseract-ocr-eng" {>= "4.0.9~"}
+  "tesseract-ocr-osd" {>= "4.0.9~"}
+]
+extra-source "tesseract-ocr_5.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tesseract/tesseract-ocr_5.3.0-2_amd64.deb"
+}

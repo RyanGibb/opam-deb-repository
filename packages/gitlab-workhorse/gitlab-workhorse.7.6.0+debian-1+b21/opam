@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gitlab-workhorse_7.6.0+debian-1+b21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gitlab-workhorse"]
+]
+depends: [
+  "libc6" {>= "2.3.2"}
+]
+extra-source "gitlab-workhorse_7.6.0+debian-1+b21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gitlab-workhorse/gitlab-workhorse_7.6.0+debian-1+b21_amd64.deb"
+}

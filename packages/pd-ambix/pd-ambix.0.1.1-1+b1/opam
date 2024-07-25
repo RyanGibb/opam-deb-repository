@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pd-ambix_0.1.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pd-ambix"]
+]
+depends: [
+  "libambix0" {>= "0.1"}
+  "libc6" {>= "2.4"}
+  ("puredata" | "pd")
+]
+extra-source "pd-ambix_0.1.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libambix/pd-ambix_0.1.1-1+b1_amd64.deb"
+}

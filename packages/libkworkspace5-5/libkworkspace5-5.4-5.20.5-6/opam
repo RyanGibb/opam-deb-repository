@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkworkspace5-5_4:5.20.5-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkworkspace5-5"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libkf5configcore5" {>= "5.74.0~"}
+  "libkf5coreaddons5" {>= "5.74.0~"}
+  "libkf5i18n5" {>= "5.74.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.15.0~"}
+  "libqt5x11extras5" {>= "5.15.0~"}
+  "libstdc++6" {>= "5"}
+  "libxau6" {>= "1-1.0.9"}
+]
+extra-source "libkworkspace5-5_4:5.20.5-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plasma-workspace/libkworkspace5-5_5.20.5-6_amd64.deb"
+}

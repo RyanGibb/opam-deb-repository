@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgtkspell3-3-0_3.0.9-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgtkspell3-3-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libenchant1c2a" {>= "1.6.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+]
+conflicts: [
+  "libgtkspell-3-0"
+]
+extra-source "libgtkspell3-3-0_3.0.9-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtkspell3/libgtkspell3-3-0_3.0.9-3_amd64.deb"
+}

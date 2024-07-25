@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzookeeper-mt2_3.4.13-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzookeeper-mt2"]
+]
+depends: [
+  "libc6" {>= "2.16"}
+]
+extra-source "libzookeeper-mt2_3.4.13-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zookeeper/libzookeeper-mt2_3.4.13-2_amd64.deb"
+}

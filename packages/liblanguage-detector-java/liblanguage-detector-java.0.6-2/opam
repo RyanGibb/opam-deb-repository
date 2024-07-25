@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblanguage-detector-java_0.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblanguage-detector-java"]
+]
+depends: [
+  "libguava-java"
+  "libjetbrains-annotations-java"
+  "libslf4j-java" {>= "1.7.32"}
+]
+extra-source "liblanguage-detector-java_0.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblanguage-detector-java/liblanguage-detector-java_0.6-2_all.deb"
+}

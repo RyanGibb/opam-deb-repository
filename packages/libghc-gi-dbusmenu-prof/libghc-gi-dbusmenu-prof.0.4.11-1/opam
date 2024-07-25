@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-gi-dbusmenu-prof_0.4.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-gi-dbusmenu-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-gi-dbusmenu-dev" {= "0.4.11-1"}
+  "libghc-gi-glib-prof"
+  "libghc-gi-gobject-prof"
+  "libghc-haskell-gi-base-prof"
+  "libghc-haskell-gi-prof"
+]
+extra-source "libghc-gi-dbusmenu-prof_0.4.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-gi-dbusmenu/libghc-gi-dbusmenu-prof_0.4.11-1_amd64.deb"
+}

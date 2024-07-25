@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplplotada5-dev_5.15.0+dfsg2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplplotada5-dev"]
+]
+depends: [
+  "gnat" {< "13"}
+  "gnat" {>= "12"}
+  "libfreetype6-dev"
+  "libltdl-dev"
+  "libplplot17" {= "5.15.0+dfsg2-6"}
+  "libplplotada4-1" {= "5.15.0+dfsg2-6"}
+  "libqhull-dev"
+  "libqsastime-dev"
+]
+extra-source "libplplotada5-dev_5.15.0+dfsg2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plplot/libplplotada5-dev_5.15.0+dfsg2-6_amd64.deb"
+}

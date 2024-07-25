@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-pkg-info_0.6-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-pkg-info"]
+]
+depends: [
+  "elpa-epl" {>= "0.8"}
+  "emacs"
+  "emacsen-common"
+]
+extra-source "elpa-pkg-info_0.6-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pkg-info-el/elpa-pkg-info_0.6-4_all.deb"
+}

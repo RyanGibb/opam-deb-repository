@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-libziparchive_1:8.1.0+r23-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-libziparchive"]
+]
+depends: [
+  "android-libbase"
+  "android-liblog"
+  "android-libutils"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "android-libziparchive_1:8.1.0+r23-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-system-core/android-libziparchive_8.1.0+r23-5_amd64.deb"
+}

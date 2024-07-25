@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-assume_2.3.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-assume"]
+]
+depends: [
+  "node-deep-eql"
+  "node-fn-name"
+  "node-is-buffer"
+  "node-object-inspect"
+  "node-propget" {>= "1.1.0"}
+  "node-pruddy-error" {>= "2.0.2"}
+]
+extra-source "node-assume_2.3.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-assume/node-assume_2.3.0-3_all.deb"
+}

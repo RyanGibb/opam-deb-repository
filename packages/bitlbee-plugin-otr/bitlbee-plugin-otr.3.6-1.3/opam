@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bitlbee-plugin-otr_3.6-1.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bitlbee-plugin-otr"]
+]
+depends: [
+  "bitlbee-common" {= "3.6-1.3"}
+  "libc6" {>= "2.4"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libotr5" {>= "4.0.0"}
+  ("bitlbee" {= "3.6-1.3"} | "bitlbee-libpurple" {= "3.6-1.3"})
+]
+extra-source "bitlbee-plugin-otr_3.6-1.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bitlbee/bitlbee-plugin-otr_3.6-1.3_amd64.deb"
+}

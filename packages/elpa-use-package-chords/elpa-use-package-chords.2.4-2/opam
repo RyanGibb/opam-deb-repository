@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-use-package-chords_2.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-use-package-chords"]
+]
+depends: [
+  "elpa-bind-chord" {>= "0.2"}
+  "elpa-bind-key" {>= "1.0"}
+  "elpa-key-chord" {>= "0.6"}
+  "elpa-use-package" {>= "2.1"}
+  "emacsen-common"
+]
+extra-source "elpa-use-package-chords_2.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/use-package/elpa-use-package-chords_2.4-2_all.deb"
+}

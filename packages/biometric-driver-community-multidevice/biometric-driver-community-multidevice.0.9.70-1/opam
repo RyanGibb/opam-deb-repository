@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i biometric-driver-community-multidevice_0.9.70-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r biometric-driver-community-multidevice"]
+]
+depends: [
+  "biometric-utils"
+  "libbiometric0"
+  "libbiometric0" {>= "0.9.58"}
+  "libc6" {>= "2.14"}
+  "libfprint-2-2" {>= "1-1.90.1"}
+  "libglib2-0-0" {>= "2.36"}
+]
+extra-source "biometric-driver-community-multidevice_0.9.70-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/biometric-authentication/biometric-driver-community-multidevice_0.9.70-1_amd64.deb"
+}

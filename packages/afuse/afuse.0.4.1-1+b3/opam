@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i afuse_0.4.1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r afuse"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfuse2" {>= "2.6"}
+]
+extra-source "afuse_0.4.1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/afuse/afuse_0.4.1-1+b3_amd64.deb"
+}

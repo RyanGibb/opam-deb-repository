@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yaws-chat_2.1.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yaws-chat"]
+]
+depends: [
+  "erlang-base" {>= "1-25.2.2+dfsg"}
+  "erlang-crypto" {>= "1-25.2.2+dfsg"}
+  "yaws" {>= "2.1.1+dfsg-2"}
+]
+extra-source "yaws-chat_2.1.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yaws/yaws-chat_2.1.1+dfsg-2_all.deb"
+}

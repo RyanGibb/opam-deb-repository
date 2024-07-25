@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i daxctl_63-1.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r daxctl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdaxctl1" {>= "63"}
+  "libjson-c3" {>= "0.11"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "daxctl_63-1.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ndctl/daxctl_63-1.3_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-multcomp_1.4-8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-multcomp"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "3.5.0-5"}
+  "r-cran-codetools"
+  "r-cran-mvtnorm" {>= "1.0-3"}
+  "r-cran-sandwich" {>= "2.3-0"}
+  "r-cran-survival" {>= "2.39-4"}
+  "r-cran-th-data" {>= "1.0-7-2"}
+]
+extra-source "r-cran-multcomp_1.4-8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/multcomp/r-cran-multcomp_1.4-8-2_all.deb"
+}

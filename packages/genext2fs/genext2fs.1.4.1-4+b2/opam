@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i genext2fs_1.4.1-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r genext2fs"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "genext2fs_1.4.1-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/genext2fs/genext2fs_1.4.1-4+b2_amd64.deb"
+}

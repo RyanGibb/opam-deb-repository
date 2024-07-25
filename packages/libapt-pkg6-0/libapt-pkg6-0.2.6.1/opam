@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapt-pkg6.0_2.6.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapt-pkg6.0"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libelogind0"
+  "libgcc-s1" {>= "3.0"}
+  "libgcrypt20" {>= "1.10.0"}
+  "liblz4-1" {>= "0.0~r127"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libstdc++6" {>= "11"}
+  "libudev1" {>= "183"}
+  "libxxhash0" {>= "0.7.1"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.2.2.3"}
+]
+extra-source "libapt-pkg6.0_2.6.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apt/libapt-pkg6.0_2.6.1_amd64.deb"
+}

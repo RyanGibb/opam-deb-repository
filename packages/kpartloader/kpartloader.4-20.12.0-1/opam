@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kpartloader_4:20.12.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kpartloader"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libkf5coreaddons5" {>= "5.53.0~"}
+  "libkf5i18n5" {>= "5.53.0~"}
+  "libkf5parts5" {>= "5.53.0~"}
+  "libkf5widgetsaddons5" {>= "5.53.0~"}
+  "libkf5xmlgui5" {>= "4.98.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.9.0~"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.9.0~"} | "libqt5gui5-gles" {>= "5.9.0~"})
+]
+extra-source "kpartloader_4:20.12.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kde-dev-utils/kpartloader_20.12.0-1_amd64.deb"
+}

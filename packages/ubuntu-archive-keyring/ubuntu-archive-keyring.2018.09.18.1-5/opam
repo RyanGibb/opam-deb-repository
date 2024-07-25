@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ubuntu-archive-keyring_2018.09.18.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ubuntu-archive-keyring"]
+]
+depends: [
+  "ubuntu-cloud-keyring"
+  "ubuntu-dbgsym-keyring"
+  "ubuntu-keyring"
+]
+extra-source "ubuntu-archive-keyring_2018.09.18.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ubuntu-keyring/ubuntu-archive-keyring_2018.09.18.1-5_all.deb"
+}

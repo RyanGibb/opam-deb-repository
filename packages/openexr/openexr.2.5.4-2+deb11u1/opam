@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openexr_2.5.4-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openexr"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc-s1" {>= "3.0"}
+  "libilmbase25" {>= "2.5.4"}
+  "libopenexr25" {>= "2.5.4"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "openexr_2.5.4-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openexr/openexr_2.5.4-2+deb11u1_amd64.deb"
+}

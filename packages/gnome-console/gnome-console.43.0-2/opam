@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-console_43.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-console"]
+]
+depends: [
+  "gsettings-desktop-schemas"
+  "libadwaita-1-0" {>= "1.2~beta"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.72.0"}
+  "libgtk-4-1" {>= "4.0.0"}
+  "libgtop-2-0-11" {>= "2.22.3"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libvte-2-91-gtk4-0" {>= "0.69.91"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-console_43.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-console/gnome-console_43.0-2_amd64.deb"
+}

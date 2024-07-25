@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmocoding0_0.12.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmocoding0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libosmocodec0" {>= "0.9.6"}
+  "libosmocore11" {>= "0.10.2"}
+  "libosmogsm10" {>= "0.11.0"}
+  "libtalloc2" {>= "2.0.3"}
+]
+extra-source "libosmocoding0_0.12.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libosmocore/libosmocoding0_0.12.1-2_amd64.deb"
+}

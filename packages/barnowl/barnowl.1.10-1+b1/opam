@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i barnowl_1.10-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r barnowl"]
+]
+depends: [
+  "libanyevent-irc-perl"
+  "libauthen-sasl-perl"
+  "libc6" {>= "2.15"}
+  "libclass-accessor-perl"
+  "libcom-err2" {>= "1.43.9"}
+  "libdatetime-format-strptime-perl"
+  "libdatetime-perl"
+  "libglib-perl"
+  "libglib2-0-0" {>= "2.41.1"}
+  "libgssapi-perl"
+  "libio-socket-ssl-perl"
+  "libmime-base64-urlsafe-perl"
+  "libncursesw6" {>= "6"}
+  "libnet-dns-perl"
+  "libpar-perl"
+  "libperl5-28" {>= "5.28.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libtext-autoformat-perl"
+  "libtinfo6" {>= "6"}
+  "liburi-encode-perl"
+  "liburi-perl"
+  "libzephyr4"
+]
+conflicts: [
+  "barnowl-irc"
+]
+extra-source "barnowl_1.10-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/barnowl/barnowl_1.10-1+b1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i montage_6.0+dfsg-7+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r montage"]
+]
+depends: [
+  "fonts-freefont-ttf"
+  "libbz2-1-0"
+  "libc6" {>= "2.29"}
+  "libcfitsio9" {>= "3.480~"}
+  "libfreetype6" {>= "2.2.1"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libwcstools1" {>= "3.8.4"}
+]
+extra-source "montage_6.0+dfsg-7+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/montage/montage_6.0+dfsg-7+b3_amd64.deb"
+}

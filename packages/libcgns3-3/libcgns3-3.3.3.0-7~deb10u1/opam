@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcgns3.3_3.3.0-7~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcgns3.3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+]
+extra-source "libcgns3.3_3.3.0-7~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcgns/libcgns3.3_3.3.0-7~deb10u1_amd64.deb"
+}

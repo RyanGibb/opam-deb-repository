@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-isospec_1.9.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-isospec"]
+]
+depends: [
+  "libc6" {>= "2.23"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "r-cran-isospec_1.9.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/isospec/r-cran-isospec_1.9.1-5_amd64.deb"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx5_5.0.21-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx5"]
+]
+depends: [
+  "fcitx5-data" {= "5.0.21-3"}
+  "fcitx5-modules" {= "5.0.21-3"}
+  "libc6" {>= "2.34"}
+  "libexpat1" {>= "2.0.1"}
+  "libfcitx5config6" {= "5.0.21-3"}
+  "libfcitx5core7" {= "5.0.21-3"}
+  "libfcitx5utils2" {= "5.0.21-3"}
+  "libgcc-s1" {>= "3.0"}
+  "libjson-c5" {>= "0.15"}
+  "libstdc++6" {>= "11"}
+]
+conflicts: [
+  "fcitx (<< 1:5)"
+  "fcitx-bin (<< 1:5)"
+  "fcitx-data (<< 1:5)"
+]
+extra-source "fcitx5_5.0.21-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx5/fcitx5_5.0.21-3_amd64.deb"
+}

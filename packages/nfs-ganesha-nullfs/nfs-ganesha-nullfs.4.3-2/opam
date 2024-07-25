@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nfs-ganesha-nullfs_4.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nfs-ganesha-nullfs"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "nfs-ganesha" {= "4.3-2"}
+]
+extra-source "nfs-ganesha-nullfs_4.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nfs-ganesha/nfs-ganesha-nullfs_4.3-2_amd64.deb"
+}

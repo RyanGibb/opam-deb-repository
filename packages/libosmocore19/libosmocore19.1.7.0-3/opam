@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmocore19_1.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmocore19"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libmnl0" {>= "1.0.3-4~"}
+  "libsctp1" {>= "1.0.12+dfsg"}
+  "libtalloc2" {>= "2.1.0"}
+]
+extra-source "libosmocore19_1.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libosmocore/libosmocore19_1.7.0-3_amd64.deb"
+}

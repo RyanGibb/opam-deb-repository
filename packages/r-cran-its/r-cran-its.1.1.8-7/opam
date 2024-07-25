@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-its_1.1.8-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-its"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "3.5.0-5"}
+  "r-cran-foreign"
+  "r-cran-hmisc"
+  "r-cran-nnet"
+]
+extra-source "r-cran-its_1.1.8-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/its/r-cran-its_1.1.8-7_all.deb"
+}

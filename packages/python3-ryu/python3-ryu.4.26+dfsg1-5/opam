@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ryu_4.26+dfsg1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ryu"]
+]
+depends: [
+  "python3-any"
+  "python3-eventlet"
+  "python3-lxml"
+  "python3-msgpack"
+  "python3-netaddr"
+  "python3-openvswitch"
+  "python3-oslo-config"
+  "python3-paramiko"
+  "python3-pip"
+  "python3-routes"
+  "python3-six" {>= "1.4.0"}
+  "python3-tinyrpc"
+  "python3-webob"
+]
+extra-source "python3-ryu_4.26+dfsg1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ryu/python3-ryu_4.26+dfsg1-5_all.deb"
+}

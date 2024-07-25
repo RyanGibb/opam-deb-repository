@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i poolcounter_1.1.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r poolcounter"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.10"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+]
+extra-source "poolcounter_1.1.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poolcounter/poolcounter_1.1.3-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shiki-dust-theme_4.6-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shiki-dust-theme"]
+]
+depends: [
+  "gnome-dust-icon-theme"
+  "gtk2-engines-murrine" {>= "0.90.3"}
+  ("metacity" | "xfwm4")
+]
+extra-source "shiki-dust-theme_4.6-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shiki-colors-murrine/shiki-dust-theme_4.6-2.1_all.deb"
+}

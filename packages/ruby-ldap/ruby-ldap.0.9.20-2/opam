@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-ldap_0.9.20-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-ldap"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libruby2-7" {>= "2.7.0"}
+  "ruby" {< "1-2.8~"}
+  "ruby" {>= "1-2.7~0"}
+]
+extra-source "ruby-ldap_0.9.20-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-ldap/ruby-ldap_0.9.20-2_amd64.deb"
+}

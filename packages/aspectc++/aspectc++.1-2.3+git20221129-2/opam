@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aspectc++_1:2.3+git20221129-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aspectc++"]
+]
+depends: [
+  "g++"
+  "libc6" {>= "2.36"}
+  "libgcc-s1" {>= "3.3"}
+  "libstdc++6" {>= "11"}
+  "libtinfo6" {>= "6"}
+  "libxml2" {>= "2.7.4"}
+  "libz3-4" {>= "4.8.12"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "aspectc++_1:2.3+git20221129-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aspectc++/aspectc++_2.3+git20221129-2_amd64.deb"
+}

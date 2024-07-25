@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmyproxy-voms_6.2.14-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmyproxy-voms"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglobus-gssapi-gsi4" {>= "13"}
+  "libmyproxy6" {= "6.2.14-2+b2"}
+  "libssl3" {>= "3.0.0"}
+  "libvomsapi1v5" {>= "2.1.0~rc3"}
+  ("voms-clients" | "voms-clients-java")
+]
+extra-source "libmyproxy-voms_6.2.14-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/myproxy/libmyproxy-voms_6.2.14-2+b2_amd64.deb"
+}

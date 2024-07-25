@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libp4est-sc-2.2_2.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libp4est-sc-2.2"]
+]
+depends: [
+  "libc6" {>= "2.23"}
+  "libopenmpi3"
+  "zlib1g" {>= "1-1.1.4"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libp4est-sc-2.2_2.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/p4est/libp4est-sc-2.2_2.2-3_amd64.deb"
+}

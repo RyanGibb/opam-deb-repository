@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-secret-sharing-prof_1.0.1.2-2+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-secret-sharing-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-dice-entropy-conduit-prof"
+  "libghc-finite-field-prof"
+  "libghc-secret-sharing-dev" {= "1.0.1.2-2+b5"}
+  "libghc-vector-prof"
+]
+extra-source "libghc-secret-sharing-prof_1.0.1.2-2+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-secret-sharing/libghc-secret-sharing-prof_1.0.1.2-2+b5_amd64.deb"
+}

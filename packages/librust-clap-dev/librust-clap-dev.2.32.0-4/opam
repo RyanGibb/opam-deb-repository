@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-clap-dev_2.32.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-clap-dev"]
+]
+depends: [
+  "librust-bitflags-1+default-dev"
+  "librust-unicode-width-dev"
+  ("librust-textwrap-0-11+default-dev" | "librust-textwrap-0-10+default-dev")
+]
+extra-source "librust-clap-dev_2.32.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-clap/librust-clap-dev_2.32.0-4_amd64.deb"
+}

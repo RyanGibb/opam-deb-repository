@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ltsp_21.01-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ltsp"]
+]
+depends: [
+  "openssh-client"
+  "procps"
+  "python3"
+  "systemd"
+  ("busybox" | "busybox-static" | "busybox-initramfs")
+]
+extra-source "ltsp_21.01-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ltsp/ltsp_21.01-1+deb11u1_all.deb"
+}

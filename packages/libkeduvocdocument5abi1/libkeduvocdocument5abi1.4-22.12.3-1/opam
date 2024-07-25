@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkeduvocdocument5abi1_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkeduvocdocument5abi1"]
+]
+depends: [
+  "kdeedu-data"
+  "kdeedu-kvtml-data"
+  "kio"
+  "libc6" {>= "2.14"}
+  "libkeduvocdocument-data" {= "4-22.12.3-1"}
+  "libkf5archive5" {>= "5.90.0~"}
+  "libkf5coreaddons5" {>= "4.97.0"}
+  "libkf5i18n5" {>= "5.90.0~"}
+  "libkf5kiocore5" {>= "5.90.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5xml5" {>= "5.15.0~"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libkeduvocdocument5abi1_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkeduvocdocument/libkeduvocdocument5abi1_22.12.3-1_amd64.deb"
+}

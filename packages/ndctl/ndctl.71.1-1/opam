@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ndctl_71.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ndctl"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libdaxctl1" {>= "71"}
+  "libjson-c5" {>= "0.15"}
+  "libkeyutils1" {>= "1.4"}
+  "libndctl6" {>= "70"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "ndctl_71.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ndctl/ndctl_71.1-1_amd64.deb"
+}

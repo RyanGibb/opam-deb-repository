@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lua-torch-paths_0~20170226-g4ebe222-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lua-torch-paths"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  ("lua5-1" | "luajit")
+]
+extra-source "lua-torch-paths_0~20170226-g4ebe222-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lua-torch-paths/lua-torch-paths_0~20170226-g4ebe222-2_amd64.deb"
+}

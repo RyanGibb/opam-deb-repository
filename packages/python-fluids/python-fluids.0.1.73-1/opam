@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-fluids_0.1.73-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-fluids"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-fuzzywuzzy"
+  "python-ipython"
+  "python-pandas"
+  "python-pint"
+  "python-scipy"
+  "python-sympy"
+]
+extra-source "python-fluids_0.1.73-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-fluids/python-fluids_0.1.73-1_all.deb"
+}

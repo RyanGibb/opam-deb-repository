@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kbackup_22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kbackup"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.34"}
+  "libkf5archive5" {>= "5.90.0~"}
+  "libkf5completion5" {>= "5.83.0"}
+  "libkf5configcore5" {>= "4.97.0"}
+  "libkf5configwidgets5" {>= "5.23.0"}
+  "libkf5coreaddons5" {>= "5.16.0"}
+  "libkf5guiaddons5" {>= "5.90.0~"}
+  "libkf5i18n5" {>= "5.90.0~"}
+  "libkf5iconthemes5" {>= "5.90.0~"}
+  "libkf5kiocore5" {>= "5.98.0"}
+  "libkf5kiogui5" {>= "5.90.0~"}
+  "libkf5kiowidgets5" {>= "5.90.0~"}
+  "libkf5notifications5" {>= "5.90.0~"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "5.69.0"}
+  "libkf5widgetsaddons5" {>= "5.90.0~"}
+  "libkf5xmlgui5" {>= "5.90.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "kbackup_22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kbackup/kbackup_22.12.3-1_amd64.deb"
+}

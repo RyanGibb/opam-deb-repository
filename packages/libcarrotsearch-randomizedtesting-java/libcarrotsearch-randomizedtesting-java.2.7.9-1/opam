@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcarrotsearch-randomizedtesting-java_2.7.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcarrotsearch-randomizedtesting-java"]
+]
+depends: [
+  "ant-optional"
+  "junit4" {>= "4.13.2"}
+  "libasm-java" {>= "9.4"}
+  "libcommons-io-java"
+  "libguava-java"
+  "libsimple-xml-java"
+]
+extra-source "libcarrotsearch-randomizedtesting-java_2.7.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/carrotsearch-randomizedtesting/libcarrotsearch-randomizedtesting-java_2.7.9-1_all.deb"
+}

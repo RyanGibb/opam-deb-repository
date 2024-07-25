@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-fmlist-prof_0.9.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-fmlist-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-fmlist-dev" {= "0.9.3-1+b1"}
+]
+extra-source "libghc-fmlist-prof_0.9.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-fmlist/libghc-fmlist-prof_0.9.3-1+b1_amd64.deb"
+}

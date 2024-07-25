@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-gnucash_1:3.4-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-gnucash"]
+]
+depends: [
+  "guile-2-2-libs"
+  "libboost-date-time1-67-0"
+  "libboost-filesystem1-67-0"
+  "libboost-locale1-67-0"
+  "libboost-regex1-67-0" {>= "1.67.0-10"}
+  "libboost-system1-67-0"
+  "libc6" {>= "2.14"}
+  "libgc1c2" {>= "1-7.2d"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libpython3-7" {>= "3.7.0"}
+  "libxml2" {>= "2.6.27"}
+  "libxslt1-1" {>= "1.1.25"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+]
+extra-source "python3-gnucash_1:3.4-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnucash/python3-gnucash_3.4-1+deb10u1_amd64.deb"
+}

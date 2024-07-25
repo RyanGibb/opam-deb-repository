@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwnn6-dev_1.0.0-19_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwnn6-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libwnn6-1" {= "1.0.0-19"}
+]
+conflicts: [
+  "freewnn-jserver-dev"
+  "libwnn-dev"
+  "wnn-dev"
+  "wnn6-dev"
+]
+extra-source "libwnn6-dev_1.0.0-19_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wnn6-sdk/libwnn6-dev_1.0.0-19_amd64.deb"
+}

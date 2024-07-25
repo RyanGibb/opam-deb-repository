@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcolpack0v5_1.0.10-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcolpack0v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "6"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libcolpack0"
+]
+extra-source "libcolpack0v5_1.0.10-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/colpack/libcolpack0v5_1.0.10-5_amd64.deb"
+}

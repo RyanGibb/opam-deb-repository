@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmovit-dev_1.6.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmovit-dev"]
+]
+depends: [
+  "libeigen3-dev"
+  "libepoxy-dev"
+  "libfftw3-dev"
+  "libmovit8" {= "1.6.3-5"}
+]
+extra-source "libmovit-dev_1.6.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/movit/libmovit-dev_1.6.3-5_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypt-openssl-ec-perl_1.31-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypt-openssl-ec-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcrypt-openssl-bignum-perl"
+  "libssl1-1" {>= "1.1.0"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libcrypt-openssl-ec-perl_1.31-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcrypt-openssl-ec-perl/libcrypt-openssl-ec-perl_1.31-1+b1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-nloptr_2.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-nloptr"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libnlopt0" {>= "2.3"}
+  "libstdc++6" {>= "11"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.0-1"}
+  "r-cran-testthat"
+]
+extra-source "r-cran-nloptr_2.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-nloptr/r-cran-nloptr_2.0.3-1_amd64.deb"
+}

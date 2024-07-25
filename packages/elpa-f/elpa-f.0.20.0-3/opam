@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-f_0.20.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-f"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-dash" {>= "2.2.0"}
+  "elpa-s" {>= "1.7.0"}
+  "emacsen-common"
+]
+extra-source "elpa-f_0.20.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/f-el/elpa-f_0.20.0-3_all.deb"
+}

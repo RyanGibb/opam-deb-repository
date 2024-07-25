@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sphinxcontrib.plantuml_0.5-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sphinxcontrib.plantuml"]
+]
+depends: [
+  "plantuml"
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-docutils"
+  "python3-sphinx"
+]
+extra-source "python3-sphinxcontrib.plantuml_0.5-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-sphinxcontrib.plantuml/python3-sphinxcontrib.plantuml_0.5-5_all.deb"
+}

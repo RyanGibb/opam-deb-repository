@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mlterm-tiny_3.8.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mlterm-tiny"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libx11-6"
+  "mlterm-common" {= "3.8.6-2"}
+]
+conflicts: [
+  "mlterm"
+]
+extra-source "mlterm-tiny_3.8.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mlterm/mlterm-tiny_3.8.6-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lxc-dev_1:5.0.2-1+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lxc-dev"]
+]
+depends: [
+  "libcap-dev"
+  "liblxc1" {= "1-5.0.2-1+deb12u2"}
+  "libseccomp-dev"
+  "libselinux1-dev"
+  "lxc" {= "1-5.0.2-1+deb12u2"}
+]
+extra-source "lxc-dev_1:5.0.2-1+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxc/lxc-dev_5.0.2-1+deb12u2_amd64.deb"
+}

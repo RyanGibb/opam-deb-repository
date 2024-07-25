@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i q2-metadata_2020.11.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r q2-metadata"]
+]
+depends: [
+  "libjs-jquery-datatables"
+  "python3-any"
+  "python3-numpy"
+  "python3-pandas"
+  "python3-scipy"
+  "python3-skbio"
+  "q2-types" {>= "2020.11.1"}
+  "q2templates" {>= "2020.11.1"}
+  "qiime" {>= "2020.11.1"}
+]
+extra-source "q2-metadata_2020.11.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/q2-metadata/q2-metadata_2020.11.1+dfsg-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpdk_22.11.5-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpdk"]
+]
+depends: [
+  "pciutils"
+  "procps"
+  "python3-any"
+  "sysvinit-utils"
+  ("pci-ids" | "hwdata")
+]
+extra-source "dpdk_22.11.5-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/dpdk_22.11.5-1~deb12u1_amd64.deb"
+}

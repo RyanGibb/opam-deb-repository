@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdart-collision-ode-dev_6.9.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdart-collision-ode-dev"]
+]
+depends: [
+  "libdart-collision-ode6" {= "6.9.5-3"}
+  "libdart-dev"
+  "libode-dev"
+]
+extra-source "libdart-collision-ode-dev_6.9.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dart/libdart-collision-ode-dev_6.9.5-3_amd64.deb"
+}

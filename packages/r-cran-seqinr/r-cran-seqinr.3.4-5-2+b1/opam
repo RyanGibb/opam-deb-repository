@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-seqinr_3.4-5-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-seqinr"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.0-5"}
+  "r-cran-ade4"
+  "r-cran-segmented"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "r-cran-seqinr_3.4-5-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-seqinr/r-cran-seqinr_3.4-5-2+b1_amd64.deb"
+}

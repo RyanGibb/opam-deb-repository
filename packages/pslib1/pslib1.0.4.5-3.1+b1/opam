@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pslib1_0.4.5-3.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pslib1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+]
+extra-source "pslib1_0.4.5-3.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pslib/pslib1_0.4.5-3.1+b1_amd64.deb"
+}

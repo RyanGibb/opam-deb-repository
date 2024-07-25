@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdwarf-freebsd-dev_10.3~svn296373-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdwarf-freebsd-dev"]
+]
+depends: [
+  "libdwarf-freebsd-3" {= "10.3~svn296373-10"}
+  "libelf-freebsd-dev"
+  ("libc0-1-dev" | "libc-dev")
+]
+conflicts: [
+  "libdwarf-dev"
+]
+extra-source "libdwarf-freebsd-dev_10.3~svn296373-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freebsd-libs/libdwarf-freebsd-dev_10.3~svn296373-10_amd64.deb"
+}

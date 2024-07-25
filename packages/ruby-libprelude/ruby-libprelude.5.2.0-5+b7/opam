@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-libprelude_5.2.0-5+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-libprelude"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libprelude28" {= "5.2.0-5+b7"}
+  "libpreludecpp12"
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.2"}
+  "libstdc++6" {>= "11"}
+  "ruby"
+]
+extra-source "ruby-libprelude_5.2.0-5+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libprelude/ruby-libprelude_5.2.0-5+b7_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-security-bundle_3.4.22+dfsg-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-security-bundle"]
+]
+depends: [
+  "php-common"
+  "php-symfony-dependency-injection" {> "3.4.3"}
+  "php-symfony-http-kernel" {> "3.4"}
+  "php-symfony-security" {> "3.4.15"}
+  "php-xml"
+]
+extra-source "php-symfony-security-bundle_3.4.22+dfsg-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/symfony/php-symfony-security-bundle_3.4.22+dfsg-2+deb10u1_all.deb"
+}

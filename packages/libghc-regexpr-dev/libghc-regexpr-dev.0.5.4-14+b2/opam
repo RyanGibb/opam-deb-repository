@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-regexpr-dev_0.5.4-14+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-regexpr-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-hunit-dev"
+  "libghc-mtlparse-dev"
+  "libgmp10"
+]
+extra-source "libghc-regexpr-dev_0.5.4-14+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-regexpr/libghc-regexpr-dev_0.5.4-14+b2_amd64.deb"
+}

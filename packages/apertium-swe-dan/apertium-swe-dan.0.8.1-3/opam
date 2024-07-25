@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-swe-dan_0.8.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-swe-dan"]
+]
+depends: [
+  "apertium" {>= "3.6.0"}
+  "apertium-lex-tools"
+  "cg3"
+]
+conflicts: [
+  "apertium-da-sv"
+  "apertium-dan-swe"
+  "apertium-sv-da"
+]
+extra-source "apertium-swe-dan_0.8.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-swe-dan/apertium-swe-dan_0.8.1-3_all.deb"
+}

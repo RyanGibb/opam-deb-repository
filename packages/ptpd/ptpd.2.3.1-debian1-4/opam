@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ptpd_2.3.1-debian1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ptpd"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libpcap0-8" {>= "0.9.8"}
+  "lsb-base"
+]
+extra-source "ptpd_2.3.1-debian1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/ptpd/ptpd_2.3.1-debian1-4_amd64.deb"
+}

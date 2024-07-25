@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-ekg-prof_0.4.0.15-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-ekg-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-ekg-core-prof"
+  "libghc-ekg-dev" {= "0.4.0.15-4+b1"}
+  "libghc-ekg-json-prof"
+  "libghc-network-prof"
+  "libghc-snap-core-prof"
+  "libghc-snap-server-prof"
+  "libghc-unordered-containers-prof"
+]
+extra-source "libghc-ekg-prof_0.4.0.15-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-ekg/libghc-ekg-prof_0.4.0.15-4+b1_amd64.deb"
+}

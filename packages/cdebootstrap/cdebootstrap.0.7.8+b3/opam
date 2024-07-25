@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cdebootstrap_0.7.8+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cdebootstrap"]
+]
+depends: [
+  "debian-archive-keyring"
+  "gpgv"
+  "libbz2-1-0"
+  "libc6" {>= "2.27"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libdebian-installer-extra4" {>= "0.121"}
+  "libdebian-installer4" {>= "0.121"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "cdebootstrap_0.7.8+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cdebootstrap/cdebootstrap_0.7.8+b3_amd64.deb"
+}

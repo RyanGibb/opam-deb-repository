@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i msi-keyboard_1.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r msi-keyboard"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libhidapi-libusb0" {>= "0.8.0~rc1+git20140201.3a66d4e+dfsg"}
+  "libqt5core5a" {>= "5.7.0"}
+  "libstdc++6" {>= "4.4.0"}
+]
+extra-source "msi-keyboard_1.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/msi-keyboard/msi-keyboard_1.1-2+b1_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mu-cade_0.11.dfsg1-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mu-cade"]
+]
+depends: [
+  "libbulletml0v5"
+  "libc6" {>= "2.17"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libgphobos3" {>= "12"}
+  "libode8" {>= "2-0.16.2"}
+  "libsdl-mixer1-2" {>= "1.2.12"}
+  "libsdl1-2-compat-shim"
+  "mu-cade-data" {= "0.11.dfsg1-13"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "mu-cade_0.11.dfsg1-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mu-cade/mu-cade_0.11.dfsg1-13_amd64.deb"
+}

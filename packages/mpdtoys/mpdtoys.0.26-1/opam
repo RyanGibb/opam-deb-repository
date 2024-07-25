@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mpdtoys_0.26-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mpdtoys"]
+]
+depends: [
+  "libaudio-mpd-perl" {>= "1.100430-1"}
+  "perl"
+]
+extra-source "mpdtoys_0.26-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpdtoys/mpdtoys_0.26-1_all.deb"
+}

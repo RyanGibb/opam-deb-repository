@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aria2_1.34.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aria2"]
+]
+depends: [
+  "libaria2-0"
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "aria2_1.34.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aria2/aria2_1.34.0-4_amd64.deb"
+}

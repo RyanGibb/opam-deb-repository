@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-compression-webpack-plugin_10.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-compression-webpack-plugin"]
+]
+depends: [
+  "node-schema-utils"
+  "node-serialize-javascript"
+  "webpack" {>= "5.0~"}
+]
+extra-source "node-compression-webpack-plugin_10.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-compression-webpack-plugin/node-compression-webpack-plugin_10.0.0-2_all.deb"
+}

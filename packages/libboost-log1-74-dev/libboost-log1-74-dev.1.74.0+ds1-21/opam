@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libboost-log1.74-dev_1.74.0+ds1-21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libboost-log1.74-dev"]
+]
+depends: [
+  "libboost-atomic1-74-dev" {= "1.74.0+ds1-21"}
+  "libboost-date-time1-74-dev" {= "1.74.0+ds1-21"}
+  "libboost-filesystem1-74-dev" {= "1.74.0+ds1-21"}
+  "libboost-log1-74-0" {= "1.74.0+ds1-21"}
+  "libboost-regex1-74-dev" {= "1.74.0+ds1-21"}
+  "libboost-system1-74-dev" {= "1.74.0+ds1-21"}
+  "libboost-thread1-74-dev" {= "1.74.0+ds1-21"}
+  "libboost1-74-dev" {= "1.74.0+ds1-21"}
+]
+conflicts: [
+  "libboost-log1.54-dev"
+  "libboost-log1.55-dev"
+  "libboost-log1.57-dev"
+  "libboost-log1.58-dev"
+  "libboost-log1.60-dev"
+  "libboost-log1.61-dev"
+  "libboost-log1.62-dev"
+  "libboost-log1.63-dev"
+  "libboost-log1.65-dev"
+  "libboost-log1.67-dev"
+  "libboost-log1.70-dev"
+  "libboost-log1.71-dev"
+]
+extra-source "libboost-log1.74-dev_1.74.0+ds1-21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boost1.74/libboost-log1.74-dev_1.74.0+ds1-21_amd64.deb"
+}

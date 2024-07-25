@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaudclient-dev_3.5~rc2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaudclient-dev"]
+]
+depends: [
+  "audacious-dev" {>= "3.5"}
+  "libaudclient2" {= "3.5~rc2-1+b1"}
+]
+extra-source "libaudclient-dev_3.5~rc2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaudclient/libaudclient-dev_3.5~rc2-1+b1_amd64.deb"
+}

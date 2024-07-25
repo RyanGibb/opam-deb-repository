@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pylxd_2.2.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pylxd"]
+]
+depends: [
+  "python3-any"
+  "python3-babel"
+  "python3-cryptography"
+  "python3-dateutil"
+  "python3-openssl"
+  "python3-pbr"
+  "python3-requests"
+  "python3-requests-toolbelt"
+  "python3-requests-unixsocket"
+  "python3-six" {>= "1.9.0"}
+  "python3-ws4py"
+]
+extra-source "python3-pylxd_2.2.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pylxd/python3-pylxd_2.2.10-1_all.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-11-pgtap_0.99.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-11-pgtap"]
+]
+depends: [
+  "postgresql-11"
+]
+extra-source "postgresql-11-pgtap_0.99.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pgtap/postgresql-11-pgtap_0.99.0-2_all.deb"
+}

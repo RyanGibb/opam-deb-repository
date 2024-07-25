@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i i2p-router_0.9.38-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r i2p-router"]
+]
+depends: [
+  "famfamfam-flag-png"
+  "geoip-database"
+  "gettext-base"
+  "libgetopt-java"
+  "libjetty9-java"
+  "libjson-simple-java" {< "3"}
+  "libtaglibs-standard-jstlel-java"
+  "libtomcat9-java"
+  "sensible-utils"
+  ("openjdk-11-jre-headless" | "openjdk-8-jre-headless" | "default-jre-headless" | "java11-runtime-headless" | "java8-runtime-headless")
+]
+extra-source "i2p-router_0.9.38-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/i2p/i2p-router_0.9.38-3.1_all.deb"
+}

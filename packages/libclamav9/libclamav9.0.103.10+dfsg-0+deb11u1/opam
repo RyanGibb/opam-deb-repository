@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclamav9_0.103.10+dfsg-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclamav9"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.29"}
+  "libcurl4" {>= "7.16.2"}
+  "libjson-c5" {>= "0.15"}
+  "libltdl7" {>= "2.4.6"}
+  "libmspack0" {>= "0.4"}
+  "libpcre2-8-0" {>= "10.22"}
+  "libssl1-1" {>= "1.1.0"}
+  "libtfm1" {>= "0.13"}
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.2.3.4"}
+]
+extra-source "libclamav9_0.103.10+dfsg-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clamav/libclamav9_0.103.10+dfsg-0+deb11u1_amd64.deb"
+}

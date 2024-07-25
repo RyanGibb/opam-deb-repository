@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-dan-nor_1.4.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-dan-nor"]
+]
+depends: [
+  "apertium" {>= "3.6.0"}
+  "apertium-lex-tools"
+  "cg3"
+]
+conflicts: [
+  "apertium-nor-dan"
+]
+extra-source "apertium-dan-nor_1.4.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-dan-nor/apertium-dan-nor_1.4.1-2_all.deb"
+}

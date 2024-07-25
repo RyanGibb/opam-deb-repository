@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libderiving-ocsigen-ocaml_0.7.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libderiving-ocsigen-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "ocaml-base-nox"
+]
+conflicts: [
+  "libderiving-ocaml"
+  "libderiving-ocaml-dev"
+]
+extra-source "libderiving-ocsigen-ocaml_0.7.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-deriving-ocsigen/libderiving-ocsigen-ocaml_0.7.1-1+b1_amd64.deb"
+}

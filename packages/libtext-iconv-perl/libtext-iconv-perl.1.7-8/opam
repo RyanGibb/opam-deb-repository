@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtext-iconv-perl_1.7-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtext-iconv-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "perl-base"
+  "perl-base" {>= "5.36.0-4"}
+]
+extra-source "libtext-iconv-perl_1.7-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtext-iconv-perl/libtext-iconv-perl_1.7-8_amd64.deb"
+}

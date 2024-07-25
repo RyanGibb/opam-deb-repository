@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jmtpfs_0.5-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jmtpfs"]
+]
+depends: [
+  "fuse"
+  "libc6" {>= "2.34"}
+  "libfuse2" {>= "2.8"}
+  "libgcc-s1" {>= "3.0"}
+  "libmagic1" {>= "5.12"}
+  "libmtp9" {>= "1.1.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "jmtpfs_0.5-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jmtpfs/jmtpfs_0.5-4_amd64.deb"
+}

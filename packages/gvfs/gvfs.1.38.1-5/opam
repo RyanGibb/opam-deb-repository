@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gvfs_1.38.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gvfs"]
+]
+depends: [
+  "gvfs-common" {= "1.38.1-5"}
+  "gvfs-daemons" {< "1.38.1-5.1~"}
+  "gvfs-daemons" {>= "1.38.1-5"}
+  "gvfs-libs" {= "1.38.1-5"}
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.57.2"}
+]
+extra-source "gvfs_1.38.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gvfs/gvfs_1.38.1-5_amd64.deb"
+}

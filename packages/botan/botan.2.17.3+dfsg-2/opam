@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i botan_2.17.3+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r botan"]
+]
+depends: [
+  "libbotan-2-17" {>= "2.17.3+dfsg"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "botan_2.17.3+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/botan/botan_2.17.3+dfsg-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-wasm-bindgen+serde-dev_0.2.33-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-wasm-bindgen+serde-dev"]
+]
+depends: [
+  "librust-serde-1+default-dev"
+  "librust-wasm-bindgen-dev" {= "0.2.33-1"}
+]
+extra-source "librust-wasm-bindgen+serde-dev_0.2.33-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-wasm-bindgen/librust-wasm-bindgen+serde-dev_0.2.33-1_amd64.deb"
+}

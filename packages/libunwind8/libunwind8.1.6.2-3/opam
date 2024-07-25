@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libunwind8_1.6.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libunwind8"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "liblzma5" {>= "5.1.1alpha+20110809"}
+]
+conflicts: [
+  "libunwind1-dev"
+]
+extra-source "libunwind8_1.6.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libunwind/libunwind8_1.6.2-3_amd64.deb"
+}

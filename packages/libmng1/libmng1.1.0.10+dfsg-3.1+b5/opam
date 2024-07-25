@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmng1_1.0.10+dfsg-3.1+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmng1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "liblcms2-2" {>= "2.2+git20110628"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libmng1_1.0.10+dfsg-3.1+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmng/libmng1_1.0.10+dfsg-3.1+b5_amd64.deb"
+}

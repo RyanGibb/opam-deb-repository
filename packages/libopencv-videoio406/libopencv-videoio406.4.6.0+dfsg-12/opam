@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencv-videoio406_4.6.0+dfsg-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencv-videoio406"]
+]
+depends: [
+  "libavcodec-extra59"
+  "libavformat-extra59"
+  "libavutil57" {>= "7-5.0"}
+  "libc6" {>= "2.34"}
+  "libdc1394-25" {>= "2.2.6"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgphoto2-6" {>= "2.5.10"}
+  "libgphoto2-port12" {>= "2.5.10"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.0.0"}
+  "libgstreamer1-0-0" {>= "1.4.0"}
+  "libopencv-core406" {>= "4.6.0+dfsg"}
+  "libopencv-imgcodecs406" {>= "4.6.0+dfsg"}
+  "libopencv-imgproc406" {>= "4.6.0+dfsg"}
+  "libstdc++6" {>= "11"}
+  "libswscale6" {>= "7-5.0"}
+]
+extra-source "libopencv-videoio406_4.6.0+dfsg-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencv/libopencv-videoio406_4.6.0+dfsg-12_amd64.deb"
+}

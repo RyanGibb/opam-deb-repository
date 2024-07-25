@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxml-security-c-dev_2.0.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxml-security-c-dev"]
+]
+depends: [
+  "libssl-dev"
+  "libxalan-c-dev"
+  "libxerces-c-dev"
+  "libxml-security-c20" {= "2.0.2-3"}
+]
+extra-source "libxml-security-c-dev_2.0.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xml-security-c/libxml-security-c-dev_2.0.2-3_amd64.deb"
+}

@@ -1,0 +1,44 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freeipa-client_4.9.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freeipa-client"]
+]
+depends: [
+  "bind9-utils"
+  "certmonger" {>= "0.79.5-2"}
+  "curl"
+  "dnsutils"
+  "freeipa-common" {= "4.9.11-1"}
+  "krb5-user"
+  "libc6" {>= "2.34"}
+  "libcom-err2" {>= "1.43.9"}
+  "libcurl4" {>= "7.16.2"}
+  "libini-config5" {>= "0.4.0"}
+  "libjansson4" {>= "2.14"}
+  "libk5crypto3" {>= "1.20"}
+  "libkrb5-3" {>= "1.13~alpha1+dfsg"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "libnss-sss"
+  "libnss3-tools"
+  "libpam-sss"
+  "libpopt0" {>= "1.14"}
+  "libsasl2-modules-gssapi-mit"
+  "libssl3" {>= "3.0.0"}
+  "libsss-sudo"
+  "oddjob-mkhomedir"
+  "python3-any"
+  "python3-dnspython"
+  "python3-gssapi"
+  "python3-ipaclient" {= "4.9.11-1"}
+  "python3-ldap"
+  "python3-sss"
+  "sssd" {>= "1.14.0"}
+]
+conflicts: [
+  "systemd-timesyncd"
+]
+extra-source "freeipa-client_4.9.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeipa/freeipa-client_4.9.11-1_amd64.deb"
+}

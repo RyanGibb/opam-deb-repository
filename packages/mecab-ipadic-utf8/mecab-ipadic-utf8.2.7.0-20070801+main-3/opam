@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mecab-ipadic-utf8_2.7.0-20070801+main-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mecab-ipadic-utf8"]
+]
+depends: [
+  "mecab-ipadic"
+  "mecab-utils" {>= "0.93"}
+]
+extra-source "mecab-ipadic-utf8_2.7.0-20070801+main-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mecab-ipadic/mecab-ipadic-utf8_2.7.0-20070801+main-3_all.deb"
+}

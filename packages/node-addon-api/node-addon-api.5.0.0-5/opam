@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-addon-api_5.0.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-addon-api"]
+]
+depends: [
+  "libnode-dev"
+  "nodejs-any"
+]
+extra-source "node-addon-api_5.0.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-addon-api/node-addon-api_5.0.0-5_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtss2-tcti-pcap0_3.2.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtss2-tcti-pcap0"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libtss2-mu0" {>= "3.0.1"}
+  "libtss2-tctildr0" {>= "3.0.1"}
+]
+extra-source "libtss2-tcti-pcap0_3.2.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tpm2-tss/libtss2-tcti-pcap0_3.2.1-3_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stressant_0.4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stressant"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-colorlog"
+  "python-humanize"
+]
+extra-source "stressant_0.4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stressant/stressant_0.4.1_all.deb"
+}

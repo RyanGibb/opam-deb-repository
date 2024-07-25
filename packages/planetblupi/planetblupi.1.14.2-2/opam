@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i planetblupi_1.14.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r planetblupi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libsdl-kitchensink1" {>= "1.0.4"}
+  "libsdl2-2-0-0" {>= "2.0.10"}
+  "libsdl2-image-2-0-0" {>= "2.0.2"}
+  "libsdl2-mixer-2-0-0" {>= "2.0.2"}
+  "libstdc++6" {>= "9"}
+  "planetblupi-common" {>= "1.14.2-2"}
+  ("planetblupi-music-ogg" {>= "1.14.2-2"} | "planetblupi-music-midi" {>= "1.14.2-2"})
+]
+extra-source "planetblupi_1.14.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/planetblupi/planetblupi_1.14.2-2_amd64.deb"
+}

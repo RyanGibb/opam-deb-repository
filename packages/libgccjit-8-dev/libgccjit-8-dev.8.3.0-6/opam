@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgccjit-8-dev_8.3.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgccjit-8-dev"]
+]
+depends: [
+  "gcc-8-base" {= "8.3.0-6"}
+  "libgccjit0" {>= "8.3.0-6"}
+]
+extra-source "libgccjit-8-dev_8.3.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8/libgccjit-8-dev_8.3.0-6_amd64.deb"
+}

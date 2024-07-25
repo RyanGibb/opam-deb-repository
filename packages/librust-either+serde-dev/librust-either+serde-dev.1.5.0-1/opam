@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-either+serde-dev_1.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-either+serde-dev"]
+]
+depends: [
+  "librust-either-dev" {= "1.5.0-1"}
+  "librust-serde-1+default-dev"
+  "librust-serde-1+derive-dev"
+]
+extra-source "librust-either+serde-dev_1.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-either/librust-either+serde-dev_1.5.0-1_amd64.deb"
+}

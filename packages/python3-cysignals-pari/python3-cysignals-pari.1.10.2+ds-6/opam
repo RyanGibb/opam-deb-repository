@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-cysignals-pari_1.10.2+ds-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-cysignals-pari"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpari-gmp-tls7"
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any" {>= "3.6~"}
+]
+conflicts: [
+  "python3-cysignals-bare"
+]
+extra-source "python3-cysignals-pari_1.10.2+ds-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cysignals/python3-cysignals-pari_1.10.2+ds-6_amd64.deb"
+}

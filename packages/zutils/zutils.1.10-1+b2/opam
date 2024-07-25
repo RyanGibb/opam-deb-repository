@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zutils_1.10-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zutils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "zfsutils (<< 10.3~svn296373)"
+]
+extra-source "zutils_1.10-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zutils/zutils_1.10-1+b2_amd64.deb"
+}

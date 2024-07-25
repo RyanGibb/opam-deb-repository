@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i crack-md5_5.0a-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r crack-md5"]
+]
+depends: [
+  "crack-common"
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "crack"
+]
+extra-source "crack-md5_5.0a-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/crack/crack-md5_5.0a-12_amd64.deb"
+}

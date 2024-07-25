@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i g++-m68k-linux-gnu_4:12.2.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r g++-m68k-linux-gnu"]
+]
+depends: [
+  "cpp-m68k-linux-gnu" {= "4-12.2.0-5"}
+  "g++-12-m68k-linux-gnu" {>= "12.2.0-1~"}
+  "gcc-m68k-linux-gnu" {= "4-12.2.0-5"}
+]
+extra-source "g++-m68k-linux-gnu_4:12.2.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-ports/g++-m68k-linux-gnu_12.2.0-5_amd64.deb"
+}

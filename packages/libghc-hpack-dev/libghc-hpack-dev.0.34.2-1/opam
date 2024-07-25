@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hpack-dev_0.34.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hpack-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-aeson-dev"
+  "libghc-bifunctors-dev"
+  "libghc-cryptonite-dev"
+  "libghc-glob-dev"
+  "libghc-http-client-dev"
+  "libghc-http-client-tls-dev"
+  "libghc-http-types-dev"
+  "libghc-infer-license-dev"
+  "libghc-scientific-dev"
+  "libghc-unordered-containers-dev"
+  "libghc-vector-dev"
+  "libghc-yaml-dev"
+  "libgmp10"
+  "libyaml-0-2"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-hpack-dev_0.34.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hpack/libghc-hpack-dev_0.34.2-1_amd64.deb"
+}

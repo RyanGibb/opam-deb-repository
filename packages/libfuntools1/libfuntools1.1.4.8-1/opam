@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfuntools1_1.4.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfuntools1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libc6-dev"
+  "libwcstools1" {>= "3.8.4"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("gcc" | "c-compiler")
+]
+extra-source "libfuntools1_1.4.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/funtools/libfuntools1_1.4.8-1_amd64.deb"
+}

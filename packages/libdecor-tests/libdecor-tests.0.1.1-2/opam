@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdecor-tests_0.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdecor-tests"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libdecor-0-0" {= "0.1.1-2"}
+  "libegl1"
+  "libgcc-s1" {>= "3.0"}
+  "libopengl0"
+  "libstdc++6" {>= "5"}
+  "libwayland-client0" {>= "1.20.0"}
+  "libwayland-cursor0" {>= "1.18"}
+  "libwayland-egl1" {>= "1.18"}
+  "libxkbcommon0" {>= "0.5.0"}
+]
+extra-source "libdecor-tests_0.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdecor-0/libdecor-tests_0.1.1-2_amd64.deb"
+}

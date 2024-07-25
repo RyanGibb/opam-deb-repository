@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgeographic17_1.49-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgeographic17"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-4.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libgeographic13"
+  "libgeographiclib10"
+]
+extra-source "libgeographic17_1.49-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/geographiclib/libgeographic17_1.49-4_amd64.deb"
+}

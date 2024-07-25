@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pdftoipe_1:7.2.20-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pdftoipe"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpoppler102" {>= "20.09.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "pdftoipe_1:7.2.20-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ipe-tools/pdftoipe_7.2.20-1+b3_amd64.deb"
+}

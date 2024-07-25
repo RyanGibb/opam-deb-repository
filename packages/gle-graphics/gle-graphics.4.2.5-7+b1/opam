@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gle-graphics_4.2.5-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gle-graphics"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libcairo2" {>= "1.10.0"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libglib2-0-0" {>= "2.12.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libncurses6" {>= "6"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libpoppler-glib8" {>= "0.18.0"}
+  "libqt4-network" {>= "4-4.5.3"}
+  "libqt4-opengl" {>= "4-4.5.3"}
+  "libqtcore4" {>= "4-4.8.0"}
+  "libqtgui4" {>= "4-4.8.0"}
+  "libstdc++6" {>= "7"}
+  "libtiff5" {>= "4.0.3"}
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "gle-graphics_4.2.5-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gle-graphics/gle-graphics_4.2.5-7+b1_amd64.deb"
+}

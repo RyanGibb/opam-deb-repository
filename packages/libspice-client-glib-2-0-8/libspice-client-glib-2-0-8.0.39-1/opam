@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspice-client-glib-2.0-8_0.39-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspice-client-glib-2.0-8"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcacard0" {>= "2.2"}
+  "libglib2-0-0" {>= "2.43.90"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.10"}
+  "libgstreamer1-0-0" {>= "1.14.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libopus0" {>= "1.1"}
+  "libphodav-2-0-0" {>= "2.5"}
+  "libpixman-1-0" {>= "0.30.0"}
+  "libsasl2-2" {>= "2.1.27+dfsg"}
+  "libsoup2-4-1" {>= "2.49.91.1"}
+  "libssl1-1" {>= "1.1.0"}
+  "libusb-1-0-0" {>= "2-1.0.21"}
+  "libusbredirhost1" {>= "0.7.1"}
+  "libusbredirparser1" {>= "0.6"}
+  "spice-client-glib-usb-acl-helper" {= "0.39-1"}
+  "usb-ids"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libspice-client-glib-2.0-8_0.39-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spice-gtk/libspice-client-glib-2.0-8_0.39-1_amd64.deb"
+}

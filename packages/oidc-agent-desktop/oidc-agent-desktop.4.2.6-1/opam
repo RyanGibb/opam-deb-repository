@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i oidc-agent-desktop_4.2.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r oidc-agent-desktop"]
+]
+depends: [
+  "oidc-agent-cli" {>= "4.2.6-1"}
+  "yad"
+  ("xterm" | "x-terminal-emulator")
+]
+extra-source "oidc-agent-desktop_4.2.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oidc-agent/oidc-agent-desktop_4.2.6-1_all.deb"
+}

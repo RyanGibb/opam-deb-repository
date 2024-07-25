@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i maptool_0.5.5+dfsg.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r maptool"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libprotobuf-c1" {>= "1.0.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "osm2navit"
+]
+extra-source "maptool_0.5.5+dfsg.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/navit/maptool_0.5.5+dfsg.1-2+b1_amd64.deb"
+}

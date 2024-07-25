@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cargo-mozilla_0.66.0+ds1-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cargo-mozilla"]
+]
+depends: [
+  "binutils"
+  "libc6" {>= "2.29"}
+  "libcurl3-gnutls" {>= "7.28.0"}
+  "libgcc-s1" {>= "4.2"}
+  "libhttp-parser2-9" {>= "2.1"}
+  "libpcre3"
+  "libssh2-1" {>= "1.7.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("gcc" | "clang" | "c-compiler")
+  ("rustc-mozilla" | "rustc-web")
+]
+conflicts: [
+  "cargo"
+]
+extra-source "cargo-mozilla_0.66.0+ds1-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cargo-mozilla/cargo-mozilla_0.66.0+ds1-1~deb11u1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i trace-cmd_3.1.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r trace-cmd"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libtraceevent1" {>= "1-1.5.1"}
+  "libtraceevent1-plugin"
+  "libtracefs1" {>= "1.6.3"}
+  "libzstd1" {>= "1.5.2"}
+]
+extra-source "trace-cmd_3.1.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trace-cmd/trace-cmd_3.1.6-1_amd64.deb"
+}

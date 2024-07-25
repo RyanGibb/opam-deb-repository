@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgmpada12-dev_1.5-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgmpada12-dev"]
+]
+depends: [
+  "gnat" {< "13"}
+  "gnat" {>= "12"}
+  "libgmp-dev"
+  "libgmpada8" {= "1.5-7"}
+]
+extra-source "libgmpada12-dev_1.5-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgmpada/libgmpada12-dev_1.5-7_amd64.deb"
+}

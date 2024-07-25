@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-dosnow_1.0.16-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-dosnow"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "3.5.0-5"}
+  "r-cran-foreach" {>= "1.2.0"}
+  "r-cran-iterators" {>= "1.0.0"}
+  "r-cran-multicore"
+  "r-cran-snow" {>= "0.3.0"}
+]
+extra-source "r-cran-dosnow_1.0.16-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-dosnow/r-cran-dosnow_1.0.16-2_all.deb"
+}

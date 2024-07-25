@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-roadie-rails_1.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-roadie-rails"]
+]
+depends: [
+  "ruby-railties" {< "2-5.3"}
+  "ruby-railties" {>= "2-3.0"}
+  "ruby-roadie" {>= "3.1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-roadie-rails_1.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-roadie-rails/ruby-roadie-rails_1.3.0-1_all.deb"
+}

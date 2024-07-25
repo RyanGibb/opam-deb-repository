@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xmms2-plugin-ofa_0.8+dfsg-21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xmms2-plugin-ofa"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libofa0" {>= "0.9.3"}
+  "xmms2-core" {= "0.8+dfsg-21"}
+]
+extra-source "xmms2-plugin-ofa_0.8+dfsg-21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmms2/xmms2-plugin-ofa_0.8+dfsg-21_amd64.deb"
+}

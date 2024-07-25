@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-recast_0.20.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-recast"]
+]
+depends: [
+  "node-ast-types" {>= "0.14.1"}
+  "node-esprima"
+  "node-private"
+  "node-source-map"
+  "node-tslib"
+  "nodejs"
+]
+extra-source "node-recast_0.20.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-recast/node-recast_0.20.4-2_all.deb"
+}

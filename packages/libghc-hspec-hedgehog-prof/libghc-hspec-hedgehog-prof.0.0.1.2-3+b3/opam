@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hspec-hedgehog-prof_0.0.1.2-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hspec-hedgehog-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hedgehog-prof"
+  "libghc-hspec-core-prof"
+  "libghc-hspec-hedgehog-dev" {= "0.0.1.2-3+b3"}
+  "libghc-hspec-prof"
+  "libghc-hunit-prof"
+  "libghc-quickcheck2-prof"
+  "libghc-splitmix-prof"
+]
+extra-source "libghc-hspec-hedgehog-prof_0.0.1.2-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hspec-hedgehog/libghc-hspec-hedgehog-prof_0.0.1.2-3+b3_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elasticsearch-curator_5.8.1-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elasticsearch-curator"]
+]
+depends: [
+  "python3-any"
+  "python3-elasticsearch-curator" {= "5.8.1-4.1"}
+  "python3-pkg-resources"
+]
+extra-source "elasticsearch-curator_5.8.1-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elasticsearch-curator/elasticsearch-curator_5.8.1-4.1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbd-sqlite_0.9.0-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbd-sqlite"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libdbi1" {>= "0.9.0"}
+  "libsqlite0" {>= "2.8.17"}
+]
+extra-source "libdbd-sqlite_0.9.0-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdbi-drivers/libdbd-sqlite_0.9.0-6+b1_amd64.deb"
+}

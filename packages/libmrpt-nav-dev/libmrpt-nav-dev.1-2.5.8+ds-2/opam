@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmrpt-nav-dev_1:2.5.8+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmrpt-nav-dev"]
+]
+depends: [
+  "libmrpt-common-dev"
+  "libmrpt-kinematics-dev"
+  "libmrpt-maps-dev"
+  "libmrpt-nav2-5" {= "1-2.5.8+ds-2"}
+]
+extra-source "libmrpt-nav-dev_1:2.5.8+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrpt/libmrpt-nav-dev_2.5.8+ds-2_amd64.deb"
+}

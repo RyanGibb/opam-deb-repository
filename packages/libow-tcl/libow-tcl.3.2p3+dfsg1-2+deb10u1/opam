@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libow-tcl_3.2p3+dfsg1-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libow-tcl"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libow-3-2-3"
+  "libowcapi-3-2-3"
+  "libtcl8-6" {>= "8.6.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libow-tcl_3.2p3+dfsg1-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/owfs/libow-tcl_3.2p3+dfsg1-2+deb10u1_amd64.deb"
+}

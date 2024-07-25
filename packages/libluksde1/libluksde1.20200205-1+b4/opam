@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libluksde1_20200205-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libluksde1"]
+]
+depends: [
+  "libbfio1" {>= "20120425"}
+  "libc6" {>= "2.34"}
+]
+extra-source "libluksde1_20200205-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/libluksde/libluksde1_20200205-1+b4_amd64.deb"
+}

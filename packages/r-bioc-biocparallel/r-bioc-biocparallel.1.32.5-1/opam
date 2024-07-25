@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-biocparallel_1.32.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-biocparallel"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biocgenerics"
+  "r-cran-bh"
+  "r-cran-codetools"
+  "r-cran-cpp11"
+  "r-cran-futile-logger"
+  "r-cran-snow"
+]
+extra-source "r-bioc-biocparallel_1.32.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-biocparallel/r-bioc-biocparallel_1.32.5-1_amd64.deb"
+}

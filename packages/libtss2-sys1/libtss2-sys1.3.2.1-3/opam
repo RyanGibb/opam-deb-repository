@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtss2-sys1_3.2.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtss2-sys1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libtss2-mu0" {>= "3.0.1"}
+  "tpm-udev"
+]
+extra-source "libtss2-sys1_3.2.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tpm2-tss/libtss2-sys1_3.2.1-3_amd64.deb"
+}

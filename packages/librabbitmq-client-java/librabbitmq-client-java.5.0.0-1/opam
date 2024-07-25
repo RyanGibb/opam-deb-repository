@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librabbitmq-client-java_5.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librabbitmq-client-java"]
+]
+depends: [
+  "libslf4j-java" {>= "1.7.25"}
+]
+extra-source "librabbitmq-client-java_5.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rabbitmq-java-client/librabbitmq-client-java_5.0.0-1_all.deb"
+}

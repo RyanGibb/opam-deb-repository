@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hidl-gen_10.0.0+r36-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hidl-gen"]
+]
+depends: [
+  "android-libbase" {>= "1-10.0.0+r36"}
+  "android-libboringssl" {>= "10.0.0+r36"}
+  "android-liblog" {>= "1-10.0.0+r36"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "hidl-gen_10.0.0+r36-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-system-tools-hidl/hidl-gen_10.0.0+r36-2_amd64.deb"
+}

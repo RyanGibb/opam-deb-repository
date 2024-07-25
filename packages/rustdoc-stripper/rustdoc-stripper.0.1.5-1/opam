@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rustdoc-stripper_0.1.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rustdoc-stripper"]
+]
+depends: [
+  "libc6" {>= "2.18"}
+  "libgcc1" {>= "1-4.2"}
+]
+extra-source "rustdoc-stripper_0.1.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-rustdoc-stripper/rustdoc-stripper_0.1.5-1_amd64.deb"
+}

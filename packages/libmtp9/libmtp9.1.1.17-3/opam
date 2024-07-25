@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmtp9_1.1.17-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmtp9"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcrypt20" {>= "1.7.0"}
+  "libmtp-common"
+  "libusb-1-0-0" {>= "2-1.0.9"}
+]
+extra-source "libmtp9_1.1.17-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmtp/libmtp9_1.1.17-3_amd64.deb"
+}

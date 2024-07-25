@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopensm-dev_3.3.23-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopensm-dev"]
+]
+depends: [
+  "libopensm9" {= "3.3.23-2+b1"}
+  "libosmcomp5" {= "3.3.23-2+b1"}
+  "libosmvendor5" {= "3.3.23-2+b1"}
+]
+conflicts: [
+  "libopensm2-dev"
+]
+extra-source "libopensm-dev_3.3.23-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opensm/libopensm-dev_3.3.23-2+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dh-dlang_0.6.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dh-dlang"]
+]
+depends: [
+  "debhelper" {>= "12"}
+  "default-d-compiler"
+  "python3"
+]
+extra-source "dh-dlang_0.6.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dh-dlang/dh-dlang_0.6.2_all.deb"
+}

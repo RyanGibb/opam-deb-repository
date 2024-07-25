@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i winregfs_0.7-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r winregfs"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfuse2" {>= "2.8"}
+]
+extra-source "winregfs_0.7-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/winregfs/winregfs_0.7-4_amd64.deb"
+}

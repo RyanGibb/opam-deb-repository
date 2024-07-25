@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwww-opensearch-perl_0.17-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwww-opensearch-perl"]
+]
+depends: [
+  "libdata-page-perl" {>= "2.00"}
+  "liburi-perl"
+  "liburi-template-perl"
+  "libwww-perl" {>= "5.811"}
+  "libxml-feed-perl" {>= "0.08"}
+  "libxml-libxml-perl" {>= "1.58"}
+  "perl-any"
+]
+extra-source "libwww-opensearch-perl_0.17-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libw/libwww-opensearch-perl/libwww-opensearch-perl_0.17-1.1_all.deb"
+}

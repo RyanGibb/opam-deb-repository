@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puredata-core_0.53.1+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puredata-core"]
+]
+depends: [
+  "libasound2" {>= "1.0.18"}
+  "libc6" {>= "2.34"}
+  "libportaudio2" {>= "19+svn20101113"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "puredata-core_0.53.1+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puredata/puredata-core_0.53.1+ds-2_amd64.deb"
+}

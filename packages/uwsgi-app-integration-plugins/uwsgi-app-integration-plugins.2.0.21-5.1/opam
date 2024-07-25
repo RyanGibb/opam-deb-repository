@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uwsgi-app-integration-plugins_2.0.21-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uwsgi-app-integration-plugins"]
+]
+depends: [
+  "uwsgi-plugin-gccgo" {= "2.0.21-5.1"}
+  "uwsgi-plugin-jvm-openjdk-17" {= "2.0.21-5.1"}
+  "uwsgi-plugin-jwsgi-openjdk-17" {= "2.0.21-5.1"}
+  "uwsgi-plugin-lua5-1" {= "2.0.21-5.1"}
+  "uwsgi-plugin-lua5-2" {= "2.0.21-5.1"}
+  "uwsgi-plugin-mono" {= "2.0.21-5.1"}
+  "uwsgi-plugin-psgi" {= "2.0.21-5.1"}
+  "uwsgi-plugin-python3" {= "2.0.21-5.1"}
+  "uwsgi-plugin-rack-ruby3-1" {= "2.0.21-5.1"}
+  "uwsgi-plugin-ring-openjdk-17" {= "2.0.21-5.1"}
+  "uwsgi-plugin-servlet-openjdk-17" {= "2.0.21-5.1"}
+]
+extra-source "uwsgi-app-integration-plugins_2.0.21-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uwsgi/uwsgi-app-integration-plugins_2.0.21-5.1_amd64.deb"
+}

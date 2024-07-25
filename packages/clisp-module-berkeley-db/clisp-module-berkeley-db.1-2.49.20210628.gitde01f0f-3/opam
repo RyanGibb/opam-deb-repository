@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clisp-module-berkeley-db_1:2.49.20210628.gitde01f0f-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clisp-module-berkeley-db"]
+]
+depends: [
+  "clisp" {= "1-2.49.20210628.gitde01f0f-3"}
+  "libc6" {>= "2.14"}
+  "libdb5-3"
+]
+extra-source "clisp-module-berkeley-db_1:2.49.20210628.gitde01f0f-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clisp/clisp-module-berkeley-db_2.49.20210628.gitde01f0f-3_amd64.deb"
+}

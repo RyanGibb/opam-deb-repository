@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i virt-sandbox_0.5.1+git20160404-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r virt-sandbox"]
+]
+depends: [
+  "gir1-2-libvirt-sandbox-1-0" {= "0.5.1+git20160404-1"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.32.0"}
+  "libvirt-glib-1-0-0" {>= "0.0.8~"}
+  "libvirt-sandbox-1-0-5" {>= "0.5.1"}
+  "libvirt0" {>= "0.0.3"}
+  "libxml2" {>= "2.6.27"}
+  "python"
+]
+extra-source "virt-sandbox_0.5.1+git20160404-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvirt-sandbox/virt-sandbox_0.5.1+git20160404-1_amd64.deb"
+}

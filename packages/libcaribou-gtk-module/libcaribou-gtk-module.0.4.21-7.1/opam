@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcaribou-gtk-module_0.4.21-7.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcaribou-gtk-module"]
+]
+depends: [
+  "gsettings-desktop-schemas"
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+]
+extra-source "libcaribou-gtk-module_0.4.21-7.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/caribou/libcaribou-gtk-module_0.4.21-7.1_amd64.deb"
+}

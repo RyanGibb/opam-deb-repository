@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kdenetwork-filesharing_4:17.08.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kdenetwork-filesharing"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libkf5completion5" {>= "4.97.0"}
+  "libkf5coreaddons5" {>= "4.99.0"}
+  "libkf5i18n5" {>= "4.97.0"}
+  "libkf5kiocore5" {>= "4.96.0"}
+  "libkf5kiowidgets5" {>= "4.96.0"}
+  "libkf5widgetsaddons5" {>= "4.96.0"}
+  "libqt5core5a" {>= "5.9.0~beta"}
+  "libqt5gui5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "kdenetwork-filesharing_4:17.08.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdenetwork-filesharing/kdenetwork-filesharing_17.08.3-1+b1_amd64.deb"
+}

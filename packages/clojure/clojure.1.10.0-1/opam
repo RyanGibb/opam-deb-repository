@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clojure_1.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clojure"]
+]
+depends: [
+  "libclojure-java" {= "1.10.0-1"}
+  ("default-jre-headless" | "java8-runtime-headless" | "openjdk-11-jre-headless")
+]
+extra-source "clojure_1.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clojure/clojure_1.10.0-1_all.deb"
+}

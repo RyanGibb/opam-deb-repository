@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpostproc-dev_7:4.3.6-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpostproc-dev"]
+]
+depends: [
+  "libavutil-dev" {= "7-4.3.6-0+deb11u1"}
+  "libpostproc55" {= "7-4.3.6-0+deb11u1"}
+]
+extra-source "libpostproc-dev_7:4.3.6-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/ffmpeg/libpostproc-dev_4.3.6-0+deb11u1_amd64.deb"
+}

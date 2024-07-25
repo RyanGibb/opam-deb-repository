@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-restextras-0.7_0.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-restextras-0.7"]
+]
+depends: [
+  "gir1-2-freedesktop" {>= "0.9.12"}
+  "gir1-2-glib-2-0" {>= "0.9.12"}
+  "gir1-2-rest-0-7" {= "0.8.1-1"}
+  "librest-extras-0-7-0"
+]
+extra-source "gir1.2-restextras-0.7_0.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librest/gir1.2-restextras-0.7_0.8.1-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ninja-build_1.11.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ninja-build"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "ninja-build_1.11.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ninja-build/ninja-build_1.11.1-1_amd64.deb"
+}

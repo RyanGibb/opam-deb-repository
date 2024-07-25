@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i filelight_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r filelight"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.35"}
+  "libkf5configcore5" {>= "5.69.0"}
+  "libkf5configwidgets5" {>= "4.96.0"}
+  "libkf5coreaddons5" {>= "5.91.0~"}
+  "libkf5i18n5" {>= "5.98.0~"}
+  "libkf5jobwidgets5" {>= "5.70.0"}
+  "libkf5kiocore5" {>= "5.100.0"}
+  "libkf5kiogui5" {>= "5.98.0~"}
+  "libkf5kiowidgets5" {>= "5.98.0~"}
+  "libkf5widgetsaddons5" {>= "4.96.0"}
+  "libkf5xmlgui5" {>= "5.98.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5qml5" {>= "5.15.2~"}
+  "libqt5quickcontrols2-5" {>= "5.15.2~"}
+  "libqt5svg5" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  "qml-module-org-kde-kcoreaddons"
+  "qml-module-org-kde-quickcharts"
+  "qml-module-qt-labs-platform"
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+  ("libqt5quick5" {>= "5.15.2~"} | "libqt5quick5-gles" {>= "5.15.2~"})
+]
+extra-source "filelight_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/filelight/filelight_22.12.3-1_amd64.deb"
+}

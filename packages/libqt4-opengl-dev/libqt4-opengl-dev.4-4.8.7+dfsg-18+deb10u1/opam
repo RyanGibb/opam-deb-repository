@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt4-opengl-dev_4:4.8.7+dfsg-18+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt4-opengl-dev"]
+]
+depends: [
+  "libglu1-mesa-dev"
+  "libqt4-dev" {= "4-4.8.7+dfsg-18+deb10u1"}
+  "libqt4-opengl" {= "4-4.8.7+dfsg-18+deb10u1"}
+  ("libgl1-mesa-dev" | "libgl-dev")
+]
+extra-source "libqt4-opengl-dev_4:4.8.7+dfsg-18+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt4-x11/libqt4-opengl-dev_4.8.7+dfsg-18+deb10u1_amd64.deb"
+}

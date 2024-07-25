@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i inetutils-inetd_2:1.9.4-7+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r inetutils-inetd"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "lsb-base"
+  "tcpd"
+  "update-inetd"
+  ("inetutils-syslogd" | "system-log-daemon")
+]
+conflicts: [
+  "inet-superserver"
+  "netkit-inetd"
+]
+extra-source "inetutils-inetd_2:1.9.4-7+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/inetutils/inetutils-inetd_1.9.4-7+deb10u1_amd64.deb"
+}

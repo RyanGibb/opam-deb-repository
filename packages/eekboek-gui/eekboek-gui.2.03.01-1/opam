@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eekboek-gui_2.03.01-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eekboek-gui"]
+]
+depends: [
+  "eekboek" {= "2.03.01-1"}
+  "libwx-perl"
+  "libwx-perl-processstream-perl"
+  "perl-any"
+]
+extra-source "eekboek-gui_2.03.01-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eekboek/eekboek-gui_2.03.01-1_all.deb"
+}

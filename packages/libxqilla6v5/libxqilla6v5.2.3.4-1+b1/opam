@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxqilla6v5_2.3.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxqilla6v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "libxerces-c3-2"
+]
+conflicts: [
+  "libxqilla6"
+]
+extra-source "libxqilla6v5_2.3.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xqilla/libxqilla6v5_2.3.4-1+b1_amd64.deb"
+}

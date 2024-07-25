@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-rollup-pluginutils_2.3.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-rollup-pluginutils"]
+]
+depends: [
+  "node-estree-walker" {>= "0.3.0"}
+  "node-micromatch" {>= "2.3.11"}
+  "nodejs"
+]
+extra-source "node-rollup-pluginutils_2.3.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-rollup-pluginutils/node-rollup-pluginutils_2.3.3-4_all.deb"
+}

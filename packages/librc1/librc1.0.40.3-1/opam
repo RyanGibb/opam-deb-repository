@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librc1_0.40.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librc1"]
+]
+depends: [
+  "libaudit1" {>= "1-2.2.1"}
+  "libc6" {>= "2.14"}
+  "libeinfo1"
+  "libselinux1" {>= "1.32"}
+]
+extra-source "librc1_0.40.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openrc/librc1_0.40.3-1_amd64.deb"
+}

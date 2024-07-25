@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt5-style-plugins_5.0.0+git23.g335dbec-4+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt5-style-plugins"]
+]
+depends: [
+  "qt5-gtk2-platformtheme" {= "5.0.0+git23.g335dbec-4+b7"}
+  "qt5-style-plugin-cleanlooks" {= "5.0.0+git23.g335dbec-4+b7"}
+  "qt5-style-plugin-motif" {= "5.0.0+git23.g335dbec-4+b7"}
+  "qt5-style-plugin-plastique" {= "5.0.0+git23.g335dbec-4+b7"}
+]
+extra-source "qt5-style-plugins_5.0.0+git23.g335dbec-4+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtstyleplugins-src/qt5-style-plugins_5.0.0+git23.g335dbec-4+b7_amd64.deb"
+}

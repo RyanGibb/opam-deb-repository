@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-test-unit-context_0.5.0-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-test-unit-context"]
+]
+depends: [
+  "ruby-test-unit"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-test-unit-context_0.5.0-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-test-unit-context/ruby-test-unit-context_0.5.0-2.1_all.deb"
+}

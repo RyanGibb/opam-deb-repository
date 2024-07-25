@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nordugrid-arc-arex-python-lrms_6.10.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nordugrid-arc-arex-python-lrms"]
+]
+depends: [
+  "libinline-python-perl" {>= "0.56-2~"}
+  "nordugrid-arc-arex" {= "6.10.2-1"}
+  "python3-any"
+  "python3-nordugrid-arc" {= "6.10.2-1"}
+]
+extra-source "nordugrid-arc-arex-python-lrms_6.10.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nordugrid-arc/nordugrid-arc-arex-python-lrms_6.10.2-1_amd64.deb"
+}

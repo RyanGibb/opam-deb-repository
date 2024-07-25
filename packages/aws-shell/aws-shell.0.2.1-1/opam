@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aws-shell_0.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aws-shell"]
+]
+depends: [
+  "awscli" {< "2.0.0"}
+  "awscli" {>= "1.16.10"}
+  "python3"
+  "python3-any"
+  "python3-boto3" {>= "1.2.1"}
+  "python3-configobj" {>= "5.0.6"}
+  "python3-prompt-toolkit"
+  "python3-pygments"
+]
+extra-source "aws-shell_0.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aws-shell/aws-shell_0.2.1-1_all.deb"
+}

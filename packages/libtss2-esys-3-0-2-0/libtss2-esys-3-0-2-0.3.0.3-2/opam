@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtss2-esys-3.0.2-0_3.0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtss2-esys-3.0.2-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl1-1" {>= "1.1.1"}
+  "libtss2-mu0" {>= "3.0.1"}
+  "libtss2-sys1" {>= "3.0.1"}
+  "libtss2-tcti-cmd0"
+  "libtss2-tcti-device0"
+  "libtss2-tcti-mssim0"
+  "libtss2-tcti-swtpm0"
+  "tpm-udev"
+]
+extra-source "libtss2-esys-3.0.2-0_3.0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tpm2-tss/libtss2-esys-3.0.2-0_3.0.3-2_amd64.deb"
+}

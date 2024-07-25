@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5doctools5_5.78.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5doctools5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5archive5" {>= "5.78.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "4.1.1"}
+  "libxml2" {>= "2.7.4"}
+  "libxslt1-1" {>= "1.1.25"}
+]
+extra-source "libkf5doctools5_5.78.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdoctools/libkf5doctools5_5.78.0-2_amd64.deb"
+}

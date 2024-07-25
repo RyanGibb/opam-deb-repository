@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zabbix-agent_1:5.0.8+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zabbix-agent"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.17"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgnutls30" {>= "3.7.0"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libpcre3"
+  "lsb-base"
+  "pciutils"
+  "ucf"
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "zabbix-agent_1:5.0.8+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zabbix/zabbix-agent_5.0.8+dfsg-1_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-capybara_3.12.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-capybara"]
+]
+depends: [
+  "libjs-jquery"
+  "libjs-jquery-ui"
+  "ruby-addressable"
+  "ruby-mini-mime" {>= "0.1.3~"}
+  "ruby-nokogiri" {>= "1.8~"}
+  "ruby-rack" {>= "1.6~"}
+  "ruby-rack-test" {>= "0.6.3~"}
+  "ruby-regexp-parser" {>= "1.2~"}
+  "ruby-xpath" {>= "3.2~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-capybara_3.12.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-capybara/ruby-capybara_3.12.0-1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libconfig-any-perl_0.32-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libconfig-any-perl"]
+]
+depends: [
+  "perl-any"
+  ("libmodule-pluggable-perl" | "perl-any" {< "5.17.0"})
+]
+extra-source "libconfig-any-perl_0.32-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libconfig-any-perl/libconfig-any-perl_0.32-3_all.deb"
+}

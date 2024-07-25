@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-glib-2.0_1.66.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-glib-2.0"]
+]
+depends: [
+  "libgirepository-1-0-1" {>= "1.66.0"}
+  "libglib2-0-0" {>= "2.65.1"}
+]
+extra-source "gir1.2-glib-2.0_1.66.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gobject-introspection/gir1.2-glib-2.0_1.66.1-1+b1_amd64.deb"
+}

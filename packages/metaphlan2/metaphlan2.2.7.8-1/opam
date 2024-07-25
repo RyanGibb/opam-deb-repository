@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i metaphlan2_2.7.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r metaphlan2"]
+]
+depends: [
+  "bowtie2"
+  "metaphlan2-data"
+  "python-any"
+  "python-biom-format"
+  "python-msgpack"
+  "python-pandas"
+]
+extra-source "metaphlan2_2.7.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/metaphlan2/metaphlan2_2.7.8-1_all.deb"
+}

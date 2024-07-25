@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libufo-dev_0.15.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libufo-dev"]
+]
+depends: [
+  "gir1-2-ufo-0-0" {= "0.15.1-1"}
+  "libglib2-0-dev"
+  "libjson-glib-dev"
+  "libpython-dev"
+  "libufo0" {= "0.15.1-1"}
+  "libzmq3-dev"
+  "ocl-icd-opencl-dev"
+]
+extra-source "libufo-dev_0.15.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ufo-core/libufo-dev_0.15.1-1_amd64.deb"
+}

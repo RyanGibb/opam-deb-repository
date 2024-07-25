@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i imgsizer_2.10-0.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r imgsizer"]
+]
+depends: [
+  "python3"
+  ("imagemagick" | "file")
+  ("imagemagick" | "libjpeg-progs")
+]
+extra-source "imgsizer_2.10-0.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/imgsizer/imgsizer_2.10-0.2_all.deb"
+}

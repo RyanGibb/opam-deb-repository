@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhttp-daemon-ssl-perl_1.05-01-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhttp-daemon-ssl-perl"]
+]
+depends: [
+  "libio-socket-ssl-perl"
+  "perl"
+  ("libhttp-daemon-perl" | "libwww-perl" {< "6"})
+]
+extra-source "libhttp-daemon-ssl-perl_1.05-01-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhttp-daemon-ssl-perl/libhttp-daemon-ssl-perl_1.05-01-2_all.deb"
+}

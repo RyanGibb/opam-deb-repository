@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-utility-ht-prof_0.0.14-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-utility-ht-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-utility-ht-dev" {= "0.0.14-3+b2"}
+]
+extra-source "libghc-utility-ht-prof_0.0.14-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-utility-ht/libghc-utility-ht-prof_0.0.14-3+b2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmo-mgcp-client3_1.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmo-mgcp-client3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libosmocore11" {>= "0.11.0"}
+  "libosmovty4" {>= "0.10.2"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "libosmo-mgcp-client3_1.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmo-mgw/libosmo-mgcp-client3_1.4.0-1_amd64.deb"
+}

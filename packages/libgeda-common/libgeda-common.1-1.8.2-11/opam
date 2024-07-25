@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgeda-common_1:1.8.2-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgeda-common"]
+]
+conflicts: [
+  "libgeda20"
+  "libgeda29"
+  "libgeda33"
+]
+extra-source "libgeda-common_1:1.8.2-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/geda-gaf/libgeda-common_1.8.2-11_all.deb"
+}

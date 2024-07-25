@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-http-media-dev_0.7.1.2-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-http-media-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libghc-case-insensitive-dev"
+  "libghc-utf8-string-dev"
+  "libgmp10"
+]
+extra-source "libghc-http-media-dev_0.7.1.2-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-http-media/libghc-http-media-dev_0.7.1.2-3+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vim-eblook_1.2.3+git20201111-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vim-eblook"]
+]
+depends: [
+  "eblook"
+  ("vim-athena" | "vim-gtk3" | "vim-nox" | "python3-pyvim")
+]
+extra-source "vim-eblook_1.2.3+git20201111-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vim-eblook/vim-eblook_1.2.3+git20201111-3.1_all.deb"
+}

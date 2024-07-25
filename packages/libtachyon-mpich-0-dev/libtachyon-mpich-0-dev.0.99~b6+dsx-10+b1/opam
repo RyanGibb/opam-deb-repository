@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtachyon-mpich-0-dev_0.99~b6+dsx-10+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtachyon-mpich-0-dev"]
+]
+depends: [
+  "libmpich-dev"
+  "libtachyon-dev-common" {= "0.99~b6+dsx-10"}
+  "libtachyon-mpich-0" {= "0.99~b6+dsx-10+b1"}
+]
+extra-source "libtachyon-mpich-0-dev_0.99~b6+dsx-10+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tachyon/libtachyon-mpich-0-dev_0.99~b6+dsx-10+b1_amd64.deb"
+}

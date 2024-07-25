@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-numexpr_2.8.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-numexpr"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-packaging"
+]
+extra-source "python3-numexpr_2.8.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/numexpr/python3-numexpr_2.8.4-1+b2_amd64.deb"
+}

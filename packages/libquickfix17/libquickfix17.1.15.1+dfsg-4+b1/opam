@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libquickfix17_1.15.1+dfsg-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libquickfix17"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libquickfix17_1.15.1+dfsg-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/quickfix/libquickfix17_1.15.1+dfsg-4+b1_amd64.deb"
+}

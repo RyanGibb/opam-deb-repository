@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdocopt0_0.6.2-2.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdocopt0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libdocopt0_0.6.2-2.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/docopt.cpp/libdocopt0_0.6.2-2.3_amd64.deb"
+}

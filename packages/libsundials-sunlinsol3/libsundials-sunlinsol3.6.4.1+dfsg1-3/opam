@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsundials-sunlinsol3_6.4.1+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsundials-sunlinsol3"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgfortran5" {>= "10"}
+  "libklu1" {>= "1-4.5.2"}
+  "libpetsc-real3-18" {>= "3.18.2+dfsg1"}
+  "libsundials-nvecparallel-petsc6" {>= "6.4.1+dfsg1"}
+  "libsundials-sunmatrix4" {>= "6.4.1+dfsg1"}
+]
+extra-source "libsundials-sunlinsol3_6.4.1+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sundials/libsundials-sunlinsol3_6.4.1+dfsg1-3_amd64.deb"
+}

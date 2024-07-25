@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i svn-all-fast-export_1.0.18+git20221225-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r svn-all-fast-export"]
+]
+depends: [
+  "git"
+  "libapr1" {>= "1.2.7"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "5.2"}
+  "libsvn1" {>= "1.9"}
+]
+extra-source "svn-all-fast-export_1.0.18+git20221225-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/svn-all-fast-export/svn-all-fast-export_1.0.18+git20221225-1_amd64.deb"
+}

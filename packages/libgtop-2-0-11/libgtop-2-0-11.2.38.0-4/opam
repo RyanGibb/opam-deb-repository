@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgtop-2.0-11_2.38.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgtop-2.0-11"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.18.0"}
+  "libgtop2-common" {>= "2.38.0-4"}
+  "libxau6"
+]
+extra-source "libgtop-2.0-11_2.38.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgtop2/libgtop-2.0-11_2.38.0-4_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eigensoft_7.2.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eigensoft"]
+]
+depends: [
+  "libc6" {>= "2.23"}
+  "libgsl23" {>= "2.5"}
+  "liblapacke"
+  "perl-any"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "eigensoft_7.2.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eigensoft/eigensoft_7.2.1+dfsg-1_amd64.deb"
+}

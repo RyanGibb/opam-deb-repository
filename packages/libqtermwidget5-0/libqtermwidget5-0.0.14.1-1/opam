@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqtermwidget5-0_0.14.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqtermwidget5-0"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.7.0"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  "libutf8proc2" {>= "1.3"}
+  "qtermwidget5-data" {= "0.14.1-1"}
+]
+extra-source "libqtermwidget5-0_0.14.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtermwidget/libqtermwidget5-0_0.14.1-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i racket_7.2+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r racket"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libffi6" {>= "3.0.4"}
+  "racket-common" {= "7.2+dfsg1-2"}
+]
+extra-source "racket_7.2+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/racket/racket_7.2+dfsg1-2_amd64.deb"
+}

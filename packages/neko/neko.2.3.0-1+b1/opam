@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i neko_2.3.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r neko"]
+]
+depends: [
+  "libapr1" {>= "1.2.7"}
+  "libc6" {>= "2.29"}
+  "libgtk2-0-0" {>= "2.8.0"}
+  "libmariadb3" {>= "3.0.0"}
+  "libmbedcrypto3" {>= "2.13"}
+  "libmbedtls12" {>= "2.13"}
+  "libmbedx509-0" {>= "2.0"}
+  "libneko2"
+  "libpcre3"
+  "libsqlite3-0" {>= "3.5.9"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "neko_2.3.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neko/neko_2.3.0-1+b1_amd64.deb"
+}

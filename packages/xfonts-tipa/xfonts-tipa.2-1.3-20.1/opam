@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xfonts-tipa_2:1.3-20.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xfonts-tipa"]
+]
+depends: [
+  "tipa" {= "2-1.3-20.1"}
+  "xfonts-utils"
+]
+extra-source "xfonts-tipa_2:1.3-20.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tipa/xfonts-tipa_1.3-20.1_all.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i toxic_0.10.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r toxic"]
+]
+depends: [
+  "libalut0" {>= "1.0.1"}
+  "libc6" {>= "2.27"}
+  "libconfig9"
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libncursesw6" {>= "6"}
+  "libnotify4" {>= "0.7.3"}
+  "libopenal1" {>= "1.14"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libqrencode4" {>= "3.2.0"}
+  "libtinfo6" {>= "6"}
+  "libtoxcore2" {>= "0.2.10"}
+]
+extra-source "toxic_0.10.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/toxic/toxic_0.10.1-1_amd64.deb"
+}

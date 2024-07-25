@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i storebackup_3.2.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r storebackup"]
+]
+depends: [
+  "bzip2"
+  "debianutils" {>= "1.16.9"}
+  "perl-any"
+]
+extra-source "storebackup_3.2.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/storebackup/storebackup_3.2.1-2_all.deb"
+}

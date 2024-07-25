@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gif2apng_1.9+srconly-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gif2apng"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libzopfli1"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gif2apng_1.9+srconly-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gif2apng/gif2apng_1.9+srconly-2+deb10u1_amd64.deb"
+}

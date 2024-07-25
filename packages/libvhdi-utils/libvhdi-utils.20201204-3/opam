@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvhdi-utils_20201204-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvhdi-utils"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libfuse2" {>= "2.6"}
+  "libvhdi1" {>= "20201018"}
+]
+extra-source "libvhdi-utils_20201204-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvhdi/libvhdi-utils_20201204-3_amd64.deb"
+}

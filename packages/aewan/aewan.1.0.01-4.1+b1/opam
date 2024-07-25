@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aewan_1.0.01-4.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aewan"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "aewan_1.0.01-4.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aewan/aewan_1.0.01-4.1+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i runit-run_2.1.2-41_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r runit-run"]
+]
+depends: [
+  "runit"
+  ("runit-systemd" {>= "2.1.2-39"} | "sysvinit-core")
+]
+conflicts: [
+  "runit-init"
+]
+extra-source "runit-run_2.1.2-41_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/runit/runit-run_2.1.2-41_all.deb"
+}

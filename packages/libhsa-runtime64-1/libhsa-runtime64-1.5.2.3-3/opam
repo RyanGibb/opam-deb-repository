@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhsa-runtime64-1_5.2.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhsa-runtime64-1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libelf1" {>= "0.144"}
+  "libgcc-s1" {>= "3.0"}
+  "libhsakmt1" {>= "5.2.0~"}
+  "libstdc++6" {>= "12"}
+]
+extra-source "libhsa-runtime64-1_5.2.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rocr-runtime/libhsa-runtime64-1_5.2.3-3_amd64.deb"
+}

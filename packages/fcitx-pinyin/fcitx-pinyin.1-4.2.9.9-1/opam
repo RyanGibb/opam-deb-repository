@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx-pinyin_1:4.2.9.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx-pinyin"]
+]
+depends: [
+  "fcitx-bin"
+  "fcitx-data" {>= "1-4.2.9.9"}
+  "fcitx-modules"
+  "libc6" {>= "2.33"}
+]
+extra-source "fcitx-pinyin_1:4.2.9.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx/fcitx-pinyin_4.2.9.9-1_amd64.deb"
+}

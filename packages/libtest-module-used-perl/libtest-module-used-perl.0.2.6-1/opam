@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest-module-used-perl_0.2.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest-module-used-perl"]
+]
+depends: [
+  "liblist-moreutils-perl"
+  "libmodule-used-perl"
+  "libppi-perl"
+  "perl"
+  ("perl" {>= "5.13.10"} | "libcpan-meta-perl")
+]
+extra-source "libtest-module-used-perl_0.2.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest-module-used-perl/libtest-module-used-perl_0.2.6-1_all.deb"
+}

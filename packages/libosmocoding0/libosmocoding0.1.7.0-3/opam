@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmocoding0_1.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmocoding0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libosmocodec0" {>= "0.9.6"}
+  "libosmocore19" {>= "0.10.2"}
+  "libosmogsm18" {>= "1.4.0"}
+]
+extra-source "libosmocoding0_1.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libosmocore/libosmocoding0_1.7.0-3_amd64.deb"
+}

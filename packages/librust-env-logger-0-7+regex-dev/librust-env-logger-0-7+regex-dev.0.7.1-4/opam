@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-env-logger-0.7+regex-dev_0.7.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-env-logger-0.7+regex-dev"]
+]
+depends: [
+  "librust-env-logger-0-7-dev" {= "0.7.1-4"}
+  "librust-regex+default-dev"
+]
+extra-source "librust-env-logger-0.7+regex-dev_0.7.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-env-logger-0.7/librust-env-logger-0.7+regex-dev_0.7.1-4_amd64.deb"
+}

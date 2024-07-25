@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-byte-order-prof_0.1.2.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-byte-order-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-byte-order-dev" {= "0.1.2.0-2+b1"}
+  "libghc-primitive-prof"
+  "libghc-primitive-unaligned-prof"
+]
+extra-source "libghc-byte-order-prof_0.1.2.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-byte-order/libghc-byte-order-prof_0.1.2.0-2+b1_amd64.deb"
+}

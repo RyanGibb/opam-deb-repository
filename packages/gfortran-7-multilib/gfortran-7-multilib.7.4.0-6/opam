@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gfortran-7-multilib_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gfortran-7-multilib"]
+]
+depends: [
+  "gcc-7-base" {= "7.4.0-6"}
+  "gcc-7-multilib" {= "7.4.0-6"}
+  "gfortran-7" {= "7.4.0-6"}
+  "lib32gfortran-7-dev" {= "7.4.0-6"}
+  "libx32gfortran-7-dev" {= "7.4.0-6"}
+]
+extra-source "gfortran-7-multilib_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/gfortran-7-multilib_7.4.0-6_amd64.deb"
+}

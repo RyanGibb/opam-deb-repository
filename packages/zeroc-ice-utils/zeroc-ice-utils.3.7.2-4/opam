@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zeroc-ice-utils_3.7.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zeroc-ice-utils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libzeroc-ice3-7" {= "3.7.2-4"}
+  "libzeroc-icestorm3-7" {= "3.7.2-4"}
+]
+extra-source "zeroc-ice-utils_3.7.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zeroc-ice/zeroc-ice-utils_3.7.2-4_amd64.deb"
+}

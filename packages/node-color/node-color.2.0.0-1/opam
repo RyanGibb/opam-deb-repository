@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-color_2.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-color"]
+]
+depends: [
+  "node-color-convert" {>= "1.8.2"}
+  "node-color-string" {>= "1.4.0"}
+  "nodejs"
+]
+extra-source "node-color_2.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-color/node-color_2.0.0-1_all.deb"
+}

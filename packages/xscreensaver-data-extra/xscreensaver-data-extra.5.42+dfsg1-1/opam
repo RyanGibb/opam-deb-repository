@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xscreensaver-data-extra_5.42+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xscreensaver-data-extra"]
+]
+depends: [
+  "dictionaries-common"
+  "libc6" {>= "2.27"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libice6" {>= "1-1.0.0"}
+  "libjpeg-turbo-progs"
+  "libsm6"
+  "libx11-6"
+  "libxext6"
+  "libxft2" {> "2.1.1"}
+  "libxmu6"
+  "libxt6"
+  "netpbm"
+  "xscreensaver-data"
+]
+extra-source "xscreensaver-data-extra_5.42+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xscreensaver/xscreensaver-data-extra_5.42+dfsg1-1_amd64.deb"
+}

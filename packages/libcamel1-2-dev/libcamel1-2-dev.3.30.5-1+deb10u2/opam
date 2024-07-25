@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcamel1.2-dev_3.30.5-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcamel1.2-dev"]
+]
+depends: [
+  "gir1-2-camel-1-2" {= "3.30.5-1+deb10u2"}
+  "libcamel-1-2-62" {= "3.30.5-1+deb10u2"}
+  "libglib2-0-dev" {>= "2.40"}
+  "libnspr4-dev"
+  "libnss3-dev"
+  "libsqlite3-dev" {>= "3.5"}
+]
+extra-source "libcamel1.2-dev_3.30.5-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/evolution-data-server/libcamel1.2-dev_3.30.5-1+deb10u2_amd64.deb"
+}

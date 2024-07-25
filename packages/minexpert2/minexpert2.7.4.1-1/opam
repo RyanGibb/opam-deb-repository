@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i minexpert2_7.4.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r minexpert2"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libisospec++2" {>= "2.1.3"}
+  "libpappsomspp-widget0"
+  "libpappsomspp0"
+  "libqcustomplot2-0" {>= "2.0.1+dfsg1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5svg5" {>= "5.11.3"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libqt5xml5" {>= "5.11.3"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.11.3"} | "libqt5gui5-gles" {>= "5.11.3"})
+]
+conflicts: [
+  "msxpertsuite-minexpert"
+]
+extra-source "minexpert2_7.4.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/minexpert2/minexpert2_7.4.1-1_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-gpg_1.12.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-gpg"]
+]
+depends: [
+  "libassuan0" {>= "2.4.2"}
+  "libc6" {>= "2.14"}
+  "libgpg-error0" {>= "1.24"}
+  "libgpgme11" {>= "1.12.0"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-gpg_1.12.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gpgme1.0/python-gpg_1.12.0-6_amd64.deb"
+}

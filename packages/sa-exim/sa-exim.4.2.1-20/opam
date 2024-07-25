@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sa-exim_4.2.1-20_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sa-exim"]
+]
+depends: [
+  "libc6" {>= "2.11"}
+  "libnetaddr-ip-perl"
+  "spamc"
+  ("debconf" {>= "1.2.0"} | "debconf-2-0")
+  ("exim4-daemon-heavy" | "exim4-daemon-light")
+]
+extra-source "sa-exim_4.2.1-20_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sa-exim/sa-exim_4.2.1-20_amd64.deb"
+}

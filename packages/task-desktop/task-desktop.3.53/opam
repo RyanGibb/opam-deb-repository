@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i task-desktop_3.53_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r task-desktop"]
+]
+depends: [
+  "desktop-base"
+  "tasksel" {= "3.53"}
+  "xorg"
+  "xserver-xorg-input-all"
+  "xserver-xorg-video-all"
+]
+extra-source "task-desktop_3.53_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tasksel/task-desktop_3.53_all.deb"
+}

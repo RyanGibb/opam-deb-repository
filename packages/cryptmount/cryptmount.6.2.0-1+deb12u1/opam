@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cryptmount_6.2.0-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cryptmount"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcryptsetup12" {>= "2-2.4"}
+  "libdevmapper1-02-1" {>= "2-1.02.97"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libudev1" {>= "183"}
+]
+extra-source "cryptmount_6.2.0-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cryptmount/cryptmount_6.2.0-1+deb12u1_amd64.deb"
+}

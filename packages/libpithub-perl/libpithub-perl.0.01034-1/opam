@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpithub-perl_0.01034-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpithub-perl"]
+]
+depends: [
+  "libarray-iterator-perl"
+  "libcache-lru-perl"
+  "libhttp-message-perl"
+  "libjson-maybexs-perl" {>= "1.003003"}
+  "liblwp-protocol-https-perl"
+  "libmoo-perl" {>= "1.001000"}
+  "liburi-perl"
+  "libwww-perl"
+  "perl"
+]
+extra-source "libpithub-perl_0.01034-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpithub-perl/libpithub-perl_0.01034-1_all.deb"
+}

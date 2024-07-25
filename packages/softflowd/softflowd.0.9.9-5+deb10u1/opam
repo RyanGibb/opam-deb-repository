@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i softflowd_0.9.9-5+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r softflowd"]
+]
+depends: [
+  "libc6" {>= "2.16"}
+  "libpcap0-8" {>= "0.9.8"}
+  "lsb-base"
+  "netbase"
+]
+extra-source "softflowd_0.9.9-5+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/softflowd/softflowd_0.9.9-5+deb10u1_amd64.deb"
+}

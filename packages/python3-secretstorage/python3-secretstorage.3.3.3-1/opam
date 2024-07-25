@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-secretstorage_3.3.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-secretstorage"]
+]
+depends: [
+  "dbus"
+  "python3-any"
+  "python3-cryptography" {>= "2.0"}
+  "python3-jeepney" {>= "0.6"}
+]
+extra-source "python3-secretstorage_3.3.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-secretstorage/python3-secretstorage_3.3.3-1_all.deb"
+}

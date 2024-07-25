@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglpk-java_1.12.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglpk-java"]
+]
+depends: [
+  "libc6" {>= "2.11"}
+  "libglpk40" {>= "4.65"}
+]
+extra-source "libglpk-java_1.12.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glpk-java/libglpk-java_1.12.0-2_amd64.deb"
+}

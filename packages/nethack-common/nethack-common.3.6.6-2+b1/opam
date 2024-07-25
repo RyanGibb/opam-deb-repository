@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nethack-common_3.6.6-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nethack-common"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "nethack-common_3.6.6-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nethack/nethack-common_3.6.6-2+b1_amd64.deb"
+}

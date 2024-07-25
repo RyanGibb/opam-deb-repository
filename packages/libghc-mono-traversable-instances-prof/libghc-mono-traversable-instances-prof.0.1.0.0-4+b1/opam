@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-mono-traversable-instances-prof_0.1.0.0-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-mono-traversable-instances-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-comonad-prof"
+  "libghc-dlist-instances-prof"
+  "libghc-dlist-prof"
+  "libghc-mono-traversable-instances-dev" {= "0.1.0.0-4+b1"}
+  "libghc-mono-traversable-prof"
+  "libghc-semigroupoids-prof"
+  "libghc-semigroups-prof"
+  "libghc-vector-instances-prof"
+]
+extra-source "libghc-mono-traversable-instances-prof_0.1.0.0-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-mono-traversable-instances/libghc-mono-traversable-instances-prof_0.1.0.0-4+b1_amd64.deb"
+}

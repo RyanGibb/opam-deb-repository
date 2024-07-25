@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gr-satellites_4.4.0-2+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gr-satellites"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libgnuradio-pmt3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-runtime3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-satellites4-4-0" {= "4.4.0-2+b7"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-construct"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-requests"
+]
+extra-source "gr-satellites_4.4.0-2+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gr-satellites/gr-satellites_4.4.0-2+b7_amd64.deb"
+}

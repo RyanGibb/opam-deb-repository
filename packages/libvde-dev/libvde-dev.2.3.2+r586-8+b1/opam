@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvde-dev_2.3.2+r586-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvde-dev"]
+]
+depends: [
+  "libvde0" {= "2.3.2+r586-8+b1"}
+  "sgml-base" {>= "1.28"}
+]
+conflicts: [
+  "libvdemgmt0-dev (<= 2.2.2-3)"
+]
+extra-source "libvde-dev_2.3.2+r586-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vde2/libvde-dev_2.3.2+r586-8+b1_amd64.deb"
+}

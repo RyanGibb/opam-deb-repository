@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gfortran-arc-linux-gnu_4:12.2.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gfortran-arc-linux-gnu"]
+]
+depends: [
+  "cpp-arc-linux-gnu" {= "4-12.2.0-5"}
+  "gcc-arc-linux-gnu" {= "4-12.2.0-5"}
+  "gfortran-12-arc-linux-gnu" {>= "12.2.0-1~"}
+]
+extra-source "gfortran-arc-linux-gnu_4:12.2.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-ports/gfortran-arc-linux-gnu_12.2.0-5_amd64.deb"
+}

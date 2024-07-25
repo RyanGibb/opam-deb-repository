@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kallisto_0.46.2+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kallisto"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libhts3" {>= "1.10"}
+  "libstdc++6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "kallisto_0.46.2+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kallisto/kallisto_0.46.2+dfsg-2_amd64.deb"
+}

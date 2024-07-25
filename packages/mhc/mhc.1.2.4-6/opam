@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mhc_1.2.4-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mhc"]
+]
+depends: [
+  "emacsen-common"
+  "mhc-utils" {>= "1.1.1+0.20160622"}
+]
+extra-source "mhc_1.2.4-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mhc/mhc_1.2.4-6_all.deb"
+}

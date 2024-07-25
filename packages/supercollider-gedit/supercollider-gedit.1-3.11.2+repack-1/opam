@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i supercollider-gedit_1:3.11.2+repack-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r supercollider-gedit"]
+]
+depends: [
+  "gedit" {>= "3.0.0"}
+  "supercollider-language" {>= "1-3.11.2+repack-1"}
+]
+extra-source "supercollider-gedit_1:3.11.2+repack-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/supercollider/supercollider-gedit_3.11.2+repack-1_all.deb"
+}

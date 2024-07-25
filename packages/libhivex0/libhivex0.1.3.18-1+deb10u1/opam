@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhivex0_1.3.18-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhivex0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "libguestfs0 (<= 1.0.84-4)"
+]
+extra-source "libhivex0_1.3.18-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hivex/libhivex0_1.3.18-1+deb10u1_amd64.deb"
+}

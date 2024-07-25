@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-redis-client_1.2.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-redis-client"]
+]
+depends: [
+  "erlang-eunit" {>= "1-23.2.3+dfsg"}
+  ("erlang-base" {>= "1-23.2.3+dfsg"} | "erlang-base-hipe" {>= "1-23.2.3+dfsg"})
+  ("erlang-base" | "erlang-abi" {= "17.0"})
+]
+extra-source "erlang-redis-client_1.2.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/erlang-redis-client/erlang-redis-client_1.2.0-6_amd64.deb"
+}

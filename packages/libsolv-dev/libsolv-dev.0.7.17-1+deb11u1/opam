@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsolv-dev_0.7.17-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsolv-dev"]
+]
+depends: [
+  "libsolv1" {= "0.7.17-1+deb11u1"}
+  "libsolvext-dev" {= "0.7.17-1+deb11u1"}
+]
+extra-source "libsolv-dev_0.7.17-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsolv/libsolv-dev_0.7.17-1+deb11u1_amd64.deb"
+}

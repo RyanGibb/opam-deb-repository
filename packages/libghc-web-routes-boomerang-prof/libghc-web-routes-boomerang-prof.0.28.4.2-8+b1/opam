@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-web-routes-boomerang-prof_0.28.4.2-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-web-routes-boomerang-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-boomerang-prof"
+  "libghc-web-routes-boomerang-dev" {= "0.28.4.2-8+b1"}
+  "libghc-web-routes-prof"
+]
+extra-source "libghc-web-routes-boomerang-prof_0.28.4.2-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-web-routes-boomerang/libghc-web-routes-boomerang-prof_0.28.4.2-8+b1_amd64.deb"
+}

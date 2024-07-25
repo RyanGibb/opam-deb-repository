@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmediaart-2.0-0_1.9.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmediaart-2.0-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+]
+extra-source "libmediaart-2.0-0_1.9.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmediaart/libmediaart-2.0-0_1.9.4-2_amd64.deb"
+}

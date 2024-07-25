@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-roslz4_1.14.3+ds1-5+deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-roslz4"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "liblz4-1" {>= "0.0~r113"}
+  "libpython3-7" {>= "3.7.0"}
+  "libroslz4-1d"
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+]
+extra-source "python3-roslz4_1.14.3+ds1-5+deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-ros-comm/python3-roslz4_1.14.3+ds1-5+deb10u3_amd64.deb"
+}

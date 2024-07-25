@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-sdl2-dev_2.5.2.0-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-sdl2-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-exceptions-dev"
+  "libghc-linear-dev"
+  "libghc-statevar-dev"
+  "libghc-vector-dev"
+  "libgmp10"
+  "libsdl2-2-0-0" {>= "2.0.12+dfsg1"}
+  "libsdl2-dev"
+]
+extra-source "libghc-sdl2-dev_2.5.2.0-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-sdl2/libghc-sdl2-dev_2.5.2.0-1+b3_amd64.deb"
+}

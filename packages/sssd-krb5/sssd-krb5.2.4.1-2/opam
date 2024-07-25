@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sssd-krb5_2.4.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sssd-krb5"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+  "sssd-common" {= "2.4.1-2"}
+  "sssd-krb5-common" {= "2.4.1-2"}
+]
+extra-source "sssd-krb5_2.4.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sssd/sssd-krb5_2.4.1-2_amd64.deb"
+}

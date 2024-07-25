@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkosm1_22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkosm1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libprotobuf32" {>= "3.21.12"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.15~"}
+  "libstdc++6" {>= "11"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libkosm1_22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kosmindoormap/libkosm1_22.12.3-1_amd64.deb"
+}

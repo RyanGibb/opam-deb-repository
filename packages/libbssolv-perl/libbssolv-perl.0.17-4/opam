@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbssolv-perl_0.17-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbssolv-perl"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libsolv1" {>= "0.7.11"}
+  "libsolvext1" {>= "0.7.11"}
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "libbssolv-perl_0.17-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbssolv-perl/libbssolv-perl_0.17-4_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i picard_2.5.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r picard"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libchromaprint-tools"
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-dateutil"
+  "python3-libdiscid"
+  "python3-mutagen" {>= "1.37"}
+  "python3-pyqt5" {>= "5.8"}
+]
+extra-source "picard_2.5.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/picard/picard_2.5.6-1_amd64.deb"
+}

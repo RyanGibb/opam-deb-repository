@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-gssapi_1.4.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-gssapi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgssapi-krb5-2" {>= "1.16"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-decorator"
+  "python-enum34"
+  "python-six" {>= "1.4.0"}
+]
+extra-source "python-gssapi_1.4.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-gssapi/python-gssapi_1.4.1-1+b1_amd64.deb"
+}

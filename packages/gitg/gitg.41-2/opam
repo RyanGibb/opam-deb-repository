@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gitg_41-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gitg"]
+]
+depends: [
+  "gir1-2-peas-1-0"
+  "git"
+  "gsettings-desktop-schemas"
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.14.0"}
+  "libdazzle-1-0-0" {>= "3.25.3"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libgee-0-8-2" {>= "0.10.1"}
+  "libgirepository-1-0-1" {>= "0.9.2"}
+  "libgit2-glib-1-0-0" {>= "1.0.0"}
+  "libglib2-0-0" {>= "2.68"}
+  "libgspell-1-2" {>= "1.8.2"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libgtksourceview-4-0" {>= "4.0.3"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpeas-1-0-0" {>= "1.6.2"}
+  "libsecret-1-0" {>= "0.7"}
+  "libxml2" {>= "2.7.4"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("default-dbus-session-bus" | "dbus-session-bus")
+]
+extra-source "gitg_41-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gitg/gitg_41-2_amd64.deb"
+}

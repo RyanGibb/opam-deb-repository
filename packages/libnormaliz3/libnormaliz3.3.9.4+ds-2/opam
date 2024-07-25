@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnormaliz3_3.9.4+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnormaliz3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libeantic1" {>= "1.1.0"}
+  "libflint17"
+  "libgcc-s1" {>= "3.4"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libgmpxx4ldbl" {>= "2-6.2.1+dfsg1"}
+  "libgomp1" {>= "6"}
+  "libnauty2" {>= "2.6r2"}
+  "libstdc++6" {>= "11"}
+]
+conflicts: [
+  "libnormaliz"
+]
+extra-source "libnormaliz3_3.9.4+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/normaliz/libnormaliz3_3.9.4+ds-2_amd64.deb"
+}

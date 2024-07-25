@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osmo-bts_1.2.2+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osmo-bts"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libosmoabis9" {>= "1.0.1"}
+  "libosmocodec0" {>= "1.4.0"}
+  "libosmocoding0" {>= "1.4.0"}
+  "libosmocore16" {>= "1.4.0"}
+  "libosmoctrl0" {>= "1.4.0"}
+  "libosmogsm15" {>= "1.4.0"}
+  "libosmotrau2" {>= "1.0.1"}
+  "libosmovty4" {>= "1.4.0"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "osmo-bts_1.2.2+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmo-bts/osmo-bts_1.2.2+dfsg1-2_amd64.deb"
+}

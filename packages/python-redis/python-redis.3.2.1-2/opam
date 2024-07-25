@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-redis_3.2.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-redis"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-redis_3.2.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-redis/python-redis_3.2.1-2_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcljx-clojure_0.6.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcljx-clojure"]
+]
+depends: [
+  "leiningen"
+  "libclojure-java"
+  "libcomplete-clojure"
+  "libcore-match-clojure" {>= "1.0.0"}
+  "libnrepl-clojure"
+  "libsjacket-clojure"
+  "libwatchtower-clojure"
+]
+extra-source "libcljx-clojure_0.6.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cljx-clojure/libcljx-clojure_0.6.0-3_all.deb"
+}

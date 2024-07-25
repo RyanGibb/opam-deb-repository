@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencsg-example_1.5.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencsg-example"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libglew2-2" {>= "2.2.0-4+b1"}
+  "libglut3-12" {>= "3.4.0"}
+  "libopencsg1" {= "1.5.0-1+b1"}
+  "libstdc++6" {>= "9"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "libopencsg-example_1.5.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencsg/libopencsg-example_1.5.0-1+b1_amd64.deb"
+}

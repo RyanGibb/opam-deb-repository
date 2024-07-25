@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yorick-mpy-openmpi_2.2.04+dfsg1-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yorick-mpy-openmpi"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libopenmpi3" {>= "4.0.3"}
+  "libx11-6"
+  "openmpi-bin"
+  "yorick" {= "2.2.04+dfsg1-12"}
+  "yorick-mpy-common" {= "2.2.04+dfsg1-12"}
+]
+extra-source "yorick-mpy-openmpi_2.2.04+dfsg1-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yorick/yorick-mpy-openmpi_2.2.04+dfsg1-12_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-websocket_1.0.33+~cs9.0.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-websocket"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libnode72" {>= "12.19.0~dfsg"}
+  "node-debug"
+  "node-es5-ext"
+  "node-typedarray-to-buffer"
+  "nodejs"
+]
+extra-source "node-websocket_1.0.33+~cs9.0.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-websocket/node-websocket_1.0.33+~cs9.0.11-2_amd64.deb"
+}

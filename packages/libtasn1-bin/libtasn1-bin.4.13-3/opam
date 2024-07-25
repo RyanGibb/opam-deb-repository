@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtasn1-bin_4.13-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtasn1-bin"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libtasn1-6" {>= "4.12"}
+]
+extra-source "libtasn1-bin_4.13-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-bin_4.13-3_amd64.deb"
+}

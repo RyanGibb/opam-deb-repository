@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jenkins-job-builder_2.9.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jenkins-job-builder"]
+]
+depends: [
+  "python3-any"
+  "python3-jenkins-job-builder" {= "2.9.1-1"}
+]
+extra-source "jenkins-job-builder_2.9.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jenkins-job-builder/jenkins-job-builder_2.9.1-1_all.deb"
+}

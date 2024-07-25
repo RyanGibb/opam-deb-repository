@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-multicool_0.1-12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-multicool"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.1.1-2"}
+  "r-cran-rcpp" {>= "0.11.2"}
+]
+extra-source "r-cran-multicool_0.1-12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-multicool/r-cran-multicool_0.1-12-1_amd64.deb"
+}

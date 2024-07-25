@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i howdoi_1.1.9-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r howdoi"]
+]
+depends: [
+  "python3-any" {>= "3.1~"}
+  "python3-cssselect"
+  "python3-lxml"
+  "python3-pygments"
+  "python3-pyquery"
+  "python3-requests"
+  "python3-requests-cache"
+]
+extra-source "howdoi_1.1.9-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/howdoi/howdoi_1.1.9-1.1_all.deb"
+}

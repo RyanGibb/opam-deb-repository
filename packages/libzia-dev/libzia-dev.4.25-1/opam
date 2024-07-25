@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzia-dev_4.25-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzia-dev"]
+]
+depends: [
+  "libftdi1-dev"
+  "libglib2-0-dev"
+  "libgtk2-0-dev"
+  "libpng-dev"
+  "libsdl2-dev"
+  "libzia" {= "4.25-1"}
+]
+extra-source "libzia-dev_4.25-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libz/libzia/libzia-dev_4.25-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gdc-8-multilib-mips64-linux-gnuabi64_8.3.0-2cross2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gdc-8-multilib-mips64-linux-gnuabi64"]
+]
+depends: [
+  "gcc-8-mips64-linux-gnuabi64-base" {>= "8"}
+  "gcc-8-multilib-mips64-linux-gnuabi64" {= "8.3.0-2cross2"}
+  "gdc-8-mips64-linux-gnuabi64" {= "8.3.0-2cross2"}
+]
+extra-source "gdc-8-multilib-mips64-linux-gnuabi64_8.3.0-2cross2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross-mipsen/gdc-8-multilib-mips64-linux-gnuabi64_8.3.0-2cross2_amd64.deb"
+}

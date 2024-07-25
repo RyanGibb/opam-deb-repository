@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtspi1_0.3.14+fixed1-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtspi1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "libtspi1_0.3.14+fixed1-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trousers/libtspi1_0.3.14+fixed1-1.2_amd64.deb"
+}

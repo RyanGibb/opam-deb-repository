@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plplot-tcl_5.15.0+dfsg2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plplot-tcl"]
+]
+depends: [
+  "iwidgets4"
+  "libc6" {>= "2.14"}
+  "libplplot17" {>= "5.15.0+dfsg"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libtk8-6" {>= "8.6.0"}
+  "libx11-6"
+  "plplot-driver-xwin" {= "5.15.0+dfsg2-6"}
+]
+extra-source "plplot-tcl_5.15.0+dfsg2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plplot/plplot-tcl_5.15.0+dfsg2-6_amd64.deb"
+}

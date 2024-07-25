@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libogdf-tulip-5.4-0_5.4.0+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libogdf-tulip-5.4-0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libogdf-tulip-5.4-0_5.4.0+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tulip/libogdf-tulip-5.4-0_5.4.0+dfsg-3_amd64.deb"
+}

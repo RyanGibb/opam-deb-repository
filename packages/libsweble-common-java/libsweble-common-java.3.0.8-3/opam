@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsweble-common-java_3.0.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsweble-common-java"]
+]
+depends: [
+  "libcommons-codec-java" {>= "1.15"}
+  "libcommons-lang3-java" {>= "3.12.0"}
+  "libxtc-rats-java"
+]
+extra-source "libsweble-common-java_3.0.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsweble-common-java/libsweble-common-java_3.0.8-3_all.deb"
+}

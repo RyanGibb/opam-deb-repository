@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i abcmidi_20210221-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r abcmidi"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+]
+conflicts: [
+  "abcmidi-yaps"
+]
+extra-source "abcmidi_20210221-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/abcmidi/abcmidi_20210221-1_amd64.deb"
+}

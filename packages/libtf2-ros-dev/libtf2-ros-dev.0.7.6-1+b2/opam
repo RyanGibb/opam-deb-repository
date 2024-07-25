@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtf2-ros-dev_0.7.6-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtf2-ros-dev"]
+]
+depends: [
+  "libactionlib-dev"
+  "libactionlib-msgs-dev"
+  "libgeometry-msgs-dev"
+  "libmessage-filters-dev"
+  "libroscpp-dev"
+  "libtf2-dev"
+  "libtf2-msgs-dev"
+  "libtf2-ros1d" {= "0.7.6-1+b2"}
+]
+extra-source "libtf2-ros-dev_0.7.6-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-geometry2/libtf2-ros-dev_0.7.6-1+b2_amd64.deb"
+}

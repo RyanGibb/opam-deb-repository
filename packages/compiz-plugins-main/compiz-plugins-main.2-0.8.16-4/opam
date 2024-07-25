@@ -1,0 +1,43 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i compiz-plugins-main_2:0.8.16-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r compiz-plugins-main"]
+]
+depends: [
+  "compiz-core"
+  "libatspi2-0-0" {>= "2.9.90"}
+  "libc6" {>= "2.17"}
+  "libcairo2" {>= "1.2.4"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libglib2-0-0" {>= "2.22.0"}
+  "libice6" {>= "1-1.0.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libsm6"
+  "libstartup-notification0" {>= "0.2"}
+  "libstdc++6" {>= "4.1.1"}
+  "libx11-6"
+  "libxcomposite1" {>= "1-0.3-1"}
+  "libxcursor1" {> "1.1.2"}
+  "libxdamage1" {>= "1-1.1"}
+  "libxext6"
+  "libxfixes3" {>= "1-4.0.1"}
+  "libxi6"
+  "libxinerama1"
+  "libxml2" {>= "2.7.4"}
+  "libxrandr2"
+  "libxrender1"
+  ("libglu1-mesa" | "libglu1")
+]
+conflicts: [
+  "compiz-dev (<< 2:0.8.14-1)"
+  "compiz-plugins (<< 2:0.8.14-1)"
+  "compiz-plugins-default (<< 2:0.8.14-1)"
+]
+extra-source "compiz-plugins-main_2:0.8.16-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/compiz-plugins-main/compiz-plugins-main_0.8.16-4_amd64.deb"
+}

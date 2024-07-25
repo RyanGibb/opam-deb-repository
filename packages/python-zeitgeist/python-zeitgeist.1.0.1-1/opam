@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-zeitgeist_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-zeitgeist"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-dbus"
+  "python-gi"
+  "python-gobject-2"
+  "python-xdg"
+]
+extra-source "python-zeitgeist_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zeitgeist/python-zeitgeist_1.0.1-1_all.deb"
+}

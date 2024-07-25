@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-prettyprinter-prof_1.2.1-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-prettyprinter-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-prettyprinter-dev" {= "1.2.1-3+b2"}
+]
+extra-source "libghc-prettyprinter-prof_1.2.1-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-prettyprinter/libghc-prettyprinter-prof_1.2.1-3+b2_amd64.deb"
+}

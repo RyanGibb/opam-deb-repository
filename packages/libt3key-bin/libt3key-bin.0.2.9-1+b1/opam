@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libt3key-bin_0.2.9-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libt3key-bin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libt3config0"
+  "libt3key1" {= "0.2.9-1+b1"}
+  "libtinfo6" {>= "6"}
+  "libxcb1"
+]
+extra-source "libt3key-bin_0.2.9-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libt3key/libt3key-bin_0.2.9-1+b1_amd64.deb"
+}

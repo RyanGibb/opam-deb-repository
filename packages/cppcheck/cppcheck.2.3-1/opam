@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cppcheck_2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cppcheck"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libpcre3"
+  "libstdc++6" {>= "9"}
+  "libtinyxml2-8" {>= "8.0.0"}
+  "libz3-4" {>= "4.8.9"}
+  "python3-any"
+  "python3-pygments"
+]
+extra-source "cppcheck_2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cppcheck/cppcheck_2.3-1_amd64.deb"
+}

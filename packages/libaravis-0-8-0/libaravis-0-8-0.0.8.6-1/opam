@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaravis-0.8-0_0.8.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaravis-0.8-0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgstreamer1-0-0" {>= "1.4.0"}
+  "libusb-1-0-0" {>= "2-1.0.9"}
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libaravis-0.8-0_0.8.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aravis/libaravis-0.8-0_0.8.6-1_amd64.deb"
+}

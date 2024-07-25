@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ohai_16.13.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ohai"]
+]
+depends: [
+  "ruby"
+  "ruby-chef-config" {< "17"}
+  "ruby-chef-config" {>= "14.12"}
+  "ruby-chef-utils" {< "17"}
+  "ruby-chef-utils" {>= "16.0"}
+  "ruby-ffi" {>= "1.9"}
+  "ruby-ffi-yajl" {>= "2.2"}
+  "ruby-ipaddress"
+  "ruby-mixlib-cli" {>= "1.7.0"}
+  "ruby-mixlib-config" {< "4.0"}
+  "ruby-mixlib-config" {>= "2.0"}
+  "ruby-mixlib-log" {< "4.0"}
+  "ruby-mixlib-log" {>= "2.0.1"}
+  "ruby-mixlib-shellout" {>= "3.2.5"}
+  "ruby-plist" {>= "3.1"}
+  "ruby-train-core"
+]
+extra-source "ohai_16.13.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ohai/ohai_16.13.0-3_all.deb"
+}

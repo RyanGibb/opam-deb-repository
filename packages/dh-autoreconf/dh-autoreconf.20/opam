@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dh-autoreconf_20_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dh-autoreconf"]
+]
+depends: [
+  "autoconf"
+  "automake"
+  "autopoint"
+  "libtool" {>= "2.4.2"}
+  "perl-any"
+  ("libdebhelper-perl" | "debhelper" {< "12.6~"})
+]
+extra-source "dh-autoreconf_20_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dh-autoreconf/dh-autoreconf_20_all.deb"
+}

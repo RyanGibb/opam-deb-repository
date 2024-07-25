@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-persistent-postgresql-prof_2.13.5.0-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-persistent-postgresql-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-attoparsec-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-conduit-prof"
+  "libghc-monad-logger-prof"
+  "libghc-persistent-postgresql-dev" {= "2.13.5.0-1+b4"}
+  "libghc-persistent-prof"
+  "libghc-postgresql-libpq-prof"
+  "libghc-postgresql-simple-prof"
+  "libghc-resource-pool-prof"
+  "libghc-resourcet-prof"
+  "libghc-string-conversions-prof"
+  "libghc-unliftio-core-prof"
+  "libghc-vault-prof"
+]
+extra-source "libghc-persistent-postgresql-prof_2.13.5.0-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-persistent-postgresql/libghc-persistent-postgresql-prof_2.13.5.0-1+b4_amd64.deb"
+}

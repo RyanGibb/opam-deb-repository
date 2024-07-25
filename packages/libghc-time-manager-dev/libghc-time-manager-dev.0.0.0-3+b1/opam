@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-time-manager-dev_0.0.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-time-manager-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-auto-update-dev"
+  "libgmp10"
+]
+extra-source "libghc-time-manager-dev_0.0.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-time-manager/libghc-time-manager-dev_0.0.0-3+b1_amd64.deb"
+}

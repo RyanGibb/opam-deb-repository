@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpetsc64-real3.18-dev_3.18.5+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpetsc64-real3.18-dev"]
+]
+depends: [
+  "gfortran"
+  "libhypre64m-dev" {>= "2.21.0"}
+  "libmumps64-dev"
+  "libopenmpi-dev" {< "4.2"}
+  "libopenmpi-dev" {>= "4.1.4"}
+  "libpetsc3-18-dev-common" {= "3.18.5+dfsg1-1"}
+  "libpetsc64-real3-18" {= "3.18.5+dfsg1-1"}
+  "libtrilinos-zoltan-dev"
+  "python3"
+  "valgrind-mpi"
+  ("gfortran-12" | "gfortran-mod-15")
+]
+extra-source "libpetsc64-real3.18-dev_3.18.5+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/petsc/libpetsc64-real3.18-dev_3.18.5+dfsg1-1_amd64.deb"
+}

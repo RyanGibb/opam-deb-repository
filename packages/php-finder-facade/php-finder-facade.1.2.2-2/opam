@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-finder-facade_1.2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-finder-facade"]
+]
+depends: [
+  "php-common"
+  "php-fdomdocument" {< "2~~"}
+  "php-fdomdocument" {>= "1.3"}
+  "php-symfony-finder"
+]
+extra-source "php-finder-facade_1.2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-finder-facade/php-finder-facade_1.2.2-2_all.deb"
+}

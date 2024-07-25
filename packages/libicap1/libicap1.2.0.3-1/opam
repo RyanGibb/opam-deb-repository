@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libicap1_2.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libicap1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libpsocksxx0" {>= "0.0.5"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libicap1_2.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bitz-server/libicap1_2.0.3-1_amd64.deb"
+}

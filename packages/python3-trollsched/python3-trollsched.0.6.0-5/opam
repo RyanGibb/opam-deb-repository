@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-trollsched_0.6.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-trollsched"]
+]
+depends: [
+  "python3-any"
+  "python3-numpy"
+  "python3-pyorbital"
+  "python3-pyresample" {>= "1.23"}
+  "python3-yaml"
+]
+extra-source "python3-trollsched_0.6.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pytroll-schedule/python3-trollsched_0.6.0-5_all.deb"
+}

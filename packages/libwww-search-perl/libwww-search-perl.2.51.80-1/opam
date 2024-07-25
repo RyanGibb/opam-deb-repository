@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwww-search-perl_2.51.80-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwww-search-perl"]
+]
+depends: [
+  "libdate-manip-perl"
+  "libfile-slurp-perl"
+  "libhtml-form-perl"
+  "libhtml-parser-perl"
+  "libhtml-tree-perl"
+  "liburi-perl"
+  "libuser-perl"
+  "libwww-mechanize-perl"
+  "libwww-perl"
+  "perl"
+  ("libcgi-pm-perl" | "perl" {< "5.19"})
+]
+extra-source "libwww-search-perl_2.51.80-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libw/libwww-search-perl/libwww-search-perl_2.51.80-1_all.deb"
+}

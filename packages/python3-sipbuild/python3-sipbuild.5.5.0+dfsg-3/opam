@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sipbuild_5.5.0+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sipbuild"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-packaging"
+  "python3-toml"
+]
+extra-source "python3-sipbuild_5.5.0+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sip5/python3-sipbuild_5.5.0+dfsg-3_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i designate-api_1:15.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r designate-api"]
+]
+depends: [
+  "adduser"
+  "debconf"
+  "designate-common" {= "1-15.0.0-4"}
+  "python3-designate" {= "1-15.0.0-4"}
+  "python3-keystoneclient"
+  "python3-openstackclient"
+  "python3-pastescript"
+  "python3-q-text-as-data"
+  "sysvinit-utils"
+  "uwsgi-plugin-python3"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "designate-api_1:15.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/designate/designate-api_15.0.0-4_all.deb"
+}

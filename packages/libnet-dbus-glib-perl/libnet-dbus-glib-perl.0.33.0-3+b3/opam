@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-dbus-glib-perl_0.33.0-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-dbus-glib-perl"]
+]
+depends: [
+  "libdbus-glib-1-2" {>= "0.78"}
+  "libglib-perl"
+  "libnet-dbus-perl"
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libnet-dbus-glib-perl_0.33.0-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-dbus-glib-perl/libnet-dbus-glib-perl_0.33.0-3+b3_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openems_0.0.35+git20190103.6a75e98+dfsg.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openems"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libcsxcad0" {= "0.0.35+git20190103.6a75e98+dfsg.1-3"}
+  "libgcc-s1" {>= "3.0"}
+  "libnf2ff0" {= "0.0.35+git20190103.6a75e98+dfsg.1-3"}
+  "libopenems0" {= "0.0.35+git20190103.6a75e98+dfsg.1-3"}
+  "libqcsxcad0" {= "0.0.35+git20190103.6a75e98+dfsg.1-3"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "openems_0.0.35+git20190103.6a75e98+dfsg.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openems/openems_0.0.35+git20190103.6a75e98+dfsg.1-3_amd64.deb"
+}

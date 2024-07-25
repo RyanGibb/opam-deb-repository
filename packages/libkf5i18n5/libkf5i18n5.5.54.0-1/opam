@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5i18n5_5.54.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5i18n5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5i18n-data" {= "5.54.0-1"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libkf5i18n5_5.54.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/ki18n/libkf5i18n5_5.54.0-1_amd64.deb"
+}

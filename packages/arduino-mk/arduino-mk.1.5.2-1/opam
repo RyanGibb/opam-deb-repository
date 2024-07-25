@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i arduino-mk_1.5.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r arduino-mk"]
+]
+depends: [
+  "arduino-core" {>= "1-1.0+dfsg-8"}
+  "make"
+  "python"
+  "python-serial"
+]
+extra-source "arduino-mk_1.5.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/arduino-mk/arduino-mk_1.5.2-1_all.deb"
+}

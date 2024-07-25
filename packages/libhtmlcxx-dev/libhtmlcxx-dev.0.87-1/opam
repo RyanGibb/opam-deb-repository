@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhtmlcxx-dev_0.87-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhtmlcxx-dev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcss-parser-pp0v5" {= "0.87-1"}
+  "libcss-parser0" {= "0.87-1"}
+  "libgcc-s1" {>= "3.0"}
+  "libhtmlcxx3v5" {= "0.87-1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libhtmlcxx-dev_0.87-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/htmlcxx/libhtmlcxx-dev_0.87-1_amd64.deb"
+}

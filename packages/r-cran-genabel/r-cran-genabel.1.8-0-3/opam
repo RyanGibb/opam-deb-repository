@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-genabel_1.8-0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-genabel"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.0-5"}
+  "r-cran-genabel-data"
+  "r-cran-mass"
+]
+extra-source "r-cran-genabel_1.8-0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-genabel/r-cran-genabel_1.8-0-3_amd64.deb"
+}

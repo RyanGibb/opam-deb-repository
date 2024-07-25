@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i geany-plugin-scope_1.37+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r geany-plugin-scope"]
+]
+depends: [
+  "geany"
+  "geany-plugins-common" {= "1.37+dfsg-6"}
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libvte-2-91-0" {>= "0.49.92"}
+]
+extra-source "geany-plugin-scope_1.37+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/geany-plugins/geany-plugin-scope_1.37+dfsg-6_amd64.deb"
+}

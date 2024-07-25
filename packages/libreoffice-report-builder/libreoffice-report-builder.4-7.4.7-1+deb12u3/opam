@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-report-builder_4:7.4.7-1+deb12u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-report-builder"]
+]
+depends: [
+  "libbase-java"
+  "libflute-java" {>= "1.1.6"}
+  "libfonts-java" {>= "1.1.6"}
+  "libformula-java" {>= "1.1.7"}
+  "liblayout-java" {>= "0.2.10"}
+  "liblibreoffice-java"
+  "libloader-java" {>= "1.1.6"}
+  "libpentaho-reporting-flow-engine-java" {>= "0.9.4"}
+  "libreoffice-common" {>= "1-7.0.0~alpha"}
+  "libreoffice-java-common"
+  "libreoffice-report-builder-bin" {>= "4-7.4.7"}
+  "librepository-java" {>= "1.1.6"}
+  "libsac-java"
+  "libserializer-java" {>= "1.1.6"}
+  "libxml-java" {>= "1.1.6"}
+  "ucf" {>= "0.8"}
+  ("libreoffice-core" | "libreoffice-core-nogui")
+]
+extra-source "libreoffice-report-builder_4:7.4.7-1+deb12u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-report-builder_7.4.7-1+deb12u3_all.deb"
+}

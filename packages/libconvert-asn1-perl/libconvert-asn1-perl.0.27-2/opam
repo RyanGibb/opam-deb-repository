@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libconvert-asn1-perl_0.27-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libconvert-asn1-perl"]
+]
+depends: [
+  "perl"
+  ("perl" {>= "5.15.3"} | "libmath-bigint-perl")
+]
+extra-source "libconvert-asn1-perl_0.27-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libconvert-asn1-perl/libconvert-asn1-perl_0.27-2_all.deb"
+}

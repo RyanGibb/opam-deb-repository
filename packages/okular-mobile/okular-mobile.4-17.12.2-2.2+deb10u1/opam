@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i okular-mobile_4:17.12.2-2.2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r okular-mobile"]
+]
+depends: [
+  "qml-module-org-kde-kirigami2"
+  "qml-module-org-kde-kquickcontrolsaddons"
+  "qml-module-org-kde-okular" {= "4-17.12.2-2.2+deb10u1"}
+  "qml-module-qtgraphicaleffects"
+  "qml-module-qtquick-controls2"
+]
+extra-source "okular-mobile_4:17.12.2-2.2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/okular/okular-mobile_17.12.2-2.2+deb10u1_amd64.deb"
+}

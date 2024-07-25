@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xdg-dbus-proxy-tests_0.1.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xdg-dbus-proxy-tests"]
+]
+depends: [
+  "dbus"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.39.4"}
+  "xdg-dbus-proxy"
+]
+extra-source "xdg-dbus-proxy-tests_0.1.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xdg-dbus-proxy/xdg-dbus-proxy-tests_0.1.2-2_amd64.deb"
+}

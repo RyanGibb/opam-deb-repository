@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qtsystems5-tools_5.0~git20190103.e3332ee+dfsg1-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qtsystems5-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.5.1~"}
+  "libqt5publishsubscribe5" {= "5.0~git20190103.e3332ee+dfsg1-5+b1"}
+  "libqt5serviceframework5" {= "5.0~git20190103.e3332ee+dfsg1-5+b1"}
+  "libqt5systeminfo5" {= "5.0~git20190103.e3332ee+dfsg1-5+b1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qtsystems5-tools_5.0~git20190103.e3332ee+dfsg1-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtsystems-opensource-src/qtsystems5-tools_5.0~git20190103.e3332ee+dfsg1-5+b1_amd64.deb"
+}

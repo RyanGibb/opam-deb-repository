@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i synaptic_0.84.6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r synaptic"]
+]
+depends: [
+  "hicolor-icon-theme"
+  "libapt-inst2-0" {>= "0.8.16~exp12"}
+  "libapt-pkg5-0" {>= "1.1~exp9"}
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.14"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libept1-5-0"
+  "libgcc1" {>= "1-3.0"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libgnutls30" {>= "3.6.5"}
+  "libgtk-3-0" {>= "3.11.7"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpcre2-8-0" {>= "10.32"}
+  "libstdc++6" {>= "5.2"}
+  "libvte-2-91-0"
+  "libx11-6"
+  "libxapian30" {>= "1.4.11~"}
+  "policykit-1"
+  "zenity"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "menu (<< 2.1.11)"
+]
+extra-source "synaptic_0.84.6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/synaptic/synaptic_0.84.6_amd64.deb"
+}

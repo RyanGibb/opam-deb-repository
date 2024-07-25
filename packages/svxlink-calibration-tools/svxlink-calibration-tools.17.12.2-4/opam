@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i svxlink-calibration-tools_17.12.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r svxlink-calibration-tools"]
+]
+depends: [
+  "libasyncaudio1-5" {>= "17.12.2"}
+  "libasynccore1-5" {>= "17.12.2"}
+  "libasynccpp1-5" {>= "17.12.2"}
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-4.0"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libpopt0" {>= "1.14"}
+  "librtlsdr0"
+  "libsigc++-2-0-0v5" {>= "2.8.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "svxlink-calibration-tools_17.12.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/svxlink/svxlink-calibration-tools_17.12.2-4_amd64.deb"
+}

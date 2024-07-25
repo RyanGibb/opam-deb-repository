@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-15-tds-fdw_2.0.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-15-tds-fdw"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsybdb5" {>= "0.91"}
+  "postgresql-15"
+]
+extra-source "postgresql-15-tds-fdw_2.0.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tds-fdw/postgresql-15-tds-fdw_2.0.3-1+b1_amd64.deb"
+}

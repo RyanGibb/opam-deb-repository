@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libshout-idjc3_2.4.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libshout-idjc3"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libogg0" {>= "1.0rc3"}
+  "libspeex1" {>= "1.2~beta3-1"}
+  "libtheora0" {>= "0.0.0.alpha7.dfsg"}
+  "libvorbis0a" {>= "1.1.2"}
+]
+extra-source "libshout-idjc3_2.4.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libshout-idjc/libshout-idjc3_2.4.3-1_amd64.deb"
+}

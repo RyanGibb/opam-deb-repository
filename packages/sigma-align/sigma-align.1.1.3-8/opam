@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sigma-align_1.1.3-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sigma-align"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.12.0"}
+]
+extra-source "sigma-align_1.1.3-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sigma-align/sigma-align_1.1.3-8_amd64.deb"
+}

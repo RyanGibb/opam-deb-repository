@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-multtest_2.38.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-multtest"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+  "r-bioc-biobase"
+  "r-bioc-biocgenerics"
+  "r-cran-mass"
+  "r-cran-survival"
+]
+extra-source "r-bioc-multtest_2.38.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-multtest/r-bioc-multtest_2.38.0-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapt-pkg-perl_0.1.39_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapt-pkg-perl"]
+]
+depends: [
+  "libapt-pkg6-0" {>= "2.1.20"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "perl"
+  "perl-base"
+]
+extra-source "libapt-pkg-perl_0.1.39_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapt-pkg-perl/libapt-pkg-perl_0.1.39_amd64.deb"
+}

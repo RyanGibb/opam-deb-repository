@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pytest-benchmark_3.2.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pytest-benchmark"]
+]
+depends: [
+  "python3-any"
+  "python3-cpuinfo"
+  "python3-pytest" {>= "2.8"}
+]
+extra-source "python3-pytest-benchmark_3.2.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pytest-benchmark/python3-pytest-benchmark_3.2.2-3_all.deb"
+}

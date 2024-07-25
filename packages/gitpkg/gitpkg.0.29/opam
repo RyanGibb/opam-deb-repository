@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gitpkg_0.29_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gitpkg"]
+]
+depends: [
+  "dpkg-dev"
+  "git" {>= "1-1.7.0"}
+]
+extra-source "gitpkg_0.29_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gitpkg/gitpkg_0.29_all.deb"
+}

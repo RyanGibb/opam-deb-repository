@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rbd-fuse_12.2.11+dfsg1-2.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rbd-fuse"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfuse2" {>= "2.6"}
+  "libgcc1" {>= "1-3.0"}
+  "librados2" {>= "0.72.2"}
+  "librbd1" {>= "0.72.2"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "rbd-fuse_12.2.11+dfsg1-2.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/rbd-fuse_12.2.11+dfsg1-2.1+b1_amd64.deb"
+}

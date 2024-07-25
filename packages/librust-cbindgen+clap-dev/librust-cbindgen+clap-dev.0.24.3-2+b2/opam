@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-cbindgen+clap-dev_0.24.3-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-cbindgen+clap-dev"]
+]
+depends: [
+  "librust-cbindgen-dev" {= "0.24.3-2+b2"}
+  "librust-clap-3-dev"
+]
+extra-source "librust-cbindgen+clap-dev_0.24.3-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-cbindgen/librust-cbindgen+clap-dev_0.24.3-2+b2_amd64.deb"
+}

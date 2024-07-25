@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-system-packages_1.0.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-system-packages"]
+]
+depends: [
+  "dh-elpa-helper"
+  "emacsen-common"
+]
+extra-source "elpa-system-packages_1.0.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/system-packages-el/elpa-system-packages_1.0.11-2_all.deb"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i valac_0.42.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r valac"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.40"}
+  "libglib2-0-dev" {>= "2.40"}
+  "libvala-0-42-0" {= "0.42.5-1"}
+  "valac-0-42-vapi"
+]
+conflicts: [
+  "valac-0.12"
+  "valac-0.14"
+  "valac-0.16"
+  "valac-0.18"
+  "valac-0.20"
+  "valac-0.22"
+  "valac-0.24"
+  "valac-0.26"
+  "valac-0.28"
+  "valac-0.30"
+]
+extra-source "valac_0.42.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vala/valac_0.42.5-1_amd64.deb"
+}

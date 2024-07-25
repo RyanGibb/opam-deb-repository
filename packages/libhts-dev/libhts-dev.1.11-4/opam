@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhts-dev_1.11-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhts-dev"]
+]
+depends: [
+  "libcurl4-gnutls-dev"
+  "libdeflate-dev"
+  "libhts3" {= "1.11-4"}
+  "liblzma-dev"
+  "zlib1g-dev"
+]
+extra-source "libhts-dev_1.11-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/htslib/libhts-dev_1.11-4_amd64.deb"
+}

@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cantor-backend-python3_4:20.12.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cantor-backend-python3"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libcantorlibs28" {>= "4-20.12.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libkf5completion5" {>= "5.57.0~"}
+  "libkf5configcore5" {>= "5.57.0~"}
+  "libkf5configgui5" {>= "5.57.0~"}
+  "libkf5coreaddons5" {>= "5.57.0~"}
+  "libkf5i18n5" {>= "5.57.0~"}
+  "libkf5kiowidgets5" {>= "5.69.0"}
+  "libkf5syntaxhighlighting5" {>= "5.57.0~"}
+  "libkf5widgetsaddons5" {>= "4.96.0"}
+  "libkf5xmlgui5" {>= "5.57.0~"}
+  "libpython3-9" {>= "3.9.1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.8.0~"}
+  "libstdc++6" {>= "5.2"}
+  "python3"
+  ("libqt5gui5" {>= "5.8.0~"} | "libqt5gui5-gles" {>= "5.8.0~"})
+]
+extra-source "cantor-backend-python3_4:20.12.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cantor/cantor-backend-python3_20.12.1-5_amd64.deb"
+}

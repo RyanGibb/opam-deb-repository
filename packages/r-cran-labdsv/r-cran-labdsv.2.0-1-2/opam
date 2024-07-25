@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-labdsv_2.0-1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-labdsv"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-cran-cluster"
+  "r-cran-mass"
+  "r-cran-mgcv"
+  "r-cran-rtsne"
+]
+extra-source "r-cran-labdsv_2.0-1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-labdsv/r-cran-labdsv_2.0-1-2_amd64.deb"
+}

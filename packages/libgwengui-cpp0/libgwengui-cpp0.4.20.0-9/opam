@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgwengui-cpp0_4.20.0-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgwengui-cpp0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libgwenhywfar60" {>= "4.5.0beta"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libgwengui-cpp0_4.20.0-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgwenhywfar/libgwengui-cpp0_4.20.0-9_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkdewebkit5_4:4.14.38-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkdewebkit5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkdecore5" {= "4-4.14.38-3"}
+  "libkdeui5" {= "4-4.14.38-3"}
+  "libkio5" {= "4-4.14.38-3"}
+  "libkparts4" {= "4-4.14.38-3"}
+  "libqt4-network" {>= "4-4.8.0"}
+  "libqtcore4" {>= "4-4.8.0"}
+  "libqtgui4" {>= "4-4.8.0"}
+  "libqtwebkit4" {>= "2.1.0~2011week13"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libkdewebkit5_4:4.14.38-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kde4libs/libkdewebkit5_4.14.38-3_amd64.deb"
+}

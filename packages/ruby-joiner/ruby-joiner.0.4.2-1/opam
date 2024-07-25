@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-joiner_0.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-joiner"]
+]
+depends: [
+  "ruby-activerecord"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-joiner_0.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-joiner/ruby-joiner_0.4.2-1_all.deb"
+}

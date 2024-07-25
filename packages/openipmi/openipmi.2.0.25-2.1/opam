@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openipmi_2.0.25-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openipmi"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libncurses6" {>= "6"}
+  "libopenipmi0"
+  "libpopt0" {>= "1.14"}
+  "libsnmp30" {>= "5.7.3+dfsg"}
+  "libssl1-1" {>= "1.1.0"}
+  "libtinfo6" {>= "6"}
+  "lsb-base"
+]
+extra-source "openipmi_2.0.25-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openipmi/openipmi_2.0.25-2.1_amd64.deb"
+}

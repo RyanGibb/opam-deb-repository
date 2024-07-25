@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblld-11-dev_1:11.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblld-11-dev"]
+]
+depends: [
+  "liblld-11" {= "1-11.0.1-2"}
+  "lld-11" {= "1-11.0.1-2"}
+]
+extra-source "liblld-11-dev_1:11.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-11/liblld-11-dev_11.0.1-2_amd64.deb"
+}

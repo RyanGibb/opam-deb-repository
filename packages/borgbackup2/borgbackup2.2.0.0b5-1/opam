@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i borgbackup2_2.0.0b5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r borgbackup2"]
+]
+depends: [
+  "libacl1" {>= "2.2.23"}
+  "libc6" {>= "2.34"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libssl3" {>= "3.0.0"}
+  "libxxhash0" {>= "0.6.5"}
+  "libzstd1" {>= "1.5.2"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-argon2"
+  "python3-msgpack" {>= "1.0.3"}
+  "python3-packaging"
+  "python3-pkg-resources"
+  "python3-platformdirs" {< "4.0.0"}
+  "python3-platformdirs" {>= "2.6.0"}
+]
+extra-source "borgbackup2_2.0.0b5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/borgbackup2/borgbackup2_2.0.0b5-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zulumount-cli_5.7.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zulumount-cli"]
+]
+depends: [
+  "libblkid1" {>= "2.17.2"}
+  "libc6" {>= "2.4"}
+  "libzulucrypt-exe1-2-0" {>= "5.4.0"}
+  "libzulucrypt1-2-0" {>= "5.7.1"}
+  "libzulucryptpluginmanager1-0-0" {>= "5.0.2"}
+]
+extra-source "zulumount-cli_5.7.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zulucrypt/zulumount-cli_5.7.1-2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sfftw-dev_2.1.5-4.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sfftw-dev"]
+]
+depends: [
+  "sfftw2" {= "2.1.5-4.2+b1"}
+]
+conflicts: [
+  "fftw-dev (<< 2.1.3-8)"
+  "fftw-single-dev"
+  "fftw1-dev"
+]
+extra-source "sfftw-dev_2.1.5-4.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fftw/sfftw-dev_2.1.5-4.2+b1_amd64.deb"
+}

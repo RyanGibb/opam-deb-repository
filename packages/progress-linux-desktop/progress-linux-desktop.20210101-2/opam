@@ -1,0 +1,50 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i progress-linux-desktop_20210101-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r progress-linux-desktop"]
+]
+depends: [
+  "apg"
+  "dosfstools"
+  "fonts-powerline"
+  "gimp"
+  "gimp-plugin-registry"
+  "gir1-2-gstreamer-1-0"
+  "gir1-2-notify-0-7"
+  "hardlink"
+  "inkscape"
+  "inkscape-open-symbols"
+  "liferea"
+  "network-manager-config-connectivity-debian"
+  "network-manager-ssh"
+  "nfs-common"
+  "ntfs-3g"
+  "nwipe"
+  "pass"
+  "pass-extension-tail"
+  "progress-linux-base-system"
+  "samba-common"
+  "sshfs"
+  "symlinks"
+  "task-desktop"
+  "task-laptop"
+  "thunderbird"
+  "tree"
+  "unzip"
+  "webext-browserpass"
+  "webext-https-everywhere"
+  "webext-privacy-badger"
+  "webext-ublock-origin"
+  "whois"
+  "zip"
+  ("exfatprogs" | "exfat-fuse")
+  ("exfatprogs" | "exfat-utils")
+  ("firefox" | "firefox-esr" | "www-browser")
+  ("task-print-server" | "cups")
+  ("thunderbird" {>= "78"} | "enigmail")
+]
+extra-source "progress-linux-desktop_20210101-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/progress-linux-metapackages/progress-linux-desktop_20210101-2_amd64.deb"
+}

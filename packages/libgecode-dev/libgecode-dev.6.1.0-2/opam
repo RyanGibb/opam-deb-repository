@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgecode-dev_6.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgecode-dev"]
+]
+depends: [
+  "libboost-dev"
+  "libgecode48" {= "6.1.0-2"}
+  "libgecodeflatzinc48" {= "6.1.0-2"}
+  "libgecodegist48" {= "6.1.0-2"}
+  "libmpfr-dev"
+  "qtbase5-dev"
+]
+extra-source "libgecode-dev_6.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gecode/libgecode-dev_6.1.0-2_amd64.deb"
+}

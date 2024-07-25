@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-lucid-prof_2.9.10-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-lucid-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-hashable-prof"
+  "libghc-lucid-dev" {= "2.9.10-3+b2"}
+  "libghc-mmorph-prof"
+  "libghc-unordered-containers-prof"
+]
+extra-source "libghc-lucid-prof_2.9.10-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-lucid/libghc-lucid-prof_2.9.10-3+b2_amd64.deb"
+}

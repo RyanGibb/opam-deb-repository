@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libflam3-dev_3.1.1+ds2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libflam3-dev"]
+]
+depends: [
+  "libflam3-0" {= "3.1.1+ds2-2"}
+]
+conflicts: [
+  "flam3"
+]
+extra-source "libflam3-dev_3.1.1+ds2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flam3/libflam3-dev_3.1.1+ds2-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ucimf-sunpinyin_0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ucimf-sunpinyin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+  "libsunpinyin3v5"
+]
+extra-source "ucimf-sunpinyin_0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ucimf-sunpinyin/ucimf-sunpinyin_0.5-1_amd64.deb"
+}

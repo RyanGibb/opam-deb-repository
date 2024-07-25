@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-horde-perms_2.1.7-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-horde-perms"]
+]
+depends: [
+  "php-common"
+  "php-horde-db" {< "3.0.0~alpha1"}
+  "php-horde-db" {>= "2.0.0"}
+  "php-horde-exception" {< "3.0.0~alpha1"}
+  "php-horde-exception" {>= "2.0.0"}
+  "php-horde-group" {< "3.0.0~alpha1"}
+  "php-horde-group" {>= "2.0.0"}
+  "php-horde-translation" {< "3.0.0~alpha1"}
+  "php-horde-translation" {>= "2.2.0"}
+  "php-horde-util" {< "3.0.0~alpha1"}
+  "php-horde-util" {>= "2.0.0"}
+]
+extra-source "php-horde-perms_2.1.7-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-horde-perms/php-horde-perms_2.1.7-4_all.deb"
+}

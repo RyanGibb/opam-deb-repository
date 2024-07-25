@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i seccure_0.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r seccure"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcrypt20" {>= "1.8.0"}
+]
+extra-source "seccure_0.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/seccure/seccure_0.5-2_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclansdl-1.0v5_1.0~svn3827-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclansdl-1.0v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libclanapp-1-0v5" {= "1.0~svn3827-8"}
+  "libgcc-s1" {>= "3.0"}
+  "libsdl-gfx1-2-5" {>= "2.0.25"}
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libclansdl-1.0"
+]
+extra-source "libclansdl-1.0v5_1.0~svn3827-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clanlib/libclansdl-1.0v5_1.0~svn3827-8_amd64.deb"
+}

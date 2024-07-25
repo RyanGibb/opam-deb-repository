@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenexr-dev_3.1.5-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenexr-dev"]
+]
+depends: [
+  "libimath-dev" {>= "3.1.2"}
+  "libopenexr-3-1-30" {= "3.1.5-5"}
+  "zlib1g-dev"
+]
+extra-source "libopenexr-dev_3.1.5-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openexr/libopenexr-dev_3.1.5-5_amd64.deb"
+}

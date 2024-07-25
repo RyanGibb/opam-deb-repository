@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsensors-applet-plugin0_3.0.0+git6-0.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsensors-applet-plugin0"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libglib2-0-0" {>= "2.22.0"}
+]
+extra-source "libsensors-applet-plugin0_3.0.0+git6-0.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sensors-applet/libsensors-applet-plugin0_3.0.0+git6-0.2+b1_amd64.deb"
+}

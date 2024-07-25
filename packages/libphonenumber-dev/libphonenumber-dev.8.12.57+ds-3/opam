@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libphonenumber-dev_8.12.57+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libphonenumber-dev"]
+]
+depends: [
+  "libabsl-dev"
+  "libboost-thread-dev"
+  "libgeocoding8" {= "8.12.57+ds-3"}
+  "libphonenumber8" {= "8.12.57+ds-3"}
+  "libprotobuf-dev"
+]
+extra-source "libphonenumber-dev_8.12.57+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libphonenumber/libphonenumber-dev_8.12.57+ds-3_amd64.deb"
+}

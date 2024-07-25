@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libshaderc1_2023.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libshaderc1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libshaderc1_2023.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shaderc/libshaderc1_2023.2-1_amd64.deb"
+}

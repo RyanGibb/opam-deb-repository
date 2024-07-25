@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-less_1.6.3~dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-less"]
+]
+depends: [
+  ("nodejs" {>= "6.11.2~dfsg-1"} | "nodejs-legacy")
+]
+extra-source "node-less_1.6.3~dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/less.js/node-less_1.6.3~dfsg-3_all.deb"
+}

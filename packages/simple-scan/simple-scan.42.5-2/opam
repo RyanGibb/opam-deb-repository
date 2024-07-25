@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i simple-scan_42.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r simple-scan"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.4.10"}
+  "libcolord2" {>= "0.1.10"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.43.92"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libgusb2" {>= "0.2.2"}
+  "libhandy-1-0" {>= "1.6.0"}
+  "libpackagekit-glib2-18" {>= "0.9.4"}
+  "libsane1" {>= "1.0.27"}
+  "libwebp7"
+  "libwebpmux3"
+  "xdg-utils"
+  "zlib1g" {>= "1-1.1.4"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("default-dbus-session-bus" | "dbus-session-bus")
+]
+extra-source "simple-scan_42.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/simple-scan/simple-scan_42.5-2_amd64.deb"
+}

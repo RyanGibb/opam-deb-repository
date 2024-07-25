@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzip4_1.7.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzip4"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libssl1-1" {>= "1.1.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libzip4_1.7.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libz/libzip/libzip4_1.7.3-1_amd64.deb"
+}

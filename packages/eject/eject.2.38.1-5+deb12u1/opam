@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eject_2.38.1-5+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eject"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libmount1" {>= "2.24.2"}
+]
+extra-source "eject_2.38.1-5+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/util-linux/eject_2.38.1-5+deb12u1_amd64.deb"
+}

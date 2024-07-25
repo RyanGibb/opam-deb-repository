@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcpldfs26_7.1.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcpldfs26"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcext0" {>= "6.6"}
+  "libcfitsio9" {>= "3.480~"}
+  "libcplcore26" {>= "7.1.2"}
+  "libcplui26" {>= "6.4"}
+]
+extra-source "libcpldfs26_7.1.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cpl/libcpldfs26_7.1.3-1_amd64.deb"
+}

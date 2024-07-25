@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libatspi2.0-dev_2.46.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libatspi2.0-dev"]
+]
+depends: [
+  "gir1-2-atspi-2-0" {= "2.46.0-5"}
+  "libatspi2-0-0" {= "2.46.0-5"}
+  "libdbus-1-dev"
+  "libglib2-0-dev"
+  "libxtst-dev"
+]
+extra-source "libatspi2.0-dev_2.46.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/at-spi2-core/libatspi2.0-dev_2.46.0-5_amd64.deb"
+}

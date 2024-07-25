@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-th-lift-instances-dev_0.1.17-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-th-lift-instances-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-th-lift-dev"
+  "libghc-vector-dev"
+  "libgmp10"
+]
+extra-source "libghc-th-lift-instances-dev_0.1.17-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-th-lift-instances/libghc-th-lift-instances-dev_0.1.17-1_amd64.deb"
+}

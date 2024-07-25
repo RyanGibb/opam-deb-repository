@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-fastcluster_1.1.25-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-fastcluster"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+]
+extra-source "r-cran-fastcluster_1.1.25-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-fastcluster/r-cran-fastcluster_1.1.25-2_amd64.deb"
+}

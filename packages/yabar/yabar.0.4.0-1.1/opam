@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yabar_0.4.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yabar"]
+]
+depends: [
+  "libc6" {>= "2.10"}
+  "libcairo2" {>= "1.6.4-5~"}
+  "libconfig9"
+  "libglib2-0-0" {>= "2.12.0"}
+  "libpango-1-0-0" {>= "1.20.0"}
+  "libpangocairo-1-0-0" {>= "1.22.0"}
+  "libxcb-ewmh2" {>= "0.4.1"}
+  "libxcb-randr0" {>= "1.3"}
+  "libxcb1"
+]
+extra-source "yabar_0.4.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yabar/yabar_0.4.0-1.1_amd64.deb"
+}

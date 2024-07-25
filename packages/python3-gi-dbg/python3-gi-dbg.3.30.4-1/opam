@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-gi-dbg_3.30.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-gi-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.10.0"}
+  "libffi6" {>= "3.0.4"}
+  "libgirepository-1-0-1" {>= "1.44.0"}
+  "libglib2-0-0" {>= "2.41.1"}
+  "python3-dbg" {< "3.8"}
+  "python3-dbg" {>= "3.6~"}
+  "python3-gi" {= "3.30.4-1"}
+]
+extra-source "python3-gi-dbg_3.30.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pygobject/python3-gi-dbg_3.30.4-1_amd64.deb"
+}

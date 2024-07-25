@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i homesick_1.1.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r homesick"]
+]
+depends: [
+  "git" {>= "1.8.0"}
+  "ruby-thor"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "homesick_1.1.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/homesick/homesick_1.1.6-2_all.deb"
+}

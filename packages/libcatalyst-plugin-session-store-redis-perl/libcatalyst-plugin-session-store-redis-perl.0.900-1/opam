@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcatalyst-plugin-session-store-redis-perl_0.900-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcatalyst-plugin-session-store-redis-perl"]
+]
+depends: [
+  "libcatalyst-plugin-session-perl"
+  "libclass-data-inheritable-perl"
+  "libmro-compat-perl"
+  "libredis-perl"
+  "libtry-tiny-perl"
+  "perl-any"
+]
+extra-source "libcatalyst-plugin-session-store-redis-perl_0.900-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcatalyst-plugin-session-store-redis-perl/libcatalyst-plugin-session-store-redis-perl_0.900-1_all.deb"
+}

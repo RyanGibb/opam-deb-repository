@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-xml-helpers-prof_1.0.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-xml-helpers-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-xml-helpers-dev" {= "1.0.0-2+b2"}
+  "libghc-xml-prof"
+]
+extra-source "libghc-xml-helpers-prof_1.0.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-xml-helpers/libghc-xml-helpers-prof_1.0.0-2+b2_amd64.deb"
+}

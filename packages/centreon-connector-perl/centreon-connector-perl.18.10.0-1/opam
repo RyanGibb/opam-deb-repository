@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i centreon-connector-perl_18.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r centreon-connector-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libperl5-28" {>= "5.28.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "centreon-connector-perl_18.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/centreon-connectors/centreon-connector-perl_18.10.0-1_amd64.deb"
+}

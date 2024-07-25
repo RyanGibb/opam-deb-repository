@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i alsa-tools_1.2.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r alsa-tools"]
+]
+depends: [
+  "libasound2" {>= "1.0.24.1"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libstdc++6" {>= "5"}
+]
+conflicts: [
+  "as10k1"
+]
+extra-source "alsa-tools_1.2.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alsa-tools/alsa-tools_1.2.5-3_amd64.deb"
+}

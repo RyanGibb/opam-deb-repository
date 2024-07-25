@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaddresses0_0.4.8-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaddresses0"]
+]
+depends: [
+  "gnustep-base-runtime" {>= "1.27.0"}
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnustep-base1-27" {>= "1.27.0"}
+  "libobjc4" {>= "4.2.1"}
+]
+extra-source "libaddresses0_0.4.8-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/addresses-for-gnustep/libaddresses0_0.4.8-3+b2_amd64.deb"
+}

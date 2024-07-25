@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsndfile1-dev_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsndfile1-dev"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libflac-dev"
+  "libgcc-s1" {>= "3.0"}
+  "libmpg123-dev"
+  "libopus-dev"
+  "libsndfile1" {= "1.2.0-1"}
+  "libstdc++6" {>= "5"}
+  "libvorbis-dev"
+]
+conflicts: [
+  "libsndfile-dev"
+  "libsndfile0-dev"
+]
+extra-source "libsndfile1-dev_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsndfile/libsndfile1-dev_1.2.0-1_amd64.deb"
+}

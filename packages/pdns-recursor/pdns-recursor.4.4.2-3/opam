@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pdns-recursor_4.4.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pdns-recursor"]
+]
+depends: [
+  "adduser"
+  "dns-root-data"
+  "libboost-context1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.27"}
+  "libcap2" {>= "1-2.10"}
+  "libfstrm0" {>= "0.4.0"}
+  "libgcc-s1" {>= "3.4"}
+  "libluajit-5-1-2" {>= "2.0.4+dfsg"}
+  "libprotobuf23" {>= "3.12.4"}
+  "libsnmp40" {>= "5.9+dfsg"}
+  "libsodium23" {>= "0.6.0"}
+  "libssl1-1" {>= "1.1.1"}
+  "libstdc++6" {>= "9"}
+  "libsystemd0"
+  "publicsuffix"
+]
+extra-source "pdns-recursor_4.4.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdns-recursor/pdns-recursor_4.4.2-3_amd64.deb"
+}

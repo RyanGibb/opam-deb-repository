@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i videogen_0.33-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r videogen"]
+]
+depends: [
+  "bc"
+  "libc6" {>= "2.14"}
+]
+extra-source "videogen_0.33-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/videogen/videogen_0.33-8_amd64.deb"
+}

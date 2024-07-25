@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php8.2-oauth_2.0.7+1.2.3-16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php8.2-oauth"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "php8-2-common"
+  ("libapache2-mod-php8-2" | "libphp8-2-embed" | "php8-2-cgi" | "php8-2-cli" | "php8-2-fpm" | "php8-2-phpdbg")
+]
+extra-source "php8.2-oauth_2.0.7+1.2.3-16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-oauth/php8.2-oauth_2.0.7+1.2.3-16_amd64.deb"
+}

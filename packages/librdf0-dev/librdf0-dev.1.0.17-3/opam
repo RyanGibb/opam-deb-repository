@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librdf0-dev_1.0.17-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librdf0-dev"]
+]
+depends: [
+  "libraptor2-dev"
+  "librasqal3-dev"
+  "librdf0" {= "1.0.17-3"}
+]
+conflicts: [
+  "librdf-dev"
+]
+extra-source "librdf0-dev_1.0.17-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/redland/librdf0-dev_1.0.17-3_amd64.deb"
+}

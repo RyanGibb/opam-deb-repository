@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-control-center-data_1:43.6-2~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-control-center-data"]
+]
+depends: [
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-control-center-data_1:43.6-2~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-control-center/gnome-control-center-data_43.6-2~deb12u1_all.deb"
+}

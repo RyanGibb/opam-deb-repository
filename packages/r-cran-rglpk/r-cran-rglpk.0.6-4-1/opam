@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rglpk_0.6-4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rglpk"]
+]
+depends: [
+  "libc6" {>= "2.11"}
+  "libglpk40" {>= "4.59"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.2-1"}
+  "r-cran-slam" {>= "0.1-9"}
+]
+extra-source "r-cran-rglpk_0.6-4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rglpk/r-cran-rglpk_0.6-4-1_amd64.deb"
+}

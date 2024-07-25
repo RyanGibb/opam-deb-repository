@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wings3d_2.2.9-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wings3d"]
+]
+depends: [
+  "erlang-base"
+  "erlang-base" {>= "1-25.2.3+dfsg"}
+  "erlang-cl"
+  "erlang-esdl" {>= "1.3.1"}
+  "erlang-wx" {>= "1-25.2.3+dfsg"}
+  "erlang-xmerl" {>= "1-25.2.3+dfsg"}
+  "libc6" {>= "2.4"}
+]
+extra-source "wings3d_2.2.9-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wings3d/wings3d_2.2.9-2+b1_amd64.deb"
+}

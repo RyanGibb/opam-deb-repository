@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-reform-prof_0.2.7.5-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-reform-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-reform-dev" {= "0.2.7.5-1+b1"}
+  "libghc-semigroups-prof"
+]
+extra-source "libghc-reform-prof_0.2.7.5-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-reform/libghc-reform-prof_0.2.7.5-1+b1_amd64.deb"
+}

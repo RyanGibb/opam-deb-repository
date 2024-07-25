@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnome-bg-4-2_43.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnome-bg-4-2"]
+]
+depends: [
+  "gsettings-desktop-schemas" {>= "3.27.0"}
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.14.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.36.5"}
+  "libglib2-0-0" {>= "2.53.0"}
+  "libgnome-desktop-4-2" {>= "3.17.92"}
+  "libgtk-4-1" {>= "4.4.0"}
+]
+extra-source "libgnome-bg-4-2_43.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-desktop/libgnome-bg-4-2_43.2-2_amd64.deb"
+}

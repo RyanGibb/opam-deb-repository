@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsambox-java_2.4.24-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsambox-java"]
+]
+depends: [
+  "libfontbox2-java"
+  "libsejda-commons-java" {>= "1.1.7"}
+  "libsejda-io-java"
+  "libslf4j-java" {>= "1.7.32"}
+]
+extra-source "libsambox-java_2.4.24-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsambox-java/libsambox-java_2.4.24-1_all.deb"
+}

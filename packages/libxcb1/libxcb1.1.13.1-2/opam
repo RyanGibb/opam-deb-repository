@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxcb1_1.13.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxcb1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libxau6"
+  "libxdmcp6"
+]
+extra-source "libxcb1_1.13.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxcb/libxcb1_1.13.1-2_amd64.deb"
+}

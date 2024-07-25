@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcairo-5c0_1.17_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcairo-5c0"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcairo2" {>= "1.2.4"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "librsvg2-2" {>= "2.26.0"}
+  "libx11-6"
+  "libxext6"
+]
+extra-source "libcairo-5c0_1.17_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cairo-5c/libcairo-5c0_1.17_amd64.deb"
+}

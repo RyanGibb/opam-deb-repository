@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnupg-interface-perl_1.01-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnupg-interface-perl"]
+]
+depends: [
+  "libautodie-perl"
+  "libmath-bigint-perl"
+  "libmoo-perl"
+  "libmoox-handlesvia-perl"
+  "libmoox-late-perl"
+  "perl-any"
+  ("gnupg" {>= "2.2.9"} | "gnupg1")
+]
+extra-source "libgnupg-interface-perl_1.01-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnupg-interface-perl/libgnupg-interface-perl_1.01-2_all.deb"
+}

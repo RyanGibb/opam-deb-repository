@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i z-push-kopano-gabsync_2.4.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r z-push-kopano-gabsync"]
+]
+depends: [
+  "php-cli"
+  "php-mapi" {>= "8.6.60-1~"}
+]
+extra-source "z-push-kopano-gabsync_2.4.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/z-push/z-push-kopano-gabsync_2.4.5-2_all.deb"
+}

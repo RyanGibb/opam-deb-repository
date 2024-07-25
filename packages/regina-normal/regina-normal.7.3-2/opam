@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i regina-normal_7.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r regina-normal"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcgraph6"
+  "libgcc-s1" {>= "4.0"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libgmpxx4ldbl" {>= "2-6.2.1+dfsg1"}
+  "libgvc6"
+  "libjansson4" {>= "2.14"}
+  "libpopt0" {>= "1.14"}
+  "libpython3-11" {>= "3.11.0"}
+  "libqt6core6" {>= "6.4.0"}
+  "libqt6gui6" {>= "6.1.2"}
+  "libqt6svgwidgets6" {>= "6.2.0"}
+  "libqt6widgets6" {>= "6.1.2"}
+  "libstdc++6" {>= "12"}
+  "libtokyocabinet9" {>= "1.4.47"}
+  "libxml2" {>= "2.7.4"}
+  "perl-any"
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "regina-normal_7.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/regina-normal/regina-normal_7.3-2_amd64.deb"
+}

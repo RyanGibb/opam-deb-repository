@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ganglia-modules-linux_1.3.6-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ganglia-modules-linux"]
+]
+depends: [
+  "ganglia-monitor"
+  "libc6" {>= "2.14"}
+]
+extra-source "ganglia-modules-linux_1.3.6-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/ganglia-modules-linux/ganglia-modules-linux_1.3.6-5_amd64.deb"
+}

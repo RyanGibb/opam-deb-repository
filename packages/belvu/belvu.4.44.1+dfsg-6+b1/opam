@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i belvu_4.44.1+dfsg-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r belvu"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.2.4"}
+  "libcurl4" {>= "7.16.2"}
+  "libgbtools0" {>= "4.44.1+dfsg"}
+  "libglib2-0-0" {>= "2.22.0"}
+  "libgtk2-0-0" {>= "2.12.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "belvu_4.44.1+dfsg-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/seqtools/belvu_4.44.1+dfsg-6+b1_amd64.deb"
+}

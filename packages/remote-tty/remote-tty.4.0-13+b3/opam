@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i remote-tty_4.0-13+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r remote-tty"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.3"}
+  "libcrypt1" {>= "1-4.1.0"}
+]
+extra-source "remote-tty_4.0-13+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/remote-tty/remote-tty_4.0-13+b3_amd64.deb"
+}

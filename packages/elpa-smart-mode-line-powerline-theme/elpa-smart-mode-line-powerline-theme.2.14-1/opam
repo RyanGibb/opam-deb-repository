@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-smart-mode-line-powerline-theme_2.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-smart-mode-line-powerline-theme"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-powerline" {>= "2.2"}
+  "elpa-smart-mode-line" {>= "2.5"}
+  "emacsen-common"
+]
+extra-source "elpa-smart-mode-line-powerline-theme_2.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/smart-mode-line/elpa-smart-mode-line-powerline-theme_2.14-1_all.deb"
+}

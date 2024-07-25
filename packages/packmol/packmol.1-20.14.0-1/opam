@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i packmol_1:20.14.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r packmol"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgfortran5" {>= "10"}
+]
+extra-source "packmol_1:20.14.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/packmol/packmol_20.14.0-1_amd64.deb"
+}

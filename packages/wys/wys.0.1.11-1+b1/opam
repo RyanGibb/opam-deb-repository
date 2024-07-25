@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wys_0.1.11-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wys"]
+]
+depends: [
+  "init-system-helpers" {>= "1.52"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.57.2"}
+  "libmm-glib0" {>= "1.5.993"}
+  "libpulse-mainloop-glib0" {>= "0.99.1"}
+  "libpulse0" {>= "0.99.1"}
+  "modemmanager"
+  "pulseaudio" {>= "12.2-4+deb10u1"}
+]
+extra-source "wys_0.1.11-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wys/wys_0.1.11-1+b1_amd64.deb"
+}

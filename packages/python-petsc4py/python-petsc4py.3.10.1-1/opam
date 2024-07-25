@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-petsc4py_3.10.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-petsc4py"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libopenmpi3"
+  "libpetsc-real3-10" {>= "3.10.3+dfsg1"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-numpy"
+  "python-numpy" {>= "1-1.16.0~rc1"}
+  "swig"
+]
+conflicts: [
+  "python-petsc"
+]
+extra-source "python-petsc4py_3.10.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/petsc4py/python-petsc4py_3.10.1-1_amd64.deb"
+}

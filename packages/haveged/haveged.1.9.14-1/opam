@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i haveged_1.9.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r haveged"]
+]
+depends: [
+  "libc6" {>= "2.16"}
+  "libhavege2" {>= "1.9.13"}
+  "lsb-base" {>= "3.2-14"}
+]
+extra-source "haveged_1.9.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haveged/haveged_1.9.14-1_amd64.deb"
+}

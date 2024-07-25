@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-lambdabot-trusted-prof_5.3-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-lambdabot-trusted-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-lambdabot-trusted-dev" {= "5.3-1+b2"}
+  "libghc-oeis-prof"
+  "libghc-quickcheck-safe-prof"
+  "libghc-quickcheck2-prof"
+]
+extra-source "libghc-lambdabot-trusted-prof_5.3-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-lambdabot-trusted/libghc-lambdabot-trusted-prof_5.3-1+b2_amd64.deb"
+}

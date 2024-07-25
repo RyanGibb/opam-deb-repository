@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtesseract-dev_4.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtesseract-dev"]
+]
+depends: [
+  "libleptonica-dev"
+  "libtesseract4" {= "4.0.0-2"}
+]
+extra-source "libtesseract-dev_4.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tesseract/libtesseract-dev_4.0.0-2_amd64.deb"
+}

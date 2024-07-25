@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-old-locale-prof_1.0.0.7-10+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-old-locale-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-old-locale-dev" {= "1.0.0.7-10+b3"}
+]
+extra-source "libghc-old-locale-prof_1.0.0.7-10+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-old-locale/libghc-old-locale-prof_1.0.0.7-10+b3_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt53dquickscene2d5_5.11.3+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt53dquickscene2d5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt53dcore5" {= "5.11.3+dfsg-2"}
+  "libqt53drender5" {>= "5.9.0"}
+  "libqt5core5a" {>= "5.11.3+dfsg~"}
+  "libqt5gui5" {>= "5.11.3+dfsg~"}
+  "libqt5qml5"
+  "libqt5qml5" {>= "5.9.2"}
+  "libqt5quick5" {>= "5.5.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libqt53dquickscene2d5_5.11.3+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt3d-opensource-src/libqt53dquickscene2d5_5.11.3+dfsg-2_amd64.deb"
+}

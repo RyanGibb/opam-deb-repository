@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcl_2.6.12-102_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcl"]
+]
+depends: [
+  "debconf" {>= "1.2.0"}
+  "gcc"
+  "libc6" {>= "2.29"}
+  "libgmp10"
+  "libreadline8" {>= "6.0"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libtk8-6" {>= "8.6.0"}
+  "libx11-6"
+  "ucf"
+  ("emacs24" | "emacsen")
+]
+extra-source "gcl_2.6.12-102_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcl/gcl_2.6.12-102_amd64.deb"
+}

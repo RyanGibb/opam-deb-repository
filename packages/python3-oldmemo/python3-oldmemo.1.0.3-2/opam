@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-oldmemo_1.0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-oldmemo"]
+]
+depends: [
+  "python3-any"
+  "python3-cryptography" {>= "3.3.2"}
+  "python3-doubleratchet" {>= "1~"}
+  "python3-omemo" {>= "1~"}
+  "python3-protobuf"
+  "python3-typing-extensions"
+  "python3-x3dh" {>= "1~"}
+  "python3-xeddsa" {>= "1~"}
+]
+extra-source "python3-oldmemo_1.0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-oldmemo/python3-oldmemo_1.0.3-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnat-12-mips64r6-cross_12.2.0-14cross5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnat-12-mips64r6-cross"]
+]
+depends: [
+  "gcc-12-cross-base-mipsen" {= "12.2.0-14cross5"}
+  "libc6-mips64r6-cross" {>= "2.36"}
+  "libgcc-s1-mips64r6-cross" {>= "4.2"}
+]
+extra-source "libgnat-12-mips64r6-cross_12.2.0-14cross5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12-cross-mipsen/libgnat-12-mips64r6-cross_12.2.0-14cross5_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgslcblas0_2.7.1+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgslcblas0"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+]
+conflicts: [
+  "gsl"
+  "libgsl0"
+  "libgsl0ldbl"
+  "libgsl2"
+]
+extra-source "libgslcblas0_2.7.1+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gsl/libgslcblas0_2.7.1+dfsg-5_amd64.deb"
+}

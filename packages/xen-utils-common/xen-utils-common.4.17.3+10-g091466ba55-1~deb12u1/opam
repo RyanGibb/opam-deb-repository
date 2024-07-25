@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xen-utils-common_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xen-utils-common"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libxenhypfs1" {>= "4.17.3+10-g091466ba55"}
+  "libxenstore4" {>= "4.16.0"}
+  "python3-any"
+  "ucf"
+  "udev"
+  "xenstore-utils"
+  ("sysvinit-utils" {>= "3.05-4~"} | "lsb-base")
+]
+extra-source "xen-utils-common_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xen/xen-utils-common_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb"
+}

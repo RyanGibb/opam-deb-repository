@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-chaco_4.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-chaco"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-enable"
+  "python-numpy"
+  "python-numpy" {>= "1-1.8.0"}
+  "python-pkg-resources"
+  "python-traitsui"
+  "python-wxgtk3-0"
+]
+extra-source "python-chaco_4.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-chaco/python-chaco_4.5.0-1_amd64.deb"
+}

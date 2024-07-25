@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-imblearn_0.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-imblearn"]
+]
+depends: [
+  "python3-any"
+  "python3-joblib"
+  "python3-numpy"
+  "python3-scipy"
+  "python3-sklearn" {>= "1.0.1"}
+  "python3-threadpoolctl"
+]
+extra-source "python3-imblearn_0.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/imbalanced-learn/python3-imblearn_0.10.0-1_all.deb"
+}

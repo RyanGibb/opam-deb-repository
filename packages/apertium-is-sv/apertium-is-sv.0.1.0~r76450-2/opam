@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-is-sv_0.1.0~r76450-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-is-sv"]
+]
+depends: [
+  "apertium" {>= "3.4"}
+  "cg3"
+]
+conflicts: [
+  "apertium-sv-is"
+]
+extra-source "apertium-is-sv_0.1.0~r76450-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-is-sv/apertium-is-sv_0.1.0~r76450-2_all.deb"
+}

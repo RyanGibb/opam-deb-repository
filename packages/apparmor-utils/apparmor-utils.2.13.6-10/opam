@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apparmor-utils_2.13.6-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apparmor-utils"]
+]
+depends: [
+  "apparmor"
+  "python3-any"
+  "python3-apparmor" {= "2.13.6-10"}
+]
+extra-source "apparmor-utils_2.13.6-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apparmor/apparmor-utils_2.13.6-10_amd64.deb"
+}

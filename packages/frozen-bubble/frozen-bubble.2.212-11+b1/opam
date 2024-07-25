@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i frozen-bubble_2.212-11+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r frozen-bubble"]
+]
+depends: [
+  "frozen-bubble-data" {= "2.212-11"}
+  "libalien-sdl-perl"
+  "libc6" {>= "2.34"}
+  "libcompress-bzip2-perl"
+  "libglib2-0-0" {>= "2.12.0"}
+  "liblocale-gettext-perl"
+  "libsdl-mixer1-2" {>= "1.2.12"}
+  "libsdl-perl"
+  "libsdl1-2-compat-shim"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "frozen-bubble_2.212-11+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/frozen-bubble/frozen-bubble_2.212-11+b1_amd64.deb"
+}

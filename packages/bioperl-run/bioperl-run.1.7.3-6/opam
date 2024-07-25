@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bioperl-run_1.7.3-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bioperl-run"]
+]
+depends: [
+  "bioperl" {>= "1.7.4"}
+  "default-jdk-headless"
+  "libbio-cluster-perl"
+  "libbio-eutilities-perl"
+  "libbio-featureio-perl"
+  "libbio-perl-run-perl" {= "1.7.3-6"}
+  "libbio-tools-run-alignment-clustalw-perl"
+  "libbio-tools-run-remoteblast-perl"
+  "libtest-requiresinternet-perl"
+  "perl-any"
+  ("hyphy-pt" | "hyphy-mpi")
+]
+extra-source "bioperl-run_1.7.3-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bioperl-run/bioperl-run_1.7.3-6_all.deb"
+}

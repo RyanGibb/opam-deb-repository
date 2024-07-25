@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dovecot-managesieved_1:2.3.4.1-5+deb10u6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dovecot-managesieved"]
+]
+depends: [
+  "dovecot-core" {= "1-2.3.4.1-5+deb10u6"}
+  "dovecot-sieve" {= "1-2.3.4.1-5+deb10u6"}
+  "libc6" {>= "2.4"}
+  "libssl1-1" {>= "1.1.0"}
+  "ucf" {>= "2.0020"}
+]
+extra-source "dovecot-managesieved_1:2.3.4.1-5+deb10u6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dovecot/dovecot-managesieved_2.3.4.1-5+deb10u6_amd64.deb"
+}

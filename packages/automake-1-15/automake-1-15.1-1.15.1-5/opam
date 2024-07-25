@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i automake-1.15_1:1.15.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r automake-1.15"]
+]
+depends: [
+  "autoconf" {>= "2.65"}
+  "autotools-dev" {>= "20020320.1"}
+]
+extra-source "automake-1.15_1:1.15.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/automake-1.15/automake-1.15_1.15.1-5_all.deb"
+}

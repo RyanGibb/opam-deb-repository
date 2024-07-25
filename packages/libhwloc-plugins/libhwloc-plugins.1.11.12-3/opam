@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhwloc-plugins_1.11.12-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhwloc-plugins"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libhwloc5" {< "1.11.12A"}
+  "libhwloc5" {>= "1.11.12~"}
+  "libltdl7" {>= "2.4.6"}
+  "libpciaccess0"
+  "libxml2" {>= "2.7.4"}
+  ("ocl-icd-libopencl1" | "libopencl1")
+]
+extra-source "libhwloc-plugins_1.11.12-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hwloc/libhwloc-plugins_1.11.12-3_amd64.deb"
+}

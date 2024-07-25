@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i loki_2.4.7.4-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r loki"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+]
+extra-source "loki_2.4.7.4-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/loki/loki_2.4.7.4-10_amd64.deb"
+}

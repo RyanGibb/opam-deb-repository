@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgsecuredelete-dev_0.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgsecuredelete-dev"]
+]
+depends: [
+  "libglib2-0-dev"
+  "libgsecuredelete0" {= "0.3-3"}
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "libgsecuredelete-dev_0.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgsecuredelete/libgsecuredelete-dev_0.3-3_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i crispy-doom_5.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r crispy-doom"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsamplerate0" {>= "0.1.7"}
+  "libsdl2-2-0-0" {>= "2.0.8"}
+  "libsdl2-mixer-2-0-0" {>= "2.0.2"}
+  "libsdl2-net-2-0-0" {>= "2.0.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "crispy-doom_5.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/crispy-doom/crispy-doom_5.4-3_amd64.deb"
+}

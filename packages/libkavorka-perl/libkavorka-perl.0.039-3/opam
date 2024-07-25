@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkavorka-perl_0.039-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkavorka-perl"]
+]
+depends: [
+  "libexporter-tiny-perl"
+  "libmatch-simple-perl"
+  "libmodule-runtime-perl"
+  "libmoo-perl"
+  "libnamespace-sweep-perl"
+  "libpadwalker-perl"
+  "libparse-keyword-perl"
+  "libreturn-type-perl"
+  "libtype-tiny-perl"
+  "perl"
+  ("perl" {>= "5.22"} | "libdata-alias-perl")
+]
+extra-source "libkavorka-perl_0.039-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkavorka-perl/libkavorka-perl_0.039-3_all.deb"
+}

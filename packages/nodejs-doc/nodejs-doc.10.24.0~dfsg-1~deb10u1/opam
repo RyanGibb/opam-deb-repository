@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nodejs-doc_10.24.0~dfsg-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nodejs-doc"]
+]
+conflicts: [
+  "nodejs (<< 6.11.2~dfsg-3)"
+]
+extra-source "nodejs-doc_10.24.0~dfsg-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nodejs/nodejs-doc_10.24.0~dfsg-1~deb10u1_all.deb"
+}

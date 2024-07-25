@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sac2mseed_1.12+ds1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sac2mseed"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libmseed2" {>= "2.18"}
+]
+extra-source "sac2mseed_1.12+ds1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sac2mseed/sac2mseed_1.12+ds1-3_amd64.deb"
+}

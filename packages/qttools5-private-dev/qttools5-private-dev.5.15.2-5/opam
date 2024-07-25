@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qttools5-private-dev_5.15.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qttools5-private-dev"]
+]
+depends: [
+  "qttools5-dev" {= "5.15.2-5"}
+]
+extra-source "qttools5-private-dev_5.15.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qttools-opensource-src/qttools5-private-dev_5.15.2-5_amd64.deb"
+}

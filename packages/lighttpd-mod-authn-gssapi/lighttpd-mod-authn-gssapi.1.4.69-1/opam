@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lighttpd-mod-authn-gssapi_1.4.69-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lighttpd-mod-authn-gssapi"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libkrb5-3" {>= "1.10+dfsg~"}
+  "lighttpd" {= "1.4.69-1"}
+]
+extra-source "lighttpd-mod-authn-gssapi_1.4.69-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lighttpd/lighttpd-mod-authn-gssapi_1.4.69-1_amd64.deb"
+}

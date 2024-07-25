@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ssh-import-id_5.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ssh-import-id"]
+]
+depends: [
+  "ca-certificates"
+  "openssh-client"
+  "python3-any"
+  "python3-distro"
+  "python3-requests" {>= "1.1.0"}
+  "wget"
+]
+extra-source "ssh-import-id_5.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/ssh-import-id/ssh-import-id_5.10-1_all.deb"
+}

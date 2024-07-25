@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvoaacenc-ocaml-dev_0.1.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvoaacenc-ocaml-dev"]
+]
+depends: [
+  "libvo-aacenc-dev"
+  "libvoaacenc-ocaml"
+  "libvoaacenc-ocaml" {= "0.1.1-1+b1"}
+  "ocaml-findlib"
+  "ocaml-nox"
+]
+extra-source "libvoaacenc-ocaml-dev_0.1.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-voaacenc/libvoaacenc-ocaml-dev_0.1.1-1+b1_amd64.deb"
+}

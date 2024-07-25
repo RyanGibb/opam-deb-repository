@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i icebreaker_2.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r icebreaker"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsdl-mixer1-2"
+  "libsdl1-2-compat-shim"
+]
+extra-source "icebreaker_2.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/icebreaker/icebreaker_2.2.0-1_amd64.deb"
+}

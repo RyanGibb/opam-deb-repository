@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdart-external-imgui6_6.9.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdart-external-imgui6"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libdart-external-imgui6_6.9.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dart/libdart-external-imgui6_6.9.5-3_amd64.deb"
+}

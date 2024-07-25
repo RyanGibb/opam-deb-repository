@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mypaint_2.0.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mypaint"]
+]
+depends: [
+  "gir1-2-gtk-3-0"
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgomp1" {>= "4.9"}
+  "liblcms2-2" {>= "2.2+git20110628"}
+  "libmypaint-1-5-1" {>= "1.6.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "librsvg2-bin"
+  "libstdc++6" {>= "11"}
+  "mypaint-brushes" {>= "1.5~"}
+  "mypaint-data" {>= "2.0.1-9"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-distutils"
+  "python3-gi"
+  "python3-gi-cairo"
+  "python3-numpy"
+]
+extra-source "mypaint_2.0.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mypaint/mypaint_2.0.1-9_amd64.deb"
+}

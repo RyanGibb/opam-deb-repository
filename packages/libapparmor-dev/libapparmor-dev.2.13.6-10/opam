@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapparmor-dev_2.13.6-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapparmor-dev"]
+]
+depends: [
+  "libapparmor1" {= "2.13.6-10"}
+]
+extra-source "libapparmor-dev_2.13.6-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apparmor/libapparmor-dev_2.13.6-10_amd64.deb"
+}

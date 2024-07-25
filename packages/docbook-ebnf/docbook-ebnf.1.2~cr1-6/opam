@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i docbook-ebnf_1.2~cr1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r docbook-ebnf"]
+]
+depends: [
+  "docbook-xml" {>= "4.3"}
+  "sgml-base" {>= "1.28"}
+  "xml-core" {>= "0.14"}
+]
+extra-source "docbook-ebnf_1.2~cr1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/docbook-ebnf/docbook-ebnf_1.2~cr1-6_all.deb"
+}

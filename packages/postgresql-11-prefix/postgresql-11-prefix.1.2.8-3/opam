@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-11-prefix_1.2.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-11-prefix"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "postgresql-11"
+]
+extra-source "postgresql-11-prefix_1.2.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prefix/postgresql-11-prefix_1.2.8-3_amd64.deb"
+}

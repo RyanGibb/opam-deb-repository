@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-yesod-persistent-prof_1.6.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-yesod-persistent-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-conduit-prof"
+  "libghc-persistent-prof"
+  "libghc-persistent-template-prof"
+  "libghc-resource-pool-prof"
+  "libghc-resourcet-prof"
+  "libghc-yesod-core-prof"
+  "libghc-yesod-persistent-dev" {= "1.6.0-2+b1"}
+]
+extra-source "libghc-yesod-persistent-prof_1.6.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-yesod-persistent/libghc-yesod-persistent-prof_1.6.0-2+b1_amd64.deb"
+}

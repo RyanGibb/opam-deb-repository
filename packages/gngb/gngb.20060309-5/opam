@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gngb_20060309-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gngb"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgl1"
+  "libsdl1-2-compat-shim"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gngb_20060309-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gngb/gngb_20060309-5_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpomp0_1.1+dfsg-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpomp0"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libgomp1" {>= "4.4"}
+]
+extra-source "libpomp0_1.1+dfsg-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opari/libpomp0_1.1+dfsg-9_amd64.deb"
+}

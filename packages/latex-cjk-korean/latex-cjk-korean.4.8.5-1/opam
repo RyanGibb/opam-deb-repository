@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i latex-cjk-korean_4.8.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r latex-cjk-korean"]
+]
+depends: [
+  "latex-cjk-common" {>= "4.8.5-1"}
+  "tex-common" {>= "6.13"}
+]
+extra-source "latex-cjk-korean_4.8.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cjk/latex-cjk-korean_4.8.5-1_all.deb"
+}

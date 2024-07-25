@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-svipc_0.16-5+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-svipc"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+]
+extra-source "python3-svipc_0.16-5+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yp-svipc/python3-svipc_0.16-5+b7_amd64.deb"
+}

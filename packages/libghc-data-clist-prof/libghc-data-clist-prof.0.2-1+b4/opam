@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-data-clist-prof_0.2-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-data-clist-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-data-clist-dev" {= "0.2-1+b4"}
+]
+extra-source "libghc-data-clist-prof_0.2-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-data-clist/libghc-data-clist-prof_0.2-1+b4_amd64.deb"
+}

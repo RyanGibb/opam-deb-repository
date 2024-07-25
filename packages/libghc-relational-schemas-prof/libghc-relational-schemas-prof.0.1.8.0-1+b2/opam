@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-relational-schemas-prof_0.1.8.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-relational-schemas-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-relational-query-prof"
+  "libghc-relational-schemas-dev" {= "0.1.8.0-1+b2"}
+  "libghc-sql-words-prof"
+]
+extra-source "libghc-relational-schemas-prof_0.1.8.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-relational-schemas/libghc-relational-schemas-prof_0.1.8.0-1+b2_amd64.deb"
+}

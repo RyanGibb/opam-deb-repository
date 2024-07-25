@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librnd3-hid-gtk2-gl_3.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librnd3-hid-gtk2-gl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libgtk2-0-0" {>= "2.8.0"}
+  "libgtkglext1"
+  "librnd3" {= "3.2.2-1"}
+  "librnd3-lib-gl" {= "3.2.2-1"}
+  "librnd3-lib-gtk" {= "3.2.2-1"}
+]
+extra-source "librnd3-hid-gtk2-gl_3.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librnd/librnd3-hid-gtk2-gl_3.2.2-1_amd64.deb"
+}

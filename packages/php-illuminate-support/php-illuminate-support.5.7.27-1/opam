@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-illuminate-support_5.7.27-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-illuminate-support"]
+]
+depends: [
+  "php-common"
+  "php-doctrine-inflector" {< "2~~"}
+  "php-doctrine-inflector" {>= "1.1"}
+  "php-illuminate-contracts" {< "5.8~~"}
+  "php-illuminate-contracts" {>= "5.7"}
+  "php-mbstring"
+  "php-nesbot-carbon" {< "2~~"}
+  "php-nesbot-carbon" {>= "1.26.3"}
+]
+extra-source "php-illuminate-support_5.7.27-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-illuminate-support/php-illuminate-support_5.7.27-1_all.deb"
+}

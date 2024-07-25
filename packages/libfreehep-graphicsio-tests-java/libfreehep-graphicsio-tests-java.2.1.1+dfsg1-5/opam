@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfreehep-graphicsio-tests-java_2.1.1+dfsg1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfreehep-graphicsio-tests-java"]
+]
+depends: [
+  "junit" {>= "3.8.2"}
+  "libfreehep-export-java"
+  "libfreehep-graphicsio-java"
+  "libjas-plotter-java"
+]
+extra-source "libfreehep-graphicsio-tests-java_2.1.1+dfsg1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freehep-graphicsio-tests/libfreehep-graphicsio-tests-java_2.1.1+dfsg1-5_all.deb"
+}

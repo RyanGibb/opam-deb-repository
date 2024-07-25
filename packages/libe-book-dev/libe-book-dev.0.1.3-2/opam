@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libe-book-dev_0.1.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libe-book-dev"]
+]
+depends: [
+  "libe-book-0-1-1" {= "0.1.3-2"}
+  "libicu-dev"
+  "librevenge-dev" {< "0.1~"}
+  "libxml2-dev"
+  "zlib1g-dev"
+]
+extra-source "libe-book-dev_0.1.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libe-book/libe-book-dev_0.1.3-2_amd64.deb"
+}

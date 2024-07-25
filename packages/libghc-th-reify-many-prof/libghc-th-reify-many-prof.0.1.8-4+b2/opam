@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-th-reify-many-prof_0.1.8-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-th-reify-many-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-safe-prof"
+  "libghc-th-expand-syns-prof"
+  "libghc-th-reify-many-dev" {= "0.1.8-4+b2"}
+]
+extra-source "libghc-th-reify-many-prof_0.1.8-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-th-reify-many/libghc-th-reify-many-prof_0.1.8-4+b2_amd64.deb"
+}

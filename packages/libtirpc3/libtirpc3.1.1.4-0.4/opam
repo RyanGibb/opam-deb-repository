@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtirpc3_1.1.4-0.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtirpc3"]
+]
+depends: [
+  "libc6" {>= "2.16"}
+  "libcom-err2" {>= "1.43.9"}
+  "libgssapi-krb5-2" {>= "1.14+dfsg"}
+  "libk5crypto3" {>= "1.6.dfsg.2"}
+  "libkrb5-3" {>= "1.6.dfsg.2"}
+  "libtirpc-common" {>= "1.1.4-0.4"}
+]
+extra-source "libtirpc3_1.1.4-0.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtirpc/libtirpc3_1.1.4-0.4_amd64.deb"
+}

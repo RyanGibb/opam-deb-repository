@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rbootd_2.0-10+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rbootd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcap0-8" {>= "0.9.8"}
+  "netbase" {>= "3.00"}
+]
+extra-source "rbootd_2.0-10+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rbootd/rbootd_2.0-10+b2_amd64.deb"
+}

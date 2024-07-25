@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfreefare-dev_0.4.0-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfreefare-dev"]
+]
+depends: [
+  "libfreefare0" {= "0.4.0-2.1"}
+  "libnfc-dev"
+]
+extra-source "libfreefare-dev_0.4.0-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfreefare/libfreefare-dev_0.4.0-2.1_amd64.deb"
+}

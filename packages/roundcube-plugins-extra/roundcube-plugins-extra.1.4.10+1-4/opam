@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i roundcube-plugins-extra_1.4.10+1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r roundcube-plugins-extra"]
+]
+depends: [
+  "roundcube-core" {>= "1.4.4"}
+]
+extra-source "roundcube-plugins-extra_1.4.10+1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/roundcube-plugins-extra/roundcube-plugins-extra_1.4.10+1-4_all.deb"
+}

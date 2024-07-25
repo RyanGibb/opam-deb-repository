@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-backtrace+addr2line-dev_0.3.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-backtrace+addr2line-dev"]
+]
+depends: [
+  "librust-addr2line-0-7+default-dev"
+  "librust-backtrace-dev" {= "0.3.13-1"}
+]
+extra-source "librust-backtrace+addr2line-dev_0.3.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-backtrace/librust-backtrace+addr2line-dev_0.3.13-1_amd64.deb"
+}

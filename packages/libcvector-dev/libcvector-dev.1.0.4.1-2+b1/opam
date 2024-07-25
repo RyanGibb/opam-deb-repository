@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcvector-dev_1.0.4.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcvector-dev"]
+]
+depends: [
+  "libcvector2" {= "1.0.4.1-2+b1"}
+]
+conflicts: [
+  "libcvector2-dev"
+]
+extra-source "libcvector-dev_1.0.4.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cvector/libcvector-dev_1.0.4.1-2+b1_amd64.deb"
+}

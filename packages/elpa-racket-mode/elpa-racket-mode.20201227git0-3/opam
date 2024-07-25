@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-racket-mode_20201227git0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-racket-mode"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-pos-tip" {>= "0.4.6"}
+  "elpa-s" {>= "1.9.0"}
+  "emacsen-common"
+]
+extra-source "elpa-racket-mode_20201227git0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/racket-mode/elpa-racket-mode_20201227git0-3_all.deb"
+}

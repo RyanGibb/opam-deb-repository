@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i connman-vpn_1.36-2.2+deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r connman-vpn"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libglib2-0-0" {>= "2.28.0"}
+  "libgnutls30" {>= "3.7.0"}
+]
+extra-source "connman-vpn_1.36-2.2+deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/connman/connman-vpn_1.36-2.2+deb11u2_amd64.deb"
+}

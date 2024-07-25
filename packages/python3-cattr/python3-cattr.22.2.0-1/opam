@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-cattr_22.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-cattr"]
+]
+depends: [
+  "python3-any"
+  "python3-attr"
+  ("python3-exceptiongroup" | "python3" {> "3.11"})
+  ("python3-typing-extensions" | "python3" {> "3.8"})
+]
+extra-source "python3-cattr_22.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-cattrs/python3-cattr_22.2.0-1_all.deb"
+}

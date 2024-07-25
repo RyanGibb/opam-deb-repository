@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libproj-dev_9.1.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libproj-dev"]
+]
+depends: [
+  "libproj25" {= "9.1.1-1+b1"}
+  "libsqlite3-dev"
+  "libtiff-dev"
+  ("libcurl4-gnutls-dev" | "libcurl-ssl-dev")
+]
+extra-source "libproj-dev_9.1.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/proj/libproj-dev_9.1.1-1+b1_amd64.deb"
+}

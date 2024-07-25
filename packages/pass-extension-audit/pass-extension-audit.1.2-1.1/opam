@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pass-extension-audit_1.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pass-extension-audit"]
+]
+depends: [
+  "pass" {>= "1.7.0"}
+  "python3-any"
+  "python3-requests"
+  "python3-zxcvbn"
+]
+extra-source "pass-extension-audit_1.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pass-audit/pass-extension-audit_1.2-1.1_all.deb"
+}

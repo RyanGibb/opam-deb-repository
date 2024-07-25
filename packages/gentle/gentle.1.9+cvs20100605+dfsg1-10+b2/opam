@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gentle_1.9+cvs20100605+dfsg1-10+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gentle"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libmariadb3" {>= "3.0.0"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "11"}
+  "libtinyxml2-6-2v5" {>= "2.6.2"}
+  "libwxbase3-2-1" {>= "3.2.1+dfsg"}
+  "libwxgtk3-2-1" {>= "3.2.1+dfsg-2"}
+]
+extra-source "gentle_1.9+cvs20100605+dfsg1-10+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gentle/gentle_1.9+cvs20100605+dfsg1-10+b2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-azure-multiapi-storage_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-azure-multiapi-storage"]
+]
+depends: [
+  "python3-any"
+  "python3-azure"
+  "python3-cryptography" {>= "2.1.4"}
+  "python3-dateutil"
+  "python3-msrest"
+  "python3-requests"
+]
+extra-source "python3-azure-multiapi-storage_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/azure-multiapi-storage-python/python3-azure-multiapi-storage_1.0.0-1_all.deb"
+}

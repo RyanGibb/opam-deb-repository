@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt6-qmllint-plugins_6.4.2+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt6-qmllint-plugins"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6qmlcompiler6" {>= "6.4.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qt6-qmllint-plugins_6.4.2+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-declarative/qt6-qmllint-plugins_6.4.2+dfsg-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wordwarvi_1.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wordwarvi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.8.0"}
+  "libportaudio2" {>= "19+svn20101113"}
+  "libvorbisfile3" {>= "1.2.0"}
+  "wordwarvi-sound" {= "1.0.4-1"}
+]
+extra-source "wordwarvi_1.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wordwarvi/wordwarvi_1.0.4-1_amd64.deb"
+}

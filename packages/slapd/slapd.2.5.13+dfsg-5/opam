@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slapd_2.5.13+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slapd"]
+]
+depends: [
+  "adduser"
+  "coreutils" {>= "4.5.1-1"}
+  "libargon2-1" {>= "0~20171227"}
+  "libc6" {>= "2.34"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libldap-2-5-0" {= "2.5.13+dfsg-5"}
+  "libltdl7" {>= "2.4.7"}
+  "libodbc2" {>= "2.3.1"}
+  "libperl5-36" {>= "5.36.0"}
+  "libsasl2-2" {>= "2.1.28+dfsg"}
+  "libwrap0" {>= "7.6-4~"}
+  "perl-any"
+  "psmisc"
+  "sysvinit-utils"
+  ("perl-any" {> "5.8.0"} | "libmime-base64-perl")
+]
+conflicts: [
+  "ldap-server"
+  "libltdl3 (= 1.5.4-1)"
+  "umich-ldapd"
+]
+extra-source "slapd_2.5.13+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openldap/slapd_2.5.13+dfsg-5_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-keyring-pkcs11_3.28.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-keyring-pkcs11"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "gnome-keyring-pkcs11_3.28.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-keyring/gnome-keyring-pkcs11_3.28.2-5_amd64.deb"
+}

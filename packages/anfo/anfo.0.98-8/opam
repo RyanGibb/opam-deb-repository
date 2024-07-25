@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i anfo_0.98-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r anfo"]
+]
+depends: [
+  "libanfo0" {>= "0.98"}
+  "libc6" {>= "2.29"}
+  "libelk0"
+  "libgcc-s1" {>= "3.0"}
+  "libpopt0" {>= "1.14"}
+  "libprotobuf23" {>= "3.12.3"}
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "anfo_0.98-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/anfo/anfo_0.98-8_amd64.deb"
+}

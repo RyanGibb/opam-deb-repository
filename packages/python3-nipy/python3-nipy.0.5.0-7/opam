@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-nipy_0.5.0-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-nipy"]
+]
+depends: [
+  "python3-any"
+  "python3-nibabel"
+  "python3-nipy-lib" {>= "0.5.0-7"}
+  "python3-numpy"
+  "python3-scipy"
+  "python3-sympy"
+]
+extra-source "python3-nipy_0.5.0-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nipy/python3-nipy_0.5.0-7_all.deb"
+}

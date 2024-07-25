@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrapperkeeper-filesystem-watcher-clojure_1.2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrapperkeeper-filesystem-watcher-clojure"]
+]
+depends: [
+  "libclojure-java"
+  "libkitchensink-clojure" {>= "3.1.1-2"}
+  "libprismatic-schema-clojure" {>= "1.1.12"}
+  "libpuppetlabs-i18n-clojure" {>= "0.9.0"}
+  "libraynes-fs-clojure" {>= "1.5.2"}
+  "libtools-logging-clojure"
+  "libtrapperkeeper-clojure" {>= "3.1.0"}
+]
+extra-source "libtrapperkeeper-filesystem-watcher-clojure_1.2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trapperkeeper-filesystem-watcher-clojure/libtrapperkeeper-filesystem-watcher-clojure_1.2.2-2_all.deb"
+}

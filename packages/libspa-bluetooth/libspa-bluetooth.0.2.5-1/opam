@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspa-bluetooth_0.2.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspa-bluetooth"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libsbc1"
+]
+extra-source "libspa-bluetooth_0.2.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pipewire/libspa-bluetooth_0.2.5-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lm4flash_3:0.1.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lm4flash"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libusb-1-0-0" {>= "2-1.0.9"}
+]
+extra-source "lm4flash_3:0.1.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lm4tools/lm4flash_0.1.3-1+b1_amd64.deb"
+}

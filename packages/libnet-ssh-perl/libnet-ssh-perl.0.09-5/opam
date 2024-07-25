@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-ssh-perl_0.09-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-ssh-perl"]
+]
+depends: [
+  "perl-any"
+  ("openssh-client" | "ssh-client")
+]
+extra-source "libnet-ssh-perl_0.09-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-ssh-perl/libnet-ssh-perl_0.09-5_all.deb"
+}

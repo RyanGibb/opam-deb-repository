@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-memotrie-dev_0.6.9-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-memotrie-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-newtype-generics-dev"
+  "libgmp10"
+]
+extra-source "libghc-memotrie-dev_0.6.9-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-memotrie/libghc-memotrie-dev_0.6.9-2+b2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-syscallz-dev_0.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-syscallz-dev"]
+]
+depends: [
+  "librust-libc-0-2+default-dev"
+  "librust-log-0-4+default-dev"
+  "librust-seccomp-sys-dev"
+]
+extra-source "librust-syscallz-dev_0.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-syscallz/librust-syscallz-dev_0.8.0-1_amd64.deb"
+}

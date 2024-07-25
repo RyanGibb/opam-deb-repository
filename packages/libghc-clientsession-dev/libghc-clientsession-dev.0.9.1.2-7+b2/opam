@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-clientsession-dev_0.9.1.2-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-clientsession-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-base64-bytestring-dev"
+  "libghc-cereal-dev"
+  "libghc-cipher-aes-dev"
+  "libghc-cprng-aes-dev"
+  "libghc-crypto-api-dev"
+  "libghc-crypto-random-dev"
+  "libghc-entropy-dev"
+  "libghc-setenv-dev"
+  "libghc-skein-dev"
+  "libghc-tagged-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-clientsession-dev_0.9.1.2-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-clientsession/libghc-clientsession-dev_0.9.1.2-7+b2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ganglia-webfrontend_3.6.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ganglia-webfrontend"]
+]
+depends: [
+  "debconf" {>= "0.5"}
+  "php-xml"
+  "rrdtool"
+  ("apache" | "apache-ssl" | "apache-perl" | "apache2" | "httpd-cgi")
+  ("php" | "php-cgi" | "libapache2-mod-php")
+]
+extra-source "ganglia-webfrontend_3.6.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/ganglia-web/ganglia-webfrontend_3.6.1-3_all.deb"
+}

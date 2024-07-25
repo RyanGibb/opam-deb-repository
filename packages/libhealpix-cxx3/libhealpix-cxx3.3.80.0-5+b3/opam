@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhealpix-cxx3_3.80.0-5+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhealpix-cxx3"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcfitsio10" {>= "4.2.0~"}
+  "libgcc-s1" {>= "4.0"}
+  "libgomp1" {>= "6"}
+  "libsharp0" {>= "1.0.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libhealpix-cxx3_3.80.0-5+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/healpix-cxx/libhealpix-cxx3_3.80.0-5+b3_amd64.deb"
+}

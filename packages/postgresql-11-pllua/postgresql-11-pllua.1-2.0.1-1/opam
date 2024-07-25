@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-11-pllua_1:2.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-11-pllua"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "liblua5-3-0"
+  "postgresql-11"
+]
+extra-source "postgresql-11-pllua_1:2.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-pllua/postgresql-11-pllua_2.0.1-1_amd64.deb"
+}

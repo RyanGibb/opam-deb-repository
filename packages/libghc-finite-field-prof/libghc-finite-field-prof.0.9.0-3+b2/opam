@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-finite-field-prof_0.9.0-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-finite-field-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-finite-field-dev" {= "0.9.0-3+b2"}
+  "libghc-hashable-prof"
+  "libghc-singletons-prof"
+]
+extra-source "libghc-finite-field-prof_0.9.0-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-finite-field/libghc-finite-field-prof_0.9.0-3+b2_amd64.deb"
+}

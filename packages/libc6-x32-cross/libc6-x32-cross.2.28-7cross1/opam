@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libc6-x32-cross_2.28-7cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libc6-x32-cross"]
+]
+conflicts: [
+  "openrc-x32-cross (<< 0.27-2~)"
+]
+extra-source "libc6-x32-cross_2.28-7cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cross-toolchain-base-ports/libc6-x32-cross_2.28-7cross1_all.deb"
+}

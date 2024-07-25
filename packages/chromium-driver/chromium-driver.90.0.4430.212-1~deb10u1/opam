@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i chromium-driver_90.0.4430.212-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r chromium-driver"]
+]
+depends: [
+  "chromium" {= "90.0.4430.212-1~deb10u1"}
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.28"}
+  "libevent-2-1-6" {>= "2.1.8-stable"}
+  "libglib2-0-0" {>= "2.22.0"}
+  "libicu63" {>= "63.1-1~"}
+  "libminizip1" {>= "1.1"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libre2-5" {>= "20150701+dfsg"}
+  "libstdc++6" {>= "5.2"}
+  "libxcb1" {>= "1.9.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "chromium-driver_90.0.4430.212-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chromium/chromium-driver_90.0.4430.212-1~deb10u1_amd64.deb"
+}

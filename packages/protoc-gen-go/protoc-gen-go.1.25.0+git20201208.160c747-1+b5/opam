@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i protoc-gen-go_1.25.0+git20201208.160c747-1+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r protoc-gen-go"]
+]
+depends: [
+  "libprotobuf-dev"
+  "protobuf-compiler"
+]
+conflicts: [
+  "golang-goprotobuf-dev"
+]
+extra-source "protoc-gen-go_1.25.0+git20201208.160c747-1+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-google-protobuf/protoc-gen-go_1.25.0+git20201208.160c747-1+b5_amd64.deb"
+}

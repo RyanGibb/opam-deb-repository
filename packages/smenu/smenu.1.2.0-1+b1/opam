@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i smenu_1.2.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r smenu"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "smenu_1.2.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/smenu/smenu_1.2.0-1+b1_amd64.deb"
+}

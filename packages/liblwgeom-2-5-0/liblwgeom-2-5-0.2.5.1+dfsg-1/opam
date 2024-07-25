@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblwgeom-2.5-0_2.5.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblwgeom-2.5-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgeos-c1v5" {>= "3.5.0"}
+  "libjson-c3" {>= "0.10"}
+  "libproj13" {>= "4.9.0"}
+  "libsfcgal1" {>= "1.1.0"}
+]
+extra-source "liblwgeom-2.5-0_2.5.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgis/liblwgeom-2.5-0_2.5.1+dfsg-1_amd64.deb"
+}

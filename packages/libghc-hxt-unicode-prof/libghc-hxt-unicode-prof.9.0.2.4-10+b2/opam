@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hxt-unicode-prof_9.0.2.4-10+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hxt-unicode-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hxt-charproperties-prof"
+  "libghc-hxt-unicode-dev" {= "9.0.2.4-10+b2"}
+]
+extra-source "libghc-hxt-unicode-prof_9.0.2.4-10+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hxt-unicode/libghc-hxt-unicode-prof_9.0.2.4-10+b2_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i breeze_4:5.27.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r breeze"]
+]
+depends: [
+  "breeze-cursor-theme" {= "4-5.27.5-2"}
+  "breeze-icon-theme"
+  "kde-style-breeze" {= "4-5.27.5-2"}
+  "kwin-style-breeze" {= "4-5.27.5-2"}
+  "libc6" {>= "2.34"}
+  "libkf5configcore5" {>= "5.102.0~"}
+  "libkf5coreaddons5" {>= "5.102.0~"}
+  "libkf5i18n5" {>= "5.102.0~"}
+  "libkf5kcmutils5" {>= "5.102.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "breeze_4:5.27.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/breeze/breeze_5.27.5-2_amd64.deb"
+}

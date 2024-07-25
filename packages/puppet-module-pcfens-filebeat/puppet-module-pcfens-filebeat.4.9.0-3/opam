@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-pcfens-filebeat_4.9.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-pcfens-filebeat"]
+]
+depends: [
+  "puppet-module-camptocamp-systemd"
+  "puppet-module-puppetlabs-apt"
+  "puppet-module-puppetlabs-stdlib"
+]
+extra-source "puppet-module-pcfens-filebeat_4.9.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-pcfens-filebeat/puppet-module-pcfens-filebeat_4.9.0-3_all.deb"
+}

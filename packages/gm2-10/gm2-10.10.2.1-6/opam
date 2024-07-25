@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gm2-10_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gm2-10"]
+]
+depends: [
+  "g++-10" {>= "10"}
+  "gcc-10-base" {>= "10"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libgm2-10-dev" {= "10.2.1-6"}
+  "libgmp10" {>= "2-5.0.1~"}
+  "libisl23" {>= "0.15"}
+  "libmpc3" {>= "1.1.0"}
+  "libmpfr6" {>= "3.1.3"}
+  "libstdc++6" {>= "5"}
+  "libzstd1" {>= "1.3.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gm2-10_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/gm2-10_10.2.1-6_amd64.deb"
+}

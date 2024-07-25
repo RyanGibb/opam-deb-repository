@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dhis-server_5.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dhis-server"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "dhis-server_5.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dhis-server/dhis-server_5.3-3_amd64.deb"
+}

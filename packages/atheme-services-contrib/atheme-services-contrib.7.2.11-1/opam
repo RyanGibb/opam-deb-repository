@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i atheme-services-contrib_7.2.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r atheme-services-contrib"]
+]
+depends: [
+  "atheme-services" {>= "7.2.11"}
+  "libc6" {>= "2.9"}
+]
+extra-source "atheme-services-contrib_7.2.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/atheme-services/atheme-services-contrib_7.2.11-1_amd64.deb"
+}

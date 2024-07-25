@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libodsstream0_0.7.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libodsstream0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5xml5" {>= "5.1.0"}
+  "libquazip5-1" {>= "0.7.3"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.8.0"} | "libqt5gui5-gles" {>= "5.8.0"})
+]
+extra-source "libodsstream0_0.7.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libodsstream/libodsstream0_0.7.11-1_amd64.deb"
+}

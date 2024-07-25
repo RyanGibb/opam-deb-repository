@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lepton-eda_1.9.18-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lepton-eda"]
+]
+depends: [
+  "guile-3-0"
+  "guile-3-0-libs"
+  "libc6" {>= "2.33"}
+  "libcairo2" {>= "1.6.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.70.0"}
+  "libgtk2-0-0" {>= "2.24.0"}
+  "libgtkextra-3-0" {>= "3.3.4"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.22.0"}
+  "libstroke0"
+]
+extra-source "lepton-eda_1.9.18-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lepton-eda/lepton-eda_1.9.18-1_amd64.deb"
+}

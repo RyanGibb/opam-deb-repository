@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtetrinet_0.7.11+git20200916.46e7ade-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtetrinet"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libcairo2" {>= "1.2.4"}
+  "libcanberra-gtk3-0" {>= "0.25"}
+  "libcanberra0" {>= "0.2"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.41.1"}
+  "libgtk-3-0" {>= "3.9.10"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gtetrinet_0.7.11+git20200916.46e7ade-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtetrinet/gtetrinet_0.7.11+git20200916.46e7ade-2+b1_amd64.deb"
+}

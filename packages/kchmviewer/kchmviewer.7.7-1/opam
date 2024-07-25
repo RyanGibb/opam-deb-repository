@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kchmviewer_7.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kchmviewer"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libchm1" {>= "0.40"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt5core5a" {>= "5.10.0"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5gui5" {>= "5.0.2"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5webkit5" {>= "5.6.0~rc"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libqt5xml5" {>= "5.1.0"}
+  "libstdc++6" {>= "5"}
+  "libzip4" {>= "0.10"}
+]
+extra-source "kchmviewer_7.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kchmviewer/kchmviewer_7.7-1_amd64.deb"
+}

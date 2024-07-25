@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-fontbitstreamvera_0.1.1+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-fontbitstreamvera"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "ttf-bitstream-vera"
+]
+extra-source "r-cran-fontbitstreamvera_0.1.1+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-fontbitstreamvera/r-cran-fontbitstreamvera_0.1.1+dfsg-4_all.deb"
+}

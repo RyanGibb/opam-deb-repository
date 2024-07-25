@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlada-sax12-dev_23.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlada-sax12-dev"]
+]
+depends: [
+  "gnat" {< "13"}
+  "gnat" {>= "12"}
+  "libxmlada-input12-dev" {= "23.0.0-3"}
+  "libxmlada-sax7" {= "23.0.0-3"}
+  "libxmlada-unicode12-dev" {= "23.0.0-3"}
+]
+extra-source "libxmlada-sax12-dev_23.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxmlada/libxmlada-sax12-dev_23.0.0-3_amd64.deb"
+}

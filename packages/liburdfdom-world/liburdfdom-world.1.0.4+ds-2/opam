@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liburdfdom-world_1.0.4+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liburdfdom-world"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libconsole-bridge0-4"
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "libtinyxml2-6-2v5"
+]
+extra-source "liburdfdom-world_1.0.4+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/urdfdom/liburdfdom-world_1.0.4+ds-2_amd64.deb"
+}

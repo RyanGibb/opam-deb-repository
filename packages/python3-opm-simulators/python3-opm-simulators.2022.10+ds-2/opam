@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-opm-simulators_2022.10+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-opm-simulators"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdune-common-dev"
+  "libdune-geometry-dev"
+  "libfmt9" {>= "9.1.0+ds1"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libgomp1" {>= "4.9"}
+  "libopenmpi3" {>= "4.1.4"}
+  "libopm-common"
+  "libopm-grid"
+  "libopm-simulators"
+  "libstdc++6" {>= "12"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-opm-simulators_2022.10+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opm-simulators/python3-opm-simulators_2022.10+ds-2_amd64.deb"
+}

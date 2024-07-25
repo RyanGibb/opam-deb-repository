@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dicod_2.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dicod"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libdico2" {>= "2.8"}
+  "libgsasl7" {>= "1.1"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libltdl7" {>= "2.4.6"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpcre3"
+  "lsb-base" {>= "3.0-6"}
+  "m4"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "dico-module-dictorg"
+  "dico-module-outline"
+  "dictd"
+]
+extra-source "dicod_2.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dico/dicod_2.10-1_amd64.deb"
+}

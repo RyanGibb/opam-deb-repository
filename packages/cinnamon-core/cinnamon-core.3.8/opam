@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cinnamon-core_3.8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cinnamon-core"]
+]
+depends: [
+  "cinnamon" {>= "3.8"}
+  "cinnamon-control-center" {>= "3.8"}
+  "cinnamon-screensaver" {>= "3.8"}
+  "cinnamon-session" {>= "3.8"}
+  "cinnamon-settings-daemon" {>= "3.8"}
+  "desktop-base"
+  "muffin" {>= "3.8"}
+  "nemo" {>= "3.8"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "cinnamon-core_3.8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cinnamon-desktop-environment/cinnamon-core_3.8_all.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yrmcds_1.1.8-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yrmcds"]
+]
+depends: [
+  "adduser"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.24"}
+  "libgcc1" {>= "1-3.0"}
+  "libgoogle-perftools4"
+  "libstdc++6" {>= "6"}
+  "libtcmalloc-minimal4"
+  "logrotate"
+]
+extra-source "yrmcds_1.1.8-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yrmcds/yrmcds_1.1.8-1.1_amd64.deb"
+}

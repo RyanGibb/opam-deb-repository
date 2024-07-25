@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i caml-crush-clients_1.0.8-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r caml-crush-clients"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "caml-crush-clients_1.0.8-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/caml-crush/caml-crush-clients_1.0.8-1+b1_amd64.deb"
+}

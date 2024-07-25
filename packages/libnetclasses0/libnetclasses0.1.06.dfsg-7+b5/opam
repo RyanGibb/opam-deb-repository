@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnetclasses0_1.06.dfsg-7+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnetclasses0"]
+]
+depends: [
+  "gnustep-base-runtime" {>= "1.28.0"}
+  "libc6" {>= "2.15"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnustep-base1-28" {>= "1.28.0"}
+  "libobjc4" {>= "4.2.1"}
+]
+extra-source "libnetclasses0_1.06.dfsg-7+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnustep-netclasses/libnetclasses0_1.06.dfsg-7+b5_amd64.deb"
+}

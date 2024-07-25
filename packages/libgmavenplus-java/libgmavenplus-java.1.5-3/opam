@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgmavenplus-java_1.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgmavenplus-java"]
+]
+depends: [
+  "ant"
+  "ivy"
+  "libjansi-java" {>= "1.16"}
+  "libjline2-java"
+  "libmaven-file-management-java" {>= "3.0.0"}
+  "libmaven3-core-java" {>= "3.5.0"}
+  "libplexus-classworlds-java" {>= "2.5.2"}
+  "libplexus-container-default-java" {>= "1.7.1"}
+]
+extra-source "libgmavenplus-java_1.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gmavenplus/libgmavenplus-java_1.5-3_all.deb"
+}

@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-horde-imap-client_2.29.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-horde-imap-client"]
+]
+depends: [
+  "php-common"
+  "php-horde-exception" {< "3.0.0~alpha1"}
+  "php-horde-exception" {>= "2.0.0"}
+  "php-horde-mail" {< "3.0.0~alpha1"}
+  "php-horde-mail" {>= "2.0.0"}
+  "php-horde-mime" {< "3.0.0~alpha1"}
+  "php-horde-mime" {>= "2.5.2"}
+  "php-horde-secret" {< "3.0.0~alpha1"}
+  "php-horde-secret" {>= "2.0.0"}
+  "php-horde-socket-client" {< "3.0.0~alpha1"}
+  "php-horde-socket-client" {>= "2.0.0"}
+  "php-horde-stream" {< "2.0.0~alpha1"}
+  "php-horde-stream" {>= "1.4.0"}
+  "php-horde-stream-filter" {< "3.0.0~alpha1"}
+  "php-horde-stream-filter" {>= "2.0.0"}
+  "php-horde-translation" {< "3.0.0~alpha1"}
+  "php-horde-translation" {>= "2.2.0"}
+  "php-horde-util" {< "3.0.0~alpha1"}
+  "php-horde-util" {>= "2.0.0"}
+  "php-json"
+]
+extra-source "php-horde-imap-client_2.29.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-horde-imap-client/php-horde-imap-client_2.29.16-1_all.deb"
+}

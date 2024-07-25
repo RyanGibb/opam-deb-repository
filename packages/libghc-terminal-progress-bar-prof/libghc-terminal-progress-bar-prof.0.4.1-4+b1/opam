@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-terminal-progress-bar-prof_0.4.1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-terminal-progress-bar-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-terminal-progress-bar-dev" {= "0.4.1-4+b1"}
+  "libghc-terminal-size-prof"
+]
+extra-source "libghc-terminal-progress-bar-prof_0.4.1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-terminal-progress-bar/libghc-terminal-progress-bar-prof_0.4.1-4+b1_amd64.deb"
+}

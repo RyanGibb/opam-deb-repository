@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i solvespace_2.3+repack1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r solvespace"]
+]
+depends: [
+  "libatkmm-1-6-1v5" {>= "2.24.0"}
+  "libc6" {>= "2.17"}
+  "libcairomm-1-0-1v5" {>= "1.12.0"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libglew2-1" {>= "1.12.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libglibmm-2-4-1v5" {>= "2.54.0"}
+  "libgtk2-0-0" {>= "2.14.0"}
+  "libgtkmm-2-4-1v5" {>= "1-2.24.0"}
+  "libjson-c3" {>= "0.10"}
+  "libpangomm-1-4-1v5" {>= "2.42.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsigc++-2-0-0v5" {>= "2.8.0"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "zlib1g" {>= "1-1.1.4"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "solvespace_2.3+repack1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/solvespace/solvespace_2.3+repack1-3+b1_amd64.deb"
+}

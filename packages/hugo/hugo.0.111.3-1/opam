@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hugo_0.111.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hugo"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libsass1" {>= "3.6.5"}
+  "libwebp7" {>= "1.2.4"}
+]
+extra-source "hugo_0.111.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hugo/hugo_0.111.3-1_amd64.deb"
+}

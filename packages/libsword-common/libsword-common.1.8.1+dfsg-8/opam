@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsword-common_1.8.1+dfsg-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsword-common"]
+]
+conflicts: [
+  "libsword6"
+  "libsword7"
+  "libsword8"
+]
+extra-source "libsword-common_1.8.1+dfsg-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sword/libsword-common_1.8.1+dfsg-8_all.deb"
+}

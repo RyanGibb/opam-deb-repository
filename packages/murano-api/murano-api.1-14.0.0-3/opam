@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i murano-api_1:14.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r murano-api"]
+]
+depends: [
+  "adduser"
+  "dbconfig-common"
+  "debconf"
+  "murano-common" {= "1-14.0.0-3"}
+  "python3-openstackclient"
+  "sysvinit-utils"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "murano-api_1:14.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/murano/murano-api_14.0.0-3_all.deb"
+}

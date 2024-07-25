@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcatalystx-injectcomponent-perl_0.025-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcatalystx-injectcomponent-perl"]
+]
+depends: [
+  "libcatalyst-perl"
+  "libclass-inspector-perl"
+  "perl-any"
+  ("libmodule-pluggable-perl" | "perl" {< "5.17.0"})
+]
+extra-source "libcatalystx-injectcomponent-perl_0.025-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcatalystx-injectcomponent-perl/libcatalystx-injectcomponent-perl_0.025-2_all.deb"
+}

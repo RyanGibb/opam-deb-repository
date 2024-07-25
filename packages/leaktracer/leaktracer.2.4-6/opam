@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i leaktracer_2.4-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r leaktracer"]
+]
+depends: [
+  "gdb"
+  "libc6" {>= "2.3"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "perl"
+]
+extra-source "leaktracer_2.4-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/leaktracer/leaktracer_2.4-6_amd64.deb"
+}

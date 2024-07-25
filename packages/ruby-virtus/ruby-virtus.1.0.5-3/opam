@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-virtus_1.0.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-virtus"]
+]
+depends: [
+  "ruby-axiom-types" {>= "0.1.1~"}
+  "ruby-coercible"
+  "ruby-descendants-tracker"
+  "ruby-equalizer"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-virtus_1.0.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-virtus/ruby-virtus_1.0.5-3_all.deb"
+}

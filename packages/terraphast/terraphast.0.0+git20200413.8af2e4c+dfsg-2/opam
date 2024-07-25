@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i terraphast_0.0+git20200413.8af2e4c+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r terraphast"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.4"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libstdc++6" {>= "11"}
+  "libterraces0" {= "0.0+git20200413.8af2e4c+dfsg-2"}
+]
+extra-source "terraphast_0.0+git20200413.8af2e4c+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/terraphast/terraphast_0.0+git20200413.8af2e4c+dfsg-2_amd64.deb"
+}

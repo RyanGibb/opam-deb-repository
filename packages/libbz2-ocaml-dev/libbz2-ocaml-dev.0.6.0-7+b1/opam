@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbz2-ocaml-dev_0.6.0-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbz2-ocaml-dev"]
+]
+depends: [
+  "libbz2-dev"
+  "libbz2-ocaml"
+  "libbz2-ocaml" {= "0.6.0-7+b1"}
+  "ocaml-findlib"
+  "ocaml-nox"
+]
+extra-source "libbz2-ocaml-dev_0.6.0-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/camlbz2/libbz2-ocaml-dev_0.6.0-7+b1_amd64.deb"
+}

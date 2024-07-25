@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libatomicparsley0_2.1.5-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libatomicparsley0"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.18.0"}
+  "libgpod4" {>= "0.7.0"}
+  "libgtkpod1" {>= "2.1.0"}
+]
+extra-source "libatomicparsley0_2.1.5-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtkpod/libatomicparsley0_2.1.5-10_amd64.deb"
+}

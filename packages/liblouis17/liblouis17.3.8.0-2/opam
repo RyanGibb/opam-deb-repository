@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblouis17_3.8.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblouis17"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "liblouis-data"
+  "libyaml-0-2"
+]
+extra-source "liblouis17_3.8.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblouis/liblouis17_3.8.0-2_amd64.deb"
+}

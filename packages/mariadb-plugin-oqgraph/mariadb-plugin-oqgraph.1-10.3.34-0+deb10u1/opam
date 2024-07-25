@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mariadb-plugin-oqgraph_1:10.3.34-0+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mariadb-plugin-oqgraph"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libjudydebian1"
+  "libstdc++6" {>= "5.2"}
+  "mariadb-server-10-3"
+]
+conflicts: [
+  "mariadb-oqgraph-engine-10.0"
+  "mariadb-oqgraph-engine-10.1"
+]
+extra-source "mariadb-plugin-oqgraph_1:10.3.34-0+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-plugin-oqgraph_10.3.34-0+deb10u1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-stackprof_0.2.15-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-stackprof"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libruby2-7" {>= "2.7.0-4"}
+  "python3"
+  "ruby" {< "1-2.8~"}
+  "ruby" {>= "1-2.7~0"}
+]
+extra-source "ruby-stackprof_0.2.15-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-stackprof/ruby-stackprof_0.2.15-2_amd64.deb"
+}

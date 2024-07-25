@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-librelogo_4:7.4.7-1+deb12u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-librelogo"]
+]
+depends: [
+  "libreoffice-common" {>= "1-7.0.0~alpha"}
+  "libreoffice-core"
+  "libreoffice-script-provider-python"
+  "libreoffice-writer"
+  "ucf" {>= "0.8"}
+]
+extra-source "libreoffice-librelogo_4:7.4.7-1+deb12u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-librelogo_7.4.7-1+deb12u3_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wput_0.6.2+git20130413-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wput"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgnutls-openssl27" {>= "3.0-0"}
+]
+extra-source "wput_0.6.2+git20130413-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wput/wput_0.6.2+git20130413-8_amd64.deb"
+}

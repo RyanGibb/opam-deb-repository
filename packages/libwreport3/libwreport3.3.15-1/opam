@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwreport3_3.15-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwreport3"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-3.0"}
+  "liblua5-1-0"
+  "libstdc++6" {>= "5.2"}
+  "wreport-common"
+]
+extra-source "libwreport3_3.15-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wreport/libwreport3_3.15-1_amd64.deb"
+}

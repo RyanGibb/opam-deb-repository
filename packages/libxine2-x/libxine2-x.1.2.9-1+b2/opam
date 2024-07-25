@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxine2-x_1.2.9-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxine2-x"]
+]
+depends: [
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.15"}
+  "libdirectfb-1-7-7" {>= "1.7.7"}
+  "libgl1"
+  "libice6" {>= "1-1.0.0"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libsm6"
+  "libva-glx2" {>= "1.0.3"}
+  "libva-x11-2" {>= "1.0.3"}
+  "libva2" {>= "1.7.3"}
+  "libvdpau1" {>= "0.2"}
+  "libx11-6"
+  "libxcb-shape0"
+  "libxcb-shm0"
+  "libxcb-xv0"
+  "libxcb1"
+  "libxext6"
+  "libxine2-bin" {= "1.2.9-1+b2"}
+  "libxinerama1"
+  "libxv1"
+  "libxvmc1"
+  ("libavcodec58" {>= "7-4.0"} | "libavcodec-extra58" {>= "7-4.0"})
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "libxine2-x_1.2.9-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xine-lib-1.2/libxine2-x_1.2.9-1+b2_amd64.deb"
+}

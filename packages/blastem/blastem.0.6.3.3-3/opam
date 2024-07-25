@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i blastem_0.6.3.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r blastem"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgl1"
+  "libglew2-1" {>= "1.12.0"}
+  "libsdl2-2-0-0" {>= "2.0.12+dfsg1"}
+  "zlib1g" {>= "1-1.2.11.dfsg"}
+]
+extra-source "blastem_0.6.3.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/blastem/blastem_0.6.3.3-3_amd64.deb"
+}

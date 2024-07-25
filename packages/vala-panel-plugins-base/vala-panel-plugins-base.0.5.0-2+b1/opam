@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vala-panel-plugins-base_0.5.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vala-panel-plugins-base"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.25.2"}
+  "libglib2-0-0" {>= "2.52"}
+  "libgtk-3-0" {>= "3.22.0"}
+  "libvalapanel0" {>= "0.5.0"}
+  "vala-panel" {= "0.5.0-2+b1"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "vala-panel-plugins-base_0.5.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vala-panel/vala-panel-plugins-base_0.5.0-2+b1_amd64.deb"
+}

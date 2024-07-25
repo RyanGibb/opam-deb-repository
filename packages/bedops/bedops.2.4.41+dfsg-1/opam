@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bedops_2.4.41+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bedops"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libjansson4" {>= "2.14"}
+  "libstdc++6" {>= "11"}
+  "python3"
+  "tcsh"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "bedops_2.4.41+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bedops/bedops_2.4.41+dfsg-1_amd64.deb"
+}

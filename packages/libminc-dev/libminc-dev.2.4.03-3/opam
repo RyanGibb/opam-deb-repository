@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libminc-dev_2.4.03-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libminc-dev"]
+]
+depends: [
+  "libhdf5-dev"
+  "libminc2-5-2-0" {= "2.4.03-3"}
+  "libnetcdf-dev"
+]
+conflicts: [
+  "libminc0-dev"
+]
+extra-source "libminc-dev_2.4.03-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libminc/libminc-dev_2.4.03-3_amd64.deb"
+}

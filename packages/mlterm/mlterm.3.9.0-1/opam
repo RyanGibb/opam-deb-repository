@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mlterm_3.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mlterm"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libx11-6"
+  "mlterm-common" {= "3.9.0-1"}
+]
+conflicts: [
+  "mlterm-tiny"
+]
+extra-source "mlterm_3.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mlterm/mlterm_3.9.0-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-elisp-refs_1.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-elisp-refs"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-dash" {>= "2.12.0"}
+  "elpa-loop" {>= "1.2"}
+  "elpa-s" {>= "1.11.0"}
+  "emacsen-common"
+]
+extra-source "elpa-elisp-refs_1.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elisp-refs/elpa-elisp-refs_1.3-3_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzulucrypt1.2.0_5.7.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzulucrypt1.2.0"]
+]
+depends: [
+  "libblkid1" {>= "2.17.2"}
+  "libc6" {>= "2.28"}
+  "libcryptsetup12" {>= "2-2.0.3"}
+  "libdevmapper1-02-1" {>= "2-1.02.97"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "libzulucrypt1.2.0_5.7.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zulucrypt/libzulucrypt1.2.0_5.7.1-2_amd64.deb"
+}

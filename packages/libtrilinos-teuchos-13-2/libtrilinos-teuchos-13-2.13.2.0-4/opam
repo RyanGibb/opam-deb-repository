@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrilinos-teuchos-13.2_13.2.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrilinos-teuchos-13.2"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libopenmpi3" {>= "4.1.4"}
+  "libstdc++6" {>= "11"}
+  "libtrilinos-kokkos-13-2" {>= "13.2.0"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libtrilinos-teuchos-13.2_13.2.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trilinos/libtrilinos-teuchos-13.2_13.2.0-4_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libscotchmetis-dev_7.0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libscotchmetis-dev"]
+]
+depends: [
+  "libscotch-dev" {= "7.0.3-2"}
+]
+conflicts: [
+  "libmetis-dev"
+  "libparmetis-dev"
+]
+extra-source "libscotchmetis-dev_7.0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scotch/libscotchmetis-dev_7.0.3-2_amd64.deb"
+}

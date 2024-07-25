@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bpython_0.21-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bpython"]
+]
+depends: [
+  "less"
+  "python3-any"
+  "python3-curtsies" {>= "0.3.5"}
+  "python3-cwcwidth"
+  "python3-greenlet"
+  "python3-pkg-resources"
+  "python3-pygments"
+  "python3-requests"
+  "python3-xdg"
+]
+extra-source "bpython_0.21-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bpython/bpython_0.21-3_all.deb"
+}

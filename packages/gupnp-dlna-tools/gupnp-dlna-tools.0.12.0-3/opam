@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gupnp-dlna-tools_0.12.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gupnp-dlna-tools"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.32"}
+  "libgupnp-dlna-2-0-4" {>= "0.9.4"}
+  "libxml2" {>= "2.6.27"}
+]
+extra-source "gupnp-dlna-tools_0.12.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gupnp-dlna/gupnp-dlna-tools_0.12.0-3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rpm2cpio_4.14.2.1+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rpm2cpio"]
+]
+depends: [
+  "libarchive13" {>= "3.0.4"}
+  "libc6" {>= "2.4"}
+  "librpm8" {>= "4.14.0+dfsg1"}
+  "librpmio8" {>= "4.14.0+dfsg1"}
+  "rpm-common" {= "4.14.2.1+dfsg1-1"}
+]
+extra-source "rpm2cpio_4.14.2.1+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rpm/rpm2cpio_4.14.2.1+dfsg1-1_amd64.deb"
+}

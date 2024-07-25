@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i miniupnpc_2.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r miniupnpc"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libminiupnpc17" {>= "1.9.20140610"}
+]
+extra-source "miniupnpc_2.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/miniupnpc/miniupnpc_2.2.1-1_amd64.deb"
+}

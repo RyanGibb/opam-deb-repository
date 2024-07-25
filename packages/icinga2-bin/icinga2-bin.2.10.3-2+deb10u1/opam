@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i icinga2-bin_2.10.3-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r icinga2-bin"]
+]
+depends: [
+  "icinga2-common" {= "2.10.3-2+deb10u1"}
+  "libboost-atomic1-67-0"
+  "libboost-chrono1-67-0"
+  "libboost-date-time1-67-0"
+  "libboost-program-options1-67-0"
+  "libboost-regex1-67-0" {>= "1.67.0-10"}
+  "libboost-system1-67-0"
+  "libboost-thread1-67-0"
+  "libc6" {>= "2.27"}
+  "libedit2" {>= "2.11-20080614-0"}
+  "libgcc1" {>= "1-3.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "7"}
+  "libsystemd0"
+  "libtinfo6" {>= "6"}
+  "libyajl2" {>= "2.0.4"}
+]
+extra-source "icinga2-bin_2.10.3-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/icinga2/icinga2-bin_2.10.3-2+deb10u1_amd64.deb"
+}

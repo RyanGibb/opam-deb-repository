@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-wl-pprint-annotated-prof_0.1.0.1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-wl-pprint-annotated-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-wl-pprint-annotated-dev" {= "0.1.0.1-3+b1"}
+]
+extra-source "libghc-wl-pprint-annotated-prof_0.1.0.1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-wl-pprint-annotated/libghc-wl-pprint-annotated-prof_0.1.0.1-3+b1_amd64.deb"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pymca5_5.6.3+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pymca5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqhull8-0" {>= "2020.1"}
+  "pymca-data" {= "5.6.3+dfsg-1"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-fisx" {>= "1.1.6"}
+  "python3-h5py-serial"
+  "python3-matplotlib"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  "python3-opengl"
+  "python3-pyqt5"
+  "python3-pyqt5-qtopengl"
+  "python3-qtconsole"
+]
+extra-source "python3-pymca5_5.6.3+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pymca/python3-pymca5_5.6.3+dfsg-1_amd64.deb"
+}

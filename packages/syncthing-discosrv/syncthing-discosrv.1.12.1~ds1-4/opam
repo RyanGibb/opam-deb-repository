@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i syncthing-discosrv_1.12.1~ds1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r syncthing-discosrv"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.4"}
+]
+extra-source "syncthing-discosrv_1.12.1~ds1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/syncthing/syncthing-discosrv_1.12.1~ds1-4_amd64.deb"
+}

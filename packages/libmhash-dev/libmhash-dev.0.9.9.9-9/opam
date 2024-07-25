@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmhash-dev_0.9.9.9-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmhash-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libmhash2" {= "0.9.9.9-9"}
+]
+extra-source "libmhash-dev_0.9.9.9-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mhash/libmhash-dev_0.9.9.9-9_amd64.deb"
+}

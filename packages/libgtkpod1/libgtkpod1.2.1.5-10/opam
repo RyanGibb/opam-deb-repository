@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgtkpod1_2.1.5-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgtkpod1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgpod4" {>= "0.7.90"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libgtkpod1_2.1.5-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtkpod/libgtkpod1_2.1.5-10_amd64.deb"
+}

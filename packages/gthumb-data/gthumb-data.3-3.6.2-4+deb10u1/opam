@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gthumb-data_3:3.6.2-4+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gthumb-data"]
+]
+depends: [
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gthumb-data_3:3.6.2-4+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gthumb/gthumb-data_3.6.2-4+deb10u1_all.deb"
+}

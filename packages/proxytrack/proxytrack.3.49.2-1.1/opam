@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i proxytrack_3.49.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r proxytrack"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "proxytrack_3.49.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/httrack/proxytrack_3.49.2-1.1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libswresample-dev_7:5.1.5-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libswresample-dev"]
+]
+depends: [
+  "libavutil-dev" {= "7-5.1.5-0+deb12u1"}
+  "libswresample4" {= "7-5.1.5-0+deb12u1"}
+]
+extra-source "libswresample-dev_7:5.1.5-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/ffmpeg/libswresample-dev_5.1.5-0+deb12u1_amd64.deb"
+}

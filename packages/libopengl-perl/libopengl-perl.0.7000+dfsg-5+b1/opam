@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopengl-perl_0.7000+dfsg-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopengl-perl"]
+]
+depends: [
+  "freeglut3" {>= "2.8.1"}
+  "libc6" {>= "2.29"}
+  "libgl1"
+  "libx11-6"
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "libopengl-perl_0.7000+dfsg-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libopengl-perl/libopengl-perl_0.7000+dfsg-5+b1_amd64.deb"
+}

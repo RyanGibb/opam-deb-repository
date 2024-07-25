@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i telemetry-tempest-plugin_1.7.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r telemetry-tempest-plugin"]
+]
+depends: [
+  "python3-any"
+  "python3-gabbi"
+  "python3-oslo-config"
+  "python3-oslo-utils"
+  "python3-pbr"
+  "python3-six" {>= "1.10.0"}
+  "python3-tempest"
+  "tempest"
+]
+extra-source "telemetry-tempest-plugin_1.7.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/telemetry-tempest-plugin/telemetry-tempest-plugin_1.7.0-2_all.deb"
+}

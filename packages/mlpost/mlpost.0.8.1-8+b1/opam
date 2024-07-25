@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mlpost_0.8.1-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mlpost"]
+]
+depends: [
+  "context" {>= "2012.05.23.20120524-1~"}
+  "libc6" {>= "2.17"}
+  "libmlpost-ocaml-dev"
+  "texlive-latex-base"
+  "texlive-latex-recommended"
+  "texlive-metapost"
+]
+extra-source "mlpost_0.8.1-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mlpost/mlpost_0.8.1-8+b1_amd64.deb"
+}

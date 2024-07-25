@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-mapbox-vector-tile_0.5.0+ds-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-mapbox-vector-tile"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-future"
+  "python-pkg-resources"
+  "python-protobuf"
+  "python-shapely"
+]
+extra-source "python-mapbox-vector-tile_0.5.0+ds-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mapbox-vector-tile/python-mapbox-vector-tile_0.5.0+ds-6_all.deb"
+}

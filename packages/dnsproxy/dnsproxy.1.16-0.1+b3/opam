@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dnsproxy_1.16-0.1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dnsproxy"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.2.5"}
+  "libevent-2-1-6" {>= "2.1.8-stable"}
+  "lsb-base"
+]
+extra-source "dnsproxy_1.16-0.1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dnsproxy/dnsproxy_1.16-0.1+b3_amd64.deb"
+}

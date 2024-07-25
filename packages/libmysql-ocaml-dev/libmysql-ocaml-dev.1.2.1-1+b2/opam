@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmysql-ocaml-dev_1.2.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmysql-ocaml-dev"]
+]
+depends: [
+  "default-libmysqlclient-dev"
+  "libmysql-ocaml"
+  "ocaml-nox"
+]
+extra-source "libmysql-ocaml-dev_1.2.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mysql-ocaml/libmysql-ocaml-dev_1.2.1-1+b2_amd64.deb"
+}

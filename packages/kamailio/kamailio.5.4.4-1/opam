@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kamailio_5.4.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kamailio"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.29"}
+  "libpcre3"
+  "libstdc++6" {>= "5"}
+  "lsb-base"
+  "python3"
+]
+extra-source "kamailio_5.4.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kamailio/kamailio_5.4.4-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openrazer-driver-dkms_2.4.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openrazer-driver-dkms"]
+]
+depends: [
+  "dkms" {>= "2.1.0.0"}
+  "udev"
+]
+conflicts: [
+  "openrazer-kernel-modules-dkms"
+]
+extra-source "openrazer-driver-dkms_2.4.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openrazer/openrazer-driver-dkms_2.4.0+dfsg-1_all.deb"
+}

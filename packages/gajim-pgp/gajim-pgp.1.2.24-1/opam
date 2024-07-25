@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gajim-pgp_1.2.24-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gajim-pgp"]
+]
+depends: [
+  "gajim" {>= "1.0.0~beta2"}
+  "python3-gnupg" {>= "0.4.1"}
+  "python3-pkg-resources"
+]
+extra-source "gajim-pgp_1.2.24-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gajim-pgp/gajim-pgp_1.2.24-1_all.deb"
+}

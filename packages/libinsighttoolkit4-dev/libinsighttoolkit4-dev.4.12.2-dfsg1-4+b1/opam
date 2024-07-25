@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libinsighttoolkit4-dev_4.12.2-dfsg1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libinsighttoolkit4-dev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdcmtk-dev"
+  "libdouble-conversion-dev"
+  "libexpat1-dev"
+  "libgcc1" {>= "1-3.0"}
+  "libgdcm2-dev"
+  "libhdf5-dev"
+  "libinsighttoolkit4-12" {= "4.12.2-dfsg1-4+b1"}
+  "libnifti-dev"
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libinsighttoolkit-dev"
+  "libinsighttoolkit3-dev"
+]
+extra-source "libinsighttoolkit4-dev_4.12.2-dfsg1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/insighttoolkit4/libinsighttoolkit4-dev_4.12.2-dfsg1-4+b1_amd64.deb"
+}

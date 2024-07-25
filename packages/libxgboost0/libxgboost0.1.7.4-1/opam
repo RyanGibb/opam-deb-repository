@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxgboost0_1.7.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxgboost0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdmlc0" {>= "0.5"}
+  "libgcc-s1" {>= "3.4"}
+  "libgomp1" {>= "6"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libxgboost0_1.7.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xgboost/libxgboost0_1.7.4-1_amd64.deb"
+}

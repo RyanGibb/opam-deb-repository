@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jshon_20131010-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jshon"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libjansson4" {>= "2.0.1"}
+]
+extra-source "jshon_20131010-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jshon/jshon_20131010-3+b1_amd64.deb"
+}

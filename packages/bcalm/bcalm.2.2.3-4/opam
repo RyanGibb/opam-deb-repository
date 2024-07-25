@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bcalm_2.2.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bcalm"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgatbcore3" {>= "1.4.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libhdf5-103-1"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "bcalm_2.2.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bcalm/bcalm_2.2.3-4_amd64.deb"
+}

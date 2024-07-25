@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-11-citus_8.0.0.PGDG-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-11-citus"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcurl4" {>= "7.16.2"}
+  "libpq5" {>= "9.2~beta3"}
+  "postgresql-11"
+]
+extra-source "postgresql-11-citus_8.0.0.PGDG-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/citus/postgresql-11-citus_8.0.0.PGDG-2_amd64.deb"
+}

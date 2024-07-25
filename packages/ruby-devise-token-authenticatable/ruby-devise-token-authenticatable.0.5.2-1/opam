@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-devise-token-authenticatable_0.5.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-devise-token-authenticatable"]
+]
+depends: [
+  "ruby-devise" {>= "4.0~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-devise-token-authenticatable_0.5.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-devise-token-authenticatable/ruby-devise-token-authenticatable_0.5.2-1_all.deb"
+}

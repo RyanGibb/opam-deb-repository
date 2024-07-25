@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i intltool_0.51.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r intltool"]
+]
+depends: [
+  "file"
+  "gettext" {>= "0.10.36-1"}
+  "libxml-parser-perl"
+  "patch"
+  "perl" {>= "5.8.1"}
+  "perl-any"
+  ("automake" | "automaken")
+]
+extra-source "intltool_0.51.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/intltool/intltool_0.51.0-6_all.deb"
+}

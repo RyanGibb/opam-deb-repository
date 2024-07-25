@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-bpfcc_0.18.0+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-bpfcc"]
+]
+depends: [
+  "libbpfcc" {>= "0.18.0+ds-2"}
+  "python3-any"
+]
+extra-source "python3-bpfcc_0.18.0+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bpfcc/python3-bpfcc_0.18.0+ds-2_all.deb"
+}

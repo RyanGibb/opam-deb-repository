@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puredata-import_1.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puredata-import"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  ("puredata-core" | "puredata")
+]
+extra-source "puredata-import_1.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puredata-import/puredata-import_1.3-5_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libobexftp0-dev_0.24-5+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libobexftp0-dev"]
+]
+depends: [
+  "libmulticobex1-dev"
+  "libobexftp0" {= "0.24-5+b5"}
+  "libopenobex2-dev"
+]
+conflicts: [
+  "libobexftp-dev (<< 0.22)"
+]
+extra-source "libobexftp0-dev_0.24-5+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/obexftp/libobexftp0-dev_0.24-5+b5_amd64.deb"
+}

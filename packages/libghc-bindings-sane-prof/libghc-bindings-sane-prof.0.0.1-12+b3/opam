@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-bindings-sane-prof_0.0.1-12+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-bindings-sane-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-bindings-sane-dev" {= "0.0.1-12+b3"}
+]
+extra-source "libghc-bindings-sane-prof_0.0.1-12+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-bindings-sane/libghc-bindings-sane-prof_0.0.1-12+b3_amd64.deb"
+}

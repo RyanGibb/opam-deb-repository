@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i c2hs_0.28.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r c2hs"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libffi8" {>= "3.4"}
+  "libgmp10" {>= "2-6.2.1+dfsg"}
+]
+extra-source "c2hs_0.28.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/c2hs/c2hs_0.28.8-1_amd64.deb"
+}

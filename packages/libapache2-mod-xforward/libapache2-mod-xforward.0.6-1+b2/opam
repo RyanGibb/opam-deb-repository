@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-xforward_0.6-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-xforward"]
+]
+depends: [
+  "apache2-bin"
+  "apache2-bin" {>= "2.4.16"}
+  "libc6" {>= "2.4"}
+]
+extra-source "libapache2-mod-xforward_0.6-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apache2-mod-xforward/libapache2-mod-xforward_0.6-1+b2_amd64.deb"
+}

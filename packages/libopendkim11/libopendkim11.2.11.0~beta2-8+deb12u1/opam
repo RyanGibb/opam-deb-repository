@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopendkim11_2.11.0~beta2-8+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopendkim11"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.34"}
+  "libdb5-3"
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "libopendkim11_2.11.0~beta2-8+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opendkim/libopendkim11_2.11.0~beta2-8+deb12u1_amd64.deb"
+}

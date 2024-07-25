@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i camlp5_7.01-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r camlp5"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "ocaml-compiler-libs"
+  "ocaml-nox"
+]
+extra-source "camlp5_7.01-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/camlp5/camlp5_7.01-1+b1_amd64.deb"
+}

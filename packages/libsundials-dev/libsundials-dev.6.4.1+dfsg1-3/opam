@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsundials-dev_6.4.1+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsundials-dev"]
+]
+depends: [
+  "cmake"
+  "gfortran"
+  "libhypre-dev"
+  "libsundials-arkode5" {= "6.4.1+dfsg1-3"}
+  "libsundials-cvode6" {= "6.4.1+dfsg1-3"}
+  "libsundials-cvodes6" {= "6.4.1+dfsg1-3"}
+  "libsundials-ida6" {= "6.4.1+dfsg1-3"}
+  "libsundials-idas5" {= "6.4.1+dfsg1-3"}
+  "libsundials-kinsol6" {= "6.4.1+dfsg1-3"}
+  "libsundials-nvecparallel-hypre6" {= "6.4.1+dfsg1-3"}
+  "libsundials-nvecparallel-mpi6" {= "6.4.1+dfsg1-3"}
+  "libsundials-nvecparallel-openmp6" {= "6.4.1+dfsg1-3"}
+  "libsundials-nvecparallel-petsc6" {= "6.4.1+dfsg1-3"}
+  "libsundials-nvecparallel-pthread6" {= "6.4.1+dfsg1-3"}
+  "libsundials-nvecserial6" {= "6.4.1+dfsg1-3"}
+  "libsundials-sunlinsol3" {= "6.4.1+dfsg1-3"}
+  "libsundials-sunmatrix4" {= "6.4.1+dfsg1-3"}
+  "mpi-default-dev"
+  "petsc-dev"
+  "pkg-config"
+]
+extra-source "libsundials-dev_6.4.1+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sundials/libsundials-dev_6.4.1+dfsg1-3_amd64.deb"
+}

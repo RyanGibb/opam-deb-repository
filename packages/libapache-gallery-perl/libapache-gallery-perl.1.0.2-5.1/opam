@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache-gallery-perl_1.0.2-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache-gallery-perl"]
+]
+depends: [
+  "libimage-imlib2-perl"
+  "libimage-info-perl"
+  "libimage-size-perl"
+  "libtemplate-perl"
+  "libtext-template-perl"
+  "perl-any"
+  ("libapache2-mod-perl2" {>= "2.0"} | "libapache-request-perl")
+  ("libcgi-pm-perl" | "perl" {< "5.19"})
+]
+extra-source "libapache-gallery-perl_1.0.2-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapache-gallery-perl/libapache-gallery-perl_1.0.2-5.1_all.deb"
+}

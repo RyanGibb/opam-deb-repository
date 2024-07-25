@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i power-profiles-daemon_0.12-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r power-profiles-daemon"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.43.2"}
+  "libgudev-1-0-0" {>= "234"}
+  "libpolkit-gobject-1-0" {>= "0.99"}
+]
+extra-source "power-profiles-daemon_0.12-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/power-profiles-daemon/power-profiles-daemon_0.12-1+b1_amd64.deb"
+}

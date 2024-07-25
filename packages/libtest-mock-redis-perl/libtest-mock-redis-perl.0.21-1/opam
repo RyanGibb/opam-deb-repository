@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest-mock-redis-perl_0.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest-mock-redis-perl"]
+]
+depends: [
+  "libclass-method-modifiers-perl"
+  "libnamespace-clean-perl"
+  "libpackage-stash-perl" {>= "0.34"}
+  "libtry-tiny-perl"
+  "perl"
+]
+extra-source "libtest-mock-redis-perl_0.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest-mock-redis-perl/libtest-mock-redis-perl_0.21-1_all.deb"
+}

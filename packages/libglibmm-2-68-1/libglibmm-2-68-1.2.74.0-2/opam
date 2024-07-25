@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglibmm-2.68-1_2.74.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglibmm-2.68-1"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.73.2"}
+  "libsigc++-3-0-0" {>= "3.2.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libglibmm-2.68-1_2.74.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glibmm2.68/libglibmm-2.68-1_2.74.0-2_amd64.deb"
+}

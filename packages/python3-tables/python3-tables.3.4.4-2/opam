@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-tables_3.4.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-tables"]
+]
+depends: [
+  "python-tables-data" {= "3.4.4-2"}
+  "python3-any"
+  "python3-numexpr"
+  "python3-numpy"
+  "python3-six" {>= "1.9.0"}
+  "python3-tables-lib" {< "3.4.4-2.1~"}
+  "python3-tables-lib" {>= "3.4.4-2"}
+]
+extra-source "python3-tables_3.4.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pytables/python3-tables_3.4.4-2_all.deb"
+}

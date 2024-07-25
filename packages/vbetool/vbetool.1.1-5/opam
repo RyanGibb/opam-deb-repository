@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vbetool_1.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vbetool"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpci3" {>= "1-3.5.1"}
+  "libx86-1" {>= "1.1+ds1"}
+]
+extra-source "vbetool_1.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vbetool/vbetool_1.1-5_amd64.deb"
+}

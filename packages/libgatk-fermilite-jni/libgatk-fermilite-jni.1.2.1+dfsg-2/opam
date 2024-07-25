@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgatk-fermilite-jni_1.2.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgatk-fermilite-jni"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfml0" {>= "0.1"}
+]
+extra-source "libgatk-fermilite-jni_1.2.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gatk-fermilite/libgatk-fermilite-jni_1.2.1+dfsg-2_amd64.deb"
+}

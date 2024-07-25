@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lightsoff_1:40.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lightsoff"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libglib2-0-0" {>= "2.39.90"}
+  "libgtk-3-0" {>= "3.24"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "lightsoff_1:40.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lightsoff/lightsoff_40.0.1-1_amd64.deb"
+}

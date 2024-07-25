@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclang-cpp16-dev_1:16.0.6-15~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclang-cpp16-dev"]
+]
+depends: [
+  "libclang-cpp16" {= "1-16.0.6-15~deb12u1"}
+  "libgcc-12-dev"
+  "libstdc++-12-dev"
+]
+extra-source "libclang-cpp16-dev_1:16.0.6-15~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-16/libclang-cpp16-dev_16.0.6-15~deb12u1_amd64.deb"
+}

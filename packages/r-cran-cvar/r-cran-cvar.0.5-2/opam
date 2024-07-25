@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-cvar_0.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-cvar"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-cran-gbutils"
+  "r-cran-rdpack" {>= "0.8"}
+]
+extra-source "r-cran-cvar_0.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-cvar/r-cran-cvar_0.5-2_all.deb"
+}

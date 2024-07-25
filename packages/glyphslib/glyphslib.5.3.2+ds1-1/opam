@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i glyphslib_5.3.2+ds1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r glyphslib"]
+]
+depends: [
+  "python3-any"
+  "python3-glyphslib" {= "5.3.2+ds1-1"}
+]
+extra-source "glyphslib_5.3.2+ds1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glyphslib/glyphslib_5.3.2+ds1-1_all.deb"
+}

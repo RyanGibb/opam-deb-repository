@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-digest_0.6.27-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-digest"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+]
+extra-source "r-cran-digest_0.6.27-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-digest/r-cran-digest_0.6.27-1_amd64.deb"
+}

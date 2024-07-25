@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyghmi_1.5.34-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyghmi"]
+]
+depends: [
+  "python3-any"
+  "python3-cryptography" {>= "2.1"}
+  "python3-dateutil"
+  "python3-pbr"
+  "python3-six" {>= "1.10.0"}
+]
+extra-source "python3-pyghmi_1.5.34-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pyghmi/python3-pyghmi_1.5.34-2_all.deb"
+}

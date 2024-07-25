@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i task-xfce-desktop_3.53_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r task-xfce-desktop"]
+]
+depends: [
+  "light-locker"
+  "lightdm"
+  "task-desktop"
+  "tasksel" {= "3.53"}
+  "xfce4"
+]
+extra-source "task-xfce-desktop_3.53_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tasksel/task-xfce-desktop_3.53_all.deb"
+}

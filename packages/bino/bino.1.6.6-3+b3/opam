@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bino_1.6.6-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bino"]
+]
+depends: [
+  "libass9" {>= "1-0.13.6"}
+  "libavcodec-extra58"
+  "libavdevice58" {>= "7-4.0"}
+  "libavformat58" {>= "7-4.1"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.17"}
+  "libgcc-s1"
+  "libgl1"
+  "libglew2-1" {>= "1.12.0"}
+  "liblirc-client0"
+  "libopenal1" {>= "1.14"}
+  "libqt5core5a" {>= "5.12.2"}
+  "libqt5opengl5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "9"}
+  "libswscale5" {>= "7-4.0"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "bino_1.6.6-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bino/bino_1.6.6-3+b3_amd64.deb"
+}

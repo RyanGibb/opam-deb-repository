@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsquashfs1_1.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsquashfs1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "liblz4-1" {>= "0.0~r130"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libzstd1" {>= "1.3.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libsquashfs1_1.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/squashfs-tools-ng/libsquashfs1_1.0.4-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liboping-dev_1.10.0-2.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liboping-dev"]
+]
+depends: [
+  "liboping0" {= "1.10.0-2.1+b1"}
+]
+conflicts: [
+  "liboping0-dev"
+]
+extra-source "liboping-dev_1.10.0-2.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/liboping/liboping-dev_1.10.0-2.1+b1_amd64.deb"
+}

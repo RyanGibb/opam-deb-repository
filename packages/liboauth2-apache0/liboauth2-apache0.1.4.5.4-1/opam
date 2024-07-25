@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liboauth2-apache0_1.4.5.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liboauth2-apache0"]
+]
+depends: [
+  "libapr1" {>= "1.2.7"}
+  "libaprutil1" {>= "1.2.7+dfsg"}
+  "libc6" {>= "2.4"}
+  "libjansson4" {>= "2.14"}
+  "liboauth2-0" {>= "1.4"}
+]
+extra-source "liboauth2-apache0_1.4.5.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/liboauth2/liboauth2-apache0_1.4.5.4-1_amd64.deb"
+}

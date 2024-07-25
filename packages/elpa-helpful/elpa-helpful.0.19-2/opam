@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-helpful_0.19-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-helpful"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-dash" {>= "2.18.0"}
+  "elpa-elisp-refs" {>= "1.2"}
+  "elpa-f" {>= "0.20.0"}
+  "elpa-s" {>= "1.11.0"}
+  "emacsen-common"
+]
+extra-source "elpa-helpful_0.19-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/helpful-el/elpa-helpful_0.19-2_all.deb"
+}

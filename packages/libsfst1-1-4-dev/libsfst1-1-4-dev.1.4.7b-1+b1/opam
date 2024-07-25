@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsfst1-1.4-dev_1.4.7b-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsfst1-1.4-dev"]
+]
+depends: [
+  "libsfst1-1-4" {= "1.4.7b-1+b1"}
+]
+conflicts: [
+  "libsfst1-dev"
+]
+extra-source "libsfst1-1.4-dev_1.4.7b-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sfst/libsfst1-1.4-dev_1.4.7b-1+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnetfilter-log-dev_1.0.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnetfilter-log-dev"]
+]
+depends: [
+  "libmnl-dev"
+  "libnetfilter-log1" {= "1.0.2-3"}
+  "libnfnetlink-dev"
+  "pkg-config"
+]
+extra-source "libnetfilter-log-dev_1.0.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnetfilter-log/libnetfilter-log-dev_1.0.2-3_amd64.deb"
+}

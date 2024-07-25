@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmdiskmon_0.0.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmdiskmon"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libx11-6"
+  "libxext6"
+  "libxpm4"
+]
+extra-source "wmdiskmon_0.0.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmdiskmon/wmdiskmon_0.0.2-4_amd64.deb"
+}

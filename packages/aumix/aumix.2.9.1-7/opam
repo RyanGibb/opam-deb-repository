@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aumix_2.9.1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aumix"]
+]
+depends: [
+  "aumix-common"
+  "libc6" {>= "2.7"}
+  "libgpm2" {>= "1.20.7"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+conflicts: [
+  "aumix-gtk"
+]
+extra-source "aumix_2.9.1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aumix/aumix_2.9.1-7_amd64.deb"
+}

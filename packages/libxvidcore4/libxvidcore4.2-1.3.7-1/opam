@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxvidcore4_2:1.3.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxvidcore4"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+]
+extra-source "libxvidcore4_2:1.3.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xvidcore/libxvidcore4_1.3.7-1_amd64.deb"
+}

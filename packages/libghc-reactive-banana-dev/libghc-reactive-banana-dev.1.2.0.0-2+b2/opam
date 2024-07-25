@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-reactive-banana-dev_1.2.0.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-reactive-banana-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-hashable-dev"
+  "libghc-pqueue-dev"
+  "libghc-semigroups-dev"
+  "libghc-unordered-containers-dev"
+  "libghc-vault-dev"
+  "libgmp10"
+]
+extra-source "libghc-reactive-banana-dev_1.2.0.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-reactive-banana/libghc-reactive-banana-dev_1.2.0.0-2+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pxlib-dev_0.6.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pxlib-dev"]
+]
+depends: [
+  "libgsf-1-dev" {>= "1.13.2"}
+  "pxlib1" {= "0.6.7-1"}
+]
+extra-source "pxlib-dev_0.6.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pxlib/pxlib-dev_0.6.7-1_amd64.deb"
+}

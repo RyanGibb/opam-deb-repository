@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-flask-mongoengine_0.9.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-flask-mongoengine"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-flask" {>= "0.8"}
+  "python3-flaskext-wtf" {>= "0.14.2"}
+  "python3-mongoengine"
+  "python3-six"
+]
+extra-source "python3-flask-mongoengine_0.9.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flask-mongoengine/python3-flask-mongoengine_0.9.3-2_all.deb"
+}

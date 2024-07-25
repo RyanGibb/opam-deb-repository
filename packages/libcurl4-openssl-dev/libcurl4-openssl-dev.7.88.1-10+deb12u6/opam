@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcurl4-openssl-dev_7.88.1-10+deb12u6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcurl4-openssl-dev"]
+]
+depends: [
+  "libcurl4" {= "7.88.1-10+deb12u6"}
+]
+conflicts: [
+  "libcurl4-gnutls-dev"
+  "libcurl4-nss-dev"
+  "libssl1.0-dev"
+]
+extra-source "libcurl4-openssl-dev_7.88.1-10+deb12u6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/curl/libcurl4-openssl-dev_7.88.1-10+deb12u6_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i usbmuxd_1.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r usbmuxd"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.17"}
+  "libimobiledevice6" {>= "1.3.0"}
+  "libplist3" {>= "2.2.0"}
+  "libusb-1-0-0" {>= "2-1.0.22"}
+]
+extra-source "usbmuxd_1.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/usbmuxd/usbmuxd_1.1.1-2_amd64.deb"
+}

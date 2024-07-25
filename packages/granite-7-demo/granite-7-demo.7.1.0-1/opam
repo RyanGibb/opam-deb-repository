@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i granite-7-demo_7.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r granite-7-demo"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgranite-7-7" {= "7.1.0-1"}
+  "libgtk-4-1" {>= "4.0.0"}
+]
+extra-source "granite-7-demo_7.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/granite-7/granite-7-demo_7.1.0-1_amd64.deb"
+}

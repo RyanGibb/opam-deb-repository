@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ldappool_3.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ldappool"]
+]
+depends: [
+  "python3-any"
+  "python3-ldap" {>= "3.0.0~b4"}
+  "python3-prettytable"
+  "python3-six"
+]
+extra-source "python3-ldappool_3.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-ldappool/python3-ldappool_3.0.0-2_all.deb"
+}

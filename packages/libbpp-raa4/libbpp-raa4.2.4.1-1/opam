@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbpp-raa4_2.4.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbpp-raa4"]
+]
+depends: [
+  "libbpp-core4" {>= "2.4.1"}
+  "libbpp-seq12" {>= "2.4.1"}
+  "libc6" {>= "2.15"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libbpp-raa4_2.4.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbpp-raa/libbpp-raa4_2.4.1-1_amd64.deb"
+}

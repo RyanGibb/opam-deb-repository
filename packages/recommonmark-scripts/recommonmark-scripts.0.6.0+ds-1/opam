@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i recommonmark-scripts_0.6.0+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r recommonmark-scripts"]
+]
+depends: [
+  "python3-any"
+  "python3-recommonmark" {= "0.6.0+ds-1"}
+]
+extra-source "recommonmark-scripts_0.6.0+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/recommonmark/recommonmark-scripts_0.6.0+ds-1_all.deb"
+}

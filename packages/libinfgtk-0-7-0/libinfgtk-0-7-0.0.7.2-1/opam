@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libinfgtk-0.7-0_0.7.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libinfgtk-0.7-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgnutls30" {>= "3.7.0"}
+  "libgtk-3-0" {>= "3.16.2"}
+  "libinfinity-0-7-0" {>= "0.7.1"}
+]
+extra-source "libinfgtk-0.7-0_0.7.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libinfinity/libinfgtk-0.7-0_0.7.2-1_amd64.deb"
+}

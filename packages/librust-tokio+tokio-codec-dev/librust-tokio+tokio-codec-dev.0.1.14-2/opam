@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-tokio+tokio-codec-dev_0.1.14-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-tokio+tokio-codec-dev"]
+]
+depends: [
+  "librust-tokio-codec-0-1+default-dev"
+  "librust-tokio-dev" {= "0.1.14-2"}
+]
+extra-source "librust-tokio+tokio-codec-dev_0.1.14-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-tokio/librust-tokio+tokio-codec-dev_0.1.14-2_amd64.deb"
+}

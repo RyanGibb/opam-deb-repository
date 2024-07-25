@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cppcheck-gui_2.10-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cppcheck-gui"]
+]
+depends: [
+  "cppcheck" {= "2.10-2"}
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.0"}
+  "libpcre3"
+  "libqt5charts5" {>= "5.7.1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5help5" {>= "5.6.0~beta"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libstdc++6" {>= "11"}
+  "libtinyxml2-9" {>= "8.0.0"}
+  ("libqt5gui5" {>= "5.11.0~rc1"} | "libqt5gui5-gles" {>= "5.11.0~rc1"})
+]
+extra-source "cppcheck-gui_2.10-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cppcheck/cppcheck-gui_2.10-2_amd64.deb"
+}

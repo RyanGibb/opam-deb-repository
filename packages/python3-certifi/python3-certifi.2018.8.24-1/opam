@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-certifi_2018.8.24-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-certifi"]
+]
+depends: [
+  "ca-certificates"
+  "python3-any" {>= "3.4~"}
+]
+extra-source "python3-certifi_2018.8.24-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-certifi/python3-certifi_2018.8.24-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwayland-egl++0_0.2.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwayland-egl++0"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "libwayland-egl1" {>= "1.15.0"}
+]
+extra-source "libwayland-egl++0_0.2.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/waylandpp/libwayland-egl++0_0.2.8-1_amd64.deb"
+}

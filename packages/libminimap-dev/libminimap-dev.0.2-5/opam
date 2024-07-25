@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libminimap-dev_0.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libminimap-dev"]
+]
+depends: [
+  "libminimap0" {= "0.2-5"}
+  "zlib1g-dev"
+]
+extra-source "libminimap-dev_0.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/minimap/libminimap-dev_0.2-5_amd64.deb"
+}

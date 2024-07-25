@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-gass-transfer-dev_9.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-gass-transfer-dev"]
+]
+depends: [
+  "libglobus-common-dev" {>= "15"}
+  "libglobus-gass-transfer2" {= "9.1-1"}
+  "libglobus-gss-assist-dev" {>= "8"}
+  "libglobus-gssapi-gsi-dev" {>= "10"}
+  "libglobus-io-dev" {>= "8"}
+]
+extra-source "libglobus-gass-transfer-dev_9.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gass-transfer/libglobus-gass-transfer-dev_9.1-1_amd64.deb"
+}

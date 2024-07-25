@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsasl2-modules-ldap_2.1.27+dfsg-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsasl2-modules-ldap"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libsasl2-modules" {= "2.1.27+dfsg-1+deb10u2"}
+]
+extra-source "libsasl2-modules-ldap_2.1.27+dfsg-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cyrus-sasl2/libsasl2-modules-ldap_2.1.27+dfsg-1+deb10u2_amd64.deb"
+}

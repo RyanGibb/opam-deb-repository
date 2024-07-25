@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-isospec_2.2.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-isospec"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-cffi-backend"
+]
+extra-source "python3-isospec_2.2.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/isospec/python3-isospec_2.2.1-1+b1_amd64.deb"
+}

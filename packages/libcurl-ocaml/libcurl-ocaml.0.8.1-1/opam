@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcurl-ocaml_0.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcurl-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.28.0"}
+  "liblwt-ocaml"
+  "libresult-ocaml"
+  "ocaml-base-nox"
+]
+extra-source "libcurl-ocaml_0.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocurl/libcurl-ocaml_0.8.1-1_amd64.deb"
+}

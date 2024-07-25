@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmoosex-classattribute-perl_0.29-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmoosex-classattribute-perl"]
+]
+depends: [
+  "libmoose-perl"
+  "libnamespace-autoclean-perl"
+  "libnamespace-clean-perl"
+  "perl-any"
+  ("libscalar-list-utils-perl" | "perl")
+]
+extra-source "libmoosex-classattribute-perl_0.29-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmoosex-classattribute-perl/libmoosex-classattribute-perl_0.29-3_all.deb"
+}

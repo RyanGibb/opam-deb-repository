@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsndfile1_1.0.31-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsndfile1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libflac8" {>= "1.3.0"}
+  "libogg0" {>= "1.3.0"}
+  "libopus0" {>= "1.1"}
+  "libvorbis0a" {>= "1.2.3"}
+  "libvorbisenc2" {>= "1.2.3"}
+]
+extra-source "libsndfile1_1.0.31-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsndfile/libsndfile1_1.0.31-2_amd64.deb"
+}

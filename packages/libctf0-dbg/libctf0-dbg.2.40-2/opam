@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libctf0-dbg_2.40-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libctf0-dbg"]
+]
+depends: [
+  "libctf0" {= "2.40-2"}
+]
+extra-source "libctf0-dbg_2.40-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/binutils/libctf0-dbg_2.40-2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i icinga2-common_2.13.6-2+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r icinga2-common"]
+]
+depends: [
+  "adduser"
+  "lsb-release"
+  "sysvinit-utils" {>= "3.05-4~"}
+]
+conflicts: [
+  "python-icinga2"
+]
+extra-source "icinga2-common_2.13.6-2+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/icinga2/icinga2-common_2.13.6-2+deb12u1_all.deb"
+}

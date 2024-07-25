@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhiredis-dev_0.14.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhiredis-dev"]
+]
+depends: [
+  "libhiredis0-14" {= "0.14.0-3"}
+]
+extra-source "libhiredis-dev_0.14.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hiredis/libhiredis-dev_0.14.0-3_amd64.deb"
+}

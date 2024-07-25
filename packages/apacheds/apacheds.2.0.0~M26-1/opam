@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apacheds_2.0.0~M26-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apacheds"]
+]
+depends: [
+  "adduser"
+  "libapacheds-java" {= "2.0.0~M26-1"}
+  ("default-jre-headless" | "java7-runtime-headless")
+]
+extra-source "apacheds_2.0.0~M26-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apache-directory-server/apacheds_2.0.0~M26-1_all.deb"
+}

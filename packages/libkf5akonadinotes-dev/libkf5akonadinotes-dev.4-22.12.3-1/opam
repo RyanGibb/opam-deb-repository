@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5akonadinotes-dev_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5akonadinotes-dev"]
+]
+depends: [
+  "libkf5akonadinotes5" {= "4-22.12.3-1"}
+  "libkf5i18n-dev" {>= "5.99.0~"}
+  "libkf5mime-dev" {>= "22.12.3~"}
+  "qtbase5-dev" {>= "5.15.2~"}
+]
+extra-source "libkf5akonadinotes-dev_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/akonadi-notes/libkf5akonadinotes-dev_22.12.3-1_amd64.deb"
+}

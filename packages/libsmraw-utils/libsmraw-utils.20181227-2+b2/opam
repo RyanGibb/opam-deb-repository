@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsmraw-utils_20181227-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsmraw-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfuse2" {>= "2.6"}
+  "libsmraw1" {>= "20150105"}
+]
+extra-source "libsmraw-utils_20181227-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsmraw/libsmraw-utils_20181227-2+b2_amd64.deb"
+}

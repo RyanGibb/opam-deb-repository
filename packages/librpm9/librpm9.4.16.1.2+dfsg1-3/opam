@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librpm9_4.16.1.2+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librpm9"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcap2" {>= "1-2.10"}
+  "libdb5-3"
+  "libpopt0" {>= "1.14"}
+  "librpmio9" {= "4.16.1.2+dfsg1-3"}
+  "libsqlite3-0" {>= "3.7.15"}
+]
+extra-source "librpm9_4.16.1.2+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rpm/librpm9_4.16.1.2+dfsg1-3_amd64.deb"
+}

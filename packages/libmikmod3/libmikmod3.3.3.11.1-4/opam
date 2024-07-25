@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmikmod3_3.3.11.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmikmod3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libopenal1" {>= "1.14"}
+  "libpulse0" {>= "0.99.1"}
+  "libsdl2-2-0-0" {>= "2.0.8"}
+]
+extra-source "libmikmod3_3.3.11.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmikmod/libmikmod3_3.3.11.1-4_amd64.deb"
+}

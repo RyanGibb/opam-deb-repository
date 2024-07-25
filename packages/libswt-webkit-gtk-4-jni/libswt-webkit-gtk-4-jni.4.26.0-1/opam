@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libswt-webkit-gtk-4-jni_4.26.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libswt-webkit-gtk-4-jni"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libswt-gtk-4-jni" {= "4.26.0-1"}
+  "libwebkit2gtk-4-0-37"
+]
+extra-source "libswt-webkit-gtk-4-jni_4.26.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/swt4-gtk/libswt-webkit-gtk-4-jni_4.26.0-1_amd64.deb"
+}

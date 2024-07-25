@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i oce-draw_0.18.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r oce-draw"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfreeimage3"
+  "libfreetype6" {>= "2.2.1"}
+  "libfreetype6-dev"
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libgl2ps1-4"
+  "libice6" {>= "1-1.0.0"}
+  "liboce-foundation11"
+  "liboce-modeling11"
+  "liboce-ocaf-lite11"
+  "liboce-ocaf11"
+  "liboce-visualization11"
+  "libsm6"
+  "libstdc++6" {>= "5.2"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libtk8-6" {>= "8.6.0"}
+  "libx11-6"
+  "libx11-dev"
+  "libxext6"
+  "tcl8-6-dev"
+  "tk8-6-dev"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "oce-draw_0.18.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oce/oce-draw_0.18.2-3_amd64.deb"
+}

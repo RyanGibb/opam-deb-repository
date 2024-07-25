@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kgb-bot_1.54-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kgb-bot"]
+]
+depends: [
+  "adduser"
+  "git"
+  "kgb-client" {= "1.54-1"}
+  "libipc-run-perl"
+  "libjson-xs-perl"
+  "libmonkey-patch-perl"
+  "libnet-ip-perl"
+  "libpoe-component-irc-perl"
+  "libpoe-component-server-soap-perl"
+  "libpoe-component-sslify-perl"
+  "libpoe-perl"
+  "libproc-pid-file-perl"
+  "libschedule-ratelimiter-perl"
+  "libyaml-perl"
+  "lsb-base"
+  "perl-any"
+]
+extra-source "kgb-bot_1.54-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kgb-bot/kgb-bot_1.54-1_all.deb"
+}

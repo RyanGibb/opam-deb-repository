@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-security-bundle_5.4.23+dfsg-1+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-security-bundle"]
+]
+depends: [
+  "php-common"
+  "php-symfony-config"
+  "php-symfony-dependency-injection"
+  "php-symfony-deprecation-contracts"
+  "php-symfony-event-dispatcher"
+  "php-symfony-http-foundation"
+  "php-symfony-http-kernel"
+  "php-symfony-password-hasher"
+  "php-symfony-security-core"
+  "php-symfony-security-csrf"
+  "php-symfony-security-guard" {< "6~~"}
+  "php-symfony-security-guard" {>= "5.3"}
+  "php-symfony-security-http"
+  "php-xml"
+]
+extra-source "php-symfony-security-bundle_5.4.23+dfsg-1+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/symfony/php-symfony-security-bundle_5.4.23+dfsg-1+deb12u2_all.deb"
+}

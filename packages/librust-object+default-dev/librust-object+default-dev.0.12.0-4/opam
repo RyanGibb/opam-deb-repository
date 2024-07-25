@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-object+default-dev_0.12.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-object+default-dev"]
+]
+depends: [
+  "librust-object+compression-dev" {= "0.12.0-4"}
+  "librust-object+std-dev" {= "0.12.0-4"}
+  "librust-object+wasm-dev" {= "0.12.0-4"}
+  "librust-object-dev" {= "0.12.0-4"}
+]
+extra-source "librust-object+default-dev_0.12.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-object/librust-object+default-dev_0.12.0-4_amd64.deb"
+}

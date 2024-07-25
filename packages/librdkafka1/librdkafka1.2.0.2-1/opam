@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librdkafka1_2.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librdkafka1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "liblz4-1" {>= "0.0~r127"}
+  "libsasl2-2" {>= "2.1.28+dfsg"}
+  "libssl3" {>= "3.0.0"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "librdkafka1_2.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librdkafka/librdkafka1_2.0.2-1_amd64.deb"
+}

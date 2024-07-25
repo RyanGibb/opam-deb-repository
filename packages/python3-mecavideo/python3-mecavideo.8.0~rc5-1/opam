@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-mecavideo_8.0~rc5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-mecavideo"]
+]
+depends: [
+  "python3-any" {>= "3.8~"}
+  "python3-odf"
+  "python3-opencv" {>= "3.1"}
+  "python3-pyqt6"
+  "python3-pyqtgraph"
+  "shared-mime-info"
+  "xdg-utils"
+]
+extra-source "python3-mecavideo_8.0~rc5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pymecavideo/python3-mecavideo_8.0~rc5-1_all.deb"
+}

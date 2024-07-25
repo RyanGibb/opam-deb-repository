@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-liblo_0.10.0-4+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-liblo"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "liblo7" {>= "0.27"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+]
+extra-source "python3-liblo_0.10.0-4+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyliblo/python3-liblo_0.10.0-4+b3_amd64.deb"
+}

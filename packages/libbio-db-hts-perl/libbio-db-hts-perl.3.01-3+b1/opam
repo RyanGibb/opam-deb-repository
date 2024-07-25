@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbio-db-hts-perl_3.01-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbio-db-hts-perl"]
+]
+depends: [
+  "libbio-perl-perl"
+  "libc6" {>= "2.14"}
+  "libhts3" {>= "1.10"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+  "zlib1g" {>= "1-1.2.3.3"}
+]
+extra-source "libbio-db-hts-perl_3.01-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbio-db-hts-perl/libbio-db-hts-perl_3.01-3+b1_amd64.deb"
+}

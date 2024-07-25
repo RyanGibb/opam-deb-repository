@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-data-ordlist-prof_0.4.7.0-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-data-ordlist-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-data-ordlist-dev" {= "0.4.7.0-7+b2"}
+]
+extra-source "libghc-data-ordlist-prof_0.4.7.0-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-data-ordlist/libghc-data-ordlist-prof_0.4.7.0-7+b2_amd64.deb"
+}

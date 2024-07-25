@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-help-hi_4:7.4.7-1+deb12u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-help-hi"]
+]
+depends: [
+  "libreoffice-common" {>= "1-6.1.0~"}
+  "libreoffice-help-common" {= "4-7.4.7-1+deb12u3"}
+  "libreoffice-l10n-hi"
+]
+extra-source "libreoffice-help-hi_4:7.4.7-1+deb12u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-help-hi_7.4.7-1+deb12u3_all.deb"
+}

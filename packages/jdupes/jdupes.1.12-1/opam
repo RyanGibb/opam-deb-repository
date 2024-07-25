@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jdupes_1.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jdupes"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "jdupes-btrfs"
+]
+extra-source "jdupes_1.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jdupes/jdupes_1.12-1_amd64.deb"
+}

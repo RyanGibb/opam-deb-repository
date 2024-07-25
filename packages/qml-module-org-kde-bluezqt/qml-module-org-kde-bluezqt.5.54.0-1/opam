@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-org-kde-bluezqt_5.54.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-org-kde-bluezqt"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5bluezqt6" {>= "5.13.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "qml-module-org-kde-bluezqt_5.54.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bluez-qt/qml-module-org-kde-bluezqt_5.54.0-1_amd64.deb"
+}

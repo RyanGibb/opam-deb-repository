@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-scciclient_0.7.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-scciclient"]
+]
+depends: [
+  "python3-any"
+  "python3-babel"
+  "python3-oslo-serialization" {>= "2.18.0"}
+  "python3-oslo-utils" {>= "3.33.0"}
+  "python3-pbr" {>= "2.0.0"}
+  "python3-pyghmi" {>= "1.0.22"}
+  "python3-pysnmp4"
+  "python3-requests"
+  "python3-six" {>= "1.10.0"}
+]
+extra-source "python3-scciclient_0.7.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-scciclient/python3-scciclient_0.7.2-2_all.deb"
+}

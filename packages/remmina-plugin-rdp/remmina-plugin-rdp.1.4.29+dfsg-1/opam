@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i remmina-plugin-rdp_1.4.29+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r remmina-plugin-rdp"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.6.0"}
+  "libcups2" {>= "1.6.0"}
+  "libfreerdp-client2-2" {>= "2.2.0~"}
+  "libfreerdp2-2" {>= "2.3.0+dfsg1"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.67.3"}
+  "libgtk-3-0" {>= "3.21.4"}
+  "libwinpr2-2" {>= "2.1.0+dfsg1"}
+  "remmina" {= "1.4.29+dfsg-1"}
+]
+extra-source "remmina-plugin-rdp_1.4.29+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/remmina/remmina-plugin-rdp_1.4.29+dfsg-1_amd64.deb"
+}

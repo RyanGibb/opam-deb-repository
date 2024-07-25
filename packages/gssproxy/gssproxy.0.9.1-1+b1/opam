@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gssproxy_0.9.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gssproxy"]
+]
+depends: [
+  "init-system-helpers" {>= "1.52"}
+  "libc6" {>= "2.34"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libgssrpc4" {>= "1.6.dfsg.2"}
+  "libini-config5" {>= "0.5.0"}
+  "libk5crypto3" {>= "1.6.dfsg.2"}
+  "libkrb5-3" {>= "1.12~alpha1+dfsg"}
+  "libpopt0" {>= "1.14"}
+  "libref-array1" {>= "0.4.0"}
+  "libselinux1" {>= "3.1~"}
+  "libverto1" {>= "0.3.0"}
+]
+extra-source "gssproxy_0.9.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gssproxy/gssproxy_0.9.1-1+b1_amd64.deb"
+}

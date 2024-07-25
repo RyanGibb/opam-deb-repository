@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-sentry-raven_2.7.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-sentry-raven"]
+]
+depends: [
+  "rake"
+  "ruby-delayed-job"
+  "ruby-faraday" {>= "0.7.6"}
+  "ruby-rack"
+  "ruby-rails"
+  "ruby-sidekiq"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-sentry-raven_2.7.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-sentry-raven/ruby-sentry-raven_2.7.4-1_all.deb"
+}

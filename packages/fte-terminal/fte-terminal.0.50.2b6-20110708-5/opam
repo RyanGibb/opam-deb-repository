@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fte-terminal_0.50.2b6-20110708-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fte-terminal"]
+]
+depends: [
+  "fte" {= "0.50.2b6-20110708-5"}
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libslang2" {>= "2.2.4"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "fte-terminal_0.50.2b6-20110708-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fte/fte-terminal_0.50.2b6-20110708-5_amd64.deb"
+}

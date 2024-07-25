@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-formatting-dev_7.1.3-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-formatting-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libdouble-conversion3" {>= "2.0.0"}
+  "libghc-clock-dev"
+  "libghc-double-conversion-dev"
+  "libghc-old-locale-dev"
+  "libghc-scientific-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libghc-formatting-dev_7.1.3-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-formatting/libghc-formatting-dev_7.1.3-1+b2_amd64.deb"
+}

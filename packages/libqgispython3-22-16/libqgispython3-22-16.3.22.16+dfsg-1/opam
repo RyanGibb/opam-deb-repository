@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqgispython3.22.16_3.22.16+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqgispython3.22.16"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpython3-11" {>= "3.11.0"}
+  "libqgis-core3-22-16" {>= "3.22.16"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libqgispython3.22.16_3.22.16+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qgis/libqgispython3.22.16_3.22.16+dfsg-1_amd64.deb"
+}

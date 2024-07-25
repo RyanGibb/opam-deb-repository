@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ovn-host_23.03.1-1~deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ovn-host"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcap-ng0" {>= "0.7.9"}
+  "libssl3" {>= "3.0.0"}
+  "libudev1" {>= "183"}
+  "libunbound8" {>= "1.8.0"}
+  "lsb-release"
+  "openvswitch-switch" {>= "2.17.0~"}
+  "ovn-common" {= "23.03.1-1~deb12u2"}
+]
+extra-source "ovn-host_23.03.1-1~deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ovn/ovn-host_23.03.1-1~deb12u2_amd64.deb"
+}

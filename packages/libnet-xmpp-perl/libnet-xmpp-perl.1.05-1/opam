@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-xmpp-perl_1.05-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-xmpp-perl"]
+]
+depends: [
+  "libauthen-sasl-perl"
+  "libxml-stream-perl" {>= "1.24"}
+  "perl"
+]
+extra-source "libnet-xmpp-perl_1.05-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-xmpp-perl/libnet-xmpp-perl_1.05-1_all.deb"
+}

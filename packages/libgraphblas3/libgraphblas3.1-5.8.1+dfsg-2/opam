@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgraphblas3_1:5.8.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgraphblas3"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgomp1" {>= "6"}
+]
+extra-source "libgraphblas3_1:5.8.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/suitesparse/libgraphblas3_5.8.1+dfsg-2_amd64.deb"
+}

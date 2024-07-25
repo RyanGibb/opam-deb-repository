@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i g++-10-multilib_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r g++-10-multilib"]
+]
+depends: [
+  "g++-10" {= "10.2.1-6"}
+  "gcc-10-base" {= "10.2.1-6"}
+  "gcc-10-multilib" {= "10.2.1-6"}
+  "lib32stdc++-10-dev" {= "10.2.1-6"}
+  "libx32stdc++-10-dev" {= "10.2.1-6"}
+]
+extra-source "g++-10-multilib_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/g++-10-multilib_10.2.1-6_amd64.deb"
+}

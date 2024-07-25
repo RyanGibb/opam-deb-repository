@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmetview-dev_5.10.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmetview-dev"]
+]
+depends: [
+  "libbz2-dev"
+  "liblz4-dev"
+  "libmetview0d" {= "5.10.2-1"}
+  "libsnappy-dev"
+  "libxxhash-dev"
+]
+extra-source "libmetview-dev_5.10.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/metview/libmetview-dev_5.10.2-1_amd64.deb"
+}

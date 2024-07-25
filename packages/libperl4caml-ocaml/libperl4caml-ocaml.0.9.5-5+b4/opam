@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libperl4caml-ocaml_0.9.5-5+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libperl4caml-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libperl5-28" {>= "5.28.0"}
+  "ocaml-base-nox"
+]
+extra-source "libperl4caml-ocaml_0.9.5-5+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/perl4caml/libperl4caml-ocaml_0.9.5-5+b4_amd64.deb"
+}

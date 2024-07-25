@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-ks_1.14.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-ks"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-cran-fnn" {>= "1.1"}
+  "r-cran-kernlab"
+  "r-cran-kernsmooth" {>= "2.22"}
+  "r-cran-matrix"
+  "r-cran-mclust"
+  "r-cran-mgcv"
+  "r-cran-multicool"
+  "r-cran-mvtnorm" {>= "1.0-0"}
+  "r-cran-plot3d"
+  "r-cran-pracma"
+]
+extra-source "r-cran-ks_1.14.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-ks/r-cran-ks_1.14.0-1_amd64.deb"
+}

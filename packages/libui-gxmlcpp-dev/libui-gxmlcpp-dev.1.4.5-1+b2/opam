@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libui-gxmlcpp-dev_1.4.5-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libui-gxmlcpp-dev"]
+]
+depends: [
+  "libboost-all-dev" {>= "1.35"}
+  "libui-gxmlcpp5v5" {= "1.4.5-1+b2"}
+  "libxml2-dev"
+  "libxslt1-dev"
+]
+conflicts: [
+  "libsp-gxmlcpp-dev"
+]
+extra-source "libui-gxmlcpp-dev_1.4.5-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ui-gxmlcpp/libui-gxmlcpp-dev_1.4.5-1+b2_amd64.deb"
+}

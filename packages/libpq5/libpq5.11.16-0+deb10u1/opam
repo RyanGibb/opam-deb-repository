@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpq5_11.16-0+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpq5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "libpq5_11.16-0+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-11/libpq5_11.16-0+deb10u1_amd64.deb"
+}

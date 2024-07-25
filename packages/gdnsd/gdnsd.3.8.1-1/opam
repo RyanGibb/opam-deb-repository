@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gdnsd_3.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gdnsd"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libev4" {>= "1-4.04"}
+  "libmaxminddb0" {>= "1.0.2"}
+  "libsodium23" {>= "0.7.0"}
+  "libunwind8"
+  "liburcu8" {>= "0.13.0"}
+]
+extra-source "gdnsd_3.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gdnsd/gdnsd_3.8.1-1_amd64.deb"
+}

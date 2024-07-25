@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-dropbox_9.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-dropbox"]
+]
+depends: [
+  "python3-any"
+  "python3-requests"
+  "python3-six" {>= "1.3.0"}
+]
+extra-source "python3-dropbox_9.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-dropbox/python3-dropbox_9.3.0-1_all.deb"
+}

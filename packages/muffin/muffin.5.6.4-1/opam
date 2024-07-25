@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i muffin_5.6.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r muffin"]
+]
+depends: [
+  "adwaita-icon-theme"
+  "libc6" {>= "2.34"}
+  "libgles2"
+  "libglib2-0-0" {>= "2.61.1"}
+  "libmuffin0" {>= "5.4.1"}
+  "libx11-6"
+  "libxcomposite1" {>= "1-0.4.5"}
+  "muffin-common" {>= "5.6.4-1"}
+  "zenity"
+]
+extra-source "muffin_5.6.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/muffin/muffin_5.6.4-1_amd64.deb"
+}

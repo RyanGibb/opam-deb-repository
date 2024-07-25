@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iproute2_6.1.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iproute2"]
+]
+depends: [
+  "libbpf1" {>= "1-0.6.0"}
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.34"}
+  "libcap2" {>= "1-2.10"}
+  "libcap2-bin"
+  "libdb5-3"
+  "libelf1" {>= "0.131"}
+  "libmnl0" {>= "1.0.3-4~"}
+  "libselinux1" {>= "3.1~"}
+  "libtirpc3" {>= "1.0.2"}
+  "libxtables12" {>= "1.6.0+snapshot20161117"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+conflicts: [
+  "arpd"
+  "iproute (<< 20130000-1)"
+]
+extra-source "iproute2_6.1.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iproute2/iproute2_6.1.0-3_amd64.deb"
+}

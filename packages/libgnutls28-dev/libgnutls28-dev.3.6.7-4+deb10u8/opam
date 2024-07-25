@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnutls28-dev_3.6.7-4+deb10u8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnutls28-dev"]
+]
+depends: [
+  "libgnutls-dane0" {= "3.6.7-4+deb10u8"}
+  "libgnutls-openssl27" {= "3.6.7-4+deb10u8"}
+  "libgnutls30" {= "3.6.7-4+deb10u8"}
+  "libgnutlsxx28" {= "3.6.7-4+deb10u8"}
+  "libidn2-dev"
+  "libp11-kit-dev" {>= "0.23.10"}
+  "libtasn1-6-dev"
+  "nettle-dev" {>= "3.4.1~rc1"}
+  ("libc6-dev" | "libc-dev")
+]
+conflicts: [
+  "gnutls-dev"
+]
+extra-source "libgnutls28-dev_3.6.7-4+deb10u8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnutls28/libgnutls28-dev_3.6.7-4+deb10u8_amd64.deb"
+}

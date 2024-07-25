@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gimp-help-sl_2.8.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gimp-help-sl"]
+]
+depends: [
+  "gimp-help-common" {= "2.8.2-1"}
+  ("gimp-helpbrowser" | "www-browser")
+]
+extra-source "gimp-help-sl_2.8.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gimp-help/gimp-help-sl_2.8.2-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-saz-memcached_3.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-saz-memcached"]
+]
+depends: [
+  "puppet-module-puppetlabs-firewall"
+  "puppet-module-puppetlabs-stdlib"
+  ("puppet" {>= "4"} | "puppet-common" {>= "3"})
+]
+extra-source "puppet-module-saz-memcached_3.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-saz-memcached/puppet-module-saz-memcached_3.1.0-1_all.deb"
+}

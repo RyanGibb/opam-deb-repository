@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzhuyin-dev_2.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzhuyin-dev"]
+]
+depends: [
+  "libglib2-0-dev"
+  "libpinyin-common-dev" {= "2.8.1-1"}
+  "libzhuyin15" {= "2.8.1-1"}
+]
+extra-source "libzhuyin-dev_2.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpinyin/libzhuyin-dev_2.8.1-1_amd64.deb"
+}

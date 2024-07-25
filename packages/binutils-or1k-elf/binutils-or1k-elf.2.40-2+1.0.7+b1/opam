@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i binutils-or1k-elf_2.40-2+1.0.7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r binutils-or1k-elf"]
+]
+depends: [
+  "binutils-common"
+  "libc6" {>= "2.34"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "binutils-or1k-elf_2.40-2+1.0.7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/binutils-or1k-elf/binutils-or1k-elf_2.40-2+1.0.7+b1_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i inetsim_1.3.2+dfsg.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r inetsim"]
+]
+depends: [
+  "adduser"
+  "libdigest-sha-perl"
+  "libipc-shareable-perl"
+  "libnet-dns-perl" {>= "0.66"}
+  "libnet-server-perl"
+  "lsb-base"
+  "openssl"
+  "perl-any"
+]
+extra-source "inetsim_1.3.2+dfsg.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/inetsim/inetsim_1.3.2+dfsg.1-1_all.deb"
+}

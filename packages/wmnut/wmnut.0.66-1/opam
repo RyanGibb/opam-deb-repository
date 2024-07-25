@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmnut_0.66-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmnut"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libupsclient4" {>= "2.7.2"}
+  "libx11-6"
+  "libxext6"
+  "libxpm4"
+]
+extra-source "wmnut_0.66-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmnut/wmnut_0.66-1_amd64.deb"
+}

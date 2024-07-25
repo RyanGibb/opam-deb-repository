@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nanopb_0.4.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nanopb"]
+]
+depends: [
+  "protobuf-compiler"
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-protobuf"
+]
+extra-source "nanopb_0.4.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nanopb/nanopb_0.4.7-2_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libswscale5_7:4.1.9-0+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libswscale5"]
+]
+depends: [
+  "libavutil56" {= "7-4.1.9-0+deb10u1"}
+  "libc6" {>= "2.14"}
+]
+extra-source "libswscale5_7:4.1.9-0+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/ffmpeg/libswscale5_4.1.9-0+deb10u1_amd64.deb"
+}

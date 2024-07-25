@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mariadb-backup_1:10.11.6-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mariadb-backup"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libelogind0"
+  "libnuma1" {>= "2.0.11"}
+  "libpcre2-8-0" {>= "10.22"}
+  "libpmem1" {>= "1.4"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "12"}
+  "liburing2" {>= "2.3"}
+  "mariadb-client-core" {= "1-10.11.6-0+deb12u1"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "mariadb-backup_1:10.11.6-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mariadb/mariadb-backup_10.11.6-0+deb12u1_amd64.deb"
+}

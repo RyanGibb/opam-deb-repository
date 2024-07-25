@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-filemanip-prof_0.3.6.3-9+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-filemanip-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-filemanip-dev" {= "0.3.6.3-9+b2"}
+  "libghc-unix-compat-prof"
+]
+extra-source "libghc-filemanip-prof_0.3.6.3-9+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-filemanip/libghc-filemanip-prof_0.3.6.3-9+b2_amd64.deb"
+}

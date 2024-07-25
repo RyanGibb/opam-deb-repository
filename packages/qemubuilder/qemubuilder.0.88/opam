@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qemubuilder_0.88_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qemubuilder"]
+]
+depends: [
+  "debootstrap"
+  "e2fsprogs"
+  "libc6" {>= "2.15"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "pbuilder"
+  ("qemu-system" | "kvm")
+]
+extra-source "qemubuilder_0.88_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cowdancer/qemubuilder_0.88_amd64.deb"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ecaccess_4.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ecaccess"]
+]
+depends: [
+  "debhelper" {>= "9"}
+  "libclass-inspector-perl"
+  "libcrypt-ssleay-perl"
+  "libgetopt-long-descriptive-perl"
+  "libio-socket-inet6-perl"
+  "libio-socket-ssl-perl"
+  "libmime-base64-urlsafe-perl"
+  "libnet-http-perl"
+  "libnumber-bytes-human-perl"
+  "libsoap-lite-perl"
+  "libterm-progressbar-perl"
+  "libterm-prompt-perl"
+  "libterm-readkey-perl"
+  "libterm-readline-perl-perl"
+  "liburi-encode-perl"
+  "perl"
+  "perl-modules-5-28"
+]
+extra-source "ecaccess_4.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ecaccess/ecaccess_4.0.1-1_all.deb"
+}

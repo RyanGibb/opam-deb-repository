@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gem2deb-test-runner_1.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gem2deb-test-runner"]
+]
+depends: [
+  "rake"
+  "ruby-minitest"
+  "ruby-test-unit"
+  ("ruby-any" | "ruby-interpreter")
+]
+extra-source "gem2deb-test-runner_1.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gem2deb/gem2deb-test-runner_1.4_amd64.deb"
+}

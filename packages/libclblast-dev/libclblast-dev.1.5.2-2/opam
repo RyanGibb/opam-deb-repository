@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclblast-dev_1.5.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclblast-dev"]
+]
+depends: [
+  "libclblast1" {= "1.5.2-2"}
+  ("ocl-icd-opencl-dev" | "opencl-dev")
+]
+extra-source "libclblast-dev_1.5.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clblast/libclblast-dev_1.5.2-2_amd64.deb"
+}

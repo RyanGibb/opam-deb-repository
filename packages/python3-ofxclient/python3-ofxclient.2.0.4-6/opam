@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ofxclient_2.0.4-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ofxclient"]
+]
+depends: [
+  "python3" {>= "3.2"}
+  "python3-any"
+  "python3-bs4"
+  "python3-keyring"
+  "python3-lxml"
+  "python3-ofxhome"
+  "python3-ofxparse"
+]
+extra-source "python3-ofxclient_2.0.4-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-ofxclient/python3-ofxclient_2.0.4-6_all.deb"
+}

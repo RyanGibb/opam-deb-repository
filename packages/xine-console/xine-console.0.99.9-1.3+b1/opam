@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xine-console_0.99.9-1.3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xine-console"]
+]
+depends: [
+  "libaa1" {>= "1.4p5"}
+  "libc6" {>= "2.3.2"}
+  "libcaca0" {>= "0.99.beta17-1"}
+  "libxine2" {>= "1.2.0"}
+  "libxine2-console"
+]
+extra-source "xine-console_0.99.9-1.3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xine-ui/xine-console_0.99.9-1.3+b1_amd64.deb"
+}

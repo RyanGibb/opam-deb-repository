@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nagios-check-xmppng_0.3.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nagios-check-xmppng"]
+]
+depends: [
+  "python3" {>= "3.4"}
+  "python3-defusedxml" {>= "0.4.1"}
+  "python3-nagiosplugin" {>= "1.2.2"}
+]
+extra-source "nagios-check-xmppng_0.3.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nagios-check-xmppng/nagios-check-xmppng_0.3.2-3_all.deb"
+}

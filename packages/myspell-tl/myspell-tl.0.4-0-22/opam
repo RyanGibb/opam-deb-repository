@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i myspell-tl_0.4-0-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r myspell-tl"]
+]
+depends: [
+  "dictionaries-common" {>= "1.0"}
+]
+conflicts: [
+  "hunspell-tl"
+  "openoffice.org-spellcheck-tl"
+]
+extra-source "myspell-tl_0.4-0-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aspell-tl/myspell-tl_0.4-0-22_all.deb"
+}

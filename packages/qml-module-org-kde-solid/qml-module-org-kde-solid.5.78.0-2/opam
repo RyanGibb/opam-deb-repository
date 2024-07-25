@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-org-kde-solid_5.78.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-org-kde-solid"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5solid5" {>= "4.97.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.14.0~"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "qml-module-org-kde-solid_5.78.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/solid/qml-module-org-kde-solid_5.78.0-2_amd64.deb"
+}

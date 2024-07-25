@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i weightwatcher_1.12+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r weightwatcher"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+]
+extra-source "weightwatcher_1.12+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/weightwatcher/weightwatcher_1.12+dfsg-2_amd64.deb"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-diskimage-builder_3.2.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-diskimage-builder"]
+]
+depends: [
+  "curl"
+  "debootstrap"
+  "fdisk"
+  "git"
+  "jq"
+  "kpartx"
+  "lvm2"
+  "python3-any"
+  "python3-flake8"
+  "python3-networkx"
+  "python3-pbr"
+  "python3-stevedore"
+  "python3-yaml"
+  "qemu-utils"
+  "uuid-runtime"
+]
+extra-source "python3-diskimage-builder_3.2.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-diskimage-builder/python3-diskimage-builder_3.2.1-4_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmemcached-dbg_1.0.18-4.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmemcached-dbg"]
+]
+depends: [
+  "libhashkit2" {= "1.0.18-4.2"}
+  "libmemcached11" {= "1.0.18-4.2"}
+  "libmemcachedutil2" {= "1.0.18-4.2"}
+]
+extra-source "libmemcached-dbg_1.0.18-4.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmemcached/libmemcached-dbg_1.0.18-4.2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-mpl-scatter-density_0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-mpl-scatter-density"]
+]
+depends: [
+  "python3-any" {>= "3.6~"}
+  "python3-fast-histogram" {>= "0.5"}
+  "python3-matplotlib" {>= "2"}
+  "python3-numpy"
+  "python3-tk"
+]
+extra-source "python3-mpl-scatter-density_0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpl-scatter-density/python3-mpl-scatter-density_0.5-1_all.deb"
+}

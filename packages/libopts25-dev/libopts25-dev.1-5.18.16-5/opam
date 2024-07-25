@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopts25-dev_1:5.18.16-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopts25-dev"]
+]
+depends: [
+  "libopts25" {= "1-5.18.16-5"}
+]
+conflicts: [
+  "libopts9-dev"
+]
+extra-source "libopts25-dev_1:5.18.16-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/autogen/libopts25-dev_5.18.16-5_amd64.deb"
+}

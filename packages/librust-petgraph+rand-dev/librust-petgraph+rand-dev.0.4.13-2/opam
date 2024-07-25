@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-petgraph+rand-dev_0.4.13-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-petgraph+rand-dev"]
+]
+depends: [
+  "librust-petgraph-dev" {= "0.4.13-2"}
+  "librust-rand-0-5+default-dev"
+]
+extra-source "librust-petgraph+rand-dev_0.4.13-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-petgraph/librust-petgraph+rand-dev_0.4.13-2_amd64.deb"
+}

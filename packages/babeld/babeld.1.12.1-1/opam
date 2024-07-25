@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i babeld_1.12.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r babeld"]
+]
+depends: [
+  "libb2-1" {>= "0.98.1"}
+  "libc6" {>= "2.34"}
+  "lsb-base"
+]
+extra-source "babeld_1.12.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/babeld/babeld_1.12.1-1_amd64.deb"
+}

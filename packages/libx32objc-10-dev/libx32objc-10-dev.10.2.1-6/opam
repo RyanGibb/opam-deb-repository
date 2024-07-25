@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libx32objc-10-dev_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libx32objc-10-dev"]
+]
+depends: [
+  "gcc-10-base" {= "10.2.1-6"}
+  "libx32gcc-10-dev" {= "10.2.1-6"}
+  "libx32objc4" {>= "10.2.1-6"}
+]
+extra-source "libx32objc-10-dev_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/libx32objc-10-dev_10.2.1-6_amd64.deb"
+}

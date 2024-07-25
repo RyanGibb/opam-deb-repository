@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-concurrent_0.5.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-concurrent"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-deferred" {= "0.5.1-4"}
+  "emacsen-common"
+]
+extra-source "elpa-concurrent_0.5.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emacs-deferred/elpa-concurrent_0.5.1-4_all.deb"
+}

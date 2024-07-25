@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hscolour_1.24.4-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hscolour"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.27"}
+  "libffi6" {>= "3.0.4"}
+  "libgmp10"
+]
+extra-source "hscolour_1.24.4-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hscolour/hscolour_1.24.4-2+b2_amd64.deb"
+}

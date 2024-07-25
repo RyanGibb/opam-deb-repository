@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hnb_1.9.18+ds1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hnb"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "hnb_1.9.18+ds1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hnb/hnb_1.9.18+ds1-3_amd64.deb"
+}

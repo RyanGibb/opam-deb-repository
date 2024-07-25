@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblomiri-connectivity-qt1-1_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblomiri-connectivity-qt1-1"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "liblomiri-connectivity-qt1-1_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri-indicator-network/liblomiri-connectivity-qt1-1_1.0.0-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-gnome_1:6.1.5-3+deb10u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-gnome"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libglib2-0-0" {>= "2.38.0"}
+  "libreoffice-core" {= "1-6.1.5-3+deb10u7"}
+  "libstdc++6" {>= "5"}
+  "uno-libs3" {>= "5.1.0~alpha"}
+  "ure"
+]
+extra-source "libreoffice-gnome_1:6.1.5-3+deb10u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-gnome_6.1.5-3+deb10u7_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-kytos-sphinx-theme_0.0.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-kytos-sphinx-theme"]
+]
+depends: [
+  "kytos-sphinx-theme-common" {= "0.0.1+dfsg-1"}
+  "python3-any" {>= "3.7~"}
+  "python3-sphinx"
+  "python3-sphinx-autobuild"
+  "python3-sphinx-bootstrap-theme"
+]
+extra-source "python3-kytos-sphinx-theme_0.0.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kytos-sphinx-theme/python3-kytos-sphinx-theme_0.0.1+dfsg-1_all.deb"
+}

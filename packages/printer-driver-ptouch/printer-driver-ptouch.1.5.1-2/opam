@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i printer-driver-ptouch_1.5.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r printer-driver-ptouch"]
+]
+depends: [
+  "ghostscript"
+  "libc6" {>= "2.4"}
+  "libcups2" {>= "2.3~b6"}
+  "python3-any"
+  "xz-utils"
+]
+extra-source "printer-driver-ptouch_1.5.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/ptouch-driver/printer-driver-ptouch_1.5.1-2_amd64.deb"
+}

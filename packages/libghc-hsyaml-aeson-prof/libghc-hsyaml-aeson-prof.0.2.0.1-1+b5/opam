@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hsyaml-aeson-prof_0.2.0.1-1+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hsyaml-aeson-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-hsyaml-aeson-dev" {= "0.2.0.1-1+b5"}
+  "libghc-hsyaml-prof"
+  "libghc-scientific-prof"
+  "libghc-unordered-containers-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-hsyaml-aeson-prof_0.2.0.1-1+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hsyaml-aeson/libghc-hsyaml-aeson-prof_0.2.0.1-1+b5_amd64.deb"
+}

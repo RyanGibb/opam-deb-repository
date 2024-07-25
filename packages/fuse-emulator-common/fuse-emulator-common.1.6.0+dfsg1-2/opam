@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fuse-emulator-common_1.6.0+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fuse-emulator-common"]
+]
+depends: [
+  ("opense-basic" | "spectrum-roms")
+]
+extra-source "fuse-emulator-common_1.6.0+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fuse-emulator/fuse-emulator-common_1.6.0+dfsg1-2_all.deb"
+}

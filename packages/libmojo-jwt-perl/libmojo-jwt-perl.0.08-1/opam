@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmojo-jwt-perl_0.08-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmojo-jwt-perl"]
+]
+depends: [
+  "libcrypt-openssl-rsa-perl"
+  "libmojolicious-perl" {>= "5.00"}
+  "perl"
+]
+extra-source "libmojo-jwt-perl_0.08-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmojo-jwt-perl/libmojo-jwt-perl_0.08-1_all.deb"
+}

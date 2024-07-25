@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-mongodb-exporter_1.0.0+git20180522.e755a44-1+b20_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-mongodb-exporter"]
+]
+depends: [
+  "daemon"
+  "libc6" {>= "2.3.2"}
+]
+extra-source "prometheus-mongodb-exporter_1.0.0+git20180522.e755a44-1+b20_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-mongodb-exporter/prometheus-mongodb-exporter_1.0.0+git20180522.e755a44-1+b20_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvdeplug-agno_0.1.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvdeplug-agno"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libvdeplug2" {>= "4.0.1"}
+  "libwolfssl35" {>= "5.2.0"}
+]
+extra-source "libvdeplug-agno_0.1.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vdeplug-agno/libvdeplug-agno_0.1.1-1+b2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaccess-modifier-checker-java_1.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaccess-modifier-checker-java"]
+]
+depends: [
+  "libannotation-indexer-java"
+  "libasm-java"
+  "libmaven3-core-java" {>= "3.6.0"}
+]
+extra-source "libaccess-modifier-checker-java_1.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/access-modifier-checker/libaccess-modifier-checker-java_1.16-1_all.deb"
+}

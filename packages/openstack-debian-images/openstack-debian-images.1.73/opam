@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openstack-debian-images_1.73_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openstack-debian-images"]
+]
+depends: [
+  "debian-archive-keyring"
+  "debootstrap"
+  "dosfstools"
+  "e2fsprogs"
+  "extlinux"
+  "initramfs-tools"
+  "ipcalc"
+  "kpartx"
+  "mbr"
+  "parted"
+  "qemu-utils"
+  "wget"
+]
+extra-source "openstack-debian-images_1.73_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openstack-debian-images/openstack-debian-images_1.73_amd64.deb"
+}

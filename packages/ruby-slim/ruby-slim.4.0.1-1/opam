@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-slim_4.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-slim"]
+]
+depends: [
+  "ruby" {>= "2.0"}
+  "ruby-temple" {< "0.9"}
+  "ruby-temple" {>= "0.7.6"}
+  "ruby-tilt" {< "2.1"}
+  "ruby-tilt" {>= "2.0.6"}
+]
+extra-source "ruby-slim_4.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-slim/ruby-slim_4.0.1-1_all.deb"
+}

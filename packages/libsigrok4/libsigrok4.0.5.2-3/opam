@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsigrok4_0.5.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsigrok4"]
+]
+depends: [
+  "libbluetooth3" {>= "4.91"}
+  "libc6" {>= "2.29"}
+  "libftdi1-2" {>= "1.2"}
+  "libglib2-0-0" {>= "2.37.5"}
+  "libhidapi-hidraw0" {>= "0.8.0~rc1+git20140201.3a66d4e+dfsg"}
+  "libieee1284-3" {>= "0.2.11"}
+  "libserialport0"
+  "libusb-1-0-0" {>= "2-1.0.20"}
+  "libzip4" {>= "0.11.2"}
+]
+extra-source "libsigrok4_0.5.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsigrok/libsigrok4_0.5.2-3_amd64.deb"
+}

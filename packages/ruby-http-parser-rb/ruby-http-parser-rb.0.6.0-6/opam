@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-http-parser.rb_0.6.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-http-parser.rb"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libhttp-parser2-9" {>= "2.1"}
+  "libruby2-7" {>= "2.7.0~preview1"}
+  "ruby" {< "1-2.8~"}
+  "ruby" {>= "1-2.7~0"}
+]
+extra-source "ruby-http-parser.rb_0.6.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-http-parser.rb/ruby-http-parser.rb_0.6.0-6_amd64.deb"
+}

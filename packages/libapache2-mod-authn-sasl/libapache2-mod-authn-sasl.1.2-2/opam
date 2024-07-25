@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-authn-sasl_1.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-authn-sasl"]
+]
+depends: [
+  "apache2-bin"
+  "libapr1" {>= "1.2.7"}
+  "libc6" {>= "2.2.5"}
+  "libsasl2-2" {>= "2.1.24"}
+  "sasl2-bin"
+]
+extra-source "libapache2-mod-authn-sasl_1.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapache2-mod-authn-sasl/libapache2-mod-authn-sasl_1.2-2_amd64.deb"
+}

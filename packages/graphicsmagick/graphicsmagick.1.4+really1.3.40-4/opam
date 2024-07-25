@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i graphicsmagick_1.4+really1.3.40-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r graphicsmagick"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgraphicsmagick-q16-3" {>= "1.3.5"}
+]
+extra-source "graphicsmagick_1.4+really1.3.40-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/graphicsmagick/graphicsmagick_1.4+really1.3.40-4_amd64.deb"
+}

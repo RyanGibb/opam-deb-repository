@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i loggerhead_1.19~bzr511-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r loggerhead"]
+]
+depends: [
+  "adduser"
+  "libjs-jquery"
+  "python3-any"
+  "python3-bleach"
+  "python3-breezy" {>= "3.0.0~"}
+  "python3-dulwich"
+  "python3-paste" {>= "1.6"}
+  "python3-pkg-resources"
+  "python3-simplejson"
+  "python3-simpletal"
+]
+extra-source "loggerhead_1.19~bzr511-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/loggerhead/loggerhead_1.19~bzr511-1_all.deb"
+}

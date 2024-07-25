@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-openturns_1.20-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-openturns"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libopenturns0-21" {= "1.20-9"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-dill"
+  "python3-psutil"
+]
+extra-source "python3-openturns_1.20-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openturns/python3-openturns_1.20-9_amd64.deb"
+}

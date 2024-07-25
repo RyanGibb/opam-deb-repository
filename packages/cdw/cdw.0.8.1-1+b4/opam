@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cdw_0.8.1-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cdw"]
+]
+depends: [
+  "genisoimage"
+  "libburn4" {>= "1.4.8"}
+  "libc6" {>= "2.14"}
+  "libcdio18" {>= "2.0.0"}
+  "libiso9660-11" {>= "2.0.0"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "wodim"
+]
+conflicts: [
+  "cdw-common"
+  "gcdw"
+]
+extra-source "cdw_0.8.1-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cdw/cdw_0.8.1-1+b4_amd64.deb"
+}

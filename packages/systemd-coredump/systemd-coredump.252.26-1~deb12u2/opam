@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i systemd-coredump_252.26-1~deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r systemd-coredump"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "liblz4-1" {>= "0.0~r130"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libsystemd-shared" {= "252.26-1~deb12u2"}
+  "libzstd1" {>= "1.5.2"}
+  "systemd"
+]
+conflicts: [
+  "core-dump-handler"
+]
+extra-source "systemd-coredump_252.26-1~deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/systemd/systemd-coredump_252.26-1~deb12u2_amd64.deb"
+}

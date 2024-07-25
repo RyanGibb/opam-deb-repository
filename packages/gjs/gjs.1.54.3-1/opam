@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gjs_1.54.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gjs"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgjs0g" {>= "1.54.3"}
+  "libglib2-0-0" {>= "2.54.0"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "gjs_1.54.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gjs/gjs_1.54.3-1_amd64.deb"
+}

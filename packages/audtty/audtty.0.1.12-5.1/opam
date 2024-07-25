@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i audtty_0.1.12-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r audtty"]
+]
+depends: [
+  "audacious"
+  "dbus-x11"
+  "libaudclient2" {>= "2.3"}
+  "libc6" {>= "2.4"}
+  "libdbus-glib-1-2" {>= "0.78"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "audtty_0.1.12-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/audtty/audtty_0.1.12-5.1_amd64.deb"
+}

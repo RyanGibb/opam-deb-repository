@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibus-libthai_0.1.4-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibus-libthai"]
+]
+depends: [
+  "ibus"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libgtk-3-0" {>= "3.16.2"}
+  "libibus-1-0-5" {>= "1.5.1"}
+  "libthai0" {>= "0.1.19"}
+]
+extra-source "ibus-libthai_0.1.4-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibus-libthai/ibus-libthai_0.1.4-6_amd64.deb"
+}

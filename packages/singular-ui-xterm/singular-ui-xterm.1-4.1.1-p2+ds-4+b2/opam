@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i singular-ui-xterm_1:4.1.1-p2+ds-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r singular-ui-xterm"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libsingular4m1"
+  "singular-ui" {= "1-4.1.1-p2+ds-4+b2"}
+  "xterm"
+]
+extra-source "singular-ui-xterm_1:4.1.1-p2+ds-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/singular/singular-ui-xterm_4.1.1-p2+ds-4+b2_amd64.deb"
+}

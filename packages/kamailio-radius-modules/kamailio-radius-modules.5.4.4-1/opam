@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kamailio-radius-modules_5.4.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kamailio-radius-modules"]
+]
+depends: [
+  "kamailio" {= "5.4.4-1"}
+  "libc6" {>= "2.4"}
+  "libradcli4" {>= "1.2.11"}
+]
+extra-source "kamailio-radius-modules_5.4.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kamailio/kamailio-radius-modules_5.4.4-1_amd64.deb"
+}

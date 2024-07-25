@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-validates-hostname_1.0.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-validates-hostname"]
+]
+depends: [
+  "ruby-activerecord" {>= "3.0"}
+  "ruby-activesupport" {>= "3.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-validates-hostname_1.0.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-validates-hostname/ruby-validates-hostname_1.0.11-1_all.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i compton-conf_0.16.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r compton-conf"]
+]
+depends: [
+  "compton"
+  "libc6" {>= "2.34"}
+  "libconfig9"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+]
+extra-source "compton-conf_0.16.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/compton-conf/compton-conf_0.16.0-2_amd64.deb"
+}

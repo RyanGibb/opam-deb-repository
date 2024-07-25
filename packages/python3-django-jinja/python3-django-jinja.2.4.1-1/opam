@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-django-jinja_2.4.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-django-jinja"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-django" {>= "1.8"}
+  "python3-jinja2"
+]
+extra-source "python3-django-jinja_2.4.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/django-jinja/python3-django-jinja_2.4.1-1_all.deb"
+}

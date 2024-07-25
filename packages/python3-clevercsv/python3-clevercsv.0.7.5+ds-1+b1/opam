@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-clevercsv_0.7.5+ds-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-clevercsv"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-chardet"
+  "python3-packaging"
+  "python3-pandas"
+  "python3-regex"
+  "python3-wilderness"
+]
+extra-source "python3-clevercsv_0.7.5+ds-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-clevercsv/python3-clevercsv_0.7.5+ds-1+b1_amd64.deb"
+}

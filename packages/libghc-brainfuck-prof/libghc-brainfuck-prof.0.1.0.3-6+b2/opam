@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-brainfuck-prof_0.1.0.3-6+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-brainfuck-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-brainfuck-dev" {= "0.1.0.3-6+b2"}
+]
+extra-source "libghc-brainfuck-prof_0.1.0.3-6+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-brainfuck/libghc-brainfuck-prof_0.1.0.3-6+b2_amd64.deb"
+}

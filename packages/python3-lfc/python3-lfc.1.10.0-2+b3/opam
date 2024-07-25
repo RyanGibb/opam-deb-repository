@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-lfc_1.10.0-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-lfc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "liblcgdm1"
+  "liblfc1" {= "1.10.0-2+b3"}
+  "libpython3-7" {>= "3.7.0"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+]
+extra-source "python3-lfc_1.10.0-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lcgdm/python3-lfc_1.10.0-2+b3_amd64.deb"
+}

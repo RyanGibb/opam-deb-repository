@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sms4you-xmpp_0.0.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sms4you-xmpp"]
+]
+depends: [
+  "python3"
+  "python3-slixmpp"
+  "sms4you" {= "0.0.7-1"}
+  ("prosody" | "ejabberd" | "xmpp-server")
+]
+extra-source "sms4you-xmpp_0.0.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sms4you/sms4you-xmpp_0.0.7-1_all.deb"
+}

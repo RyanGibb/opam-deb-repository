@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5people-dev_5.78.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5people-dev"]
+]
+depends: [
+  "libkf5people5" {= "5.78.0-2"}
+  "libkf5peoplebackend5" {= "5.78.0-2"}
+  "libkf5peoplewidgets5" {= "5.78.0-2"}
+  "qtbase5-dev" {>= "5.14.0~"}
+]
+extra-source "libkf5people-dev_5.78.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kpeople/libkf5people-dev_5.78.0-2_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmirage-crypto-ocaml_0.10.7-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmirage-crypto-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+  "libcstruct-ocaml"
+  "libduration-ocaml"
+  "libeqaf-ocaml"
+  "liblogs-ocaml"
+  "liblwt-ocaml"
+  "libmtime-ocaml"
+  "libsexplib0-ocaml"
+  "libzarith-ocaml"
+  "ocaml-base"
+]
+extra-source "libmirage-crypto-ocaml_0.10.7-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-mirage-crypto/libmirage-crypto-ocaml_0.10.7-1+b3_amd64.deb"
+}

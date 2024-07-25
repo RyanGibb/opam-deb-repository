@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cm-super_0.3.4-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cm-super"]
+]
+depends: [
+  "cm-super-minimal" {= "0.3.4-14"}
+  "pfb2t1c2pfb"
+  "tex-common" {>= "6"}
+  "texlive-latex-recommended"
+]
+conflicts: [
+  "pts-tetex-cm-super"
+]
+extra-source "cm-super_0.3.4-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cm-super/cm-super_0.3.4-14_all.deb"
+}

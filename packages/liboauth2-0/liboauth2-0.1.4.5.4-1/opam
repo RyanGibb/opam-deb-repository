@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liboauth2-0_1.4.5.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liboauth2-0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcjose0" {>= "0.6.0"}
+  "libcurl4" {>= "7.16.2"}
+  "libhiredis0-14" {>= "0.14.0"}
+  "libjansson4" {>= "2.14"}
+  "libmemcached11" {>= "1.0.18+"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "liboauth2-0_1.4.5.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/liboauth2/liboauth2-0_1.4.5.4-1_amd64.deb"
+}

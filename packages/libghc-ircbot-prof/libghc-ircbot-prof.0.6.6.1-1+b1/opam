@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-ircbot-prof_0.6.6.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-ircbot-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-irc-prof"
+  "libghc-ircbot-dev" {= "0.6.6.1-1+b1"}
+  "libghc-network-prof"
+  "libghc-optparse-applicative-prof"
+  "libghc-random-prof"
+  "libghc-safesemaphore-prof"
+]
+extra-source "libghc-ircbot-prof_0.6.6.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-ircbot/libghc-ircbot-prof_0.6.6.1-1+b1_amd64.deb"
+}

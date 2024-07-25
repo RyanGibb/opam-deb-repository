@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-show-prof_0.6-11+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-show-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-show-dev" {= "0.6-11+b3"}
+  "libghc-syb-prof"
+]
+extra-source "libghc-show-prof_0.6-11+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-show/libghc-show-prof_0.6-11+b3_amd64.deb"
+}

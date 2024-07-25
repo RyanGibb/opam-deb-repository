@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kxd_0.15-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kxd"]
+]
+depends: [
+  "kxgencert"
+  "libc6" {>= "2.34"}
+]
+extra-source "kxd_0.15-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kxd/kxd_0.15-4+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i testssl.sh_2.9.5-7+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r testssl.sh"]
+]
+depends: [
+  "bsdmainutils"
+  "openssl" {>= "1"}
+  "procps"
+  ("dnsutils" | "ldnsutils")
+]
+extra-source "testssl.sh_2.9.5-7+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/testssl.sh/testssl.sh_2.9.5-7+dfsg1-2_all.deb"
+}

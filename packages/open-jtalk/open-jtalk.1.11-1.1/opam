@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i open-jtalk_1.11-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r open-jtalk"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libhtsengine1" {>= "1.10"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "open-jtalk_1.11-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/open-jtalk/open-jtalk_1.11-1.1_amd64.deb"
+}

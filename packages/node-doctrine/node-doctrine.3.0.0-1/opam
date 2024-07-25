@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-doctrine_3.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-doctrine"]
+]
+depends: [
+  "node-esutils" {>= "2.0.2"}
+  "node-isarray" {>= "1.0.0"}
+  "nodejs"
+]
+extra-source "node-doctrine_3.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-doctrine/node-doctrine_3.0.0-1_all.deb"
+}

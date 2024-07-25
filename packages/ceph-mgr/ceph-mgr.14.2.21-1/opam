@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ceph-mgr_14.2.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ceph-mgr"]
+]
+depends: [
+  "ceph-base" {= "14.2.21-1"}
+  "libboost-python1-74-0"
+  "libboost-python1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.30"}
+  "libgcc-s1" {>= "3.0"}
+  "libgoogle-perftools4"
+  "libpython3-9" {>= "3.9.1"}
+  "librados2" {>= "12.1.4"}
+  "libstdc++6" {>= "9"}
+  "python3-bcrypt"
+  "python3-cherrypy3"
+  "python3-jwt"
+  "python3-openssl"
+  "python3-pecan"
+  "python3-werkzeug"
+]
+extra-source "ceph-mgr_14.2.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/ceph-mgr_14.2.21-1_amd64.deb"
+}

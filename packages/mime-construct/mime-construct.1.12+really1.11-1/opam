@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mime-construct_1.12+really1.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mime-construct"]
+]
+depends: [
+  "libmime-base64-perl"
+  "libmime-types-perl"
+  "libproc-waitstat-perl"
+  "perl-any"
+  ("default-mta" | "mail-transport-agent")
+]
+extra-source "mime-construct_1.12+really1.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mime-construct/mime-construct_1.12+really1.11-1_all.deb"
+}

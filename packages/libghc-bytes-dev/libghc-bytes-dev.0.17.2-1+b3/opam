@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-bytes-dev_0.17.2-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-bytes-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-binary-orphans-dev"
+  "libghc-cereal-dev"
+  "libghc-hashable-dev"
+  "libghc-scientific-dev"
+  "libghc-transformers-compat-dev"
+  "libghc-unordered-containers-dev"
+  "libghc-void-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-bytes-dev_0.17.2-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-bytes/libghc-bytes-dev_0.17.2-1+b3_amd64.deb"
+}

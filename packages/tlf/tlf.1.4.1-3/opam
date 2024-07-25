@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tlf_1.4.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tlf"]
+]
+depends: [
+  "hamradio-files"
+  "libc6" {>= "2.29"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libhamlib4"
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libxmlrpc-core-c3"
+]
+extra-source "tlf_1.4.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tlf/tlf_1.4.1-3_amd64.deb"
+}

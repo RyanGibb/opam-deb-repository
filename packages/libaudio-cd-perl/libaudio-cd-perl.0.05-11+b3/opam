@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaudio-cd-perl_0.05-11+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaudio-cd-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcdaudio1" {>= "0.99.12p2"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libaudio-cd-perl_0.05-11+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaudio-cd-perl/libaudio-cd-perl_0.05-11+b3_amd64.deb"
+}

@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-cvxopt_1.1.9+dfsg-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-cvxopt"]
+]
+depends: [
+  "libamd2" {>= "1-4.5.2"}
+  "libc6" {>= "2.14"}
+  "libcholmod3" {>= "1-4.5.2"}
+  "libcolamd2" {>= "1-4.5.2"}
+  "libdsdp-5-8gf"
+  "libfftw3-double3" {>= "3.3.5"}
+  "libglpk40" {>= "4.59"}
+  "libgsl23" {>= "2.5"}
+  "libsuitesparseconfig5" {>= "1-5.0.0"}
+  "libumfpack5" {>= "1-4.5.2"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "python-cvxopt_1.1.9+dfsg-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cvxopt/python-cvxopt_1.1.9+dfsg-3+b1_amd64.deb"
+}

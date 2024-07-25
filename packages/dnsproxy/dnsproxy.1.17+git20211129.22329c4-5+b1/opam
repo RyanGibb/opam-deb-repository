@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dnsproxy_1.17+git20211129.22329c4-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dnsproxy"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "lsb-base"
+  "passwd"
+]
+extra-source "dnsproxy_1.17+git20211129.22329c4-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dnsproxy/dnsproxy_1.17+git20211129.22329c4-5+b1_amd64.deb"
+}

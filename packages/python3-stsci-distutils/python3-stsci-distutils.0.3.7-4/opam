@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-stsci.distutils_0.3.7-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-stsci.distutils"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-d2to1"
+  "python3-pkg-resources"
+]
+extra-source "python3-stsci.distutils_0.3.7-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stsci.distutils/python3-stsci.distutils_0.3.7-4_all.deb"
+}

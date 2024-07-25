@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobjects-dev_1.1.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobjects-dev"]
+]
+depends: [
+  "libglbinding-dev"
+  "libglobjects1" {= "1.1.0-3"}
+]
+extra-source "libglobjects-dev_1.1.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globjects/libglobjects-dev_1.1.0-3_amd64.deb"
+}

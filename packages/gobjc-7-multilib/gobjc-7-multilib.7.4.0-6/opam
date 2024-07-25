@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gobjc-7-multilib_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gobjc-7-multilib"]
+]
+depends: [
+  "gcc-7-base" {= "7.4.0-6"}
+  "gcc-7-multilib" {= "7.4.0-6"}
+  "gobjc-7" {= "7.4.0-6"}
+  "lib32objc-7-dev" {= "7.4.0-6"}
+  "libx32objc-7-dev" {= "7.4.0-6"}
+]
+extra-source "gobjc-7-multilib_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/gobjc-7-multilib_7.4.0-6_amd64.deb"
+}

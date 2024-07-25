@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsdl-net1.2-dev_1.2.8-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsdl-net1.2-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libsdl-net1-2" {= "1.2.8-6+b1"}
+  "libsdl1-2-compat-dev"
+]
+extra-source "libsdl-net1.2-dev_1.2.8-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sdl-net1.2/libsdl-net1.2-dev_1.2.8-6+b1_amd64.deb"
+}

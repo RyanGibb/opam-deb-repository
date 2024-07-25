@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgm2-15_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgm2-15"]
+]
+depends: [
+  "gcc-10-base" {= "10.2.1-6"}
+  "libc6" {>= "2.14"}
+]
+extra-source "libgm2-15_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/libgm2-15_10.2.1-6_amd64.deb"
+}

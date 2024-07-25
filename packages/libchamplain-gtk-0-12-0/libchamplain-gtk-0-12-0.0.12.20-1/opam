@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libchamplain-gtk-0.12-0_0.12.20-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libchamplain-gtk-0.12-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libchamplain-0-12-0" {>= "0.11.0"}
+  "libclutter-1-0-0" {>= "1.24"}
+  "libclutter-gtk-1-0-0" {>= "0.91.8"}
+  "libglib2-0-0" {>= "2.38"}
+  "libgtk-3-0" {>= "3.0.0"}
+]
+extra-source "libchamplain-gtk-0.12-0_0.12.20-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libchamplain/libchamplain-gtk-0.12-0_0.12.20-1_amd64.deb"
+}

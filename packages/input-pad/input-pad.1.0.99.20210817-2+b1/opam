@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i input-pad_1.0.99.20210817-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r input-pad"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libinput-pad-1-0-1" {= "1.0.99.20210817-2+b1"}
+]
+extra-source "input-pad_1.0.99.20210817-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/input-pad/input-pad_1.0.99.20210817-2+b1_amd64.deb"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libodil-dev_0.10.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libodil-dev"]
+]
+depends: [
+  "libboost-atomic1-67-dev"
+  "libboost-chrono1-67-dev"
+  "libboost-date-time1-67-dev"
+  "libboost-filesystem1-67-dev"
+  "libboost-log-dev"
+  "libboost-system1-67-dev"
+  "libboost-thread1-67-dev"
+  "libdcmtk-dev"
+  "libicu-dev"
+  "libjsoncpp-dev"
+  "libodil0" {= "0.10.0-3"}
+  "libwrap0-dev"
+  "zlib1g-dev"
+]
+conflicts: [
+  "libdcmtkpp-dev"
+  "libodil0-dev"
+]
+extra-source "libodil-dev_0.10.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/odil/libodil-dev_0.10.0-3_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnfft3-2_3.3.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnfft3-2"]
+]
+depends: [
+  "libnfft3-double2" {= "3.3.2-2"}
+  "libnfft3-long2" {= "3.3.2-2"}
+  "libnfft3-single2" {= "3.3.2-2"}
+]
+extra-source "libnfft3-2_3.3.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nfft/libnfft3-2_3.3.2-2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i krb5-pkinit_1.18.3-6+deb11u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r krb5-pkinit"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+  "libcom-err2" {>= "1.43.9"}
+  "libk5crypto3" {>= "1.8+dfsg"}
+  "libkrb5-3" {= "1.18.3-6+deb11u4"}
+  "libkrb5support0" {>= "1.17"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "krb5-pkinit_1.18.3-6+deb11u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/krb5/krb5-pkinit_1.18.3-6+deb11u4_amd64.deb"
+}

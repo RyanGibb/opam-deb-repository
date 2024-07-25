@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hsh-dev_2.1.3-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hsh-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-hslogger-dev"
+  "libghc-missingh-dev"
+  "libghc-regex-base-dev"
+  "libghc-regex-compat-dev"
+  "libghc-regex-posix-dev"
+  "libgmp10"
+]
+extra-source "libghc-hsh-dev_2.1.3-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hsh/libghc-hsh-dev_2.1.3-3+b2_amd64.deb"
+}

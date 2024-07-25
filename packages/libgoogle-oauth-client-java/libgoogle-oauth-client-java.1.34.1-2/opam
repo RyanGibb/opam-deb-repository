@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgoogle-oauth-client-java_1.34.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgoogle-oauth-client-java"]
+]
+depends: [
+  "libgoogle-http-client-java" {>= "1.42.0"}
+  "libguava-java"
+]
+extra-source "libgoogle-oauth-client-java_1.34.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/google-oauth-client-java/libgoogle-oauth-client-java_1.34.1-2_all.deb"
+}

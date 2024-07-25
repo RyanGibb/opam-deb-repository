@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libafsauthent2_1.8.6-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libafsauthent2"]
+]
+depends: [
+  "libafsrpc2" {>= "1.8.0~pre1"}
+  "libc6" {>= "2.14"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libhcrypto4-heimdal" {>= "1.4.0+git20110226"}
+  "libroken18-heimdal" {>= "1.7~git20150920"}
+]
+extra-source "libafsauthent2_1.8.6-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openafs/libafsauthent2_1.8.6-5_amd64.deb"
+}

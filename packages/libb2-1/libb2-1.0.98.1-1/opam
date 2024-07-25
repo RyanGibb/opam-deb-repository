@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libb2-1_0.98.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libb2-1"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+  "libgomp1" {>= "4.9"}
+]
+extra-source "libb2-1_0.98.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libb2/libb2-1_0.98.1-1_amd64.deb"
+}

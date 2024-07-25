@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rt-tests_2.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rt-tests"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libnuma1" {>= "2.0.11"}
+  "python3"
+]
+extra-source "rt-tests_2.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rt-tests/rt-tests_2.4-1_amd64.deb"
+}

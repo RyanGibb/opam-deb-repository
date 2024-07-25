@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-erl-docgen_1:25.2.3+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-erl-docgen"]
+]
+depends: [
+  "erlang-base" {= "1-25.2.3+dfsg-1"}
+  "erlang-edoc" {= "1-25.2.3+dfsg-1"}
+  "erlang-xmerl" {= "1-25.2.3+dfsg-1"}
+]
+extra-source "erlang-erl-docgen_1:25.2.3+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-erl-docgen_25.2.3+dfsg-1_amd64.deb"
+}

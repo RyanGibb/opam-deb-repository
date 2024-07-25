@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcl-stereo1.13_1.13.0+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcl-stereo1.13"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libpcl-common1-13" {>= "1.13.0+dfsg"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libpcl-stereo1.13_1.13.0+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcl/libpcl-stereo1.13_1.13.0+dfsg-3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpnetcdf0d_1.12.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpnetcdf0d"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgfortran5" {>= "10"}
+  "libopenmpi3" {>= "4.1.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libpnetcdf0d_1.12.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pnetcdf/libpnetcdf0d_1.12.2-1_amd64.deb"
+}

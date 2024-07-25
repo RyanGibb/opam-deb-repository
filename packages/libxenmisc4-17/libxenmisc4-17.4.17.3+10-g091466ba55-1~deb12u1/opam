@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxenmisc4.17_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxenmisc4.17"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libext2fs2" {>= "1.37"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libuuid1" {>= "2.16"}
+  "libxencall1" {>= "4.17.3+10-g091466ba55"}
+  "libxendevicemodel1" {>= "4.17.3+10-g091466ba55"}
+  "libxenevtchn1" {>= "4.17.3+10-g091466ba55"}
+  "libxenforeignmemory1" {>= "4.17.3+10-g091466ba55"}
+  "libxengnttab1" {>= "4.17.3+10-g091466ba55"}
+  "libxenhypfs1" {>= "4.17.3+10-g091466ba55"}
+  "libxenstore4" {>= "4.16.0"}
+  "libxentoollog1" {>= "4.17.3+10-g091466ba55"}
+  "libyajl2" {>= "2.0.4"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libxenmisc4.17_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xen/libxenmisc4.17_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb"
+}

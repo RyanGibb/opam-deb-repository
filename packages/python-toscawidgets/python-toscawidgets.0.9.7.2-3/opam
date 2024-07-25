@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-toscawidgets_0.9.7.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-toscawidgets"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-formencode" {>= "1.1"}
+  "python-simplejson" {>= "2.0"}
+  "python-webob"
+]
+extra-source "python-toscawidgets_0.9.7.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-toscawidgets/python-toscawidgets_0.9.7.2-3_all.deb"
+}

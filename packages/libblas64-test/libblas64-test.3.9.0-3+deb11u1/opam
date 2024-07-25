@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libblas64-test_3.9.0-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libblas64-test"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgfortran5" {>= "8"}
+  ("libblas64-3" | "libblas64-so-3")
+]
+extra-source "libblas64-test_3.9.0-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lapack/libblas64-test_3.9.0-3+deb11u1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvdeplug2_4.0.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvdeplug2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libexecs0" {>= "1.3"}
+]
+extra-source "libvdeplug2_4.0.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vdeplug4/libvdeplug2_4.0.1-4_amd64.deb"
+}

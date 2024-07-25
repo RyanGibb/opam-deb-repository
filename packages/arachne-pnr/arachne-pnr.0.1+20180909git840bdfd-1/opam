@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i arachne-pnr_0.1+20180909git840bdfd-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r arachne-pnr"]
+]
+depends: [
+  "arachne-pnr-chipdb"
+  "fpga-icestorm"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "yosys"
+]
+extra-source "arachne-pnr_0.1+20180909git840bdfd-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/arachne-pnr/arachne-pnr_0.1+20180909git840bdfd-1_amd64.deb"
+}

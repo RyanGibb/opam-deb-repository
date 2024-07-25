@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slurm-client_18.08.5.2-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slurm-client"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libhdf5-103"
+  "liblz4-1" {>= "0.0~r130"}
+  "libncurses6" {>= "6"}
+  "libreadline7" {>= "6.0"}
+  "libslurmdb33" {>= "18.08.0"}
+  "libsz2"
+  "libtinfo6" {>= "6"}
+  "munge"
+  "slurm-wlm-basic-plugins" {= "18.08.5.2-1+deb10u2"}
+  "ucf"
+  "zlib1g" {>= "1-1.2.0"}
+]
+conflicts: [
+  "sinfo (<< 0.0.47-4)"
+]
+extra-source "slurm-client_18.08.5.2-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-llnl/slurm-client_18.08.5.2-1+deb10u2_amd64.deb"
+}

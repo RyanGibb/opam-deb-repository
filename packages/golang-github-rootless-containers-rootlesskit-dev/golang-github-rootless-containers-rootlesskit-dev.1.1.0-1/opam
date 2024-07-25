@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-rootless-containers-rootlesskit-dev_1.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-rootless-containers-rootlesskit-dev"]
+]
+depends: [
+  "golang-github-gofrs-flock-dev"
+  "golang-github-gorilla-mux-dev"
+  "golang-github-insomniacslk-dhcp-dev"
+  "golang-github-moby-sys-dev"
+  "golang-github-sirupsen-logrus-dev"
+  "golang-golang-x-sys-dev"
+]
+extra-source "golang-github-rootless-containers-rootlesskit-dev_1.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rootlesskit/golang-github-rootless-containers-rootlesskit-dev_1.1.0-1_all.deb"
+}

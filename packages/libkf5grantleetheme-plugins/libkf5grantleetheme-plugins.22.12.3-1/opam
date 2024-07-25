@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5grantleetheme-plugins_22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5grantleetheme-plugins"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgrantlee-templates5" {>= "5.2~"}
+  "libkf5configwidgets5" {>= "5.94.0"}
+  "libkf5guiaddons5" {>= "5.99.0~"}
+  "libkf5iconthemes5" {>= "5.99.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "libkf5grantleetheme-plugins_22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkf5grantleetheme/libkf5grantleetheme-plugins_22.12.3-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-geometry_0.3-6+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-geometry"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libqhull7"
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-2"}
+  "r-cran-magic"
+]
+extra-source "r-cran-geometry_0.3-6+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-geometry/r-cran-geometry_0.3-6+dfsg-2_amd64.deb"
+}

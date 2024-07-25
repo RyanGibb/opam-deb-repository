@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-party_1.3-11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-party"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-2"}
+  "r-cran-coin" {>= "1.1-0"}
+  "r-cran-modeltools" {>= "0.2-21"}
+  "r-cran-mvtnorm" {>= "1.0-2"}
+  "r-cran-sandwich" {>= "1.1-1"}
+  "r-cran-strucchange"
+  "r-cran-survival" {>= "2.37-7"}
+  "r-cran-zoo"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "r-cran-party_1.3-11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-party/r-cran-party_1.3-11-1_amd64.deb"
+}

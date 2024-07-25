@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-fuzzywuzzy_0.17.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-fuzzywuzzy"]
+]
+depends: [
+  "python3-any"
+  "python3-levenshtein" {>= "0.12"}
+]
+extra-source "python3-fuzzywuzzy_0.17.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fuzzywuzzy/python3-fuzzywuzzy_0.17.0-1_all.deb"
+}

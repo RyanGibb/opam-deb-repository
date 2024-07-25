@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i renderdoc_1.24+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r renderdoc"]
+]
+depends: [
+  "librenderdoc" {= "1.24+dfsg-1+b1"}
+  "python3-renderdoc" {= "1.24+dfsg-1+b1"}
+  "qrenderdoc" {= "1.24+dfsg-1+b1"}
+  "renderdoccmd" {= "1.24+dfsg-1+b1"}
+]
+extra-source "renderdoc_1.24+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/renderdoc/renderdoc_1.24+dfsg-1+b1_amd64.deb"
+}

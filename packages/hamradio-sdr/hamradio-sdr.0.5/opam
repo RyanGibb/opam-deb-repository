@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hamradio-sdr_0.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hamradio-sdr"]
+]
+depends: [
+  "hamradio-tasks" {= "0.5"}
+]
+extra-source "hamradio-sdr_0.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-hamradio/hamradio-sdr_0.5_all.deb"
+}

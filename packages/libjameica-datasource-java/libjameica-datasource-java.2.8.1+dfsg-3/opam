@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjameica-datasource-java_2.8.1+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjameica-datasource-java"]
+]
+depends: [
+  "libjameica-util-java"
+  "libmckoisqldb-java" {>= "1.0.6"}
+]
+extra-source "libjameica-datasource-java_2.8.1+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jameica-datasource/libjameica-datasource-java_2.8.1+dfsg-3_all.deb"
+}

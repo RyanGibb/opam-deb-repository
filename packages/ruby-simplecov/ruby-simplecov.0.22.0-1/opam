@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-simplecov_0.22.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-simplecov"]
+]
+depends: [
+  "ruby-docile" {>= "1.1"}
+  "ruby-simplecov-html" {>= "0.11"}
+]
+extra-source "ruby-simplecov_0.22.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-simplecov/ruby-simplecov_0.22.0-1_all.deb"
+}

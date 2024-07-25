@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzmq3-dev_4.3.1-4+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzmq3-dev"]
+]
+depends: [
+  "libkrb5-dev"
+  "libnorm-dev"
+  "libpgm-dev" {>= "5.2.122~dfsg"}
+  "libsodium-dev"
+  "libzmq5" {= "4.3.1-4+deb10u2"}
+]
+conflicts: [
+  "libzmq-dev"
+  "libzmq5-dev"
+]
+extra-source "libzmq3-dev_4.3.1-4+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zeromq3/libzmq3-dev_4.3.1-4+deb10u2_amd64.deb"
+}

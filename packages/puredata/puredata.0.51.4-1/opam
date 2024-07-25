@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puredata_0.51.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puredata"]
+]
+depends: [
+  "puredata-core" {< "0.51.4+1~"}
+  "puredata-core" {>= "0.51.4-1"}
+  "puredata-dev" {< "0.51.4+1~"}
+  "puredata-dev" {>= "0.51.4-1"}
+  "puredata-doc" {< "0.51.4+1~"}
+  "puredata-doc" {>= "0.51.4-1"}
+  "puredata-extra" {< "0.51.4+1~"}
+  "puredata-extra" {>= "0.51.4-1"}
+  "puredata-gui" {< "0.51.4+1~"}
+  "puredata-gui" {>= "0.51.4-1"}
+  "puredata-utils"
+]
+extra-source "puredata_0.51.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puredata/puredata_0.51.4-1_all.deb"
+}

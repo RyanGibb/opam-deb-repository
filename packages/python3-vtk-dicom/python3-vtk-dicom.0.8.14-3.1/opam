@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-vtk-dicom_0.8.14-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-vtk-dicom"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libvtk9-1" {>= "9.1.0+really9.1.0+dfsg2"}
+  "libvtkdicom0-8" {>= "0.8.14"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-vtk9"
+]
+extra-source "python3-vtk-dicom_0.8.14-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vtk-dicom/python3-vtk-dicom_0.8.14-3.1_amd64.deb"
+}

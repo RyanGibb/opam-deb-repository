@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libslepc-real3.10_3.10.1+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libslepc-real3.10"]
+]
+depends: [
+  "libamd2" {>= "1-4.5.2"}
+  "libarpack2" {>= "2.1"}
+  "libc6" {>= "2.14"}
+  "libcholmod3" {>= "1-4.5.2"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libfftw3-mpi3"
+  "libgcc1" {>= "1-3.0"}
+  "libgfortran5" {>= "8"}
+  "libhdf5-openmpi-103" {>= "1.8.13"}
+  "libhypre-2-15-1"
+  "libklu1" {>= "1-4.5.2"}
+  "libmumps-5-1-2"
+  "libopenmpi3"
+  "libparpack2" {>= "2.1"}
+  "libpetsc-real3-10"
+  "libptscotch-6-0"
+  "libquadmath0" {>= "4.6"}
+  "libscalapack-openmpi2-0"
+  "libstdc++6" {>= "4.1.1"}
+  "libsuperlu-dist6"
+  "libsuperlu5"
+  "libumfpack5" {>= "1-4.5.2"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+conflicts: [
+  "libslepc2.3.2"
+  "libslepc3.6 (<= 3.6.1.dfsg1-2)"
+]
+extra-source "libslepc-real3.10_3.10.1+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slepc/libslepc-real3.10_3.10.1+dfsg1-3_amd64.deb"
+}

@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-photos_3.38.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-photos"]
+]
+depends: [
+  "gnome-online-miners"
+  "libatk1-0-0" {>= "1.12.4"}
+  "libbabl-0-1-0" {>= "0.1.72"}
+  "libc6" {>= "2.29"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.14.0"}
+  "libdazzle-1-0-0" {>= "3.26.0"}
+  "libgdata22" {>= "0.15.2"}
+  "libgdk-pixbuf-2-0-0" {>= "2.36.9"}
+  "libgegl-0-4-0" {>= "0.4.0"}
+  "libgeocode-glib0" {>= "0.99.1"}
+  "libgexiv2-2" {>= "0.10.8"}
+  "libgfbgraph-0-2-0" {>= "0.2.2"}
+  "libglib2-0-0" {>= "2.59.0"}
+  "libgoa-1-0-0b" {>= "3.8.0"}
+  "libgrilo-0-3-0" {>= "0.3.5"}
+  "libgtk-3-0" {>= "3.22.16"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libtracker-control-2-0-0" {>= "1.9.1"}
+  "libtracker-sparql-2-0-0" {>= "0.12.0"}
+  "tracker"
+  "tracker-extract"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-photos_3.38.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-photos/gnome-photos_3.38.0-2_amd64.deb"
+}

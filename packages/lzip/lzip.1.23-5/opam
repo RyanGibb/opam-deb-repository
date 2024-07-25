@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lzip_1.23-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lzip"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "lzip_1.23-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lzip/lzip_1.23-5_amd64.deb"
+}

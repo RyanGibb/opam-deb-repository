@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fuseext2_0.4-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fuseext2"]
+]
+depends: [
+  "fuse"
+  "libc6" {>= "2.4"}
+  "libext2fs2" {>= "1.42"}
+  "libfuse2" {>= "2.8"}
+]
+extra-source "fuseext2_0.4-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fuse-umfuse-ext2/fuseext2_0.4-1.2_amd64.deb"
+}

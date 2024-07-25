@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5syntaxhighlighting-tools_5.103.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5syntaxhighlighting-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libkf5syntaxhighlighting5" {= "5.103.0-3"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libkf5syntaxhighlighting-tools_5.103.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/ksyntax-highlighting/libkf5syntaxhighlighting-tools_5.103.0-3_amd64.deb"
+}

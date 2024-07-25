@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debian-installer-launcher_34_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debian-installer-launcher"]
+]
+depends: [
+  "menu"
+  "psmisc"
+  "sudo"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("xterm" | "x-terminal-emulator")
+]
+extra-source "debian-installer-launcher_34_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-installer-launcher/debian-installer-launcher_34_all.deb"
+}

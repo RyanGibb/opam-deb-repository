@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mock_1.3.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mock"]
+]
+depends: [
+  "python"
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-rpm"
+  "python3-six"
+  "usermode"
+  "yum" {> "3.2.26"}
+  "yum-utils"
+]
+extra-source "mock_1.3.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mock/mock_1.3.2-2_all.deb"
+}

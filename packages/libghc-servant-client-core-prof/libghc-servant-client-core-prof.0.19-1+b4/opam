@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-servant-client-core-prof_0.19-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-servant-client-core-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-base-compat-prof"
+  "libghc-base64-bytestring-prof"
+  "libghc-constraints-prof"
+  "libghc-free-prof"
+  "libghc-http-media-prof"
+  "libghc-http-types-prof"
+  "libghc-network-uri-prof"
+  "libghc-safe-prof"
+  "libghc-servant-client-core-dev" {= "0.19-1+b4"}
+  "libghc-servant-prof"
+  "libghc-sop-core-prof"
+]
+extra-source "libghc-servant-client-core-prof_0.19-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-servant-client-core/libghc-servant-client-core-prof_0.19-1+b4_amd64.deb"
+}

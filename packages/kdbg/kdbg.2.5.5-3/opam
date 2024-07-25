@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kdbg_2.5.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kdbg"]
+]
+depends: [
+  "kde-runtime" {> "4-4.10"}
+  "libc6" {>= "2.14"}
+  "libkdecore5" {>= "4-4.4.0"}
+  "libkdeui5" {>= "4-4.4.0"}
+  "libkio5" {>= "4-4.4.0"}
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libqtgui4" {>= "4-4.8.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "kdbg_2.5.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdbg/kdbg_2.5.5-3_amd64.deb"
+}

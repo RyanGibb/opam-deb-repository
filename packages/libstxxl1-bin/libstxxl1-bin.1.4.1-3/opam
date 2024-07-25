@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstxxl1-bin_1.4.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstxxl1-bin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "5.2"}
+  "libstxxl1v5" {= "1.4.1-3"}
+]
+extra-source "libstxxl1-bin_1.4.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libstxxl/libstxxl1-bin_1.4.1-3_amd64.deb"
+}

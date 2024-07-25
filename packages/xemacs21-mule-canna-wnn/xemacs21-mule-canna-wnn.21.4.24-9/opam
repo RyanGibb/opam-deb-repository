@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xemacs21-mule-canna-wnn_21.4.24-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xemacs21-mule-canna-wnn"]
+]
+depends: [
+  "emacsen-common" {>= "3.0.0"}
+  "libc6" {>= "2.29"}
+  "libcanna1g" {>= "3.7p3"}
+  "libcompfaceg1"
+  "libcrypt1" {>= "1-4.1.0"}
+  "libdb5-3"
+  "libgpm2" {>= "1.20.7"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libtiff5" {>= "4.0.3"}
+  "libtinfo6" {>= "6"}
+  "libx11-6"
+  "libxaw7"
+  "libxext6"
+  "libxmu6"
+  "libxpm4"
+  "libxt6"
+  "xemacs21-basesupport" {>= "2003.04.23-1"}
+  "xemacs21-bin" {= "21.4.24-9"}
+  "xemacs21-mulesupport" {>= "2003.04.23-1"}
+  "xemacs21-support" {= "21.4.24-9"}
+]
+conflicts: [
+  "xemacs21-gnome-mule-canna-wnn"
+]
+extra-source "xemacs21-mule-canna-wnn_21.4.24-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xemacs21/xemacs21-mule-canna-wnn_21.4.24-9_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgdome2-cpp-smart0v5_0.2.6-7+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgdome2-cpp-smart0v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdome2-0"
+  "libglib2-0-0" {>= "2.12.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libgdome2-cpp-smart0"
+  "libgdome2-cpp-smart0c2"
+  "libgdome2-cpp-smart0c2a"
+]
+extra-source "libgdome2-cpp-smart0v5_0.2.6-7+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gmetadom/libgdome2-cpp-smart0v5_0.2.6-7+b3_amd64.deb"
+}

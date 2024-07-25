@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmo-sigtran7_1.6.0+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmo-sigtran7"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libosmocore19" {>= "1.7.0"}
+  "libosmogsm18" {>= "1.7.0"}
+  "libosmonetif8" {>= "1.2.0"}
+  "libosmovty9" {>= "1.7.0"}
+  "libsctp1" {>= "1.0.10+dfsg"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "libosmo-sigtran7_1.6.0+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libosmo-sccp/libosmo-sigtran7_1.6.0+dfsg1-3_amd64.deb"
+}

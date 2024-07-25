@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmirrenderer-dev_2.12.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmirrenderer-dev"]
+]
+depends: [
+  "libmircommon-dev" {= "2.12.1-1"}
+  "libmirplatform-dev" {= "2.12.1-1"}
+]
+extra-source "libmirrenderer-dev_2.12.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mir/libmirrenderer-dev_2.12.1-1_amd64.deb"
+}

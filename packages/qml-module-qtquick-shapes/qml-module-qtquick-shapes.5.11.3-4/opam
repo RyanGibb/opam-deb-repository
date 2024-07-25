@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-qtquick-shapes_5.11.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-qtquick-shapes"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.9.0~beta"}
+  "libqt5qml5"
+  "libqt5qml5" {>= "5.9.0~beta"}
+  "libqt5quick5" {>= "5.11.0"}
+  "libstdc++6" {>= "5"}
+  "qml-module-qtquick2"
+]
+extra-source "qml-module-qtquick-shapes_5.11.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtdeclarative-opensource-src/qml-module-qtquick-shapes_5.11.3-4_amd64.deb"
+}

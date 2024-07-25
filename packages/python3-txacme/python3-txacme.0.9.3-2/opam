@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-txacme_0.9.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-txacme"]
+]
+depends: [
+  "python3-acme"
+  "python3-any"
+  "python3-attr"
+  "python3-eliot" {>= "0.8.0"}
+  "python3-josepy"
+  "python3-openssl"
+  "python3-pem" {>= "16.1.0"}
+  "python3-treq"
+  "python3-twisted"
+  "python3-txsni"
+]
+extra-source "python3-txacme_0.9.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/txacme/python3-txacme_0.9.3-2_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fig2dev_1:3.2.8b-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fig2dev"]
+]
+depends: [
+  "gawk"
+  "ghostscript"
+  "libc6" {>= "2.34"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "netpbm"
+  "x11-common"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "fig2dev_1:3.2.8b-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fig2dev/fig2dev_3.2.8b-3_amd64.deb"
+}

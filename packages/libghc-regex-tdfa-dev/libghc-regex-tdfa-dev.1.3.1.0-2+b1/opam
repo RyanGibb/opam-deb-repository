@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-regex-tdfa-dev_1.3.1.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-regex-tdfa-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-regex-base-dev"
+  "libgmp10"
+]
+extra-source "libghc-regex-tdfa-dev_1.3.1.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-regex-tdfa/libghc-regex-tdfa-dev_1.3.1.0-2+b1_amd64.deb"
+}

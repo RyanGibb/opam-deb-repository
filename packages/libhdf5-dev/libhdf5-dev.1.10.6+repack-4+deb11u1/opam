@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhdf5-dev_1.10.6+repack-4+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhdf5-dev"]
+]
+depends: [
+  "hdf5-helpers"
+  "libaec-dev"
+  "libhdf5-103-1" {= "1.10.6+repack-4+deb11u1"}
+  "libhdf5-cpp-103-1" {= "1.10.6+repack-4+deb11u1"}
+  "libhdf5-fortran-102" {= "1.10.6+repack-4+deb11u1"}
+  "libhdf5-hl-100" {= "1.10.6+repack-4+deb11u1"}
+  "libhdf5-hl-cpp-100" {= "1.10.6+repack-4+deb11u1"}
+  "libhdf5-hl-fortran-100" {= "1.10.6+repack-4+deb11u1"}
+  "libjpeg-dev"
+  "zlib1g-dev"
+]
+extra-source "libhdf5-dev_1.10.6+repack-4+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hdf5/libhdf5-dev_1.10.6+repack-4+deb11u1_amd64.deb"
+}

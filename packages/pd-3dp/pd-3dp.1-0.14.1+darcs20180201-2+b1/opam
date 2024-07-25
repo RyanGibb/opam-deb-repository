@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pd-3dp_1:0.14.1+darcs20180201-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pd-3dp"]
+]
+depends: [
+  "freeglut3" {>= "2.8.1"}
+  "libc6" {>= "2.4"}
+  "pd-pdp"
+]
+extra-source "pd-3dp_1:0.14.1+darcs20180201-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdp/pd-3dp_0.14.1+darcs20180201-2+b1_amd64.deb"
+}

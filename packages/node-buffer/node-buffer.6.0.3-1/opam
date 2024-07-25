@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-buffer_6.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-buffer"]
+]
+depends: [
+  "node-base64-js"
+  "node-ieee754"
+  "nodejs" {>= "10"}
+]
+extra-source "node-buffer_6.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-buffer/node-buffer_6.0.3-1_all.deb"
+}

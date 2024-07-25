@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mediathekview_13.2.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mediathekview"]
+]
+depends: [
+  "java-wrappers" {>= "0.3"}
+  "libcommons-compress-java"
+  "libcommons-configuration2-java"
+  "libcommons-dbcp2-java"
+  "libcommons-lang3-java"
+  "libcommons-pool2-java"
+  "libcontrolsfx-java"
+  "libguava-java"
+  "libh2-java"
+  "libjackson2-core-java"
+  "libjchart2d-java"
+  "libjiconfont-font-awesome-java"
+  "libjiconfont-java"
+  "libjiconfont-swing-java"
+  "libjide-oss-java" {>= "3.7.4"}
+  "liblog4j2-java"
+  "libmbassador-java"
+  "libmiglayout-java"
+  "libokhttp-java"
+  "libopenjfx-java" {>= "11"}
+  "libswingx-java"
+  "libxz-java"
+  ("default-jre" {>= "2-1.9"} | "java9-runtime")
+]
+extra-source "mediathekview_13.2.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mediathekview/mediathekview_13.2.1-3_all.deb"
+}

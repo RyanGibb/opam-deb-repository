@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libiml0_1.0.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libiml0"]
+]
+depends: [
+  "libatlas3-base"
+  "libc6" {>= "2.4"}
+  "libgmp10"
+]
+extra-source "libiml0_1.0.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iml/libiml0_1.0.4-1+b2_amd64.deb"
+}

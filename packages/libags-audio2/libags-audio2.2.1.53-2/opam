@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libags-audio2_2.1.53-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libags-audio2"]
+]
+depends: [
+  "libags2" {= "2.1.53-2"}
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.14"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libglib2-0-0" {>= "2.43.2"}
+  "libinstpatch-1-0-0" {>= "1.0.0~"}
+  "libpulse-mainloop-glib0" {>= "0.99.1"}
+  "libpulse0" {>= "0.99.1"}
+  "libsamplerate0" {>= "0.1.7"}
+  "libsndfile1" {>= "1.0.20"}
+  "libx11-6"
+  "libxml2" {>= "2.7.4"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "libags-audio2_2.1.53-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gsequencer/libags-audio2_2.1.53-2_amd64.deb"
+}

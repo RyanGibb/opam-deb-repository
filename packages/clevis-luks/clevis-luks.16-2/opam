@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clevis-luks_16-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clevis-luks"]
+]
+depends: [
+  "clevis" {= "16-2"}
+  "cryptsetup-bin"
+  "luksmeta"
+]
+extra-source "clevis-luks_16-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clevis/clevis-luks_16-2_amd64.deb"
+}

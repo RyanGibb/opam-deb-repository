@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-frankban-quicktest-dev_1.11.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-frankban-quicktest-dev"]
+]
+depends: [
+  "golang-github-google-go-cmp-dev" {>= "0.5.2"}
+  "golang-github-kr-pretty-dev" {>= "0.2.1"}
+]
+extra-source "golang-github-frankban-quicktest-dev_1.11.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-frankban-quicktest/golang-github-frankban-quicktest-dev_1.11.2-1_all.deb"
+}

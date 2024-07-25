@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i texlive-lang-korean_2018.20190227-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r texlive-lang-korean"]
+]
+depends: [
+  "fonts-baekmuk"
+  "fonts-unfonts-core"
+  "fonts-unfonts-extra"
+  "tex-common" {>= "6"}
+  "texlive-base" {>= "2018.20190227"}
+  "texlive-binaries" {>= "2018.20180416"}
+  "texlive-lang-cjk" {>= "2018.20190227"}
+]
+conflicts: [
+  "ko.tex-bin"
+]
+extra-source "texlive-lang-korean_2018.20190227-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/texlive-lang/texlive-lang-korean_2018.20190227-2_all.deb"
+}

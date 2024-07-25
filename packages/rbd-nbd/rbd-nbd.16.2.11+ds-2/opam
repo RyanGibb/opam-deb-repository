@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rbd-nbd_16.2.11+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rbd-nbd"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libnl-3-200" {>= "3.2.7"}
+  "libnl-genl-3-200" {>= "3.2.21"}
+  "librados2" {>= "16.2.11+ds"}
+  "librbd1" {>= "0.87"}
+  "libstdc++6" {>= "12"}
+]
+extra-source "rbd-nbd_16.2.11+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/rbd-nbd_16.2.11+ds-2_amd64.deb"
+}

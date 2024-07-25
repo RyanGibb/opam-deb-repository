@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-xio-rate-driver-dev_2.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-xio-rate-driver-dev"]
+]
+depends: [
+  "libglobus-common-dev" {>= "15"}
+  "libglobus-xio-dev" {>= "3"}
+  "libglobus-xio-rate-driver" {= "2.1-3"}
+]
+extra-source "libglobus-xio-rate-driver-dev_2.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-xio-rate-driver/libglobus-xio-rate-driver-dev_2.1-3_amd64.deb"
+}

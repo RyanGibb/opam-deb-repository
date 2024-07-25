@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i atropos_1.1.29+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r atropos"]
+]
+depends: [
+  "cython3"
+  "libc6" {>= "2.4"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-pysam"
+]
+extra-source "atropos_1.1.29+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/atropos/atropos_1.1.29+dfsg-1_amd64.deb"
+}

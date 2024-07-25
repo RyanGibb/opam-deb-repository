@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppetmaster-passenger_5.5.10-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppetmaster-passenger"]
+]
+depends: [
+  "puppet-master-passenger"
+]
+extra-source "puppetmaster-passenger_5.5.10-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet/puppetmaster-passenger_5.5.10-4_all.deb"
+}

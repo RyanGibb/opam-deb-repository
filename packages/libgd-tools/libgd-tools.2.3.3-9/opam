@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgd-tools_2.3.3-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgd-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgd3" {>= "2.1.0~alpha~"}
+  "perl-any"
+]
+extra-source "libgd-tools_2.3.3-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgd2/libgd-tools_2.3.3-9_amd64.deb"
+}

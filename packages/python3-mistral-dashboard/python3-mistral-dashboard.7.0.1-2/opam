@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-mistral-dashboard_7.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-mistral-dashboard"]
+]
+depends: [
+  "openstack-dashboard" {>= "3-10.0.0~rc2"}
+  "python3-any"
+  "python3-django" {>= "1.8"}
+  "python3-django-compressor" {>= "2.0"}
+  "python3-iso8601" {>= "0.1.11"}
+  "python3-mistralclient" {>= "2.0.0"}
+  "python3-pbr" {>= "1.8"}
+  "python3-yaml" {>= "3.1.0"}
+]
+extra-source "python3-mistral-dashboard_7.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mistral-dashboard/python3-mistral-dashboard_7.0.1-2_all.deb"
+}

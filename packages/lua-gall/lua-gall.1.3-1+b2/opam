@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lua-gall_1.3-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lua-gall"]
+]
+depends: [
+  "git"
+  "libc6" {>= "2.4"}
+  "libgit2-27" {>= "0.26.0"}
+  "lua-luxio0"
+]
+extra-source "lua-gall_1.3-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gall/lua-gall_1.3-1+b2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-appc-cni-dev_0.4.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-appc-cni-dev"]
+]
+depends: [
+  "golang-github-coreos-go-iptables-dev"
+  "golang-github-coreos-go-systemd-dev"
+  "golang-github-d2g-dhcp4-dev"
+  "golang-github-d2g-dhcp4client-dev"
+  "golang-github-vishvananda-netlink-dev"
+  "golang-go"
+]
+extra-source "golang-github-appc-cni-dev_0.4.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-appc-cni/golang-github-appc-cni-dev_0.4.0+dfsg-1_all.deb"
+}

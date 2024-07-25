@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjffi-java_1.3.9+ds-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjffi-java"]
+]
+depends: [
+  "libjffi-jni" {>= "1.3.9+ds-6"}
+]
+extra-source "libjffi-java_1.3.9+ds-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jffi/libjffi-java_1.3.9+ds-6_all.deb"
+}

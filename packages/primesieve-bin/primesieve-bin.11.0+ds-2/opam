@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i primesieve-bin_11.0+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r primesieve-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libprimesieve11" {= "11.0+ds-2"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "primesieve-bin_11.0+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/primesieve/primesieve-bin_11.0+ds-2_amd64.deb"
+}

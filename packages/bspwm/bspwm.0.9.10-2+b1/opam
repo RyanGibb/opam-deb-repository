@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bspwm_0.9.10-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bspwm"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libxcb-ewmh2" {>= "0.4.1"}
+  "libxcb-icccm4" {>= "0.4.1"}
+  "libxcb-keysyms1" {>= "0.4.0"}
+  "libxcb-randr0" {>= "1.3"}
+  "libxcb-shape0"
+  "libxcb-util1" {>= "0.4.0"}
+  "libxcb-xinerama0"
+  "libxcb1"
+  "sxhkd"
+  "x11-utils"
+]
+extra-source "bspwm_0.9.10-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bspwm/bspwm_0.9.10-2+b1_amd64.deb"
+}

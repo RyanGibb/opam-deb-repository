@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dublin-traceroute_0.4.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dublin-traceroute"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdublintraceroute0" {= "0.4.2-2"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtins4-0"
+]
+extra-source "dublin-traceroute_0.4.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dublin-traceroute/dublin-traceroute_0.4.2-2_amd64.deb"
+}

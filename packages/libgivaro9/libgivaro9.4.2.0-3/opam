@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgivaro9_4.2.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgivaro9"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libgmpxx4ldbl" {>= "2-6.2.1+dfsg1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libgivaro9_4.2.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/givaro/libgivaro9_4.2.0-3_amd64.deb"
+}

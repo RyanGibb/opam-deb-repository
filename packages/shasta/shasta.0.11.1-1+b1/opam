@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shasta_0.11.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shasta"]
+]
+depends: [
+  "libboost-chrono1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "python3-shasta" {= "0.11.1-1+b1"}
+]
+extra-source "shasta_0.11.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shasta/shasta_0.11.1-1+b1_amd64.deb"
+}

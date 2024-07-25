@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-bluetooth_3.28.2-4~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-bluetooth"]
+]
+depends: [
+  "bluez" {>= "5.5"}
+  "bluez-obexd"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.38.0"}
+  "libgnome-bluetooth13" {>= "3.12.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "udev" {>= "154"}
+]
+conflicts: [
+  "bluez-gnome"
+]
+extra-source "gnome-bluetooth_3.28.2-4~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-bluetooth/gnome-bluetooth_3.28.2-4~deb10u1_amd64.deb"
+}

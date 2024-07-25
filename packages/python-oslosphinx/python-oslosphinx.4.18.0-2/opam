@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-oslosphinx_4.18.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-oslosphinx"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-oslosphinx-common"
+  "python-pbr" {>= "2.0.0"}
+  "python-requests" {>= "2.14.2"}
+  "python-six" {>= "1.10.0"}
+]
+extra-source "python-oslosphinx_4.18.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oslo-sphinx/python-oslosphinx_4.18.0-2_all.deb"
+}

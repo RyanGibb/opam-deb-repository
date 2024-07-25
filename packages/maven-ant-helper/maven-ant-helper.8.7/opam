@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i maven-ant-helper_8.7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r maven-ant-helper"]
+]
+depends: [
+  "ant"
+  "ant-contrib"
+  "ant-optional"
+  "libstax-java"
+  "maven-repo-helper" {>= "1.4"}
+]
+extra-source "maven-ant-helper_8.7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maven-ant-helper/maven-ant-helper_8.7_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-shebang-command_1.2.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-shebang-command"]
+]
+depends: [
+  "node-shebang-regex" {>= "1.0.0"}
+  "nodejs"
+]
+extra-source "node-shebang-command_1.2.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-shebang-command/node-shebang-command_1.2.0-1.1_all.deb"
+}

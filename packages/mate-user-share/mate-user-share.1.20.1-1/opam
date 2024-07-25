@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mate-user-share_1.20.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mate-user-share"]
+]
+depends: [
+  "apache2-bin"
+  "gvfs-backends"
+  "libapache2-mod-dnssd" {>= "0.6"}
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.4"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libcaja-extension1" {>= "1.6.3"}
+  "libcanberra-gtk3-0" {>= "0.25"}
+  "libcanberra0" {>= "0.2"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libdbus-glib-1-2" {>= "0.78"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.21.4"}
+  "libice6" {>= "1-1.0.0"}
+  "libnotify4" {>= "0.7.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libselinux1" {>= "1.32"}
+  "libsm6"
+  "libx11-6"
+  "mate-user-share-common" {= "1.20.1-1"}
+  "obex-data-server"
+]
+extra-source "mate-user-share_1.20.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mate-user-share/mate-user-share_1.20.1-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-randomfill_1.0.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-randomfill"]
+]
+depends: [
+  "node-randombytes" {>= "2.0.5"}
+  "node-safe-buffer" {>= "5.1.0"}
+  "nodejs"
+]
+extra-source "node-randomfill_1.0.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-randomfill/node-randomfill_1.0.4-2_all.deb"
+}

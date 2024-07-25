@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i latex2html_2019-debian1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r latex2html"]
+]
+depends: [
+  "ghostscript-x"
+  "netpbm" {>= "2-9.20"}
+  "perl"
+  "perl-doc"
+  "poppler-utils"
+  "tex-common" {>= "6"}
+  "texlive-binaries"
+  "texlive-fonts-recommended"
+  "texlive-latex-extra"
+  "texlive-latex-recommended"
+]
+extra-source "latex2html_2019-debian1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/latex2html/latex2html_2019-debian1-3_all.deb"
+}

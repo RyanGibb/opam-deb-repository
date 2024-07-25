@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vanguards_0.3.1-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vanguards"]
+]
+depends: [
+  "pypy"
+  "pypy-ipaddress"
+  "pypy-setuptools"
+  "pypy-stem" {>= "1.6.0-3.1"}
+  "tor"
+]
+extra-source "vanguards_0.3.1-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vanguards/vanguards_0.3.1-2.1_all.deb"
+}

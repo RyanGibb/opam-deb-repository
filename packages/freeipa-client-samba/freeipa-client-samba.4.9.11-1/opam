@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freeipa-client-samba_4.9.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freeipa-client-samba"]
+]
+depends: [
+  "cifs-utils"
+  "freeipa-client" {= "4.9.11-1"}
+  "python3-any"
+  "python3-samba"
+  "samba-common-bin"
+  "smbclient"
+  "tdb-tools"
+  "winbind"
+]
+extra-source "freeipa-client-samba_4.9.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeipa/freeipa-client-samba_4.9.11-1_amd64.deb"
+}

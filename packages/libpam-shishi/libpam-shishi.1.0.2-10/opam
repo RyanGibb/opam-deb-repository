@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-shishi_1.0.2-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-shishi"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libshishi0" {>= "0.0.30"}
+]
+extra-source "libpam-shishi_1.0.2-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shishi/libpam-shishi_1.0.2-10_amd64.deb"
+}

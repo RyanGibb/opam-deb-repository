@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgail18_2.24.33-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgail18"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.32.0"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.27.3"}
+  "libgtk2-0-0" {= "2.24.33-2"}
+  "libpango-1-0-0" {>= "1.28.3"}
+]
+extra-source "libgail18_2.24.33-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtk+2.0/libgail18_2.24.33-2_amd64.deb"
+}

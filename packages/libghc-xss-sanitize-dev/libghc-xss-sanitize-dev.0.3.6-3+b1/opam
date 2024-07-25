@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-xss-sanitize-dev_0.3.6-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-xss-sanitize-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-attoparsec-dev"
+  "libghc-css-text-dev"
+  "libghc-network-uri-dev"
+  "libghc-tagsoup-dev"
+  "libghc-utf8-string-dev"
+  "libgmp10"
+]
+extra-source "libghc-xss-sanitize-dev_0.3.6-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-xss-sanitize/libghc-xss-sanitize-dev_0.3.6-3+b1_amd64.deb"
+}

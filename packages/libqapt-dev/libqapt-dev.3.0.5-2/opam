@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqapt-dev_3.0.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqapt-dev"]
+]
+depends: [
+  "libapt-pkg-dev"
+  "libqapt3" {= "3.0.5-2"}
+  "qtbase5-dev" {>= "5.2.0"}
+]
+extra-source "libqapt-dev_3.0.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libq/libqapt/libqapt-dev_3.0.5-2_amd64.deb"
+}

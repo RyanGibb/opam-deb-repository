@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-qtnfc_5.15.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-qtnfc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a" {>= "5.15.8+dfsg~"}
+  "libqt5nfc5" {>= "5.6.0"}
+  "libqt5qml5" {>= "5.15.8+dfsg~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qml-module-qtnfc_5.15.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtconnectivity-opensource-src/qml-module-qtnfc_5.15.8-2_amd64.deb"
+}

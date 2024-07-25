@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenusb0_1.1.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenusb0"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libudev1" {>= "183"}
+]
+extra-source "libopenusb0_1.1.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libopenusb/libopenusb0_1.1.11-2_amd64.deb"
+}

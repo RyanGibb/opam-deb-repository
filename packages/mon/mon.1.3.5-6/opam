@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mon_1.3.5-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mon"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.4"}
+  "libtime-period-perl"
+  "mon-client" {>= "1.2.0"}
+]
+conflicts: [
+  "mon-contrib (<= 1.0+dfsg-3+nmu1)"
+]
+extra-source "mon_1.3.5-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/etbemon/mon_1.3.5-6_amd64.deb"
+}

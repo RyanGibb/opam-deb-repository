@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i q2-feature-classifier_2020.11.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r q2-feature-classifier"]
+]
+depends: [
+  "ncbi-blast+"
+  "python3-any"
+  "python3-biom-format"
+  "python3-joblib"
+  "python3-skbio"
+  "python3-sklearn"
+  "q2-feature-table"
+  "q2-quality-control"
+  "q2-taxa"
+  "q2-types"
+  "qiime"
+  "vsearch"
+]
+extra-source "q2-feature-classifier_2020.11.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/q2-feature-classifier/q2-feature-classifier_2020.11.1-2_all.deb"
+}

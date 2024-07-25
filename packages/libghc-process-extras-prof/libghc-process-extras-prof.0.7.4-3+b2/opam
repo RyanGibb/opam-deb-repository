@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-process-extras-prof_0.7.4-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-process-extras-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-data-default-prof"
+  "libghc-generic-deriving-prof"
+  "libghc-listlike-prof"
+  "libghc-process-extras-dev" {= "0.7.4-3+b2"}
+]
+extra-source "libghc-process-extras-prof_0.7.4-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-process-extras/libghc-process-extras-prof_0.7.4-3+b2_amd64.deb"
+}

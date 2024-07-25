@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcctz2_2.3+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcctz2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libcctz2_2.3+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cctz/libcctz2_2.3+dfsg1-3_amd64.deb"
+}

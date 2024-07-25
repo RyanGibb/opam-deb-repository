@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgm2-0_9.3.0-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgm2-0"]
+]
+depends: [
+  "gcc-9-base" {= "9.3.0-22"}
+  "libc6" {>= "2.14"}
+  "libpth20" {>= "2.0.7"}
+]
+extra-source "libgm2-0_9.3.0-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-9/libgm2-0_9.3.0-22_amd64.deb"
+}

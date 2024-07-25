@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwildmagic5-dbg_5.13-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwildmagic5-dbg"]
+]
+depends: [
+  "libwildmagic-common" {= "5.13-1"}
+  "libwildmagic5" {= "5.13-1+b2"}
+]
+extra-source "libwildmagic5-dbg_5.13-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libw/libwildmagic/libwildmagic5-dbg_5.13-1+b2_amd64.deb"
+}

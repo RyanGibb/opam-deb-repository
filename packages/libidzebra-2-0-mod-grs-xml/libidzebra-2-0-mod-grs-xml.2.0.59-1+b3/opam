@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libidzebra-2.0-mod-grs-xml_2.0.59-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libidzebra-2.0-mod-grs-xml"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libexpat1" {>= "2.0.1"}
+  "libidzebra-2-0-0" {>= "2.0.32"}
+  "libyaz5" {>= "5.27.1"}
+]
+extra-source "libidzebra-2.0-mod-grs-xml_2.0.59-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/idzebra/libidzebra-2.0-mod-grs-xml_2.0.59-1+b3_amd64.deb"
+}

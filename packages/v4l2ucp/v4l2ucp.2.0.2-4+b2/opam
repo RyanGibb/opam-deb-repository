@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i v4l2ucp_2.0.2-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r v4l2ucp"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libgcc1" {>= "1-3.0"}
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libqtgui4" {>= "4-4.5.3"}
+  "libstdc++6" {>= "5"}
+  "libv4l-0" {>= "0.5.0"}
+]
+extra-source "v4l2ucp_2.0.2-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/v4l2ucp/v4l2ucp_2.0.2-4+b2_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cron_3.0pl1-162_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cron"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpam-runtime"
+  "libpam0g" {>= "0.99.7.1"}
+  "libselinux1" {>= "3.1~"}
+  "sensible-utils"
+]
+conflicts: [
+  "bcron"
+  "cronie"
+  "systemd-cron"
+]
+extra-source "cron_3.0pl1-162_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cron/cron_3.0pl1-162_amd64.deb"
+}

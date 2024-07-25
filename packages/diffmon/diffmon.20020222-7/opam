@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i diffmon_20020222-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r diffmon"]
+]
+depends: [
+  "bash" {>= "2.0"}
+  ("default-mta" | "mail-transport-agent")
+]
+extra-source "diffmon_20020222-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/diffmon/diffmon_20020222-7_all.deb"
+}

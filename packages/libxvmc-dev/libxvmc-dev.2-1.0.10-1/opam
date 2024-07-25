@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxvmc-dev_2:1.0.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxvmc-dev"]
+]
+depends: [
+  "libx11-dev" {>= "2-1.0.0-1"}
+  "libxext-dev" {>= "1-1.0.0-2"}
+  "libxv-dev"
+  "libxvmc1" {= "2-1.0.10-1"}
+  "x11proto-video-dev"
+]
+conflicts: [
+  "x11proto-video-dev (<< 2.2+cvs.20050712-1)"
+]
+extra-source "libxvmc-dev_2:1.0.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxvmc/libxvmc-dev_1.0.10-1_amd64.deb"
+}

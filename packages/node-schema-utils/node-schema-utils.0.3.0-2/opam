@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-schema-utils_0.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-schema-utils"]
+]
+depends: [
+  "node-ajv" {>= "5.0.0"}
+  "nodejs"
+]
+extra-source "node-schema-utils_0.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-schema-utils/node-schema-utils_0.3.0-2_all.deb"
+}

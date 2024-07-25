@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xwax_1.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xwax"]
+]
+depends: [
+  "fonts-dejavu-extra"
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.34"}
+  "libsdl-ttf2-0-0"
+  "libsdl1-2-compat-shim"
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "xwax_1.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xwax/xwax_1.8-2_amd64.deb"
+}

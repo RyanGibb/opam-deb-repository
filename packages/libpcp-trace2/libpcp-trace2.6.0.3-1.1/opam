@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcp-trace2_6.0.3-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcp-trace2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcp3"
+]
+extra-source "libpcp-trace2_6.0.3-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcp/libpcp-trace2_6.0.3-1.1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i between_6+dfsg1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r between"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc-s1"
+  "libgl1"
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "5"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "between_6+dfsg1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/between/between_6+dfsg1-3+b1_amd64.deb"
+}

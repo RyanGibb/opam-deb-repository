@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcvm1_0.97-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcvm1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libcvm1_0.97-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cvm/libcvm1_0.97-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ncbi-entrez-direct_19.0.20230216+dfsg-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ncbi-entrez-direct"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  ("curl" | "wget")
+]
+extra-source "ncbi-entrez-direct_19.0.20230216+dfsg-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ncbi-entrez-direct/ncbi-entrez-direct_19.0.20230216+dfsg-2+b1_amd64.deb"
+}

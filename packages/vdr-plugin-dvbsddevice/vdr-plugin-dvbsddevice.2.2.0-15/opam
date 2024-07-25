@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vdr-plugin-dvbsddevice_2.2.0-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vdr-plugin-dvbsddevice"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "vdr"
+]
+extra-source "vdr-plugin-dvbsddevice_2.2.0-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vdr-plugin-dvbsddevice/vdr-plugin-dvbsddevice_2.2.0-15_amd64.deb"
+}

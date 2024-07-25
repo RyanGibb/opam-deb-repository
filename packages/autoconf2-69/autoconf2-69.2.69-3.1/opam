@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i autoconf2.69_2.69-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r autoconf2.69"]
+]
+depends: [
+  "autoconf"
+  "debianutils" {>= "1.8"}
+  "libfile-temp-perl"
+  "m4"
+  "perl"
+]
+extra-source "autoconf2.69_2.69-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/autoconf2.69/autoconf2.69_2.69-3.1_all.deb"
+}

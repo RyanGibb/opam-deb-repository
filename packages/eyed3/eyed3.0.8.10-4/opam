@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eyed3_0.8.10-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eyed3"]
+]
+depends: [
+  "python3-any"
+  "python3-eyed3" {= "0.8.10-4"}
+  "python3-pkg-resources"
+]
+extra-source "eyed3_0.8.10-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eyed3/eyed3_0.8.10-4_all.deb"
+}

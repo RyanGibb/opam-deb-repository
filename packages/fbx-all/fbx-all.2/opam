@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fbx-all_2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fbx-all"]
+]
+depends: [
+  "fbx-tasks" {= "2"}
+  "freedombox"
+]
+extra-source "fbx-all_2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-fbx/fbx-all_2_all.deb"
+}

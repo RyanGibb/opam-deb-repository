@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phast_1.5+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phast"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libpcre3"
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "phast_1.5+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phast/phast_1.5+dfsg-2_amd64.deb"
+}

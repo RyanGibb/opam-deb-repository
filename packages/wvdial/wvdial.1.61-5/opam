@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wvdial_1.61-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wvdial"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+  "libuniconf4-6"
+  "libwvstreams4-6-base"
+  "libwvstreams4-6-extras"
+  "ppp" {>= "2.3.0"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("debconf" {>= "0.5.00"} | "cdebconf")
+]
+extra-source "wvdial_1.61-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wvdial/wvdial_1.61-5_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libauthen-radius-perl_0.29-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libauthen-radius-perl"]
+]
+depends: [
+  "libnet-ip-perl" {>= "1.26"}
+  "perl"
+]
+extra-source "libauthen-radius-perl_0.29-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libauthen-radius-perl/libauthen-radius-perl_0.29-2_all.deb"
+}

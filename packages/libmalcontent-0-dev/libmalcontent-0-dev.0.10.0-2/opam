@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmalcontent-0-dev_0.10.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmalcontent-0-dev"]
+]
+depends: [
+  "gir1-2-malcontent-0" {= "0.10.0-2"}
+  "libglib2-0-dev" {>= "2.60"}
+  "libmalcontent-0-0" {= "0.10.0-2"}
+]
+extra-source "libmalcontent-0-dev_0.10.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/malcontent/libmalcontent-0-dev_0.10.0-2_amd64.deb"
+}

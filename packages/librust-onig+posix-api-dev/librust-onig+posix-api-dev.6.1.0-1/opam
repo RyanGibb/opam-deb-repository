@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-onig+posix-api-dev_6.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-onig+posix-api-dev"]
+]
+depends: [
+  "librust-onig-dev" {= "6.1.0-1"}
+  "librust-onig-sys-dev"
+]
+extra-source "librust-onig+posix-api-dev_6.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-onig/librust-onig+posix-api-dev_6.1.0-1_amd64.deb"
+}

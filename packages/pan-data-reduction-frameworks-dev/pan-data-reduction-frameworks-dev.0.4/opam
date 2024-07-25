@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pan-data-reduction-frameworks-dev_0.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pan-data-reduction-frameworks-dev"]
+]
+depends: [
+  "libmgl-dev"
+  "libnexus-dev"
+  "pan-config" {= "0.4"}
+  "pan-data-reduction-frameworks"
+  "pan-tasks" {= "0.4"}
+]
+extra-source "pan-data-reduction-frameworks-dev_0.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-pan/pan-data-reduction-frameworks-dev_0.4_all.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvotca-2022_2022.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvotca-2022"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libboost-regex1-74-0"
+  "libc6" {>= "2.34"}
+  "libexpat1" {>= "2.0.1"}
+  "libfftw3-double3" {>= "3.3.10"}
+  "libgcc-s1" {>= "4.0"}
+  "libgomp1" {>= "6"}
+  "libgromacs7" {>= "2022.4"}
+  "libhdf5-103-1"
+  "libhdf5-cpp-103-1" {>= "1.10.8"}
+  "libint2-2"
+  "libpugixml1v5" {>= "1.4"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libvotca-2022_2022.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/votca/libvotca-2022_2022.1-1_amd64.deb"
+}

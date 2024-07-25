@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-time-compat-dev_0.1.0.3-9+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-time-compat-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-old-time-dev"
+  "libgmp10"
+]
+extra-source "libghc-time-compat-dev_0.1.0.3-9+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-time-compat/libghc-time-compat-dev_0.1.0.3-9+b2_amd64.deb"
+}

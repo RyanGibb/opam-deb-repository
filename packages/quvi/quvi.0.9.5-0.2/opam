@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i quvi_0.9.5-0.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r quvi"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libquvi-0-9-0-9-4" {>= "0.9.4"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "quvi_0.9.5-0.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/quvi/quvi_0.9.5-0.2_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pspp_1.6.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pspp"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.12"}
+  "libglib2-0-0" {>= "2.43.4"}
+  "libgsl27" {>= "2.7.1"}
+  "libgtk-3-0" {>= "3.22.0"}
+  "libgtksourceview-4-0" {>= "2.91.4"}
+  "libpango-1-0-0" {>= "1.22"}
+  "libpangocairo-1-0-0" {>= "1.22"}
+  "libreadline8" {>= "6.0"}
+  "libspread-sheet-widget" {>= "0.8"}
+  "libxml2" {>= "2.9.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "pspp_1.6.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pspp/pspp_1.6.2-2_amd64.deb"
+}

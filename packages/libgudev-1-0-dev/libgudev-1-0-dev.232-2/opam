@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgudev-1.0-dev_232-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgudev-1.0-dev"]
+]
+depends: [
+  "gir1-2-gudev-1-0" {= "232-2"}
+  "libglib2-0-dev"
+  "libgudev-1-0-0" {= "232-2"}
+  "pkg-config"
+]
+extra-source "libgudev-1.0-dev_232-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgudev/libgudev-1.0-dev_232-2_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-jar-dependencies_0.3.10-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-jar-dependencies"]
+]
+depends: [
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-jar-dependencies_0.3.10-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-jar-dependencies/ruby-jar-dependencies_0.3.10-2_all.deb"
+}

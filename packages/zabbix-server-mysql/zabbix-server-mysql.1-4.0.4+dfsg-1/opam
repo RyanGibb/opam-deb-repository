@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zabbix-server-mysql_1:4.0.4+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zabbix-server-mysql"]
+]
+depends: [
+  "adduser"
+  "fping"
+  "libc6" {>= "2.17"}
+  "libcurl3-gnutls" {>= "7.28.0"}
+  "libevent-2-1-6" {>= "2.1.8-stable"}
+  "libgnutls30" {>= "3.6.6"}
+  "libiksemel3" {>= "1.2"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libmariadb3" {>= "3.0.0"}
+  "libodbc1" {>= "2.3.1"}
+  "libopenipmi0"
+  "libpcre3"
+  "libsnmp30" {>= "5.7.3+dfsg"}
+  "libssh2-1" {>= "1.0"}
+  "libxml2" {>= "2.7.4"}
+  "lsb-base"
+  "ucf"
+  "zlib1g" {>= "1-1.2.0"}
+]
+conflicts: [
+  "zabbix-proxy-mysql"
+  "zabbix-proxy-pgsql"
+  "zabbix-proxy-sqlite3"
+  "zabbix-server-pgsql"
+]
+extra-source "zabbix-server-mysql_1:4.0.4+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zabbix/zabbix-server-mysql_4.0.4+dfsg-1_amd64.deb"
+}

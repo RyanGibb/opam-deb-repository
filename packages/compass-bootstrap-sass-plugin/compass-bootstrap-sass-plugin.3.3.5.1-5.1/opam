@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i compass-bootstrap-sass-plugin_3.3.5.1-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r compass-bootstrap-sass-plugin"]
+]
+depends: [
+  "ruby-bootstrap-sass" {= "3.3.5.1-5.1"}
+  ("ruby" | "ruby-interpreter")
+  ("ruby-compass" | "ruby-sass")
+]
+extra-source "compass-bootstrap-sass-plugin_3.3.5.1-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-bootstrap-sass/compass-bootstrap-sass-plugin_3.3.5.1-5.1_all.deb"
+}

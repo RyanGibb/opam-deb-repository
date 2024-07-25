@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-xmpp-alerts_0.5.3-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-xmpp-alerts"]
+]
+depends: [
+  "python3-aiohttp"
+  "python3-any"
+  "python3-prometheus-client"
+  "python3-slixmpp"
+  "python3-tz"
+  "python3-yaml"
+]
+extra-source "prometheus-xmpp-alerts_0.5.3-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-xmpp-alerts/prometheus-xmpp-alerts_0.5.3-1.1_all.deb"
+}

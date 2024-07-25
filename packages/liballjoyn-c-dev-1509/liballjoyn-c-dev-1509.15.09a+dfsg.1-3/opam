@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liballjoyn-c-dev-1509_15.09a+dfsg.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liballjoyn-c-dev-1509"]
+]
+depends: [
+  "liballjoyn-c1509" {= "15.09a+dfsg.1-3"}
+  "liballjoyn-common-dev-1509" {= "15.09a+dfsg.1-3"}
+]
+conflicts: [
+  "liballjoyn-c-dev-1504"
+]
+extra-source "liballjoyn-c-dev-1509_15.09a+dfsg.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alljoyn-core-1509/liballjoyn-c-dev-1509_15.09a+dfsg.1-3_amd64.deb"
+}

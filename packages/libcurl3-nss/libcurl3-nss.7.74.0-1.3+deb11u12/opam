@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcurl3-nss_7.74.0-1.3+deb11u12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcurl3-nss"]
+]
+depends: [
+  "libbrotli1" {>= "0.6.0"}
+  "libc6" {>= "2.17"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libidn2-0" {>= "0.6"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libnghttp2-14" {>= "1.12.0"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.44.0"}
+  "libpsl5" {>= "0.16.0"}
+  "librtmp1" {>= "2.4+20131018.git79459a2-3~"}
+  "libssh2-1" {>= "1.7.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libcurl3-nss_7.74.0-1.3+deb11u12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/curl/libcurl3-nss_7.74.0-1.3+deb11u12_amd64.deb"
+}

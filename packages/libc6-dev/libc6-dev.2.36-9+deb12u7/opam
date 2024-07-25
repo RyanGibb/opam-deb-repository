@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libc6-dev_2.36-9+deb12u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libc6-dev"]
+]
+depends: [
+  "libc-dev-bin" {= "2.36-9+deb12u7"}
+  "libc6" {= "2.36-9+deb12u7"}
+  "libcrypt-dev"
+  "libnsl-dev"
+  "linux-libc-dev"
+  "rpcsvc-proto"
+]
+conflicts: [
+  "libc0.1-dev"
+  "libc0.3-dev"
+  "libc6.1-dev"
+]
+extra-source "libc6-dev_2.36-9+deb12u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glibc/libc6-dev_2.36-9+deb12u7_amd64.deb"
+}

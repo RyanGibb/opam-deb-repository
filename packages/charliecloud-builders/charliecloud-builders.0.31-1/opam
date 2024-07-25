@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i charliecloud-builders_0.31-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r charliecloud-builders"]
+]
+depends: [
+  "buildah"
+  "charliecloud-common"
+  "docker-io"
+  "python3"
+  "python3-lark"
+  "python3-requests"
+  "squashfs-tools"
+]
+extra-source "charliecloud-builders_0.31-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/charliecloud/charliecloud-builders_0.31-1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libelpi-ocaml-dev_1.16.8-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libelpi-ocaml-dev"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libelpi-ocaml"
+  "libmenhir-ocaml-dev"
+  "libocaml-compiler-libs-ocaml-dev"
+  "libppx-deriving-ocaml-dev"
+  "libppxlib-ocaml-dev"
+  "libre-ocaml-dev"
+  "libsexplib0-ocaml-dev"
+  "ocaml"
+]
+extra-source "libelpi-ocaml-dev_1.16.8-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elpi/libelpi-ocaml-dev_1.16.8-1+b2_amd64.deb"
+}

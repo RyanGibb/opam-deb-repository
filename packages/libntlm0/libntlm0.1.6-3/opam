@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libntlm0_1.6-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libntlm0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libntlm0_1.6-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libntlm/libntlm0_1.6-3_amd64.deb"
+}

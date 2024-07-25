@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-ncdf4_1.17-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-ncdf4"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libnetcdf18" {>= "4.0.1"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+]
+extra-source "r-cran-ncdf4_1.17-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-ncdf4/r-cran-ncdf4_1.17-1+b3_amd64.deb"
+}

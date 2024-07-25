@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i q2-diversity-lib_2022.11.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r q2-diversity-lib"]
+]
+depends: [
+  "python3-any"
+  "python3-pandas"
+  "python3-sklearn"
+  "python3-statsmodels"
+  "python3-unifrac"
+  "q2-emperor" {>= "2022.11.1"}
+  "q2-feature-table" {>= "2022.11.1"}
+  "qiime" {>= "2022.11.1"}
+  "r-base-core"
+  "r-cran-vegan"
+  "unifrac-tools"
+]
+extra-source "q2-diversity-lib_2022.11.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/q2-diversity-lib/q2-diversity-lib_2022.11.1-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-binaryornot_0.4.4+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-binaryornot"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-chardet"
+]
+extra-source "python-binaryornot_0.4.4+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/binaryornot/python-binaryornot_0.4.4+dfsg-2_all.deb"
+}

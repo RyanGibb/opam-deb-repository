@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hdevtools_0.1.7.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hdevtools"]
+]
+depends: [
+  "ghc" {< "8.4.4+dfsg1+"}
+  "ghc" {>= "8.4.4+dfsg1"}
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.27"}
+  "libffi6" {>= "3.0.4"}
+  "libgmp10"
+  "libtinfo6" {>= "6"}
+]
+extra-source "hdevtools_0.1.7.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hdevtools/hdevtools_0.1.7.0-1+b1_amd64.deb"
+}

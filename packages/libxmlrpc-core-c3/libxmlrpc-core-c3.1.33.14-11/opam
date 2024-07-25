@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlrpc-core-c3_1.33.14-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlrpc-core-c3"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcurl4" {>= "7.16.2"}
+]
+extra-source "libxmlrpc-core-c3_1.33.14-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmlrpc-c/libxmlrpc-core-c3_1.33.14-11_amd64.deb"
+}

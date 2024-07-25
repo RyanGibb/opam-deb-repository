@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pybtex_0.23.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pybtex"]
+]
+depends: [
+  "python3-any"
+  "python3-latexcodec" {>= "1.0.4"}
+  "python3-pkg-resources"
+  "python3-six"
+  "python3-yaml"
+]
+extra-source "python3-pybtex_0.23.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pybtex/python3-pybtex_0.23.0-1_all.deb"
+}

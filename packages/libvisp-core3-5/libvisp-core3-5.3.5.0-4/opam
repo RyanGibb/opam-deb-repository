@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvisp-core3.5_3.5.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvisp-core3.5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "6"}
+  "libgsl27" {>= "2.7.1"}
+  "libopencv-calib3d406" {>= "4.6.0+dfsg"}
+  "libopencv-core406" {>= "4.6.0+dfsg"}
+  "libopencv-imgproc406" {>= "4.6.0+dfsg"}
+  "libstdc++6" {>= "11"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libvisp-core3.5_3.5.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/visp/libvisp-core3.5_3.5.0-4_amd64.deb"
+}

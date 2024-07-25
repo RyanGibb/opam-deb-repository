@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jison_0.4.17+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jison"]
+]
+depends: [
+  "node-cjson" {>= "0.3.0~"}
+  "node-ebnf-parser" {>= "0.1.10~"}
+  "node-escodegen" {>= "1.3~"}
+  "node-esprima" {>= "1.1~"}
+  "node-jison-lex" {>= "0.3~"}
+  "node-jsonselect" {>= "0.4.0~"}
+  "node-lex-parser" {>= "0.1.3~"}
+  "node-nomnom" {>= "1.5.2~"}
+  "nodejs"
+]
+extra-source "jison_0.4.17+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-jison/jison_0.4.17+dfsg-3_all.deb"
+}

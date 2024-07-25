@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clang-13_1:13.0.1-6~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clang-13"]
+]
+depends: [
+  "binutils"
+  "libc6" {>= "2.14"}
+  "libc6-dev"
+  "libclang-common-13-dev" {= "1-13.0.1-6~deb11u1"}
+  "libclang-cpp13" {>= "1-13.0.1"}
+  "libclang1-13" {= "1-13.0.1-6~deb11u1"}
+  "libgcc-10-dev"
+  "libgcc-s1" {>= "3.0"}
+  "libllvm13"
+  "libobjc-10-dev"
+  "libstdc++-10-dev"
+  "libstdc++6" {>= "5.2"}
+  "llvm-13-linker-tools" {= "1-13.0.1-6~deb11u1"}
+]
+extra-source "clang-13_1:13.0.1-6~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-13/clang-13_13.0.1-6~deb11u1_amd64.deb"
+}

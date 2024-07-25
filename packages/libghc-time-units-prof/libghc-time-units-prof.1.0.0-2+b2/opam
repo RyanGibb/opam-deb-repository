@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-time-units-prof_1.0.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-time-units-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-time-units-dev" {= "1.0.0-2+b2"}
+]
+extra-source "libghc-time-units-prof_1.0.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-time-units/libghc-time-units-prof_1.0.0-2+b2_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-fs_2.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-fs"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-backports-os"
+  "python-enum34"
+  "python-pkg-resources"
+  "python-six" {>= "1.10.0"}
+  "python-typing"
+  "python-tz"
+]
+extra-source "python-fs_2.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-fs/python-fs_2.2.1-1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-bcrypt-pbkdf_1.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-bcrypt-pbkdf"]
+]
+depends: [
+  "node-tweetnacl" {>= "0.14.3"}
+  "nodejs"
+]
+extra-source "node-bcrypt-pbkdf_1.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-bcrypt-pbkdf/node-bcrypt-pbkdf_1.0.2-1_all.deb"
+}

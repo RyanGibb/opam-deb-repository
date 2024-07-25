@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdebian-dep12-perl_0.1.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdebian-dep12-perl"]
+]
+depends: [
+  "libdata-validate-email-perl"
+  "libdata-validate-uri-perl"
+  "libtext-bibtex-validate-perl" {>= "0.3.0"}
+  "libyaml-libyaml-perl"
+  "perl-any"
+]
+extra-source "libdebian-dep12-perl_0.1.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdebian-dep12-perl/libdebian-dep12-perl_0.1.0-3_all.deb"
+}

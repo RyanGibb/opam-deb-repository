@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmirwayland0_1.8.0+dfsg1-18_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmirwayland0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libmircommon7" {>= "1.7"}
+  "libmircore1" {>= "1.7"}
+  "libstdc++6" {>= "5.2"}
+  "libwayland-server0" {>= "1.17.0"}
+]
+extra-source "libmirwayland0_1.8.0+dfsg1-18_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mir/libmirwayland0_1.8.0+dfsg1-18_amd64.deb"
+}

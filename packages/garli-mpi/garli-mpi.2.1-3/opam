@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i garli-mpi_2.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r garli-mpi"]
+]
+depends: [
+  "libc6" {>= "2.22"}
+  "libgcc1" {>= "1-3.0"}
+  "libncl2" {>= "2.1.18"}
+  "libopenmpi3"
+  "libstdc++6" {>= "5.2"}
+  "openmpi-bin"
+]
+extra-source "garli-mpi_2.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/garli/garli-mpi_2.1-3_amd64.deb"
+}

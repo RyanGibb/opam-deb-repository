@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-cloudflare-gortr-dev_0.14.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-cloudflare-gortr-dev"]
+]
+depends: [
+  "golang-github-prometheus-client-golang-dev"
+  "golang-github-sirupsen-logrus-dev"
+  "golang-github-stretchr-testify-dev"
+  "golang-golang-x-crypto-dev"
+]
+extra-source "golang-github-cloudflare-gortr-dev_0.14.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gortr/golang-github-cloudflare-gortr-dev_0.14.7-1_all.deb"
+}

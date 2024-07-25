@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librxtx-java_2.2pre2+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librxtx-java"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+]
+conflicts: [
+  "lib-rxtx-java"
+]
+extra-source "librxtx-java_2.2pre2+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rxtx/librxtx-java_2.2pre2+dfsg1-2_amd64.deb"
+}

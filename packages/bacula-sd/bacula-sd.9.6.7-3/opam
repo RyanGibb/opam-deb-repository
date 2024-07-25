@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bacula-sd_9.6.7-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bacula-sd"]
+]
+depends: [
+  "bacula-common" {= "9.6.7-3"}
+  "libc6" {>= "2.14"}
+  "liblzo2-2" {>= "2.02"}
+  "libstdc++6" {>= "5"}
+  "lsb-base" {>= "3.0-6"}
+  "mtx"
+  "ucf"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "bacula-sd_9.6.7-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bacula/bacula-sd_9.6.7-3_amd64.deb"
+}

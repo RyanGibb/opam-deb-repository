@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-getrandom+rustc-dep-of-std-dev_0.2.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-getrandom+rustc-dep-of-std-dev"]
+]
+depends: [
+  "librust-getrandom+compiler-builtins-dev" {= "0.2.8-1"}
+  "librust-getrandom+core-dev" {= "0.2.8-1"}
+  "librust-getrandom-dev" {= "0.2.8-1"}
+  "librust-libc+rustc-dep-of-std-dev"
+]
+extra-source "librust-getrandom+rustc-dep-of-std-dev_0.2.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-getrandom/librust-getrandom+rustc-dep-of-std-dev_0.2.8-1_amd64.deb"
+}

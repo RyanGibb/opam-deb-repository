@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nilfs-tools_2.2.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nilfs-tools"]
+]
+depends: [
+  "libblkid1" {>= "2.17.2"}
+  "libc6" {>= "2.17"}
+  "libmount1" {>= "2.20.1"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "nilfs-tools_2.2.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nilfs-tools/nilfs-tools_2.2.7-1_amd64.deb"
+}

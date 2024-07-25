@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtomcrypt-dev_1.18.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtomcrypt-dev"]
+]
+depends: [
+  "libtomcrypt1" {= "1.18.2-1"}
+]
+extra-source "libtomcrypt-dev_1.18.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtomcrypt/libtomcrypt-dev_1.18.2-1_amd64.deb"
+}

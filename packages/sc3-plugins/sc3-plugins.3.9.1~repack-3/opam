@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sc3-plugins_3.9.1~repack-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sc3-plugins"]
+]
+depends: [
+  "sc3-plugins-language"
+  "sc3-plugins-server"
+]
+conflicts: [
+  "supercollider-sc3-plugins"
+]
+extra-source "sc3-plugins_3.9.1~repack-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/supercollider-sc3-plugins/sc3-plugins_3.9.1~repack-3_all.deb"
+}

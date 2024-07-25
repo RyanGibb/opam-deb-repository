@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sc_7.16-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sc"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "sc_7.16-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sc/sc_7.16-4.1_amd64.deb"
+}

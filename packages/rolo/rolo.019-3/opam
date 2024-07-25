@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rolo_019-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rolo"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libunac1" {>= "1.8.0"}
+  "libvc0" {>= "003.dfsg.1"}
+]
+extra-source "rolo_019-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rolo/rolo_019-3_amd64.deb"
+}

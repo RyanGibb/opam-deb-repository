@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-regexpr-prof_0.5.4-16+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-regexpr-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hunit-prof"
+  "libghc-mtlparse-prof"
+  "libghc-regexpr-dev" {= "0.5.4-16+b2"}
+]
+extra-source "libghc-regexpr-prof_0.5.4-16+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-regexpr/libghc-regexpr-prof_0.5.4-16+b2_amd64.deb"
+}

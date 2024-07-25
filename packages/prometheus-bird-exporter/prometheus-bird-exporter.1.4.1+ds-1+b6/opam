@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-bird-exporter_1.4.1+ds-1+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-bird-exporter"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  ("bird" | "bird2")
+]
+extra-source "prometheus-bird-exporter_1.4.1+ds-1+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-bird-exporter/prometheus-bird-exporter_1.4.1+ds-1+b6_amd64.deb"
+}

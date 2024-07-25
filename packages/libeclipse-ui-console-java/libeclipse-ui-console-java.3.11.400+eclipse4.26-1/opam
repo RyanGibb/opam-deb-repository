@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libeclipse-ui-console-java_3.11.400+eclipse4.26-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libeclipse-ui-console-java"]
+]
+depends: [
+  "libeclipse-core-commands-java"
+  "libeclipse-core-expressions-java"
+  "libeclipse-core-jobs-java"
+  "libeclipse-core-runtime-java"
+  "libeclipse-core-variables-java"
+  "libeclipse-debug-core-java"
+  "libeclipse-jface-java"
+  "libeclipse-jface-text-java"
+  "libeclipse-text-java" {>= "3.9"}
+  "libeclipse-ui-workbench-java"
+  "libeclipse-ui-workbench-texteditor-java"
+  "libequinox-common-java"
+  "libequinox-preferences-java"
+  "libequinox-registry-java"
+  "libicu4j-java"
+  "libswt-gtk-4-java" {>= "4.8"}
+]
+extra-source "libeclipse-ui-console-java_3.11.400+eclipse4.26-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eclipse-platform-debug/libeclipse-ui-console-java_3.11.400+eclipse4.26-1_all.deb"
+}

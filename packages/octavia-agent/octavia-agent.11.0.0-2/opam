@@ -1,0 +1,51 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octavia-agent_11.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octavia-agent"]
+]
+depends: [
+  "acl"
+  "adduser"
+  "anacron"
+  "apparmor"
+  "at"
+  "cron"
+  "cryptsetup"
+  "curl"
+  "dbconfig-common"
+  "dbus"
+  "debconf"
+  "dirmngr"
+  "dmeventd"
+  "ethtool"
+  "gawk"
+  "gpg"
+  "gpg-agent"
+  "haproxy"
+  "haveged"
+  "ifenslave"
+  "ifupdown"
+  "iptables"
+  "iputils-ping"
+  "iputils-tracepath"
+  "ipvsadm"
+  "keepalived"
+  "net-tools"
+  "netbase"
+  "netcat-openbsd"
+  "octavia-common" {= "11.0.0-2"}
+  "pollinate"
+  "psmisc"
+  "python3-openstackclient"
+  "python3-q-text-as-data"
+  "rsyslog"
+  "socat"
+  "sysvinit-utils"
+  "uuid-runtime"
+  "vlan"
+]
+extra-source "octavia-agent_11.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octavia/octavia-agent_11.0.0-2_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstellarsolver2_2.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstellarsolver2"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libcfitsio10" {>= "4.2.0~"}
+  "libgcc-s1" {>= "3.0"}
+  "libgsl27" {>= "2.7.1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.14.1"}
+  "libqt5widgets5" {>= "5.4.0~"}
+  "libstdc++6" {>= "5"}
+  "libwcs7" {>= "4.8.2"}
+]
+extra-source "libstellarsolver2_2.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stellarsolver/libstellarsolver2_2.4-1+b1_amd64.deb"
+}

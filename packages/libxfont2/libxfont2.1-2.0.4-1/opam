@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxfont2_1:2.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxfont2"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.26"}
+  "libfontenc1"
+  "libfreetype6" {>= "2.2.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libxfont2_1:2.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxfont/libxfont2_2.0.4-1_amd64.deb"
+}

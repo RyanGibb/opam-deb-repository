@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libyojson-ocaml-dev_2.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libyojson-ocaml-dev"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libyojson-ocaml"
+  "ocaml"
+]
+extra-source "libyojson-ocaml-dev_2.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yojson/libyojson-ocaml-dev_2.0.2-2_amd64.deb"
+}

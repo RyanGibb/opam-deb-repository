@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i logswan_2.1.12-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r logswan"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libjansson4" {>= "2.14"}
+  "libmaxminddb0" {>= "1.0.2"}
+]
+extra-source "logswan_2.1.12-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/logswan/logswan_2.1.12-1+b1_amd64.deb"
+}

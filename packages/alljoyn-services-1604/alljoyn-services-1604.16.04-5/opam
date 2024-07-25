@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i alljoyn-services-1604_16.04-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r alljoyn-services-1604"]
+]
+depends: [
+  "liballjoyn1604"
+  "libc6" {>= "2.3.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "alljoyn-services-1504"
+  "alljoyn-services-1509"
+]
+extra-source "alljoyn-services-1604_16.04-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alljoyn-services-1604/alljoyn-services-1604_16.04-5_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenhft-chronicle-queue-java_3.6.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenhft-chronicle-queue-java"]
+]
+depends: [
+  "libintellij-annotations-java"
+  "libopenhft-affinity-java"
+  "libopenhft-chronicle-core-java"
+  "libopenhft-chronicle-network-java"
+  "libopenhft-chronicle-threads-java"
+  "libopenhft-chronicle-wire-java"
+  "libopenhft-lang-java"
+  "libslf4j-java" {>= "1.7.25"}
+]
+extra-source "libopenhft-chronicle-queue-java_3.6.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openhft-chronicle-queue/libopenhft-chronicle-queue-java_3.6.0-2_all.deb"
+}

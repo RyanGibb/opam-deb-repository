@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-common-mlx5-23_22.11.5-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-common-mlx5-23"]
+]
+depends: [
+  "ibverbs-providers" {>= "42"}
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.28"}
+  "libfdt1" {>= "1.6.1"}
+  "libibverbs1" {>= "35"}
+  "libnuma1" {>= "2.0.11"}
+  "librte-bus-auxiliary23" {>= "22.11.5"}
+  "librte-bus-pci23" {>= "22.11"}
+  "librte-eal23" {>= "22.11"}
+  "librte-hash23" {>= "18.11"}
+  "librte-kvargs23" {>= "22.11"}
+  "librte-mbuf23" {>= "19.08"}
+  "librte-mempool23" {>= "22.11"}
+  "librte-net23" {>= "22.11~rc2"}
+  "librte-pci23" {>= "22.11"}
+  "librte-rcu23" {>= "19.11"}
+  "librte-ring23" {>= "22.11~rc2"}
+  "librte-telemetry23" {>= "21.08"}
+]
+extra-source "librte-common-mlx5-23_22.11.5-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-common-mlx5-23_22.11.5-1~deb12u1_amd64.deb"
+}

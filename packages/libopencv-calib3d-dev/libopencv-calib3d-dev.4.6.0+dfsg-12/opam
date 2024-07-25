@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencv-calib3d-dev_4.6.0+dfsg-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencv-calib3d-dev"]
+]
+depends: [
+  "libopencv-calib3d406" {= "4.6.0+dfsg-12"}
+  "libopencv-features2d-dev" {= "4.6.0+dfsg-12"}
+]
+extra-source "libopencv-calib3d-dev_4.6.0+dfsg-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencv/libopencv-calib3d-dev_4.6.0+dfsg-12_amd64.deb"
+}

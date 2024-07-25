@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ceph-base_16.2.11+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ceph-base"]
+]
+depends: [
+  "binutils"
+  "ceph-common" {= "16.2.11+ds-2"}
+  "e2fsprogs"
+  "gdisk"
+  "libaio1" {>= "0.3.93"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.4"}
+  "libleveldb1d" {>= "1.23"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libpmem1" {>= "1.4"}
+  "librados2" {>= "16.2.11+ds"}
+  "libsnappy1v5" {>= "1.1.9"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "12"}
+  "logrotate"
+  "nvme-cli"
+  "parted"
+  "psmisc"
+  "python3-any"
+  "smartmontools"
+  "uuid-runtime"
+  "xfsprogs"
+  "zlib1g" {>= "1-1.1.4"}
+  ("cryptsetup-bin" | "cryptsetup")
+  ("hdparm" | "sdparm")
+]
+extra-source "ceph-base_16.2.11+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/ceph-base_16.2.11+ds-2_amd64.deb"
+}

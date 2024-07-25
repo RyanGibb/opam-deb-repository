@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aspell_0.60.7~20110707-6+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aspell"]
+]
+depends: [
+  "dictionaries-common" {> "0.40"}
+  "libaspell15" {= "0.60.7~20110707-6+deb10u1"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libncursesw6" {>= "6"}
+  "libstdc++6" {>= "5"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "aspell_0.60.7~20110707-6+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aspell/aspell_0.60.7~20110707-6+deb10u1_amd64.deb"
+}

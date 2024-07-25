@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypt-u2f-server-perl_0.45-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypt-u2f-server-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libjson-xs-perl"
+  "libu2f-server0" {>= "0.0.0"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libcrypt-u2f-server-perl_0.45-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcrypt-u2f-server-perl/libcrypt-u2f-server-perl_0.45-1+b2_amd64.deb"
+}

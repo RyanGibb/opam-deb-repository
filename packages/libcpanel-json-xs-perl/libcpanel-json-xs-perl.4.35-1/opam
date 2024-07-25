@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcpanel-json-xs-perl_4.35-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcpanel-json-xs-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "libcpanel-json-xs-perl_4.35-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcpanel-json-xs-perl/libcpanel-json-xs-perl_4.35-1_amd64.deb"
+}

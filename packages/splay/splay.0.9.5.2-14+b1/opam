@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i splay_0.9.5.2-14+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r splay"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+  "libtag1v5" {>= "1.9.1-2.2~"}
+  "oss-compat"
+]
+extra-source "splay_0.9.5.2-14+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/splay/splay_0.9.5.2-14+b1_amd64.deb"
+}

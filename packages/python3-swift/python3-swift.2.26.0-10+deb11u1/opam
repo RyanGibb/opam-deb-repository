@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-swift_2.26.0-10+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-swift"]
+]
+depends: [
+  "adduser"
+  "python3-any"
+  "python3-cryptography" {>= "2.0.2"}
+  "python3-eventlet" {>= "0.25.0"}
+  "python3-greenlet"
+  "python3-lxml"
+  "python3-netifaces"
+  "python3-openssl"
+  "python3-pastedeploy"
+  "python3-pyeclib"
+  "python3-requests" {>= "2.14.2"}
+  "python3-six" {>= "1.10.0"}
+  "python3-xattr"
+]
+extra-source "python3-swift_2.26.0-10+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/swift/python3-swift_2.26.0-10+deb11u1_all.deb"
+}

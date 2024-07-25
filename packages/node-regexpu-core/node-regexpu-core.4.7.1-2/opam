@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-regexpu-core_4.7.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-regexpu-core"]
+]
+depends: [
+  "node-regenerate"
+  "node-regenerate-unicode-properties" {>= "8.2~"}
+  "node-regjsgen"
+  "node-regjsparser" {>= "0.6.4~"}
+  "node-unicode-match-property-ecmascript"
+  "node-unicode-match-property-value-ecmascript" {>= "1.2~"}
+  "nodejs"
+]
+extra-source "node-regexpu-core_4.7.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-regexpu-core/node-regexpu-core_4.7.1-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pkcs11-data_0.7.4-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pkcs11-data"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libpkcs11-helper1" {>= "1.05"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "pkcs11-data_0.7.4-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pkcs11-data/pkcs11-data_0.7.4-2+b3_amd64.deb"
+}

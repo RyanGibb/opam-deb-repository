@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lua-torch-nn_0~20171002-g8726825+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lua-torch-nn"]
+]
+depends: [
+  "libtorch-thnn-dev" {>= "0~20171002-g8726825+dfsg-4"}
+  "lua-moses" {>= "2.0.0~"}
+  "lua-torch-torch7"
+  ("luajit" | "lua5-1")
+]
+extra-source "lua-torch-nn_0~20171002-g8726825+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lua-torch-nn/lua-torch-nn_0~20171002-g8726825+dfsg-4_all.deb"
+}

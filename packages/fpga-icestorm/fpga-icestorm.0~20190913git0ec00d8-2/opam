@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fpga-icestorm_0~20190913git0ec00d8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fpga-icestorm"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libftdi1"
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "python3"
+]
+extra-source "fpga-icestorm_0~20190913git0ec00d8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fpga-icestorm/fpga-icestorm_0~20190913git0ec00d8-2_amd64.deb"
+}

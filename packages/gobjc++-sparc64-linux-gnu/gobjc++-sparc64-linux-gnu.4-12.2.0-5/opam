@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gobjc++-sparc64-linux-gnu_4:12.2.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gobjc++-sparc64-linux-gnu"]
+]
+depends: [
+  "cpp-sparc64-linux-gnu" {>= "4-12.2.0-5"}
+  "gcc-sparc64-linux-gnu" {>= "4-12.2.0-5"}
+  "gobjc++-12-sparc64-linux-gnu" {>= "12.2.0-1~"}
+]
+extra-source "gobjc++-sparc64-linux-gnu_4:12.2.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-ports/gobjc++-sparc64-linux-gnu_12.2.0-5_amd64.deb"
+}

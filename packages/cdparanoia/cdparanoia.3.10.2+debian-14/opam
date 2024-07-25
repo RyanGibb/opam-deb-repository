@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cdparanoia_3.10.2+debian-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cdparanoia"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcdparanoia0" {>= "3.10.2+debian"}
+]
+extra-source "cdparanoia_3.10.2+debian-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cdparanoia/cdparanoia_3.10.2+debian-14_amd64.deb"
+}

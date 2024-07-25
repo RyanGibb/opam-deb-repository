@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i adminer_4.7.1-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r adminer"]
+]
+depends: [
+  ("libapache2-mod-php" | "php-cgi" | "php-fpm" | "php")
+  ("php-mysql" | "php-sqlite3" | "php-pgsql")
+]
+extra-source "adminer_4.7.1-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/adminer/adminer_4.7.1-1+deb10u1_all.deb"
+}

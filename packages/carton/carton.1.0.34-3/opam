@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i carton_1.0.34-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r carton"]
+]
+depends: [
+  "libcapture-tiny-perl"
+  "libclass-tiny-perl" {>= "1.001"}
+  "libmenlo-legacy-perl"
+  "libmodule-cpanfile-perl" {>= "0.9031"}
+  "libpath-tiny-perl"
+  "libtry-tiny-perl"
+  "perl"
+  "perl" {>= "5.17.10"}
+  "perl-any"
+]
+extra-source "carton_1.0.34-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/carton/carton_1.0.34-3_all.deb"
+}

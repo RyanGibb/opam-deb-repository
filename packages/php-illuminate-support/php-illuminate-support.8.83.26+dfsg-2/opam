@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-illuminate-support_8.83.26+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-illuminate-support"]
+]
+depends: [
+  "php-common"
+  "php-doctrine-inflector"
+  "php-illuminate-collections" {< "9~~"}
+  "php-illuminate-collections" {>= "8.0"}
+  "php-illuminate-contracts" {< "9~~"}
+  "php-illuminate-contracts" {>= "8.0"}
+  "php-illuminate-macroable" {< "9~~"}
+  "php-illuminate-macroable" {>= "8.0"}
+  "php-json"
+  "php-mbstring"
+  "php-nesbot-carbon" {< "3~~"}
+  "php-nesbot-carbon" {>= "2.53.1"}
+  "php-voku-portable-ascii" {< "3~~"}
+  "php-voku-portable-ascii" {>= "2.0"}
+]
+extra-source "php-illuminate-support_8.83.26+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-laravel-framework/php-illuminate-support_8.83.26+dfsg-2_all.deb"
+}

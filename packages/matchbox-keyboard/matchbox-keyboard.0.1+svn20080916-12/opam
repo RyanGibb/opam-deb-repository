@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i matchbox-keyboard_0.1+svn20080916-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r matchbox-keyboard"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libexpat1" {>= "2.0.1"}
+  "libfakekey0" {>= "0.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+  "libxrender1"
+]
+extra-source "matchbox-keyboard_0.1+svn20080916-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/matchbox-keyboard/matchbox-keyboard_0.1+svn20080916-12_amd64.deb"
+}

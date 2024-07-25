@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-monadprompt-prof_1.0.0.5-9+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-monadprompt-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-monadprompt-dev" {= "1.0.0.5-9+b2"}
+]
+extra-source "libghc-monadprompt-prof_1.0.0.5-9+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-monadprompt/libghc-monadprompt-prof_1.0.0.5-9+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibverbs-utils_33.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibverbs-utils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libibverbs1" {>= "33"}
+]
+extra-source "ibverbs-utils_33.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rdma-core/ibverbs-utils_33.2-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-oci-fra_0.3.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-oci-fra"]
+]
+depends: [
+  "apertium" {>= "3.6.0"}
+  "apertium-lex-tools"
+  "cg3"
+]
+conflicts: [
+  "apertium-fra-oci"
+]
+extra-source "apertium-oci-fra_0.3.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-oci-fra/apertium-oci-fra_0.3.0-3_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-libbde_20190102-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-libbde"]
+]
+depends: [
+  "libbde1" {= "20190102-1"}
+  "libbfio1" {>= "20120425"}
+  "libc6" {>= "2.14"}
+  "libpython3-7" {>= "3.7.0"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+]
+extra-source "python3-libbde_20190102-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbde/python3-libbde_20190102-1_amd64.deb"
+}

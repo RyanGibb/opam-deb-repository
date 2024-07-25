@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-language-c99-simple-prof_0.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-language-c99-simple-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-language-c99-prof"
+  "libghc-language-c99-simple-dev" {= "0.2.2-1"}
+  "libghc-language-c99-util-prof"
+]
+extra-source "libghc-language-c99-simple-prof_0.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-language-c99-simple/libghc-language-c99-simple-prof_0.2.2-1_amd64.deb"
+}

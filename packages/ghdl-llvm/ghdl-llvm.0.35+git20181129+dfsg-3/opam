@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ghdl-llvm_0.35+git20181129+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ghdl-llvm"]
+]
+depends: [
+  "ghdl" {= "0.35+git20181129+dfsg-3"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnat-8" {>= "8.2.0"}
+  "libllvm7" {>= "1-7~svn298832-1~"}
+  "zlib1g-dev"
+]
+extra-source "ghdl-llvm_0.35+git20181129+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/ghdl/ghdl-llvm_0.35+git20181129+dfsg-3_amd64.deb"
+}

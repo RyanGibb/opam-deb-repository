@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i swtpm-libs_0.7.1-1.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r swtpm-libs"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0"
+  "libseccomp2" {>= "0.0.0~20120605"}
+  "libssl3" {>= "3.0.0"}
+  "libtpms0" {>= "0.8.0~dev1"}
+  "openssl"
+]
+extra-source "swtpm-libs_0.7.1-1.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/swtpm/swtpm-libs_0.7.1-1.3_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gdc-aarch64-linux-gnu_4:8.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gdc-aarch64-linux-gnu"]
+]
+depends: [
+  "cpp-aarch64-linux-gnu" {>= "4-8.3.0-1"}
+  "gdc-8-aarch64-linux-gnu" {>= "8.3.0-1~"}
+]
+extra-source "gdc-aarch64-linux-gnu_4:8.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults/gdc-aarch64-linux-gnu_8.3.0-1_amd64.deb"
+}

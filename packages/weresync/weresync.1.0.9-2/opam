@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i weresync_1.0.9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r weresync"]
+]
+depends: [
+  "python3-any"
+  "python3-gi"
+  "python3-parse"
+  "python3-yapsy"
+  ("fdisk" | "util-linux" {< "2.29.2-3~"})
+]
+extra-source "weresync_1.0.9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/weresync/weresync_1.0.9-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpwquality1_1.4.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpwquality1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcrack2" {>= "2.8.12"}
+  "libpwquality-common"
+]
+extra-source "libpwquality1_1.4.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpwquality/libpwquality1_1.4.0-3_amd64.deb"
+}

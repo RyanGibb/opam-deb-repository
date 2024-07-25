@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-sassc_2.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-sassc"]
+]
+depends: [
+  "libsass-dev" {>= "3.6.1"}
+  "rake"
+  "ruby-ffi" {>= "1.9"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-sassc_2.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-sassc/ruby-sassc_2.2.1-1_all.deb"
+}

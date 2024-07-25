@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcregrep_2:8.39-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcregrep"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpcre3"
+]
+extra-source "pcregrep_2:8.39-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcre3/pcregrep_8.39-12_amd64.deb"
+}

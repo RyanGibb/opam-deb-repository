@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-postgresql_1.2.1+git20180803.ef7b9a9-4+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-postgresql"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libjs-sphinxdoc" {>= "5.2"}
+  "libpython3-stdlib"
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-postgresql_1.2.1+git20180803.ef7b9a9-4+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/py-postgresql/python3-postgresql_1.2.1+git20180803.ef7b9a9-4+b3_amd64.deb"
+}

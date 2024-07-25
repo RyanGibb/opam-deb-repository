@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i s4cmd_2.1.0+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r s4cmd"]
+]
+depends: [
+  "python-any"
+  "python-boto3"
+  "python-tz"
+]
+extra-source "s4cmd_2.1.0+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/s4cmd/s4cmd_2.1.0+ds-1_all.deb"
+}

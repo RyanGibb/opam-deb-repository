@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i isync_1.3.0-2.2~deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r isync"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdb5-3"
+  "libsasl2-2" {>= "2.1.27+dfsg"}
+  "libssl1-1" {>= "1.1.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "isync_1.3.0-2.2~deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/isync/isync_1.3.0-2.2~deb10u2_amd64.deb"
+}

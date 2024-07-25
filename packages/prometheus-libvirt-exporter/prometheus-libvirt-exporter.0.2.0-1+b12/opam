@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-libvirt-exporter_0.2.0-1+b12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-libvirt-exporter"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libvirt0" {>= "6.0.0~rc1"}
+  ("daemon" | "systemd-sysv")
+]
+extra-source "prometheus-libvirt-exporter_0.2.0-1+b12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-libvirt-exporter/prometheus-libvirt-exporter_0.2.0-1+b12_amd64.deb"
+}

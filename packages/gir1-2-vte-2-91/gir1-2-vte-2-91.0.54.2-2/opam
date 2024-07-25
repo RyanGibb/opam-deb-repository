@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-vte-2.91_0.54.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-vte-2.91"]
+]
+depends: [
+  "gir1-2-gtk-3-0" {>= "3.20"}
+  "gir1-2-pango-1-0" {>= "1.22.0"}
+  "libvte-2-91-0" {>= "0.54.0"}
+]
+extra-source "gir1.2-vte-2.91_0.54.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vte2.91/gir1.2-vte-2.91_0.54.2-2_amd64.deb"
+}

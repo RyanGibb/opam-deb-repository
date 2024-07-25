@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i games-platform_5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r games-platform"]
+]
+depends: [
+  "games-tasks" {= "5"}
+]
+extra-source "games-platform_5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-games/games-platform_5_all.deb"
+}

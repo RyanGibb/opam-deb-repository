@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcob4_2.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcob4"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libdb5-3"
+  "libgmp10"
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "libcob4_2.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnucobol/libcob4_2.2-5_amd64.deb"
+}

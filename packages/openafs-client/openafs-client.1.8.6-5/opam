@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openafs-client_1.8.6-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openafs-client"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libhcrypto4-heimdal" {>= "1.4.0+git20110226"}
+  "libkrb5-26-heimdal" {>= "1.4.0+git20110226"}
+  "libncurses6" {>= "6"}
+  "libroken18-heimdal" {>= "1.7~git20150920"}
+  "libtinfo6" {>= "6"}
+  "lsb-base" {>= "3.0-6"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+conflicts: [
+  "arla"
+]
+extra-source "openafs-client_1.8.6-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openafs/openafs-client_1.8.6-5_amd64.deb"
+}

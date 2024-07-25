@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5webkit5-dev_5.212.0~alpha4-30_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5webkit5-dev"]
+]
+depends: [
+  "libqt5webkit5" {= "5.212.0~alpha4-30"}
+  "qtbase5-dev"
+  "qtdeclarative5-dev"
+]
+extra-source "libqt5webkit5-dev_5.212.0~alpha4-30_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtwebkit-opensource-src/libqt5webkit5-dev_5.212.0~alpha4-30_amd64.deb"
+}

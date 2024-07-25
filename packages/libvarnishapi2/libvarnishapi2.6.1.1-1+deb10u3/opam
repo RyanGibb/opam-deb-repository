@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvarnishapi2_6.1.1-1+deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvarnishapi2"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+  "libpcre3"
+]
+extra-source "libvarnishapi2_6.1.1-1+deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/varnish/libvarnishapi2_6.1.1-1+deb10u3_amd64.deb"
+}

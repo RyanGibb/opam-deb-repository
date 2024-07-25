@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-openshift-imagebuilder-dev_1.1.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-openshift-imagebuilder-dev"]
+]
+depends: [
+  "golang-github-containerd-containerd-dev"
+  "golang-github-containers-storage-dev" {> "1.11"}
+  "golang-github-docker-docker-dev" {> "18.09.3+dfsg1"}
+  "golang-github-fsouza-go-dockerclient-dev"
+  "golang-glog-dev"
+]
+extra-source "golang-github-openshift-imagebuilder-dev_1.1.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-openshift-imagebuilder/golang-github-openshift-imagebuilder-dev_1.1.6-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pandoc-citeproc-preamble_1.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pandoc-citeproc-preamble"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libffi8" {>= "3.4"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "pandoc-citeproc-preamble_1.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pandoc-citeproc-preamble/pandoc-citeproc-preamble_1.7-1_amd64.deb"
+}

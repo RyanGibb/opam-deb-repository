@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gdal-bin_3.6.2+dfsg-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gdal-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdal32" {>= "3.5.0"}
+  "libstdc++6" {>= "11"}
+  "python3-any"
+  "python3-gdal" {= "3.6.2+dfsg-1+b2"}
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+]
+extra-source "gdal-bin_3.6.2+dfsg-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gdal/gdal-bin_3.6.2+dfsg-1+b2_amd64.deb"
+}

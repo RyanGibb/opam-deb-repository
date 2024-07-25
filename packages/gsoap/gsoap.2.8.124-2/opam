@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gsoap_2.8.124-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gsoap"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgsoap-2-8-124" {>= "2.8.124"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "gsoap_2.8.124-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gsoap/gsoap_2.8.124-2_amd64.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mir-platform-graphics-wayland20_2.12.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mir-platform-graphics-wayland20"]
+]
+depends: [
+  "libboost-program-options1-74-0" {>= "1.74.0+ds1"}
+  "libc6" {>= "2.34"}
+  "libegl1"
+  "libepoxy0" {>= "1.0"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libgles2"
+  "libmircommon9" {>= "2.12.1"}
+  "libmircore2" {>= "2.8.0"}
+  "libmirplatform24" {>= "2.12.1"}
+  "libstdc++6" {>= "11"}
+  "libwayland-client0" {>= "1.20.0"}
+  "libwayland-egl1" {>= "1.15.0"}
+  "libwayland-server0" {>= "1.0.2"}
+  "libxkbcommon0" {>= "0.5.0"}
+]
+extra-source "mir-platform-graphics-wayland20_2.12.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mir/mir-platform-graphics-wayland20_2.12.1-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmessaging-menu-dev_0.6.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmessaging-menu-dev"]
+]
+depends: [
+  "gir1-2-messagingmenu-1-0" {= "0.6.0-2"}
+  "libglib2-0-dev"
+  "libmessaging-menu0" {= "0.6.0-2"}
+]
+extra-source "libmessaging-menu-dev_0.6.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ayatana-indicator-messages/libmessaging-menu-dev_0.6.0-2_amd64.deb"
+}

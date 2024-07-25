@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libotbioonera-8.1-1_8.1.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libotbioonera-8.1-1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libinsighttoolkit4-13" {>= "4.13.3withdata-dfsg2"}
+  "libotbcommon-8-1-1" {>= "6.6.0"}
+  "libotbimagebase-8-1-1" {>= "7.0.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libotbioonera-8.1-1_8.1.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/otb/libotbioonera-8.1-1_8.1.1+dfsg-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i udunits-bin_2.2.26-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r udunits-bin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libudunits2-0" {>= "2.2.14"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "udunits-bin_2.2.26-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/udunits/udunits-bin_2.2.26-5_amd64.deb"
+}

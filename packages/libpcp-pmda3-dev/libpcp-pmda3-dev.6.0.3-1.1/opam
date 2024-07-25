@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcp-pmda3-dev_6.0.3-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcp-pmda3-dev"]
+]
+depends: [
+  "libpcp-pmda3" {= "6.0.3-1.1"}
+  "libpcp3" {= "6.0.3-1.1"}
+]
+extra-source "libpcp-pmda3-dev_6.0.3-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcp/libpcp-pmda3-dev_6.0.3-1.1_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblogforwarderutils2v5_2.7-1.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblogforwarderutils2v5"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libomniorb4-2" {>= "4.2.0"}
+  "libomnithread4" {>= "4.2.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "liblogforwarderutils2"
+]
+extra-source "liblogforwarderutils2v5_2.7-1.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/logservice/liblogforwarderutils2v5_2.7-1.1+b2_amd64.deb"
+}

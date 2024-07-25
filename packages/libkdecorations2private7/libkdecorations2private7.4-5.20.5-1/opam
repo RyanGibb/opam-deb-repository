@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkdecorations2private7_4:5.20.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkdecorations2private7"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.15.0~"} | "libqt5gui5-gles" {>= "5.15.0~"})
+]
+extra-source "libkdecorations2private7_4:5.20.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdecoration/libkdecorations2private7_5.20.5-1_amd64.deb"
+}

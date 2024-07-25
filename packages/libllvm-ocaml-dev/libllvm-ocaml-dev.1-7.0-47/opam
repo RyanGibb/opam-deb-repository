@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libllvm-ocaml-dev_1:7.0-47_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libllvm-ocaml-dev"]
+]
+depends: [
+  "libllvm-7-ocaml-dev" {>= "7~"}
+  "llvm-runtime" {= "1-7.0-47"}
+]
+extra-source "libllvm-ocaml-dev_1:7.0-47_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-defaults/libllvm-ocaml-dev_7.0-47_amd64.deb"
+}

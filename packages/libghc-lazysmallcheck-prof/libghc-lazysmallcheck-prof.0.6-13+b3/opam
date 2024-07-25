@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-lazysmallcheck-prof_0.6-13+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-lazysmallcheck-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-lazysmallcheck-dev" {= "0.6-13+b3"}
+]
+extra-source "libghc-lazysmallcheck-prof_0.6-13+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-lazysmallcheck/libghc-lazysmallcheck-prof_0.6-13+b3_amd64.deb"
+}

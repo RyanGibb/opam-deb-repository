@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcl_2.6.14-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcl"]
+]
+depends: [
+  "debconf" {>= "1.2.0"}
+  "gcc"
+  "libc6" {>= "2.34"}
+  "libedit2" {>= "2.11-20080614-0"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libtirpc3" {>= "1.0.2"}
+  "libtk8-6" {>= "8.6.0"}
+  "libx11-6"
+  "ucf"
+  ("emacs" | "emacsen")
+]
+extra-source "gcl_2.6.14-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcl/gcl_2.6.14-4_amd64.deb"
+}

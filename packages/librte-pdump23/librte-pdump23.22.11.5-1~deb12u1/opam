@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-pdump23_22.11.5-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-pdump23"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.4"}
+  "libelf1" {>= "0.131"}
+  "libfdt1" {>= "1.6.1"}
+  "libnuma1" {>= "2.0.11"}
+  "libpcap0-8" {>= "0.9.8"}
+  "librte-bpf23" {>= "22.11"}
+  "librte-eal23" {>= "22.11"}
+  "librte-ethdev23" {>= "22.11"}
+  "librte-kvargs23" {>= "18.08"}
+  "librte-mbuf23" {>= "22.11"}
+  "librte-mempool23" {>= "18.05"}
+  "librte-meter23" {>= "22.11~rc2"}
+  "librte-net23" {>= "22.11~rc2"}
+  "librte-pcapng23" {>= "21.11"}
+  "librte-ring23" {>= "22.11~rc2"}
+  "librte-telemetry23" {>= "21.08"}
+]
+conflicts: [
+  "libdpdk0"
+]
+extra-source "librte-pdump23_22.11.5-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-pdump23_22.11.5-1~deb12u1_amd64.deb"
+}

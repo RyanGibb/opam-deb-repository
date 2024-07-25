@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmxmms2_0.6+repack-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmxmms2"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libx11-6"
+  "libxext6"
+  "libxmmsclient6" {>= "0.7DrNo"}
+  "libxpm4"
+]
+extra-source "wmxmms2_0.6+repack-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmxmms2/wmxmms2_0.6+repack-2_amd64.deb"
+}

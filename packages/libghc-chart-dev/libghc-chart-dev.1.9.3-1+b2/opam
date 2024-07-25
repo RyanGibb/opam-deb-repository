@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-chart-dev_1.9.3-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-chart-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.29"}
+  "libghc-colour-dev"
+  "libghc-data-default-class-dev"
+  "libghc-lens-dev"
+  "libghc-old-locale-dev"
+  "libghc-operational-dev"
+  "libghc-vector-dev"
+  "libgmp10"
+]
+extra-source "libghc-chart-dev_1.9.3-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-chart/libghc-chart-dev_1.9.3-1+b2_amd64.deb"
+}

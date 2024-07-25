@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-asetus_0.3.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-asetus"]
+]
+depends: [
+  "ruby-json"
+  "ruby-toml"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-asetus_0.3.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-asetus/ruby-asetus_0.3.0-1.1_all.deb"
+}

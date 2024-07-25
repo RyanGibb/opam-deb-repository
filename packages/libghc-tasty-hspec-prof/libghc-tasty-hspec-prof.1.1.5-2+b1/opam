@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tasty-hspec-prof_1.1.5-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tasty-hspec-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hspec-core-prof"
+  "libghc-hspec-prof"
+  "libghc-quickcheck2-prof"
+  "libghc-tasty-hspec-dev" {= "1.1.5-2+b1"}
+  "libghc-tasty-prof"
+  "libghc-tasty-quickcheck-prof"
+  "libghc-tasty-smallcheck-prof"
+]
+extra-source "libghc-tasty-hspec-prof_1.1.5-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tasty-hspec/libghc-tasty-hspec-prof_1.1.5-2+b1_amd64.deb"
+}

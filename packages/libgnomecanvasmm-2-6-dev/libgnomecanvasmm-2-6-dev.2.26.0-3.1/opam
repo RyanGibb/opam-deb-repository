@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnomecanvasmm-2.6-dev_2.26.0-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnomecanvasmm-2.6-dev"]
+]
+depends: [
+  "libgnomecanvas2-dev" {>= "2.6.0"}
+  "libgnomecanvasmm-2-6-1v5" {= "2.26.0-3.1"}
+  "libgtkmm-2-4-dev" {>= "2.4.0"}
+]
+extra-source "libgnomecanvasmm-2.6-dev_2.26.0-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnomecanvasmm2.6/libgnomecanvasmm-2.6-dev_2.26.0-3.1_amd64.deb"
+}

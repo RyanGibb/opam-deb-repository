@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-horde-nls_2.2.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-horde-nls"]
+]
+depends: [
+  "php-common"
+  "php-horde-translation" {< "3.0.0~alpha1"}
+  "php-horde-translation" {>= "2.2.0"}
+  "php-horde-util" {< "3.0.0~alpha1"}
+  "php-horde-util" {>= "2.0.0"}
+]
+extra-source "php-horde-nls_2.2.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-horde-nls/php-horde-nls_2.2.1-3_all.deb"
+}

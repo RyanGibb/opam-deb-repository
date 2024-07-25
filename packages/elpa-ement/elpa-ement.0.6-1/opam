@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-ement_0.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-ement"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-plz" {>= "0.2"}
+  "elpa-svg-lib" {>= "0.2.5"}
+  "elpa-taxy" {>= "0.10"}
+  "elpa-taxy-magit-section" {>= "0.12.1"}
+  "emacsen-common"
+]
+extra-source "elpa-ement_0.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ement-el/elpa-ement_0.6-1_all.deb"
+}

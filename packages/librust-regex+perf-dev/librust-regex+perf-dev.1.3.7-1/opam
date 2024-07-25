@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-regex+perf-dev_1.3.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-regex+perf-dev"]
+]
+depends: [
+  "librust-regex+perf-cache-dev" {= "1.3.7-1"}
+  "librust-regex+perf-literal-dev" {= "1.3.7-1"}
+  "librust-regex-dev"
+  "librust-regex-dev" {= "1.3.7-1"}
+]
+extra-source "librust-regex+perf-dev_1.3.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-regex/librust-regex+perf-dev_1.3.7-1_amd64.deb"
+}

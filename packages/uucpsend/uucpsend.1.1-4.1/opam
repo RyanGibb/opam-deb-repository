@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uucpsend_1.1-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uucpsend"]
+]
+depends: [
+  "inn"
+  "libc6" {>= "2.14"}
+  "uucp"
+]
+conflicts: [
+  "inn2"
+]
+extra-source "uucpsend_1.1-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uucpsend/uucpsend_1.1-4.1_amd64.deb"
+}

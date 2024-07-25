@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libx11-xcb-perl_0.19-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libx11-xcb-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdata-dump-perl"
+  "libmouse-perl"
+  "libmousex-nativetraits-perl"
+  "libtry-tiny-perl"
+  "libxcb-xinerama0"
+  "libxcb1"
+  "libxml-descent-perl"
+  "libxml-simple-perl"
+  "libxs-object-magic-perl"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libx11-xcb-perl_0.19-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libx11-xcb-perl/libx11-xcb-perl_0.19-1+b2_amd64.deb"
+}

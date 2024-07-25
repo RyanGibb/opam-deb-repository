@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libatlas-ecmwf-0_0.31.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libatlas-ecmwf-0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libeckit0d" {>= "1.20.2"}
+  "libectrans-0" {>= "1.1.0"}
+  "libfckit0d" {>= "0.9.5"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libgfortran5" {>= "10"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libgomp1" {>= "6"}
+  "libproj25" {>= "6.1.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libatlas-ecmwf-0_0.31.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/atlas-ecmwf/libatlas-ecmwf-0_0.31.1-3_amd64.deb"
+}

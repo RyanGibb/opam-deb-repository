@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aspell-it_2.4-20070901-0-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aspell-it"]
+]
+depends: [
+  "aspell"
+  "dictionaries-common" {>= "1.23~"}
+]
+extra-source "aspell-it_2.4-20070901-0-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aspell-it/aspell-it_2.4-20070901-0-3.1_all.deb"
+}

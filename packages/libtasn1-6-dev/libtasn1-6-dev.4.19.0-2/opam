@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtasn1-6-dev_4.19.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtasn1-6-dev"]
+]
+depends: [
+  "libtasn1-6" {= "4.19.0-2"}
+]
+conflicts: [
+  "libtasn1-dev"
+]
+extra-source "libtasn1-6-dev_4.19.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6-dev_4.19.0-2_amd64.deb"
+}

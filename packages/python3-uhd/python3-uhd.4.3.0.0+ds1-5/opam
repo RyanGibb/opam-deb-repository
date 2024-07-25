@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-uhd_4.3.0.0+ds1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-uhd"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libpython3-11" {>= "3.11.0"}
+  "libstdc++6" {>= "11"}
+  "libuhd4-3-0" {= "4.3.0.0+ds1-5"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-ruamel-yaml"
+]
+extra-source "python3-uhd_4.3.0.0+ds1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uhd/python3-uhd_4.3.0.0+ds1-5_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-slim_3.12.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-slim"]
+]
+depends: [
+  "php-common"
+  "php-json"
+  "php-nikic-fast-route" {< "2~~"}
+  "php-nikic-fast-route" {>= "1.0"}
+  "php-pimple" {< "4~~"}
+  "php-pimple" {>= "3.0"}
+  "php-psr-container" {< "2~~"}
+  "php-psr-container" {>= "1.0"}
+  "php-psr-http-message" {< "2~~"}
+  "php-psr-http-message" {>= "1.0"}
+  "php-xml"
+]
+extra-source "php-slim_3.12.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-slim/php-slim_3.12.4-1_all.deb"
+}

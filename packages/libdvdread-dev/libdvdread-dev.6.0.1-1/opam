@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdvdread-dev_6.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdvdread-dev"]
+]
+depends: [
+  "libdvdread4" {= "6.0.1-1"}
+  "pkg-config"
+]
+extra-source "libdvdread-dev_6.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdvdread/libdvdread-dev_6.0.1-1_amd64.deb"
+}

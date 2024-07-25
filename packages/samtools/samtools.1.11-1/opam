@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i samtools_1.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r samtools"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libhts3" {>= "1.11"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "samtools_1.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/samtools/samtools_1.11-1_amd64.deb"
+}

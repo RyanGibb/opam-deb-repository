@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mono-4.0-gac_5.18.0.240+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mono-4.0-gac"]
+]
+depends: [
+  "libmono-corlib4-5-cil" {>= "5.18.0.240"}
+  "libmono-security4-0-cil" {>= "4.6.1.3"}
+  "libmono-system-security4-0-cil" {>= "5.18.0.240"}
+  "libmono-system4-0-cil" {>= "5.18.0.240"}
+  ("libc6" {>= "2.28"} | "libc6-1" {>= "2.28"} | "libc0-1" {>= "2.28"})
+]
+extra-source "mono-4.0-gac_5.18.0.240+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mono/mono-4.0-gac_5.18.0.240+dfsg-3_all.deb"
+}

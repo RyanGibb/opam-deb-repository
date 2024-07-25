@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblucene8-java_8.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblucene8-java"]
+]
+depends: [
+  "libregexp-java"
+]
+conflicts: [
+  "liblucene4.10-java"
+]
+extra-source "liblucene8-java_8.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lucene8/liblucene8-java_8.8.1-1_all.deb"
+}

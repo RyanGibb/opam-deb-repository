@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gemma_0.98.4+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gemma"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgsl25" {>= "2.6"}
+  "libopenblas0"
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gemma_0.98.4+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gemma/gemma_0.98.4+dfsg-4_amd64.deb"
+}

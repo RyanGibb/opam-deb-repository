@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sqlline_1.0.2-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sqlline"]
+]
+depends: [
+  "java-wrappers"
+  "libjline-java"
+  ("default-jre-headless" | "java2-runtime-headless")
+]
+extra-source "sqlline_1.0.2-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sqlline/sqlline_1.0.2-8_all.deb"
+}

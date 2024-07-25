@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i festival_1:2.5.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r festival"]
+]
+depends: [
+  "adduser" {>= "3.105"}
+  "alsa-utils"
+  "libc6" {>= "2.29"}
+  "libestools2-5"
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "lsb-base" {>= "3.0-10"}
+  "sgml-base" {>= "1.28"}
+]
+extra-source "festival_1:2.5.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/festival/festival_2.5.0-5_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgpiv-mpi3_0.6.1-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgpiv-mpi3"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgomp1" {>= "4.9"}
+  "libgpiv3-common" {= "0.6.1-7+b1"}
+  "libgsl23" {>= "2.5"}
+  "libgslcblas0" {>= "2.4"}
+  "libhdf5-103"
+  "libpng16-16" {>= "1.6.2-1"}
+]
+conflicts: [
+  "libgpiv3"
+]
+extra-source "libgpiv-mpi3_0.6.1-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgpiv/libgpiv-mpi3_0.6.1-7+b1_amd64.deb"
+}

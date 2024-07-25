@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnunet-fuse_0.19.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnunet-fuse"]
+]
+depends: [
+  "gnunet" {>= "0.19.1"}
+  "libc6" {>= "2.34"}
+  "libfuse2" {>= "2.6"}
+  "libgnunet0-19" {>= "0.19.1"}
+]
+extra-source "gnunet-fuse_0.19.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnunet-fuse/gnunet-fuse_0.19.1-1_amd64.deb"
+}

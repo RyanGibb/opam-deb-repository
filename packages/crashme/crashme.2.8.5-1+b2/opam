@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i crashme_2.8.5-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r crashme"]
+]
+depends: [
+  "libc6" {>= "2.11"}
+]
+extra-source "crashme_2.8.5-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/crashme/crashme_2.8.5-1+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gajim-antispam_1.6.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gajim-antispam"]
+]
+depends: [
+  "gajim" {>= "1.6.0~"}
+  "python3-pkg-resources"
+]
+extra-source "gajim-antispam_1.6.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gajim-antispam/gajim-antispam_1.6.8-1_all.deb"
+}

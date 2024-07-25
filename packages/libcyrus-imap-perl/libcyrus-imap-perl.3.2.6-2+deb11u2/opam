@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcyrus-imap-perl_3.2.6-2+deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcyrus-imap-perl"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libpcre3"
+  "libpq5"
+  "libsasl2-2" {>= "2.1.27+dfsg"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libssl1-1" {>= "1.1.0"}
+  "perl"
+  "perl-base"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libcyrus-imap-perl_3.2.6-2+deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cyrus-imapd/libcyrus-imap-perl_3.2.6-2+deb11u2_amd64.deb"
+}

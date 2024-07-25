@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-pcre-light-doc_0.4.0.4-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-pcre-light-doc"]
+]
+depends: [
+  "ghc"
+]
+conflicts: [
+  "haskell-pcre-light-doc (<< 0.3.1.1-2)"
+]
+extra-source "libghc-pcre-light-doc_0.4.0.4-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pcre-light/libghc-pcre-light-doc_0.4.0.4-5_all.deb"
+}

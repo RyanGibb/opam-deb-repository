@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zathura-pdf-poppler_0.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zathura-pdf-poppler"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgirara-gtk3-3" {>= "0.2.7"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libpoppler-glib8" {>= "0.18.0"}
+  "zathura"
+]
+extra-source "zathura-pdf-poppler_0.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zathura-pdf-poppler/zathura-pdf-poppler_0.3.0-1_amd64.deb"
+}

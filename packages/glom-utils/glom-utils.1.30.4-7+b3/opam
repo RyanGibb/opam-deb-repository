@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i glom-utils_1.30.4-7+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r glom-utils"]
+]
+depends: [
+  "gir1-2-gda-5-0"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgda-5-0-postgres"
+  "libglib2-0-0" {>= "2.16.0"}
+  "libglibmm-2-4-1v5" {>= "2.66.5"}
+  "libglom-1-30-0" {= "1.30.4-7+b3"}
+  "libstdc++6" {>= "5.2"}
+  "postgresql-15"
+]
+extra-source "glom-utils_1.30.4-7+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glom/glom-utils_1.30.4-7+b3_amd64.deb"
+}

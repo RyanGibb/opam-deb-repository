@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rubydns_1.0.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rubydns"]
+]
+depends: [
+  "ruby"
+  "ruby-celluloid" {>= "0.16.0"}
+  "ruby-celluloid-io" {>= "0.16.2"}
+  "ruby-timers" {>= "4.0"}
+]
+extra-source "ruby-rubydns_1.0.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rubydns/ruby-rubydns_1.0.3-3_all.deb"
+}

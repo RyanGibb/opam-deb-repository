@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lgeneral_1.4.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lgeneral"]
+]
+depends: [
+  "lgc-pg"
+  "lgeneral-data"
+  "libc6" {>= "2.34"}
+  "libsdl-mixer1-2" {>= "1.2.12"}
+  "libsdl1-2-compat-shim"
+]
+extra-source "lgeneral_1.4.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lgeneral/lgeneral_1.4.4-2_amd64.deb"
+}

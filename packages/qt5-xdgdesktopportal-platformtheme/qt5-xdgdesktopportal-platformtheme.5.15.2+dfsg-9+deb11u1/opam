@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt5-xdgdesktopportal-platformtheme_5.15.2+dfsg-9+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt5-xdgdesktopportal-platformtheme"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.9.0"} | "libqt5gui5-gles" {>= "5.9.0"})
+]
+extra-source "qt5-xdgdesktopportal-platformtheme_5.15.2+dfsg-9+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtbase-opensource-src/qt5-xdgdesktopportal-platformtheme_5.15.2+dfsg-9+deb11u1_amd64.deb"
+}

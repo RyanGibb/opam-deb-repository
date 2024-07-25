@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspring-jdbc-java_4.3.22-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspring-jdbc-java"]
+]
+depends: [
+  "libc3p0-java"
+  "libspring-beans-java" {= "4.3.22-4"}
+  "libspring-transaction-java" {= "4.3.22-4"}
+]
+extra-source "libspring-jdbc-java_4.3.22-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libspring-java/libspring-jdbc-java_4.3.22-4_all.deb"
+}

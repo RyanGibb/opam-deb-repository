@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-appraiser_0.2.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-appraiser"]
+]
+depends: [
+  "ruby-colored"
+  "ruby-json"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-appraiser_0.2.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-appraiser/ruby-appraiser_0.2.0-3_all.deb"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dnsmasq-base-lua_2.89-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dnsmasq-base-lua"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libhogweed6" {>= "2.4-3"}
+  "libidn2-0" {>= "2.0.0"}
+  "liblua5-2-0" {>= "5.2.4"}
+  "libnetfilter-conntrack3" {>= "1.0.1"}
+  "libnettle8" {>= "2.4-3"}
+  "libnftables1" {>= "1.0.2"}
+]
+conflicts: [
+  "dnsmasq-base"
+]
+extra-source "dnsmasq-base-lua_2.89-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dnsmasq/dnsmasq-base-lua_2.89-1_amd64.deb"
+}

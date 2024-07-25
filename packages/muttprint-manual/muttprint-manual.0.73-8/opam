@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i muttprint-manual_0.73-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r muttprint-manual"]
+]
+depends: [
+  ("lynx" | "www-browser" | "xpdf" | "pdf-viewer")
+]
+extra-source "muttprint-manual_0.73-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/muttprint/muttprint-manual_0.73-8_all.deb"
+}

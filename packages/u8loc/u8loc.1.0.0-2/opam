@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i u8loc_1.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r u8loc"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libutf8-locale0" {>= "0.3.0"}
+]
+extra-source "u8loc_1.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/utf8-locale/u8loc_1.0.0-2_amd64.deb"
+}

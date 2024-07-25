@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-gtk2hs-buildtools-prof_0.13.8.3-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-gtk2hs-buildtools-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-gtk2hs-buildtools-dev" {= "0.13.8.3-1+b2"}
+  "libghc-hashtables-prof"
+  "libghc-random-prof"
+]
+extra-source "libghc-gtk2hs-buildtools-prof_0.13.8.3-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtk2hs-buildtools/libghc-gtk2hs-buildtools-prof_0.13.8.3-1+b2_amd64.deb"
+}

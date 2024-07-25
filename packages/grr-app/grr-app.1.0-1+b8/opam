@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i grr.app_1.0-1+b8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r grr.app"]
+]
+depends: [
+  "dpkg" {>= "1.17.14"}
+  "gnustep-back0-29" {>= "0.29.0"}
+  "gnustep-base-runtime" {>= "1.28.0"}
+  "gnustep-gui-runtime" {>= "0.29.0"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnustep-base1-28" {>= "1.28.0"}
+  "libgnustep-gui0-29" {>= "0.29.0"}
+  "libobjc4" {>= "4.2.1"}
+  "librsskit0d"
+]
+extra-source "grr.app_1.0-1+b8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grr.app/grr.app_1.0-1+b8_amd64.deb"
+}

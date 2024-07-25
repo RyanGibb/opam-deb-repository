@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ocamlweb_1.41-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ocamlweb"]
+]
+depends: [
+  "ocaml-base-nox"
+  "tex-common" {>= "6"}
+]
+extra-source "ocamlweb_1.41-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocamlweb/ocamlweb_1.41-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pdfminer_20181108+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pdfminer"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-six"
+  "python-sortedcontainers"
+]
+extra-source "python-pdfminer_20181108+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdfminer/python-pdfminer_20181108+dfsg-3_all.deb"
+}

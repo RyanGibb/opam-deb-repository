@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-all-dev_3.7.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-all-dev"]
+]
+depends: [
+  "libpython3-all-dev" {= "3.7.3-1"}
+  "python3" {= "3.7.3-1"}
+  "python3-7-dev"
+  "python3-all" {= "3.7.3-1"}
+  "python3-dev" {= "3.7.3-1"}
+]
+extra-source "python3-all-dev_3.7.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python3-defaults/python3-all-dev_3.7.3-1_amd64.deb"
+}

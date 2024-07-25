@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sssd-ipa_2.8.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sssd-ipa"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdhash1" {>= "0.4.0"}
+  "libipa-hbac0" {= "2.8.2-4"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "libldb2" {>= "0.9.21"}
+  "libpopt0" {>= "1.14"}
+  "libselinux1" {>= "3.1~"}
+  "libsemanage2" {>= "2.0.3"}
+  "libsss-idmap0" {= "2.8.2-4"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+  "libtevent0" {>= "0.9.9"}
+  "samba-libs" {> "2-4.17.7+dfsg-1~"}
+  "sssd-ad-common" {= "2.8.2-4"}
+  "sssd-common" {= "2.8.2-4"}
+  "sssd-krb5-common" {= "2.8.2-4"}
+]
+extra-source "sssd-ipa_2.8.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sssd/sssd-ipa_2.8.2-4_amd64.deb"
+}

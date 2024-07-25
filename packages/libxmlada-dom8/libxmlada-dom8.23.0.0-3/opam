@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlada-dom8_23.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlada-dom8"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnat-12" {>= "12.2.0"}
+  "libxmlada-sax7" {>= "23.0.0"}
+  "libxmlada-unicode7" {>= "23.0.0"}
+]
+extra-source "libxmlada-dom8_23.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxmlada/libxmlada-dom8_23.0.0-3_amd64.deb"
+}

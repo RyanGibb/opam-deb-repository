@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcamp-dev_0.8.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcamp-dev"]
+]
+depends: [
+  "libcamp0-8" {= "0.8.2-1"}
+]
+conflicts: [
+  "libcamp0.7-dev"
+]
+extra-source "libcamp-dev_0.8.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/camp/libcamp-dev_0.8.2-1_amd64.deb"
+}

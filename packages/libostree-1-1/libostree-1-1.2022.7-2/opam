@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libostree-1-1_2022.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libostree-1-1"]
+]
+depends: [
+  "libarchive13" {>= "3.0.4"}
+  "libavahi-client3" {>= "0.6.31"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libavahi-glib1" {>= "0.6.31"}
+  "libc6" {>= "2.33"}
+  "libcurl3-gnutls" {>= "7.16.3"}
+  "libglib2-0-0" {>= "2.67.3"}
+  "libgpgme11" {>= "1.2.0"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libselinux1" {>= "3.1~"}
+  "libsystemd0"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libostree-1-1_2022.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ostree/libostree-1-1_2022.7-2_amd64.deb"
+}

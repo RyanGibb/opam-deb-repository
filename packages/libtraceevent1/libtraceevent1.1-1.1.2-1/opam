@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtraceevent1_1:1.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtraceevent1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libtraceevent1_1:1.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtraceevent/libtraceevent1_1.1.2-1_amd64.deb"
+}

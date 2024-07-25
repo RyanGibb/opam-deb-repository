@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dvipng_1.15-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dvipng"]
+]
+depends: [
+  "ghostscript"
+  "libc6" {>= "2.14"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgd3" {>= "2.1.0~alpha~"}
+  "libkpathsea6"
+  "libpng16-16" {>= "1.6.2-1"}
+  "texlive-binaries"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "dvipng_1.15-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dvipng/dvipng_1.15-1.1_amd64.deb"
+}

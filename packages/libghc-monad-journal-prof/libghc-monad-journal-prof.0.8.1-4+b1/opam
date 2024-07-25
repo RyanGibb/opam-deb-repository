@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-monad-journal-prof_0.8.1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-monad-journal-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-monad-control-prof"
+  "libghc-monad-journal-dev" {= "0.8.1-4+b1"}
+  "libghc-transformers-base-prof"
+]
+extra-source "libghc-monad-journal-prof_0.8.1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-monad-journal/libghc-monad-journal-prof_0.8.1-4+b1_amd64.deb"
+}

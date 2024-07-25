@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-obexftp_0.24-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-obexftp"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libobexftp0" {= "0.24-9"}
+  "libruby3-1"
+]
+extra-source "ruby-obexftp_0.24-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/obexftp/ruby-obexftp_0.24-9_amd64.deb"
+}

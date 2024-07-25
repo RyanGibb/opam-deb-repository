@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gvncviewer_0.9.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gvncviewer"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.4"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.42.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libgtk-vnc-2-0-0" {>= "0.7.1"}
+  "libgvnc-1-0-0" {>= "0.5.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gvncviewer_0.9.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtk-vnc/gvncviewer_0.9.0-1.1_amd64.deb"
+}

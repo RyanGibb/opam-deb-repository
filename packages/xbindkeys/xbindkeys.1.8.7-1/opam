@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xbindkeys_1.8.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xbindkeys"]
+]
+depends: [
+  "guile-2-2-libs"
+  "libc6" {>= "2.4"}
+  "libx11-6"
+]
+extra-source "xbindkeys_1.8.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xbindkeys/xbindkeys_1.8.7-1_amd64.deb"
+}

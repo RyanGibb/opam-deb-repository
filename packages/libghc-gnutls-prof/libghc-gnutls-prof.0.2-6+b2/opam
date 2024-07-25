@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-gnutls-prof_0.2-6+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-gnutls-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-gnutls-dev" {= "0.2-6+b2"}
+  "libghc-monads-tf-prof"
+]
+extra-source "libghc-gnutls-prof_0.2-6+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-gnutls/libghc-gnutls-prof_0.2-6+b2_amd64.deb"
+}

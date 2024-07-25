@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fio_3.33-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fio"]
+]
+depends: [
+  "init-system-helpers" {>= "1.51"}
+  "libaio1" {>= "0.3.93"}
+  "libc6" {>= "2.34"}
+  "libgfapi0" {>= "10.3"}
+  "libibverbs1" {>= "1.1.6"}
+  "libnbd0" {>= "1.0.0"}
+  "libnuma1" {>= "2.0.11"}
+  "libpmem1" {>= "1.5"}
+  "libpmemblk1" {>= "1.4"}
+  "librados2" {>= "16.2.10+ds"}
+  "librbd1" {>= "10.1.0"}
+  "librdmacm1" {>= "1.0.15"}
+  "python3"
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "fio_3.33-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fio/fio_3.33-3_amd64.deb"
+}

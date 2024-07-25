@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vdr-plugin-satip_2.4.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vdr-plugin-satip"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "libcurl4" {>= "7.36.0"}
+  "libgcc-s1"
+  "libpugixml1v5" {>= "1.6"}
+  "libstdc++6" {>= "5"}
+  "vdr"
+]
+extra-source "vdr-plugin-satip_2.4.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vdr-plugin-satip/vdr-plugin-satip_2.4.0-4_amd64.deb"
+}

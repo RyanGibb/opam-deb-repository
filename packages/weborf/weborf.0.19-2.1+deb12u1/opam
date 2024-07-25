@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i weborf_0.19-2.1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r weborf"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libmagic1" {>= "5.12"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "weborf_0.19-2.1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/weborf/weborf_0.19-2.1+deb12u1_amd64.deb"
+}

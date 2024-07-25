@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lomiri-url-dispatcher_0.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lomiri-url-dispatcher"]
+]
+depends: [
+  "init-system-helpers" {>= "1.52"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.61.2"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "liblomiri-app-launch0" {>= "0.1.3"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+  "qml-module-lomiri-components"
+  "qtchooser"
+]
+extra-source "lomiri-url-dispatcher_0.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri-url-dispatcher/lomiri-url-dispatcher_0.1.2-1_amd64.deb"
+}

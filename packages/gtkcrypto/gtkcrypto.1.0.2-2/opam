@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtkcrypto_1.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtkcrypto"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libglib2-0-0" {>= "2.67.3"}
+  "libgpgme11" {>= "1.5.0"}
+  "libgtk-3-0" {>= "3.11.5"}
+  "libpango-1-0-0" {>= "1.14.0"}
+]
+extra-source "gtkcrypto_1.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtkcrypto/gtkcrypto_1.0.2-2_amd64.deb"
+}

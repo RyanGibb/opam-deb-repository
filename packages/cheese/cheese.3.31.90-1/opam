@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cheese_3.31.90-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cheese"]
+]
+depends: [
+  "cheese-common" {>= "3.31.90-1"}
+  "gnome-video-effects"
+  "libc6" {>= "2.4"}
+  "libcanberra-gtk3-0" {>= "0.25"}
+  "libcheese-gtk25" {>= "3.18.0"}
+  "libcheese8" {>= "3.18.0"}
+  "libclutter-1-0-0" {>= "1.16"}
+  "libclutter-gtk-1-0-0" {>= "0.91.8"}
+  "libgdk-pixbuf2-0-0" {>= "2.25.2"}
+  "libglib2-0-0" {>= "2.39.90"}
+  "libgnome-desktop-3-17" {>= "3.17.92"}
+  "libgstreamer1-0-0" {>= "1.0.0"}
+  "libgtk-3-0" {>= "3.13.7"}
+]
+extra-source "cheese_3.31.90-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cheese/cheese_3.31.90-1_amd64.deb"
+}

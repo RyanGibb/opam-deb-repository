@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i opencl-headers_2.2~2019.01.17-g49f07d3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r opencl-headers"]
+]
+depends: [
+  "opencl-c-headers" {= "2.2~2019.01.17-g49f07d3-1"}
+  "opencl-clhpp-headers" {>= "2.0.10"}
+]
+extra-source "opencl-headers_2.2~2019.01.17-g49f07d3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/khronos-opencl-headers/opencl-headers_2.2~2019.01.17-g49f07d3-1_all.deb"
+}

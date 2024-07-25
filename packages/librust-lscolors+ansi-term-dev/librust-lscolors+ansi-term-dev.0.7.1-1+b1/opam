@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-lscolors+ansi-term-dev_0.7.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-lscolors+ansi-term-dev"]
+]
+depends: [
+  "librust-lscolors-dev" {= "0.7.1-1+b1"}
+  ("librust-ansi-term-0-12+default-dev" | "librust-ansi-term-0-11+default-dev")
+]
+extra-source "librust-lscolors+ansi-term-dev_0.7.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-lscolors/librust-lscolors+ansi-term-dev_0.7.1-1+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-reltool_1:23.2.6+dfsg-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-reltool"]
+]
+depends: [
+  "erlang-tools" {= "1-23.2.6+dfsg-1+deb11u1"}
+  "erlang-wx" {= "1-23.2.6+dfsg-1+deb11u1"}
+  ("erlang-base" {= "1-23.2.6+dfsg-1+deb11u1"} | "erlang-base-hipe" {= "1-23.2.6+dfsg-1+deb11u1"})
+]
+extra-source "erlang-reltool_1:23.2.6+dfsg-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-reltool_23.2.6+dfsg-1+deb11u1_amd64.deb"
+}

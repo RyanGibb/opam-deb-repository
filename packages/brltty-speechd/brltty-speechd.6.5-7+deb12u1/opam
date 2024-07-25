@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i brltty-speechd_6.5-7+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r brltty-speechd"]
+]
+depends: [
+  "brltty" {= "6.5-7+deb12u1"}
+  "libc6" {>= "2.14"}
+  "libspeechd2" {>= "0.7.1"}
+]
+extra-source "brltty-speechd_6.5-7+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/brltty/brltty-speechd_6.5-7+deb12u1_amd64.deb"
+}

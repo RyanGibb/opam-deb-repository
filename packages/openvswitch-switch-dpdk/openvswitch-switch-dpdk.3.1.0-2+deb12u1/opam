@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openvswitch-switch-dpdk_3.1.0-2+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openvswitch-switch-dpdk"]
+]
+depends: [
+  "dpdk"
+  "libbpf1" {>= "1-0.7.0"}
+  "libc6" {>= "2.34"}
+  "libcap-ng0" {>= "0.7.9"}
+  "libnuma1" {>= "2.0.11"}
+  "librte-eal23" {>= "22.11"}
+  "librte-ethdev23" {>= "22.11"}
+  "librte-mbuf23" {>= "22.11"}
+  "librte-mempool23" {>= "22.11"}
+  "librte-meter23" {>= "22.11"}
+  "librte-vhost23" {>= "22.11"}
+  "libssl3" {>= "3.0.0"}
+  "libunbound8" {>= "1.8.0"}
+  "libxdp1" {>= "1.2.9~"}
+  "openvswitch-switch" {= "3.1.0-2+deb12u1"}
+]
+extra-source "openvswitch-switch-dpdk_3.1.0-2+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openvswitch/openvswitch-switch-dpdk_3.1.0-2+deb12u1_amd64.deb"
+}

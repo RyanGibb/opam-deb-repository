@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pygac_1.7.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pygac"]
+]
+depends: [
+  "python3-any"
+  "python3-bottleneck"
+  "python3-docutils"
+  "python3-geotiepoints"
+  "python3-h5py"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-pyorbital"
+  "python3-scipy"
+]
+extra-source "python3-pygac_1.7.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pygac/python3-pygac_1.7.1-2_amd64.deb"
+}

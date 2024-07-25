@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tcpick_0.2.1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tcpick"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "tcpick_0.2.1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tcpick/tcpick_0.2.1-10_amd64.deb"
+}

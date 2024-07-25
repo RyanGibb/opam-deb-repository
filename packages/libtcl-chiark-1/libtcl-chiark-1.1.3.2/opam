@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtcl-chiark-1_1.3.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtcl-chiark-1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcdb1"
+]
+extra-source "libtcl-chiark-1_1.3.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chiark-tcl/libtcl-chiark-1_1.3.2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pycparser_2.20-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pycparser"]
+]
+depends: [
+  "python-ply"
+  "python2-any" {< "2.8"}
+  "python2-any" {>= "2.7~"}
+]
+extra-source "python-pycparser_2.20-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pycparser/python-pycparser_2.20-3_all.deb"
+}

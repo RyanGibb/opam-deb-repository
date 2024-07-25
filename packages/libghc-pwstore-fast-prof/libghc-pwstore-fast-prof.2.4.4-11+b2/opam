@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-pwstore-fast-prof_2.4.4-11+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-pwstore-fast-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-base64-bytestring-prof"
+  "libghc-byteable-prof"
+  "libghc-cryptohash-prof"
+  "libghc-pwstore-fast-dev" {= "2.4.4-11+b2"}
+  "libghc-random-prof"
+]
+extra-source "libghc-pwstore-fast-prof_2.4.4-11+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pwstore-fast/libghc-pwstore-fast-prof_2.4.4-11+b2_amd64.deb"
+}

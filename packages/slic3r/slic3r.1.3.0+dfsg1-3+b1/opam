@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slic3r_1.3.0+dfsg1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slic3r"]
+]
+depends: [
+  "libboost-filesystem1-67-0"
+  "libboost-geometry-utils-perl"
+  "libboost-system1-67-0"
+  "libboost-thread1-67-0"
+  "libc6" {>= "2.17"}
+  "libencode-locale-perl"
+  "libexpat1" {>= "2.0.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libio-stringy-perl"
+  "libmath-convexhull-monotonechain-perl"
+  "libmath-geometry-voronoi-perl"
+  "libmath-planepath-perl"
+  "libmoo-perl"
+  "libstdc++6" {>= "5.2"}
+  "libstorable-perl"
+  "libtime-hires-perl"
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "slic3r_1.3.0+dfsg1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slic3r/slic3r_1.3.0+dfsg1-3+b1_amd64.deb"
+}

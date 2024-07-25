@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gstreamer1.0-gtk3_1.22.0-5+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gstreamer1.0-gtk3"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.10.0"}
+  "libglib2-0-0" {>= "2.62"}
+  "libgstreamer-gl1-0-0" {>= "1.22.0"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.22.0"}
+  "libgstreamer1-0-0" {>= "1.22.0"}
+  "libgtk-3-0" {>= "3.16.2"}
+]
+extra-source "gstreamer1.0-gtk3_1.22.0-5+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gst-plugins-good1.0/gstreamer1.0-gtk3_1.22.0-5+deb12u1_amd64.deb"
+}

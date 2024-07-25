@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlrpc-c++8v5_1.33.14-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlrpc-c++8v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libxmlrpc-core-c3" {= "1.33.14-11"}
+]
+conflicts: [
+  "libxmlrpc-c++8"
+]
+extra-source "libxmlrpc-c++8v5_1.33.14-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmlrpc-c/libxmlrpc-c++8v5_1.33.14-11_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i netlabel-tools_0.30.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r netlabel-tools"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libnl-3-200" {>= "3.2.7"}
+  "libnl-genl-3-200" {>= "3.2.21"}
+]
+extra-source "netlabel-tools_0.30.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netlabel-tools/netlabel-tools_0.30.0-1+b1_amd64.deb"
+}

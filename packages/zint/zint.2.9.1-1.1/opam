@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zint_2.9.1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zint"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libzint2-9" {>= "2.4.3"}
+]
+extra-source "zint_2.9.1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zint/zint_2.9.1-1.1_amd64.deb"
+}

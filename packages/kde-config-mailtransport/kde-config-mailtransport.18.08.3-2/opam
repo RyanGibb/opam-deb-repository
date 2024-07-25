@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kde-config-mailtransport_18.08.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kde-config-mailtransport"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libkf5configwidgets5" {>= "4.96.0"}
+  "libkf5coreaddons5" {>= "4.99.0"}
+  "libkf5mailtransport-data" {= "18.08.3-2"}
+  "libkf5mailtransport5" {>= "17.12.2"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5widgets5" {>= "5.7.0~"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "kde-config-mailtransport_18.08.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kmailtransport/kde-config-mailtransport_18.08.3-2_amd64.deb"
+}

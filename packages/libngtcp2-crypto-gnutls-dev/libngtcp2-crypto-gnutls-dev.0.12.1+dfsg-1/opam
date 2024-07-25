@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libngtcp2-crypto-gnutls-dev_0.12.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libngtcp2-crypto-gnutls-dev"]
+]
+depends: [
+  "libngtcp2-crypto-gnutls2" {= "0.12.1+dfsg-1"}
+]
+extra-source "libngtcp2-crypto-gnutls-dev_0.12.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ngtcp2/libngtcp2-crypto-gnutls-dev_0.12.1+dfsg-1_amd64.deb"
+}

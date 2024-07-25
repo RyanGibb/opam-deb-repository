@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libinteractive-markers-dev_1.12.0-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libinteractive-markers-dev"]
+]
+depends: [
+  "libinteractive-markers2d" {= "1.12.0-9"}
+  "librosconsole-dev"
+  "libroscpp-dev"
+  "librostest-dev"
+  "libstd-msgs-dev"
+  "libtf2-dev"
+  "libtf2-ros-dev"
+  "libvisualization-msgs-dev"
+  "python3-rospy"
+]
+extra-source "libinteractive-markers-dev_1.12.0-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-interactive-markers/libinteractive-markers-dev_1.12.0-9_amd64.deb"
+}

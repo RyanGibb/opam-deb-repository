@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-luasandbox_4.1.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-luasandbox"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "liblua5-1-0"
+  "php-common" {>= "1-7.0+33~"}
+  ("libapache2-mod-php8-2" | "libphp8-2-embed" | "php8-2-cgi" | "php8-2-cli" | "php8-2-fpm" | "php8-2-phpdbg")
+  ("php" | "php-cli")
+]
+extra-source "php-luasandbox_4.1.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-luasandbox/php-luasandbox_4.1.0-1+b1_amd64.deb"
+}

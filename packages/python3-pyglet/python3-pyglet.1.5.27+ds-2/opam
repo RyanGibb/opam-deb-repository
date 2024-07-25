@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyglet_1.5.27+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyglet"]
+]
+depends: [
+  "libavcodec59"
+  "libavformat59"
+  "libavutil57"
+  "libfontconfig1"
+  "libfreetype6"
+  "libswresample4"
+  "libswscale6"
+  "libx11-6"
+  "libxext6"
+  "libxi6"
+  "libxinerama1"
+  "libxxf86vm1"
+  "python3-any"
+  "python3-pil"
+  "python3-png"
+  ("libgl1" | "libgl1-mesa-swx11")
+  ("libglu1" | "libglu1-mesa")
+]
+extra-source "python3-pyglet_1.5.27+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyglet/python3-pyglet_1.5.27+ds-2_all.deb"
+}

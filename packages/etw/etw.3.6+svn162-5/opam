@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i etw_3.6+svn162-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r etw"]
+]
+depends: [
+  "etw-data" {>= "3.6+svn162-5"}
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.8.0"}
+  "libsdl1-2debian" {>= "1.2.11"}
+]
+extra-source "etw_3.6+svn162-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/etw/etw_3.6+svn162-5_amd64.deb"
+}

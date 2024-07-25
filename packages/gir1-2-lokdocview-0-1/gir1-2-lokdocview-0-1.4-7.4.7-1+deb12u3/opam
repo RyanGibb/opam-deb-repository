@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-lokdocview-0.1_4:7.4.7-1+deb12u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-lokdocview-0.1"]
+]
+depends: [
+  "gir1-2-gdkpixbuf-2-0"
+  "gir1-2-glib-2-0" {>= "1.32"}
+  "gir1-2-gtk-3-0" {>= "3.20.0"}
+  "liblibreofficekitgtk" {= "4-7.4.7-1+deb12u3"}
+]
+extra-source "gir1.2-lokdocview-0.1_4:7.4.7-1+deb12u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/gir1.2-lokdocview-0.1_7.4.7-1+deb12u3_amd64.deb"
+}

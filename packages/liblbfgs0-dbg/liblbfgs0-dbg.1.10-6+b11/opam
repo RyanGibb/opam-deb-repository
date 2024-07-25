@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblbfgs0-dbg_1.10-6+b11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblbfgs0-dbg"]
+]
+depends: [
+  "liblbfgs0" {= "1.10-6+b11"}
+]
+extra-source "liblbfgs0-dbg_1.10-6+b11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblbfgs/liblbfgs0-dbg_1.10-6+b11_amd64.deb"
+}

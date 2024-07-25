@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i minder_1.9.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r minder"]
+]
+depends: [
+  "libarchive13" {>= "3.0.4"}
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libgee-0-8-2" {>= "0.8.3"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgranite5" {>= "5.2.1"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libgtksourceview-3-0-1" {>= "2.91.4"}
+  "libmarkdown2" {>= "2.1.5"}
+  "libpango-1-0-0" {>= "1.18.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libxml2" {>= "2.7.4"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "minder_1.9.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/minder/minder_1.9.2-1_amd64.deb"
+}

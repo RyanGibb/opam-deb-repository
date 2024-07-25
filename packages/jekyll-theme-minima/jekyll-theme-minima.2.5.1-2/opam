@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jekyll-theme-minima_2.5.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jekyll-theme-minima"]
+]
+depends: [
+  "jekyll" {< "5.0"}
+  "jekyll" {>= "3.5"}
+  "ruby-jekyll-feed" {>= "0.9"}
+  "ruby-jekyll-seo-tag" {>= "2.1"}
+]
+extra-source "jekyll-theme-minima_2.5.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jekyll-theme-minima/jekyll-theme-minima_2.5.1-2_all.deb"
+}

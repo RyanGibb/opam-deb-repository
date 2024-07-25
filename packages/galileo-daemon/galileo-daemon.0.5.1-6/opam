@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i galileo-daemon_0.5.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r galileo-daemon"]
+]
+depends: [
+  "galileo" {= "0.5.1-6"}
+  "sysuser-helper" {< "1.4"}
+]
+extra-source "galileo-daemon_0.5.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/galileo/galileo-daemon_0.5.1-6_all.deb"
+}

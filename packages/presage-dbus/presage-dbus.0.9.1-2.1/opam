@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i presage-dbus_0.9.1-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r presage-dbus"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-presage" {>= "0.9.1-2.1"}
+]
+extra-source "presage-dbus_0.9.1-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/presage/presage-dbus_0.9.1-2.1_all.deb"
+}

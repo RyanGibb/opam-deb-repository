@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tryton-modules-account-payment_6.0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tryton-modules-account-payment"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "5.2"}
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-sql"
+  "tryton-modules-account" {>= "6.0"}
+  "tryton-modules-company" {>= "6.0"}
+  "tryton-modules-currency" {>= "6.0"}
+  "tryton-modules-party" {>= "6.0"}
+  "tryton-server"
+  "tryton-server" {>= "6.0"}
+]
+extra-source "tryton-modules-account-payment_6.0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tryton-modules-account-payment/tryton-modules-account-payment_6.0.3-2_all.deb"
+}

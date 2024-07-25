@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx-anthy_0.2.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx-anthy"]
+]
+depends: [
+  "anthy"
+  "fcitx-bin"
+  "fcitx-data" {>= "1-4.2.9.2"}
+  "fcitx-modules"
+  "libanthy1"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "fcitx-anthy_0.2.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx-anthy/fcitx-anthy_0.2.4-1_amd64.deb"
+}

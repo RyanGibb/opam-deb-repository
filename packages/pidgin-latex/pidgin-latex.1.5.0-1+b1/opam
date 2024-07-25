@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pidgin-latex_1.5.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pidgin-latex"]
+]
+depends: [
+  "dvipng"
+  "libc6" {>= "2.3.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libpurple0" {>= "2.5.0"}
+  "pidgin" {>= "2.7.3"}
+  "texlive-latex-base"
+]
+conflicts: [
+  "gaim-encryption"
+]
+extra-source "pidgin-latex_1.5.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pidgin-latex/pidgin-latex_1.5.0-1+b1_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-megadepth_1.8.0+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-megadepth"]
+]
+depends: [
+  "megadepth"
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-genomicranges"
+  "r-cran-cmdfun"
+  "r-cran-dplyr"
+  "r-cran-fs"
+  "r-cran-magrittr"
+  "r-cran-readr"
+  "r-cran-xfun"
+]
+extra-source "r-bioc-megadepth_1.8.0+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-megadepth/r-bioc-megadepth_1.8.0+ds-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cmus-plugin-ffmpeg_2.9.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cmus-plugin-ffmpeg"]
+]
+depends: [
+  "cmus" {= "2.9.1-1"}
+  "libavcodec-extra58"
+  "libavformat58" {>= "7-4.1"}
+  "libc6" {>= "2.14"}
+  "libswresample3" {>= "7-4.0"}
+]
+extra-source "cmus-plugin-ffmpeg_2.9.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cmus/cmus-plugin-ffmpeg_2.9.1-1_amd64.deb"
+}

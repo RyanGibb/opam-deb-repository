@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libelk0_3.99.8-4.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libelk0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libelf1" {>= "0.131"}
+  "libice6" {>= "1-1.0.0"}
+  "libsm6"
+  "libx11-6"
+  "libxext6"
+  "libxmu6"
+  "libxt6"
+]
+conflicts: [
+  "elk (<< 3.99-1)"
+]
+extra-source "libelk0_3.99.8-4.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elk/libelk0_3.99.8-4.2+b1_amd64.deb"
+}

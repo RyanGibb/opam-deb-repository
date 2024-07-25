@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhfst-dev_3.16.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhfst-dev"]
+]
+depends: [
+  "hfst" {= "3.16.0-5"}
+  "libhfst55" {= "3.16.0-5"}
+  "libicu-dev"
+]
+conflicts: [
+  "libhfst3-dev"
+]
+extra-source "libhfst-dev_3.16.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hfst/libhfst-dev_3.16.0-5_amd64.deb"
+}

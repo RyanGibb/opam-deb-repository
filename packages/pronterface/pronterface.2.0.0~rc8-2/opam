@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pronterface_2.0.0~rc8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pronterface"]
+]
+depends: [
+  "pronsole" {= "2.0.0~rc8-2"}
+  "python3-any"
+  "python3-cairosvg"
+  "python3-gi"
+  "python3-libxml2"
+  "python3-numpy"
+  "python3-pyglet"
+  "python3-wxgtk4-0"
+]
+extra-source "pronterface_2.0.0~rc8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/printrun/pronterface_2.0.0~rc8-2_all.deb"
+}

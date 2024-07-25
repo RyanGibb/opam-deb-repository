@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libucimf-dev_2.3.8-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libucimf-dev"]
+]
+depends: [
+  "libucimf0" {= "2.3.8-10"}
+]
+conflicts: [
+  "libucimf-dev"
+]
+extra-source "libucimf-dev_2.3.8-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libucimf/libucimf-dev_2.3.8-10_amd64.deb"
+}

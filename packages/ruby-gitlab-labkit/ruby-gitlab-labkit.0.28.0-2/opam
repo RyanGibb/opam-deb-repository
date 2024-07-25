@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-gitlab-labkit_0.28.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-gitlab-labkit"]
+]
+depends: [
+  "ruby-actionpack" {< "2-8.0.0"}
+  "ruby-actionpack" {>= "2-5.0.0"}
+  "ruby-activesupport" {< "2-8.0.0"}
+  "ruby-activesupport" {>= "2-5.0.0"}
+  "ruby-grpc" {>= "1.37"}
+  "ruby-jaeger-client" {>= "1.1"}
+  "ruby-opentracing" {>= "0.4"}
+  "ruby-pg-query" {>= "2.1"}
+  "ruby-redis" {< "6.0.0"}
+  "ruby-redis" {> "3.0.0"}
+]
+extra-source "ruby-gitlab-labkit_0.28.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-gitlab-labkit/ruby-gitlab-labkit_0.28.0-2_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnblib-gmx0_2022.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnblib-gmx0"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libgromacs7" {>= "2022.5"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libnblib-gmx0_2022.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gromacs/libnblib-gmx0_2022.5-2_amd64.deb"
+}

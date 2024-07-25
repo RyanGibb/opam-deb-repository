@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsml-dev_0.1.1+git20180125-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsml-dev"]
+]
+depends: [
+  "libsml1" {= "0.1.1+git20180125-1.1"}
+  "uuid-dev" {>= "2.16"}
+]
+extra-source "libsml-dev_0.1.1+git20180125-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsml/libsml-dev_0.1.1+git20180125-1.1_amd64.deb"
+}

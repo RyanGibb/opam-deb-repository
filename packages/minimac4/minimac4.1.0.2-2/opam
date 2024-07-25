@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i minimac4_1.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r minimac4"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1"
+  "libgomp1" {>= "4.9"}
+  "libstatgen0" {>= "1.0.14"}
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "minimac4_1.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/minimac4/minimac4_1.0.2-2_amd64.deb"
+}

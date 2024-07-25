@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-ogg+async-dev_0.7.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-ogg+async-dev"]
+]
+depends: [
+  "librust-bytes-0-4+default-dev"
+  "librust-futures-0-1+default-dev"
+  "librust-ogg-dev" {= "0.7.0-1+b2"}
+  "librust-tokio-io-0-1+default-dev"
+]
+extra-source "librust-ogg+async-dev_0.7.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-ogg/librust-ogg+async-dev_0.7.0-1+b2_amd64.deb"
+}

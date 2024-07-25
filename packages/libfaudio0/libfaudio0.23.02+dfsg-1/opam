@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfaudio0_23.02+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfaudio0"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libsdl2-2-0-0" {>= "2.24.0"}
+  "libstb0" {>= "0.0~git20180212.15.e6afb9c"}
+]
+extra-source "libfaudio0_23.02+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/faudio/libfaudio0_23.02+dfsg-1_amd64.deb"
+}

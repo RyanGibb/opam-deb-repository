@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uuagc_0.9.42.3-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uuagc"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libffi6" {>= "3.0.4"}
+  "libgmp10"
+]
+extra-source "uuagc_0.9.42.3-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uuagc/uuagc_0.9.42.3-11_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibus-keyman_16.0.138-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibus-keyman"]
+]
+depends: [
+  "ibus" {>= "1.3.7"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.9.10"}
+  "libibus-1-0-5" {>= "1.5.14"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libkmnkbp0-0" {= "16.0.138-4"}
+  "libx11-6"
+  "sudo"
+]
+extra-source "ibus-keyman_16.0.138-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/keyman/ibus-keyman_16.0.138-4_amd64.deb"
+}

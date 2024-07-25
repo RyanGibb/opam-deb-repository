@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzookeeper-mt-dev_3.4.13-6+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzookeeper-mt-dev"]
+]
+depends: [
+  "libzookeeper-mt2" {= "3.4.13-6+deb11u1"}
+]
+conflicts: [
+  "libzookeeper-dev"
+]
+extra-source "libzookeeper-mt-dev_3.4.13-6+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zookeeper/libzookeeper-mt-dev_3.4.13-6+deb11u1_amd64.deb"
+}

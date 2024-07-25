@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mpack_1.6-17_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mpack"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "mpack_1.6-17_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpack/mpack_1.6-17_amd64.deb"
+}

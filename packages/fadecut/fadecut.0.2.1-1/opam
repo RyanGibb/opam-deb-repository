@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fadecut_0.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fadecut"]
+]
+depends: [
+  "id3v2"
+  "libsox-fmt-mp3"
+  "mediainfo" {>= "0.7.80"}
+  "opus-tools"
+  "sox"
+  "streamripper"
+  ("vorbis-tools" | "lame")
+]
+extra-source "fadecut_0.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fadecut/fadecut_0.2.1-1_all.deb"
+}

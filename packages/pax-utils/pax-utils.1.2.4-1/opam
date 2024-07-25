@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pax-utils_1.2.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pax-utils"]
+]
+depends: [
+  "binutils"
+  "libc6" {>= "2.27"}
+  "libcap2" {>= "1-2.10"}
+]
+extra-source "pax-utils_1.2.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pax-utils/pax-utils_1.2.4-1_amd64.deb"
+}

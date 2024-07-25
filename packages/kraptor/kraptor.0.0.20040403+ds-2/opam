@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kraptor_0.0.20040403+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kraptor"]
+]
+depends: [
+  "kraptor-data" {= "0.0.20040403+ds-2"}
+  "libaldmb1"
+  "liballegro4-4"
+  "libc6" {>= "2.4"}
+  "libdumb1"
+]
+extra-source "kraptor_0.0.20040403+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kraptor/kraptor_0.0.20040403+ds-2_amd64.deb"
+}

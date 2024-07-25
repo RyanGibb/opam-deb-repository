@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-parking-lot-0.7+deadlock-detection-dev_0.7.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-parking-lot-0.7+deadlock-detection-dev"]
+]
+depends: [
+  "librust-parking-lot-0-7-dev" {= "0.7.1-1+b1"}
+  "librust-parking-lot-core-0-4+deadlock-detection-dev"
+]
+extra-source "librust-parking-lot-0.7+deadlock-detection-dev_0.7.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-parking-lot-0.7/librust-parking-lot-0.7+deadlock-detection-dev_0.7.1-1+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-digest-dev_0.0.1.3-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-digest-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "zlib1g" {>= "1-1.1.4"}
+  "zlib1g-dev"
+]
+extra-source "libghc-digest-dev_0.0.1.3-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-digest/libghc-digest-dev_0.0.1.3-1+b4_amd64.deb"
+}

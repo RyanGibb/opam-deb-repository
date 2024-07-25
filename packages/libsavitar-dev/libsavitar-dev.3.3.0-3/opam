@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsavitar-dev_3.3.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsavitar-dev"]
+]
+depends: [
+  "libpugixml-dev" {>= "1.7"}
+  "libsavitar0" {= "3.3.0-3"}
+]
+extra-source "libsavitar-dev_3.3.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsavitar/libsavitar-dev_3.3.0-3_amd64.deb"
+}

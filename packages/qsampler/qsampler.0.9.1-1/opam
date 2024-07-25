@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qsampler_0.9.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qsampler"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgig9" {>= "4.2.0~ds1"}
+  "liblscp6" {>= "0.5.8~repack"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "qsampler_0.9.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qsampler/qsampler_0.9.1-1_amd64.deb"
+}

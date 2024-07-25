@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mason_1.0.0-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mason"]
+]
+depends: [
+  "bash" {>= "2.04-1"}
+  ("debconf" {>= "1.2.0"} | "debconf-2-0")
+]
+extra-source "mason_1.0.0-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mason/mason_1.0.0-13_all.deb"
+}

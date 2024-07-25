@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libluajit-5.1-2_2.1.0~beta3+dfsg-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libluajit-5.1-2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.3"}
+  "libluajit-5-1-common" {= "2.1.0~beta3+dfsg-5.1"}
+]
+extra-source "libluajit-5.1-2_2.1.0~beta3+dfsg-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/luajit/libluajit-5.1-2_2.1.0~beta3+dfsg-5.1_amd64.deb"
+}

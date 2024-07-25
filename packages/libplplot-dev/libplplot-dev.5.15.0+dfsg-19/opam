@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplplot-dev_5.15.0+dfsg-19_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplplot-dev"]
+]
+depends: [
+  "libcsirocsa0" {= "5.15.0+dfsg-19"}
+  "libcsironn0" {= "5.15.0+dfsg-19"}
+  "libfreetype6-dev"
+  "libltdl-dev"
+  "libplplot17" {= "5.15.0+dfsg-19"}
+  "libplplotcxx15" {= "5.15.0+dfsg-19"}
+  "libplplotfortran0" {= "5.15.0+dfsg-19"}
+  "libplplotqt2" {= "5.15.0+dfsg-19"}
+  "libplplotwxwidgets1" {= "5.15.0+dfsg-19"}
+  "libqhull-dev"
+  "libqsastime-dev"
+  "libshp-dev"
+  ("gfortran-9" | "gfortran-mod-15")
+]
+extra-source "libplplot-dev_5.15.0+dfsg-19_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plplot/libplplot-dev_5.15.0+dfsg-19_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gkdebconf_2.1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gkdebconf"]
+]
+depends: [
+  "gettext-base"
+  "libc6" {>= "2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.26.0"}
+  "libgtk-3-0" {>= "3.9.12"}
+  "ssh-askpass"
+  "sudo"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("debconf" | "debconf-2-0")
+  ("xterm" | "x-terminal-emulator")
+]
+extra-source "gkdebconf_2.1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gkdebconf/gkdebconf_2.1.1_amd64.deb"
+}

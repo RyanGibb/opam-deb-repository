@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5xdg-dev_3.10.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5xdg-dev"]
+]
+depends: [
+  "libmagic-dev"
+  "libqt5xdg3" {= "3.10.0-2+b2"}
+  "libqt5xdgiconloader-dev" {= "3.10.0-2+b2"}
+]
+extra-source "libqt5xdg-dev_3.10.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libq/libqtxdg/libqt5xdg-dev_3.10.0-2+b2_amd64.deb"
+}

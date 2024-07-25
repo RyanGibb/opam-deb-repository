@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-openvswitch_2.10.7+ds1-0+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-openvswitch"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-six"
+  "python-sortedcontainers"
+]
+extra-source "python-openvswitch_2.10.7+ds1-0+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openvswitch/python-openvswitch_2.10.7+ds1-0+deb10u1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgit2-dev_0.27.7+dfsg.1-0.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgit2-dev"]
+]
+depends: [
+  "libgit2-27" {= "0.27.7+dfsg.1-0.2"}
+  "libhttp-parser-dev"
+  "libmbedtls-dev"
+  "libssh2-1-dev"
+  "zlib1g-dev"
+]
+extra-source "libgit2-dev_0.27.7+dfsg.1-0.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgit2/libgit2-dev_0.27.7+dfsg.1-0.2_amd64.deb"
+}

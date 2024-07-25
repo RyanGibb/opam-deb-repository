@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i svt-av1_1.4.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r svt-av1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libsvtav1dec0" {>= "1.4.1+dfsg"}
+  "libsvtav1enc1" {>= "1.4.1+dfsg"}
+]
+extra-source "svt-av1_1.4.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/svt-av1/svt-av1_1.4.1+dfsg-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i primrose_6+dfsg1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r primrose"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "5"}
+  ("libgl1-mesa-glx" | "libgl1")
+]
+extra-source "primrose_6+dfsg1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/primrose/primrose_6+dfsg1-4_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-maxminddb+memmap-dev_0.13.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-maxminddb+memmap-dev"]
+]
+depends: [
+  "librust-maxminddb-dev" {= "0.13.0-1"}
+  "librust-memmap-0-7+default-dev"
+]
+extra-source "librust-maxminddb+memmap-dev_0.13.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-maxminddb/librust-maxminddb+memmap-dev_0.13.0-1_amd64.deb"
+}

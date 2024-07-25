@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dracut_051-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dracut"]
+]
+depends: [
+  "dracut-core" {< "051-1+b+~"}
+  "dracut-core" {>= "051-1"}
+]
+conflicts: [
+  "initramfs-tools"
+  "live-tools"
+]
+extra-source "dracut_051-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dracut/dracut_051-1_all.deb"
+}

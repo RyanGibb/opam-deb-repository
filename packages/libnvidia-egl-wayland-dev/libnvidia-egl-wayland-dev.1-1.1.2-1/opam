@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnvidia-egl-wayland-dev_1:1.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnvidia-egl-wayland-dev"]
+]
+depends: [
+  "libnvidia-egl-wayland1" {= "1-1.1.2-1"}
+]
+extra-source "libnvidia-egl-wayland-dev_1:1.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/egl-wayland/libnvidia-egl-wayland-dev_1.1.2-1_amd64.deb"
+}

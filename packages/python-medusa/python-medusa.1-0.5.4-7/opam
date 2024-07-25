@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-medusa_1:0.5.4-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-medusa"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  ("python2-6" | "python2-7")
+]
+extra-source "python-medusa_1:0.5.4-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-medusa/python-medusa_0.5.4-7_all.deb"
+}

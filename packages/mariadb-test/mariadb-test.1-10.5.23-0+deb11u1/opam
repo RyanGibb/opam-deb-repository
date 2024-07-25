@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mariadb-test_1:10.5.23-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mariadb-test"]
+]
+depends: [
+  "libaio1" {>= "0.3.93"}
+  "libc6" {>= "2.30"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libpcre2-8-0" {>= "10.22"}
+  "libpcre2-posix2" {>= "10.34"}
+  "libsnappy1v5" {>= "1.1.8"}
+  "libssl1-1" {>= "1.1.1"}
+  "libstdc++6" {>= "9"}
+  "mariadb-client-10-5" {= "1-10.5.23-0+deb11u1"}
+  "mariadb-server-10-5" {= "1-10.5.23-0+deb11u1"}
+  "mariadb-test-data" {= "1-10.5.23-0+deb11u1"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "mariadb-test_1:10.5.23-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-test_10.5.23-0+deb11u1_amd64.deb"
+}

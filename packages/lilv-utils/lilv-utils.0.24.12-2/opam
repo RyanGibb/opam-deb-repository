@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lilv-utils_0.24.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lilv-utils"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "liblilv-0-0" {>= "0.20.0~dfsg0"}
+  "libsndfile1" {>= "1.0.20"}
+]
+extra-source "lilv-utils_0.24.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lilv/lilv-utils_0.24.12-2_amd64.deb"
+}

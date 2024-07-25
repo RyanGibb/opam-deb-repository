@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libudt0_4.11+dfsg1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libudt0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libudt0_4.11+dfsg1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/udt/libudt0_4.11+dfsg1-1+b1_amd64.deb"
+}

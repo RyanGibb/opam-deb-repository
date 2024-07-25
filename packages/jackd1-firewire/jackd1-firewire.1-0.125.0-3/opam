@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jackd1-firewire_1:0.125.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jackd1-firewire"]
+]
+depends: [
+  "jackd1" {= "1-0.125.0-3"}
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.4"}
+  "libdb5-3"
+  "libffado2" {>= "2.0"}
+  "libjack0" {>= "1-0.125.0"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+conflicts: [
+  "jackd-firewire"
+]
+extra-source "jackd1-firewire_1:0.125.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jack-audio-connection-kit/jackd1-firewire_0.125.0-3_amd64.deb"
+}

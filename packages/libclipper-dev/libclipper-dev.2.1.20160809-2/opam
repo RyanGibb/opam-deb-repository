@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclipper-dev_2.1.20160809-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclipper-dev"]
+]
+depends: [
+  "fftw-dev"
+  "libccp4-dev"
+  "libclipper2" {= "2.1.20160809-2"}
+  "libmmdb2-dev"
+  "sfftw-dev"
+]
+extra-source "libclipper-dev_2.1.20160809-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clipper/libclipper-dev_2.1.20160809-2_amd64.deb"
+}

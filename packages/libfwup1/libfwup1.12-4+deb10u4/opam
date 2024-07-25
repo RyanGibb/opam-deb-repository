@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfwup1_12-4+deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfwup1"]
+]
+depends: [
+  "libc6" {>= "2.22"}
+  "libefiboot1" {>= "37"}
+  "libefivar1" {>= "37"}
+  "libsmbios-c2"
+]
+extra-source "libfwup1_12-4+deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fwupdate/libfwup1_12-4+deb10u4_amd64.deb"
+}

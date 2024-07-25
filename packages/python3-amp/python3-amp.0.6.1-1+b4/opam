@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-amp_0.6.1-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-amp"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgfortran5" {>= "10"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any" {>= "3.5~"}
+  "python3-ase" {>= "3.14.0~"}
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  "python3-scipy"
+]
+extra-source "python3-amp_0.6.1-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/amp/python3-amp_0.6.1-1+b4_amd64.deb"
+}

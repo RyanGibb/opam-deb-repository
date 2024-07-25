@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-harfbuzz-rs-dev_1.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-harfbuzz-rs-dev"]
+]
+depends: [
+  "librust-bitflags-1+default-dev"
+  ("librust-harfbuzz-sys-0-4+build-native-freetype-dev" | "librust-harfbuzz-sys-0-3+build-native-freetype-dev")
+  ("librust-harfbuzz-sys-0-4+build-native-harfbuzz-dev" | "librust-harfbuzz-sys-0-3+build-native-harfbuzz-dev")
+  ("librust-harfbuzz-sys-0-4-dev" | "librust-harfbuzz-sys-0-3-dev")
+]
+extra-source "librust-harfbuzz-rs-dev_1.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-harfbuzz-rs/librust-harfbuzz-rs-dev_1.2.0-2_amd64.deb"
+}

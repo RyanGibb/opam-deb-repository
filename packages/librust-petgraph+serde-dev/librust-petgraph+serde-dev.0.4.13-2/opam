@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-petgraph+serde-dev_0.4.13-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-petgraph+serde-dev"]
+]
+depends: [
+  "librust-petgraph-dev" {= "0.4.13-2"}
+  "librust-serde-1+default-dev"
+]
+extra-source "librust-petgraph+serde-dev_0.4.13-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-petgraph/librust-petgraph+serde-dev_0.4.13-2_amd64.deb"
+}

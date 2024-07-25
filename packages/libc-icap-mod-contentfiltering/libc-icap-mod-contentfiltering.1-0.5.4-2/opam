@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libc-icap-mod-contentfiltering_1:0.5.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libc-icap-mod-contentfiltering"]
+]
+depends: [
+  "c-icap" {>= "1-0.2.5~"}
+  "libc6" {>= "2.4"}
+]
+extra-source "libc-icap-mod-contentfiltering_1:0.5.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/c-icap-modules/libc-icap-mod-contentfiltering_0.5.4-2_amd64.deb"
+}

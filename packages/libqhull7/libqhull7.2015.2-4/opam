@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqhull7_2015.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqhull7"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libqhull7_2015.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qhull/libqhull7_2015.2-4_amd64.deb"
+}

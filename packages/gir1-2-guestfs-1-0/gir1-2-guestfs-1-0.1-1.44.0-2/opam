@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-guestfs-1.0_1:1.44.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-guestfs-1.0"]
+]
+depends: [
+  "gir1-2-glib-2-0"
+  "libguestfs-gobject-1-0-0" {= "1-1.44.0-2"}
+]
+conflicts: [
+  "libguestfs0 (<< 1:1.14.9-1~)"
+]
+extra-source "gir1.2-guestfs-1.0_1:1.44.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libguestfs/gir1.2-guestfs-1.0_1.44.0-2_amd64.deb"
+}

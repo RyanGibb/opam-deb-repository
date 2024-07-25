@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgrilo-0.3-0_0.3.15-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgrilo-0.3-0"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libglib2-0-0" {>= "2.65.1"}
+  "libsoup2-4-1" {>= "2.41.90"}
+  "libtotem-plparser18" {>= "3.26.0"}
+]
+extra-source "libgrilo-0.3-0_0.3.15-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grilo/libgrilo-0.3-0_0.3.15-1_amd64.deb"
+}

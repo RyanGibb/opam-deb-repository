@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvotca-tools5_1.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvotca-tools5"]
+]
+depends: [
+  "libboost-filesystem1-67-0"
+  "libboost-program-options1-67-0"
+  "libboost-system1-67-0"
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc1" {>= "1-3.0"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libvotca-tools5_1.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/votca-tools/libvotca-tools5_1.5-2_amd64.deb"
+}

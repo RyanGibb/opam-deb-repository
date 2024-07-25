@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsocksd0_1.4.2+dfsg-7+b8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsocksd0"]
+]
+depends: [
+  "libc6" {< "2.37"}
+  "libc6" {> "2.36"}
+]
+extra-source "libsocksd0_1.4.2+dfsg-7+b8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dante/libsocksd0_1.4.2+dfsg-7+b8_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vlc_3.0.21-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vlc"]
+]
+depends: [
+  "vlc-bin" {= "3.0.21-0+deb11u1"}
+  "vlc-plugin-base" {= "3.0.21-0+deb11u1"}
+  "vlc-plugin-qt" {= "3.0.21-0+deb11u1"}
+  "vlc-plugin-video-output" {= "3.0.21-0+deb11u1"}
+]
+extra-source "vlc_3.0.21-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vlc/vlc_3.0.21-0+deb11u1_amd64.deb"
+}

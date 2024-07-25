@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzonemaster-ldns-perl_3.1.0+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzonemaster-ldns-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libidn2-0" {>= "2.0.0"}
+  "libldns3" {>= "1.8.3"}
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "libzonemaster-ldns-perl_3.1.0+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libz/libzonemaster-ldns-perl/libzonemaster-ldns-perl_3.1.0+ds-1_amd64.deb"
+}

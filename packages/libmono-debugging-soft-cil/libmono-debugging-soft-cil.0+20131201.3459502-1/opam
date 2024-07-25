@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmono-debugging-soft-cil_0+20131201.3459502-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmono-debugging-soft-cil"]
+]
+depends: [
+  "libmono-corlib4-5-cil" {>= "1.0"}
+  "libmono-debugger-soft-cil" {>= "0+20131201.3459502"}
+  "libmono-debugging-cil" {>= "0+20131201.3459502"}
+  "libmono-system-core4-0-cil" {>= "3.0.6"}
+  "libmono-system4-0-cil" {>= "3.0.6"}
+  ("libc6" {>= "2.17"} | "libc6-1" {>= "2.17"} | "libc0-1" {>= "2.17"})
+]
+extra-source "libmono-debugging-soft-cil_0+20131201.3459502-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mono-debugger-libs/libmono-debugging-soft-cil_0+20131201.3459502-1_all.deb"
+}

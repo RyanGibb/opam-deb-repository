@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gap-io_4.7.0+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gap-io"]
+]
+depends: [
+  "gap" {>= "4.11.0"}
+  "gap-core"
+  "libc6" {>= "2.15"}
+]
+extra-source "gap-io_4.7.0+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gap-io/gap-io_4.7.0+ds-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-uri-encode-prof_1.5.0.7-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-uri-encode-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-network-uri-prof"
+  "libghc-uri-encode-dev" {= "1.5.0.7-1+b2"}
+  "libghc-utf8-string-prof"
+]
+extra-source "libghc-uri-encode-prof_1.5.0.7-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-uri-encode/libghc-uri-encode-prof_1.5.0.7-1+b2_amd64.deb"
+}

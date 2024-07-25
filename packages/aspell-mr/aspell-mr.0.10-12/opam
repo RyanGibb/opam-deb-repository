@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aspell-mr_0.10-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aspell-mr"]
+]
+depends: [
+  "aspell"
+  "dictionaries-common" {>= "1.23~"}
+]
+extra-source "aspell-mr_0.10-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aspell-mr/aspell-mr_0.10-12_all.deb"
+}

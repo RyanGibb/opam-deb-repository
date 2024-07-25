@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librpm-dev_4.18.0+dfsg-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librpm-dev"]
+]
+depends: [
+  "libaudit-dev"
+  "libbz2-dev"
+  "libfsverity-dev"
+  "libgcrypt20-dev"
+  "libpopt-dev"
+  "libreadline-dev"
+  "librpm9" {= "4.18.0+dfsg-1+deb12u1"}
+  "librpmbuild9" {= "4.18.0+dfsg-1+deb12u1"}
+  "librpmio9" {= "4.18.0+dfsg-1+deb12u1"}
+  "librpmsign9" {= "4.18.0+dfsg-1+deb12u1"}
+  "libselinux1-dev"
+  "libsqlite3-dev"
+  "libxml2-dev"
+  "libzstd-dev"
+  "zlib1g-dev"
+]
+extra-source "librpm-dev_4.18.0+dfsg-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rpm/librpm-dev_4.18.0+dfsg-1+deb12u1_amd64.deb"
+}

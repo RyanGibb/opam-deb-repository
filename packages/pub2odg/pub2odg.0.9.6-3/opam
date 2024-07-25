@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pub2odg_0.9.6-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pub2odg"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libeot0"
+  "libgcc-s1" {>= "3.0"}
+  "libmspub-0-1-1"
+  "libodfgen-0-1-1"
+  "librevenge-0-0-0"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "pub2odg_0.9.6-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/writerperfect/pub2odg_0.9.6-3_amd64.deb"
+}

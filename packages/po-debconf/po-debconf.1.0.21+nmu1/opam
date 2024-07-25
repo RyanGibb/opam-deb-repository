@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i po-debconf_1.0.21+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r po-debconf"]
+]
+depends: [
+  "gettext" {>= "0.16"}
+  "intltool-debian" {>= "0.34.2+20060512"}
+  "perl"
+  "sensible-utils"
+]
+extra-source "po-debconf_1.0.21+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/po-debconf/po-debconf_1.0.21+nmu1_all.deb"
+}

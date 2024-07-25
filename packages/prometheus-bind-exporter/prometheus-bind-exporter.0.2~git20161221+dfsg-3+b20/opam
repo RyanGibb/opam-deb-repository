@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-bind-exporter_0.2~git20161221+dfsg-3+b20_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-bind-exporter"]
+]
+depends: [
+  "libc6" {>= "2.3.2"}
+  ("daemon" | "systemd-sysv")
+]
+extra-source "prometheus-bind-exporter_0.2~git20161221+dfsg-3+b20_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-bind-exporter/prometheus-bind-exporter_0.2~git20161221+dfsg-3+b20_amd64.deb"
+}

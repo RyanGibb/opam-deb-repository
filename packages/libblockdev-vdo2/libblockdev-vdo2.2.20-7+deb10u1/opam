@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libblockdev-vdo2_2.20-7+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libblockdev-vdo2"]
+]
+depends: [
+  "libblockdev-utils2" {>= "2.20"}
+  "libbytesize1"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.42.2"}
+  "libyaml-0-2"
+]
+extra-source "libblockdev-vdo2_2.20-7+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libblockdev/libblockdev-vdo2_2.20-7+deb10u1_amd64.deb"
+}

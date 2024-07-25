@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i twms_0.07z-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r twms"]
+]
+depends: [
+  "adduser"
+  "python3-any"
+  "python3-pil"
+  "python3-webpy" {>= "1-0.33"}
+]
+extra-source "twms_0.07z-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/twms/twms_0.07z-1_all.deb"
+}

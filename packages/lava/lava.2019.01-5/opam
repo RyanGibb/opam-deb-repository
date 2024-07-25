@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lava_2019.01-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lava"]
+]
+depends: [
+  "bridge-utils"
+  "debootstrap" {>= "1.0.86~"}
+  "lava-coordinator"
+  "lava-dev"
+  "lava-dispatcher" {>= "2019.01-5"}
+  "lava-server" {>= "2019.01-5"}
+  "lava-server-doc"
+  "lavacli"
+  "lavapdu-client"
+  "lxc" {>= "1-2.0.6"}
+  "openssh-client"
+  "rsync"
+  "sudo"
+  "telnet"
+  "tftpd-hpa"
+  ("ntp" | "ntpdate")
+]
+extra-source "lava_2019.01-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lava/lava_2019.01-5_all.deb"
+}

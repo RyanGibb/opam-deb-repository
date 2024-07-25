@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i llvm-14-dev_1:14.0.6-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r llvm-14-dev"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libclang-cpp14" {= "1-14.0.6-12"}
+  "libffi-dev"
+  "libgcc-s1" {>= "3.0"}
+  "libllvm14" {= "1-14.0.6-12"}
+  "libstdc++6" {>= "4.1.1"}
+  "libtinfo-dev"
+  "libxml2-dev"
+  "libz3-dev"
+  "llvm-14" {= "1-14.0.6-12"}
+  "llvm-14-tools" {= "1-14.0.6-12"}
+]
+extra-source "llvm-14-dev_1:14.0.6-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-14/llvm-14-dev_14.0.6-12_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-estimatr_1.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-estimatr"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-cran-formula"
+  "r-cran-generics"
+  "r-cran-rcpp" {>= "0.12.16"}
+  "r-cran-rcppeigen"
+  "r-cran-rlang" {>= "0.2.0"}
+]
+extra-source "r-cran-estimatr_1.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-estimatr/r-cran-estimatr_1.0.0-3_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenturns-dev_1.20-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenturns-dev"]
+]
+depends: [
+  "libceres-dev"
+  "libhmat-oss-dev"
+  "libopenturns0-21" {= "1.20-9"}
+]
+extra-source "libopenturns-dev_1.20-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openturns/libopenturns-dev_1.20-9_amd64.deb"
+}

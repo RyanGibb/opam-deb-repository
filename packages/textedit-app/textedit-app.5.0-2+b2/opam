@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i textedit.app_5.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r textedit.app"]
+]
+depends: [
+  "gnustep-back0-28" {>= "0.28.0"}
+  "gnustep-base-runtime" {>= "1.27.0"}
+  "gnustep-gui-runtime" {>= "0.28.0"}
+  "libc6" {>= "2.14"}
+  "libgnustep-base1-27" {>= "1.27.0"}
+  "libgnustep-gui0-28" {>= "0.28.0"}
+  "libobjc4" {>= "4.2.1"}
+]
+extra-source "textedit.app_5.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/textedit.app/textedit.app_5.0-2+b2_amd64.deb"
+}

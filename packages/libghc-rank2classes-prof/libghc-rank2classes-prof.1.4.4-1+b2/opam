@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-rank2classes-prof_1.4.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-rank2classes-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-distributive-prof"
+  "libghc-rank2classes-dev" {= "1.4.4-1+b2"}
+]
+extra-source "libghc-rank2classes-prof_1.4.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-rank2classes/libghc-rank2classes-prof_1.4.4-1+b2_amd64.deb"
+}

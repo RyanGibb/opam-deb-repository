@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fsprotect_1.0.7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fsprotect"]
+]
+depends: [
+  "aufs-dkms"
+  "init-system-helpers" {>= "1.18~"}
+  "initramfs-tools"
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "fsprotect_1.0.7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fsprotect/fsprotect_1.0.7_all.deb"
+}

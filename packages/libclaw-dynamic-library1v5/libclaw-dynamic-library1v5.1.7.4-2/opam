@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclaw-dynamic-library1v5_1.7.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclaw-dynamic-library1v5"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libclaw-dynamic-library1"
+]
+extra-source "libclaw-dynamic-library1v5_1.7.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libclaw/libclaw-dynamic-library1v5_1.7.4-2_amd64.deb"
+}

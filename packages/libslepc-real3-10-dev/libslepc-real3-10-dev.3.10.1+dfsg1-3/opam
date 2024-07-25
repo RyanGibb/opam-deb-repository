@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libslepc-real3.10-dev_3.10.1+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libslepc-real3.10-dev"]
+]
+depends: [
+  "libarpack2-dev"
+  "libhdf5-mpi-dev"
+  "libparpack2-dev"
+  "libpetsc-real3-10-dev"
+  "libslepc-real3-10" {= "3.10.1+dfsg1-3"}
+  ("gfortran-8" | "gfortran")
+]
+conflicts: [
+  "libslepc2.3.2-dev"
+]
+extra-source "libslepc-real3.10-dev_3.10.1+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slepc/libslepc-real3.10-dev_3.10.1+dfsg1-3_amd64.deb"
+}

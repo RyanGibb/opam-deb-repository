@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i grub-cloud-amd64_0.0.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r grub-cloud-amd64"]
+]
+depends: [
+  "grub-efi-amd64-bin"
+  "grub-efi-amd64-signed"
+  "grub-pc-bin"
+  "grub2-common" {>= "2.02+dfsg1-7"}
+  "shim-signed"
+]
+extra-source "grub-cloud-amd64_0.0.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grub-cloud/grub-cloud-amd64_0.0.5_amd64.deb"
+}

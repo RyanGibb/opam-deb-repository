@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i avfs_1.0.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r avfs"]
+]
+depends: [
+  "fuse"
+  "libbz2-1-0"
+  "libc6" {>= "2.17"}
+  "libfuse2" {>= "2.6"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libzstd1" {>= "1.3.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "avfs_1.0.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/avfs/avfs_1.0.6-1_amd64.deb"
+}

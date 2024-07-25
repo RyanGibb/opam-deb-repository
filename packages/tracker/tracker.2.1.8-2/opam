@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tracker_2.1.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tracker"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.45.3"}
+  "libglib2-0-bin"
+  "libtracker-control-2-0-0" {= "2.1.8-2"}
+  "libtracker-sparql-2-0-0" {= "2.1.8-2"}
+  "shared-mime-info"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("default-dbus-session-bus" | "dbus-session-bus")
+]
+extra-source "tracker_2.1.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tracker/tracker_2.1.8-2_amd64.deb"
+}

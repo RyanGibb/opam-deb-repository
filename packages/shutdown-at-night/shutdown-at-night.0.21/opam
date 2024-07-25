@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shutdown-at-night_0.21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shutdown-at-night"]
+]
+depends: [
+  "ethtool"
+  "fping"
+  "ng-utils"
+  "perl-any"
+  "wakeonlan"
+  "x11-utils"
+  ("cron" | "cron-daemon")
+]
+extra-source "shutdown-at-night_0.21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shutdown-at-night/shutdown-at-night_0.21_all.deb"
+}

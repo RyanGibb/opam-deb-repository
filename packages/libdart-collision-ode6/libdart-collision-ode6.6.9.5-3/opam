@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdart-collision-ode6_6.9.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdart-collision-ode6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdart6" {>= "6.9.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libode8" {>= "2-0.16.2"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libdart-collision-ode6_6.9.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dart/libdart-collision-ode6_6.9.5-3_amd64.deb"
+}

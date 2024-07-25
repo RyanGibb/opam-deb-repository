@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wxglade_0.8.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wxglade"]
+]
+depends: [
+  "python3-any"
+  "python3-wxgtk4-0"
+]
+conflicts: [
+  "python-wxglade (<< 0.7.1-1)"
+]
+extra-source "wxglade_0.8.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wxglade/wxglade_0.8.3-2_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32z1-dev_1:1.2.13.dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32z1-dev"]
+]
+depends: [
+  "lib32z1" {= "1-1.2.13.dfsg-1"}
+  "libc6-dev-i386"
+  "zlib1g-dev" {= "1-1.2.13.dfsg-1"}
+]
+conflicts: [
+  "libc6-i386 (<= 2.9-18)"
+]
+extra-source "lib32z1-dev_1:1.2.13.dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zlib/lib32z1-dev_1.2.13.dfsg-1_amd64.deb"
+}

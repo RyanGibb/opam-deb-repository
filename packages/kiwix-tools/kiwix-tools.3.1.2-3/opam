@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kiwix-tools_3.1.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kiwix-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libkiwix9" {>= "9.4.1+dfsg"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "kiwix-tools_3.1.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kiwix-tools/kiwix-tools_3.1.2-3_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i waffle-utils_1.6.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r waffle-utils"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libwaffle-1-0" {= "1.6.3-3"}
+]
+extra-source "waffle-utils_1.6.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/waffle/waffle-utils_1.6.3-3_amd64.deb"
+}

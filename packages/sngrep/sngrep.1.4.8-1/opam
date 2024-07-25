@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sngrep_1.4.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sngrep"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libgnutls30" {>= "3.6.14"}
+  "libncursesw6" {>= "6"}
+  "libpcap0-8" {>= "1.0.0"}
+  "libpcre3"
+  "libtinfo6" {>= "6"}
+]
+extra-source "sngrep_1.4.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sngrep/sngrep_1.4.8-1_amd64.deb"
+}

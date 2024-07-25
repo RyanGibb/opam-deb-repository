@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-reprozip_1.0.16-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-reprozip"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-distro"
+  "python3-requests"
+  "python3-rpaths"
+  "python3-usagestats"
+  "python3-yaml"
+]
+extra-source "python3-reprozip_1.0.16-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/reprozip/python3-reprozip_1.0.16-1+b2_amd64.deb"
+}

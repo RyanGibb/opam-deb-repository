@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-pyo3-ffi-dev_0.17.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-pyo3-ffi-dev"]
+]
+depends: [
+  "librust-libc-dev"
+  "librust-pyo3-build-config+python3-dll-a-dev"
+  "librust-pyo3-build-config-dev"
+  "python3-all-dev"
+]
+extra-source "librust-pyo3-ffi-dev_0.17.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-pyo3-ffi/librust-pyo3-ffi-dev_0.17.3-1_amd64.deb"
+}

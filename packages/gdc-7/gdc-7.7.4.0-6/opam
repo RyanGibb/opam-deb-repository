@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gdc-7_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gdc-7"]
+]
+depends: [
+  "g++-7" {>= "7"}
+  "gcc-7-base" {>= "7"}
+  "libc6" {>= "2.14"}
+  "libgmp10" {>= "2-5.0.1~"}
+  "libgphobos-7-dev" {>= "7"}
+  "libisl19" {>= "0.15"}
+  "libmpc3"
+  "libmpfr6" {>= "3.1.3"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gdc-7_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/gdc-7_7.4.0-6_amd64.deb"
+}

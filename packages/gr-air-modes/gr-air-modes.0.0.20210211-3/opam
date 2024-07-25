@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gr-air-modes_0.0.20210211-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gr-air-modes"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libgnuradio-air-modes1" {= "0.0.20210211-3"}
+  "libgnuradio-runtime3-10-5" {>= "3.10.5.1"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-zmq"
+]
+extra-source "gr-air-modes_0.0.20210211-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gr-air-modes/gr-air-modes_0.0.20210211-3_amd64.deb"
+}

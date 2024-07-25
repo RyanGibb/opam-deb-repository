@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i windowlab_1.40-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r windowlab"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libx11-6"
+  "libxext6"
+  "libxft2" {> "2.1.1"}
+]
+extra-source "windowlab_1.40-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/windowlab/windowlab_1.40-3+b1_amd64.deb"
+}

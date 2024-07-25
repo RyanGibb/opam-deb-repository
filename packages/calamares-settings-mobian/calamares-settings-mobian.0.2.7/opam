@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i calamares-settings-mobian_0.2.7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r calamares-settings-mobian"]
+]
+depends: [
+  "btrfs-progs"
+  "calamares"
+  "calamares-extensions"
+  "cryptsetup"
+  "e2fsprogs"
+  "fdisk"
+  "parted"
+  "python3"
+  "squashfs-tools"
+]
+conflicts: [
+  "calamares-settings-debian"
+]
+extra-source "calamares-settings-mobian_0.2.7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/calamares-settings-mobian/calamares-settings-mobian_0.2.7_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-sawyer_0.8.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-sawyer"]
+]
+depends: [
+  "ruby-addressable"
+  "ruby-faraday"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-sawyer_0.8.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-sawyer/ruby-sawyer_0.8.2-1_all.deb"
+}

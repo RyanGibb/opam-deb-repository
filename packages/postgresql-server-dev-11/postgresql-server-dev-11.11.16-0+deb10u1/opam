@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-server-dev-11_11.16-0+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-server-dev-11"]
+]
+depends: [
+  "clang-7"
+  "libc6" {>= "2.4"}
+  "libpq-dev" {>= "11~~"}
+  "llvm-7-dev"
+  "postgresql-common" {>= "142~"}
+]
+extra-source "postgresql-server-dev-11_11.16-0+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-11/postgresql-server-dev-11_11.16-0+deb10u1_amd64.deb"
+}

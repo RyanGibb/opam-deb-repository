@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-hashicorp-serf-dev_0.8.1+git20180508.80ab4877~ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-hashicorp-serf-dev"]
+]
+depends: [
+  "golang-github-armon-circbuf-dev"
+  "golang-github-armon-go-metrics-dev"
+  "golang-github-hashicorp-go-msgpack-dev"
+  "golang-github-hashicorp-go-syslog-dev"
+  "golang-github-hashicorp-logutils-dev"
+  "golang-github-hashicorp-mdns-dev"
+  "golang-github-hashicorp-memberlist-dev" {>= "0.1.0+git20180209~"}
+  "golang-github-mitchellh-cli-dev"
+  "golang-github-mitchellh-mapstructure-dev"
+  "golang-github-ryanuber-columnize-dev"
+]
+extra-source "golang-github-hashicorp-serf-dev_0.8.1+git20180508.80ab4877~ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-hashicorp-serf/golang-github-hashicorp-serf-dev_0.8.1+git20180508.80ab4877~ds-1_all.deb"
+}

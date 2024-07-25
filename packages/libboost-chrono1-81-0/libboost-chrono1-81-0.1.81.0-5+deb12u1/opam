@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libboost-chrono1.81.0_1.81.0-5+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libboost-chrono1.81.0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libboost-chrono1.81.0_1.81.0-5+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boost1.81/libboost-chrono1.81.0_1.81.0-5+deb12u1_amd64.deb"
+}

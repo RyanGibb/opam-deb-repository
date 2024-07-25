@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmii_3.10~20120413+hg2813-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmii"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libixp0"
+  "libx11-6"
+  "libxext6"
+  "libxft2"
+  "libxinerama1"
+  "libxrandr2"
+  "libxrender1"
+  "suckless-tools"
+]
+conflicts: [
+  "wmii2"
+]
+extra-source "wmii_3.10~20120413+hg2813-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmii/wmii_3.10~20120413+hg2813-11_amd64.deb"
+}

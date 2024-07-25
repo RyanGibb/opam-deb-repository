@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencv-superres-dev_4.6.0+dfsg-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencv-superres-dev"]
+]
+depends: [
+  "libopencv-superres406" {= "4.6.0+dfsg-12"}
+  "libopencv-video-dev" {= "4.6.0+dfsg-12"}
+  "libopencv-videoio-dev" {= "4.6.0+dfsg-12"}
+]
+extra-source "libopencv-superres-dev_4.6.0+dfsg-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencv/libopencv-superres-dev_4.6.0+dfsg-12_amd64.deb"
+}

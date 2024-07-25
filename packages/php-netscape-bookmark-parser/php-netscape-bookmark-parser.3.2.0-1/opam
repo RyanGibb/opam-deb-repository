@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-netscape-bookmark-parser_3.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-netscape-bookmark-parser"]
+]
+depends: [
+  "php-common"
+  "php-klogger" {< "2~~"}
+  "php-klogger" {>= "1.0"}
+]
+extra-source "php-netscape-bookmark-parser_3.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-netscape-bookmark-parser/php-netscape-bookmark-parser_3.2.0-1_all.deb"
+}

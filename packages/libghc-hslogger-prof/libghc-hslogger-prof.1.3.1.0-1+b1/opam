@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hslogger-prof_1.3.1.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hslogger-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hslogger-dev" {= "1.3.1.0-1+b1"}
+  "libghc-network-bsd-prof"
+  "libghc-network-prof"
+  "libghc-old-locale-prof"
+]
+extra-source "libghc-hslogger-prof_1.3.1.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hslogger/libghc-hslogger-prof_1.3.1.0-1+b1_amd64.deb"
+}

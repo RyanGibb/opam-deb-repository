@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-snappy_0.5.3-1.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-snappy"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libsnappy1v5" {>= "1.1.9"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-snappy_0.5.3-1.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-snappy/python3-snappy_0.5.3-1.2+b1_amd64.deb"
+}

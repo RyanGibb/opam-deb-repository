@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debug-me-server_1.20220324-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debug-me-server"]
+]
+depends: [
+  "adduser"
+  "debug-me"
+  "sysvinit-utils"
+  ("default-mta" | "mail-transport-agent")
+]
+extra-source "debug-me-server_1.20220324-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debug-me/debug-me-server_1.20220324-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nqp_2018.12+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nqp"]
+]
+depends: [
+  "libjs-angularjs"
+  "libjs-bootstrap"
+  "moarvm" {< "2019.01"}
+  "moarvm" {>= "2018.12"}
+]
+extra-source "nqp_2018.12+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nqp/nqp_2018.12+dfsg-1_amd64.deb"
+}

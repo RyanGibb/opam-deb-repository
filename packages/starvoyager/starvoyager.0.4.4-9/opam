@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i starvoyager_0.4.4-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r starvoyager"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libsdl-net1-2"
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "5"}
+  "starvoyager-data"
+]
+extra-source "starvoyager_0.4.4-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/starvoyager/starvoyager_0.4.4-9_amd64.deb"
+}

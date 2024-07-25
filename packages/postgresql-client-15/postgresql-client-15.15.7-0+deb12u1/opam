@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-client-15_15.7-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-client-15"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "liblz4-1" {>= "0.0~r127"}
+  "libpq5" {>= "15.7"}
+  "libreadline8" {>= "6.0"}
+  "libssl3" {>= "3.0.0"}
+  "libzstd1" {>= "1.5.2"}
+  "postgresql-client-common" {>= "182~"}
+  "sensible-utils"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "postgresql-client-15_15.7-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-15/postgresql-client-15_15.7-0+deb12u1_amd64.deb"
+}

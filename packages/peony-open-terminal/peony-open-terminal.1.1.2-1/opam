@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i peony-open-terminal_1.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r peony-open-terminal"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.4"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libmate-desktop-2-17" {>= "1.6.1"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpeony-extension1"
+  "libstartup-notification0" {>= "0.2"}
+  "peony-extensions-common" {= "1.1.2-1"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "peony-open-terminal_1.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/peony-extensions/peony-open-terminal_1.1.2-1_amd64.deb"
+}

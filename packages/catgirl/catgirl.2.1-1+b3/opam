@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i catgirl_2.1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r catgirl"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libtls26" {>= "3.5.0"}
+]
+extra-source "catgirl_2.1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/catgirl/catgirl_2.1-1+b3_amd64.deb"
+}

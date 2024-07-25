@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsaml10_3.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsaml10"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "liblog4shib2"
+  "libstdc++6" {>= "5.2"}
+  "libxerces-c3-2"
+  "libxml-security-c20"
+  "libxmltooling8"
+]
+extra-source "libsaml10_3.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opensaml/libsaml10_3.0.1-1_amd64.deb"
+}

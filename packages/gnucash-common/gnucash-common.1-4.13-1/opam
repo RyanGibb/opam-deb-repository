@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnucash-common_1:4.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnucash-common"]
+]
+depends: [
+  "libjs-jquery"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnucash-common_1:4.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnucash/gnucash-common_4.13-1_all.deb"
+}

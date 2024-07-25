@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgoogle-http-client-java_1.32.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgoogle-http-client-java"]
+]
+depends: [
+  "libguava-java"
+  "libhttpclient-java" {>= "4.5.13"}
+  "libhttpcore-java" {>= "4.4.13"}
+  "libjackson2-core-java" {>= "2.11.3"}
+  "libjsr305-java"
+  "libopencensus-java"
+]
+extra-source "libgoogle-http-client-java_1.32.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/google-http-client-java/libgoogle-http-client-java_1.32.1-1_all.deb"
+}

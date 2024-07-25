@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-git-lfs-dev_1.1.0-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-git-lfs-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-aeson-dev"
+  "libghc-case-insensitive-dev"
+  "libghc-http-client-dev"
+  "libghc-http-types-dev"
+  "libghc-network-uri-dev"
+  "libgmp10"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-git-lfs-dev_1.1.0-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-git-lfs/libghc-git-lfs-dev_1.1.0-3+b3_amd64.deb"
+}

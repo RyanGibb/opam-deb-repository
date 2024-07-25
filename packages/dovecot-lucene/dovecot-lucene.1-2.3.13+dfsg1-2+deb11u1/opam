@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dovecot-lucene_1:2.3.13+dfsg1-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dovecot-lucene"]
+]
+depends: [
+  "dovecot-core" {= "1-2.3.13+dfsg1-2+deb11u1"}
+  "libc6" {>= "2.14"}
+  "libclucene-core1v5" {>= "2.3.3.4+dfsg"}
+  "libexttextcat-2-0-0" {>= "2.2-8"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "libstemmer0d" {>= "0+svn527"}
+]
+extra-source "dovecot-lucene_1:2.3.13+dfsg1-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dovecot/dovecot-lucene_2.3.13+dfsg1-2+deb11u1_amd64.deb"
+}

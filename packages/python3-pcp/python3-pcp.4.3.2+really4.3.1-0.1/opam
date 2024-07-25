@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pcp_4.3.2+really4.3.1-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pcp"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpcp-gui2" {= "4.3.2+really4.3.1-0.1"}
+  "libpcp-import1" {= "4.3.2+really4.3.1-0.1"}
+  "libpcp-mmv1" {= "4.3.2+really4.3.1-0.1"}
+  "libpcp-pmda3" {= "4.3.2+really4.3.1-0.1"}
+  "libpcp3" {= "4.3.2+really4.3.1-0.1"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any" {>= "3.3~"}
+]
+extra-source "python3-pcp_4.3.2+really4.3.1-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcp/python3-pcp_4.3.2+really4.3.1-0.1_amd64.deb"
+}

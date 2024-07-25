@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apticron-systemd_1.2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apticron-systemd"]
+]
+depends: [
+  "apt" {>= "1.1~exp9"}
+  "bzip2"
+  "systemd"
+  ("bsd-mailx" | "mailx")
+]
+conflicts: [
+  "apticron"
+]
+extra-source "apticron-systemd_1.2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apticron/apticron-systemd_1.2.1_all.deb"
+}

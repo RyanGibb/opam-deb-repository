@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bpm-tools_0.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bpm-tools"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "sox"
+]
+extra-source "bpm-tools_0.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bpm-tools/bpm-tools_0.3-4_amd64.deb"
+}

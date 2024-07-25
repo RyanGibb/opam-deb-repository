@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-trust-dns-server+tokio-rustls-dev_0.22.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-trust-dns-server+tokio-rustls-dev"]
+]
+depends: [
+  "librust-tokio-rustls-0-23+default-dev"
+  "librust-trust-dns-server-dev" {= "0.22.0-2"}
+]
+extra-source "librust-trust-dns-server+tokio-rustls-dev_0.22.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-trust-dns-server/librust-trust-dns-server+tokio-rustls-dev_0.22.0-2_amd64.deb"
+}

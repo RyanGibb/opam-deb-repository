@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gambas3-gb-jit_3.12.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gambas3-gb-jit"]
+]
+depends: [
+  "gambas3-runtime" {>= "3.12.2-1"}
+  "libc6" {>= "2.14"}
+]
+extra-source "gambas3-gb-jit_3.12.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gambas3/gambas3-gb-jit_3.12.2-1_amd64.deb"
+}

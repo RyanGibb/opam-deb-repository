@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwolfssl24_4.6.0+p1-0+deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwolfssl24"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+]
+extra-source "libwolfssl24_4.6.0+p1-0+deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wolfssl/libwolfssl24_4.6.0+p1-0+deb11u2_amd64.deb"
+}

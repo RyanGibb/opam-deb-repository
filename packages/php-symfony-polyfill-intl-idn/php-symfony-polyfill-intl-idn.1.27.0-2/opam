@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-polyfill-intl-idn_1.27.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-polyfill-intl-idn"]
+]
+depends: [
+  "php-common"
+  "php-symfony-polyfill-intl-normalizer" {< "2~~"}
+  "php-symfony-polyfill-intl-normalizer" {>= "1.10"}
+  "php-symfony-polyfill-php72" {< "2~~"}
+  "php-symfony-polyfill-php72" {>= "1.10"}
+]
+extra-source "php-symfony-polyfill-intl-idn_1.27.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-symfony-polyfill/php-symfony-polyfill-intl-idn_1.27.0-2_all.deb"
+}

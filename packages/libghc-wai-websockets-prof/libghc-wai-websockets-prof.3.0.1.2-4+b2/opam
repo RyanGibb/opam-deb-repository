@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-wai-websockets-prof_3.0.1.2-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-wai-websockets-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-case-insensitive-prof"
+  "libghc-http-types-prof"
+  "libghc-network-prof"
+  "libghc-wai-prof"
+  "libghc-wai-websockets-dev" {= "3.0.1.2-4+b2"}
+  "libghc-websockets-prof"
+]
+extra-source "libghc-wai-websockets-prof_3.0.1.2-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-wai-websockets/libghc-wai-websockets-prof_3.0.1.2-4+b2_amd64.deb"
+}

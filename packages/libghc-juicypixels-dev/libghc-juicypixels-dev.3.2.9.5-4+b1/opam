@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-juicypixels-dev_3.2.9.5-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-juicypixels-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.27"}
+  "libghc-primitive-dev"
+  "libghc-vector-dev"
+  "libghc-zlib-dev"
+  "libgmp10"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-juicypixels-dev_3.2.9.5-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-juicypixels/libghc-juicypixels-dev_3.2.9.5-4+b1_amd64.deb"
+}

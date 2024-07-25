@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i compass-susy-plugin_2.2.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r compass-susy-plugin"]
+]
+depends: [
+  "ruby-sass" {>= "3.4"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "compass-susy-plugin_2.2.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/compass-susy-plugin/compass-susy-plugin_2.2.12-1_all.deb"
+}

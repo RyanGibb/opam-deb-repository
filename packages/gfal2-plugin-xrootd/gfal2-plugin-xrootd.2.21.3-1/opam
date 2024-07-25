@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gfal2-plugin-xrootd_2.21.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gfal2-plugin-xrootd"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgfal-transfer2" {= "2.21.3-1"}
+  "libgfal2-2" {= "2.21.3-1"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libjson-c5" {>= "0.15"}
+  "libstdc++6" {>= "9"}
+  "libxrdcl3" {>= "5.5.1"}
+  "libxrdposix3" {>= "5.5.1"}
+]
+extra-source "gfal2-plugin-xrootd_2.21.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gfal2/gfal2-plugin-xrootd_2.21.3-1_amd64.deb"
+}

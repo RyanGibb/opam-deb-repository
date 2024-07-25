@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tj3_3.6.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tj3"]
+]
+depends: [
+  "ruby-mail" {>= "2.4.3"}
+  "ruby-term-ansicolor" {>= "1.0.7"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "tj3_3.6.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tj3/tj3_3.6.0-6_all.deb"
+}

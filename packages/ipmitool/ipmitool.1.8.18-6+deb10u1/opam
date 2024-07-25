@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ipmitool_1.8.18-6+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ipmitool"]
+]
+depends: [
+  "init-system-helpers" {>= "1.51"}
+  "libc6" {>= "2.15"}
+  "libfreeipmi17" {>= "1.1.5"}
+  "libncurses6" {>= "6"}
+  "libreadline7" {>= "6.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libtinfo6" {>= "6"}
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "ipmitool_1.8.18-6+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ipmitool/ipmitool_1.8.18-6+deb10u1_amd64.deb"
+}

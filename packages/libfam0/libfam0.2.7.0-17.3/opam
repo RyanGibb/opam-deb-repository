@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfam0_2.7.0-17.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfam0"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+]
+extra-source "libfam0_2.7.0-17.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fam/libfam0_2.7.0-17.3_amd64.deb"
+}

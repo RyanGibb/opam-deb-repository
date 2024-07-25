@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmget_0.6.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmget"]
+]
+depends: [
+  "curl"
+  "libc6" {>= "2.16"}
+  "libcurl4" {>= "7.16.2"}
+  "libx11-6"
+  "libxext6"
+  "libxpm4"
+  "perl-any"
+]
+extra-source "wmget_0.6.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmget/wmget_0.6.1-2_amd64.deb"
+}

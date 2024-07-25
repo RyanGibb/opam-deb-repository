@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsql-abstract-perl_1.86-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsql-abstract-perl"]
+]
+depends: [
+  "libhash-merge-perl"
+  "libmoo-perl" {>= "1.004002"}
+  "libsub-quote-perl"
+  "perl"
+]
+extra-source "libsql-abstract-perl_1.86-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsql-abstract-perl/libsql-abstract-perl_1.86-1_all.deb"
+}

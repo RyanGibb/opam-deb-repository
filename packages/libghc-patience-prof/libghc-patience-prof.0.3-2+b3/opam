@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-patience-prof_0.3-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-patience-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-patience-dev" {= "0.3-2+b3"}
+]
+extra-source "libghc-patience-prof_0.3-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-patience/libghc-patience-prof_0.3-2+b3_amd64.deb"
+}

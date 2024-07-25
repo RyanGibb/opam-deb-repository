@@ -1,0 +1,54 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plasma-sdk_5.20.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plasma-sdk"]
+]
+depends: [
+  "kio"
+  "kpackagetool5"
+  "libc6" {>= "2.14"}
+  "libkf5archive5" {>= "5.74.0~"}
+  "libkf5completion5" {>= "5.74.0~"}
+  "libkf5configcore5" {>= "5.74.0~"}
+  "libkf5configwidgets5" {>= "5.74.0~"}
+  "libkf5coreaddons5" {>= "5.74.0~"}
+  "libkf5dbusaddons5" {>= "5.74.0~"}
+  "libkf5declarative5" {>= "5.74.0~"}
+  "libkf5i18n5" {>= "5.74.0~"}
+  "libkf5iconthemes5" {>= "5.74.0~"}
+  "libkf5kiocore5" {>= "5.74.0~"}
+  "libkf5package5" {>= "5.5.0+git"}
+  "libkf5plasma5" {>= "5.74.0~"}
+  "libkf5plasmaquick5" {>= "5.74.0~"}
+  "libkf5quickaddons5" {>= "5.74.0~"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "5.74.0~"}
+  "libkf5texteditor5" {>= "5.74.0~"}
+  "libkf5widgetsaddons5" {>= "5.74.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.15.0~"}
+  "libqt5qml5" {>= "5.15.0~"}
+  "libqt5widgets5" {>= "5.15.0~"}
+  "libqt5xml5" {>= "5.15.0~"}
+  "libstdc++6" {>= "4.4.0"}
+  "plasma-framework"
+  "qml-module-org-kde-draganddrop"
+  "qml-module-org-kde-kirigami2"
+  "qml-module-org-kde-kquickcontrolsaddons"
+  "qml-module-qt-labs-platform"
+  "qml-module-qt-labs-settings"
+  "qml-module-qtgraphicaleffects"
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-dialogs"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick-window2"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.15.0~"} | "libqt5gui5-gles" {>= "5.15.0~"})
+  ("libqt5quick5" {>= "5.15.1"} | "libqt5quick5-gles" {>= "5.15.1"})
+]
+extra-source "plasma-sdk_5.20.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plasma-sdk/plasma-sdk_5.20.5-1_amd64.deb"
+}

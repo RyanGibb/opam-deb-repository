@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i canmatrix-utils_0.9.3~github-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r canmatrix-utils"]
+]
+depends: [
+  "python3-any"
+  "python3-canmatrix" {< "0.9.3~github+1~"}
+  "python3-canmatrix" {>= "0.9.3~github"}
+]
+extra-source "canmatrix-utils_0.9.3~github-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-canmatrix/canmatrix-utils_0.9.3~github-1_all.deb"
+}

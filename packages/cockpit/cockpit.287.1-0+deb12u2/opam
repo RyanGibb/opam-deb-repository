@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cockpit_287.1-0+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cockpit"]
+]
+depends: [
+  "cockpit-bridge" {>= "287.1-0+deb12u2"}
+  "cockpit-system" {>= "287.1-0+deb12u2"}
+  "cockpit-ws" {>= "287.1-0+deb12u2"}
+]
+extra-source "cockpit_287.1-0+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cockpit/cockpit_287.1-0+deb12u2_all.deb"
+}

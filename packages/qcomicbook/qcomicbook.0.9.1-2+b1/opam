@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qcomicbook_0.9.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qcomicbook"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libpoppler-qt5-1" {>= "0.24.5"}
+  "libqt5core5a" {>= "5.12.2"}
+  "libqt5printsupport5" {>= "5.4.0"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libqt5x11extras5" {>= "5.6.0"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.4.0"} | "libqt5gui5-gles" {>= "5.4.0"})
+]
+extra-source "qcomicbook_0.9.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qcomicbook/qcomicbook_0.9.1-2+b1_amd64.deb"
+}

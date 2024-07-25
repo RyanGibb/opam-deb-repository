@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-xmlrpc-all-dev_3:1.0.0~rc3-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-xmlrpc-all-dev"]
+]
+depends: [
+  "php-all-dev"
+  "php8-2-xmlrpc" {>= "3-1.0.0~rc3-6~"}
+]
+extra-source "php-xmlrpc-all-dev_3:1.0.0~rc3-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-xmlrpc/php-xmlrpc-all-dev_1.0.0~rc3-6_all.deb"
+}

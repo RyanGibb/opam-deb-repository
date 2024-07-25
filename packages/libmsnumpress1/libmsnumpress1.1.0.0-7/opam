@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmsnumpress1_1.0.0-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmsnumpress1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libmsnumpress1_1.0.0-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmsnumpress/libmsnumpress1_1.0.0-7_amd64.deb"
+}

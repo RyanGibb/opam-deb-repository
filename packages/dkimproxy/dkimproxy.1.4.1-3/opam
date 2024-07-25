@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dkimproxy_1.4.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dkimproxy"]
+]
+depends: [
+  "adduser"
+  "liberror-perl"
+  "libmail-dkim-perl" {>= "0.34"}
+  "libnet-server-perl"
+  "libtext-wrapper-perl"
+  "lsb-base"
+  "openssl"
+  "perl"
+  "ssl-cert"
+]
+conflicts: [
+  "dkfilter"
+]
+extra-source "dkimproxy_1.4.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dkimproxy/dkimproxy_1.4.1-3_all.deb"
+}

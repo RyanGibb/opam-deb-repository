@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mate-desktop-environment-core_1.20.0+5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mate-desktop-environment-core"]
+]
+depends: [
+  "caja" {>= "1.20.2-2~"}
+  "gvfs-backends"
+  "marco" {>= "1.20"}
+  "mate-control-center" {>= "1.20"}
+  "mate-desktop" {>= "1.20"}
+  "mate-icon-theme" {>= "1.20"}
+  "mate-menus" {>= "1.20"}
+  "mate-panel" {>= "1.20"}
+  "mate-polkit" {>= "1.20"}
+  "mate-session-manager" {>= "1.20"}
+  "mate-settings-daemon" {>= "1.20"}
+  "mate-terminal" {>= "1.20"}
+  "mate-themes" {>= "3.22.16"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("fonts-cantarell" | "fonts-ubuntu")
+  ("mate-notification-daemon" {>= "1.20.0-2~"} | "notification-daemon")
+]
+conflicts: [
+  "caja-gksu"
+  "mate-conf"
+  "mate-conf-editor"
+  "mate-dialogs"
+  "mate-dialogs-common"
+  "mate-dialogs-dbg"
+  "mate-doc-utils"
+  "mate-doc-utils-gnome"
+  "mate-gnome-main-menu-applet"
+  "mate-keyring"
+]
+extra-source "mate-desktop-environment-core_1.20.0+5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mate-desktop-environment/mate-desktop-environment-core_1.20.0+5_all.deb"
+}

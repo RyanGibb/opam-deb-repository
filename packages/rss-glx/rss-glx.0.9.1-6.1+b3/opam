@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rss-glx_0.9.1-6.1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rss-glx"]
+]
+depends: [
+  "libalut0" {>= "1.0.1"}
+  "libbz2-1-0"
+  "libc6" {>= "2.27"}
+  "libgcc-s1"
+  "libgl1"
+  "libglc0" {>= "0.7.1"}
+  "libglew2-1" {>= "1.12.0"}
+  "libmagickcore-6-q16-6" {>= "8-6.9.10.2"}
+  "libmagickwand-6-q16-6" {>= "8-6.9.10.2"}
+  "libopenal1" {>= "1.14"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "libxext6"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "rss-glx_0.9.1-6.1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rss-glx/rss-glx_0.9.1-6.1+b3_amd64.deb"
+}

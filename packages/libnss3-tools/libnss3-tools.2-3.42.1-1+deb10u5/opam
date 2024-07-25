@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnss3-tools_2:3.42.1-1+deb10u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnss3-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libnspr4" {>= "2-4.12"}
+  "libnss3" {>= "2-3.39"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libnss3-tools_2:3.42.1-1+deb10u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nss/libnss3-tools_3.42.1-1+deb10u5_amd64.deb"
+}

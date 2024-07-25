@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnunet0.19_0.19.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnunet0.19"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libidn2-0" {>= "2.0.0"}
+  "libjansson4" {>= "2.14"}
+  "libltdl7" {>= "2.4.7"}
+  "libmicrohttpd12" {>= "0.9.50"}
+  "libsodium23" {>= "1.0.18"}
+  "libsqlite3-0" {>= "3.8.7"}
+  "libunistring2" {>= "0.9.7"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libgnunet0.14"
+  "libgnunet0.15"
+  "libgnunet0.17"
+]
+extra-source "libgnunet0.19_0.19.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnunet/libgnunet0.19_0.19.3-2_amd64.deb"
+}

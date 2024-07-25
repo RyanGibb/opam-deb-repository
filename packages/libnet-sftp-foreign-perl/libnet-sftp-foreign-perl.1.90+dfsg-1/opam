@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-sftp-foreign-perl_1.90+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-sftp-foreign-perl"]
+]
+depends: [
+  "perl"
+  ("openssh-client" | "ssh-client")
+]
+extra-source "libnet-sftp-foreign-perl_1.90+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-sftp-foreign-perl/libnet-sftp-foreign-perl_1.90+dfsg-1_all.deb"
+}

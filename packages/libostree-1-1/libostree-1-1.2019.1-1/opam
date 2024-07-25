@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libostree-1-1_2019.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libostree-1-1"]
+]
+depends: [
+  "libarchive13" {>= "3.0.4"}
+  "libassuan0" {>= "2.0.1"}
+  "libavahi-client3" {>= "0.6.16"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libavahi-glib1" {>= "0.6.16"}
+  "libc6" {>= "2.28"}
+  "libglib2-0-0" {>= "2.55.1"}
+  "libgpg-error0" {>= "1.14"}
+  "libgpgme11" {>= "1.2.0"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libmount1" {>= "2.24.2"}
+  "libselinux1" {>= "2.2"}
+  "libsoup2-4-1" {>= "2.41.90"}
+  "libsystemd0"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libostree-1-1_2019.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ostree/libostree-1-1_2019.1-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kxd_0.13+git20170730.6182dc8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kxd"]
+]
+depends: [
+  "init-system-helpers" {>= "1.18~"}
+  "libc6" {>= "2.3.2"}
+]
+extra-source "kxd_0.13+git20170730.6182dc8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kxd/kxd_0.13+git20170730.6182dc8-1_amd64.deb"
+}

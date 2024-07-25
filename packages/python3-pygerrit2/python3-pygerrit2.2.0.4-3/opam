@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pygerrit2_2.0.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pygerrit2"]
+]
+depends: [
+  "python3-any"
+  "python3-pbr" {>= "0.8.2"}
+  "python3-requests" {>= "2.10.0"}
+]
+extra-source "python3-pygerrit2_2.0.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pygerrit2/python3-pygerrit2_2.0.4-3_all.deb"
+}

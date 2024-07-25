@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-debbundle-insert-module-globals_7.2.0+ds+~cs3.3.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-debbundle-insert-module-globals"]
+]
+depends: [
+  "node-acorn-node"
+  "node-combine-source-map"
+  "node-concat-stream" {>= "1.6.1"}
+  "node-is-buffer"
+  "node-jsonstream"
+  "node-path-is-absolute"
+  "node-process"
+  "node-through2" {>= "2.0.0"}
+  "node-xtend"
+  "nodejs" {>= "10"}
+  ("node-debbundle-acorn" | "node-debbundle-acorn")
+]
+extra-source "node-debbundle-insert-module-globals_7.2.0+ds+~cs3.3.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-debbundle-insert-module-globals/node-debbundle-insert-module-globals_7.2.0+ds+~cs3.3.3-1_all.deb"
+}

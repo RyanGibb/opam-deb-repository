@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i arduino_2:1.0.5+dfsg2-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r arduino"]
+]
+depends: [
+  "arduino-core" {= "2-1.0.5+dfsg2-4.1"}
+  "libjna-java"
+  "librxtx-java" {>= "2.2pre2-3"}
+  ("default-jre" | "java6-runtime")
+]
+extra-source "arduino_2:1.0.5+dfsg2-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/arduino/arduino_1.0.5+dfsg2-4.1_all.deb"
+}

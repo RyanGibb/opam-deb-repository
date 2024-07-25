@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librsb0_1.2.0.9+real+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librsb0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgomp1" {>= "6"}
+  "libhwloc15" {>= "2.2.0+dfsg"}
+  "zlib1g" {>= "1-1.2.2.3"}
+]
+extra-source "librsb0_1.2.0.9+real+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librsb/librsb0_1.2.0.9+real+dfsg-1_amd64.deb"
+}

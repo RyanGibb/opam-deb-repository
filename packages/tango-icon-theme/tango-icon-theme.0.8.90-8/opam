@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tango-icon-theme_0.8.90-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tango-icon-theme"]
+]
+depends: [
+  "hicolor-icon-theme"
+]
+conflicts: [
+  "tango-icon-theme-common (<< 0.6)"
+]
+extra-source "tango-icon-theme_0.8.90-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tango-icon-theme/tango-icon-theme_0.8.90-8_all.deb"
+}

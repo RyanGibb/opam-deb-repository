@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsoci-core4.0_4.0.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsoci-core4.0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libsoci-core4.0_4.0.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/soci/libsoci-core4.0_4.0.1-5_amd64.deb"
+}

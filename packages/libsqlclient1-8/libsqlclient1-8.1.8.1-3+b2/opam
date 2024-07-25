@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsqlclient1.8_1.8.1-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsqlclient1.8"]
+]
+depends: [
+  "gnustep-base-runtime" {>= "1.27.0"}
+  "libc6" {>= "2.14"}
+  "libecpg6"
+  "libgcc-s1" {>= "3.0"}
+  "libgnustep-base1-27" {>= "1.27.0"}
+  "libmariadb3" {>= "3.0.0"}
+  "libobjc4" {>= "4.6"}
+  "libperformance0-5"
+  "libpq5"
+  "libsqlite3-0" {>= "3.5.9"}
+]
+extra-source "libsqlclient1.8_1.8.1-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnustep-sqlclient/libsqlclient1.8_1.8.1-3+b2_amd64.deb"
+}

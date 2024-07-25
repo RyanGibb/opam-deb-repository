@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libio-async-loop-epoll-perl_0.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libio-async-loop-epoll-perl"]
+]
+depends: [
+  "libio-async-perl"
+  "liblinux-epoll-perl" {>= "0.012"}
+  "libstruct-dumb-perl"
+  "perl-any"
+]
+extra-source "libio-async-loop-epoll-perl_0.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libio-async-loop-epoll-perl/libio-async-loop-epoll-perl_0.21-1_all.deb"
+}

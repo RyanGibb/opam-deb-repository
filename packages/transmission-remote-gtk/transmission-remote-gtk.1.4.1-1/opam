@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i transmission-remote-gtk_1.4.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r transmission-remote-gtk"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl4" {>= "7.16.2"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libgeoip1"
+  "libglib2-0-0" {>= "2.44"}
+  "libgtk-3-0" {>= "3.16"}
+  "libjson-glib-1-0-0" {>= "0.12.0"}
+  "libnotify4" {>= "0.7.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libproxy1v5" {>= "0.4.14"}
+]
+extra-source "transmission-remote-gtk_1.4.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/transmission-remote-gtk/transmission-remote-gtk_1.4.1-1_amd64.deb"
+}

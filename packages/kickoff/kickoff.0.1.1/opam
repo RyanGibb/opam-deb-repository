@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kickoff_0.1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kickoff"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libffi8" {>= "3.4"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libyaml-0-2"
+  "libzmq5" {>= "4.0.1+dfsg"}
+]
+extra-source "kickoff_0.1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kickoff/kickoff_0.1.1_amd64.deb"
+}

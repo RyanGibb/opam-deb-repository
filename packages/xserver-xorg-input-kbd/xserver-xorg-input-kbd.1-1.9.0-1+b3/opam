@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xserver-xorg-input-kbd_1:1.9.0-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xserver-xorg-input-kbd"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "xserver-xorg-core"
+  "xserver-xorg-core" {>= "2-21.1.1"}
+]
+extra-source "xserver-xorg-input-kbd_1:1.9.0-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xserver-xorg-input-keyboard/xserver-xorg-input-kbd_1.9.0-1+b3_amd64.deb"
+}

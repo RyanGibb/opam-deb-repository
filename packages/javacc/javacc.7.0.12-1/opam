@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i javacc_7.0.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r javacc"]
+]
+depends: [
+  "junit"
+  ("default-jre-headless" {>= "2-1.5"} | "java5-runtime-headless")
+]
+extra-source "javacc_7.0.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/javacc/javacc_7.0.12-1_all.deb"
+}

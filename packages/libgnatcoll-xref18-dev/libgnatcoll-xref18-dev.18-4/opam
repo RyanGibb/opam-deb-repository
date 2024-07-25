@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatcoll-xref18-dev_18-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatcoll-xref18-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-8"
+  "libgnatcoll-iconv17-dev"
+  "libgnatcoll-sql1-dev" {= "18-4"}
+  "libgnatcoll-sqlite17-dev" {= "18-4"}
+  "libgnatcoll-xref18" {= "18-4"}
+  "libgnatcoll17-dev"
+]
+extra-source "libgnatcoll-xref18-dev_18-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnatcoll-db/libgnatcoll-xref18-dev_18-4_amd64.deb"
+}

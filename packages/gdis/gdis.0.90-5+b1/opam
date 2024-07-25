@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gdis_0.90-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gdis"]
+]
+depends: [
+  "gdis-data" {= "0.90-5"}
+  "libc6" {>= "2.14"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgtk2-0-0" {>= "2.8.0"}
+  "libgtkglext1"
+  "libpango-1-0-0" {>= "1.14.0"}
+  ("libgl1-mesa-glx" | "libgl1")
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "gdis_0.90-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gdis/gdis_0.90-5+b1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwireshark-dev_2.6.20-0+deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwireshark-dev"]
+]
+depends: [
+  "libwireshark11" {= "2.6.20-0+deb10u4"}
+  "libwiretap-dev"
+  "libwsutil-dev"
+]
+conflicts: [
+  "wireshark-dev (<< 1.4.0~rc2-1)"
+]
+extra-source "libwireshark-dev_2.6.20-0+deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wireshark/libwireshark-dev_2.6.20-0+deb10u4_amd64.deb"
+}

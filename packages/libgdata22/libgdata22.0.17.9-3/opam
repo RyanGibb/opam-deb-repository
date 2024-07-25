@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgdata22_0.17.9-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgdata22"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcr-base-3-1" {>= "3.8.0"}
+  "libgdata-common"
+  "libglib2-0-0" {>= "2.44.0"}
+  "libgoa-1-0-0b" {>= "3.12.0"}
+  "libjson-glib-1-0-0" {>= "0.13.2"}
+  "liboauth0" {>= "0.9.1"}
+  "libsoup2-4-1" {>= "2.56.0"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libgdata22_0.17.9-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgdata/libgdata22_0.17.9-3_amd64.deb"
+}

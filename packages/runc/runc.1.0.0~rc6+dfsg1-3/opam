@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i runc_1.0.0~rc6+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r runc"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libseccomp2" {>= "2.1.0"}
+]
+extra-source "runc_1.0.0~rc6+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/runc/runc_1.0.0~rc6+dfsg1-3_amd64.deb"
+}

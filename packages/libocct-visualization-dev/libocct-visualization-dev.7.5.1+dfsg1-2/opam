@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libocct-visualization-dev_7.5.1+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libocct-visualization-dev"]
+]
+depends: [
+  "libfreeimage-dev"
+  "libfreetype6-dev"
+  "libocct-foundation-dev" {< "7.5.1+dfsg1-2+1~"}
+  "libocct-foundation-dev" {>= "7.5.1+dfsg1-2"}
+  "libocct-modeling-algorithms-dev" {< "7.5.1+dfsg1-2+1~"}
+  "libocct-modeling-algorithms-dev" {>= "7.5.1+dfsg1-2"}
+  "libocct-modeling-data-dev" {< "7.5.1+dfsg1-2+1~"}
+  "libocct-modeling-data-dev" {>= "7.5.1+dfsg1-2"}
+  "libocct-ocaf-dev" {< "7.5.1+dfsg1-2+1~"}
+  "libocct-ocaf-dev" {>= "7.5.1+dfsg1-2"}
+  "libocct-visualization-7-5" {< "7.5.1+dfsg1-2+1~"}
+  "libocct-visualization-7-5" {>= "7.5.1+dfsg1-2"}
+  "libx11-dev"
+  "libxext-dev"
+  "libxmu-dev"
+  ("libgl1-mesa-dev" | "libgl-dev")
+  ("libglu1-mesa-dev" | "libglu-dev")
+]
+conflicts: [
+  "liboce-visualization-dev"
+]
+extra-source "libocct-visualization-dev_7.5.1+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencascade/libocct-visualization-dev_7.5.1+dfsg1-2_amd64.deb"
+}

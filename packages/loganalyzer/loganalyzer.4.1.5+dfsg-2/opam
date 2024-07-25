@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i loganalyzer_4.1.5+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r loganalyzer"]
+]
+depends: [
+  "debconf" {>= "0.5"}
+  "ttf-bitstream-vera"
+  ("apache" | "apache-ssl" | "apache-perl" | "apache2" | "httpd-cgi")
+  ("php" | "php-cgi" | "libapache2-mod-php")
+]
+extra-source "loganalyzer_4.1.5+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/loganalyzer/loganalyzer_4.1.5+dfsg-2_all.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-bus-pci21_20.11.10-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-bus-pci21"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.7"}
+  "libfdt1" {>= "1.6.0"}
+  "libnuma1" {>= "2.0.11"}
+  "librte-eal21" {>= "20.11"}
+  "librte-kvargs21" {>= "20.11"}
+  "librte-pci21" {>= "20.11"}
+  "librte-telemetry21" {>= "19.11"}
+]
+extra-source "librte-bus-pci21_20.11.10-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-bus-pci21_20.11.10-1~deb11u1_amd64.deb"
+}

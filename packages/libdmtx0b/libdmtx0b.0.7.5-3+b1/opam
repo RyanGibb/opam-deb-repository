@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdmtx0b_0.7.5-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdmtx0b"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "libdmtx0"
+  "libdmtx0a"
+]
+extra-source "libdmtx0b_0.7.5-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdmtx/libdmtx0b_0.7.5-3+b1_amd64.deb"
+}

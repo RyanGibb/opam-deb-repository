@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstfl-dev_0.22-3+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstfl-dev"]
+]
+depends: [
+  "libncursesw5-dev"
+  "libstfl0" {= "0.22-3+b5"}
+]
+extra-source "libstfl-dev_0.22-3+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stfl/libstfl-dev_0.22-3+b5_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-flake8_3.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-flake8"]
+]
+depends: [
+  "python3-any"
+  "python3-mccabe" {>= "0.6.0"}
+  "python3-pkg-resources"
+  "python3-pycodestyle" {>= "2.4.0"}
+  "python3-pyflakes" {>= "2.0.0"}
+  "python3-setuptools" {>= "30"}
+]
+extra-source "python3-flake8_3.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-flake8/python3-flake8_3.6.0-1_all.deb"
+}

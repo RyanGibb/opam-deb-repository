@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-http-client-tls-prof_0.3.5.3-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-http-client-tls-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-case-insensitive-prof"
+  "libghc-connection-prof"
+  "libghc-cryptonite-prof"
+  "libghc-data-default-class-prof"
+  "libghc-exceptions-prof"
+  "libghc-http-client-prof"
+  "libghc-http-client-tls-dev" {= "0.3.5.3-3+b1"}
+  "libghc-http-types-prof"
+  "libghc-memory-prof"
+  "libghc-network-prof"
+  "libghc-network-uri-prof"
+  "libghc-tls-prof"
+]
+extra-source "libghc-http-client-tls-prof_0.3.5.3-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-http-client-tls/libghc-http-client-tls-prof_0.3.5.3-3+b1_amd64.deb"
+}

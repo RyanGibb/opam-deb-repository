@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guile-2.2-libs_2.2.7+1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guile-2.2-libs"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libffi8" {>= "3.4"}
+  "libgc1" {>= "1-7.4.2"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libltdl7" {>= "2.4.7"}
+  "libreadline8" {>= "6.0"}
+  "libunistring2" {>= "0.9.7"}
+]
+extra-source "guile-2.2-libs_2.2.7+1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guile-2.2/guile-2.2-libs_2.2.7+1-9_amd64.deb"
+}

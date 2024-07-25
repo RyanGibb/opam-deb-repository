@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i odbcinst_2.3.6-0.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r odbcinst"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libltdl7" {>= "2.4.6"}
+  "odbcinst1debian2" {>= "2.3.1"}
+]
+conflicts: [
+  "odbcinst1"
+]
+extra-source "odbcinst_2.3.6-0.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unixodbc/odbcinst_2.3.6-0.1+b1_amd64.deb"
+}

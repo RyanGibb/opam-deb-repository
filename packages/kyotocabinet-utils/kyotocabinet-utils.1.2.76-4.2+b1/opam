@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kyotocabinet-utils_1.2.76-4.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kyotocabinet-utils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libkyotocabinet16v5" {= "1.2.76-4.2+b1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "kyotocabinet-utils_1.2.76-4.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kyotocabinet/kyotocabinet-utils_1.2.76-4.2+b1_amd64.deb"
+}

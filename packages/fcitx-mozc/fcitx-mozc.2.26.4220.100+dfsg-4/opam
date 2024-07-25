@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx-mozc_2.26.4220.100+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx-mozc"]
+]
+depends: [
+  "fcitx-bin"
+  "fcitx-data"
+  "fcitx-modules"
+  "fcitx-mozc-data"
+  "libabsl20200923" {>= "0~20200923-1"}
+  "libc6" {>= "2.15"}
+  "libprotobuf23" {>= "3.12.4"}
+  "libstdc++6" {>= "5.2"}
+  "mozc-server" {= "2.26.4220.100+dfsg-4"}
+  "tegaki-zinnia-japanese"
+]
+extra-source "fcitx-mozc_2.26.4220.100+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mozc/fcitx-mozc_2.26.4220.100+dfsg-4_amd64.deb"
+}

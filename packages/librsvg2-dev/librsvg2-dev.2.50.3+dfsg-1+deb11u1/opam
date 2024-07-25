@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librsvg2-dev_2.50.3+dfsg-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librsvg2-dev"]
+]
+depends: [
+  "gir1-2-rsvg-2-0" {= "2.50.3+dfsg-1+deb11u1"}
+  "libcairo2-dev" {>= "1.2.0"}
+  "libglib2-0-dev" {>= "2.50.0"}
+  "librsvg2-2" {= "2.50.3+dfsg-1+deb11u1"}
+  "librsvg2-common" {= "2.50.3+dfsg-1+deb11u1"}
+  ("libgdk-pixbuf-2-0-dev" {>= "2.23.5-2"} | "libgdk-pixbuf2-0-dev" {>= "2.23.5-2"})
+]
+extra-source "librsvg2-dev_2.50.3+dfsg-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librsvg/librsvg2-dev_2.50.3+dfsg-1+deb11u1_amd64.deb"
+}

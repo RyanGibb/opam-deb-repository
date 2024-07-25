@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml6-module-qtwebengine_6.4.2-final+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml6-module-qtwebengine"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6qml6" {>= "6.4.2+dfsg~"}
+  "libqt6webenginequick6" {>= "6.2.2"}
+  "libstdc++6" {>= "5"}
+  "qml6-module-qtquick"
+]
+extra-source "qml6-module-qtwebengine_6.4.2-final+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-webengine/qml6-module-qtwebengine_6.4.2-final+dfsg-1_amd64.deb"
+}

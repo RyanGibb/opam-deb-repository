@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i olsrd-plugins_0.6.6.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r olsrd-plugins"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "olsrd" {= "0.6.6.2-1"}
+]
+extra-source "olsrd-plugins_0.6.6.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/olsrd/olsrd-plugins_0.6.6.2-1_amd64.deb"
+}

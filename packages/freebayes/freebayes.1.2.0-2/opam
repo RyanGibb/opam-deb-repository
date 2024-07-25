@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freebayes_1.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freebayes"]
+]
+depends: [
+  "libbamtools2-5-1"
+  "libc6" {>= "2.14"}
+  "libdisorder0" {>= "0.0.2"}
+  "libfastahack0" {>= "0.0+git20160702.bbc645f"}
+  "libfml0"
+  "libgcc1" {>= "1-3.0"}
+  "libhts2" {>= "1.0"}
+  "libjsoncpp1" {>= "1.7.4"}
+  "libseqlib1" {>= "1.1.2+dfsg"}
+  "libsmithwaterman0" {>= "0.0+git20160702.2610e25"}
+  "libssw0"
+  "libstdc++6" {>= "5.2"}
+  "libtabixpp0"
+  "libvcflib1"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "freebayes_1.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freebayes/freebayes_1.2.0-2_amd64.deb"
+}

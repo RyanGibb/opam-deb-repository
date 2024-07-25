@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-dgraph-io-badger-dev_2.2007.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-dgraph-io-badger-dev"]
+]
+depends: [
+  "golang-github-cespare-xxhash-dev"
+  "golang-github-datadog-zstd-dev"
+  "golang-github-dgraph-io-ristretto-dev" {>= "0.0.2"}
+  "golang-github-dgryski-go-farm-dev"
+  "golang-github-dustin-go-humanize-dev"
+  "golang-github-pkg-errors-dev"
+  "golang-github-spf13-cobra-dev"
+  "golang-github-stretchr-testify-dev" {>= "1.4.0"}
+  "golang-golang-x-net-dev"
+  "golang-golang-x-sys-dev"
+  "golang-goprotobuf-dev"
+  "golang-snappy-go-dev"
+]
+extra-source "golang-github-dgraph-io-badger-dev_2.2007.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/badger/golang-github-dgraph-io-badger-dev_2.2007.2-2_all.deb"
+}

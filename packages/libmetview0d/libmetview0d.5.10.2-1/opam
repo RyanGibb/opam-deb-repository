@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmetview0d_5.10.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmetview0d"]
+]
+depends: [
+  "libatlas-ecmwf-0" {>= "0.23.0"}
+  "libc6" {>= "2.29"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libeccodes0" {>= "2.20.0"}
+  "libeckit0d" {>= "1.15.4"}
+  "libemos0d"
+  "libgcc-s1" {>= "4.0"}
+  "libmetkit0d" {>= "1.6.4"}
+  "libnetcdf18" {>= "4.0.1"}
+  "libodc-0d" {>= "1.2.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libmetview0d_5.10.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/metview/libmetview0d_5.10.2-1_amd64.deb"
+}

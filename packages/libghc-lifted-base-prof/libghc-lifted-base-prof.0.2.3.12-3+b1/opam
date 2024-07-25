@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-lifted-base-prof_0.2.3.12-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-lifted-base-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-lifted-base-dev" {= "0.2.3.12-3+b1"}
+  "libghc-monad-control-prof"
+  "libghc-transformers-base-prof"
+]
+extra-source "libghc-lifted-base-prof_0.2.3.12-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-lifted-base/libghc-lifted-base-prof_0.2.3.12-3+b1_amd64.deb"
+}

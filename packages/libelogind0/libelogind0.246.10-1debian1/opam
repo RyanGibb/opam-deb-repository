@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libelogind0_246.10-1debian1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libelogind0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcap2" {>= "1-2.10"}
+]
+conflicts: [
+  "libsystemd0"
+  "systemd"
+]
+extra-source "libelogind0_246.10-1debian1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elogind/libelogind0_246.10-1debian1_amd64.deb"
+}

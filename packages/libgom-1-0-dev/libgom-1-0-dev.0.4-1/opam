@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgom-1.0-dev_0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgom-1.0-dev"]
+]
+depends: [
+  "gir1-2-gom-1-0" {= "0.4-1"}
+  "libglib2-0-dev"
+  "libgom-1-0-0" {= "0.4-1"}
+]
+extra-source "libgom-1.0-dev_0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgom/libgom-1.0-dev_0.4-1_amd64.deb"
+}

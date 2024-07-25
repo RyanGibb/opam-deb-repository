@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sip-tester_1:3.5.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sip-tester"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-3.0"}
+  "libgsl23" {>= "2.5"}
+  "libgslcblas0" {>= "2.4"}
+  "libncurses6" {>= "6"}
+  "libpcap0-8" {>= "0.9.8"}
+  "libsctp1" {>= "1.0.10+dfsg"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "sip-tester_1:3.5.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sip-tester/sip-tester_3.5.2-1_amd64.deb"
+}

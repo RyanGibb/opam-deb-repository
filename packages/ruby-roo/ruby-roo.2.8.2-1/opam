@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-roo_2.8.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-roo"]
+]
+depends: [
+  "ruby-nokogiri" {>= "1"}
+  "ruby-zip" {< "2.0.0"}
+  "ruby-zip" {>= "1.1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-roo_2.8.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-roo/ruby-roo_2.8.2-1_all.deb"
+}

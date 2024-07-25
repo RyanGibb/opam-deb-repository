@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblldb-15_1:15.0.6-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblldb-15"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libclang-cpp15" {>= "1-15.0.6"}
+  "libedit2" {>= "3.1-20140620-0"}
+  "libgcc-s1" {>= "3.0"}
+  "libllvm15" {= "1-15.0.6-4+b1"}
+  "libncurses6" {>= "6"}
+  "libpython3-11" {>= "3.11.0"}
+  "libstdc++6" {>= "12"}
+  "libtinfo6" {>= "6"}
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "liblldb-15_1:15.0.6-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-15/liblldb-15_15.0.6-4+b1_amd64.deb"
+}

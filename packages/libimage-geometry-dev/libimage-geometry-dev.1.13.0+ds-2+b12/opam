@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libimage-geometry-dev_1.13.0+ds-2+b12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libimage-geometry-dev"]
+]
+depends: [
+  "libimage-geometry0d" {= "1.13.0+ds-2+b12"}
+  "libopencv-dev"
+  "libsensor-msgs-dev"
+]
+extra-source "libimage-geometry-dev_1.13.0+ds-2+b12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-vision-opencv/libimage-geometry-dev_1.13.0+ds-2+b12_amd64.deb"
+}

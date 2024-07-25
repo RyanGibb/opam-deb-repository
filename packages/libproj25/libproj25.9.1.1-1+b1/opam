@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libproj25_9.1.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libproj25"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcc-s1" {>= "4.0"}
+  "libsqlite3-0" {>= "3.7.5"}
+  "libstdc++6" {>= "11"}
+  "libtiff6" {>= "4.0.3"}
+  "proj-data" {>= "9.1.1-1"}
+]
+extra-source "libproj25_9.1.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/proj/libproj25_9.1.1-1+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i espeak_1.48.15+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r espeak"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libespeak-ng-libespeak1"
+]
+extra-source "espeak_1.48.15+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/espeak/espeak_1.48.15+dfsg-2_amd64.deb"
+}

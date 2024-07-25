@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i covered_0.7.10-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r covered"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libtk8-6" {>= "8.6.0"}
+  "tklib"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "covered_0.7.10-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/covered/covered_0.7.10-3+b1_amd64.deb"
+}

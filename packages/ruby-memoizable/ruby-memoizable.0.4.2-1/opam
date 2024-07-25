@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-memoizable_0.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-memoizable"]
+]
+depends: [
+  "ruby-thread-safe"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-memoizable_0.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-memoizable/ruby-memoizable_0.4.2-1_all.deb"
+}

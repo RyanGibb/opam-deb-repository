@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osm2pgrouting_2.3.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osm2pgrouting"]
+]
+depends: [
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libpq5"
+  "libpqxx-6-4" {>= "6.4"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "osm2pgrouting_2.3.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osm2pgrouting/osm2pgrouting_2.3.7-1_amd64.deb"
+}

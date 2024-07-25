@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i supervisor_4.2.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r supervisor"]
+]
+depends: [
+  "lsb-base"
+  "python3-any"
+  "python3-pkg-resources"
+]
+extra-source "supervisor_4.2.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/supervisor/supervisor_4.2.5-1_all.deb"
+}

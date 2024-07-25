@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtickit-widgets-perl_0.31-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtickit-widgets-perl"]
+]
+depends: [
+  "libobject-pad-perl"
+  "libparser-mgc-perl"
+  "libscalar-list-utils-perl"
+  "libstruct-dumb-perl"
+  "libsyntax-keyword-dynamically-perl"
+  "libtickit-perl" {>= "0.66"}
+  "perl-any"
+]
+extra-source "libtickit-widgets-perl_0.31-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtickit-widgets-perl/libtickit-widgets-perl_0.31-1_all.deb"
+}

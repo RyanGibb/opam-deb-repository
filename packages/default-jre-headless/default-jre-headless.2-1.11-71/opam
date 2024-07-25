@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i default-jre-headless_2:1.11-71_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r default-jre-headless"]
+]
+depends: [
+  "java-common"
+  "openjdk-11-jre-headless"
+]
+extra-source "default-jre-headless_2:1.11-71_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/java-common/default-jre-headless_1.11-71_amd64.deb"
+}

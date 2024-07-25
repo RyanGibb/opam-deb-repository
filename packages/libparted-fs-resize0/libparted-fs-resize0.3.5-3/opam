@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libparted-fs-resize0_3.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libparted-fs-resize0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libparted2" {= "3.5-3"}
+]
+extra-source "libparted-fs-resize0_3.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/parted/libparted-fs-resize0_3.5-3_amd64.deb"
+}

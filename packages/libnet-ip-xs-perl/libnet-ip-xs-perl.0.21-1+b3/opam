@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-ip-xs-perl_0.21-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-ip-xs-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libio-capture-perl"
+  "libtie-simple-perl"
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libnet-ip-xs-perl_0.21-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-ip-xs-perl/libnet-ip-xs-perl_0.21-1+b3_amd64.deb"
+}

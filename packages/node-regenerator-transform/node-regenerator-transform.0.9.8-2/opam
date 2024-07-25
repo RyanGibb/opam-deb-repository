@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-regenerator-transform_0.9.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-regenerator-transform"]
+]
+depends: [
+  "node-babel-runtime" {>= "6.18.0"}
+  "node-babel-types" {>= "6.19.0"}
+  "node-private" {>= "0.1.6"}
+  "nodejs"
+]
+extra-source "node-regenerator-transform_0.9.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-regenerator-transform/node-regenerator-transform_0.9.8-2_all.deb"
+}

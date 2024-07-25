@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i spamassassin_4.0.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r spamassassin"]
+]
+depends: [
+  "adduser"
+  "libarchive-tar-perl"
+  "libhtml-parser-perl"
+  "libhttp-date-perl"
+  "libio-string-perl"
+  "libmail-dkim-perl"
+  "libnet-dns-perl"
+  "libnetaddr-ip-perl"
+  "libsocket6-perl"
+  "libsys-hostname-long-perl"
+  "perl"
+  "sysvinit-utils"
+  ("libwww-perl" | "curl" | "w3m")
+]
+extra-source "spamassassin_4.0.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spamassassin/spamassassin_4.0.0-6_all.deb"
+}

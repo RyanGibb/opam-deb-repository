@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yum_3.4.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yum"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-libxml2"
+  "python-lzma"
+  "python-rpm"
+  "python-sqlite"
+  "python-sqlitecachec"
+  "python-urlgrabber"
+  "rpm" {>= "4.4.1"}
+]
+extra-source "yum_3.4.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yum/yum_3.4.3-3_all.deb"
+}

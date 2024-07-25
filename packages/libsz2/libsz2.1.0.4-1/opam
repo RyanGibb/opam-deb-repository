@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsz2_1.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsz2"]
+]
+depends: [
+  "libaec0" {>= "1.0.4"}
+  "libc6" {>= "2.14"}
+]
+extra-source "libsz2_1.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaec/libsz2_1.0.4-1_amd64.deb"
+}

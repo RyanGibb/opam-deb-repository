@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-net-imap_1:1.1.3-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-net-imap"]
+]
+depends: [
+  "php-common"
+  "php-net-socket" {>= "1.0.8"}
+]
+extra-source "php-net-imap_1:1.1.3-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-net-imap/php-net-imap_1.1.3-2.1_all.deb"
+}

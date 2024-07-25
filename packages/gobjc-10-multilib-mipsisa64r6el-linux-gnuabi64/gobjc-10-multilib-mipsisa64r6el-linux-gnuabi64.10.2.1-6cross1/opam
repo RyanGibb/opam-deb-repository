@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gobjc-10-multilib-mipsisa64r6el-linux-gnuabi64_10.2.1-6cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gobjc-10-multilib-mipsisa64r6el-linux-gnuabi64"]
+]
+depends: [
+  "gcc-10-mipsisa64r6el-linux-gnuabi64-base" {= "10.2.1-6cross1"}
+  "gcc-10-multilib-mipsisa64r6el-linux-gnuabi64" {= "10.2.1-6cross1"}
+  "gobjc-10-mipsisa64r6el-linux-gnuabi64" {= "10.2.1-6cross1"}
+  "lib32objc-10-dev-mips64r6el-cross" {>= "10.2.1-6cross1"}
+  "libn32objc-10-dev-mips64r6el-cross" {>= "10.2.1-6cross1"}
+]
+extra-source "gobjc-10-multilib-mipsisa64r6el-linux-gnuabi64_10.2.1-6cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10-cross-mipsen/gobjc-10-multilib-mipsisa64r6el-linux-gnuabi64_10.2.1-6cross1_amd64.deb"
+}

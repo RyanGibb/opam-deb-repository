@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvdeslirp0_0.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvdeslirp0"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libslirp0" {>= "4.2.0"}
+  "libvdeplug2"
+]
+extra-source "libvdeslirp0_0.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvdeslirp/libvdeslirp0_0.1.1-1_amd64.deb"
+}

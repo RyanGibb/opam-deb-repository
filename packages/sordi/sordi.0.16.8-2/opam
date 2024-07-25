@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sordi_0.16.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sordi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcre3"
+  "libserd-0-0" {>= "0.30"}
+  "libsord-0-0" {>= "0.12.0~dfsg0"}
+]
+extra-source "sordi_0.16.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sord/sordi_0.16.8-2_amd64.deb"
+}

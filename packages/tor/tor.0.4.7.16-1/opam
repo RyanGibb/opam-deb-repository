@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tor_0.4.7.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tor"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libcap2" {>= "1-2.10"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libseccomp2" {>= "0.0.0~20120605"}
+  "libssl3" {>= "3.0.0"}
+  "libsystemd0"
+  "libzstd1" {>= "1.5.2"}
+  "lsb-base"
+  "runit-helper" {>= "2.14.0~"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libssl0.9.8 (<< 0.9.8g-9)"
+]
+extra-source "tor_0.4.7.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tor/tor_0.4.7.16-1_amd64.deb"
+}

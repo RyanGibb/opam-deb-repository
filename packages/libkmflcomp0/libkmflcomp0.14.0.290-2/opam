@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkmflcomp0_14.0.290-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkmflcomp0"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libx11-6"
+]
+extra-source "libkmflcomp0_14.0.290-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kmflcomp/libkmflcomp0_14.0.290-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tkinfo_2.11-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tkinfo"]
+]
+depends: [
+  "install-info"
+  "tk" {>= "8.5"}
+]
+extra-source "tkinfo_2.11-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tkinfo/tkinfo_2.11-4_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i duperemove_0.11.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r duperemove"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libsqlite3-0" {>= "3.7.15"}
+]
+extra-source "duperemove_0.11.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/duperemove/duperemove_0.11.1-3_amd64.deb"
+}

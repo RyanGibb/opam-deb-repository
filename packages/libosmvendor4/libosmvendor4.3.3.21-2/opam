@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmvendor4_3.3.21-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmvendor4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libibumad3" {>= "1.3.9"}
+  "libosmcomp4" {>= "3.3.21"}
+  "libwrap0" {>= "7.6-4~"}
+]
+extra-source "libosmvendor4_3.3.21-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opensm/libosmvendor4_3.3.21-2_amd64.deb"
+}

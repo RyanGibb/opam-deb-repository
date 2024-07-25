@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-openglraw-prof_3.3.4.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-openglraw-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-fixed-prof"
+  "libghc-half-prof"
+  "libghc-openglraw-dev" {= "3.3.4.1-1+b2"}
+]
+extra-source "libghc-openglraw-prof_3.3.4.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-openglraw/libghc-openglraw-prof_3.3.4.1-1+b2_amd64.deb"
+}

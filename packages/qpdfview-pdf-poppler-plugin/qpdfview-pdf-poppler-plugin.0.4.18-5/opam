@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qpdfview-pdf-poppler-plugin_0.4.18-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qpdfview-pdf-poppler-plugin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpoppler-qt5-1" {>= "0.34.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+conflicts: [
+  "qpdfview-pdf-mupdf-plugin"
+]
+extra-source "qpdfview-pdf-poppler-plugin_0.4.18-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qpdfview/qpdfview-pdf-poppler-plugin_0.4.18-5_amd64.deb"
+}

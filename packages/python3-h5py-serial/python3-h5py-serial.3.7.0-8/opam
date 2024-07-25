@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-h5py-serial_3.7.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-h5py-serial"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libhdf5-103-1"
+  "libhdf5-hl-100"
+  "liblzf1" {>= "1.5"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+]
+conflicts: [
+  "python3-h5py (<< 2.10.0-3~)"
+]
+extra-source "python3-h5py-serial_3.7.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/h5py/python3-h5py-serial_3.7.0-8_amd64.deb"
+}

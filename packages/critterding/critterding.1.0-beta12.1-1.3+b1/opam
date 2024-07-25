@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i critterding_1.0-beta12.1-1.3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r critterding"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libftgl2" {>= "2.1.3~rc5"}
+  "libgcc-s1"
+  "libgomp1" {>= "4.9"}
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "5.2"}
+  ("libgl1-mesa-glx" | "libgl1")
+]
+extra-source "critterding_1.0-beta12.1-1.3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/critterding/critterding_1.0-beta12.1-1.3+b1_amd64.deb"
+}

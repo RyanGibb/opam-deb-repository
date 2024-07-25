@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsysrepo-cpp5_1.4.70-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsysrepo-cpp5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libsysrepo5" {= "1.4.70-4"}
+  "libyang-cpp1" {>= "1.0.182"}
+  "libyang1" {>= "1.0.182"}
+]
+extra-source "libsysrepo-cpp5_1.4.70-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sysrepo/libsysrepo-cpp5_1.4.70-4_amd64.deb"
+}

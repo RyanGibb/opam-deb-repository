@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsingular4-dev_1:4.3.1-p3+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsingular4-dev"]
+]
+depends: [
+  "libflint-dev"
+  "libgmp-dev"
+  "libmpfr-dev"
+  "libntl-dev"
+  "libsingular4-dev-common" {= "1-4.3.1-p3+ds-2"}
+  "libsingular4m3n0" {= "1-4.3.1-p3+ds-2"}
+]
+conflicts: [
+  "libsingular-dev"
+]
+extra-source "libsingular4-dev_1:4.3.1-p3+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/singular/libsingular4-dev_4.3.1-p3+ds-2_amd64.deb"
+}

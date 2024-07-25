@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmongodb-perl_2.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmongodb-perl"]
+]
+depends: [
+  "libauthen-sasl-saslprep-perl"
+  "libauthen-scram-perl" {>= "0.011"}
+  "libboolean-perl"
+  "libbson-perl"
+  "libclass-xsaccessor-perl"
+  "libmoo-perl" {>= "2"}
+  "libnamespace-clean-perl"
+  "libnet-dns-perl"
+  "libsafe-isa-perl" {>= "1.000007"}
+  "libsub-quote-perl"
+  "libtie-ixhash-perl"
+  "libtry-tiny-perl"
+  "libtype-tiny-xs-perl"
+  "libuuid-urandom-perl"
+  "perl-any"
+]
+extra-source "libmongodb-perl_2.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmongodb-perl/libmongodb-perl_2.2.2-1_all.deb"
+}

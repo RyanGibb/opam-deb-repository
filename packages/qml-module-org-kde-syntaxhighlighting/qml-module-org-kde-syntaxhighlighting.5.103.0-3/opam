@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-org-kde-syntaxhighlighting_5.103.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-org-kde-syntaxhighlighting"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5syntaxhighlighting5" {= "5.103.0-3"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5qml5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+  ("libqt5quick5" {>= "5.15.2~"} | "libqt5quick5-gles" {>= "5.15.2~"})
+]
+extra-source "qml-module-org-kde-syntaxhighlighting_5.103.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/ksyntax-highlighting/qml-module-org-kde-syntaxhighlighting_5.103.0-3_amd64.deb"
+}

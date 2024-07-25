@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aodh-notifier_11.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aodh-notifier"]
+]
+depends: [
+  "aodh-common" {= "11.0.0-2"}
+  "lsb-base"
+]
+extra-source "aodh-notifier_11.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aodh/aodh-notifier_11.0.0-2_all.deb"
+}

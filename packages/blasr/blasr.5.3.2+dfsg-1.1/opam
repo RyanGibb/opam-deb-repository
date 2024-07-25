@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i blasr_5.3.2+dfsg-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r blasr"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libhdf5-cpp-103" {>= "1.10.1"}
+  "libpbbam0-19-0" {>= "0.19.0+dfsg"}
+  "libpbseq" {>= "0~20160912"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "blasr_5.3.2+dfsg-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/blasr/blasr_5.3.2+dfsg-1.1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblog4j2-java_2.17.1-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblog4j2-java"]
+]
+depends: [
+  "liblightcouch-java" {>= "0.0.6"}
+  "libmongodb-java"
+  "libslf4j-java" {>= "1.7.30"}
+]
+extra-source "liblog4j2-java_2.17.1-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apache-log4j2/liblog4j2-java_2.17.1-1~deb11u1_all.deb"
+}

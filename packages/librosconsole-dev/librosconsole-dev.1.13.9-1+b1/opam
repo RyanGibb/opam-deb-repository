@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librosconsole-dev_1.13.9-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librosconsole-dev"]
+]
+depends: [
+  "libboost-regex-dev"
+  "libboost-system-dev"
+  "libboost-thread-dev"
+  "liblog4cxx-dev"
+  "librosconsole2d" {= "1.13.9-1+b1"}
+  "libroscpp-core-dev"
+]
+extra-source "librosconsole-dev_1.13.9-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-rosconsole/librosconsole-dev_1.13.9-1+b1_amd64.deb"
+}

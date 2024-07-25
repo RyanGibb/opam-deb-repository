@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgcc-11-dev-mipsel-cross_11.3.0-8cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgcc-11-dev-mipsel-cross"]
+]
+depends: [
+  "gcc-11-cross-base-mipsen" {= "11.3.0-8cross1"}
+  "libatomic1-mipsel-cross" {>= "11.3.0-8cross1"}
+  "libgcc-s1-mipsel-cross" {>= "11.3.0-8cross1"}
+  "libgomp1-mipsel-cross" {>= "11.3.0-8cross1"}
+]
+extra-source "libgcc-11-dev-mipsel-cross_11.3.0-8cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-11-cross-mipsen/libgcc-11-dev-mipsel-cross_11.3.0-8cross1_all.deb"
+}

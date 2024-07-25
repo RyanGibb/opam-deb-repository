@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ftools-pow_5.5+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ftools-pow"]
+]
+depends: [
+  "iwidgets4"
+  "libc6" {>= "2.14"}
+  "libcfitsio7" {>= "3.450~"}
+  "libwcs6" {>= "4.8.2"}
+  "libx11-6"
+  "tcl-fitstcl"
+  "tix"
+]
+extra-source "ftools-pow_5.5+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/ftools-fv/ftools-pow_5.5+dfsg-2_amd64.deb"
+}

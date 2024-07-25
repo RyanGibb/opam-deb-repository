@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplot2c2_2.6-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplot2c2"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  "libxaw7" {>= "2-1.0.14"}
+  "libxext6"
+  "libxt6"
+]
+conflicts: [
+  "libplot"
+  "libplot2"
+]
+extra-source "libplot2c2_2.6-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plotutils/libplot2c2_2.6-13_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rxvt-unicode-256color_9.22-6+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rxvt-unicode-256color"]
+]
+depends: [
+  "rxvt-unicode" {>= "9.22-2"}
+]
+conflicts: [
+  "rxvt-unicode (<< 9.22-2)"
+]
+extra-source "rxvt-unicode-256color_9.22-6+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rxvt-unicode/rxvt-unicode-256color_9.22-6+deb10u1_all.deb"
+}

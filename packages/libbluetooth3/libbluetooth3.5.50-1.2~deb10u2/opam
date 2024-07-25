@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbluetooth3_5.50-1.2~deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbluetooth3"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libudev1" {>= "183"}
+]
+conflicts: [
+  "libsdp2 (<= 1.5-2)"
+]
+extra-source "libbluetooth3_5.50-1.2~deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bluez/libbluetooth3_5.50-1.2~deb10u2_amd64.deb"
+}

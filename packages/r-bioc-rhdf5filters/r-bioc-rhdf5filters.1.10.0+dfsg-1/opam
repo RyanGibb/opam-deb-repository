@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-rhdf5filters_1.10.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-rhdf5filters"]
+]
+depends: [
+  "libblosc1" {>= "1.7.0"}
+  "libbz2-1-0"
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-rhdf5lib"
+]
+extra-source "r-bioc-rhdf5filters_1.10.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-rhdf5filters/r-bioc-rhdf5filters_1.10.0+dfsg-1_amd64.deb"
+}

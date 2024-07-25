@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-criterion-measurement-prof_0.1.4.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-criterion-measurement-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-base-compat-prof"
+  "libghc-criterion-measurement-dev" {= "0.1.4.0-1+b2"}
+  "libghc-vector-prof"
+]
+extra-source "libghc-criterion-measurement-prof_0.1.4.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-criterion-measurement/libghc-criterion-measurement-prof_0.1.4.0-1+b2_amd64.deb"
+}

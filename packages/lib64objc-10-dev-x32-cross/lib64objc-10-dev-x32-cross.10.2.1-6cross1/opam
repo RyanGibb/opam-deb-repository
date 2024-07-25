@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib64objc-10-dev-x32-cross_10.2.1-6cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib64objc-10-dev-x32-cross"]
+]
+depends: [
+  "gcc-10-cross-base-ports" {= "10.2.1-6cross1"}
+  "lib64gcc-10-dev-x32-cross" {= "10.2.1-6cross1"}
+  "lib64objc4-x32-cross" {>= "10.2.1-6cross1"}
+]
+extra-source "lib64objc-10-dev-x32-cross_10.2.1-6cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10-cross-ports/lib64objc-10-dev-x32-cross_10.2.1-6cross1_all.deb"
+}

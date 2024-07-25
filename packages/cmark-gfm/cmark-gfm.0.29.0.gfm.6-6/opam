@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cmark-gfm_0.29.0.gfm.6-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cmark-gfm"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcmark-gfm-extensions0-29-0-gfm-6" {>= "0.29.0.gfm.6"}
+  "libcmark-gfm0-29-0-gfm-6" {>= "0.29.0.gfm.6"}
+]
+extra-source "cmark-gfm_0.29.0.gfm.6-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cmark-gfm/cmark-gfm_0.29.0.gfm.6-6_amd64.deb"
+}

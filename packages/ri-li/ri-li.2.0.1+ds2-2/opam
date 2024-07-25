@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ri-li_2.0.1+ds2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ri-li"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libsdl-mixer1-2" {>= "1.2.12"}
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "5"}
+  "ri-li-data" {>= "2.0.1+ds2-2"}
+]
+extra-source "ri-li_2.0.1+ds2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ri-li/ri-li_2.0.1+ds2-2_amd64.deb"
+}

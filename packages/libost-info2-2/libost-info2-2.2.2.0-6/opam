@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libost-info2.2_2.2.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libost-info2.2"]
+]
+depends: [
+  "libboost-regex1-74-0"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libost-base2-2" {>= "2.2.0"}
+  "libost-geom2-2" {>= "2.2.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libost-info2.2_2.2.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openstructure/libost-info2.2_2.2.0-6_amd64.deb"
+}

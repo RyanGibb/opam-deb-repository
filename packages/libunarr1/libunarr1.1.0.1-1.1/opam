@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libunarr1_1.0.1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libunarr1"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libunarr1_1.0.1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unarr/libunarr1_1.0.1-1.1_amd64.deb"
+}

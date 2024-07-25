@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-breezy_3.0.0~bzr7290-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-breezy"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+  "python3-configobj"
+]
+conflicts: [
+  "python3-dulwich (<< 0.19.11)"
+  "python3-paramiko (<< 1.14.1)"
+]
+extra-source "python3-breezy_3.0.0~bzr7290-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/breezy/python3-breezy_3.0.0~bzr7290-2_amd64.deb"
+}

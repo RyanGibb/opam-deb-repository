@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i twoftpd_1.42-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r twoftpd"]
+]
+depends: [
+  "libbg2" {>= "2.03"}
+  "libc6" {>= "2.14"}
+  "libcvm1"
+]
+extra-source "twoftpd_1.42-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/twoftpd/twoftpd_1.42-1.2_amd64.deb"
+}

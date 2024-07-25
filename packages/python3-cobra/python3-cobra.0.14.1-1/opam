@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-cobra_0.14.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-cobra"]
+]
+depends: [
+  "python-cobra-data" {= "0.14.1-1"}
+  "python3-any"
+  "python3-depinfo"
+  "python3-future"
+  "python3-numpy"
+  "python3-optlang"
+  "python3-pandas" {>= "0.17.0"}
+  "python3-ruamel-yaml"
+  "python3-six"
+  "python3-swiglpk"
+  "python3-tabulate"
+]
+extra-source "python3-cobra_0.14.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-cobra/python3-cobra_0.14.1-1_amd64.deb"
+}

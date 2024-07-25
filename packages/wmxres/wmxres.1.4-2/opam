@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmxres_1.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmxres"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdockapp3" {>= "0.7.3"}
+  "libx11-6"
+  "libxxf86vm1"
+]
+extra-source "wmxres_1.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmxres/wmxres_1.4-2_amd64.deb"
+}

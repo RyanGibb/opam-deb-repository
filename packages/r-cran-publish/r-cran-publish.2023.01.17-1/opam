@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-publish_2023.01.17-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-publish"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-data-table" {>= "1.10.4"}
+  "r-cran-lava" {>= "1.5.1"}
+  "r-cran-multcomp" {>= "1.4"}
+  "r-cran-prodlim" {>= "1.5.4"}
+  "r-cran-survival" {>= "2.38"}
+]
+extra-source "r-cran-publish_2023.01.17-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-publish/r-cran-publish_2023.01.17-1_all.deb"
+}

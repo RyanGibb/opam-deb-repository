@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i atac_0~20150903+r2013-8+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r atac"]
+]
+depends: [
+  "gnuplot"
+  "leaff"
+  "libc6" {>= "2.34"}
+  "libfile-which-perl"
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "meryl"
+  "perl-any"
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-11"
+  "python3-any"
+]
+extra-source "atac_0~20150903+r2013-8+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kmer/atac_0~20150903+r2013-8+b3_amd64.deb"
+}

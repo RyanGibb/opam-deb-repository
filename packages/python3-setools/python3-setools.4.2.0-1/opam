@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-setools_4.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-setools"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libselinux1" {>= "2.8"}
+  "libsepol1" {>= "2.8"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.6~"}
+  "python3-any"
+  "python3-networkx" {>= "2.0"}
+  "python3-pkg-resources"
+]
+extra-source "python3-setools_4.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/setools/python3-setools_4.2.0-1_amd64.deb"
+}

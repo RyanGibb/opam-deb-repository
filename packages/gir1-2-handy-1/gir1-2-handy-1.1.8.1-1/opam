@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-handy-1_1.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-handy-1"]
+]
+depends: [
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-3-0"
+  "libhandy-1-0" {>= "1.5.0"}
+]
+extra-source "gir1.2-handy-1_1.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhandy-1/gir1.2-handy-1_1.8.1-1_amd64.deb"
+}

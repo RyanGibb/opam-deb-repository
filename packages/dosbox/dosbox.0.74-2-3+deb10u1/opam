@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dosbox_0.74-2-3+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dosbox"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl-net1-2"
+  "libsdl-sound1-2" {>= "1.0.1"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "dosbox_0.74-2-3+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dosbox/dosbox_0.74-2-3+deb10u1_amd64.deb"
+}

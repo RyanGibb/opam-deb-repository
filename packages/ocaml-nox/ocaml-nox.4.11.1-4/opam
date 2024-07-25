@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ocaml-nox_4.11.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ocaml-nox"]
+]
+depends: [
+  "binutils"
+  "gcc"
+  "libc6" {>= "2.29"}
+  "libncurses5-dev"
+  "ocaml-base-nox"
+  "ocaml-interp" {= "4.11.1-4"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "ocaml-nox_4.11.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml/ocaml-nox_4.11.1-4_amd64.deb"
+}

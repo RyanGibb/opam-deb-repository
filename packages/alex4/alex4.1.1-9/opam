@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i alex4_1.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r alex4"]
+]
+depends: [
+  "alex4-data" {= "1.1-9"}
+  "libaldmb1"
+  "liballegro4-4" {>= "2-4.4.3.1"}
+  "libc6" {>= "2.14"}
+  "libdumb1"
+]
+extra-source "alex4_1.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alex4/alex4_1.1-9_amd64.deb"
+}

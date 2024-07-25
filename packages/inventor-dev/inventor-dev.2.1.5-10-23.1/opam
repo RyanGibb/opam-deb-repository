@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i inventor-dev_2.1.5-10-23.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r inventor-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libinventor1" {= "2.1.5-10-23.1"}
+  "libmotif-dev"
+  ("xlibmesa-dev" | "libgl-dev")
+]
+conflicts: [
+  "libcoin20-dev"
+  "libcoin20-doc"
+]
+extra-source "inventor-dev_2.1.5-10-23.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/inventor/inventor-dev_2.1.5-10-23.1_amd64.deb"
+}

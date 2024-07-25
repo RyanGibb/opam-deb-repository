@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-haddock-library-dev_1.5.0.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-haddock-library-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libghc-attoparsec-dev"
+  "libgmp10"
+]
+extra-source "libghc-haddock-library-dev_1.5.0.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-haddock-library/libghc-haddock-library-dev_1.5.0.1-2+b1_amd64.deb"
+}

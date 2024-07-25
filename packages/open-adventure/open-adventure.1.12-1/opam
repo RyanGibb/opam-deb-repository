@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i open-adventure_1.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r open-adventure"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libedit2" {>= "2.11-20080614-0"}
+]
+extra-source "open-adventure_1.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/open-adventure/open-adventure_1.12-1_amd64.deb"
+}

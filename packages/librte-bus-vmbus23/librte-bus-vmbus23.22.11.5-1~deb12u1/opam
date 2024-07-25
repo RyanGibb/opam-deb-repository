@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-bus-vmbus23_22.11.5-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-bus-vmbus23"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.33"}
+  "libfdt1" {>= "1.6.1"}
+  "libnuma1" {>= "2.0.11"}
+  "librte-eal23" {>= "22.11"}
+  "librte-kvargs23" {>= "18.08"}
+  "librte-telemetry23" {>= "21.08"}
+]
+extra-source "librte-bus-vmbus23_22.11.5-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-bus-vmbus23_22.11.5-1~deb12u1_amd64.deb"
+}

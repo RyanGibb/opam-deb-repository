@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pysqlite2_2.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pysqlite2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+]
+conflicts: [
+  "python2.3-pysqlite2"
+  "python2.4-pysqlite2"
+]
+extra-source "python-pysqlite2_2.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pysqlite2/python-pysqlite2_2.7.0-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jmol_14.6.4+2016.11.05+dfsg1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jmol"]
+]
+depends: [
+  "default-jre"
+  "libjmol-java" {= "14.6.4+2016.11.05+dfsg1-4"}
+]
+extra-source "jmol_14.6.4+2016.11.05+dfsg1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jmol/jmol_14.6.4+2016.11.05+dfsg1-4_all.deb"
+}

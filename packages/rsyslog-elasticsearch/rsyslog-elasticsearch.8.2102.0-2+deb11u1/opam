@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rsyslog-elasticsearch_8.2102.0-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rsyslog-elasticsearch"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "rsyslog" {= "8.2102.0-2+deb11u1"}
+]
+extra-source "rsyslog-elasticsearch_8.2102.0-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rsyslog/rsyslog-elasticsearch_8.2102.0-2+deb11u1_amd64.deb"
+}

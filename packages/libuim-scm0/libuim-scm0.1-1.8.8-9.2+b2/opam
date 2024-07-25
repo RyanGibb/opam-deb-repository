@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libuim-scm0_1:1.8.8-9.2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libuim-scm0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcroots0" {>= "0.9.0"}
+]
+extra-source "libuim-scm0_1:1.8.8-9.2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uim/libuim-scm0_1.8.8-9.2+b2_amd64.deb"
+}

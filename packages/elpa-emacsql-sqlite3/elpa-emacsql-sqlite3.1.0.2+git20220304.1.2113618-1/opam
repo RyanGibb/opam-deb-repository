@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-emacsql-sqlite3_1.0.2+git20220304.1.2113618-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-emacsql-sqlite3"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-emacsql" {>= "3.0.0"}
+  "emacsen-common"
+  "sqlite3"
+]
+extra-source "elpa-emacsql-sqlite3_1.0.2+git20220304.1.2113618-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emacsql-sqlite3/elpa-emacsql-sqlite3_1.0.2+git20220304.1.2113618-1_all.deb"
+}

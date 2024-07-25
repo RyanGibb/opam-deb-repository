@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-regenerate_1.4.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-regenerate"]
+]
+depends: [
+  "libjs-regenerate" {= "1.4.2-2"}
+  "nodejs"
+]
+extra-source "node-regenerate_1.4.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-regenerate/node-regenerate_1.4.2-2_all.deb"
+}

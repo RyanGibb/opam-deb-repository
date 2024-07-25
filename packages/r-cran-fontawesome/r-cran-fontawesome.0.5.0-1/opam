@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-fontawesome_0.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-fontawesome"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-htmltools" {>= "0.5.1.1"}
+  "r-cran-rlang" {>= "1.0.6"}
+]
+extra-source "r-cran-fontawesome_0.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-fontawesome/r-cran-fontawesome_0.5.0-1_all.deb"
+}

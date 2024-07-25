@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libruli-bin_0.36-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libruli-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "liboop4" {>= "1.0~"}
+  "libruli4" {= "0.36-3+b1"}
+]
+extra-source "libruli-bin_0.36-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruli/libruli-bin_0.36-3+b1_amd64.deb"
+}

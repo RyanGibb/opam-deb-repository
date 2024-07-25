@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkolabxml-dev_1.2.1-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkolabxml-dev"]
+]
+depends: [
+  "libboost-dev"
+  "libboost-thread-dev"
+  "libcurl4-gnutls-dev"
+  "libkolabxml1v5" {= "1.2.1-4+b2"}
+  "libxerces-c-dev"
+]
+extra-source "libkolabxml-dev_1.2.1-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkolabxml/libkolabxml-dev_1.2.1-4+b2_amd64.deb"
+}

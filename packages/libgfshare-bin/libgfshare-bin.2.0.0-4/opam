@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgfshare-bin_2.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgfshare-bin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgfshare2" {>= "2"}
+]
+extra-source "libgfshare-bin_2.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgfshare/libgfshare-bin_2.0.0-4_amd64.deb"
+}

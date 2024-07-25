@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fbcat_0.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fbcat"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+conflicts: [
+  "fbgrab"
+]
+extra-source "fbcat_0.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fbcat/fbcat_0.3-1+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libyuv-utils_0.0~git20230123.b2528b0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libyuv-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libstdc++6" {>= "4.3"}
+  "libyuv0" {= "0.0~git20230123.b2528b0-1"}
+]
+extra-source "libyuv-utils_0.0~git20230123.b2528b0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liby/libyuv/libyuv-utils_0.0~git20230123.b2528b0-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libphonenumber7-java_7.1.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libphonenumber7-java"]
+]
+depends: [
+  "libprotobuf-java"
+  "libservlet3-1-java"
+]
+conflicts: [
+  "libphonenumber-java"
+  "libphonenumber6-java"
+]
+extra-source "libphonenumber7-java_7.1.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libphonenumber/libphonenumber7-java_7.1.0-5_all.deb"
+}

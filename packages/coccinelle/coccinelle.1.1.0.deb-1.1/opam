@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coccinelle_1.1.0.deb-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coccinelle"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libparmap-ocaml"
+  "libpcre3"
+  "libstdcompat-ocaml"
+  "ocaml-base-nox"
+  "ocaml-findlib"
+  "python3-any"
+]
+extra-source "coccinelle_1.1.0.deb-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coccinelle/coccinelle_1.1.0.deb-1.1_amd64.deb"
+}

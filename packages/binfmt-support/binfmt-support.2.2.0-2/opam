@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i binfmt-support_2.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r binfmt-support"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpipeline1" {>= "1.0.0"}
+  "lsb-base" {>= "4.1+Debian3"}
+]
+extra-source "binfmt-support_2.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/binfmt-support/binfmt-support_2.2.0-2_amd64.deb"
+}

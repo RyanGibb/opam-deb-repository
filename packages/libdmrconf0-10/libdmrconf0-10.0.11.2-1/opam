@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdmrconf0.10_0.11.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdmrconf0.10"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5positioning5" {>= "5.6.0"}
+  "libqt5serialport5" {>= "5.6.0"}
+  "libstdc++6" {>= "11"}
+  "libusb-1-0-0" {>= "2-1.0.16"}
+  "libyaml-cpp0-7" {>= "0.7.0"}
+]
+extra-source "libdmrconf0.10_0.11.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qdmr/libdmrconf0.10_0.11.2-1_amd64.deb"
+}

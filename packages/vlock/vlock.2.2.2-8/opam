@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vlock_2.2.2-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vlock"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.15"}
+  "libpam-modules"
+  "libpam0g" {>= "0.99.7.1"}
+]
+extra-source "vlock_2.2.2-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vlock/vlock_2.2.2-8_amd64.deb"
+}

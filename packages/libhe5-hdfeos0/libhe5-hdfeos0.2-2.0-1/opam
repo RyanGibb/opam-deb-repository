@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhe5-hdfeos0_2:2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhe5-hdfeos0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgctp-2-0-0" {>= "2.0.0"}
+  "libhdf5-103-1"
+  "libhdf5-hl-100"
+]
+extra-source "libhe5-hdfeos0_2:2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hdf-eos5/libhe5-hdfeos0_2.0-1_amd64.deb"
+}

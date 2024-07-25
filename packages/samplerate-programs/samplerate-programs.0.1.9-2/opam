@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i samplerate-programs_0.1.9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r samplerate-programs"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libsamplerate0" {>= "0.1.7"}
+  "libsndfile1" {>= "1.0.20"}
+]
+extra-source "samplerate-programs_0.1.9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsamplerate/samplerate-programs_0.1.9-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wyrd_1.4.6-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wyrd"]
+]
+depends: [
+  "less"
+  "libc6" {>= "2.29"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "remind"
+]
+extra-source "wyrd_1.4.6-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wyrd/wyrd_1.4.6-6_amd64.deb"
+}

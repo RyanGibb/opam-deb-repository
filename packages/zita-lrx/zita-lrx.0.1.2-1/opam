@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zita-lrx_0.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zita-lrx"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libclthreads2" {>= "2.4.2"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "zita-lrx_0.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zita-lrx/zita-lrx_0.1.2-1_amd64.deb"
+}

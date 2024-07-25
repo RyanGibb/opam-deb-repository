@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libflashrom1_1.3.0-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libflashrom1"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libftdi1-2" {>= "1.2"}
+  "libjaylink0" {>= "0.3.1"}
+  "libpci3" {>= "1-3.8.0"}
+  "libusb-1-0-0" {>= "2-1.0.22"}
+]
+extra-source "libflashrom1_1.3.0-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flashrom/libflashrom1_1.3.0-2.1_amd64.deb"
+}

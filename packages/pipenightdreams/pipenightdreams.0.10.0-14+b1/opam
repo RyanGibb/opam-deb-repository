@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pipenightdreams_0.10.0-14+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pipenightdreams"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "5"}
+  "pipenightdreams-data" {= "0.10.0-14"}
+]
+extra-source "pipenightdreams_0.10.0-14+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pipenightdreams/pipenightdreams_0.10.0-14+b1_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstdc++-arm-none-eabi-dev_15:12.2.rel1-1+23_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstdc++-arm-none-eabi-dev"]
+]
+depends: [
+  "gcc-arm-none-eabi" {= "15-12.2.rel1-1"}
+]
+extra-source "libstdc++-arm-none-eabi-dev_15:12.2.rel1-1+23_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libstdc++-arm-none-eabi/libstdc++-arm-none-eabi-dev_12.2.rel1-1+23_all.deb"
+}

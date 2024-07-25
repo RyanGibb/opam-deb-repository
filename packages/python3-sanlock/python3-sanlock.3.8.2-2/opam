@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sanlock_3.8.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sanlock"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libsanlock1" {= "3.8.2-2"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+]
+extra-source "python3-sanlock_3.8.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sanlock/python3-sanlock_3.8.2-2_amd64.deb"
+}

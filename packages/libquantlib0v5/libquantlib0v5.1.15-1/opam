@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libquantlib0v5_1.15-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libquantlib0v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-4.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libquantlib0"
+]
+extra-source "libquantlib0v5_1.15-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/quantlib/libquantlib0v5_1.15-1_amd64.deb"
+}

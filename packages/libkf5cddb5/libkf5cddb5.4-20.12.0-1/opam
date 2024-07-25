@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5cddb5_4:20.12.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5cddb5"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libkf5configcore5" {>= "5.24.0~"}
+  "libkf5configgui5" {>= "5.24.0~"}
+  "libkf5coreaddons5" {>= "4.97.0"}
+  "libkf5i18n5" {>= "5.24.0~"}
+  "libkf5kiocore5" {>= "5.69.0"}
+  "libmusicbrainz5cc2v5" {>= "5.1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.4.0~"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libkf5cddb5_4:20.12.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkcddb/libkf5cddb5_20.12.0-1_amd64.deb"
+}

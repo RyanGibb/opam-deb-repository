@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tcl3270_4.1ga10-1.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tcl3270"]
+]
+depends: [
+  "3270-common" {= "4.1ga10-1.1+b1"}
+  "libc6" {>= "2.4"}
+  "libtcl8-6" {>= "8.6.0"}
+  "s3270" {= "4.1ga10-1.1+b1"}
+]
+extra-source "tcl3270_4.1ga10-1.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibm-3270/tcl3270_4.1ga10-1.1+b1_amd64.deb"
+}

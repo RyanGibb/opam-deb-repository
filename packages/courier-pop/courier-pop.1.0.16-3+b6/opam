@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i courier-pop_1.0.16-3+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r courier-pop"]
+]
+depends: [
+  "courier-authlib" {>= "0.71"}
+  "courier-base" {= "1.0.16-3+b6"}
+  "libc6" {>= "2.34"}
+  "libcourier-unicode4" {>= "2.1.2"}
+  "libidn12" {>= "1.13"}
+  ("debconf" | "debconf-2-0")
+  ("default-mta" | "mail-transport-agent")
+  ("sysvinit-utils" {>= "2.88dsf-50"} | "init-d-script")
+]
+conflicts: [
+  "pop3-server"
+]
+extra-source "courier-pop_1.0.16-3+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/courier/courier-pop_1.0.16-3+b6_amd64.deb"
+}

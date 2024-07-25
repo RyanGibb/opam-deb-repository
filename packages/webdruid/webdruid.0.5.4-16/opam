@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i webdruid_0.5.4-16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r webdruid"]
+]
+depends: [
+  "fonts-freefont-ttf"
+  "libc6" {>= "2.14"}
+  "libdb5-3"
+  "libgd3" {>= "2.1.0~alpha~"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "webdruid_0.5.4-16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/webdruid/webdruid_0.5.4-16_amd64.deb"
+}

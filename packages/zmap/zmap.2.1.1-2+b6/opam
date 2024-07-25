@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zmap_2.1.1-2+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zmap"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgmp10"
+  "libhiredis0-14" {>= "0.14.0"}
+  "libjson-c5" {>= "0.15"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "zmap_2.1.1-2+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zmap/zmap_2.1.1-2+b6_amd64.deb"
+}

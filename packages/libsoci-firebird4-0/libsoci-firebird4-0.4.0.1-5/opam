@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsoci-firebird4.0_4.0.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsoci-firebird4.0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfbclient2" {>= "2.5.0.25784~ReleaseCandidate1.ds2"}
+  "libgcc-s1" {>= "3.0"}
+  "libsoci-core4-0" {>= "4.0.1"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libsoci-firebird4.0_4.0.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/soci/libsoci-firebird4.0_4.0.1-5_amd64.deb"
+}

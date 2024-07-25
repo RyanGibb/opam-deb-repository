@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsasl2-modules-gssapi-heimdal_2.1.27+dfsg-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsasl2-modules-gssapi-heimdal"]
+]
+depends: [
+  "libasn1-8-heimdal" {>= "1.4.0+git20110226"}
+  "libc6" {>= "2.14"}
+  "libcom-err2" {>= "1.43.9"}
+  "libgssapi3-heimdal" {>= "1.4.0+git20110226"}
+  "libkrb5-26-heimdal" {>= "1.4.0+git20110226"}
+  "libroken18-heimdal" {>= "1.4.0+git20110226"}
+  "libsasl2-modules" {= "2.1.27+dfsg-1+deb10u2"}
+  "libssl1-1" {>= "1.1.0"}
+]
+conflicts: [
+  "libsasl2-modules-gssapi-mit"
+]
+extra-source "libsasl2-modules-gssapi-heimdal_2.1.27+dfsg-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cyrus-sasl2/libsasl2-modules-gssapi-heimdal_2.1.27+dfsg-1+deb10u2_amd64.deb"
+}

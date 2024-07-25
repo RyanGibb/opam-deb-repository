@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-zope.publisher_3.12.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-zope.publisher"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  "python-pkg-resources"
+  "python-zope-browser"
+  "python-zope-component"
+  "python-zope-configuration"
+  "python-zope-contenttype" {>= "3.5"}
+  "python-zope-event"
+  "python-zope-exceptions"
+  "python-zope-i18n"
+  "python-zope-interface"
+  "python-zope-location"
+  "python-zope-proxy"
+  "python-zope-security"
+  ("python2-7" | "python2-6")
+]
+conflicts: [
+  "zope3"
+]
+extra-source "python-zope.publisher_3.12.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zope.publisher/python-zope.publisher_3.12.6-2_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pywraps2_0.10.0-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pywraps2"]
+]
+depends: [
+  "libabsl20220623" {>= "0~20220623.0-1"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpython3-11" {>= "3.11.0"}
+  "libs2-0" {= "0.10.0-6+b1"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-pywraps2_0.10.0-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/s2geometry/python3-pywraps2_0.10.0-6+b1_amd64.deb"
+}

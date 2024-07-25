@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-netlink-proto-dev_0.10.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-netlink-proto-dev"]
+]
+depends: [
+  "librust-bytes-1+default-dev"
+  "librust-futures-0-3+default-dev"
+  "librust-log-dev"
+  "librust-netlink-packet-core-dev"
+  "librust-netlink-sys-dev"
+  "librust-thiserror-dev"
+  "librust-tokio-1+io-util-dev"
+]
+extra-source "librust-netlink-proto-dev_0.10.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-netlink-proto/librust-netlink-proto-dev_0.10.0-1+b1_amd64.deb"
+}

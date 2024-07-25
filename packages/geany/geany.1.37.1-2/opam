@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i geany_1.37.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r geany"]
+]
+depends: [
+  "geany-common" {= "1.37.1-2"}
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.27"}
+  "libcairo2" {>= "1.8.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.63.1"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libpango-1-0-0" {>= "1.20.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "geany_1.37.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/geany/geany_1.37.1-2_amd64.deb"
+}

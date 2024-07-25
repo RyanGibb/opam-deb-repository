@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i parcimonie_0.11.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r parcimonie"]
+]
+depends: [
+  "dirmngr"
+  "gnupg" {>= "2.1~"}
+  "libclone-perl"
+  "libconfig-general-perl"
+  "libfile-homedir-perl"
+  "libfile-which-perl"
+  "libgnupg-interface-perl" {>= "0.52-3"}
+  "libipc-system-simple-perl"
+  "liblist-moreutils-perl"
+  "libmoo-perl" {>= "1.003001"}
+  "libmoox-late-perl"
+  "libmoox-options-perl"
+  "libmoox-strictconstructor-perl"
+  "libnamespace-clean-perl"
+  "libpath-tiny-perl"
+  "libtime-duration-parse-perl"
+  "libtry-tiny-perl"
+  "libtype-tiny-perl"
+  "libtypes-path-tiny-perl"
+  "perl" {>= "5.20"}
+  "torsocks"
+]
+extra-source "parcimonie_0.11.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/parcimonie/parcimonie_0.11.0-1_all.deb"
+}

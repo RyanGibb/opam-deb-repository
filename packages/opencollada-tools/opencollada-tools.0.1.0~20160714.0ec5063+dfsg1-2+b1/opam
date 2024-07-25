@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i opencollada-tools_0.1.0~20160714.0ec5063+dfsg1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r opencollada-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libpcre3"
+  "libstdc++6" {>= "5.2"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "opencollada-tools_0.1.0~20160714.0ec5063+dfsg1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencollada/opencollada-tools_0.1.0~20160714.0ec5063+dfsg1-2+b1_amd64.deb"
+}

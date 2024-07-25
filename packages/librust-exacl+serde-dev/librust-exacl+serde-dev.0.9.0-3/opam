@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-exacl+serde-dev_0.9.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-exacl+serde-dev"]
+]
+depends: [
+  "librust-exacl-dev" {= "0.9.0-3"}
+  "librust-serde-1+default-dev"
+  "librust-serde-1+derive-dev"
+]
+extra-source "librust-exacl+serde-dev_0.9.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-exacl/librust-exacl+serde-dev_0.9.0-3_amd64.deb"
+}

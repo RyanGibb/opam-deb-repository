@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-ethon_0.16.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-ethon"]
+]
+depends: [
+  "libcurl4"
+  "ruby-ffi" {>= "1.15.0"}
+  "ruby-mime-types"
+]
+extra-source "ruby-ethon_0.16.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-ethon/ruby-ethon_0.16.0-1_all.deb"
+}

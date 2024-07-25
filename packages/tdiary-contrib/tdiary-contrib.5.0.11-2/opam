@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tdiary-contrib_5.0.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tdiary-contrib"]
+]
+depends: [
+  "curl"
+  "libjs-mootools"
+  "ruby"
+  "tdiary" {>= "5"}
+]
+extra-source "tdiary-contrib_5.0.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tdiary-contrib/tdiary-contrib_5.0.11-2_all.deb"
+}

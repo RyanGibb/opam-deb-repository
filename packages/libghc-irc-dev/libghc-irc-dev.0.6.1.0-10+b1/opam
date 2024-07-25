@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-irc-dev_0.6.1.0-10+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-irc-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-attoparsec-dev"
+  "libgmp10"
+]
+extra-source "libghc-irc-dev_0.6.1.0-10+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-irc/libghc-irc-dev_0.6.1.0-10+b1_amd64.deb"
+}

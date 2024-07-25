@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-language-javascript-dev_0.6.0.11-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-language-javascript-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-blaze-builder-dev"
+  "libghc-utf8-string-dev"
+  "libgmp10"
+]
+extra-source "libghc-language-javascript-dev_0.6.0.11-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-language-javascript/libghc-language-javascript-dev_0.6.0.11-3+b2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hindent_5.3.4-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hindent"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libffi8" {>= "3.4"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libyaml-0-2"
+]
+extra-source "hindent_5.3.4-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hindent/hindent_5.3.4-1+b4_amd64.deb"
+}

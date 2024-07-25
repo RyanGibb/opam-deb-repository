@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i icingaweb2-module-director_1.10.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r icingaweb2-module-director"]
+]
+depends: [
+  "icinga-php-library"
+  "icingaweb2"
+  "icingaweb2-module-incubator"
+  "icingaweb2-module-monitoring"
+  "icingaweb2-module-reactbundle"
+  "php"
+  "php-common"
+  "php-curl"
+  "php8-2-common"
+]
+extra-source "icingaweb2-module-director_1.10.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/icingaweb2-module-director/icingaweb2-module-director_1.10.2-1_all.deb"
+}

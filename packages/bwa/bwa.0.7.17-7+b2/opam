@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bwa_0.7.17-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bwa"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "bwa_0.7.17-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bwa/bwa_0.7.17-7+b2_amd64.deb"
+}

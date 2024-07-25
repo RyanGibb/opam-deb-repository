@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsoldout-utils_1.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsoldout-utils"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libsoldout1" {>= "1.3"}
+]
+extra-source "libsoldout-utils_1.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsoldout/libsoldout-utils_1.4-2_amd64.deb"
+}

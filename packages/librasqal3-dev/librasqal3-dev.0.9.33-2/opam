@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librasqal3-dev_0.9.33-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librasqal3-dev"]
+]
+depends: [
+  "libgmp-dev"
+  "libraptor2-dev"
+  "librasqal3" {= "0.9.33-2"}
+]
+conflicts: [
+  "librasqal-dev"
+  "librasqal2-dev"
+]
+extra-source "librasqal3-dev_0.9.33-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rasqal/librasqal3-dev_0.9.33-2_amd64.deb"
+}

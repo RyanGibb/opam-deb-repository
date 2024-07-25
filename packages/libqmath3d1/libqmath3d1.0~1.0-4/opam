@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqmath3d1_0~1.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqmath3d1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.14.1"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "libqmath3d1_0~1.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qmath3d/libqmath3d1_0~1.0-4_amd64.deb"
+}

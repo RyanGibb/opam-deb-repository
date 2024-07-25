@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gconjugue_0.8.3-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gconjugue"]
+]
+depends: [
+  "gconjugue-common"
+  "libc6" {>= "2.7"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.19.12"}
+]
+extra-source "gconjugue_0.8.3-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gconjugue/gconjugue_0.8.3-7_amd64.deb"
+}

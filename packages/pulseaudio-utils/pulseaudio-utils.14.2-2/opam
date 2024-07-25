@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pulseaudio-utils_14.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pulseaudio-utils"]
+]
+depends: [
+  "libc6" {>= "2.16"}
+  "libcap2" {>= "1-2.10"}
+  "libice6" {>= "1-1.0.0"}
+  "libpulse0" {= "14.2-2"}
+  "libpulsedsp"
+  "libsm6"
+  "libsndfile1" {>= "1.0.20"}
+  "libx11-6"
+  "libx11-xcb1" {>= "2-1.7.0"}
+  "libxcb1"
+  "libxtst6"
+]
+extra-source "pulseaudio-utils_14.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pulseaudio/pulseaudio-utils_14.2-2_amd64.deb"
+}

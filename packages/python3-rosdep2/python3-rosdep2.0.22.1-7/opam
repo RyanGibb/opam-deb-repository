@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-rosdep2_0.22.1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-rosdep2"]
+]
+depends: [
+  "ca-certificates"
+  "python3-any"
+  "python3-catkin-pkg"
+  "python3-pkg-resources"
+  "python3-rosdistro"
+  "python3-rospkg"
+  "python3-yaml"
+]
+extra-source "python3-rosdep2_0.22.1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-rosdep/python3-rosdep2_0.22.1-7_all.deb"
+}

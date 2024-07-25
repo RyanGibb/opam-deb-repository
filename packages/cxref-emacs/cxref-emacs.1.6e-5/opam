@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cxref-emacs_1.6e-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cxref-emacs"]
+]
+depends: [
+  "emacsen-common" {>= "1.4.14"}
+  ("emacs" | "emacsen")
+]
+extra-source "cxref-emacs_1.6e-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cxref/cxref-emacs_1.6e-5_all.deb"
+}

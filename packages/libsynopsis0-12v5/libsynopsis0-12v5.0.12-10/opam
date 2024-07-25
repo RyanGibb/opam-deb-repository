@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsynopsis0.12v5_0.12-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsynopsis0.12v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgc1c2" {>= "1-7.2d"}
+  "libgcc1" {>= "1-4.1.1"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libsynopsis0.12"
+]
+extra-source "libsynopsis0.12v5_0.12-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/synopsis/libsynopsis0.12v5_0.12-10_amd64.deb"
+}

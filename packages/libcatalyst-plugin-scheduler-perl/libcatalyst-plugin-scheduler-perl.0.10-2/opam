@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcatalyst-plugin-scheduler-perl_0.10-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcatalyst-plugin-scheduler-perl"]
+]
+depends: [
+  "libcatalyst-perl"
+  "libclass-accessor-perl"
+  "libclass-data-inheritable-perl"
+  "libdatetime-event-cron-perl"
+  "libdatetime-perl"
+  "libdatetime-timezone-perl"
+  "libmro-compat-perl"
+  "libset-scalar-perl"
+  "perl"
+  ("libyaml-syck-perl" | "libyaml-perl")
+]
+extra-source "libcatalyst-plugin-scheduler-perl_0.10-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcatalyst-plugin-scheduler-perl/libcatalyst-plugin-scheduler-perl_0.10-2_all.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i duc_1.4.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r duc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libncursesw6" {>= "6"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libtinfo6" {>= "6"}
+  "libtokyocabinet9" {>= "1.4.47"}
+  "libx11-6"
+]
+conflicts: [
+  "duc-nox (>= 1.4.3-3)"
+]
+extra-source "duc_1.4.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/duc/duc_1.4.4-1_amd64.deb"
+}

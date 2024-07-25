@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsiloh5-0_4.10.2.real-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsiloh5-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libhdf5-openmpi-103-1" {>= "1.10.5"}
+  "libopenmpi3" {>= "4.1.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libsiloh5-0_4.10.2.real-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/silo-llnl/libsiloh5-0_4.10.2.real-9_amd64.deb"
+}

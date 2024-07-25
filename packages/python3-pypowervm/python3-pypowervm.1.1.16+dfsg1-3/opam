@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pypowervm_1.1.16+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pypowervm"]
+]
+depends: [
+  "python3-any"
+  "python3-lxml"
+  "python3-oslo-concurrency"
+  "python3-oslo-context" {>= "2.12.0"}
+  "python3-oslo-i18n"
+  "python3-oslo-log"
+  "python3-oslo-utils" {>= "3.20.0"}
+  "python3-pbr" {>= "2.0.0"}
+  "python3-pyasn1"
+  "python3-pyasn1-modules"
+  "python3-requests"
+  "python3-six" {>= "1.9.0"}
+  "python3-taskflow" {>= "2.16.0"}
+  "python3-tz"
+]
+extra-source "python3-pypowervm_1.1.16+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pypowervm/python3-pypowervm_1.1.16+dfsg1-3_all.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-fabio_0.11.0+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-fabio"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-h5py"
+  "python3-h5py-serial"
+  "python3-lxml"
+  "python3-matplotlib"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  "python3-pil"
+  "python3-pkg-resources"
+  "python3-pyqt5"
+  "python3-six"
+]
+extra-source "python3-fabio_0.11.0+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-fabio/python3-fabio_0.11.0+dfsg-3_amd64.deb"
+}

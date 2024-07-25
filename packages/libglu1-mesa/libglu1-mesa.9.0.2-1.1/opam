@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglu1-mesa_9.0.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglu1-mesa"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libopengl0"
+  "libstdc++6" {>= "5"}
+]
+conflicts: [
+  "libglu1"
+  "mesag3 (<< 5.0.0-1)"
+  "xlibmesa3"
+]
+extra-source "libglu1-mesa_9.0.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libglu/libglu1-mesa_9.0.2-1.1_amd64.deb"
+}

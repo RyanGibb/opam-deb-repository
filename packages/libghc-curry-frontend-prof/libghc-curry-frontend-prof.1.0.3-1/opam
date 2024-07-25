@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-curry-frontend-prof_1.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-curry-frontend-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-curry-base-prof"
+  "libghc-curry-frontend-dev" {= "1.0.3-1"}
+  "libghc-extra-prof"
+  "libghc-network-uri-prof"
+  "libghc-set-extra-prof"
+]
+extra-source "libghc-curry-frontend-prof_1.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/curry-frontend/libghc-curry-frontend-prof_1.0.3-1_amd64.deb"
+}

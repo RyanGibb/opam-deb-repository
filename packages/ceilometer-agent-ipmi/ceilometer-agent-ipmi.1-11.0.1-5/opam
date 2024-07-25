@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ceilometer-agent-ipmi_1:11.0.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ceilometer-agent-ipmi"]
+]
+depends: [
+  "ceilometer-common" {= "1-11.0.1-5"}
+  "ipmitool"
+  "lsb-base"
+]
+extra-source "ceilometer-agent-ipmi_1:11.0.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceilometer/ceilometer-agent-ipmi_11.0.1-5_all.deb"
+}

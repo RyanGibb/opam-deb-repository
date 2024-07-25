@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-phf+unicase-dev_0.7.23-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-phf+unicase-dev"]
+]
+depends: [
+  "librust-phf-dev" {= "0.7.23-1"}
+  "librust-phf-shared-0-7-23+unicase-dev"
+]
+extra-source "librust-phf+unicase-dev_0.7.23-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-phf/librust-phf+unicase-dev_0.7.23-1_amd64.deb"
+}

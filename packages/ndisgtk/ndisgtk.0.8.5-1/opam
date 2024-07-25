@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ndisgtk_0.8.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ndisgtk"]
+]
+depends: [
+  "menu"
+  "ndiswrapper"
+  "python" {>= "2.4"}
+  "python-glade2"
+  "python-gtk2"
+]
+extra-source "ndisgtk_0.8.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ndisgtk/ndisgtk_0.8.5-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-spam_2.9-1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-spam"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-2"}
+  "r-cran-dotcall64"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "r-cran-spam_2.9-1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-spam/r-cran-spam_2.9-1-1_amd64.deb"
+}

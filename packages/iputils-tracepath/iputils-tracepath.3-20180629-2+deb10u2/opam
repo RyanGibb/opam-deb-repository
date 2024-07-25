@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iputils-tracepath_3:20180629-2+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iputils-tracepath"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libcap2" {>= "1-2.10"}
+  "libidn2-0" {>= "0.6"}
+]
+extra-source "iputils-tracepath_3:20180629-2+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iputils/iputils-tracepath_20180629-2+deb10u2_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i htdig_1:3.2.0b6-19+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r htdig"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libstdc++6" {>= "5"}
+  "lockfile-progs"
+  "perl"
+  "zlib1g" {>= "1-1.1.4"}
+  ("debconf" {>= "1.2.9"} | "debconf-2-0")
+]
+conflicts: [
+  "libmifluz0"
+]
+extra-source "htdig_1:3.2.0b6-19+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/htdig/htdig_3.2.0b6-19+b1_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libomp5-16_1:16.0.6-15~deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libomp5-16"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libffi7" {>= "3.3~20180313"}
+  "libgcc-s1" {>= "3.0"}
+  "libllvm16"
+  "libstdc++6" {>= "9"}
+]
+conflicts: [
+  "libomp-x.y"
+]
+extra-source "libomp5-16_1:16.0.6-15~deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-16/libomp5-16_16.0.6-15~deb11u2_amd64.deb"
+}

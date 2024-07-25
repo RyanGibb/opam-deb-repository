@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-drbg-prof_0.5.5-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-drbg-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-cereal-prof"
+  "libghc-cipher-aes128-prof"
+  "libghc-crypto-api-prof"
+  "libghc-cryptohash-cryptoapi-prof"
+  "libghc-drbg-dev" {= "0.5.5-6+b1"}
+  "libghc-entropy-prof"
+  "libghc-parallel-prof"
+  "libghc-prettyclass-prof"
+  "libghc-tagged-prof"
+]
+extra-source "libghc-drbg-prof_0.5.5-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-drbg/libghc-drbg-prof_0.5.5-6+b1_amd64.deb"
+}

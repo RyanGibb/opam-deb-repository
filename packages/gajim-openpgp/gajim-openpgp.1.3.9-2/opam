@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gajim-openpgp_1.3.9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gajim-openpgp"]
+]
+depends: [
+  "gajim" {>= "1.2.91~"}
+  "python3-gpg"
+  "python3-pkg-resources"
+]
+extra-source "gajim-openpgp_1.3.9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gajim-openpgp/gajim-openpgp_1.3.9-2_all.deb"
+}

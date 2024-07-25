@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pbzip2_1.1.9-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pbzip2"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "pbzip2_1.1.9-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pbzip2/pbzip2_1.1.9-1+b1_amd64.deb"
+}

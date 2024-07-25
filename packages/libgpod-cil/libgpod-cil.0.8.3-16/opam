@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgpod-cil_0.8.3-16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgpod-cil"]
+]
+depends: [
+  "libglib2-0-cil" {>= "2.12.40"}
+  "libgpod4" {>= "0.7.94"}
+  "libgtk2-0-cil" {>= "2.12.40"}
+  "libmono-corlib4-5-cil" {>= "5.18.0.240"}
+  "libmono-system-core4-0-cil" {>= "5.18.0.240"}
+]
+extra-source "libgpod-cil_0.8.3-16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgpod/libgpod-cil_0.8.3-16_amd64.deb"
+}

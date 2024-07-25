@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mariadb-server_1:10.5.23-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mariadb-server"]
+]
+depends: [
+  "mariadb-server-10-5" {>= "1-10.5.23-0+deb11u1"}
+]
+extra-source "mariadb-server_1:10.5.23-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-server_10.5.23-0+deb11u1_all.deb"
+}

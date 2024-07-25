@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvolk2-bin_2.4.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvolk2-bin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "libvolk2-4" {= "2.4.1-2"}
+  "python3-any"
+]
+extra-source "libvolk2-bin_2.4.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/volk/libvolk2-bin_2.4.1-2_amd64.deb"
+}

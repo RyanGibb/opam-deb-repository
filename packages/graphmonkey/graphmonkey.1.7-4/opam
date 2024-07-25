@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i graphmonkey_1.7-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r graphmonkey"]
+]
+depends: [
+  "libglib2-0-cil" {>= "2.12.10-1ubuntu1"}
+  "libgtk2-0-cil" {>= "2.12.10-1ubuntu1"}
+  "libmono-corlib4-5-cil" {>= "3.2.8"}
+  "mono-runtime" {>= "3.0~"}
+]
+extra-source "graphmonkey_1.7-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/graphmonkey/graphmonkey_1.7-4_all.deb"
+}

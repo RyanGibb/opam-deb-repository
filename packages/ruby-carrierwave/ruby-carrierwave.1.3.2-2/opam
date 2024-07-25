@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-carrierwave_1.3.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-carrierwave"]
+]
+depends: [
+  "ruby-activemodel"
+  "ruby-activesupport"
+  "ruby-mime-types" {>= "1.16~"}
+  "ruby-ssrf-filter"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-carrierwave_1.3.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-carrierwave/ruby-carrierwave_1.3.2-2_all.deb"
+}

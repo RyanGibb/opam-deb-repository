@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt6-wayland-dev_6.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt6-wayland-dev"]
+]
+depends: [
+  "libqt6waylandclient6" {= "6.4.2-1"}
+  "libqt6waylandcompositor6" {= "6.4.2-1"}
+  "libqt6waylandeglclienthwintegration6" {= "6.4.2-1"}
+  "libqt6waylandeglcompositorhwintegration6" {= "6.4.2-1"}
+  "libqt6wlshellintegration6" {= "6.4.2-1"}
+  "libwayland-dev"
+  "qt6-wayland-dev-tools" {= "6.4.2-1"}
+]
+extra-source "qt6-wayland-dev_6.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-wayland/qt6-wayland-dev_6.4.2-1_amd64.deb"
+}

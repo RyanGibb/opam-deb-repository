@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnustep-base-runtime_1.27.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnustep-base-runtime"]
+]
+depends: [
+  "gnustep-base-common" {= "1.27.0-3"}
+  "init-system-helpers" {>= "1.51"}
+  "libc6" {>= "2.15"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnustep-base1-27" {>= "1.27.0"}
+  "libobjc4" {>= "4.2.1"}
+  "lsb-base"
+]
+extra-source "gnustep-base-runtime_1.27.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnustep-base/gnustep-base-runtime_1.27.0-3_amd64.deb"
+}

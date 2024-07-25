@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i grab_3.0.1-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r grab"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+]
+extra-source "grab_3.0.1-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-cavaliergopher-grab/grab_3.0.1-3+b2_amd64.deb"
+}

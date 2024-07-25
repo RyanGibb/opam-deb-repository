@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i quickroute-gps_2.4-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r quickroute-gps"]
+]
+depends: [
+  "liblog4net1-2-cil" {>= "1.2.10"}
+  "libmono-corlib4-5-cil" {>= "4.6.1.3"}
+  "libmono-system-configuration4-0-cil" {>= "4.0.0~alpha1"}
+  "libmono-system-drawing4-0-cil" {>= "4.6.1.3"}
+  "libmono-system-web-services4-0-cil" {>= "4.2.0"}
+  "libmono-system-web4-0-cil" {>= "2.10.3"}
+  "libmono-system-windows-forms4-0-cil" {>= "1.0"}
+  "libmono-system-xml4-0-cil" {>= "4.6.1.3"}
+  "libmono-system4-0-cil" {>= "4.6.1.3"}
+  "mono-mcs" {>= "2.8"}
+  "mono-runtime" {>= "3.0~"}
+  ("libc6" {>= "2.24"} | "libc6-1" {>= "2.24"} | "libc0-1" {>= "2.24"})
+]
+extra-source "quickroute-gps_2.4-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/quickroute-gps/quickroute-gps_2.4-15_amd64.deb"
+}

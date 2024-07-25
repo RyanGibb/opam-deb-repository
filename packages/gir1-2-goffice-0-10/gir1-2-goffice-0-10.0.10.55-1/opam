@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-goffice-0.10_0.10.55-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-goffice-0.10"]
+]
+depends: [
+  "gir1-2-freedesktop"
+  "gir1-2-glib-2-0"
+  "gir1-2-gsf-1" {>= "1.14.25-2"}
+  "gir1-2-gtk-3-0"
+  "gir1-2-pango-1-0"
+  "libgoffice-0-10-10" {>= "0.10.52"}
+]
+extra-source "gir1.2-goffice-0.10_0.10.55-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/goffice/gir1.2-goffice-0.10_0.10.55-1_amd64.deb"
+}

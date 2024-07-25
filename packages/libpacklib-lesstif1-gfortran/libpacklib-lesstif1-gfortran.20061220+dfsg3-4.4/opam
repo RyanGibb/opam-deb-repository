@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpacklib-lesstif1-gfortran_20061220+dfsg3-4.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpacklib-lesstif1-gfortran"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libgcc1" {>= "1-3.0"}
+  "libgfortran5" {>= "8"}
+  "libgrafx11-1-gfortran"
+  "libkernlib1-gfortran"
+  "libpacklib1-gfortran"
+  "libquadmath0" {>= "4.6"}
+  "libx11-6"
+  "libxm4" {>= "2.3.4"}
+  "libxt6"
+]
+extra-source "libpacklib-lesstif1-gfortran_20061220+dfsg3-4.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cernlib/libpacklib-lesstif1-gfortran_20061220+dfsg3-4.4_amd64.deb"
+}

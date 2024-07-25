@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sip-dbg_4.19.25+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sip-dbg"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python3-any"
+  "python3-dbg" {< "3.10"}
+  "python3-dbg" {>= "3.9~"}
+  "python3-sip" {= "4.19.25+dfsg-1"}
+]
+extra-source "python3-sip-dbg_4.19.25+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sip4/python3-sip-dbg_4.19.25+dfsg-1_amd64.deb"
+}

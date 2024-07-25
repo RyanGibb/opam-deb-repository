@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i appmenu-gtk3-module_0.7.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r appmenu-gtk3-module"]
+]
+depends: [
+  "appmenu-gtk-module-common" {>= "0.7.6-2"}
+  "libappmenu-gtk3-parser0" {>= "0.7.6-2"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.50.0"}
+  "libgtk-3-0" {>= "3.22.0"}
+]
+conflicts: [
+  "appmenu-gtk3"
+]
+extra-source "appmenu-gtk3-module_0.7.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/appmenu-gtk-module/appmenu-gtk3-module_0.7.6-2_amd64.deb"
+}

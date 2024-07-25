@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-sinon_1.17.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-sinon"]
+]
+depends: [
+  "node-formatio" {>= "1.1.1"}
+  "node-lolex" {>= "1.3.2"}
+  "node-samsam" {>= "1.1.2"}
+  "node-util" {< "1"}
+  "node-util" {>= "0.10.3"}
+  "nodejs"
+]
+extra-source "node-sinon_1.17.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-sinon/node-sinon_1.17.6-1_all.deb"
+}

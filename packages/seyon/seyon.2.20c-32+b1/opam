@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i seyon_2.20c-32+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r seyon"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libice6" {>= "1-1.0.0"}
+  "libsm6"
+  "libx11-6"
+  "libxaw7"
+  "libxext6"
+  "libxmu6"
+  "libxpm4"
+  "libxt6"
+  ("debconf" {>= "1.2.9"} | "debconf-2-0")
+  ("xterm" | "x-terminal-emulator")
+]
+extra-source "seyon_2.20c-32+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/seyon/seyon_2.20c-32+b1_amd64.deb"
+}

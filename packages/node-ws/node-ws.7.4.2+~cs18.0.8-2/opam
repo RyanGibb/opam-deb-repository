@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-ws_7.4.2+~cs18.0.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-ws"]
+]
+depends: [
+  "node-agent-base"
+  "node-commander"
+  "node-debug" {>= "4.1.1+~cs4.1.5"}
+  "node-read"
+  "node-tinycolor"
+  "nodejs"
+]
+extra-source "node-ws_7.4.2+~cs18.0.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-ws/node-ws_7.4.2+~cs18.0.8-2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt3d-defaultgeometryloader-plugin_5.11.3+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt3d-defaultgeometryloader-plugin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt53dcore5" {= "5.11.3+dfsg-2"}
+  "libqt53drender5" {>= "5.10.1"}
+  "libqt5core5a" {>= "5.11.3+dfsg~"}
+  "libqt5gui5" {>= "5.11.3+dfsg~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qt3d-defaultgeometryloader-plugin_5.11.3+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt3d-opensource-src/qt3d-defaultgeometryloader-plugin_5.11.3+dfsg-2_amd64.deb"
+}

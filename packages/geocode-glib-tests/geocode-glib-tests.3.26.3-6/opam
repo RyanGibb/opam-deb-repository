@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i geocode-glib-tests_3.26.3-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r geocode-glib-tests"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgeocode-glib-2-0" {= "3.26.3-6"}
+  "libglib2-0-0" {>= "2.65.1"}
+  "libsoup-3-0-0" {>= "2.4.0"}
+]
+extra-source "geocode-glib-tests_3.26.3-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/geocode-glib/geocode-glib-tests_3.26.3-6_amd64.deb"
+}

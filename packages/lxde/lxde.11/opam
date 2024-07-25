@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lxde_11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lxde"]
+]
+depends: [
+  "gpicview"
+  "lxappearance"
+  "lxappearance-obconf"
+  "lxde-core"
+  "lxde-icon-theme"
+  "lxhotkey-gtk"
+  "lxinput"
+  "lxrandr"
+  "lxsession-edit"
+  "lxterminal"
+  "xarchiver"
+  ("galculator" | "gnome-calculator")
+  ("mousepad" | "leafpad")
+]
+extra-source "lxde_11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxde-metapackages/lxde_11_all.deb"
+}

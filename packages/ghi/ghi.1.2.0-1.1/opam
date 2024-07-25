@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ghi_1.2.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ghi"]
+]
+depends: [
+  "git"
+  "ruby-pygments-rb"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ghi_1.2.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-ghi/ghi_1.2.0-1.1_all.deb"
+}

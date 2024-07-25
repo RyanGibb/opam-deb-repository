@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtickit-console-perl_0.09-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtickit-console-perl"]
+]
+depends: [
+  "libobject-pad-perl" {>= "0.27"}
+  "libstring-tagged-perl"
+  "libtickit-perl"
+  "libtickit-widget-scroller-perl"
+  "libtickit-widget-tabbed-perl"
+  "libtickit-widgets-perl"
+  "perl" {>= "5.26"}
+  "perl-any"
+]
+extra-source "libtickit-console-perl_0.09-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtickit-console-perl/libtickit-console-perl_0.09-1_all.deb"
+}

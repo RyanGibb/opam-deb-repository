@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i progress-linux-gnome-desktop_20210101-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r progress-linux-gnome-desktop"]
+]
+depends: [
+  "gnome-shell-extension-disconnect-wifi"
+  "gnome-shell-extension-hide-activities"
+  "gnome-shell-extension-impatience"
+  "gnome-shell-extension-multi-monitors"
+  "gnome-shell-extension-no-annoyance"
+  "gnome-shell-extension-remove-dropdown-arrows"
+  "nautilus-admin"
+  "network-manager-ssh-gnome"
+  "progress-linux-desktop"
+  "seahorse-nautilus"
+  "task-gnome-desktop"
+  ("gnome-shell-extension-bluetooth-quick-connect" | "gnome-shell" {< "3.36"})
+]
+extra-source "progress-linux-gnome-desktop_20210101-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/progress-linux-metapackages/progress-linux-gnome-desktop_20210101-2_all.deb"
+}

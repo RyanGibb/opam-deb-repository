@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnl-xfrm-3-dev_3.4.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnl-xfrm-3-dev"]
+]
+depends: [
+  "libnl-3-dev" {= "3.4.0-1+b1"}
+  "libnl-xfrm-3-200" {= "3.4.0-1+b1"}
+]
+extra-source "libnl-xfrm-3-dev_3.4.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnl3/libnl-xfrm-3-dev_3.4.0-1+b1_amd64.deb"
+}

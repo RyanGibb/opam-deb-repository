@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nsxiv_31-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nsxiv"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libexif12" {>= "0.6.21-1~"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libimlib2" {>= "1.9.1"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+]
+extra-source "nsxiv_31-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nsxiv/nsxiv_31-1_amd64.deb"
+}

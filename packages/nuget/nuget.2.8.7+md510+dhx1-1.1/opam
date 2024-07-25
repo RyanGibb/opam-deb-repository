@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nuget_2.8.7+md510+dhx1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nuget"]
+]
+depends: [
+  "libmono-corlib4-5-cil" {>= "5.18.0.240"}
+  "libmono-microsoft-build-engine4-0-cil" {>= "3.2.1"}
+  "libmono-microsoft-build-framework4-0-cil" {>= "3.6.0"}
+  "libmono-microsoft-build4-0-cil" {>= "3.6.0"}
+  "libmono-microsoft-csharp4-0-cil" {>= "1.0"}
+  "libmono-system-componentmodel-composition4-0-cil" {>= "3.0.6"}
+  "libmono-system-core4-0-cil" {>= "5.18.0.240"}
+  "libmono-system-xml-linq4-0-cil" {>= "5.16.0.220"}
+  "libmono-system4-0-cil" {>= "5.18.0.240"}
+  "libnuget-core-cil" {= "2.8.7+md510+dhx1-1.1"}
+  "mono-runtime" {>= "3.0~"}
+]
+extra-source "nuget_2.8.7+md510+dhx1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nuget/nuget_2.8.7+md510+dhx1-1.1_all.deb"
+}

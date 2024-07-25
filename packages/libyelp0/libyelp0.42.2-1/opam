@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libyelp0_42.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libyelp0"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.67.4"}
+  "libgtk-3-0" {>= "3.13.3"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libwebkit2gtk-4-1-0" {>= "2.19.2"}
+  "libxml2" {>= "2.7.4"}
+  "libxslt1-1" {>= "1.1.25"}
+]
+extra-source "libyelp0_42.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yelp/libyelp0_42.2-1_amd64.deb"
+}

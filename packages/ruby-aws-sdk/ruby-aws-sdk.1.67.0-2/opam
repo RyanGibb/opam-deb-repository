@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-aws-sdk_1.67.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-aws-sdk"]
+]
+depends: [
+  "libruby3-1"
+  "ruby-nokogiri" {>= "1"}
+  "ruby-uuidtools" {>= "2.1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-aws-sdk_1.67.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-aws-sdk/ruby-aws-sdk_1.67.0-2_all.deb"
+}

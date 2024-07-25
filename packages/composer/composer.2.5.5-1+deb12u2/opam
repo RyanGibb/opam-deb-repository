@@ -1,0 +1,39 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i composer_2.5.5-1+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r composer"]
+]
+depends: [
+  "jsonlint" {< "2~~"}
+  "jsonlint" {>= "1.4"}
+  "php-cli"
+  "php-common"
+  "php-composer-ca-bundle" {< "2~~"}
+  "php-composer-ca-bundle" {>= "1.0"}
+  "php-composer-class-map-generator" {< "2~~"}
+  "php-composer-class-map-generator" {>= "1.0"}
+  "php-composer-metadata-minifier" {< "2~~"}
+  "php-composer-metadata-minifier" {>= "1.0"}
+  "php-composer-pcre" {> "2.1"}
+  "php-composer-semver" {< "4~~"}
+  "php-composer-semver" {>= "3.0"}
+  "php-composer-spdx-licenses" {< "2~~"}
+  "php-composer-spdx-licenses" {>= "1.5.7"}
+  "php-composer-xdebug-handler" {> "2.0.2"}
+  "php-json-schema" {< "6~~"}
+  "php-json-schema" {>= "5.2.11"}
+  "php-psr-log"
+  "php-react-promise" {< "3~~"}
+  "php-react-promise" {>= "2.8"}
+  "php-seld-signal-handler" {< "3~~"}
+  "php-seld-signal-handler" {>= "2.0"}
+  "php-symfony-console" {> "5.4.11"}
+  "php-symfony-filesystem" {> "5.4"}
+  "php-symfony-finder" {> "5.4"}
+  "php-symfony-process" {> "5.4"}
+]
+extra-source "composer_2.5.5-1+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/composer/composer_2.5.5-1+deb12u2_all.deb"
+}

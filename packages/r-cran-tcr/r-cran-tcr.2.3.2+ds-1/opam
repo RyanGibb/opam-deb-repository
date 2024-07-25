@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-tcr_2.3.2+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-tcr"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.1-1"}
+  "r-cran-data-table" {>= "1.9.0"}
+  "r-cran-dplyr" {>= "0.4.0"}
+  "r-cran-ggplot2" {>= "1.0.0"}
+  "r-cran-gridextra" {>= "0.9.0"}
+  "r-cran-gtable" {>= "0.1.2"}
+  "r-cran-igraph" {>= "0.7.1"}
+  "r-cran-rcpp" {>= "0.11.1"}
+  "r-cran-reshape2" {>= "1.2.0"}
+  "r-cran-scales" {>= "0.3.0"}
+  "r-cran-stringdist" {>= "0.7.3"}
+]
+extra-source "r-cran-tcr_2.3.2+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-tcr/r-cran-tcr_2.3.2+ds-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbcjmail-java_1.72-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbcjmail-java"]
+]
+depends: [
+  "libbcpkix-java" {>= "1.72-2"}
+  "libbcprov-java" {>= "1.72-2"}
+  "libbcutil-java" {>= "1.72-2"}
+  "libjakarta-activation-java"
+  "libjakarta-mail-java"
+]
+extra-source "libbcjmail-java_1.72-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bouncycastle/libbcjmail-java_1.72-2_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-transaction_1.4.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-transaction"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-zope-interface"
+]
+conflicts: [
+  "zope3"
+]
+extra-source "python-transaction_1.4.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/transaction/python-transaction_1.4.3-3_all.deb"
+}

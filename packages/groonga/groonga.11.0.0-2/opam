@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i groonga_11.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r groonga"]
+]
+depends: [
+  "groonga-bin" {= "11.0.0-2"}
+  "groonga-doc" {= "11.0.0-2"}
+  "groonga-plugin-suggest" {= "11.0.0-2"}
+]
+extra-source "groonga_11.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/groonga/groonga_11.0.0-2_amd64.deb"
+}

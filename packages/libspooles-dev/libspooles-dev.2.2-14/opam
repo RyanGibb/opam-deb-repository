@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspooles-dev_2.2-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspooles-dev"]
+]
+depends: [
+  "libspooles2-2" {= "2.2-14"}
+  "mpi-default-dev"
+]
+extra-source "libspooles-dev_2.2-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spooles/libspooles-dev_2.2-14_amd64.deb"
+}

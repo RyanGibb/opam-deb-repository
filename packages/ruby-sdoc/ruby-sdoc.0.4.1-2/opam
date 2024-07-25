@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-sdoc_0.4.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-sdoc"]
+]
+depends: [
+  "ruby-json"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-sdoc_0.4.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-sdoc/ruby-sdoc_0.4.1-2_all.deb"
+}

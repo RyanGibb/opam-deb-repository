@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guestmount_1:1.48.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guestmount"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libconfig9"
+  "libfuse2" {>= "2.8"}
+  "libguestfs0" {= "1-1.48.6-2"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "guestmount_1:1.48.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libguestfs/guestmount_1.48.6-2_amd64.deb"
+}

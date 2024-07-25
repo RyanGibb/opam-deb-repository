@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iproute2-doc_4.20.0-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iproute2-doc"]
+]
+conflicts: [
+  "iproute-doc (<< 20130000-1)"
+]
+extra-source "iproute2-doc_4.20.0-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iproute2/iproute2-doc_4.20.0-2+deb10u1_all.deb"
+}

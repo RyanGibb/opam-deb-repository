@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyfribidi_0.12.0+repack-9+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyfribidi"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfribidi0" {>= "0.19.2"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-six"
+]
+extra-source "python3-pyfribidi_0.12.0+repack-9+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyfribidi/python3-pyfribidi_0.12.0+repack-9+b2_amd64.deb"
+}

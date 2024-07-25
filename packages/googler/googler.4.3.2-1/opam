@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i googler_4.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r googler"]
+]
+depends: [
+  "python3" {>= "3.4"}
+  "python3-any"
+]
+extra-source "googler_4.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/googler/googler_4.3.2-1_all.deb"
+}

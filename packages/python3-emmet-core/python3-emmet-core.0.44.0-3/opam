@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-emmet-core_0.44.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-emmet-core"]
+]
+depends: [
+  "python3-any"
+  "python3-monty" {>= "2021.3~"}
+  "python3-pybtex"
+  "python3-pydantic" {>= "1.10.2~"}
+  "python3-pymatgen" {>= "2021.3~"}
+  "python3-spglib" {>= "2.0.1~"}
+  "python3-typing-extensions" {>= "3.7~"}
+]
+extra-source "python3-emmet-core_0.44.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-emmet-core/python3-emmet-core_0.44.0-3_all.deb"
+}

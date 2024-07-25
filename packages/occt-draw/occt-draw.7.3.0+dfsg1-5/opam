@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i occt-draw_7.3.0+dfsg1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r occt-draw"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libfreeimage3"
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libocct-draw-7-3"
+  "libocct-foundation-7-3"
+  "libocct-modeling-algorithms-7-3"
+  "libocct-modeling-data-7-3"
+  "libocct-visualization-7-3"
+  "libstdc++6" {>= "4.1.1"}
+  "libtbb2" {>= "2017~U7"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libtk8-6" {>= "8.6.0"}
+  "libx11-6"
+  "libxext6"
+  "libxi6"
+  "libxmu6"
+]
+conflicts: [
+  "oce-draw"
+]
+extra-source "occt-draw_7.3.0+dfsg1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencascade/occt-draw_7.3.0+dfsg1-5_amd64.deb"
+}

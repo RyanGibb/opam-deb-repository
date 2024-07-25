@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-utidylib_0.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-utidylib"]
+]
+depends: [
+  "python3-any"
+  "python3-six"
+  ("libtidy5deb1" | "libtidy5" | "libtidy-0-99-0")
+]
+extra-source "python3-utidylib_0.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/utidylib/python3-utidylib_0.8-1_all.deb"
+}

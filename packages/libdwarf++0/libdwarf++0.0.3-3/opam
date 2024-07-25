@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdwarf++0_0.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdwarf++0"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libelf++0" {= "0.3-3"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libdwarf++0_0.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libelfin/libdwarf++0_0.3-3_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i default-jdk-headless_2:1.17-74_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r default-jdk-headless"]
+]
+depends: [
+  "default-jre-headless" {= "2-1.17-74"}
+  "openjdk-17-jdk-headless"
+]
+extra-source "default-jdk-headless_2:1.17-74_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/java-common/default-jdk-headless_1.17-74_amd64.deb"
+}

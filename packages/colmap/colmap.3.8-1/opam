@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i colmap_3.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r colmap"]
+]
+depends: [
+  "libatlas3-base"
+  "libc6" {>= "2.34"}
+  "libcholmod3" {>= "1-4.5.2"}
+  "libcxsparse3" {>= "1-4.5.2"}
+  "libfreeimage3" {>= "3.18.0+ds2"}
+  "libgcc-s1" {>= "4.0"}
+  "libglew2-2" {>= "2.2.0-4+b1"}
+  "libglx0"
+  "libgomp1" {>= "4.9"}
+  "libgoogle-glog0v6" {>= "0.6.0"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libmetis5" {>= "5.1.0.dfsg"}
+  "libopengl0"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5gui5" {>= "5.1.0"}
+  "libqt5widgets5" {>= "5.4.0"}
+  "libspqr2" {>= "1-5.12.0+dfsg"}
+  "libsqlite3-0" {>= "3.7.15"}
+  "libstdc++6" {>= "12"}
+  ("liblapack3" | "liblapack-so-3")
+  ("libqt5gui5" {>= "5.4.0"} | "libqt5gui5-gles" {>= "5.4.0"})
+]
+extra-source "colmap_3.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/colmap/colmap_3.8-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shapetools_1.4pl6-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shapetools"]
+]
+depends: [
+  "atfs" {= "1.4pl6-14"}
+  "libatfs1" {>= "1.4pl6"}
+  "libc6" {>= "2.14"}
+]
+extra-source "shapetools_1.4pl6-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shapetools/shapetools_1.4pl6-14_amd64.deb"
+}

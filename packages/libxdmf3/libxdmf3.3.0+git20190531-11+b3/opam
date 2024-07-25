@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxdmf3_3.0+git20190531-11+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxdmf3"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libhdf5-103-1"
+  "libhdf5-openmpi-103-1" {>= "1.8.14"}
+  "libstdc++6" {>= "11"}
+  "libtiff6" {>= "4.0.3"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libxdmf3_3.0+git20190531-11+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xdmf/libxdmf3_3.0+git20190531-11+b3_amd64.deb"
+}

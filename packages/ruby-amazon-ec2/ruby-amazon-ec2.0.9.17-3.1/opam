@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-amazon-ec2_0.9.17-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-amazon-ec2"]
+]
+depends: [
+  "ruby-xml-simple"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-amazon-ec2_0.9.17-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-amazon-ec2/ruby-amazon-ec2_0.9.17-3.1_all.deb"
+}

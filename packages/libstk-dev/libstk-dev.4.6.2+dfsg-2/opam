@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstk-dev_4.6.2+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstk-dev"]
+]
+depends: [
+  "librtaudio-dev"
+  "librtmidi-dev"
+  "libstk-4-6-2" {= "4.6.2+dfsg-2"}
+]
+extra-source "libstk-dev_4.6.2+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stk/libstk-dev_4.6.2+dfsg-2_amd64.deb"
+}

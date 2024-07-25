@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-getfem_5.4.2+dfsg1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-getfem"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libgetfem5" {= "5.4.2+dfsg1-3+b1"}
+  "libmumps-seq-5-5" {>= "5.5.1"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-scipy"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "python3-getfem_5.4.2+dfsg1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/getfem/python3-getfem_5.4.2+dfsg1-3+b1_amd64.deb"
+}

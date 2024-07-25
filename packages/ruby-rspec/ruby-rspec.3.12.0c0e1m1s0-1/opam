@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rspec_3.12.0c0e1m1s0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rspec"]
+]
+depends: [
+  "ruby-rspec-core" {= "3.12.0c0e1m1s0-1"}
+  "ruby-rspec-expectations" {= "3.12.0c0e1m1s0-1"}
+  "ruby-rspec-mocks" {= "3.12.0c0e1m1s0-1"}
+]
+extra-source "ruby-rspec_3.12.0c0e1m1s0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rspec/ruby-rspec_3.12.0c0e1m1s0-1_all.deb"
+}

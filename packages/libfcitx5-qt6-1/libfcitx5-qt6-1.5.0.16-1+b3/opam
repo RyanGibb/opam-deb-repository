@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfcitx5-qt6-1_5.0.16-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfcitx5-qt6-1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfcitx5-qt-data" {= "5.0.16-1"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt6core6" {>= "6.4.0"}
+  "libqt6dbus6" {>= "6.4.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libfcitx5-qt6-1_5.0.16-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx5-qt/libfcitx5-qt6-1_5.0.16-1+b3_amd64.deb"
+}

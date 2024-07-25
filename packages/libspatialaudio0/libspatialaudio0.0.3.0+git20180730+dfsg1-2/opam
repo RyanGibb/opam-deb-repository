@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspatialaudio0_0.3.0+git20180730+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspatialaudio0"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libmysofa0" {>= "0.6~"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libspatialaudio0_0.3.0+git20180730+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libspatialaudio/libspatialaudio0_0.3.0+git20180730+dfsg1-2_amd64.deb"
+}

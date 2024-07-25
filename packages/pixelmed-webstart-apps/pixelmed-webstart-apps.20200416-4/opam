@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pixelmed-webstart-apps_20200416-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pixelmed-webstart-apps"]
+]
+depends: [
+  "libbcprov-java"
+  "libpixelmed-java" {= "20200416-4"}
+]
+extra-source "pixelmed-webstart-apps_20200416-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pixelmed/pixelmed-webstart-apps_20200416-4_all.deb"
+}

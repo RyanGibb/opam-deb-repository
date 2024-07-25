@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ola-python_0.10.9.nojsmin-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ola-python"]
+]
+depends: [
+  "ola" {< "0.10.9.nojsmin-2.~"}
+  "ola" {>= "0.10.9.nojsmin-2"}
+  "python3-any"
+  "python3-protobuf"
+]
+extra-source "ola-python_0.10.9.nojsmin-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ola/ola-python_0.10.9.nojsmin-2_all.deb"
+}

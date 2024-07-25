@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i designate-sink_1:7.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r designate-sink"]
+]
+depends: [
+  "designate-common" {= "1-7.0.0-2"}
+  "python3-designate" {= "1-7.0.0-2"}
+]
+extra-source "designate-sink_1:7.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/designate/designate-sink_7.0.0-2_all.deb"
+}

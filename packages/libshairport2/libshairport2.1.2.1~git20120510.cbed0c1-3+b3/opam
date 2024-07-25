@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libshairport2_1.2.1~git20120510.cbed0c1-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libshairport2"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "libshairport2_1.2.1~git20120510.cbed0c1-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libshairport/libshairport2_1.2.1~git20120510.cbed0c1-3+b3_amd64.deb"
+}

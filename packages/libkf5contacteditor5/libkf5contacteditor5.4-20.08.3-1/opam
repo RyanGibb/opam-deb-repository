@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5contacteditor5_4:20.08.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5contacteditor5"]
+]
+depends: [
+  "akonadi-contacts-data" {= "4-20.08.3-1"}
+  "kio"
+  "libc6" {>= "2.14"}
+  "libkf5completion5" {>= "5.71.0~"}
+  "libkf5configcore5" {>= "5.71.0~"}
+  "libkf5contacts5" {>= "5-5.71.0~"}
+  "libkf5coreaddons5" {>= "4.99.0"}
+  "libkf5i18n5" {>= "5.71.0~"}
+  "libkf5kiocore5" {>= "5.71.0~"}
+  "libkf5kiowidgets5" {>= "5.71.0~"}
+  "libkf5textwidgets5" {>= "5.71.0~"}
+  "libkf5widgetsaddons5" {>= "5.71.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.13.0~"} | "libqt5gui5-gles" {>= "5.13.0~"})
+]
+extra-source "libkf5contacteditor5_4:20.08.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/akonadi-contacts/libkf5contacteditor5_20.08.3-1_amd64.deb"
+}

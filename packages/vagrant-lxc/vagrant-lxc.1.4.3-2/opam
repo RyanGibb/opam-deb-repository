@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vagrant-lxc_1.4.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vagrant-lxc"]
+]
+depends: [
+  "lxc"
+  "redir"
+  "sudo"
+  "vagrant"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "vagrant-lxc_1.4.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vagrant-lxc/vagrant-lxc_1.4.3-2_all.deb"
+}

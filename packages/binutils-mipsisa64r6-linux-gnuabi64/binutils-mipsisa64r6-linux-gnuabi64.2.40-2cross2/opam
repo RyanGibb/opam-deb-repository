@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i binutils-mipsisa64r6-linux-gnuabi64_2.40-2cross2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r binutils-mipsisa64r6-linux-gnuabi64"]
+]
+depends: [
+  "binutils-common" {>= "2.40-2"}
+  "libbinutils" {>= "2.39.50"}
+  "libc6" {>= "2.36"}
+  "libgcc-s1" {>= "4.2"}
+  "libjansson4" {>= "2.14"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "binutils-mipsisa64r6-linux-gnuabi64_2.40-2cross2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/binutils-mipsen/binutils-mipsisa64r6-linux-gnuabi64_2.40-2cross2_amd64.deb"
+}

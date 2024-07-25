@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-sexp-processor_4.15.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-sexp-processor"]
+]
+depends: [
+  ("ruby-any" | "ruby-interpreter")
+]
+extra-source "ruby-sexp-processor_4.15.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-sexp-processor/ruby-sexp-processor_4.15.2-1_all.deb"
+}

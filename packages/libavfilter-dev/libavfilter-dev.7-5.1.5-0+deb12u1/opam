@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libavfilter-dev_7:5.1.5-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libavfilter-dev"]
+]
+depends: [
+  "libavcodec-dev" {= "7-5.1.5-0+deb12u1"}
+  "libavfilter-extra8"
+  "libavformat-dev" {= "7-5.1.5-0+deb12u1"}
+  "libavutil-dev" {= "7-5.1.5-0+deb12u1"}
+  "libpostproc-dev" {= "7-5.1.5-0+deb12u1"}
+  "libswresample-dev" {= "7-5.1.5-0+deb12u1"}
+  "libswscale-dev" {= "7-5.1.5-0+deb12u1"}
+]
+extra-source "libavfilter-dev_7:5.1.5-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/ffmpeg/libavfilter-dev_5.1.5-0+deb12u1_amd64.deb"
+}

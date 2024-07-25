@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i knot_2.7.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r knot"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.27"}
+  "libcap-ng0" {>= "0.7.9"}
+  "libdnssec6" {= "2.7.6-2"}
+  "libedit2" {>= "2.11-20080614-0"}
+  "libfstrm0" {>= "0.2.0"}
+  "libgnutls30" {>= "3.6.5"}
+  "libknot8" {= "2.7.6-2"}
+  "libmaxminddb0" {>= "1.0.2"}
+  "libprotobuf-c1" {>= "1.0.1"}
+  "libsystemd0"
+  "liburcu6" {>= "0.10.0"}
+  "libzscanner2" {= "2.7.6-2"}
+  "lsb-base" {>= "3.0-6"}
+  "python3"
+  "python3-yaml"
+]
+extra-source "knot_2.7.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/knot/knot_2.7.6-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cluster-glue-dev_1.0.12-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cluster-glue-dev"]
+]
+depends: [
+  "liblrm2-dev" {>= "1.0.12-12"}
+  "libpils2-dev" {>= "1.0.12-12"}
+  "libplumb2-dev" {>= "1.0.12-12"}
+  "libplumbgpl2-dev" {>= "1.0.12-12"}
+  "libstonith1-dev" {>= "1.0.12-12"}
+]
+extra-source "cluster-glue-dev_1.0.12-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cluster-glue/cluster-glue-dev_1.0.12-12_amd64.deb"
+}

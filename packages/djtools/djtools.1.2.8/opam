@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i djtools_1.2.8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r djtools"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libpaper1"
+  "libstdc++6" {>= "5"}
+]
+extra-source "djtools_1.2.8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/djtools/djtools_1.2.8_amd64.deb"
+}

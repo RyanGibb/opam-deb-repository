@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjsonrpccpp-server0_0.7.0-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjsonrpccpp-server0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libjsoncpp1" {>= "1.7.4"}
+  "libjsonrpccpp-common0"
+  "libmicrohttpd12" {>= "0.9.50"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libjsonrpccpp-server0_0.7.0-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libj/libjson-rpc-cpp/libjsonrpccpp-server0_0.7.0-1+b3_amd64.deb"
+}

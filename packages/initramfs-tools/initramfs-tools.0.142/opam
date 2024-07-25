@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i initramfs-tools_0.142_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r initramfs-tools"]
+]
+depends: [
+  "initramfs-tools-core" {= "0.142"}
+  "linux-base"
+]
+conflicts: [
+  "linux-initramfs-tool"
+  "usplash (<< 0.5.50)"
+]
+extra-source "initramfs-tools_0.142_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/initramfs-tools/initramfs-tools_0.142_all.deb"
+}

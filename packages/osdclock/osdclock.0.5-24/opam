@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osdclock_0.5-24_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osdclock"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libx11-6"
+  "libxext6"
+  "libxinerama1"
+  "libxosd2" {>= "2.2.14"}
+  "libxt6"
+]
+extra-source "osdclock_0.5-24_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osdclock/osdclock_0.5-24_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cardpeek_0.8.4-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cardpeek"]
+]
+depends: [
+  "cardpeek-data"
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libcurl4" {>= "7.16.2"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.31.18"}
+  "libgtk-3-0" {>= "3.13.7"}
+  "liblua5-2-0"
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpcsclite1" {>= "1.3.0"}
+  "libreadline8" {>= "6.0"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "cardpeek_0.8.4-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cardpeek/cardpeek_0.8.4-1.1_amd64.deb"
+}

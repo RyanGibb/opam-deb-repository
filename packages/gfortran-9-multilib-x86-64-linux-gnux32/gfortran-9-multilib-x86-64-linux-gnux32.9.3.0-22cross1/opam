@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gfortran-9-multilib-x86-64-linux-gnux32_9.3.0-22cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gfortran-9-multilib-x86-64-linux-gnux32"]
+]
+depends: [
+  "gcc-9-multilib-x86-64-linux-gnux32" {= "9.3.0-22cross1"}
+  "gcc-9-x86-64-linux-gnux32-base" {= "9.3.0-22cross1"}
+  "gfortran-9-x86-64-linux-gnux32" {= "9.3.0-22cross1"}
+  "lib32gfortran-9-dev-x32-cross" {>= "9.3.0-22cross1"}
+  "lib64gfortran-9-dev-x32-cross" {>= "9.3.0-22cross1"}
+]
+extra-source "gfortran-9-multilib-x86-64-linux-gnux32_9.3.0-22cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-9-cross-ports/gfortran-9-multilib-x86-64-linux-gnux32_9.3.0-22cross1_amd64.deb"
+}

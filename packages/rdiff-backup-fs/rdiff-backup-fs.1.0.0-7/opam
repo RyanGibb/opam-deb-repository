@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rdiff-backup-fs_1.0.0-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rdiff-backup-fs"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libfuse2" {>= "2.6"}
+  "zlib1g" {>= "1-1.2.3.3"}
+]
+conflicts: [
+  "archfs"
+]
+extra-source "rdiff-backup-fs_1.0.0-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rdiff-backup-fs/rdiff-backup-fs_1.0.0-7_amd64.deb"
+}

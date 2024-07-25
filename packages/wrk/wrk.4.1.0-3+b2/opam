@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wrk_4.1.0-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wrk"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl3" {>= "3.0.0"}
+  ("libluajit-5-1-2" {>= "2.0.4+dfsg"} | "libluajit2-5-1-2" {>= "2.1~"})
+]
+extra-source "wrk_4.1.0-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wrk/wrk_4.1.0-3+b2_amd64.deb"
+}

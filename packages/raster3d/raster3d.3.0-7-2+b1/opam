@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i raster3d_3.0-7-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r raster3d"]
+]
+depends: [
+  "ghostscript"
+  "imagemagick"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "4.0"}
+  "libgd3" {>= "2.1.0~alpha~"}
+  "libgfortran5" {>= "10"}
+  "libtiff6" {>= "4.0.3"}
+]
+extra-source "raster3d_3.0-7-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/raster3d/raster3d_3.0-7-2+b1_amd64.deb"
+}

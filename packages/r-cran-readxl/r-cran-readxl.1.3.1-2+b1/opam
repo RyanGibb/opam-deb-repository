@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-readxl_1.3.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-readxl"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-cellranger"
+  "r-cran-progress"
+  "r-cran-rcpp" {>= "0.12.18"}
+  "r-cran-tibble" {>= "1.3.1"}
+]
+extra-source "r-cran-readxl_1.3.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-readxl/r-cran-readxl_1.3.1-2+b1_amd64.deb"
+}

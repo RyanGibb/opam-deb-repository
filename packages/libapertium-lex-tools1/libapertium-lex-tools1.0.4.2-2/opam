@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapertium-lex-tools1_0.4.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapertium-lex-tools1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libicu72" {>= "72.1~rc-1~"}
+  "liblttoolbox3" {>= "3.7.1"}
+  "libstdc++6" {>= "11"}
+]
+conflicts: [
+  "libapertium-lex-tools"
+]
+extra-source "libapertium-lex-tools1_0.4.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-lex-tools/libapertium-lex-tools1_0.4.2-2_amd64.deb"
+}

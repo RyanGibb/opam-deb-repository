@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosdcpu3.5.0_3.5.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosdcpu3.5.0"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libosdcpu3.5.0_3.5.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opensubdiv/libosdcpu3.5.0_3.5.0-2_amd64.deb"
+}

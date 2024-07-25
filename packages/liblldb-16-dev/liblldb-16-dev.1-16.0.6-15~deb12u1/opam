@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblldb-16-dev_1:16.0.6-15~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblldb-16-dev"]
+]
+depends: [
+  "lldb-16" {= "1-16.0.6-15~deb12u1"}
+]
+extra-source "liblldb-16-dev_1:16.0.6-15~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-16/liblldb-16-dev_16.0.6-15~deb12u1_amd64.deb"
+}

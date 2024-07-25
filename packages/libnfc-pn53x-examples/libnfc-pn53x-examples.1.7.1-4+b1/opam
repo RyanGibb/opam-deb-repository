@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnfc-pn53x-examples_1.7.1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnfc-pn53x-examples"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libnfc5" {>= "1.7.1-4+b1"}
+]
+extra-source "libnfc-pn53x-examples_1.7.1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnfc/libnfc-pn53x-examples_1.7.1-4+b1_amd64.deb"
+}

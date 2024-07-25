@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-org-kde-kaccounts_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-org-kde-kaccounts"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkaccounts2" {= "4-22.12.3-1"}
+  "libkf5coreaddons5" {>= "5.97.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.7.0~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qml-module-org-kde-kaccounts_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kaccounts-integration/qml-module-org-kde-kaccounts_22.12.3-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qcat-examples_1.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qcat-examples"]
+]
+depends: [
+  "python3-pytest"
+  "python3-pytest-cov"
+  "python3-pytest-runner"
+]
+extra-source "qcat-examples_1.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qcat/qcat-examples_1.1.0-2_all.deb"
+}

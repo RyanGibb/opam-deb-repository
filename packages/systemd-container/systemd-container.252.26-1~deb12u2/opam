@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i systemd-container_252.26-1~deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r systemd-container"]
+]
+depends: [
+  "libacl1" {>= "2.2.23"}
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libcurl4" {>= "7.16.3"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libseccomp2" {>= "2.3.1"}
+  "libselinux1" {>= "3.1~"}
+  "libssl3" {>= "3.0.0"}
+  "libsystemd-shared" {= "252.26-1~deb12u2"}
+  "systemd"
+  "zlib1g" {>= "1-1.1.4"}
+  ("default-dbus-system-bus" | "dbus-system-bus")
+]
+extra-source "systemd-container_252.26-1~deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/systemd/systemd-container_252.26-1~deb12u2_amd64.deb"
+}

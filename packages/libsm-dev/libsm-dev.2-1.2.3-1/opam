@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsm-dev_2:1.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsm-dev"]
+]
+depends: [
+  "libice-dev" {>= "1-1.0.0-1"}
+  "libsm6" {= "2-1.2.3-1"}
+  "x11proto-core-dev"
+]
+extra-source "libsm-dev_2:1.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsm/libsm-dev_1.2.3-1_amd64.deb"
+}

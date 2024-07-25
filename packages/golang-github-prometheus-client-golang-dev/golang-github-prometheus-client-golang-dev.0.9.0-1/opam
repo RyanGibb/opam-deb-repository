@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-prometheus-client-golang-dev_0.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-prometheus-client-golang-dev"]
+]
+depends: [
+  "golang-github-beorn7-perks-dev"
+  "golang-github-prometheus-client-model-dev"
+  "golang-github-prometheus-common-dev" {>= "0+git20180413"}
+  "golang-golang-x-net-dev"
+  ("golang-goprotobuf-dev" | "golang-github-golang-protobuf-dev")
+  ("golang-procfs-dev" | "golang-github-prometheus-procfs-dev")
+]
+extra-source "golang-github-prometheus-client-golang-dev_0.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-prometheus-client-golang/golang-github-prometheus-client-golang-dev_0.9.0-1_all.deb"
+}

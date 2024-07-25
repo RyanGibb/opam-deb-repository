@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtarget-factory2_2.5-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtarget-factory2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libgoogle-glog0v6" {>= "0.6.0"}
+  "libprotobuf32" {>= "3.21.12"}
+  "libstdc++6" {>= "11"}
+  "libunilog2" {>= "2.5"}
+]
+extra-source "libtarget-factory2_2.5-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/target-factory/libtarget-factory2_2.5-11_amd64.deb"
+}

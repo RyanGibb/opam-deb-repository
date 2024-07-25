@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-cpuguy83-go-md2man-dev_1.0.10+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-cpuguy83-go-md2man-dev"]
+]
+depends: [
+  "golang-github-russross-blackfriday-dev" {>= "1.5.2~"}
+]
+conflicts: [
+  "golang-go-md2man-dev"
+]
+extra-source "golang-github-cpuguy83-go-md2man-dev_1.0.10+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/go-md2man/golang-github-cpuguy83-go-md2man-dev_1.0.10+ds-2_all.deb"
+}

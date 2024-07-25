@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i caribou_0.4.21-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r caribou"]
+]
+depends: [
+  "gir1-2-caribou-1-0"
+  "gir1-2-clutter-1-0"
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-3-0"
+  "libatspi2-0-0" {>= "2.9.90"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "python3-any"
+  "python3-dbus"
+  "python3-gi"
+  "python3-pyatspi"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "caribou_0.4.21-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/caribou/caribou_0.4.21-7_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librest-dev_0.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librest-dev"]
+]
+depends: [
+  "gir1-2-rest-0-7" {= "0.8.1-1"}
+  "librest-0-7-0" {= "0.8.1-1"}
+  "libsoup2-4-dev"
+  "libxml2-dev"
+]
+extra-source "librest-dev_0.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librest/librest-dev_0.8.1-1_amd64.deb"
+}

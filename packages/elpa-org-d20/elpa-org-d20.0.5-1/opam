@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-org-d20_0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-org-d20"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-dash" {>= "2.12.0"}
+  "elpa-s" {>= "1.11.0"}
+  "elpa-seq" {>= "2.19"}
+  "emacsen-common"
+]
+extra-source "elpa-org-d20_0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/org-d20/elpa-org-d20_0.5-1_all.deb"
+}

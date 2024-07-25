@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i inetutils-talk_2:2.4-2+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r inetutils-talk"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "netbase"
+]
+extra-source "inetutils-talk_2:2.4-2+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/inetutils/inetutils-talk_2.4-2+deb12u1_amd64.deb"
+}

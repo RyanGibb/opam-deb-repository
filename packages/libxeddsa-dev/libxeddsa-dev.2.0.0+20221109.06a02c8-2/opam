@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxeddsa-dev_2.0.0+20221109.06a02c8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxeddsa-dev"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "4.3"}
+  "libxeddsa2" {= "2.0.0+20221109.06a02c8-2"}
+  "sphinx-rtd-theme-common" {>= "1.1.1+dfsg"}
+]
+extra-source "libxeddsa-dev_2.0.0+20221109.06a02c8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxeddsa/libxeddsa-dev_2.0.0+20221109.06a02c8-2_amd64.deb"
+}

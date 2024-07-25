@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32gphobos-9-dev_9.3.0-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32gphobos-9-dev"]
+]
+depends: [
+  "gcc-9-base" {= "9.3.0-22"}
+  "lib32gcc-9-dev" {= "9.3.0-22"}
+  "lib32gphobos76" {>= "9.3.0-22"}
+  "lib32z1-dev"
+]
+extra-source "lib32gphobos-9-dev_9.3.0-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-9/lib32gphobos-9-dev_9.3.0-22_amd64.deb"
+}

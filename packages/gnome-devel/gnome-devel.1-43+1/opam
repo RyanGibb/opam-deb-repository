@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-devel_1:43+1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-devel"]
+]
+depends: [
+  "accerciser" {>= "3.22"}
+  "dconf-editor" {>= "3.38"}
+  "devhelp" {>= "3.38"}
+  "gitg" {>= "3.32"}
+  "glade" {>= "3.22"}
+  "gnome-boxes" {>= "3.38"}
+  "gnome-builder" {>= "3.38"}
+  "gnome-devel-docs" {>= "3.38"}
+]
+extra-source "gnome-devel_1:43+1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-gnome3/gnome-devel_43+1_all.deb"
+}

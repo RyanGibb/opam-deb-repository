@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-genvalidity-property-prof_1.0.0.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-genvalidity-property-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-genvalidity-prof"
+  "libghc-genvalidity-property-dev" {= "1.0.0.0-2+b1"}
+  "libghc-hspec-prof"
+  "libghc-pretty-show-prof"
+  "libghc-quickcheck2-prof"
+  "libghc-validity-prof"
+]
+extra-source "libghc-genvalidity-property-prof_1.0.0.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-genvalidity-property/libghc-genvalidity-property-prof_1.0.0.0-2+b1_amd64.deb"
+}

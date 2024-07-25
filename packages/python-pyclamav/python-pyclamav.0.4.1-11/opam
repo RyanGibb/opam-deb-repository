@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pyclamav_0.4.1-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pyclamav"]
+]
+depends: [
+  "clamav-freshclam"
+  "libc6" {>= "2.4"}
+  "libclamav9" {>= "0.101.1"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-pyclamav_0.4.1-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-clamav/python-pyclamav_0.4.1-11_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i packaging-dev_0.8.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r packaging-dev"]
+]
+depends: [
+  "build-essential"
+  "debhelper"
+  "devscripts"
+  "lintian"
+  "quilt"
+  ("dput-ng" | "dput" | "dupload")
+  ("sbuild" | "cowbuilder" | "pbuilder")
+]
+extra-source "packaging-dev_0.8.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/packaging-dev/packaging-dev_0.8.2_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liboakleaf0_0.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liboakleaf0"]
+]
+depends: [
+  "libc6" {>= "2.23"}
+  "libgcc-s1"
+  "libgfortran5" {>= "8"}
+  "libminpack1"
+  "libquadmath0" {>= "4.6"}
+]
+extra-source "liboakleaf0_0.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oakleaf/liboakleaf0_0.0.1-3_amd64.deb"
+}

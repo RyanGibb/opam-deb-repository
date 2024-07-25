@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i enemylines7_0.6-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r enemylines7"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libgl1"
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2"
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "5.2"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "enemylines7_0.6-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/enemylines7/enemylines7_0.6-5_amd64.deb"
+}

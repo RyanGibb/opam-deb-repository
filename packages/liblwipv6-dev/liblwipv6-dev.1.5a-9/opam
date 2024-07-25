@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblwipv6-dev_1.5a-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblwipv6-dev"]
+]
+depends: [
+  "liblwipv6-2" {= "1.5a-9"}
+]
+conflicts: [
+  "liblwipv6-1-dev"
+]
+extra-source "liblwipv6-dev_1.5a-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lwipv6/liblwipv6-dev_1.5a-9_amd64.deb"
+}

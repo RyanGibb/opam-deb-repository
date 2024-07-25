@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-process-exporter_0.7.5-3+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-process-exporter"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.4"}
+]
+extra-source "prometheus-process-exporter_0.7.5-3+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-process-exporter/prometheus-process-exporter_0.7.5-3+b5_amd64.deb"
+}

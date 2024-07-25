@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xfsdump_3.1.11-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xfsdump"]
+]
+depends: [
+  "libattr1" {>= "2.0.0"}
+  "libc6" {>= "2.34"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libuuid1" {>= "2.16"}
+  "xfsprogs" {>= "2.6.30"}
+]
+extra-source "xfsdump_3.1.11-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xfsdump/xfsdump_3.1.11-0.1_amd64.deb"
+}

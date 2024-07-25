@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slashem-sdl_0.0.7E7F3-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slashem-sdl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "slashem-common" {= "0.0.7E7F3-9+b1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "slashem-sdl_0.0.7E7F3-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slashem/slashem-sdl_0.0.7E7F3-9+b1_amd64.deb"
+}

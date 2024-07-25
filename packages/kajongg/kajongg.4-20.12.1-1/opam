@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kajongg_4:20.12.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kajongg"]
+]
+depends: [
+  "kdegames-mahjongg-data-kf5"
+  "python3-any"
+  "python3-pyqt5-qtsvg"
+  "python3-twisted" {>= "16.6.0~"}
+]
+extra-source "kajongg_4:20.12.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kajongg/kajongg_20.12.1-1_all.deb"
+}

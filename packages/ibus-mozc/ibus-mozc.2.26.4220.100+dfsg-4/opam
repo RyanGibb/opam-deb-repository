@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibus-mozc_2.26.4220.100+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibus-mozc"]
+]
+depends: [
+  "ibus" {>= "1.2"}
+  "libabsl20200923" {>= "0~20200923-1"}
+  "libc6" {>= "2.15"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libibus-1-0-5" {>= "1.5.4"}
+  "libprotobuf23" {>= "3.12.4"}
+  "libstdc++6" {>= "5.2"}
+  "libxcb-xfixes0"
+  "libxcb1"
+  "mozc-data"
+  "mozc-server" {= "2.26.4220.100+dfsg-4"}
+  "tegaki-zinnia-japanese"
+]
+extra-source "ibus-mozc_2.26.4220.100+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mozc/ibus-mozc_2.26.4220.100+dfsg-4_amd64.deb"
+}

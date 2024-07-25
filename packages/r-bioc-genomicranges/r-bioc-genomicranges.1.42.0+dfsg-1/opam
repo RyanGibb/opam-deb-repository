@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-genomicranges_1.42.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-genomicranges"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.25.3"}
+  "r-bioc-genomeinfodb" {>= "1.15.2"}
+  "r-bioc-iranges" {>= "2.23.9"}
+  "r-bioc-s4vectors" {>= "0.27.12"}
+  "r-bioc-xvector" {>= "0.29.2"}
+]
+extra-source "r-bioc-genomicranges_1.42.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-genomicranges/r-bioc-genomicranges_1.42.0+dfsg-1_amd64.deb"
+}

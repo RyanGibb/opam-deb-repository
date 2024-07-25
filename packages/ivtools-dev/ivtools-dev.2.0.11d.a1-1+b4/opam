@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ivtools-dev_2.0.11d.a1-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ivtools-dev"]
+]
+depends: [
+  "libace-dev"
+  "libc6-dev"
+  "libiv-unidraw2" {= "2.0.11d.a1-1+b4"}
+  "libiv2" {= "2.0.11d.a1-1+b4"}
+  "libtiff-dev"
+  "zlib1g-dev"
+]
+extra-source "ivtools-dev_2.0.11d.a1-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ivtools/ivtools-dev_2.0.11d.a1-1+b4_amd64.deb"
+}

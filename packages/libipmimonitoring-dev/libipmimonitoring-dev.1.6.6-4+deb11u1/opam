@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libipmimonitoring-dev_1.6.6-4+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libipmimonitoring-dev"]
+]
+depends: [
+  "freeipmi-common" {= "1.6.6-4+deb11u1"}
+  "libipmimonitoring6" {= "1.6.6-4+deb11u1"}
+]
+extra-source "libipmimonitoring-dev_1.6.6-4+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeipmi/libipmimonitoring-dev_1.6.6-4+deb11u1_amd64.deb"
+}

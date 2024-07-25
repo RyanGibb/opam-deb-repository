@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pywps_4.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pywps"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-dateutil"
+  "python-flufl-enum"
+  "python-gdal"
+  "python-jinja2"
+  "python-jsonschema"
+  "python-lxml"
+  "python-owslib"
+  "python-pathlib"
+  "python-requests"
+  "python-sqlalchemy"
+  "python-werkzeug"
+]
+extra-source "python-pywps_4.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pywps/python-pywps_4.2.1-1_all.deb"
+}

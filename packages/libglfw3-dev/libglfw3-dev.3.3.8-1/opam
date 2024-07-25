@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglfw3-dev_3.3.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglfw3-dev"]
+]
+depends: [
+  ("libgl1-mesa-dev" | "libgl-dev")
+  ("libglfw3" {= "3.3.8-1"} | "libglfw3-wayland" {= "3.3.8-1"})
+]
+conflicts: [
+  "libglfw-dev"
+]
+extra-source "libglfw3-dev_3.3.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glfw3/libglfw3-dev_3.3.8-1_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-xraylib_4.0.0+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-xraylib"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgomp1" {>= "4.9"}
+  "libxrl11" {>= "4.0.0+dfsg1"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+]
+extra-source "python3-xraylib_4.0.0+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xraylib/python3-xraylib_4.0.0+dfsg1-3_amd64.deb"
+}

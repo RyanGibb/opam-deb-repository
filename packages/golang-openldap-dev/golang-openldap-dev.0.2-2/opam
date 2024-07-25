@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-openldap-dev_0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-openldap-dev"]
+]
+depends: [
+  "libldap-2-4-2"
+  "libldap2-dev"
+]
+extra-source "golang-openldap-dev_0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-openldap/golang-openldap-dev_0.2-2_all.deb"
+}

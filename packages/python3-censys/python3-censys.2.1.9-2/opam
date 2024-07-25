@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-censys_2.1.9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-censys"]
+]
+depends: [
+  "python3-any"
+  "python3-backoff"
+  "python3-requests"
+  "python3-rich"
+  ("python3-importlib-metadata" | "python3" {> "3.8"})
+]
+extra-source "python3-censys_2.1.9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/censys/python3-censys_2.1.9-2_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtext-levenshtein-perl_0.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtext-levenshtein-perl"]
+]
+depends: [
+  "perl"
+  ("perl" {>= "5.19.7"} | "libunicode-collate-perl" {>= "1.04"})
+]
+extra-source "libtext-levenshtein-perl_0.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtext-levenshtein-perl/libtext-levenshtein-perl_0.13-1_all.deb"
+}

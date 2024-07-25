@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liborcania1.2_1.2.9-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liborcania1.2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libjansson4" {>= "2.3"}
+]
+extra-source "liborcania1.2_1.2.9-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/orcania/liborcania1.2_1.2.9-5_amd64.deb"
+}

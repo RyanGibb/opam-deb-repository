@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5multimediawidgets5_5.11.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5multimediawidgets5"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgl1"
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.11.3+dfsg~"}
+  "libqt5gui5" {>= "5.11.3+dfsg~"}
+  "libqt5multimedia5" {>= "5.6.0~beta"}
+  "libqt5opengl5" {>= "5.11.3+dfsg~"}
+  "libqt5widgets5" {>= "5.11.3+dfsg~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libqt5multimediawidgets5_5.11.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtmultimedia-opensource-src/libqt5multimediawidgets5_5.11.3-2_amd64.deb"
+}

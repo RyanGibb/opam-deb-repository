@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libantlr-maven-plugin-java_2.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libantlr-maven-plugin-java"]
+]
+depends: [
+  "libcommons-exec-java"
+  "libmaven-reporting-impl-java" {>= "3.0.0"}
+  "libmaven3-core-java" {>= "3.5.0"}
+  "libplexus-i18n-java" {>= "1.0-beta-10"}
+  "libplexus-utils-java"
+  "libwagon-provider-api-java" {>= "3.0.0"}
+]
+extra-source "libantlr-maven-plugin-java_2.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/antlr-maven-plugin/libantlr-maven-plugin-java_2.2-4_all.deb"
+}

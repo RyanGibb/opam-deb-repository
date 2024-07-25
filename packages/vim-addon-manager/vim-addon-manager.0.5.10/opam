@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vim-addon-manager_0.5.10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vim-addon-manager"]
+]
+depends: [
+  "vim-common"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "vim-addon-manager_0.5.10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vim-addon-manager/vim-addon-manager_0.5.10_all.deb"
+}

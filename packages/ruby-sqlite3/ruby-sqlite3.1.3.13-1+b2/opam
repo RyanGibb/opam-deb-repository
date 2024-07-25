@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-sqlite3_1.3.13-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-sqlite3"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgmp10"
+  "libruby2-5" {>= "2.5.0~preview1"}
+  "libsqlite3-0" {>= "3.7.10"}
+  "ruby" {< "1-2.6~"}
+  "ruby" {>= "1-2.5~0"}
+]
+extra-source "ruby-sqlite3_1.3.13-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-sqlite3/ruby-sqlite3_1.3.13-1+b2_amd64.deb"
+}

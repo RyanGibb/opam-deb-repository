@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmiral-dev_2.9.0.1.8.0+dfsg1-18_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmiral-dev"]
+]
+depends: [
+  "libmiral3" {= "2.9.0.1.8.0+dfsg1-18"}
+  "libmirclient-dev" {< "1.8.0+dfsg1-18.1~"}
+  "libmirclient-dev" {>= "1.8.0+dfsg1-18"}
+]
+extra-source "libmiral-dev_2.9.0.1.8.0+dfsg1-18_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mir/libmiral-dev_2.9.0.1.8.0+dfsg1-18_amd64.deb"
+}

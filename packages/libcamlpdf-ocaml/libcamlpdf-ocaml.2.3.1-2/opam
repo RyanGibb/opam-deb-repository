@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcamlpdf-ocaml_2.3.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcamlpdf-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "ocaml-base-nox"
+]
+extra-source "libcamlpdf-ocaml_2.3.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/camlpdf/libcamlpdf-ocaml_2.3.1-2_amd64.deb"
+}

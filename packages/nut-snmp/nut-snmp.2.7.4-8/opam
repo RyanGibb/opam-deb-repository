@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nut-snmp_2.7.4-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nut-snmp"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libsnmp30" {>= "5.7.3+dfsg-3~dfsg"}
+  "nut" {>= "1.4.1-pre1"}
+]
+extra-source "nut-snmp_2.7.4-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nut/nut-snmp_2.7.4-8_amd64.deb"
+}

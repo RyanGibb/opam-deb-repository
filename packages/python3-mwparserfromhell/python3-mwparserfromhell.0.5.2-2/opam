@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-mwparserfromhell_0.5.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-mwparserfromhell"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+]
+extra-source "python3-mwparserfromhell_0.5.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mwparserfromhell/python3-mwparserfromhell_0.5.2-2_amd64.deb"
+}

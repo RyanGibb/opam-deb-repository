@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-axolotl_0.1.42-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-axolotl"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-axolotl-curve25519" {>= "0.1"}
+  "python-cryptography"
+  "python-protobuf" {>= "3.0.0"}
+]
+extra-source "python-axolotl_0.1.42-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-axolotl/python-axolotl_0.1.42-1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-tower-cli_3.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-tower-cli"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-click"
+  "python-colorama"
+  "python-requests"
+  "python-six" {>= "1.7.2"}
+  "python-yaml"
+]
+extra-source "python-tower-cli_3.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ansible-tower-cli/python-tower-cli_3.3.0-1_all.deb"
+}

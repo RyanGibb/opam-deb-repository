@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sassc_3.6.1+20201027-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sassc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsass1" {>= "3.6.4"}
+]
+extra-source "sassc_3.6.1+20201027-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sassc/sassc_3.6.1+20201027-1_amd64.deb"
+}

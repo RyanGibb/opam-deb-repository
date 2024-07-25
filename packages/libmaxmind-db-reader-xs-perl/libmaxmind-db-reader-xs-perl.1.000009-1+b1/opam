@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmaxmind-db-reader-xs-perl_1.000009-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmaxmind-db-reader-xs-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmath-int128-perl"
+  "libmath-int64-perl"
+  "libmaxmind-db-common-perl"
+  "libmaxmind-db-reader-perl"
+  "libmaxminddb0" {>= "1.0.2"}
+  "libmoo-perl"
+  "libnamespace-autoclean-perl"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libmaxmind-db-reader-xs-perl_1.000009-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmaxmind-db-reader-xs-perl/libmaxmind-db-reader-xs-perl_1.000009-1+b1_amd64.deb"
+}

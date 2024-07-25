@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopendht-dev_2.4.12-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopendht-dev"]
+]
+depends: [
+  "libargon2-dev"
+  "libasio-dev"
+  "libfmt-dev"
+  "libgnutls28-dev"
+  "libhttp-parser-dev"
+  "libjsoncpp-dev"
+  "libncurses-dev"
+  "libopendht2" {= "2.4.12-7"}
+  "libreadline-dev"
+  "librestinio-dev"
+  "libssl-dev"
+  "nettle-dev"
+  ("libmsgpack-cxx-dev" | "libmsgpack-dev" {<= "4.0.0"})
+  ("libmsgpack-cxx-dev" | "libmsgpack-dev" {>= "1.2"})
+]
+extra-source "libopendht-dev_2.4.12-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opendht/libopendht-dev_2.4.12-7_amd64.deb"
+}

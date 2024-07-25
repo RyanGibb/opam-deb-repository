@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpigpiod-if2-1_1.68-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpigpiod-if2-1"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+]
+conflicts: [
+  "pigpio (<< 1.68-1)"
+]
+extra-source "libpigpiod-if2-1_1.68-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pigpio/libpigpiod-if2-1_1.68-3_amd64.deb"
+}

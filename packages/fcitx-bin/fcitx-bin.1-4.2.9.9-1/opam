@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx-bin_1:4.2.9.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx-bin"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libfcitx-config4" {>= "4.2.7"}
+  "libfcitx-core0" {>= "4.2.8.1"}
+  "libfcitx-utils0" {>= "4.2.7"}
+  "libgettextpo0" {>= "0.21"}
+]
+conflicts: [
+  "fcitx5"
+]
+extra-source "fcitx-bin_1:4.2.9.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx/fcitx-bin_4.2.9.9-1_amd64.deb"
+}

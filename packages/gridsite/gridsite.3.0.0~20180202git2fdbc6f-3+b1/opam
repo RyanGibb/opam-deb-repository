@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gridsite_3.0.0~20180202git2fdbc6f-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gridsite"]
+]
+depends: [
+  "apache2-bin"
+  "apache2-bin" {>= "2.4.16"}
+  "libc6" {>= "2.15"}
+  "libgridsite6" {= "3.0.0~20180202git2fdbc6f-3+b1"}
+  "libgsoap-2-8-104"
+]
+extra-source "gridsite_3.0.0~20180202git2fdbc6f-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gridsite/gridsite_3.0.0~20180202git2fdbc6f-3+b1_amd64.deb"
+}

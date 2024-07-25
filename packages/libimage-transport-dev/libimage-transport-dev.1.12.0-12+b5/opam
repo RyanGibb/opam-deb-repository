@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libimage-transport-dev_1.12.0-12+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libimage-transport-dev"]
+]
+depends: [
+  "libimage-transport0d" {= "1.12.0-12+b5"}
+  "libmessage-filters-dev"
+  "librosconsole-dev"
+  "libroscpp-dev"
+  "libroslib-dev"
+  "libsensor-msgs-dev"
+  "pluginlib-dev"
+]
+extra-source "libimage-transport-dev_1.12.0-12+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-image-common/libimage-transport-dev_1.12.0-12+b5_amd64.deb"
+}

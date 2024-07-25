@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i compiz_2:0.8.16.1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r compiz"]
+]
+depends: [
+  "compiz-core" {>= "2-0.8.16.1-10"}
+  "compiz-gnome" {>= "2-0.8.16.1-10"}
+  "compiz-plugins" {>= "2-0.8.16.1-10"}
+  "compiz-plugins-main"
+  "compizconfig-settings-manager"
+  "libcompizconfig0" {>= "2-0.8.14-0~"}
+]
+extra-source "compiz_2:0.8.16.1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/compiz/compiz_0.8.16.1-10_all.deb"
+}

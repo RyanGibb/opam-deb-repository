@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gammu-smsd_1.40.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gammu-smsd"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.7"}
+  "libgammu8" {>= "1.40.0"}
+  "libgsmsd8" {>= "1.40.0"}
+  "lsb-base"
+]
+extra-source "gammu-smsd_1.40.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gammu/gammu-smsd_1.40.0-1_amd64.deb"
+}

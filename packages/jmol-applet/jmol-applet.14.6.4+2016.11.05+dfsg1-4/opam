@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jmol-applet_14.6.4+2016.11.05+dfsg1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jmol-applet"]
+]
+depends: [
+  "libjmol-java"
+  ("default-jre" | "java2-runtime")
+]
+extra-source "jmol-applet_14.6.4+2016.11.05+dfsg1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jmol/jmol-applet_14.6.4+2016.11.05+dfsg1-4_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slapd-contrib_2.5.13+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slapd-contrib"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libkadm5srv8-heimdal" {>= "1.4.0+git20110226"}
+  "libkrb5-26-heimdal" {>= "1.4.0+git20110226"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "libnettle8"
+  "slapd" {= "2.5.13+dfsg-5"}
+]
+extra-source "slapd-contrib_2.5.13+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openldap/slapd-contrib_2.5.13+dfsg-5_amd64.deb"
+}

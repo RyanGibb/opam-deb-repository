@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shorewall-lite_5.2.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shorewall-lite"]
+]
+depends: [
+  "bc"
+  "init-system-helpers" {>= "1.51"}
+  "iproute2"
+  "iptables"
+  "shorewall-core" {= "5.2.8-2"}
+]
+conflicts: [
+  "ferm"
+  "filtergen"
+  "guidedog"
+  "uif"
+]
+extra-source "shorewall-lite_5.2.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shorewall/shorewall-lite_5.2.8-2_all.deb"
+}

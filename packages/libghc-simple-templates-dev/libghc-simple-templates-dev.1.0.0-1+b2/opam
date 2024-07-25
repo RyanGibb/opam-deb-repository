@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-simple-templates-dev_1.0.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-simple-templates-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-aeson-dev"
+  "libghc-attoparsec-dev"
+  "libghc-scientific-dev"
+  "libghc-unordered-containers-dev"
+  "libghc-vector-dev"
+  "libgmp10"
+]
+extra-source "libghc-simple-templates-dev_1.0.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-simple-templates/libghc-simple-templates-dev_1.0.0-1+b2_amd64.deb"
+}

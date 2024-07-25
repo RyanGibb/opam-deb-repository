@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-monads-tf-prof_0.1.0.3-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-monads-tf-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-monads-tf-dev" {= "0.1.0.3-7+b2"}
+]
+extra-source "libghc-monads-tf-prof_0.1.0.3-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-monads-tf/libghc-monads-tf-prof_0.1.0.3-7+b2_amd64.deb"
+}

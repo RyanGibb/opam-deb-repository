@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hdbc-sqlite3-doc_2.3.3.1-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hdbc-sqlite3-doc"]
+]
+depends: [
+  "ghc"
+]
+conflicts: [
+  "haskell-hdbc-sqlite3-doc (<< 2.3.0.0-2)"
+]
+extra-source "libghc-hdbc-sqlite3-doc_2.3.3.1-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hdbc-sqlite3/libghc-hdbc-sqlite3-doc_2.3.3.1-8_all.deb"
+}

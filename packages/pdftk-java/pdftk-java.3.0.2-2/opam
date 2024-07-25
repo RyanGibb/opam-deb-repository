@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pdftk-java_3.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pdftk-java"]
+]
+depends: [
+  "libbcprov-java"
+  "libcommons-lang3-java"
+  ("default-jre-headless" | "java8-runtime-headless")
+]
+extra-source "pdftk-java_3.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdftk-java/pdftk-java_3.0.2-2_all.deb"
+}

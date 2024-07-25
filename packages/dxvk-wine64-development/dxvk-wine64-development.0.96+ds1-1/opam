@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dxvk-wine64-development_0.96+ds1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dxvk-wine64-development"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "7"}
+  "libwine-development"
+]
+extra-source "dxvk-wine64-development_0.96+ds1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dxvk/dxvk-wine64-development_0.96+ds1-1_amd64.deb"
+}

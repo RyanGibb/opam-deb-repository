@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i miredo-server_1.2.6-7.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r miredo-server"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcap2" {>= "1-2.10"}
+  "lsb-base"
+]
+extra-source "miredo-server_1.2.6-7.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/miredo/miredo-server_1.2.6-7.1+b2_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zabbix-java-gateway_1:4.0.4+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zabbix-java-gateway"]
+]
+depends: [
+  "adduser"
+  "jarwrapper" {>= "0.5"}
+  "libandroid-json-java"
+  "liblogback-java"
+  "libslf4j-java"
+  "lsb-base"
+  ("default-jre" | "java7-runtime" | "java8-runtime" | "java9-runtime" | "java10-runtime" | "java11-runtime")
+]
+extra-source "zabbix-java-gateway_1:4.0.4+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zabbix/zabbix-java-gateway_4.0.4+dfsg-1_all.deb"
+}

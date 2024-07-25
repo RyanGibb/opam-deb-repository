@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dvgrab_3.5+git20160707.1.e46042e-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dvgrab"]
+]
+depends: [
+  "libavc1394-0" {>= "0.5.3"}
+  "libc6" {>= "2.28"}
+  "libdv4" {>= "1.0.0"}
+  "libgcc-s1"
+  "libiec61883-0" {>= "1.2.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libquicktime2" {>= "2-1.2.2"}
+  "libraw1394-11"
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "dvgrab_3.5+git20160707.1.e46042e-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dvgrab/dvgrab_3.5+git20160707.1.e46042e-1+b1_amd64.deb"
+}

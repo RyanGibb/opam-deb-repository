@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ldns_1.7.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ldns"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libldns2" {>= "1.7.0"}
+  "libpython3-7" {>= "3.7.0"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+]
+extra-source "python3-ldns_1.7.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ldns/python3-ldns_1.7.0-4_amd64.deb"
+}

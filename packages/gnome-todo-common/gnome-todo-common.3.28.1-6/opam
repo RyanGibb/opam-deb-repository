@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-todo-common_3.28.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-todo-common"]
+]
+depends: [
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-todo-common_3.28.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-todo/gnome-todo-common_3.28.1-6_all.deb"
+}

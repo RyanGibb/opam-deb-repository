@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stayrtr_0.5.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stayrtr"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  ("systemd" | "systemd-standalone-sysusers" | "systemd-sysusers")
+]
+conflicts: [
+  "gortr"
+]
+extra-source "stayrtr_0.5.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stayrtr/stayrtr_0.5.1-2+b1_amd64.deb"
+}

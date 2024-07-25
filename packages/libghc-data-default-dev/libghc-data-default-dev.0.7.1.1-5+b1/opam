@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-data-default-dev_0.7.1.1-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-data-default-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-data-default-class-dev"
+  "libghc-data-default-instances-containers-dev"
+  "libghc-data-default-instances-dlist-dev"
+  "libghc-data-default-instances-old-locale-dev"
+  "libgmp10"
+]
+extra-source "libghc-data-default-dev_0.7.1.1-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-data-default/libghc-data-default-dev_0.7.1.1-5+b1_amd64.deb"
+}

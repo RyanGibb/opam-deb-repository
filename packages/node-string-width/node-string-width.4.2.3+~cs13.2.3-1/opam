@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-string-width_4.2.3+~cs13.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-string-width"]
+]
+depends: [
+  "node-is-fullwidth-code-point"
+  "node-slice-ansi" {>= "5.0.0+~cs9.0.0-2~"}
+  "node-strip-ansi"
+  "node-wcwidth-js"
+]
+extra-source "node-string-width_4.2.3+~cs13.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-string-width/node-string-width_4.2.3+~cs13.2.3-1_all.deb"
+}

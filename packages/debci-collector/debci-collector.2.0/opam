@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debci-collector_2.0_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debci-collector"]
+]
+depends: [
+  "debci" {= "2.0"}
+]
+extra-source "debci-collector_2.0_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debci/debci-collector_2.0_all.deb"
+}

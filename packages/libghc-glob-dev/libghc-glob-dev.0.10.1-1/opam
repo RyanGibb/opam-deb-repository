@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-glob-dev_0.10.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-glob-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-dlist-dev"
+  "libghc-transformers-compat-dev"
+  "libgmp10"
+]
+extra-source "libghc-glob-dev_0.10.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-glob/libghc-glob-dev_0.10.1-1_amd64.deb"
+}

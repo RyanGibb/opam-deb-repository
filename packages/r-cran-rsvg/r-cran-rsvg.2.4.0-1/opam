@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rsvg_2.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rsvg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.6.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "librsvg2-2" {>= "2.47.3"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+]
+extra-source "r-cran-rsvg_2.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-rsvg/r-cran-rsvg_2.4.0-1_amd64.deb"
+}

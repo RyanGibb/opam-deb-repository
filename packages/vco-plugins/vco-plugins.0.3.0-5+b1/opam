@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vco-plugins_0.3.0-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vco-plugins"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "vco-plugins_0.3.0-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vco-plugins/vco-plugins_0.3.0-5+b1_amd64.deb"
+}

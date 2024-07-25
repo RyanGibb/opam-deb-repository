@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtimblserver4_1.14-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtimblserver4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libticcutils8" {>= "0.24"}
+  "libtimbl4" {>= "6.5"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libtimblserver4_1.14-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/timblserver/libtimblserver4_1.14-3_amd64.deb"
+}

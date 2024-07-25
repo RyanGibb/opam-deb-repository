@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bomberclone_0.11.9-7.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bomberclone"]
+]
+depends: [
+  "bomberclone-data" {= "0.11.9-7.1"}
+  "libc6" {>= "2.27"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2"
+  "libsdl1-2-compat-shim"
+]
+extra-source "bomberclone_0.11.9-7.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bomberclone/bomberclone_0.11.9-7.1_amd64.deb"
+}

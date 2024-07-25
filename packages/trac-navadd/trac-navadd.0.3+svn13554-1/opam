@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i trac-navadd_0.3+svn13554-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r trac-navadd"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "trac"
+]
+extra-source "trac-navadd_0.3+svn13554-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trac-navadd/trac-navadd_0.3+svn13554-1_all.deb"
+}

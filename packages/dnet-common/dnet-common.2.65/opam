@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dnet-common_2.65_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dnet-common"]
+]
+depends: [
+  "debianutils" {>= "1.13"}
+  "kmod"
+  "lsb-base"
+]
+conflicts: [
+  "dnprogs"
+]
+extra-source "dnet-common_2.65_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dnprogs/dnet-common_2.65_all.deb"
+}

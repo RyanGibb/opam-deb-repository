@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-notmuch_0.28.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-notmuch"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgmp10"
+  "libnotmuch5" {>= "0.26~rc0"}
+  "libruby2-5" {>= "2.5.0~preview1"}
+]
+extra-source "ruby-notmuch_0.28.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/notmuch/ruby-notmuch_0.28.4-1_amd64.deb"
+}

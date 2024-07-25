@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-libyaml-prof_0.1.2-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-libyaml-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-conduit-prof"
+  "libghc-libyaml-dev" {= "0.1.2-2+b4"}
+  "libghc-resourcet-prof"
+]
+extra-source "libghc-libyaml-prof_0.1.2-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-libyaml/libghc-libyaml-prof_0.1.2-2+b4_amd64.deb"
+}

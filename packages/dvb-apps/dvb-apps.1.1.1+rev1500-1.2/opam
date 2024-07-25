@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dvb-apps_1.1.1+rev1500-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dvb-apps"]
+]
+depends: [
+  "dtv-scan-tables"
+  "libc6" {>= "2.16"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libx11-6"
+  "libzvbi0" {>= "0.2.35"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("makedev" | "udev")
+]
+conflicts: [
+  "alevt"
+  "libxbase2.0-bin"
+  "libxdb-dev"
+  "nmh (<< 1.5-release-2)"
+]
+extra-source "dvb-apps_1.1.1+rev1500-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linuxtv-dvb-apps/dvb-apps_1.1.1+rev1500-1.2_amd64.deb"
+}

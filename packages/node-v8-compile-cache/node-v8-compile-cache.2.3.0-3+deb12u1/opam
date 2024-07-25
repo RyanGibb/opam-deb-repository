@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-v8-compile-cache_2.3.0-3+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-v8-compile-cache"]
+]
+depends: [
+  "nodejs-any" {>= "14"}
+]
+extra-source "node-v8-compile-cache_2.3.0-3+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-v8-compile-cache/node-v8-compile-cache_2.3.0-3+deb12u1_all.deb"
+}

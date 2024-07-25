@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-tf_1.13.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-tf"]
+]
+depends: [
+  "python3-any"
+  "python3-genpy"
+  "python3-geometry-msgs"
+  "python3-numpy"
+  "python3-sensor-msgs"
+  "python3-std-msgs"
+  "python3-tf2-ros"
+]
+extra-source "python3-tf_1.13.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-geometry/python3-tf_1.13.2-3_amd64.deb"
+}

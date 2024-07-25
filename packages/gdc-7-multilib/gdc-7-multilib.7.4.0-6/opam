@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gdc-7-multilib_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gdc-7-multilib"]
+]
+depends: [
+  "gcc-7-base" {>= "7"}
+  "gcc-7-multilib" {= "7.4.0-6"}
+  "gdc-7" {= "7.4.0-6"}
+  "lib32gphobos-7-dev" {= "7.4.0-6"}
+  "libx32gphobos-7-dev" {= "7.4.0-6"}
+]
+extra-source "gdc-7-multilib_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/gdc-7-multilib_7.4.0-6_amd64.deb"
+}

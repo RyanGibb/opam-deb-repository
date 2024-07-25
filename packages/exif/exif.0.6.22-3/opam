@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i exif_0.6.22-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r exif"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libexif12" {>= "0.6.21-1~"}
+  "libpopt0" {>= "1.14"}
+]
+extra-source "exif_0.6.22-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/exif/exif_0.6.22-3_amd64.deb"
+}

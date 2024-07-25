@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i metis_5.1.0.dfsg-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r metis"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libmetis5" {= "5.1.0.dfsg-5+b2"}
+]
+extra-source "metis_5.1.0.dfsg-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/metis/metis_5.1.0.dfsg-5+b2_amd64.deb"
+}

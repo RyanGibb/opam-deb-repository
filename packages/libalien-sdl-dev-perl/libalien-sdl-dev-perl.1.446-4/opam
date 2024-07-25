@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libalien-sdl-dev-perl_1.446-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libalien-sdl-dev-perl"]
+]
+depends: [
+  "freeglut3-dev"
+  "libalien-sdl-perl" {= "1.446-4"}
+  "libjpeg-dev"
+  "libpng-dev"
+  "libsdl-gfx1-2-dev"
+  "libsdl-image1-2-dev"
+  "libsdl-mixer1-2-dev"
+  "libsdl-net1-2-dev"
+  "libsdl-pango-dev"
+  "libsdl-ttf2-0-dev"
+  "libsdl1-2-dev"
+  "libsmpeg-dev"
+  "libtiff-dev"
+  ("libgl1-mesa-dev" | "libgl-dev")
+]
+extra-source "libalien-sdl-dev-perl_1.446-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libalien-sdl-perl/libalien-sdl-dev-perl_1.446-4_all.deb"
+}

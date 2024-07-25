@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rust-mozilla-lldb_1.63.0+dfsg1-2~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rust-mozilla-lldb"]
+]
+depends: [
+  "lldb-13"
+  "python3-lldb-13"
+]
+conflicts: [
+  "rust-lldb"
+]
+extra-source "rust-mozilla-lldb_1.63.0+dfsg1-2~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rustc-mozilla/rust-mozilla-lldb_1.63.0+dfsg1-2~deb11u1_all.deb"
+}

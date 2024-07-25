@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plink_1.07+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plink"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libgcc-s1"
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "plink_1.07+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plink/plink_1.07+dfsg-3_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcc_1.2.0~DEVEL+20220331-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcc"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpcc-dev"
+]
+extra-source "pcc_1.2.0~DEVEL+20220331-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcc/pcc_1.2.0~DEVEL+20220331-1_amd64.deb"
+}

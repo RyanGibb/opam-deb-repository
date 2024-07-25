@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-krb5_4.8-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-krb5"]
+]
+depends: [
+  "krb5-config"
+  "libc6" {>= "2.26"}
+  "libkrb5-3" {>= "1.10.2+dfsg"}
+  "libpam-runtime"
+  "libpam0g" {>= "0.99.7.1"}
+]
+conflicts: [
+  "libpam-heimdal"
+]
+extra-source "libpam-krb5_4.8-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpam-krb5/libpam-krb5_4.8-2+deb10u1_amd64.deb"
+}

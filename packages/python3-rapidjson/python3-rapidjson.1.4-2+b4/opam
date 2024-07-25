@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-rapidjson_1.4-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-rapidjson"]
+]
+depends: [
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+]
+extra-source "python3-rapidjson_1.4-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-rapidjson/python3-rapidjson_1.4-2+b4_amd64.deb"
+}

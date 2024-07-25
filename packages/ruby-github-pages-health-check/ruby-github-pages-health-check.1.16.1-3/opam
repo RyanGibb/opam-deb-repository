@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-github-pages-health-check_1.16.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-github-pages-health-check"]
+]
+depends: [
+  "ruby-addressable" {< "3~"}
+  "ruby-dnsruby" {< "2~"}
+  "ruby-dnsruby" {>= "1.60"}
+  "ruby-octokit" {< "5~"}
+  "ruby-public-suffix" {< "5~"}
+  "ruby-typhoeus" {< "2~"}
+]
+extra-source "ruby-github-pages-health-check_1.16.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-github-pages-health-check/ruby-github-pages-health-check_1.16.1-3_all.deb"
+}

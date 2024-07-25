@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-setenv-prof_0.1.1.3-8+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-setenv-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-setenv-dev" {= "0.1.1.3-8+b2"}
+]
+extra-source "libghc-setenv-prof_0.1.1.3-8+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-setenv/libghc-setenv-prof_0.1.1.3-8+b2_amd64.deb"
+}

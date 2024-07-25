@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libceres1_1.14.0-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libceres1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcholmod3" {>= "1-4.5.2"}
+  "libcxsparse3" {>= "1-4.5.2"}
+  "libgcc-s1" {>= "4.0"}
+  "libgomp1" {>= "6"}
+  "libgoogle-glog0v5" {>= "0.4.0"}
+  "libspqr2" {>= "1-5.8.1+dfsg"}
+  "libstdc++6" {>= "9"}
+  "libunwind8"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libceres1_1.14.0-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceres-solver/libceres1_1.14.0-14_amd64.deb"
+}

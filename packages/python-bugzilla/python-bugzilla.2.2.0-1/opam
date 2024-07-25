@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-bugzilla_2.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-bugzilla"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-requests"
+]
+extra-source "python-bugzilla_2.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-bugzilla/python-bugzilla_2.2.0-1_all.deb"
+}

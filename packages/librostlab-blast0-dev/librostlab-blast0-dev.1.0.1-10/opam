@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librostlab-blast0-dev_1.0.1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librostlab-blast0-dev"]
+]
+depends: [
+  "librostlab-blast0v5" {= "1.0.1-10"}
+  "librostlab3-dev"
+]
+conflicts: [
+  "librostlab-blast-dev"
+]
+extra-source "librostlab-blast0-dev_1.0.1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librostlab-blast/librostlab-blast0-dev_1.0.1-10_amd64.deb"
+}

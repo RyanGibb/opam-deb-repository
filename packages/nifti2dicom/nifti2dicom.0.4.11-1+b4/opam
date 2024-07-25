@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nifti2dicom_0.4.11-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nifti2dicom"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgdcm2-8"
+  "libinsighttoolkit4-12" {>= "4.12.0-dfsg1-2~"}
+  "libstdc++6" {>= "5.2"}
+  "nifti2dicom-data" {= "0.4.11-1"}
+]
+extra-source "nifti2dicom_0.4.11-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nifti2dicom/nifti2dicom_0.4.11-1+b4_amd64.deb"
+}

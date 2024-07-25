@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-jaeger-client_1.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-jaeger-client"]
+]
+depends: [
+  "ruby-opentracing" {>= "0.3"}
+  "ruby-thrift"
+]
+extra-source "ruby-jaeger-client_1.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-jaeger-client/ruby-jaeger-client_1.3.0-1_all.deb"
+}

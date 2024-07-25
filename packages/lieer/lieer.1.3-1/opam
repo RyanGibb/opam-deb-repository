@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lieer_1.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lieer"]
+]
+depends: [
+  "python3-any"
+  "python3-googleapi"
+  "python3-notmuch" {>= "0.25"}
+  "python3-oauth2client"
+  "python3-tqdm"
+]
+extra-source "lieer_1.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gmailieer/lieer_1.3-1_all.deb"
+}

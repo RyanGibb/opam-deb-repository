@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i davix-tests_0.7.6-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r davix-tests"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdavix0v5" {= "0.7.6-3"}
+  "libgcc-s1" {>= "3.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "davix-tests_0.7.6-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/davix/davix-tests_0.7.6-3_amd64.deb"
+}

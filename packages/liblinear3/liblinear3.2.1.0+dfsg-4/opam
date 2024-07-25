@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblinear3_2.1.0+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblinear3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5"}
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "liblinear3_2.1.0+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblinear/liblinear3_2.1.0+dfsg-4_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-gulp-coffee_2.3.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-gulp-coffee"]
+]
+depends: [
+  "coffeescript" {>= "1.10.0~"}
+  "node-gulp-util" {>= "3.0.2"}
+  "node-merge" {>= "1.2.0"}
+  "node-through2" {>= "2.0.1"}
+  "node-vinyl-sourcemaps-apply" {>= "0.2.1"}
+  "nodejs"
+]
+extra-source "node-gulp-coffee_2.3.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-gulp-coffee/node-gulp-coffee_2.3.4-1_all.deb"
+}

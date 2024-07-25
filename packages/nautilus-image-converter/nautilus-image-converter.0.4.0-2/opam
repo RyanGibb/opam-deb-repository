@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nautilus-image-converter_0.4.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nautilus-image-converter"]
+]
+depends: [
+  "imagemagick"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-4-1" {>= "4.6"}
+  "libnautilus-extension4" {>= "43~rc"}
+  "nautilus" {>= "43~rc"}
+]
+extra-source "nautilus-image-converter_0.4.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nautilus-image-converter/nautilus-image-converter_0.4.0-2_amd64.deb"
+}

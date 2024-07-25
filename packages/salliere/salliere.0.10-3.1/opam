@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i salliere_0.10-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r salliere"]
+]
+depends: [
+  "jarwrapper" {>= "0.5"}
+  "libcommons-net-java"
+  "libcsv-java"
+  "libitext-java"
+  ("default-jre" | "java11-runtime")
+]
+extra-source "salliere_0.10-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/salliere/salliere_0.10-3.1_all.deb"
+}

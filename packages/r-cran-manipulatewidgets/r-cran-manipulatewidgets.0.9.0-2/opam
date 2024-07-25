@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-manipulatewidgets_0.9.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-manipulatewidgets"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "3.5.0-5"}
+  "r-cran-base64enc"
+  "r-cran-codetools"
+  "r-cran-htmltools"
+  "r-cran-htmlwidgets"
+  "r-cran-knitr"
+  "r-cran-miniui"
+  "r-cran-shiny" {>= "1.0.3"}
+]
+extra-source "r-cran-manipulatewidgets_0.9.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-manipulatewidgets/r-cran-manipulatewidgets_0.9.0-2_all.deb"
+}

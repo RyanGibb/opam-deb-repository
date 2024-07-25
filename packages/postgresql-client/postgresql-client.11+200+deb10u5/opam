@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-client_11+200+deb10u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-client"]
+]
+depends: [
+  "postgresql-client-11"
+]
+extra-source "postgresql-client_11+200+deb10u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-common/postgresql-client_11+200+deb10u5_all.deb"
+}

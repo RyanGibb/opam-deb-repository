@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-hips_0.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-hips"]
+]
+depends: [
+  "python3-any"
+  "python3-astropy" {>= "1.3~"}
+  "python3-astropy-healpix"
+  "python3-numpy"
+  "python3-pil"
+  "python3-skimage"
+]
+extra-source "python3-hips_0.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hipspy/python3-hips_0.2-3_all.deb"
+}

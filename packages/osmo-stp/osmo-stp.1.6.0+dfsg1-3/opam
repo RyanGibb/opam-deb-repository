@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osmo-stp_1.6.0+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osmo-stp"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libosmo-sigtran7" {>= "1.3.0"}
+  "libosmocore19" {>= "1.7.0"}
+  "libosmovty9" {>= "1.7.0"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "osmo-stp_1.6.0+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libosmo-sccp/osmo-stp_1.6.0+dfsg1-3_amd64.deb"
+}

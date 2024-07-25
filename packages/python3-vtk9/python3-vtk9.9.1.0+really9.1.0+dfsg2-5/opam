@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-vtk9_9.1.0+really9.1.0+dfsg2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-vtk9"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libopenmpi3" {>= "4.1.4"}
+  "libpython3-11" {>= "3.11.0"}
+  "libstdc++6" {>= "11"}
+  "libtbb12" {>= "2021.4.0"}
+  "libvtk9-1" {= "9.1.0+really9.1.0+dfsg2-5"}
+  "libvtk9-1-qt" {>= "9.1.0+really9.1.0+dfsg2"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-mpi4py"
+]
+extra-source "python3-vtk9_9.1.0+really9.1.0+dfsg2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vtk9/python3-vtk9_9.1.0+really9.1.0+dfsg2-5_amd64.deb"
+}

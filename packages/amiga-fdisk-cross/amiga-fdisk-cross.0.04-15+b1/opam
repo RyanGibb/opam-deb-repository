@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i amiga-fdisk-cross_0.04-15+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r amiga-fdisk-cross"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libreadline7" {>= "6.0"}
+]
+conflicts: [
+  "amiga-fdisk"
+  "amiga-fdisk-bf"
+]
+extra-source "amiga-fdisk-cross_0.04-15+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/amiga-fdisk/amiga-fdisk-cross_0.04-15+b1_amd64.deb"
+}

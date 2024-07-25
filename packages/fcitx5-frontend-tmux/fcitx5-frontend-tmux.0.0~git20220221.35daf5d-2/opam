@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx5-frontend-tmux_0.0~git20220221.35daf5d-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx5-frontend-tmux"]
+]
+depends: [
+  "dbus-bin"
+  "fcitx5"
+  "libc6" {>= "2.14"}
+  "libfcitx5utils2" {>= "5.0.18"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "tmux"
+]
+extra-source "fcitx5-frontend-tmux_0.0~git20220221.35daf5d-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx5-tmux/fcitx5-frontend-tmux_0.0~git20220221.35daf5d-2_amd64.deb"
+}

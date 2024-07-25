@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaws6_20.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaws6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnat-10" {>= "10.2.1"}
+  "libgnutls30" {>= "3.7.0"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libtemplates-parser20" {>= "21.0.0"}
+  "libxmlada-dom7" {>= "21.0.0"}
+  "libxmlada-input7" {>= "21.0.0"}
+  "libxmlada-sax7" {>= "21.0.0"}
+  "libxmlada-unicode7" {>= "21.0.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libaws6_20.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaws/libaws6_20.2-2_amd64.deb"
+}

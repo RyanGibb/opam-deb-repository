@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libslepc-complex3.18-dev_3.18.2+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libslepc-complex3.18-dev"]
+]
+depends: [
+  "libarpack2-dev"
+  "libhdf5-mpi-dev"
+  "libparpack2-dev"
+  "libpetsc-complex3-18-dev"
+  "libslepc-complex3-18" {= "3.18.2+dfsg1-2"}
+  ("gfortran-12" | "gfortran-mod-15")
+]
+conflicts: [
+  "libslepc2.3.2-dev"
+]
+extra-source "libslepc-complex3.18-dev_3.18.2+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slepc/libslepc-complex3.18-dev_3.18.2+dfsg1-2_amd64.deb"
+}

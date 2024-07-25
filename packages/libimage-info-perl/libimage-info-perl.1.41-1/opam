@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libimage-info-perl_1.41-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libimage-info-perl"]
+]
+depends: [
+  "libio-string-perl"
+  "perl"
+  ("libimage-base-bundle-perl" | "libimage-xbm-perl")
+  ("libimage-base-bundle-perl" | "libimage-xpm-perl")
+  ("libxml-libxml-perl" | "libxml-simple-perl")
+  ("perl" {>= "5.21.7"} | "libio-scalar-perl")
+]
+extra-source "libimage-info-perl_1.41-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libimage-info-perl/libimage-info-perl_1.41-1_all.deb"
+}

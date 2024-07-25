@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i squid-common_4.6-1+deb10u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r squid-common"]
+]
+depends: [
+  "squid-langpack" {>= "20110214-1"}
+]
+conflicts: [
+  "squid3-common"
+]
+extra-source "squid-common_4.6-1+deb10u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/squid/squid-common_4.6-1+deb10u7_all.deb"
+}

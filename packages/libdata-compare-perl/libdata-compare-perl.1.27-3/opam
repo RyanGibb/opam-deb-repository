@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdata-compare-perl_1.27-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdata-compare-perl"]
+]
+depends: [
+  "libclone-perl" {>= "0.43"}
+  "libfile-find-rule-perl"
+  "perl-any"
+]
+extra-source "libdata-compare-perl_1.27-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdata-compare-perl/libdata-compare-perl_1.27-3_all.deb"
+}

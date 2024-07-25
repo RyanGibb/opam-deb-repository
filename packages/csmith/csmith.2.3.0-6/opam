@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i csmith_2.3.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r csmith"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "libsys-cpu-perl"
+]
+extra-source "csmith_2.3.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/csmith/csmith_2.3.0-6_amd64.deb"
+}

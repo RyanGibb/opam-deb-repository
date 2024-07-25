@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5network5_5.15.8+dfsg-11+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5network5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libssl3"
+  "libstdc++6" {>= "11"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libqt5network5_5.15.8+dfsg-11+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtbase-opensource-src/libqt5network5_5.15.8+dfsg-11+deb12u2_amd64.deb"
+}

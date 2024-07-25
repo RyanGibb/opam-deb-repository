@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nextpnr-generic_0.0~git20210102.9b96280-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nextpnr-generic"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libboost-thread1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "nextpnr-generic_0.0~git20210102.9b96280-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nextpnr/nextpnr-generic_0.0~git20210102.9b96280-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-ormolu-prof_0.1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-ormolu-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-dlist-prof"
+  "libghc-exceptions-prof"
+  "libghc-ghc-lib-parser-prof"
+  "libghc-ormolu-dev" {= "0.1.2.0-1"}
+  "libghc-syb-prof"
+]
+extra-source "libghc-ormolu-prof_0.1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-ormolu/libghc-ormolu-prof_0.1.2.0-1_amd64.deb"
+}

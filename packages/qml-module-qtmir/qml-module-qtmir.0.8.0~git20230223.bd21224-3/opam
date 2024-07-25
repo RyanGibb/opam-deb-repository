@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-qtmir_0.8.0~git20230223.bd21224-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-qtmir"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgsettings-qt1" {>= "0.1+14.04.20140408"}
+  "liblomiri-app-launch0" {>= "0.0.90"}
+  "liblttng-ust1" {>= "2.13.0"}
+  "libmiral5" {>= "3.6.0"}
+  "libmiroil3" {>= "2.11.0"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5qml5"
+  "libqt5qml5" {>= "5.0.2"}
+  "libqtmirserver2" {>= "0.8.0~git20230223.bd21224"}
+  "libstdc++6" {>= "11"}
+  "qtmir" {= "0.8.0~git20230223.bd21224-3"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+  ("libqt5quick5" {>= "5.4.0"} | "libqt5quick5-gles" {>= "5.4.0"})
+]
+extra-source "qml-module-qtmir_0.8.0~git20230223.bd21224-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtmir/qml-module-qtmir_0.8.0~git20230223.bd21224-3_amd64.deb"
+}

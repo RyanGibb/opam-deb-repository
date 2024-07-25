@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pyscss_1.3.5-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pyscss"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcre3"
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-enum34"
+  "python-pathlib"
+  "python-pkg-resources"
+  "python-six"
+]
+extra-source "python-pyscss_1.3.5-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pyscss/python-pyscss_1.3.5-2+b2_amd64.deb"
+}

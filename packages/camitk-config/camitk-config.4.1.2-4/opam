@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i camitk-config_4.1.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r camitk-config"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcamitk4" {= "4.1.2-4"}
+  "libgcc-s1"
+  "libqt5core5a" {>= "5.12.2"}
+  "libstdc++6" {>= "5.2"}
+  "libvtk7-1p"
+]
+extra-source "camitk-config_4.1.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/camitk/camitk-config_4.1.2-4_amd64.deb"
+}

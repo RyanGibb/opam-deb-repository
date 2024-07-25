@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreadosm-dev_1:1.1.0a+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreadosm-dev"]
+]
+depends: [
+  "libexpat1-dev"
+  "libreadosm1" {= "1-1.1.0a+dfsg-2"}
+  "zlib1g-dev"
+]
+extra-source "libreadosm-dev_1:1.1.0a+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/readosm/libreadosm-dev_1.1.0a+dfsg-2_amd64.deb"
+}

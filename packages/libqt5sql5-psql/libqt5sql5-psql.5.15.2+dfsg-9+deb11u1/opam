@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5sql5-psql_5.15.2+dfsg-9+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5sql5-psql"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpq5" {>= "9.2~beta3"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5sql5" {>= "5.10.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libqt5sql5-psql_5.15.2+dfsg-9+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtbase-opensource-src/libqt5sql5-psql_5.15.2+dfsg-9+deb11u1_amd64.deb"
+}

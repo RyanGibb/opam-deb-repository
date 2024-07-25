@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bareos-dbg_16.2.6-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bareos-dbg"]
+]
+depends: [
+  ("bareos-storage" {= "16.2.6-5"} | "bareos-bconsole" {= "16.2.6-5"} | "bareos-common" {= "16.2.6-5"} | "bareos-database-common" {= "16.2.6-5"} | "bareos-database-mysql" {= "16.2.6-5"} | "bareos-database-postgresql" {= "16.2.6-5"} | "bareos-database-sqlite3" {= "16.2.6-5"} | "bareos-database-tools" {= "16.2.6-5"} | "bareos-director" {= "16.2.6-5"} | "bareos-filedaemon" {= "16.2.6-5"} | "bareos-storage" {= "16.2.6-5"} | "bareos-storage-tape" {= "16.2.6-5"} | "bareos-storage-fifo" {= "16.2.6-5"} | "bareos-tools" {= "16.2.6-5"})
+]
+conflicts: [
+  "bacula-sd-dbg"
+  "bacula-sd-mysql-dbg"
+  "bacula-sd-pgsql-dbg"
+  "bacula-sd-sqlite3-dbg"
+]
+extra-source "bareos-dbg_16.2.6-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bareos/bareos-dbg_16.2.6-5_amd64.deb"
+}

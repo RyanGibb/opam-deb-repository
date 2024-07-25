@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i redeclipse_1.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r redeclipse"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libenet7"
+  "libgcc-s1"
+  "libgl1"
+  "libsdl2-2-0-0" {>= "2.0.8"}
+  "libsdl2-image-2-0-0" {>= "2.0.2"}
+  "libsdl2-mixer-2-0-0" {>= "2.0.2"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  "redeclipse-common" {>= "1.6.0"}
+  "redeclipse-data" {>= "1.6.0"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "redeclipse_1.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/redeclipse/redeclipse_1.6.0-1_amd64.deb"
+}

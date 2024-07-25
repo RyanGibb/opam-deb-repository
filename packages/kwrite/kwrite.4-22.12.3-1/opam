@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kwrite_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kwrite"]
+]
+depends: [
+  "kate" {>= "4-22.12.3"}
+  "ktexteditor-katepart"
+  "libc6" {>= "2.34"}
+  "libkf5coreaddons5" {>= "5.16.0"}
+  "libkf5dbusaddons5" {>= "5.79.0~"}
+  "libkf5i18n5" {>= "5.90.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "4.4"}
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "kwrite_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kate/kwrite_22.12.3-1_amd64.deb"
+}

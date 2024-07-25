@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-h5py-mpi_2.10.0-9+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-h5py-mpi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libhdf5-openmpi-103-1" {>= "1.10.5"}
+  "libhdf5-openmpi-hl-100" {>= "1.10.2"}
+  "liblzf1" {>= "1.5"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-h5py-serial"
+  "python3-mpi4py"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  "python3-six"
+]
+extra-source "python3-h5py-mpi_2.10.0-9+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/h5py/python3-h5py-mpi_2.10.0-9+b2_amd64.deb"
+}

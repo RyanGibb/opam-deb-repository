@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-gopkg-gorethink-gorethink.v3-dev_3.0.5-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-gopkg-gorethink-gorethink.v3-dev"]
+]
+depends: [
+  "golang-github-cenkalti-backoff-dev"
+  "golang-github-hailocab-go-hostpool-dev"
+  "golang-github-sirupsen-logrus-dev" {>= "1.0.2~"}
+  "golang-github-stretchr-testify-dev"
+  "golang-golang-x-crypto-dev"
+  "golang-golang-x-net-dev"
+  "golang-gopkg-check-v1-dev"
+  "golang-gopkg-fatih-pool-v2-dev"
+  "golang-goprotobuf-dev"
+]
+extra-source "golang-gopkg-gorethink-gorethink.v3-dev_3.0.5-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-gopkg-gorethink-gorethink.v3/golang-gopkg-gorethink-gorethink.v3-dev_3.0.5-1.1_all.deb"
+}

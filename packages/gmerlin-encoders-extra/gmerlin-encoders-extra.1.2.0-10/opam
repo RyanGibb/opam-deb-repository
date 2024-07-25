@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gmerlin-encoders-extra_1.2.0-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gmerlin-encoders-extra"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgmerlin0" {>= "1.2.0~dfsg+1"}
+  "libmjpegutils-2-1-0"
+]
+extra-source "gmerlin-encoders-extra_1.2.0-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gmerlin-encoders/gmerlin-encoders-extra_1.2.0-10_amd64.deb"
+}

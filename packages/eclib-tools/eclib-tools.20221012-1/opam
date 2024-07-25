@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eclib-tools_20221012-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eclib-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libec10" {= "20221012-1"}
+  "libgcc-s1" {>= "3.0"}
+  "libntl44" {>= "11.5.1"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "eclib-tools_20221012-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eclib/eclib-tools_20221012-1_amd64.deb"
+}

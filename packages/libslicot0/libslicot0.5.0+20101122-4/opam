@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libslicot0_5.0+20101122-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libslicot0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1"
+  "libgfortran5" {>= "8"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libslicot0_5.0+20101122-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slicot/libslicot0_5.0+20101122-4_amd64.deb"
+}

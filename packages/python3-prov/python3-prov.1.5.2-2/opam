@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-prov_1.5.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-prov"]
+]
+depends: [
+  "python3-any"
+  "python3-dateutil"
+  "python3-lxml"
+  "python3-networkx"
+  "python3-rdflib" {>= "4.2.1"}
+  "python3-six" {>= "1.9.0"}
+]
+extra-source "python3-prov_1.5.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-prov/python3-prov_1.5.2-2_all.deb"
+}

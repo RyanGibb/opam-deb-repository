@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freefem++_3.61.1+dfsg1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freefem++"]
+]
+depends: [
+  "freeglut3"
+  "libarpack2" {>= "2.1"}
+  "libc6" {>= "2.23"}
+  "libgcc1" {>= "1-4.0"}
+  "libgl1"
+  "libhdf5-103"
+  "libopenmpi3"
+  "libstdc++6" {>= "5.2"}
+  "libumfpack5" {>= "1-4.5.2"}
+  ("libblas3" | "libblas-so-3")
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "freefem++_3.61.1+dfsg1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freefem++/freefem++_3.61.1+dfsg1-4_amd64.deb"
+}

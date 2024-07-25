@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmlir-16_1:16.0.6-15~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmlir-16"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libllvm16"
+  "libstdc++6" {>= "12"}
+]
+conflicts: [
+  "libmlir-x.y"
+]
+extra-source "libmlir-16_1:16.0.6-15~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-16/libmlir-16_16.0.6-15~deb12u1_amd64.deb"
+}

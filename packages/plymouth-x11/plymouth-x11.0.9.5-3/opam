@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plymouth-x11_0.9.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plymouth-x11"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.21.4"}
+  "libplymouth5" {>= "0.9.5"}
+  "plymouth" {= "0.9.5-3"}
+]
+extra-source "plymouth-x11_0.9.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plymouth/plymouth-x11_0.9.5-3_amd64.deb"
+}

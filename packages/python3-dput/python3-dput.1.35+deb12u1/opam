@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-dput_1.35+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-dput"]
+]
+depends: [
+  "gnupg"
+  "python3-any"
+  "python3-debian"
+]
+extra-source "python3-dput_1.35+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dput-ng/python3-dput_1.35+deb12u1_all.deb"
+}

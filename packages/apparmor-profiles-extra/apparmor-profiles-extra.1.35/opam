@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apparmor-profiles-extra_1.35_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apparmor-profiles-extra"]
+]
+depends: [
+  "apparmor"
+]
+extra-source "apparmor-profiles-extra_1.35_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apparmor-profiles-extra/apparmor-profiles-extra_1.35_all.deb"
+}

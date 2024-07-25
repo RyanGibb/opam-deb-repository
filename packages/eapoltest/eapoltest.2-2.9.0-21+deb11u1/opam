@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eapoltest_2:2.9.0-21+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eapoltest"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libpcsclite1" {>= "1.0.0"}
+  "libssl1-1" {>= "1.1.1"}
+]
+extra-source "eapoltest_2:2.9.0-21+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wpa/eapoltest_2.9.0-21+deb11u1_amd64.deb"
+}

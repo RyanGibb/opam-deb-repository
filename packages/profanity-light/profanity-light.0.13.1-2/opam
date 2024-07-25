@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i profanity-light_0.13.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r profanity-light"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcurl3-gnutls" {>= "7.63.0"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.65.1"}
+  "libgpgme11" {>= "1.9.0"}
+  "libncursesw6" {>= "6"}
+  "libotr5" {>= "4.0.0"}
+  "libreadline8" {>= "6.0"}
+  "libsignal-protocol-c2-3-2" {>= "2.3.3"}
+  "libsqlite3-0" {>= "3.6.0"}
+  "libstrophe0" {>= "0.12.0"}
+  "libtinfo6" {>= "6"}
+]
+conflicts: [
+  "profanity"
+]
+extra-source "profanity-light_0.13.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/profanity/profanity-light_0.13.1-2_amd64.deb"
+}

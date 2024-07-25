@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbabl-0.1-0_1:0.1.82-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbabl-0.1-0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "liblcms2-2" {>= "2.8"}
+]
+extra-source "libbabl-0.1-0_1:0.1.82-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/babl/libbabl-0.1-0_0.1.82-1_amd64.deb"
+}

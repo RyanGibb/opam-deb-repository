@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-cuttlefish_3.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-cuttlefish"]
+]
+depends: [
+  "erlang-base" {>= "1-24.3.4.5+dfsg"}
+  "erlang-eunit" {>= "1-24.3.4.5+dfsg"}
+  "erlang-getopt"
+  "erlang-neotoma"
+  "erlang-syntax-tools" {>= "1-24.3.4.5+dfsg"}
+]
+extra-source "erlang-cuttlefish_3.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/erlang-cuttlefish/erlang-cuttlefish_3.1.0-1_all.deb"
+}

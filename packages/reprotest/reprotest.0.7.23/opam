@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i reprotest_0.7.23_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r reprotest"]
+]
+depends: [
+  "apt-utils"
+  "libdpkg-perl"
+  "procps"
+  "python3-any"
+  "python3-debian"
+  "python3-distro"
+  "python3-pkg-resources"
+  "python3-rstr"
+]
+extra-source "reprotest_0.7.23_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/reprotest/reprotest_0.7.23_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkdb3-driver-postgresql_3.1.0-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkdb3-driver-postgresql"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkdb3-4" {= "3.1.0-5+b2"}
+  "libkf5coreaddons5" {>= "4.99.0"}
+  "libpq5" {>= "9.1~"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5network5" {>= "5.4.0"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libkdb3-driver-postgresql_3.1.0-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdb/libkdb3-driver-postgresql_3.1.0-5+b2_amd64.deb"
+}

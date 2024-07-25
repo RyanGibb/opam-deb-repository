@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-torchtext_0.14.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-torchtext"]
+]
+depends: [
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-11"
+  "python3-any"
+  "python3-numpy"
+  "python3-requests"
+  "python3-torch" {>= "1.12.0~"}
+  "python3-tqdm"
+]
+extra-source "python3-torchtext_0.14.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pytorch-text/python3-torchtext_0.14.1-2_amd64.deb"
+}

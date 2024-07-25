@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kde-telepathy-minimal_22.12.3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kde-telepathy-minimal"]
+]
+depends: [
+  "kde-config-telepathy-accounts" {>= "22.12.3"}
+  "kde-telepathy-approver" {>= "22.12.3"}
+  "kde-telepathy-auth-handler" {>= "22.12.3"}
+  "kde-telepathy-contact-list" {>= "22.12.3"}
+  "kde-telepathy-integration-module" {>= "22.12.3"}
+  "kde-telepathy-text-ui" {>= "22.12.3"}
+  "telepathy-mission-control-5" {>= "1-5.16.5"}
+  ("telepathy-haze" | "telepathy-idle" | "telepathy-rakia")
+]
+extra-source "kde-telepathy-minimal_22.12.3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-kde-telepathy/kde-telepathy-minimal_22.12.3.1_amd64.deb"
+}

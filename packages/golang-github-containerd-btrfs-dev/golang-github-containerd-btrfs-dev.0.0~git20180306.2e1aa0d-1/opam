@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-containerd-btrfs-dev_0.0~git20180306.2e1aa0d-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-containerd-btrfs-dev"]
+]
+depends: [
+  "golang-github-pkg-errors-dev"
+  ("libbtrfs-dev" | "btrfs-progs" {< "4.16.1~"})
+]
+extra-source "golang-github-containerd-btrfs-dev_0.0~git20180306.2e1aa0d-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-containerd-btrfs/golang-github-containerd-btrfs-dev_0.0~git20180306.2e1aa0d-1_all.deb"
+}

@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-pipeline21_20.11.10-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-pipeline21"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.14"}
+  "libfdt1" {>= "1.6.0"}
+  "libnuma1" {>= "2.0.11"}
+  "libpcap0-8" {>= "0.9.8"}
+  "librte-acl21" {>= "20.11"}
+  "librte-cryptodev21" {>= "20.11"}
+  "librte-eal21" {>= "20.11"}
+  "librte-ethdev21" {>= "17.11"}
+  "librte-eventdev21" {>= "20.08"}
+  "librte-hash21" {>= "18.11"}
+  "librte-ip-frag21" {>= "18.11"}
+  "librte-kni21" {>= "18.11"}
+  "librte-kvargs21" {>= "18.08"}
+  "librte-lpm21" {>= "20.08"}
+  "librte-mbuf21" {>= "19.08"}
+  "librte-mempool21" {>= "20.11"}
+  "librte-meter21" {>= "20.11"}
+  "librte-net21" {>= "18.02"}
+  "librte-pci21" {>= "20.11"}
+  "librte-port21" {>= "19.11"}
+  "librte-rcu21" {>= "19.11"}
+  "librte-ring21" {>= "20.08"}
+  "librte-sched21" {>= "18.05"}
+  "librte-table21" {>= "20.11"}
+  "librte-telemetry21" {>= "19.11"}
+  "librte-timer21" {>= "19.08"}
+]
+conflicts: [
+  "libdpdk0"
+]
+extra-source "librte-pipeline21_20.11.10-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-pipeline21_20.11.10-1~deb11u1_amd64.deb"
+}

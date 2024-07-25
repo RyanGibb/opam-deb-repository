@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-grape_1.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-grape"]
+]
+depends: [
+  "ruby-activesupport"
+  "ruby-builder"
+  "ruby-dry-types" {>= "1.1~"}
+  "ruby-mustermann-grape"
+  "ruby-rack"
+  "ruby-rack-accept" {>= "0.4.5-3~"}
+  "ruby-virtus"
+]
+extra-source "ruby-grape_1.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-grape/ruby-grape_1.4.0-1_all.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-tigger_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-tigger"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-2"}
+  "r-cran-alakazam" {>= "1.1.0.999"}
+  "r-cran-doparallel"
+  "r-cran-dplyr" {>= "0.8.1"}
+  "r-cran-foreach"
+  "r-cran-ggplot2" {>= "3.2.0"}
+  "r-cran-gridextra"
+  "r-cran-gtools"
+  "r-cran-iterators"
+  "r-cran-lazyeval"
+  "r-cran-rlang"
+  "r-cran-stringi"
+  "r-cran-tidyr" {>= "0.1.0"}
+]
+extra-source "r-cran-tigger_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-tigger/r-cran-tigger_1.0.1-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblinux-acl-perl_0.05-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblinux-acl-perl"]
+]
+depends: [
+  "libacl1" {>= "2.2.23"}
+  "libc6" {>= "2.4"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "liblinux-acl-perl_0.05-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblinux-acl-perl/liblinux-acl-perl_0.05-1+b3_amd64.deb"
+}

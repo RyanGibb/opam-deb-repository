@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pngmeta_1.11-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pngmeta"]
+]
+depends: [
+  "libc6" {>= "2.11"}
+  "libpng16-16" {>= "1.6.2-1"}
+]
+extra-source "pngmeta_1.11-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pngmeta/pngmeta_1.11-10_amd64.deb"
+}

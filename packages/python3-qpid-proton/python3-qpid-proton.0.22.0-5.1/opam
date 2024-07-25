@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-qpid-proton_0.22.0-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-qpid-proton"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libqpid-proton11"
+  "libssl1-1" {>= "1.1.0"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+]
+extra-source "python3-qpid-proton_0.22.0-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qpid-proton/python3-qpid-proton_0.22.0-5.1_amd64.deb"
+}

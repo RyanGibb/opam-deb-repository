@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gobjc-12-multilib-s390x-linux-gnu_12.2.0-14cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gobjc-12-multilib-s390x-linux-gnu"]
+]
+depends: [
+  "gcc-12-multilib-s390x-linux-gnu" {= "12.2.0-14cross1"}
+  "gcc-12-s390x-linux-gnu-base" {= "12.2.0-14cross1"}
+  "gobjc-12-s390x-linux-gnu" {= "12.2.0-14cross1"}
+  "lib32objc-12-dev-s390x-cross" {>= "12.2.0-14cross1"}
+]
+extra-source "gobjc-12-multilib-s390x-linux-gnu_12.2.0-14cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12-cross/gobjc-12-multilib-s390x-linux-gnu_12.2.0-14cross1_amd64.deb"
+}

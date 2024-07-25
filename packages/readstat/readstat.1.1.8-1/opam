@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i readstat_1.1.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r readstat"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libcsv3" {>= "3.0.3"}
+  "libreadstat1" {= "1.1.8-1"}
+  "libxlsxwriter4" {>= "1.1.4"}
+]
+extra-source "readstat_1.1.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/readstat/readstat_1.1.8-1_amd64.deb"
+}

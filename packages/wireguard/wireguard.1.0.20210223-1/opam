@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wireguard_1.0.20210223-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wireguard"]
+]
+depends: [
+  "wireguard-tools" {>= "1.0.20210223-1"}
+  ("wireguard-modules" {>= "0.0.20191219"} | "wireguard-dkms" {>= "0.0.20200121-2"})
+]
+extra-source "wireguard_1.0.20210223-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wireguard/wireguard_1.0.20210223-1_all.deb"
+}

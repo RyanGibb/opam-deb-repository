@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcodcif3_3.1.0+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcodcif3"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcexceptions0" {>= "3.1.0+dfsg-3"}
+]
+extra-source "libcodcif3_3.1.0+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cod-tools/libcodcif3_3.1.0+dfsg-3_amd64.deb"
+}

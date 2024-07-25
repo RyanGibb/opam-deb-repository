@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatcoll21_23.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatcoll21"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnat-12" {>= "12.2.0"}
+  "libgnatprj10" {>= "2023.0.0"}
+  "libxmlada-dom8" {>= "23.0.0"}
+  "libxmlada-input7" {>= "23.0.0"}
+  "libxmlada-sax7" {>= "23.0.0"}
+  "libxmlada-schema7" {>= "23.0.0"}
+  "libxmlada-unicode7" {>= "23.0.0"}
+]
+extra-source "libgnatcoll21_23.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnatcoll/libgnatcoll21_23.0.0-3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nordugrid-arc-acix-index_6.10.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nordugrid-arc-acix-index"]
+]
+depends: [
+  "init-system-helpers" {>= "1.51"}
+  "libarccommon3v5" {>= "6.10.2-1"}
+  "nordugrid-arc-acix-core" {= "6.10.2-1"}
+  "nordugrid-arc-arcctl-service" {= "6.10.2-1"}
+  "python3-any"
+]
+extra-source "nordugrid-arc-acix-index_6.10.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nordugrid-arc/nordugrid-arc-acix-index_6.10.2-1_all.deb"
+}

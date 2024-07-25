@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ncat_7.70+dfsg1-6+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ncat"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "liblua5-3-0"
+  "libpcap0-8" {>= "0.9.8"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "ncat_7.70+dfsg1-6+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nmap/ncat_7.70+dfsg1-6+deb10u2_amd64.deb"
+}

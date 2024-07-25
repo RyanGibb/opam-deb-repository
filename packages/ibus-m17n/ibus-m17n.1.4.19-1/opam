@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibus-m17n_1.4.19-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibus-m17n"]
+]
+depends: [
+  "ibus" {>= "1.5.22-2~"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.26.0"}
+  "libgtk-3-0" {>= "3.3.16"}
+  "libibus-1-0-5" {>= "1.5.1"}
+  "libm17n-0" {>= "1.6.3"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "ibus-m17n_1.4.19-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibus-m17n/ibus-m17n_1.4.19-1_amd64.deb"
+}

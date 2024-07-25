@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-trust-dns-server+h2-dev_0.22.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-trust-dns-server+h2-dev"]
+]
+depends: [
+  "librust-h2-0-3+default-dev"
+  "librust-h2-0-3+stream-dev"
+  "librust-trust-dns-server-dev" {= "0.22.0-2"}
+]
+extra-source "librust-trust-dns-server+h2-dev_0.22.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-trust-dns-server/librust-trust-dns-server+h2-dev_0.22.0-2_amd64.deb"
+}

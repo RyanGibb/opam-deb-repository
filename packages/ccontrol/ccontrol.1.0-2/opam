@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ccontrol_1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ccontrol"]
+]
+depends: [
+  "binutils"
+  "ccache"
+  "gcc"
+  "libc6" {>= "2.14"}
+  "make"
+]
+extra-source "ccontrol_1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ccontrol/ccontrol_1.0-2_amd64.deb"
+}

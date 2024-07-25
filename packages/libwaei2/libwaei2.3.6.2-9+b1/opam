@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwaei2_3.6.2-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwaei2"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libmecab2" {>= "0.996"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libwaei2_3.6.2-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gwaei/libwaei2_3.6.2-9+b1_amd64.deb"
+}

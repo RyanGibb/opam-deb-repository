@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mpeg3-utils_1.8.dfsg-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mpeg3-utils"]
+]
+depends: [
+  "liba52-0-7-4"
+  "libc6" {>= "2.14"}
+  "libmpeg3-2" {>= "1.8.dfsg"}
+]
+extra-source "mpeg3-utils_1.8.dfsg-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmpeg3/mpeg3-utils_1.8.dfsg-2.1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i silversearcher-ag_2.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r silversearcher-ag"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libpcre3"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "python-ase (<< 3.8.1.3440)"
+]
+extra-source "silversearcher-ag_2.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/silversearcher-ag/silversearcher-ag_2.2.0-1_amd64.deb"
+}

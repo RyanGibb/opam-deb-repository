@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hxtools_20201116-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hxtools"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libhx32" {>= "3.25"}
+  "libstdc++6" {>= "5.2"}
+  "perl-any"
+]
+conflicts: [
+  "nvidia-cuda-toolkit"
+]
+extra-source "hxtools_20201116-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hxtools/hxtools_20201116-1_amd64.deb"
+}

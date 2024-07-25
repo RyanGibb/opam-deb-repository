@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-libidn2-perl_1.01-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-libidn2-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libidn2-0" {>= "2.0.0"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libnet-libidn2-perl_1.01-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-libidn2-perl/libnet-libidn2-perl_1.01-2+b1_amd64.deb"
+}

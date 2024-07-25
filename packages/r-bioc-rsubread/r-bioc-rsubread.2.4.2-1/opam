@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-rsubread_2.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-rsubread"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-bioc-biocgenerics"
+  "r-cran-matrix"
+  "zlib1g" {>= "1-1.2.2.4"}
+]
+extra-source "r-bioc-rsubread_2.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-rsubread/r-bioc-rsubread_2.4.2-1_amd64.deb"
+}

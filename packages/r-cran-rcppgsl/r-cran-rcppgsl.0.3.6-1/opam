@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rcppgsl_0.3.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rcppgsl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgsl-dev"
+  "libgsl23"
+  "libgslcblas0"
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.0-5"}
+  "r-cran-rcpp" {>= "0.11.0-1"}
+]
+extra-source "r-cran-rcppgsl_0.3.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-rcppgsl/r-cran-rcppgsl_0.3.6-1_amd64.deb"
+}

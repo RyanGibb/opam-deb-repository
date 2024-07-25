@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vmtouch_1.3.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vmtouch"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "sysvinit-utils"
+]
+extra-source "vmtouch_1.3.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vmtouch/vmtouch_1.3.1-2_amd64.deb"
+}

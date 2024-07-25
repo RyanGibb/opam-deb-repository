@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dub_1.27.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dub"]
+]
+depends: [
+  "default-d-compiler"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgphobos3" {>= "12"}
+  ("libcurl3-gnutls" | "libcurl4")
+]
+extra-source "dub_1.27.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dub/dub_1.27.0-3_amd64.deb"
+}

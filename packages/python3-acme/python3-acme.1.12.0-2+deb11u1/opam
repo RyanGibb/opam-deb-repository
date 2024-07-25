@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-acme_1.12.0-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-acme"]
+]
+depends: [
+  "ca-certificates"
+  "python3-any"
+  "python3-cryptography" {>= "2.1.4"}
+  "python3-josepy"
+  "python3-openssl" {>= "17.3.0"}
+  "python3-pkg-resources"
+  "python3-requests"
+  "python3-requests-toolbelt"
+  "python3-rfc3339"
+  "python3-six" {>= "1.11.0"}
+  "python3-tz"
+]
+extra-source "python3-acme_1.12.0-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-acme/python3-acme_1.12.0-2+deb11u1_all.deb"
+}

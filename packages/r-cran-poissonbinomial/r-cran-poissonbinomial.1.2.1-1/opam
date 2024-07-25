@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-poissonbinomial_1.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-poissonbinomial"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc-s1" {>= "4.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-cran-bh"
+  "r-cran-rcpp" {>= "1.0.3"}
+]
+extra-source "r-cran-poissonbinomial_1.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-poissonbinomial/r-cran-poissonbinomial_1.2.1-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfreenect-bin_1:0.5.3-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfreenect-bin"]
+]
+depends: [
+  "freeglut3"
+  "libc6" {>= "2.14"}
+  "libfreenect0-5" {>= "1-0.5.2"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  ("libgl1-mesa-glx" | "libgl1")
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "libfreenect-bin_1:0.5.3-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfreenect/libfreenect-bin_0.5.3-1+b2_amd64.deb"
+}

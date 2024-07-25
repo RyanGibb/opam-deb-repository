@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgrantlee5-dev_5.1.0-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgrantlee5-dev"]
+]
+depends: [
+  "libgrantlee-templates5" {= "5.1.0-2.1"}
+  "libgrantlee-textdocument5" {= "5.1.0-2.1"}
+  "qtbase5-dev" {>= "5.4"}
+]
+extra-source "libgrantlee5-dev_5.1.0-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grantlee5/libgrantlee5-dev_5.1.0-2.1_amd64.deb"
+}

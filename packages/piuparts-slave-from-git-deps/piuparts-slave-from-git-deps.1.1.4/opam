@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i piuparts-slave-from-git-deps_1.1.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r piuparts-slave-from-git-deps"]
+]
+depends: [
+  "adduser"
+  "adequate"
+  "debootstrap" {>= "1.0.89~"}
+  "debsums" {>= "2.2.2~"}
+  "git"
+  "libjs-sphinxdoc"
+  "lsb-release"
+  "lsof"
+  "mount"
+  "openssh-client"
+  "pkg-config"
+  "python3-apt"
+  "python3-debian"
+  "python3-distro-info"
+  "screen"
+  "sudo"
+]
+extra-source "piuparts-slave-from-git-deps_1.1.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/piuparts/piuparts-slave-from-git-deps_1.1.4_all.deb"
+}

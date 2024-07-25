@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lavapdu-client_0.0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lavapdu-client"]
+]
+depends: [
+  "python"
+  "python2-7"
+]
+conflicts: [
+  "lavapdu"
+]
+extra-source "lavapdu-client_0.0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lavapdu/lavapdu-client_0.0.5-1_all.deb"
+}

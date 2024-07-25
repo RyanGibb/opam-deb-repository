@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcs-snmp_0.10.8-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcs-snmp"]
+]
+depends: [
+  "pcs"
+  "python3-any"
+  "python3-pyagentx"
+  "snmpd"
+]
+extra-source "pcs-snmp_0.10.8-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcs/pcs-snmp_0.10.8-1+deb11u1_all.deb"
+}

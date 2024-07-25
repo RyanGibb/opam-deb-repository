@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-sha2+sha2-asm-dev_0.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-sha2+sha2-asm-dev"]
+]
+depends: [
+  "librust-sha2-asm-0-5+default-dev"
+  "librust-sha2-dev" {= "0.8.0-1"}
+]
+extra-source "librust-sha2+sha2-asm-dev_0.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-sha2/librust-sha2+sha2-asm-dev_0.8.0-1_amd64.deb"
+}

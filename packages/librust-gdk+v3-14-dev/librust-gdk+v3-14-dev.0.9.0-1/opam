@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-gdk+v3-14-dev_0.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-gdk+v3-14-dev"]
+]
+depends: [
+  "librust-gdk+v3-12-dev" {= "0.9.0-1"}
+  "librust-gdk-dev" {= "0.9.0-1"}
+  "librust-gdk-pixbuf-0-5+v2-30-dev"
+  "librust-gdk-sys-0-7+v3-14-dev"
+  "librust-gio-0-5+v2-40-dev"
+  "librust-pango-0-5+v1-34-dev"
+]
+extra-source "librust-gdk+v3-14-dev_0.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-gdk/librust-gdk+v3-14-dev_0.9.0-1_amd64.deb"
+}

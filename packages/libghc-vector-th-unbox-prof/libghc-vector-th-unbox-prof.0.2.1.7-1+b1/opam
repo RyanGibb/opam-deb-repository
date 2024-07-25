@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-vector-th-unbox-prof_0.2.1.7-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-vector-th-unbox-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-vector-prof"
+  "libghc-vector-th-unbox-dev" {= "0.2.1.7-1+b1"}
+]
+extra-source "libghc-vector-th-unbox-prof_0.2.1.7-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-vector-th-unbox/libghc-vector-th-unbox-prof_0.2.1.7-1+b1_amd64.deb"
+}

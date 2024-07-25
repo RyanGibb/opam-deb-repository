@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-cairo-sys-rs+glib-sys-dev_0.9.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-cairo-sys-rs+glib-sys-dev"]
+]
+depends: [
+  "librust-cairo-sys-rs-dev" {= "0.9.0-2"}
+  "librust-glib-sys-0-9+default-dev"
+]
+extra-source "librust-cairo-sys-rs+glib-sys-dev_0.9.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-cairo-sys-rs/librust-cairo-sys-rs+glib-sys-dev_0.9.0-2_amd64.deb"
+}

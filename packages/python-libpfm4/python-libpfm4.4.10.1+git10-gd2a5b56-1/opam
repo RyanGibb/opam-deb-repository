@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-libpfm4_4.10.1+git10-gd2a5b56-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-libpfm4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpfm4" {= "4.10.1+git10-gd2a5b56-1"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-libpfm4_4.10.1+git10-gd2a5b56-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpfm4/python-libpfm4_4.10.1+git10-gd2a5b56-1_amd64.deb"
+}

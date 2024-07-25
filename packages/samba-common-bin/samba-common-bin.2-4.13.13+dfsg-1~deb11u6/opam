@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i samba-common-bin_2:4.13.13+dfsg-1~deb11u6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r samba-common-bin"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.14"}
+  "libgnutls30" {>= "3.7.0"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libncurses6" {>= "6"}
+  "libpopt0" {>= "1.14"}
+  "libreadline8" {>= "6.0"}
+  "libtalloc2" {>= "2.3.1~"}
+  "libtdb1" {>= "1.4.3~"}
+  "libtevent0" {>= "0.10.2~"}
+  "libtinfo6" {>= "6"}
+  "libwbclient0" {= "2-4.13.13+dfsg-1~deb11u6"}
+  "python3"
+  "python3-any"
+  "python3-samba"
+  "samba-common" {= "2-4.13.13+dfsg-1~deb11u6"}
+  "samba-libs" {= "2-4.13.13+dfsg-1~deb11u6"}
+]
+extra-source "samba-common-bin_2:4.13.13+dfsg-1~deb11u6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/samba/samba-common-bin_4.13.13+dfsg-1~deb11u6_amd64.deb"
+}

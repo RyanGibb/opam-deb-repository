@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest-differences-perl_0.67-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest-differences-perl"]
+]
+depends: [
+  "libcapture-tiny-perl"
+  "libtest-simple-perl"
+  "libtext-diff-perl" {>= "1.43"}
+  "perl"
+]
+extra-source "libtest-differences-perl_0.67-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest-differences-perl/libtest-differences-perl_0.67-1_all.deb"
+}

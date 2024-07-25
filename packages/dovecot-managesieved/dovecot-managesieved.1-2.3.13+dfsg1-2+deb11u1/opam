@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dovecot-managesieved_1:2.3.13+dfsg1-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dovecot-managesieved"]
+]
+depends: [
+  "dovecot-core" {= "1-2.3.13+dfsg1-2+deb11u1"}
+  "dovecot-sieve" {= "1-2.3.13+dfsg1-2+deb11u1"}
+  "libc6" {>= "2.4"}
+  "ucf"
+]
+extra-source "dovecot-managesieved_1:2.3.13+dfsg1-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dovecot/dovecot-managesieved_2.3.13+dfsg1-2+deb11u1_amd64.deb"
+}

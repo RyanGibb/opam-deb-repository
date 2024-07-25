@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dgit-infrastructure_9.13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dgit-infrastructure"]
+]
+depends: [
+  "chiark-utils-bin"
+  "git"
+  "gpgv"
+  "libdbd-sqlite3-perl"
+  "libdigest-sha-perl"
+  "libdpkg-perl"
+  "libjson-perl"
+  "liblocale-gettext-perl"
+  "perl"
+  "sqlite3"
+]
+extra-source "dgit-infrastructure_9.13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dgit/dgit-infrastructure_9.13_all.deb"
+}

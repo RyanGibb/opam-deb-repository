@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-cairocffi_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-cairocffi"]
+]
+depends: [
+  "libcairo2"
+  "libgdk-pixbuf2-0-0"
+  "python3-any"
+  "python3-cffi"
+  "python3-cffi-backend"
+  "python3-xcffib" {>= "0.3.2"}
+]
+extra-source "python3-cairocffi_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cairocffi/python3-cairocffi_1.2.0-1_all.deb"
+}

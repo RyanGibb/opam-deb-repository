@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mgetty_1.2.1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mgetty"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "logrotate" {>= "3.5.4-1"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+conflicts: [
+  "mgetty-docs (<= 1.1.30-6)"
+]
+extra-source "mgetty_1.2.1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mgetty/mgetty_1.2.1-1.1_amd64.deb"
+}

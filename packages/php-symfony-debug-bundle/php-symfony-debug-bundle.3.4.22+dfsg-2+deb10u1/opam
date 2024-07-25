@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-debug-bundle_3.4.22+dfsg-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-debug-bundle"]
+]
+depends: [
+  "php-common"
+  "php-symfony-http-kernel"
+  "php-symfony-twig-bridge"
+  "php-symfony-var-dumper" {> "3.4"}
+  "php-xml"
+]
+extra-source "php-symfony-debug-bundle_3.4.22+dfsg-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/symfony/php-symfony-debug-bundle_3.4.22+dfsg-2+deb10u1_all.deb"
+}

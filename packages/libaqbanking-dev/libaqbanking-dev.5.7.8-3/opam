@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaqbanking-dev_5.7.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaqbanking-dev"]
+]
+depends: [
+  "debhelper"
+  "libaqbanking35" {= "5.7.8-3"}
+  "libaqhbci24" {= "5.7.8-3"}
+  "libaqofxconnect7" {= "5.7.8-3"}
+  "libgwenhywfar-core-dev"
+  "libktoblzcheck1-dev"
+  "perl"
+]
+extra-source "libaqbanking-dev_5.7.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaqbanking/libaqbanking-dev_5.7.8-3_amd64.deb"
+}

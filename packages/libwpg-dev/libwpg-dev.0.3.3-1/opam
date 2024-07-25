@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwpg-dev_0.3.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwpg-dev"]
+]
+depends: [
+  "librevenge-dev"
+  "libwpd-dev" {>= "0.10"}
+  "libwpg-0-3-3" {= "0.3.3-1"}
+]
+extra-source "libwpg-dev_0.3.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libw/libwpg/libwpg-dev_0.3.3-1_amd64.deb"
+}

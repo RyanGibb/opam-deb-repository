@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bacula-client_9.6.7-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bacula-client"]
+]
+depends: [
+  "bacula-console" {>= "9.6.7-7"}
+  "bacula-fd" {>= "9.6.7-7"}
+]
+extra-source "bacula-client_9.6.7-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bacula/bacula-client_9.6.7-7_all.deb"
+}

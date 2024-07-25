@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plowshare_2.1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plowshare"]
+]
+depends: [
+  "curl" {>= "7.24"}
+  ("recode" | "libhtml-parser-perl")
+]
+extra-source "plowshare_2.1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plowshare/plowshare_2.1.7-2_all.deb"
+}

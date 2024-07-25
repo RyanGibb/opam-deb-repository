@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ng-cjk-canna_1.5~beta1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ng-cjk-canna"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcanna1g" {>= "3.7p3"}
+  "libtinfo6" {>= "6"}
+  "ng-common"
+]
+extra-source "ng-cjk-canna_1.5~beta1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ng/ng-cjk-canna_1.5~beta1-4+b1_amd64.deb"
+}

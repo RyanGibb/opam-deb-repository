@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmustache-java_0.9.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmustache-java"]
+]
+depends: [
+  "libasm-java" {>= "9.0"}
+  "libmaven-plugin-tools-java" {>= "3.6.0"}
+  "libmaven3-core-java" {>= "3.6.3"}
+  "libplexus-compiler-java" {>= "2.8.8"}
+]
+extra-source "libmustache-java_0.9.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mustache-java/libmustache-java_0.9.1-1_all.deb"
+}

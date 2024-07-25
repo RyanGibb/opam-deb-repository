@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkpimaddressbookimportexport-dev_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkpimaddressbookimportexport-dev"]
+]
+depends: [
+  "libkf5akonadi-dev" {>= "4-22.12.3~"}
+  "libkpimaddressbookimportexport5" {= "4-22.12.3-1"}
+]
+extra-source "libkpimaddressbookimportexport-dev_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kaddressbook/libkpimaddressbookimportexport-dev_22.12.3-1_amd64.deb"
+}

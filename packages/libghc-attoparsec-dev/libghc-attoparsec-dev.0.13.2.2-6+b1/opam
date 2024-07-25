@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-attoparsec-dev_0.13.2.2-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-attoparsec-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libghc-scientific-dev"
+  "libgmp10"
+]
+extra-source "libghc-attoparsec-dev_0.13.2.2-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-attoparsec/libghc-attoparsec-dev_0.13.2.2-6+b1_amd64.deb"
+}

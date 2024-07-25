@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hspec-dev_2.8.5-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hspec-dev"]
+]
+depends: [
+  "ghc"
+  "hspec-discover" {< "2.8.6"}
+  "hspec-discover" {>= "2.8.5"}
+  "libc6" {>= "2.2.5"}
+  "libghc-hspec-core-dev"
+  "libghc-hspec-expectations-dev"
+  "libghc-quickcheck2-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-hspec-dev_2.8.5-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hspec/libghc-hspec-dev_2.8.5-2+b2_amd64.deb"
+}

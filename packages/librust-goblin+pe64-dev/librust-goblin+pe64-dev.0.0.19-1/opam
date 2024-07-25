@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-goblin+pe64-dev_0.0.19-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-goblin+pe64-dev"]
+]
+depends: [
+  "librust-goblin+alloc-dev"
+  "librust-goblin+alloc-dev" {= "0.0.19-1"}
+  "librust-goblin-dev" {= "0.0.19-1"}
+]
+extra-source "librust-goblin+pe64-dev_0.0.19-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-goblin/librust-goblin+pe64-dev_0.0.19-1_amd64.deb"
+}

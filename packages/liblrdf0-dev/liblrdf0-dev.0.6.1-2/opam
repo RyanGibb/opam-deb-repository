@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblrdf0-dev_0.6.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblrdf0-dev"]
+]
+depends: [
+  "ladspa-sdk"
+  "liblrdf0" {= "0.6.1-2"}
+  "libraptor2-dev"
+]
+conflicts: [
+  "liblrdf-dev"
+]
+extra-source "liblrdf0-dev_0.6.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblrdf/liblrdf0-dev_0.6.1-2_amd64.deb"
+}

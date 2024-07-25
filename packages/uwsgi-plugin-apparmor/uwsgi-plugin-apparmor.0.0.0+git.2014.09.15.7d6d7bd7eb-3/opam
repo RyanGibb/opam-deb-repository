@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uwsgi-plugin-apparmor_0.0.0+git.2014.09.15.7d6d7bd7eb-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uwsgi-plugin-apparmor"]
+]
+depends: [
+  "libapparmor1" {>= "2.6~devel"}
+  "libc6" {>= "2.2.5"}
+]
+extra-source "uwsgi-plugin-apparmor_0.0.0+git.2014.09.15.7d6d7bd7eb-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uwsgi-apparmor/uwsgi-plugin-apparmor_0.0.0+git.2014.09.15.7d6d7bd7eb-3_amd64.deb"
+}

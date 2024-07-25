@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pngquant_2.12.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pngquant"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libimagequant0" {>= "2.11.10"}
+  "liblcms2-2" {>= "2.2+git20110628"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "pngquant_2.12.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pngquant/pngquant_2.12.2-1_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ros-robot-state-publisher_1.15.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ros-robot-state-publisher"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libjoint-state-listener1d" {>= "1.15.1"}
+  "libkdl-parser1d" {>= "1.14.1"}
+  "liborocos-kdl1-4" {>= "1.4.0"}
+  "librosconsole3d" {>= "1.14.3"}
+  "libroscpp3d" {>= "1.15.9+ds1"}
+  "libstdc++6" {>= "5.2"}
+  "liburdf1d" {>= "1.13.2"}
+  "liburdfdom-world"
+]
+extra-source "ros-robot-state-publisher_1.15.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-robot-state-publisher/ros-robot-state-publisher_1.15.1-4_amd64.deb"
+}

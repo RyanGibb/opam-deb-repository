@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vpb-driver-source_4.2.61-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vpb-driver-source"]
+]
+depends: [
+  "bzip2"
+  "debhelper" {> "4.0.0"}
+  "make"
+  "module-assistant"
+]
+extra-source "vpb-driver-source_4.2.61-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vpb-driver/vpb-driver-source_4.2.61-1_all.deb"
+}

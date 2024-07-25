@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfolks-telepathy25_0.11.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfolks-telepathy25"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfolks25" {= "0.11.4-1+b2"}
+  "libgee-0-8-2" {>= "0.8.3"}
+  "libglib2-0-0" {>= "2.40"}
+  "libtelepathy-glib0" {>= "0.19.9"}
+  "libzeitgeist-2-0-0" {>= "0.9.9"}
+]
+extra-source "libfolks-telepathy25_0.11.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/folks/libfolks-telepathy25_0.11.4-1+b2_amd64.deb"
+}

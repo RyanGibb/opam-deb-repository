@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i z3_4.4.1-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r z3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.4"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "z3_4.4.1-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/z3/z3_4.4.1-1~deb10u1_amd64.deb"
+}

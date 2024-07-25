@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-write-file-atomic_2.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-write-file-atomic"]
+]
+depends: [
+  "node-graceful-fs" {>= "4.1.11~"}
+  "node-imurmurhash" {>= "0.1.4~"}
+  "node-signal-exit" {>= "3.0~"}
+  "nodejs"
+]
+extra-source "node-write-file-atomic_2.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-write-file-atomic/node-write-file-atomic_2.3.0-1_all.deb"
+}

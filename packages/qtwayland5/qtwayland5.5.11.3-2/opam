@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qtwayland5_5.11.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qtwayland5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libegl1"
+  "libgcc1" {>= "1-3.4"}
+  "libgl1"
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.11.3+dfsg~"}
+  "libqt5gui5" {>= "5.11.3+dfsg~"}
+  "libqt5waylandclient5" {>= "5.11.1"}
+  "libqt5waylandcompositor5" {>= "5.9.0~rc"}
+  "libstdc++6" {>= "5"}
+  "libwayland-client0" {>= "1.9.91"}
+  "libwayland-egl1" {>= "1.15.0"}
+  "libwayland-server0" {>= "1.6.0"}
+  "libx11-6"
+  "libxcomposite1" {>= "1-0.3-1"}
+]
+extra-source "qtwayland5_5.11.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtwayland-opensource-src/qtwayland5_5.11.3-2_amd64.deb"
+}

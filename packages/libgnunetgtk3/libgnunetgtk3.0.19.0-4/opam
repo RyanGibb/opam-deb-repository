@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnunetgtk3_0.19.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnunetgtk3"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libgnunet0-19" {>= "0.19.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+]
+extra-source "libgnunetgtk3_0.19.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnunet-gtk/libgnunetgtk3_0.19.0-4_amd64.deb"
+}

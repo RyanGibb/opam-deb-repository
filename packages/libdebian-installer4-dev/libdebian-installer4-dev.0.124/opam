@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdebian-installer4-dev_0.124_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdebian-installer4-dev"]
+]
+depends: [
+  "libdebian-installer-extra4" {= "0.124"}
+  "libdebian-installer4" {= "0.124"}
+]
+conflicts: [
+  "libdebian-installer-dev"
+]
+extra-source "libdebian-installer4-dev_0.124_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdebian-installer/libdebian-installer4-dev_0.124_amd64.deb"
+}

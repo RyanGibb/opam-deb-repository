@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-azure-cli-core_2.18.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-azure-cli-core"]
+]
+depends: [
+  "python3-adal"
+  "python3-any"
+  "python3-argcomplete"
+  "python3-azure" {>= "20201208+git-2~"}
+  "python3-azure-cli-telemetry"
+  "python3-colorama"
+  "python3-decorator"
+  "python3-distutils"
+  "python3-humanfriendly"
+  "python3-jmespath"
+  "python3-jwt"
+  "python3-knack" {>= "0.8.0~"}
+  "python3-msal"
+  "python3-msal-extensions"
+  "python3-msrest" {>= "0.6.18-1~"}
+  "python3-msrestazure"
+  "python3-openssl"
+  "python3-paramiko"
+  "python3-pkginfo"
+  "python3-requests"
+  "python3-six" {< "2"}
+  "python3-six" {>= "1.12"}
+]
+extra-source "python3-azure-cli-core_2.18.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/azure-cli/python3-azure-cli-core_2.18.0-2_all.deb"
+}

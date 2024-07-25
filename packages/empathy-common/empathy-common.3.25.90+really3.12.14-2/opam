@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i empathy-common_3.25.90+really3.12.14-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r empathy-common"]
+]
+conflicts: [
+  "empathy-doc"
+  "libempathy-common"
+  "libempathy-gtk-common"
+]
+extra-source "empathy-common_3.25.90+really3.12.14-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/empathy/empathy-common_3.25.90+really3.12.14-2_all.deb"
+}

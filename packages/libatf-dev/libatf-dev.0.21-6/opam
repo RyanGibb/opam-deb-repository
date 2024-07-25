@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libatf-dev_0.21-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libatf-dev"]
+]
+depends: [
+  "libatf-c++-2" {= "0.21-6"}
+  "libatf-c-1" {= "0.21-6"}
+]
+extra-source "libatf-dev_0.21-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/atf/libatf-dev_0.21-6_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt6-documentation-tools_6.4.2~rc1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt6-documentation-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libclang1-15" {>= "1-15.0.6-3"}
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6gui6" {>= "6.4.2+dfsg~"}
+  "libqt6help6" {>= "6.2.2"}
+  "libqt6qml6" {>= "6.4.2+dfsg~"}
+  "libqt6sql6" {>= "6.4.2+dfsg~"}
+  "libqt6sql6-sqlite"
+  "libstdc++6" {>= "11"}
+]
+extra-source "qt6-documentation-tools_6.4.2~rc1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-tools/qt6-documentation-tools_6.4.2~rc1-2_amd64.deb"
+}

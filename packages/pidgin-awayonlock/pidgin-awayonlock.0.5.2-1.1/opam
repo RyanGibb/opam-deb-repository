@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pidgin-awayonlock_0.5.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pidgin-awayonlock"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdbus-glib-1-2" {>= "0.78"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libpurple0" {>= "2.2.0"}
+  "pidgin"
+  ("gnome-screensaver" {>= "2.26"} | "kscreensaver" {>= "4.2"})
+]
+extra-source "pidgin-awayonlock_0.5.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pidgin-awayonlock/pidgin-awayonlock_0.5.2-1.1_amd64.deb"
+}

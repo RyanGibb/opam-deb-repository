@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kde-zeroconf_4:20.12.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kde-zeroconf"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libkf5coreaddons5" {>= "4.99.0"}
+  "libkf5dbusaddons5" {>= "5.37.0~"}
+  "libkf5dnssd5" {>= "5.37.0~"}
+  "libkf5i18n5" {>= "5.37.0~"}
+  "libkf5kiocore5" {>= "5.69.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.9.0~"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "kde-zeroconf_4:20.12.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zeroconf-ioslave/kde-zeroconf_20.12.0-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coinor-libcbc3_2.10.8+ds1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coinor-libcbc3"]
+]
+depends: [
+  "coinor-libcgl1"
+  "coinor-libclp1"
+  "coinor-libcoinutils3v5"
+  "coinor-libosi1v5"
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "coinor-libcbc3_2.10.8+ds1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coinor-cbc/coinor-libcbc3_2.10.8+ds1-1_amd64.deb"
+}

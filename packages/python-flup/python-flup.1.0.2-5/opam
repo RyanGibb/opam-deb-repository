@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-flup_1.0.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-flup"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+]
+extra-source "python-flup_1.0.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flup/python-flup_1.0.2-5_all.deb"
+}

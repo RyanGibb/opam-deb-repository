@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i topal_80-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r topal"]
+]
+depends: [
+  "gnupg"
+  "less"
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnat-8" {>= "8.2.0"}
+  "libreadline7" {>= "6.0"}
+]
+extra-source "topal_80-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/topal/topal_80-1_amd64.deb"
+}

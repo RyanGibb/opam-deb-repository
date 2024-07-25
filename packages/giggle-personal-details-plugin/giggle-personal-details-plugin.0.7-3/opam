@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i giggle-personal-details-plugin_0.7-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r giggle-personal-details-plugin"]
+]
+depends: [
+  "giggle" {= "0.7-3"}
+  "libc6" {>= "2.2.5"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+]
+extra-source "giggle-personal-details-plugin_0.7-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/giggle/giggle-personal-details-plugin_0.7-3_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prettyping_1.0.1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prettyping"]
+]
+depends: [
+  "iputils-ping"
+  ("original-awk" | "gawk" | "mawk")
+]
+extra-source "prettyping_1.0.1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prettyping/prettyping_1.0.1-1.1_all.deb"
+}

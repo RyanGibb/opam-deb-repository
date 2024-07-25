@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mathgl_2.4.2.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mathgl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfltk-forms1-3"
+  "libfltk-gl1-3"
+  "libfltk-images1-3"
+  "libfltk1-3" {>= "1.3.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libgif7" {>= "5.1"}
+  "libgl1"
+  "libgsl23" {>= "2.5"}
+  "libgslcblas0" {>= "2.4"}
+  "libhdf4-0" {>= "4.1r2"}
+  "libhdf5-103"
+  "libhpdf-2-3-0" {>= "2.3.0"}
+  "libice6" {>= "1-1.0.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libltdl7" {>= "2.4.6"}
+  "libmgl-fltk7-5-0"
+  "libmgl7-5-0" {= "2.4.2.1-5"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsm6"
+  "libstdc++6" {>= "5.2"}
+  "libsz2"
+  "libx11-6"
+  "libxext6"
+  "zlib1g" {>= "1-1.1.4"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "mathgl_2.4.2.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mathgl/mathgl_2.4.2.1-5_amd64.deb"
+}

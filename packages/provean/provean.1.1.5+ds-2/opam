@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i provean_1.1.5+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r provean"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "provean_1.1.5+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/provean/provean_1.1.5+ds-2_amd64.deb"
+}

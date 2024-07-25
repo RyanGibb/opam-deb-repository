@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tpm-tools_1.3.9.1-0.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tpm-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl1-1" {>= "1.1.0"}
+  "libtpm-unseal1" {>= "1.3.8"}
+  "libtspi1" {>= "0.3.8"}
+  "trousers"
+]
+extra-source "tpm-tools_1.3.9.1-0.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tpm-tools/tpm-tools_1.3.9.1-0.2+b1_amd64.deb"
+}

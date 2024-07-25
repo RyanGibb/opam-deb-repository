@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dnsperf_2.10.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dnsperf"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libldns3" {>= "1.7.1"}
+  "libnghttp2-14" {>= "1.3.0"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "dnsperf_2.10.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dnsperf/dnsperf_2.10.0-2_amd64.deb"
+}

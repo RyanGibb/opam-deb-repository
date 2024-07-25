@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openpgp-applet_1.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openpgp-applet"]
+]
+depends: [
+  "gnupg" {>= "2.1.18-8~"}
+  "libdatetime-perl"
+  "libfile-sharedir-perl"
+  "libglib-perl"
+  "libgnupg-interface-perl"
+  "libgtk3-perl"
+  "libgtk3-simplelist-perl"
+  "libintl-perl"
+  "liblist-moreutils-perl"
+  "liblocale-gettext-perl"
+  "libmodule-pluggable-perl"
+  "libmoo-perl" {>= "0.50"}
+  "libnamespace-autoclean-perl"
+  "perl"
+  "seahorse"
+]
+extra-source "openpgp-applet_1.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openpgp-applet/openpgp-applet_1.1-3_all.deb"
+}

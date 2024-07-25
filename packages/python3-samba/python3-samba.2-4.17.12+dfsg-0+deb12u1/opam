@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-samba_2:4.17.12+dfsg-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-samba"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.34"}
+  "libgnutls30" {>= "3.7.0"}
+  "libldb2" {>= "0.9.21"}
+  "libpython3-11" {>= "3.11.0"}
+  "libtalloc2" {>= "2.3.4~"}
+  "libtevent0" {>= "0.13.0~"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-ldb" {>= "2-2.1.0"}
+  "python3-talloc" {>= "2.3.4~"}
+  "python3-tdb"
+  "samba-libs" {= "2-4.17.12+dfsg-0+deb12u1"}
+]
+extra-source "python3-samba_2:4.17.12+dfsg-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/samba/python3-samba_4.17.12+dfsg-0+deb12u1_amd64.deb"
+}

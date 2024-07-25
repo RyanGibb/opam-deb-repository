@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxres-dev_2:1.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxres-dev"]
+]
+depends: [
+  "libx11-dev"
+  "libxext-dev"
+  "libxres1" {= "2-1.2.1-1"}
+  "x11proto-dev"
+]
+extra-source "libxres-dev_2:1.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxres/libxres-dev_1.2.1-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-config-schema-prof_1.2.0.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-config-schema-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-config-schema-dev" {= "1.2.0.0-1+b1"}
+  "libghc-config-value-prof"
+  "libghc-free-prof"
+  "libghc-kan-extensions-prof"
+  "libghc-semigroupoids-prof"
+]
+extra-source "libghc-config-schema-prof_1.2.0.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-config-schema/libghc-config-schema-prof_1.2.0.0-1+b1_amd64.deb"
+}

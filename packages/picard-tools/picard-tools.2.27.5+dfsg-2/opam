@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i picard-tools_2.27.5+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r picard-tools"]
+]
+depends: [
+  "libpicard-java" {= "2.27.5+dfsg-2"}
+  ("default-jre" | "java6-runtime")
+]
+extra-source "picard-tools_2.27.5+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/picard-tools/picard-tools_2.27.5+dfsg-2_all.deb"
+}

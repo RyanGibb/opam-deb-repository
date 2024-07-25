@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpixelif-dev_0.8.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpixelif-dev"]
+]
+depends: [
+  "libdrilbo-dev" {>= "0.2.11"}
+  "libfizmo-dev" {>= "0.7.15"}
+  "libfreetype6-dev"
+  "libpixelif-common" {>= "0.8.3"}
+]
+extra-source "libpixelif-dev_0.8.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpixelif/libpixelif-dev_0.8.4-3_amd64.deb"
+}

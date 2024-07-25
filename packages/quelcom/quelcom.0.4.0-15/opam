@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i quelcom_0.4.0-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r quelcom"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "quelcom_0.4.0-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/quelcom/quelcom_0.4.0-15_amd64.deb"
+}

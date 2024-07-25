@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblouis20_3.16.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblouis20"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "liblouis-data"
+]
+extra-source "liblouis20_3.16.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblouis/liblouis20_3.16.0-1_amd64.deb"
+}

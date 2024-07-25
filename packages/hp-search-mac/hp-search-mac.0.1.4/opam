@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hp-search-mac_0.1.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hp-search-mac"]
+]
+depends: [
+  "libnet-snmp-perl" {>= "3.6-7"}
+  "opalmod" {>= "0.1.6"}
+  "perl"
+]
+extra-source "hp-search-mac_0.1.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hp-search-mac/hp-search-mac_0.1.4_all.deb"
+}

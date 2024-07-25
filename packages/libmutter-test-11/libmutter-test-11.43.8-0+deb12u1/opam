@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmutter-test-11_43.8-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmutter-test-11"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.14.0"}
+  "libgles2"
+  "libglib2-0-0" {>= "2.69.0"}
+  "libmutter-11-0" {= "43.8-0+deb12u1"}
+  "libxcb1"
+  "libxext6"
+  "mutter" {= "43.8-0+deb12u1"}
+]
+extra-source "libmutter-test-11_43.8-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mutter/libmutter-test-11_43.8-0+deb12u1_amd64.deb"
+}

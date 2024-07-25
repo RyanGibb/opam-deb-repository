@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgulkan-utils_0.15.1-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgulkan-utils"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.25.2"}
+  "libglfw3" {>= "3.2"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgraphene-1-0-0" {>= "1.5.4"}
+  "libgulkan-0-15-0"
+  "libvulkan1" {>= "1.2.131.2"}
+]
+extra-source "libgulkan-utils_0.15.1-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gulkan/libgulkan-utils_0.15.1-2.1_amd64.deb"
+}

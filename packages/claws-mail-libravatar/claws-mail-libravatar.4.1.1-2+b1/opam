@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i claws-mail-libravatar_4.1.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r claws-mail-libravatar"]
+]
+depends: [
+  "claws-mail" {= "4.1.1-2+b1"}
+  "libc6" {>= "2.34"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libgtk-3-0" {>= "3.16.2"}
+]
+extra-source "claws-mail-libravatar_4.1.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/claws-mail/claws-mail-libravatar_4.1.1-2+b1_amd64.deb"
+}

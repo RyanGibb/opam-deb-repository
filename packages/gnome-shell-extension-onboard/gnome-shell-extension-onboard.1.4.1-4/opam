@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-shell-extension-onboard_1.4.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-shell-extension-onboard"]
+]
+depends: [
+  "gnome-shell" {>= "3.16"}
+  "onboard" {>= "1.4.1-4"}
+]
+extra-source "gnome-shell-extension-onboard_1.4.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/onboard/gnome-shell-extension-onboard_1.4.1-4_all.deb"
+}

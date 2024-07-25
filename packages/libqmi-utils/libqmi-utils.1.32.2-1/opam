@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqmi-utils_1.32.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqmi-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgudev-1-0-0" {>= "146"}
+  "libmbim-glib4" {>= "1.28.0"}
+  "libmbim-proxy"
+  "libqmi-glib5" {>= "1.32.0"}
+  "libqmi-proxy"
+  "libqrtr-glib0" {>= "1.0.0"}
+]
+extra-source "libqmi-utils_1.32.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libq/libqmi/libqmi-utils_1.32.2-1_amd64.deb"
+}

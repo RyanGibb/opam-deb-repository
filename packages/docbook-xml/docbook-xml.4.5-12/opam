@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i docbook-xml_4.5-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r docbook-xml"]
+]
+depends: [
+  "sgml-base" {>= "1.28"}
+  "sgml-data"
+  "xml-core" {>= "0.14"}
+]
+extra-source "docbook-xml_4.5-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/docbook-xml/docbook-xml_4.5-12_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-google-api-dev_0.0~git20180916.19ff876-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-google-api-dev"]
+]
+depends: [
+  "golang-golang-x-net-dev"
+  "golang-golang-x-oauth2-dev"
+  "golang-golang-x-oauth2-google-dev" {>= "0.0~git20180821.d2e6202~"}
+  "golang-golang-x-sync-dev"
+  "golang-google-genproto-dev"
+  "golang-google-grpc-dev"
+]
+extra-source "golang-google-api-dev_0.0~git20180916.19ff876-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-google-api/golang-google-api-dev_0.0~git20180916.19ff876-2_all.deb"
+}

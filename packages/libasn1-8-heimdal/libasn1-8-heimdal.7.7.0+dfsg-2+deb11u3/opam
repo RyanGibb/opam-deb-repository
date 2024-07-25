@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libasn1-8-heimdal_7.7.0+dfsg-2+deb11u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libasn1-8-heimdal"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcom-err2" {>= "1.43.9"}
+  "libroken18-heimdal" {>= "1.4.0+git20110226"}
+]
+extra-source "libasn1-8-heimdal_7.7.0+dfsg-2+deb11u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heimdal/libasn1-8-heimdal_7.7.0+dfsg-2+deb11u3_amd64.deb"
+}

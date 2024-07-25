@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-mdlayher-vsock-dev_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-mdlayher-vsock-dev"]
+]
+depends: [
+  "golang-github-google-go-cmp-dev"
+  "golang-github-mdlayher-socket-dev" {>= "0.4.0"}
+  "golang-golang-x-net-dev"
+  "golang-golang-x-sys-dev" {>= "0.0~git20220422.9388b58"}
+]
+extra-source "golang-github-mdlayher-vsock-dev_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-mdlayher-vsock/golang-github-mdlayher-vsock-dev_1.2.0-1_all.deb"
+}

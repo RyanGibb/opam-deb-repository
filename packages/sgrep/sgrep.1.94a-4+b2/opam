@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sgrep_1.94a-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sgrep"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "m4"
+]
+extra-source "sgrep_1.94a-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sgrep/sgrep_1.94a-4+b2_amd64.deb"
+}

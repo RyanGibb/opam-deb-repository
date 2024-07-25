@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tdiary-mode_5.0.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tdiary-mode"]
+]
+depends: [
+  "emacsen-common"
+  "psgml"
+  ("emacs" | "emacsen")
+]
+extra-source "tdiary-mode_5.0.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tdiary-contrib/tdiary-mode_5.0.11-2_all.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcre16-3_2:8.39-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcre16-3"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+]
+extra-source "libpcre16-3_2:8.39-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcre3/libpcre16-3_8.39-15_amd64.deb"
+}

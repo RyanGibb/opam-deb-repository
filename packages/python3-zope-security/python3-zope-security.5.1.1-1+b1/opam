@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-zope.security_5.1.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-zope.security"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-zope-component"
+  "python3-zope-i18nmessageid"
+  "python3-zope-interface"
+  "python3-zope-location"
+  "python3-zope-proxy"
+  "python3-zope-schema"
+]
+conflicts: [
+  "zope3"
+]
+extra-source "python3-zope.security_5.1.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zope.security/python3-zope.security_5.1.1-1+b1_amd64.deb"
+}

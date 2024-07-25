@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openscenegraph_3.6.5+dfsg1-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openscenegraph"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libopenscenegraph161" {>= "3.6.5+dfsg1"}
+  "libopenthreads21" {>= "3.6.5+dfsg1"}
+  "libstdc++6" {>= "9"}
+]
+conflicts: [
+  "openscenegraph"
+]
+extra-source "openscenegraph_3.6.5+dfsg1-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openscenegraph/openscenegraph_3.6.5+dfsg1-7+b1_amd64.deb"
+}

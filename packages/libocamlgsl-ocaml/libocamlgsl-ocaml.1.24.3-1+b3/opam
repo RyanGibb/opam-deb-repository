@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libocamlgsl-ocaml_1.24.3-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libocamlgsl-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgsl27" {>= "2.7.1"}
+  "ocaml-base"
+]
+extra-source "libocamlgsl-ocaml_1.24.3-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocamlgsl/libocamlgsl-ocaml_1.24.3-1+b3_amd64.deb"
+}

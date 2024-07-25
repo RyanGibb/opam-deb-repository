@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mono-addins-utils_1.0+git20130406.adcd75b-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mono-addins-utils"]
+]
+depends: [
+  "libmono-addins0-2-cil" {>= "1.0"}
+  "libmono-corlib4-5-cil" {>= "4.2.0"}
+  "mono-runtime" {>= "3.0~"}
+]
+conflicts: [
+  "libmono-addins0.2-cil (<< 0.4-6)"
+]
+extra-source "mono-addins-utils_1.0+git20130406.adcd75b-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mono-addins/mono-addins-utils_1.0+git20130406.adcd75b-4_all.deb"
+}

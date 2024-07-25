@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i centreon-connector-ssh_19.10.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r centreon-connector-ssh"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libssh2-1" {>= "1.2.8"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "centreon-connector-ssh_19.10.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/centreon-connectors/centreon-connector-ssh_19.10.0-1+b1_amd64.deb"
+}

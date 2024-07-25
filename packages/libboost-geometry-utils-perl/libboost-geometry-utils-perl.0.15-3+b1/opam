@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libboost-geometry-utils-perl_0.15-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libboost-geometry-utils-perl"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libboost-geometry-utils-perl_0.15-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libboost-geometry-utils-perl/libboost-geometry-utils-perl_0.15-3+b1_amd64.deb"
+}

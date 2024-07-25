@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx-rime_0.3.2+git20221207-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx-rime"]
+]
+depends: [
+  "fcitx-bin"
+  "fcitx-data" {>= "1-4.2.8.1"}
+  "fcitx-modules"
+  "libc6" {>= "2.14"}
+  "libfcitx-config4" {>= "4.2.7"}
+  "libfcitx-qt5-1" {>= "1.0.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "librime-data"
+  "librime1" {>= "1.8.5+dfsg1~"}
+  "libstdc++6" {>= "11"}
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+]
+extra-source "fcitx-rime_0.3.2+git20221207-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx-rime/fcitx-rime_0.3.2+git20221207-1_amd64.deb"
+}

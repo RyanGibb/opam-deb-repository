@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xmille_2.0-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xmille"]
+]
+depends: [
+  "libc6" {>= "2.7-1"}
+  "libx11-6"
+  "libxext6"
+]
+extra-source "xmille_2.0-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmille/xmille_2.0-13_amd64.deb"
+}

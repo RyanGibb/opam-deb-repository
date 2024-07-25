@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-pipes-prof_4.3.16-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-pipes-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-mmorph-prof"
+  "libghc-pipes-dev" {= "4.3.16-1+b2"}
+  "libghc-void-prof"
+]
+extra-source "libghc-pipes-prof_4.3.16-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pipes/libghc-pipes-prof_4.3.16-1+b2_amd64.deb"
+}

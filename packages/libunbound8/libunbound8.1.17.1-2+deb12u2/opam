@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libunbound8_1.17.1-2+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libunbound8"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libhogweed6"
+  "libnettle8"
+]
+extra-source "libunbound8_1.17.1-2+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unbound/libunbound8_1.17.1-2+deb12u2_amd64.deb"
+}

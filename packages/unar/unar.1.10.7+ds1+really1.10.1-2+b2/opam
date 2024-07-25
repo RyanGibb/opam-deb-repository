@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i unar_1.10.7+ds1+really1.10.1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r unar"]
+]
+depends: [
+  "gnustep-base-runtime" {>= "1.28.0"}
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnustep-base1-28" {>= "1.28.0"}
+  "libicu72" {>= "72.1~rc-1~"}
+  "libobjc4" {>= "4.2.1"}
+  "libstdc++6" {>= "5"}
+  "libwavpack1" {>= "4.40.0"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+conflicts: [
+  "theunarchiver"
+]
+extra-source "unar_1.10.7+ds1+really1.10.1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unar/unar_1.10.7+ds1+really1.10.1-2+b2_amd64.deb"
+}

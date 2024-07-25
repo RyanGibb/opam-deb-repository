@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-voikko_5.0-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-voikko"]
+]
+depends: [
+  "libreoffice-core"
+  "python3-libvoikko" {>= "4.0"}
+  "python3-uno"
+  "voikko-fi"
+]
+extra-source "libreoffice-voikko_5.0-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice-voikko/libreoffice-voikko_5.0-4+b1_amd64.deb"
+}

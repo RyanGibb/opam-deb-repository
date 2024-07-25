@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcal3d12-dev_0.11.0-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcal3d12-dev"]
+]
+depends: [
+  "libcal3d12v5" {= "0.11.0-7+b1"}
+]
+conflicts: [
+  "libcal3d-dev"
+  "libcal3d10-dev"
+]
+extra-source "libcal3d12-dev_0.11.0-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cal3d/libcal3d12-dev_0.11.0-7+b1_amd64.deb"
+}

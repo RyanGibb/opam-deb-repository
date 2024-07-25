@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-geos_1.0.0-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-geos"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgeos-c1v5" {>= "3.6.0"}
+  "php-common" {>= "1-7.0+33~"}
+  ("libapache2-mod-php8-2" | "libphp8-2-embed" | "php8-2-cgi" | "php8-2-cli" | "php8-2-fpm" | "php8-2-phpdbg")
+]
+extra-source "php-geos_1.0.0-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-geos/php-geos_1.0.0-7+b1_amd64.deb"
+}

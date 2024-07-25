@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5parts-dev_5.78.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5parts-dev"]
+]
+depends: [
+  "libkf5kio-dev" {>= "5.78.0~"}
+  "libkf5parts5" {= "5.78.0-3"}
+  "libkf5textwidgets-dev" {>= "5.78.0~"}
+  "libkf5xmlgui-dev" {>= "5.78.0~"}
+]
+extra-source "libkf5parts-dev_5.78.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kparts/libkf5parts-dev_5.78.0-3_amd64.deb"
+}

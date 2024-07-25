@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libunwind-13-dev_1:13.0.1-6~deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libunwind-13-dev"]
+]
+depends: [
+  "libunwind-13" {= "1-13.0.1-6~deb10u4"}
+]
+conflicts: [
+  "libunwind-x.y-dev"
+]
+extra-source "libunwind-13-dev_1:13.0.1-6~deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-13/libunwind-13-dev_13.0.1-6~deb10u4_amd64.deb"
+}

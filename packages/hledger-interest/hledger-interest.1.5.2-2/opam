@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hledger-interest_1.5.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hledger-interest"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.27"}
+  "libffi6" {>= "3.0.4"}
+  "libgmp10"
+]
+extra-source "hledger-interest_1.5.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hledger-interest/hledger-interest_1.5.2-2_amd64.deb"
+}

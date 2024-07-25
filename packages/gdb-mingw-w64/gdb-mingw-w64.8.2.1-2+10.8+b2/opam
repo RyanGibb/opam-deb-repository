@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gdb-mingw-w64_8.2.1-2+10.8+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gdb-mingw-w64"]
+]
+depends: [
+  "gdb" {>= "8.2.1"}
+  "libbabeltrace1" {>= "1.5.4"}
+  "libc6" {>= "2.17"}
+  "libexpat1" {>= "2.0.1"}
+  "libipt2" {>= "2.0"}
+  "liblzma5" {>= "5.1.1alpha+20110809"}
+  "libmpfr6" {>= "3.1.3"}
+  "libncursesw6" {>= "6"}
+  "libpython3-7" {>= "3.7.0"}
+  "libreadline7" {>= "6.0"}
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "gdb-mingw-w64_8.2.1-2+10.8+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gdb-mingw-w64/gdb-mingw-w64_8.2.1-2+10.8+b2_amd64.deb"
+}

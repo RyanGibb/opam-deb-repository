@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i raptor2-utils_2.0.15-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r raptor2-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libraptor2-0" {>= "2.0.15"}
+]
+extra-source "raptor2-utils_2.0.15-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/raptor2/raptor2-utils_2.0.15-4_amd64.deb"
+}

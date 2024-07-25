@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ayatana-settings_21.1.28-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ayatana-settings"]
+]
+depends: [
+  "gir1-2-gtk-3-0"
+  "python3-any" {>= "3.6~"}
+  "python3-gi"
+  "python3-pkg-resources"
+  "python3-psutil"
+]
+extra-source "ayatana-settings_21.1.28-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ayatana-settings/ayatana-settings_21.1.28-1_all.deb"
+}

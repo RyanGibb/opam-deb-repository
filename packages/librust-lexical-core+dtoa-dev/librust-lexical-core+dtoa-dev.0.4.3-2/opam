@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-lexical-core+dtoa-dev_0.4.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-lexical-core+dtoa-dev"]
+]
+depends: [
+  "librust-dtoa-0-4+default-dev"
+  "librust-lexical-core-dev" {= "0.4.3-2"}
+]
+extra-source "librust-lexical-core+dtoa-dev_0.4.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-lexical-core/librust-lexical-core+dtoa-dev_0.4.3-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-parlatype-4.0_3.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-parlatype-4.0"]
+]
+depends: [
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-3-0" {>= "3.22.0"}
+  "libparlatype5" {>= "3.1"}
+]
+extra-source "gir1.2-parlatype-4.0_3.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/parlatype/gir1.2-parlatype-4.0_3.1-2_amd64.deb"
+}

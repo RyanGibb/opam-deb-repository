@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sass-elisp_3.0.15-4.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sass-elisp"]
+]
+depends: [
+  "emacsen-common" {>= "2.0.8"}
+  "haml-elisp" {>= "1-3.0.15-5"}
+  ("emacs25" | "emacs24" | "emacs23")
+]
+extra-source "sass-elisp_3.0.15-4.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sass-elisp/sass-elisp_3.0.15-4.2_all.deb"
+}

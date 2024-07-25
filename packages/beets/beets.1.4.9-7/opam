@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i beets_1.4.9-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r beets"]
+]
+depends: [
+  "libjs-backbone"
+  "libjs-jquery"
+  "libjs-underscore"
+  "python3-any"
+  "python3-jellyfish"
+  "python3-munkres"
+  "python3-musicbrainzngs" {>= "0.4"}
+  "python3-mutagen" {>= "1.45"}
+  "python3-pkg-resources"
+  "python3-six" {>= "1.9"}
+  "python3-unidecode"
+  "python3-yaml"
+]
+extra-source "beets_1.4.9-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/beets/beets_1.4.9-7_all.deb"
+}

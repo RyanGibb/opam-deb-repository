@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libavfilter-extra_7:4.3.6-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libavfilter-extra"]
+]
+depends: [
+  "libavfilter-extra7" {= "7-4.3.6-0+deb11u1"}
+]
+extra-source "libavfilter-extra_7:4.3.6-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/ffmpeg/libavfilter-extra_4.3.6-0+deb11u1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhttp-proxy-perl_0.304-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhttp-proxy-perl"]
+]
+depends: [
+  "libio-socket-ip-perl"
+  "libwww-perl"
+  "perl-any"
+  ("libhttp-daemon-perl" | "libwww-perl" {< "6"})
+]
+extra-source "libhttp-proxy-perl_0.304-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhttp-proxy-perl/libhttp-proxy-perl_0.304-5_all.deb"
+}

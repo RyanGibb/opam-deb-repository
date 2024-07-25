@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i opari2_2.0.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r opari2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpomp2-dev"
+  "libstdc++6" {>= "9"}
+]
+extra-source "opari2_2.0.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opari2/opari2_2.0.5-2_amd64.deb"
+}

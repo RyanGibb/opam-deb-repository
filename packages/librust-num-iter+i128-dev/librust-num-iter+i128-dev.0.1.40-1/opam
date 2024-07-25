@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-num-iter+i128-dev_0.1.40-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-num-iter+i128-dev"]
+]
+depends: [
+  "librust-num-integer+i128-dev"
+  "librust-num-iter-dev" {= "0.1.40-1"}
+  "librust-num-traits-dev"
+]
+extra-source "librust-num-iter+i128-dev_0.1.40-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-num-iter/librust-num-iter+i128-dev_0.1.40-1_amd64.deb"
+}

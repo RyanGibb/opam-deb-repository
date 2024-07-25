@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libexpat-ocaml-dev_0.9.1+debian1-7+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libexpat-ocaml-dev"]
+]
+depends: [
+  "libexpat-ocaml"
+  "libexpat1-dev"
+  "ocaml-findlib" {>= "1.1"}
+  "ocaml-nox"
+]
+extra-source "libexpat-ocaml-dev_0.9.1+debian1-7+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-expat/libexpat-ocaml-dev_0.9.1+debian1-7+b5_amd64.deb"
+}

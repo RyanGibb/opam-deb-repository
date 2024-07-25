@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freediameterd_1.2.1-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freediameterd"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfdcore6" {= "1.2.1-8"}
+  "libfdproto6" {= "1.2.1-8"}
+  "libgnutls30" {>= "3.7.0"}
+]
+extra-source "freediameterd_1.2.1-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freediameter/freediameterd_1.2.1-8_amd64.deb"
+}

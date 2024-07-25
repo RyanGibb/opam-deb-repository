@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-serverengine_2.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-serverengine"]
+]
+depends: [
+  "ruby" {>= "2.1.0"}
+  "ruby-sigdump" {>= "0.2.2"}
+]
+extra-source "ruby-serverengine_2.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-serverengine/ruby-serverengine_2.2.2-1_all.deb"
+}

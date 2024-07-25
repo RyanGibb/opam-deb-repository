@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmupen64plus2_2.5.9+341+gf82b37bf-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmupen64plus2"]
+]
+depends: [
+  "fonts-dejavu-core"
+  "libc6" {>= "2.34"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libminizip1" {>= "1.1"}
+  "libopencv-core406" {>= "4.6.0+dfsg"}
+  "libopencv-imgproc406" {>= "4.6.0+dfsg"}
+  "libopencv-videoio406" {>= "4.6.0+dfsg"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libsdl2-net-2-0-0" {>= "2.0.1"}
+  "libstdc++6" {>= "5.2"}
+  "mupen64plus-data"
+  "zlib1g" {>= "1-1.2.3.3"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "libmupen64plus2_2.5.9+341+gf82b37bf-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mupen64plus-core/libmupen64plus2_2.5.9+341+gf82b37bf-1_amd64.deb"
+}

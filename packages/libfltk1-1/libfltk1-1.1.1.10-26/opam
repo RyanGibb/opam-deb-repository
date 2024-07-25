@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfltk1.1_1.1.10-26_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfltk1.1"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+  "libxinerama1"
+]
+extra-source "libfltk1.1_1.1.10-26_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fltk1.1/libfltk1.1_1.1.10-26_amd64.deb"
+}

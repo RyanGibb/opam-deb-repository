@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i theme-d-bootstrap_5.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r theme-d-bootstrap"]
+]
+depends: [
+  "theme-d-stdlib" {= "5.0.0-2"}
+  "theme-d-translator" {< "5.0.0-2.0~"}
+  "theme-d-translator" {>= "5.0.0-2"}
+]
+extra-source "theme-d-bootstrap_5.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/theme-d/theme-d-bootstrap_5.0.0-2_all.deb"
+}

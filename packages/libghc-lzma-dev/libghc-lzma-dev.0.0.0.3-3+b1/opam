@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-lzma-dev_0.0.0.3-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-lzma-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libgmp10"
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+]
+extra-source "libghc-lzma-dev_0.0.0.3-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-lzma/libghc-lzma-dev_0.0.0.3-3+b1_amd64.deb"
+}

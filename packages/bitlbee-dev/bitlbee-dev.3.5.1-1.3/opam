@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bitlbee-dev_3.5.1-1.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bitlbee-dev"]
+]
+depends: [
+  "bitlbee-common" {= "3.5.1-1.3"}
+  ("bitlbee" {< "3.5.1-1.3.1~"} | "bitlbee-libpurple" {< "3.5.1-1.3.1~"})
+  ("bitlbee" {>= "3.5.1-1.3"} | "bitlbee-libpurple" {>= "3.5.1-1.3"})
+]
+extra-source "bitlbee-dev_3.5.1-1.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bitlbee/bitlbee-dev_3.5.1-1.3_all.deb"
+}

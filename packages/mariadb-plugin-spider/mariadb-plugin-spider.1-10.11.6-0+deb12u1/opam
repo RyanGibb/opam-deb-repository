@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mariadb-plugin-spider_1:10.11.6-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mariadb-plugin-spider"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libstdc++6" {>= "4.3"}
+  "mariadb-server" {= "1-10.11.6-0+deb12u1"}
+]
+extra-source "mariadb-plugin-spider_1:10.11.6-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mariadb/mariadb-plugin-spider_10.11.6-0+deb12u1_amd64.deb"
+}

@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-degnorm_1.8.2+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-degnorm"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "9"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-bioc-biocgenerics"
+  "r-bioc-genomicalignments"
+  "r-bioc-genomicfeatures"
+  "r-bioc-genomicranges"
+  "r-bioc-iranges"
+  "r-bioc-rsamtools" {>= "1.31.2"}
+  "r-bioc-s4vectors"
+  "r-cran-data-table"
+  "r-cran-doparallel"
+  "r-cran-foreach"
+  "r-cran-ggplot2"
+  "r-cran-heatmaply"
+  "r-cran-plotly"
+  "r-cran-plyr"
+  "r-cran-rcpp" {>= "1.0.2"}
+  "r-cran-rcpparmadillo"
+  "r-cran-viridis"
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "r-bioc-degnorm_1.8.2+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-degnorm/r-bioc-degnorm_1.8.2+ds-1_amd64.deb"
+}

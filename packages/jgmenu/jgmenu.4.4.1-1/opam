@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jgmenu_4.4.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jgmenu"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libmenu-cache3" {>= "1.1.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "librsvg2-2" {>= "2.46.0"}
+  "libx11-6"
+  "libxml2" {>= "2.7.4"}
+  "libxrandr2" {>= "2-1.2.99.2"}
+  "python3-any"
+]
+extra-source "jgmenu_4.4.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jgmenu/jgmenu_4.4.1-1_amd64.deb"
+}

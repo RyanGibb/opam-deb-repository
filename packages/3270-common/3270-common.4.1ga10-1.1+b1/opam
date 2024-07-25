@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i 3270-common_4.1ga10-1.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r 3270-common"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "3270-common_4.1ga10-1.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibm-3270/3270-common_4.1ga10-1.1+b1_amd64.deb"
+}

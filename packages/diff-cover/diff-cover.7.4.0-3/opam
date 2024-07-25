@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i diff-cover_7.4.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r diff-cover"]
+]
+depends: [
+  "python3-any"
+  "python3-chardet"
+  "python3-jinja2"
+  "python3-pluggy"
+  "python3-pygments"
+  ("python3-pkg-resources" | "python3" {> "3.8"})
+]
+extra-source "diff-cover_7.4.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/diff-cover/diff-cover_7.4.0-3_all.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-winston_3.8.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-winston"]
+]
+depends: [
+  "node-dabh-diagnostics"
+  "node-is-stream" {>= "2.0.0"}
+  "node-logform"
+  "node-neo-async"
+  "node-one-time"
+  "node-readable-stream" {>= "3.4.0"}
+  "node-stack-trace"
+  "node-std-mocks"
+  "node-triple-beam"
+  "node-winston-compat"
+  "node-winston-transport"
+]
+extra-source "node-winston_3.8.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-winston/node-winston_3.8.2-1_all.deb"
+}

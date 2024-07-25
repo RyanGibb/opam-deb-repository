@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcpluff0_0.2.0+ds1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcpluff0"]
+]
+depends: [
+  "dh-autoreconf"
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+]
+extra-source "libcpluff0_0.2.0+ds1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cpluff/libcpluff0_0.2.0+ds1-2+b1_amd64.deb"
+}

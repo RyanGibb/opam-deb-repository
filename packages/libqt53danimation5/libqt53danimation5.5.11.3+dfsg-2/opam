@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt53danimation5_5.11.3+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt53danimation5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt53dcore5" {= "5.11.3+dfsg-2"}
+  "libqt53drender5" {>= "5.7.1~20161122"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.11.3+dfsg~"}
+  "libqt5gui5" {>= "5.11.3+dfsg~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libqt53danimation5_5.11.3+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt3d-opensource-src/libqt53danimation5_5.11.3+dfsg-2_amd64.deb"
+}

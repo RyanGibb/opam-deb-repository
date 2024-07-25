@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dbconfig-sqlite_2.0.11+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dbconfig-sqlite"]
+]
+depends: [
+  "dbconfig-common" {= "2.0.11+deb10u1"}
+  "sqlite"
+]
+conflicts: [
+  "dbconfig-no-thanks"
+]
+extra-source "dbconfig-sqlite_2.0.11+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dbconfig-common/dbconfig-sqlite_2.0.11+deb10u1_all.deb"
+}

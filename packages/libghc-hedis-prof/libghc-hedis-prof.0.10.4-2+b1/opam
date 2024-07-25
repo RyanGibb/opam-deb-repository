@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hedis-prof_0.10.4-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hedis-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-async-prof"
+  "libghc-bytestring-lexing-prof"
+  "libghc-errors-prof"
+  "libghc-hedis-dev" {= "0.10.4-2+b1"}
+  "libghc-http-prof"
+  "libghc-network-prof"
+  "libghc-network-uri-prof"
+  "libghc-resource-pool-prof"
+  "libghc-scanner-prof"
+  "libghc-tls-prof"
+  "libghc-unordered-containers-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-hedis-prof_0.10.4-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hedis/libghc-hedis-prof_0.10.4-2+b1_amd64.deb"
+}

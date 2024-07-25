@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-murano-dashboard_1:14.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-murano-dashboard"]
+]
+depends: [
+  "openstack-dashboard" {>= "3-20.0.0+git2020.09.21.27036cc0eb"}
+  "python3-any"
+  "python3-bs4"
+  "python3-castellan"
+  "python3-django"
+  "python3-django-compressor"
+  "python3-django-formtools"
+  "python3-django-horizon"
+  "python3-heat-dashboard"
+  "python3-iso8601"
+  "python3-muranoclient"
+  "python3-oslo-log"
+  "python3-pbr"
+  "python3-semantic-version"
+  "python3-tz"
+  "python3-yaml"
+  "python3-yaql"
+]
+conflicts: [
+  "python-murano-dashboard"
+]
+extra-source "python3-murano-dashboard_1:14.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/murano-dashboard/python3-murano-dashboard_14.0.0-1_all.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsoup2.4-dev_2.74.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsoup2.4-dev"]
+]
+depends: [
+  "gir1-2-soup-2-4" {= "2.74.3-1"}
+  "libbrotli-dev"
+  "libglib2-0-dev" {>= "2.58.0"}
+  "libpsl-dev" {>= "0.20"}
+  "libsoup2-4-1" {= "2.74.3-1"}
+  "libsqlite3-dev"
+  "libxml2-dev"
+  "zlib1g-dev"
+]
+extra-source "libsoup2.4-dev_2.74.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsoup2.4/libsoup2.4-dev_2.74.3-1_amd64.deb"
+}

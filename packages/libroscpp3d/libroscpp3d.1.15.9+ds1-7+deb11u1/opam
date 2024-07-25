@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libroscpp3d_1.15.9+ds1-7+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libroscpp3d"]
+]
+depends: [
+  "libboost-chrono1-74-0" {>= "1.74.0"}
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-thread1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libcpp-common0d" {>= "0.7.2"}
+  "libgcc-s1" {>= "3.0"}
+  "librosconsole3d" {>= "1.14.3"}
+  "libroscpp-serialization0d" {>= "0.7.2"}
+  "librostime1d" {>= "0.7.2"}
+  "libstdc++6" {>= "9"}
+  "libxmlrpcpp3d" {>= "1.15.9+ds1"}
+]
+extra-source "libroscpp3d_1.15.9+ds1-7+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-ros-comm/libroscpp3d_1.15.9+ds1-7+deb11u1_amd64.deb"
+}

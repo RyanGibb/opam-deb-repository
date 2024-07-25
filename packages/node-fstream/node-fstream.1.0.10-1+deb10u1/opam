@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-fstream_1.0.10-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-fstream"]
+]
+depends: [
+  "node-graceful-fs" {>= "3"}
+  "node-inherits" {>= "2"}
+  "node-mkdirp" {>= "0.5"}
+  "node-rimraf" {>= "2"}
+  "nodejs"
+]
+extra-source "node-fstream_1.0.10-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-fstream/node-fstream_1.0.10-1+deb10u1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vnlog_1.31-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vnlog"]
+]
+depends: [
+  "liblist-moreutils-perl"
+  "libtext-table-perl"
+  "libvnlog-perl" {= "1.31-1"}
+  "mawk"
+  "moreutils"
+  "perl-any"
+]
+extra-source "vnlog_1.31-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vnlog/vnlog_1.31-1_all.deb"
+}

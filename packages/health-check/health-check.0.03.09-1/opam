@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i health-check_0.03.09-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r health-check"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.15"}
+  "libjson-c5" {>= "0.15"}
+]
+extra-source "health-check_0.03.09-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/health-check/health-check_0.03.09-1_amd64.deb"
+}

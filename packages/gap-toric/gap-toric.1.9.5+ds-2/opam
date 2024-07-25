@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gap-toric_1.9.5+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gap-toric"]
+]
+depends: [
+  "gap" {>= "4.11"}
+  "gap-gapdoc"
+]
+extra-source "gap-toric_1.9.5+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gap-toric/gap-toric_1.9.5+ds-2_all.deb"
+}

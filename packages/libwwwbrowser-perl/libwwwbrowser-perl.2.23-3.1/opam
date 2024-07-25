@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwwwbrowser-perl_2.23-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwwwbrowser-perl"]
+]
+depends: [
+  "perl-any"
+  ("lynx" | "www-browser")
+]
+extra-source "libwwwbrowser-perl_2.23-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libw/libwwwbrowser-perl/libwwwbrowser-perl_2.23-3.1_all.deb"
+}

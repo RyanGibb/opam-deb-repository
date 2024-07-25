@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-src-exts-doc_1.23.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-src-exts-doc"]
+]
+depends: [
+  "ghc"
+  "sgml-base" {>= "1.28"}
+]
+conflicts: [
+  "haskell-src-exts-doc (<< 1.8.2-2)"
+]
+extra-source "libghc-src-exts-doc_1.23.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-src-exts/libghc-src-exts-doc_1.23.1-3_all.deb"
+}

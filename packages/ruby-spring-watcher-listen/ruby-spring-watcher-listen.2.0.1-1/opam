@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-spring-watcher-listen_2.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-spring-watcher-listen"]
+]
+depends: [
+  "ruby-listen" {< "4.0"}
+  "ruby-listen" {>= "2.7"}
+  "ruby-spring" {< "3.0"}
+  "ruby-spring" {>= "1.2"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-spring-watcher-listen_2.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-spring-watcher-listen/ruby-spring-watcher-listen_2.0.1-1_all.deb"
+}

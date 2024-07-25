@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-dicompylercore_0.5.5-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-dicompylercore"]
+]
+depends: [
+  "python3-any"
+  "python3-matplotlib"
+  "python3-numpy"
+  "python3-pil"
+  "python3-pydicom"
+  "python3-shapely"
+  "python3-six" {>= "1.5"}
+  "python3-skimage"
+]
+extra-source "python3-dicompylercore_0.5.5-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-dicompylercore/python3-dicompylercore_0.5.5-5_amd64.deb"
+}

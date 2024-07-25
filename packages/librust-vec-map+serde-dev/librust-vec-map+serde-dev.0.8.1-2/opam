@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-vec-map+serde-dev_0.8.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-vec-map+serde-dev"]
+]
+depends: [
+  "librust-serde-1+default-dev"
+  "librust-serde-1+derive-dev"
+  "librust-vec-map-dev" {= "0.8.1-2"}
+]
+extra-source "librust-vec-map+serde-dev_0.8.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-vec-map/librust-vec-map+serde-dev_0.8.1-2_amd64.deb"
+}

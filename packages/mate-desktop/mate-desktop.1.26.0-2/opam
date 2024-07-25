@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mate-desktop_1.26.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mate-desktop"]
+]
+depends: [
+  "hicolor-icon-theme"
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.50.0"}
+  "libgtk-3-0" {>= "3.22.0"}
+  "libmate-desktop-2-17" {>= "1.10.0"}
+  "mate-desktop-common" {= "1.26.0-2"}
+]
+extra-source "mate-desktop_1.26.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mate-desktop/mate-desktop_1.26.0-2_amd64.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sendmail-bin_8.15.2-14~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sendmail-bin"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libdb5-3"
+  "libldap-2-4-2" {>= "2.4.7"}
+  "liblockfile1" {>= "1.0"}
+  "libsasl2-2" {>= "2.1.27+dfsg"}
+  "libssl1-1" {>= "1.1.0"}
+  "libwrap0" {>= "7.6-4~"}
+  "lsb-base" {>= "3.0-6"}
+  "procps"
+  "sendmail-base" {= "8.15.2-14~deb10u1"}
+  "sendmail-cf" {= "8.15.2-14~deb10u1"}
+]
+conflicts: [
+  "mail-transport-agent"
+]
+extra-source "sendmail-bin_8.15.2-14~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sendmail/sendmail-bin_8.15.2-14~deb10u1_amd64.deb"
+}

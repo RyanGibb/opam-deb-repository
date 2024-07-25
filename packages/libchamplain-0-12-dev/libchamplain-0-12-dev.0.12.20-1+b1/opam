@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libchamplain-0.12-dev_0.12.20-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libchamplain-0.12-dev"]
+]
+depends: [
+  "gir1-2-champlain-0-12" {= "0.12.20-1+b1"}
+  "libcairo2-dev" {>= "1.4"}
+  "libchamplain-0-12-0" {= "0.12.20-1+b1"}
+  "libclutter-1-0-dev"
+  "libglib2-0-dev"
+  "libsoup2-4-dev" {>= "2.42"}
+  "libsqlite3-dev"
+]
+extra-source "libchamplain-0.12-dev_0.12.20-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libchamplain/libchamplain-0.12-dev_0.12.20-1+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i progress-linux_20221212-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r progress-linux"]
+]
+depends: [
+  "ca-certificates"
+  "progress-linux-pgp-keys"
+  "progress-linux-ssh-keys"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "progress-linux_20221212-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/progress-linux/progress-linux_20221212-3_all.deb"
+}

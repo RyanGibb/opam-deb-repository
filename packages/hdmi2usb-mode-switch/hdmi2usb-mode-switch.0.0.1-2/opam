@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hdmi2usb-mode-switch_0.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hdmi2usb-mode-switch"]
+]
+depends: [
+  "fxload"
+  "hdmi2usb-fx2-firmware"
+  "hdmi2usb-udev"
+  "ixo-usb-jtag" {>= "0.0.1"}
+  "openocd" {>= "0.9.0+git20150701"}
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-pkg-resources"
+  "usbutils"
+]
+extra-source "hdmi2usb-mode-switch_0.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hdmi2usb-mode-switch/hdmi2usb-mode-switch_0.0.1-2_all.deb"
+}

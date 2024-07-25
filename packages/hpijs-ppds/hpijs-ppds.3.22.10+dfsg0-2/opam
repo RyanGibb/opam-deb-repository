@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hpijs-ppds_3.22.10+dfsg0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hpijs-ppds"]
+]
+depends: [
+  "printer-driver-hpijs" {>= "3.22.10+dfsg0-2"}
+  "python3-any"
+  "xz-utils"
+  ("cups-filters" | "foomatic-filters")
+]
+extra-source "hpijs-ppds_3.22.10+dfsg0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hplip/hpijs-ppds_3.22.10+dfsg0-2_all.deb"
+}

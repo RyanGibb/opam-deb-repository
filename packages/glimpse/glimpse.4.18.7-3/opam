@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i glimpse_4.18.7-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r glimpse"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "agrep"
+]
+extra-source "glimpse_4.18.7-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glimpse/glimpse_4.18.7-3_amd64.deb"
+}

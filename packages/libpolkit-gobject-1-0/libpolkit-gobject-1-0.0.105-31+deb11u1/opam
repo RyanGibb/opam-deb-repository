@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpolkit-gobject-1-0_0.105-31+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpolkit-gobject-1-0"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libelogind0"
+  "libglib2-0-0" {>= "2.37.3"}
+]
+extra-source "libpolkit-gobject-1-0_0.105-31+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/policykit-1/libpolkit-gobject-1-0_0.105-31+deb11u1_amd64.deb"
+}

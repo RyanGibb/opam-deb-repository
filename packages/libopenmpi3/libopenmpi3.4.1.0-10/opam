@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenmpi3_4.1.0-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenmpi3"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libevent-core-2-1-7" {>= "2.1.8-stable"}
+  "libevent-pthreads-2-1-7" {>= "2.1.8-stable"}
+  "libfabric1" {>= "1.11.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libhwloc-plugins"
+  "libhwloc15" {>= "2.4.1+dfsg"}
+  "libibverbs1" {>= "1.1.7"}
+  "libnl-3-200" {>= "3.2.7"}
+  "libpmix2" {>= "4.0.0"}
+  "libpsm-infinipath1" {>= "3.3+7.gec1d6d2"}
+  "libpsm2-2" {>= "10.3-37"}
+  "libstdc++6" {>= "5"}
+  "libucx0" {>= "1.10.1~rc1+really.1.10.0"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "libopenmpi3_4.1.0-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openmpi/libopenmpi3_4.1.0-10_amd64.deb"
+}

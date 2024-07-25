@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfilament-tools_1.9.25+dfsg2-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfilament-tools"]
+]
+depends: [
+  "libassimp5" {>= "5.2.5~ds0"}
+  "libc6" {>= "2.34"}
+  "libfilament1-9" {>= "1.9.25+dfsg2"}
+  "libgcc-s1" {>= "4.0"}
+  "libmeshoptimizer2d" {>= "0.18+dfsg"}
+  "libstdc++6" {>= "12"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libfilament-tools_1.9.25+dfsg2-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/filament/libfilament-tools_1.9.25+dfsg2-10_amd64.deb"
+}

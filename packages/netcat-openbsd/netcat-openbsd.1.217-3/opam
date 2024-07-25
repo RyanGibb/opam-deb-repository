@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i netcat-openbsd_1.217-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r netcat-openbsd"]
+]
+depends: [
+  "libbsd0" {>= "0.2.0"}
+  "libc6" {>= "2.25"}
+]
+extra-source "netcat-openbsd_1.217-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netcat-openbsd/netcat-openbsd_1.217-3_amd64.deb"
+}

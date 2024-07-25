@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i datapacker_1.0.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r datapacker"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libffi6" {>= "3.0.4"}
+  "libgmp10"
+]
+extra-source "datapacker_1.0.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/datapacker/datapacker_1.0.2_amd64.deb"
+}

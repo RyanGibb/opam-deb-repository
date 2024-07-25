@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-matplotlib-dbg_2.2.3-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-matplotlib-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "5.2"}
+  "python-all-dbg"
+  "python-kiwisolver-dbg"
+  "python-matplotlib" {= "2.2.3-6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "python-matplotlib-dbg_2.2.3-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/matplotlib2/python-matplotlib-dbg_2.2.3-6_amd64.deb"
+}

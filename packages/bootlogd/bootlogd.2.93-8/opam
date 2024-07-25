@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bootlogd_2.93-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bootlogd"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "lsb-base" {>= "3.2-14"}
+]
+extra-source "bootlogd_2.93-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sysvinit/bootlogd_2.93-8_amd64.deb"
+}

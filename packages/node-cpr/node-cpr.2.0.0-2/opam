@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-cpr_2.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-cpr"]
+]
+depends: [
+  "node-graceful-fs" {>= "4.1.5"}
+  "node-minimist" {>= "1.2.0"}
+  "node-mkdirp" {>= "0.5"}
+  "node-rimraf" {>= "2.5.4"}
+  "nodejs"
+]
+extra-source "node-cpr_2.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-cpr/node-cpr_2.0.0-2_all.deb"
+}

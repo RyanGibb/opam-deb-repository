@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcomment-preprocessor-java_6.0.1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcomment-preprocessor-java"]
+]
+depends: [
+  "ant"
+  "libcommons-io-java" {>= "2.8.0"}
+  "libcommons-lang3-java" {>= "3.11"}
+  "libmaven-file-management-java" {>= "3.0.0"}
+  "libmaven3-core-java" {>= "3.6.3"}
+]
+extra-source "libcomment-preprocessor-java_6.0.1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/java-comment-preprocessor/libcomment-preprocessor-java_6.0.1-1.1_all.deb"
+}

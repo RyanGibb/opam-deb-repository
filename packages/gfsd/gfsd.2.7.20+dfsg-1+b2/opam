@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gfsd_2.7.20+dfsg-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gfsd"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libgfarm1" {>= "2.7.19"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "gfsd_2.7.20+dfsg-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gfarm/gfsd_2.7.20+dfsg-1+b2_amd64.deb"
+}

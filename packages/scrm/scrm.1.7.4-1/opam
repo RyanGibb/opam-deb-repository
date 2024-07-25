@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scrm_1.7.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scrm"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "scrm_1.7.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scrm/scrm_1.7.4-1_amd64.deb"
+}

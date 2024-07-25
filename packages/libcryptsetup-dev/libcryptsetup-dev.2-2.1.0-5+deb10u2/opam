@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcryptsetup-dev_2:2.1.0-5+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcryptsetup-dev"]
+]
+depends: [
+  "libcryptsetup12" {= "2-2.1.0-5+deb10u2"}
+]
+extra-source "libcryptsetup-dev_2:2.1.0-5+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cryptsetup/libcryptsetup-dev_2.1.0-5+deb10u2_amd64.deb"
+}

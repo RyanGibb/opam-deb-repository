@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglib-testing-0-dev_0.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglib-testing-0-dev"]
+]
+depends: [
+  "libglib-testing-0-0" {= "0.1.0-1"}
+  "libglib2-0-dev" {>= "2.44"}
+]
+extra-source "libglib-testing-0-dev_0.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libglib-testing/libglib-testing-0-dev_0.1.0-1_amd64.deb"
+}

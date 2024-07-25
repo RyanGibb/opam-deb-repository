@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xserver-xorg-dev_2:1.20.4-1+deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xserver-xorg-dev"]
+]
+depends: [
+  "libpciaccess-dev"
+  "libpixman-1-dev" {>= "0.27.2"}
+  "libxfont-dev"
+  "libxkbfile-dev"
+  "mesa-common-dev"
+  "x11proto-dev" {>= "2018.4"}
+]
+extra-source "xserver-xorg-dev_2:1.20.4-1+deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xorg-server/xserver-xorg-dev_1.20.4-1+deb10u4_amd64.deb"
+}

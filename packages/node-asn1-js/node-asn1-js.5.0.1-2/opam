@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-asn1.js_5.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-asn1.js"]
+]
+depends: [
+  "node-assert" {>= "1.0.0"}
+  "node-bn-js" {>= "4.0.0"}
+  "node-inherits" {>= "2.0.1"}
+  "nodejs" {>= "6"}
+]
+extra-source "node-asn1.js_5.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-asn1.js/node-asn1.js_5.0.1-2_all.deb"
+}

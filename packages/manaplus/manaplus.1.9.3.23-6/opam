@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i manaplus_1.9.3.23-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r manaplus"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl2-2-0-0" {>= "2.0.12+dfsg1"}
+  "libsdl2-image-2-0-0" {>= "2.0.2"}
+  "libsdl2-mixer-2-0-0" {>= "2.0.2"}
+  "libsdl2-net-2-0-0" {>= "2.0.1"}
+  "libsdl2-ttf-2-0-0" {>= "2.0.14"}
+  "libstdc++6" {>= "7"}
+  "libx11-6"
+  "libxml2" {>= "2.7.4"}
+  "manaplus-data" {= "1.9.3.23-6"}
+  "x11-utils"
+  "xdg-utils"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "manaplus_1.9.3.23-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/manaplus/manaplus_1.9.3.23-6_amd64.deb"
+}

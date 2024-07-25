@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i budgie-desktop_10.5.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r budgie-desktop"]
+]
+depends: [
+  "budgie-core"
+  "gir1-2-budgie-1-0" {>= "10.5"}
+  "gnome-control-center"
+  "gnome-menus"
+  "network-manager-gnome"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "budgie-desktop_10.5.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/budgie-desktop/budgie-desktop_10.5.2-4_all.deb"
+}

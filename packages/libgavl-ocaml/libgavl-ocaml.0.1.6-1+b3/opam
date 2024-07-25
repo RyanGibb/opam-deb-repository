@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgavl-ocaml_0.1.6-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgavl-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgavl2" {>= "1.1.0"}
+  "ocaml-base"
+]
+extra-source "libgavl-ocaml_0.1.6-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-gavl/libgavl-ocaml_0.1.6-1+b3_amd64.deb"
+}

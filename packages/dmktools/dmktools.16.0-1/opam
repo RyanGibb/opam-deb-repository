@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dmktools_16.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dmktools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "openmsx (<< 0.14.0-2)"
+]
+extra-source "dmktools_16.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openmsx/dmktools_16.0-1_amd64.deb"
+}

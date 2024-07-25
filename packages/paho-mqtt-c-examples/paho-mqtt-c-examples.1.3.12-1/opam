@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i paho.mqtt.c-examples_1.3.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r paho.mqtt.c-examples"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpaho-mqtt1-3" {= "1.3.12-1"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "paho.mqtt.c-examples_1.3.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/paho.mqtt.c/paho.mqtt.c-examples_1.3.12-1_amd64.deb"
+}

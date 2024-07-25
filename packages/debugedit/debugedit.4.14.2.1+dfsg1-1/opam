@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debugedit_4.14.2.1+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debugedit"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdw1" {>= "0.167"}
+  "libelf1" {>= "0.144"}
+  "libpopt0" {>= "1.14"}
+  "librpmio8" {= "4.14.2.1+dfsg1-1"}
+]
+extra-source "debugedit_4.14.2.1+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rpm/debugedit_4.14.2.1+dfsg1-1_amd64.deb"
+}

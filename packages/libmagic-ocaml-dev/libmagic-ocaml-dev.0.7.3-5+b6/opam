@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmagic-ocaml-dev_0.7.3-5+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmagic-ocaml-dev"]
+]
+depends: [
+  "libmagic-dev"
+  "libmagic-ocaml"
+  "libmagic-ocaml" {= "0.7.3-5+b6"}
+  "ocaml-nox"
+]
+extra-source "libmagic-ocaml-dev_0.7.3-5+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-magic/libmagic-ocaml-dev_0.7.3-5+b6_amd64.deb"
+}

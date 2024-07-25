@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcatalyst-view-json-perl_0.37-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcatalyst-view-json-perl"]
+]
+depends: [
+  "libcatalyst-perl"
+  "libjson-maybexs-perl" {>= "1.003000"}
+  "libmro-compat-perl"
+  "perl"
+]
+extra-source "libcatalyst-view-json-perl_0.37-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcatalyst-view-json-perl/libcatalyst-view-json-perl_0.37-1_all.deb"
+}

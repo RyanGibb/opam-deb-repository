@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-common_1:6.1.5-3+deb10u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-common"]
+]
+depends: [
+  "libnumbertext-data"
+  "libreoffice-style-colibre"
+  "libreoffice-style-tango"
+  "ure"
+]
+conflicts: [
+  "apparmor (<< 2.13.1~)"
+  "broffice"
+  "libreoffice-filter-mobiledev"
+  "libreoffice-l10n-4.3"
+  "libreoffice-l10n-4.4"
+  "libreoffice-wiki-publisher (<< 1.2.0+LibO5.4.0~rc2)"
+  "openoffice-unbundled"
+]
+extra-source "libreoffice-common_1:6.1.5-3+deb10u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-common_6.1.5-3+deb10u7_all.deb"
+}

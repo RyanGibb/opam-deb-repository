@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gedit-plugin-draw-spaces_44.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gedit-plugin-draw-spaces"]
+]
+depends: [
+  "gedit" {< "45~"}
+  "gedit" {>= "44.2"}
+  "gedit-plugins-common" {>= "44.1-2"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.9.0"}
+  "libgtksourceview-4-0" {>= "3.23.90"}
+  "libpeas-1-0-0" {>= "1.14.1"}
+  "libtepl-6-2" {>= "6.1.2"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gedit-plugin-draw-spaces_44.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gedit-plugins/gedit-plugin-draw-spaces_44.1-2_amd64.deb"
+}

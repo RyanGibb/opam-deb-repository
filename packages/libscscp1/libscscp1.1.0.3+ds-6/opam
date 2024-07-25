@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libscscp1_1.0.3+ds-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libscscp1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+  "libxml2" {>= "2.7.4"}
+]
+conflicts: [
+  "libscscp"
+]
+extra-source "libscscp1_1.0.3+ds-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scscp-imcce/libscscp1_1.0.3+ds-6_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkpimgapicontacts5_22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkpimgapicontacts5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5contacts5" {>= "5-5.99.0~"}
+  "libkpimgapi-data" {= "22.12.3-1"}
+  "libkpimgapicore5abi1"
+  "libkpimgapicore5abi1" {= "22.12.3-1"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5network5" {>= "5.15.2~"}
+  "libqt5xml5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libkpimgapicontacts5_22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkgapi/libkpimgapicontacts5_22.12.3-1_amd64.deb"
+}

@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i conky-std_1.10.8-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r conky-std"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-3.0"}
+  "libimlib2" {>= "1.4.5"}
+  "libiw30" {>= "30~pre1"}
+  "liblua5-1-0"
+  "libncurses6" {>= "6"}
+  "libstdc++6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libx11-6"
+  "libxdamage1" {>= "1-1.1"}
+  "libxext6"
+  "libxfixes3"
+  "libxft2" {> "2.1.1"}
+  "libxinerama1"
+]
+conflicts: [
+  "conky-all"
+  "conky-cli"
+]
+extra-source "conky-std_1.10.8-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/conky/conky-std_1.10.8-1+b1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i git-debrebase_8.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r git-debrebase"]
+]
+depends: [
+  "devscripts"
+  "git"
+  "libdpkg-perl"
+  "libfile-fnmatch-perl"
+  "liblocale-gettext-perl"
+  "perl"
+]
+extra-source "git-debrebase_8.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dgit/git-debrebase_8.5_all.deb"
+}

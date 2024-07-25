@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wev_1.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wev"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libwayland-client0" {>= "1.9.91"}
+  "libxkbcommon0" {>= "0.5.0"}
+]
+extra-source "wev_1.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wev/wev_1.0.0-2_amd64.deb"
+}

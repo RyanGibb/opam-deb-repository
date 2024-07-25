@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsbml5-octave_5.19.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsbml5-octave"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libsbml5" {>= "5.19.0+dfsg"}
+  "libstdc++6" {>= "5.2"}
+  "octave" {>= "6.1.1~hg.2020.12.27-1"}
+]
+extra-source "libsbml5-octave_5.19.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsbml/libsbml5-octave_5.19.0+dfsg-1_amd64.deb"
+}

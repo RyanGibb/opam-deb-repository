@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libblockdev-mpath2_2.20-7+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libblockdev-mpath2"]
+]
+depends: [
+  "libblockdev-utils2" {>= "2.20"}
+  "libc6" {>= "2.4"}
+  "libdevmapper1-02-1" {>= "2-1.02.97"}
+  "libglib2-0-0" {>= "2.42.2"}
+  "multipath-tools" {>= "0.4.9"}
+]
+extra-source "libblockdev-mpath2_2.20-7+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libblockdev/libblockdev-mpath2_2.20-7+deb10u1_amd64.deb"
+}

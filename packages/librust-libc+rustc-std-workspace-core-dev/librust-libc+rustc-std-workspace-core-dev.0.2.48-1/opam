@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-libc+rustc-std-workspace-core-dev_0.2.48-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-libc+rustc-std-workspace-core-dev"]
+]
+depends: [
+  "librust-libc-dev" {= "0.2.48-1"}
+  "librust-rustc-std-workspace-core-1+default-dev"
+]
+extra-source "librust-libc+rustc-std-workspace-core-dev_0.2.48-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-libc/librust-libc+rustc-std-workspace-core-dev_0.2.48-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i spice-webdavd_3.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r spice-webdavd"]
+]
+depends: [
+  "avahi-daemon"
+  "libavahi-gobject0" {>= "0.6.22"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.51"}
+]
+extra-source "spice-webdavd_3.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phodav/spice-webdavd_3.0-8_amd64.deb"
+}

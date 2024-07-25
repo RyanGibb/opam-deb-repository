@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqcustomplot2.1-qt6_2.1.0+dfsg1-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqcustomplot2.1-qt6"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt6core6" {>= "6.3.0"}
+  "libqt6gui6" {>= "6.2.0"}
+  "libqt6printsupport6" {>= "6.2.0"}
+  "libqt6widgets6" {>= "6.2.0"}
+  "libstdc++6" {>= "5"}
+]
+conflicts: [
+  "libqcustomplot2.0"
+]
+extra-source "libqcustomplot2.1-qt6_2.1.0+dfsg1-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qcustomplot/libqcustomplot2.1-qt6_2.1.0+dfsg1-3.1_amd64.deb"
+}

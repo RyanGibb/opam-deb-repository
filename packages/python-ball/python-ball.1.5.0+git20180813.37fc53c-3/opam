@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-ball_1.5.0+git20180813.37fc53c-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-ball"]
+]
+depends: [
+  "libball1-5"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-sip"
+]
+extra-source "python-ball_1.5.0+git20180813.37fc53c-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/ball/python-ball_1.5.0+git20180813.37fc53c-3_amd64.deb"
+}

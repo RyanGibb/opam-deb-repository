@@ -1,0 +1,61 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ledgersmb_1.6.33+ds-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ledgersmb"]
+]
+depends: [
+  "adduser"
+  "libcarp-always-perl"
+  "libcgi-emulate-psgi-perl"
+  "libcgi-simple-perl"
+  "libclass-c3-xs-perl"
+  "libconfig-inifiles-perl"
+  "libdata-uuid-perl"
+  "libdatetime-format-strptime-perl"
+  "libdatetime-perl"
+  "libdbd-pg-perl"
+  "libdbi-perl"
+  "libhtml-escape-perl"
+  "libhttp-exception-perl"
+  "libio-stringy-perl"
+  "libjs-dojo-dijit"
+  "libjson-perl"
+  "liblocale-codes-perl"
+  "liblocale-maketext-lexicon-perl" {>= "0.62-1"}
+  "liblog-log4perl-perl"
+  "libmime-lite-perl"
+  "libmime-types-perl"
+  "libmoose-perl"
+  "libmoosex-nonmoose-perl"
+  "libnamespace-autoclean-perl"
+  "libnumber-format-perl"
+  "libpgobject-perl" {>= "1.403.2-1"}
+  "libpgobject-simple-perl" {>= "3.000002-1"}
+  "libpgobject-simple-role-perl" {>= "2.000000-1"}
+  "libpgobject-type-bigfloat-perl"
+  "libpgobject-type-bytestring-perl" {>= "1.1.1-1"}
+  "libpgobject-type-datetime-perl"
+  "libpgobject-util-dbadmin-perl"
+  "libpgobject-util-dbmethod-perl"
+  "libplack-builder-conditionals-perl"
+  "libplack-middleware-reverseproxy-perl"
+  "libplack-perl"
+  "libplack-request-withencoding-perl"
+  "libtemplate-perl" {>= "2.14-1"}
+  "libtext-markdown-perl"
+  "libtry-tiny-perl"
+  "libversion-compare-perl"
+  "libxml-simple-perl"
+  "perl"
+  "perl-any"
+  "postgresql-client"
+  "postgresql-contrib"
+  "starman"
+  "ucf"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "ledgersmb_1.6.33+ds-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ledgersmb/ledgersmb_1.6.33+ds-2.1_all.deb"
+}

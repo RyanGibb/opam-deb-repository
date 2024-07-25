@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jmeter-java_2.13-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jmeter-java"]
+]
+depends: [
+  "jmeter" {= "2.13-5"}
+  "libbsf-java"
+  "libcommons-io-java"
+  "libexcalibur-logkit-java"
+]
+extra-source "jmeter-java_2.13-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jakarta-jmeter/jmeter-java_2.13-5_all.deb"
+}

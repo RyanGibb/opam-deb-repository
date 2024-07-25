@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libktplogger9abi1_20.08.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libktplogger9abi1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libkf5configcore5" {>= "5.11~"}
+  "libkf5coreaddons5" {>= "5.11~"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "4.96.0"}
+  "libktpcommoninternals9abi1" {= "20.08.0-1"}
+  "libqt5core5a" {>= "5.14.1"}
+  "libstdc++6" {>= "4.1.1"}
+  "libtelepathy-logger-qt5" {>= "17.08~"}
+  "libtelepathy-qt5-0" {>= "0.9.8~"}
+]
+extra-source "libktplogger9abi1_20.08.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/ktp-common-internals/libktplogger9abi1_20.08.0-1_amd64.deb"
+}

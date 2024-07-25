@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i console-setup-freebsd_1.193~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r console-setup-freebsd"]
+]
+depends: [
+  "kbdcontrol"
+  "keyboard-configuration" {= "1.193~deb10u1"}
+  "vidcontrol"
+  ("init-system-helpers" {>= "1.29~"} | "initscripts")
+]
+conflicts: [
+  "console-setup-linux"
+]
+extra-source "console-setup-freebsd_1.193~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/console-setup/console-setup-freebsd_1.193~deb10u1_all.deb"
+}

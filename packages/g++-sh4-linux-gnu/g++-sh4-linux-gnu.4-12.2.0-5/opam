@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i g++-sh4-linux-gnu_4:12.2.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r g++-sh4-linux-gnu"]
+]
+depends: [
+  "cpp-sh4-linux-gnu" {= "4-12.2.0-5"}
+  "g++-12-sh4-linux-gnu" {>= "12.2.0-1~"}
+  "gcc-sh4-linux-gnu" {= "4-12.2.0-5"}
+]
+extra-source "g++-sh4-linux-gnu_4:12.2.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-ports/g++-sh4-linux-gnu_12.2.0-5_amd64.deb"
+}

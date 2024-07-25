@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dicoweb_2.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dicoweb"]
+]
+depends: [
+  "python3-any"
+  "python3-django" {>= "1.4.5"}
+  "python3-memcache"
+  "python3-wikitrans"
+  ("libapache2-mod-passenger" | "libapache2-mod-wsgi-py3")
+]
+extra-source "dicoweb_2.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dico/dicoweb_2.11-2_all.deb"
+}

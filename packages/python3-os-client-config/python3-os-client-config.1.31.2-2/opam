@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-os-client-config_1.31.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-os-client-config"]
+]
+depends: [
+  "python3-any"
+  "python3-openstacksdk" {>= "0.13.0"}
+  "python3-pbr"
+]
+extra-source "python3-os-client-config_1.31.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-os-client-config/python3-os-client-config_1.31.2-2_all.deb"
+}

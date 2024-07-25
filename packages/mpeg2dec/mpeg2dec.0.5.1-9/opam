@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mpeg2dec_0.5.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mpeg2dec"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmpeg2-4" {>= "0.5.1"}
+  "libsdl1-2-compat-shim"
+  "libx11-6"
+  "libxext6"
+  "libxv1"
+]
+extra-source "mpeg2dec_0.5.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpeg2dec/mpeg2dec_0.5.1-9_amd64.deb"
+}

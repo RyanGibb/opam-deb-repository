@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmqdb-perl_0.954-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmqdb-perl"]
+]
+depends: [
+  "libdbd-mysql-perl"
+  "libdbd-sqlite3-perl"
+  "libdbi-perl"
+  "perl"
+]
+extra-source "libmqdb-perl_0.954-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmqdb-perl/libmqdb-perl_0.954-2_all.deb"
+}

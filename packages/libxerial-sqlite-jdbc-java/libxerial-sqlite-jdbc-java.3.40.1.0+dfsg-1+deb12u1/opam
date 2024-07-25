@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxerial-sqlite-jdbc-java_3.40.1.0+dfsg-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxerial-sqlite-jdbc-java"]
+]
+depends: [
+  "libxerial-sqlite-jdbc-jni" {< "3.40.1.0+dfsg-1+deb12u1.1~"}
+  "libxerial-sqlite-jdbc-jni" {>= "3.40.1.0+dfsg-1+deb12u1"}
+]
+extra-source "libxerial-sqlite-jdbc-java_3.40.1.0+dfsg-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xerial-sqlite-jdbc/libxerial-sqlite-jdbc-java_3.40.1.0+dfsg-1+deb12u1_all.deb"
+}

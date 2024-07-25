@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstdx-allocator-dev_3.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstdx-allocator-dev"]
+]
+depends: [
+  "libmir-core-dev"
+  "libstdx-allocator0" {= "3.0.1-2"}
+]
+extra-source "libstdx-allocator-dev_3.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stdx-allocator/libstdx-allocator-dev_3.0.1-2_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtk2-engines-oxygen_1.4.6-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtk2-engines-oxygen"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.10.0"}
+  "libgcc-s1"
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.26.0"}
+  "libgtk2-0-0" {>= "2.24.5-4"}
+  "libpango-1-0-0" {>= "1.18.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+]
+extra-source "gtk2-engines-oxygen_1.4.6-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtk2-engines-oxygen/gtk2-engines-oxygen_1.4.6-1.1_amd64.deb"
+}

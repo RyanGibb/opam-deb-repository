@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mesa-va-drivers_20.3.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mesa-va-drivers"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libdrm-amdgpu1" {>= "2.4.100"}
+  "libdrm-nouveau2" {>= "2.4.66"}
+  "libdrm-radeon1" {>= "2.4.31"}
+  "libdrm2" {>= "2.4.75"}
+  "libelf1" {>= "0.142"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc-s1" {>= "3.4"}
+  "libllvm11" {>= "1-9~svn298832-1~"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-xcb1" {>= "2-1.7.0"}
+  "libxcb-dri2-0" {>= "1.8"}
+  "libxcb-dri3-0"
+  "libxcb-present0"
+  "libxcb-sync1"
+  "libxcb-xfixes0"
+  "libxcb1" {>= "1.9.2"}
+  "libxshmfence1"
+  "libzstd1" {>= "1.4.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "mesa-va-drivers_20.3.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mesa/mesa-va-drivers_20.3.5-1_amd64.deb"
+}

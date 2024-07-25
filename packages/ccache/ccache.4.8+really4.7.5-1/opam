@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ccache_4.8+really4.7.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ccache"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.4"}
+  "libhiredis0-14" {>= "0.14.1"}
+  "libstdc++6" {>= "12"}
+  "libzstd1" {>= "1.5.2"}
+]
+extra-source "ccache_4.8+really4.7.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ccache/ccache_4.8+really4.7.5-1_amd64.deb"
+}

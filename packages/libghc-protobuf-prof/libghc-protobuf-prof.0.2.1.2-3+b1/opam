@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-protobuf-prof_0.2.1.2-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-protobuf-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-base-orphans-prof"
+  "libghc-cereal-prof"
+  "libghc-data-binary-ieee754-prof"
+  "libghc-protobuf-dev" {= "0.2.1.2-3+b1"}
+  "libghc-unordered-containers-prof"
+]
+extra-source "libghc-protobuf-prof_0.2.1.2-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-protobuf/libghc-protobuf-prof_0.2.1.2-3+b1_amd64.deb"
+}

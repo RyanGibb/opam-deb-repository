@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librpmio8_4.14.2.1+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librpmio8"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.17"}
+  "libelf1" {>= "0.131"}
+  "liblua5-2-0"
+  "liblzma5" {>= "5.2.2"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libpopt0" {>= "1.14"}
+  "libzstd1" {>= "1.3.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "librpmio8_4.14.2.1+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rpm/librpmio8_4.14.2.1+dfsg1-1_amd64.deb"
+}

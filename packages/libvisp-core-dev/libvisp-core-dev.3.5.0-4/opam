@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvisp-core-dev_3.5.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvisp-core-dev"]
+]
+depends: [
+  "libeigen3-dev"
+  "libgsl-dev"
+  "liblapack-dev"
+  "libopencv-dev"
+  "libvisp-core3-5" {= "3.5.0-4"}
+  "libxml2-dev"
+]
+extra-source "libvisp-core-dev_3.5.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/visp/libvisp-core-dev_3.5.0-4_amd64.deb"
+}

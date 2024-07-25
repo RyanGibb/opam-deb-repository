@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnat-7-sjlj_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnat-7-sjlj"]
+]
+depends: [
+  "gcc-7-base" {= "7.4.0-6"}
+  "gnat-7" {= "7.4.0-6"}
+]
+extra-source "gnat-7-sjlj_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/gnat-7-sjlj_7.4.0-6_amd64.deb"
+}

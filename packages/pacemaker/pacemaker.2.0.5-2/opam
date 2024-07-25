@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pacemaker_2.0.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pacemaker"]
+]
+depends: [
+  "corosync" {>= "1.99"}
+  "dbus"
+  "libc6" {>= "2.17"}
+  "libcfg7" {>= "2.99.5"}
+  "libcib27" {>= "1.1.17~rc1"}
+  "libcmap4" {>= "1.99.9"}
+  "libcorosync-common4" {>= "1.99.9"}
+  "libcrmcluster29" {>= "2.0.1~rc4"}
+  "libcrmcommon34" {>= "2.0.5~rc2"}
+  "libcrmservice28" {>= "1.1.18~rc3"}
+  "libglib2-0-0" {>= "2.39.4"}
+  "libgnutls30" {>= "3.7.0"}
+  "liblrmd28" {>= "2.0.4"}
+  "libpacemaker1" {>= "2.0.3"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpe-rules26" {>= "2.0.3"}
+  "libpe-status28" {>= "2.0.3"}
+  "libqb100" {>= "2.0.1"}
+  "libstonithd26" {>= "2.0.4"}
+  "lsb-base" {>= "3.0-6"}
+  "pacemaker-common"
+  "pacemaker-resource-agents"
+  "python3-any"
+]
+conflicts: [
+  "pacemaker-remote"
+]
+extra-source "pacemaker_2.0.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pacemaker/pacemaker_2.0.5-2_amd64.deb"
+}

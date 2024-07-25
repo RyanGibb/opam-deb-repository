@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-cheese-3.0_3.38.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-cheese-3.0"]
+]
+depends: [
+  "gir1-2-clutter-1-0" {>= "1.16"}
+  "gir1-2-gdkpixbuf-2-0"
+  "gir1-2-gstreamer-1-0" {>= "0.11.0"}
+  "libcheese8" {= "3.38.0-3"}
+]
+extra-source "gir1.2-cheese-3.0_3.38.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cheese/gir1.2-cheese-3.0_3.38.0-3_amd64.deb"
+}

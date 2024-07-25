@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsys-cpuaffinity-perl_1.13~03-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsys-cpuaffinity-perl"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libsys-cpuaffinity-perl_1.13~03-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsys-cpuaffinity-perl/libsys-cpuaffinity-perl_1.13~03-2+b1_amd64.deb"
+}

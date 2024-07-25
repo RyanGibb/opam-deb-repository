@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-leaflet.markercluster_1.5.3~dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-leaflet.markercluster"]
+]
+depends: [
+  "libjs-leaflet-markercluster" {= "1.5.3~dfsg-4"}
+  "node-leaflet"
+  "nodejs-any"
+]
+extra-source "node-leaflet.markercluster_1.5.3~dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/leaflet-markercluster/node-leaflet.markercluster_1.5.3~dfsg-4_all.deb"
+}

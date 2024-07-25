@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjmagick6-jni_6.6.9~20130201-svn99-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjmagick6-jni"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmagickcore-6-q16-6" {>= "8-6.9.10.2"}
+]
+extra-source "libjmagick6-jni_6.6.9~20130201-svn99-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jmagick/libjmagick6-jni_6.6.9~20130201-svn99-4+b1_amd64.deb"
+}

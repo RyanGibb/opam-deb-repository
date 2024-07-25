@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i meep-lam4_1.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r meep-lam4"]
+]
+depends: [
+  "guile-2-2-libs"
+  "lam-runtime"
+  "libatlas3-base"
+  "libc6" {>= "2.14"}
+  "libctl7" {>= "3.0.3"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgc1c2" {>= "1-7.2d"}
+  "libgcc1" {>= "1-3.0"}
+  "libgfortran5" {>= "8"}
+  "libgsl23" {>= "2.5"}
+  "libgslcblas0" {>= "2.4"}
+  "libharminv3" {>= "1.4"}
+  "libhdf5-103"
+  "liblam4"
+  "libmeep-lam4-12"
+  "libquadmath0" {>= "4.6"}
+  "libstdc++6" {>= "5"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "meep-lam4_1.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meep-lam4/meep-lam4_1.7.0-3_amd64.deb"
+}

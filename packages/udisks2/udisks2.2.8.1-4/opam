@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i udisks2_2.8.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r udisks2"]
+]
+depends: [
+  "dbus"
+  "libacl1" {>= "2.2.23"}
+  "libatasmart4" {>= "0.13"}
+  "libblockdev-fs2"
+  "libblockdev-loop2"
+  "libblockdev-part2"
+  "libblockdev-swap2"
+  "libblockdev-utils2" {>= "2.20"}
+  "libblockdev2" {>= "2.20"}
+  "libc6" {>= "2.7"}
+  "libglib2-0-0" {>= "2.50"}
+  "libgudev-1-0-0" {>= "165"}
+  "libmount1" {>= "2.30"}
+  "libpam-systemd"
+  "libpolkit-agent-1-0" {>= "0.99"}
+  "libpolkit-gobject-1-0" {>= "0.101"}
+  "libsystemd0" {>= "209"}
+  "libudisks2-0" {>= "2.8.1"}
+  "parted"
+  "udev"
+]
+extra-source "udisks2_2.8.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/udisks2/udisks2_2.8.1-4_amd64.deb"
+}

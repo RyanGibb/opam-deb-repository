@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libssm-dev_1.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libssm-dev"]
+]
+depends: [
+  "libmmdb2-dev"
+  "libssm2" {= "1.4.0-1"}
+]
+extra-source "libssm-dev_1.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/ssm/libssm-dev_1.4.0-1_amd64.deb"
+}

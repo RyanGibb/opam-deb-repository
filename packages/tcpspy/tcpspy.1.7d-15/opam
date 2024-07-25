@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tcpspy_1.7d-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tcpspy"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "lsb-base"
+]
+extra-source "tcpspy_1.7d-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tcpspy/tcpspy_1.7d-15_amd64.deb"
+}

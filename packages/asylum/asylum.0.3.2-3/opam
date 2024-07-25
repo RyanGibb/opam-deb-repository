@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i asylum_0.3.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r asylum"]
+]
+depends: [
+  "asylum-data" {= "0.3.2-3"}
+  "libc6" {>= "2.4"}
+  "libgcc-s1"
+  "libgl1"
+  "libsdl-mixer1-2"
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "4.1.1"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "asylum_0.3.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/asylum/asylum_0.3.2-3_amd64.deb"
+}

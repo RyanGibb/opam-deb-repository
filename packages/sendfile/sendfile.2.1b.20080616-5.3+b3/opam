@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sendfile_2.1b.20080616-5.3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sendfile"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdpkg-perl"
+  "libreadline7" {>= "6.0"}
+  "update-inetd"
+  ("openbsd-inetd" | "inet-superserver")
+  ("perl" | "perl5")
+]
+extra-source "sendfile_2.1b.20080616-5.3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sendfile/sendfile_2.1b.20080616-5.3+b3_amd64.deb"
+}

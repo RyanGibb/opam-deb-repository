@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-elasticsearch-transport_1.0.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-elasticsearch-transport"]
+]
+depends: [
+  "ruby-faraday"
+  "ruby-multi-json"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-elasticsearch-transport_1.0.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-elasticsearch/ruby-elasticsearch-transport_1.0.12-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i schleuder-gitlab-ticketing_1.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r schleuder-gitlab-ticketing"]
+]
+depends: [
+  "ruby-gitlab" {>= "4.8~"}
+  "schleuder"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "schleuder-gitlab-ticketing_1.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/schleuder-gitlab-ticketing/schleuder-gitlab-ticketing_1.0.0-2_all.deb"
+}

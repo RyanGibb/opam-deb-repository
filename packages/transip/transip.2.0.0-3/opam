@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i transip_2.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r transip"]
+]
+depends: [
+  "python3-any"
+  "python3-suds"
+  "python3-transip" {= "2.0.0-3"}
+]
+extra-source "transip_2.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/transip/transip_2.0.0-3_all.deb"
+}

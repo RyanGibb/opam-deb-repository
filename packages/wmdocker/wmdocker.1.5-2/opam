@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmdocker_1.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmdocker"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libx11-6"
+]
+extra-source "wmdocker_1.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/docker/wmdocker_1.5-2_amd64.deb"
+}

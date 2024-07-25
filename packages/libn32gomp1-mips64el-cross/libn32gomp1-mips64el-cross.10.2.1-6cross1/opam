@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libn32gomp1-mips64el-cross_10.2.1-6cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libn32gomp1-mips64el-cross"]
+]
+depends: [
+  "gcc-10-cross-base-mipsen" {= "10.2.1-6cross1"}
+  "libc6-mipsn32-mips64el-cross" {>= "2.31"}
+]
+extra-source "libn32gomp1-mips64el-cross_10.2.1-6cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10-cross-mipsen/libn32gomp1-mips64el-cross_10.2.1-6cross1_all.deb"
+}

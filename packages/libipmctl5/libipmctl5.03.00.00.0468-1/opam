@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libipmctl5_03.00.00.0468-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libipmctl5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libipmctl-common"
+  "libndctl6" {>= "63"}
+]
+extra-source "libipmctl5_03.00.00.0468-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ipmctl/libipmctl5_03.00.00.0468-1_amd64.deb"
+}

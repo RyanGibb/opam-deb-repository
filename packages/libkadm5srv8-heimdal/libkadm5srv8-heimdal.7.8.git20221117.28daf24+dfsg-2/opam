@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkadm5srv8-heimdal_7.8.git20221117.28daf24+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkadm5srv8-heimdal"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcom-err2" {>= "1.43.9"}
+  "libhdb9-heimdal" {>= "7.4.0.dfsg.1"}
+  "libkrb5-26-heimdal" {>= "1.7~git20160418"}
+  "libroken19-heimdal" {>= "1.6~git20131117"}
+]
+extra-source "libkadm5srv8-heimdal_7.8.git20221117.28daf24+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heimdal/libkadm5srv8-heimdal_7.8.git20221117.28daf24+dfsg-2_amd64.deb"
+}

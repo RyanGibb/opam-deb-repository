@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xgammon_0.99.1128-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xgammon"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libice6" {>= "1-1.0.0"}
+  "libsm6"
+  "libx11-6"
+  "libxaw7"
+  "libxext6"
+  "libxt6"
+]
+extra-source "xgammon_0.99.1128-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xgammon/xgammon_0.99.1128-3+b2_amd64.deb"
+}

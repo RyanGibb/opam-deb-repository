@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-camelcase-keys_8.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-camelcase-keys"]
+]
+depends: [
+  "node-camelcase" {>= "7"}
+  "node-map-obj" {>= "4.3.0~"}
+  "node-quick-lru" {>= "6.1.1~"}
+]
+extra-source "node-camelcase-keys_8.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-camelcase-keys/node-camelcase-keys_8.0.2-2_all.deb"
+}

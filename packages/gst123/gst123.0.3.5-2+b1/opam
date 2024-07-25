@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gst123_0.3.5-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gst123"]
+]
+depends: [
+  "gstreamer1-0-plugins-base"
+  "gstreamer1-0-plugins-good"
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libglib2-0-0" {>= "2.31.8"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.0.0"}
+  "libgstreamer1-0-0" {>= "1.0.0"}
+  "libgtk2-0-0" {>= "2.24.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+  "libx11-6"
+]
+extra-source "gst123_0.3.5-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gst123/gst123_0.3.5-2+b1_amd64.deb"
+}

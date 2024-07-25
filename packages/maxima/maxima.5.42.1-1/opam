@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i maxima_5.42.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r maxima"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgmp10"
+  "libreadline7" {>= "6.0"}
+  "libx11-6"
+]
+extra-source "maxima_5.42.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maxima/maxima_5.42.1-1_amd64.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-gridftp-server-dev_13.24-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-gridftp-server-dev"]
+]
+depends: [
+  "libglobus-authz-dev" {>= "2"}
+  "libglobus-common-dev" {>= "17"}
+  "libglobus-ftp-control-dev" {>= "7"}
+  "libglobus-gfork-dev" {>= "3"}
+  "libglobus-gridftp-server-control-dev" {>= "9"}
+  "libglobus-gridftp-server6" {= "13.24-3"}
+  "libglobus-gsi-credential-dev" {>= "6"}
+  "libglobus-gsi-sysconfig-dev" {>= "5"}
+  "libglobus-gss-assist-dev" {>= "9"}
+  "libglobus-gssapi-gsi-dev" {>= "10"}
+  "libglobus-io-dev" {>= "9"}
+  "libglobus-xio-dev" {>= "5"}
+  "libglobus-xio-gsi-driver-dev" {>= "2"}
+  "libssl-dev"
+]
+extra-source "libglobus-gridftp-server-dev_13.24-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gridftp-server/libglobus-gridftp-server-dev_13.24-3_amd64.deb"
+}

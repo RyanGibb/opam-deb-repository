@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpaper-utils_1.1.29_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpaper-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpaper1"
+]
+extra-source "libpaper-utils_1.1.29_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpaper/libpaper-utils_1.1.29_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdns-export1104_1:9.11.5.P4+dfsg-5.1+deb10u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdns-export1104"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libisc-export1100"
+  "libssl1-1" {>= "1.1.1"}
+]
+extra-source "libdns-export1104_1:9.11.5.P4+dfsg-5.1+deb10u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bind9/libdns-export1104_9.11.5.P4+dfsg-5.1+deb10u7_amd64.deb"
+}

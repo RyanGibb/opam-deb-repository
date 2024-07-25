@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libeclipse-sisu-maven-plugin-java_0.3.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libeclipse-sisu-maven-plugin-java"]
+]
+depends: [
+  "libmaven-common-artifact-filters-java" {>= "3.3.2"}
+  "libmaven3-core-java" {>= "3.8.7"}
+  "libplexus-utils2-java" {>= "2.x"}
+  "libsisu-inject-java" {>= "0.3.4"}
+  "libslf4j-java" {>= "1.7.32"}
+]
+extra-source "libeclipse-sisu-maven-plugin-java_0.3.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sisu-mojos/libeclipse-sisu-maven-plugin-java_0.3.5-1_all.deb"
+}

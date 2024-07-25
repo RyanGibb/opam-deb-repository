@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ucimf-chewing_0.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ucimf-chewing"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libchewing3" {>= "0.3.4"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "ucimf-chewing_0.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ucimf-chewing/ucimf-chewing_0.3-3_amd64.deb"
+}

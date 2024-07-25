@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-haproxy-exporter_0.9.0+git20180917+ds-1+b20_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-haproxy-exporter"]
+]
+depends: [
+  "libc6" {>= "2.3.2"}
+]
+extra-source "prometheus-haproxy-exporter_0.9.0+git20180917+ds-1+b20_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-haproxy-exporter/prometheus-haproxy-exporter_0.9.0+git20180917+ds-1+b20_amd64.deb"
+}

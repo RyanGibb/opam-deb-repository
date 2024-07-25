@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypt-blowfish-perl_2.14-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypt-blowfish-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libcrypt-blowfish-perl_2.14-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcrypt-blowfish-perl/libcrypt-blowfish-perl_2.14-3+b1_amd64.deb"
+}

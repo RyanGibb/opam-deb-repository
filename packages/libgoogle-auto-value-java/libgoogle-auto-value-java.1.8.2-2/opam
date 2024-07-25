@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgoogle-auto-value-java_1.8.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgoogle-auto-value-java"]
+]
+depends: [
+  "liberror-prone-java"
+  "libescapevelocity-java"
+  "libgoogle-auto-common-java"
+  "libgoogle-auto-service-java" {>= "1.0.1"}
+  "libguava-java"
+  "libjavapoet-java"
+]
+extra-source "libgoogle-auto-value-java_1.8.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/google-auto-value-java/libgoogle-auto-value-java_1.8.2-2_all.deb"
+}

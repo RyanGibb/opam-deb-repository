@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmps-fortran0_3.2.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmps-fortran0"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libmps3" {>= "3.1.8"}
+]
+extra-source "libmps-fortran0_3.2.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpsolve/libmps-fortran0_3.2.1-2+b1_amd64.deb"
+}

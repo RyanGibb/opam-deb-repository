@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i w1retap-mongo_1.4.4-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r w1retap-mongo"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmongo-client0" {>= "0.1.6"}
+  "libxml2" {>= "2.6.27"}
+]
+extra-source "w1retap-mongo_1.4.4-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/w1retap/w1retap-mongo_1.4.4-3+b1_amd64.deb"
+}

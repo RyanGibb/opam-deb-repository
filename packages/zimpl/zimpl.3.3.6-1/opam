@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zimpl_3.3.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zimpl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgmp10"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "zimpl_3.3.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zimpl/zimpl_3.3.6-1_amd64.deb"
+}

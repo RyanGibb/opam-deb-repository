@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvirt-daemon-driver-vbox_7.0.0-3+deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvirt-daemon-driver-vbox"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libvirt-daemon" {= "7.0.0-3+deb11u2"}
+  "libvirt0" {= "7.0.0-3+deb11u2"}
+  "libxml2" {>= "2.9.2+really2.9.1+dfsg1-0.2"}
+]
+extra-source "libvirt-daemon-driver-vbox_7.0.0-3+deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvirt/libvirt-daemon-driver-vbox_7.0.0-3+deb11u2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-countries_3.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-countries"]
+]
+depends: [
+  "ruby-i18n-data" {>= "0.8.0"}
+  "ruby-sixarm-ruby-unaccent" {>= "1.1"}
+  "ruby-unicode-utils" {>= "1.4"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-countries_3.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-countries/ruby-countries_3.0.0-2_all.deb"
+}

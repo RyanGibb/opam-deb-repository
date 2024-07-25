@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-aiohttp-apispec_3.0.0~b2+ds1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-aiohttp-apispec"]
+]
+depends: [
+  "python3-aiohttp" {< "4.0"}
+  "python3-any"
+  "python3-apispec"
+  "python3-jinja2"
+  "python3-webargs"
+]
+extra-source "python3-aiohttp-apispec_3.0.0~b2+ds1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-aiohttp-apispec/python3-aiohttp-apispec_3.0.0~b2+ds1-2_all.deb"
+}

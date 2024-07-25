@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gstreamer1.0-libav_1.22.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gstreamer1.0-libav"]
+]
+depends: [
+  "libavcodec-extra59"
+  "libavfilter-extra8"
+  "libavformat-extra59"
+  "libavutil57" {>= "7-5.0"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.22.0"}
+  "libgstreamer1-0-0" {>= "1.22.0"}
+]
+extra-source "gstreamer1.0-libav_1.22.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gst-libav1.0/gstreamer1.0-libav_1.22.0-2_amd64.deb"
+}

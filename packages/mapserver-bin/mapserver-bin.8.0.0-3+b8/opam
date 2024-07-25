@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mapserver-bin_8.0.0-3+b8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mapserver-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfcgi0ldbl" {>= "2.4.2"}
+  "libmapserver2" {>= "8.0.0"}
+]
+extra-source "mapserver-bin_8.0.0-3+b8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mapserver/mapserver-bin_8.0.0-3+b8_amd64.deb"
+}

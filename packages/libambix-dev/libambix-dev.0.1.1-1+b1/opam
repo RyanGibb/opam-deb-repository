@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libambix-dev_0.1.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libambix-dev"]
+]
+depends: [
+  "libambix0" {< "0.1.1+1~"}
+  "libambix0" {>= "0.1.1-1"}
+]
+extra-source "libambix-dev_0.1.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libambix/libambix-dev_0.1.1-1+b1_amd64.deb"
+}

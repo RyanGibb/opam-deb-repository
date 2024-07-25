@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnma-dev_1.8.30-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnma-dev"]
+]
+depends: [
+  "gir1-2-nma-1-0" {= "1.8.30-1"}
+  "libnm-dev" {>= "1.8"}
+  "libnma0" {= "1.8.30-1"}
+]
+extra-source "libnma-dev_1.8.30-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnma/libnma-dev_1.8.30-1_amd64.deb"
+}

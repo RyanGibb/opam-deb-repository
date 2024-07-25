@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mswatch_1.2.0-2.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mswatch"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libglib2-0-0" {>= "2.12.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "mswatch_1.2.0-2.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mswatch/mswatch_1.2.0-2.2+b1_amd64.deb"
+}

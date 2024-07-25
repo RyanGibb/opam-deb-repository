@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspng0_0.7.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspng0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "zlib1g" {>= "1-1.2.11.dfsg"}
+]
+extra-source "libspng0_0.7.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libspng/libspng0_0.7.3-3_amd64.deb"
+}

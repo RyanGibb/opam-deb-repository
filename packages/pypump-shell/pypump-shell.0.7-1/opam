@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pypump-shell_0.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pypump-shell"]
+]
+depends: [
+  "ipython"
+  "python" {>= "2.7"}
+  "python-pypump" {>= "0.6"}
+]
+extra-source "pypump-shell_0.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pypump/pypump-shell_0.7-1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bootlogd_3.06-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bootlogd"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "sysvinit-utils" {>= "3.05-1"}
+]
+extra-source "bootlogd_3.06-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sysvinit/bootlogd_3.06-4_amd64.deb"
+}

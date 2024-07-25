@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-control_3.2.0-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-control"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "liboctave8"
+  "libslicot0" {>= "5.0+20101122"}
+  "libstdc++6" {>= "5.2"}
+  "octave" {>= "6.1.0"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "octave-control_3.2.0-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave-control/octave-control_3.2.0-5+b1_amd64.deb"
+}

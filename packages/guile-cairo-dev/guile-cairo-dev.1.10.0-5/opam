@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guile-cairo-dev_1.10.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guile-cairo-dev"]
+]
+depends: [
+  "guile-2-2-dev"
+  "guile-cairo" {= "1.10.0-5"}
+  "libcairo2-dev" {>= "1.4.10"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "guile-cairo-dev_1.10.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guile-cairo/guile-cairo-dev_1.10.0-5_amd64.deb"
+}

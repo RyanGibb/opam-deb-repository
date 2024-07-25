@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-maps_43.5-2~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-maps"]
+]
+depends: [
+  "geoclue-2-0" {>= "2.0"}
+  "gir1-2-adw-1"
+  "gir1-2-clutter-1-0"
+  "gir1-2-cogl-1-0"
+  "gir1-2-gdkpixbuf-2-0"
+  "gir1-2-geoclue-2-0"
+  "gir1-2-geocodeglib-2-0"
+  "gir1-2-glib-2-0" {>= "1.41"}
+  "gir1-2-gtk-4-0"
+  "gir1-2-gtkclutter-1-0"
+  "gir1-2-gweather-4-0" {>= "4.1"}
+  "gir1-2-handy-1" {>= "1.5.0"}
+  "gir1-2-pango-1-0"
+  "gir1-2-rest-1-0" {>= "0.9.1"}
+  "gir1-2-secret-1"
+  "gir1-2-shumate-1-0" {>= "1.0.1"}
+  "gir1-2-soup-3-0"
+  "gir1-2-webkit2-4-1"
+  "gjs" {>= "1.66.0"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.66.0"}
+  "libglib2-0-bin" {>= "2.66.0"}
+  "librest-1-0-0" {>= "0.9.1"}
+  "libshumate-1-0-1" {>= "1.0.1"}
+  "libxml2" {>= "2.7.4"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-maps_43.5-2~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-maps/gnome-maps_43.5-2~deb12u1_amd64.deb"
+}

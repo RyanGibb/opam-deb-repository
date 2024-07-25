@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rtpengine_10.5.3.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rtpengine"]
+]
+depends: [
+  "rtpengine-daemon" {>= "10.5.3.5-1"}
+  "rtpengine-iptables" {>= "10.5.3.5-1"}
+  "rtpengine-kernel-dkms" {>= "10.5.3.5-1"}
+  "rtpengine-recording-daemon" {>= "10.5.3.5-1"}
+  "rtpengine-utils" {>= "10.5.3.5-1"}
+]
+conflicts: [
+  "ngcp-rtpengine"
+]
+extra-source "rtpengine_10.5.3.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rtpengine/rtpengine_10.5.3.5-1_all.deb"
+}

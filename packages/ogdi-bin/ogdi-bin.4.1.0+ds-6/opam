@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ogdi-bin_4.1.0+ds-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ogdi-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libogdi4-1" {>= "3.2.0~beta2"}
+  "libtirpc3" {>= "1.0.2"}
+]
+extra-source "ogdi-bin_4.1.0+ds-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ogdi-dfsg/ogdi-bin_4.1.0+ds-6_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rngtools_1.3.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rngtools"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "3.5.0-5"}
+  "r-cran-digest"
+  "r-cran-pkgmaker" {>= "0.20"}
+  "r-cran-stringr"
+]
+extra-source "r-cran-rngtools_1.3.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-rngtools/r-cran-rngtools_1.3.1-2_all.deb"
+}

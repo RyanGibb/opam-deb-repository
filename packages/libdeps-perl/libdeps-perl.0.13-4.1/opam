@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdeps-perl_0.13-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdeps-perl"]
+]
+depends: [
+  "libset-object-perl"
+  "perl-any"
+]
+conflicts: [
+  "graph-includes (<< 0.12)"
+]
+extra-source "libdeps-perl_0.13-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/deps/libdeps-perl_0.13-4.1_all.deb"
+}

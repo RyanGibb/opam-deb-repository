@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uwsgi-plugin-tornado-python3_2.0.21-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uwsgi-plugin-tornado-python3"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "uwsgi-plugin-python3" {= "2.0.21-5.1"}
+]
+extra-source "uwsgi-plugin-tornado-python3_2.0.21-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uwsgi/uwsgi-plugin-tornado-python3_2.0.21-5.1_amd64.deb"
+}

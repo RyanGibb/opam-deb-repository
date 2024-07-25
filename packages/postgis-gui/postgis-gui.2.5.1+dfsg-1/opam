@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgis-gui_2.5.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgis-gui"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.14.0"}
+  "liblwgeom-2-5-0" {>= "2.0.0"}
+  "libpq5"
+]
+extra-source "postgis-gui_2.5.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgis/postgis-gui_2.5.1+dfsg-1_amd64.deb"
+}

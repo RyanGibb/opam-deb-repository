@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-bear_0.8.2+dfsg-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-bear"]
+]
+depends: [
+  ("erlang-base" {>= "1-22.0.7+dfsg"} | "erlang-base-hipe" {>= "1-22.0.7+dfsg"})
+]
+extra-source "erlang-bear_0.8.2+dfsg-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/erlang-bear/erlang-bear_0.8.2+dfsg-2+b1_amd64.deb"
+}

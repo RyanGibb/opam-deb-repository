@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sm-archive_1.7-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sm-archive"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.2.5"}
+  "libgcc1" {>= "1-3.0"}
+  "libmilter1-0-1"
+  "libstdc++6" {>= "5"}
+]
+extra-source "sm-archive_1.7-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sm-archive/sm-archive_1.7-1+b2_amd64.deb"
+}

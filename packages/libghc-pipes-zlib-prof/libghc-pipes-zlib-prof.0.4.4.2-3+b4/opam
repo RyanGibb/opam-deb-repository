@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-pipes-zlib-prof_0.4.4.2-3+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-pipes-zlib-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-pipes-prof"
+  "libghc-pipes-zlib-dev" {= "0.4.4.2-3+b4"}
+  "libghc-streaming-commons-prof"
+]
+extra-source "libghc-pipes-zlib-prof_0.4.4.2-3+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pipes-zlib/libghc-pipes-zlib-prof_0.4.4.2-3+b4_amd64.deb"
+}

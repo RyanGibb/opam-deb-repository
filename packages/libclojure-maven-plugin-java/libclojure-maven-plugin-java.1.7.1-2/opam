@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclojure-maven-plugin-java_1.7.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclojure-maven-plugin-java"]
+]
+depends: [
+  "libcommons-exec-java"
+  "libcommons-io-java" {>= "2.6"}
+  "libcommons-lang-java" {>= "2.6"}
+  "libmaven-plugin-tools-java" {>= "3.5"}
+  "libmaven3-core-java" {>= "3.5.3"}
+  "libplexus-compiler-java" {>= "2.8.4"}
+  "libplexus-utils-java"
+]
+extra-source "libclojure-maven-plugin-java_1.7.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clojure-maven-plugin/libclojure-maven-plugin-java_1.7.1-2_all.deb"
+}

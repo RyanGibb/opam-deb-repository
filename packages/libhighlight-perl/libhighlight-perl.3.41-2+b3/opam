@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhighlight-perl_3.41-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhighlight-perl"]
+]
+depends: [
+  "highlight-common" {= "3.41-2"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.4"}
+  "liblua5-2-0"
+  "libstdc++6" {>= "9"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libhighlight-perl_3.41-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/highlight/libhighlight-perl_3.41-2+b3_amd64.deb"
+}

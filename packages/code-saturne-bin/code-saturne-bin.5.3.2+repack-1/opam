@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i code-saturne-bin_5.3.2+repack-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r code-saturne-bin"]
+]
+depends: [
+  "libblas-dev"
+  "libc6" {>= "2.17"}
+  "libcgns3-3" {>= "3.1.4.2"}
+  "libgfortran5" {>= "8"}
+  "libgomp1" {>= "4.9"}
+  "libhdf5-openmpi-103" {>= "1.8.13"}
+  "libmedc11"
+  "libopenmpi3"
+  "libquadmath0" {>= "4.6"}
+  "libxml2-dev"
+  "python"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "code-saturne-bin_5.3.2+repack-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/code-saturne/code-saturne-bin_5.3.2+repack-1_amd64.deb"
+}

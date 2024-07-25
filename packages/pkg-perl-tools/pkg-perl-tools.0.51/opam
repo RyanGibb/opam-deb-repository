@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pkg-perl-tools_0.51_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pkg-perl-tools"]
+]
+depends: [
+  "curl"
+  "debhelper"
+  "devscripts"
+  "dh-make-perl"
+  "dpkg-dev" {>= "1.17.0"}
+  "git"
+  "git-buildpackage"
+  "libdatetime-perl"
+  "libdpkg-perl"
+  "libgit-repository-perl"
+  "libgitlab-api-v4-perl"
+  "libipc-run-perl"
+  "libjson-xs-perl"
+  "libparse-debianchangelog-perl"
+  "libproc-invokeeditor-perl"
+  "librt-client-rest-perl"
+  "libtry-tiny-perl"
+  "libutf8-all-perl"
+  "lintian" {>= "2.5.28~"}
+  "perl"
+  "pristine-tar"
+  "quilt"
+  ("openssh-client" | "ssh-client")
+]
+extra-source "pkg-perl-tools_0.51_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pkg-perl-tools/pkg-perl-tools_0.51_all.deb"
+}

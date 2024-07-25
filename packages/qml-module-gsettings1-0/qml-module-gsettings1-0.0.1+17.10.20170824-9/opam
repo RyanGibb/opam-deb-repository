@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-gsettings1.0_0.1+17.10.20170824-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-gsettings1.0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgsettings-qt1" {= "0.1+17.10.20170824-9"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5qml5" {>= "5.10.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qml-module-gsettings1.0_0.1+17.10.20170824-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gsettings-qt/qml-module-gsettings1.0_0.1+17.10.20170824-9_amd64.deb"
+}

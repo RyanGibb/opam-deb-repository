@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcontent-hub1_1.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcontent-hub1"]
+]
+depends: [
+  "libapparmor1" {>= "2.8.94"}
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.39.91"}
+  "liblomiri-api0" {>= "0.1.1"}
+  "liblomiri-app-launch0" {>= "0.1.1"}
+  "liblomiri-download-manager-client0" {>= "0.1.0"}
+  "libnotify4" {>= "0.7.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libcontent-hub1_1.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/content-hub/libcontent-hub1_1.0.2-1_amd64.deb"
+}

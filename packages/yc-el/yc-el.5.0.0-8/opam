@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yc-el_5.0.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yc-el"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  ("emacs25-nox" | "emacs25" | "emacs24" | "emacs23" | "emacs21" | "xemacs21-mule" | "xemacs21-mule-canna-wnn" | "xemacs21-gnome-mule-canna-wnn" | "xemacs21-gnome-mule" | "emacs-snapshot")
+]
+extra-source "yc-el_5.0.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yc-el/yc-el_5.0.0-8_amd64.deb"
+}

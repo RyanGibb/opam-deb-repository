@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjnr-ffi-java_2.2.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjnr-ffi-java"]
+]
+depends: [
+  "libasm-java" {>= "9.2"}
+  "libjffi-java" {>= "1.2.7"}
+  "libjnr-x86asm-java"
+]
+extra-source "libjnr-ffi-java_2.2.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jnr-ffi/libjnr-ffi-java_2.2.7-1_all.deb"
+}

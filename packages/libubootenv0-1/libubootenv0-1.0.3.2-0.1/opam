@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libubootenv0.1_0.3.2-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libubootenv0.1"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libubootenv0.1_0.3.2-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libubootenv/libubootenv0.1_0.3.2-0.1_amd64.deb"
+}

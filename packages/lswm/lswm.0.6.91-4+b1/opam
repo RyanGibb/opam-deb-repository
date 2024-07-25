@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lswm_0.6.91-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lswm"]
+]
+depends: [
+  "libbluetooth3" {>= "4.91"}
+  "libc6" {>= "2.34"}
+  "libcwiid1" {>= "0.6.00+svn184"}
+]
+extra-source "lswm_0.6.91-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cwiid/lswm_0.6.91-4+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slingshot_0.9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slingshot"]
+]
+depends: [
+  "fonts-freefont-ttf"
+  "python-any" {>= "2.6.6-7~"}
+  "python-pygame" {>= "1.7.1"}
+]
+extra-source "slingshot_0.9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slingshot/slingshot_0.9-2_all.deb"
+}

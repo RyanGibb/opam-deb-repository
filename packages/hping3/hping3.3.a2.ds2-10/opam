@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hping3_3.a2.ds2-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hping3"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libpcap0-8" {>= "0.9.8"}
+  "libtcl8-6" {>= "8.6.0"}
+]
+extra-source "hping3_3.a2.ds2-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hping3/hping3_3.a2.ds2-10_amd64.deb"
+}

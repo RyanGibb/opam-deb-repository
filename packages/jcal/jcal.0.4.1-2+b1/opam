@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jcal_0.4.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jcal"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libjalali0"
+]
+extra-source "jcal_0.4.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jcal/jcal_0.4.1-2+b1_amd64.deb"
+}

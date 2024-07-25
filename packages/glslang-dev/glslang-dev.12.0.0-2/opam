@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i glslang-dev_12.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r glslang-dev"]
+]
+depends: [
+  "spirv-tools" {>= "2023.1"}
+]
+extra-source "glslang-dev_12.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glslang/glslang-dev_12.0.0-2_amd64.deb"
+}

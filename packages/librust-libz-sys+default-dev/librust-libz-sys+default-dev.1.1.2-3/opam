@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-libz-sys+default-dev_1.1.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-libz-sys+default-dev"]
+]
+depends: [
+  "librust-libc-dev"
+  "librust-libz-sys-dev"
+  "librust-libz-sys-dev" {= "1.1.2-3"}
+]
+extra-source "librust-libz-sys+default-dev_1.1.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-libz-sys/librust-libz-sys+default-dev_1.1.2-3_amd64.deb"
+}

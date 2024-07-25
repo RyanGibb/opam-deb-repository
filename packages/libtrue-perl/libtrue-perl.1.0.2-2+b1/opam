@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrue-perl_1.0.2-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrue-perl"]
+]
+depends: [
+  "libb-hooks-op-annotation-perl"
+  "libb-hooks-op-check-perl" {>= "0.22"}
+  "libc6" {>= "2.2.5"}
+  "libdevel-stacktrace-perl"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libtrue-perl_1.0.2-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtrue-perl/libtrue-perl_1.0.2-2+b1_amd64.deb"
+}

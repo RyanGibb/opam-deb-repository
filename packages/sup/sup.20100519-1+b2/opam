@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sup_20100519-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sup"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libwrap0" {>= "7.6-4~"}
+]
+extra-source "sup_20100519-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sup/sup_20100519-1+b2_amd64.deb"
+}

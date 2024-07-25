@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gringotts_1.2.10-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gringotts"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgringotts2" {>= "1.2.1"}
+  "libgtk2-0-0" {>= "2.12.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpopt0" {>= "1.14"}
+]
+extra-source "gringotts_1.2.10-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gringotts/gringotts_1.2.10-4_amd64.deb"
+}

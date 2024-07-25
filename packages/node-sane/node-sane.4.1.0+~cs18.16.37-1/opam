@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-sane_4.1.0+~cs18.16.37-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-sane"]
+]
+depends: [
+  "node-anymatch"
+  "node-execa"
+  "node-micromatch" {>= "3.1.4"}
+  "node-minimist"
+  "nodejs" {>= "6"}
+]
+extra-source "node-sane_4.1.0+~cs18.16.37-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-sane/node-sane_4.1.0+~cs18.16.37-1_all.deb"
+}

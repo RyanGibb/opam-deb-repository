@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-lldb-6.0_1:6.0.1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-lldb-6.0"]
+]
+depends: [
+  "liblldb-6-0-dev"
+  "python"
+  "python-six"
+]
+conflicts: [
+  "python-lldb-3.8"
+  "python-lldb-3.9"
+  "python-lldb-x.y"
+]
+extra-source "python-lldb-6.0_1:6.0.1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-6.0/python-lldb-6.0_6.0.1-10_amd64.deb"
+}

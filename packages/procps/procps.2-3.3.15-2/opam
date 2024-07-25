@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i procps_2:3.3.15-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r procps"]
+]
+depends: [
+  "init-system-helpers" {>= "1.29~"}
+  "libc6" {>= "2.27"}
+  "libncurses6" {>= "6"}
+  "libncursesw6" {>= "6"}
+  "libprocps7" {>= "2-3.3.15-1"}
+  "libtinfo6" {>= "6"}
+  "lsb-base" {>= "3.0-10"}
+]
+conflicts: [
+  "pgrep (<< 3.3-5)"
+  "w-bassman (<< 1.0-3)"
+]
+extra-source "procps_2:3.3.15-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/procps/procps_3.3.15-2_amd64.deb"
+}

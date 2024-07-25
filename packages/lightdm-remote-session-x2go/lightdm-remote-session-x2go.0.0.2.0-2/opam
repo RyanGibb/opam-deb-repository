@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lightdm-remote-session-x2go_0.0.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lightdm-remote-session-x2go"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpam-x2go" {>= "0.0.2"}
+  "lightdm" {>= "1.3.3-0~"}
+  "pyhoca-cli" {>= "0.2.1.0-0~"}
+  "socat"
+  "zenity"
+]
+extra-source "lightdm-remote-session-x2go_0.0.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lightdm-remote-session-x2go/lightdm-remote-session-x2go_0.0.2.0-2_amd64.deb"
+}

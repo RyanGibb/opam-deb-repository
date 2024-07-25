@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-google-go-github-dev_32.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-google-go-github-dev"]
+]
+depends: [
+  "golang-github-google-go-querystring-dev" {>= "1.0.0~"}
+  "golang-github-puerkitobio-goquery-dev"
+  "golang-github-xlzd-gotp-dev"
+  "golang-golang-x-crypto-dev"
+  "golang-golang-x-oauth2-google-dev"
+  "golang-google-appengine-dev" {>= "1.1.0~"}
+  "mime-support"
+]
+extra-source "golang-github-google-go-github-dev_32.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-google-go-github/golang-github-google-go-github-dev_32.1.0-2_all.deb"
+}

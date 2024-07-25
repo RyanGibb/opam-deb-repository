@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-xmlbuilder_1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-xmlbuilder"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+]
+extra-source "python-xmlbuilder_1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-xmlbuilder/python-xmlbuilder_1.0-1_all.deb"
+}

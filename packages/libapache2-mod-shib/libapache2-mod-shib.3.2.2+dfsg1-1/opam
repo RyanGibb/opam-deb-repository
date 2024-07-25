@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-shib_3.2.2+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-shib"]
+]
+depends: [
+  "apache2-bin"
+  "apache2-bin" {>= "2.4.16"}
+  "libapr1" {>= "1.2.7"}
+  "libaprutil1" {>= "1.2.7+dfsg"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgssapi-krb5-2" {>= "1.6.dfsg.2"}
+  "libshibsp-plugins" {= "3.2.2+dfsg1-1"}
+  "libshibsp10" {>= "3.2.2+dfsg1"}
+  "libstdc++6" {>= "5.2"}
+  "libxerces-c3-2"
+  "libxmltooling10" {>= "3.2.0"}
+  "shibboleth-sp-utils" {= "3.2.2+dfsg1-1"}
+]
+extra-source "libapache2-mod-shib_3.2.2+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shibboleth-sp/libapache2-mod-shib_3.2.2+dfsg1-1_amd64.deb"
+}

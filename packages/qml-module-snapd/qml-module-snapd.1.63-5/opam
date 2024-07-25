@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-snapd_1.63-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-snapd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libsnapd-qt-2-1" {>= "1.58"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "qml-module-snapd_1.63-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snapd-glib/qml-module-snapd_1.63-5_amd64.deb"
+}

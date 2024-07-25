@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i public-inbox_1.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r public-inbox"]
+]
+depends: [
+  "libpublicinbox-perl" {= "1.9.0-1"}
+  "perl-any"
+]
+extra-source "public-inbox_1.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/public-inbox/public-inbox_1.9.0-1_all.deb"
+}

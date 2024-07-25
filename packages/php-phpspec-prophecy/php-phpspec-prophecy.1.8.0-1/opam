@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-phpspec-prophecy_1.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-phpspec-prophecy"]
+]
+depends: [
+  "php-common"
+  "php-doctrine-instantiator" {< "2~~"}
+  "php-doctrine-instantiator" {>= "1.0.2"}
+  "php-phpdocumentor-reflection-docblock"
+  "phpunit-comparator"
+  "phpunit-recursion-context"
+]
+extra-source "php-phpspec-prophecy_1.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-phpspec-prophecy/php-phpspec-prophecy_1.8.0-1_all.deb"
+}

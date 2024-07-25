@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xhtml2ps_1.0b7-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xhtml2ps"]
+]
+depends: [
+  "html2ps" {= "1.0b7-4"}
+  "tk"
+]
+extra-source "xhtml2ps_1.0b7-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/html2ps/xhtml2ps_1.0b7-4_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsoci-dev_3.2.3-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsoci-dev"]
+]
+depends: [
+  "libsoci-core3-2" {= "3.2.3-2+b1"}
+  "libsoci-firebird3-2" {= "3.2.3-2+b1"}
+  "libsoci-mysql3-2" {= "3.2.3-2+b1"}
+  "libsoci-odbc3-2" {= "3.2.3-2+b1"}
+  "libsoci-postgresql3-2" {= "3.2.3-2+b1"}
+  "libsoci-sqlite3-3-2" {= "3.2.3-2+b1"}
+]
+extra-source "libsoci-dev_3.2.3-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/soci/libsoci-dev_3.2.3-2+b1_amd64.deb"
+}

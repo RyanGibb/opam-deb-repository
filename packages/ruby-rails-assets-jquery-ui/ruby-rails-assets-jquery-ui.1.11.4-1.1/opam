@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rails-assets-jquery-ui_1.11.4-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rails-assets-jquery-ui"]
+]
+depends: [
+  "ruby-rails-assets-jquery" {>= "1.6"}
+  ("ruby" | "ruby-interpreter")
+]
+conflicts: [
+  "ruby-jquery-ui-rails (<< 5.0.5-4)"
+]
+extra-source "ruby-rails-assets-jquery-ui_1.11.4-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rails-assets-jquery-ui/ruby-rails-assets-jquery-ui_1.11.4-1.1_all.deb"
+}

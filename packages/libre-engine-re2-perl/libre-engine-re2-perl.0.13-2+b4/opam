@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libre-engine-re2-perl_0.13-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libre-engine-re2-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libre2-5" {>= "20160901"}
+  "libstdc++6" {>= "5.2"}
+  "perl" {>= "5.28.1-3"}
+  "perl-base"
+]
+extra-source "libre-engine-re2-perl_0.13-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libre-engine-re2-perl/libre-engine-re2-perl_0.13-2+b4_amd64.deb"
+}

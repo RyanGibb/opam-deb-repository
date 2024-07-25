@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-text-icu-dev_0.7.0.1-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-text-icu-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libgmp10"
+  "libicu-dev"
+  "libicu67" {>= "67.1-1~"}
+]
+extra-source "libghc-text-icu-dev_0.7.0.1-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-text-icu/libghc-text-icu-dev_0.7.0.1-14_amd64.deb"
+}

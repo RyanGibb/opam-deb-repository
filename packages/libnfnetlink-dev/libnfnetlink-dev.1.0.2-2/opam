@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnfnetlink-dev_1.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnfnetlink-dev"]
+]
+depends: [
+  "libnfnetlink0" {= "1.0.2-2"}
+  "pkg-config"
+]
+extra-source "libnfnetlink-dev_1.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnfnetlink/libnfnetlink-dev_1.0.2-2_amd64.deb"
+}

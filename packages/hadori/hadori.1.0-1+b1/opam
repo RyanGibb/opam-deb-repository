@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hadori_1.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hadori"]
+]
+depends: [
+  "libboost-program-options1-67-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "hadori_1.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hadori/hadori_1.0-1+b1_amd64.deb"
+}

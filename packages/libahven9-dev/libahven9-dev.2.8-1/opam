@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libahven9-dev_2.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libahven9-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-10"
+  "libahven30" {= "2.8-1"}
+]
+extra-source "libahven9-dev_2.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ahven/libahven9-dev_2.8-1_amd64.deb"
+}

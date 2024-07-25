@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clonezilla_5.3.17-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clonezilla"]
+]
+depends: [
+  "bc"
+  "dialog"
+  "drbl" {> "2.30.5-1~"}
+  "e2fsprogs"
+  "file"
+  "gdisk"
+  "pigz"
+  ("fdisk" | "util-linux" {< "2.29.2-3~"})
+]
+extra-source "clonezilla_5.3.17-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clonezilla/clonezilla_5.3.17-2_all.deb"
+}

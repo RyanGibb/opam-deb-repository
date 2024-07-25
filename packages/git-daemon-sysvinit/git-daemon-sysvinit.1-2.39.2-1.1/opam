@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i git-daemon-sysvinit_1:2.39.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r git-daemon-sysvinit"]
+]
+depends: [
+  "adduser"
+  "git" {< "1-2.39.2-."}
+  "git" {> "1-2.39.2"}
+  "sysvinit-utils"
+]
+conflicts: [
+  "git-daemon-run"
+]
+extra-source "git-daemon-sysvinit_1:2.39.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/git/git-daemon-sysvinit_2.39.2-1.1_all.deb"
+}

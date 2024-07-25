@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libchart-gnuplot-perl_0.23-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libchart-gnuplot-perl"]
+]
+depends: [
+  "perl-any"
+  ("gnuplot-nox" | "gnuplot-x11" | "gnuplot-qt")
+]
+extra-source "libchart-gnuplot-perl_0.23-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libchart-gnuplot-perl/libchart-gnuplot-perl_0.23-2_all.deb"
+}

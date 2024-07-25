@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-bundler_1.17.3-3+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-bundler"]
+]
+depends: [
+  "ruby-molinillo" {>= "0.6~"}
+  "ruby-net-http-persistent" {>= "2.7-1"}
+  "ruby-thor" {>= "0.19.4~"}
+  "rubygems-integration"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-bundler_1.17.3-3+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bundler/ruby-bundler_1.17.3-3+deb10u1_all.deb"
+}

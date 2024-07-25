@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmail-spf-xs-perl_1.2.10-7.1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmail-spf-xs-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libspf2-2" {= "1.2.10-7.1~deb10u1"}
+  "libstring-escape-perl"
+  "perl" {>= "5.28.1-6+deb10u1"}
+  "perl-base"
+]
+extra-source "libmail-spf-xs-perl_1.2.10-7.1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libspf2/libmail-spf-xs-perl_1.2.10-7.1~deb10u1_amd64.deb"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gccgo-8-arm-linux-gnueabihf_8.3.0-2cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gccgo-8-arm-linux-gnueabihf"]
+]
+depends: [
+  "gcc-8-arm-linux-gnueabihf" {= "8.3.0-2cross1"}
+  "gcc-8-arm-linux-gnueabihf-base" {= "8.3.0-2cross1"}
+  "libc6" {>= "2.14"}
+  "libc6-dev-armhf-cross" {>= "2.13-5"}
+  "libgmp10" {>= "2-5.0.1~"}
+  "libgo13-armhf-cross" {>= "8"}
+  "libisl19" {>= "0.15"}
+  "libmpc3"
+  "libmpfr6" {>= "3.1.3"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "golang-go (<< 2:1.3.3-1ubuntu2)"
+]
+extra-source "gccgo-8-arm-linux-gnueabihf_8.3.0-2cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross/gccgo-8-arm-linux-gnueabihf_8.3.0-2cross1_amd64.deb"
+}

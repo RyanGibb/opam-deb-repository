@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-qtmir_0.6.1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-qtmir"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgles2"
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgsettings-qt1" {>= "0.1+14.04.20140408"}
+  "liblomiri-app-launch0" {>= "0.0.90"}
+  "liblttng-ust0" {>= "2.5.0"}
+  "libmiral3" {>= "2.0"}
+  "libmirclient9" {>= "1.7"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5qml5"
+  "libqt5qml5" {>= "5.0.2"}
+  "libqtmirserver1" {>= "0.6.1"}
+  "libstdc++6" {>= "5.2"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("libqt5gui5" {>= "5.9.0~beta"} | "libqt5gui5-gles" {>= "5.9.0~beta"})
+  ("libqt5quick5" {>= "5.14.1"} | "libqt5quick5-gles" {>= "5.14.1"})
+  ("qtmir-desktop" {= "0.6.1-7"} | "qtmir-android" {= "0.6.1-7"})
+]
+extra-source "qml-module-qtmir_0.6.1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtmir/qml-module-qtmir_0.6.1-7_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgit2-dev_1.5.1+ds-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgit2-dev"]
+]
+depends: [
+  "libgit2-1-5" {= "1.5.1+ds-1+deb12u1"}
+  "libhttp-parser-dev"
+  "libmbedtls-dev"
+  "libpcre2-dev"
+  "libssh2-1-dev"
+  "zlib1g-dev"
+]
+extra-source "libgit2-dev_1.5.1+ds-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgit2/libgit2-dev_1.5.1+ds-1+deb12u1_amd64.deb"
+}

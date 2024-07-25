@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iipimage-server_1.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iipimage-server"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfcgi0ldbl"
+  "libgcc1" {>= "1-3.0"}
+  "libgomp1" {>= "4.9"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libmemcached11"
+  "libstdc++6" {>= "5.2"}
+  "libtiff5" {>= "4.0.3"}
+  ("libapache2-mod-fcgid" | "lighttpd")
+]
+extra-source "iipimage-server_1.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iipimage/iipimage-server_1.0-3_amd64.deb"
+}

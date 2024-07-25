@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hexchat-plugins_2.14.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hexchat-plugins"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libglib2-0-0" {>= "2.39.4"}
+  "libpci3" {>= "1-3.5.2-1"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "hexchat-plugins_2.14.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hexchat/hexchat-plugins_2.14.2-4_amd64.deb"
+}

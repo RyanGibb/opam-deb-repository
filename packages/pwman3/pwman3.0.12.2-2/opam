@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pwman3_0.12.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pwman3"]
+]
+depends: [
+  "python3-any"
+  "python3-colorama" {>= "0.2.4"}
+  "python3-cryptography"
+  "python3-pkg-resources"
+  "python3-pycryptodome"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "pwman3_0.12.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pwman3/pwman3_0.12.2-2_all.deb"
+}

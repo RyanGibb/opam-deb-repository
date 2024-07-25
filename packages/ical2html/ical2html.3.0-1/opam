@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ical2html_3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ical2html"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libical3" {>= "3.0.0"}
+]
+extra-source "ical2html_3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ical2html/ical2html_3.0-1_amd64.deb"
+}

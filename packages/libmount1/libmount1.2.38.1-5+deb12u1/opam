@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmount1_2.38.1-5+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmount1"]
+]
+depends: [
+  "libblkid1" {>= "2.17.2"}
+  "libc6" {>= "2.34"}
+  "libselinux1" {>= "3.1~"}
+]
+extra-source "libmount1_2.38.1-5+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/util-linux/libmount1_2.38.1-5+deb12u1_amd64.deb"
+}

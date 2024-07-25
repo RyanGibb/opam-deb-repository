@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcb-rnd-export-extra_2.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcb-rnd-export-extra"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "pcb-rnd-core" {= "2.3.1-1"}
+  "pcb-rnd-export" {= "2.3.1-1"}
+]
+extra-source "pcb-rnd-export-extra_2.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcb-rnd/pcb-rnd-export-extra_2.3.1-1_amd64.deb"
+}

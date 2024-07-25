@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-projpred_2.3.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-projpred"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-cran-dplyr"
+  "r-cran-gamm4"
+  "r-cran-ggplot2"
+  "r-cran-lme4"
+  "r-cran-loo" {>= "2.0.0"}
+  "r-cran-magrittr"
+  "r-cran-mass"
+  "r-cran-mgcv"
+  "r-cran-mvtnorm"
+  "r-cran-rcpp"
+  "r-cran-rcpparmadillo"
+  "r-cran-rlang"
+  "r-cran-rstantools" {>= "2.0.0"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "r-cran-projpred_2.3.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-projpred/r-cran-projpred_2.3.0+dfsg-1_amd64.deb"
+}

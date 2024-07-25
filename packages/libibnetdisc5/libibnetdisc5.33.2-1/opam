@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libibnetdisc5_33.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libibnetdisc5"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libibmad5" {>= "1.3.11"}
+  "libibumad3" {>= "1.3.9"}
+]
+extra-source "libibnetdisc5_33.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rdma-core/libibnetdisc5_33.2-1_amd64.deb"
+}

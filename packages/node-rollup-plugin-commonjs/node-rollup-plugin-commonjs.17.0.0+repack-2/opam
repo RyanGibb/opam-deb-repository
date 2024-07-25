@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-rollup-plugin-commonjs_17.0.0+repack-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-rollup-plugin-commonjs"]
+]
+depends: [
+  "node-commondir"
+  "node-estree-walker"
+  "node-glob"
+  "node-is-reference"
+  "node-magic-string" {>= "0.22.4"}
+  "node-resolve" {>= "1.5.0"}
+  "node-rollup-pluginutils" {>= "3.1.0"}
+]
+extra-source "node-rollup-plugin-commonjs_17.0.0+repack-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-rollup-plugin-commonjs/node-rollup-plugin-commonjs_17.0.0+repack-2_all.deb"
+}

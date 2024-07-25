@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mailavenger_0.8.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mailavenger"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libdb5-3"
+  "libgcc1" {>= "1-3.0"}
+  "libpcap0-8" {>= "0.9.8"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "lsb-base"
+  ("postfix" | "default-mta" | "mail-transport-agent")
+]
+extra-source "mailavenger_0.8.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mailavenger/mailavenger_0.8.5-1_amd64.deb"
+}

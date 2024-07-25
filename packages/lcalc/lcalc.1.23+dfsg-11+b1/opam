@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lcalc_1.23+dfsg-11+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lcalc"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libpari-gmp-tls7"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "lcalc_1.23+dfsg-11+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lcalc/lcalc_1.23+dfsg-11+b1_amd64.deb"
+}

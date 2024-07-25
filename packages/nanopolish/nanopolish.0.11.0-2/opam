@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nanopolish_0.11.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nanopolish"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.3.1"}
+  "libgomp1" {>= "4.9"}
+  "libhdf5-103"
+  "libhts2" {>= "1.4.1"}
+  "libstdc++6" {>= "5.2"}
+  "python-any"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "nanopolish_0.11.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nanopolish/nanopolish_0.11.0-2_amd64.deb"
+}

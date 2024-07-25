@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i smem_1.5-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r smem"]
+]
+depends: [
+  "python3-any"
+]
+conflicts: [
+  "secure-delete (<< 3.1-5)"
+]
+extra-source "smem_1.5-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/smem/smem_1.5-1.1_all.deb"
+}

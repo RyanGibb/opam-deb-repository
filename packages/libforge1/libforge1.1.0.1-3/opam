@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libforge1_1.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libforge1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreeimage3"
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc-s1"
+  "libgl1"
+  "libglbinding2"
+  "libglfw3" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libforge1_1.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/forge/libforge1_1.0.1-3_amd64.deb"
+}

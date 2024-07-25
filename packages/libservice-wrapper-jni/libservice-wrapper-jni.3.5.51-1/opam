@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libservice-wrapper-jni_3.5.51-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libservice-wrapper-jni"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  ("default-jre-headless" | "java5-runtime-headless" | "java6-runtime-headless" | "java7-runtime-headless")
+]
+extra-source "libservice-wrapper-jni_3.5.51-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/service-wrapper-java/libservice-wrapper-jni_3.5.51-1_amd64.deb"
+}

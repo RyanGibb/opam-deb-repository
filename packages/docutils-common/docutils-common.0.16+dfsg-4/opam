@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i docutils-common_0.16+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r docutils-common"]
+]
+depends: [
+  "sgml-base" {>= "1.28"}
+  "xml-core" {>= "0.14"}
+]
+extra-source "docutils-common_0.16+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-docutils/docutils-common_0.16+dfsg-4_all.deb"
+}

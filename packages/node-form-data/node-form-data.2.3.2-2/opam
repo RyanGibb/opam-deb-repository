@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-form-data_2.3.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-form-data"]
+]
+depends: [
+  "node-asynckit" {>= "0.4~"}
+  "node-combined-stream" {>= "1.0.6~"}
+  "node-mime-types" {>= "2.1.12~"}
+  "nodejs"
+]
+extra-source "node-form-data_2.3.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-form-data/node-form-data_2.3.2-2_all.deb"
+}

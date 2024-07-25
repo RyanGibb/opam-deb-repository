@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rtpengine-recording-daemon_10.5.3.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rtpengine-recording-daemon"]
+]
+depends: [
+  "libavcodec-extra59"
+  "libavfilter-extra8"
+  "libavformat-extra59"
+  "libavutil57" {>= "7-5.1"}
+  "libbcg729-0" {>= "1.0.0"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.30"}
+  "libmariadb3" {>= "3.0.0"}
+  "libssl3" {>= "3.0.0"}
+  "libswresample4" {>= "7-5.1"}
+  "libsystemd0"
+  "nfs-common"
+  "rtpengine-daemon"
+  ("sysvinit-utils" {>= "3.05-4~"} | "lsb-base" {>= "3.0-6"})
+]
+conflicts: [
+  "ngcp-rtpengine-recording-daemon"
+]
+extra-source "rtpengine-recording-daemon_10.5.3.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rtpengine/rtpengine-recording-daemon_10.5.3.5-1_amd64.deb"
+}

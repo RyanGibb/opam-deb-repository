@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpangomm-2.48-1_2.50.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpangomm-2.48-1"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libcairomm-1-16-1" {>= "1.16.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.33.14"}
+  "libglibmm-2-68-1" {>= "2.74.0"}
+  "libpango-1-0-0" {>= "1.50.3"}
+  "libpangocairo-1-0-0" {>= "1.49.4"}
+  "libsigc++-3-0-0" {>= "2.2.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libpangomm-2.48-1_2.50.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pangomm2.48/libpangomm-2.48-1_2.50.1-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnemo-extension1_5.6.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnemo-extension1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.9.10"}
+  "libpango-1-0-0" {>= "1.14.0"}
+]
+extra-source "libnemo-extension1_5.6.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nemo/libnemo-extension1_5.6.4-1_amd64.deb"
+}

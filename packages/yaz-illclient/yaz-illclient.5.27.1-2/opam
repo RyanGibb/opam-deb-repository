@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yaz-illclient_5.27.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yaz-illclient"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libxml2" {>= "2.6.27"}
+  "libxslt1-1" {>= "1.1.25"}
+  "libyaz5" {>= "5.27.1"}
+]
+extra-source "yaz-illclient_5.27.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yaz/yaz-illclient_5.27.1-2_amd64.deb"
+}

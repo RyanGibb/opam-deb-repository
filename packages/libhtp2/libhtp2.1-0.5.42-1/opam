@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhtp2_1:0.5.42-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhtp2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libhtp2_1:0.5.42-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhtp/libhtp2_0.5.42-1_amd64.deb"
+}

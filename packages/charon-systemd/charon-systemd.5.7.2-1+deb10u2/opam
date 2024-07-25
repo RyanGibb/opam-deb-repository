@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i charon-systemd_5.7.2-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r charon-systemd"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libstrongswan" {= "5.7.2-1+deb10u2"}
+  "libsystemd0"
+  "strongswan-libcharon"
+  "strongswan-swanctl"
+]
+extra-source "charon-systemd_5.7.2-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/strongswan/charon-systemd_5.7.2-1+deb10u2_amd64.deb"
+}

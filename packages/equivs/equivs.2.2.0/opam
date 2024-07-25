@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i equivs_2.2.0_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r equivs"]
+]
+depends: [
+  "debhelper"
+  "dpkg-dev"
+  "fakeroot"
+  "make"
+  "perl"
+]
+extra-source "equivs_2.2.0_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/equivs/equivs_2.2.0_all.deb"
+}

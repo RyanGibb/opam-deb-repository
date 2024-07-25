@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-containerd-go-cni-dev_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-containerd-go-cni-dev"]
+]
+depends: [
+  "golang-github-pkg-errors-dev"
+  ("golang-github-appc-cni-dev" {>= "0.7.1~"} | "golang-github-containernetworking-cni-dev" {>= "0.7.1~"})
+]
+extra-source "golang-github-containerd-go-cni-dev_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-containerd-go-cni/golang-github-containerd-go-cni-dev_1.0.1-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iperf_2.0.14a+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iperf"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "iperf_2.0.14a+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iperf/iperf_2.0.14a+dfsg1-1_amd64.deb"
+}

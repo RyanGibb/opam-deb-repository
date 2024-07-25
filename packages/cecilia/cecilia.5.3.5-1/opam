@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cecilia_5.3.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cecilia"]
+]
+depends: [
+  "python3" {>= "3.5"}
+  "python3-any" {>= "3.5~"}
+  "python3-numpy"
+  "python3-pyo" {>= "0.8.7"}
+  "python3-wxgtk4-0"
+]
+extra-source "cecilia_5.3.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cecilia/cecilia_5.3.5-1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnuradio-rds1_3.8.0.0.f1c584a-3+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnuradio-rds1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnuradio-pmt3-8-2" {>= "3.8.2.0"}
+  "libgnuradio-runtime3-8-2" {>= "3.8.2.0"}
+  "liblog4cpp5v5" {>= "1.1.3"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libgnuradio-rds1_3.8.0.0.f1c584a-3+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gr-rds/libgnuradio-rds1_3.8.0.0.f1c584a-3+b5_amd64.deb"
+}

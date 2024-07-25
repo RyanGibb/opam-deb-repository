@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cryfs_0.10.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cryfs"]
+]
+depends: [
+  "fuse"
+  "libc6" {>= "2.29"}
+  "libcurl4" {>= "7.16.2"}
+  "libfuse2" {>= "2.8"}
+  "libgcc-s1" {>= "3.3"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "cryfs_0.10.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cryfs/cryfs_0.10.2-5_amd64.deb"
+}

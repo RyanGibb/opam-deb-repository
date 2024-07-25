@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i esekeyd_1.2.7-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r esekeyd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "esekeyd_1.2.7-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/esekeyd/esekeyd_1.2.7-1+b2_amd64.deb"
+}

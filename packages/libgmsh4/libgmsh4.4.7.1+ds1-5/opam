@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgmsh4_4.7.1+ds1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgmsh4"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfltk-gl1-3" {>= "1.3.0"}
+  "libfltk-images1-3"
+  "libfltk1-3" {>= "1.3.4"}
+  "libgcc-s1" {>= "4.0"}
+  "libgl1"
+  "libgl2ps1-4" {>= "1.4.2+dfsg1"}
+  "libgmp10"
+  "libgomp1" {>= "6"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libmetis5" {>= "5.1.0.dfsg"}
+  "libocct-data-exchange-7-5" {>= "7.5.1+dfsg1"}
+  "libocct-foundation-7-5" {>= "7.5.1+dfsg1"}
+  "libocct-modeling-algorithms-7-5" {>= "7.5.1+dfsg1"}
+  "libocct-modeling-data-7-5" {>= "7.5.1+dfsg1"}
+  "libocct-ocaf-7-5" {>= "7.5.1+dfsg1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "9"}
+  "libvoro++1" {>= "0.4.6"}
+  "libx11-6"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "libgmsh4_4.7.1+ds1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gmsh/libgmsh4_4.7.1+ds1-5_amd64.deb"
+}

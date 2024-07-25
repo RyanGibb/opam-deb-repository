@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcre2-16-0_10.42-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcre2-16-0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+]
+extra-source "libpcre2-16-0_10.42-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcre2/libpcre2-16-0_10.42-1_amd64.deb"
+}

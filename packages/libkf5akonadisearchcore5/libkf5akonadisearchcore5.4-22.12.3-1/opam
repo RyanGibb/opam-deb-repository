@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5akonadisearchcore5_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5akonadisearchcore5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libkf5akonadisearch-data" {>= "4-22.12.3-1"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libkf5akonadisearchcore5_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/akonadi-search/libkf5akonadisearchcore5_22.12.3-1_amd64.deb"
+}

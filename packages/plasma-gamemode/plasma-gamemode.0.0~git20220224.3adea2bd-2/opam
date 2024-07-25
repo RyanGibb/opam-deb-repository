@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plasma-gamemode_0.0~git20220224.3adea2bd-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plasma-gamemode"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.15.0~"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  "plasma-desktop"
+]
+extra-source "plasma-gamemode_0.0~git20220224.3adea2bd-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plasma-gamemode/plasma-gamemode_0.0~git20220224.3adea2bd-2_amd64.deb"
+}

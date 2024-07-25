@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-ghub+_0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-ghub+"]
+]
+depends: [
+  "elpa-apiwrap" {>= "0.5"}
+  "elpa-ghub" {>= "2.0"}
+  "emacsen-common"
+]
+extra-source "elpa-ghub+_0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/ghub-plus-el/elpa-ghub+_0.3-2_all.deb"
+}

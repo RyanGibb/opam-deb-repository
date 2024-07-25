@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-gi_3.42.2-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-gi"]
+]
+depends: [
+  "gir1-2-glib-2-0" {>= "1.48.0"}
+  "libc6" {>= "2.14"}
+  "libffi8" {>= "3.4"}
+  "libgirepository-1-0-1"
+  "libgirepository-1-0-1" {>= "1.62.0-4~"}
+  "libglib2-0-0" {>= "2.67.3"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-gi_3.42.2-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pygobject/python3-gi_3.42.2-3+b1_amd64.deb"
+}

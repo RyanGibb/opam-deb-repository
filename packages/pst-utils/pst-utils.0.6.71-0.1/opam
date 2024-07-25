@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pst-utils_0.6.71-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pst-utils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgd3" {>= "2.1.0~alpha~"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgsf-1-114" {>= "1.14.8"}
+  "libpst4" {>= "0.6.71"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "pst-utils_0.6.71-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpst/pst-utils_0.6.71-0.1_amd64.deb"
+}

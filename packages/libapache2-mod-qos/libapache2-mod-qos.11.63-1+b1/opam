@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-qos_11.63-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-qos"]
+]
+depends: [
+  "apache2-bin"
+  "apache2-bin" {>= "2.4.16"}
+  "libapr1" {>= "1.2.7"}
+  "libaprutil1" {>= "1.2.7+dfsg"}
+  "libc6" {>= "2.14"}
+  "libpcre3"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libssl1-1" {>= "1.1.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libapache2-mod-qos_11.63-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapache2-mod-qos/libapache2-mod-qos_11.63-1+b1_amd64.deb"
+}

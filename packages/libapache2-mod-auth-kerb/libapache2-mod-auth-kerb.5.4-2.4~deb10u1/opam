@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-auth-kerb_5.4-2.4~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-auth-kerb"]
+]
+depends: [
+  "apache2-bin"
+  "apache2-bin" {>= "2.4.16"}
+  "krb5-config"
+  "libc6" {>= "2.8"}
+  "libcom-err2" {>= "1.43.9"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libk5crypto3" {>= "1.6.dfsg.2"}
+  "libkrb5-3" {>= "1.13~alpha1+dfsg"}
+]
+extra-source "libapache2-mod-auth-kerb_5.4-2.4~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapache-mod-auth-kerb/libapache2-mod-auth-kerb_5.4-2.4~deb10u1_amd64.deb"
+}

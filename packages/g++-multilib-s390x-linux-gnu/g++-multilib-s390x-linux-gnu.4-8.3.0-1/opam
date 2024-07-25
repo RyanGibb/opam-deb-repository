@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i g++-multilib-s390x-linux-gnu_4:8.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r g++-multilib-s390x-linux-gnu"]
+]
+depends: [
+  "cpp-s390x-linux-gnu" {= "4-8.3.0-1"}
+  "g++-8-multilib-s390x-linux-gnu" {>= "8.3.0-1~"}
+  "g++-s390x-linux-gnu" {= "4-8.3.0-1"}
+  "gcc-multilib-s390x-linux-gnu" {= "4-8.3.0-1"}
+]
+extra-source "g++-multilib-s390x-linux-gnu_4:8.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults/g++-multilib-s390x-linux-gnu_8.3.0-1_amd64.deb"
+}

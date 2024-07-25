@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libattica0.4_0.4.2-2+b11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libattica0.4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt4-network" {>= "4-4.7"}
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libattica0.4_0.4.2-2+b11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/attica/libattica0.4_0.4.2-2+b11_amd64.deb"
+}

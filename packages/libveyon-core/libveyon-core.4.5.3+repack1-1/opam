@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libveyon-core_4.5.3+repack1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libveyon-core"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqca-qt5-2" {>= "2.1.0+git20141127.0049+15.04"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "4.5"}
+  "libvncclient1" {>= "0.9.13"}
+  "veyon-plugins" {= "4.5.3+repack1-1"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "libveyon-core_4.5.3+repack1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/veyon/libveyon-core_4.5.3+repack1-1_amd64.deb"
+}

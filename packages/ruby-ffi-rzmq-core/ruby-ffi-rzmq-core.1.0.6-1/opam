@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-ffi-rzmq-core_1.0.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-ffi-rzmq-core"]
+]
+depends: [
+  "libzmq5"
+  "ruby-ffi" {>= "1.9.3debian-1+b1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-ffi-rzmq-core_1.0.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-ffi-rzmq-core/ruby-ffi-rzmq-core_1.0.6-1_all.deb"
+}

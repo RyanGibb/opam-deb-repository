@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-django-downloadview_1.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-django-downloadview"]
+]
+depends: [
+  "python3-any" {>= "3.4~"}
+  "python3-django"
+  "python3-pkg-resources"
+  "python3-requests"
+  "python3-six"
+]
+extra-source "python3-django-downloadview_1.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/django-downloadview/python3-django-downloadview_1.9-1_all.deb"
+}

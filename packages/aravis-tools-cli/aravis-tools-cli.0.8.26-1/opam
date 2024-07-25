@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aravis-tools-cli_0.8.26-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aravis-tools-cli"]
+]
+depends: [
+  "libaravis-0-8-0" {= "0.8.26-1"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.31.8"}
+]
+extra-source "aravis-tools-cli_0.8.26-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aravis/aravis-tools-cli_0.8.26-1_amd64.deb"
+}

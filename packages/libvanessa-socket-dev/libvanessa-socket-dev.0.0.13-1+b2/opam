@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvanessa-socket-dev_0.0.13-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvanessa-socket-dev"]
+]
+depends: [
+  "libvanessa-logger-dev" {>= "0.0.8"}
+  "libvanessa-socket2" {= "0.0.13-1+b2"}
+]
+extra-source "libvanessa-socket-dev_0.0.13-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vanessa-socket/libvanessa-socket-dev_0.0.13-1+b2_amd64.deb"
+}

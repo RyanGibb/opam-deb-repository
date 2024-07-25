@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-autoprefixer-rails_10.1.0.0+dfsg1+~cs14.1.12-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-autoprefixer-rails"]
+]
+depends: [
+  "ruby-execjs" {>= "2.7~"}
+  "ruby-json"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-autoprefixer-rails_10.1.0.0+dfsg1+~cs14.1.12-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-autoprefixer/ruby-autoprefixer-rails_10.1.0.0+dfsg1+~cs14.1.12-5_all.deb"
+}

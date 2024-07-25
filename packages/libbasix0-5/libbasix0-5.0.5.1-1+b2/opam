@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbasix0.5_0.5.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbasix0.5"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libbasix0.5_0.5.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fenics-basix/libbasix0.5_0.5.1-1+b2_amd64.deb"
+}

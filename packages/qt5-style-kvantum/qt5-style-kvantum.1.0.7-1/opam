@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt5-style-kvantum_1.0.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt5-style-kvantum"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libkf5windowsystem5" {>= "5.83.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libqt5x11extras5" {>= "5.6.0"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  ("libqt5gui5" {>= "5.15.1"} | "libqt5gui5-gles" {>= "5.15.1"})
+  ("qt5-style-kvantum-themes" | "qt5-style-kvantum-theme")
+]
+extra-source "qt5-style-kvantum_1.0.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt5-style-kvantum/qt5-style-kvantum_1.0.7-1_amd64.deb"
+}

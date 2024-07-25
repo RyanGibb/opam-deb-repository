@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-zope.testrunner_4.4.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-zope.testrunner"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-pkg-resources"
+  "python-six"
+  "python-zope-exceptions"
+  "python-zope-interface"
+]
+extra-source "python-zope.testrunner_4.4.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zope.testrunner/python-zope.testrunner_4.4.9-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libx32objc-7-dev_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libx32objc-7-dev"]
+]
+depends: [
+  "gcc-7-base" {= "7.4.0-6"}
+  "libx32gcc-7-dev" {= "7.4.0-6"}
+  "libx32objc4" {>= "7.4.0-6"}
+]
+extra-source "libx32objc-7-dev_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/libx32objc-7-dev_7.4.0-6_amd64.deb"
+}

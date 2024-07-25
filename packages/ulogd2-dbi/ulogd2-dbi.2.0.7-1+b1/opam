@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ulogd2-dbi_2.0.7-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ulogd2-dbi"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdbi1" {>= "0.8.4"}
+  "ulogd2" {= "2.0.7-1+b1"}
+]
+extra-source "ulogd2-dbi_2.0.7-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ulogd2/ulogd2-dbi_2.0.7-1+b1_amd64.deb"
+}

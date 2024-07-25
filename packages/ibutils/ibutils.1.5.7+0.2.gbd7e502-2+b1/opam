@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibutils_1.5.7+0.2.gbd7e502-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibutils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libibdm1"
+  "libibumad3" {>= "1.3.9"}
+  "libopensm8" {>= "3.3.21"}
+  "libosmcomp4" {>= "3.3.21"}
+  "libosmvendor4" {>= "3.3.19"}
+  "libstdc++6" {>= "5.2"}
+  "libtcl8-6" {>= "8.6.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "ibutils_1.5.7+0.2.gbd7e502-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibutils/ibutils_1.5.7+0.2.gbd7e502-2+b1_amd64.deb"
+}

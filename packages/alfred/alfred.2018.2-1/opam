@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i alfred_2018.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r alfred"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libcap2" {>= "1-2.10"}
+  "libgps23" {>= "3.3"}
+  "libnl-3-200" {>= "3.2.7"}
+  "libnl-genl-3-200" {>= "3.2.7"}
+]
+extra-source "alfred_2018.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alfred/alfred_2018.2-1_amd64.deb"
+}

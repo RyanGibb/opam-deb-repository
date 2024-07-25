@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gpsd-clients_3.17-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gpsd-clients"]
+]
+depends: [
+  "libbluetooth3" {>= "4.91"}
+  "libc6" {>= "2.27"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libgps23" {= "3.17-7"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+  "python-any"
+  "python-cairo"
+  "python-gps"
+  "python-gtk2"
+]
+conflicts: [
+  "gps"
+]
+extra-source "gpsd-clients_3.17-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gpsd/gpsd-clients_3.17-7_amd64.deb"
+}

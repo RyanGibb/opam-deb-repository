@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblangtag-gobject0_0.6.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblangtag-gobject0"]
+]
+depends: [
+  "libglib2-0-0" {>= "2.14.0"}
+  "liblangtag-common" {= "0.6.3-2"}
+  "liblangtag1" {>= "0.6.0"}
+]
+extra-source "liblangtag-gobject0_0.6.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblangtag/liblangtag-gobject0_0.6.3-2_amd64.deb"
+}

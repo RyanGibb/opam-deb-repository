@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i collada-urdf-tools_1.12.13-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r collada-urdf-tools"]
+]
+depends: [
+  "libassimp5" {>= "5.0.1~ds0"}
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libcollada-parser1d" {>= "1.12.13"}
+  "libcollada-urdf1d" {>= "1.12.13"}
+  "libgcc-s1" {>= "3.0"}
+  "librosconsole3d" {>= "1.14.3"}
+  "libstdc++6" {>= "5.2"}
+  "liburdf1d" {>= "1.13.2"}
+  "liburdfdom-model"
+  "liburdfdom-world"
+]
+extra-source "collada-urdf-tools_1.12.13-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-collada-urdf/collada-urdf-tools_1.12.13-3_amd64.deb"
+}

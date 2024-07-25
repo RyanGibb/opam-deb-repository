@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i flamp_2.2.07-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r flamp"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfltk-images1-3"
+  "libfltk1-3" {>= "1.3.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libx11-6"
+  "sensible-utils"
+]
+extra-source "flamp_2.2.07-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flamp/flamp_2.2.07-1+b1_amd64.deb"
+}

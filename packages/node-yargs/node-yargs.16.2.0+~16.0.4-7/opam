@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-yargs_16.2.0+~16.0.4-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-yargs"]
+]
+depends: [
+  "node-browserslist"
+  "node-cliui"
+  "node-escalade"
+  "node-get-caller-file"
+  "node-require-directory"
+  "node-string-width"
+  "node-y18n"
+  "node-yargs-parser" {>= "20.2.2~"}
+]
+extra-source "node-yargs_16.2.0+~16.0.4-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-yargs/node-yargs_16.2.0+~16.0.4-7_all.deb"
+}

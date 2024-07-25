@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmojo-rabbitmq-client-perl_0.3.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmojo-rabbitmq-client-perl"]
+]
+depends: [
+  "libfile-sharedir-perl"
+  "libmojolicious-perl" {>= "7.53"}
+  "libnet-amqp-perl"
+  "perl-any"
+  ("perl" {>= "5.19.5"} | "libscalar-list-utils-perl" {>= "1-1.33"})
+]
+extra-source "libmojo-rabbitmq-client-perl_0.3.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmojo-rabbitmq-client-perl/libmojo-rabbitmq-client-perl_0.3.1-2_all.deb"
+}

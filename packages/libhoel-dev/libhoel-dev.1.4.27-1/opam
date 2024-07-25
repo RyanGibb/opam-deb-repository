@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhoel-dev_1.4.27-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhoel-dev"]
+]
+depends: [
+  "default-libmysqlclient-dev"
+  "libhoel1-4" {= "1.4.27-1"}
+  "libjansson-dev"
+  "liborcania-dev" {>= "2.2.2"}
+  "libpq-dev"
+  "libsqlite3-dev"
+  "libyder-dev"
+]
+extra-source "libhoel-dev_1.4.27-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hoel/libhoel-dev_1.4.27-1_amd64.deb"
+}

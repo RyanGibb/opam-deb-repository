@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgoocanvas-2.0-9_2.0.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgoocanvas-2.0-9"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.10"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.41.1"}
+  "libgoocanvas-2-0-common" {= "2.0.4-1"}
+  "libgtk-3-0" {>= "3.19.12"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+]
+extra-source "libgoocanvas-2.0-9_2.0.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/goocanvas-2.0/libgoocanvas-2.0-9_2.0.4-1+b1_amd64.deb"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rollup_2.38.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rollup"]
+]
+depends: [
+  "node-ansi-escapes"
+  "node-colorette"
+  "node-date-time"
+  "node-debbundle-acorn"
+  "node-hash-js"
+  "node-is-reference"
+  "node-locate-character" {>= "2.0.5-1~"}
+  "node-magic-string" {>= "0.25.4-3~"}
+  "node-pretty-bytes"
+  "node-pretty-ms" {>= "6.0.1"}
+  "node-require-relative"
+  "node-rollup-pluginutils" {>= "2.8.2-2~"}
+  "node-signal-exit"
+  "node-source-map"
+  "node-sourcemap-codec"
+  "node-yargs-parser"
+  "nodejs" {>= "10"}
+]
+extra-source "rollup_2.38.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-rollup/rollup_2.38.4-1_all.deb"
+}

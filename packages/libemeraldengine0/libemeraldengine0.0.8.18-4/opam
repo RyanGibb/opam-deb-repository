@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libemeraldengine0_0.8.18-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libemeraldengine0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgtk-3-0" {>= "3.3.16"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libx11-6"
+]
+extra-source "libemeraldengine0_0.8.18-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emerald/libemeraldengine0_0.8.18-4_amd64.deb"
+}

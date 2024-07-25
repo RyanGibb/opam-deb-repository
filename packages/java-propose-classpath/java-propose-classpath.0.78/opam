@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i java-propose-classpath_0.78_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r java-propose-classpath"]
+]
+depends: [
+  "fastjar"
+  "javahelper" {= "0.78"}
+]
+extra-source "java-propose-classpath_0.78_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/javatools/java-propose-classpath_0.78_all.deb"
+}

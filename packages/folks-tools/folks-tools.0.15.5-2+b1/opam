@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i folks-tools_0.15.5-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r folks-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfolks26" {>= "0.11.1"}
+  "libgee-0-8-2" {>= "0.8.4"}
+  "libglib2-0-0" {>= "2.58"}
+  "libreadline8" {>= "6.0"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "folks-tools_0.15.5-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/folks/folks-tools_0.15.5-2+b1_amd64.deb"
+}

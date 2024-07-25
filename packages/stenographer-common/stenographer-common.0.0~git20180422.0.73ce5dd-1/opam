@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stenographer-common_0.0~git20180422.0.73ce5dd-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stenographer-common"]
+]
+depends: [
+  "adduser"
+  "jq"
+  "libcap2-bin"
+  "openssl"
+]
+extra-source "stenographer-common_0.0~git20180422.0.73ce5dd-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stenographer/stenographer-common_0.0~git20180422.0.73ce5dd-1_all.deb"
+}

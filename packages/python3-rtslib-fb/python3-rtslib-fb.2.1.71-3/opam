@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-rtslib-fb_2.1.71-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-rtslib-fb"]
+]
+depends: [
+  "lsb-base"
+  "python3-any"
+  "python3-pyudev"
+  "python3-six"
+]
+conflicts: [
+  "lio-utils"
+]
+extra-source "python3-rtslib-fb_2.1.71-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-rtslib-fb/python3-rtslib-fb_2.1.71-3_all.deb"
+}

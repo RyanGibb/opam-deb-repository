@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tclspice_39.3+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tclspice"]
+]
+depends: [
+  "blt"
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "4.5"}
+  "ngspice" {= "39.3+ds-1"}
+  "tcl8-6"
+  "tk8-6"
+  "tk8-6-blt2-5" {>= "2.5.3"}
+]
+extra-source "tclspice_39.3+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ngspice/tclspice_39.3+ds-1_amd64.deb"
+}

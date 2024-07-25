@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-premailer_1.8.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-premailer"]
+]
+depends: [
+  "ruby-css-parser" {>= "1.3.6"}
+  "ruby-htmlentities" {>= "4.0.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-premailer_1.8.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-premailer/ruby-premailer_1.8.6-2_all.deb"
+}

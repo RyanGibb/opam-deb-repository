@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i virgl-server_0.8.2-5+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r virgl-server"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libvirglrenderer1" {= "0.8.2-5+deb11u1"}
+]
+extra-source "virgl-server_0.8.2-5+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/virglrenderer/virgl-server_0.8.2-5+deb11u1_amd64.deb"
+}

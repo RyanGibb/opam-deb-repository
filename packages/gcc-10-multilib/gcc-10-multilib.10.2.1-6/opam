@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-10-multilib_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-10-multilib"]
+]
+depends: [
+  "gcc-10" {= "10.2.1-6"}
+  "gcc-10-base" {= "10.2.1-6"}
+  "lib32gcc-10-dev" {= "10.2.1-6"}
+  "libc6-dev-i386" {>= "2.30-1~"}
+  "libc6-dev-x32" {>= "2.30-1~"}
+  "libx32gcc-10-dev" {= "10.2.1-6"}
+]
+extra-source "gcc-10-multilib_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/gcc-10-multilib_10.2.1-6_amd64.deb"
+}

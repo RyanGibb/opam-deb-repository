@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i avr-libc_1:2.0.0+Atmel3.6.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r avr-libc"]
+]
+depends: [
+  "binutils-avr" {>= "2.26.20160125+Atmel3.6.2-1"}
+  "gcc-avr" {>= "5.4.0+Atmel3.6.2-1"}
+]
+extra-source "avr-libc_1:2.0.0+Atmel3.6.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/avr-libc/avr-libc_2.0.0+Atmel3.6.2-1.1_all.deb"
+}

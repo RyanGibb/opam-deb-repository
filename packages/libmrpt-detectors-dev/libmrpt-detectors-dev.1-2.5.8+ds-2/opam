@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmrpt-detectors-dev_1:2.5.8+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmrpt-detectors-dev"]
+]
+depends: [
+  "libmrpt-common-dev"
+  "libmrpt-detectors2-5" {= "1-2.5.8+ds-2"}
+  "libmrpt-gui-dev"
+  "libmrpt-slam-dev"
+]
+extra-source "libmrpt-detectors-dev_1:2.5.8+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrpt/libmrpt-detectors-dev_2.5.8+ds-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i screen_4.8.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r screen"]
+]
+depends: [
+  "libc6" {>= "2.16"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libtinfo6" {>= "6"}
+  "libutempter0" {>= "1.1.5"}
+]
+extra-source "screen_4.8.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/screen/screen_4.8.0-6_amd64.deb"
+}

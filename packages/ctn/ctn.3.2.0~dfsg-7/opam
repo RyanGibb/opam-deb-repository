@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ctn_3.2.0~dfsg-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ctn"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libfl2" {>= "2.5.33"}
+  "libmariadb3" {>= "3.0.0"}
+  "libx11-6"
+  "libxaw7"
+  "libxt6"
+]
+extra-source "ctn_3.2.0~dfsg-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ctn/ctn_3.2.0~dfsg-7_amd64.deb"
+}

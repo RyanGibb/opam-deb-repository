@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx5-libthai_5.0.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx5-libthai"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libfcitx5config6" {>= "5.0.19"}
+  "libfcitx5core7" {>= "5.0.19"}
+  "libfcitx5utils2" {>= "5.0.19"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libthai0" {>= "0.1.19"}
+]
+extra-source "fcitx5-libthai_5.0.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx5-libthai/fcitx5-libthai_5.0.10-1_amd64.deb"
+}

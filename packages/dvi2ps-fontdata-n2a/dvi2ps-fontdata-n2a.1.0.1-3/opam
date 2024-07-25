@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dvi2ps-fontdata-n2a_1.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dvi2ps-fontdata-n2a"]
+]
+depends: [
+  "dvi2dvi"
+  "dvi2ps-fontdata-ja"
+]
+conflicts: [
+  "dvi2ps (<< 3.2j)"
+  "fontdata-j"
+  "fontdata-n2a"
+]
+extra-source "dvi2ps-fontdata-n2a_1.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dvi2ps-fontdata/dvi2ps-fontdata-n2a_1.0.1-3_all.deb"
+}

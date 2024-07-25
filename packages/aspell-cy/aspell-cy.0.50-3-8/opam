@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aspell-cy_0.50-3-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aspell-cy"]
+]
+depends: [
+  "aspell"
+  "dictionaries-common" {>= "1.23~"}
+]
+extra-source "aspell-cy_0.50-3-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aspell-cy/aspell-cy_0.50-3-8_all.deb"
+}

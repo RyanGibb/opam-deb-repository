@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dssi-example-plugins_1.1.1~dfsg0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dssi-example-plugins"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc1" {>= "1-3.0"}
+  "liblo7" {>= "0.26~repack"}
+  "libqtcore4" {>= "4-4.5.3"}
+  "libqtgui4" {>= "4-4.5.3"}
+  "libsamplerate0" {>= "0.1.7"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+]
+extra-source "dssi-example-plugins_1.1.1~dfsg0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dssi/dssi-example-plugins_1.1.1~dfsg0-1+b2_amd64.deb"
+}

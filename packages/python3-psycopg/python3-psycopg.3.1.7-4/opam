@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-psycopg_3.1.7-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-psycopg"]
+]
+depends: [
+  "libpq5"
+  "python3-any"
+  "python3-typing-extensions"
+]
+conflicts: [
+  "python3-psycopg3"
+]
+extra-source "python3-psycopg_3.1.7-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/psycopg3/python3-psycopg_3.1.7-4_all.deb"
+}

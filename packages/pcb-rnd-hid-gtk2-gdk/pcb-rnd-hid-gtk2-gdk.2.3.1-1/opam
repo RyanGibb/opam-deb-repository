@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcb-rnd-hid-gtk2-gdk_2.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcb-rnd-hid-gtk2-gdk"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.8.0"}
+  "pcb-rnd-core" {= "2.3.1-1"}
+  "pcb-rnd-lib-gtk" {= "2.3.1-1"}
+]
+extra-source "pcb-rnd-hid-gtk2-gdk_2.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcb-rnd/pcb-rnd-hid-gtk2-gdk_2.3.1-1_amd64.deb"
+}

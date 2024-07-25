@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclang-common-7-dev_1:7.0.1-8+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclang-common-7-dev"]
+]
+depends: [
+  "lib32gcc1" {>= "1-4.2"}
+  "lib32stdc++6" {>= "4.1.1"}
+  "libc6" {>= "2.17"}
+  "libc6-i386" {>= "2.17"}
+  "libgcc1" {>= "1-3.3"}
+  "libllvm7" {= "1-7.0.1-8+deb10u2"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libclang-common-7-dev_1:7.0.1-8+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-7/libclang-common-7-dev_7.0.1-8+deb10u2_amd64.deb"
+}

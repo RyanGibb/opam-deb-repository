@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-dialog_3.5.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-dialog"]
+]
+depends: [
+  "dialog"
+  "libjs-sphinxdoc" {>= "4.3"}
+  "python3-any"
+]
+extra-source "python3-dialog_3.5.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pythondialog/python3-dialog_3.5.1-3_all.deb"
+}

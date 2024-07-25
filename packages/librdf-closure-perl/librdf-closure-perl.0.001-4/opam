@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librdf-closure-perl_0.001-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librdf-closure-perl"]
+]
+depends: [
+  "libdatetime-format-strptime-perl"
+  "libdatetime-format-xsd-perl"
+  "libdatetime-perl"
+  "libdatetime-timezone-perl"
+  "liberror-perl"
+  "libnamespace-clean-perl"
+  "libnumber-fraction-perl"
+  "libossp-uuid-perl"
+  "libparse-recdescent-perl"
+  "librdf-trine-perl"
+  "liburi-perl"
+  "libxml-libxml-perl"
+  "perl"
+  ("libmodule-pluggable-perl" | "perl" {< "5.17.0"})
+]
+extra-source "librdf-closure-perl_0.001-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librdf-closure-perl/librdf-closure-perl_0.001-4_all.deb"
+}

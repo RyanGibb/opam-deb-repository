@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtbbmalloc2_2021.8.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtbbmalloc2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libstdc++6" {>= "4.9"}
+]
+extra-source "libtbbmalloc2_2021.8.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/onetbb/libtbbmalloc2_2021.8.0-2_amd64.deb"
+}

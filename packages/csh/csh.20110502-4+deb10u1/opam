@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i csh_20110502-4+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r csh"]
+]
+depends: [
+  "libbsd0" {>= "0.2.0"}
+  "libc6" {>= "2.27"}
+]
+extra-source "csh_20110502-4+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/csh/csh_20110502-4+deb10u1_amd64.deb"
+}

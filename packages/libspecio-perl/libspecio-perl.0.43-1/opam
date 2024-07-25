@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspecio-perl_0.43-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspecio-perl"]
+]
+depends: [
+  "libdevel-stacktrace-perl"
+  "libeval-closure-perl"
+  "libmodule-runtime-perl"
+  "libmro-compat-perl"
+  "librole-tiny-perl" {>= "1.003003"}
+  "libsub-quote-perl"
+  "perl"
+  ("perl" {>= "5.19.5"} | "libscalar-list-utils-perl" {>= "1-1.33"})
+]
+extra-source "libspecio-perl_0.43-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libspecio-perl/libspecio-perl_0.43-1_all.deb"
+}

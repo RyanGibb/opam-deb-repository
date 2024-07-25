@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsoci-postgresql3.2_3.2.3-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsoci-postgresql3.2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libpq5"
+  "libsoci-core3-2"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libsoci-postgresql3.2_3.2.3-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/soci/libsoci-postgresql3.2_3.2.3-2+b1_amd64.deb"
+}

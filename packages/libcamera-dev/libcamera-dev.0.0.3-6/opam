@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcamera-dev_0.0.3-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcamera-dev"]
+]
+depends: [
+  "libcamera0-0-3" {= "0.0.3-6"}
+]
+extra-source "libcamera-dev_0.0.3-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcamera/libcamera-dev_0.0.3-6_amd64.deb"
+}

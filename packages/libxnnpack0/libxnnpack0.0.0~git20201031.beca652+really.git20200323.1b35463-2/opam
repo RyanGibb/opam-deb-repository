@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxnnpack0_0.0~git20201031.beca652+really.git20200323.1b35463-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxnnpack0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcpuinfo0" {>= "0.0~git20200422.a1e0b95-2~"}
+  "libpthreadpool0" {>= "0.0~git20200423.6acde9c"}
+]
+extra-source "libxnnpack0_0.0~git20201031.beca652+really.git20200323.1b35463-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xnnpack/libxnnpack0_0.0~git20201031.beca652+really.git20200323.1b35463-2_amd64.deb"
+}

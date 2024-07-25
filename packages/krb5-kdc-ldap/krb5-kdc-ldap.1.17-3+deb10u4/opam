@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i krb5-kdc-ldap_1.17-3+deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r krb5-kdc-ldap"]
+]
+depends: [
+  "krb5-kdc" {= "1.17-3+deb10u4"}
+  "libc6" {>= "2.14"}
+  "libcom-err2" {>= "1.43.9"}
+  "libgssapi-krb5-2" {>= "1.6.dfsg.2"}
+  "libgssrpc4" {>= "1.6.dfsg.2"}
+  "libk5crypto3" {>= "1.7+dfsg"}
+  "libkadm5srv-mit11" {>= "1.15~beta1"}
+  "libkdb5-9"
+  "libkeyutils1" {>= "1.4"}
+  "libkrb5-3" {>= "1.14+dfsg"}
+  "libkrb5support0" {>= "1.17"}
+  "libldap-2-4-2" {>= "2.4.7"}
+]
+extra-source "krb5-kdc-ldap_1.17-3+deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/krb5/krb5-kdc-ldap_1.17-3+deb10u4_amd64.deb"
+}

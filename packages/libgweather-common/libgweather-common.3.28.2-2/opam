@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgweather-common_3.28.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgweather-common"]
+]
+depends: [
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "libgweather-common_3.28.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgweather/libgweather-common_3.28.2-2_all.deb"
+}

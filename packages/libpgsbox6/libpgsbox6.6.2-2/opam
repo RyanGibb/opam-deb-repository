@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpgsbox6_6.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpgsbox6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgfortran5" {>= "8"}
+  "libpgplot0"
+  "libquadmath0" {>= "4.6"}
+  "libwcs6" {>= "4.8.2"}
+]
+extra-source "libpgsbox6_6.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wcslib/libpgsbox6_6.2-2_amd64.deb"
+}

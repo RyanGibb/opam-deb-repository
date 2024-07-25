@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dovecot-imapd_1:2.3.4.1-5+deb10u6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dovecot-imapd"]
+]
+depends: [
+  "dovecot-core" {= "1-2.3.4.1-5+deb10u6"}
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "liblz4-1" {>= "0.0~r130"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "ucf" {>= "2.0020"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "dovecot-imapd_1:2.3.4.1-5+deb10u6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dovecot/dovecot-imapd_2.3.4.1-5+deb10u6_amd64.deb"
+}

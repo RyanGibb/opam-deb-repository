@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i umockdev_0.15.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r umockdev"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libglib2-0-0" {>= "2.32.0"}
+  "libumockdev0" {>= "0.8"}
+]
+extra-source "umockdev_0.15.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/umockdev/umockdev_0.15.4-1_amd64.deb"
+}

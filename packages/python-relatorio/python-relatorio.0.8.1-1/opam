@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-relatorio_0.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-relatorio"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-genshi"
+  "python-lxml"
+  "python-magic" {>= "2-0.4.15"}
+  "python-pkg-resources"
+]
+extra-source "python-relatorio_0.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/relatorio/python-relatorio_0.8.1-1_all.deb"
+}

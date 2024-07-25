@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i chirp_1:20221106+py3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r chirp"]
+]
+depends: [
+  "python3-any"
+  "python3-future"
+  "python3-requests"
+  "python3-serial"
+  "python3-six"
+  "python3-wxgtk4-0"
+]
+extra-source "chirp_1:20221106+py3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chirp/chirp_20221106+py3-1_all.deb"
+}

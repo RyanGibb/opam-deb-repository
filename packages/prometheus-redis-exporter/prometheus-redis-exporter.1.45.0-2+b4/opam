@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-redis-exporter_1.45.0-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-redis-exporter"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+]
+extra-source "prometheus-redis-exporter_1.45.0-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-redis-exporter/prometheus-redis-exporter_1.45.0-2+b4_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-otr-activerecord_2.1.1-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-otr-activerecord"]
+]
+depends: [
+  "ruby-activerecord" {< "2-7.1"}
+  "ruby-activerecord" {>= "2-4.0"}
+  "ruby-hashie-forbidden-attributes" {>= "0.1"}
+]
+extra-source "ruby-otr-activerecord_2.1.1-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-otr-activerecord/ruby-otr-activerecord_2.1.1-0.1_all.deb"
+}

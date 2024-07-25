@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-freedb-perl_0.10-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-freedb-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcddb-file-perl"
+  "libmoo-perl"
+  "perl"
+  "perl-base"
+]
+extra-source "libnet-freedb-perl_0.10-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-freedb-perl/libnet-freedb-perl_0.10-2_amd64.deb"
+}

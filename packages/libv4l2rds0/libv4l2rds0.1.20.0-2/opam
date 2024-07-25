@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libv4l2rds0_1.20.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libv4l2rds0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+extra-source "libv4l2rds0_1.20.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/v4l-utils/libv4l2rds0_1.20.0-2_amd64.deb"
+}

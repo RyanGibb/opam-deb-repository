@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-edit-distance-prof_0.2.2.1-12+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-edit-distance-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-edit-distance-dev" {= "0.2.2.1-12+b3"}
+  "libghc-random-prof"
+]
+extra-source "libghc-edit-distance-prof_0.2.2.1-12+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-edit-distance/libghc-edit-distance-prof_0.2.2.1-12+b3_amd64.deb"
+}

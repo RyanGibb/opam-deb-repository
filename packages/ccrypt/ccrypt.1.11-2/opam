@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ccrypt_1.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ccrypt"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcrypt1" {>= "1-4.1.0"}
+]
+extra-source "ccrypt_1.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ccrypt/ccrypt_1.11-2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnuradio-hpsdr1.2.1_1.2.1-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnuradio-hpsdr1.2.1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnuradio-pmt3-8-2" {>= "3.8.2.0"}
+  "libgnuradio-runtime3-8-2" {>= "3.8.2.0"}
+  "liblog4cpp5v5" {>= "1.1.3"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libgnuradio-hpsdr1.2.1_1.2.1-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gr-hpsdr/libgnuradio-hpsdr1.2.1_1.2.1-2+b3_amd64.deb"
+}

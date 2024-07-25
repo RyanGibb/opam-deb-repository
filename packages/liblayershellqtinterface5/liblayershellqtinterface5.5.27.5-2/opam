@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblayershellqtinterface5_5.27.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblayershellqtinterface5"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5waylandclient5"
+  "libqt5waylandclient5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  "libwayland-client0" {>= "1.20.0"}
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+]
+extra-source "liblayershellqtinterface5_5.27.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/layer-shell-qt/liblayershellqtinterface5_5.27.5-2_amd64.deb"
+}

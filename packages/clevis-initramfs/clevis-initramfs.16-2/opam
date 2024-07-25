@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clevis-initramfs_16-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clevis-initramfs"]
+]
+depends: [
+  "clevis-luks" {= "16-2"}
+  "initramfs-tools"
+]
+extra-source "clevis-initramfs_16-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clevis/clevis-initramfs_16-2_amd64.deb"
+}

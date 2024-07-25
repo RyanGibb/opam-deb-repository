@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prewikka_5.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prewikka"]
+]
+depends: [
+  "dbconfig-common"
+  "fonts-font-awesome"
+  "libjs-jquery"
+  "libjs-jquery-ui"
+  "libjs-underscore"
+  "python3-any"
+  "python3-babel"
+  "python3-croniter" {>= "0.3.6"}
+  "python3-dateutil"
+  "python3-gevent"
+  "python3-lark"
+  "python3-mako" {>= "0.8.1"}
+  "python3-passlib"
+  "python3-pkg-resources"
+  "python3-prelude" {>= "5.2.0"}
+  "python3-preludedb" {>= "5.2.0"}
+  "python3-requests"
+  "python3-tz"
+  "python3-voluptuous"
+  "python3-werkzeug"
+  "python3-yaml"
+  "ucf"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("libpreludedb7-mysql" | "libpreludedb7-pgsql")
+]
+extra-source "prewikka_5.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prewikka/prewikka_5.2.0-1_all.deb"
+}

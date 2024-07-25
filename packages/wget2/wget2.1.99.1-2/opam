@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wget2_1.99.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wget2"]
+]
+depends: [
+  "libassuan0" {>= "2.0.1"}
+  "libbrotli1" {>= "0.6.0"}
+  "libbz2-1-0"
+  "libc6" {>= "2.27"}
+  "libgnutls30" {>= "3.5.0"}
+  "libgpg-error0" {>= "1.14"}
+  "libgpgme11" {>= "1.2.0"}
+  "libidn2-0" {>= "0.6"}
+  "liblzma5" {>= "5.1.1alpha+20110809"}
+  "libnghttp2-14" {>= "1.3.0"}
+  "libpcre2-8-0" {>= "10.31"}
+  "libpsl5" {>= "0.13.0"}
+  "libwget0"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "wget2_1.99.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wget2/wget2_1.99.1-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librocksdb-dev_5.17.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librocksdb-dev"]
+]
+depends: [
+  "librocksdb5-17" {= "5.17.2-3"}
+]
+conflicts: [
+  "librocksdb5.7"
+]
+extra-source "librocksdb-dev_5.17.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rocksdb/librocksdb-dev_5.17.2-3_amd64.deb"
+}

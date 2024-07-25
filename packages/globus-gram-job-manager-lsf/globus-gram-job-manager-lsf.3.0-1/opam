@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i globus-gram-job-manager-lsf_3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r globus-gram-job-manager-lsf"]
+]
+depends: [
+  "globus-gass-cache-program" {>= "5"}
+  "globus-gatekeeper" {>= "9"}
+  "globus-gram-job-manager" {>= "13"}
+  "globus-gram-job-manager-scripts" {>= "4"}
+  "perl"
+]
+conflicts: [
+  "globus-gram-job-manager-setup-lsf (<< 2.6)"
+  "globus-gram-job-manager-setup-lsf-doc (<< 2.6)"
+]
+extra-source "globus-gram-job-manager-lsf_3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gram-job-manager-lsf/globus-gram-job-manager-lsf_3.0-1_all.deb"
+}

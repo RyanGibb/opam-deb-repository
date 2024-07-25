@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i umps3_3.0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r umps3"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libelf1" {>= "0.144"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libsigc++-2-0-0v5" {>= "2.8.0"}
+  "libstdc++6" {>= "11"}
+  ("libqt5gui5" {>= "5.11.0~rc1"} | "libqt5gui5-gles" {>= "5.11.0~rc1"})
+]
+extra-source "umps3_3.0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/umps3/umps3_3.0.5-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i taggrepper_0.05-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r taggrepper"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libflac8" {>= "1.3.0"}
+  "libid3tag0" {>= "0.15.1b"}
+  "libmagic1" {>= "5.12"}
+  "libpcre3"
+  "libvorbisfile3" {>= "1.2.0"}
+]
+extra-source "taggrepper_0.05-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/taggrepper/taggrepper_0.05-5_amd64.deb"
+}

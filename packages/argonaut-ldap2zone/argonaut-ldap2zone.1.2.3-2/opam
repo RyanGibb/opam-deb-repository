@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i argonaut-ldap2zone_1.2.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r argonaut-ldap2zone"]
+]
+depends: [
+  "argonaut-common"
+  "bind9utils"
+  "libdns-zoneparse-perl" {>= "1.10"}
+]
+conflicts: [
+  "ldap2zone"
+]
+extra-source "argonaut-ldap2zone_1.2.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/argonaut/argonaut-ldap2zone_1.2.3-2_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmodule-install-perl_1.19-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmodule-install-perl"]
+]
+depends: [
+  "libfile-remove-perl"
+  "libmodule-scandeps-perl" {>= "1.09"}
+  "libyaml-tiny-perl"
+  "perl"
+  ("perl" {>= "5.19.9"} | "libparse-cpan-meta-perl" {>= "1.4413"})
+]
+extra-source "libmodule-install-perl_1.19-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmodule-install-perl/libmodule-install-perl_1.19-1_all.deb"
+}

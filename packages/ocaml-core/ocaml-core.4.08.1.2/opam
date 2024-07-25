@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ocaml-core_4.08.1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ocaml-core"]
+]
+depends: [
+  "ocaml"
+  "ocaml-dune"
+  "ocaml-findlib"
+  "ocaml-interp"
+]
+extra-source "ocaml-core_4.08.1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-ocaml/ocaml-core_4.08.1.2_all.deb"
+}

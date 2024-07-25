@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-miekg-dns-dev_1.1.50-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-miekg-dns-dev"]
+]
+depends: [
+  "golang-golang-x-net-dev" {>= "1-0.0+git20210726.c6fcb2d"}
+  "golang-golang-x-sync-dev"
+  "golang-golang-x-sys-dev"
+]
+extra-source "golang-github-miekg-dns-dev_1.1.50-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-miekg-dns/golang-github-miekg-dns-dev_1.1.50-2_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpdl-vectorvalued-perl_1.0.9-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpdl-vectorvalued-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "pdl"
+  "pdl" {>= "1-2.019-5+b1"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libpdl-vectorvalued-perl_1.0.9-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpdl-vectorvalued-perl/libpdl-vectorvalued-perl_1.0.9-1+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-concurrent-extra-prof_0.7.0.12-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-concurrent-extra-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-concurrent-extra-dev" {= "0.7.0.12-2+b1"}
+  "libghc-unbounded-delays-prof"
+]
+extra-source "libghc-concurrent-extra-prof_0.7.0.12-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-concurrent-extra/libghc-concurrent-extra-prof_0.7.0.12-2+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ontospy_1.9.8.3~dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ontospy"]
+]
+depends: [
+  "python3-any"
+  "python3-ontospy" {= "1.9.8.3~dfsg-2"}
+]
+extra-source "ontospy_1.9.8.3~dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ontospy/ontospy_1.9.8.3~dfsg-2_all.deb"
+}

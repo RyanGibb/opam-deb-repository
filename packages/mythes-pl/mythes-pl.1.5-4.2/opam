@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mythes-pl_1.5-4.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mythes-pl"]
+]
+depends: [
+  ("dictionaries-common" {>= "0.10"} | "openoffice-org-updatedicts")
+  ("libreoffice-core" | "openoffice-org-core" {>= "1.9"})
+]
+conflicts: [
+  "openoffice.org (<< 1.9)"
+]
+extra-source "mythes-pl_1.5-4.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openoffice.org-thesaurus-pl/mythes-pl_1.5-4.2_all.deb"
+}

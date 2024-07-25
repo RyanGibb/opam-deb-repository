@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmltooling-dev_3.0.4-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmltooling-dev"]
+]
+depends: [
+  "libboost-dev"
+  "libcurl4-openssl-dev"
+  "liblog4shib-dev" {>= "2~"}
+  "libssl-dev"
+  "libxerces-c-dev"
+  "libxml-security-c-dev" {>= "2~"}
+  "libxmltooling8" {= "3.0.4-1+deb10u1"}
+]
+extra-source "libxmltooling-dev_3.0.4-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmltooling/libxmltooling-dev_3.0.4-1+deb10u1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsysprof-4-dev_3.46.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsysprof-4-dev"]
+]
+depends: [
+  "libadwaita-1-dev"
+  "libglib2-0-dev" {>= "2.73.0"}
+  "libgtk-4-dev" {>= "4.6"}
+  "libjson-glib-dev"
+  "libpolkit-gobject-1-dev" {>= "0.105"}
+  "libsysprof-4" {= "3.46.0-4"}
+  "libsysprof-ui-5" {= "3.46.0-4"}
+]
+extra-source "libsysprof-4-dev_3.46.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sysprof/libsysprof-4-dev_3.46.0-4_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libedit2_3.1-20191231-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libedit2"]
+]
+depends: [
+  "libbsd0" {>= "0.1.3"}
+  "libc6" {>= "2.14"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "libedit2_3.1-20191231-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libedit/libedit2_3.1-20191231-2+b1_amd64.deb"
+}

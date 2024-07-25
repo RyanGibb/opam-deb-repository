@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmovit8_1.6.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmovit8"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libepoxy0" {>= "1.0"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libmovit1"
+  "libmovit2"
+  "libmovit2v5"
+  "libmovit3"
+  "libmovit4"
+  "libmovit5"
+  "libmovit6"
+  "libmovit7"
+]
+extra-source "libmovit8_1.6.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/movit/libmovit8_1.6.3-5_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nuspell_5.1.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nuspell"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libicu72" {>= "72.1~rc-1~"}
+  "libnuspell5" {>= "5.1.2"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "nuspell_5.1.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nuspell/nuspell_5.1.2-1+b1_amd64.deb"
+}

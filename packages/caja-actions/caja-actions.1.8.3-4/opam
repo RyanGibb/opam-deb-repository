@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i caja-actions_1.8.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r caja-actions"]
+]
+depends: [
+  "caja-actions-common" {= "1.8.3-4"}
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.4"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libcaja-extension1" {>= "1.6.3"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.41.1"}
+  "libgtk-3-0" {>= "3.9.12"}
+  "libgtop-2-0-11" {>= "2.22.3"}
+  "libice6" {>= "1-1.0.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libsm6"
+  "libuuid1" {>= "2.16"}
+  "libxml2" {>= "2.6.27"}
+]
+extra-source "caja-actions_1.8.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/caja-actions/caja-actions_1.8.3-4_amd64.deb"
+}

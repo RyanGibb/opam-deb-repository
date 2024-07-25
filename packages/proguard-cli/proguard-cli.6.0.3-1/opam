@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i proguard-cli_6.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r proguard-cli"]
+]
+depends: [
+  "libproguard-java"
+  ("default-jre-headless" | "java5-runtime-headless")
+]
+extra-source "proguard-cli_6.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/proguard/proguard-cli_6.0.3-1_all.deb"
+}

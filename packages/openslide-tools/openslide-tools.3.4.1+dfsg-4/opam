@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openslide-tools_3.4.1+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openslide-tools"]
+]
+depends: [
+  "libc6" {>= "2.11"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libopenslide0"
+  "libpng16-16" {>= "1.6.2-1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "openslide-tools_3.4.1+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openslide/openslide-tools_3.4.1+dfsg-4_amd64.deb"
+}

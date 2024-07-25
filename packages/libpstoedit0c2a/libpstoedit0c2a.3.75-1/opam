@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpstoedit0c2a_3.75-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpstoedit0c2a"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libemf1" {>= "1.0.11"}
+  "libgcc-s1"
+  "libmagick++-6-q16-8"
+  "libplot2c2"
+  "libstdc++6" {>= "5.2"}
+  "libzip4" {>= "0.10"}
+]
+conflicts: [
+  "libpstoedit0"
+  "libpstoedit0c2"
+]
+extra-source "libpstoedit0c2a_3.75-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pstoedit/libpstoedit0c2a_3.75-1_amd64.deb"
+}

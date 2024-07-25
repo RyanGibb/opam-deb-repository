@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cmark-gfm-dev_0.2.5+ds1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cmark-gfm-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libcmark-gfm-dev"
+  "libcmark-gfm-extensions-dev"
+  "libcmark-gfm-extensions0-29-0-gfm-6" {>= "0.29.0.gfm.6"}
+  "libcmark-gfm0-29-0-gfm-6" {>= "0.29.0.gfm.6"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-cmark-gfm-dev_0.2.5+ds1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cmark-gfm/libghc-cmark-gfm-dev_0.2.5+ds1-1+b1_amd64.deb"
+}

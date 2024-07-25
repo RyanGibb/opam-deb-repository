@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-futurist_2.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-futurist"]
+]
+depends: [
+  "python3-any"
+  "python3-greenlet"
+  "python3-pbr"
+  "python3-six" {>= "1.10.0"}
+]
+extra-source "python3-futurist_2.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-futurist/python3-futurist_2.3.0-2_all.deb"
+}

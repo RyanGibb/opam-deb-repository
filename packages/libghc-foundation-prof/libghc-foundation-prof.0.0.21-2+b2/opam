@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-foundation-prof_0.0.21-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-foundation-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-basement-prof"
+  "libghc-foundation-dev" {= "0.0.21-2+b2"}
+]
+extra-source "libghc-foundation-prof_0.0.21-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-foundation/libghc-foundation-prof_0.0.21-2+b2_amd64.deb"
+}

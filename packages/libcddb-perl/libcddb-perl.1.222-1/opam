@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcddb-perl_1.222-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcddb-perl"]
+]
+depends: [
+  "libhttp-message-perl"
+  "libwww-perl" {>= "6.05"}
+  "perl"
+]
+extra-source "libcddb-perl_1.222-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcddb-perl/libcddb-perl_1.222-1_all.deb"
+}

@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mame_0.228+dfsg.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mame"]
+]
+depends: [
+  "libc6" {>= "2.30"}
+  "libexpat1" {>= "2.0.1"}
+  "libflac8" {>= "1.3.0"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libgcc-s1" {>= "3.4"}
+  "libgl1"
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "liblua5-3-0"
+  "libportaudio2" {>= "19+svn20101113"}
+  "libportmidi0"
+  "libpugixml1v5" {>= "1.7"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libsdl2-ttf-2-0-0" {>= "2.0.14"}
+  "libsqlite3-0" {>= "3.6.11"}
+  "libstdc++6" {>= "9"}
+  "libutf8proc2" {>= "1.3"}
+  "libx11-6"
+  "libxi6"
+  "mame-data" {= "0.228+dfsg.1-1"}
+  "zlib1g" {>= "1-1.2.2"}
+  ("libqt5gui5" {>= "5.11.0~rc1"} | "libqt5gui5-gles" {>= "5.11.0~rc1"})
+]
+extra-source "mame_0.228+dfsg.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mame/mame_0.228+dfsg.1-1_amd64.deb"
+}

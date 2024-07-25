@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i flow-tools_1:0.68-12.5+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r flow-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpq5"
+  "libwrap0" {>= "7.6-4~"}
+  "python"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "flow-tools_1:0.68-12.5+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flow-tools/flow-tools_0.68-12.5+b3_amd64.deb"
+}

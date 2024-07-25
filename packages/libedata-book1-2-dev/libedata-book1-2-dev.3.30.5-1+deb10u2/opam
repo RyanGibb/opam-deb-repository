@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libedata-book1.2-dev_3.30.5-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libedata-book1.2-dev"]
+]
+depends: [
+  "libebackend1-2-dev" {= "3.30.5-1+deb10u2"}
+  "libebook-contacts1-2-dev" {= "3.30.5-1+deb10u2"}
+  "libedata-book-1-2-25" {= "3.30.5-1+deb10u2"}
+  "libglib2-0-dev" {>= "2.40"}
+]
+extra-source "libedata-book1.2-dev_3.30.5-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/evolution-data-server/libedata-book1.2-dev_3.30.5-1+deb10u2_amd64.deb"
+}

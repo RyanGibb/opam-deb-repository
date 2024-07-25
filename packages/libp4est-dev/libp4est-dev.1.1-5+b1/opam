@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libp4est-dev_1.1-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libp4est-dev"]
+]
+depends: [
+  "libp4est-1-1" {= "1.1-5+b1"}
+  "libp4est-sc-1-1" {= "1.1-5+b1"}
+]
+extra-source "libp4est-dev_1.1-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/p4est/libp4est-dev_1.1-5+b1_amd64.deb"
+}

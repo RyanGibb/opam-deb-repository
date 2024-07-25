@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopensmtpd0_0.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopensmtpd0"]
+]
+depends: [
+  "libc6" {>= "2.26"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+]
+extra-source "libopensmtpd0_0.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libopensmtpd/libopensmtpd0_0.7-2_amd64.deb"
+}

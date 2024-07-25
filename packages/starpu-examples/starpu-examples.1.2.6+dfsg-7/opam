@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i starpu-examples_1.2.6+dfsg-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r starpu-examples"]
+]
+depends: [
+  "freeglut3"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgfortran5" {>= "8"}
+  "libgl1"
+  "libgomp1" {>= "4.9"}
+  "libhwloc5" {>= "1.11.12"}
+  "libice6" {>= "1-1.0.0"}
+  "libopenmpi3"
+  "libquadmath0" {>= "4.6"}
+  "libsm6"
+  "libstdc++6" {>= "4.1.1"}
+  "libx11-6"
+  ("libblas3" | "libblas-so-3")
+  ("libglu1-mesa" | "libglu1")
+  ("libsocl-1-2-0" {>= "1.2.3+dfsg~"} | "libsocl-any-1-2-0")
+  ("libstarpu-1-2-5" {>= "1.2.5+dfsg~"} | "libstarpu-any-1-2-5")
+  ("libstarpumpi-1-2-3" {>= "1.2.4+dfsg~"} | "libstarpu-anympi-1-2-3")
+  ("ocl-icd-libopencl1" | "libopencl1")
+]
+conflicts: [
+  "starpu-contrib-examples"
+]
+extra-source "starpu-examples_1.2.6+dfsg-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/starpu/starpu-examples_1.2.6+dfsg-7_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsqliteodbc_0.9996-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsqliteodbc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsqlite3-0" {>= "3.7.14"}
+]
+extra-source "libsqliteodbc_0.9996-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sqliteodbc/libsqliteodbc_0.9996-1_amd64.deb"
+}

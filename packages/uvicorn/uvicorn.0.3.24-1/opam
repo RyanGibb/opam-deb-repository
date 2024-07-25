@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uvicorn_0.3.24-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uvicorn"]
+]
+depends: [
+  "python3-any"
+  "python3-uvicorn" {= "0.3.24-1"}
+]
+extra-source "uvicorn_0.3.24-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-uvicorn/uvicorn_0.3.24-1_all.deb"
+}

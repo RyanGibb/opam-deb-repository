@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx5-module-emoji_5.0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx5-module-emoji"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "libfcitx5core7" {>= "5.0.5"}
+  "libfcitx5utils2" {>= "5.0.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "unicode-cldr-core"
+]
+extra-source "fcitx5-module-emoji_5.0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx5/fcitx5-module-emoji_5.0.5-1_amd64.deb"
+}

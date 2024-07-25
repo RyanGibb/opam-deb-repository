@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i feynmf_1.08-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r feynmf"]
+]
+depends: [
+  "perl-any"
+  "tex-common" {>= "6.13"}
+  "texlive-extra-utils"
+  "texlive-font-utils"
+  "texlive-latex-base"
+]
+extra-source "feynmf_1.08-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/feynmf/feynmf_1.08-14_all.deb"
+}

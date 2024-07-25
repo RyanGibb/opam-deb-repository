@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i icheck_0.9.7-6.3+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r icheck"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "icheck_0.9.7-6.3+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/icheck/icheck_0.9.7-6.3+b4_amd64.deb"
+}

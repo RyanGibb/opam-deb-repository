@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i subtle_0.11.3224-xi-2.2+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r subtle"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libruby2-7" {>= "2.7.0-4"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+  "libxinerama1"
+  "libxpm4"
+  "libxrandr2" {>= "2-1.2.99.2"}
+  "ruby"
+  "ruby-minitar"
+]
+extra-source "subtle_0.11.3224-xi-2.2+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/subtle/subtle_0.11.3224-xi-2.2+b5_amd64.deb"
+}

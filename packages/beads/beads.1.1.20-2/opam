@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i beads_1.1.20-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r beads"]
+]
+depends: [
+  "imagemagick"
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libodsstream0"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libqt5core5a" {>= "5.14.1"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.2.0~alpha1"}
+  "libstdc++6" {>= "5.2"}
+  "libtiff5" {>= "4.0.3"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+]
+extra-source "beads_1.1.20-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/beads/beads_1.1.20-2_amd64.deb"
+}

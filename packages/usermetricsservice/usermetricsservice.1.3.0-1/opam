@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i usermetricsservice_1.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r usermetricsservice"]
+]
+depends: [
+  "adduser"
+  "dbus"
+  "libapparmor1" {>= "2.7.0~beta1+bzr1772"}
+  "libc6" {>= "2.34"}
+  "libclick-0-4-0" {>= "0.4.17"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libqdjango-db0"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5sql5" {>= "5.0.2"}
+  "libqt5sql5-sqlite"
+  "libstdc++6" {>= "5.2"}
+  "sqlite3"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "usermetricsservice_1.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libusermetrics/usermetricsservice_1.3.0-1_amd64.deb"
+}

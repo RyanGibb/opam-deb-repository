@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-pam-dev_0.7.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-pam-dev"]
+]
+depends: [
+  "librust-libc-0-2+default-dev"
+  "librust-pam-sys-0-5+default-dev"
+  ("librust-users-0-11+default-dev" | "librust-users-0-10+default-dev" | "librust-users-0-9+default-dev" | "librust-users-0-8+default-dev")
+]
+extra-source "librust-pam-dev_0.7.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-pam/librust-pam-dev_0.7.0-2_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i moonshot-trust-router-dbg_3.5.4+1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r moonshot-trust-router-dbg"]
+]
+depends: [
+  ("moonshot-trust-router" {= "3.5.4+1"} | "libtr-tid2" {= "3.5.4+1"})
+]
+extra-source "moonshot-trust-router-dbg_3.5.4+1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/moonshot-trust-router/moonshot-trust-router-dbg_3.5.4+1_amd64.deb"
+}

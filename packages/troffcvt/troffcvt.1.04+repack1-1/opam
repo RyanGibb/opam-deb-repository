@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i troffcvt_1.04+repack1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r troffcvt"]
+]
+depends: [
+  "groff"
+  "libc6" {>= "2.34"}
+  "perl"
+]
+extra-source "troffcvt_1.04+repack1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/troffcvt/troffcvt_1.04+repack1-1_amd64.deb"
+}

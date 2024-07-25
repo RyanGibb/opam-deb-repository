@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fitsverify_4.20-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fitsverify"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libcfitsio9" {>= "3.480~"}
+]
+extra-source "fitsverify_4.20-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fitsverify/fitsverify_4.20-3_amd64.deb"
+}

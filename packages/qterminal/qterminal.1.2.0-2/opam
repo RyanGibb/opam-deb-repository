@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qterminal_1.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qterminal"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libqt5x11extras5" {>= "5.6.0"}
+  "libqtermwidget5-1" {>= "1.2.0"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  ("libqt5gui5" {>= "5.11.0~rc1"} | "libqt5gui5-gles" {>= "5.11.0~rc1"})
+]
+extra-source "qterminal_1.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qterminal/qterminal_1.2.0-2_amd64.deb"
+}

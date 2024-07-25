@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elvis-tiny_1.4-24.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elvis-tiny"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "elvis-tiny_1.4-24.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elvis-tiny/elvis-tiny_1.4-24.1_amd64.deb"
+}

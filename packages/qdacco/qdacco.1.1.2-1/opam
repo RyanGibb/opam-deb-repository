@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qdacco_1.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qdacco"]
+]
+depends: [
+  "dacco-common"
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.5.1"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libqt5xml5" {>= "5.5.1"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.5.1"} | "libqt5gui5-gles" {>= "5.5.1"})
+]
+extra-source "qdacco_1.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qdacco/qdacco_1.1.2-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcroco3_0.6.12-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcroco3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libcroco3_0.6.12-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcroco/libcroco3_0.6.12-3_amd64.deb"
+}

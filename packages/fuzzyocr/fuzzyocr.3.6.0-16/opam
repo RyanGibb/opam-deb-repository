@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fuzzyocr_3.6.0-16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fuzzyocr"]
+]
+depends: [
+  "giflib-tools"
+  "gifsicle"
+  "gocr"
+  "libdbd-mysql-perl"
+  "libdigest-md5-perl"
+  "libmldbm-sync-perl"
+  "libstring-approx-perl"
+  "libtie-cache-perl"
+  "netpbm"
+  "spamassassin"
+  "tesseract-ocr-eng"
+]
+extra-source "fuzzyocr_3.6.0-16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fuzzyocr/fuzzyocr_3.6.0-16_all.deb"
+}

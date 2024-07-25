@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-libnativebridge-dev_1:10.0.0+r36-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-libnativebridge-dev"]
+]
+depends: [
+  "android-libnativebridge" {< "1-10.0.0+r36-7.1~"}
+  "android-libnativebridge" {>= "1-10.0.0+r36-7"}
+  "android-libnativehelper-dev"
+]
+extra-source "android-libnativebridge-dev_1:10.0.0+r36-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-system-core/android-libnativebridge-dev_10.0.0+r36-7_all.deb"
+}

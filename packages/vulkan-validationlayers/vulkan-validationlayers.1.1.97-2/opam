@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vulkan-validationlayers_1.1.97-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vulkan-validationlayers"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-3.4"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "vulkan-validationlayers_1.1.97-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vulkan-validationlayers/vulkan-validationlayers_1.1.97-2_amd64.deb"
+}

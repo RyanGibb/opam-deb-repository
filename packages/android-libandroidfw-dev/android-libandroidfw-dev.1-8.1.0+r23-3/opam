@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-libandroidfw-dev_1:8.1.0+r23-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-libandroidfw-dev"]
+]
+depends: [
+  "android-libandroidfw" {= "1-8.1.0+r23-3"}
+  "android-libutils-dev" {>= "1-8.1.0+r23~"}
+  "android-platform-frameworks-native-headers" {>= "8.1.0+r23~"}
+]
+extra-source "android-libandroidfw-dev_1:8.1.0+r23-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-frameworks-base/android-libandroidfw-dev_8.1.0+r23-3_amd64.deb"
+}

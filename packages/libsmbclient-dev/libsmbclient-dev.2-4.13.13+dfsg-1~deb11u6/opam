@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsmbclient-dev_2:4.13.13+dfsg-1~deb11u6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsmbclient-dev"]
+]
+depends: [
+  "libsmbclient" {= "2-4.13.13+dfsg-1~deb11u6"}
+]
+extra-source "libsmbclient-dev_2:4.13.13+dfsg-1~deb11u6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/samba/libsmbclient-dev_4.13.13+dfsg-1~deb11u6_amd64.deb"
+}

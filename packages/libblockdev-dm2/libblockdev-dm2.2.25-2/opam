@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libblockdev-dm2_2.25-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libblockdev-dm2"]
+]
+depends: [
+  "dmraid"
+  "dmsetup" {>= "1.02.93"}
+  "libblockdev-utils2" {>= "2.20"}
+  "libc6" {>= "2.4"}
+  "libdevmapper1-02-1" {>= "2-1.02.97"}
+  "libdmraid1-0-0-rc16" {>= "1.0.0.rc16"}
+  "libglib2-0-0" {>= "2.42.2"}
+  "libudev1" {>= "216"}
+]
+extra-source "libblockdev-dm2_2.25-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libblockdev/libblockdev-dm2_2.25-2_amd64.deb"
+}

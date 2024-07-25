@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt5-assistant_5.15.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt5-assistant"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5help5" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5sql5" {>= "5.0.2"}
+  "libqt5sql5-sqlite"
+  "libqt5webkit5" {>= "5.212.0~alpha4-8~"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libstdc++6" {>= "5"}
+  "qtchooser"
+  ("libqt5gui5" {>= "5.11.0~rc1"} | "libqt5gui5-gles" {>= "5.11.0~rc1"})
+]
+extra-source "qt5-assistant_5.15.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qttools-opensource-src/qt5-assistant_5.15.2-5_amd64.deb"
+}

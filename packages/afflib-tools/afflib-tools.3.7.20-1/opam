@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i afflib-tools_3.7.20-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r afflib-tools"]
+]
+depends: [
+  "libafflib0v5" {>= "3.7.16"}
+  "libc6" {>= "2.34"}
+  "libexpat1" {>= "2.0.1"}
+  "libfuse2" {>= "2.6"}
+  "libgcc-s1" {>= "3.0"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "afflib-tools_3.7.20-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/afflib/afflib-tools_3.7.20-1_amd64.deb"
+}

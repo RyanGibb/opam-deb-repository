@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xless_1.7-14.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xless"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libx11-6"
+  "libxaw7"
+  "libxmu6"
+  "libxt6"
+]
+extra-source "xless_1.7-14.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xless/xless_1.7-14.4_amd64.deb"
+}

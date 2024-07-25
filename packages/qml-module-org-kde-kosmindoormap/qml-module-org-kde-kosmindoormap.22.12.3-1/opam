@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-org-kde-kosmindoormap_22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-org-kde-kosmindoormap"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5i18n5" {>= "4.97.0"}
+  "libkf5i18nlocaledata5" {>= "5.103.0"}
+  "libkosm1" {>= "22.08.2"}
+  "libkosmindoormap1" {>= "22.08.2"}
+  "libkpublictransport1" {>= "21.12.3"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.15~"}
+  "libstdc++6" {>= "11"}
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.15~"} | "libqt5gui5-gles" {>= "5.15~"})
+  ("libqt5quick5" {>= "5.15~"} | "libqt5quick5-gles" {>= "5.15~"})
+]
+extra-source "qml-module-org-kde-kosmindoormap_22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kosmindoormap/qml-module-org-kde-kosmindoormap_22.12.3-1_amd64.deb"
+}

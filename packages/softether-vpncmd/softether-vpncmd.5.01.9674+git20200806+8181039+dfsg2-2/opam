@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i softether-vpncmd_5.01.9674+git20200806+8181039+dfsg2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r softether-vpncmd"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "libreadline8" {>= "6.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "softether-common"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "softether-vpncmd_5.01.9674+git20200806+8181039+dfsg2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/softether-vpn/softether-vpncmd_5.01.9674+git20200806+8181039+dfsg2-2_amd64.deb"
+}

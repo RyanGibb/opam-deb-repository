@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i anytun_0.3.7-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r anytun"]
+]
+depends: [
+  "adduser"
+  "libboost-date-time1-67-0"
+  "libboost-serialization1-67-0"
+  "libboost-system1-67-0"
+  "libboost-thread1-67-0"
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-3.0"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libgpg-error0" {>= "1.14"}
+  "libstdc++6" {>= "5.2"}
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "anytun_0.3.7-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/anytun/anytun_0.3.7-1.1_amd64.deb"
+}

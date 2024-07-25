@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-stream-http_3.2.0+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-stream-http"]
+]
+depends: [
+  "node-builtin-status-codes"
+  "node-inherits"
+  "node-readable-stream" {>= "3.0.6"}
+  "node-to-arraybuffer"
+  "node-xtend"
+]
+extra-source "node-stream-http_3.2.0+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-stream-http/node-stream-http_3.2.0+dfsg-5_all.deb"
+}

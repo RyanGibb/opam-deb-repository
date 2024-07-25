@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnat-10-s390x-cross_10.2.1-6cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnat-10-s390x-cross"]
+]
+depends: [
+  "gcc-10-cross-base" {>= "10.2.1-6"}
+  "libc6-s390x-cross" {>= "2.31"}
+  "libgcc-s1-s390x-cross" {>= "4.2"}
+]
+extra-source "libgnat-10-s390x-cross_10.2.1-6cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10-cross/libgnat-10-s390x-cross_10.2.1-6cross1_all.deb"
+}

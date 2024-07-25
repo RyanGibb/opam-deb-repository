@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i grcov_0.8.12-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r grcov"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "4.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "grcov_0.8.12-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-grcov/grcov_0.8.12-2+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmarisa-perl_0.2.5-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmarisa-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libmarisa0" {= "0.2.5-2+b1"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libmarisa-perl_0.2.5-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/marisa/libmarisa-perl_0.2.5-2+b1_amd64.deb"
+}

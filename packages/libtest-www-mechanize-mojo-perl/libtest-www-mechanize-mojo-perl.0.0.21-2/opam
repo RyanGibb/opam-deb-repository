@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest-www-mechanize-mojo-perl_0.0.21-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest-www-mechanize-mojo-perl"]
+]
+depends: [
+  "libhtml-parser-perl"
+  "libmojolicious-perl" {>= "8.61+dfsg-2~"}
+  "libtest-www-mechanize-perl"
+  "perl-any"
+]
+extra-source "libtest-www-mechanize-mojo-perl_0.0.21-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest-www-mechanize-mojo-perl/libtest-www-mechanize-mojo-perl_0.0.21-2_all.deb"
+}

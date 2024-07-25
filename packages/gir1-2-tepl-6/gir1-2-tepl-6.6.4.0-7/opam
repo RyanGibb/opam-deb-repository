@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-tepl-6_6.4.0-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-tepl-6"]
+]
+depends: [
+  "gir1-2-amtk-5" {>= "5.0"}
+  "gir1-2-gtk-3-0" {>= "3.22"}
+  "gir1-2-gtksource-4" {>= "4.0"}
+  "libtepl-6-2" {>= "6.4.0"}
+]
+extra-source "gir1.2-tepl-6_6.4.0-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tepl/gir1.2-tepl-6_6.4.0-7_amd64.deb"
+}

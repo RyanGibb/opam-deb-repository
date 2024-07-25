@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i printer-driver-gutenprint_5.3.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r printer-driver-gutenprint"]
+]
+depends: [
+  "cups"
+  "cups-client"
+  "libc6" {>= "2.29"}
+  "libcups2" {>= "2.3~b6"}
+  "libgutenprint9" {>= "5.3.1"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("cups-filters" {>= "1.0.36"} | "ghostscript-cups" {< "9.08"})
+]
+extra-source "printer-driver-gutenprint_5.3.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gutenprint/printer-driver-gutenprint_5.3.3-5_amd64.deb"
+}

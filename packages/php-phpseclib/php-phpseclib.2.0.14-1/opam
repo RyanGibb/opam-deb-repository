@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-phpseclib_2.0.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-phpseclib"]
+]
+depends: [
+  "php-common"
+]
+conflicts: [
+  "php-seclib (>= 2)"
+]
+extra-source "php-phpseclib_2.0.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-phpseclib/php-phpseclib_2.0.14-1_all.deb"
+}

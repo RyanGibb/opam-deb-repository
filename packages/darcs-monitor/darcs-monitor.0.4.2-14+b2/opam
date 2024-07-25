@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i darcs-monitor_0.4.2-14+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r darcs-monitor"]
+]
+depends: [
+  "darcs" {>= "1.0.0rc2-1"}
+  "libc6" {>= "2.29"}
+  "libffi8" {>= "3.4"}
+  "libgmp10" {>= "2-6.2.1+dfsg"}
+]
+extra-source "darcs-monitor_0.4.2-14+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/darcs-monitor/darcs-monitor_0.4.2-14+b2_amd64.deb"
+}

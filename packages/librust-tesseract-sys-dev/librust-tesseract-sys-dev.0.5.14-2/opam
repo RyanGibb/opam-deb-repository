@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-tesseract-sys-dev_0.5.14-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-tesseract-sys-dev"]
+]
+depends: [
+  "librust-bindgen-0-60+default-dev"
+  "librust-leptonica-sys-0-4+default-dev"
+  "librust-pkg-config-dev"
+  "libtesseract-dev"
+]
+extra-source "librust-tesseract-sys-dev_0.5.14-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-tesseract-sys/librust-tesseract-sys-dev_0.5.14-2_all.deb"
+}

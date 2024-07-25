@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i astyle_3.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r astyle"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "astyle_3.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/astyle/astyle_3.1-2_amd64.deb"
+}

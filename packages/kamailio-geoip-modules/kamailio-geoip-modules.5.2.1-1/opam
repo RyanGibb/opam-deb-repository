@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kamailio-geoip-modules_5.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kamailio-geoip-modules"]
+]
+depends: [
+  "kamailio" {= "5.2.1-1"}
+  "libc6" {>= "2.14"}
+  "libgeoip1"
+]
+extra-source "kamailio-geoip-modules_5.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kamailio/kamailio-geoip-modules_5.2.1-1_amd64.deb"
+}

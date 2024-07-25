@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i opendnssec_1:2.1.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r opendnssec"]
+]
+depends: [
+  "libhsm-bin"
+  "opendnssec-enforcer"
+  "opendnssec-signer"
+]
+extra-source "opendnssec_1:2.1.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opendnssec/opendnssec_2.1.3-2_all.deb"
+}

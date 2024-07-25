@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openstack-tempest-ci-live-booter_0.25_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openstack-tempest-ci-live-booter"]
+]
+depends: [
+  "apache2"
+  "apache2-utils"
+  "approx"
+  "bind9-host"
+  "bind9utils"
+  "bridge-utils"
+  "ipcalc"
+  "isc-dhcp-server"
+  "live-build"
+  "lsb-base"
+  "pxelinux"
+  "qemu-kvm"
+  "qemu-utils"
+  "tftpd-hpa"
+]
+extra-source "openstack-tempest-ci-live-booter_0.25_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openstack-meta-packages/openstack-tempest-ci-live-booter_0.25_all.deb"
+}

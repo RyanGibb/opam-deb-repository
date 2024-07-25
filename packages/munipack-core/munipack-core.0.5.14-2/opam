@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i munipack-core_0.5.14-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r munipack-core"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcfitsio9" {>= "3.480~"}
+  "libgcc-s1" {>= "4.0"}
+  "libgfortran5" {>= "10"}
+  "libminpack1"
+  "liboakleaf0" {>= "0.0.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "munipack-core_0.5.14-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/munipack/munipack-core_0.5.14-2_amd64.deb"
+}

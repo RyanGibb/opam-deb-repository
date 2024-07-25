@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zbarcam-qt_0.23.90-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zbarcam-qt"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libstdc++6" {>= "5"}
+  "libzbarqt0" {= "0.23.90-1+deb11u1"}
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+]
+extra-source "zbarcam-qt_0.23.90-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zbar/zbarcam-qt_0.23.90-1+deb11u1_amd64.deb"
+}

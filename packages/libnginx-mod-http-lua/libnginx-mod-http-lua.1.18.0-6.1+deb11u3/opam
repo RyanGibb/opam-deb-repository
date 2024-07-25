@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnginx-mod-http-lua_1.18.0-6.1+deb11u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnginx-mod-http-lua"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libluajit-5-1-2" {>= "2.0.4+dfsg"}
+  "libnginx-mod-http-ndk" {= "1.18.0-6.1+deb11u3"}
+  "nginx-common" {= "1.18.0-6.1+deb11u3"}
+]
+extra-source "libnginx-mod-http-lua_1.18.0-6.1+deb11u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nginx/libnginx-mod-http-lua_1.18.0-6.1+deb11u3_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcryptsetup12_2:2.6.1-4~deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcryptsetup12"]
+]
+depends: [
+  "libargon2-1" {>= "0~20171227"}
+  "libblkid1" {>= "2.24.2"}
+  "libc6" {>= "2.34"}
+  "libdevmapper1-02-1" {>= "2-1.02.97"}
+  "libjson-c5" {>= "0.15"}
+  "libssl3" {>= "3.0.0"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "libcryptsetup12_2:2.6.1-4~deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cryptsetup/libcryptsetup12_2.6.1-4~deb12u2_amd64.deb"
+}

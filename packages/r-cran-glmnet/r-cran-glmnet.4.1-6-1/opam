@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-glmnet_4.1-6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-glmnet"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgfortran5" {>= "8"}
+  "libjs-mathjax"
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-cran-foreach"
+  "r-cran-matrix" {>= "1.0-6"}
+  "r-cran-rcpp"
+  "r-cran-rcppeigen"
+  "r-cran-shape"
+  "r-cran-survival"
+]
+extra-source "r-cran-glmnet_4.1-6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-glmnet/r-cran-glmnet_4.1-6-1_amd64.deb"
+}

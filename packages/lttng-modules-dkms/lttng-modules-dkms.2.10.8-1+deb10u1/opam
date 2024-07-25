@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lttng-modules-dkms_2.10.8-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lttng-modules-dkms"]
+]
+depends: [
+  "dkms" {>= "2.1.0.0"}
+]
+extra-source "lttng-modules-dkms_2.10.8-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lttng-modules/lttng-modules-dkms_2.10.8-1+deb10u1_all.deb"
+}

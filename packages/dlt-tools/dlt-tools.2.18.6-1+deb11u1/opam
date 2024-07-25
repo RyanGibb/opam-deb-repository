@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dlt-tools_2.18.6-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dlt-tools"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libdlt2" {>= "2.18.6"}
+  "libsystemd0"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "dlt-tools_2.18.6-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dlt-daemon/dlt-tools_2.18.6-1+deb11u1_amd64.deb"
+}

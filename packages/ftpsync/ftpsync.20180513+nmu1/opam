@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ftpsync_20180513+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ftpsync"]
+]
+depends: [
+  "rsync"
+  ("default-mta" | "mail-transport-agent")
+]
+extra-source "ftpsync_20180513+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/archvsync/ftpsync_20180513+nmu1_all.deb"
+}

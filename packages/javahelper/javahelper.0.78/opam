@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i javahelper_0.78_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r javahelper"]
+]
+depends: [
+  "dctrl-tools"
+  "devscripts"
+  "dpkg-dev"
+  "libarchive-zip-perl" {>= "1.30-6~"}
+  "perl-any"
+  ("bsdextrautils" | "bsdmainutils")
+  ("debhelper" | "debhelper" | "debhelper" | "debhelper" | "debhelper")
+]
+extra-source "javahelper_0.78_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/javatools/javahelper_0.78_all.deb"
+}

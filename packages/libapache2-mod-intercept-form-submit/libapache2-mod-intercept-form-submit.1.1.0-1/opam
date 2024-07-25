@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-intercept-form-submit_1.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-intercept-form-submit"]
+]
+depends: [
+  "apache2-bin"
+  "apache2-bin" {>= "2.4.16"}
+  "libc6" {>= "2.14"}
+  "libpam0g" {>= "0.99.7.1"}
+]
+extra-source "libapache2-mod-intercept-form-submit_1.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapache2-mod-intercept-form-submit/libapache2-mod-intercept-form-submit_1.1.0-1_amd64.deb"
+}

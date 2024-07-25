@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xmaxima_5.46.0-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xmaxima"]
+]
+depends: [
+  "maxima" {>= "5.46.0-11"}
+  "maxima-doc" {>= "5.46.0-11"}
+  "maxima-test" {>= "5.46.0-11"}
+  "sensible-utils"
+  "tk"
+]
+extra-source "xmaxima_5.46.0-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maxima/xmaxima_5.46.0-11_amd64.deb"
+}

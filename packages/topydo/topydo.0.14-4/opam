@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i topydo_0.14-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r topydo"]
+]
+depends: [
+  "python3-any"
+  "python3-arrow"
+]
+conflicts: [
+  "devtodo"
+]
+extra-source "topydo_0.14-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/topydo/topydo_0.14-4_all.deb"
+}

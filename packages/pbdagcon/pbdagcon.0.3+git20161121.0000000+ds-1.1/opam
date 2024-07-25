@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pbdagcon_0.3+git20161121.0000000+ds-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pbdagcon"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.4"}
+  "libhdf5-103"
+  "libhdf5-cpp-103" {>= "1.8.13"}
+  "libhts2" {>= "1.0"}
+  "libpbbam0-19-0" {>= "0.19.0+dfsg"}
+  "libpbseq"
+  "libstdc++6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "pbdagcon_0.3+git20161121.0000000+ds-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pbdagcon/pbdagcon_0.3+git20161121.0000000+ds-1.1_amd64.deb"
+}

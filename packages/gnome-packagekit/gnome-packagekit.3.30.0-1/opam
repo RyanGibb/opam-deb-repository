@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-packagekit_3.30.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-packagekit"]
+]
+depends: [
+  "gnome-packagekit-data" {>= "3.30.0-1"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.16.2"}
+  "libpackagekit-glib2-18" {>= "0.9.4"}
+  "libpolkit-gobject-1-0" {>= "0.101"}
+  "packagekit" {>= "1.0.4"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-packagekit_3.30.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-packagekit/gnome-packagekit_3.30.0-1_amd64.deb"
+}

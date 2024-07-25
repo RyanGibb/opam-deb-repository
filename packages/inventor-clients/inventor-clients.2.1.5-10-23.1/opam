@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i inventor-clients_2.1.5-10-23.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r inventor-clients"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libinventor1" {>= "2.1.5-10"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  "libxm4" {>= "2.3.4"}
+  "libxt6"
+]
+extra-source "inventor-clients_2.1.5-10-23.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/inventor/inventor-clients_2.1.5-10-23.1_amd64.deb"
+}

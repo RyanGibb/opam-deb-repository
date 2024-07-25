@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i neurodebian-dev_0.41.0_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r neurodebian-dev"]
+]
+depends: [
+  "devscripts"
+  "neurodebian-archive-keyring"
+]
+extra-source "neurodebian-dev_0.41.0_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neurodebian/neurodebian-dev_0.41.0_all.deb"
+}

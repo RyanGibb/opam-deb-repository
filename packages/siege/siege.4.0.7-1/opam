@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i siege_4.0.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r siege"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl1-1" {>= "1.1.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "siege-ssl"
+]
+extra-source "siege_4.0.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/siege/siege_4.0.7-1_amd64.deb"
+}

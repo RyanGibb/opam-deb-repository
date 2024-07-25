@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libibmad5_44.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libibmad5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libibumad3" {>= "1.3.9"}
+]
+extra-source "libibmad5_44.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rdma-core/libibmad5_44.0-2_amd64.deb"
+}

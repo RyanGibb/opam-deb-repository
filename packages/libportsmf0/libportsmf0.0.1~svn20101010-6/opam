@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libportsmf0_0.1~svn20101010-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libportsmf0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libportsmf0_0.1~svn20101010-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/portsmf/libportsmf0_0.1~svn20101010-6_amd64.deb"
+}

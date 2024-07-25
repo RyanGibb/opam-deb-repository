@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i acpi-override-initramfs_0.1+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r acpi-override-initramfs"]
+]
+depends: [
+  "initramfs-tools-core"
+]
+extra-source "acpi-override-initramfs_0.1+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/acpi-override/acpi-override-initramfs_0.1+nmu1_all.deb"
+}

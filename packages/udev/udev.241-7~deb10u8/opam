@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i udev_241-7~deb10u8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r udev"]
+]
+depends: [
+  "adduser"
+  "libacl1" {>= "2.2.23"}
+  "libblkid1" {>= "2.24"}
+  "libc6" {>= "2.28"}
+  "libkmod2" {>= "5~"}
+  "libselinux1" {>= "2.1.9"}
+  "libudev1" {= "241-7~deb10u8"}
+  "lsb-base" {>= "3.0-6"}
+  "util-linux" {>= "2.27.1"}
+  ("dpkg" {>= "1.19.3"} | "systemd-sysv")
+]
+conflicts: [
+  "hal"
+]
+extra-source "udev_241-7~deb10u8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/systemd/udev_241-7~deb10u8_amd64.deb"
+}

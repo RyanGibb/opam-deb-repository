@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openssh-tests_1:7.9p1-10+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openssh-tests"]
+]
+depends: [
+  "libc6" {>= "2.26"}
+  "libssl1-1" {>= "1.1.0"}
+  "openssh-client" {= "1-7.9p1-10+deb10u2"}
+  "openssh-server" {= "1-7.9p1-10+deb10u2"}
+  "openssh-sftp-server" {= "1-7.9p1-10+deb10u2"}
+  "openssl"
+  "putty-tools" {>= "0.67-2"}
+  "python-twisted-conch" {>= "1-15.5.0-1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "openssh-tests_1:7.9p1-10+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openssh/openssh-tests_7.9p1-10+deb10u2_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-mechanize_2.8.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-mechanize"]
+]
+depends: [
+  "ruby-addressable"
+  "ruby-domain-name"
+  "ruby-http-cookie"
+  "ruby-mime-types"
+  "ruby-net-http-digest-auth" {>= "1.4.1"}
+  "ruby-net-http-persistent"
+  "ruby-nokogiri"
+  "ruby-ntlm"
+  "ruby-webrick" {>= "1.7.0"}
+  "ruby-webrobots"
+]
+extra-source "ruby-mechanize_2.8.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-mechanize/ruby-mechanize_2.8.5-1_all.deb"
+}

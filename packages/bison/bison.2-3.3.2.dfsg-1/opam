@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bison_2:3.3.2.dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bison"]
+]
+depends: [
+  "libbison-dev" {= "2-3.3.2.dfsg-1"}
+  "libc6" {>= "2.17"}
+  "m4"
+]
+extra-source "bison_2:3.3.2.dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bison/bison_3.3.2.dfsg-1_amd64.deb"
+}

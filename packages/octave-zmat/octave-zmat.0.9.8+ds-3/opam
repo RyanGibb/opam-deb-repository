@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-zmat_0.9.8+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-zmat"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libstdc++6" {>= "4.1.1"}
+  "octave" {>= "6.2.0"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "octave-zmat_0.9.8+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zmat/octave-zmat_0.9.8+ds-3_amd64.deb"
+}

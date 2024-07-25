@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcxsparse3_1:5.8.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcxsparse3"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+]
+extra-source "libcxsparse3_1:5.8.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/suitesparse/libcxsparse3_5.8.1+dfsg-2_amd64.deb"
+}

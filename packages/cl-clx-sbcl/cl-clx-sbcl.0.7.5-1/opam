@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cl-clx-sbcl_0.7.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cl-clx-sbcl"]
+]
+depends: [
+  "cl-asdf" {>= "1.86"}
+  "dpkg" {>= "1.15.4"}
+]
+extra-source "cl-clx-sbcl_0.7.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cl-clx-sbcl/cl-clx-sbcl_0.7.5-1_amd64.deb"
+}

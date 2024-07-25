@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bombardier_0.8.3+nmu3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bombardier"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "bombardier_0.8.3+nmu3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bombardier/bombardier_0.8.3+nmu3_amd64.deb"
+}

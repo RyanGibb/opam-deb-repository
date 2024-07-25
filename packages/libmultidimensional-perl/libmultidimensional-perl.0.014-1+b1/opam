@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmultidimensional-perl_0.014-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmultidimensional-perl"]
+]
+depends: [
+  "libb-hooks-op-check-perl"
+  "libc6" {>= "2.2.5"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libmultidimensional-perl_0.014-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmultidimensional-perl/libmultidimensional-perl_0.014-1+b1_amd64.deb"
+}

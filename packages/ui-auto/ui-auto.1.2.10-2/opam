@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ui-auto_1.2.10-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ui-auto"]
+]
+depends: [
+  "autoconf" {> "2.58"}
+  "automake" {>= "1.10"}
+  "libtool" {> "1.5.8"}
+  ("bsd-mailx" | "mailx")
+]
+extra-source "ui-auto_1.2.10-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ui-auto/ui-auto_1.2.10-2_all.deb"
+}

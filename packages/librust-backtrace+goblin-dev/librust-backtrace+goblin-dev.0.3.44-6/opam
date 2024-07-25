@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-backtrace+goblin-dev_0.3.44-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-backtrace+goblin-dev"]
+]
+depends: [
+  "librust-backtrace-dev" {= "0.3.44-6"}
+  ("librust-goblin-2+elf32-dev" | "librust-goblin-1+elf32-dev" | "librust-goblin-0+elf32-dev" {>= "0.1.0-~~"})
+  ("librust-goblin-2+elf64-dev" | "librust-goblin-1+elf64-dev" | "librust-goblin-0+elf64-dev" {>= "0.1.0-~~"})
+  ("librust-goblin-2+mach32-dev" | "librust-goblin-1+mach32-dev" | "librust-goblin-0+mach32-dev" {>= "0.1.0-~~"})
+  ("librust-goblin-2+mach64-dev" | "librust-goblin-1+mach64-dev" | "librust-goblin-0+mach64-dev" {>= "0.1.0-~~"})
+  ("librust-goblin-2+pe32-dev" | "librust-goblin-1+pe32-dev" | "librust-goblin-0+pe32-dev" {>= "0.1.0-~~"})
+  ("librust-goblin-2+pe64-dev" | "librust-goblin-1+pe64-dev" | "librust-goblin-0+pe64-dev" {>= "0.1.0-~~"})
+  ("librust-goblin-2+std-dev" | "librust-goblin-1+std-dev" | "librust-goblin-0+std-dev" {>= "0.1.0-~~"})
+]
+extra-source "librust-backtrace+goblin-dev_0.3.44-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-backtrace/librust-backtrace+goblin-dev_0.3.44-6_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmongoc-dev_1.14.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmongoc-dev"]
+]
+depends: [
+  "libbson-dev" {= "1.14.0-1"}
+  "libmongoc-1-0-0" {= "1.14.0-1"}
+  "libsnappy-dev"
+  "libssl-dev"
+  "zlib1g-dev"
+]
+extra-source "libmongoc-dev_1.14.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mongo-c-driver/libmongoc-dev_1.14.0-1_amd64.deb"
+}

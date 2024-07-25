@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kodi-imagedecoder-heif_20.1.0+ds1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kodi-imagedecoder-heif"]
+]
+depends: [
+  "kodi"
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libheif1" {>= "1.4.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtinyxml2-9" {>= "8.0.0"}
+]
+extra-source "kodi-imagedecoder-heif_20.1.0+ds1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kodi-imagedecoder-heif/kodi-imagedecoder-heif_20.1.0+ds1-2_amd64.deb"
+}

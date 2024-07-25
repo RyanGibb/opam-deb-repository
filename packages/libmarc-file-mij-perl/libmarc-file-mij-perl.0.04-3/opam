@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmarc-file-mij-perl_0.04-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmarc-file-mij-perl"]
+]
+depends: [
+  "libex-monkeypatched-perl"
+  "libjson-perl"
+  "libmarc-record-perl"
+  "perl-any"
+  "sgml-base" {>= "1.28"}
+]
+extra-source "libmarc-file-mij-perl_0.04-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmarc-file-mij-perl/libmarc-file-mij-perl_0.04-3_all.deb"
+}

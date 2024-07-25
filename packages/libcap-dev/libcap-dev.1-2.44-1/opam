@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcap-dev_1:2.44-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcap-dev"]
+]
+depends: [
+  "libcap2" {= "1-2.44-1"}
+]
+extra-source "libcap-dev_1:2.44-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcap2/libcap-dev_2.44-1_amd64.deb"
+}

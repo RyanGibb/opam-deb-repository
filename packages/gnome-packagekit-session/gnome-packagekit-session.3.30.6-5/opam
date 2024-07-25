@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-packagekit-session_3.30.6-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-packagekit-session"]
+]
+depends: [
+  "gnome-software" {>= "3.30.6-5"}
+]
+extra-source "gnome-packagekit-session_3.30.6-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-software/gnome-packagekit-session_3.30.6-5_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfinance-quotehist-perl_1.32-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfinance-quotehist-perl"]
+]
+depends: [
+  "libdate-manip-perl"
+  "libhtml-tableextract-perl"
+  "libjson-perl"
+  "libregexp-common-perl"
+  "libwww-perl"
+  "perl-any"
+  ("libtext-csv-xs-perl" | "libtext-csv-perl")
+]
+extra-source "libfinance-quotehist-perl_1.32-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfinance-quotehist-perl/libfinance-quotehist-perl_1.32-1_all.deb"
+}

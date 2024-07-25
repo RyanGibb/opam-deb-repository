@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest-cukes-perl_0.10-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest-cukes-perl"]
+]
+depends: [
+  "libany-moose-perl"
+  "libcarp-assert-perl"
+  "libtry-tiny-perl" {>= "0.07"}
+  "perl"
+]
+extra-source "libtest-cukes-perl_0.10-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest-cukes-perl/libtest-cukes-perl_0.10-3_all.deb"
+}

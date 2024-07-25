@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmagickcore-6.q16hdri-6-extra_8:6.9.11.60+dfsg-1.6+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmagickcore-6.q16hdri-6-extra"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libcairo2" {>= "1.6.0"}
+  "libdjvulibre21" {>= "3.5.28"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libmagickcore-6-q16hdri-6" {>= "8-6.9.11.24"}
+  "libmagickwand-6-q16hdri-6" {>= "8-6.9.10.2"}
+  "libopenexr-3-1-30" {>= "3.1.5"}
+  "libpango-1-0-0" {>= "1.22.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libwmflite-0-2-7" {>= "0.2.12"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libmagickcore-6.q16hdri-6-extra_8:6.9.11.60+dfsg-1.6+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/imagemagick/libmagickcore-6.q16hdri-6-extra_6.9.11.60+dfsg-1.6+deb12u1_amd64.deb"
+}

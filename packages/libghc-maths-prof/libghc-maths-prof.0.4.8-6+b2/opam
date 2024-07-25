@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-maths-prof_0.4.8-6+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-maths-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-maths-dev" {= "0.4.8-6+b2"}
+  "libghc-random-prof"
+]
+extra-source "libghc-maths-prof_0.4.8-6+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-maths/libghc-maths-prof_0.4.8-6+b2_amd64.deb"
+}

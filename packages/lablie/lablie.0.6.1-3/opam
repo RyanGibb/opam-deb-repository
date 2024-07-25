@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lablie_0.6.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lablie"]
+]
+depends: [
+  "default-jre-headless" {>= "1.8"}
+  "libbatik-java"
+  "libcommons-csv-java" {>= "1.5"}
+  "libcommons-jexl3-java"
+  "libjackson2-databind-java"
+  "libpicocli-java" {>= "3.9.1"}
+]
+extra-source "lablie_0.6.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lablie/lablie_0.6.1-3_all.deb"
+}

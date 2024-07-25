@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-gi-vte-prof_2.91.19-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-gi-vte-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-gi-atk-prof"
+  "libghc-gi-gdk-prof"
+  "libghc-gi-gio-prof"
+  "libghc-gi-glib-prof"
+  "libghc-gi-gobject-prof"
+  "libghc-gi-gtk-prof"
+  "libghc-gi-pango-prof"
+  "libghc-gi-vte-dev" {= "2.91.19-1"}
+  "libghc-haskell-gi-base-prof"
+  "libghc-haskell-gi-prof"
+]
+extra-source "libghc-gi-vte-prof_2.91.19-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-gi-vte/libghc-gi-vte-prof_2.91.19-1_amd64.deb"
+}

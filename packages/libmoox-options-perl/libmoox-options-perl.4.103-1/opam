@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmoox-options-perl_4.103-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmoox-options-perl"]
+]
+depends: [
+  "libdata-record-perl"
+  "libgetopt-long-descriptive-perl" {>= "0.099"}
+  "libintl-perl"
+  "libjson-maybexs-perl"
+  "libmodule-runtime-perl"
+  "libmoo-perl" {>= "1.003001"}
+  "libmoox-configfromfile-perl"
+  "libmoox-locale-passthrough-perl"
+  "libmro-compat-perl"
+  "libpath-class-perl" {>= "0.32"}
+  "libregexp-common-perl"
+  "libstrictures-perl" {>= "2"}
+  "libunicode-linebreak-perl"
+  "perl"
+  ("perl" {>= "5.19.5"} | "libmodule-metadata-perl" {>= "1.000019"})
+]
+extra-source "libmoox-options-perl_4.103-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmoox-options-perl/libmoox-options-perl_4.103-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcre2-utils_10.32-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcre2-utils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcre2-16-0" {>= "10.32"}
+  "libpcre2-32-0" {>= "10.32"}
+  "libpcre2-8-0" {>= "10.32"}
+  "libpcre2-posix0" {>= "10.32"}
+]
+extra-source "pcre2-utils_10.32-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcre2/pcre2-utils_10.32-5_amd64.deb"
+}

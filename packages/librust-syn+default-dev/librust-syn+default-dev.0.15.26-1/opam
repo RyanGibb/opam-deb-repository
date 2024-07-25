@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-syn+default-dev_0.15.26-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-syn+default-dev"]
+]
+depends: [
+  "librust-syn+printing-dev" {= "0.15.26-1"}
+  "librust-syn+proc-macro-dev" {= "0.15.26-1"}
+  "librust-syn-dev"
+  "librust-syn-dev" {= "0.15.26-1"}
+]
+extra-source "librust-syn+default-dev_0.15.26-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-syn/librust-syn+default-dev_0.15.26-1_amd64.deb"
+}

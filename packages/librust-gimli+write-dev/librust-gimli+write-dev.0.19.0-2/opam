@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-gimli+write-dev_0.19.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-gimli+write-dev"]
+]
+depends: [
+  "librust-gimli+std-dev" {= "0.19.0-2"}
+  "librust-gimli-dev" {= "0.19.0-2"}
+  "librust-indexmap-dev"
+]
+extra-source "librust-gimli+write-dev_0.19.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-gimli/librust-gimli+write-dev_0.19.0-2_amd64.deb"
+}

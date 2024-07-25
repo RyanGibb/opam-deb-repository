@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mono-apache-server_4.2-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mono-apache-server"]
+]
+depends: [
+  "mono-apache-server4" {= "4.2-2.1"}
+]
+conflicts: [
+  "mono-apache-server1"
+  "mono-server"
+]
+extra-source "mono-apache-server_4.2-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xsp/mono-apache-server_4.2-2.1_all.deb"
+}

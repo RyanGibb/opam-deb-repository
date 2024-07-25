@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qtav-players_1.13.0+ds-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qtav-players"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libqt5sql5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libqtav1"
+  "libqtavwidgets1"
+  "libstdc++6" {>= "5"}
+  "qml-module-qt-labs-folderlistmodel"
+  "qml-module-qtav"
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-dialogs"
+  ("libqt5gui5" {>= "5.8.0"} | "libqt5gui5-gles" {>= "5.8.0"})
+  ("libqt5quick5" {>= "5.15.1"} | "libqt5quick5-gles" {>= "5.15.1"})
+]
+extra-source "qtav-players_1.13.0+ds-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtav/qtav-players_1.13.0+ds-3+b2_amd64.deb"
+}

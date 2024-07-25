@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpolyml9_5.7.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpolyml9"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libffi7" {>= "3.3~20180313"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+]
+extra-source "libpolyml9_5.7.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/polyml/libpolyml9_5.7.1-4_amd64.deb"
+}

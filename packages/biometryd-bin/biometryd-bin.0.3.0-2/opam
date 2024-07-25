@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i biometryd-bin_0.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r biometryd-bin"]
+]
+depends: [
+  "libbiometry1" {= "0.3.0-2"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "biometryd-bin_0.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/biometryd/biometryd-bin_0.3.0-2_amd64.deb"
+}

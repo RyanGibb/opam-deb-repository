@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libc-client2007e-dev_8:2007f~dfsg-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libc-client2007e-dev"]
+]
+depends: [
+  "krb5-multidev"
+  "libc-client2007e" {= "8-2007f~dfsg-7+b2"}
+  "libpam0g-dev"
+  "libssl-dev"
+  "sgml-base" {>= "1.28"}
+]
+conflicts: [
+  "libc-client-dev"
+]
+extra-source "libc-client2007e-dev_8:2007f~dfsg-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uw-imap/libc-client2007e-dev_2007f~dfsg-7+b2_amd64.deb"
+}

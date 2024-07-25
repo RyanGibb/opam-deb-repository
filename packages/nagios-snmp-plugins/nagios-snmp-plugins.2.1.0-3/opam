@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nagios-snmp-plugins_2.1.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nagios-snmp-plugins"]
+]
+depends: [
+  "libnet-snmp-perl"
+  "perl-any"
+  "ucf"
+  ("monitoring-plugins-common" | "nagios-plugins-basic" {>= "1.4.5-2"})
+]
+extra-source "nagios-snmp-plugins_2.1.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nagios-snmp-plugins/nagios-snmp-plugins_2.1.0-3_all.deb"
+}

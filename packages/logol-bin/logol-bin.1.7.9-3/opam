@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i logol-bin_1.7.9-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r logol-bin"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "swi-prolog"
+  "swi-prolog-core" {>= "8.2.4+dfsg"}
+]
+extra-source "logol-bin_1.7.9-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/logol/logol-bin_1.7.9-3_amd64.deb"
+}

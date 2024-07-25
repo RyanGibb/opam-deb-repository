@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i light_1.2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r light"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "udev"
+]
+extra-source "light_1.2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/light/light_1.2.2-2_amd64.deb"
+}

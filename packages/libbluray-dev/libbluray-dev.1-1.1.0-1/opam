@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbluray-dev_1:1.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbluray-dev"]
+]
+depends: [
+  "libbluray2" {= "1-1.1.0-1"}
+  "libfontconfig1-dev"
+  "libfreetype6-dev"
+  "libxml2-dev"
+]
+extra-source "libbluray-dev_1:1.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbluray/libbluray-dev_1.1.0-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mpop-gnome_1.4.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mpop-gnome"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libgnutls30" {>= "3.6.6"}
+  "libgsasl7" {>= "1.1"}
+  "libsecret-1-0" {>= "0.7"}
+  "mpop" {= "1.4.3-1"}
+  "seahorse"
+]
+extra-source "mpop-gnome_1.4.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpop/mpop-gnome_1.4.3-1_amd64.deb"
+}

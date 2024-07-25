@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sparse_0.6.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sparse"]
+]
+depends: [
+  "gcc-8"
+  "libc6" {>= "2.14"}
+  "libllvm7" {>= "1-7~svn298832-1~"}
+  "libxml2" {>= "2.7.4"}
+  "perl-any"
+]
+extra-source "sparse_0.6.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sparse/sparse_0.6.0-3_amd64.deb"
+}

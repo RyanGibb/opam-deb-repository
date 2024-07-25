@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gss-ntlmssp_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gss-ntlmssp"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgssapi-krb5-2" {>= "1.9.1+dfsg"}
+  "libssl3" {>= "3.0.0"}
+  "libunistring2" {>= "0.9.7"}
+  "libwbclient0" {>= "2-4.2.1+dfsg"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gss-ntlmssp_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gss-ntlmssp/gss-ntlmssp_1.2.0-1_amd64.deb"
+}

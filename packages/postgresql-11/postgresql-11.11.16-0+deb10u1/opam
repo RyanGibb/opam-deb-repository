@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-11_11.16-0+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-11"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-3.0"}
+  "libgssapi-krb5-2" {>= "1.14+dfsg"}
+  "libicu63" {>= "63.1-1~"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libllvm7" {>= "1-7~svn298832-1~"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpq5" {>= "9.3~"}
+  "libselinux1" {>= "2.1.12"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+  "libsystemd0"
+  "libuuid1" {>= "2.16"}
+  "libxml2" {>= "2.7.4"}
+  "libxslt1-1" {>= "1.1.25"}
+  "postgresql-client-11"
+  "postgresql-common" {>= "194~"}
+  "ssl-cert"
+  "tzdata"
+  "zlib1g" {>= "1-1.1.4"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("locales" | "locales-all")
+]
+extra-source "postgresql-11_11.16-0+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-11/postgresql-11_11.16-0+deb10u1_amd64.deb"
+}

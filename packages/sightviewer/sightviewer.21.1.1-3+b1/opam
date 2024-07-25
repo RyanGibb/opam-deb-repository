@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sightviewer_21.1.1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sightviewer"]
+]
+depends: [
+  "libsight" {= "21.1.1-3+b1"}
+]
+conflicts: [
+  "vrrender"
+]
+extra-source "sightviewer_21.1.1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sight/sightviewer_21.1.1-3+b1_amd64.deb"
+}

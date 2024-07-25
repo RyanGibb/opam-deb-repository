@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jbigkit-bin_2.1-3.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jbigkit-bin"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libjbig0" {>= "2.0"}
+]
+extra-source "jbigkit-bin_2.1-3.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jbigkit/jbigkit-bin_2.1-3.1+b2_amd64.deb"
+}

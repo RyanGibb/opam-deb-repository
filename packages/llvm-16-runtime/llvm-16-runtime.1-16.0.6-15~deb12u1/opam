@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i llvm-16-runtime_1:16.0.6-15~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r llvm-16-runtime"]
+]
+depends: [
+  "libc6" {>= "2.36"}
+  "libgcc-s1" {>= "3.3"}
+  "libllvm16"
+  "libstdc++6" {>= "12"}
+  "libtinfo6" {>= "6"}
+  "libz3-4" {>= "4.8.12"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "llvm-16-runtime_1:16.0.6-15~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-16/llvm-16-runtime_16.0.6-15~deb12u1_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sssd-dbus_2.8.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sssd-dbus"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libdhash1" {>= "0.4.0"}
+  "libldb2" {>= "0.9.21"}
+  "libpopt0" {>= "1.14"}
+  "libselinux1" {>= "3.1~"}
+  "libsystemd0"
+  "libtalloc2" {>= "2.0.4~git20101213"}
+  "libtdb1" {>= "1.2.7+git20101214"}
+  "libtevent0" {>= "0.9.9"}
+  "sssd-common" {= "2.8.2-4"}
+]
+extra-source "sssd-dbus_2.8.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sssd/sssd-dbus_2.8.2-4_amd64.deb"
+}

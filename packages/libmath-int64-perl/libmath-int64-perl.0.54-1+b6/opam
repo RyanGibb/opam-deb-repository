@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmath-int64-perl_0.54-1+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmath-int64-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libmath-int64-perl_0.54-1+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmath-int64-perl/libmath-int64-perl_0.54-1+b6_amd64.deb"
+}

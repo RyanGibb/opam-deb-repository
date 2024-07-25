@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libuno-cppu3_1:7.0.4-4+deb11u9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libuno-cppu3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "libuno-sal3" {>= "4.1.0~alpha"}
+  "libuno-salhelpergcc3-3" {>= "1.4.0"}
+]
+extra-source "libuno-cppu3_1:7.0.4-4+deb11u9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libuno-cppu3_7.0.4-4+deb11u9_amd64.deb"
+}

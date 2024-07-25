@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i akonadi-server_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r akonadi-server"]
+]
+depends: [
+  "libaccounts-qt5-1" {>= "1.16~"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libkf5akonadiprivate5abi2"
+  "libkf5akonadiprivate5abi2" {>= "4-22.12.3"}
+  "libkf5akonadiwidgets5abi1"
+  "libkf5akonadiwidgets5abi1" {>= "4-22.12.3"}
+  "libkf5configcore5" {>= "5.99.0~"}
+  "libkf5coreaddons5" {>= "5.99.0~"}
+  "libkf5crash5" {>= "5.99.0~"}
+  "libkf5i18n5" {>= "5.99.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5dbus5" {>= "5.15.2~"}
+  "libqt5network5" {>= "5.15.2~"}
+  "libqt5sql5" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libqt5xml5" {>= "5.15.2~"}
+  "libstdc++6" {>= "11"}
+  ("akonadi-backend-mysql" {= "4-22.12.3-1"} | "akonadi-backend-sqlite" {= "4-22.12.3-1"} | "akonadi-backend-postgresql" {= "4-22.12.3-1"})
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "akonadi-server_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/akonadi/akonadi-server_22.12.3-1_amd64.deb"
+}

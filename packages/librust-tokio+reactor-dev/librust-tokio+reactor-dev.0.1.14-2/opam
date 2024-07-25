@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-tokio+reactor-dev_0.1.14-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-tokio+reactor-dev"]
+]
+depends: [
+  "librust-mio-dev"
+  "librust-tokio+io-dev" {= "0.1.14-2"}
+  "librust-tokio-dev" {= "0.1.14-2"}
+  "librust-tokio-reactor-dev"
+]
+extra-source "librust-tokio+reactor-dev_0.1.14-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-tokio/librust-tokio+reactor-dev_0.1.14-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-pipes-parse-prof_3.0.8-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-pipes-parse-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-pipes-parse-dev" {= "3.0.8-4+b2"}
+  "libghc-pipes-prof"
+]
+extra-source "libghc-pipes-parse-prof_3.0.8-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pipes-parse/libghc-pipes-parse-prof_3.0.8-4+b2_amd64.deb"
+}

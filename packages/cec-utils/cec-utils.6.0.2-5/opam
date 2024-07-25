@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cec-utils_6.0.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cec-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcec6" {= "6.0.2-5"}
+  "libgcc-s1" {>= "3.0"}
+  "libncurses6" {>= "6"}
+  "libp8-platform2" {>= "1.0.10"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "cec-utils_6.0.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcec/cec-utils_6.0.2-5_amd64.deb"
+}

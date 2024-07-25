@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ont-fast5-api_4.1.1+dfsg-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ont-fast5-api"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "4.4"}
+  "libvbz-hdf-plugin-dev"
+  "libzstd1" {>= "1.5.2"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-h5py"
+  "python3-numpy"
+  "python3-packaging"
+  "python3-progressbar"
+]
+extra-source "ont-fast5-api_4.1.1+dfsg-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ont-fast5-api/ont-fast5-api_4.1.1+dfsg-2+b1_amd64.deb"
+}

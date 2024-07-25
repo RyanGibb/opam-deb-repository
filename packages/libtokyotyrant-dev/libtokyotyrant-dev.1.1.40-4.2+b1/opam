@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtokyotyrant-dev_1.1.40-4.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtokyotyrant-dev"]
+]
+depends: [
+  "libtokyocabinet-dev"
+  "libtokyotyrant3" {= "1.1.40-4.2+b1"}
+]
+extra-source "libtokyotyrant-dev_1.1.40-4.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tokyotyrant/libtokyotyrant-dev_1.1.40-4.2+b1_amd64.deb"
+}

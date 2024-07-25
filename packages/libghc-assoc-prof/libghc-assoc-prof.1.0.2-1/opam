@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-assoc-prof_1.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-assoc-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-assoc-dev" {= "1.0.2-1"}
+  "libghc-bifunctors-prof"
+  "libghc-tagged-prof"
+]
+extra-source "libghc-assoc-prof_1.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-assoc/libghc-assoc-prof_1.0.2-1_amd64.deb"
+}

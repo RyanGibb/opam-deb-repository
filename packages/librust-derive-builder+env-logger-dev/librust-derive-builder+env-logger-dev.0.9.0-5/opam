@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-derive-builder+env-logger-dev_0.9.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-derive-builder+env-logger-dev"]
+]
+depends: [
+  "librust-derive-builder-dev" {= "0.9.0-5"}
+  ("librust-env-logger-0-7+default-dev" | "librust-env-logger-0-6+default-dev" | "librust-env-logger-0-5+default-dev")
+]
+extra-source "librust-derive-builder+env-logger-dev_0.9.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-derive-builder/librust-derive-builder+env-logger-dev_0.9.0-5_amd64.deb"
+}

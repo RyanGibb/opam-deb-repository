@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libexpat-gst_3.2.5-1.3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libexpat-gst"]
+]
+depends: [
+  "gnu-smalltalk" {= "3.2.5-1.3+b2"}
+  "gnu-smalltalk-common" {>= "3.2.5"}
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+]
+extra-source "libexpat-gst_3.2.5-1.3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnu-smalltalk/libexpat-gst_3.2.5-1.3+b2_amd64.deb"
+}

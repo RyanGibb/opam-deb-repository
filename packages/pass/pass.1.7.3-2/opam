@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pass_1.7.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pass"]
+]
+depends: [
+  "gnupg"
+  "tree" {>= "1.7.0"}
+]
+extra-source "pass_1.7.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/password-store/pass_1.7.3-2_all.deb"
+}

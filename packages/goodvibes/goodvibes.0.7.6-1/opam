@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i goodvibes_0.7.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r goodvibes"]
+]
+depends: [
+  "dconf-gsettings-backend"
+  "gstreamer1-0-plugins-base"
+  "gstreamer1-0-plugins-good"
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.39.4"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.0.0"}
+  "libgstreamer1-0-0" {>= "1.14.0"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libkeybinder-3-0-0" {>= "0.3.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libsoup2-4-1" {>= "2.41.90"}
+  ("gstreamer1-0-pulseaudio" | "gstreamer1-0-alsa")
+]
+extra-source "goodvibes_0.7.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/goodvibes/goodvibes_0.7.6-1_amd64.deb"
+}

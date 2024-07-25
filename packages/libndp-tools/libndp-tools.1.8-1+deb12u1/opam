@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libndp-tools_1.8-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libndp-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libndp0" {= "1.8-1+deb12u1"}
+]
+extra-source "libndp-tools_1.8-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libndp/libndp-tools_1.8-1+deb12u1_amd64.deb"
+}

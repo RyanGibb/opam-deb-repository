@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libodb-pgsql-dev_2.4.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libodb-pgsql-dev"]
+]
+depends: [
+  "libodb-dev" {>= "2.4.0"}
+  "libodb-pgsql-2-4" {= "2.4.0-1+b1"}
+]
+extra-source "libodb-pgsql-dev_2.4.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libodb-pgsql/libodb-pgsql-dev_2.4.0-1+b1_amd64.deb"
+}

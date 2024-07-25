@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i caja-gtkhash_1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r caja-gtkhash"]
+]
+depends: [
+  "gtkhash" {= "1.2-1"}
+  "libatk1-0-0" {>= "1.12.4"}
+  "libb2-1"
+  "libc6" {>= "2.14"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libcaja-extension1" {>= "1.6.3"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.35.8"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libnettle6"
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "caja-gtkhash_1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtkhash/caja-gtkhash_1.2-1_amd64.deb"
+}

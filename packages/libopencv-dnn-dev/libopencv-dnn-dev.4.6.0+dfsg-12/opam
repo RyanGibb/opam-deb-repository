@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencv-dnn-dev_4.6.0+dfsg-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencv-dnn-dev"]
+]
+depends: [
+  "libopencv-core-dev" {= "4.6.0+dfsg-12"}
+  "libopencv-dnn406" {= "4.6.0+dfsg-12"}
+]
+extra-source "libopencv-dnn-dev_4.6.0+dfsg-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencv/libopencv-dnn-dev_4.6.0+dfsg-12_amd64.deb"
+}

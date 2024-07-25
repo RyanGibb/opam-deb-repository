@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-hdate_1.6.02-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-hdate"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libhdate1" {= "1.6.02-2+b1"}
+  "libstdc++6" {>= "5"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-hdate_1.6.02-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhdate/python-hdate_1.6.02-2+b1_amd64.deb"
+}

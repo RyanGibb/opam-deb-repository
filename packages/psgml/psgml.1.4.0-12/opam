@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i psgml_1.4.0-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r psgml"]
+]
+depends: [
+  "emacsen-common"
+  "sgml-base"
+  "sgml-data"
+  "ucf" {>= "0.08"}
+]
+extra-source "psgml_1.4.0-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/psgml/psgml_1.4.0-12_all.deb"
+}

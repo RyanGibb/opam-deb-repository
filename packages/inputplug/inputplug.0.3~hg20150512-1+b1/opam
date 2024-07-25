@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i inputplug_0.3~hg20150512-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r inputplug"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libixp0"
+  "libx11-6" {>= "2-1.2.99.901"}
+  "libxi6" {>= "2-1.2.99.4"}
+]
+extra-source "inputplug_0.3~hg20150512-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/inputplug/inputplug_0.3~hg20150512-1+b1_amd64.deb"
+}

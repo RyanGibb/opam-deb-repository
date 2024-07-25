@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libldap-2.5-0_2.5.13+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libldap-2.5-0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgnutls30" {>= "3.7.5"}
+  "libsasl2-2" {>= "2.1.28+dfsg"}
+]
+conflicts: [
+  "ldap-utils (<= 2.1.23-1)"
+]
+extra-source "libldap-2.5-0_2.5.13+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openldap/libldap-2.5-0_2.5.13+dfsg-5_amd64.deb"
+}

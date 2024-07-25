@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-flask-security_4.0.0-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-flask-security"]
+]
+depends: [
+  "python3-any"
+  "python3-email-validator"
+  "python3-flask" {>= "1.1.1"}
+  "python3-flask-login"
+  "python3-flask-mail"
+  "python3-flask-principal"
+  "python3-flaskext-wtf"
+  "python3-itsdangerous"
+  "python3-passlib"
+  "python3-speaklater"
+]
+extra-source "python3-flask-security_4.0.0-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flask-security/python3-flask-security_4.0.0-1+deb11u1_all.deb"
+}

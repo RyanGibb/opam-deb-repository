@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php8.2-solr_2.6.0+2.4.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php8.2-solr"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl4" {>= "7.16.2"}
+  "libxml2" {>= "2.7.4"}
+  "php8-2-common"
+  "php8-2-curl"
+  "php8-2-xml"
+  ("libapache2-mod-php8-2" | "libphp8-2-embed" | "php8-2-cgi" | "php8-2-cli" | "php8-2-fpm" | "php8-2-phpdbg")
+]
+extra-source "php8.2-solr_2.6.0+2.4.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-solr/php8.2-solr_2.6.0+2.4.0-3_amd64.deb"
+}

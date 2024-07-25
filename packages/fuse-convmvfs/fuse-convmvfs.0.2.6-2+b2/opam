@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fuse-convmvfs_0.2.6-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fuse-convmvfs"]
+]
+depends: [
+  "fuse"
+  "libc6" {>= "2.14"}
+  "libfuse2" {>= "2.8"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "fuse-convmvfs_0.2.6-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fuse-convmvfs/fuse-convmvfs_0.2.6-2+b2_amd64.deb"
+}

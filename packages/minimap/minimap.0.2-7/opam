@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i minimap_0.2-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r minimap"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "minimap_0.2-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/minimap/minimap_0.2-7_amd64.deb"
+}

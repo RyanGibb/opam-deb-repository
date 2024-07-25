@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblouisxml1_2.4.0-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblouisxml1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "liblouis17"
+  "liblouisxml-data"
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "liblouisxml1_2.4.0-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblouisxml/liblouisxml1_2.4.0-8+b1_amd64.deb"
+}

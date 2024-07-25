@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmemkind0_1.14.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmemkind0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdaxctl1" {>= "66"}
+  "libhwloc15" {>= "2.8.0"}
+  "libnuma1" {>= "2.0.11"}
+]
+extra-source "libmemkind0_1.14.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/memkind/libmemkind0_1.14.0-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i thunderbird-l10n-ms_1:115.12.0-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r thunderbird-l10n-ms"]
+]
+depends: [
+  "thunderbird" {< "1-115.12.0-1~deb12u1.1~"}
+  "thunderbird" {>= "1-115.12.0-1~deb12u1"}
+]
+extra-source "thunderbird-l10n-ms_1:115.12.0-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/thunderbird/thunderbird-l10n-ms_115.12.0-1~deb12u1_all.deb"
+}

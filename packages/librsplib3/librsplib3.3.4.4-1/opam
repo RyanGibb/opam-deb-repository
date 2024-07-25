@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librsplib3_3.4.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librsplib3"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libsctp1" {>= "1.0.12+dfsg"}
+]
+extra-source "librsplib3_3.4.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rsplib/librsplib3_3.4.4-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xmlto_0.0.28-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xmlto"]
+]
+depends: [
+  "debianutils" {>= "1.16"}
+  "docbook-xml" {>= "4.2-8"}
+  "docbook-xsl" {>= "1.64.1.0"}
+  "libc6" {>= "2.3.4"}
+  "libxml2-utils"
+  "sgml-base"
+  "xsltproc" {>= "1.1.12-8"}
+]
+extra-source "xmlto_0.0.28-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmlto/xmlto_0.0.28-2.1_amd64.deb"
+}

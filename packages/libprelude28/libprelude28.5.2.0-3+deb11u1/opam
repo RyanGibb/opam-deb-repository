@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libprelude28_5.2.0-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libprelude28"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgnutls30" {>= "3.7.0"}
+  "libltdl7" {>= "2.4.6"}
+]
+extra-source "libprelude28_5.2.0-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libprelude/libprelude28_5.2.0-3+deb11u1_amd64.deb"
+}

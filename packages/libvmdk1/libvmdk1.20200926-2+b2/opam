@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvmdk1_20200926-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvmdk1"]
+]
+depends: [
+  "libbfio1" {>= "20120425"}
+  "libc6" {>= "2.34"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libvmdk1_20200926-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvmdk/libvmdk1_20200926-2+b2_amd64.deb"
+}

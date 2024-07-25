@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsymkey-java_10.10.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsymkey-java"]
+]
+depends: [
+  "libjss-java"
+  "libsymkey-jni" {>= "10.10.2-3"}
+]
+extra-source "libsymkey-java_10.10.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dogtag-pki/libsymkey-java_10.10.2-3_all.deb"
+}

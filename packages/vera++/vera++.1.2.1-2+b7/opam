@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vera++_1.2.1-2+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vera++"]
+]
+depends: [
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libboost-wave1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "libtcl8-6" {>= "8.6.0"}
+]
+extra-source "vera++_1.2.1-2+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vera++/vera++_1.2.1-2+b7_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtcplay_1.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtcplay"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdevmapper1-02-1" {>= "2-1.02.97"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libgpg-error0" {>= "1.14"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "libtcplay_1.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tcplay/libtcplay_1.1-6_amd64.deb"
+}

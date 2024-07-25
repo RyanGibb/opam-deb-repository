@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-amelia_1.7.5-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-amelia"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+  "r-cran-foreign"
+  "r-cran-rcpp" {>= "0.11"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "r-cran-amelia_1.7.5-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-amelia/r-cran-amelia_1.7.5-1+b2_amd64.deb"
+}

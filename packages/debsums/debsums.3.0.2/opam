@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debsums_3.0.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debsums"]
+]
+depends: [
+  "libdpkg-perl"
+  "libfile-fnmatch-perl"
+  "perl"
+  "perl-any"
+  "ucf" {>= "0.28"}
+]
+extra-source "debsums_3.0.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debsums/debsums_3.0.2_all.deb"
+}

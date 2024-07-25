@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-pluggaloid_1.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-pluggaloid"]
+]
+depends: [
+  "ruby-delayer" {< "2.0"}
+  "ruby-delayer" {>= "1.1.0"}
+  "ruby-instance-storage" {< "2.0.0"}
+  "ruby-instance-storage" {>= "1.0.0"}
+]
+extra-source "ruby-pluggaloid_1.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-pluggaloid/ruby-pluggaloid_1.7.0-1_all.deb"
+}

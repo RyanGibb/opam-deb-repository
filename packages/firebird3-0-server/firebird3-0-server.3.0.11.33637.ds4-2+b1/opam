@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i firebird3.0-server_3.0.11.33637.ds4-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r firebird3.0-server"]
+]
+depends: [
+  "adduser"
+  "debconf" {>= "1.4.69"}
+  "firebird3-0-common" {= "3.0.11.33637.ds4-2"}
+  "firebird3-0-common-doc" {= "3.0.11.33637.ds4-2"}
+  "firebird3-0-server-core" {= "3.0.11.33637.ds4-2+b1"}
+  "firebird3-0-utils" {= "3.0.11.33637.ds4-2+b1"}
+  "libc6" {>= "2.34"}
+  "libfbclient2" {>= "3.0.0~svn20110219r52404.ds3"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "libtommath1" {>= "1.1.0"}
+  "sysvinit-utils"
+]
+conflicts: [
+  "firebird-server"
+  "firebird2.1-classic"
+  "firebird2.1-server-common"
+  "firebird2.1-super"
+  "firebird2.5-server-common"
+]
+extra-source "firebird3.0-server_3.0.11.33637.ds4-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/firebird3.0/firebird3.0-server_3.0.11.33637.ds4-2+b1_amd64.deb"
+}

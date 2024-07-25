@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-libffi-prof_0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-libffi-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-libffi-dev" {= "0.1-2"}
+]
+extra-source "libghc-libffi-prof_0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-libffi/libghc-libffi-prof_0.1-2_amd64.deb"
+}

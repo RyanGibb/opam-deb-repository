@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i usbprog_0.2.0-2.2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r usbprog"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libreadline7" {>= "6.0"}
+  "libstdc++6" {>= "5.2"}
+  "libusbprog0v5"
+]
+extra-source "usbprog_0.2.0-2.2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/usbprog/usbprog_0.2.0-2.2+b2_amd64.deb"
+}

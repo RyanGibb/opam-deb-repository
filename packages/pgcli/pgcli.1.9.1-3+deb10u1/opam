@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pgcli_1.9.1-3+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pgcli"]
+]
+depends: [
+  "python3-any" {>= "3.7~"}
+  "python3-click" {>= "4.1"}
+  "python3-configobj" {>= "5.0.6"}
+  "python3-humanize" {>= "0.5.1"}
+  "python3-pgspecial" {>= "1.9.0"}
+  "python3-pkg-resources" {>= "40"}
+  "python3-prompt-toolkit" {>= "1.0.10"}
+  "python3-psycopg2" {>= "2.7.4"}
+  "python3-pygments" {>= "2.0"}
+  "python3-setproctitle" {>= "1.1.9"}
+  "python3-sqlparse" {>= "0.2.2"}
+  "python3-tabulate" {>= "0.8.2"}
+  "python3-terminaltables"
+]
+extra-source "pgcli_1.9.1-3+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pgcli/pgcli_1.9.1-3+deb10u1_all.deb"
+}

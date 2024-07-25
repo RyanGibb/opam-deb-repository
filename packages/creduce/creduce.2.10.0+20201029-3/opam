@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i creduce_2.10.0+20201029-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r creduce"]
+]
+depends: [
+  "clang-format-11"
+  "libbenchmark-timer-perl"
+  "libc6" {>= "2.14"}
+  "libclang-cpp11" {>= "1-11.0.1"}
+  "libexporter-lite-perl"
+  "libfile-which-perl"
+  "libgetopt-tabular-perl"
+  "libllvm11" {>= "1-9~svn298832-1~"}
+  "libregexp-common-perl"
+  "libstdc++6" {>= "9"}
+  "libterm-readkey-perl"
+]
+extra-source "creduce_2.10.0+20201029-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/creduce/creduce_2.10.0+20201029-3_amd64.deb"
+}

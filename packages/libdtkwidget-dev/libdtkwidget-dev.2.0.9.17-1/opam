@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdtkwidget-dev_2.0.9.17-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdtkwidget-dev"]
+]
+depends: [
+  "libdtkcore-dev"
+  "libdtkwidget2" {= "2.0.9.17-1"}
+  "libqt5x11extras5-dev"
+  "qtmultimedia5-dev"
+]
+extra-source "libdtkwidget-dev_2.0.9.17-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dtkwidget/libdtkwidget-dev_2.0.9.17-1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-susier_0.12.35+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-susier"]
+]
+depends: [
+  "python3"
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-crayon"
+  "r-cran-ggplot2"
+  "r-cran-matrix"
+  "r-cran-matrixstats"
+  "r-cran-mixsqp"
+  "r-cran-reshape"
+]
+extra-source "r-cran-susier_0.12.35+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-susier/r-cran-susier_0.12.35+dfsg-1_all.deb"
+}

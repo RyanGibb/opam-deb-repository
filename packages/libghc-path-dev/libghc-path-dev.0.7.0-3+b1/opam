@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-path-dev_0.7.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-path-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-aeson-dev"
+  "libghc-exceptions-dev"
+  "libghc-hashable-dev"
+  "libgmp10"
+]
+extra-source "libghc-path-dev_0.7.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-path/libghc-path-dev_0.7.0-3+b1_amd64.deb"
+}

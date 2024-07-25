@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fontconfig_2.14.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fontconfig"]
+]
+depends: [
+  "fontconfig-config"
+  "libc6" {>= "2.34"}
+  "libfontconfig1" {>= "2.13.0"}
+  "libfreetype6" {>= "2.2.1"}
+]
+extra-source "fontconfig_2.14.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fontconfig/fontconfig_2.14.1-4_amd64.deb"
+}

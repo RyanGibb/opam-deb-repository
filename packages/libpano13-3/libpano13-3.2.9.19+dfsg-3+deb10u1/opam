@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpano13-3_2.9.19+dfsg-3+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpano13-3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libtiff5" {>= "4.0.3"}
+]
+extra-source "libpano13-3_2.9.19+dfsg-3+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpano13/libpano13-3_2.9.19+dfsg-3+deb10u1_amd64.deb"
+}

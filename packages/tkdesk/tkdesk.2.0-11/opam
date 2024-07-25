@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tkdesk_2.0-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tkdesk"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfontconfig1" {>= "2.12"}
+  "libfreetype6" {>= "2.2.1"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libtk8-6" {>= "8.6.0"}
+  "libx11-6"
+  "libxext6"
+  "libxft2" {> "2.1.1"}
+  "libxss1"
+  "tcl-itcl4" {>= "4.0.0"}
+  "tk8-6-blt2-5" {>= "2.5.3"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "tkdesk_2.0-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tkdesk/tkdesk_2.0-11_amd64.deb"
+}

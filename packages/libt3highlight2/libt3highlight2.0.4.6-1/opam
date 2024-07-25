@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libt3highlight2_0.4.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libt3highlight2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcre2-8-0" {>= "10.32"}
+  "libt3config0"
+]
+extra-source "libt3highlight2_0.4.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libt3highlight/libt3highlight2_0.4.6-1_amd64.deb"
+}

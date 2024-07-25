@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmysofa-utils_1.2~dfsg0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmysofa-utils"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmysofa1" {>= "0.6~"}
+]
+extra-source "libmysofa-utils_1.2~dfsg0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmysofa/libmysofa-utils_1.2~dfsg0-1_amd64.deb"
+}

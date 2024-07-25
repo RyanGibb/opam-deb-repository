@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsdl-stretch-0-3_0.3.1-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsdl-stretch-0-3"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libsdl1-2debian" {>= "1.2.11"}
+]
+extra-source "libsdl-stretch-0-3_0.3.1-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sdl-stretch/libsdl-stretch-0-3_0.3.1-12_amd64.deb"
+}

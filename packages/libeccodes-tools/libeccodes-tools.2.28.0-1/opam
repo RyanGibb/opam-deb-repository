@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libeccodes-tools_2.28.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libeccodes-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libeccodes0" {>= "2.28.0"}
+  "libnetcdf19" {>= "4.0.1"}
+  ("mksh" | "pdksh" | "zsh" | "ksh")
+]
+conflicts: [
+  "libgrib-api-tools"
+]
+extra-source "libeccodes-tools_2.28.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eccodes/libeccodes-tools_2.28.0-1_amd64.deb"
+}

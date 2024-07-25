@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfastrtps-dev_2.1.0+ds-9+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfastrtps-dev"]
+]
+depends: [
+  "libasio-dev"
+  "libfastcdr-dev"
+  "libfastrtps2" {= "2.1.0+ds-9+deb11u1"}
+  "libfoonathan-memory-dev"
+  "libssl-dev"
+]
+extra-source "libfastrtps-dev_2.1.0+ds-9+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fastdds/libfastrtps-dev_2.1.0+ds-9+deb11u1_amd64.deb"
+}

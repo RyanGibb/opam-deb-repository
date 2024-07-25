@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-fgl-arbitrary-prof_0.2.0.3-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-fgl-arbitrary-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-fgl-arbitrary-dev" {= "0.2.0.3-5+b1"}
+  "libghc-fgl-prof"
+  "libghc-quickcheck2-prof"
+]
+extra-source "libghc-fgl-arbitrary-prof_0.2.0.3-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-fgl-arbitrary/libghc-fgl-arbitrary-prof_0.2.0.3-5+b1_amd64.deb"
+}

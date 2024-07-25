@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-script-provider-js_1:6.1.5-3+deb10u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-script-provider-js"]
+]
+depends: [
+  "libreoffice-common" {= "1-6.1.5-3+deb10u7"}
+  "libreoffice-core"
+  "libreoffice-java-common"
+  ("default-jre" | "sun-java6-jre" | "java6-runtime" | "jre")
+]
+extra-source "libreoffice-script-provider-js_1:6.1.5-3+deb10u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-script-provider-js_6.1.5-3+deb10u7_all.deb"
+}

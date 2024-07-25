@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i seq24_0.9.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r seq24"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libatkmm-1-6-1v5" {>= "2.24.0"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libglib2-0-0" {>= "2.12.0"}
+  "libglibmm-2-4-1v5" {>= "2.54.0"}
+  "libgtk2-0-0" {>= "2.8.0"}
+  "libgtkmm-2-4-1v5" {>= "1-2.24.0"}
+  "libsigc++-2-0-0v5" {>= "2.2.0"}
+  "libstdc++6" {>= "5.2"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "seq24_0.9.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/seq24/seq24_0.9.3-2_amd64.deb"
+}

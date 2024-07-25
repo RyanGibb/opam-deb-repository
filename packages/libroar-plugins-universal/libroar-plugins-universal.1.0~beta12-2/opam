@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libroar-plugins-universal_1.0~beta12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libroar-plugins-universal"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libroar2"
+]
+extra-source "libroar-plugins-universal_1.0~beta12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/roaraudio/libroar-plugins-universal_1.0~beta12-2_amd64.deb"
+}

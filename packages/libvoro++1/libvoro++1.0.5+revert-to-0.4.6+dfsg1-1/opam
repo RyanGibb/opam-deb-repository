@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvoro++1_0.5+revert-to-0.4.6+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvoro++1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libvoro++1_0.5+revert-to-0.4.6+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/voro++/libvoro++1_0.5+revert-to-0.4.6+dfsg1-1_amd64.deb"
+}

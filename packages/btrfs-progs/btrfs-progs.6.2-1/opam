@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i btrfs-progs_6.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r btrfs-progs"]
+]
+depends: [
+  "libblkid1" {>= "2.17.2"}
+  "libc6" {>= "2.34"}
+  "libcom-err2" {>= "1.43.9"}
+  "libext2fs2" {>= "1.42"}
+  "liblzo2-2" {>= "2.02"}
+  "libudev1" {>= "183"}
+  "libuuid1" {>= "2.16"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "btrfs-progs_6.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/btrfs-progs/btrfs-progs_6.2-1_amd64.deb"
+}

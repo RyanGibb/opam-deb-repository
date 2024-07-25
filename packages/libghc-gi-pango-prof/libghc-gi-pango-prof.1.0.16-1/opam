@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-gi-pango-prof_1.0.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-gi-pango-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-gi-glib-prof"
+  "libghc-gi-gobject-prof"
+  "libghc-gi-pango-dev" {= "1.0.16-1"}
+  "libghc-haskell-gi-base-prof"
+  "libghc-haskell-gi-prof"
+]
+extra-source "libghc-gi-pango-prof_1.0.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-gi-pango/libghc-gi-pango-prof_1.0.16-1_amd64.deb"
+}

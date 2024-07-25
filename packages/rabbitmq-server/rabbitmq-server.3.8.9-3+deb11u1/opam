@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rabbitmq-server_3.8.9-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rabbitmq-server"]
+]
+depends: [
+  "adduser"
+  "erlang-crypto" {>= "1-21.3"}
+  "erlang-eldap" {>= "1-21.3"}
+  "erlang-inets" {>= "1-21.3"}
+  "erlang-mnesia" {>= "1-21.3"}
+  "erlang-os-mon" {>= "1-21.3"}
+  "erlang-parsetools" {>= "1-21.3"}
+  "erlang-public-key" {>= "1-21.3"}
+  "erlang-runtime-tools" {>= "1-21.3"}
+  "erlang-ssl" {>= "1-21.3"}
+  "erlang-syntax-tools" {>= "1-21.3"}
+  "erlang-tools" {>= "1-21.3"}
+  "erlang-xmerl" {>= "1-21.3"}
+  "locales-all"
+  "logrotate"
+  "lsb-base"
+  "python3-any"
+  "socat"
+  ("erlang-base" | "erlang-base-hipe")
+]
+extra-source "rabbitmq-server_3.8.9-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rabbitmq-server/rabbitmq-server_3.8.9-3+deb11u1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-flashclust_1.01-2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-flashclust"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+]
+extra-source "r-cran-flashclust_1.01-2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-flashclust/r-cran-flashclust_1.01-2-3_amd64.deb"
+}

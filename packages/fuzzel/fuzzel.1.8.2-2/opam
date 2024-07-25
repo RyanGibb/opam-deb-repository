@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fuzzel_1.8.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fuzzel"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libfcft4" {>= "3.0.1"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libpixman-1-0" {>= "0.30.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libwayland-client0" {>= "1.20.0"}
+  "libwayland-cursor0" {>= "1.0.2"}
+  "libxkbcommon0" {>= "1.0.0"}
+]
+extra-source "fuzzel_1.8.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fuzzel/fuzzel_1.8.2-2_amd64.deb"
+}

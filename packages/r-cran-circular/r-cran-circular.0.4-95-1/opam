@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-circular_0.4-95-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-circular"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.0-1"}
+  "r-cran-boot"
+  "r-cran-mvtnorm"
+]
+extra-source "r-cran-circular_0.4-95-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-circular/r-cran-circular_0.4-95-1_amd64.deb"
+}

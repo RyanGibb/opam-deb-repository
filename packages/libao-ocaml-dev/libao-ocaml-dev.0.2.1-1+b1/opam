@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libao-ocaml-dev_0.2.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libao-ocaml-dev"]
+]
+depends: [
+  "libao-dev"
+  "libao-ocaml"
+  "libao-ocaml" {= "0.2.1-1+b1"}
+  "ocaml-findlib"
+  "ocaml-nox"
+]
+extra-source "libao-ocaml-dev_0.2.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-ao/libao-ocaml-dev_0.2.1-1+b1_amd64.deb"
+}

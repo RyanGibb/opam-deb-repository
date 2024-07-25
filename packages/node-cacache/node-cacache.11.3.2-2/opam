@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-cacache_11.3.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-cacache"]
+]
+depends: [
+  "node-bluebird"
+  "node-chownr"
+  "node-glob" {>= "7.1.2"}
+  "node-graceful-fs" {>= "4.1.11"}
+  "node-lru-cache" {>= "4.1.1"}
+  "node-mississippi"
+  "node-mkdirp" {>= "0.5.1"}
+  "node-move-concurrently"
+  "node-promise-inflight"
+  "node-rimraf" {>= "2.6.1"}
+  "node-ssri"
+  "node-unique-filename"
+  "node-y18n"
+  "nodejs"
+]
+extra-source "node-cacache_11.3.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-cacache/node-cacache_11.3.2-2_all.deb"
+}

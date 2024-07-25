@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjdependency-java_1.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjdependency-java"]
+]
+depends: [
+  "libasm-java" {>= "6.0"}
+  "libcommons-io-java" {>= "2.6"}
+]
+extra-source "libjdependency-java_1.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jdependency/libjdependency-java_1.4-1_all.deb"
+}

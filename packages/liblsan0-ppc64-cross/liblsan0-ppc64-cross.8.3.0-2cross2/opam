@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblsan0-ppc64-cross_8.3.0-2cross2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblsan0-ppc64-cross"]
+]
+depends: [
+  "gcc-8-cross-base-ports" {= "8.3.0-2cross2"}
+  "libc6-ppc64-cross" {>= "2.28"}
+  "libgcc1-ppc64-cross" {>= "1-3-cross.3"}
+  "libstdc++6-ppc64-cross"
+]
+extra-source "liblsan0-ppc64-cross_8.3.0-2cross2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross-ports/liblsan0-ppc64-cross_8.3.0-2cross2_all.deb"
+}

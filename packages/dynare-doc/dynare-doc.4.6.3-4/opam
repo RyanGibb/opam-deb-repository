@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dynare-doc_4.6.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dynare-doc"]
+]
+depends: [
+  "libjs-mathjax"
+  "libjs-sphinxdoc" {>= "2.4.3-5~"}
+]
+extra-source "dynare-doc_4.6.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dynare/dynare-doc_4.6.3-4_all.deb"
+}

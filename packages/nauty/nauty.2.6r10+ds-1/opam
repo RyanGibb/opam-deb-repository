@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nauty_2.6r10+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nauty"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgmp10"
+  "libnauty2" {= "2.6r10+ds-1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "nauty_2.6r10+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nauty/nauty_2.6r10+ds-1_amd64.deb"
+}

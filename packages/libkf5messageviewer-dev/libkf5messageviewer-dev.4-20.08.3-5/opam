@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5messageviewer-dev_4:20.08.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5messageviewer-dev"]
+]
+depends: [
+  "libkf5messagecore-dev" {= "4-20.08.3-5"}
+  "libkf5messageviewer5abi1" {= "4-20.08.3-5"}
+  "libkf5mimetreeparser-dev" {= "4-20.08.3-5"}
+  "libkf5pimcommon-dev" {>= "4-20.08.3~"}
+]
+extra-source "libkf5messageviewer-dev_4:20.08.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kf5-messagelib/libkf5messageviewer-dev_20.08.3-5_amd64.deb"
+}

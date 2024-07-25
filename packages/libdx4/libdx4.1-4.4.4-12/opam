@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdx4_1:4.4.4-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdx4"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgl1"
+  "libhdf4-0-alt" {>= "4.2r4"}
+  "libmagickcore-6-q16-6" {>= "8-6.9.10.2"}
+  "libnetcdf13" {>= "3.6.1"}
+  "libx11-6"
+  "libxt6"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "libdx4_1:4.4.4-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dx/libdx4_4.4.4-12_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libminizip1_1.1-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libminizip1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libminizip1_1.1-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/minizip/libminizip1_1.1-8+b1_amd64.deb"
+}

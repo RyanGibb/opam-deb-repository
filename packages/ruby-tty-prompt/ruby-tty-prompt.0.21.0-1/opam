@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-tty-prompt_0.21.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-tty-prompt"]
+]
+depends: [
+  "ruby-necromancer" {>= "0.5.0"}
+  "ruby-pastel" {>= "0.7.0"}
+  "ruby-tty-reader" {>= "0.7.0"}
+]
+extra-source "ruby-tty-prompt_0.21.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-tty-prompt/ruby-tty-prompt_0.21.0-1_all.deb"
+}

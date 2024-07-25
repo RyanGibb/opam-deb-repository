@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nast_0.2.0-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nast"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libncurses6" {>= "6"}
+  "libnet1" {>= "1.1.2.1"}
+  "libpcap0-8" {>= "0.9.8"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "nast_0.2.0-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nast/nast_0.2.0-10_amd64.deb"
+}

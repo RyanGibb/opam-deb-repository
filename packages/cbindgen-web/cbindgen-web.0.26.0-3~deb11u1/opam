@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cbindgen-web_0.26.0-3~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cbindgen-web"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.2"}
+]
+conflicts: [
+  "cbindgen"
+]
+extra-source "cbindgen-web_0.26.0-3~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-cbindgen-web/cbindgen-web_0.26.0-3~deb11u1_amd64.deb"
+}

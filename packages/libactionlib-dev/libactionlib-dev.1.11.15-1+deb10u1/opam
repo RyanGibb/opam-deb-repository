@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libactionlib-dev_1.11.15-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libactionlib-dev"]
+]
+depends: [
+  "libactionlib-msgs-dev"
+  "libactionlib0d" {= "1.11.15-1+deb10u1"}
+  "libboost-thread-dev"
+  "libstd-msgs-dev"
+  "python"
+  "python-rosunit"
+  "ros-message-generation"
+]
+extra-source "libactionlib-dev_1.11.15-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-actionlib/libactionlib-dev_1.11.15-1+deb10u1_amd64.deb"
+}

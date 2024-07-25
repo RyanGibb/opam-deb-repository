@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pybuild-plugin-pyproject_5.20230130+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pybuild-plugin-pyproject"]
+]
+depends: [
+  "dh-python" {= "5.20230130+deb12u1"}
+  "python3-build" {> "0.7~"}
+  "python3-installer"
+  "python3-tomli"
+]
+extra-source "pybuild-plugin-pyproject_5.20230130+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dh-python/pybuild-plugin-pyproject_5.20230130+deb12u1_all.deb"
+}

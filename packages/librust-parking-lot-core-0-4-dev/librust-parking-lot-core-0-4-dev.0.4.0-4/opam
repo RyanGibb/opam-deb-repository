@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-parking-lot-core-0.4-dev_0.4.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-parking-lot-core-0.4-dev"]
+]
+depends: [
+  "librust-libc-dev"
+  "librust-rand-0-7+default-dev"
+  "librust-rand-0-7+small-rng-dev"
+  "librust-rustc-version-0-2+default-dev"
+  "librust-winapi-0-3+default-dev"
+  "librust-winapi-0-3+errhandlingapi-dev"
+  "librust-winapi-0-3+handleapi-dev"
+  "librust-winapi-0-3+minwindef-dev"
+  "librust-winapi-0-3+ntstatus-dev"
+  "librust-winapi-0-3+winbase-dev"
+  "librust-winapi-0-3+winerror-dev"
+  "librust-winapi-0-3+winnt-dev"
+  ("librust-smallvec-1+default-dev" | "librust-smallvec-0+default-dev" {>= "0.6-~~"})
+]
+extra-source "librust-parking-lot-core-0.4-dev_0.4.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-parking-lot-core-0.4/librust-parking-lot-core-0.4-dev_0.4.0-4_amd64.deb"
+}

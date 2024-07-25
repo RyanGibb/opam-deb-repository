@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freebsd-buildutils_10.3~svn296373-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freebsd-buildutils"]
+]
+depends: [
+  "bsdmainutils"
+  "freebsd-glue" {>= "0.2.8~"}
+  "freebsd-mk"
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.15"}
+  "libdb5-3"
+  "libmd0" {>= "0.0.0"}
+  "libsbuf6" {>= "9.0"}
+  "m4"
+  "patchutils"
+  "unzip"
+]
+conflicts: [
+  "flex-old"
+  "freebsd5-buildutils"
+  "freebsd6-buildutils"
+]
+extra-source "freebsd-buildutils_10.3~svn296373-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freebsd-buildutils/freebsd-buildutils_10.3~svn296373-7_amd64.deb"
+}

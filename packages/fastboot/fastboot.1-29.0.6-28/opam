@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fastboot_1:29.0.6-28_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fastboot"]
+]
+depends: [
+  "android-libbase" {>= "29.0.6"}
+  "android-libboringssl" {>= "13.0.0+r24"}
+  "android-libcutils" {= "1-29.0.6-28"}
+  "android-liblog" {>= "29.0.6"}
+  "android-libsparse" {= "1-29.0.6-28"}
+  "android-libziparchive" {= "1-29.0.6-28"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+]
+extra-source "fastboot_1:29.0.6-28_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-tools/fastboot_29.0.6-28_amd64.deb"
+}

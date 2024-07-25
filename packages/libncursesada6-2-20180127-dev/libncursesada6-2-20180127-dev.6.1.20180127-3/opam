@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libncursesada6.2.20180127-dev_6.1.20180127-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libncursesada6.2.20180127-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-8"
+  "libncurses-dev"
+  "libncursesada6-2-20180127" {= "6.1.20180127-3"}
+]
+extra-source "libncursesada6.2.20180127-dev_6.1.20180127-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libncursesada/libncursesada6.2.20180127-dev_6.1.20180127-3_amd64.deb"
+}

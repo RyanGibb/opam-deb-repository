@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-wayland-server+scoped-tls-dev_0.29.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-wayland-server+scoped-tls-dev"]
+]
+depends: [
+  "librust-scoped-tls-1+default-dev"
+  "librust-wayland-server-dev" {= "0.29.4-3"}
+]
+extra-source "librust-wayland-server+scoped-tls-dev_0.29.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-wayland-server/librust-wayland-server+scoped-tls-dev_0.29.4-3_amd64.deb"
+}

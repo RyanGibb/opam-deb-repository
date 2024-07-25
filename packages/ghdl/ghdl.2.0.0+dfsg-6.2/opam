@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ghdl_2.0.0+dfsg-6.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ghdl"]
+]
+depends: [
+  "ghdl-common" {= "2.0.0+dfsg-6.2"}
+  ("ghdl-mcode" | "ghdl-gcc" | "ghdl-llvm")
+]
+extra-source "ghdl_2.0.0+dfsg-6.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/ghdl/ghdl_2.0.0+dfsg-6.2_amd64.deb"
+}

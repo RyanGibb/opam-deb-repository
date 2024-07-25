@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i consul_1.0.7~dfsg1-5+b21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r consul"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.3.2"}
+]
+extra-source "consul_1.0.7~dfsg1-5+b21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/consul/consul_1.0.7~dfsg1-5+b21_amd64.deb"
+}

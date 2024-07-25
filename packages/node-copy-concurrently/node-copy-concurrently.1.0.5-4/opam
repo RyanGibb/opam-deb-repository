@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-copy-concurrently_1.0.5-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-copy-concurrently"]
+]
+depends: [
+  "node-aproba" {>= "1.1.1"}
+  "node-fs-write-stream-atomic" {>= "1.0.8-3~"}
+  "node-iferr" {>= "0.1.5"}
+  "node-mkdirp" {>= "0.5.1"}
+  "node-rimraf" {>= "2.5.4"}
+  "node-run-queue" {>= "1.0.0"}
+  "nodejs" {>= "4"}
+]
+extra-source "node-copy-concurrently_1.0.5-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-copy-concurrently/node-copy-concurrently_1.0.5-4_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tryton-modules-account-stock-landed-cost-weight_6.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tryton-modules-account-stock-landed-cost-weight"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "5.2"}
+  "python3-any"
+  "python3-pkg-resources"
+  "tryton-modules-account-stock-landed-cost" {>= "6.0"}
+  "tryton-modules-product" {>= "6.0"}
+  "tryton-modules-product-measurements" {>= "6.0"}
+  "tryton-modules-stock-shipment-measurements" {>= "6.0"}
+  "tryton-server"
+  "tryton-server" {>= "6.0"}
+]
+extra-source "tryton-modules-account-stock-landed-cost-weight_6.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tryton-modules-account-stock-landed-cost-weight/tryton-modules-account-stock-landed-cost-weight_6.0.0-3_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-kazoo_2.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-kazoo"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-eventlet"
+  "python-jinja2"
+  "python-pygments"
+  "python-six"
+]
+extra-source "python-kazoo_2.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kazoo/python-kazoo_2.5.0-1_all.deb"
+}

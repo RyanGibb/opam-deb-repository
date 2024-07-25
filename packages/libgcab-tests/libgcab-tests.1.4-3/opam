@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgcab-tests_1.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgcab-tests"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcab-1-0-0" {>= "1.4"}
+  "libglib2-0-0" {>= "2.37.2"}
+]
+extra-source "libgcab-tests_1.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcab/libgcab-tests_1.4-3_amd64.deb"
+}

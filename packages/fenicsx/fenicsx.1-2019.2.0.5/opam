@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fenicsx_1:2019.2.0.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fenicsx"]
+]
+depends: [
+  "dolfinx-doc" {>= "2019.2"}
+  "libdolfinx-dev" {>= "2019.2"}
+  "python-ufl-doc" {>= "2019.2"}
+  "python3-dolfinx" {>= "2019.2"}
+  "python3-ffcx" {>= "2019.2"}
+  "python3-fiat" {>= "2019.2"}
+  "python3-ufl" {>= "2019.2"}
+]
+extra-source "fenicsx_1:2019.2.0.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fenics/fenicsx_2019.2.0.5_all.deb"
+}

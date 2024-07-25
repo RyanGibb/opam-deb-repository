@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgkl-jni_0.8.7+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgkl-jni"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgomp1" {>= "6"}
+]
+extra-source "libgkl-jni_0.8.7+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gkl/libgkl-jni_0.8.7+dfsg-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcephfs-jni_12.2.11+dfsg1-2.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcephfs-jni"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcephfs2" {= "12.2.11+dfsg1-2.1+b1"}
+  "libgcc1" {>= "1-3.0"}
+  "librados2" {>= "12.2.8"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libcephfs-jni_12.2.11+dfsg1-2.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/libcephfs-jni_12.2.11+dfsg1-2.1+b1_amd64.deb"
+}

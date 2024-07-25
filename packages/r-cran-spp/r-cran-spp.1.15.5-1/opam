@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-spp_1.15.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-spp"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+  "r-bioc-rsamtools"
+  "r-cran-catools"
+  "r-cran-rcpp"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "r-other-hms-dbmi-spp"
+]
+extra-source "r-cran-spp_1.15.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-spp/r-cran-spp_1.15.5-1_amd64.deb"
+}

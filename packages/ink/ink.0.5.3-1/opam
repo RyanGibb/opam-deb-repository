@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ink_0.5.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ink"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libinklevel5" {>= "0.9.3~"}
+]
+extra-source "ink_0.5.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ink/ink_0.5.3-1_amd64.deb"
+}

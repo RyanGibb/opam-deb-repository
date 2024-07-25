@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-bel-rus_0.2.0~r81186-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-bel-rus"]
+]
+depends: [
+  "apertium" {>= "3.4"}
+  "apertium-lex-tools"
+  "cg3"
+]
+conflicts: [
+  "apertium-rus-bel"
+]
+extra-source "apertium-bel-rus_0.2.0~r81186-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-bel-rus/apertium-bel-rus_0.2.0~r81186-2_all.deb"
+}

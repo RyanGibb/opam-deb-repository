@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libffi6-dbg_3.2.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libffi6-dbg"]
+]
+depends: [
+  "libffi6" {= "3.2.1-9"}
+]
+extra-source "libffi6-dbg_3.2.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libffi/libffi6-dbg_3.2.1-9_amd64.deb"
+}

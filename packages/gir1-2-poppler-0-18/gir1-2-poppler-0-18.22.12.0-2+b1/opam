@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-poppler-0.18_22.12.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-poppler-0.18"]
+]
+depends: [
+  "gir1-2-freedesktop" {>= "1.42.0-2~"}
+  "gir1-2-glib-2-0" {>= "1.42.0-2~"}
+  "libpoppler-glib8" {>= "22.08.0"}
+]
+extra-source "gir1.2-poppler-0.18_22.12.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poppler/gir1.2-poppler-0.18_22.12.0-2+b1_amd64.deb"
+}

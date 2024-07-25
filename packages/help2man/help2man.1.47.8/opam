@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i help2man_1.47.8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r help2man"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "liblocale-gettext-perl"
+  "perl" {>= "5.26.2-7+b1"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "help2man_1.47.8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/help2man/help2man_1.47.8_amd64.deb"
+}

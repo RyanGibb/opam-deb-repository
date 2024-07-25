@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gem-plugin-tiff_1:0.94-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gem-plugin-tiff"]
+]
+depends: [
+  "gem" {< "1-0.94+1~"}
+  "gem" {>= "1-0.94-3"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtiff5" {>= "4.0.3"}
+]
+extra-source "gem-plugin-tiff_1:0.94-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gem/gem-plugin-tiff_0.94-3_amd64.deb"
+}

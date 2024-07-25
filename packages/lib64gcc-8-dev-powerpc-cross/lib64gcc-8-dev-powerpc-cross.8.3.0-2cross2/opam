@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib64gcc-8-dev-powerpc-cross_8.3.0-2cross2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib64gcc-8-dev-powerpc-cross"]
+]
+depends: [
+  "gcc-8-cross-base-ports" {= "8.3.0-2cross2"}
+  "lib64asan5-powerpc-cross" {>= "8.3.0-2cross2"}
+  "lib64atomic1-powerpc-cross" {>= "8.3.0-2cross2"}
+  "lib64gcc1-powerpc-cross" {>= "1-8.3.0-2cross2"}
+  "lib64gomp1-powerpc-cross" {>= "8.3.0-2cross2"}
+  "lib64ubsan1-powerpc-cross" {>= "8.3.0-2cross2"}
+]
+extra-source "lib64gcc-8-dev-powerpc-cross_8.3.0-2cross2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross-ports/lib64gcc-8-dev-powerpc-cross_8.3.0-2cross2_all.deb"
+}

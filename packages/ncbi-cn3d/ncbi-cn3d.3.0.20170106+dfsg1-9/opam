@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ncbi-cn3d_3.0.20170106+dfsg1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ncbi-cn3d"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libncbi6" {< "6.1.20170106+dfsg1.1"}
+  "libncbi6" {>= "6.1.20170106+dfsg1"}
+  "libvibrant6b" {< "6.1.20170106+dfsg1.1"}
+  "libvibrant6b" {>= "6.1.20170106+dfsg1"}
+]
+extra-source "ncbi-cn3d_3.0.20170106+dfsg1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ncbi-tools6/ncbi-cn3d_3.0.20170106+dfsg1-9_amd64.deb"
+}

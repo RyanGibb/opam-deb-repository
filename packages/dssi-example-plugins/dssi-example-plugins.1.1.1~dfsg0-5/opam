@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dssi-example-plugins_1.1.1~dfsg0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dssi-example-plugins"]
+]
+depends: [
+  "dssi-host-jack" {= "1.1.1~dfsg0-5"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libsamplerate0" {>= "0.1.7"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "dssi-example-plugins_1.1.1~dfsg0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dssi/dssi-example-plugins_1.1.1~dfsg0-5_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnustep-base-dev_1.27.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnustep-base-dev"]
+]
+depends: [
+  "gnustep-base-runtime" {= "1.27.0-3"}
+  "gnustep-make" {>= "2.7.0-4"}
+  "libgnustep-base1-27" {= "1.27.0-3"}
+]
+extra-source "libgnustep-base-dev_1.27.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnustep-base/libgnustep-base-dev_1.27.0-3_amd64.deb"
+}

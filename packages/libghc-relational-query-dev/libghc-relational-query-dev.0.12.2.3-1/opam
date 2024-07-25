@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-relational-query-dev_0.12.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-relational-query-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-dlist-dev"
+  "libghc-names-th-dev"
+  "libghc-persistable-record-dev"
+  "libghc-product-isomorphic-dev"
+  "libghc-sql-words-dev"
+  "libghc-th-constraint-compat-dev"
+  "libghc-th-reify-compat-dev"
+  "libghc-time-locale-compat-dev"
+  "libgmp10"
+]
+extra-source "libghc-relational-query-dev_0.12.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-relational-query/libghc-relational-query-dev_0.12.2.3-1_amd64.deb"
+}

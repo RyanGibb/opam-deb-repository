@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-astrodendro_0.2.0+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-astrodendro"]
+]
+depends: [
+  "python3-any"
+  "python3-astropy" {>= "0.2.0"}
+  "python3-h5py" {>= "0.2.0"}
+  "python3-matplotlib"
+  "python3-numpy" {>= "1.4.1"}
+]
+extra-source "python3-astrodendro_0.2.0+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/astrodendro/python3-astrodendro_0.2.0+dfsg1-2_all.deb"
+}

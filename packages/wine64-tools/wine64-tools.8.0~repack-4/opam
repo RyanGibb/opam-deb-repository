@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wine64-tools_8.0~repack-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wine64-tools"]
+]
+depends: [
+  "gcc"
+  "libc6" {>= "2.34"}
+  "libgettextpo0" {>= "0.21"}
+  "perl-any"
+  ("libwine-dev" {= "8.0~repack-4"} | "libwine-dev-i386" {= "8.0~repack-4"})
+]
+conflicts: [
+  "wine32-tools"
+]
+extra-source "wine64-tools_8.0~repack-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wine/wine64-tools_8.0~repack-4_amd64.deb"
+}

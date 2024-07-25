@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libctapimkt1-dev_1.0.5~rc1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libctapimkt1-dev"]
+]
+depends: [
+  "ctapi-dev"
+  "libctapimkt1" {= "1.0.5~rc1-7"}
+]
+conflicts: [
+  "libctapimkt-dev"
+]
+extra-source "libctapimkt1-dev_1.0.5~rc1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libctapimkt/libctapimkt1-dev_1.0.5~rc1-7_amd64.deb"
+}

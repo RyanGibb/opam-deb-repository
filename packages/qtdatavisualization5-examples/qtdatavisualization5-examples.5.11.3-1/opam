@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qtdatavisualization5-examples_5.11.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qtdatavisualization5-examples"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a" {>= "5.11.3~"}
+  "libqt5datavisualization5" {>= "5.10.1"}
+  "libqt5gui5" {>= "5.11.3~"}
+  "libqt5qml5" {>= "5.1.0"}
+  "libqt5quick5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.11.3~"}
+  "libstdc++6" {>= "5"}
+  "qml-module-qtdatavisualization" {= "5.11.3-1"}
+]
+extra-source "qtdatavisualization5-examples_5.11.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtdatavis3d-everywhere-src/qtdatavisualization5-examples_5.11.3-1_amd64.deb"
+}

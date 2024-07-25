@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcpg-dev_3.1.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcpg-dev"]
+]
+depends: [
+  "libcorosync-common-dev" {= "3.1.7-1"}
+  "libcpg4" {= "3.1.7-1"}
+]
+extra-source "libcpg-dev_3.1.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/corosync/libcpg-dev_3.1.7-1_amd64.deb"
+}

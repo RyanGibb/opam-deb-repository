@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i boinc-screensaver_7.16.16+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r boinc-screensaver"]
+]
+depends: [
+  "boinc-client"
+  "libboinc7" {>= "7.16.16+dfsg"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libstdc++6" {>= "5.2"}
+  "libxcb1"
+]
+extra-source "boinc-screensaver_7.16.16+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boinc/boinc-screensaver_7.16.16+dfsg-1_amd64.deb"
+}

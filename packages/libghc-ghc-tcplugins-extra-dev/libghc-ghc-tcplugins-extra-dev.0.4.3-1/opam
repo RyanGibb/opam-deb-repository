@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-ghc-tcplugins-extra-dev_0.4.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-ghc-tcplugins-extra-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "libghc-ghc-tcplugins-extra-dev_0.4.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-ghc-tcplugins-extra/libghc-ghc-tcplugins-extra-dev_0.4.3-1_amd64.deb"
+}

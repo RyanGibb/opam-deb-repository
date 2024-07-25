@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i llvm-spirv-15_15.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r llvm-spirv-15"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libllvm15"
+  "libllvmspirvlib15" {= "15.0.0-2"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "llvm-spirv-15_15.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spirv-llvm-translator-15/llvm-spirv-15_15.0.0-2_amd64.deb"
+}

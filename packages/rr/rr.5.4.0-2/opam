@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rr_5.4.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rr"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libc6-i386" {>= "2.2"}
+  "libcapnp-0-7-0"
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "python3-any"
+]
+extra-source "rr_5.4.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rr/rr_5.4.0-2_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i conky-cli_1.10.8-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r conky-cli"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-3.0"}
+  "liblua5-1-0"
+  "libncurses6" {>= "6"}
+  "libstdc++6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+conflicts: [
+  "conky-all"
+  "conky-std"
+]
+extra-source "conky-cli_1.10.8-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/conky/conky-cli_1.10.8-1+b1_amd64.deb"
+}

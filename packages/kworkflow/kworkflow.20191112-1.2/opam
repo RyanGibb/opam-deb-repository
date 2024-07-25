@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kworkflow_20191112-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kworkflow"]
+]
+depends: [
+  "ansible"
+  "libguestfs-tools"
+  "pulseaudio-utils"
+  "qemu-system-x86"
+  "rsync"
+  "samba"
+]
+extra-source "kworkflow_20191112-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kworkflow/kworkflow_20191112-1.2_amd64.deb"
+}

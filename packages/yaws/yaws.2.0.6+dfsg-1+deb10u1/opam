@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yaws_2.0.6+dfsg-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yaws"]
+]
+depends: [
+  "adduser"
+  "erlang-yaws" {>= "2.0.6+dfsg-1+deb10u1"}
+  "lsb-base" {>= "3.0-6"}
+  "ssl-cert"
+]
+extra-source "yaws_2.0.6+dfsg-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yaws/yaws_2.0.6+dfsg-1+deb10u1_all.deb"
+}

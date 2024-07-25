@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i riemann-c-client_1.10.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r riemann-c-client"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libjson-c3" {>= "0.10"}
+  "libriemann-client0" {= "1.10.4-2"}
+]
+extra-source "riemann-c-client_1.10.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/riemann-c-client/riemann-c-client_1.10.4-2_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i igal2_2.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r igal2"]
+]
+depends: [
+  "libimage-exiftool-perl"
+  "libimage-imlib2-perl"
+  "libimage-size-perl"
+  "perl-any"
+]
+conflicts: [
+  "igal"
+]
+extra-source "igal2_2.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/igal2/igal2_2.4-1_all.deb"
+}

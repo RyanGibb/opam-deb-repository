@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kuipc_20061220+dfsg3-4.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kuipc"]
+]
+depends: [
+  "cernlib-base"
+  "libc6" {>= "2.14"}
+]
+extra-source "kuipc_20061220+dfsg3-4.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cernlib/kuipc_20061220+dfsg3-4.4_amd64.deb"
+}

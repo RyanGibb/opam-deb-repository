@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i couriergraph_0.25-4.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r couriergraph"]
+]
+depends: [
+  "libfile-tail-perl"
+  "librrds-perl" {>= "1.2"}
+]
+extra-source "couriergraph_0.25-4.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/couriergraph/couriergraph_0.25-4.5_all.deb"
+}

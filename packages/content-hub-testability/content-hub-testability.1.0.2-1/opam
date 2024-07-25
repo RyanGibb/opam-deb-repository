@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i content-hub-testability_1.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r content-hub-testability"]
+]
+depends: [
+  "content-hub"
+  "libapparmor1" {>= "2.6~devel"}
+  "libc6" {>= "2.34"}
+  "libcontent-hub1" {>= "1.0.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "content-hub-testability_1.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/content-hub/content-hub-testability_1.0.2-1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibus-typing-booster_2.22.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibus-typing-booster"]
+]
+depends: [
+  "ibus"
+  "libm17n-0"
+  "m17n-db"
+  "python3-any"
+  "python3-dbus"
+  "python3-enchant"
+  "python3-packaging"
+  "python3-xdg"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "ibus-typing-booster_2.22.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibus-typing-booster/ibus-typing-booster_2.22.0-1_all.deb"
+}

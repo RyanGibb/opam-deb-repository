@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libisocodes-dev_1.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libisocodes-dev"]
+]
+depends: [
+  "gir1-2-isocodes-1-2" {= "1.2.3-1"}
+  "libisocodes1" {= "1.2.3-1"}
+]
+extra-source "libisocodes-dev_1.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libisocodes/libisocodes-dev_1.2.3-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i webdis_0.1.9+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r webdis"]
+]
+depends: [
+  "adduser"
+  "libb64-0d" {>= "1.2"}
+  "libc6" {>= "2.14"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "libhiredis0-14" {>= "0.14.1"}
+  "libjansson4" {>= "2.0.1"}
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "webdis_0.1.9+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/webdis/webdis_0.1.9+dfsg-1_amd64.deb"
+}

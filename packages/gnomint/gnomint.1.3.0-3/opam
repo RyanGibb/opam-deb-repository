@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnomint_1.3.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnomint"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.41.1"}
+  "libgnutls30" {>= "3.6.12"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libreadline8" {>= "6.0"}
+  "libsqlite3-0" {>= "3.5.9"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnomint_1.3.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnomint/gnomint_1.3.0-3_amd64.deb"
+}

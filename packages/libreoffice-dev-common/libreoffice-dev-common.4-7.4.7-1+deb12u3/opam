@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-dev-common_4:7.4.7-1+deb12u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-dev-common"]
+]
+conflicts: [
+  "libreoffice (<< 1:5.2.5-2~)"
+]
+extra-source "libreoffice-dev-common_4:7.4.7-1+deb12u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-dev-common_7.4.7-1+deb12u3_all.deb"
+}

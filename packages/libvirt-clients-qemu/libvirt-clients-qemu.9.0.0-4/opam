@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvirt-clients-qemu_9.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvirt-clients-qemu"]
+]
+depends: [
+  "python3-any"
+  "python3-libvirt"
+]
+extra-source "libvirt-clients-qemu_9.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvirt/libvirt-clients-qemu_9.0.0-4_all.deb"
+}

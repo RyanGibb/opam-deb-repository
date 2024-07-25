@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnss-libvirt_9.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnss-libvirt"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libvirt0" {= "9.0.0-4"}
+  "libyajl2" {>= "2.0.4"}
+]
+extra-source "libnss-libvirt_9.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvirt/libnss-libvirt_9.0.0-4_amd64.deb"
+}

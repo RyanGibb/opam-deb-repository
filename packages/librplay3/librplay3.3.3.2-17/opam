@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librplay3_3.3.2-17_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librplay3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "librplay3_3.3.2-17_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rplay/librplay3_3.3.2-17_amd64.deb"
+}

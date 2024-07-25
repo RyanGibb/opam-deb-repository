@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libatlas3-base_3.10.3-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libatlas3-base"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgfortran5" {>= "8"}
+]
+conflicts: [
+  "libcblas3"
+]
+extra-source "libatlas3-base_3.10.3-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/atlas/libatlas3-base_3.10.3-13_amd64.deb"
+}

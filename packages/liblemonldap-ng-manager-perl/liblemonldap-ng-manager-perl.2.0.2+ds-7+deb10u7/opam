@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblemonldap-ng-manager-perl_2.0.2+ds-7+deb10u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblemonldap-ng-manager-perl"]
+]
+depends: [
+  "libconvert-pem-perl"
+  "libcrypt-openssl-rsa-perl"
+  "libjs-angularjs" {>= "1.4"}
+  "libjs-bootstrap"
+  "libjs-es5-shim"
+  "libjs-jquery"
+  "liblemonldap-ng-handler-perl" {= "2.0.2+ds-7+deb10u7"}
+  "perl"
+  ("lemonldap-ng-fastcgi-server" {= "2.0.2+ds-7+deb10u7"} | "lemonldap-ng-uwsgi-app" {= "2.0.2+ds-7+deb10u7"} | "apache2" | "httpd-cgi")
+]
+extra-source "liblemonldap-ng-manager-perl_2.0.2+ds-7+deb10u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lemonldap-ng/liblemonldap-ng-manager-perl_2.0.2+ds-7+deb10u7_all.deb"
+}

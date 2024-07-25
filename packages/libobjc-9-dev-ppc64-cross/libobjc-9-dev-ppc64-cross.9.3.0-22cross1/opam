@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libobjc-9-dev-ppc64-cross_9.3.0-22cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libobjc-9-dev-ppc64-cross"]
+]
+depends: [
+  "gcc-9-cross-base-ports" {= "9.3.0-22cross1"}
+  "libgcc-9-dev-ppc64-cross" {= "9.3.0-22cross1"}
+  "libobjc4-ppc64-cross" {>= "9.3.0-22cross1"}
+]
+extra-source "libobjc-9-dev-ppc64-cross_9.3.0-22cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-9-cross-ports/libobjc-9-dev-ppc64-cross_9.3.0-22cross1_all.deb"
+}

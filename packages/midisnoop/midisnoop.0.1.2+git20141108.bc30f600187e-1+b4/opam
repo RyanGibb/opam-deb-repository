@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i midisnoop_0.1.2+git20141108.bc30f600187e-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r midisnoop"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.3.0"}
+  "librtmidi6" {>= "5.0.0"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "midisnoop_0.1.2+git20141108.bc30f600187e-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/midisnoop/midisnoop_0.1.2+git20141108.bc30f600187e-1+b4_amd64.deb"
+}

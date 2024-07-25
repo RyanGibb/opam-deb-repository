@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-organismdbi_1.40.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-organismdbi"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-annotationdbi" {>= "1.33.15"}
+  "r-bioc-biobase"
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.15.10"}
+  "r-bioc-genomicfeatures" {>= "1.39.4"}
+  "r-bioc-genomicranges" {>= "1.31.13"}
+  "r-bioc-graph"
+  "r-bioc-iranges"
+  "r-bioc-rbgl"
+  "r-bioc-s4vectors" {>= "0.9.25"}
+  "r-cran-biocmanager"
+  "r-cran-dbi"
+]
+extra-source "r-bioc-organismdbi_1.40.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-organismdbi/r-bioc-organismdbi_1.40.0-1_all.deb"
+}

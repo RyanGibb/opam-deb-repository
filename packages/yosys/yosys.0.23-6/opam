@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yosys_0.23-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yosys"]
+]
+depends: [
+  "berkeley-abc" {>= "1.01+20221019git70cb339+dfsg-3"}
+  "libc6" {>= "2.35"}
+  "libffi8" {>= "3.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "11"}
+  "libtcl8-6" {>= "8.6.0"}
+  "python3-any"
+  "python3-click"
+  "xdot"
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "yosys_0.23-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yosys/yosys_0.23-6_amd64.deb"
+}

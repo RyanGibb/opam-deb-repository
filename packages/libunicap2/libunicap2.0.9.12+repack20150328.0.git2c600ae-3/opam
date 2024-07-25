@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libunicap2_0.9.12+repack20150328.0.git2c600ae-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libunicap2"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libraw1394-11" {>= "2.1.2"}
+  "libv4l-0" {>= "0.5.0"}
+]
+extra-source "libunicap2_0.9.12+repack20150328.0.git2c600ae-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unicap/libunicap2_0.9.12+repack20150328.0.git2c600ae-3_amd64.deb"
+}

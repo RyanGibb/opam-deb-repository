@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slurmdbd_22.05.8-4+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slurmdbd"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "munge"
+  "slurm-wlm-basic-plugins" {= "22.05.8-4+deb12u2"}
+  "slurm-wlm-mysql-plugin" {= "22.05.8-4+deb12u2"}
+  "ucf"
+]
+extra-source "slurmdbd_22.05.8-4+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-wlm/slurmdbd_22.05.8-4+deb12u2_amd64.deb"
+}

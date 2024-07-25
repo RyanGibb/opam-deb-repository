@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iwyu_8.15-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iwyu"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libclang-cpp11" {>= "1-11.0.1"}
+  "libllvm11" {>= "1-9~svn298832-1~"}
+  "libstdc++6" {>= "5.2"}
+  "python3"
+  ("clang" | "clang-4-0" | "clang-5-0" | "clang-6-0" | "clang-7" | "clang-8" | "clang-9" | "clang-10" | "clang-11" | "clang-12")
+]
+extra-source "iwyu_8.15-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iwyu/iwyu_8.15-2_amd64.deb"
+}

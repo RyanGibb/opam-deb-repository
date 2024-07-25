@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jconvolver_1.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jconvolver"]
+]
+depends: [
+  "jconvolver-config-files"
+  "libc6" {>= "2.27"}
+  "libgcc-s1" {>= "3.0"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "5"}
+  "libzita-convolver4" {>= "4.0.3"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "jconvolver_1.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jconvolver/jconvolver_1.1.0-1_amd64.deb"
+}

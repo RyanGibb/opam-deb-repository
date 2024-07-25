@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnfnetlink0_1.0.1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnfnetlink0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libnfnetlink0_1.0.1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnfnetlink/libnfnetlink0_1.0.1-3+b1_amd64.deb"
+}

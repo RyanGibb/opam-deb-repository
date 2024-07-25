@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aprx_2.9.0+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aprx"]
+]
+depends: [
+  "init-system-helpers" {>= "1.51"}
+  "libc6" {>= "2.17"}
+  "lsb-base"
+]
+extra-source "aprx_2.9.0+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aprx/aprx_2.9.0+dfsg-4_amd64.deb"
+}

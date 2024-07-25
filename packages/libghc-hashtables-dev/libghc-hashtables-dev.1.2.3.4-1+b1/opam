@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hashtables-dev_1.2.3.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hashtables-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-hashable-dev"
+  "libghc-primitive-dev"
+  "libghc-vector-dev"
+  "libgmp10"
+]
+extra-source "libghc-hashtables-dev_1.2.3.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hashtables/libghc-hashtables-dev_1.2.3.4-1+b1_amd64.deb"
+}

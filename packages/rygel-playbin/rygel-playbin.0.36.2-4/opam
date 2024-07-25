@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rygel-playbin_0.36.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rygel-playbin"]
+]
+depends: [
+  "gstreamer1-0-plugins-good"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.40.0"}
+  "libgstreamer1-0-0" {>= "1.0.0"}
+  "librygel-core-2-6-2"
+  "librygel-renderer-2-6-2"
+  "librygel-renderer-gst-2-6-2"
+  "rygel" {= "0.36.2-4"}
+]
+conflicts: [
+  "rygel-gst-renderer (<< 0.8.3-1~)"
+]
+extra-source "rygel-playbin_0.36.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rygel/rygel-playbin_0.36.2-4_amd64.deb"
+}

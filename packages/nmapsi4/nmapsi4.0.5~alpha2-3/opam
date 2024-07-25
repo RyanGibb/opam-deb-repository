@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nmapsi4_0.5~alpha2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nmapsi4"]
+]
+depends: [
+  "bind9-dnsutils"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libqt5webenginewidgets5" {>= "5.7.1"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libstdc++6" {>= "4.1.1"}
+  "nmap"
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+  ("libqt5quick5" {>= "5.0.2"} | "libqt5quick5-gles" {>= "5.0.2"})
+]
+extra-source "nmapsi4_0.5~alpha2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nmapsi4/nmapsi4_0.5~alpha2-3_amd64.deb"
+}

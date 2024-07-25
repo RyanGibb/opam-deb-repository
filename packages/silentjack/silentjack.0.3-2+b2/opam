@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i silentjack_0.3-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r silentjack"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "silentjack_0.3-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/silentjack/silentjack_0.3-2+b2_amd64.deb"
+}

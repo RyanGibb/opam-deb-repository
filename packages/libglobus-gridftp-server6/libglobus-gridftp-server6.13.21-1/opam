@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-gridftp-server6_13.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-gridftp-server6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglobus-authz0" {>= "2"}
+  "libglobus-common0" {>= "17"}
+  "libglobus-ftp-control1" {>= "8"}
+  "libglobus-gfork0" {>= "3"}
+  "libglobus-gridftp-server-control0" {>= "9"}
+  "libglobus-gsi-credential1" {>= "6"}
+  "libglobus-gsi-sysconfig1" {>= "8"}
+  "libglobus-gss-assist3" {>= "11"}
+  "libglobus-gssapi-gsi4" {>= "13"}
+  "libglobus-io3" {>= "11"}
+  "libglobus-xio-gsi-driver" {>= "2"}
+  "libglobus-xio0" {>= "5"}
+  "libssl1-1" {>= "1.1.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libglobus-gridftp-server6_13.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gridftp-server/libglobus-gridftp-server6_13.21-1_amd64.deb"
+}

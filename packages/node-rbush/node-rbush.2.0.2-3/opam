@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-rbush_2.0.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-rbush"]
+]
+depends: [
+  "node-quickselect" {>= "1.0.1"}
+  "nodejs"
+]
+extra-source "node-rbush_2.0.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-rbush/node-rbush_2.0.2-3_all.deb"
+}

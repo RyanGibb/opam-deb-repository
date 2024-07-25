@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-prometheus+protobuf-dev_0.13.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-prometheus+protobuf-dev"]
+]
+depends: [
+  "librust-prometheus-dev" {= "0.13.3-1"}
+  "librust-protobuf-2+default-dev"
+]
+extra-source "librust-prometheus+protobuf-dev_0.13.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-prometheus/librust-prometheus+protobuf-dev_0.13.3-1_amd64.deb"
+}

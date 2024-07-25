@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rasterio_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rasterio"]
+]
+depends: [
+  "python3-any"
+  "python3-numpy"
+  "python3-rasterio" {< "1.2.0-1.1~"}
+  "python3-rasterio" {>= "1.2.0-1"}
+]
+extra-source "rasterio_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rasterio/rasterio_1.2.0-1_all.deb"
+}

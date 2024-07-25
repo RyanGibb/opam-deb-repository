@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfilezilla11_0.26.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfilezilla11"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnutls30" {>= "3.7.0"}
+  "libhogweed6" {>= "3.1"}
+  "libnettle8" {>= "3.1"}
+  "libstdc++6" {>= "6"}
+]
+extra-source "libfilezilla11_0.26.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfilezilla/libfilezilla11_0.26.0-1+b1_amd64.deb"
+}

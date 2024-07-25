@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i radicale_3.1.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r radicale"]
+]
+depends: [
+  "adduser"
+  "lsb-base"
+  "python3-any"
+  "python3-radicale" {= "3.1.8-2"}
+]
+extra-source "radicale_3.1.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/radicale/radicale_3.1.8-2_all.deb"
+}

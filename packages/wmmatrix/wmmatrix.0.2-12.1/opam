@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmmatrix_0.2-12.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmmatrix"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6"
+  "libxext6"
+  "libxpm4"
+]
+extra-source "wmmatrix_0.2-12.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmmatrix/wmmatrix_0.2-12.1_amd64.deb"
+}

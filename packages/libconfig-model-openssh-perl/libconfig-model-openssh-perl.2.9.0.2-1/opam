@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libconfig-model-openssh-perl_2.9.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libconfig-model-openssh-perl"]
+]
+depends: [
+  "cme"
+  "libconfig-model-perl" {>= "2.134"}
+  "libfile-homedir-perl"
+  "liblog-log4perl-perl"
+  "libmouse-perl"
+  "perl-any"
+]
+extra-source "libconfig-model-openssh-perl_2.9.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libconfig-model-openssh-perl/libconfig-model-openssh-perl_2.9.0.2-1_all.deb"
+}

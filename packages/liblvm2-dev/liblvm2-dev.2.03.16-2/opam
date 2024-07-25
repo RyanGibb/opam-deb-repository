@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblvm2-dev_2.03.16-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblvm2-dev"]
+]
+depends: [
+  "libdevmapper-dev"
+  "liblvm2cmd2-03" {= "2.03.16-2"}
+]
+extra-source "liblvm2-dev_2.03.16-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lvm2/liblvm2-dev_2.03.16-2_amd64.deb"
+}

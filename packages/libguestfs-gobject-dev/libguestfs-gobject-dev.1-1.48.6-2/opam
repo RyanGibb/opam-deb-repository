@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libguestfs-gobject-dev_1:1.48.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libguestfs-gobject-dev"]
+]
+depends: [
+  "gir1-2-guestfs-1-0" {= "1-1.48.6-2"}
+  "libguestfs-gobject-1-0-0" {= "1-1.48.6-2"}
+]
+conflicts: [
+  "libguestfs0 (<< 1:1.14.9-1~)"
+]
+extra-source "libguestfs-gobject-dev_1:1.48.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libguestfs/libguestfs-gobject-dev_1.48.6-2_amd64.deb"
+}

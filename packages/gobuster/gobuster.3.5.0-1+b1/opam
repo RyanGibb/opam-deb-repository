@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gobuster_3.5.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gobuster"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+]
+extra-source "gobuster_3.5.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gobuster/gobuster_3.5.0-1+b1_amd64.deb"
+}

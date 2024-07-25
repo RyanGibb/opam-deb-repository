@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pipewire-audio-client-libraries_0.3.19-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pipewire-audio-client-libraries"]
+]
+depends: [
+  "libasound2" {>= "1.1.6"}
+  "libc6" {>= "2.17"}
+  "libpipewire-0-3-0" {= "0.3.19-4"}
+  "pipewire" {= "0.3.19-4"}
+]
+extra-source "pipewire-audio-client-libraries_0.3.19-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pipewire/pipewire-audio-client-libraries_0.3.19-4_amd64.deb"
+}

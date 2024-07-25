@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i getstream_20100616-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r getstream"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libevent-2-1-6" {>= "2.1.8-stable"}
+  "libglib2-0-0" {>= "2.24.0"}
+]
+extra-source "getstream_20100616-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/getstream/getstream_20100616-1+b1_amd64.deb"
+}

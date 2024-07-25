@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i open-invaders_0.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r open-invaders"]
+]
+depends: [
+  "libaldmb1"
+  "liballegro4-4" {>= "2-4.4.3.1"}
+  "libc6" {>= "2.14"}
+  "libdumb1"
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "open-invaders-data" {= "0.3-5"}
+]
+extra-source "open-invaders_0.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/open-invaders/open-invaders_0.3-5_amd64.deb"
+}

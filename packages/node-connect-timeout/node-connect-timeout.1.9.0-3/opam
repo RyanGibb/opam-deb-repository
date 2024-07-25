@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-connect-timeout_1.9.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-connect-timeout"]
+]
+depends: [
+  "node-http-errors" {>= "1.6.1"}
+  "node-ms" {>= "2.0.0"}
+  "node-on-finished" {>= "2.3.0"}
+  "node-on-headers" {>= "1.0.0"}
+  "nodejs" {>= "6"}
+]
+extra-source "node-connect-timeout_1.9.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-connect-timeout/node-connect-timeout_1.9.0-3_all.deb"
+}

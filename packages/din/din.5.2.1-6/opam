@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i din_5.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r din"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc-s1"
+  "libgl1"
+  "libircclient1" {>= "1.8"}
+  "liblo7" {>= "0.26~repack"}
+  "libstdc++6" {>= "5.2"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libx11-6"
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "din_5.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/din/din_5.2.1-6_amd64.deb"
+}

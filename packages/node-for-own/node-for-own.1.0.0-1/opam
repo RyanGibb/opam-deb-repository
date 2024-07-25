@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-for-own_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-for-own"]
+]
+depends: [
+  "node-for-in" {>= "0.1.5"}
+  "nodejs"
+]
+extra-source "node-for-own_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-for-own/node-for-own_1.0.0-1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencl-clang15_15.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencl-clang15"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libclang-cpp15" {>= "1-15.0.6"}
+  "libgcc-s1" {>= "3.0"}
+  "libllvm15"
+  "libllvmspirvlib15"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libopencl-clang15_15.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencl-clang-15/libopencl-clang15_15.0.0-2_amd64.deb"
+}

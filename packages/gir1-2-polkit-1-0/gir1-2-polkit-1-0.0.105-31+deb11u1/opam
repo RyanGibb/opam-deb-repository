@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-polkit-1.0_0.105-31+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-polkit-1.0"]
+]
+depends: [
+  "gir1-2-glib-2-0" {>= "0.9.12"}
+  "libpolkit-agent-1-0" {= "0.105-31+deb11u1"}
+  "libpolkit-gobject-1-0" {= "0.105-31+deb11u1"}
+]
+extra-source "gir1.2-polkit-1.0_0.105-31+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/policykit-1/gir1.2-polkit-1.0_0.105-31+deb11u1_amd64.deb"
+}

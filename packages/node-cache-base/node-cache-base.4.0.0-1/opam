@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-cache-base_4.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-cache-base"]
+]
+depends: [
+  "node-collection-visit"
+  "node-get-value" {>= "3.0.1"}
+  "node-kind-of" {>= "6.0.2"}
+  "node-sellside-emitter"
+  "node-set-value" {>= "3.0.0"}
+  "node-union-value" {>= "2.0.0"}
+  "node-unset-value" {>= "1.0.0"}
+  "nodejs" {>= "6"}
+]
+extra-source "node-cache-base_4.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-cache-base/node-cache-base_4.0.0-1_all.deb"
+}

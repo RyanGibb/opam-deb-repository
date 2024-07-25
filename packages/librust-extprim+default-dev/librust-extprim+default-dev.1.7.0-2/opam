@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-extprim+default-dev_1.7.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-extprim+default-dev"]
+]
+depends: [
+  "librust-extprim-dev"
+  "librust-extprim-dev" {= "1.7.0-2"}
+  "librust-serde-1+default-dev"
+  "librust-serde-1+derive-dev"
+  ("librust-rand-0-7+default-dev" | "librust-rand-0-6+default-dev")
+]
+extra-source "librust-extprim+default-dev_1.7.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-extprim/librust-extprim+default-dev_1.7.0-2_amd64.deb"
+}

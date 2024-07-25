@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tcpbench_1.01-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tcpbench"]
+]
+depends: [
+  "libbsd0" {>= "0.2.0"}
+  "libc6" {>= "2.34"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+]
+extra-source "tcpbench_1.01-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tcpbench/tcpbench_1.01-1+b1_amd64.deb"
+}

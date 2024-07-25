@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcs_0.10.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcs"]
+]
+depends: [
+  "fonts-dejavu-core"
+  "fonts-liberation"
+  "lsb-base" {>= "3.0-6"}
+  "psmisc"
+  "python3-any"
+  "python3-lxml"
+  "python3-openssl"
+  "python3-pkg-resources"
+  "python3-pycurl"
+  "python3-tornado"
+  "ruby"
+  "ruby-backports"
+  "ruby-ethon"
+  "ruby-json"
+  "ruby-open4"
+  "ruby-sinatra"
+  "rubygems-integration"
+]
+conflicts: [
+  "python3-pcs"
+]
+extra-source "pcs_0.10.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcs/pcs_0.10.1-2_all.deb"
+}

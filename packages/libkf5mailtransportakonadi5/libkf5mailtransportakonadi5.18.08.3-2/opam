@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5mailtransportakonadi5_18.08.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5mailtransportakonadi5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libkf5akonadicore5abi2" {>= "4-18.08.3~"}
+  "libkf5akonadimime5" {>= "4-17.12.2"}
+  "libkf5coreaddons5" {>= "4.97.0"}
+  "libkf5i18n5" {>= "4.97.0"}
+  "libkf5mailtransport-data" {= "18.08.3-2"}
+  "libkf5mailtransport5" {>= "17.12.2"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libkf5mailtransportakonadi5_18.08.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kmailtransport/libkf5mailtransportakonadi5_18.08.3-2_amd64.deb"
+}

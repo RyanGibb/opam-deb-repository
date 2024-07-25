@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mono-mcs_6.8.0.105+dfsg-3.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mono-mcs"]
+]
+depends: [
+  "libmono-corlib4-5-cil" {< "6.8.0.106"}
+  "libmono-corlib4-5-cil" {>= "6.8.0.105"}
+  "libmono-microsoft-csharp4-0-cil"
+  "libmono-system-core4-0-cil" {>= "5.18.0.240"}
+  "libmono-system-xml4-0-cil" {>= "4.6.1.3"}
+  "libmono-system4-0-cil" {>= "5.18.0.240"}
+  "mono-runtime" {>= "3.0~"}
+  ("libc6" {>= "2.36"} | "libc6-1" {>= "2.36"} | "libc0-1" {>= "2.36"})
+]
+extra-source "mono-mcs_6.8.0.105+dfsg-3.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mono/mono-mcs_6.8.0.105+dfsg-3.3_all.deb"
+}

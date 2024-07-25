@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cargo-outdated_0.11.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cargo-outdated"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcurl3-gnutls" {>= "7.28.0"}
+  "libgcc-s1" {>= "4.2"}
+  "libgit2-1-5" {>= "1.5.0"}
+  "libssh2-1" {>= "1.2.5"}
+  "libssl3" {>= "3.0.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "cargo-outdated_0.11.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-cargo-outdated/cargo-outdated_0.11.1-2+b1_amd64.deb"
+}

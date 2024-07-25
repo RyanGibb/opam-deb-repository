@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sagetex_3.6.1+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sagetex"]
+]
+depends: [
+  "python3-any"
+  "python3-tk"
+  "sagemath" {>= "8.9~beta9"}
+  "tex-common" {>= "6.13"}
+]
+conflicts: [
+  "python-sagetex"
+]
+extra-source "python3-sagetex_3.6.1+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sagetex/python3-sagetex_3.6.1+ds-1_all.deb"
+}

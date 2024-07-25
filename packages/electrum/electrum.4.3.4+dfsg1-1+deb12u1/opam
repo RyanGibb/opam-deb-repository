@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i electrum_4.3.4+dfsg1-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r electrum"]
+]
+depends: [
+  "python3-any"
+  "python3-electrum" {= "4.3.4+dfsg1-1+deb12u1"}
+]
+extra-source "electrum_4.3.4+dfsg1-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/electrum/electrum_4.3.4+dfsg1-1+deb12u1_all.deb"
+}

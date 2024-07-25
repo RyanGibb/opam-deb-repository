@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libodb-boost-dev_2.4.0-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libodb-boost-dev"]
+]
+depends: [
+  "libodb-boost-2-4" {= "2.4.0-1+b3"}
+  "libodb-dev" {>= "2.4.0"}
+]
+extra-source "libodb-boost-dev_2.4.0-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libodb-boost/libodb-boost-dev_2.4.0-1+b3_amd64.deb"
+}

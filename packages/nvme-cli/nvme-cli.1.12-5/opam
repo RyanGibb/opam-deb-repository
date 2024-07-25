@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nvme-cli_1.12-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nvme-cli"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libuuid1" {>= "2.16"}
+  "uuid-runtime"
+]
+extra-source "nvme-cli_1.12-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nvme-cli/nvme-cli_1.12-5_amd64.deb"
+}

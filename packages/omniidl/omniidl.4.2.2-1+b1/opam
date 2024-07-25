@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i omniidl_4.2.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r omniidl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+]
+extra-source "omniidl_4.2.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/omniorb-dfsg/omniidl_4.2.2-1+b1_amd64.deb"
+}

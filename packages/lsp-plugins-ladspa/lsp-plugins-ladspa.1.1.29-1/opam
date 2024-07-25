@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lsp-plugins-ladspa_1.1.29-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lsp-plugins-ladspa"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "lsp-plugins-ladspa_1.1.29-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lsp-plugins/lsp-plugins-ladspa_1.1.29-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpdl-netcdf-perl_4.20-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpdl-netcdf-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libnetcdf13" {>= "4.0.1"}
+  "pdl"
+  "pdl" {>= "1-2.019-5+b1"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libpdl-netcdf-perl_4.20-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpdl-netcdf-perl/libpdl-netcdf-perl_4.20-6+b1_amd64.deb"
+}

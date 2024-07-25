@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmailutils-dev_1:3.15-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmailutils-dev"]
+]
+depends: [
+  "default-libmysqlclient-dev"
+  "libc6" {>= "2.34"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libdb-dev"
+  "libdb5-3"
+  "libgdbm-dev"
+  "libgdbm6" {>= "1.16"}
+  "libgnutls28-dev"
+  "libgnutls30" {>= "3.7.0"}
+  "libgsasl-dev"
+  "libgsasl18" {>= "1.1"}
+  "libkyotocabinet-dev"
+  "libkyotocabinet16v5" {>= "1.2.79"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "libldap2-dev"
+  "libmailutils9" {= "1-3.15-4"}
+  "libmu-dbm9" {= "1-3.15-4"}
+  "libncurses6" {>= "6"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpam0g-dev"
+  "libreadline8" {>= "6.0"}
+  "libtinfo6" {>= "6"}
+  "libunistring2" {>= "0.9.7"}
+]
+extra-source "libmailutils-dev_1:3.15-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mailutils/libmailutils-dev_3.15-4_amd64.deb"
+}

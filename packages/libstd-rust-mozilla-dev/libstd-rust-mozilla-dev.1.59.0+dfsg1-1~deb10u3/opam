@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstd-rust-mozilla-dev_1.59.0+dfsg1-1~deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstd-rust-mozilla-dev"]
+]
+depends: [
+  "libstd-rust-mozilla-1-59" {= "1.59.0+dfsg1-1~deb10u3"}
+]
+extra-source "libstd-rust-mozilla-dev_1.59.0+dfsg1-1~deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rustc-mozilla/libstd-rust-mozilla-dev_1.59.0+dfsg1-1~deb10u3_amd64.deb"
+}

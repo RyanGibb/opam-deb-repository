@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i espeakedit_1.48.15-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r espeakedit"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libportaudio2" {>= "19+svn20101113"}
+  "libsonic0" {>= "0.1.10"}
+  "libstdc++6" {>= "5.2"}
+  "libwxbase3-2-1" {>= "3.2.1+dfsg"}
+  "libwxgtk3-2-1" {>= "3.2.1+dfsg-2"}
+  "sox"
+]
+extra-source "espeakedit_1.48.15-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/espeakedit/espeakedit_1.48.15-2+b2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i finit_4.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r finit"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libite5" {>= "2.2.0"}
+  "libuev3" {>= "2.4.0"}
+  "sensible-utils"
+]
+extra-source "finit_4.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/finit/finit_4.2-1+b1_amd64.deb"
+}

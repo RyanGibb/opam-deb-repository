@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dlm-controld_4.0.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dlm-controld"]
+]
+depends: [
+  "corosync"
+  "kmod"
+  "libc6" {>= "2.14"}
+  "libcfg7" {>= "2.99.5"}
+  "libcmap4" {>= "1.99.9"}
+  "libcpg4" {>= "1.99"}
+  "libdlm3" {>= "3.0.2"}
+  "libdlmcontrol3" {>= "4.0.2"}
+  "libquorum5" {>= "1.99.9"}
+  "libsystemd0"
+]
+extra-source "dlm-controld_4.0.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dlm/dlm-controld_4.0.8-1_amd64.deb"
+}

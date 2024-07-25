@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcorona-perl_0.1004-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcorona-perl"]
+]
+depends: [
+  "libanyevent-perl"
+  "libcoro-perl"
+  "libev-perl"
+  "libnet-server-coro-perl"
+  "libnet-server-perl"
+  "libplack-perl"
+  "perl"
+]
+extra-source "libcorona-perl_0.1004-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcorona-perl/libcorona-perl_0.1004-4_all.deb"
+}

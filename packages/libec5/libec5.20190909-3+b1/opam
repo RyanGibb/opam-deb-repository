@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libec5_20190909-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libec5"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libntl43" {>= "11.4.3"}
+  "libpari-gmp-tls7"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libec5_20190909-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eclib/libec5_20190909-3+b1_amd64.deb"
+}

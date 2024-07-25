@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-serde-bytes+alloc-dev_0.11.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-serde-bytes+alloc-dev"]
+]
+depends: [
+  "librust-serde-1+alloc-dev"
+  "librust-serde-bytes-dev" {= "0.11.5-2"}
+]
+extra-source "librust-serde-bytes+alloc-dev_0.11.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-serde-bytes/librust-serde-bytes+alloc-dev_0.11.5-2_amd64.deb"
+}

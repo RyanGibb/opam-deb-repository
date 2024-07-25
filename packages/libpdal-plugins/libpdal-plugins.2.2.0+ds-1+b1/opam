@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpdal-plugins_2.2.0+ds-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpdal-plugins"]
+]
+depends: [
+  "libpdal-plugin-e57" {= "2.2.0+ds-1+b1"}
+  "libpdal-plugin-faux" {= "2.2.0+ds-1+b1"}
+  "libpdal-plugin-hdf" {= "2.2.0+ds-1+b1"}
+  "libpdal-plugin-i3s" {= "2.2.0+ds-1+b1"}
+  "libpdal-plugin-icebridge" {= "2.2.0+ds-1+b1"}
+  "libpdal-plugin-pgpointcloud" {= "2.2.0+ds-1+b1"}
+]
+extra-source "libpdal-plugins_2.2.0+ds-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdal/libpdal-plugins_2.2.0+ds-1+b1_amd64.deb"
+}

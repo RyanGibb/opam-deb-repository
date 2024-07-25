@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rwhod_0.17-14+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rwhod"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.7"}
+  "lsb-base" {>= "3.2-13"}
+  "passwd"
+]
+extra-source "rwhod_0.17-14+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netkit-rwho/rwhod_0.17-14+b1_amd64.deb"
+}

@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i claws-mail-spamassassin_3.17.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r claws-mail-spamassassin"]
+]
+depends: [
+  "claws-mail" {= "3.17.3-2"}
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libdb5-3"
+  "libetpan20" {>= "1.5"}
+  "libexpat1" {>= "2.0.1"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libgnutls30" {>= "3.6.5"}
+  "libgtk2-0-0" {>= "2.12.0"}
+  "liblockfile1" {>= "1.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpangoft2-1-0-0" {>= "1.14.0"}
+  "libsasl2-2" {>= "2.1.27+dfsg"}
+  "spamassassin"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "claws-mail-spamassassin_3.17.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/claws-mail/claws-mail-spamassassin_3.17.3-2_amd64.deb"
+}

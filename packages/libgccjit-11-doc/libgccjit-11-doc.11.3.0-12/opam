@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgccjit-11-doc_11.3.0-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgccjit-11-doc"]
+]
+depends: [
+  "gcc-11-base" {= "11.3.0-12"}
+]
+conflicts: [
+  "libgccjit-10-doc"
+  "libgccjit-5-doc"
+  "libgccjit-6-doc"
+  "libgccjit-7-doc"
+  "libgccjit-8-doc"
+  "libgccjit-9-doc"
+]
+extra-source "libgccjit-11-doc_11.3.0-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-11/libgccjit-11-doc_11.3.0-12_all.deb"
+}

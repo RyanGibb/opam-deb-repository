@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsdl-mixer1.2-dev_1.2.12-17+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsdl-mixer1.2-dev"]
+]
+depends: [
+  "libflac-dev" {>= "1.2.1"}
+  "libmad0-dev" {>= "0.15.1b"}
+  "libmikmod-dev"
+  "libogg-dev" {>= "1.2.0"}
+  "libsdl-mixer1-2" {= "1.2.12-17+b3"}
+  "libsdl1-2-compat-dev"
+  "libvorbis-dev" {>= "1.2.0"}
+]
+extra-source "libsdl-mixer1.2-dev_1.2.12-17+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sdl-mixer1.2/libsdl-mixer1.2-dev_1.2.12-17+b3_amd64.deb"
+}

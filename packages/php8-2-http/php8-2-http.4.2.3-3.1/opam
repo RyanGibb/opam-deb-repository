@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php8.2-http_4.2.3-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php8.2-http"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl4" {>= "7.16.3"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "libicu72" {>= "72.1~rc-1~"}
+  "libssl3" {>= "3.0.0"}
+  "php8-2-common"
+  "zlib1g" {>= "1-1.2.0"}
+  ("libapache2-mod-php8-2" | "libphp8-2-embed" | "php8-2-cgi" | "php8-2-cli" | "php8-2-fpm" | "php8-2-phpdbg")
+]
+extra-source "php8.2-http_4.2.3-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-pecl-http/php8.2-http_4.2.3-3.1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ebview_0.3.6.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ebview"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libeb16" {>= "4.4.3"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libgtk2-0-0" {>= "2.24.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libx11-6"
+]
+extra-source "ebview_0.3.6.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ebview/ebview_0.3.6.2-3_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libeclipse-e4-core-services-java_2.1.300+eclipse4.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libeclipse-e4-core-services-java"]
+]
+depends: [
+  "libatinject-jsr330-api-java"
+  "libeclipse-osgi-services-java" {>= "3.7.0"}
+  "libequinox-common-java"
+]
+extra-source "libeclipse-e4-core-services-java_2.1.300+eclipse4.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eclipse-platform-runtime/libeclipse-e4-core-services-java_2.1.300+eclipse4.10-1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i psychtoolbox-3-lib_3.0.18.12.dfsg1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r psychtoolbox-3-lib"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libstdc++6" {>= "11"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "psychtoolbox-3-lib_3.0.18.12.dfsg1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/psychtoolbox-3/psychtoolbox-3-lib_3.0.18.12.dfsg1-1.1_amd64.deb"
+}

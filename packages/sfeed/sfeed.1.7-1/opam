@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sfeed_1.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sfeed"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "sfeed_1.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sfeed/sfeed_1.7-1_amd64.deb"
+}

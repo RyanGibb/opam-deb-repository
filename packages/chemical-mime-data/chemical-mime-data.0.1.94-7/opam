@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i chemical-mime-data_0.1.94-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r chemical-mime-data"]
+]
+depends: [
+  "shared-mime-info"
+]
+conflicts: [
+  "chemicalmime"
+]
+extra-source "chemical-mime-data_0.1.94-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chemical-mime-data/chemical-mime-data_0.1.94-7_all.deb"
+}

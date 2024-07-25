@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtevent-dev_0.9.37-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtevent-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libtalloc-dev"
+  "libtevent0" {= "0.9.37-1"}
+]
+extra-source "libtevent-dev_0.9.37-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tevent/libtevent-dev_0.9.37-1_amd64.deb"
+}

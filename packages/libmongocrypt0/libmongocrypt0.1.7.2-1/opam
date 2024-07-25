@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmongocrypt0_1.7.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmongocrypt0"]
+]
+depends: [
+  "libbson-1-0-0" {>= "1.23.1"}
+  "libc6" {>= "2.34"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "libmongocrypt0_1.7.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmongocrypt/libmongocrypt0_1.7.2-1_amd64.deb"
+}

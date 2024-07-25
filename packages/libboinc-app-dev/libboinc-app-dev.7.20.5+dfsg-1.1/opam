@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libboinc-app-dev_7.20.5+dfsg-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libboinc-app-dev"]
+]
+depends: [
+  "build-essential"
+  "default-libmysqlclient-dev"
+  "libboinc-app7" {= "7.20.5+dfsg-1.1"}
+  "libboinc7" {= "7.20.5+dfsg-1.1"}
+  "libssl-dev"
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "libboinc-app-dev_7.20.5+dfsg-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boinc/libboinc-app-dev_7.20.5+dfsg-1.1_amd64.deb"
+}

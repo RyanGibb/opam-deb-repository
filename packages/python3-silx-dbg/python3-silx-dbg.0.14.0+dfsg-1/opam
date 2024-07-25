@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-silx-dbg_0.14.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-silx-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "5.2"}
+  "python3-dbg" {< "3.10"}
+  "python3-dbg" {>= "3.9~"}
+  "python3-fabio-dbg"
+  "python3-h5py-dbg"
+  "python3-lxml-dbg"
+  "python3-matplotlib-dbg"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  "python3-numpy-dbg"
+  "python3-pil-dbg"
+  "python3-pyopencl-dbg"
+  "python3-pyqt5-dbg"
+  "python3-pyqt5-qtopengl-dbg"
+  "python3-pyqt5-qtsvg-dbg"
+  "python3-scipy-dbg"
+  "python3-silx" {= "0.14.0+dfsg-1"}
+]
+extra-source "python3-silx-dbg_0.14.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/silx/python3-silx-dbg_0.14.0+dfsg-1_amd64.deb"
+}

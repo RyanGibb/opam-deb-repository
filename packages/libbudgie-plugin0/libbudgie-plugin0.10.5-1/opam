@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbudgie-plugin0_10.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbudgie-plugin0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.57"}
+  "libgtk-3-0" {>= "3.21.4"}
+  "libpeas-1-0-0" {>= "1.0.0"}
+]
+extra-source "libbudgie-plugin0_10.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/budgie-desktop/libbudgie-plugin0_10.5-1_amd64.deb"
+}

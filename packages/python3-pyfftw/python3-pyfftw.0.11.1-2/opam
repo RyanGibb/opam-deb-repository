@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyfftw_0.11.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyfftw"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libfftw3-long3" {>= "3.3.5"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+]
+conflicts: [
+  "python3-fftw3"
+]
+extra-source "python3-pyfftw_0.11.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyfftw/python3-pyfftw_0.11.1-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhsail-rt-9-dev_9.3.0-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhsail-rt-9-dev"]
+]
+depends: [
+  "gcc-9-base" {= "9.3.0-22"}
+  "libgcc-9-dev" {= "9.3.0-22"}
+  "libhsail-rt0" {>= "9.3.0-22"}
+]
+extra-source "libhsail-rt-9-dev_9.3.0-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-9/libhsail-rt-9-dev_9.3.0-22_amd64.deb"
+}

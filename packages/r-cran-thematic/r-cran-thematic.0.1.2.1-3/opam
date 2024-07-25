@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-thematic_0.1.2.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-thematic"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.0-1"}
+  "r-cran-farver"
+  "r-cran-ggplot2" {>= "3.3.5+dfsg-5~"}
+  "r-cran-rappdirs"
+  "r-cran-rlang"
+  "r-cran-rstudioapi" {>= "0.8"}
+  "r-cran-scales"
+]
+extra-source "r-cran-thematic_0.1.2.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-thematic/r-cran-thematic_0.1.2.1-3_all.deb"
+}

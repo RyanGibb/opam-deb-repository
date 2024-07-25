@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcalcium0_0.4.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcalcium0"]
+]
+depends: [
+  "libantic0" {>= "0.2.4"}
+  "libc6" {>= "2.14"}
+  "libflint-arb2" {>= "1-2.23.0"}
+  "libflint17"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libcalcium0_0.4.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/calcium/libcalcium0_0.4.1-3_amd64.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-dbus-dev_1.0.1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-dbus-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libghc-cereal-dev"
+  "libghc-lens-dev"
+  "libghc-libxml-sax-dev"
+  "libghc-network-dev"
+  "libghc-random-dev"
+  "libghc-split-dev"
+  "libghc-th-lift-dev"
+  "libghc-vector-dev"
+  "libghc-xml-types-dev"
+  "libgmp10"
+  "libxml2" {>= "2.6.27"}
+]
+extra-source "libghc-dbus-dev_1.0.1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-dbus/libghc-dbus-dev_1.0.1-3+b1_amd64.deb"
+}

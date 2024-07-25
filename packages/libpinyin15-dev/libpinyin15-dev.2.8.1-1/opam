@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpinyin15-dev_2.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpinyin15-dev"]
+]
+depends: [
+  "libglib2-0-dev"
+  "libpinyin-common-dev" {= "2.8.1-1"}
+  "libpinyin15" {= "2.8.1-1"}
+]
+conflicts: [
+  "libpinyin-dev"
+]
+extra-source "libpinyin15-dev_2.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpinyin/libpinyin15-dev_2.8.1-1_amd64.deb"
+}

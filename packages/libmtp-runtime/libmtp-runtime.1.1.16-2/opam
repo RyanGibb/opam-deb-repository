@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmtp-runtime_1.1.16-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmtp-runtime"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmtp-common"
+  "libmtp9" {= "1.1.16-2"}
+]
+extra-source "libmtp-runtime_1.1.16-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmtp/libmtp-runtime_1.1.16-2_amd64.deb"
+}

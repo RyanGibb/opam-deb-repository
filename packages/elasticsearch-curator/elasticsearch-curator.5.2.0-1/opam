@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elasticsearch-curator_5.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elasticsearch-curator"]
+]
+depends: [
+  "python-any" {>= "2.6~"}
+  "python-elasticsearch-curator" {= "5.2.0-1"}
+  "python-pkg-resources"
+]
+extra-source "elasticsearch-curator_5.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elasticsearch-curator/elasticsearch-curator_5.2.0-1_all.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xnee-doc_3.19-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xnee-doc"]
+]
+depends: [
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "xnee-doc_3.19-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xnee/xnee-doc_3.19-6_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i namazu2-common_2.0.21-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r namazu2-common"]
+]
+conflicts: [
+  "namazu2 (<= 2.0.12-1)"
+  "namazu2-doc"
+]
+extra-source "namazu2-common_2.0.21-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/namazu2/namazu2-common_2.0.21-22_all.deb"
+}

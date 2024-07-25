@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mate-notification-daemon_1.24.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mate-notification-daemon"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.10.0"}
+  "libcanberra-gtk3-0" {>= "0.25"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libglib2-0-bin"
+  "libgtk-3-0" {>= "3.21.4"}
+  "libnotify4" {>= "0.7.0"}
+  "libwnck-3-0" {>= "2.91.6"}
+  "libx11-6"
+  "libxml2" {>= "2.7.4"}
+  "mate-notification-daemon-common" {= "1.24.1-1"}
+]
+extra-source "mate-notification-daemon_1.24.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mate-notification-daemon/mate-notification-daemon_1.24.1-1_amd64.deb"
+}

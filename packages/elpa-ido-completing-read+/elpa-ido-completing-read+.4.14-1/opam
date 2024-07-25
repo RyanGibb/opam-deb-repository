@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-ido-completing-read+_4.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-ido-completing-read+"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-memoize" {>= "1.1"}
+  "elpa-seq" {>= "0.5"}
+  "emacsen-common"
+]
+extra-source "elpa-ido-completing-read+_4.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ido-ubiquitous/elpa-ido-completing-read+_4.14-1_all.deb"
+}

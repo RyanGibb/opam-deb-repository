@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5xmlrpcclient-dev_5.54.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5xmlrpcclient-dev"]
+]
+depends: [
+  "libkf5kio-dev" {>= "5.54.0~"}
+  "libkf5xmlrpcclient5" {= "5.54.0-1"}
+  "qtbase5-dev" {>= "5.4"}
+]
+extra-source "libkf5xmlrpcclient-dev_5.54.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kxmlrpcclient/libkf5xmlrpcclient-dev_5.54.0-1_amd64.deb"
+}

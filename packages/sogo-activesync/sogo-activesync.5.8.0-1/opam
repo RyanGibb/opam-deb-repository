@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sogo-activesync_5.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sogo-activesync"]
+]
+depends: [
+  "gnustep-base-runtime" {>= "1.28.0"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnustep-base1-28" {>= "1.28.0"}
+  "libobjc4" {>= "4.2.1"}
+  "libsbjson2-3"
+  "libsope1" {>= "5.7.1"}
+  "libssl3" {>= "3.0.0"}
+  "libwbxml2-1" {>= "0.11.7+dfsg"}
+  "sogo" {= "5.8.0-1"}
+]
+extra-source "sogo-activesync_5.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sogo/sogo-activesync_5.8.0-1_amd64.deb"
+}

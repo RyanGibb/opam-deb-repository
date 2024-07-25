@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt6svgwidgets6_6.4.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt6svgwidgets6"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libqt6core6"
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6gui6" {>= "6.4.2+dfsg~"}
+  "libqt6svg6" {>= "6.2.0"}
+  "libqt6widgets6" {>= "6.4.2+dfsg~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libqt6svgwidgets6_6.4.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-svg/libqt6svgwidgets6_6.4.2-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-psa-crypto-sys-dev_0.9.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-psa-crypto-sys-dev"]
+]
+depends: [
+  "libmbedtls-dev"
+  "librust-bindgen-0-60+default-dev"
+  "librust-cc-dev"
+  "librust-cmake-dev"
+  "librust-walkdir-dev"
+]
+extra-source "librust-psa-crypto-sys-dev_0.9.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-psa-crypto-sys/librust-psa-crypto-sys-dev_0.9.3-1+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzbar-dev_0.23.92-7+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzbar-dev"]
+]
+depends: [
+  "gir1-2-zbar-1-0" {= "0.23.92-7+deb12u1"}
+  "libmagick++-dev"
+  "libx11-dev"
+  "libzbar0" {= "0.23.92-7+deb12u1"}
+]
+extra-source "libzbar-dev_0.23.92-7+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zbar/libzbar-dev_0.23.92-7+deb12u1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyiosxr_0.52-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyiosxr"]
+]
+depends: [
+  "python3-any"
+  "python3-lxml"
+  "python3-netmiko"
+]
+extra-source "python3-pyiosxr_0.52-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyiosxr/python3-pyiosxr_0.52-2_all.deb"
+}

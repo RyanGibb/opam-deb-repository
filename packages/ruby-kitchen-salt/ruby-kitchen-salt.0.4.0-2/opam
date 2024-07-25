@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-kitchen-salt_0.4.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-kitchen-salt"]
+]
+depends: [
+  "ruby-hashie" {>= "3.5"}
+  "test-kitchen" {>= "1.4"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-kitchen-salt_0.4.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-kitchen-salt/ruby-kitchen-salt_0.4.0-2_all.deb"
+}

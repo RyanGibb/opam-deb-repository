@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblog-any-adapter-dispatch-perl_0.08-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblog-any-adapter-dispatch-perl"]
+]
+depends: [
+  "liblog-dispatch-perl"
+  "perl-any"
+  ("liblog-any-perl" | "liblog-any-adapter-perl")
+]
+extra-source "liblog-any-adapter-dispatch-perl_0.08-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblog-any-adapter-dispatch-perl/liblog-any-adapter-dispatch-perl_0.08-2_all.deb"
+}

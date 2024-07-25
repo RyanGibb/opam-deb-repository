@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i network-manager-gnome_1.8.20-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r network-manager-gnome"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libayatana-appindicator3-1" {>= "0.4.90"}
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.43.2"}
+  "libgtk-3-0" {>= "3.10"}
+  "libjansson4" {>= "2.0.1"}
+  "libmm-glib0" {>= "0.7.991"}
+  "libnm0" {>= "1.11.3"}
+  "libnma0" {= "1.8.20-1.1"}
+  "libnotify4" {>= "0.7.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libsecret-1-0" {>= "0.7"}
+  "libselinux1" {>= "2.1.9"}
+  "network-manager" {>= "1.8"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("default-dbus-session-bus" | "dbus-session-bus")
+  ("policykit-1-gnome" | "polkit-1-auth-agent")
+]
+extra-source "network-manager-gnome_1.8.20-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/network-manager-applet/network-manager-gnome_1.8.20-1.1_amd64.deb"
+}

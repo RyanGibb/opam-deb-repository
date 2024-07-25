@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-appc-spec-dev_0.8.11+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-appc-spec-dev"]
+]
+depends: [
+  "golang-github-gogo-protobuf-dev"
+  "golang-github-spf13-pflag-dev"
+  "golang-go"
+  "golang-go4-dev"
+  "golang-golang-x-net-dev"
+  "golang-gopkg-inf-v0-dev"
+  ("golang-go-semver-dev" | "golang-github-coreos-go-semver-dev")
+]
+extra-source "golang-github-appc-spec-dev_0.8.11+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-appc-spec/golang-github-appc-spec-dev_0.8.11+dfsg-2_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfennec-perl_2.018-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfennec-perl"]
+]
+depends: [
+  "libchild-perl" {>= "0.010"}
+  "libexporter-declare-perl"
+  "libmock-quick-perl"
+  "libparallel-runner-perl"
+  "libtest-exception-perl"
+  "libtest-warn-perl"
+  "perl"
+]
+extra-source "libfennec-perl_2.018-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfennec-perl/libfennec-perl_2.018-1_all.deb"
+}

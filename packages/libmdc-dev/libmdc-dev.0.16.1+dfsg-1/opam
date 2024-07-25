@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmdc-dev_0.16.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmdc-dev"]
+]
+depends: [
+  "libmdc3" {= "0.16.1+dfsg-1"}
+]
+conflicts: [
+  "libmdc2-dev"
+]
+extra-source "libmdc-dev_0.16.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmedcon/libmdc-dev_0.16.1+dfsg-1_amd64.deb"
+}

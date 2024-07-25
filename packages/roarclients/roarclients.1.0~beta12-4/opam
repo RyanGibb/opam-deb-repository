@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i roarclients_1.0~beta12-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r roarclients"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libroar2" {>= "1.0~beta12"}
+  "libshout3" {>= "2.2.2"}
+  "libvorbisfile3" {>= "1.1.2"}
+]
+extra-source "roarclients_1.0~beta12-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/roaraudio/roarclients_1.0~beta12-4_amd64.deb"
+}

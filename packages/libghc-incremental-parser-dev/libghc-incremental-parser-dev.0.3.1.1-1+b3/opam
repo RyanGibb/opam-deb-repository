@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-incremental-parser-dev_0.3.1.1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-incremental-parser-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-monoid-subclasses-dev"
+  "libgmp10"
+]
+extra-source "libghc-incremental-parser-dev_0.3.1.1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-incremental-parser/libghc-incremental-parser-dev_0.3.1.1-1+b3_amd64.deb"
+}

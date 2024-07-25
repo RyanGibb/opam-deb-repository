@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libb-hooks-op-annotation-perl_0.44-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libb-hooks-op-annotation-perl"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  "libextutils-depends-perl"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libb-hooks-op-annotation-perl_0.44-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libb-hooks-op-annotation-perl/libb-hooks-op-annotation-perl_0.44-3+b1_amd64.deb"
+}

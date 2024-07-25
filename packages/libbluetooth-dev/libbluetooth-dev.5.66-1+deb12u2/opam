@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbluetooth-dev_5.66-1+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbluetooth-dev"]
+]
+depends: [
+  "libbluetooth3" {= "5.66-1+deb12u2"}
+  ("libc6-dev" | "libc-dev")
+]
+conflicts: [
+  "bluez-pan"
+  "libbluetooth-dev"
+  "libsdp2-dev (<= 1.5.2)"
+]
+extra-source "libbluetooth-dev_5.66-1+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bluez/libbluetooth-dev_5.66-1+deb12u2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-unicode-bidi+serde-dev_0.3.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-unicode-bidi+serde-dev"]
+]
+depends: [
+  "librust-unicode-bidi-dev" {= "0.3.4-2"}
+  ("librust-serde-1+default-dev" | "librust-serde-0+default-dev" {>= "0.8~~"})
+  ("librust-serde-1+derive-dev" | "librust-serde-0+derive-dev" {>= "0.8~~"})
+]
+extra-source "librust-unicode-bidi+serde-dev_0.3.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-unicode-bidi/librust-unicode-bidi+serde-dev_0.3.4-2_amd64.deb"
+}

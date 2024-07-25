@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspeex-ocaml-dev_0.2.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspeex-ocaml-dev"]
+]
+depends: [
+  "libogg-ocaml-dev"
+  "libogg-ocaml-dev" {>= "0.3.0-1"}
+  "libspeex-dev"
+  "libspeex-ocaml"
+  "libspeex-ocaml" {= "0.2.1-2"}
+  "ocaml-findlib"
+  "ocaml-nox"
+]
+extra-source "libspeex-ocaml-dev_0.2.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-speex/libspeex-ocaml-dev_0.2.1-2_amd64.deb"
+}

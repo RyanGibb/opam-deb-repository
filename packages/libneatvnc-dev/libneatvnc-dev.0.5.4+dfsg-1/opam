@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libneatvnc-dev_0.5.4+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libneatvnc-dev"]
+]
+depends: [
+  "libaml-dev"
+  "libgnutls28-dev"
+  "libneatvnc0" {= "0.5.4+dfsg-1"}
+  "libpixman-1-dev"
+  "libturbojpeg0-dev"
+  "zlib1g-dev"
+]
+extra-source "libneatvnc-dev_0.5.4+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neatvnc/libneatvnc-dev_0.5.4+dfsg-1_amd64.deb"
+}

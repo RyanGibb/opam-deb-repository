@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-adler+core-dev_1.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-adler+core-dev"]
+]
+depends: [
+  "librust-adler-dev" {= "1.0.2-2"}
+  "librust-rustc-std-workspace-core-1+default-dev"
+]
+extra-source "librust-adler+core-dev_1.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-adler/librust-adler+core-dev_1.0.2-2_amd64.deb"
+}

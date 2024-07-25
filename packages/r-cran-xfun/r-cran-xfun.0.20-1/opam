@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-xfun_0.20-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-xfun"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+]
+extra-source "r-cran-xfun_0.20-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-xfun/r-cran-xfun_0.20-1_amd64.deb"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tigervnc-scraping-server_1.12.0+dfsg-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tigervnc-scraping-server"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfile-readbackwards-perl" {>= "1.05"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnutls30" {>= "3.7.5"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpixman-1-0"
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  "libxdamage1" {>= "1-1.1"}
+  "libxext6"
+  "libxfixes3"
+  "libxrandr2" {>= "2-1.2.0"}
+  "libxtst6"
+  "perl-any"
+  "tigervnc-common" {= "1.12.0+dfsg-8"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "tigervnc-scraping-server_1.12.0+dfsg-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tigervnc/tigervnc-scraping-server_1.12.0+dfsg-8_amd64.deb"
+}

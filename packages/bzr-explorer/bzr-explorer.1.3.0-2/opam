@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bzr-explorer_1.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bzr-explorer"]
+]
+depends: [
+  "bzr" {>= "2.3"}
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "qbzr" {>= "0.19"}
+  "tango-icon-theme"
+]
+extra-source "bzr-explorer_1.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bzr-explorer/bzr-explorer_1.3.0-2_all.deb"
+}

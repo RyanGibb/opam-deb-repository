@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i runsnakerun_2.0.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r runsnakerun"]
+]
+depends: [
+  "python3-any"
+  "python3-six"
+  "python3-squaremap" {>= "1-1.0.5-1"}
+  "python3-wxgtk4-0"
+]
+extra-source "runsnakerun_2.0.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/runsnakerun/runsnakerun_2.0.5-3_all.deb"
+}

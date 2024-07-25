@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-missingh-prof_1.5.0.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-missingh-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hslogger-prof"
+  "libghc-missingh-dev" {= "1.5.0.1-1+b2"}
+  "libghc-network-bsd-prof"
+  "libghc-network-prof"
+  "libghc-old-locale-prof"
+  "libghc-old-time-prof"
+  "libghc-regex-compat-prof"
+]
+extra-source "libghc-missingh-prof_1.5.0.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/missingh/libghc-missingh-prof_1.5.0.1-1+b2_amd64.deb"
+}

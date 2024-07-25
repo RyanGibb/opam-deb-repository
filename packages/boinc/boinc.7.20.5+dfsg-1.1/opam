@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i boinc_7.20.5+dfsg-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r boinc"]
+]
+depends: [
+  "boinc-client" {>= "7.20.5+dfsg-1.1"}
+  "boinc-manager" {>= "7.20.5+dfsg-1.1"}
+]
+extra-source "boinc_7.20.5+dfsg-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boinc/boinc_7.20.5+dfsg-1.1_all.deb"
+}

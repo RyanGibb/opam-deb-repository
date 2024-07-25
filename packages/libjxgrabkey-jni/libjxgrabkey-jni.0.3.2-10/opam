@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjxgrabkey-jni_0.3.2-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjxgrabkey-jni"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+]
+extra-source "libjxgrabkey-jni_0.3.2-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jxgrabkey/libjxgrabkey-jni_0.3.2-10_amd64.deb"
+}

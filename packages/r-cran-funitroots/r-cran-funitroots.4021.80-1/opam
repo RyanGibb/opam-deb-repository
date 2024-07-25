@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-funitroots_4021.80-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-funitroots"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-1"}
+  "r-cran-fbasics" {>= "260.72"}
+  "r-cran-timeseries"
+  "r-cran-urca" {>= "1.2-5-2"}
+]
+extra-source "r-cran-funitroots_4021.80-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/funitroots/r-cran-funitroots_4021.80-1_amd64.deb"
+}

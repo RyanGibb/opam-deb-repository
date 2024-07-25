@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libyuv0_0.0~git20230123.b2528b0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libyuv0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libstdc++6" {>= "5"}
+]
+conflicts: [
+  "libyuv"
+]
+extra-source "libyuv0_0.0~git20230123.b2528b0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liby/libyuv/libyuv0_0.0~git20230123.b2528b0-1_amd64.deb"
+}

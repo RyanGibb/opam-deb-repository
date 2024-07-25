@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmodule-build-perl_0.422400-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmodule-build-perl"]
+]
+depends: [
+  "perl"
+  ("perl" {>= "5.19.5"} | "libtest-harness-perl" {>= "3.29"})
+  ("perl" {>= "5.21.3"} | "libcpan-meta-perl" {>= "2.142060"})
+]
+extra-source "libmodule-build-perl_0.422400-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmodule-build-perl/libmodule-build-perl_0.422400-1_all.deb"
+}

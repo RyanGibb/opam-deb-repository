@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gobjc++-8-mipsisa32r6-linux-gnu_8.3.0-2cross2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gobjc++-8-mipsisa32r6-linux-gnu"]
+]
+depends: [
+  "g++-8-mipsisa32r6-linux-gnu" {= "8.3.0-2cross2"}
+  "gcc-8-mipsisa32r6-linux-gnu-base" {= "8.3.0-2cross2"}
+  "gobjc-8-mipsisa32r6-linux-gnu" {= "8.3.0-2cross2"}
+  "libc6" {>= "2.14"}
+  "libgmp10" {>= "2-5.0.1~"}
+  "libisl19" {>= "0.15"}
+  "libmpc3"
+  "libmpfr6" {>= "3.1.3"}
+  "libobjc-8-dev-mipsr6-cross" {>= "8"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gobjc++-8-mipsisa32r6-linux-gnu_8.3.0-2cross2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross-mipsen/gobjc++-8-mipsisa32r6-linux-gnu_8.3.0-2cross2_amd64.deb"
+}

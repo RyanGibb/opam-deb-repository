@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hjsmin-prof_0.2.0.4-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hjsmin-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hjsmin-dev" {= "0.2.0.4-2+b1"}
+  "libghc-language-javascript-prof"
+]
+extra-source "libghc-hjsmin-prof_0.2.0.4-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hjsmin/libghc-hjsmin-prof_0.2.0.4-2+b1_amd64.deb"
+}

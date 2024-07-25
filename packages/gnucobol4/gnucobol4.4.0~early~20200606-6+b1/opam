@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnucobol4_4.0~early~20200606-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnucobol4"]
+]
+depends: [
+  "gcc"
+  "libc6" {>= "2.34"}
+  "libcob5" {>= "4.0~early~20200606"}
+  "libcob5-dev" {= "4.0~early~20200606-6+b1"}
+  "libgmp-dev"
+  "libncurses5-dev"
+]
+extra-source "gnucobol4_4.0~early~20200606-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnucobol4/gnucobol4_4.0~early~20200606-6+b1_amd64.deb"
+}

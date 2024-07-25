@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cpluff-loader_0.2.0+ds1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cpluff-loader"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcpluff0" {>= "0.1.3"}
+]
+extra-source "cpluff-loader_0.2.0+ds1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cpluff/cpluff-loader_0.2.0+ds1-2+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tcpd_7.6.q-32_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tcpd"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libwrap0" {= "7.6.q-32"}
+]
+extra-source "tcpd_7.6.q-32_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tcp-wrappers/tcpd_7.6.q-32_amd64.deb"
+}

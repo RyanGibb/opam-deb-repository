@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdatrie1-bin_0.2.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdatrie1-bin"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libdatrie1" {>= "0.2.0"}
+]
+extra-source "libdatrie1-bin_0.2.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdatrie/libdatrie1-bin_0.2.13-1_amd64.deb"
+}

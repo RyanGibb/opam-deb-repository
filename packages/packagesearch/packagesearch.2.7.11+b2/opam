@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i packagesearch_2.7.11+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r packagesearch"]
+]
+depends: [
+  "apt" {>= "0.6.46.1"}
+  "apt-xapian-index"
+  "debtags" {>= "1.6.1"}
+  "libapt-pkg6-0" {>= "1.9~"}
+  "libc6" {>= "2.14"}
+  "libept1-6-0"
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.12.2"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  "libxapian30" {>= "1.4.14~"}
+  "xterm"
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "packagesearch_2.7.11+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/packagesearch/packagesearch_2.7.11+b2_amd64.deb"
+}

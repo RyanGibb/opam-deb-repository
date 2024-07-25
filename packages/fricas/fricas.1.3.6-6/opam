@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fricas_1.3.6-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fricas"]
+]
+depends: [
+  "fricas-databases" {= "1.3.6-6"}
+  "gawk"
+  "libc6" {>= "2.29"}
+  "libgmp10"
+  "libreadline8" {>= "6.0"}
+  "libx11-6"
+]
+extra-source "fricas_1.3.6-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fricas/fricas_1.3.6-6_amd64.deb"
+}

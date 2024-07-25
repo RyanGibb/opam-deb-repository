@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libubsan1-s390x-cross_8.3.0-2cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libubsan1-s390x-cross"]
+]
+depends: [
+  "gcc-8-cross-base" {>= "8.3.0-2"}
+  "libc6-s390x-cross" {>= "2.28"}
+  "libgcc1-s390x-cross" {>= "1-3-cross.3"}
+  "libstdc++6-s390x-cross"
+]
+extra-source "libubsan1-s390x-cross_8.3.0-2cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross/libubsan1-s390x-cross_8.3.0-2cross1_all.deb"
+}

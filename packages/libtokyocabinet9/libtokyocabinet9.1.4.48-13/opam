@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtokyocabinet9_1.4.48-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtokyocabinet9"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.29"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libtokyocabinet9_1.4.48-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tokyocabinet/libtokyocabinet9_1.4.48-13_amd64.deb"
+}

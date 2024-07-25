@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ann-tools_1.1.2+doc-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ann-tools"]
+]
+depends: [
+  "libann0"
+  "libc6" {>= "2.4"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+]
+extra-source "ann-tools_1.1.2+doc-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ann/ann-tools_1.1.2+doc-7_amd64.deb"
+}

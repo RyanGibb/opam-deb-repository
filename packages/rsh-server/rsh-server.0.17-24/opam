@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rsh-server_0.17-24_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rsh-server"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpam0g" {>= "0.99.7.1"}
+  ("openbsd-inetd" | "inet-superserver")
+]
+extra-source "rsh-server_0.17-24_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netkit-rsh/rsh-server_0.17-24_amd64.deb"
+}

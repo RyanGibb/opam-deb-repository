@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vdr-plugin-xine_0.9.4-17_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vdr-plugin-xine"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "libxine2-vdr"
+  "vdr"
+]
+extra-source "vdr-plugin-xine_0.9.4-17_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vdr-plugin-xine/vdr-plugin-xine_0.9.4-17_amd64.deb"
+}

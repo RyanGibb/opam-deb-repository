@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libscalar-list-utils-perl_1:1.55-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libscalar-list-utils-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libscalar-list-utils-perl_1:1.55-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libscalar-list-utils-perl/libscalar-list-utils-perl_1.55-1+b1_amd64.deb"
+}

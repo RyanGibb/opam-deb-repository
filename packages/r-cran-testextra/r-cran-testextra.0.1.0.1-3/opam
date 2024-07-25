@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-testextra_0.1.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-testextra"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-assertthat"
+  "r-cran-parsetools"
+  "r-cran-pkgcond"
+  "r-cran-postlogic"
+  "r-cran-purrr"
+  "r-cran-rlang"
+  "r-cran-stringi"
+  "r-cran-testthat"
+]
+extra-source "r-cran-testextra_0.1.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-testextra/r-cran-testextra_0.1.0.1-3_all.deb"
+}

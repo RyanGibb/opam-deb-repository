@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-jmacro-dev_0.6.17.1-1+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-jmacro-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-aeson-dev"
+  "libghc-regex-posix-dev"
+  "libghc-safe-dev"
+  "libghc-src-exts-dev"
+  "libghc-src-meta-dev"
+  "libghc-syb-dev"
+  "libghc-unordered-containers-dev"
+  "libghc-vector-dev"
+  "libghc-wl-pprint-text-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-jmacro-dev_0.6.17.1-1+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-jmacro/libghc-jmacro-dev_0.6.17.1-1+b5_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i barman_3.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r barman"]
+]
+depends: [
+  "adduser"
+  "python3-any"
+  "python3-barman" {= "3.4.0-1"}
+  "python3-pkg-resources"
+  "rsync" {>= "3.0.4~"}
+]
+extra-source "barman_3.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/barman/barman_3.4.0-1_all.deb"
+}

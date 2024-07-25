@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libendless-dev_0~git20230107+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libendless-dev"]
+]
+depends: [
+  "gir1-2-endless-0" {= "0~git20230107+ds-3"}
+  "libendless-0-0" {= "0~git20230107+ds-3"}
+  "pkg-config"
+]
+extra-source "libendless-dev_0~git20230107+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eos-sdk/libendless-dev_0~git20230107+ds-3_amd64.deb"
+}

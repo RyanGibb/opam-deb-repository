@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mh-e_8.5-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mh-e"]
+]
+depends: [
+  ("dpkg" {>= "1.15.4"} | "install-info")
+  ("emacs25" | "emacs24" | "emacs" | "xemacs21")
+  ("nmh" | "mailutils-mh")
+]
+extra-source "mh-e_8.5-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mh-e/mh-e_8.5-2.1_all.deb"
+}

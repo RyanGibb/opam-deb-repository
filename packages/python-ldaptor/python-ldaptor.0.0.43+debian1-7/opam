@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-ldaptor_0.0.43+debian1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-ldaptor"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  "python-pyparsing"
+  "python-twisted-core" {>= "2.2"}
+  "python-twisted-mail" {>= "0.2"}
+  "python-twisted-names" {>= "0.2"}
+  "python-twisted-web" {>= "0.5"}
+  ("python2-7" | "python2-6")
+]
+conflicts: [
+  "ldaptor-common"
+  "python2.3-ldaptor"
+]
+extra-source "python-ldaptor_0.0.43+debian1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ldaptor/python-ldaptor_0.0.43+debian1-7_all.deb"
+}

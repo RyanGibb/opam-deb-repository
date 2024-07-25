@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lout_3.39-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lout"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "lout-common" {= "3.39-3"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "lout_3.39-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lout/lout_3.39-3+b1_amd64.deb"
+}

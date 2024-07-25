@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kalgebramobile_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kalgebramobile"]
+]
+depends: [
+  "kalgebra-common" {= "4-22.12.3-1"}
+  "libanalitza8" {>= "4-22.12.1"}
+  "libanalitzaplot8" {>= "4-22.12.1"}
+  "libc6" {>= "2.34"}
+  "libkf5coreaddons5" {>= "5.90.0~"}
+  "libkf5i18n5" {>= "5.90.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.15~"}
+  "libqt5widgets5" {>= "5.15~"}
+  "libstdc++6" {>= "4.1.1"}
+  "plasma-framework"
+  "qml-module-org-kde-kirigami2"
+  "qml-module-qtqml-models2"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-dialogs"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick-window2"
+  ("libqt5gui5" {>= "5.15~"} | "libqt5gui5-gles" {>= "5.15~"})
+]
+extra-source "kalgebramobile_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kalgebra/kalgebramobile_22.12.3-1_amd64.deb"
+}

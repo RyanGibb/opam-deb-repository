@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-epc_0.1.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-epc"]
+]
+depends: [
+  "elpa-concurrent" {>= "0.3.1"}
+  "elpa-ctable" {>= "0.1.2"}
+  "emacs"
+  "emacsen-common"
+]
+extra-source "elpa-epc_0.1.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emacs-epc/elpa-epc_0.1.1-3_all.deb"
+}

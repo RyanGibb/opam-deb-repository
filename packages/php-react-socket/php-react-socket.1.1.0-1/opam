@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-react-socket_1.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-react-socket"]
+]
+depends: [
+  "php-common"
+  "php-evenement"
+  "php-react-dns" {< "0.5~~"}
+  "php-react-dns" {>= "0.4.13"}
+  "php-react-event-loop" {< "2~~"}
+  "php-react-event-loop" {>= "1.0"}
+  "php-react-promise" {< "3~~"}
+  "php-react-promise" {>= "2.0"}
+  "php-react-promise-timer" {< "2~~"}
+  "php-react-promise-timer" {>= "1.0"}
+  "php-react-stream" {< "2~~"}
+  "php-react-stream" {>= "1.0"}
+]
+extra-source "php-react-socket_1.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/reactphp-socket/php-react-socket_1.1.0-1_all.deb"
+}

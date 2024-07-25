@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fastqc_0.11.9+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fastqc"]
+]
+depends: [
+  "default-jre"
+  "libcommons-math3-java"
+  "libfindbin-libs-perl"
+  "libhtsjdk-java"
+  "libjbzip2-java"
+  "libsis-jhdf5-java"
+]
+extra-source "fastqc_0.11.9+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fastqc/fastqc_0.11.9+dfsg-6_all.deb"
+}

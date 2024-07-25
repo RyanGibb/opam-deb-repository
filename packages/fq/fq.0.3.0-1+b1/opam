@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fq_0.3.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fq"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+]
+conflicts: [
+  "nq"
+]
+extra-source "fq_0.3.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fq/fq_0.3.0-1+b1_amd64.deb"
+}

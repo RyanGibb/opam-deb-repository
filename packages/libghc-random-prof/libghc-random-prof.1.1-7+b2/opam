@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-random-prof_1.1-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-random-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-random-dev" {= "1.1-7+b2"}
+]
+extra-source "libghc-random-prof_1.1-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-random/libghc-random-prof_1.1-7+b2_amd64.deb"
+}

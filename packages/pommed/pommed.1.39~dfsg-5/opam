@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pommed_1.39~dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pommed"]
+]
+depends: [
+  "eject"
+  "libasound2" {>= "1.0.16"}
+  "libaudiofile1" {>= "0.3.6"}
+  "libc6" {>= "2.8"}
+  "libconfuse2" {>= "3.2.1~"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libpci3" {>= "1-3.5.2-1"}
+]
+extra-source "pommed_1.39~dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pommed/pommed_1.39~dfsg-5_amd64.deb"
+}

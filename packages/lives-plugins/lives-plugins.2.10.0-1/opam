@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lives-plugins_2.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lives-plugins"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libavformat58" {>= "7-4.0"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.17"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.6.0"}
+  "libdv4" {>= "1.0.0"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc1" {>= "1-3.0"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libgl1"
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libmjpegutils-2-1-0"
+  "libogg0" {>= "1.0rc3"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "4.1.1"}
+  "libswresample3" {>= "7-4.0"}
+  "libswscale5" {>= "7-4.0"}
+  "libtheora0" {>= "0.0.0.alpha7.dfsg"}
+  "libx11-6"
+  "libxrender1"
+  "perl-any"
+  "python3"
+  "python3-any"
+  "zlib1g" {>= "1-1.1.4"}
+  ("libavcodec58" {>= "7-4.0"} | "libavcodec-extra58" {>= "7-4.0"})
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "lives-plugins_2.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lives/lives-plugins_2.10.0-1_amd64.deb"
+}

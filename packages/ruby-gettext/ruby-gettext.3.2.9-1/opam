@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-gettext_3.2.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-gettext"]
+]
+depends: [
+  "ruby-locale" {>= "2.0.5"}
+  "ruby-text" {>= "1.3.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-gettext_3.2.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-gettext/ruby-gettext_3.2.9-1_all.deb"
+}

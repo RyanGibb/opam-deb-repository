@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcoda-jni_2.24.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcoda-jni"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcoda-dev" {= "2.24.2-1"}
+  "libcoda15" {>= "2.24.2"}
+]
+extra-source "libcoda-jni_2.24.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coda/libcoda-jni_2.24.2-1_amd64.deb"
+}

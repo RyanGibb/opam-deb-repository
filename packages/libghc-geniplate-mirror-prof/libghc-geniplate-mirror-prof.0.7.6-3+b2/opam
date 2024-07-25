@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-geniplate-mirror-prof_0.7.6-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-geniplate-mirror-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-geniplate-mirror-dev" {= "0.7.6-3+b2"}
+]
+extra-source "libghc-geniplate-mirror-prof_0.7.6-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-geniplate-mirror/libghc-geniplate-mirror-prof_0.7.6-3+b2_amd64.deb"
+}

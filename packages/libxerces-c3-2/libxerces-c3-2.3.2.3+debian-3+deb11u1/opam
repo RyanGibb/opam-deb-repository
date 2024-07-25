@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxerces-c3.2_3.2.3+debian-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxerces-c3.2"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libicu67" {>= "67.1-1~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libxerces-c3.2_3.2.3+debian-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xerces-c/libxerces-c3.2_3.2.3+debian-3+deb11u1_amd64.deb"
+}

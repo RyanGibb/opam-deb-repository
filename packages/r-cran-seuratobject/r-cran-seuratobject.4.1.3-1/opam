@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-seuratobject_4.1.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-seuratobject"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-cran-future"
+  "r-cran-future-apply"
+  "r-cran-matrix" {>= "1.5-0"}
+  "r-cran-progressr"
+  "r-cran-rcpp" {>= "1.0.5"}
+  "r-cran-rcppeigen"
+  "r-cran-rlang" {>= "0.4.7"}
+  "r-cran-sp" {>= "1.5.0"}
+]
+extra-source "r-cran-seuratobject_4.1.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-seuratobject/r-cran-seuratobject_4.1.3-1_amd64.deb"
+}

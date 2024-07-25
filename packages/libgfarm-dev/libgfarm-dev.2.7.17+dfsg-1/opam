@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgfarm-dev_2.7.17+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgfarm-dev"]
+]
+depends: [
+  "libgfarm1" {= "2.7.17+dfsg-1"}
+]
+conflicts: [
+  "libgfarm-dev"
+]
+extra-source "libgfarm-dev_2.7.17+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gfarm/libgfarm-dev_2.7.17+dfsg-1_amd64.deb"
+}

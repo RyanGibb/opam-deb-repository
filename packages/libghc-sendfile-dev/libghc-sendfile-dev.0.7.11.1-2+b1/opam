@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-sendfile-dev_0.7.11.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-sendfile-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.3"}
+  "libghc-network-dev"
+  "libgmp10"
+]
+extra-source "libghc-sendfile-dev_0.7.11.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-sendfile/libghc-sendfile-dev_0.7.11.1-2+b1_amd64.deb"
+}

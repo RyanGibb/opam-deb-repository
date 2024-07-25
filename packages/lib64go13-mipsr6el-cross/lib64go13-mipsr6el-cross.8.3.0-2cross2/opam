@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib64go13-mipsr6el-cross_8.3.0-2cross2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib64go13-mipsr6el-cross"]
+]
+depends: [
+  "gcc-8-cross-base-mipsen" {= "8.3.0-2cross2"}
+  "lib64gcc1-mipsr6el-cross" {>= "1-4.2"}
+  "libc6-mips64-mipsr6el-cross" {>= "2.28"}
+]
+extra-source "lib64go13-mipsr6el-cross_8.3.0-2cross2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross-mipsen/lib64go13-mipsr6el-cross_8.3.0-2cross2_all.deb"
+}

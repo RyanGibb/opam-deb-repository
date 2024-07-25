@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i skanlite_22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r skanlite"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.34"}
+  "libkf5configcore5" {>= "5.69.0"}
+  "libkf5configwidgets5" {>= "4.98.0"}
+  "libkf5coreaddons5" {>= "5.90.0~"}
+  "libkf5i18n5" {>= "5.90.0~"}
+  "libkf5jobwidgets5" {>= "4.96.0"}
+  "libkf5kiocore5" {>= "5.90.0~"}
+  "libkf5kiowidgets5" {>= "5.90.0~"}
+  "libkf5sane5" {>= "21.08.1~"}
+  "libkf5widgetsaddons5" {>= "4.96.0"}
+  "libkf5xmlgui5" {>= "5.90.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.15.0~"}
+  "libqt5widgets5" {>= "5.15.0~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.0~"} | "libqt5gui5-gles" {>= "5.15.0~"})
+]
+extra-source "skanlite_22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/skanlite/skanlite_22.12.3-1_amd64.deb"
+}

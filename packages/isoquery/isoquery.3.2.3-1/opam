@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i isoquery_3.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r isoquery"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libjson-glib-1-0-0" {>= "0.12.0"}
+]
+extra-source "isoquery_3.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/isoquery/isoquery_3.2.3-1_amd64.deb"
+}

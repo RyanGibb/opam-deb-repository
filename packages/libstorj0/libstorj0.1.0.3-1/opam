@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstorj0_1.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstorj0"]
+]
+depends: [
+  "libc6" {>= "2.16"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libjson-c3" {>= "0.10"}
+  "libnettle6"
+  "libuv1" {>= "1.4.2"}
+]
+extra-source "libstorj0_1.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libstorj/libstorj0_1.0.3-1_amd64.deb"
+}

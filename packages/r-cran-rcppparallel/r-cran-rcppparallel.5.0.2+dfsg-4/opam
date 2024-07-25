@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rcppparallel_5.0.2+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rcppparallel"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "libtbb-dev"
+  "libtbb2" {>= "2017~U7"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.4-1"}
+]
+extra-source "r-cran-rcppparallel_5.0.2+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-rcppparallel/r-cran-rcppparallel_5.0.2+dfsg-4_amd64.deb"
+}

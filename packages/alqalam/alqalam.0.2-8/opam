@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i alqalam_0.2-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r alqalam"]
+]
+depends: [
+  "dpkg" {>= "1.14.18"}
+  "tex-common" {>= "4"}
+  "texlive-lang-arabic"
+  "texlive-latex-base"
+]
+extra-source "alqalam_0.2-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alqalam/alqalam_0.2-8_all.deb"
+}

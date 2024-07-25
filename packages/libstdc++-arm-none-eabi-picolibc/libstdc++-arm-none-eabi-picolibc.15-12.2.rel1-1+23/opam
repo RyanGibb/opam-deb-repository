@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstdc++-arm-none-eabi-picolibc_15:12.2.rel1-1+23_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstdc++-arm-none-eabi-picolibc"]
+]
+depends: [
+  "gcc-arm-none-eabi" {= "15-12.2.rel1-1"}
+  "libstdc++-arm-none-eabi-dev" {= "15-12.2.rel1-1+23"}
+  "picolibc-arm-none-eabi"
+]
+extra-source "libstdc++-arm-none-eabi-picolibc_15:12.2.rel1-1+23_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libstdc++-arm-none-eabi/libstdc++-arm-none-eabi-picolibc_12.2.rel1-1+23_all.deb"
+}

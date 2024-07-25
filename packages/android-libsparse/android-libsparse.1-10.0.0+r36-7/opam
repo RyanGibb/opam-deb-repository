@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-libsparse_1:10.0.0+r36-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-libsparse"]
+]
+depends: [
+  "android-libbase" {>= "1-10.0.0+r36"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.2.3.4"}
+]
+extra-source "android-libsparse_1:10.0.0+r36-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-system-core/android-libsparse_10.0.0+r36-7_amd64.deb"
+}

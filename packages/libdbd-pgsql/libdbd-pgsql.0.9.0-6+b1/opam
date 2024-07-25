@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbd-pgsql_0.9.0-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbd-pgsql"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libdbi1" {>= "0.8.4"}
+  "libpq5"
+]
+extra-source "libdbd-pgsql_0.9.0-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdbi-drivers/libdbd-pgsql_0.9.0-6+b1_amd64.deb"
+}

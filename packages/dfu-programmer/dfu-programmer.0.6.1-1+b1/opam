@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dfu-programmer_0.6.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dfu-programmer"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+]
+extra-source "dfu-programmer_0.6.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dfu-programmer/dfu-programmer_0.6.1-1+b1_amd64.deb"
+}

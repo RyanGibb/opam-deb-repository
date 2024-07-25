@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-mesos-mesos-go-dev_0.0.6+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-mesos-mesos-go-dev"]
+]
+depends: [
+  "golang-github-gogo-protobuf-dev"
+  "golang-github-pborman-uuid-dev"
+  "golang-github-pquerna-ffjson-dev"
+  "golang-github-samuel-go-zookeeper-dev"
+  "golang-github-stretchr-objx-dev"
+  "golang-github-stretchr-testify-dev"
+  "golang-golang-x-net-dev"
+  ("golang-glog-dev" | "golang-github-golang-glog-dev")
+]
+extra-source "golang-github-mesos-mesos-go-dev_0.0.6+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-mesos-mesos-go/golang-github-mesos-mesos-go-dev_0.0.6+dfsg-2_all.deb"
+}

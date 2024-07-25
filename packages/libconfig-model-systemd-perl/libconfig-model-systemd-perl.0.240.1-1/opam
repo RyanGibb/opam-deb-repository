@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libconfig-model-systemd-perl_0.240.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libconfig-model-systemd-perl"]
+]
+depends: [
+  "libconfig-model-perl" {>= "2.133"}
+  "liblog-log4perl-perl"
+  "libmouse-perl"
+  "libpath-tiny-perl" {>= "0.086"}
+  "perl"
+]
+extra-source "libconfig-model-systemd-perl_0.240.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libconfig-model-systemd-perl/libconfig-model-systemd-perl_0.240.1-1_all.deb"
+}

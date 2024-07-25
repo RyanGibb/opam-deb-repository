@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i comgt_0.32-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r comgt"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+]
+conflicts: [
+  "gcom"
+]
+extra-source "comgt_0.32-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/comgt/comgt_0.32-3_amd64.deb"
+}

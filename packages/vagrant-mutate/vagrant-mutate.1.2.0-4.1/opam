@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vagrant-mutate_1.2.0-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vagrant-mutate"]
+]
+depends: [
+  "qemu-utils"
+  "vagrant"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "vagrant-mutate_1.2.0-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vagrant-mutate/vagrant-mutate_1.2.0-4.1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libipe-dev_7.2.26+dfsg1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libipe-dev"]
+]
+depends: [
+  "libipe7-2-26" {= "7.2.26+dfsg1-3+b1"}
+]
+conflicts: [
+  "libipe1-dev"
+]
+extra-source "libipe-dev_7.2.26+dfsg1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ipe/libipe-dev_7.2.26+dfsg1-3+b1_amd64.deb"
+}

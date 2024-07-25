@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libimager-qrcode-perl_0.033-1.2+b8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libimager-qrcode-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libimager-perl"
+  "libqrencode4" {>= "3.2.0"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libimager-qrcode-perl_0.033-1.2+b8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libimager-qrcode-perl/libimager-qrcode-perl_0.033-1.2+b8_amd64.deb"
+}

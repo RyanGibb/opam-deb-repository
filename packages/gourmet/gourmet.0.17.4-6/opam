@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gourmet_0.17.4-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gourmet"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-any" {>= "2.6.6-7~"}
+  "python-elib-intl"
+  "python-gtk2" {>= "2.22.0"}
+  "python-pil" {>= "3.0.0~"}
+  "python-reportlab"
+  "python-sqlalchemy"
+]
+extra-source "gourmet_0.17.4-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gourmet/gourmet_0.17.4-6_all.deb"
+}

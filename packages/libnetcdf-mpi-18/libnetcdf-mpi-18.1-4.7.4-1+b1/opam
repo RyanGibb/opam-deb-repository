@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnetcdf-mpi-18_1:4.7.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnetcdf-mpi-18"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libhdf5-openmpi-103-1" {>= "1.8.14"}
+  "libhdf5-openmpi-hl-100" {>= "1.8.13"}
+]
+extra-source "libnetcdf-mpi-18_1:4.7.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netcdf-parallel/libnetcdf-mpi-18_4.7.4-1+b1_amd64.deb"
+}

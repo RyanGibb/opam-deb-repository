@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i duc-nox_1.4.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r duc-nox"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libtokyocabinet9" {>= "1.4.47"}
+]
+conflicts: [
+  "duc"
+]
+extra-source "duc-nox_1.4.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/duc/duc-nox_1.4.4-1_amd64.deb"
+}

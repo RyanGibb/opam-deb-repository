@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmogb14_1.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmogb14"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libosmocore19" {>= "1.7.0"}
+  "libosmogsm18" {>= "1.5.1"}
+  "libosmovty9" {>= "1.6.0"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "libosmogb14_1.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libosmocore/libosmogb14_1.7.0-3_amd64.deb"
+}

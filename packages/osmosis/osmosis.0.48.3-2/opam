@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osmosis_0.48.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osmosis"]
+]
+depends: [
+  "libbatik-java"
+  "libcommons-codec-java"
+  "libcommons-compress-java" {>= "1.4.1"}
+  "libcommons-csv-java"
+  "libcommons-dbcp-java"
+  "libcommons-io-java"
+  "libcommons-pool-java"
+  "libjpf-java"
+  "libmariadb-java"
+  "libosmpbf-java"
+  "libplexus-classworlds-java"
+  "libpostgis-java"
+  "libpostgresql-jdbc-java"
+  "libprotobuf-java"
+  "libspring-beans-java"
+  "libspring-context-java"
+  "libspring-core-java"
+  "libspring-jdbc-java"
+  "libspring-transaction-java"
+  "libxz-java"
+  ("default-jre-headless" | "java8-runtime-headless")
+]
+extra-source "osmosis_0.48.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmosis/osmosis_0.48.3-2_all.deb"
+}

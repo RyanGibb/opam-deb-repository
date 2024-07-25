@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dbus-bin_1.14.10-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dbus-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdbus-1-3" {= "1.14.10-1~deb12u1"}
+]
+extra-source "dbus-bin_1.14.10-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dbus/dbus-bin_1.14.10-1~deb12u1_amd64.deb"
+}

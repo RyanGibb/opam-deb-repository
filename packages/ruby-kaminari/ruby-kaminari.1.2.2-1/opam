@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-kaminari_1.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-kaminari"]
+]
+depends: [
+  "ruby-activesupport" {>= "2-4.1.0"}
+  "ruby-kaminari-actionview" {>= "1.2.2"}
+  "ruby-kaminari-activerecord" {>= "1.2.2"}
+  "ruby-kaminari-core" {>= "1.2.2"}
+]
+extra-source "ruby-kaminari_1.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-kaminari/ruby-kaminari_1.2.2-1_all.deb"
+}

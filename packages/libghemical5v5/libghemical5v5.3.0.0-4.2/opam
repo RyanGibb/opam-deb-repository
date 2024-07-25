@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghemical5v5_3.0.0-4.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghemical5v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libghemical-data" {= "3.0.0-4.2"}
+  "libmopac7-1gf"
+  "libopenmpi3"
+  "libsc7v5"
+  "libstdc++6" {>= "5.2"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+conflicts: [
+  "libghemical5"
+]
+extra-source "libghemical5v5_3.0.0-4.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libghemical/libghemical5v5_3.0.0-4.2_amd64.deb"
+}

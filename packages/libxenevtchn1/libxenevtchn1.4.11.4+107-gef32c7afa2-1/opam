@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxenevtchn1_4.11.4+107-gef32c7afa2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxenevtchn1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libxentoolcore1"
+  "libxentoollog1"
+]
+extra-source "libxenevtchn1_4.11.4+107-gef32c7afa2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xen/libxenevtchn1_4.11.4+107-gef32c7afa2-1_amd64.deb"
+}

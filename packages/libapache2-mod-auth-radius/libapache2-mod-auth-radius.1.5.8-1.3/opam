@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-auth-radius_1.5.8-1.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-auth-radius"]
+]
+depends: [
+  "apache2-bin"
+  "apache2-bin" {>= "2.4.16"}
+  "libc6" {>= "2.15"}
+]
+extra-source "libapache2-mod-auth-radius_1.5.8-1.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapache-mod-auth-radius/libapache2-mod-auth-radius_1.5.8-1.3_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i w3m-img_0.5.3-37_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r w3m-img"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libimlib2" {>= "1.4.5"}
+  "libx11-6"
+  "w3m" {= "0.5.3-37"}
+]
+extra-source "w3m-img_0.5.3-37_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/w3m/w3m-img_0.5.3-37_amd64.deb"
+}

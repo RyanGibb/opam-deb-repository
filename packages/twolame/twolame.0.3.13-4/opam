@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i twolame_0.3.13-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r twolame"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libsndfile1" {>= "1.0.20"}
+  "libtwolame0" {>= "0.3.6"}
+]
+extra-source "twolame_0.3.13-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/twolame/twolame_0.3.13-4_amd64.deb"
+}

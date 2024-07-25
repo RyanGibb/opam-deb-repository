@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ticker_1.13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ticker"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libslang2" {>= "2.2.4"}
+]
+extra-source "ticker_1.13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/ticker/ticker_1.13_amd64.deb"
+}

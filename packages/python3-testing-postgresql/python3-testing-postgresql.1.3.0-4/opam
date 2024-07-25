@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-testing.postgresql_1.3.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-testing.postgresql"]
+]
+depends: [
+  "postgresql"
+  "python3-any"
+  "python3-pg8000" {>= "1.10"}
+  "python3-testing-common-database" {>= "2.0.3"}
+]
+extra-source "python3-testing.postgresql_1.3.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-testing.postgresql/python3-testing.postgresql_1.3.0-4_all.deb"
+}

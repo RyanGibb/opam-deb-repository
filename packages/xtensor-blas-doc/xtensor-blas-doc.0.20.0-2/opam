@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xtensor-blas-doc_0.20.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xtensor-blas-doc"]
+]
+depends: [
+  "libjs-mathjax"
+  "libjs-sphinxdoc" {>= "4.3"}
+  "sphinx-rtd-theme-common" {>= "1.0.0+dfsg"}
+]
+extra-source "xtensor-blas-doc_0.20.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xtensor-blas/xtensor-blas-doc_0.20.0-2_all.deb"
+}

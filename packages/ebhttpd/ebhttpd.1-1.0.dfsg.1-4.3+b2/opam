@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ebhttpd_1:1.0.dfsg.1-4.3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ebhttpd"]
+]
+depends: [
+  "ebnetd-common"
+  "libc6" {>= "2.14"}
+  "libeb16"
+  "update-inetd"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "ebhttpd_1:1.0.dfsg.1-4.3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ebnetd/ebhttpd_1.0.dfsg.1-4.3+b2_amd64.deb"
+}

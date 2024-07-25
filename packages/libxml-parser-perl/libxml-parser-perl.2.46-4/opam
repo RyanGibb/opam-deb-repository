@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxml-parser-perl_2.46-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxml-parser-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "liburi-perl"
+  "libwww-perl"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libxml-parser-perl_2.46-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxml-parser-perl/libxml-parser-perl_2.46-4_amd64.deb"
+}

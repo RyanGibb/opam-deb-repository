@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i super_3.30.3-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r super"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libpam-runtime" {>= "0.76-14"}
+  "libpam0g" {>= "0.99.7.1"}
+]
+extra-source "super_3.30.3-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/super/super_3.30.3-2+b1_amd64.deb"
+}

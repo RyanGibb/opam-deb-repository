@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i festvox-kdlpc16k_1.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r festvox-kdlpc16k"]
+]
+depends: [
+  "festival" {>= "1.4.3-9"}
+  "festlex-cmu" {>= "1.3.0"}
+  "festlex-poslex" {>= "1.3.0"}
+]
+conflicts: [
+  "festvox-kdlpc8k"
+]
+extra-source "festvox-kdlpc16k_1.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/festvox-kdlpc16k/festvox-kdlpc16k_1.4.0-6_all.deb"
+}

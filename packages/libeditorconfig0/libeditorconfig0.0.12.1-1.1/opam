@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libeditorconfig0_0.12.1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libeditorconfig0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcre3"
+]
+extra-source "libeditorconfig0_0.12.1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/editorconfig-core/libeditorconfig0_0.12.1-1.1_amd64.deb"
+}

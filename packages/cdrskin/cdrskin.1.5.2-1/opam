@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cdrskin_1.5.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cdrskin"]
+]
+depends: [
+  "libburn4" {>= "1.5.2"}
+  "libc6" {>= "2.15"}
+]
+extra-source "cdrskin_1.5.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libburn/cdrskin_1.5.2-1_amd64.deb"
+}

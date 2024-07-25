@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gambc_4.8.8-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gambc"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgambit4" {= "4.8.8-3.1"}
+  "libgambit4-dev" {= "4.8.8-3.1"}
+]
+extra-source "gambc_4.8.8-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gambc/gambc_4.8.8-3.1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5eventviews-dev_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5eventviews-dev"]
+]
+depends: [
+  "libkf5akonadi-dev" {>= "4-22.12.3~"}
+  "libkf5akonadicalendar-dev" {>= "4-22.12.3~"}
+  "libkf5calendarsupport-dev" {>= "4-22.12.3~"}
+  "libkf5calendarutils-dev" {>= "4-22.12.3~"}
+  "libkf5eventviews5abi1" {= "4-22.12.3-1"}
+]
+extra-source "libkf5eventviews-dev_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkf5eventviews/libkf5eventviews-dev_22.12.3-1_amd64.deb"
+}

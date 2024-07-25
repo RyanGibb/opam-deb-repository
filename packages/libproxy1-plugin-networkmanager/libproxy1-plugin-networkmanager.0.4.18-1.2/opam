@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libproxy1-plugin-networkmanager_0.4.18-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libproxy1-plugin-networkmanager"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libproxy1v5" {= "0.4.18-1.2"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libproxy1-plugin-networkmanager_0.4.18-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libproxy/libproxy1-plugin-networkmanager_0.4.18-1.2_amd64.deb"
+}

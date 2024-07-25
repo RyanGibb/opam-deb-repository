@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guitarix-ladspa_0.36.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guitarix-ladspa"]
+]
+depends: [
+  "libboost-system1-67-0"
+  "libc6" {>= "2.27"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc1" {>= "1-3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libglibmm-2-4-1v5" {>= "2.54.0"}
+  "libsigc++-2-0-0v5" {>= "2.8.0"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "5.2"}
+  "libzita-convolver3" {>= "3.0.2"}
+  "libzita-resampler1"
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "guitarix-ladspa_0.36.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guitarix/guitarix-ladspa_0.36.1-1+b1_amd64.deb"
+}

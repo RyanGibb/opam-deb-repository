@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libadwaita-1-examples_1.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libadwaita-1-examples"]
+]
+depends: [
+  "libadwaita-1-0" {>= "1.2~beta"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.66.0"}
+  "libgtk-4-1" {>= "4.5.0"}
+]
+extra-source "libadwaita-1-examples_1.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libadwaita-1/libadwaita-1-examples_1.2.2-1_amd64.deb"
+}

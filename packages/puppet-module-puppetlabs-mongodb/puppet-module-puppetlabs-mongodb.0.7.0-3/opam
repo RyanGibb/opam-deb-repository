@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-puppetlabs-mongodb_0.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-puppetlabs-mongodb"]
+]
+depends: [
+  "puppet"
+  "puppet-module-puppetlabs-apt"
+  "puppet-module-puppetlabs-stdlib"
+]
+extra-source "puppet-module-puppetlabs-mongodb_0.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-puppetlabs-mongodb/puppet-module-puppetlabs-mongodb_0.7.0-3_all.deb"
+}

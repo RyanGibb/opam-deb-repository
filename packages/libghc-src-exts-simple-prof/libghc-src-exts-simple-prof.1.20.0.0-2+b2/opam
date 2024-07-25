@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-src-exts-simple-prof_1.20.0.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-src-exts-simple-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-src-exts-prof"
+  "libghc-src-exts-simple-dev" {= "1.20.0.0-2+b2"}
+]
+extra-source "libghc-src-exts-simple-prof_1.20.0.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-src-exts-simple/libghc-src-exts-simple-prof_1.20.0.0-2+b2_amd64.deb"
+}

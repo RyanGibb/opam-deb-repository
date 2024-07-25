@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblapacke64-dev_3.11.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblapacke64-dev"]
+]
+depends: [
+  "liblapacke64" {= "3.11.0-2"}
+  "libtmglib64-dev"
+  ("libblas64-dev" | "libblas64-so")
+  ("liblapack64-dev" | "liblapack64-so")
+]
+extra-source "liblapacke64-dev_3.11.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lapack/liblapacke64-dev_3.11.0-2_amd64.deb"
+}

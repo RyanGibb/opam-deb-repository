@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32go16_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32go16"]
+]
+depends: [
+  "gcc-10-base" {= "10.2.1-6"}
+  "lib32gcc-s1" {>= "4.2"}
+  "libc6-i386" {>= "2.29"}
+]
+conflicts: [
+  "libc6-i386 (<< 2.9-22)"
+]
+extra-source "lib32go16_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/lib32go16_10.2.1-6_amd64.deb"
+}

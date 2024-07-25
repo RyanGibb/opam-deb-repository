@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnunit-mocks2.6.3-cil_2.6.4+dfsg-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnunit-mocks2.6.3-cil"]
+]
+depends: [
+  "cli-common" {>= "0.5.6"}
+  "libmono-corlib4-5-cil" {>= "5.18.0.240"}
+  "libnunit-framework2-6-3-cil"
+]
+extra-source "libnunit-mocks2.6.3-cil_2.6.4+dfsg-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nunit/libnunit-mocks2.6.3-cil_2.6.4+dfsg-1.1_all.deb"
+}

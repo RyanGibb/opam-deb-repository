@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-snapdragon-node_3.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-snapdragon-node"]
+]
+depends: [
+  "node-define-property" {>= "1.0.0"}
+  "node-isobject" {>= "3.0.0"}
+  "node-snapdragon-util" {>= "3.0.1"}
+  "nodejs"
+]
+extra-source "node-snapdragon-node_3.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-snapdragon-node/node-snapdragon-node_3.0.0-2_all.deb"
+}

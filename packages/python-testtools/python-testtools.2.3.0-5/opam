@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-testtools_2.3.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-testtools"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-extras" {>= "1.0.0"}
+  "python-fixtures"
+  "python-linecache2"
+  "python-mimeparse"
+  "python-pbr"
+  "python-pkg-resources"
+  "python-six" {>= "1.4.0"}
+  "python-traceback2"
+  "python-unittest2"
+]
+extra-source "python-testtools_2.3.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-testtools/python-testtools_2.3.0-5_all.deb"
+}

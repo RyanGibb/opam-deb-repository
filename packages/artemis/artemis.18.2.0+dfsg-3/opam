@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i artemis_18.2.0+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r artemis"]
+]
+depends: [
+  "default-jre"
+  "jemboss"
+  "libbatik-java" {>= "1.16"}
+  "libbiojava-java" {>= "1-1.9.5+dfsg"}
+  "libcglib-java" {>= "3.3.0"}
+  "libcommons-lang3-java"
+  "libcommons-logging-java" {>= "1.2"}
+  "libcommons-net-java"
+  "libhtsjdk-java"
+  "libibatis-java" {>= "2.3.4.726"}
+  "libj2ssh-java" {>= "0.2.9"}
+  "liblog4j1-2-java"
+  "libpicard-java"
+  "libpostgresql-jdbc-java"
+]
+extra-source "artemis_18.2.0+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/artemis/artemis_18.2.0+dfsg-3_all.deb"
+}

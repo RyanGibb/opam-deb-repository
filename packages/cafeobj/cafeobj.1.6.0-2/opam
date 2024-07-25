@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cafeobj_1.6.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cafeobj"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "cafeobj_1.6.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cafeobj/cafeobj_1.6.0-2_amd64.deb"
+}

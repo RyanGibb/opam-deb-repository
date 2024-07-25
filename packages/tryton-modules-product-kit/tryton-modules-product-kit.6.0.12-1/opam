@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tryton-modules-product-kit_6.0.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tryton-modules-product-kit"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "5.2"}
+  "python3-any"
+  "python3-pkg-resources"
+  "tryton-modules-product" {>= "6.0"}
+  "tryton-server"
+  "tryton-server" {>= "6.0"}
+]
+extra-source "tryton-modules-product-kit_6.0.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tryton-modules-product-kit/tryton-modules-product-kit_6.0.12-1_all.deb"
+}

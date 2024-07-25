@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mysqltcl_3.052-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mysqltcl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmariadb3" {>= "3.0.0"}
+  "tcl" {>= "8.6.0-2"}
+]
+extra-source "mysqltcl_3.052-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mysqltcl/mysqltcl_3.052-4_amd64.deb"
+}

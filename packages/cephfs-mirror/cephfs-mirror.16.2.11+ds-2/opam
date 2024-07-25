@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cephfs-mirror_16.2.11+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cephfs-mirror"]
+]
+depends: [
+  "ceph-common" {= "16.2.11+ds-2"}
+  "libc6" {>= "2.34"}
+  "libcephfs2" {= "16.2.11+ds-2"}
+  "libgcc-s1" {>= "3.0"}
+  "libgoogle-perftools4" {>= "2.10"}
+  "librados2" {= "16.2.11+ds-2"}
+  "libstdc++6" {>= "12"}
+]
+extra-source "cephfs-mirror_16.2.11+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/cephfs-mirror_16.2.11+ds-2_amd64.deb"
+}

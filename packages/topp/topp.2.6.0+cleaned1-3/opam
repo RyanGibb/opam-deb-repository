@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i topp_2.6.0+cleaned1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r topp"]
+]
+depends: [
+  "libboost-regex1-74-0"
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "6"}
+  "libopenms2-6-0" {= "2.6.0+cleaned1-3"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.11.3"}
+  "libstdc++6" {>= "9"}
+  "libxerces-c3-2"
+  "openms-common" {= "2.6.0+cleaned1-3"}
+  ("libqt5gui5" {>= "5.11.3"} | "libqt5gui5-gles" {>= "5.11.3"})
+]
+extra-source "topp_2.6.0+cleaned1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openms/topp_2.6.0+cleaned1-3_amd64.deb"
+}

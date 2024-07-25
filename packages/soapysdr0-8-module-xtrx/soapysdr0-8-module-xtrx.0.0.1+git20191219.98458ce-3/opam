@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i soapysdr0.8-module-xtrx_0.0.1+git20191219.98458ce-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r soapysdr0.8-module-xtrx"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libsoapysdr0-8" {>= "0.8.1"}
+  "libstdc++6" {>= "11"}
+  "libxtrx0" {>= "0.0.1+git20191219.98458ce"}
+]
+extra-source "soapysdr0.8-module-xtrx_0.0.1+git20191219.98458ce-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxtrx/soapysdr0.8-module-xtrx_0.0.1+git20191219.98458ce-3_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-mapscript-ng_8.0.0-3+b8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-mapscript-ng"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmapserver2" {>= "8.0.0"}
+  "php-common" {>= "1-7.0+33~"}
+  ("libapache2-mod-php8-2" | "libphp8-2-embed" | "php8-2-cgi" | "php8-2-cli" | "php8-2-fpm" | "php8-2-phpdbg")
+]
+extra-source "php-mapscript-ng_8.0.0-3+b8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mapserver/php-mapscript-ng_8.0.0-3+b8_amd64.deb"
+}

@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kid3-core_3.9.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kid3-core"]
+]
+depends: [
+  "libavcodec-extra59"
+  "libavformat-extra59"
+  "libavutil57" {>= "7-5.0"}
+  "libc6" {>= "2.33"}
+  "libchromaprint1" {>= "1.3.2"}
+  "libflac++10" {>= "1.3.1"}
+  "libflac12" {>= "1.3.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libid3-3-8-3v5"
+  "libogg0" {>= "1.0rc3"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5multimedia5" {>= "5.14.1"}
+  "libqt5network5" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.5.0"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  "libswresample4" {>= "7-5.0"}
+  "libtag1v5" {>= "1.13"}
+  "libvorbis0a" {>= "1.1.2"}
+  "libvorbisfile3" {>= "1.1.2"}
+  ("libqt5gui5" {>= "5.11.0~rc1"} | "libqt5gui5-gles" {>= "5.11.0~rc1"})
+  ("libqt5quick5" {>= "5.0.2"} | "libqt5quick5-gles" {>= "5.0.2"})
+]
+extra-source "kid3-core_3.9.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kid3/kid3-core_3.9.3-1_amd64.deb"
+}

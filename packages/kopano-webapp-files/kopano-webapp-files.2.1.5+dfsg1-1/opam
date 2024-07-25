@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kopano-webapp-files_2.1.5+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kopano-webapp-files"]
+]
+depends: [
+  "kopano-webapp-common" {>= "3.3.1-1~"}
+  "php-curl"
+  "php-sabre-dav"
+  "php-sabre-vobject"
+]
+extra-source "kopano-webapp-files_2.1.5+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kopano-webapp-plugin-files/kopano-webapp-files_2.1.5+dfsg1-1_all.deb"
+}

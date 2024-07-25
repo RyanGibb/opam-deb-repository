@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dbus-broker_33-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dbus-broker"]
+]
+depends: [
+  "dbus-system-bus-common"
+  "init-system-helpers" {>= "1.52"}
+  "libapparmor1" {>= "3.0"}
+  "libaudit1" {>= "1-2.2.1"}
+  "libc6" {>= "2.34"}
+  "libcap-ng0" {>= "0.7.9"}
+  "libelogind0"
+  "libexpat1" {>= "2.0.1"}
+  "libselinux1" {>= "3.1~"}
+  "systemd-sysv" {>= "230"}
+]
+extra-source "dbus-broker_33-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dbus-broker/dbus-broker_33-1_amd64.deb"
+}

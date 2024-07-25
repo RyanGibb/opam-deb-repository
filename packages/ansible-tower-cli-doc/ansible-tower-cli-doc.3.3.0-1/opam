@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ansible-tower-cli-doc_3.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ansible-tower-cli-doc"]
+]
+depends: [
+  "libjs-mathjax"
+  "libjs-sphinxdoc" {>= "1.0"}
+]
+extra-source "ansible-tower-cli-doc_3.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ansible-tower-cli/ansible-tower-cli-doc_3.3.0-1_all.deb"
+}

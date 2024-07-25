@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i squid-deb-proxy-client_0.8.14+nmu2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r squid-deb-proxy-client"]
+]
+depends: [
+  "apt" {>= "0.7.25.3ubuntu1"}
+  "avahi-utils"
+  "python"
+]
+extra-source "squid-deb-proxy-client_0.8.14+nmu2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/squid-deb-proxy/squid-deb-proxy-client_0.8.14+nmu2_all.deb"
+}

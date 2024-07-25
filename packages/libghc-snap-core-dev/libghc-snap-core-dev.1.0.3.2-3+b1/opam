@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-snap-core-dev_1.0.3.2-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-snap-core-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libghc-attoparsec-dev"
+  "libghc-case-insensitive-dev"
+  "libghc-hashable-dev"
+  "libghc-hunit-dev"
+  "libghc-io-streams-dev"
+  "libghc-lifted-base-dev"
+  "libghc-monad-control-dev"
+  "libghc-network-dev"
+  "libghc-network-uri-dev"
+  "libghc-old-locale-dev"
+  "libghc-random-dev"
+  "libghc-readable-dev"
+  "libghc-regex-posix-dev"
+  "libghc-transformers-base-dev"
+  "libghc-unix-compat-dev"
+  "libghc-unordered-containers-dev"
+  "libghc-vector-dev"
+  "libgmp10"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-snap-core-dev_1.0.3.2-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-snap-core/libghc-snap-core-dev_1.0.3.2-3+b1_amd64.deb"
+}

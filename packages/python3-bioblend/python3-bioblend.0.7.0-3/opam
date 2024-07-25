@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-bioblend_0.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-bioblend"]
+]
+depends: [
+  "python3-any"
+  "python3-boto"
+  "python3-requests"
+  "python3-requests-toolbelt"
+  "python3-six"
+  "python3-yaml"
+]
+conflicts: [
+  "python-bioblend"
+]
+extra-source "python3-bioblend_0.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-bioblend/python3-bioblend_0.7.0-3_all.deb"
+}

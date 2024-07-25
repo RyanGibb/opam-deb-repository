@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-syntect+dump-create-rs-dev_3.3.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-syntect+dump-create-rs-dev"]
+]
+depends: [
+  "librust-bincode-1+default-dev"
+  "librust-flate2-1+rust-backend-dev"
+  "librust-syntect-dev" {= "3.3.0-4"}
+]
+extra-source "librust-syntect+dump-create-rs-dev_3.3.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-syntect/librust-syntect+dump-create-rs-dev_3.3.0-4_amd64.deb"
+}

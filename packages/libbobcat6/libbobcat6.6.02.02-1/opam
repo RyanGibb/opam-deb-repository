@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbobcat6_6.02.02-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbobcat6"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libmilter1-0-1"
+  "libreadline8" {>= "6.0"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "12"}
+  "libx11-6"
+]
+extra-source "libbobcat6_6.02.02-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bobcat/libbobcat6_6.02.02-1_amd64.deb"
+}

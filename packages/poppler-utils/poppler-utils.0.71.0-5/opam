@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i poppler-utils_0.71.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r poppler-utils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.12.0"}
+  "libfreetype6" {>= "2.2.1"}
+  "liblcms2-2" {>= "2.2+git20110628"}
+  "libpoppler82" {= "0.71.0-5"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "pdftohtml"
+]
+extra-source "poppler-utils_0.71.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poppler/poppler-utils_0.71.0-5_amd64.deb"
+}

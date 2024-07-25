@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-xml-conduit-prof_1.9.1.1-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-xml-conduit-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-attoparsec-prof"
+  "libghc-blaze-html-prof"
+  "libghc-blaze-markup-prof"
+  "libghc-conduit-extra-prof"
+  "libghc-conduit-prof"
+  "libghc-data-default-class-prof"
+  "libghc-resourcet-prof"
+  "libghc-xml-conduit-dev" {= "1.9.1.1-2+b4"}
+  "libghc-xml-types-prof"
+]
+extra-source "libghc-xml-conduit-prof_1.9.1.1-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-xml-conduit/libghc-xml-conduit-prof_1.9.1.1-2+b4_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rmagick_4.2.3-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rmagick"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmagickcore-6-q16-6" {>= "8-6.9.11.24"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.2"}
+]
+extra-source "ruby-rmagick_4.2.3-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rmagick/ruby-rmagick_4.2.3-2+b4_amd64.deb"
+}

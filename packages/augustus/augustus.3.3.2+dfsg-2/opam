@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i augustus_3.3.2+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r augustus"]
+]
+depends: [
+  "augustus-data"
+  "libbamtools2-5-1"
+  "libbz2-1-0"
+  "libc6" {>= "2.15"}
+  "libcurl3-nss" {>= "7.23.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libhts2" {>= "1.0"}
+  "liblzma5" {>= "5.1.1alpha+20110809"}
+  "libncurses6" {>= "6"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.2.3.3"}
+]
+extra-source "augustus_3.3.2+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/augustus/augustus_3.3.2+dfsg-2_amd64.deb"
+}

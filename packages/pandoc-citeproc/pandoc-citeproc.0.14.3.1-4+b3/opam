@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pandoc-citeproc_0.14.3.1-4+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pandoc-citeproc"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libbibutils6" {>= "4.12"}
+  "libc6" {>= "2.27"}
+  "libffi6" {>= "3.0.4"}
+  "libghc-pandoc-citeproc-data" {>= "0.14.3.1-4"}
+  "libgmp10"
+  "libicu63" {>= "63.1-1~"}
+  "liblua5-1-0"
+  "libpcre3"
+  "libyaml-0-2"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "pandoc-citeproc_0.14.3.1-4+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pandoc-citeproc/pandoc-citeproc_0.14.3.1-4+b3_amd64.deb"
+}

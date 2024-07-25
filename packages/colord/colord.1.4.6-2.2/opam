@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i colord_1.4.6-2.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r colord"]
+]
+depends: [
+  "acl"
+  "adduser"
+  "colord-data"
+  "libc6" {>= "2.34"}
+  "libcolord2" {>= "1.4.3"}
+  "libcolorhug2" {>= "0.1.30"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libglib2-0-0" {>= "2.58"}
+  "libgudev-1-0-0" {>= "146"}
+  "libgusb2" {>= "0.2.7"}
+  "liblcms2-2" {>= "2.2+git20110628"}
+  "libpolkit-gobject-1-0" {>= "0.103"}
+  "libsane1" {>= "1.0.27"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libsystemd0"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("polkitd" | "policykit-1" {>= "0.103"})
+]
+extra-source "colord_1.4.6-2.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/colord/colord_1.4.6-2.2_amd64.deb"
+}

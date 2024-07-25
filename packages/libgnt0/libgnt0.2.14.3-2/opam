@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnt0_2.14.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnt0"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libxml2"
+]
+extra-source "libgnt0_2.14.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnt/libgnt0_2.14.3-2_amd64.deb"
+}

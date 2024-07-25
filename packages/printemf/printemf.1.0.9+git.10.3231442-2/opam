@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i printemf_1.0.9+git.10.3231442-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r printemf"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libemf1" {>= "1.0.9+git.10.3231442"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "printemf_1.0.9+git.10.3231442-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libemf/printemf_1.0.9+git.10.3231442-2_amd64.deb"
+}

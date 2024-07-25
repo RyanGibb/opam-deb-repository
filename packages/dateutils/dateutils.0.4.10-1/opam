@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dateutils_0.4.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dateutils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "tzdata"
+]
+extra-source "dateutils_0.4.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dateutils/dateutils_0.4.10-1_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ditaa_0.10+ds1-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ditaa"]
+]
+depends: [
+  "jarwrapper" {>= "0.5"}
+  "junit4"
+  "libbatik-java"
+  "libcommons-cli-java"
+  "libjericho-html-java" {>= "3.1"}
+  "libxml-commons-external-java"
+  ("default-jdk" | "java6-sdk")
+  ("default-jre" | "java7-runtime" | "java8-runtime" | "java9-runtime" | "java10-runtime" | "java11-runtime")
+]
+extra-source "ditaa_0.10+ds1-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/ditaa/ditaa_0.10+ds1-1.2_all.deb"
+}

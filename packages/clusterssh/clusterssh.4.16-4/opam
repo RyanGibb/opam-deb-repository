@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clusterssh_4.16-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clusterssh"]
+]
+depends: [
+  "libexception-class-perl"
+  "libtry-tiny-perl"
+  "libx11-protocol-other-perl"
+  "libx11-protocol-perl"
+  "openssh-client"
+  "perl-any"
+  "perl-tk"
+  "xterm"
+]
+extra-source "clusterssh_4.16-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clusterssh/clusterssh_4.16-4_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-combustion_1.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-combustion"]
+]
+depends: [
+  "ruby"
+  "ruby-activesupport" {>= "3.0.0"}
+  "ruby-railties" {>= "3.0.0"}
+  "ruby-thor" {>= "0.14.6"}
+]
+extra-source "ruby-combustion_1.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-combustion/ruby-combustion_1.3.0-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-multilib-powerpc64-linux-gnu_4:12.2.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-multilib-powerpc64-linux-gnu"]
+]
+depends: [
+  "cpp-powerpc64-linux-gnu" {= "4-12.2.0-5"}
+  "gcc-12-multilib-powerpc64-linux-gnu" {>= "12.2.0-1~"}
+  "gcc-powerpc64-linux-gnu" {= "4-12.2.0-5"}
+]
+extra-source "gcc-multilib-powerpc64-linux-gnu_4:12.2.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-ports/gcc-multilib-powerpc64-linux-gnu_12.2.0-5_amd64.deb"
+}

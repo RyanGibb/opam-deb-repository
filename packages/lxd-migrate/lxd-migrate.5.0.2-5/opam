@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lxd-migrate_5.0.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lxd-migrate"]
+]
+depends: [
+  "libacl1" {>= "2.2.23"}
+  "libc6" {>= "2.34"}
+  "libdqlite0" {>= "1.11.1"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libsqlite3-0" {>= "3.12.0"}
+  "rsync"
+]
+extra-source "lxd-migrate_5.0.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxd/lxd-migrate_5.0.2-5_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rocminfo_5.2.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rocminfo"]
+]
+depends: [
+  "kmod"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libhsa-runtime64-1" {>= "5.2.0~"}
+  "libstdc++6" {>= "11"}
+  "pciutils"
+  "python3"
+]
+extra-source "rocminfo_5.2.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rocminfo/rocminfo_5.2.3-2_amd64.deb"
+}

@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i unagi_0.3.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r unagi"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libconfuse2" {>= "3.2.1~"}
+  "libev4" {>= "1-4.04"}
+  "libxcb-composite0"
+  "libxcb-damage0"
+  "libxcb-ewmh2" {>= "0.4.1"}
+  "libxcb-image0" {>= "0.2.1"}
+  "libxcb-keysyms1" {>= "0.4.0"}
+  "libxcb-randr0"
+  "libxcb-render-util0"
+  "libxcb-render0"
+  "libxcb-shm0"
+  "libxcb-util0" {>= "0.3.8"}
+  "libxcb-xfixes0"
+  "libxcb1" {>= "1.8"}
+  "libxdg-basedir1"
+]
+extra-source "unagi_0.3.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unagi/unagi_0.3.4-1+b2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iec16022_0.2.4-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iec16022"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  "libiec16022-0"
+  "libpopt0" {>= "1.14"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "iec16022_0.2.4-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iec16022/iec16022_0.2.4-1.2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-text-postgresql-prof_0.0.3.1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-text-postgresql-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-dlist-prof"
+  "libghc-text-postgresql-dev" {= "0.0.3.1-3+b1"}
+  "libghc-transformers-compat-prof"
+]
+extra-source "libghc-text-postgresql-prof_0.0.3.1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-text-postgresql/libghc-text-postgresql-prof_0.0.3.1-3+b1_amd64.deb"
+}

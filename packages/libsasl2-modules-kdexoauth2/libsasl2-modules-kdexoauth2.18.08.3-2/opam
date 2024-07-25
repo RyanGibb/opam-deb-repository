@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsasl2-modules-kdexoauth2_18.08.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsasl2-modules-kdexoauth2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkpimgapi-data" {= "18.08.3-2"}
+]
+extra-source "libsasl2-modules-kdexoauth2_18.08.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkgapi/libsasl2-modules-kdexoauth2_18.08.3-2_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmongoclient0_1.1.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmongoclient0"]
+]
+depends: [
+  "libboost-system1-67-0"
+  "libboost-thread1-67-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libsasl2-2"
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libmongoclient0_1.1.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mongo-cxx-driver-legacy/libmongoclient0_1.1.3-3_amd64.deb"
+}

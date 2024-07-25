@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmosdr0_0.1.8.effcaa7-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmosdr0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+]
+extra-source "libosmosdr0_0.1.8.effcaa7-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libosmosdr/libosmosdr0_0.1.8.effcaa7-7+b1_amd64.deb"
+}

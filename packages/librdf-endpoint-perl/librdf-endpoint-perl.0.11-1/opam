@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librdf-endpoint-perl_0.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librdf-endpoint-perl"]
+]
+depends: [
+  "libfile-sharedir-perl"
+  "libhash-merge-simple-perl"
+  "libhtml-html5-writer-perl"
+  "libhttp-negotiate-perl"
+  "libplack-perl"
+  "librdf-query-perl"
+  "librdf-rdfa-generator-perl" {>= "0.200"}
+  "librdf-trine-perl"
+  "librdf-trinex-compatibility-attean-perl"
+  "libxml-libxml-perl"
+  "perl-any"
+]
+extra-source "librdf-endpoint-perl_0.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librdf-endpoint-perl/librdf-endpoint-perl_0.11-1_all.deb"
+}

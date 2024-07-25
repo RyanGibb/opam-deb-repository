@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglbinding2_2.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglbinding2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libgl1"
+  "libstdc++6" {>= "6"}
+]
+extra-source "libglbinding2_2.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glbinding/libglbinding2_2.1.1-2_amd64.deb"
+}

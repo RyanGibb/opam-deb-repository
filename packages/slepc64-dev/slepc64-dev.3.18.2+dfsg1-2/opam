@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slepc64-dev_3.18.2+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slepc64-dev"]
+]
+depends: [
+  ("libslepc64-real-dev" | "libslepc64-complex-dev" | "libslepc64-real3-18-dev" | "libslepc64-complex3-18-dev")
+]
+extra-source "slepc64-dev_3.18.2+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slepc/slepc64-dev_3.18.2+dfsg1-2_amd64.deb"
+}

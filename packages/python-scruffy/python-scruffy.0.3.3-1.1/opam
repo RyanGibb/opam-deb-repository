@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-scruffy_0.3.3-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-scruffy"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-pkg-resources"
+  "python-six"
+  "python-yaml"
+]
+extra-source "python-scruffy_0.3.3-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-scruffy/python-scruffy_0.3.3-1.1_all.deb"
+}

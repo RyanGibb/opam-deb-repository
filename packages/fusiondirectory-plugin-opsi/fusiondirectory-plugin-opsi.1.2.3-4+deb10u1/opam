@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fusiondirectory-plugin-opsi_1.2.3-4+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fusiondirectory-plugin-opsi"]
+]
+depends: [
+  "fusiondirectory" {= "1.2.3-4+deb10u1"}
+  "fusiondirectory-plugin-dns" {= "1.2.3-4+deb10u1"}
+  "fusiondirectory-plugin-samba" {= "1.2.3-4+deb10u1"}
+  "fusiondirectory-plugin-systems" {= "1.2.3-4+deb10u1"}
+]
+conflicts: [
+  "gosa-plugin-opsi"
+]
+extra-source "fusiondirectory-plugin-opsi_1.2.3-4+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fusiondirectory/fusiondirectory-plugin-opsi_1.2.3-4+deb10u1_all.deb"
+}

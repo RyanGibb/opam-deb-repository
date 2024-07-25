@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-rtnetlink-dev_0.10.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-rtnetlink-dev"]
+]
+depends: [
+  "librust-futures-dev"
+  "librust-log-dev"
+  "librust-netlink-packet-route-0-12+default-dev"
+  "librust-netlink-proto-0-10-dev"
+  "librust-nix-dev"
+  "librust-thiserror-1+default-dev"
+]
+extra-source "librust-rtnetlink-dev_0.10.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-rtnetlink/librust-rtnetlink-dev_0.10.1-5_amd64.deb"
+}

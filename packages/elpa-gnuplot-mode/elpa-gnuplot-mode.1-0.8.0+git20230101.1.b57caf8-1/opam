@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-gnuplot-mode_1:0.8.0+git20230101.1.b57caf8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-gnuplot-mode"]
+]
+depends: [
+  "dh-elpa-helper"
+  "emacsen-common"
+  ("gnuplot-qt" | "gnuplot-x11" | "gnuplot")
+]
+extra-source "elpa-gnuplot-mode_1:0.8.0+git20230101.1.b57caf8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnuplot-mode/elpa-gnuplot-mode_0.8.0+git20230101.1.b57caf8-1_all.deb"
+}

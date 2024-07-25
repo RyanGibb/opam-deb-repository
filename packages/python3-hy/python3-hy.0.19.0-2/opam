@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-hy_0.19.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-hy"]
+]
+depends: [
+  "python3-any"
+  "python3-astor" {>= "0.8~"}
+  "python3-colorama"
+  "python3-funcparserlib" {>= "0.3.6~"}
+  "python3-rply" {>= "0.7.7~"}
+  "python3-setuptools"
+]
+extra-source "python3-hy_0.19.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hy/python3-hy_0.19.0-2_all.deb"
+}

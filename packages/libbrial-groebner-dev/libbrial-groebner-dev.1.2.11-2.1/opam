@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbrial-groebner-dev_1.2.11-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbrial-groebner-dev"]
+]
+depends: [
+  "libbrial-dev"
+  "libbrial-groebner3" {= "1.2.11-2.1"}
+]
+extra-source "libbrial-groebner-dev_1.2.11-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/brial/libbrial-groebner-dev_1.2.11-2.1_amd64.deb"
+}

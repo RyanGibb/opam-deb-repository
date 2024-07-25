@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i leptonica-progs_1.76.0-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r leptonica-progs"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "liblept5"
+]
+extra-source "leptonica-progs_1.76.0-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/leptonlib/leptonica-progs_1.76.0-1+deb10u1_amd64.deb"
+}

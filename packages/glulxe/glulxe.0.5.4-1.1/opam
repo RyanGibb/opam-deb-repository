@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i glulxe_0.5.4-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r glulxe"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "glulxe_0.5.4-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glulxe/glulxe_0.5.4-1.1_amd64.deb"
+}

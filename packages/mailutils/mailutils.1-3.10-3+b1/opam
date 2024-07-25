@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mailutils_1:3.10-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mailutils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libfribidi0" {>= "0.19.2"}
+  "libgnutls30" {>= "3.6.5"}
+  "libgsasl7" {>= "1.1"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libmailutils7"
+  "libncurses6" {>= "6"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libreadline8" {>= "6.0"}
+  "libtinfo6" {>= "6"}
+  "libunistring2" {>= "0.9.7"}
+  "mailutils-common" {= "1-3.10-3"}
+]
+extra-source "mailutils_1:3.10-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mailutils/mailutils_3.10-3+b1_amd64.deb"
+}

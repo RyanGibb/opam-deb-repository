@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libavresample-dev_7:4.1.9-0+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libavresample-dev"]
+]
+depends: [
+  "libavresample4" {= "7-4.1.9-0+deb10u1"}
+  "libavutil-dev" {= "7-4.1.9-0+deb10u1"}
+]
+extra-source "libavresample-dev_7:4.1.9-0+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/ffmpeg/libavresample-dev_4.1.9-0+deb10u1_amd64.deb"
+}

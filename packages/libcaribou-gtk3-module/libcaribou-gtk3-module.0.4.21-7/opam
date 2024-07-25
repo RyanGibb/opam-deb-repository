@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcaribou-gtk3-module_0.4.21-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcaribou-gtk3-module"]
+]
+depends: [
+  "gsettings-desktop-schemas"
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.2.2-3"}
+]
+extra-source "libcaribou-gtk3-module_0.4.21-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/caribou/libcaribou-gtk3-module_0.4.21-7_amd64.deb"
+}

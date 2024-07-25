@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmirrenderer-dev_1.8.0+dfsg1-18_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmirrenderer-dev"]
+]
+depends: [
+  "libmircommon-dev" {= "1.8.0+dfsg1-18"}
+  "libmirplatform-dev" {= "1.8.0+dfsg1-18"}
+]
+extra-source "libmirrenderer-dev_1.8.0+dfsg1-18_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mir/libmirrenderer-dev_1.8.0+dfsg1-18_amd64.deb"
+}

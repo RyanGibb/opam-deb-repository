@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ledger_3.2.1-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ledger"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-iostreams1-74-0" {>= "1.74.0"}
+  "libboost-python1-74-0"
+  "libboost-python1-74-0" {>= "1.74.0"}
+  "libboost-regex1-74-0"
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.4"}
+  "libgmp10"
+  "libicu67" {>= "67.1-1~"}
+  "libmpfr6" {>= "3.1.3"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libstdc++6" {>= "9"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+]
+extra-source "python3-ledger_3.2.1-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ledger/python3-ledger_3.2.1-7+b2_amd64.deb"
+}

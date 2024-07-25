@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstdc++-7-dev_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstdc++-7-dev"]
+]
+depends: [
+  "gcc-7-base" {= "7.4.0-6"}
+  "libc6-dev" {>= "2.13-5"}
+  "libgcc-7-dev" {= "7.4.0-6"}
+  "libstdc++6" {>= "7.4.0-6"}
+]
+conflicts: [
+  "libg++2.8-dev"
+  "libg++27-dev"
+  "libg++272-dev (<< 2.7.2.8-1)"
+  "libstdc++2.10-dev (<< 1:2.95.3-2)"
+  "libstdc++2.8-dev"
+  "libstdc++2.9-dev"
+  "libstdc++2.9-glibc2.1-dev"
+  "libstdc++3.0-dev"
+]
+extra-source "libstdc++-7-dev_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/libstdc++-7-dev_7.4.0-6_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcpdb-libs-frontend1_1.2.0-2+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcpdb-libs-frontend1"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libcpdb-libs-common1" {= "1.2.0-2+deb12u1"}
+  "libcups2" {>= "2.2.2"}
+  "libglib2-0-0" {>= "2.31.8"}
+]
+extra-source "libcpdb-libs-frontend1_1.2.0-2+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cpdb-libs/libcpdb-libs-frontend1_1.2.0-2+deb12u1_amd64.deb"
+}

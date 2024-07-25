@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-haml-rails_1.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-haml-rails"]
+]
+depends: [
+  "ruby-actionpack" {>= "4.0.1~"}
+  "ruby-activesupport" {>= "4.0.1~"}
+  "ruby-haml" {< "6.0"}
+  "ruby-haml" {>= "4.0.6~"}
+  "ruby-html2haml" {>= "2.0~"}
+  "ruby-railties" {>= "4.0.1~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-haml-rails_1.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-haml-rails/ruby-haml-rails_1.0.0-2_all.deb"
+}

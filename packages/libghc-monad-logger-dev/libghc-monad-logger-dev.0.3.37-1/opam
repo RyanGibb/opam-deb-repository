@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-monad-logger-dev_0.3.37-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-monad-logger-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-conduit-dev"
+  "libghc-conduit-extra-dev"
+  "libghc-fast-logger-dev"
+  "libghc-lifted-base-dev"
+  "libghc-monad-control-dev"
+  "libghc-monad-loops-dev"
+  "libghc-resourcet-dev"
+  "libghc-stm-chans-dev"
+  "libghc-transformers-base-dev"
+  "libghc-transformers-compat-dev"
+  "libghc-unliftio-core-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-monad-logger-dev_0.3.37-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-monad-logger/libghc-monad-logger-dev_0.3.37-1_amd64.deb"
+}

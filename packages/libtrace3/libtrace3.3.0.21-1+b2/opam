@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrace3_3.0.21-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrace3"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc-s1"
+  "libpcap0-8" {>= "1.0.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "libwandio1"
+]
+extra-source "libtrace3_3.0.21-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtrace3/libtrace3_3.0.21-1+b2_amd64.deb"
+}

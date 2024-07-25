@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgit-raw-perl_0.79-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgit-raw-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgit2-27" {>= "0.27.0"}
+  "libssh2-1" {>= "1.0"}
+  "perl" {>= "5.28.1-3"}
+  "perl-base"
+]
+extra-source "libgit-raw-perl_0.79-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgit-raw-perl/libgit-raw-perl_0.79-6_amd64.deb"
+}

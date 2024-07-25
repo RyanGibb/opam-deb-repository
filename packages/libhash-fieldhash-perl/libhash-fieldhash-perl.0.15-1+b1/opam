@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhash-fieldhash-perl_0.15-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhash-fieldhash-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libhash-fieldhash-perl_0.15-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhash-fieldhash-perl/libhash-fieldhash-perl_0.15-1+b1_amd64.deb"
+}

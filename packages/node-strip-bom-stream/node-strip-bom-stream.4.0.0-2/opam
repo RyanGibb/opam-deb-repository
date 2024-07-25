@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-strip-bom-stream_4.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-strip-bom-stream"]
+]
+depends: [
+  "node-first-chunk-stream" {>= "4.0.0"}
+  "node-strip-bom"
+  "nodejs"
+]
+extra-source "node-strip-bom-stream_4.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-strip-bom-stream/node-strip-bom-stream_4.0.0-2_all.deb"
+}

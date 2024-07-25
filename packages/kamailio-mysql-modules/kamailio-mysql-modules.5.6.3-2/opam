@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kamailio-mysql-modules_5.6.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kamailio-mysql-modules"]
+]
+depends: [
+  "kamailio" {= "5.6.3-2"}
+  "libc6" {>= "2.4"}
+  "libmariadb3" {>= "3.0.0"}
+  ("default-mysql-client" | "virtual-mysql-client")
+]
+extra-source "kamailio-mysql-modules_5.6.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kamailio/kamailio-mysql-modules_5.6.3-2_amd64.deb"
+}

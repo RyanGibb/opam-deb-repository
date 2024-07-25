@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libavogadro-dev_1.93.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libavogadro-dev"]
+]
+depends: [
+  "libavogadro2-1" {= "1.93.1-3"}
+  "libeigen3-dev"
+  "libglew-dev"
+  "openbabel"
+]
+extra-source "libavogadro-dev_1.93.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/avogadrolibs/libavogadro-dev_1.93.1-3_amd64.deb"
+}

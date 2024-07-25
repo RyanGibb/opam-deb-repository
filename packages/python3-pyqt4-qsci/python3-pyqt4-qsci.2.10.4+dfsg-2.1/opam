@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyqt4.qsci_2.10.4+dfsg-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyqt4.qsci"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libqscintilla2-qt4-13" {>= "2.10.2"}
+  "libqtcore4" {>= "4-4.8.0~"}
+  "libqtgui4" {>= "4-4.8.0~"}
+  "libstdc++6" {>= "5"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-pyqt4"
+  "python3-sip"
+]
+extra-source "python3-pyqt4.qsci_2.10.4+dfsg-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qscintilla2/python3-pyqt4.qsci_2.10.4+dfsg-2.1_amd64.deb"
+}

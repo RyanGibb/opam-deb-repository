@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i g++-arc-linux-gnu_4:12.2.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r g++-arc-linux-gnu"]
+]
+depends: [
+  "cpp-arc-linux-gnu" {= "4-12.2.0-5"}
+  "g++-12-arc-linux-gnu" {>= "12.2.0-1~"}
+  "gcc-arc-linux-gnu" {= "4-12.2.0-5"}
+]
+extra-source "g++-arc-linux-gnu_4:12.2.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-ports/g++-arc-linux-gnu_12.2.0-5_amd64.deb"
+}

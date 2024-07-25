@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-lapack_1.8.2-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-lapack"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.0~preview1"}
+  "ruby-narray"
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "ruby-lapack_1.8.2-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-lapack/ruby-lapack_1.8.2-1+b3_amd64.deb"
+}

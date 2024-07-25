@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-afdko_3.6.0+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-afdko"]
+]
+depends: [
+  "afdko-bin" {< "3.6.0+dfsg1.0~"}
+  "afdko-bin" {>= "3.6.0+dfsg1-3"}
+  "python3-any"
+  "python3-booleanoperations" {>= "0.9.0"}
+  "python3-defcon" {>= "0.7.2"}
+  "python3-fontmath" {>= "0.6.0"}
+  "python3-fontpens"
+  "python3-fonttools" {>= "4.19.1"}
+  "python3-lxml"
+  "python3-psautohint" {>= "2.2.0"}
+  "python3-tqdm" {>= "4.48.2"}
+  "python3-ufonormalizer" {>= "0.5.2"}
+  "python3-ufoprocessor" {>= "1.9.0"}
+]
+extra-source "python3-afdko_3.6.0+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/afdko/python3-afdko_3.6.0+dfsg1-3_all.deb"
+}

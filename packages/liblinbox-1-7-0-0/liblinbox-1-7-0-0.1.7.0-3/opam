@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblinbox-1.7.0-0_1.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblinbox-1.7.0-0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libntl44" {>= "11.5.1"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "liblinbox-1.7.0-0_1.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linbox/liblinbox-1.7.0-0_1.7.0-3_amd64.deb"
+}

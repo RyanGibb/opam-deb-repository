@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvsqlitepp3v5_0.3.13-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvsqlitepp3v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libvsqlitepp3"
+]
+extra-source "libvsqlitepp3v5_0.3.13-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvsqlitepp/libvsqlitepp3v5_0.3.13-4.1_amd64.deb"
+}

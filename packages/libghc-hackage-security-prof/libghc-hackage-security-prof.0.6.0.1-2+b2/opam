@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hackage-security-prof_0.6.0.1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hackage-security-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-base16-bytestring-prof"
+  "libghc-base64-bytestring-prof"
+  "libghc-cryptohash-sha256-prof"
+  "libghc-ed25519-prof"
+  "libghc-hackage-security-dev" {= "0.6.0.1-2+b2"}
+  "libghc-network-prof"
+  "libghc-network-uri-prof"
+  "libghc-tar-prof"
+  "libghc-zlib-prof"
+]
+extra-source "libghc-hackage-security-prof_0.6.0.1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hackage-security/libghc-hackage-security-prof_0.6.0.1-2+b2_amd64.deb"
+}

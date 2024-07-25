@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gmult_10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gmult"]
+]
+depends: [
+  "libadwaita-1-0" {>= "1.0.1"}
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.70"}
+  "libgtk-4-1" {>= "4.6"}
+  "libpango-1-0-0" {>= "1.14.0"}
+]
+extra-source "gmult_10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gmult/gmult_10.0-1_amd64.deb"
+}

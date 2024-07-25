@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-messagingmenu-1.0_22.9.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-messagingmenu-1.0"]
+]
+depends: [
+  "gir1-2-glib-2-0" {>= "0.9.12"}
+  "libmessaging-menu0" {>= "0.6.0"}
+]
+extra-source "gir1.2-messagingmenu-1.0_22.9.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ayatana-indicator-messages/gir1.2-messagingmenu-1.0_22.9.0-1+b1_amd64.deb"
+}

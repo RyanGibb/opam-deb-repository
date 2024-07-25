@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cockpit-podman_28-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cockpit-podman"]
+]
+depends: [
+  "cockpit-bridge" {>= "138"}
+  "cockpit-system" {>= "138"}
+  "podman" {>= "2.0.4"}
+]
+extra-source "cockpit-podman_28-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cockpit-podman/cockpit-podman_28-1_all.deb"
+}

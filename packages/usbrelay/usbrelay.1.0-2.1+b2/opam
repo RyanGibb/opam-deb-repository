@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i usbrelay_1.0-2.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r usbrelay"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libhidapi-hidraw0" {>= "0.8.0~rc1+git20140201.3a66d4e+dfsg"}
+]
+extra-source "usbrelay_1.0-2.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/usbrelay/usbrelay_1.0-2.1+b2_amd64.deb"
+}

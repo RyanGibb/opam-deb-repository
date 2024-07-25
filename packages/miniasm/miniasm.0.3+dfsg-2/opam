@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i miniasm_0.3+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r miniasm"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "miniasm_0.3+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/miniasm/miniasm_0.3+dfsg-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librandom-numbers0d_0.3.2-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librandom-numbers0d"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "librandom-numbers0d_0.3.2-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-random-numbers/librandom-numbers0d_0.3.2-5+b1_amd64.deb"
+}

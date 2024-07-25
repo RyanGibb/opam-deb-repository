@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ccal_4.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ccal"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "ccal_4.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cal/ccal_4.0-4_amd64.deb"
+}

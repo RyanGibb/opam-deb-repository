@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kopano-search_8.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kopano-search"]
+]
+depends: [
+  "catdoc"
+  "file"
+  "gawk"
+  "kopano-common" {>= "8.7.0-3"}
+  "lsb-base" {>= "3.0-6"}
+  "poppler-utils"
+  "python3-any"
+  "python3-bsddb3"
+  "python3-dateutil"
+  "python3-kopano" {>= "8.7.0-3"}
+  "python3-magic"
+  "python3-xapian"
+  "unzip"
+  "w3m"
+  "xsltproc"
+]
+extra-source "kopano-search_8.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kopanocore/kopano-search_8.7.0-3_all.deb"
+}

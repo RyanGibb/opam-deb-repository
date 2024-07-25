@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i luajit_2.1.0~beta3+git20220320+dfsg-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r luajit"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.3"}
+  "libluajit-5-1-2" {= "2.1.0~beta3+git20220320+dfsg-4.1"}
+  "libluajit-5-1-common" {= "2.1.0~beta3+git20220320+dfsg-4.1"}
+]
+conflicts: [
+  "luajit2"
+]
+extra-source "luajit_2.1.0~beta3+git20220320+dfsg-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/luajit/luajit_2.1.0~beta3+git20220320+dfsg-4.1_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i deja-dup_44.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r deja-dup"]
+]
+depends: [
+  "duplicity" {>= "0.7.14"}
+  "libadwaita-1-0" {>= "1.2"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.70.0"}
+  "libgpg-error0" {>= "1.14"}
+  "libgtk-4-1" {>= "4.0.0"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libpackagekit-glib2-18" {>= "1.1.0"}
+  "libpango-1-0-0" {>= "1.18.0"}
+  "libsecret-1-0" {>= "0.18.6"}
+  "libsoup-3-0-0" {>= "3.0.3"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "deja-dup_44.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/deja-dup/deja-dup_44.0-2_amd64.deb"
+}

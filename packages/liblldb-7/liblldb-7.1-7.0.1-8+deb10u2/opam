@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblldb-7_1:7.0.1-8+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblldb-7"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libedit2" {>= "2.11-20080614-0"}
+  "libgcc1" {>= "1-3.0"}
+  "libllvm7" {= "1-7.0.1-8+deb10u2"}
+  "libncurses6" {>= "6"}
+  "libpython2-7" {>= "2.7"}
+  "libstdc++6" {>= "7"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "liblldb-7_1:7.0.1-8+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-7/liblldb-7_7.0.1-8+deb10u2_amd64.deb"
+}

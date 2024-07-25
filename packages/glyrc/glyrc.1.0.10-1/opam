@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i glyrc_1.0.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r glyrc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libglyr1" {>= "1.0.0"}
+]
+extra-source "glyrc_1.0.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glyr/glyrc_1.0.10-1_amd64.deb"
+}

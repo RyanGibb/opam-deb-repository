@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i arcanist-clang-format-linter_0.git20161021-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r arcanist-clang-format-linter"]
+]
+depends: [
+  "arcanist" {>= "0~git20160124-1.3"}
+  "clang-format"
+  "diffutils"
+]
+extra-source "arcanist-clang-format-linter_0.git20161021-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/arcanist-clang-format-linter/arcanist-clang-format-linter_0.git20161021-3_all.deb"
+}

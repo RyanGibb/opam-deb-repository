@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i minetest-data_0.4.17.1+repack-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r minetest-data"]
+]
+depends: [
+  "fonts-croscore"
+  "fonts-droid-fallback"
+  "python"
+  "python-pil"
+]
+conflicts: [
+  "minetest-common"
+]
+extra-source "minetest-data_0.4.17.1+repack-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/minetest/minetest-data_0.4.17.1+repack-1+deb10u1_all.deb"
+}

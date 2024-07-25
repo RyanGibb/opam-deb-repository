@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpeony-dev_3.2.4-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpeony-dev"]
+]
+depends: [
+  "libcanberra-dev"
+  "libglib2-0-dev"
+  "libgsettings-qt-dev"
+  "libnotify-dev"
+  "libpeony3" {= "3.2.4-2+b1"}
+  "libpoppler-qt5-dev"
+  "qtbase5-dev"
+]
+extra-source "libpeony-dev_3.2.4-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/peony/libpeony-dev_3.2.4-2+b1_amd64.deb"
+}

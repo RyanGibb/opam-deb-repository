@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libewf-dev_20140807-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libewf-dev"]
+]
+depends: [
+  "libbfio-dev" {>= "20130507"}
+  "libewf2" {= "20140807-2+b2"}
+  "zlib1g-dev"
+]
+extra-source "libewf-dev_20140807-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libewf/libewf-dev_20140807-2+b2_amd64.deb"
+}

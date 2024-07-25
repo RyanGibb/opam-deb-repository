@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-greenlet-dbg_0.4.15-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-greenlet-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3-dbg" {< "3.8"}
+  "python3-dbg" {>= "3.7~"}
+  "python3-greenlet" {= "0.4.15-2"}
+]
+extra-source "python3-greenlet-dbg_0.4.15-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-greenlet/python3-greenlet-dbg_0.4.15-2_amd64.deb"
+}

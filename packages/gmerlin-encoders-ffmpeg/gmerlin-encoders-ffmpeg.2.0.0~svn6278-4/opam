@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gmerlin-encoders-ffmpeg_2.0.0~svn6278-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gmerlin-encoders-ffmpeg"]
+]
+depends: [
+  "libavformat-extra59"
+  "libc6" {>= "2.14"}
+  "libgmerlin2" {>= "2~"}
+]
+extra-source "gmerlin-encoders-ffmpeg_2.0.0~svn6278-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gmerlin-encoders/gmerlin-encoders-ffmpeg_2.0.0~svn6278-4_amd64.deb"
+}

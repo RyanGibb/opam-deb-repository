@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-microlens-platform-dev_0.4.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-microlens-platform-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-hashable-dev"
+  "libghc-microlens-dev"
+  "libghc-microlens-ghc-dev"
+  "libghc-microlens-mtl-dev"
+  "libghc-microlens-th-dev"
+  "libghc-unordered-containers-dev"
+  "libghc-vector-dev"
+  "libgmp10"
+]
+extra-source "libghc-microlens-platform-dev_0.4.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-microlens-platform/libghc-microlens-platform-dev_0.4.1-1+b1_amd64.deb"
+}

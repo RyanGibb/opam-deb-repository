@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcs_0.10.8-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcs"]
+]
+depends: [
+  "fonts-dejavu-core"
+  "fonts-liberation"
+  "lsb-base" {>= "3.0-6"}
+  "psmisc"
+  "python3-any"
+  "python3-dacite"
+  "python3-dateutil"
+  "python3-distro"
+  "python3-lxml"
+  "python3-openssl"
+  "python3-pkg-resources"
+  "python3-pycurl"
+  "python3-pyparsing"
+  "python3-tornado" {>= "6.0.4"}
+  "ruby"
+  "ruby-backports"
+  "ruby-ethon"
+  "ruby-json"
+  "ruby-open4"
+  "ruby-sinatra"
+  "thin"
+]
+conflicts: [
+  "python3-pcs"
+]
+extra-source "pcs_0.10.8-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcs/pcs_0.10.8-1+deb11u1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pgxnclient_1.3.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pgxnclient"]
+]
+depends: [
+  "ca-certificates"
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-six"
+]
+extra-source "pgxnclient_1.3.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pgxnclient/pgxnclient_1.3.2-2_all.deb"
+}

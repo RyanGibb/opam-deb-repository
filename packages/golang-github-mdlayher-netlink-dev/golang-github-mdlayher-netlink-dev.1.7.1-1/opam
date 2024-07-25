@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-mdlayher-netlink-dev_1.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-mdlayher-netlink-dev"]
+]
+depends: [
+  "golang-github-google-go-cmp-dev"
+  "golang-github-josharian-native-dev"
+  "golang-github-mdlayher-socket-dev" {>= "0.4.0"}
+  "golang-golang-x-net-dev"
+  "golang-golang-x-sys-dev"
+]
+extra-source "golang-github-mdlayher-netlink-dev_1.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-mdlayher-netlink/golang-github-mdlayher-netlink-dev_1.7.1-1_all.deb"
+}

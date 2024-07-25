@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tls-session-manager-dev_0.0.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tls-session-manager-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-auto-update-dev"
+  "libghc-basement-dev"
+  "libghc-clock-dev"
+  "libghc-memory-dev"
+  "libghc-psqueues-dev"
+  "libghc-tls-dev"
+  "libgmp10"
+]
+extra-source "libghc-tls-session-manager-dev_0.0.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tls-session-manager/libghc-tls-session-manager-dev_0.0.4-1+b1_amd64.deb"
+}

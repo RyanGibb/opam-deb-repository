@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i csync2_2.0-42-g83b3644-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r csync2"]
+]
+depends: [
+  "init-system-helpers" {>= "1.51"}
+  "libc6" {>= "2.34"}
+  "libgnutls30" {>= "3.7.5"}
+  "librsync2" {>= "1.0.0"}
+  "netbase" {>= "4.25"}
+]
+extra-source "csync2_2.0-42-g83b3644-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/csync2/csync2_2.0-42-g83b3644-2_amd64.deb"
+}

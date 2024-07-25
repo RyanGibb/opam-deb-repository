@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcl-ml1.9_1.9.1+dfsg1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcl-ml1.9"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libpcl-common1-9"
+  "libstdc++6" {>= "5"}
+]
+extra-source "libpcl-ml1.9_1.9.1+dfsg1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcl/libpcl-ml1.9_1.9.1+dfsg1-10_amd64.deb"
+}

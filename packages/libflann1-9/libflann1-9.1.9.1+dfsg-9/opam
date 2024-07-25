@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libflann1.9_1.9.1+dfsg-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libflann1.9"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1"
+  "libgomp1" {>= "4.9"}
+  "liblz4-1" {>= "0.0~r113"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libflann1.9_1.9.1+dfsg-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flann/libflann1.9_1.9.1+dfsg-9_amd64.deb"
+}

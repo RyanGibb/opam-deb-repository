@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkxl0_1.1.7-17_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkxl0"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libx11-6"
+]
+extra-source "libkxl0_1.1.7-17_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kxl/libkxl0_1.1.7-17_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cyrus-admin_3.6.1-4+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cyrus-admin"]
+]
+depends: [
+  "cyrus-common" {>= "3.6.1"}
+  "libc6" {>= "2.34"}
+  "libcyrus-imap-perl" {>= "3.6.1-4+deb12u2"}
+  "perl-any"
+]
+extra-source "cyrus-admin_3.6.1-4+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cyrus-imapd/cyrus-admin_3.6.1-4+deb12u2_amd64.deb"
+}

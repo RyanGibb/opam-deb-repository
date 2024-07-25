@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i smb-nat_1:1.0-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r smb-nat"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "nat"
+]
+extra-source "smb-nat_1:1.0-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nat/smb-nat_1.0-6+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yara_4.2.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yara"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libyara9" {>= "4.2.0~"}
+]
+extra-source "yara_4.2.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yara/yara_4.2.3-4_amd64.deb"
+}

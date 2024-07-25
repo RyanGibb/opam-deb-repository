@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-sink-test_1.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-sink-test"]
+]
+depends: [
+  "libjs-sink-test"
+  "node-colors" {>= "0.5.0"}
+  "nodejs" {>= "0.4.0"}
+]
+extra-source "node-sink-test_1.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-sink-test/node-sink-test_1.0.2-2_all.deb"
+}

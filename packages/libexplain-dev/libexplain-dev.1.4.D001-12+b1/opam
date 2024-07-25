@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libexplain-dev_1.4.D001-12+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libexplain-dev"]
+]
+depends: [
+  "libacl1-dev"
+  "libexplain51" {= "1.4.D001-12+b1"}
+  "lsof"
+]
+extra-source "libexplain-dev_1.4.D001-12+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libexplain/libexplain-dev_1.4.D001-12+b1_amd64.deb"
+}

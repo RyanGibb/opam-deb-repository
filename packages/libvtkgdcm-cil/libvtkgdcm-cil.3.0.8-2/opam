@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvtkgdcm-cil_3.0.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvtkgdcm-cil"]
+]
+depends: [
+  "cli-common" {>= "0.5.1"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdcm3-0" {= "3.0.8-2"}
+  "libmono-corlib4-5-cil" {>= "5.18.0.240"}
+  "libstdc++6" {>= "5.2"}
+  "libvtk7-1p"
+  "libvtkgdcm3-0" {>= "3.0.8"}
+]
+extra-source "libvtkgdcm-cil_3.0.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gdcm/libvtkgdcm-cil_3.0.8-2_amd64.deb"
+}

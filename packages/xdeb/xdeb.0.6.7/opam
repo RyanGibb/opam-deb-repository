@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xdeb_0.6.7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xdeb"]
+]
+depends: [
+  "apt-utils" {>= "0.8.11"}
+  "build-essential"
+  "devscripts" {>= "2.10.41"}
+  "dpkg-cross" {>= "2.6.3"}
+  "dpkg-dev" {>= "1.15"}
+  "lintian" {>= "2.3.0"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-apt" {>= "0.7.91"}
+  "python-debian" {>= "0.1.15~"}
+  "sudo"
+  "wget"
+]
+extra-source "xdeb_0.6.7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xdeb/xdeb_0.6.7_all.deb"
+}

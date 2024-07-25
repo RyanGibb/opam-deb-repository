@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-storm-dbg_0.19-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-storm-dbg"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python-dbg" {< "2.8"}
+  "python-dbg" {>= "2.7~"}
+  "python-dbg-any" {< "2.8"}
+  "python-dbg-any" {>= "2.7~"}
+  "python-storm" {= "0.19-2"}
+]
+extra-source "python-storm-dbg_0.19-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/storm/python-storm-dbg_0.19-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i crossbuild-essential-i386_12.9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r crossbuild-essential-i386"]
+]
+depends: [
+  "dpkg-cross"
+  ("g++-i686-linux-gnu" {>= "4-10.2"} | "g++-i386")
+  ("gcc-i686-linux-gnu" {>= "4-10.2"} | "gcc-i386")
+]
+extra-source "crossbuild-essential-i386_12.9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/build-essential/crossbuild-essential-i386_12.9_all.deb"
+}

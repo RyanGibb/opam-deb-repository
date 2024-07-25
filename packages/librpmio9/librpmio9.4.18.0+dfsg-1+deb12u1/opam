@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librpmio9_4.18.0+dfsg-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librpmio9"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libgcrypt20" {>= "1.10.0"}
+  "liblua5-3-0"
+  "liblzma5" {>= "5.2.2"}
+  "libpopt0" {>= "1.14"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "librpmio9_4.18.0+dfsg-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rpm/librpmio9_4.18.0+dfsg-1+deb12u1_amd64.deb"
+}

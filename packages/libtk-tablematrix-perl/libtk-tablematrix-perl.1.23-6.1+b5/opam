@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtk-tablematrix-perl_1.23-6.1+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtk-tablematrix-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libx11-6"
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+  "perl-modules-5-28"
+  "perl-tk" {>= "1-804.028"}
+]
+extra-source "libtk-tablematrix-perl_1.23-6.1+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtk-tablematrix-perl/libtk-tablematrix-perl_1.23-6.1+b5_amd64.deb"
+}

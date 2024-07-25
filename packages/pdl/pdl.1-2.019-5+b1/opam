@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pdl_1:2.019-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pdl"]
+]
+depends: [
+  "libc6" {>= "2.23"}
+  "libgd3" {>= "2.1.0~alpha~"}
+  "libgfortran5" {>= "8"}
+  "libgsl23" {>= "2.5"}
+  "libhdf4-0-alt" {>= "4.2r4"}
+  "libncurses6" {>= "6"}
+  "libproj13" {>= "4.8.0"}
+  "libterm-readkey-perl"
+  "libtinfo6" {>= "6"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+  "sensible-utils"
+]
+conflicts: [
+  "r-pdl"
+]
+extra-source "pdl_1:2.019-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdl/pdl_2.019-5+b1_amd64.deb"
+}

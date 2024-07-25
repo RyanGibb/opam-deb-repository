@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclasslojure-clojure_0.7.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclasslojure-clojure"]
+]
+depends: [
+  ("libclojure-java" | "libclojure1-8-java")
+]
+extra-source "libclasslojure-clojure_0.7.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libclasslojure-clojure/libclasslojure-clojure_0.7.1-4_all.deb"
+}

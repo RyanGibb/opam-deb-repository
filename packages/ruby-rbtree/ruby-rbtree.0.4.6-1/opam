@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rbtree_0.4.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rbtree"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.2"}
+]
+extra-source "ruby-rbtree_0.4.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rbtree/ruby-rbtree_0.4.6-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fakemachine_0.0.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fakemachine"]
+]
+depends: [
+  "qemu-system-x86"
+  "systemd"
+  ("busybox" | "busybox-static")
+]
+extra-source "fakemachine_0.0.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-go-debos-fakemachine/fakemachine_0.0.4-1+b2_amd64.deb"
+}

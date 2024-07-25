@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slowmovideo_0.5+git20190116-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slowmovideo"]
+]
+depends: [
+  "ffmpeg"
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libopencv-core4-5" {>= "4.5.0+dfsg"}
+  "libopencv-imgcodecs4-5" {>= "4.5.0+dfsg"}
+  "libopencv-superres4-5" {>= "4.5.0+dfsg"}
+  "libopencv-video4-5" {>= "4.5.0+dfsg"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5script5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+]
+extra-source "slowmovideo_0.5+git20190116-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slowmovideo/slowmovideo_0.5+git20190116-3+b2_amd64.deb"
+}

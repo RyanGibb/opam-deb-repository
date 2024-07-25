@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bind9-libs_1:9.16.48-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bind9-libs"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libfstrm0" {>= "0.2.0"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libjson-c5" {>= "0.15"}
+  "libkrb5-3" {>= "1.6.dfsg.2"}
+  "liblmdb0" {>= "0.9.7"}
+  "libmaxminddb0" {>= "1.3.0"}
+  "libprotobuf-c1" {>= "1.0.1"}
+  "libssl1-1" {>= "1.1.0"}
+  "libuv1" {>= "1.40.0"}
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "bind9-libs_1:9.16.48-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bind9/bind9-libs_9.16.48-1_amd64.deb"
+}

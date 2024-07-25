@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-gevent-dbg_20.9.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-gevent-dbg"]
+]
+depends: [
+  "libc-ares2" {>= "1.16.0"}
+  "libc6" {>= "2.14"}
+  "libev4" {>= "1-4.04"}
+  "python3-dbg" {< "3.10"}
+  "python3-dbg" {>= "3.9~"}
+  "python3-gevent" {= "20.9.0-2"}
+  "python3-greenlet-dbg"
+]
+extra-source "python3-gevent-dbg_20.9.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-gevent/python3-gevent-dbg_20.9.0-2_amd64.deb"
+}

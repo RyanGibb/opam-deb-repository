@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-ghc-exactprint-prof_0.6.4-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-ghc-exactprint-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-free-prof"
+  "libghc-ghc-exactprint-dev" {= "0.6.4-1+b3"}
+  "libghc-ghc-paths-prof"
+  "libghc-syb-prof"
+]
+extra-source "libghc-ghc-exactprint-prof_0.6.4-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-ghc-exactprint/libghc-ghc-exactprint-prof_0.6.4-1+b3_amd64.deb"
+}

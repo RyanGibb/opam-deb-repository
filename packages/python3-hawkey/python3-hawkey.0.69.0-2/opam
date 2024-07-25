@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-hawkey_0.69.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-hawkey"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdnf2" {= "0.69.0-2"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.22.0"}
+  "libpython3-11" {>= "3.11.0"}
+  "libsolv1" {>= "0.7.14-1.1~"}
+  "libsolvext1" {>= "0.7.14-1.1~"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-libdnf" {= "0.69.0-2"}
+]
+extra-source "python3-hawkey_0.69.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdnf/python3-hawkey_0.69.0-2_amd64.deb"
+}

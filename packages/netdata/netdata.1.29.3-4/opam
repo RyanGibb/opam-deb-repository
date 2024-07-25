@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i netdata_1.29.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r netdata"]
+]
+depends: [
+  "netdata-plugins-bash"
+  "netdata-web"
+  ("netdata-core" | "netdata-core-no-sse")
+]
+extra-source "netdata_1.29.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netdata/netdata_1.29.3-4_all.deb"
+}

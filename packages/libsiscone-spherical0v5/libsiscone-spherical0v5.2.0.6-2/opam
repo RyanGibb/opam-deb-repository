@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsiscone-spherical0v5_2.0.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsiscone-spherical0v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libsiscone0v5" {= "2.0.6-2"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libsiscone-spherical0"
+]
+extra-source "libsiscone-spherical0v5_2.0.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/siscone/libsiscone-spherical0v5_2.0.6-2_amd64.deb"
+}

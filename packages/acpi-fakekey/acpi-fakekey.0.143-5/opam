@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i acpi-fakekey_0.143-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r acpi-fakekey"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libsystemd0"
+]
+extra-source "acpi-fakekey_0.143-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/acpi-support/acpi-fakekey_0.143-5_amd64.deb"
+}

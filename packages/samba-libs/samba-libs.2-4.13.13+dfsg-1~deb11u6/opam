@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i samba-libs_2:4.13.13+dfsg-1~deb11u6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r samba-libs"]
+]
+depends: [
+  "libacl1" {>= "2.2.23"}
+  "libavahi-client3" {>= "0.6.16"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libbsd0" {>= "0.5.0"}
+  "libc6" {>= "2.17"}
+  "libcap2" {>= "1-2.10"}
+  "libcups2" {>= "1.7.0"}
+  "libgnutls30" {>= "3.7.0"}
+  "libjansson4" {>= "2.1"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libldb2" {>= "2-2.2.3-2~deb11u2~"}
+  "libnsl2" {>= "1.0"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpopt0" {>= "1.14"}
+  "libpython3-9" {>= "3.9.1"}
+  "libtalloc2" {>= "2.3.1~"}
+  "libtdb1" {>= "1.4.3~"}
+  "libtevent0" {>= "0.10.2~"}
+  "libwbclient0" {= "2-4.13.13+dfsg-1~deb11u6"}
+  "python3-ldb" {>= "2-2.1.0"}
+  "python3-talloc" {>= "2.3.1~"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "samba-libs_2:4.13.13+dfsg-1~deb11u6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/samba/samba-libs_4.13.13+dfsg-1~deb11u6_amd64.deb"
+}

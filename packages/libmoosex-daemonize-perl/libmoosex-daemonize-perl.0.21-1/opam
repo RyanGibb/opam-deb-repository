@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmoosex-daemonize-perl_0.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmoosex-daemonize-perl"]
+]
+depends: [
+  "libmoose-perl"
+  "libmoosex-getopt-perl"
+  "libmoosex-types-path-class-perl"
+  "libnamespace-autoclean-perl"
+  "libsub-exporter-perl"
+  "perl" {>= "5.11.1"}
+]
+extra-source "libmoosex-daemonize-perl_0.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmoosex-daemonize-perl/libmoosex-daemonize-perl_0.21-1_all.deb"
+}

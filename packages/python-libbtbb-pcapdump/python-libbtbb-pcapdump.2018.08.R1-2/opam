@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-libbtbb-pcapdump_2018.08.R1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-libbtbb-pcapdump"]
+]
+depends: [
+  "libbtbb1" {>= "2018.08.R1-2"}
+  "python"
+]
+extra-source "python-libbtbb-pcapdump_2018.08.R1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbtbb/python-libbtbb-pcapdump_2018.08.R1-2_all.deb"
+}

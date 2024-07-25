@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i frogr_1.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r frogr"]
+]
+depends: [
+  "frogr-data" {= "1.5-1"}
+  "libc6" {>= "2.4"}
+  "libexif12" {>= "0.6.21-1~"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.44"}
+  "libgstreamer1-0-0" {>= "1.0.0"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libjson-glib-1-0-0" {>= "1.2.0"}
+  "libsoup2-4-1" {>= "2.41.90"}
+  "libxml2" {>= "2.7.4"}
+  "shared-mime-info"
+]
+extra-source "frogr_1.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/frogr/frogr_1.5-1_amd64.deb"
+}

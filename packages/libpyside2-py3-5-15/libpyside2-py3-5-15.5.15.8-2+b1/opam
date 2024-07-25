@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpyside2-py3-5.15_5.15.8-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpyside2-py3-5.15"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5"
+  "libqt5qml5" {>= "5.15"}
+  "libshiboken2-py3-5-15" {>= "5.15.8"}
+  "libstdc++6" {>= "4.3"}
+  "python3-any"
+]
+conflicts: [
+  "libpyside2-py3-5.11"
+  "libpyside2-py3-5.13"
+  "libpyside2-py3-5.14"
+]
+extra-source "libpyside2-py3-5.15_5.15.8-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyside2/libpyside2-py3-5.15_5.15.8-2+b1_amd64.deb"
+}

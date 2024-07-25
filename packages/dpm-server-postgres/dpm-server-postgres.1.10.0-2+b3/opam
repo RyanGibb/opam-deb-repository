@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpm-server-postgres_1.10.0-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpm-server-postgres"]
+]
+depends: [
+  "adduser"
+  "finger"
+  "libc6" {>= "2.15"}
+  "libdpm1" {= "1.10.0-2+b3"}
+  "liblcgdm1"
+  "libpq5"
+  "libuuid1" {>= "2.16"}
+  "postgresql-client"
+]
+conflicts: [
+  "dpm-postgres (<< 1.8.1.2-2~)"
+]
+extra-source "dpm-server-postgres_1.10.0-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lcgdm/dpm-server-postgres_1.10.0-2+b3_amd64.deb"
+}

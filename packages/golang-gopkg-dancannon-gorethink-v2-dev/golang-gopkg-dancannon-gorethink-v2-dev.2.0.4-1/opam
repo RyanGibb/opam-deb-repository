@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-gopkg-dancannon-gorethink.v2-dev_2.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-gopkg-dancannon-gorethink.v2-dev"]
+]
+depends: [
+  "golang-github-cenkalti-backoff-dev"
+  "golang-github-hailocab-go-hostpool-dev"
+  "golang-github-sirupsen-logrus-dev"
+  "golang-go"
+  "golang-golang-x-crypto-dev"
+  "golang-gopkg-fatih-pool-v2-dev"
+  ("golang-check-v1-dev" | "golang-gopkg-check-v1-dev")
+  ("golang-goprotobuf-dev" | "golang-github-golang-protobuf-dev")
+]
+extra-source "golang-gopkg-dancannon-gorethink.v2-dev_2.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-gopkg-dancannon-gorethink.v2/golang-gopkg-dancannon-gorethink.v2-dev_2.0.4-1_all.deb"
+}

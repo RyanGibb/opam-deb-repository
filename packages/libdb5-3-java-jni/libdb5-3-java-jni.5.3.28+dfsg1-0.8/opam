@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdb5.3-java-jni_5.3.28+dfsg1-0.8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdb5.3-java-jni"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libdb5-3" {= "5.3.28+dfsg1-0.8"}
+]
+conflicts: [
+  "libdb5.1-java"
+  "libdb5.2-java"
+]
+extra-source "libdb5.3-java-jni_5.3.28+dfsg1-0.8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/db5.3/libdb5.3-java-jni_5.3.28+dfsg1-0.8_amd64.deb"
+}

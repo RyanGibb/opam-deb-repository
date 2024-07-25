@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmp3lame-ocaml-dev_0.3.2-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmp3lame-ocaml-dev"]
+]
+depends: [
+  "libmp3lame-dev"
+  "libmp3lame-ocaml"
+  "libmp3lame-ocaml" {= "0.3.2-1+b3"}
+  "ocaml-findlib"
+  "ocaml-nox"
+]
+extra-source "libmp3lame-ocaml-dev_0.3.2-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-lame/libmp3lame-ocaml-dev_0.3.2-1+b3_amd64.deb"
+}

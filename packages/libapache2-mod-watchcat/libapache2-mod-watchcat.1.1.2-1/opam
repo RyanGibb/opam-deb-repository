@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-watchcat_1.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-watchcat"]
+]
+depends: [
+  "apache2-bin"
+  "libc6" {>= "2.2.5"}
+  "libwcat1"
+  "watchcatd"
+]
+extra-source "libapache2-mod-watchcat_1.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapache2-mod-watchcat/libapache2-mod-watchcat_1.1.2-1_amd64.deb"
+}

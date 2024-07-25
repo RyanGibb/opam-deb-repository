@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblog4net1.2-cil_1.2.10+dfsg-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblog4net1.2-cil"]
+]
+depends: [
+  "cli-common" {>= "0.5.6"}
+  "libmono-corlib4-5-cil" {>= "3.2.8"}
+  "libmono-system-data4-0-cil" {>= "3.0.6"}
+  "libmono-system-web4-0-cil" {>= "2.10.3"}
+  "libmono-system-xml4-0-cil" {>= "3.2.1"}
+  "libmono-system4-0-cil" {>= "3.2.8"}
+  ("libc6" {>= "2.19"} | "libc6-1" {>= "2.19"} | "libc0-1" {>= "2.19"})
+]
+extra-source "liblog4net1.2-cil_1.2.10+dfsg-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/log4net/liblog4net1.2-cil_1.2.10+dfsg-7_all.deb"
+}

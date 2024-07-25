@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-atomic-write-prof_0.2.0.7-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-atomic-write-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-atomic-write-dev" {= "0.2.0.7-3+b1"}
+  "libghc-temporary-prof"
+  "libghc-unix-compat-prof"
+]
+extra-source "libghc-atomic-write-prof_0.2.0.7-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-atomic-write/libghc-atomic-write-prof_0.2.0.7-3+b1_amd64.deb"
+}

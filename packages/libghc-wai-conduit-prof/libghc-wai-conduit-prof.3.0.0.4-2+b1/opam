@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-wai-conduit-prof_3.0.0.4-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-wai-conduit-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-conduit-prof"
+  "libghc-http-types-prof"
+  "libghc-wai-conduit-dev" {= "3.0.0.4-2+b1"}
+  "libghc-wai-prof"
+]
+extra-source "libghc-wai-conduit-prof_3.0.0.4-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-wai-conduit/libghc-wai-conduit-prof_3.0.0.4-2+b1_amd64.deb"
+}

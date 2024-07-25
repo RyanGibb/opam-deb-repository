@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcamera-calibration-parsers-dev_1.11.13-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcamera-calibration-parsers-dev"]
+]
+depends: [
+  "libboost-filesystem-dev"
+  "libcamera-calibration-parsers0d" {= "1.11.13-3+b1"}
+  "librosconsole-dev"
+  "libsensor-msgs-dev"
+]
+extra-source "libcamera-calibration-parsers-dev_1.11.13-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-image-common/libcamera-calibration-parsers-dev_1.11.13-3+b1_amd64.deb"
+}

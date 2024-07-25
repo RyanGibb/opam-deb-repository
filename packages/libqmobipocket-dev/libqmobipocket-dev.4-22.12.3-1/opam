@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqmobipocket-dev_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqmobipocket-dev"]
+]
+depends: [
+  "libkf5i18n-dev"
+  "libqmobipocket2" {= "4-22.12.3-1"}
+  "qtbase5-dev" {>= "5.12.0~"}
+]
+extra-source "libqmobipocket-dev_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdegraphics-mobipocket/libqmobipocket-dev_22.12.3-1_amd64.deb"
+}

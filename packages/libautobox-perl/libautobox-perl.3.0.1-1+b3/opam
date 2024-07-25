@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libautobox-perl_3.0.1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libautobox-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libscope-guard-perl"
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libautobox-perl_3.0.1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libautobox-perl/libautobox-perl_3.0.1-1+b3_amd64.deb"
+}

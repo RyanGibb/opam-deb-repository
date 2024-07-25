@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libssm-bin_1.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libssm-bin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libccp4c0"
+  "libgcc1" {>= "1-3.0"}
+  "libmmdb2-0"
+  "libssm2"
+  "libstdc++6" {>= "5"}
+]
+extra-source "libssm-bin_1.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/ssm/libssm-bin_1.4.0-1_amd64.deb"
+}

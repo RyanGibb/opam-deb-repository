@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aewm++-goodies_1.0-10+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aewm++-goodies"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "libxext6"
+  "libxpm4"
+]
+conflicts: [
+  "aewm++ (<< 1.0.24-1)"
+]
+extra-source "aewm++-goodies_1.0-10+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aewm++-goodies/aewm++-goodies_1.0-10+b1_amd64.deb"
+}

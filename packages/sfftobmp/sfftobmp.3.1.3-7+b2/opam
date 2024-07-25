@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sfftobmp_3.1.3-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sfftobmp"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libstdc++6" {>= "9"}
+  "libtiff5" {>= "4.0.3"}
+]
+extra-source "sfftobmp_3.1.3-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sfftobmp/sfftobmp_3.1.3-7+b2_amd64.deb"
+}

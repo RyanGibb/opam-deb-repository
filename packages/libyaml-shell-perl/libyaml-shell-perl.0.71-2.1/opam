@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libyaml-shell-perl_0.71-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libyaml-shell-perl"]
+]
+depends: [
+  "perl-any"
+  ("libyaml-perl" {>= "0.67"} | "libyaml-syck-perl")
+]
+conflicts: [
+  "libyaml-perl (<< 0.67)"
+]
+extra-source "libyaml-shell-perl_0.71-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liby/libyaml-shell-perl/libyaml-shell-perl_0.71-2.1_all.deb"
+}

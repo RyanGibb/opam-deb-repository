@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-output-file-sync_1.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-output-file-sync"]
+]
+depends: [
+  "node-graceful-fs" {>= "4.1.4"}
+  "node-mkdirp" {>= "0.5"}
+  "node-object-assign" {>= "4.1.0"}
+  "nodejs"
+]
+extra-source "node-output-file-sync_1.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-output-file-sync/node-output-file-sync_1.1.2-1_all.deb"
+}

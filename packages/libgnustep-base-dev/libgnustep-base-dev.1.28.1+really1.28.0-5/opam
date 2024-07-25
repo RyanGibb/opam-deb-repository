@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnustep-base-dev_1.28.1+really1.28.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnustep-base-dev"]
+]
+depends: [
+  "gnustep-base-runtime" {= "1.28.1+really1.28.0-5"}
+  "gnustep-make" {>= "2.9.0"}
+  "libgnustep-base1-28" {= "1.28.1+really1.28.0-5"}
+]
+extra-source "libgnustep-base-dev_1.28.1+really1.28.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnustep-base/libgnustep-base-dev_1.28.1+really1.28.0-5_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsamplerate0-dev_0.2.1+ds0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsamplerate0-dev"]
+]
+depends: [
+  "libsamplerate0" {= "0.2.1+ds0-1"}
+  "pkg-config"
+]
+conflicts: [
+  "libsamplerate-dev"
+]
+extra-source "libsamplerate0-dev_0.2.1+ds0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsamplerate/libsamplerate0-dev_0.2.1+ds0-1_amd64.deb"
+}

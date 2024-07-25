@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libminion-backend-sqlite-perl_5.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libminion-backend-sqlite-perl"]
+]
+depends: [
+  "libminion-perl" {>= "10.13"}
+  "libmojo-sqlite-perl"
+  "libmojolicious-perl" {>= "7.49"}
+  "perl-any"
+]
+extra-source "libminion-backend-sqlite-perl_5.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libminion-backend-sqlite-perl/libminion-backend-sqlite-perl_5.0.4-1_all.deb"
+}

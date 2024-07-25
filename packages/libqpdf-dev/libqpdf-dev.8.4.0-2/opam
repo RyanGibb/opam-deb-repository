@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqpdf-dev_8.4.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqpdf-dev"]
+]
+depends: [
+  "libjpeg-dev"
+  "libqpdf21" {= "8.4.0-2"}
+  "zlib1g-dev"
+]
+extra-source "libqpdf-dev_8.4.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qpdf/libqpdf-dev_8.4.0-2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdssi-ocaml-dev_0.1.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdssi-ocaml-dev"]
+]
+depends: [
+  "dssi-dev"
+  "libdssi-ocaml"
+  "libdssi-ocaml" {= "0.1.2-1+b1"}
+  "libladspa-ocaml-dev"
+  "ocaml-findlib"
+  "ocaml-nox"
+]
+extra-source "libdssi-ocaml-dev_0.1.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-dssi/libdssi-ocaml-dev_0.1.2-1+b1_amd64.deb"
+}

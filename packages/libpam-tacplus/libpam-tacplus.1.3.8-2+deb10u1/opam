@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-tacplus_1.3.8-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-tacplus"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libpam-runtime"
+  "libpam0g" {>= "0.99.7.1"}
+]
+extra-source "libpam-tacplus_1.3.8-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpam-tacplus/libpam-tacplus_1.3.8-2+deb10u1_amd64.deb"
+}

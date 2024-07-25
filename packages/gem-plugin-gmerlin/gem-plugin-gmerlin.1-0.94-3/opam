@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gem-plugin-gmerlin_1:0.94-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gem-plugin-gmerlin"]
+]
+depends: [
+  "gem" {< "1-0.94+1~"}
+  "gem" {>= "1-0.94-3"}
+  "libc6" {>= "2.14"}
+  "libgavl1" {>= "1.1.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libgmerlin-avdec1" {>= "1.0.3"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "gem-plugin-gmerlin_1:0.94-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gem/gem-plugin-gmerlin_0.94-3_amd64.deb"
+}

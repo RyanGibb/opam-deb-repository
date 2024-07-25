@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i avldrums.lv2_0.4.2~repack1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r avldrums.lv2"]
+]
+depends: [
+  "avldrums-lv2-soundfont" {= "0.4.2~repack1-1"}
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.2.4"}
+  "libgl1"
+  "libglib2-0-0" {>= "2.31.8"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libx11-6"
+]
+extra-source "avldrums.lv2_0.4.2~repack1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/avldrums.lv2/avldrums.lv2_0.4.2~repack1-1_amd64.deb"
+}

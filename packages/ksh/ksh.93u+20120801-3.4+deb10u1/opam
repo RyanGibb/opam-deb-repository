@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ksh_93u+20120801-3.4+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ksh"]
+]
+depends: [
+  "binfmt-support"
+  "libc6" {>= "2.23"}
+]
+extra-source "ksh_93u+20120801-3.4+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/ksh/ksh_93u+20120801-3.4+deb10u1_amd64.deb"
+}

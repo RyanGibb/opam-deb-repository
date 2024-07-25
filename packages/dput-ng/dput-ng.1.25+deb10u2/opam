@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dput-ng_1.25+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dput-ng"]
+]
+depends: [
+  "python3-any"
+  "python3-dput" {= "1.25+deb10u2"}
+]
+conflicts: [
+  "dput"
+]
+extra-source "dput-ng_1.25+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dput-ng/dput-ng_1.25+deb10u2_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-x2gobroker_0.0.4.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-x2gobroker"]
+]
+depends: [
+  "python3"
+  "python3-daemon"
+  "python3-lockfile"
+  "python3-netaddr"
+  "python3-pampy"
+  "python3-paramiko"
+  "python3-tornado"
+  "python3-urllib3"
+  "x2gobroker-common" {>= "0.0.4.3-1"}
+]
+extra-source "python3-x2gobroker_0.0.4.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/x2gobroker/python3-x2gobroker_0.0.4.3-1_all.deb"
+}

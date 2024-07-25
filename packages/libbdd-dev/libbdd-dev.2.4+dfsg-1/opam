@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbdd-dev_2.4+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbdd-dev"]
+]
+depends: [
+  "libbdd0c2" {= "2.4+dfsg-1"}
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "libbdd-dev_2.4+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/buddy/libbdd-dev_2.4+dfsg-1_amd64.deb"
+}

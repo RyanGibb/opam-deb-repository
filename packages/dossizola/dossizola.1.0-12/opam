@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dossizola_1.0-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dossizola"]
+]
+depends: [
+  "dossizola-data" {= "1.0-12"}
+  "libc6" {>= "2.4"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl1-2-compat-shim"
+]
+extra-source "dossizola_1.0-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dossizola/dossizola_1.0-12_amd64.deb"
+}

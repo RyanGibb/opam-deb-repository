@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libestring-ocaml-dev_20130822-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libestring-ocaml-dev"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libcamlp4-ocaml-dev"
+  "libestring-ocaml"
+  "ocaml-findlib"
+  "ocaml-nox"
+]
+conflicts: [
+  "libbatteries-ocaml-dev (<< 2.0)"
+]
+extra-source "libestring-ocaml-dev_20130822-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-estring/libestring-ocaml-dev_20130822-5+b2_amd64.deb"
+}

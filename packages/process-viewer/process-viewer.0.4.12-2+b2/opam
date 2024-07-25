@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i process-viewer_0.4.12-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r process-viewer"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libgcc-s1" {>= "4.2"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.35.8"}
+  "libgtk-3-0" {>= "3.11.5"}
+  "libpango-1-0-0" {>= "1.14.0"}
+]
+extra-source "process-viewer_0.4.12-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-process-viewer/process-viewer_0.4.12-2+b2_amd64.deb"
+}

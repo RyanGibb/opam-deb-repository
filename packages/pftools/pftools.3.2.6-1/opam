@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pftools_3.2.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pftools"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfile-slurp-perl"
+  "libgfortran5" {>= "8"}
+  "libpcre3"
+]
+extra-source "pftools_3.2.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pftools/pftools_3.2.6-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrilinos-pike-dev_12.12.1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrilinos-pike-dev"]
+]
+depends: [
+  "libtrilinos-pike12" {= "12.12.1-7"}
+  "trilinos-dev"
+]
+extra-source "libtrilinos-pike-dev_12.12.1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trilinos/libtrilinos-pike-dev_12.12.1-7_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tasty-prof_1.1.0.3-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tasty-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-ansi-terminal-prof"
+  "libghc-async-prof"
+  "libghc-clock-prof"
+  "libghc-optparse-applicative-prof"
+  "libghc-tagged-prof"
+  "libghc-tasty-dev" {= "1.1.0.3-2+b1"}
+  "libghc-unbounded-delays-prof"
+  "libghc-wcwidth-prof"
+]
+extra-source "libghc-tasty-prof_1.1.0.3-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tasty/libghc-tasty-prof_1.1.0.3-2+b1_amd64.deb"
+}

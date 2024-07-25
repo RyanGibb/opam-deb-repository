@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xgboost_1.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xgboost"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libdmlc0" {>= "0.0~git20200912.bfad207"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "6"}
+  "librabit0" {>= "0.0~git20200628.74bf00a"}
+  "libstdc++6" {>= "9"}
+  "libxgboost0" {= "1.2.1-1"}
+]
+extra-source "xgboost_1.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xgboost/xgboost_1.2.1-1_amd64.deb"
+}

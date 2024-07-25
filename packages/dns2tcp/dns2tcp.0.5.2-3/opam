@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dns2tcp_0.5.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dns2tcp"]
+]
+depends: [
+  "init-system-helpers" {>= "1.58"}
+  "libc6" {>= "2.15"}
+  "lsb-base"
+]
+extra-source "dns2tcp_0.5.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dns2tcp/dns2tcp_0.5.2-3_amd64.deb"
+}

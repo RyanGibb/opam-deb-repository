@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tomcat9-common_9.0.43-2~deb11u10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tomcat9-common"]
+]
+depends: [
+  "libtomcat9-java" {>= "9.0.43-2~deb11u10"}
+  ("default-jre-headless" | "java8-runtime-headless" | "java8-runtime")
+]
+extra-source "tomcat9-common_9.0.43-2~deb11u10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tomcat9/tomcat9-common_9.0.43-2~deb11u10_all.deb"
+}

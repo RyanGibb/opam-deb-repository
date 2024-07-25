@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnetfilter-cthelper0_1.0.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnetfilter-cthelper0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmnl0" {>= "1.0.3-4~"}
+]
+extra-source "libnetfilter-cthelper0_1.0.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnetfilter-cthelper/libnetfilter-cthelper0_1.0.0-1+b1_amd64.deb"
+}

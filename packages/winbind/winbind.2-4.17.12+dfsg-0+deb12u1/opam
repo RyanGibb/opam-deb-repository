@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i winbind_2:4.17.12+dfsg-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r winbind"]
+]
+depends: [
+  "libbsd0" {>= "0.6.0"}
+  "libc6" {>= "2.34"}
+  "libgnutls30" {>= "3.7.0"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "libpopt0" {>= "1.14"}
+  "libtalloc2" {>= "2.3.4~"}
+  "libtdb1" {>= "1.4.7~"}
+  "libtevent0" {>= "0.13.0~"}
+  "libwbclient0" {= "2-4.17.12+dfsg-0+deb12u1"}
+  "passwd"
+  "samba-common" {= "2-4.17.12+dfsg-0+deb12u1"}
+  "samba-common-bin" {= "2-4.17.12+dfsg-0+deb12u1"}
+  "samba-libs" {= "2-4.17.12+dfsg-0+deb12u1"}
+]
+extra-source "winbind_2:4.17.12+dfsg-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/samba/winbind_4.17.12+dfsg-0+deb12u1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-object+parity-wasm-dev_0.12.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-object+parity-wasm-dev"]
+]
+depends: [
+  "librust-object-dev" {= "0.12.0-4"}
+  ("librust-parity-wasm-0-41+default-dev" | "librust-parity-wasm-0-40+default-dev" | "librust-parity-wasm-0-39+default-dev" | "librust-parity-wasm-0-38+default-dev")
+]
+extra-source "librust-object+parity-wasm-dev_0.12.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-object/librust-object+parity-wasm-dev_0.12.0-4_amd64.deb"
+}

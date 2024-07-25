@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhttp-request-ascgi-perl_1.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhttp-request-ascgi-perl"]
+]
+depends: [
+  "libclass-accessor-perl"
+  "libwww-perl"
+  "perl-any"
+  ("libcgi-pm-perl" | "perl" {< "5.19"})
+  ("libhttp-daemon-perl" | "libwww-perl" {< "6"})
+]
+extra-source "libhttp-request-ascgi-perl_1.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhttp-request-ascgi-perl/libhttp-request-ascgi-perl_1.2-4_all.deb"
+}

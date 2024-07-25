@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i flextra_5.0-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r flextra"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libeccodes0"
+  "libgcc1" {>= "1-3.0"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+]
+extra-source "flextra_5.0-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flextra/flextra_5.0-12_amd64.deb"
+}

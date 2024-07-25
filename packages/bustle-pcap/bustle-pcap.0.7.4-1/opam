@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bustle-pcap_0.7.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bustle-pcap"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libglib2-0-0" {>= "2.39.4"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "bustle-pcap_0.7.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bustle/bustle-pcap_0.7.4-1_amd64.deb"
+}

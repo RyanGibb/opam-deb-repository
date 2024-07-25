@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tvnamer_3.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tvnamer"]
+]
+depends: [
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-tvdb-api" {>= "3"}
+]
+extra-source "tvnamer_3.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tvnamer/tvnamer_3.0.4-1_all.deb"
+}

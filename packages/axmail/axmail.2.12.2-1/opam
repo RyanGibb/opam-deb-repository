@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i axmail_2.12.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r axmail"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcrypt1" {>= "1-4.1.0"}
+]
+extra-source "axmail_2.12.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/axmail/axmail_2.12.2-1_amd64.deb"
+}

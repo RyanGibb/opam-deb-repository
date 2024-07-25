@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenid4java-java_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenid4java-java"]
+]
+depends: [
+  "libcommons-logging-java"
+  "libguice-java" {>= "4.0"}
+  "libhttpclient-java" {>= "4.5.3"}
+  "libnekohtml-java"
+  "libxerces2-java"
+]
+extra-source "libopenid4java-java_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openid4java/libopenid4java-java_1.0.0-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlcatalog-java_1.0.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlcatalog-java"]
+]
+depends: [
+  "liblog4j1-2-java"
+  "libowlapi-java" {>= "5.1.20"}
+  "libxml-commons-resolver1-1-java" {>= "1.2"}
+]
+extra-source "libxmlcatalog-java_1.0.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxmlcatalog-java/libxmlcatalog-java_1.0.5-3_all.deb"
+}

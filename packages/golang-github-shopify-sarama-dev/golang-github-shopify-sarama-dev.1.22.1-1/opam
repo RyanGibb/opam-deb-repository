@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-shopify-sarama-dev_1.22.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-shopify-sarama-dev"]
+]
+depends: [
+  "golang-github-datadog-zstd-dev"
+  "golang-github-davecgh-go-spew-dev"
+  "golang-github-eapache-go-xerial-snappy-dev"
+  "golang-github-golang-snappy-dev"
+  "golang-github-klauspost-compress-dev"
+  "golang-github-klauspost-crc32-dev"
+  "golang-github-pierrec-lz4-dev"
+  "golang-github-rcrowley-go-metrics-dev"
+  "golang-golang-x-net-dev"
+  ("golang-gopkg-eapache-go-resiliency-v1-dev" | "golang-github-eapache-go-resiliency-dev")
+  ("golang-gopkg-eapache-queue-v1-dev" | "golang-github-eapache-queue-dev")
+]
+extra-source "golang-github-shopify-sarama-dev_1.22.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-shopify-sarama/golang-github-shopify-sarama-dev_1.22.1-1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpdal-plugin-i3s_2.2.0+ds-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpdal-plugin-i3s"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpdal-base12" {>= "2.2.0"}
+  "libpdal-util12" {>= "2.2.0"}
+  "libstdc++6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libpdal-plugin-i3s_2.2.0+ds-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdal/libpdal-plugin-i3s_2.2.0+ds-1+b1_amd64.deb"
+}

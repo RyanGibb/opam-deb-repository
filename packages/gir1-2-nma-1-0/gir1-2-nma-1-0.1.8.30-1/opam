@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-nma-1.0_1.8.30-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-nma-1.0"]
+]
+depends: [
+  "gir1-2-gtk-3-0" {>= "3.10"}
+  "gir1-2-nm-1-0" {>= "1.7"}
+  "libnma0" {>= "1.8.28"}
+]
+extra-source "gir1.2-nma-1.0_1.8.30-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnma/gir1.2-nma-1.0_1.8.30-1_amd64.deb"
+}

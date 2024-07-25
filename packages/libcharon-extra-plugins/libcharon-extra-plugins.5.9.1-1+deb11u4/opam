@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcharon-extra-plugins_5.9.1-1+deb11u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcharon-extra-plugins"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libstrongswan" {= "5.9.1-1+deb11u4"}
+]
+extra-source "libcharon-extra-plugins_5.9.1-1+deb11u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/strongswan/libcharon-extra-plugins_5.9.1-1+deb11u4_amd64.deb"
+}

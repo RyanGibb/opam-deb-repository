@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hearse_1.5-8.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hearse"]
+]
+depends: [
+  "libwww-perl"
+  "perl"
+  ("debconf" {>= "1.2.0"} | "debconf-2-0")
+  ("nethack-common" | "nethack")
+]
+extra-source "hearse_1.5-8.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hearse/hearse_1.5-8.3_all.deb"
+}

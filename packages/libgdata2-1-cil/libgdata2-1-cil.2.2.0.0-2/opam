@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgdata2.1-cil_2.2.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgdata2.1-cil"]
+]
+depends: [
+  "cli-common" {>= "0.5.6"}
+  "libmono-corlib4-5-cil" {>= "1.0"}
+  "libmono-system-xml4-0-cil" {>= "3.0.6"}
+  "libmono-system4-0-cil" {>= "3.0.6"}
+  "libnewtonsoft-json5-0-cil" {>= "5.0r6"}
+]
+extra-source "libgdata2.1-cil_2.2.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gdata-sharp/libgdata2.1-cil_2.2.0.0-2_all.deb"
+}

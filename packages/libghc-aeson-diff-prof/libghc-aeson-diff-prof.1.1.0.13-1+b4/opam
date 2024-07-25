@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-aeson-diff-prof_1.1.0.13-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-aeson-diff-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-diff-dev" {= "1.1.0.13-1+b4"}
+  "libghc-aeson-prof"
+  "libghc-edit-distance-vector-prof"
+  "libghc-scientific-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-aeson-diff-prof_1.1.0.13-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-aeson-diff/libghc-aeson-diff-prof_1.1.0.13-1+b4_amd64.deb"
+}

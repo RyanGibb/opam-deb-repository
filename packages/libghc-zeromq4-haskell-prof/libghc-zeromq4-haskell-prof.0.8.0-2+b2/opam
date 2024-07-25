@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-zeromq4-haskell-prof_0.8.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-zeromq4-haskell-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-async-prof"
+  "libghc-monad-control-prof"
+  "libghc-semigroups-prof"
+  "libghc-transformers-base-prof"
+  "libghc-zeromq4-haskell-dev" {= "0.8.0-2+b2"}
+]
+extra-source "libghc-zeromq4-haskell-prof_0.8.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-zeromq4-haskell/libghc-zeromq4-haskell-prof_0.8.0-2+b2_amd64.deb"
+}

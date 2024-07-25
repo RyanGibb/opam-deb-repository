@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcwiid-dev_0.6.91-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcwiid-dev"]
+]
+depends: [
+  "libbluetooth-dev"
+  "libcwiid1" {= "0.6.91-4+b1"}
+  "pkg-config"
+]
+conflicts: [
+  "libcwiid0-dev"
+]
+extra-source "libcwiid-dev_0.6.91-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cwiid/libcwiid-dev_0.6.91-4+b1_amd64.deb"
+}

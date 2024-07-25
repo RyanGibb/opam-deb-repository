@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-ebib_2.39.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-ebib"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-parsebib" {>= "4.0"}
+  "emacs"
+  "emacsen-common"
+]
+extra-source "elpa-ebib_2.39.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ebib/elpa-ebib_2.39.3-1_all.deb"
+}

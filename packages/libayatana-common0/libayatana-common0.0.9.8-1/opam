@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libayatana-common0_0.9.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libayatana-common0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.70.0"}
+  "liblomiri-url-dispatcher0" {>= "0.1.0"}
+]
+extra-source "libayatana-common0_0.9.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libayatana-common/libayatana-common0_0.9.8-1_amd64.deb"
+}

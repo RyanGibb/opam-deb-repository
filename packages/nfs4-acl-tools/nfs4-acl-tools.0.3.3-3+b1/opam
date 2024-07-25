@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nfs4-acl-tools_0.3.3-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nfs4-acl-tools"]
+]
+depends: [
+  "libattr1" {>= "1-2.4.44"}
+  "libc6" {>= "2.14"}
+]
+extra-source "nfs4-acl-tools_0.3.3-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nfs4-acl-tools/nfs4-acl-tools_0.3.3-3+b1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cockpit-system_188-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cockpit-system"]
+]
+depends: [
+  "cockpit-bridge" {>= "138"}
+  "libpwquality-tools"
+  "openssl"
+]
+conflicts: [
+  "cockpit-shell"
+]
+extra-source "cockpit-system_188-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cockpit/cockpit-system_188-1_all.deb"
+}

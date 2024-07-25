@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libomp-dev_1:14.0-55.7~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libomp-dev"]
+]
+depends: [
+  "libomp-14-dev" {>= "14~"}
+]
+extra-source "libomp-dev_1:14.0-55.7~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-defaults/libomp-dev_14.0-55.7~deb12u1_amd64.deb"
+}

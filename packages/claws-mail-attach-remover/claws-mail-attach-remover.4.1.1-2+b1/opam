@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i claws-mail-attach-remover_4.1.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r claws-mail-attach-remover"]
+]
+depends: [
+  "claws-mail" {= "4.1.1-2+b1"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+]
+extra-source "claws-mail-attach-remover_4.1.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/claws-mail/claws-mail-attach-remover_4.1.1-2+b1_amd64.deb"
+}

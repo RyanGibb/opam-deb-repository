@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-typedarray-to-buffer_3.0.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-typedarray-to-buffer"]
+]
+depends: [
+  "libjs-typedarray-to-buffer" {= "3.0.3-3"}
+  "node-is-typedarray"
+  "nodejs" {>= "0.6.19~dfsg1-3"}
+]
+extra-source "node-typedarray-to-buffer_3.0.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-typedarray-to-buffer/node-typedarray-to-buffer_3.0.3-3_all.deb"
+}

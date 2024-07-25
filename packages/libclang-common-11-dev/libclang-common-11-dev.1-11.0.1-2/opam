@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclang-common-11-dev_1:11.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclang-common-11-dev"]
+]
+depends: [
+  "lib32gcc-s1" {>= "4.2"}
+  "lib32stdc++6" {>= "4.1.1"}
+  "libc6" {>= "2.17"}
+  "libc6-i386" {>= "2.17"}
+  "libgcc-s1" {>= "3.3"}
+  "libllvm11" {= "1-11.0.1-2"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libclang-common-11-dev_1:11.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-11/libclang-common-11-dev_11.0.1-2_amd64.deb"
+}

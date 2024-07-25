@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tagstream-conduit-prof_0.5.6-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tagstream-conduit-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-attoparsec-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-case-insensitive-prof"
+  "libghc-conduit-extra-prof"
+  "libghc-conduit-prof"
+  "libghc-data-default-prof"
+  "libghc-resourcet-prof"
+  "libghc-tagstream-conduit-dev" {= "0.5.6-1+b3"}
+  "libghc-xml-conduit-prof"
+]
+extra-source "libghc-tagstream-conduit-prof_0.5.6-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tagstream-conduit/libghc-tagstream-conduit-prof_0.5.6-1+b3_amd64.deb"
+}

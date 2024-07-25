@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspice-client-glib-2.0-dev_0.35-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspice-client-glib-2.0-dev"]
+]
+depends: [
+  "gir1-2-spiceclientglib-2-0" {= "0.35-2"}
+  "libpixman-1-dev" {>= "0.17.7"}
+  "libspice-client-glib-2-0-8" {= "0.35-2"}
+  "libspice-protocol-dev" {>= "0.12.14"}
+  "libssl-dev"
+]
+extra-source "libspice-client-glib-2.0-dev_0.35-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spice-gtk/libspice-client-glib-2.0-dev_0.35-2_amd64.deb"
+}

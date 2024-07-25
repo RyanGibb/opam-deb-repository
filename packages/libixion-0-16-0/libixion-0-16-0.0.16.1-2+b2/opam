@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libixion-0.16-0_0.16.1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libixion-0.16-0"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libixion-0.16-0_0.16.1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libixion/libixion-0.16-0_0.16.1-2+b2_amd64.deb"
+}

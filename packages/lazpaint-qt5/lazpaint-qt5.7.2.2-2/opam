@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lazpaint-qt5_7.2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lazpaint-qt5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libqt5pas1" {>= "2.6~beta-1"}
+  "libx11-6"
+]
+conflicts: [
+  "lazpaint"
+  "lazpaint-gtk2"
+  "lazpaint-gtk3"
+  "lazpaint-qt4"
+]
+extra-source "lazpaint-qt5_7.2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lazpaint/lazpaint-qt5_7.2.2-2_amd64.deb"
+}

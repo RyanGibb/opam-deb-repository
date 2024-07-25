@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libinotify-ocaml_2.3-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libinotify-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "liblwt-ocaml"
+  "libresult-ocaml"
+  "ocaml-base-nox"
+]
+extra-source "libinotify-ocaml_2.3-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-inotify/libinotify-ocaml_2.3-2+b2_amd64.deb"
+}

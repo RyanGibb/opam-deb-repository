@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pdns-backend-sqlite3_4.7.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pdns-backend-sqlite3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "pdns-server" {= "4.7.3-2"}
+]
+extra-source "pdns-backend-sqlite3_4.7.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdns/pdns-backend-sqlite3_4.7.3-2_amd64.deb"
+}

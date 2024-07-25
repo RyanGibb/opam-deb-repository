@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i emacs-libvterm_0.0.2+git20230217.3e5a9b7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r emacs-libvterm"]
+]
+depends: [
+  "elpa-vterm"
+  "emacs"
+  "libc6" {>= "2.14"}
+  "libvterm0" {>= "0.1"}
+]
+extra-source "emacs-libvterm_0.0.2+git20230217.3e5a9b7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emacs-libvterm/emacs-libvterm_0.0.2+git20230217.3e5a9b7-1_amd64.deb"
+}

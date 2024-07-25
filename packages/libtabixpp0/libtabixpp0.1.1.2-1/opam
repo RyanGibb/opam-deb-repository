@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtabixpp0_1.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtabixpp0"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libhts3" {>= "1.10"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libtabixpp0_1.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtabixpp/libtabixpp0_1.1.2-1_amd64.deb"
+}

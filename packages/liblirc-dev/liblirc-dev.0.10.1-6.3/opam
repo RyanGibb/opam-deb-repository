@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblirc-dev_0.10.1-6.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblirc-dev"]
+]
+depends: [
+  "liblirc-client0" {= "0.10.1-6.3"}
+  "liblirc0" {= "0.10.1-6.3"}
+  "lsb-base"
+]
+extra-source "liblirc-dev_0.10.1-6.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lirc/liblirc-dev_0.10.1-6.3_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5virtualkeyboard5_5.15.2+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5virtualkeyboard5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.2+dfsg~"}
+  "libqt5qml5" {>= "5.15.2+dfsg~"}
+  "libstdc++6" {>= "5"}
+  "libxcb-xfixes0"
+  "libxcb1"
+  ("libqt5gui5" {>= "5.15.2+dfsg~"} | "libqt5gui5-gles" {>= "5.15.2+dfsg~"})
+  ("libqt5quick5" {>= "5.15.2+dfsg~"} | "libqt5quick5-gles" {>= "5.15.2+dfsg~"})
+]
+extra-source "libqt5virtualkeyboard5_5.15.2+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtvirtualkeyboard-opensource-src/libqt5virtualkeyboard5_5.15.2+dfsg-2_amd64.deb"
+}

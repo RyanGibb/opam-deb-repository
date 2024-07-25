@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmuscle1_3.7+4565-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmuscle1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.2.1"}
+  "libstdc++6" {>= "5"}
+]
+conflicts: [
+  "libmuscle-3.7-1"
+]
+extra-source "libmuscle1_3.7+4565-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmuscle/libmuscle1_3.7+4565-7_amd64.deb"
+}

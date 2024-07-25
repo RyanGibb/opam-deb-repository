@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnginx-mod-http-memc_0.19-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnginx-mod-http-memc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "nginx"
+]
+extra-source "libnginx-mod-http-memc_0.19-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnginx-mod-http-memc/libnginx-mod-http-memc_0.19-2_amd64.deb"
+}

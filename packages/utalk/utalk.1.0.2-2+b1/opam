@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i utalk_1.0.2-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r utalk"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "utalk_1.0.2-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/utalk/utalk_1.0.2-2+b1_amd64.deb"
+}

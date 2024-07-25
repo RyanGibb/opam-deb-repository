@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xdvik-ja_22.87.05+j1.42-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xdvik-ja"]
+]
+depends: [
+  "fontconfig"
+  "libc6" {>= "2.29"}
+  "libfreetype6" {>= "2.2.1"}
+  "libkpathsea6" {>= "2020.20200327.54578"}
+  "libx11-6" {>= "2-1.2.99.901"}
+  "libxaw7"
+  "libxi6" {>= "2-1.2.99.4"}
+  "libxmu6"
+  "libxpm4"
+  "libxt6"
+  "texlive-binaries" {>= "2011~"}
+  ("fonts-ipafont-gothic" | "fonts-japanese-gothic")
+  ("fonts-ipafont-mincho" | "fonts-japanese-mincho")
+]
+extra-source "xdvik-ja_22.87.05+j1.42-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xdvik-ja/xdvik-ja_22.87.05+j1.42-2_amd64.deb"
+}

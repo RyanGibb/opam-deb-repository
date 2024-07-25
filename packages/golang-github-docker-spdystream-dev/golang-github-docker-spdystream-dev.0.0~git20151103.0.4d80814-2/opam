@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-docker-spdystream-dev_0.0~git20151103.0.4d80814-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-docker-spdystream-dev"]
+]
+depends: [
+  "golang-go"
+  ("golang-websocket-dev" | "golang-github-gorilla-websocket-dev")
+]
+extra-source "golang-github-docker-spdystream-dev_0.0~git20151103.0.4d80814-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-docker-spdystream/golang-github-docker-spdystream-dev_0.0~git20151103.0.4d80814-2_all.deb"
+}

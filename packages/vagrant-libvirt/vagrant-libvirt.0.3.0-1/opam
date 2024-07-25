@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vagrant-libvirt_0.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vagrant-libvirt"]
+]
+depends: [
+  "ruby-fog-core" {>= "1.43.0"}
+  "ruby-fog-libvirt" {>= "0.3.0"}
+  "ruby-nokogiri" {>= "1.6"}
+  "vagrant"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "vagrant-libvirt_0.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vagrant-libvirt/vagrant-libvirt_0.3.0-1_all.deb"
+}

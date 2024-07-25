@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sga_0.10.15-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sga"]
+]
+depends: [
+  "libbamtools2-5-1"
+  "libc6" {>= "2.23"}
+  "libgcc1" {>= "1-3.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "5.2"}
+  "python"
+  "python-pysam"
+  "python-ruffus"
+  "samtools"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "sga_0.10.15-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sga/sga_0.10.15-4_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-serial-test-dev_0.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-serial-test-dev"]
+]
+depends: [
+  "librust-dashmap-5+default-dev"
+  "librust-futures-0-3+executor-dev"
+  "librust-lazy-static-dev"
+  "librust-log-0-4+default-dev"
+  "librust-parking-lot-0-12+default-dev"
+  "librust-serial-test-derive-0-9+default-dev"
+]
+extra-source "librust-serial-test-dev_0.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-serial-test/librust-serial-test-dev_0.9.0-1_amd64.deb"
+}

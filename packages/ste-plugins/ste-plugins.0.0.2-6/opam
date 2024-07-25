@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ste-plugins_0.0.2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ste-plugins"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "ste-plugins_0.0.2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/ste-plugins/ste-plugins_0.0.2-6_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i default-mysql-client-core_1.0.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r default-mysql-client-core"]
+]
+depends: [
+  "mariadb-client-core-10-3"
+]
+extra-source "default-mysql-client-core_1.0.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mysql-defaults/default-mysql-client-core_1.0.5_all.deb"
+}

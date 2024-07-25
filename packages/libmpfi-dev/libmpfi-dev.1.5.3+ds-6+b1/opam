@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmpfi-dev_1.5.3+ds-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmpfi-dev"]
+]
+depends: [
+  "libgmp-dev"
+  "libmpfi-dev-common" {= "1.5.3+ds-6"}
+  "libmpfi0" {= "1.5.3+ds-6+b1"}
+  "libmpfr-dev"
+]
+conflicts: [
+  "libmpfi-dev (<< 1.5.1+ds-3)"
+  "libmpfi0-dev (<< 1.5.1+ds-3)"
+]
+extra-source "libmpfi-dev_1.5.3+ds-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpfi/libmpfi-dev_1.5.3+ds-6+b1_amd64.deb"
+}

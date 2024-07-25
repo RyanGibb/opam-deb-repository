@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzopfli1_1.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzopfli1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libzopfli1_1.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zopfli/libzopfli1_1.0.3-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-tksnack_2.2.10.20090623-dfsg-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-tksnack"]
+]
+depends: [
+  "python3-any"
+  "python3-tk"
+  "tcl-snack" {>= "2.2.10.20090623-dfsg-8"}
+]
+extra-source "python3-tksnack_2.2.10.20090623-dfsg-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snack/python3-tksnack_2.2.10.20090623-dfsg-8_all.deb"
+}

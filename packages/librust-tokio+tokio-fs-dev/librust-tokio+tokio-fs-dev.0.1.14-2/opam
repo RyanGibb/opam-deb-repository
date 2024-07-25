@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-tokio+tokio-fs-dev_0.1.14-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-tokio+tokio-fs-dev"]
+]
+depends: [
+  "librust-tokio-dev" {= "0.1.14-2"}
+  "librust-tokio-fs-dev"
+]
+extra-source "librust-tokio+tokio-fs-dev_0.1.14-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-tokio/librust-tokio+tokio-fs-dev_0.1.14-2_amd64.deb"
+}

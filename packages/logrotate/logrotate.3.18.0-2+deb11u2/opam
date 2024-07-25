@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i logrotate_3.18.0-2+deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r logrotate"]
+]
+depends: [
+  "libacl1" {>= "2.2.23"}
+  "libc6" {>= "2.27"}
+  "libpopt0" {>= "1.14"}
+  "libselinux1" {>= "3.1~"}
+  ("cron" | "anacron" | "cron-daemon" | "systemd-sysv")
+]
+extra-source "logrotate_3.18.0-2+deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/logrotate/logrotate_3.18.0-2+deb11u2_amd64.deb"
+}

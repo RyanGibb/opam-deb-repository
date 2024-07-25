@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hoauth2-prof_2.3.0-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hoauth2-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-data-default-prof"
+  "libghc-hoauth2-dev" {= "2.3.0-1+b4"}
+  "libghc-http-conduit-prof"
+  "libghc-http-types-prof"
+  "libghc-microlens-prof"
+  "libghc-uri-bytestring-aeson-prof"
+  "libghc-uri-bytestring-prof"
+]
+extra-source "libghc-hoauth2-prof_2.3.0-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hoauth2/libghc-hoauth2-prof_2.3.0-1+b4_amd64.deb"
+}

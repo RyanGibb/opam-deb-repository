@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-gfork0_5.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-gfork0"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libglobus-common0" {>= "17"}
+  "libglobus-xio0" {>= "5"}
+]
+extra-source "libglobus-gfork0_5.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gfork/libglobus-gfork0_5.0-4_amd64.deb"
+}

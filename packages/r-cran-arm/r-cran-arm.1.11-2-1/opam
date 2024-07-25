@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-arm_1.11-2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-arm"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  "r-cran-abind"
+  "r-cran-coda"
+  "r-cran-hmisc"
+  "r-cran-lme4" {>= "1.0"}
+  "r-cran-mass"
+  "r-cran-matrix" {>= "1.0"}
+  "r-cran-nlme"
+]
+extra-source "r-cran-arm_1.11-2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-arm/r-cran-arm_1.11-2-1_all.deb"
+}

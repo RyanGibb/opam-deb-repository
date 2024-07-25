@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-memcache-all-dev_8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-memcache-all-dev"]
+]
+depends: [
+  "php-all-dev"
+  "php8-2-memcache" {>= "8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8~"}
+]
+extra-source "php-memcache-all-dev_8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-memcache/php-memcache-all-dev_8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8_all.deb"
+}

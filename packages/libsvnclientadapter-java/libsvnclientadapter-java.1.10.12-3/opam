@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsvnclientadapter-java_1.10.12-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsvnclientadapter-java"]
+]
+depends: [
+  ("libsvn-java" {>= "1.8~"} | "libsvnkit-java" {>= "1.7.5~"})
+]
+conflicts: [
+  "libnb-svnclientadapter-java"
+]
+extra-source "libsvnclientadapter-java_1.10.12-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/svnclientadapter/libsvnclientadapter-java_1.10.12-3_all.deb"
+}

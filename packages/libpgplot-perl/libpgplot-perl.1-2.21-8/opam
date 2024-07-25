@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpgplot-perl_1:2.21-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpgplot-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcpgplot0"
+  "libpgplot0"
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libpgplot-perl_1:2.21-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpgplot-perl/libpgplot-perl_2.21-8_amd64.deb"
+}

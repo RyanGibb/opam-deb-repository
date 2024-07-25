@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhpmud0_3.18.12+dfsg0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhpmud0"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libcups2" {>= "1.6.0"}
+  "libsnmp30" {>= "5.7.3+dfsg-4+b1~dfsg"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+]
+extra-source "libhpmud0_3.18.12+dfsg0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hplip/libhpmud0_3.18.12+dfsg0-2_amd64.deb"
+}

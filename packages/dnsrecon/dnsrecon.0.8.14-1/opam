@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dnsrecon_0.8.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dnsrecon"]
+]
+depends: [
+  "python-any"
+  "python-dnspython"
+  "python-lxml"
+  "python-netaddr"
+]
+extra-source "dnsrecon_0.8.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dnsrecon/dnsrecon_0.8.14-1_all.deb"
+}

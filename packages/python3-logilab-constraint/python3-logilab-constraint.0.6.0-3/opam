@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-logilab-constraint_0.6.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-logilab-constraint"]
+]
+depends: [
+  "python3-any"
+  "python3-logilab-common" {>= "0.63.2"}
+  "python3-pkg-resources"
+  "python3-six"
+]
+extra-source "python3-logilab-constraint_0.6.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/logilab-constraint/python3-logilab-constraint_0.6.0-3_all.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xaw3dg-dev_1.5+E-18.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xaw3dg-dev"]
+]
+depends: [
+  "libx11-dev"
+  "libxmu-dev"
+  "libxpm-dev"
+  "libxt-dev"
+  "x11proto-core-dev"
+  "x11proto-xext-dev"
+  "xaw3dg" {= "1.5+E-18.3"}
+  "xutils-dev"
+]
+conflicts: [
+  "xaw3d-dev"
+]
+extra-source "xaw3dg-dev_1.5+E-18.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xaw3d/xaw3dg-dev_1.5+E-18.3_amd64.deb"
+}

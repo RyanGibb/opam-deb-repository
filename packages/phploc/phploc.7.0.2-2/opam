@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phploc_7.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phploc"]
+]
+depends: [
+  "php-cli"
+  "php-common"
+  "php-file-iterator" {< "4~~"}
+  "php-file-iterator" {>= "3.0"}
+  "php-json"
+  "php-xml"
+  "phpunit-cli-parser" {< "2~~"}
+  "phpunit-cli-parser" {>= "1.0"}
+  "phpunit-version" {< "4~~"}
+  "phpunit-version" {>= "3.0"}
+]
+extra-source "phploc_7.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phploc/phploc_7.0.2-2_all.deb"
+}

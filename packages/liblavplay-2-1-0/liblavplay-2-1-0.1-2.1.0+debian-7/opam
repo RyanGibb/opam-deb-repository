@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblavplay-2.1-0_1:2.1.0+debian-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblavplay-2.1-0"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libdv4" {>= "1.0.0"}
+  "liblavfile-2-1-0" {>= "1-2.1.0+debian"}
+  "liblavjpeg-2-1-0" {>= "1-2.1.0+debian"}
+  "libmjpegutils-2-1-0" {>= "1-2.1.0+debian"}
+  "libsdl1-2-compat-shim"
+]
+extra-source "liblavplay-2.1-0_1:2.1.0+debian-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mjpegtools/liblavplay-2.1-0_2.1.0+debian-7_amd64.deb"
+}

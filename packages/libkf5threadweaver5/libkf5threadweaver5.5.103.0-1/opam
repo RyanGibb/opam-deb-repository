@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5threadweaver5_5.103.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5threadweaver5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libkf5threadweaver5_5.103.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/threadweaver/libkf5threadweaver5_5.103.0-1_amd64.deb"
+}

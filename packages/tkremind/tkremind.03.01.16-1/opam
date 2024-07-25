@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tkremind_03.01.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tkremind"]
+]
+depends: [
+  "remind" {= "03.01.16-1"}
+  "tcllib"
+  "tk"
+]
+extra-source "tkremind_03.01.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/remind/tkremind_03.01.16-1_amd64.deb"
+}

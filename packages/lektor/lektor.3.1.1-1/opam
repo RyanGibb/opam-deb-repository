@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lektor_3.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lektor"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-babel"
+  "python3-click" {>= "6.0"}
+  "python3-exif"
+  "python3-flask"
+  "python3-inifile"
+  "python3-jinja2" {>= "2.4"}
+  "python3-mistune" {>= "0.7.0"}
+  "python3-pip"
+  "python3-pkg-resources"
+  "python3-requests"
+  "python3-watchdog"
+]
+extra-source "lektor_3.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lektor/lektor_3.1.1-1_all.deb"
+}

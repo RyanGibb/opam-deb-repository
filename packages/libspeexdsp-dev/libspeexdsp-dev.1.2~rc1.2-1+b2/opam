@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspeexdsp-dev_1.2~rc1.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspeexdsp-dev"]
+]
+depends: [
+  "libspeex-dev" {= "1.2~rc1.2-1+b2"}
+  "libspeexdsp1" {= "1.2~rc1.2-1+b2"}
+]
+extra-source "libspeexdsp-dev_1.2~rc1.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/speex/libspeexdsp-dev_1.2~rc1.2-1+b2_amd64.deb"
+}

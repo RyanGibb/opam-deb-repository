@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libept1.5.0_1.1+nmu3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libept1.5.0"]
+]
+depends: [
+  "libapt-pkg5-0" {>= "1.1~exp9"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libxapian30"
+]
+extra-source "libept1.5.0_1.1+nmu3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libept/libept1.5.0_1.1+nmu3+b1_amd64.deb"
+}

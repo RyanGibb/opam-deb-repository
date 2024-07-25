@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-json-spec_1.1.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-json-spec"]
+]
+depends: [
+  "ruby-multi-json"
+  "ruby-rspec"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-json-spec_1.1.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-json-spec/ruby-json-spec_1.1.5-2_all.deb"
+}

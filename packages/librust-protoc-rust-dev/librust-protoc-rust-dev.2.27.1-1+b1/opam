@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-protoc-rust-dev_2.27.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-protoc-rust-dev"]
+]
+depends: [
+  "librust-protobuf-2-27-1+default-dev"
+  "librust-protobuf-codegen-2-27-1+default-dev"
+  "librust-protoc-2-27-1+default-dev"
+  "librust-tempfile-3+default-dev"
+]
+extra-source "librust-protoc-rust-dev_2.27.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-protoc-rust/librust-protoc-rust-dev_2.27.1-1+b1_amd64.deb"
+}

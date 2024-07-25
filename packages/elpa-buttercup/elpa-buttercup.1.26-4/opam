@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-buttercup_1.26-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-buttercup"]
+]
+depends: [
+  "dh-elpa-helper"
+  "emacs" {>= "1-28.2+1-9"}
+  "emacsen-common"
+]
+extra-source "elpa-buttercup_1.26-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emacs-buttercup/elpa-buttercup_1.26-4_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libblockdev-btrfs2_2.20-7+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libblockdev-btrfs2"]
+]
+depends: [
+  "btrfs-progs"
+  "libblockdev-utils2" {>= "2.20"}
+  "libbytesize1"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.42.2"}
+]
+extra-source "libblockdev-btrfs2_2.20-7+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libblockdev/libblockdev-btrfs2_2.20-7+deb10u1_amd64.deb"
+}

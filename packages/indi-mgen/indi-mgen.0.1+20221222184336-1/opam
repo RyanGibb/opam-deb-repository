@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i indi-mgen_0.1+20221222184336-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r indi-mgen"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libftdi1-2" {>= "1.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libindidriver1" {>= "1.9.9+dfsg"}
+  "libstdc++6" {>= "5.2"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+]
+extra-source "indi-mgen_0.1+20221222184336-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/indi-mgen/indi-mgen_0.1+20221222184336-1_amd64.deb"
+}

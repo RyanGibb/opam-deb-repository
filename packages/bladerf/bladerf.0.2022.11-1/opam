@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bladerf_0.2022.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bladerf"]
+]
+depends: [
+  "libbladerf2" {= "0.2022.11-1"}
+  "libc6" {>= "2.34"}
+  "libtecla1" {>= "1.6.3"}
+]
+conflicts: [
+  "bladerf-host"
+]
+extra-source "bladerf_0.2022.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bladerf/bladerf_0.2022.11-1_amd64.deb"
+}

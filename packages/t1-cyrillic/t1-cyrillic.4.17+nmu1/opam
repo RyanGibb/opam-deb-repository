@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i t1-cyrillic_4.17+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r t1-cyrillic"]
+]
+depends: [
+  "xfonts-utils"
+]
+conflicts: [
+  "scalable-cyrfonts"
+  "scalable-cyrfonts-x11"
+  "xbase-clients (<< 4.0)"
+]
+extra-source "t1-cyrillic_4.17+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scalable-cyrfonts/t1-cyrillic_4.17+nmu1_all.deb"
+}

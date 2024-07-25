@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-colourpicker_1.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-colourpicker"]
+]
+depends: [
+  "libjs-jquery"
+  "r-base-core"
+  "r-base-core" {>= "3.5.0-5"}
+  "r-cran-ggplot2"
+  "r-cran-htmltools"
+  "r-cran-htmlwidgets" {>= "0.7"}
+  "r-cran-jsonlite"
+  "r-cran-miniui" {>= "0.1.1"}
+  "r-cran-shiny" {>= "0.11.1"}
+  "r-cran-shinyjs"
+]
+extra-source "r-cran-colourpicker_1.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-colourpicker/r-cran-colourpicker_1.0+dfsg-2_all.deb"
+}

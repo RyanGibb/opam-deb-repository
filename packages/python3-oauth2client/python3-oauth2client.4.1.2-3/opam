@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-oauth2client_4.1.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-oauth2client"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-fasteners"
+  "python3-httplib2"
+  "python3-openssl"
+  "python3-pyasn1" {>= "0.1.7"}
+  "python3-pyasn1-modules"
+  "python3-rsa"
+  "python3-six" {>= "1.6.1"}
+  "python3-sqlalchemy"
+  "python3-uritemplate"
+]
+extra-source "python3-oauth2client_4.1.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-oauth2client/python3-oauth2client_4.1.2-3_all.deb"
+}

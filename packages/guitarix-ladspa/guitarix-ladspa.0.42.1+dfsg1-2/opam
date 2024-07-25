@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guitarix-ladspa_0.42.1+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guitarix-ladspa"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "guitarix-ladspa_0.42.1+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guitarix/guitarix-ladspa_0.42.1+dfsg1-2_amd64.deb"
+}

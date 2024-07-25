@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i neutron-common_2:17.2.1-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r neutron-common"]
+]
+depends: [
+  "adduser"
+  "dbconfig-common"
+  "debconf"
+  "dpkg-dev"
+  "python3-any"
+  "python3-neutron" {= "2-17.2.1-0+deb11u1"}
+  "python3-openstackclient"
+  "python3-pyparsing"
+  "python3-sqlalchemy"
+  "sqlite3"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "neutron-common_2:17.2.1-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neutron/neutron-common_17.2.1-0+deb11u1_all.deb"
+}

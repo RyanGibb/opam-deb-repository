@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencv-dnn4.5_4.5.1+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencv-dnn4.5"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libopencv-core4-5" {>= "4.5.1+dfsg"}
+  "libopencv-imgproc4-5" {>= "4.5.1+dfsg"}
+  "libprotobuf23" {>= "3.12.4"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libopencv-dnn4.5_4.5.1+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencv/libopencv-dnn4.5_4.5.1+dfsg-5_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libutop-ocaml_1.19.3-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libutop-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libfindlib-ocaml"
+  "liblambda-term-ocaml"
+  "liblwt-ocaml"
+  "libreact-ocaml"
+  "libresult-ocaml"
+  "libzed-ocaml"
+  "ocaml-base-nox"
+]
+extra-source "libutop-ocaml_1.19.3-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/utop/libutop-ocaml_1.19.3-2+b1_amd64.deb"
+}

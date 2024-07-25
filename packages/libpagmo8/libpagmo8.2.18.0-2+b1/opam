@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpagmo8_2.18.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpagmo8"]
+]
+depends: [
+  "libboost-serialization1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "12"}
+  "libtbb12" {>= "2021.4.0"}
+]
+extra-source "libpagmo8_2.18.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pagmo/libpagmo8_2.18.0-2+b1_amd64.deb"
+}

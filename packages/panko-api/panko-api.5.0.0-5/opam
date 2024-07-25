@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i panko-api_5.0.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r panko-api"]
+]
+depends: [
+  "adduser"
+  "debconf"
+  "lsb-base" {>= "3.0-6"}
+  "panko-common" {= "5.0.0-5"}
+  "python-q-text-as-data"
+  "python3-keystoneclient"
+  "python3-openstackclient"
+  "python3-pastescript"
+  "uwsgi-plugin-python"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "panko-api_5.0.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/panko/panko-api_5.0.0-5_all.deb"
+}

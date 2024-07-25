@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-certbot-dns-dnsimple_2.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-certbot-dns-dnsimple"]
+]
+depends: [
+  "certbot"
+  "python3-acme"
+  "python3-any"
+  "python3-certbot"
+  "python3-lexicon" {>= "3.2.1"}
+  "python3-pkg-resources"
+]
+extra-source "python3-certbot-dns-dnsimple_2.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-certbot-dns-dnsimple/python3-certbot-dns-dnsimple_2.0.0-1_all.deb"
+}

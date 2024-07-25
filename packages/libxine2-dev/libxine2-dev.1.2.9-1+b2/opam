@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxine2-dev_1.2.9-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxine2-dev"]
+]
+depends: [
+  "libxine2-bin" {= "1.2.9-1+b2"}
+  "perl"
+  "pkg-config"
+]
+extra-source "libxine2-dev_1.2.9-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xine-lib-1.2/libxine2-dev_1.2.9-1+b2_amd64.deb"
+}

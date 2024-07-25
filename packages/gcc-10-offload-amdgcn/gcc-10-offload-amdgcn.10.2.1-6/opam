@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-10-offload-amdgcn_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-10-offload-amdgcn"]
+]
+depends: [
+  "amdgcn-tools"
+  "gcc-10" {= "10.2.1-6"}
+  "gcc-10-base" {= "10.2.1-6"}
+  "libc6" {>= "2.14"}
+  "libc6-dev" {>= "2.30-1~"}
+  "libgmp10" {>= "2-5.0.1~"}
+  "libgomp-plugin-amdgcn1" {>= "10.2.1-6"}
+  "libmpc3" {>= "1.1.0"}
+  "libmpfr6" {>= "3.1.3"}
+  "libzstd1" {>= "1.3.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gcc-10-offload-amdgcn_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/gcc-10-offload-amdgcn_10.2.1-6_amd64.deb"
+}

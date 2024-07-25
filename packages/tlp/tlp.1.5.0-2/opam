@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tlp_1.5.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tlp"]
+]
+depends: [
+  "hdparm"
+  "iw"
+  "pciutils"
+  "rfkill"
+  "usbutils"
+]
+conflicts: [
+  "laptop-mode-tools"
+  "power-profiles-daemon"
+]
+extra-source "tlp_1.5.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tlp/tlp_1.5.0-2_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i devhelp_43.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r devhelp"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdevhelp-3-6" {>= "3.36.0"}
+  "libglib2-0-0" {>= "2.64"}
+  "libgtk-3-0" {>= "3.22"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libwebkit2gtk-4-1-0" {>= "2.26"}
+  "python3-any"
+]
+extra-source "devhelp_43.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/devhelp/devhelp_43.0-3_amd64.deb"
+}

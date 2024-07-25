@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libn32stdc++-8-dev-mipsr6el-cross_8.3.0-2cross2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libn32stdc++-8-dev-mipsr6el-cross"]
+]
+depends: [
+  "gcc-8-cross-base-mipsen" {= "8.3.0-2cross2"}
+  "libn32gcc-8-dev-mipsr6el-cross" {= "8.3.0-2cross2"}
+  "libn32stdc++6-mipsr6el-cross" {>= "8.3.0-2cross2"}
+  "libstdc++-8-dev-mipsr6el-cross" {= "8.3.0-2cross2"}
+]
+extra-source "libn32stdc++-8-dev-mipsr6el-cross_8.3.0-2cross2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross-mipsen/libn32stdc++-8-dev-mipsr6el-cross_8.3.0-2cross2_all.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mailcheck_1.91.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mailcheck"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+]
+extra-source "mailcheck_1.91.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mailcheck/mailcheck_1.91.2-5_amd64.deb"
+}

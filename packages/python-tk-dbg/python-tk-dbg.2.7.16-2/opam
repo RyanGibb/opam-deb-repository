@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-tk-dbg_2.7.16-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-tk-dbg"]
+]
+depends: [
+  "blt" {>= "2.4z-9"}
+  "libc6" {>= "2.4"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libtk8-6" {>= "8.6.0"}
+  "libx11-6"
+  "python-dbg" {< "2.8"}
+  "python-dbg" {>= "2.7"}
+  "python-tk" {= "2.7.16-2"}
+  "tk8-6-blt2-5" {>= "2.5.3"}
+]
+extra-source "python-tk-dbg_2.7.16-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-stdlib-extensions/python-tk-dbg_2.7.16-2_amd64.deb"
+}

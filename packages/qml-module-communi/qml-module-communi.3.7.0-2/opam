@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-communi_3.7.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-communi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libirccore3" {= "3.7.0-2"}
+  "libircmodel3" {= "3.7.0-2"}
+  "libircutil3" {= "3.7.0-2"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qml-module-communi_3.7.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcommuni/qml-module-communi_3.7.0-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dh-python_5.20230130+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dh-python"]
+]
+depends: [
+  "python3-any"
+  ("python3-distutils" | "python3" {< "3.6.5~rc1-1"})
+]
+extra-source "dh-python_5.20230130+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dh-python/dh-python_5.20230130+deb12u1_all.deb"
+}

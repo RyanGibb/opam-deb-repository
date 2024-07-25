@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i extract_1:1.8-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r extract"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libextractor3" {>= "0.6.3"}
+]
+extra-source "extract_1:1.8-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libextractor/extract_1.8-2+deb10u1_amd64.deb"
+}

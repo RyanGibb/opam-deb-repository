@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gkrellm-x86info_0.0.2-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gkrellm-x86info"]
+]
+depends: [
+  "gkrellm" {>= "2.1.4"}
+  "libc6" {>= "2.2.5"}
+]
+extra-source "gkrellm-x86info_0.0.2-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gkrellm-x86info/gkrellm-x86info_0.0.2-9_amd64.deb"
+}

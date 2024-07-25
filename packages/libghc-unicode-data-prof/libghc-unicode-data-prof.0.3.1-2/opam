@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-unicode-data-prof_0.3.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-unicode-data-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-unicode-data-dev" {= "0.3.1-2"}
+]
+extra-source "libghc-unicode-data-prof_0.3.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-unicode-data/libghc-unicode-data-prof_0.3.1-2_amd64.deb"
+}

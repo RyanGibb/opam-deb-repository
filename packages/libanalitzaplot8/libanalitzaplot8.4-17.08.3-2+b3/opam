@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libanalitzaplot8_4:17.08.3-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libanalitzaplot8"]
+]
+depends: [
+  "analitza-common"
+  "libanalitza8" {>= "4-17.08.3"}
+  "libc6" {>= "2.14"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.7.0"}
+  "libqt5printsupport5" {>= "5.4"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libanalitzaplot8_4:17.08.3-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/analitza/libanalitzaplot8_17.08.3-2+b3_amd64.deb"
+}

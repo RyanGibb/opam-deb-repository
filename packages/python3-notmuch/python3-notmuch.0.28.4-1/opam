@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-notmuch_0.28.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-notmuch"]
+]
+depends: [
+  "libnotmuch5" {>= "0.28.4-1"}
+  "python3-any"
+]
+extra-source "python3-notmuch_0.28.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/notmuch/python3-notmuch_0.28.4-1_all.deb"
+}

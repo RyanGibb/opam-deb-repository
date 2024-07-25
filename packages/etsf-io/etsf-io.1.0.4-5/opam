@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i etsf-io_1.0.4-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r etsf-io"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgfortran5" {>= "10"}
+  "libnetcdff7" {>= "4.1.1"}
+]
+extra-source "etsf-io_1.0.4-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/etsf-io/etsf-io_1.0.4-5_amd64.deb"
+}

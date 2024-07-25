@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kgeotag_1.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kgeotag"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libkf5configcore5" {>= "4.97.0"}
+  "libkf5configwidgets5" {>= "5.68.0~"}
+  "libkf5coreaddons5" {>= "5.68.0~"}
+  "libkf5crash5" {>= "5.68.0~"}
+  "libkf5i18n5" {>= "5.68.0~"}
+  "libkf5kexiv2-15-0-0" {>= "5.0.0~"}
+  "libkf5xmlgui5" {>= "5.68.0~"}
+  "libmarblewidget-qt5-28" {>= "4-18.08.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.12.0~"}
+  "libqt5widgets5" {>= "5.12.0~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.12.0~"} | "libqt5gui5-gles" {>= "5.12.0~"})
+]
+extra-source "kgeotag_1.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kgeotag/kgeotag_1.4.0-1_amd64.deb"
+}

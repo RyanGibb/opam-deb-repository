@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hex-dev_0.1.2-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hex-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libgmp10"
+]
+extra-source "libghc-hex-dev_0.1.2-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hex/libghc-hex-dev_0.1.2-8+b1_amd64.deb"
+}

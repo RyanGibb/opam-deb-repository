@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dumpet_2.1-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dumpet"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libpopt0" {>= "1.14"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "dumpet_2.1-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dumpet/dumpet_2.1-12_amd64.deb"
+}

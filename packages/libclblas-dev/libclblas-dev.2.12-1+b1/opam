@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclblas-dev_2.12-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclblas-dev"]
+]
+depends: [
+  "libclblas2" {= "2.12-1+b1"}
+  ("ocl-icd-opencl-dev" | "opencl-dev")
+]
+extra-source "libclblas-dev_2.12-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clblas/libclblas-dev_2.12-1+b1_amd64.deb"
+}

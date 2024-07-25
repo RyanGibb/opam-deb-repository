@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pyramid-tm_0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pyramid-tm"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  "python-pyramid"
+  "python-transaction"
+]
+extra-source "python-pyramid-tm_0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pyramid-tm/python-pyramid-tm_0.5-1_all.deb"
+}

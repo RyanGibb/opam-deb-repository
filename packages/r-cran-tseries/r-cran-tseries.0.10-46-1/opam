@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-tseries_0.10-46-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-tseries"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+  "r-cran-lattice"
+  "r-cran-quadprog"
+  "r-cran-quantmod" {>= "0.4-9"}
+  "r-cran-zoo"
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "r-cran-tseries_0.10-46-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tseries/r-cran-tseries_0.10-46-1_amd64.deb"
+}

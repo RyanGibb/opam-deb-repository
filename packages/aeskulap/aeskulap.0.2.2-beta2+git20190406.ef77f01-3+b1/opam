@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aeskulap_0.2.2-beta2+git20190406.ef77f01-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aeskulap"]
+]
+depends: [
+  "dcmtk"
+  "libatkmm-1-6-1v5" {>= "2.24.0"}
+  "libc6" {>= "2.14"}
+  "libdcmtk15" {>= "3.6.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libglademm-2-4-1v5" {>= "2.6.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libglibmm-2-4-1v5" {>= "2.64.2"}
+  "libgtkmm-2-4-1v5" {>= "1-2.24.0"}
+  "libpangomm-1-4-1v5" {>= "2.42.0"}
+  "libsigc++-2-0-0v5" {>= "2.8.0"}
+  "libstdc++6" {>= "5.2"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "aeskulap_0.2.2-beta2+git20190406.ef77f01-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aeskulap/aeskulap_0.2.2-beta2+git20190406.ef77f01-3+b1_amd64.deb"
+}

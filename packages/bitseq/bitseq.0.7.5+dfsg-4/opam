@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bitseq_0.7.5+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bitseq"]
+]
+depends: [
+  "libc6" {>= "2.23"}
+  "libgcc1" {>= "1-3.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "5.2"}
+  "python"
+  "zlib1g" {>= "1-1.2.3.3"}
+]
+extra-source "bitseq_0.7.5+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bitseq/bitseq_0.7.5+dfsg-4_amd64.deb"
+}

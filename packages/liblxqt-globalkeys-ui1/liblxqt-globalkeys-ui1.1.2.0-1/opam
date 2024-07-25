@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblxqt-globalkeys-ui1_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblxqt-globalkeys-ui1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "liblxqt-globalkeys1" {= "1.2.0-1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "liblxqt-globalkeys-ui1_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxqt-globalkeys/liblxqt-globalkeys-ui1_1.2.0-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdmx-dev_1:1.1.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdmx-dev"]
+]
+depends: [
+  "libdmx1" {= "1-1.1.4-2"}
+  "libx11-dev"
+  "x11proto-dev"
+]
+extra-source "libdmx-dev_1:1.1.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdmx/libdmx-dev_1.1.4-2_amd64.deb"
+}

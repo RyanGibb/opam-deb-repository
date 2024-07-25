@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dico-module-wordnet_2.11-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dico-module-wordnet"]
+]
+depends: [
+  "dicod"
+  "libc6" {>= "2.4"}
+  "libdico2" {>= "2.0.91"}
+  "wordnet"
+]
+extra-source "dico-module-wordnet_2.11-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dico/dico-module-wordnet_2.11-2+b3_amd64.deb"
+}

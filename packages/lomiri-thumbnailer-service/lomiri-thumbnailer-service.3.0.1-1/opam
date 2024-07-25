@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lomiri-thumbnailer-service_3.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lomiri-thumbnailer-service"]
+]
+depends: [
+  "dconf-cli"
+  "libapparmor1" {>= "2.8.94"}
+  "libboost-filesystem1-74-0" {>= "1.74.0+ds1"}
+  "libc6" {>= "2.34"}
+  "libexif12" {>= "0.6.21-1~"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.31.1"}
+  "libglib2-0-0" {>= "2.39.4"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.0.0"}
+  "libgstreamer1-0-0" {>= "1.4.0"}
+  "libleveldb1d" {>= "1.23"}
+  "liblomiri-api0" {>= "0.1.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5network5" {>= "5.0.2"}
+  "libstdc++6" {>= "11"}
+  "libtag1v5" {>= "1.11"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+conflicts: [
+  "libthumbnailer0"
+  "thumbnailer-common"
+]
+extra-source "lomiri-thumbnailer-service_3.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri-thumbnailer/lomiri-thumbnailer-service_3.0.1-1_amd64.deb"
+}

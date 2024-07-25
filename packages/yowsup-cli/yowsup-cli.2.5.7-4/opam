@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yowsup-cli_2.5.7-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yowsup-cli"]
+]
+depends: [
+  "python3-any"
+  "python3-axolotl" {>= "0.1.39"}
+  "python3-dateutil"
+  "python3-libxml2"
+  "python3-yowsup"
+]
+extra-source "yowsup-cli_2.5.7-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yowsup/yowsup-cli_2.5.7-4_all.deb"
+}

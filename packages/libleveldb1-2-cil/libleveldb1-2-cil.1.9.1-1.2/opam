@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libleveldb1.2-cil_1.9.1-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libleveldb1.2-cil"]
+]
+depends: [
+  "cli-common" {>= "0.5.1"}
+  "libleveldb1d"
+  "libmono-corlib4-5-cil" {>= "5.18.0.240"}
+]
+extra-source "libleveldb1.2-cil_1.9.1-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/leveldb-sharp/libleveldb1.2-cil_1.9.1-1.2_all.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-log-domain-prof_0.13-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-log-domain-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-bytes-prof"
+  "libghc-cereal-prof"
+  "libghc-comonad-prof"
+  "libghc-distributive-prof"
+  "libghc-hashable-prof"
+  "libghc-log-domain-dev" {= "0.13-1+b1"}
+  "libghc-semigroupoids-prof"
+  "libghc-semigroups-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-log-domain-prof_0.13-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-log-domain/libghc-log-domain-prof_0.13-1+b1_amd64.deb"
+}

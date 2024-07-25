@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hdf5-plugin-lzf_3.7.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hdf5-plugin-lzf"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+extra-source "hdf5-plugin-lzf_3.7.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/h5py/hdf5-plugin-lzf_3.7.0-8_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmate-menu-dev_1.20.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmate-menu-dev"]
+]
+depends: [
+  "gir1-2-matemenu-2-0" {= "1.20.2-1"}
+  "libglib2-0-dev"
+  "libmate-menu2" {= "1.20.2-1"}
+]
+extra-source "libmate-menu-dev_1.20.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mate-menus/libmate-menu-dev_1.20.2-1_amd64.deb"
+}

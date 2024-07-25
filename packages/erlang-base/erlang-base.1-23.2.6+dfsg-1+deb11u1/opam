@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-base_1:23.2.6+dfsg-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-base"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.29"}
+  "libsystemd0"
+  "libtinfo6" {>= "6"}
+  "procps"
+  "zlib1g" {>= "1-1.2.8"}
+]
+conflicts: [
+  "erlang (<< 1:23.2.6+dfsg-1+deb11u1)"
+  "erlang-base-hipe"
+  "erlang-doc (<< 1:23.2.6+dfsg)"
+  "erlang-doc (>> 1:23.2.6+dfsg-999)"
+  "erlang-doc-html (<< 1:13.b.4)"
+  "erlang-manpages (<= 1:11.b.1-2)"
+]
+extra-source "erlang-base_1:23.2.6+dfsg-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-base_23.2.6+dfsg-1+deb11u1_amd64.deb"
+}

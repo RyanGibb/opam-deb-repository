@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5attica-dev_5.54.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5attica-dev"]
+]
+depends: [
+  "libkf5attica5" {= "5.54.0-1"}
+  "qtbase5-dev" {>= "5.9.0~"}
+]
+extra-source "libkf5attica-dev_5.54.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/attica-kf5/libkf5attica-dev_5.54.0-1_amd64.deb"
+}

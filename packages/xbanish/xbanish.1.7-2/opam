@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xbanish_1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xbanish"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6" {>= "2-1.2.99.901"}
+  "libxfixes3" {>= "1-4.0.1"}
+  "libxi6" {>= "2-1.2.99.4"}
+]
+extra-source "xbanish_1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xbanish/xbanish_1.7-2_amd64.deb"
+}

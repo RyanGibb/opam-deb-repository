@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i marble-data_4:17.08.3-3.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r marble-data"]
+]
+depends: [
+  "marble-qt-data" {= "4-17.08.3-3.2"}
+]
+extra-source "marble-data_4:17.08.3-3.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/marble/marble-data_17.08.3-3.2_all.deb"
+}

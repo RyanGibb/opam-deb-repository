@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i q2cli_2022.11.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r q2cli"]
+]
+depends: [
+  "python3-any"
+  "python3-click"
+  "python3-setuptools"
+  "q2-feature-table" {>= "2021.11.1"}
+  "qiime" {>= "2021.11.1"}
+]
+extra-source "q2cli_2022.11.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/q2cli/q2cli_2022.11.1-2_all.deb"
+}

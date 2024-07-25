@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmariadbd19_1:10.5.23-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmariadbd19"]
+]
+depends: [
+  "libaio1" {>= "0.3.93"}
+  "libc6" {>= "2.30"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libpcre2-8-0" {>= "10.22"}
+  "libsnappy1v5" {>= "1.1.8"}
+  "libssl1-1" {>= "1.1.1"}
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "libmariadbd19_1:10.5.23-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mariadb-10.5/libmariadbd19_10.5.23-0+deb11u1_amd64.deb"
+}

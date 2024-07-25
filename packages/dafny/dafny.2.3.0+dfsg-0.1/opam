@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dafny_2.3.0+dfsg-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dafny"]
+]
+depends: [
+  "libboogie-cil"
+  "libmono-corlib4-5-cil" {>= "5.18.0.240"}
+  "libmono-system-core4-0-cil" {>= "5.18.0.240"}
+  "libmono-system-numerics4-0-cil" {>= "5.16.0.220"}
+  "libmono-system-runtime-serialization4-0-cil" {>= "5.16.0.220"}
+  "libmono-system4-0-cil" {>= "5.18.0.240"}
+  "mono-mcs"
+  "mono-runtime" {>= "3.0~"}
+  "z3"
+]
+extra-source "dafny_2.3.0+dfsg-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dafny/dafny_2.3.0+dfsg-0.1_all.deb"
+}

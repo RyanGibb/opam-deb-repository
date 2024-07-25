@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libquadmath0_12.2.0-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libquadmath0"]
+]
+depends: [
+  "gcc-12-base" {= "12.2.0-14"}
+  "libc6" {>= "2.23"}
+]
+extra-source "libquadmath0_12.2.0-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12/libquadmath0_12.2.0-14_amd64.deb"
+}

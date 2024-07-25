@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libr3-0_1.3.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libr3-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcre3" {>= "1-8.35"}
+]
+extra-source "libr3-0_1.3.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libr3/libr3-0_1.3.4-1_amd64.deb"
+}

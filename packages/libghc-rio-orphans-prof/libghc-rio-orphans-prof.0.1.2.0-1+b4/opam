@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-rio-orphans-prof_0.1.2.0-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-rio-orphans-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-fast-logger-prof"
+  "libghc-monad-control-prof"
+  "libghc-monad-logger-prof"
+  "libghc-resourcet-prof"
+  "libghc-rio-orphans-dev" {= "0.1.2.0-1+b4"}
+  "libghc-rio-prof"
+  "libghc-transformers-base-prof"
+  "libghc-unliftio-core-prof"
+]
+extra-source "libghc-rio-orphans-prof_0.1.2.0-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-rio-orphans/libghc-rio-orphans-prof_0.1.2.0-1+b4_amd64.deb"
+}

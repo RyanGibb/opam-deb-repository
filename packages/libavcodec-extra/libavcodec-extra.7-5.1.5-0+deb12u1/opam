@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libavcodec-extra_7:5.1.5-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libavcodec-extra"]
+]
+depends: [
+  "libavcodec-extra59" {= "7-5.1.5-0+deb12u1"}
+]
+extra-source "libavcodec-extra_7:5.1.5-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/ffmpeg/libavcodec-extra_5.1.5-0+deb12u1_amd64.deb"
+}

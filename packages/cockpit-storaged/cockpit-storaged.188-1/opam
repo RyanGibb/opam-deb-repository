@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cockpit-storaged_188-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cockpit-storaged"]
+]
+depends: [
+  "cockpit-bridge" {>= "138"}
+  "python3"
+  "python3-dbus"
+  "udisks2"
+  ("udisks2" {< "2.7"} | "libblockdev-mdraid2")
+]
+extra-source "cockpit-storaged_188-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cockpit/cockpit-storaged_188-1_all.deb"
+}

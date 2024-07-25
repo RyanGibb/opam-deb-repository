@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpdl-io-matlab-perl_0.005-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpdl-io-matlab-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmatio11" {>= "1.5.4"}
+  "pdl"
+  "pdl" {>= "1-2.021-2+b1"}
+  "perl" {>= "5.32.0-5"}
+  "perl-base"
+]
+extra-source "libpdl-io-matlab-perl_0.005-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpdl-io-matlab-perl/libpdl-io-matlab-perl_0.005-5+b1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-kvargs21_20.11.10-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-kvargs21"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfdt1" {>= "1.6.0"}
+  "libnuma1" {>= "2.0.11"}
+]
+conflicts: [
+  "libdpdk0"
+]
+extra-source "librte-kvargs21_20.11.10-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-kvargs21_20.11.10-1~deb11u1_amd64.deb"
+}

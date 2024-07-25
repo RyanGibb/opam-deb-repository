@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32ncurses-dev_6.2+20201114-2+deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32ncurses-dev"]
+]
+depends: [
+  "lib32ncurses6" {= "6.2+20201114-2+deb11u2"}
+  "lib32ncursesw6" {= "6.2+20201114-2+deb11u2"}
+  "lib32tinfo6" {= "6.2+20201114-2+deb11u2"}
+  "libc6-dev-i386"
+  "libncurses-dev" {= "6.2+20201114-2+deb11u2"}
+]
+conflicts: [
+  "lib32ncurses5-dev"
+  "lib32ncursesw5-dev"
+  "lib32tinfo-dev"
+]
+extra-source "lib32ncurses-dev_6.2+20201114-2+deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ncurses/lib32ncurses-dev_6.2+20201114-2+deb11u2_amd64.deb"
+}

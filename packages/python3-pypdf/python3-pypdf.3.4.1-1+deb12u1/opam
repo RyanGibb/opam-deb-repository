@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pypdf_3.4.1-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pypdf"]
+]
+depends: [
+  "python3-any"
+  ("python3-typing-extensions" | "python3" {> "3.10"})
+]
+extra-source "python3-pypdf_3.4.1-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pypdf/python3-pypdf_3.4.1-1+deb12u1_all.deb"
+}

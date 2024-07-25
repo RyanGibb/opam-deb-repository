@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqscintilla2-qt5-dev_2.11.6+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqscintilla2-qt5-dev"]
+]
+depends: [
+  "libqscintilla2-qt5-15" {< "2.11.6+dfsg+1~"}
+  "libqscintilla2-qt5-15" {>= "2.11.6+dfsg"}
+  "qtbase5-dev"
+]
+extra-source "libqscintilla2-qt5-dev_2.11.6+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qscintilla2/libqscintilla2-qt5-dev_2.11.6+dfsg-2_amd64.deb"
+}

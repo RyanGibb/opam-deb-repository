@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmoabis9_1.0.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmoabis9"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libosmocore16" {>= "1.4.0"}
+  "libosmogsm15" {>= "1.4.0"}
+  "libosmovty4" {>= "1.4.0"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "libosmoabis9_1.0.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libosmo-abis/libosmoabis9_1.0.1-2+b1_amd64.deb"
+}

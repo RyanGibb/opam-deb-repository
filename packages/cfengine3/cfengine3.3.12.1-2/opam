@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cfengine3_3.12.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cfengine3"]
+]
+depends: [
+  "e2fsprogs"
+  "libacl1" {>= "2.2.51-8"}
+  "libc6" {>= "2.15"}
+  "liblmdb0" {>= "0.9.7"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpcre3"
+  "libpromises3"
+  "libssl1-1" {>= "1.1.0"}
+  "libvirt0" {>= "0.5.0"}
+  "libxml2" {>= "2.7.4"}
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "cfengine3_3.12.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cfengine3/cfengine3_3.12.1-2_amd64.deb"
+}

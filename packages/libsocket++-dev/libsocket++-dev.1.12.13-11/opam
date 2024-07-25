@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsocket++-dev_1.12.13-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsocket++-dev"]
+]
+depends: [
+  "libsocket++1" {= "1.12.13-11"}
+]
+extra-source "libsocket++-dev_1.12.13-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/socket++/libsocket++-dev_1.12.13-11_amd64.deb"
+}

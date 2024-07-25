@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-haddock-library-doc_1.10.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-haddock-library-doc"]
+]
+depends: [
+  "ghc"
+  "sgml-base" {>= "1.28"}
+]
+extra-source "libghc-haddock-library-doc_1.10.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-haddock-library/libghc-haddock-library-doc_1.10.0-2_all.deb"
+}

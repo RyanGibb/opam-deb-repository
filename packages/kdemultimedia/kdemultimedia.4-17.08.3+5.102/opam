@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kdemultimedia_4:17.08.3+5.102_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kdemultimedia"]
+]
+depends: [
+  "dragonplayer" {>= "4-17.08.3"}
+  "juk" {>= "4-17.08.3"}
+  "kde-config-cddb" {>= "4-17.08.3"}
+  "kio-audiocd" {>= "4-17.08.3"}
+  ("plasma-pa" {>= "5.10"} | "kmix" {>= "4-17.08.3"})
+]
+extra-source "kdemultimedia_4:17.08.3+5.102_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-kde/kdemultimedia_17.08.3+5.102_amd64.deb"
+}

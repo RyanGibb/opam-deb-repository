@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-vroom_1.6.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-vroom"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "12"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-bit64"
+  "r-cran-cli" {>= "3.2.0"}
+  "r-cran-cpp11" {>= "0.2.0"}
+  "r-cran-crayon"
+  "r-cran-glue"
+  "r-cran-hms"
+  "r-cran-lifecycle" {>= "1.0.3"}
+  "r-cran-progress" {>= "1.2.1"}
+  "r-cran-rlang" {>= "0.4.2"}
+  "r-cran-tibble" {>= "2.0.0"}
+  "r-cran-tidyselect"
+  "r-cran-tzdb" {>= "0.1.1"}
+  "r-cran-vctrs" {>= "0.2.0"}
+  "r-cran-withr"
+]
+extra-source "r-cran-vroom_1.6.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-vroom/r-cran-vroom_1.6.1-1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsidplay1v5_1.36.60-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsidplay1v5"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libsidplay1"
+  "libsidplay1-c102 (<= 1.36.59-2)"
+  "libsidplay1.36"
+  "sidplay (<= 1.36.36)"
+]
+extra-source "libsidplay1v5_1.36.60-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsidplay/libsidplay1v5_1.36.60-1_amd64.deb"
+}

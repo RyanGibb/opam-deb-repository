@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i supercollider-supernova_1:3.11.2+repack-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r supercollider-supernova"]
+]
+depends: [
+  "jackd"
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libboost-thread1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "9"}
+  "libx11-6"
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "supercollider-supernova_1:3.11.2+repack-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/supercollider/supercollider-supernova_3.11.2+repack-1_amd64.deb"
+}

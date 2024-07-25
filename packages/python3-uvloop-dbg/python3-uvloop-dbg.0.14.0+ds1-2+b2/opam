@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-uvloop-dbg_0.14.0+ds1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-uvloop-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libuv1" {>= "1.30.1"}
+  "python3-dbg" {< "3.10"}
+  "python3-dbg" {>= "3.9~"}
+  "python3-uvloop" {= "0.14.0+ds1-2+b2"}
+]
+extra-source "python3-uvloop-dbg_0.14.0+ds1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uvloop/python3-uvloop-dbg_0.14.0+ds1-2+b2_amd64.deb"
+}

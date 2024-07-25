@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmxml-bin_2.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmxml-bin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmxml1"
+]
+extra-source "libmxml-bin_2.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mxml/libmxml-bin_2.12-2_amd64.deb"
+}

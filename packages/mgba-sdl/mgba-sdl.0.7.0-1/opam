@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mgba-sdl_0.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mgba-sdl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmgba" {>= "0.7.0"}
+  "libopengl0"
+  "libsdl2-2-0-0" {>= "2.0.9"}
+  "mgba-common" {= "0.7.0-1"}
+]
+extra-source "mgba-sdl_0.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mgba/mgba-sdl_0.7.0-1_amd64.deb"
+}

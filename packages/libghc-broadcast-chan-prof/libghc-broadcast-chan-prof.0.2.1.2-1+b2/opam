@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-broadcast-chan-prof_0.2.1.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-broadcast-chan-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-broadcast-chan-dev" {= "0.2.1.2-1+b2"}
+  "libghc-unliftio-core-prof"
+]
+extra-source "libghc-broadcast-chan-prof_0.2.1.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-broadcast-chan/libghc-broadcast-chan-prof_0.2.1.2-1+b2_amd64.deb"
+}

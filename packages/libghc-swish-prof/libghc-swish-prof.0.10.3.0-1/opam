@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-swish-prof_0.10.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-swish-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hashable-prof"
+  "libghc-intern-prof"
+  "libghc-network-uri-prof"
+  "libghc-polyparse-prof"
+  "libghc-swish-dev" {= "0.10.3.0-1"}
+]
+extra-source "libghc-swish-prof_0.10.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-swish/libghc-swish-prof_0.10.3.0-1_amd64.deb"
+}

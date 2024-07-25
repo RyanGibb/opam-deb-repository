@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtexttools9_2.1.0-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtexttools9"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnat-8" {>= "8.2.0-8"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "libtexttools9_2.1.0-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtexttools/libtexttools9_2.1.0-13_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libogmrip-dev_1.0.1-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libogmrip-dev"]
+]
+depends: [
+  "intltool"
+  "libdvdread-dev"
+  "libenca-dev"
+  "libgconf2-dev"
+  "libglade2-dev"
+  "libogmrip1" {= "1.0.1-3.1"}
+]
+extra-source "libogmrip-dev_1.0.1-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ogmrip/libogmrip-dev_1.0.1-3.1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-django-tastypie_0.13.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-django-tastypie"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-dateutil" {>= "1.5"}
+  "python-django" {>= "1.7"}
+  "python-mimeparse" {>= "0.1.4"}
+]
+extra-source "python-django-tastypie_0.13.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/django-tastypie/python-django-tastypie_0.13.3-1_all.deb"
+}

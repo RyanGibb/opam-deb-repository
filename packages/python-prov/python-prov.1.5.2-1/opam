@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-prov_1.5.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-prov"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-dateutil"
+  "python-lxml"
+  "python-networkx"
+  "python-rdflib"
+  "python-six" {>= "1.9.0"}
+]
+extra-source "python-prov_1.5.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-prov/python-prov_1.5.2-1_all.deb"
+}

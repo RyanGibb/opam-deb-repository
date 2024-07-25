@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjsonparser1.1_1.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjsonparser1.1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+]
+extra-source "libjsonparser1.1_1.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libj/libjsonparser/libjsonparser1.1_1.1.0-2_amd64.deb"
+}

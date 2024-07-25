@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i faust_2.14.4~repack2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r faust"]
+]
+depends: [
+  "faust-common" {< "2.14.4~repack2+1~"}
+  "faust-common" {>= "2.14.4~repack2-1"}
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libllvm7" {>= "1-7~svn298832-1~"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "faust_2.14.4~repack2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/faust/faust_2.14.4~repack2-1_amd64.deb"
+}

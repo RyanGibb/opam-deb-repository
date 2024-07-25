@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lighttpd-mod-gnutls_1.4.69-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lighttpd-mod-gnutls"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgnutls30" {>= "3.7.5"}
+  "lighttpd" {= "1.4.69-1"}
+]
+extra-source "lighttpd-mod-gnutls_1.4.69-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lighttpd/lighttpd-mod-gnutls_1.4.69-1_amd64.deb"
+}

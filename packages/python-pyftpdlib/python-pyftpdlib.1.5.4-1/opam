@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pyftpdlib_1.5.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pyftpdlib"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-pyftpdlib_1.5.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pyftpdlib/python-pyftpdlib_1.5.4-1_all.deb"
+}

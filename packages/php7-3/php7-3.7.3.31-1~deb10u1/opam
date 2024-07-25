@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php7.3_7.3.31-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php7.3"]
+]
+depends: [
+  "php7-3-common"
+  ("libapache2-mod-php7-3" | "php7-3-fpm" | "php7-3-cgi")
+]
+extra-source "php7.3_7.3.31-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php7.3/php7.3_7.3.31-1~deb10u1_all.deb"
+}

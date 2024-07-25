@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmetkit-dev_1.6.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmetkit-dev"]
+]
+depends: [
+  "libeckit-dev"
+  "libmetkit0d" {= "1.6.4-2"}
+  "libodc-dev"
+]
+conflicts: [
+  "libodb-api-dev"
+]
+extra-source "libmetkit-dev_1.6.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/metkit/libmetkit-dev_1.6.4-2_amd64.deb"
+}

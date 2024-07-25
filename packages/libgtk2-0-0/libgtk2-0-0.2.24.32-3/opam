@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgtk2.0-0_2.24.32-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgtk2.0-0"]
+]
+depends: [
+  "hicolor-icon-theme"
+  "libatk1-0-0" {>= "1.32.0"}
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.6.4-6.1"}
+  "libcups2" {>= "1.6.0"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.41.1"}
+  "libgtk2-0-common"
+  "libpango-1-0-0" {>= "1.28.3"}
+  "libpangocairo-1-0-0" {>= "1.28.3"}
+  "libpangoft2-1-0-0" {>= "1.28.3"}
+  "libx11-6" {>= "2-1.4.99.1"}
+  "libxcomposite1" {>= "1-0.3-1"}
+  "libxcursor1" {> "1.1.2"}
+  "libxdamage1" {>= "1-1.1"}
+  "libxext6"
+  "libxfixes3"
+  "libxi6"
+  "libxinerama1"
+  "libxrandr2" {>= "2-1.5.0"}
+  "libxrender1"
+  "shared-mime-info"
+  ("adwaita-icon-theme" | "gnome-icon-theme")
+]
+extra-source "libgtk2.0-0_2.24.32-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtk+2.0/libgtk2.0-0_2.24.32-3_amd64.deb"
+}

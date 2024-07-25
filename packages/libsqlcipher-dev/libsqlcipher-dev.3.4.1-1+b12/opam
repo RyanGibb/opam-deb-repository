@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsqlcipher-dev_3.4.1-1+b12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsqlcipher-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libsqlcipher0" {= "3.4.1-1+b12"}
+]
+extra-source "libsqlcipher-dev_3.4.1-1+b12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sqlcipher/libsqlcipher-dev_3.4.1-1+b12_amd64.deb"
+}

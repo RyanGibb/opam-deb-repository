@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cpupower-gui_0.7.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cpupower-gui"]
+]
+depends: [
+  "gir1-2-gtk-3-0"
+  "hicolor-icon-theme"
+  "libgtk-3-0"
+  "policykit-1"
+  "python3-any"
+  "python3-dbus"
+  "python3-gi"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "cpupower-gui_0.7.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cpupower-gui/cpupower-gui_0.7.2-2_amd64.deb"
+}

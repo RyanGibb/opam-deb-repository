@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i unaccent_1.8.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r unaccent"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libunac1"
+]
+extra-source "unaccent_1.8.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unac/unaccent_1.8.0-8_amd64.deb"
+}

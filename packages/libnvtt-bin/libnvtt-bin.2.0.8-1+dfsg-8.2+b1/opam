@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnvtt-bin_2.0.8-1+dfsg-8.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnvtt-bin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libnvtt2" {= "2.0.8-1+dfsg-8.2+b1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libnvtt-bin_2.0.8-1+dfsg-8.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nvidia-texture-tools/libnvtt-bin_2.0.8-1+dfsg-8.2+b1_amd64.deb"
+}

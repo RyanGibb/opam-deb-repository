@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-common-sfc-efx21_20.11.10-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-common-sfc-efx21"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.14"}
+  "libfdt1" {>= "1.6.0"}
+  "libnuma1" {>= "2.0.11"}
+  "librte-eal21" {>= "20.11"}
+  "librte-kvargs21" {>= "18.08"}
+  "librte-telemetry21" {>= "19.11"}
+]
+conflicts: [
+  "libdpdk0"
+]
+extra-source "librte-common-sfc-efx21_20.11.10-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-common-sfc-efx21_20.11.10-1~deb11u1_amd64.deb"
+}

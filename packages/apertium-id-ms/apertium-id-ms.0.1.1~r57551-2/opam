@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-id-ms_0.1.1~r57551-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-id-ms"]
+]
+depends: [
+  "apertium" {>= "3.4"}
+]
+conflicts: [
+  "apertium-ms-id"
+]
+extra-source "apertium-id-ms_0.1.1~r57551-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-id-ms/apertium-id-ms_0.1.1~r57551-2_all.deb"
+}

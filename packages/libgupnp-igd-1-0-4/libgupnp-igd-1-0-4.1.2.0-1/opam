@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgupnp-igd-1.0-4_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgupnp-igd-1.0-4"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.38"}
+  "libgssdp-1-2-0" {>= "0.12.0"}
+  "libgupnp-1-2-0" {>= "1.1.2"}
+]
+extra-source "libgupnp-igd-1.0-4_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gupnp-igd/libgupnp-igd-1.0-4_1.2.0-1_amd64.deb"
+}

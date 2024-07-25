@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wavbreaker_0.16-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wavbreaker"]
+]
+depends: [
+  "libao4" {>= "1.1.0"}
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.39.4"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libmpg123-0" {>= "1.28.0"}
+  "libvorbisfile3" {>= "1.2.0"}
+]
+extra-source "wavbreaker_0.16-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wavbreaker/wavbreaker_0.16-2_amd64.deb"
+}

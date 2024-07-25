@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lebiniou_3.54.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lebiniou"]
+]
+depends: [
+  "fonts-freefont-ttf"
+  "lebiniou-data" {>= "3.54.1"}
+  "libasound2" {>= "1.0.16"}
+  "libavcodec-extra58"
+  "libavformat58" {>= "7-4.1"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.29"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libglib2-0-0" {>= "2.63.1"}
+  "libjansson4" {>= "2.3"}
+  "libjs-jquery"
+  "libjs-jquery-ui"
+  "libmagickwand-6-q16-6" {>= "8-6.9.10.2"}
+  "liborcania2-1" {>= "2.1.0"}
+  "libpulse0" {>= "0.99.1"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libsdl2-ttf-2-0-0" {>= "2.0.14"}
+  "libsndfile1" {>= "1.0.20"}
+  "libswscale5" {>= "7-4.0"}
+  "libulfius2-7" {>= "2.7.0"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "lebiniou_3.54.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lebiniou/lebiniou_3.54.1-1_amd64.deb"
+}

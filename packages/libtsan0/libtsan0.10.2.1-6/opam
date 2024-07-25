@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtsan0_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtsan0"]
+]
+depends: [
+  "gcc-10-base" {= "10.2.1-6"}
+  "libc6" {>= "2.23"}
+  "libgcc-s1" {>= "3.3"}
+]
+extra-source "libtsan0_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/libtsan0_10.2.1-6_amd64.deb"
+}

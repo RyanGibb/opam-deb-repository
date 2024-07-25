@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i maildir-filter_1.20-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r maildir-filter"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libpcre3"
+]
+extra-source "maildir-filter_1.20-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maildir-filter/maildir-filter_1.20-6_amd64.deb"
+}

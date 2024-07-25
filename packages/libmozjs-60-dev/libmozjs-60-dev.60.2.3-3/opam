@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmozjs-60-dev_60.2.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmozjs-60-dev"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-3.4"}
+  "libicu63" {>= "63.1-1~"}
+  "libmozjs-60-0" {= "60.2.3-3"}
+  "libreadline7" {>= "6.0"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libmozjs-60-dev_60.2.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mozjs60/libmozjs-60-dev_60.2.3-3_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-monadrandom-dev_0.5.1.1-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-monadrandom-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-primitive-dev"
+  "libghc-random-dev"
+  "libghc-transformers-compat-dev"
+  "libgmp10"
+]
+extra-source "libghc-monadrandom-dev_0.5.1.1-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-monadrandom/libghc-monadrandom-dev_0.5.1.1-3+b2_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsource-highlight4v5_3.1.9-4.2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsource-highlight4v5"]
+]
+depends: [
+  "libboost-regex1-74-0"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libsource-highlight-common"
+  "libstdc++6" {>= "11"}
+]
+conflicts: [
+  "libsource-highlight4"
+]
+extra-source "libsource-highlight4v5_3.1.9-4.2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/source-highlight/libsource-highlight4v5_3.1.9-4.2+b3_amd64.deb"
+}

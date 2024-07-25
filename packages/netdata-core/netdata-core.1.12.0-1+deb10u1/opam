@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i netdata-core_1.12.0-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r netdata-core"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcap2-bin"
+  "libipmimonitoring6" {>= "1.1.5"}
+  "libuuid1" {>= "2.16"}
+  "lsb-base"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "netdata-core-no-sse"
+]
+extra-source "netdata-core_1.12.0-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netdata/netdata-core_1.12.0-1+deb10u1_amd64.deb"
+}

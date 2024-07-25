@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnuradio-limesdr3.0.1_3.0.1-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnuradio-limesdr3.0.1"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnuradio-pmt3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-runtime3-10-5" {>= "3.10.5.0"}
+  "liblimesuite22-09-1" {>= "22.09.1+dfsg"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libgnuradio-limesdr3.0.1_3.0.1-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gr-limesdr/libgnuradio-limesdr3.0.1_3.0.1-5+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ducktype_0.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ducktype"]
+]
+depends: [
+  "python3-any"
+  "python3-mallard-ducktype" {= "0.4-2"}
+]
+extra-source "ducktype_0.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mallard-ducktype/ducktype_0.4-2_all.deb"
+}

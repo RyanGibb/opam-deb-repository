@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uwsgi-plugin-php_2.0.21+4+0.0.15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uwsgi-plugin-php"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libphp8-2-embed"
+  "uwsgi-core"
+  ("libapache2-mod-php8-2" | "libphp8-2-embed" | "php8-2-cgi" | "php8-2-cli" | "php8-2-fpm" | "php8-2-phpdbg")
+]
+extra-source "uwsgi-plugin-php_2.0.21+4+0.0.15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uwsgi-plugin-php/uwsgi-plugin-php_2.0.21+4+0.0.15_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debian-xcontrol_0.0.4-1.1+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debian-xcontrol"]
+]
+depends: [
+  "libapt-pkg5-0" {>= "0.8.0"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "debian-xcontrol_0.0.4-1.1+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-xcontrol/debian-xcontrol_0.0.4-1.1+b6_amd64.deb"
+}

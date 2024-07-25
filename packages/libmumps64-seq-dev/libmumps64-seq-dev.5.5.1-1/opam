@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmumps64-seq-dev_5.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmumps64-seq-dev"]
+]
+depends: [
+  "libmumps-64pord-seq-5-5" {= "5.5.1-1"}
+  "libmumps-headers-dev" {= "5.5.1-1"}
+  "libmumps64-dev" {= "5.5.1-1"}
+]
+extra-source "libmumps64-seq-dev_5.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mumps/libmumps64-seq-dev_5.5.1-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-imagick_3.4.3-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-imagick"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmagickcore-6-q16-6" {>= "8-6.9.10.2"}
+  "libmagickwand-6-q16-6" {>= "8-6.9.10.2"}
+  "php-common" {>= "1-7.0+33~"}
+  ("libapache2-mod-php7-3" | "libphp7-3-embed" | "php7-3-cgi" | "php7-3-cli" | "php7-3-fpm" | "php7-3-phpdbg")
+]
+extra-source "php-imagick_3.4.3-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-imagick/php-imagick_3.4.3-4.1_amd64.deb"
+}

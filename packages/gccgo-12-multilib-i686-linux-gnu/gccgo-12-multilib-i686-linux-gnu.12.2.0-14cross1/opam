@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gccgo-12-multilib-i686-linux-gnu_12.2.0-14cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gccgo-12-multilib-i686-linux-gnu"]
+]
+depends: [
+  "gcc-12-i686-linux-gnu-base" {= "12.2.0-14cross1"}
+  "gcc-12-multilib-i686-linux-gnu" {= "12.2.0-14cross1"}
+  "gccgo-12-i686-linux-gnu" {= "12.2.0-14cross1"}
+  "lib64go-12-dev-i386-cross" {>= "12.2.0-14cross1"}
+  "libx32go-12-dev-i386-cross" {>= "12.2.0-14cross1"}
+]
+extra-source "gccgo-12-multilib-i686-linux-gnu_12.2.0-14cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12-cross/gccgo-12-multilib-i686-linux-gnu_12.2.0-14cross1_amd64.deb"
+}

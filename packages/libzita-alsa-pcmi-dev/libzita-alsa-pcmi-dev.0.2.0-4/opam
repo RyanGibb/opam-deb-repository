@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzita-alsa-pcmi-dev_0.2.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzita-alsa-pcmi-dev"]
+]
+depends: [
+  "libfftw3-dev" {>= "3.1.2-3.1"}
+  "libzita-alsa-pcmi0" {= "0.2.0-4"}
+]
+extra-source "libzita-alsa-pcmi-dev_0.2.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zita-alsa-pcmi/libzita-alsa-pcmi-dev_0.2.0-4_amd64.deb"
+}

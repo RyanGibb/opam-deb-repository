@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stompserver_0.9.9gem-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stompserver"]
+]
+depends: [
+  "adduser"
+  "ruby-daemons" {>= "1.0.2"}
+  "ruby-eventmachine" {>= "0.7.2"}
+  "ruby-hoe" {>= "1.1.1"}
+  "sysvinit-utils"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "stompserver_0.9.9gem-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stompserver/stompserver_0.9.9gem-4.1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i music123_16.4-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r music123"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnat-8" {>= "8.2.0-9"}
+]
+extra-source "music123_16.4-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/music123/music123_16.4-3+b1_amd64.deb"
+}

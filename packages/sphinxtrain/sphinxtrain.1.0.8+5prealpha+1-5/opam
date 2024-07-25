@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sphinxtrain_1.0.8+5prealpha+1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sphinxtrain"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libsphinxbase3" {>= "0.8+5prealpha"}
+  "perl-any"
+  "python3"
+  "python3-any"
+]
+extra-source "sphinxtrain_1.0.8+5prealpha+1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sphinxtrain/sphinxtrain_1.0.8+5prealpha+1-5_amd64.deb"
+}

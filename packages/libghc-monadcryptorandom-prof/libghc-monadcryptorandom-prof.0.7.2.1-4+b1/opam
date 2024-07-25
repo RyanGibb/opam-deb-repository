@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-monadcryptorandom-prof_0.7.2.1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-monadcryptorandom-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-crypto-api-prof"
+  "libghc-exceptions-prof"
+  "libghc-monadcryptorandom-dev" {= "0.7.2.1-4+b1"}
+  "libghc-tagged-prof"
+  "libghc-transformers-compat-prof"
+]
+extra-source "libghc-monadcryptorandom-prof_0.7.2.1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-monadcryptorandom/libghc-monadcryptorandom-prof_0.7.2.1-4+b1_amd64.deb"
+}

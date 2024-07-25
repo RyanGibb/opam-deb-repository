@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libuninum5_2.7-1.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libuninum5"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  "libgmp10"
+]
+extra-source "libuninum5_2.7-1.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libuninum/libuninum5_2.7-1.1+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-wayland-protocols+wayland-server-dev_0.29.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-wayland-protocols+wayland-server-dev"]
+]
+depends: [
+  "librust-wayland-protocols-dev" {= "0.29.4-1+b1"}
+  "librust-wayland-server-dev"
+]
+extra-source "librust-wayland-protocols+wayland-server-dev_0.29.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-wayland-protocols/librust-wayland-protocols+wayland-server-dev_0.29.4-1+b1_amd64.deb"
+}

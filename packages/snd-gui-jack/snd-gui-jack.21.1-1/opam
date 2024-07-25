@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i snd-gui-jack_21.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r snd-gui-jack"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.29"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgl1"
+  "libgmp10" {>= "2-6.1.0"}
+  "libgsl25" {>= "2.6"}
+  "libmpc3" {>= "1.1.0"}
+  "libmpfr6" {>= "3.1.3"}
+  "libsamplerate0" {>= "0.1.7"}
+  "libx11-6"
+  "libxext6"
+  "libxm4" {>= "2.3.4"}
+  "libxpm4"
+  "libxt6"
+  "snd-common" {>= "21.1-1"}
+  ("libglu1-mesa" | "libglu1")
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "snd-gui-jack_21.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snd/snd-gui-jack_21.1-1_amd64.deb"
+}

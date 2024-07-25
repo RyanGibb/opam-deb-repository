@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i emacs-mozc_2.26.4220.100+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r emacs-mozc"]
+]
+depends: [
+  "emacs-mozc-bin" {= "2.26.4220.100+dfsg-4"}
+  ("emacs" | "emacs23" | "emacs24")
+]
+conflicts: [
+  "emacsen-common (<< 2.0.0)"
+]
+extra-source "emacs-mozc_2.26.4220.100+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mozc/emacs-mozc_2.26.4220.100+dfsg-4_amd64.deb"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnuradio-radar3.10.0_0.0.0.20220920-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnuradio-radar3.10.0"]
+]
+depends: [
+  "libboost-thread1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.34"}
+  "libfftw3-single3" {>= "3.3.10"}
+  "libgcc-s1" {>= "4.0"}
+  "libgnuradio-pmt3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-runtime3-10-5" {>= "3.10.5.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libqwt-qt5-6" {>= "6.1.2"}
+  "libstdc++6" {>= "11"}
+  "libuhd4-3-0" {>= "4.3.0.0+ds1"}
+  "libvolk2-5" {>= "2.5.2"}
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+]
+extra-source "libgnuradio-radar3.10.0_0.0.0.20220920-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gr-radar/libgnuradio-radar3.10.0_0.0.0.20220920-2+b2_amd64.deb"
+}

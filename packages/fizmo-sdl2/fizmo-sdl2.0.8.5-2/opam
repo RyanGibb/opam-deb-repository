@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fizmo-sdl2_0.8.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fizmo-sdl2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdrilbo-common"
+  "libfizmo-common"
+  "libfreetype6" {>= "2.3.5"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpixelif-common"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl2-2-0-0" {>= "2.0.4"}
+  "libsndfile1" {>= "1.0.20"}
+  "libx11-6"
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "fizmo-sdl2_0.8.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fizmo-sdl2/fizmo-sdl2_0.8.5-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstellarsolver-dev_2.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstellarsolver-dev"]
+]
+depends: [
+  "libcfitsio-dev"
+  "libstellarsolver2" {= "2.4-1+b1"}
+  "qtbase5-dev"
+]
+extra-source "libstellarsolver-dev_2.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stellarsolver/libstellarsolver-dev_2.4-1+b1_amd64.deb"
+}

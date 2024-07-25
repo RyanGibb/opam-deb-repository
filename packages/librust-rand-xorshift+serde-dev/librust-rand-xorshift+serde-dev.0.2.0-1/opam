@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-rand-xorshift+serde-dev_0.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-rand-xorshift+serde-dev"]
+]
+depends: [
+  "librust-rand-xorshift-dev" {= "0.2.0-1"}
+  "librust-serde-1+default-dev"
+  "librust-serde-1+derive-dev"
+]
+extra-source "librust-rand-xorshift+serde-dev_0.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-rand-xorshift/librust-rand-xorshift+serde-dev_0.2.0-1_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openntpd_1:6.2p3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openntpd"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.26"}
+  "lsb-base" {>= "3.0-6"}
+  "netbase"
+]
+conflicts: [
+  "ntp"
+  "time-daemon"
+]
+extra-source "openntpd_1:6.2p3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openntpd/openntpd_6.2p3-4_amd64.deb"
+}

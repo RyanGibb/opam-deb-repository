@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kodi-eventclients-wiiremote_2:20.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kodi-eventclients-wiiremote"]
+]
+depends: [
+  "kodi-eventclients-python" {= "2-20.1+dfsg-1"}
+  "libbluetooth3" {>= "4.91"}
+  "libc6" {>= "2.34"}
+  "libcwiid1" {>= "0.6.00+svn184"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "kodi-eventclients-wiiremote_2:20.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kodi/kodi-eventclients-wiiremote_20.1+dfsg-1_amd64.deb"
+}

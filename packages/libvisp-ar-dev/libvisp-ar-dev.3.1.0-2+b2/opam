@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvisp-ar-dev_3.1.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvisp-ar-dev"]
+]
+depends: [
+  "libois-dev"
+  "libvisp-ar3-1" {= "3.1.0-2+b2"}
+  "libvisp-core-dev" {= "3.1.0-2+b2"}
+  "libvisp-io-dev" {= "3.1.0-2+b2"}
+  ("libogre-1-9-dev" | "libogre-dev")
+]
+extra-source "libvisp-ar-dev_3.1.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/visp/libvisp-ar-dev_3.1.0-2+b2_amd64.deb"
+}

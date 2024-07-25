@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i unbound_1.17.1-2+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r unbound"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.36"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "libnghttp2-14" {>= "1.3.0"}
+  "libprotobuf-c1" {>= "1.0.1"}
+  "libpython3-11" {>= "3.11.0"}
+  "libssl3" {>= "3.0.0"}
+  "libsystemd0"
+  "sysvinit-utils"
+]
+extra-source "unbound_1.17.1-2+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unbound/unbound_1.17.1-2+deb12u2_amd64.deb"
+}

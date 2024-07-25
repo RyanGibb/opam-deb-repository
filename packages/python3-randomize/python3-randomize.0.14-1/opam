@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-randomize_0.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-randomize"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-coverage"
+  "python3-ipdb"
+  "python3-ipython"
+  "python3-nose"
+]
+extra-source "python3-randomize_0.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-randomize/python3-randomize_0.14-1_all.deb"
+}

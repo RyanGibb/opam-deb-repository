@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pluma-plugin-terminal_1.27.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pluma-plugin-terminal"]
+]
+depends: [
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-3-0"
+  "gir1-2-pango-1-0"
+  "gir1-2-peas-1-0"
+  "gir1-2-vte-2-91"
+  "pluma"
+  "pluma-plugins-common"
+  "python3-gi"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "pluma-plugin-terminal_1.27.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pluma-plugins/pluma-plugin-terminal_1.27.0-3_amd64.deb"
+}

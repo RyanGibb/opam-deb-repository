@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openclipart-libreoffice_1:0.18+dfsg-19_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openclipart-libreoffice"]
+]
+depends: [
+  "openclipart-png" {= "1-0.18+dfsg-19"}
+]
+conflicts: [
+  "libreoffice-common (<< 1:3.5.0~beta~)"
+  "openclipart (<< 0.10+dfsg-3)"
+]
+extra-source "openclipart-libreoffice_1:0.18+dfsg-19_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openclipart/openclipart-libreoffice_0.18+dfsg-19_all.deb"
+}

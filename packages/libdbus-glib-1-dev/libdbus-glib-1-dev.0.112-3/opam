@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbus-glib-1-dev_0.112-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbus-glib-1-dev"]
+]
+depends: [
+  "libdbus-1-dev"
+  "libdbus-glib-1-2" {= "0.112-3"}
+  "libdbus-glib-1-dev-bin" {= "0.112-3"}
+  "libglib2-0-dev"
+]
+extra-source "libdbus-glib-1-dev_0.112-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dbus-glib/libdbus-glib-1-dev_0.112-3_amd64.deb"
+}

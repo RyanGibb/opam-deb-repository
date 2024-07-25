@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libutil-freebsd-9_10.3~svn296373-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libutil-freebsd-9"]
+]
+depends: [
+  "libbsd0" {>= "0.3.0"}
+  "libc6" {>= "2.14"}
+  "libfreebsd-glue-0" {>= "0.1.15"}
+]
+extra-source "libutil-freebsd-9_10.3~svn296373-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freebsd-libs/libutil-freebsd-9_10.3~svn296373-10_amd64.deb"
+}

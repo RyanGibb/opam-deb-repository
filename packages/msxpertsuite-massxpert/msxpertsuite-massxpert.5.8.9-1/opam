@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i msxpertsuite-massxpert_5.8.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r msxpertsuite-massxpert"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libpwiz3" {>= "3.0.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5script5" {>= "5.7.0"}
+  "libqt5svg5" {>= "5.7.0"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libqt5xml5" {>= "5.7.0"}
+  "libstdc++6" {>= "5.2"}
+  "msxpertsuite-massxpert-data-doc" {< "5.8.9A~"}
+  "msxpertsuite-massxpert-data-doc" {>= "5.8.9"}
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+]
+extra-source "msxpertsuite-massxpert_5.8.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/msxpertsuite/msxpertsuite-massxpert_5.8.9-1_amd64.deb"
+}

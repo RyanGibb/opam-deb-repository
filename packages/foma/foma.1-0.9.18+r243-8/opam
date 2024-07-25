@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i foma_1:0.9.18+r243-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r foma"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfoma0" {= "1-0.9.18+r243-8"}
+  "libreadline8" {>= "6.0"}
+  "zlib1g" {>= "1-1.2.2.3"}
+]
+extra-source "foma_1:0.9.18+r243-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/foma/foma_0.9.18+r243-8_amd64.deb"
+}

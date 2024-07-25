@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxineliboutput-wlfe_2.2.0+git20211212-2.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxineliboutput-wlfe"]
+]
+depends: [
+  "dbus"
+  "libc6" {>= "2.33"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libwayland-client0" {>= "1.20.0"}
+  "libwayland-cursor0" {>= "1.0.2"}
+  "libxine2" {>= "1.2.0"}
+  "libxine2-x"
+  "libxine2-xvdr" {= "2.2.0+git20211212-2.2"}
+  "vdr-plugin-xineliboutput" {= "2.2.0+git20211212-2.2"}
+]
+extra-source "libxineliboutput-wlfe_2.2.0+git20211212-2.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vdr-plugin-xineliboutput/libxineliboutput-wlfe_2.2.0+git20211212-2.2_amd64.deb"
+}

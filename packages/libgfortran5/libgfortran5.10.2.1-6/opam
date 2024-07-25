@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgfortran5_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgfortran5"]
+]
+depends: [
+  "gcc-10-base" {= "10.2.1-6"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.3"}
+  "libquadmath0" {>= "4.6"}
+]
+extra-source "libgfortran5_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/libgfortran5_10.2.1-6_amd64.deb"
+}

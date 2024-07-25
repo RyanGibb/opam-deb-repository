@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5kio-dev_5.78.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5kio-dev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5bookmarks-dev" {>= "5.78.0~"}
+  "libkf5completion-dev" {>= "5.78.0~"}
+  "libkf5itemviews-dev" {>= "5.78.0~"}
+  "libkf5jobwidgets-dev" {>= "5.78.0~"}
+  "libkf5kiocore5" {= "5.78.0-5"}
+  "libkf5kiofilewidgets5" {= "5.78.0-5"}
+  "libkf5kiogui5" {= "5.78.0-5"}
+  "libkf5kiontlm5" {= "5.78.0-5"}
+  "libkf5kiowidgets5" {= "5.78.0-5"}
+  "libkf5service-dev" {>= "5.78.0~"}
+  "libkf5solid-dev" {>= "5.78.0~"}
+  "libkf5xmlgui-dev" {>= "5.78.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "4.1.1"}
+  "qtbase5-dev" {>= "5.14.0~"}
+  ("libqt5gui5" {>= "5.14.0~"} | "libqt5gui5-gles" {>= "5.14.0~"})
+]
+extra-source "libkf5kio-dev_5.78.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kio/libkf5kio-dev_5.78.0-5_amd64.deb"
+}

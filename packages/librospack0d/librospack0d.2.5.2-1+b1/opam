@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librospack0d_2.5.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librospack0d"]
+]
+depends: [
+  "libboost-filesystem1-67-0"
+  "libboost-program-options1-67-0"
+  "libboost-system1-67-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libpython2-7" {>= "2.7"}
+  "libstdc++6" {>= "5.2"}
+  "libtinyxml2-6a" {>= "5.0.0"}
+]
+extra-source "librospack0d_2.5.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-rospack/librospack0d_2.5.2-1+b1_amd64.deb"
+}

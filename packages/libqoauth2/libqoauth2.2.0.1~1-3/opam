@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqoauth2_2.0.1~1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqoauth2"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1"
+  "libqca-qt5-2" {>= "2.0.2"}
+  "libqca-qt5-2-plugins"
+  "libqt5core5a" {>= "5.9.0~beta"}
+  "libqt5network5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libqoauth2_2.0.1~1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qoauth/libqoauth2_2.0.1~1-3_amd64.deb"
+}

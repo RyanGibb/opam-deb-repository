@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcoda15_2.20-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcoda15"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "libhdf4-0-alt" {>= "4.2r4"}
+  "libhdf5-103"
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpcre3"
+  "libsz2"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libcoda15_2.20-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coda/libcoda15_2.20-3_amd64.deb"
+}

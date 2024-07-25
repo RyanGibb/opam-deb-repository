@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-wnck-3.0_3.36.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-wnck-3.0"]
+]
+depends: [
+  "gir1-2-gdkpixbuf-2-0"
+  "gir1-2-glib-2-0" {>= "0.10"}
+  "gir1-2-gtk-3-0" {>= "3.22.0"}
+  "libwnck-3-0" {>= "3.36.0"}
+]
+extra-source "gir1.2-wnck-3.0_3.36.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libw/libwnck3/gir1.2-wnck-3.0_3.36.0-1_amd64.deb"
+}

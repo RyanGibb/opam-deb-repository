@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libquadmath0-dbg_8.3.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libquadmath0-dbg"]
+]
+depends: [
+  "gcc-8-base" {= "8.3.0-6"}
+  "libquadmath0" {= "8.3.0-6"}
+]
+extra-source "libquadmath0-dbg_8.3.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8/libquadmath0-dbg_8.3.0-6_amd64.deb"
+}

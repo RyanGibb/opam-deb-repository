@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-rustls-native-certs-dev_0.6.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-rustls-native-certs-dev"]
+]
+depends: [
+  "librust-openssl-probe-dev"
+  "librust-rustls-pemfile-1+default-dev"
+]
+extra-source "librust-rustls-native-certs-dev_0.6.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-rustls-native-certs/librust-rustls-native-certs-dev_0.6.2-4_all.deb"
+}

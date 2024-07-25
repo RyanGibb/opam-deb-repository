@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gettext-el_0.19.8.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gettext-el"]
+]
+depends: [
+  "gettext"
+  ("emacs" | "emacsen")
+]
+extra-source "gettext-el_0.19.8.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gettext/gettext-el_0.19.8.1-9_all.deb"
+}

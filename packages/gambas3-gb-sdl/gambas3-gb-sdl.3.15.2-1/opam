@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gambas3-gb-sdl_3.15.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gambas3-gb-sdl"]
+]
+depends: [
+  "fonts-dejavu-core"
+  "gambas3-gb-image" {>= "3.15.2-1"}
+  "gambas3-gb-image-io" {>= "3.15.2-1"}
+  "gambas3-runtime" {>= "3.15.2-1"}
+  "libc6" {>= "2.14"}
+  "libgl1"
+  "libglew2-1" {>= "1.12.0"}
+  "libsdl-ttf2-0-0"
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "libxcursor1" {> "1.1.2"}
+]
+extra-source "gambas3-gb-sdl_3.15.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gambas3/gambas3-gb-sdl_3.15.2-1_amd64.deb"
+}

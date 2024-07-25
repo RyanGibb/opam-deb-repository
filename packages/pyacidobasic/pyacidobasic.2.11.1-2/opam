@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pyacidobasic_2.11.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pyacidobasic"]
+]
+depends: [
+  "gnome-icon-theme"
+  "python3"
+  "python3-html5lib"
+  "python3-numpy"
+  "python3-pyqt5"
+  "python3-pyqt5-qtsvg"
+  "python3-pyqtgraph"
+]
+conflicts: [
+  "python-acidobasic (<< 2.8~)"
+]
+extra-source "pyacidobasic_2.11.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyacidobasic/pyacidobasic_2.11.1-2_all.deb"
+}

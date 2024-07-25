@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ltrace_0.7.3-6.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ltrace"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libelf1" {>= "0.131"}
+  "libselinux1" {>= "1.32"}
+]
+extra-source "ltrace_0.7.3-6.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ltrace/ltrace_0.7.3-6.1_amd64.deb"
+}

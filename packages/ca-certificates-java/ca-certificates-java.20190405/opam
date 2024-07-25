@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ca-certificates-java_20190405_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ca-certificates-java"]
+]
+depends: [
+  "ca-certificates" {>= "20121114"}
+  "libnss3" {>= "3.12.10-2~"}
+  ("default-jre-headless" | "java8-runtime-headless")
+]
+extra-source "ca-certificates-java_20190405_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ca-certificates-java/ca-certificates-java_20190405_all.deb"
+}

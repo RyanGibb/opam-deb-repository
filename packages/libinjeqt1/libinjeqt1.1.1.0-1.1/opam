@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libinjeqt1_1.1.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libinjeqt1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libqt5core5a" {>= "5.9.0~beta"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libinjeqt1_1.1.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/injeqt/libinjeqt1_1.1.0-1.1_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-yi-frontend-vty-dev_0.19.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-yi-frontend-vty-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-data-default-dev"
+  "libghc-dlist-dev"
+  "libghc-microlens-platform-dev"
+  "libghc-pointedlist-dev"
+  "libghc-vty-dev"
+  "libghc-yi-core-dev"
+  "libghc-yi-language-dev"
+  "libghc-yi-rope-dev"
+  "libgmp10"
+  "libtinfo6" {>= "6"}
+]
+extra-source "libghc-yi-frontend-vty-dev_0.19.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-yi-frontend-vty/libghc-yi-frontend-vty-dev_0.19.0-1_amd64.deb"
+}

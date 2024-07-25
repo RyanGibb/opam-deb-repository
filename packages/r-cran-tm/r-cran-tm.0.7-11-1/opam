@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-tm_0.7-11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-tm"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-bh"
+  "r-cran-nlp" {>= "0.2-0"}
+  "r-cran-rcpp"
+  "r-cran-slam" {>= "0.1-37"}
+  "r-cran-xml2"
+]
+extra-source "r-cran-tm_0.7-11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-tm/r-cran-tm_0.7-11-1_amd64.deb"
+}

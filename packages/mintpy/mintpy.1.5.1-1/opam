@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mintpy_1.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mintpy"]
+]
+depends: [
+  "python3-any"
+  "python3-mintpy" {= "1.5.1-1"}
+]
+extra-source "mintpy_1.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mintpy/mintpy_1.5.1-1_all.deb"
+}

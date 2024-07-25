@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopm-grid-dev_2022.10+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopm-grid-dev"]
+]
+depends: [
+  "libdune-grid-dev" {>= "2.6"}
+  "libdune-istl-dev" {>= "2.6"}
+  "libopm-common-dev" {>= "2022.10"}
+  "libopm-grid"
+  "libscotchmetis-dev"
+  "libscotchparmetis-dev"
+  "libtrilinos-zoltan-dev"
+]
+extra-source "libopm-grid-dev_2022.10+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opm-grid/libopm-grid-dev_2022.10+ds-3_amd64.deb"
+}

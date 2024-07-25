@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsundials-dev_3.1.2+dfsg-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsundials-dev"]
+]
+depends: [
+  "cmake"
+  "gfortran"
+  "libhypre-dev"
+  "libsundials-arkode2" {= "3.1.2+dfsg-3+b1"}
+  "libsundials-cvode3" {= "3.1.2+dfsg-3+b1"}
+  "libsundials-cvodes3" {= "3.1.2+dfsg-3+b1"}
+  "libsundials-ida3" {= "3.1.2+dfsg-3+b1"}
+  "libsundials-idas2" {= "3.1.2+dfsg-3+b1"}
+  "libsundials-kinsol3" {= "3.1.2+dfsg-3+b1"}
+  "libsundials-nvecparallel-hypre3" {= "3.1.2+dfsg-3+b1"}
+  "libsundials-nvecparallel-mpi3" {= "3.1.2+dfsg-3+b1"}
+  "libsundials-nvecparallel-openmp3" {= "3.1.2+dfsg-3+b1"}
+  "libsundials-nvecparallel-petsc3" {= "3.1.2+dfsg-3+b1"}
+  "libsundials-nvecparallel-pthread3" {= "3.1.2+dfsg-3+b1"}
+  "libsundials-nvecserial3" {= "3.1.2+dfsg-3+b1"}
+  "libsundials-sunlinsol1" {= "3.1.2+dfsg-3+b1"}
+  "libsundials-sunmatrix1" {= "3.1.2+dfsg-3+b1"}
+  "mpi-default-dev"
+  "petsc-dev"
+  "pkg-config"
+]
+extra-source "libsundials-dev_3.1.2+dfsg-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sundials/libsundials-dev_3.1.2+dfsg-3+b1_amd64.deb"
+}

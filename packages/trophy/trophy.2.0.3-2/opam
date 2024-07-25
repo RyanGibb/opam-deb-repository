@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i trophy_2.0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r trophy"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libclanapp-1-0v5"
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "trophy-data" {= "2.0.3-2"}
+]
+extra-source "trophy_2.0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trophy/trophy_2.0.3-2_amd64.deb"
+}

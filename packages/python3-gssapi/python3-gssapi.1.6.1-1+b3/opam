@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-gssapi_1.6.1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-gssapi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-decorator"
+  "python3-six" {>= "1.4.0"}
+]
+extra-source "python3-gssapi_1.6.1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-gssapi/python3-gssapi_1.6.1-1+b3_amd64.deb"
+}

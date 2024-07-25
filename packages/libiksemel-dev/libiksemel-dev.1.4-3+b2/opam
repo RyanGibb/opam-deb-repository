@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libiksemel-dev_1.4-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libiksemel-dev"]
+]
+depends: [
+  "libiksemel3" {= "1.4-3+b2"}
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "libiksemel-dev_1.4-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libiksemel/libiksemel-dev_1.4-3+b2_amd64.deb"
+}

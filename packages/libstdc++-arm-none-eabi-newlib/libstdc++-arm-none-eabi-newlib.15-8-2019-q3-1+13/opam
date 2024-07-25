@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstdc++-arm-none-eabi-newlib_15:8-2019-q3-1+13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstdc++-arm-none-eabi-newlib"]
+]
+depends: [
+  "libnewlib-arm-none-eabi"
+  "libnewlib-dev"
+]
+extra-source "libstdc++-arm-none-eabi-newlib_15:8-2019-q3-1+13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libstdc++-arm-none-eabi/libstdc++-arm-none-eabi-newlib_8-2019-q3-1+13_all.deb"
+}

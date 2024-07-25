@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-genshi_0.7.7-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-genshi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-six"
+]
+extra-source "python3-genshi_0.7.7-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/genshi/python3-genshi_0.7.7-2+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i looktxt_1.4.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r looktxt"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libnexus1" {>= "4.4.3"}
+]
+extra-source "looktxt_1.4.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/looktxt/looktxt_1.4.1-3_amd64.deb"
+}

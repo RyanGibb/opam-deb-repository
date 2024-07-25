@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-cache-integration-tests_0.16.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-cache-integration-tests"]
+]
+depends: [
+  "php-cache-tag-interop" {< "2~~"}
+  "php-cache-tag-interop" {>= "1.0"}
+  "php-common"
+  "php-psr-cache" {< "2~~"}
+  "php-psr-cache" {>= "1.0"}
+]
+extra-source "php-cache-integration-tests_0.16.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-cache-integration-tests/php-cache-integration-tests_0.16.0-2_all.deb"
+}

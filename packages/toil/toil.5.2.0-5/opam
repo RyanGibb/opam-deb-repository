@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i toil_5.2.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r toil"]
+]
+depends: [
+  "cwltool"
+  "python3-any"
+  "python3-dateutil"
+  "python3-dill"
+  "python3-distutils"
+  "python3-docker"
+  "python3-enlighten"
+  "python3-psutil"
+  "python3-requests"
+  "python3-tz"
+]
+extra-source "toil_5.2.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/toil/toil_5.2.0-5_all.deb"
+}

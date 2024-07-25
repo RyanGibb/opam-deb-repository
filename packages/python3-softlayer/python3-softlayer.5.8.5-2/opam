@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-softlayer_5.8.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-softlayer"]
+]
+depends: [
+  "python3-any"
+  "python3-click"
+  "python3-mock"
+  "python3-nose"
+  "python3-prompt-toolkit" {>= "2"}
+  "python3-ptable"
+  "python3-pygments"
+  "python3-requests"
+  "python3-six"
+  "python3-urllib3"
+]
+extra-source "python3-softlayer_5.8.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-softlayer/python3-softlayer_5.8.5-2_all.deb"
+}

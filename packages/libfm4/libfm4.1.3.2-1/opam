@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfm4_1.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfm4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdbus-glib-1-2" {>= "0.78"}
+  "libexif12" {>= "0.6.21-1~"}
+  "libfm-data" {>= "1.2.0~"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libmenu-cache3" {>= "0.5.0"}
+  "lxmenu-data"
+]
+extra-source "libfm4_1.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfm/libfm4_1.3.2-1_amd64.deb"
+}

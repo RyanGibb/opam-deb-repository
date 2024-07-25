@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mitools_2.0.5-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mitools"]
+]
+depends: [
+  "dcmtk"
+  "libc6" {>= "2.33"}
+  "libdcmtk17" {>= "3.6.7"}
+  "libgcc-s1" {>= "4.0"}
+  "libgsl27" {>= "2.7.1"}
+  "libismrmrd1-8" {>= "1.8.0"}
+  "libniftiio2" {>= "3.0.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libqwt-qt5-6" {>= "6.1.2"}
+  "libstdc++6" {>= "11"}
+  "libvtk9-1" {>= "9.1.0+really9.1.0+dfsg2"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("liblapack3" | "liblapack-so-3")
+  ("libqt5gui5" {>= "5.8.0"} | "libqt5gui5-gles" {>= "5.8.0"})
+]
+extra-source "mitools_2.0.5-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/odin/mitools_2.0.5-3+b1_amd64.deb"
+}

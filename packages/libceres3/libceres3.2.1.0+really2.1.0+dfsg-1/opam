@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libceres3_2.1.0+really2.1.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libceres3"]
+]
+depends: [
+  "libatlas3-base"
+  "libc6" {>= "2.32"}
+  "libcholmod3" {>= "1-4.5.2"}
+  "libcxsparse3" {>= "1-4.5.2"}
+  "libgcc-s1" {>= "4.0"}
+  "libgoogle-glog0v6" {>= "0.6.0"}
+  "libspqr2" {>= "1-5.12.0+dfsg"}
+  "libstdc++6" {>= "12"}
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libceres3_2.1.0+really2.1.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceres-solver/libceres3_2.1.0+really2.1.0+dfsg-1_amd64.deb"
+}

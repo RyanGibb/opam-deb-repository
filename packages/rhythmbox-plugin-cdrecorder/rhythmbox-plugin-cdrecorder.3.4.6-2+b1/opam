@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rhythmbox-plugin-cdrecorder_3.4.6-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rhythmbox-plugin-cdrecorder"]
+]
+depends: [
+  "libbrasero-media3-1" {>= "3.0.0"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.38.0"}
+  "libgtk-3-0" {>= "3.20.0"}
+  "libpeas-1-0-0" {>= "1.0.0"}
+  "librhythmbox-core10" {>= "3.0"}
+  "libxml2" {>= "2.7.8"}
+  "rhythmbox" {= "3.4.6-2+b1"}
+]
+extra-source "rhythmbox-plugin-cdrecorder_3.4.6-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rhythmbox/rhythmbox-plugin-cdrecorder_3.4.6-2+b1_amd64.deb"
+}

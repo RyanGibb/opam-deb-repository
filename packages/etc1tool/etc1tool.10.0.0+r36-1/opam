@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i etc1tool_10.0.0+r36-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r etc1tool"]
+]
+depends: [
+  "android-libetc1"
+  "libc6" {>= "2.14"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "etc1tool_10.0.0+r36-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-development/etc1tool_10.0.0+r36-1_amd64.deb"
+}

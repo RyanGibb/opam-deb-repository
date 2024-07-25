@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-slowpoke_0.3.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-slowpoke"]
+]
+depends: [
+  "ruby-actionpack"
+  "ruby-rack-timeout" {>= "0.4.0"}
+  "ruby-railties" {>= "2-5"}
+]
+extra-source "ruby-slowpoke_0.3.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-slowpoke/ruby-slowpoke_0.3.2-2_all.deb"
+}

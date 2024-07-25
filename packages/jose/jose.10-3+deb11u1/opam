@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jose_10-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jose"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libjansson4" {>= "2.10"}
+  "libjose0" {>= "10"}
+]
+extra-source "jose_10-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jose/jose_10-3+deb11u1_amd64.deb"
+}

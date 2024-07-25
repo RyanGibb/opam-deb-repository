@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scrypt_1.3.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scrypt"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "scrypt_1.3.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scrypt/scrypt_1.3.1-2+b1_amd64.deb"
+}

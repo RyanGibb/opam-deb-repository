@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xapian-omega_1.4.22-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xapian-omega"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libmagic1" {>= "5.12"}
+  "libpcre2-8-0" {>= "10.22"}
+  "libstdc++6" {>= "11"}
+  "libxapian30" {>= "1.4.19~"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "xapian-omega_1.4.22-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xapian-omega/xapian-omega_1.4.22-1_amd64.deb"
+}

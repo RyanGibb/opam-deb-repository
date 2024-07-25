@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-dimensional-dev_1.1-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-dimensional-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-exact-pi-dev"
+  "libghc-ieee754-dev"
+  "libghc-numtype-dk-dev"
+  "libghc-semigroups-dev"
+  "libghc-vector-dev"
+  "libgmp10"
+]
+extra-source "libghc-dimensional-dev_1.1-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-dimensional/libghc-dimensional-dev_1.1-2+b3_amd64.deb"
+}

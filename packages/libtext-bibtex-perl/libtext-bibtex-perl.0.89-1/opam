@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtext-bibtex-perl_0.89-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtext-bibtex-perl"]
+]
+depends: [
+  "libbtparse2" {>= "0.62"}
+  "libc6" {>= "2.4"}
+  "libscalar-list-utils-perl"
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "libtext-bibtex-perl_0.89-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtext-bibtex-perl/libtext-bibtex-perl_0.89-1_amd64.deb"
+}

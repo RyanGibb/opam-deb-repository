@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstatgrab10_0.91-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstatgrab10"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libstatgrab10_0.91-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libstatgrab/libstatgrab10_0.91-1+b2_amd64.deb"
+}

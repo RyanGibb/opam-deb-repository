@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnetpbm9-dev_2:10.0-15.3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnetpbm9-dev"]
+]
+depends: [
+  "libnetpbm9" {= "2-10.0-15.3+b2"}
+]
+conflicts: [
+  "netpbm-dev"
+]
+extra-source "libnetpbm9-dev_2:10.0-15.3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netpbm-free/libnetpbm9-dev_10.0-15.3+b2_amd64.deb"
+}

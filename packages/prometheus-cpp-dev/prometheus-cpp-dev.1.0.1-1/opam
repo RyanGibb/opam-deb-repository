@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-cpp-dev_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-cpp-dev"]
+]
+depends: [
+  "civetweb"
+  "libcivetweb-dev"
+  "libcurl4-openssl-dev"
+  "libprometheus-cpp-core1-0" {= "1.0.1-1"}
+  "libprometheus-cpp-pull1-0" {= "1.0.1-1"}
+  "libprometheus-cpp-push1-0" {= "1.0.1-1"}
+  "zlib1g-dev"
+]
+extra-source "prometheus-cpp-dev_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-cpp/prometheus-cpp-dev_1.0.1-1_amd64.deb"
+}

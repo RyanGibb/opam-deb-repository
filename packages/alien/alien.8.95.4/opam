@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i alien_8.95.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r alien"]
+]
+depends: [
+  "cpio"
+  "debhelper" {>= "10"}
+  "dpkg-dev"
+  "make"
+  "perl-any"
+  "rpm" {>= "2.4.4-2"}
+  "rpm2cpio"
+]
+extra-source "alien_8.95.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alien/alien_8.95.4_all.deb"
+}

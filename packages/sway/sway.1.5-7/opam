@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sway_1.5-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sway"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "libcairo2" {>= "1.10.0"}
+  "libelogind0"
+  "libevdev2" {>= "0.9.1"}
+  "libgdk-pixbuf2-0-0" {>= "2.31.1"}
+  "libgl1-mesa-dri"
+  "libgles2"
+  "libglib2-0-0" {>= "2.12.0"}
+  "libinput10" {>= "1.6.0"}
+  "libjson-c5" {>= "0.15"}
+  "libpango-1-0-0" {>= "1.22.0"}
+  "libpangocairo-1-0-0" {>= "1.22.0"}
+  "libpcre3"
+  "libpixman-1-0" {>= "0.25.2"}
+  "libwayland-client0" {>= "1.9.91"}
+  "libwayland-cursor0" {>= "1.0.2"}
+  "libwayland-server0" {>= "1.14.91"}
+  "libwlroots6" {>= "0.11.0"}
+  "libxcb1"
+  "libxkbcommon0" {>= "0.7.0"}
+  "policykit-1"
+  "swaybg"
+]
+extra-source "sway_1.5-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sway/sway_1.5-7_amd64.deb"
+}

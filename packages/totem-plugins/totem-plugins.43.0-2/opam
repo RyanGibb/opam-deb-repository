@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i totem-plugins_43.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r totem-plugins"]
+]
+depends: [
+  "gir1-2-gdkpixbuf-2-0"
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-3-0"
+  "gir1-2-pango-1-0"
+  "gir1-2-peas-1-0"
+  "gir1-2-totem-1-0" {= "43.0-2"}
+  "libc6" {>= "2.28"}
+  "libgdk-pixbuf-2-0-0" {>= "2.23.0"}
+  "libglib2-0-0" {>= "2.72.0"}
+  "libgtk-3-0" {>= "3.22.0"}
+  "libpeas-1-0-0" {>= "1.1.0"}
+  "libportal-gtk3-1" {>= "0.5"}
+  "libportal1" {>= "0.5"}
+  "libtotem0" {< "43.1"}
+  "libtotem0" {>= "43.0-2"}
+  "python3-gi" {>= "2.90.3"}
+  "python3-xdg"
+  "totem" {= "43.0-2"}
+]
+extra-source "totem-plugins_43.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/totem/totem-plugins_43.0-2_amd64.deb"
+}

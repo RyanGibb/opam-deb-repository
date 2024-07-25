@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rwhod_0.17-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rwhod"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "passwd"
+  "sysvinit-utils"
+]
+extra-source "rwhod_0.17-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netkit-rwho/rwhod_0.17-15_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-ebook-1.2_3.38.3-1+deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-ebook-1.2"]
+]
+depends: [
+  "gir1-2-camel-1-2" {= "3.38.3-1+deb11u2"}
+  "gir1-2-ebookcontacts-1-2" {= "3.38.3-1+deb11u2"}
+  "gir1-2-edataserver-1-2" {= "3.38.3-1+deb11u2"}
+  "gir1-2-freedesktop" {>= "1.59.1"}
+  "gir1-2-glib-2-0" {>= "1.59.1"}
+  "libebook-1-2-20" {>= "3.29.90"}
+]
+extra-source "gir1.2-ebook-1.2_3.38.3-1+deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/evolution-data-server/gir1.2-ebook-1.2_3.38.3-1+deb11u2_amd64.deb"
+}

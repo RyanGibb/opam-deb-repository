@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i criu_3.17.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r criu"]
+]
+depends: [
+  "libbsd0" {>= "0.6.0"}
+  "libc6" {>= "2.34"}
+  "libgnutls30" {>= "3.7.5"}
+  "libnet1" {>= "1.1.2.1"}
+  "libnftables1" {>= "1.0.2"}
+  "libnl-3-200" {>= "3.2.7"}
+  "libprotobuf-c1" {>= "1.0.1"}
+  "python3-any"
+  "python3-protobuf"
+]
+extra-source "criu_3.17.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/criu/criu_3.17.1-2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcasa-lattices5_3.3.0-4+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcasa-lattices5"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcasa-casa5" {>= "3.3.0"}
+  "libcasa-scimath5" {>= "3.3.0"}
+  "libcasa-tables5" {>= "3.3.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libcasa-lattices5_3.3.0-4+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/casacore/libcasa-lattices5_3.3.0-4+b3_amd64.deb"
+}

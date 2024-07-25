@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-guestfs_1:1.40.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-guestfs"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libguestfs0" {>= "1-1.39.8"}
+  "libvirt0" {>= "0.0.3"}
+  "libxml2" {>= "2.6.27"}
+  ("erlang-base" {>= "1-21.2.6+dfsg"} | "erlang-base-hipe" {>= "1-21.2.6+dfsg"})
+  ("erlang-base" | "erlang-base-hipe")
+]
+conflicts: [
+  "libguestfs-dev (<< 1:1.14.9-1~)"
+]
+extra-source "erlang-guestfs_1:1.40.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libguestfs/erlang-guestfs_1.40.2-2_amd64.deb"
+}

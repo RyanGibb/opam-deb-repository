@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i meshlab_1.3.2+dfsg1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r meshlab"]
+]
+depends: [
+  "lib3ds-1-3"
+  "libbz2-1-0"
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libglew2-1" {>= "1.12.0"}
+  "libmuparser2v5" {>= "2.2.3"}
+  "libopenctm1" {>= "1.0.3"}
+  "libqhull7"
+  "libqt4-network" {>= "4-4.6.1"}
+  "libqt4-opengl" {>= "4-4.6.1"}
+  "libqt4-script" {>= "4-4.5.3"}
+  "libqt4-xml" {>= "4-4.5.3"}
+  "libqt4-xmlpatterns" {>= "4-4.6.1"}
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libqtgui4" {>= "4-4.8.0"}
+  "libstdc++6" {>= "5.2"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "meshlab_1.3.2+dfsg1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meshlab/meshlab_1.3.2+dfsg1-4+b1_amd64.deb"
+}

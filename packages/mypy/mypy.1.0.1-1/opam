@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mypy_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mypy"]
+]
+depends: [
+  "python3-any"
+  "python3-mypy" {>= "1.0.1-1"}
+]
+extra-source "mypy_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mypy/mypy_1.0.1-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-nom+default-dev_5.0.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-nom+default-dev"]
+]
+depends: [
+  "librust-nom+lexical-dev" {= "5.0.1-4"}
+  "librust-nom-4+std-dev"
+  "librust-nom-4-dev"
+]
+extra-source "librust-nom+default-dev_5.0.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-nom/librust-nom+default-dev_5.0.1-4_amd64.deb"
+}

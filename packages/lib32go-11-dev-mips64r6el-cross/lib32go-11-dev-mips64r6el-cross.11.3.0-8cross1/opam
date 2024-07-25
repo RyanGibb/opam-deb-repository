@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32go-11-dev-mips64r6el-cross_11.3.0-8cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32go-11-dev-mips64r6el-cross"]
+]
+depends: [
+  "gcc-11-cross-base-mipsen" {= "11.3.0-8cross1"}
+  "lib32gcc-11-dev-mips64r6el-cross" {= "11.3.0-8cross1"}
+  "lib32go19-mips64r6el-cross" {>= "11.3.0-8cross1"}
+]
+extra-source "lib32go-11-dev-mips64r6el-cross_11.3.0-8cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-11-cross-mipsen/lib32go-11-dev-mips64r6el-cross_11.3.0-8cross1_all.deb"
+}

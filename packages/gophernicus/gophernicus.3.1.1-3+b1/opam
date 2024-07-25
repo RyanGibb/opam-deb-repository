@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gophernicus_3.1.1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gophernicus"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libwrap0" {>= "7.6-4~"}
+]
+extra-source "gophernicus_3.1.1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gophernicus/gophernicus_3.1.1-3+b1_amd64.deb"
+}

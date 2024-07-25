@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-zope.copy_3.5.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-zope.copy"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  "python-pkg-resources"
+  "python-zope-interface"
+  ("python2-7" | "python2-6")
+]
+extra-source "python-zope.copy_3.5.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zope.copy/python-zope.copy_3.5.0-6_all.deb"
+}

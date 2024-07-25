@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhtrace-core-java_3.1.0-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhtrace-core-java"]
+]
+depends: [
+  "libcommons-logging-java" {>= "1.2"}
+  "libjackson2-core-java" {>= "2.12.0"}
+  "libjackson2-databind-java"
+]
+extra-source "libhtrace-core-java_3.1.0-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/htrace/libhtrace-core-java_3.1.0-2.1_all.deb"
+}

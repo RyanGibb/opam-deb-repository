@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbiometry1_0.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbiometry1"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0+ds1"}
+  "libboost-program-options1-74-0" {>= "1.74.0+ds1"}
+  "libc6" {>= "2.34"}
+  "libdbus-cpp5" {>= "5.0.1"}
+  "libelf1" {>= "0.142"}
+  "libgcc-s1" {>= "3.0"}
+  "libprocess-cpp3" {>= "1.0.0+14.04.20140326.2"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libbiometry1_0.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/biometryd/libbiometry1_0.3.0-2_amd64.deb"
+}

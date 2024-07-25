@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nmzmail_1.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nmzmail"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libreadline8" {>= "6.0"}
+  "namazu2"
+  "namazu2-index-tools"
+]
+extra-source "nmzmail_1.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nmzmail/nmzmail_1.1-4_amd64.deb"
+}

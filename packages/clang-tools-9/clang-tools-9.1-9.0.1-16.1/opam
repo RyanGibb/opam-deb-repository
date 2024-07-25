@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clang-tools-9_1:9.0.1-16.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clang-tools-9"]
+]
+depends: [
+  "clang-9" {= "1-9.0.1-16.1"}
+  "libc6" {>= "2.29"}
+  "libclang-cpp9"
+  "libclang1-9" {>= "1-9~svn360566-1~"}
+  "libgcc-s1" {>= "3.0"}
+  "libllvm9" {>= "1-9~svn298832-1~"}
+  "libstdc++6" {>= "9"}
+  "python3"
+]
+extra-source "clang-tools-9_1:9.0.1-16.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-9/clang-tools-9_9.0.1-16.1_amd64.deb"
+}

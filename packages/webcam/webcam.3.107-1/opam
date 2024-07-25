@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i webcam_3.107-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r webcam"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "xawtv-plugins" {= "3.107-1"}
+]
+extra-source "webcam_3.107-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xawtv/webcam_3.107-1_amd64.deb"
+}

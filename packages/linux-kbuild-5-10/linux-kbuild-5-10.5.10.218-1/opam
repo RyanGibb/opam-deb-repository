@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i linux-kbuild-5.10_5.10.218-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r linux-kbuild-5.10"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libelf1" {>= "0.142"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "linux-kbuild-5.10_5.10.218-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linux/linux-kbuild-5.10_5.10.218-1_amd64.deb"
+}

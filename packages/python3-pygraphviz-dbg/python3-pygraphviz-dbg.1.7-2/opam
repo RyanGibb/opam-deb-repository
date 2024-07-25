@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pygraphviz-dbg_1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pygraphviz-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcgraph6"
+  "libgvc6"
+  "python3-dbg"
+  "python3-pygraphviz" {= "1.7-2"}
+]
+extra-source "python3-pygraphviz-dbg_1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pygraphviz/python3-pygraphviz-dbg_1.7-2_amd64.deb"
+}

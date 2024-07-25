@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sqlobject-admin_3.7.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sqlobject-admin"]
+]
+depends: [
+  "python3-any"
+  "python3-sqlobject" {= "3.7.0+dfsg-2"}
+]
+extra-source "sqlobject-admin_3.7.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sqlobject/sqlobject-admin_3.7.0+dfsg-2_all.deb"
+}

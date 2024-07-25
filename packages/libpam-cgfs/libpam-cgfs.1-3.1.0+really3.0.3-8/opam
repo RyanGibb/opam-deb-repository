@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-cgfs_1:3.1.0+really3.0.3-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-cgfs"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcap2" {>= "1-2.10"}
+  "libpam-runtime" {>= "1.0.1-6"}
+  "libpam0g" {>= "0.99.7.1"}
+]
+conflicts: [
+  "libpam-cgm"
+]
+extra-source "libpam-cgfs_1:3.1.0+really3.0.3-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxc/libpam-cgfs_3.1.0+really3.0.3-8_amd64.deb"
+}

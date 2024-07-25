@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmspack0_0.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmspack0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libmspack0_0.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmspack/libmspack0_0.11-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librun-parts-perl_0.09-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librun-parts-perl"]
+]
+depends: [
+  "libexporter-easy-perl"
+  "libfile-slurp-perl" {>= "9999.17"}
+  "libtaint-util-perl"
+  "perl-any"
+]
+extra-source "librun-parts-perl_0.09-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librun-parts-perl/librun-parts-perl_0.09-2.1_all.deb"
+}

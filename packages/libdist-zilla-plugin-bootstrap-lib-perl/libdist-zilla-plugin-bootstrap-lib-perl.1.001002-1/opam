@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdist-zilla-plugin-bootstrap-lib-perl_1.001002-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdist-zilla-plugin-bootstrap-lib-perl"]
+]
+depends: [
+  "libdist-zilla-role-bootstrap-perl"
+  "libmoose-perl" {>= "2.000"}
+  "perl"
+]
+extra-source "libdist-zilla-plugin-bootstrap-lib-perl_1.001002-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdist-zilla-plugin-bootstrap-lib-perl/libdist-zilla-plugin-bootstrap-lib-perl_1.001002-1_all.deb"
+}

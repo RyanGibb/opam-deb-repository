@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-shapely_1.6.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-shapely"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgeos-c1v5" {>= "3.4.2"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-numpy"
+  "python-numpy" {>= "1-1.14.3"}
+]
+extra-source "python-shapely_1.6.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-shapely/python-shapely_1.6.4-2_amd64.deb"
+}

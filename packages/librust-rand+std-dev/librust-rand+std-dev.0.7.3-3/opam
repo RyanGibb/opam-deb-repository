@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-rand+std-dev_0.7.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-rand+std-dev"]
+]
+depends: [
+  "librust-libc-dev"
+  "librust-rand+alloc-dev" {= "0.7.3-3"}
+  "librust-rand+getrandom-dev" {= "0.7.3-3"}
+  "librust-rand-chacha+std-dev"
+  "librust-rand-core+std-dev"
+  "librust-rand-dev" {= "0.7.3-3"}
+]
+extra-source "librust-rand+std-dev_0.7.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-rand/librust-rand+std-dev_0.7.3-3_amd64.deb"
+}

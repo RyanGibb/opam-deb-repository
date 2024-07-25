@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-fixed-dev_0.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-fixed-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.29"}
+  "libgmp10"
+]
+extra-source "libghc-fixed-dev_0.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-fixed/libghc-fixed-dev_0.3-1+b1_amd64.deb"
+}

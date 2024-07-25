@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i knot-resolver_3.2.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r knot-resolver"]
+]
+depends: [
+  "adduser"
+  "dns-root-data"
+  "libc6" {>= "2.14"}
+  "libdnssec6" {>= "2.7.2"}
+  "libedit2" {>= "2.11-20080614-0"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnutls30" {>= "3.6.6"}
+  "libknot8" {>= "2.7.2"}
+  "liblmdb0" {>= "0.9.9"}
+  "libluajit-5-1-2" {>= "2.0.4+dfsg"}
+  "libstdc++6" {>= "5"}
+  "libsystemd0" {>= "227"}
+  "libuv1" {>= "1.7.0"}
+  "libzscanner2" {>= "2.7.2"}
+  "lua-sec"
+  "lua-socket"
+]
+extra-source "knot-resolver_3.2.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/knot-resolver/knot-resolver_3.2.1-3_amd64.deb"
+}

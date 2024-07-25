@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblensfun1_0.3.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblensfun1"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "liblensfun-data-v1" {>= "0.3.3-1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "liblensfun1_0.3.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lensfun/liblensfun1_0.3.3-1_amd64.deb"
+}

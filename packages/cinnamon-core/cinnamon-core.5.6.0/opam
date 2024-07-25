@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cinnamon-core_5.6.0_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cinnamon-core"]
+]
+depends: [
+  "cinnamon" {>= "5.6"}
+  "cinnamon-control-center" {>= "5.6"}
+  "cinnamon-screensaver" {>= "5.6"}
+  "cinnamon-session" {>= "5.6"}
+  "cinnamon-settings-daemon" {>= "5.6"}
+  "desktop-base"
+  "muffin" {>= "5.6"}
+  "nemo" {>= "5.6"}
+  "xserver-xorg"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("gnome-terminal" | "x-terminal-emulator")
+  ("lightdm" | "gdm3" | "x-display-manager")
+]
+extra-source "cinnamon-core_5.6.0_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cinnamon-desktop-environment/cinnamon-core_5.6.0_all.deb"
+}

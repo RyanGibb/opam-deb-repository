@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-clone-deep_4.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-clone-deep"]
+]
+depends: [
+  "node-for-own" {>= "1.0.0"}
+  "node-is-extendable"
+  "node-is-plain-object" {>= "2.0.4"}
+  "node-kind-of" {>= "6.0.0"}
+  "nodejs"
+]
+extra-source "node-clone-deep_4.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-clone-deep/node-clone-deep_4.0.1-1_all.deb"
+}

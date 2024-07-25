@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i numba-doc_0.52.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r numba-doc"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "2.4.3-5~"}
+  "sphinx-rtd-theme-common" {>= "0.5.1+dfsg"}
+]
+extra-source "numba-doc_0.52.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/numba/numba-doc_0.52.0-4_all.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sensors-applet_3.0.0+git6-0.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sensors-applet"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgtk-3-0" {>= "3.5.12"}
+  "libnotify4" {>= "0.7.0"}
+  "libpanel-applet3" {>= "3.2.1"}
+  "libsensors-applet-plugin0" {= "3.0.0+git6-0.2+b1"}
+  "libsensors5" {>= "1-3.5.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "sensors-applet_3.0.0+git6-0.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sensors-applet/sensors-applet_3.0.0+git6-0.2+b1_amd64.deb"
+}

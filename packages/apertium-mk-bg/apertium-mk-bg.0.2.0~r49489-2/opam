@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-mk-bg_0.2.0~r49489-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-mk-bg"]
+]
+depends: [
+  "apertium" {>= "3.4"}
+  "cg3"
+]
+conflicts: [
+  "apertium-bg-mk"
+]
+extra-source "apertium-mk-bg_0.2.0~r49489-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-mk-bg/apertium-mk-bg_0.2.0~r49489-2_all.deb"
+}

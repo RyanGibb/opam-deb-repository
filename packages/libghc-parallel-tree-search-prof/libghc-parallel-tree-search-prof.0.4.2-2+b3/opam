@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-parallel-tree-search-prof_0.4.2-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-parallel-tree-search-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-parallel-prof"
+  "libghc-parallel-tree-search-dev" {= "0.4.2-2+b3"}
+  "libghc-tree-monad-prof"
+]
+extra-source "libghc-parallel-tree-search-prof_0.4.2-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-parallel-tree-search/libghc-parallel-tree-search-prof_0.4.2-2+b3_amd64.deb"
+}

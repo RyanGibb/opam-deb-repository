@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dsdp_5.8-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dsdp"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libdsdp-5-8gf"
+  "sgml-base" {>= "1.28"}
+]
+extra-source "dsdp_5.8-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dsdp/dsdp_5.8-10_amd64.deb"
+}

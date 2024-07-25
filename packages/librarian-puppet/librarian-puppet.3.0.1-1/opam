@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librarian-puppet_3.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librarian-puppet"]
+]
+depends: [
+  "puppet"
+  "ruby"
+  "ruby-json"
+  "ruby-librarian" {>= "0.6.3"}
+  "ruby-puppet-forge" {>= "2.1"}
+  "ruby-rsync"
+]
+extra-source "librarian-puppet_3.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librarian-puppet/librarian-puppet_3.0.1-1_all.deb"
+}

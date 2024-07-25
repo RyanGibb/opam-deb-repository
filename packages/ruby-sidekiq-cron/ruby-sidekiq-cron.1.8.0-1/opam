@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-sidekiq-cron_1.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-sidekiq-cron"]
+]
+depends: [
+  "ruby-fugit" {>= "1"}
+  "ruby-sidekiq" {>= "4.2.1"}
+]
+extra-source "ruby-sidekiq-cron_1.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-sidekiq-cron/ruby-sidekiq-cron_1.8.0-1_all.deb"
+}

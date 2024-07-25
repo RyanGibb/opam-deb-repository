@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtext-bidi-perl_2.15-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtext-bidi-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfribidi0" {>= "1.0.0"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libtext-bidi-perl_2.15-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtext-bidi-perl/libtext-bidi-perl_2.15-3+b2_amd64.deb"
+}

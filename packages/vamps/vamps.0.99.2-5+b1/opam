@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vamps_0.99.2-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vamps"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdvdread8" {>= "4.1.3"}
+]
+extra-source "vamps_0.99.2-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vamps/vamps_0.99.2-5+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i exmh_1:2.9.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r exmh"]
+]
+depends: [
+  "mailcap"
+  ("nmh" | "mh")
+  ("tcl" | "tclsh")
+  ("tk" | "wish")
+  ("xterm" | "x-terminal-emulator")
+]
+extra-source "exmh_1:2.9.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/exmh/exmh_2.9.0-6_all.deb"
+}

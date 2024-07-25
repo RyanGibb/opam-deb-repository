@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ssh-cron_1.04.01-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ssh-cron"]
+]
+depends: [
+  "libbobcat6" {>= "6.02.00"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "openssh-client"
+]
+extra-source "ssh-cron_1.04.01-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/ssh-cron/ssh-cron_1.04.01-1_amd64.deb"
+}

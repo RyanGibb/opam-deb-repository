@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aidl_1:10.0.0+r36-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aidl"]
+]
+depends: [
+  "android-libbase" {>= "1-10.0.0+r36"}
+  "android-libcutils" {>= "1-10.0.0+r36"}
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "aidl_1:10.0.0+r36-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-system-tools-aidl/aidl_10.0.0+r36-4+b1_amd64.deb"
+}

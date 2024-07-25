@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gist_5.0.0-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gist"]
+]
+depends: [
+  "ruby-json"
+  "sensible-utils"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "gist_5.0.0-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gist/gist_5.0.0-2+deb10u1_all.deb"
+}

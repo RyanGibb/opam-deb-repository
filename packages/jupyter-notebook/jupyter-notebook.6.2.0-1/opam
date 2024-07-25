@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jupyter-notebook_6.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jupyter-notebook"]
+]
+depends: [
+  "init-system-helpers" {>= "1.52"}
+  "jupyter-core"
+  "python3-any"
+  "python3-notebook" {= "6.2.0-1"}
+]
+extra-source "jupyter-notebook_6.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jupyter-notebook/jupyter-notebook_6.2.0-1_all.deb"
+}

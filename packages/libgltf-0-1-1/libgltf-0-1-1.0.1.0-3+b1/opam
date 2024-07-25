@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgltf-0.1-1_0.1.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgltf-0.1-1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libepoxy0" {>= "1.0"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libgltf-0.1-1_0.1.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgltf/libgltf-0.1-1_0.1.0-3+b1_amd64.deb"
+}

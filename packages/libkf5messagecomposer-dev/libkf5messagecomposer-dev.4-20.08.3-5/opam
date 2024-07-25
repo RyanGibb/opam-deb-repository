@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5messagecomposer-dev_4:20.08.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5messagecomposer-dev"]
+]
+depends: [
+  "libkf5identitymanagement-dev" {>= "20.08.3~"}
+  "libkf5libkleo-dev" {>= "4-20.08.3~"}
+  "libkf5messagecomposer5abi1" {= "4-20.08.3-5"}
+]
+extra-source "libkf5messagecomposer-dev_4:20.08.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kf5-messagelib/libkf5messagecomposer-dev_20.08.3-5_amd64.deb"
+}

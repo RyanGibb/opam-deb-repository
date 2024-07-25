@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-ip-address_6.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-ip-address"]
+]
+depends: [
+  "node-jsbn" {>= "1.1.0"}
+  "node-lodash" {>= "4.6.0"}
+  "node-lodash-packages" {>= "4.6.0"}
+  "node-sprintf-js" {>= "1.1.2"}
+  "nodejs" {>= "6"}
+]
+extra-source "node-ip-address_6.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-ip-address/node-ip-address_6.4.0-1_all.deb"
+}

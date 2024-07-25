@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i caveconverter_0~20170114-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r caveconverter"]
+]
+depends: [
+  "jarwrapper" {>= "0.5"}
+  ("default-jre-headless" | "java6-runtime-headless" | "java7-runtime-headless" | "java8-runtime-headless" | "java9-runtime-headless" | "java10-runtime-headless" | "java11-runtime-headless")
+]
+extra-source "caveconverter_0~20170114-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/caveconverter/caveconverter_0~20170114-6_all.deb"
+}

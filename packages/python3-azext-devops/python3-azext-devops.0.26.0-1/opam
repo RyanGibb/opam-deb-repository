@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-azext-devops_0.26.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-azext-devops"]
+]
+depends: [
+  "python3-any"
+  "python3-azure-cli"
+  "python3-distro"
+  "python3-keyring"
+]
+extra-source "python3-azext-devops_0.26.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/azure-devops-cli-extension/python3-azext-devops_0.26.0-1_all.deb"
+}

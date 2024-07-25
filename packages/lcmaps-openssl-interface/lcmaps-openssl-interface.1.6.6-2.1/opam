@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lcmaps-openssl-interface_1.6.6-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lcmaps-openssl-interface"]
+]
+depends: [
+  "lcmaps-basic-interface" {= "1.6.6-2.1"}
+  "libssl-dev"
+]
+extra-source "lcmaps-openssl-interface_1.6.6-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lcmaps/lcmaps-openssl-interface_1.6.6-2.1_all.deb"
+}

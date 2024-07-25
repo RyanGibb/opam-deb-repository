@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-13-pgmemcache_2.3.0-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-13-pgmemcache"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmemcached11"
+  "libsasl2-2" {>= "2.1.27+dfsg"}
+  "postgresql-13"
+]
+extra-source "postgresql-13-pgmemcache_2.3.0-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pgmemcache/postgresql-13-pgmemcache_2.3.0-8+b1_amd64.deb"
+}

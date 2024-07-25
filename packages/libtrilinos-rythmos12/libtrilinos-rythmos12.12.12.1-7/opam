@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrilinos-rythmos12_12.12.1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrilinos-rythmos12"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libopenmpi3"
+  "libstdc++6" {>= "5.2"}
+  "libtrilinos-rtop12"
+  "libtrilinos-teuchos12"
+  "libtrilinos-thyra12"
+]
+extra-source "libtrilinos-rythmos12_12.12.1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trilinos/libtrilinos-rythmos12_12.12.1-7_amd64.deb"
+}

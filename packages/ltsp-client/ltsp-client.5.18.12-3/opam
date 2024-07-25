@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ltsp-client_5.18.12-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ltsp-client"]
+]
+depends: [
+  "alsa-utils"
+  "cron"
+  "cryptsetup"
+  "cups-bsd"
+  "ldm"
+  "libasound2-plugins"
+  "ltsp-client-core" {>= "5.18.12-3"}
+  "ltspfsd" {>= "1.1"}
+  "numlockx"
+  "pulseaudio"
+  "python-serial"
+  "sane-utils"
+  "sshfs"
+  "x11-xserver-utils"
+  "xorg"
+  ("freerdp2-x11" | "freerdp-x11" | "rdesktop")
+  ("inputattach" | "joystick" {< "20051019-6"})
+  ("netcat-traditional" | "netcat")
+  ("rsyslog" | "system-log-daemon")
+  ("systemd" {>= "219-1"} | "ntpdate")
+]
+extra-source "ltsp-client_5.18.12-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ltsp/ltsp-client_5.18.12-3_amd64.deb"
+}

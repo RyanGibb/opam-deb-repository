@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i signon-kwallet-extension_4:17.08.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r signon-kwallet-extension"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libkf5wallet-bin"
+  "libkf5wallet5" {>= "4.96.0"}
+  "libqt5core5a" {>= "5.9.0~beta"}
+  "libsignon-extension1" {>= "8.57+20150423"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "signon-kwallet-extension_4:17.08.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/signon-kwallet-extension/signon-kwallet-extension_17.08.3-1_amd64.deb"
+}

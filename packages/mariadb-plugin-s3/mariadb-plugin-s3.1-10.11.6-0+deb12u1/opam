@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mariadb-plugin-s3_1:10.11.6-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mariadb-plugin-s3"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libcurl4" {>= "7.16.2"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "mariadb-server" {= "1-10.11.6-0+deb12u1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "mariadb-plugin-s3_1:10.11.6-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mariadb/mariadb-plugin-s3_10.11.6-0+deb12u1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32gphobos-12-dev-s390x-cross_12.2.0-14cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32gphobos-12-dev-s390x-cross"]
+]
+depends: [
+  "gcc-12-cross-base" {>= "12.2.0-14"}
+  "lib32gcc-12-dev-s390x-cross" {= "12.2.0-14cross1"}
+  "lib32gphobos3-s390x-cross" {>= "12.2.0-14cross1"}
+]
+extra-source "lib32gphobos-12-dev-s390x-cross_12.2.0-14cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12-cross/lib32gphobos-12-dev-s390x-cross_12.2.0-14cross1_all.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpolkit-qt5-1-1_0.114.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpolkit-qt5-1-1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libpolkit-agent-1-0" {>= "0.99"}
+  "libpolkit-gobject-1-0" {>= "0.105-12~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.5.0~"}
+  "libqt5widgets5" {>= "5.5.0~"}
+  "libstdc++6" {>= "4.1.1"}
+  ("default-logind" | "logind")
+  ("libqt5gui5" {>= "5.5.0~"} | "libqt5gui5-gles" {>= "5.5.0~"})
+]
+extra-source "libpolkit-qt5-1-1_0.114.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/polkit-qt-1/libpolkit-qt5-1-1_0.114.0-2_amd64.deb"
+}

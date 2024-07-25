@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ttv_3.107-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ttv"]
+]
+depends: [
+  "libaa1" {>= "1.4p5"}
+  "libc6" {>= "2.33"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "xawtv-plugins" {= "3.107-1.1"}
+]
+extra-source "ttv_3.107-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xawtv/ttv_3.107-1.1_amd64.deb"
+}

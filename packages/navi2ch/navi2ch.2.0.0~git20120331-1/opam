@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i navi2ch_2.0.0~git20120331-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r navi2ch"]
+]
+depends: [
+  ("dpkg" {>= "1.15.4"} | "install-info")
+  ("emacs" | "emacs23" | "emacs-snapshot")
+]
+extra-source "navi2ch_2.0.0~git20120331-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/navi2ch/navi2ch_2.0.0~git20120331-1_all.deb"
+}

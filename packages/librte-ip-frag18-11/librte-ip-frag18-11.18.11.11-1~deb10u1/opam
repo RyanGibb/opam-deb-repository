@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-ip-frag18.11_18.11.11-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-ip-frag18.11"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.4"}
+  "libnuma1" {>= "2.0.11"}
+  "librte-cmdline18-11" {>= "16.04"}
+  "librte-eal18-11" {>= "16.04"}
+  "librte-ethdev18-11" {>= "16.07~rc1"}
+  "librte-hash18-11" {>= "16.04"}
+  "librte-kvargs18-11" {>= "16.04"}
+  "librte-mbuf18-11" {>= "16.04"}
+  "librte-mempool18-11" {>= "16.07~rc1"}
+  "librte-net18-11" {>= "16.11"}
+  "librte-ring18-11" {>= "16.04"}
+]
+conflicts: [
+  "libdpdk0"
+]
+extra-source "librte-ip-frag18.11_18.11.11-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-ip-frag18.11_18.11.11-1~deb10u1_amd64.deb"
+}

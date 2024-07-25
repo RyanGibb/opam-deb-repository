@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scid-rating-data_200901-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scid-rating-data"]
+]
+depends: [
+  "scid"
+]
+conflicts: [
+  "scid-spell-data"
+]
+extra-source "scid-rating-data_200901-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scid-rating-data/scid-rating-data_200901-2_all.deb"
+}

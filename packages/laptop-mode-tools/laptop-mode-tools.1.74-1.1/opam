@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i laptop-mode-tools_1.74-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r laptop-mode-tools"]
+]
+depends: [
+  "lsb-base" {>= "3.0-10"}
+  "psmisc"
+  "util-linux" {>= "2.13"}
+]
+conflicts: [
+  "noflushd"
+]
+extra-source "laptop-mode-tools_1.74-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/laptop-mode-tools/laptop-mode-tools_1.74-1.1_all.deb"
+}

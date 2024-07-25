@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i goby-java_3.3.1+dfsg2-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r goby-java"]
+]
+depends: [
+  "default-jre"
+  "libdistlib-java"
+  "libgoby-io-java" {= "3.3.1+dfsg2-9"}
+  "libjaxb-api-java"
+  "r-cran-rjava"
+]
+extra-source "goby-java_3.3.1+dfsg2-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgoby-java/goby-java_3.3.1+dfsg2-9_all.deb"
+}

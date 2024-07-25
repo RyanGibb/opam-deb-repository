@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i oslo-messaging-zmq-receiver_8.1.4-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r oslo-messaging-zmq-receiver"]
+]
+depends: [
+  "adduser"
+  "lsb-base"
+  ("python-oslo-messaging" {= "8.1.4-1+deb10u1"} | "python3-oslo-messaging" {= "8.1.4-1+deb10u1"})
+]
+extra-source "oslo-messaging-zmq-receiver_8.1.4-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-oslo.messaging/oslo-messaging-zmq-receiver_8.1.4-1+deb10u1_all.deb"
+}

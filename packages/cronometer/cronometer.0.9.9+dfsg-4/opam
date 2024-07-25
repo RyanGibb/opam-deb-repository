@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cronometer_0.9.9+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cronometer"]
+]
+depends: [
+  "jarwrapper" {>= "0.5"}
+  "libjcommon-java"
+  "libjfreechart-java"
+  "libswingx-java"
+  ("default-jre" | "java11-runtime")
+  ("default-jre" | "java8-runtime")
+]
+extra-source "cronometer_0.9.9+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cronometer/cronometer_0.9.9+dfsg-4_all.deb"
+}

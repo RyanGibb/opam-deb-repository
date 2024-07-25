@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qtdbustest-runner_0.2+bzr42+repack1-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qtdbustest-runner"]
+]
+depends: [
+  "gvfs-backends"
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqtdbustest1" {= "0.2+bzr42+repack1-11"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "qtdbustest-runner_0.2+bzr42+repack1-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libq/libqtdbustest/qtdbustest-runner_0.2+bzr42+repack1-11_amd64.deb"
+}

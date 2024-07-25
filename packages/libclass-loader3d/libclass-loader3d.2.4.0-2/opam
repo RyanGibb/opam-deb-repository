@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclass-loader3d_2.4.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclass-loader3d"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libconsole-bridge1-0" {>= "1.0.1+dfsg2"}
+  "libgcc-s1" {>= "3.0"}
+  "librcpputils1d" {>= "2.6.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libclass-loader3d_2.4.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-class-loader/libclass-loader3d_2.4.0-2_amd64.deb"
+}

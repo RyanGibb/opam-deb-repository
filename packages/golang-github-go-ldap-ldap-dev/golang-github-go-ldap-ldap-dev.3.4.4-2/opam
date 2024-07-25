@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-go-ldap-ldap-dev_3.4.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-go-ldap-ldap-dev"]
+]
+depends: [
+  "golang-github-azure-go-ntlmssp-dev" {>= "0.0~git20220621.cb9428e~"}
+  "golang-golang-x-crypto-dev"
+  "golang-gopkg-asn1-ber-v1-dev" {>= "1.5.4~"}
+]
+extra-source "golang-github-go-ldap-ldap-dev_3.4.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-go-ldap-ldap/golang-github-go-ldap-ldap-dev_3.4.4-2_all.deb"
+}

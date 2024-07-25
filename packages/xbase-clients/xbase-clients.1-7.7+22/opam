@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xbase-clients_1:7.7+22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xbase-clients"]
+]
+depends: [
+  "x11-apps"
+  "x11-session-utils"
+  "x11-utils"
+  "x11-xkb-utils"
+  "x11-xserver-utils"
+  "xauth"
+  "xinit"
+]
+extra-source "xbase-clients_1:7.7+22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xorg/xbase-clients_7.7+22_all.deb"
+}

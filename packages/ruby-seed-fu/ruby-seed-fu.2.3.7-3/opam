@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-seed-fu_2.3.7-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-seed-fu"]
+]
+depends: [
+  "ruby-activerecord" {>= "3.1"}
+  "ruby-activesupport" {>= "3.1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-seed-fu_2.3.7-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-seed-fu/ruby-seed-fu_2.3.7-3_all.deb"
+}

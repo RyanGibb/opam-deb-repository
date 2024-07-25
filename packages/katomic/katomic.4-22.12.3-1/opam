@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i katomic_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r katomic"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libkf5configcore5" {>= "5.91.0~"}
+  "libkf5configgui5" {>= "5.91.0~"}
+  "libkf5coreaddons5" {>= "5.91.0~"}
+  "libkf5crash5" {>= "5.91.0~"}
+  "libkf5dbusaddons5" {>= "5.91.0~"}
+  "libkf5i18n5" {>= "5.91.0~"}
+  "libkf5kdegames7" {>= "4-21.04.0"}
+  "libkf5newstuffwidgets5" {>= "5.93.0"}
+  "libkf5widgetsaddons5" {>= "5.91.0~"}
+  "libkf5xmlgui5" {>= "5.91.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  "perl-any"
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "katomic_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/katomic/katomic_22.12.3-1_amd64.deb"
+}

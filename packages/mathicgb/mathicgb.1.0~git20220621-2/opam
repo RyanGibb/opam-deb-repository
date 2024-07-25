@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mathicgb_1.0~git20220621-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mathicgb"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libmathic0v5" {>= "1.0~git20220426"}
+  "libmathicgb0" {>= "1.0~git20220621"}
+  "libmemtailor0" {>= "1.0~git20130809"}
+  "libstdc++6" {>= "11"}
+  "libtbb12" {>= "2021.4.0"}
+]
+extra-source "mathicgb_1.0~git20220621-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mathicgb/mathicgb_1.0~git20220621-2_amd64.deb"
+}

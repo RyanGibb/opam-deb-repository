@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libshibsp-plugins_3.4.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libshibsp-plugins"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "liblog4shib2" {>= "2.0.1"}
+  "libmemcached11" {>= "1.0.18+"}
+  "libodbc2" {>= "2.3.1"}
+  "libsaml12" {>= "3.2.1"}
+  "libshibsp11" {>= "3.4.1+dfsg"}
+  "libstdc++6" {>= "11"}
+  "libxerces-c3-2"
+  "libxmltooling10" {>= "3.2.3"}
+]
+extra-source "libshibsp-plugins_3.4.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shibboleth-sp/libshibsp-plugins_3.4.1+dfsg-2_amd64.deb"
+}

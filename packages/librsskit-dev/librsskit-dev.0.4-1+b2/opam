@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librsskit-dev_0.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librsskit-dev"]
+]
+depends: [
+  "libgnustep-base-dev"
+  "librsskit0d" {= "0.4-1+b2"}
+]
+conflicts: [
+  "librsskit0"
+]
+extra-source "librsskit-dev_0.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rsskit/librsskit-dev_0.4-1+b2_amd64.deb"
+}

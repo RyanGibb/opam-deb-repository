@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i global_6.6.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r global"]
+]
+depends: [
+  "emacsen-common"
+  "libc6" {>= "2.14"}
+  "libltdl7" {>= "2.4.6"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "global_6.6.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/global/global_6.6.3-2_amd64.deb"
+}

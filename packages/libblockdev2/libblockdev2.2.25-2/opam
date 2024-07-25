@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libblockdev2_2.25-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libblockdev2"]
+]
+depends: [
+  "libblockdev-utils2" {>= "2.14"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.42.2"}
+]
+extra-source "libblockdev2_2.25-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libblockdev/libblockdev2_2.25-2_amd64.deb"
+}

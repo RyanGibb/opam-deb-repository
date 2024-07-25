@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-renderpm_3.6.12-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-renderpm"]
+]
+depends: [
+  "fonts-urw-base35"
+  "libc6" {>= "2.14"}
+  "libfreetype6" {>= "2.2.1"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+]
+extra-source "python3-renderpm_3.6.12-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-reportlab/python3-renderpm_3.6.12-1+b1_amd64.deb"
+}

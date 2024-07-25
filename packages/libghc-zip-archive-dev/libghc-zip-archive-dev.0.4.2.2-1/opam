@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-zip-archive-dev_0.4.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-zip-archive-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-digest-dev"
+  "libghc-zlib-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-zip-archive-dev_0.4.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-zip-archive/libghc-zip-archive-dev_0.4.2.2-1_amd64.deb"
+}

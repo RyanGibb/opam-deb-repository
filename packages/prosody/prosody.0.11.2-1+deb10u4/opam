@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prosody_0.11.2-1+deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prosody"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.17"}
+  "libidn11" {>= "1.13"}
+  "libssl1-1" {>= "1.1.0"}
+  "lsb-base"
+  "lua-bitop"
+  "lua-expat"
+  "lua-expat" {>= "1.2.0"}
+  "lua-filesystem"
+  "lua-filesystem" {>= "1.4.2-3~"}
+  "lua-sec"
+  "lua-socket"
+  "lua5-2"
+  "ssl-cert"
+]
+conflicts: [
+  "prosody-modules (<< 0.0~hg20170719.cd828b1cb5b9+dfsg-1)"
+]
+extra-source "prosody_0.11.2-1+deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prosody/prosody_0.11.2-1+deb10u4_amd64.deb"
+}

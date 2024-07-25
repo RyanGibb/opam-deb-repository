@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfcft-dev_3.1.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfcft-dev"]
+]
+depends: [
+  "libfcft4" {= "3.1.5-3"}
+  "libfontconfig-dev"
+  "libfreetype6-dev"
+  "libharfbuzz-dev"
+  "libpixman-1-dev"
+  "libtllist-dev"
+  "libutf8proc-dev"
+]
+extra-source "libfcft-dev_3.1.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcft/libfcft-dev_3.1.5-3_amd64.deb"
+}

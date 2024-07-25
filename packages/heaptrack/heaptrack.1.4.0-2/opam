@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i heaptrack_1.4.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r heaptrack"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-iostreams1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libheaptrack" {= "1.4.0-2"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "heaptrack_1.4.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heaptrack/heaptrack_1.4.0-2_amd64.deb"
+}

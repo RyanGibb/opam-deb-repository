@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kwin-addons_4:5.27.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kwin-addons"]
+]
+depends: [
+  "kdeplasma-addons-data" {= "4-5.27.5-2"}
+  "plasma-framework" {>= "5.79.0~"}
+  ("kwin-x11" {>= "4-5.27.5~"} | "kwin" {>= "4-5.27.5~"})
+]
+extra-source "kwin-addons_4:5.27.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdeplasma-addons/kwin-addons_5.27.5-2_amd64.deb"
+}

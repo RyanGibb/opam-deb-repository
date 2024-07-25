@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i merkaartor_0.18.4+ds-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r merkaartor"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libexiv2-27" {>= "0.27.3"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdal28" {>= "3.0.0"}
+  "libgps28" {>= "3.10+dev1~"}
+  "libproj19" {>= "4.8.0"}
+  "libproxy1v5" {>= "0.4.16"}
+  "libqt5concurrent5" {>= "5.6.0~rc"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.14.1"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libqt5xml5" {>= "5.1.0"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.3.0"} | "libqt5gui5-gles" {>= "5.3.0"})
+]
+extra-source "merkaartor_0.18.4+ds-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/merkaartor/merkaartor_0.18.4+ds-5+b2_amd64.deb"
+}

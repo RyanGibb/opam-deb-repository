@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i spacenavd_0.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r spacenavd"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libx11-6"
+  "lsb-base"
+]
+extra-source "spacenavd_0.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spacenavd/spacenavd_0.7.1-1_amd64.deb"
+}

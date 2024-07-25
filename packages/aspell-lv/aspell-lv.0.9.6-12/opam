@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aspell-lv_0.9.6-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aspell-lv"]
+]
+depends: [
+  "aspell"
+  "dictionaries-common" {>= "1.23~"}
+]
+extra-source "aspell-lv_0.9.6-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/myspell-lv/aspell-lv_0.9.6-12_all.deb"
+}

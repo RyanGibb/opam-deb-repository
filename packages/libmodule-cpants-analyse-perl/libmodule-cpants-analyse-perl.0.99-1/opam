@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmodule-cpants-analyse-perl_0.99-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmodule-cpants-analyse-perl"]
+]
+depends: [
+  "libarchive-any-lite-perl"
+  "libarray-diff-perl"
+  "libclass-accessor-perl"
+  "libcpan-distnameinfo-perl"
+  "libcpan-meta-yaml-perl"
+  "libdata-binary-perl"
+  "libfile-find-object-perl"
+  "libmodule-extractuse-perl" {>= "0.33"}
+  "libmodule-find-perl"
+  "libreadonly-perl"
+  "libsoftware-license-perl" {>= "0.103012"}
+  "perl"
+  "perl-base"
+  ("libmodule-pluggable-perl" | "perl" {< "5.17.9"})
+]
+extra-source "libmodule-cpants-analyse-perl_0.99-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmodule-cpants-analyse-perl/libmodule-cpants-analyse-perl_0.99-1_all.deb"
+}

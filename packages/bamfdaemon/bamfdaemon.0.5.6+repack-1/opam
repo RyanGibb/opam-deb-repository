@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bamfdaemon_0.5.6+repack-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bamfdaemon"]
+]
+depends: [
+  "libbamf3-2" {= "0.5.6+repack-1"}
+  "libc6" {>= "2.14"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.43.2"}
+  "libgtk-3-0" {>= "3.9.10"}
+  "libgtop-2-0-11" {>= "2.22.3"}
+  "libstartup-notification0" {>= "0.11"}
+  "libwnck-3-0" {>= "3.4.7"}
+  "libx11-6"
+]
+extra-source "bamfdaemon_0.5.6+repack-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bamf/bamfdaemon_0.5.6+repack-1_amd64.deb"
+}

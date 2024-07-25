@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dctrl-tools_2.24-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dctrl-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "grep-dctrl"
+]
+extra-source "dctrl-tools_2.24-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dctrl-tools/dctrl-tools_2.24-3+b1_amd64.deb"
+}

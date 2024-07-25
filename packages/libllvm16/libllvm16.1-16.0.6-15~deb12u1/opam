@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libllvm16_1:16.0.6-15~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libllvm16"]
+]
+depends: [
+  "libc6" {>= "2.36"}
+  "libedit2" {>= "2.11-20080614-0"}
+  "libffi8" {>= "3.4"}
+  "libgcc-s1" {>= "3.3"}
+  "libstdc++6" {>= "12"}
+  "libtinfo6" {>= "6"}
+  "libxml2" {>= "2.7.4"}
+  "libz3-4" {>= "4.8.12"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "libllvm16_1:16.0.6-15~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-16/libllvm16_16.0.6-15~deb12u1_amd64.deb"
+}

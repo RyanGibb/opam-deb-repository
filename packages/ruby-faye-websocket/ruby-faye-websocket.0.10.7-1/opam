@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-faye-websocket_0.10.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-faye-websocket"]
+]
+depends: [
+  "ruby-eventmachine" {>= "0.12.0"}
+  "ruby-websocket-driver" {>= "0.5.1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-faye-websocket_0.10.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-faye-websocket/ruby-faye-websocket_0.10.7-1_all.deb"
+}

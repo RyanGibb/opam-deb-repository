@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rack-protection_2.0.8.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rack-protection"]
+]
+depends: [
+  "ruby-rack"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-rack-protection_2.0.8.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-sinatra/ruby-rack-protection_2.0.8.1-2_all.deb"
+}

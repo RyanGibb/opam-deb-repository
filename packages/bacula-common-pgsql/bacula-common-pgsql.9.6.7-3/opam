@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bacula-common-pgsql_9.6.7-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bacula-common-pgsql"]
+]
+depends: [
+  "bacula-common" {= "9.6.7-3"}
+  "libc6" {>= "2.14"}
+  "libpq5" {>= "9.1"}
+]
+conflicts: [
+  "bacula-common-mysql"
+  "bacula-common-sqlite3"
+]
+extra-source "bacula-common-pgsql_9.6.7-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bacula/bacula-common-pgsql_9.6.7-3_amd64.deb"
+}

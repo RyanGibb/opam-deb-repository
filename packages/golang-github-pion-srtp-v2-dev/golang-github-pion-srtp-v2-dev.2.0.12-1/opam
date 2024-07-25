@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-pion-srtp.v2-dev_2.0.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-pion-srtp.v2-dev"]
+]
+depends: [
+  "golang-github-pion-logging-dev"
+  "golang-github-pion-rtcp-dev" {>= "1.2.10-1~"}
+  "golang-github-pion-rtp-dev"
+  "golang-github-pion-transport-dev" {>= "2.0.2-1~"}
+  "golang-github-stretchr-testify-dev"
+]
+extra-source "golang-github-pion-srtp.v2-dev_2.0.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-pion-srtp.v2/golang-github-pion-srtp.v2-dev_2.0.12-1_all.deb"
+}

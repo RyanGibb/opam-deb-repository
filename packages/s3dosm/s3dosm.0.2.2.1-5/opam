@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i s3dosm_0.2.2.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r s3dosm"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libg3d-plugins"
+  "libgps28" {>= "3.3"}
+  "libs3d2" {>= "0.2.2.1"}
+  "libs3dw2" {>= "0.2.2.1"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libxml2" {>= "2.7.4"}
+  "s3d-data" {= "0.2.2.1-5"}
+]
+extra-source "s3dosm_0.2.2.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/s3d/s3dosm_0.2.2.1-5_amd64.deb"
+}

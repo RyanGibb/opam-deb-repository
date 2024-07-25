@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libixion-dev_0.14.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libixion-dev"]
+]
+depends: [
+  "libixion-0-14-0" {= "0.14.1-4"}
+  "libmdds-dev" {>= "1.4"}
+]
+extra-source "libixion-dev_0.14.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libixion/libixion-dev_0.14.1-4_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i moosefs-cgiserv_3.0.117-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r moosefs-cgiserv"]
+]
+depends: [
+  "lsb-base"
+  "moosefs-cgi"
+  "moosefs-common" {>= "3.0.117-1"}
+  "python3-any"
+]
+extra-source "moosefs-cgiserv_3.0.117-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/moosefs/moosefs-cgiserv_3.0.117-1_all.deb"
+}

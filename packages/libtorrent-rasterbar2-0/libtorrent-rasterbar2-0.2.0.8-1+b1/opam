@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtorrent-rasterbar2.0_2.0.8-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtorrent-rasterbar2.0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.4"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "12.2.0-12"}
+]
+extra-source "libtorrent-rasterbar2.0_2.0.8-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtorrent-rasterbar/libtorrent-rasterbar2.0_2.0.8-1+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libauthen-sasl-cyrus-perl_0.13-server-13+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libauthen-sasl-cyrus-perl"]
+]
+depends: [
+  "libauthen-sasl-perl"
+  "libc6" {>= "2.4"}
+  "libsasl2-2" {>= "2.1.28+dfsg"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libauthen-sasl-cyrus-perl_0.13-server-13+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libauthen-sasl-cyrus-perl/libauthen-sasl-cyrus-perl_0.13-server-13+b1_amd64.deb"
+}

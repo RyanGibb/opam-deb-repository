@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-go_2:1.19~1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-go"]
+]
+depends: [
+  "golang-1-19-go"
+  "golang-src" {>= "2-1.19~1"}
+]
+conflicts: [
+  "gccgo-go"
+]
+extra-source "golang-go_2:1.19~1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-defaults/golang-go_1.19~1_amd64.deb"
+}

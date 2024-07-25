@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfastrtps2_2.1.0+ds-9+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfastrtps2"]
+]
+depends: [
+  "libc6" {>= "2.30"}
+  "libfastcdr1" {>= "1.0.16"}
+  "libfoonathan-memory0d" {>= "0.7"}
+  "libgcc-s1" {>= "3.0"}
+  "libsqlite3-0" {>= "3.20.0"}
+  "libssl1-1" {>= "1.1.1"}
+  "libstdc++6" {>= "9"}
+  "libtinyxml2-8" {>= "8.0.0"}
+]
+extra-source "libfastrtps2_2.1.0+ds-9+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fastdds/libfastrtps2_2.1.0+ds-9+deb11u1_amd64.deb"
+}

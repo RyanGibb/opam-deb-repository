@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i simgrid-java_3.21+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r simgrid-java"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.3.1"}
+  "libgfortran5" {>= "8"}
+  "libsimgrid3-21" {>= "3.21+dfsg-4"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "simgrid-java_3.21+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/simgrid/simgrid-java_3.21+dfsg-4_amd64.deb"
+}

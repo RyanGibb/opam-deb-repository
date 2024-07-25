@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkmod-dev_28-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkmod-dev"]
+]
+depends: [
+  "libkmod2" {= "28-1"}
+]
+extra-source "libkmod-dev_28-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kmod/libkmod-dev_28-1_amd64.deb"
+}

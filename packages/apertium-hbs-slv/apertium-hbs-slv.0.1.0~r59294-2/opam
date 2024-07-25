@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-hbs-slv_0.1.0~r59294-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-hbs-slv"]
+]
+depends: [
+  "apertium" {>= "3.4"}
+  "apertium-lex-tools"
+  "cg3"
+]
+conflicts: [
+  "apertium-slv-hbs"
+]
+extra-source "apertium-hbs-slv_0.1.0~r59294-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-hbs-slv/apertium-hbs-slv_0.1.0~r59294-2_all.deb"
+}

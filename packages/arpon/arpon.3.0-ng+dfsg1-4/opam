@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i arpon_3.0-ng+dfsg1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r arpon"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libdumbnet1" {>= "1.8"}
+  "libnet1" {>= "1.1.2.1"}
+  "libpcap0-8" {>= "1.0.0"}
+  "lsb-base"
+]
+extra-source "arpon_3.0-ng+dfsg1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/arpon/arpon_3.0-ng+dfsg1-4_amd64.deb"
+}

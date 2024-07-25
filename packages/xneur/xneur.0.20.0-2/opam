@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xneur_0.20.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xneur"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libgstreamer1-0-0" {>= "1.0.0"}
+  "libnotify4" {>= "0.7.0"}
+  "libx11-6"
+  "libxext6"
+  "libxi6"
+  "libxinerama1"
+  "libxneur" {< "0.20.0-99"}
+  "libxneur" {>= "0.20.0"}
+  "libxosd2" {>= "2.2.14"}
+  "libxtst6"
+]
+extra-source "xneur_0.20.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xneur/xneur_0.20.0-2_amd64.deb"
+}

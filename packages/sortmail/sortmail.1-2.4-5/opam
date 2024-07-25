@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sortmail_1:2.4-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sortmail"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgdbm-compat4" {>= "1.16"}
+]
+extra-source "sortmail_1:2.4-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sortmail/sortmail_2.4-5_amd64.deb"
+}

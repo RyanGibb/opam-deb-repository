@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-unix-time-dev_0.4.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-unix-time-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-old-time-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-unix-time-dev_0.4.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-unix-time/libghc-unix-time-dev_0.4.8-1_amd64.deb"
+}

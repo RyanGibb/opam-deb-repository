@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspglib-f08-1_2.0.2-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspglib-f08-1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgfortran5" {>= "10"}
+]
+extra-source "libspglib-f08-1_2.0.2-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spglib/libspglib-f08-1_2.0.2-1+b3_amd64.deb"
+}

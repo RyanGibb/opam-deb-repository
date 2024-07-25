@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qgis-server-bin_3.22.16+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qgis-server-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfcgi0ldbl" {>= "2.4.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libqgis-core3-22-16" {>= "3.22.4"}
+  "libqgis-server3-22-16" {>= "3.22.4"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5webkit5" {>= "5.212.0~alpha3"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "12"}
+  "python3-qgis" {= "3.22.16+dfsg-1"}
+  "qgis-providers" {= "3.22.16+dfsg-1"}
+  "qgis-server-common" {= "3.22.16+dfsg-1"}
+]
+extra-source "qgis-server-bin_3.22.16+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qgis/qgis-server-bin_3.22.16+dfsg-1_amd64.deb"
+}

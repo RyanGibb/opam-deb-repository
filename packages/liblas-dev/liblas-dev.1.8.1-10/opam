@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblas-dev_1.8.1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblas-dev"]
+]
+depends: [
+  "libboost-dev"
+  "libboost-filesystem-dev"
+  "libboost-iostreams-dev"
+  "libboost-program-options-dev"
+  "libboost-thread-dev"
+  "libgdal-dev" {>= "1.10.0~"}
+  "libgeotiff-dev"
+  "liblas3" {= "1.8.1-10"}
+  "libtiff-dev"
+]
+extra-source "liblas-dev_1.8.1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblas/liblas-dev_1.8.1-10_amd64.deb"
+}

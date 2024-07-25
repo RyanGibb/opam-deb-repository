@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i upower_0.99.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r upower"]
+]
+depends: [
+  "dbus"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.41.1"}
+  "libgudev-1-0-0" {>= "147"}
+  "libimobiledevice6" {>= "0.9.7"}
+  "libplist3" {>= "1.11"}
+  "libupower-glib3" {>= "0.99.8"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+  "udev"
+]
+extra-source "upower_0.99.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/upower/upower_0.99.10-1_amd64.deb"
+}

@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i partimage-server_0.6.9-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r partimage-server"]
+]
+depends: [
+  "adduser"
+  "libbz2-1-0"
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libnewt0-52" {>= "0.52.21"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libslang2" {>= "2.2.4"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5"}
+  "lsb-base" {>= "3.2-14"}
+  "openssl"
+  "zlib1g" {>= "1-1.2.3.3"}
+]
+conflicts: [
+  "partimage (<< 0.6.0)"
+  "partimage-doc (<= 20020126-6)"
+]
+extra-source "partimage-server_0.6.9-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/partimage/partimage-server_0.6.9-8_amd64.deb"
+}

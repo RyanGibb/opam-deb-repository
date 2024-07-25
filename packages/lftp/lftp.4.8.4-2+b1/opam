@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lftp_4.8.4-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lftp"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc-s1"
+  "libgnutls30" {>= "3.6.6"}
+  "libidn2-0" {>= "2.0.0"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "5"}
+  "libtinfo6" {>= "6"}
+  "netbase"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "lftp_4.8.4-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lftp/lftp_4.8.4-2+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpari-gmp-tls8_2.15.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpari-gmp-tls8"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libpari-gmp-tls8_2.15.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pari/libpari-gmp-tls8_2.15.2-1_amd64.deb"
+}

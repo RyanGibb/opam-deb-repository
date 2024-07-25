@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i open-infrastructure-apache-tools_20170701-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r open-infrastructure-apache-tools"]
+]
+depends: [
+  "apache2-bin"
+  "apache2-bin" {>= "2.4.16"}
+  "apache2-data"
+]
+extra-source "open-infrastructure-apache-tools_20170701-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/open-infrastructure-service-tools/open-infrastructure-apache-tools_20170701-3_all.deb"
+}

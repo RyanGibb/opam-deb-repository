@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdata-walk-perl_2.01-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdata-walk-perl"]
+]
+depends: [
+  "perl-any"
+  ("perl" | "libscalar-list-utils-perl")
+]
+extra-source "libdata-walk-perl_2.01-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdata-walk-perl/libdata-walk-perl_2.01-2_all.deb"
+}

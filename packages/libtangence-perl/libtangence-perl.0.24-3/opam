@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtangence-perl_0.24-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtangence-perl"]
+]
+depends: [
+  "libfuture-perl"
+  "libparser-mgc-perl" {>= "0.04"}
+  "libstruct-dumb-perl"
+  "perl" {>= "5.19.3"}
+]
+extra-source "libtangence-perl_0.24-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtangence-perl/libtangence-perl_0.24-3_all.deb"
+}

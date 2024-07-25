@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tetex-brev_4.24-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tetex-brev"]
+]
+depends: [
+  "tex-common" {>= "6.13"}
+  "texlive-fonts-recommended"
+  "texlive-latex-base"
+  "texlive-latex-recommended"
+  ("texlive-lang-european" | "texlive-latex-base" {< "2013.20130918-1"})
+]
+extra-source "tetex-brev_4.24-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tetex-brev/tetex-brev_4.24-2_all.deb"
+}

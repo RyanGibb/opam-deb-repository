@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i etcd-discovery_2.0.0+git2019.04.19.git.78fb45d3c9-4+b13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r etcd-discovery"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "sysvinit-utils"
+]
+extra-source "etcd-discovery_2.0.0+git2019.04.19.git.78fb45d3c9-4+b13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-coreos-discovery-etcd-io/etcd-discovery_2.0.0+git2019.04.19.git.78fb45d3c9-4+b13_amd64.deb"
+}

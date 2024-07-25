@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxbae4m_4.60.4-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxbae4m"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libx11-6"
+  "libxm4" {>= "2.3.4"}
+  "libxt6"
+]
+conflicts: [
+  "libxbae4"
+]
+extra-source "libxbae4m_4.60.4-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xbae/libxbae4m_4.60.4-9_amd64.deb"
+}

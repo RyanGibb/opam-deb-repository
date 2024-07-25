@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hw-probe_1.6.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hw-probe"]
+]
+depends: [
+  "acpica-tools"
+  "curl"
+  "dmidecode"
+  "hdparm"
+  "hwinfo"
+  "libdigest-sha-perl"
+  "libwww-perl"
+  "lm-sensors"
+  "lsb-release"
+  "mesa-utils"
+  "pciutils"
+  "perl-any"
+  "perl-base" {>= "5"}
+  "smartmontools"
+  "usbutils"
+]
+extra-source "hw-probe_1.6.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hw-probe/hw-probe_1.6.5-1_all.deb"
+}

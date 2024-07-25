@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-oslotest_1:3.6.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-oslotest"]
+]
+depends: [
+  "python3-any"
+  "python3-debtcollector"
+  "python3-fixtures"
+  "python3-mock"
+  "python3-mox3" {>= "0.20.0"}
+  "python3-os-client-config" {>= "1.28.0"}
+  "python3-pbr" {>= "2.0.0"}
+  "python3-six" {>= "1.10.0"}
+  "python3-stestr" {>= "2.0.0"}
+  "python3-subunit"
+  "python3-testtools" {>= "2.2.0"}
+  "subunit"
+]
+extra-source "python3-oslotest_1:3.6.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-oslotest/python3-oslotest_3.6.0-2_all.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jtreg6_6.2+1-3~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jtreg6"]
+]
+depends: [
+  "javahelp2"
+  "libasmtools-java"
+  "libhamcrest-java"
+  "libjcommander-java"
+  "libjtharness-java" {>= "6.0"}
+  "libslf4j-java"
+  "libxalan2-java"
+]
+conflicts: [
+  "jtreg"
+  "jtreg7"
+]
+extra-source "jtreg6_6.2+1-3~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jtreg6/jtreg6_6.2+1-3~deb12u1_all.deb"
+}

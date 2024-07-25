@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-grpc-ecosystem-go-grpc-prometheus-dev_1.2.0+git20191002.6af20e3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-grpc-ecosystem-go-grpc-prometheus-dev"]
+]
+depends: [
+  "golang-github-prometheus-client-golang-dev"
+  "golang-golang-x-net-dev"
+  "golang-google-grpc-dev" {>= "1.3.2~"}
+]
+extra-source "golang-github-grpc-ecosystem-go-grpc-prometheus-dev_1.2.0+git20191002.6af20e3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-grpc-ecosystem-go-grpc-prometheus/golang-github-grpc-ecosystem-go-grpc-prometheus-dev_1.2.0+git20191002.6af20e3-3_all.deb"
+}

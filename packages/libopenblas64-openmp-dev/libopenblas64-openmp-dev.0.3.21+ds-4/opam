@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenblas64-openmp-dev_0.3.21+ds-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenblas64-openmp-dev"]
+]
+depends: [
+  "libopenblas64-0-openmp" {= "0.3.21+ds-4"}
+]
+extra-source "libopenblas64-openmp-dev_0.3.21+ds-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openblas/libopenblas64-openmp-dev_0.3.21+ds-4_amd64.deb"
+}

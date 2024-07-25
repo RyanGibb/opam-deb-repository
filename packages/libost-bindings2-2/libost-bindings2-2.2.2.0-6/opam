@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libost-bindings2.2_2.2.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libost-bindings2.2"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libost-base2-2" {>= "2.2.0"}
+  "libost-geom2-2" {>= "2.2.0"}
+  "libost-mol2-2" {>= "2.2.0"}
+  "libost-seq2-2" {>= "2.2.0"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libost-bindings2.2_2.2.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openstructure/libost-bindings2.2_2.2.0-6_amd64.deb"
+}

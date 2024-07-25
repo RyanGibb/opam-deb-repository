@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debian-keyring_2021.07.26_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debian-keyring"]
+]
+conflicts: [
+  "debian-maintainers"
+]
+extra-source "debian-keyring_2021.07.26_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-keyring/debian-keyring_2021.07.26_all.deb"
+}

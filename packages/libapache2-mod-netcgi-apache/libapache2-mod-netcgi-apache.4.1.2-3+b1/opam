@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-netcgi-apache_4.1.2-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-netcgi-apache"]
+]
+depends: [
+  "apache2-bin"
+  "apache2-bin" {>= "2.4.16"}
+  "libc6" {>= "2.14"}
+  "libocamlnet-ocaml-dev" {= "4.1.2-3+b1"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "libapache2-mod-netcgi-apache_4.1.2-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocamlnet/libapache2-mod-netcgi-apache_4.1.2-3+b1_amd64.deb"
+}

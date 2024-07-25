@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaprutil1-dbg_1.6.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaprutil1-dbg"]
+]
+depends: [
+  "libaprutil1" {= "1.6.1-4"}
+]
+extra-source "libaprutil1-dbg_1.6.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apr-util/libaprutil1-dbg_1.6.1-4_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i docbook2x_0.8.8-17+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r docbook2x"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libtext-wrapi18n-perl"
+  "libxml-sax-expat-perl"
+  "opensp"
+  "perl-any"
+  "texinfo"
+  "xml-core" {>= "0.14"}
+  "xsltproc"
+]
+extra-source "docbook2x_0.8.8-17+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/docbook2x/docbook2x_0.8.8-17+b1_amd64.deb"
+}

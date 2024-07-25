@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-master-passenger_5.5.22-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-master-passenger"]
+]
+depends: [
+  "apache2"
+  "libapache2-mod-passenger"
+  "lsb-base"
+  "puppet" {= "5.5.22-2"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "puppet-master-passenger_5.5.22-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet/puppet-master-passenger_5.5.22-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i abi-dumper_1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r abi-dumper"]
+]
+depends: [
+  "elfutils"
+  "perl-any"
+  "vtable-dumper" {>= "1.0"}
+]
+extra-source "abi-dumper_1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/abi-dumper/abi-dumper_1.1-1_all.deb"
+}

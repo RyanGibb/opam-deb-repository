@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i inputattach_1:1.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r inputattach"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libsystemd0"
+]
+extra-source "inputattach_1:1.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/joystick/inputattach_1.7.1-1_amd64.deb"
+}

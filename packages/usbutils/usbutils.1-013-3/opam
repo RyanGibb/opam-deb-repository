@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i usbutils_1:013-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r usbutils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libudev1" {>= "196"}
+  "libusb-1-0-0" {>= "2-1.0.22"}
+]
+extra-source "usbutils_1:013-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/usbutils/usbutils_013-3_amd64.deb"
+}

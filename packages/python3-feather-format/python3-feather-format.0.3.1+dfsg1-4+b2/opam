@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-feather-format_0.3.1+dfsg1-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-feather-format"]
+]
+depends: [
+  "cython3"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  "python3-pandas"
+  "python3-six"
+]
+extra-source "python3-feather-format_0.3.1+dfsg1-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-feather-format/python3-feather-format_0.3.1+dfsg1-4+b2_amd64.deb"
+}

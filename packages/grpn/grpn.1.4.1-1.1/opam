@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i grpn_1.4.1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r grpn"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.8.0"}
+  "libpango-1-0-0" {>= "1.18.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+]
+extra-source "grpn_1.4.1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grpn/grpn_1.4.1-1.1_amd64.deb"
+}

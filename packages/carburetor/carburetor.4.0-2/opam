@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i carburetor_4.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r carburetor"]
+]
+depends: [
+  "gir1-2-adw-1" {>= "1.2"}
+  "gir1-2-gtk-4-0" {>= "4.8"}
+  "python3-any"
+  "tractor" {>= "4.0"}
+]
+extra-source "carburetor_4.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/carburetor/carburetor_4.0-2_all.deb"
+}

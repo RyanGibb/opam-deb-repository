@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpgf7_7.21.7+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpgf7"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libpgf7_7.21.7+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpgf/libpgf7_7.21.7+ds-2_amd64.deb"
+}

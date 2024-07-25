@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-profitbricks_4.1.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-profitbricks"]
+]
+depends: [
+  "python3-any"
+  "python3-requests"
+  "python3-six" {>= "1.10.0"}
+]
+extra-source "python3-profitbricks_4.1.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/profitbricks-sdk-python/python3-profitbricks_4.1.3-3_all.deb"
+}

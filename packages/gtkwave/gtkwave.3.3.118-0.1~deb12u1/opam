@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtkwave_3.3.118-0.1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtkwave"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.10.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.49.3"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libjudydebian1"
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libstdc++6" {>= "11"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libtk8-6" {>= "8.6.0"}
+  "zlib1g" {>= "1-1.2.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gtkwave_3.3.118-0.1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtkwave/gtkwave_3.3.118-0.1~deb12u1_amd64.deb"
+}

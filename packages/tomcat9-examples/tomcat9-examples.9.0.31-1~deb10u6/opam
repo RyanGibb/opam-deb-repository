@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tomcat9-examples_9.0.31-1~deb10u6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tomcat9-examples"]
+]
+depends: [
+  "libtaglibs-standard-impl-java"
+  "libtaglibs-standard-spec-java"
+  "tomcat9-common" {>= "9.0.31-1~deb10u6"}
+]
+extra-source "tomcat9-examples_9.0.31-1~deb10u6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tomcat9/tomcat9-examples_9.0.31-1~deb10u6_all.deb"
+}

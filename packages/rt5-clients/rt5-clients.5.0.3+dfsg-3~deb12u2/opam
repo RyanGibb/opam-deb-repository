@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rt5-clients_5.0.3+dfsg-3~deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rt5-clients"]
+]
+depends: [
+  "libterm-readkey-perl"
+  "libwww-perl"
+  "perl-any"
+  ("default-mta" | "mail-transport-agent")
+  ("libterm-readline-perl-perl" | "libterm-readline-gnu-perl")
+]
+extra-source "rt5-clients_5.0.3+dfsg-3~deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/request-tracker5/rt5-clients_5.0.3+dfsg-3~deb12u2_all.deb"
+}

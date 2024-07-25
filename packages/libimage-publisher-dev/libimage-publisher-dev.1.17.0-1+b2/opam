@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libimage-publisher-dev_1.17.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libimage-publisher-dev"]
+]
+depends: [
+  "libcamera-info-manager-dev"
+  "libcv-bridge-dev" {>= "1.15.0+ds-8~"}
+  "libdynamic-reconfigure-config-init-mutex-dev"
+  "libimage-publisher0d" {= "1.17.0-1+b2"}
+  "libimage-transport-dev"
+  "libnodelet-dev"
+  "libsensor-msgs-dev"
+]
+extra-source "libimage-publisher-dev_1.17.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-image-pipeline/libimage-publisher-dev_1.17.0-1+b2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mecat2_0.0+git20200428.f54c542+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mecat2"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "6"}
+  "perl-any"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "mecat2_0.0+git20200428.f54c542+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mecat2/mecat2_0.0+git20200428.f54c542+ds-3_amd64.deb"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i trove-tempest-plugin_1.5.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r trove-tempest-plugin"]
+]
+depends: [
+  "python3-any"
+  "python3-oslo-config"
+  "python3-oslo-log"
+  "python3-oslo-serialization"
+  "python3-oslo-service"
+  "python3-oslotest"
+  "python3-pbr"
+  "python3-pymysql"
+  "python3-requests"
+  "python3-six" {>= "1.10.0"}
+  "python3-sqlalchemy"
+  "python3-swiftclient"
+  "python3-tempest"
+  "python3-tenacity"
+  "tempest"
+]
+extra-source "trove-tempest-plugin_1.5.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trove-tempest-plugin/trove-tempest-plugin_1.5.0-2_all.deb"
+}

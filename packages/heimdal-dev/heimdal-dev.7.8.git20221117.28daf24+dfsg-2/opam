@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i heimdal-dev_7.8.git20221117.28daf24+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r heimdal-dev"]
+]
+depends: [
+  "heimdal-multidev" {= "7.8.git20221117.28daf24+dfsg-2"}
+]
+conflicts: [
+  "libkrb5-dev"
+]
+extra-source "heimdal-dev_7.8.git20221117.28daf24+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heimdal/heimdal-dev_7.8.git20221117.28daf24+dfsg-2_amd64.deb"
+}

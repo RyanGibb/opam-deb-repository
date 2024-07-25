@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mpg123-el_1:1.58-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mpg123-el"]
+]
+depends: [
+  "aumix"
+  "emacsen-common" {>= "1.4.14"}
+  ("emacs" | "emacsen")
+  ("mpg123" | "mpg321" | "vorbis-tools")
+]
+extra-source "mpg123-el_1:1.58-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpg123-el/mpg123-el_1.58-1_all.deb"
+}

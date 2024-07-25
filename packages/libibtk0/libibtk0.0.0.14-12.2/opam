@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libibtk0_0.0.14-12.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libibtk0"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+]
+extra-source "libibtk0_0.0.14-12.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libibtk/libibtk0_0.0.14-12.2_amd64.deb"
+}

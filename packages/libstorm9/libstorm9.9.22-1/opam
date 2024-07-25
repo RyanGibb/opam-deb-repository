@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstorm9_9.22-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstorm9"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "4.1.1"}
+  "libtomcrypt1"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libstorm9_9.22-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stormlib/libstorm9_9.22-1_amd64.deb"
+}

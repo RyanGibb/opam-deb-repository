@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-fsouza-go-dockerclient-dev_1.6.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-fsouza-go-dockerclient-dev"]
+]
+depends: [
+  "golang-github-docker-docker-dev" {>= "17.12.1~"}
+  "golang-github-docker-go-units-dev"
+  "golang-github-gorilla-context-dev"
+  "golang-github-gorilla-mux-dev"
+  "golang-github-sirupsen-logrus-dev"
+  "golang-github-stretchr-testify-dev"
+  "golang-golang-x-net-dev"
+  "golang-golang-x-sys-dev"
+]
+extra-source "golang-github-fsouza-go-dockerclient-dev_1.6.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-fsouza-go-dockerclient/golang-github-fsouza-go-dockerclient-dev_1.6.6-1_all.deb"
+}

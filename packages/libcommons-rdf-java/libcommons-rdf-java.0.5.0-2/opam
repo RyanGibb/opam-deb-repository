@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcommons-rdf-java_0.5.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcommons-rdf-java"]
+]
+depends: [
+  "libcommons-parent-java" {>= "43"}
+  "libjsonld-java" {>= "0.13.3"}
+]
+extra-source "libcommons-rdf-java_0.5.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apache-commons-rdf/libcommons-rdf-java_0.5.0-2_all.deb"
+}

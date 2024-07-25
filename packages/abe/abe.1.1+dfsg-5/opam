@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i abe_1.1+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r abe"]
+]
+depends: [
+  "abe-data" {= "1.1+dfsg-5"}
+  "libc6" {>= "2.34"}
+  "libsdl-mixer1-2" {>= "1.2.12"}
+  "libsdl1-2-compat-shim"
+]
+extra-source "abe_1.1+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/abe/abe_1.1+dfsg-5_amd64.deb"
+}

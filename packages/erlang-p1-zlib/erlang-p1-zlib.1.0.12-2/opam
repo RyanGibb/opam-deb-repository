@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-p1-zlib_1.0.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-p1-zlib"]
+]
+depends: [
+  "erlang-base"
+  "erlang-base" {>= "1-25.2.2+dfsg"}
+  "erlang-p1-utils" {>= "1.0.25"}
+  "libc6" {>= "2.4"}
+]
+extra-source "erlang-p1-zlib_1.0.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/erlang-p1-zlib/erlang-p1-zlib_1.0.12-2_amd64.deb"
+}

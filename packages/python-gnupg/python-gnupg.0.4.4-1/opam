@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-gnupg_0.4.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-gnupg"]
+]
+depends: [
+  "gnupg"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-gnupg_0.4.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-gnupg/python-gnupg_0.4.4-1_all.deb"
+}

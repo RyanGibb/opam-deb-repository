@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-dygraphs_1.1.1.6+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-dygraphs"]
+]
+depends: [
+  "libjs-jquery"
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+  "r-cran-htmltools" {>= "0.3.5"}
+  "r-cran-htmlwidgets" {>= "0.6"}
+  "r-cran-magrittr"
+  "r-cran-xts" {>= "0.9-7"}
+  "r-cran-zoo" {>= "1.7-10"}
+]
+extra-source "r-cran-dygraphs_1.1.1.6+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-dygraphs/r-cran-dygraphs_1.1.1.6+dfsg-1_all.deb"
+}

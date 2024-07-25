@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-del_3.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-del"]
+]
+depends: [
+  "node-globby" {>= "6.1.0"}
+  "node-is-path-cwd" {>= "1.0.0"}
+  "node-is-path-in-cwd" {>= "1.0.0"}
+  "node-p-map" {>= "1.1.1"}
+  "node-pify" {>= "3.0.0"}
+  "node-rimraf" {>= "2.2.8"}
+  "nodejs"
+]
+extra-source "node-del_3.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-del/node-del_3.0.0-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dropbear-initramfs_2020.81-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dropbear-initramfs"]
+]
+depends: [
+  "dropbear-bin" {>= "2020.81-3+deb11u1"}
+  "initramfs-tools" {>= "0.94"}
+  "udev"
+  ("busybox" | "busybox-static")
+]
+extra-source "dropbear-initramfs_2020.81-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dropbear/dropbear-initramfs_2020.81-3+deb11u1_all.deb"
+}

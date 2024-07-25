@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlrpc3-client-java_3.1.3-9+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlrpc3-client-java"]
+]
+depends: [
+  "libcommons-httpclient-java"
+  "libxmlrpc3-common-java" {= "3.1.3-9+deb10u1"}
+]
+extra-source "libxmlrpc3-client-java_3.1.3-9+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxmlrpc3-java/libxmlrpc3-client-java_3.1.3-9+deb10u1_all.deb"
+}

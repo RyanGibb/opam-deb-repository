@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dtc-xen_0.5.17-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dtc-xen"]
+]
+depends: [
+  "adduser"
+  "apache2-utils"
+  "debconf"
+  "debootstrap"
+  "e2fsprogs"
+  "ipcalc"
+  "lsb-base"
+  "lvm2"
+  "makedev"
+  "net-tools"
+  "openssh-server"
+  "openssl"
+  "python-any" {>= "2.7.5-5~"}
+  "python-crypto"
+  "python-m2crypto"
+  "python-soappy"
+  "python-sqlite"
+  "rrdtool"
+  "sudo"
+  "sysstat"
+  "yum"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "dtc-xen_0.5.17-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dtc-xen/dtc-xen_0.5.17-1.2_all.deb"
+}

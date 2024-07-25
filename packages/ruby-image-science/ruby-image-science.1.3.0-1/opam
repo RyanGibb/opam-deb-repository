@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-image-science_1.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-image-science"]
+]
+depends: [
+  "libfreeimage-dev"
+  "ruby-inline"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-image-science_1.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-image-science/ruby-image-science_1.3.0-1_all.deb"
+}

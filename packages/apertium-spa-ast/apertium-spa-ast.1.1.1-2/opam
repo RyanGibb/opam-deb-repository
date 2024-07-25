@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-spa-ast_1.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-spa-ast"]
+]
+depends: [
+  "apertium" {>= "3.8.1"}
+]
+conflicts: [
+  "apertium-ast-spa"
+  "apertium-spa-ast"
+]
+extra-source "apertium-spa-ast_1.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-spa-ast/apertium-spa-ast_1.1.1-2_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lighttpd-modules-mysql_1.4.53-4+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lighttpd-modules-mysql"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgnutls30" {>= "3.6.5"}
+  "libmariadb3" {>= "3.0.0"}
+  "lighttpd" {= "1.4.53-4+deb10u2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "lighttpd-modules-mysql_1.4.53-4+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lighttpd/lighttpd-modules-mysql_1.4.53-4+deb10u2_amd64.deb"
+}

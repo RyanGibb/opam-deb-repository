@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yorick-mpeg_0.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yorick-mpeg"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "yorick" {>= "1.6.02"}
+]
+extra-source "yorick-mpeg_0.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yorick-mpeg/yorick-mpeg_0.1-4_amd64.deb"
+}

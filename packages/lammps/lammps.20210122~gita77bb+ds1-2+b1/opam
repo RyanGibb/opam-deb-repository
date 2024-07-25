@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lammps_20210122~gita77bb+ds1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lammps"]
+]
+depends: [
+  "lammps-data"
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "liblammps0" {>= "20210122~gita77bb+ds1"}
+  "libopenmpi3" {>= "4.1.0"}
+  "libstdc++6" {>= "4.9"}
+  "mpi-default-bin"
+]
+extra-source "lammps_20210122~gita77bb+ds1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lammps/lammps_20210122~gita77bb+ds1-2+b1_amd64.deb"
+}

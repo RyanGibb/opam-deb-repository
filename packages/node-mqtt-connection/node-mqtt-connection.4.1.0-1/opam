@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-mqtt-connection_4.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-mqtt-connection"]
+]
+depends: [
+  "node-duplexify" {>= "3.5.1"}
+  "node-inherits"
+  "node-mqtt-packet" {>= "6.0.0"}
+  "node-safe-buffer" {>= "5.1.1"}
+  "node-through2"
+  "nodejs" {>= "6"}
+]
+extra-source "node-mqtt-connection_4.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-mqtt-connection/node-mqtt-connection_4.1.0-1_all.deb"
+}

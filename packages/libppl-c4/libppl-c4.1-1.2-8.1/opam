@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libppl-c4_1:1.2-8.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libppl-c4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgmp10"
+  "libgmpxx4ldbl"
+  "libppl14" {= "1-1.2-8.1"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libppl-c4_1:1.2-8.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/ppl/libppl-c4_1.2-8.1_amd64.deb"
+}

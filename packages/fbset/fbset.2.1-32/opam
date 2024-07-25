@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fbset_2.1-32_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fbset"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  ("udev" | "makedev" {>= "2.3.1-24"})
+]
+extra-source "fbset_2.1-32_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fbset/fbset_2.1-32_amd64.deb"
+}

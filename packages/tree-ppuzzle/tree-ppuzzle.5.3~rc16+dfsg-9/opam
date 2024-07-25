@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tree-ppuzzle_5.3~rc16+dfsg-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tree-ppuzzle"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libopenmpi3" {>= "4.1.2"}
+  "libsprng2"
+  "openmpi-bin"
+]
+extra-source "tree-ppuzzle_5.3~rc16+dfsg-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tree-puzzle/tree-ppuzzle_5.3~rc16+dfsg-9_amd64.deb"
+}

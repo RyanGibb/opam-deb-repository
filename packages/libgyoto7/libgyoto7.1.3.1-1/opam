@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgyoto7_1.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgyoto7"]
+]
+depends: [
+  "libboost-mpi1-67-0"
+  "libboost-serialization1-67-0"
+  "libc6" {>= "2.14"}
+  "libcfitsio7" {>= "3.450~"}
+  "libcpgplot0"
+  "libfftw3-double3" {>= "3.3.5"}
+  "libflint-arb2"
+  "libgcc1" {>= "1-3.0"}
+  "libgfortran5" {>= "8"}
+  "libgsl23" {>= "2.5"}
+  "libgslcblas0" {>= "2.4"}
+  "liblorene-debian1"
+  "libpgplot0"
+  "libstdc++6" {>= "5.2"}
+  "libudunits2-0" {>= "2.2.14"}
+  "libx11-6"
+  "libxerces-c3-2"
+  "python-numpy"
+  "python-numpy" {>= "1-1.16.0~rc1"}
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libgyoto7_1.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gyoto/libgyoto7_1.3.1-1_amd64.deb"
+}

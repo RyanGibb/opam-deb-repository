@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pywps-wsgi_4.5.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pywps-wsgi"]
+]
+depends: [
+  ("libapache2-mod-wsgi-py3" | "httpd-wsgi")
+]
+extra-source "pywps-wsgi_4.5.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pywps/pywps-wsgi_4.5.2-2_all.deb"
+}

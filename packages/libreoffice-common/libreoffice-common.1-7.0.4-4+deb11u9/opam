@@ -1,0 +1,43 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-common_1:7.0.4-4+deb11u9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-common"]
+]
+depends: [
+  "libnumbertext-data"
+  "libreoffice-style-colibre"
+  "ucf" {>= "0.8"}
+  "ure"
+]
+conflicts: [
+  "broffice"
+  "libreoffice-base (<< 1:7.0.0~alpha~)"
+  "libreoffice-base-nogui (<< 1:7.0.0~alpha~)"
+  "libreoffice-calc (<< 1:7.0.0~alpha~)"
+  "libreoffice-calc-nogui (<< 1:7.0.0~alpha~)"
+  "libreoffice-draw (<< 1:7.0.0~alpha~)"
+  "libreoffice-draw-nogui (<< 1:7.0.0~alpha~)"
+  "libreoffice-evolution (<< 1:7.0.0~alpha~)"
+  "libreoffice-filter-mobiledev"
+  "libreoffice-gnome (<< 1:7.0.0~alpha~)"
+  "libreoffice-impress (<< 1:7.0.0~alpha~)"
+  "libreoffice-impress-nogui (<< 1:7.0.0~alpha~)"
+  "libreoffice-l10n (<< 7.0)"
+  "libreoffice-l10n-4.3"
+  "libreoffice-l10n-4.4"
+  "libreoffice-librelogo (<< 1:7.0.0~alpha~)"
+  "libreoffice-math (<< 1:7.0.0~alpha~)"
+  "libreoffice-math-nogui (<< 1:7.0.0~alpha~)"
+  "libreoffice-report-builder (<< 1:7.0.0~alpha~)"
+  "libreoffice-sdbc-postgresql (<< 1:7.0.0~alpha~)"
+  "libreoffice-wiki-publisher (<< 1.2.0+LibO5.4.0~rc2)"
+  "libreoffice-writer (<< 1:7.0.0~alpha~)"
+  "libreoffice-writer-nogui (<< 1:7.0.0~alpha~)"
+  "openoffice.org-unbundled"
+  "python3-uno (<< 1:7.0.0~alpha~)"
+]
+extra-source "libreoffice-common_1:7.0.4-4+deb11u9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-common_7.0.4-4+deb11u9_all.deb"
+}

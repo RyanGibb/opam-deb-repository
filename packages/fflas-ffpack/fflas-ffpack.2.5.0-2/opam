@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fflas-ffpack_2.5.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fflas-ffpack"]
+]
+depends: [
+  "fflas-ffpack-common" {= "2.5.0-2"}
+  "libgivaro-dev" {>= "4.1.2~"}
+]
+extra-source "fflas-ffpack_2.5.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fflas-ffpack/fflas-ffpack_2.5.0-2_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-nyholm-psr7_1.3.2-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-nyholm-psr7"]
+]
+depends: [
+  "php-common"
+  "php-http-message-factory" {< "2~~"}
+  "php-http-message-factory" {>= "1.0"}
+  "php-psr-http-factory" {< "2~~"}
+  "php-psr-http-factory" {>= "1.0"}
+  "php-psr-http-message" {< "2~~"}
+  "php-psr-http-message" {>= "1.0"}
+]
+extra-source "php-nyholm-psr7_1.3.2-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-nyholm-psr7/php-nyholm-psr7_1.3.2-2+deb11u1_all.deb"
+}

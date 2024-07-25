@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i statserial_1.1-23+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r statserial"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "statserial_1.1-23+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/statserial/statserial_1.1-23+b1_amd64.deb"
+}

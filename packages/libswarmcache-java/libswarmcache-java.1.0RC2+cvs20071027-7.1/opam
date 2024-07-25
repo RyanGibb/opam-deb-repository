@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libswarmcache-java_1.0RC2+cvs20071027-7.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libswarmcache-java"]
+]
+depends: [
+  "libcommons-collections3-java"
+  "libcommons-logging-java"
+  "libjgroups-java" {>= "2.12.2.Final"}
+]
+extra-source "libswarmcache-java_1.0RC2+cvs20071027-7.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libswarmcache-java/libswarmcache-java_1.0RC2+cvs20071027-7.1_all.deb"
+}

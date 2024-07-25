@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ecl_21.2.1+ds-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ecl"]
+]
+depends: [
+  "gcc"
+  "libatomic-ops-dev"
+  "libc6" {>= "2.2.5"}
+  "libecl-dev" {= "21.2.1+ds-4"}
+  "libecl21-2" {= "21.2.1+ds-4"}
+  "libffi-dev"
+  "libgc-dev"
+  "libgmp-dev"
+  "libncurses5-dev"
+]
+extra-source "ecl_21.2.1+ds-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ecl/ecl_21.2.1+ds-4_amd64.deb"
+}

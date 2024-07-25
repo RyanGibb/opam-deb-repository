@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fabio-viewer_0.8.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fabio-viewer"]
+]
+depends: [
+  "python3-any"
+  "python3-fabio" {>= "0.8.0+dfsg-1"}
+  "python3-numpy"
+]
+extra-source "fabio-viewer_0.8.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-fabio/fabio-viewer_0.8.0+dfsg-1_all.deb"
+}

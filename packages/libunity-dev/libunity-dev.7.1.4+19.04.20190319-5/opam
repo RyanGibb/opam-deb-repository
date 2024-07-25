@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libunity-dev_7.1.4+19.04.20190319-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libunity-dev"]
+]
+depends: [
+  "gir1-2-unity-7-0" {= "7.1.4+19.04.20190319-5"}
+  "libdbusmenu-glib-dev"
+  "libdee-dev"
+  "libglib2-0-dev"
+  "libunity-protocol-private0" {= "7.1.4+19.04.20190319-5"}
+  "libunity9" {= "7.1.4+19.04.20190319-5"}
+]
+extra-source "libunity-dev_7.1.4+19.04.20190319-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libunity/libunity-dev_7.1.4+19.04.20190319-5_amd64.deb"
+}

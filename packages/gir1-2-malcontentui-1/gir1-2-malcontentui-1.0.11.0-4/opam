@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-malcontentui-1_0.11.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-malcontentui-1"]
+]
+depends: [
+  "gir1-2-accountsservice-1-0"
+  "gir1-2-adw-1"
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-4-0"
+  "gir1-2-malcontent-0" {= "0.11.0-4"}
+  "libmalcontent-ui-1-1" {>= "0.11.0"}
+]
+extra-source "gir1.2-malcontentui-1_0.11.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/malcontent/gir1.2-malcontentui-1_0.11.0-4_amd64.deb"
+}

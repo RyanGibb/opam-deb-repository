@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i connman-vpn_1.41-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r connman-vpn"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libgnutls30" {>= "3.7.5"}
+  "libmnl0" {>= "1.0.3-4~"}
+  "libopenconnect5" {>= "8.01"}
+]
+extra-source "connman-vpn_1.41-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/connman/connman-vpn_1.41-3_amd64.deb"
+}

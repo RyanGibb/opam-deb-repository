@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgcc1_1:8.3.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgcc1"]
+]
+depends: [
+  "gcc-8-base" {= "8.3.0-6"}
+  "libc6" {>= "2.14"}
+]
+extra-source "libgcc1_1:8.3.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8/libgcc1_8.3.0-6_amd64.deb"
+}

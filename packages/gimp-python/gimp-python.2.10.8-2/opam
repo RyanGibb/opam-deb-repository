@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gimp-python_2.10.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gimp-python"]
+]
+depends: [
+  "libbabl-0-1-0" {>= "0.1.10"}
+  "libc6" {>= "2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.30.8"}
+  "libgegl-0-4-0" {>= "0.4.12"}
+  "libgimp2-0" {>= "2.10.6"}
+  "libglib2-0-0" {>= "2.54.2"}
+  "libgtk2-0-0" {>= "2.24.10"}
+  "python-any"
+  "python-gtk2" {>= "2.8.0"}
+  "python2-7"
+]
+extra-source "gimp-python_2.10.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gimp/gimp-python_2.10.8-2_amd64.deb"
+}

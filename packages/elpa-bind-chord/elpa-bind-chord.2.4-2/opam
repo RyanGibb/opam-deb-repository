@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-bind-chord_2.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-bind-chord"]
+]
+depends: [
+  "elpa-bind-key" {>= "1.0"}
+  "elpa-key-chord" {>= "0.6"}
+  "emacsen-common"
+]
+extra-source "elpa-bind-chord_2.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/use-package/elpa-bind-chord_2.4-2_all.deb"
+}

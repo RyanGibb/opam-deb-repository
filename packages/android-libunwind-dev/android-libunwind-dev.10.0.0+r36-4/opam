@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-libunwind-dev_10.0.0+r36-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-libunwind-dev"]
+]
+depends: [
+  "android-libunwind" {= "10.0.0+r36-4"}
+  "libbsd-dev"
+]
+extra-source "android-libunwind-dev_10.0.0+r36-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-external-libunwind/android-libunwind-dev_10.0.0+r36-4_amd64.deb"
+}

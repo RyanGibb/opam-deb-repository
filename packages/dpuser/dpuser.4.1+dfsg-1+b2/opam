@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpuser_4.1+dfsg-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpuser"]
+]
+depends: [
+  "g++"
+  "libc6" {>= "2.34"}
+  "libc6-dev"
+  "libcpgplot0" {>= "1.3.2"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libgsl27" {>= "2.7.1"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "11"}
+  "libxpa1" {>= "2.1.14"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "dpuser_4.1+dfsg-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpuser/dpuser_4.1+dfsg-1+b2_amd64.deb"
+}

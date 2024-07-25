@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libucx0_1.10.1~rc1+really.1.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libucx0"]
+]
+depends: [
+  "ibverbs-providers" {>= "25"}
+  "libc6" {>= "2.29"}
+  "libibverbs1" {>= "28"}
+  "libnuma1" {>= "2.0.11"}
+  "librdmacm1" {>= "23"}
+]
+extra-source "libucx0_1.10.1~rc1+really.1.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ucx/libucx0_1.10.1~rc1+really.1.10.0-1_amd64.deb"
+}

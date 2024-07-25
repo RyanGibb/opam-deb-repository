@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libflext-pd0_0.6.0+git20161101.1.01318a94-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libflext-pd0"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-3.0"}
+  "libsndobj2v5"
+  "libstdc++6" {>= "5"}
+  "libstk-4-5-0"
+  "puredata-core"
+]
+extra-source "libflext-pd0_0.6.0+git20161101.1.01318a94-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pd-flext/libflext-pd0_0.6.0+git20161101.1.01318a94-3_amd64.deb"
+}

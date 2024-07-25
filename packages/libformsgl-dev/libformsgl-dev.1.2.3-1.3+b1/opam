@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libformsgl-dev_1.2.3-1.3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libformsgl-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libforms2" {= "1.2.3-1.3+b1"}
+  "libformsgl2" {= "1.2.3-1.3+b1"}
+  "libxpm-dev"
+]
+conflicts: [
+  "libforms-dev (<< 1.0-4)"
+]
+extra-source "libformsgl-dev_1.2.3-1.3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libforms/libformsgl-dev_1.2.3-1.3+b1_amd64.deb"
+}

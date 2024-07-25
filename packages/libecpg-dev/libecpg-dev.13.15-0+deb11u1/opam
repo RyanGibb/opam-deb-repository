@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libecpg-dev_13.15-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libecpg-dev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libecpg-compat3" {= "13.15-0+deb11u1"}
+  "libecpg6" {= "13.15-0+deb11u1"}
+  "libpgtypes3" {= "13.15-0+deb11u1"}
+  "libpq-dev"
+]
+extra-source "libecpg-dev_13.15-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-13/libecpg-dev_13.15-0+deb11u1_amd64.deb"
+}

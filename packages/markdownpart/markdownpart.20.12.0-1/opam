@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i markdownpart_20.12.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r markdownpart"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libkf5configwidgets5" {>= "5.23.0"}
+  "libkf5coreaddons5" {>= "4.100.0"}
+  "libkf5i18n5" {>= "5.66.0~"}
+  "libkf5kiocore5" {>= "5.69.0"}
+  "libkf5parts5" {>= "5.66.0~"}
+  "libkf5xmlgui5" {>= "4.96.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.14.0~"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "markdownpart_20.12.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/markdownpart/markdownpart_20.12.0-1_amd64.deb"
+}

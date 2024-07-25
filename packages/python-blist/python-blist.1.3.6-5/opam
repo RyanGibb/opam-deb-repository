@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-blist_1.3.6-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-blist"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+]
+extra-source "python-blist_1.3.6-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/blist/python-blist_1.3.6-5_amd64.deb"
+}

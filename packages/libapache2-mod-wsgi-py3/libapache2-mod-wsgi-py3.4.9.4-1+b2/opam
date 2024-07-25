@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-wsgi-py3_4.9.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-wsgi-py3"]
+]
+depends: [
+  "apache2-bin"
+  "apache2-bin" {>= "2.4.16"}
+  "libc6" {>= "2.34"}
+  "libpython3-11" {>= "3.11.0"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11"}
+]
+conflicts: [
+  "libapache2-mod-wsgi"
+]
+extra-source "libapache2-mod-wsgi-py3_4.9.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mod-wsgi/libapache2-mod-wsgi-py3_4.9.4-1+b2_amd64.deb"
+}

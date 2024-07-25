@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i embassy-domainatrix_0.1.660-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r embassy-domainatrix"]
+]
+depends: [
+  "emboss-lib" {< "6.6.1~"}
+  "emboss-lib" {>= "6.6.0-1~"}
+  "libc6" {>= "2.4"}
+  "libx11-6"
+]
+extra-source "embassy-domainatrix_0.1.660-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/embassy-domainatrix/embassy-domainatrix_0.1.660-3_amd64.deb"
+}

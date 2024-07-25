@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i oddjob_0.34.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r oddjob"]
+]
+depends: [
+  "dbus"
+  "libc6" {>= "2.27"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libselinux1" {>= "1.32"}
+  "libxml2" {>= "2.7.4"}
+  "systemd"
+]
+extra-source "oddjob_0.34.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oddjob/oddjob_0.34.4-1_amd64.deb"
+}

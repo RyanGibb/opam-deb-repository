@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsss-certmap0_2.4.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsss-certmap0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl1-1" {>= "1.1.0"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "libsss-certmap0_2.4.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sssd/libsss-certmap0_2.4.1-2_amd64.deb"
+}

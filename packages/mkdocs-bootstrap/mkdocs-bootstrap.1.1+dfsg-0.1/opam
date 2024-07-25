@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mkdocs-bootstrap_1.1+dfsg-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mkdocs-bootstrap"]
+]
+depends: [
+  "libjs-bootstrap4"
+  "mkdocs" {>= "1.1"}
+  "python3-any"
+  "python3-pkg-resources"
+]
+extra-source "mkdocs-bootstrap_1.1+dfsg-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mkdocs-bootstrap/mkdocs-bootstrap_1.1+dfsg-0.1_all.deb"
+}

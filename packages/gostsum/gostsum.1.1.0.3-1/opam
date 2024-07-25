@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gostsum_1.1.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gostsum"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "gostsum_1.1.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libengine-gost-openssl1.1/gostsum_1.1.0.3-1_amd64.deb"
+}

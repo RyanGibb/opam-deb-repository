@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-auth-openid_0.8-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-auth-openid"]
+]
+depends: [
+  "apache2-bin"
+  "libapr1" {>= "1.2.7"}
+  "libaprutil1" {>= "1.2.7+dfsg"}
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc-s1"
+  "libopkele3v5"
+  "libpcre3"
+  "libsqlite3-0" {>= "3.5.9"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtidy5deb1" {>= "1-5.2.0"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "libapache2-mod-auth-openid_0.8-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapache2-mod-auth-openid/libapache2-mod-auth-openid_0.8-5_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-prim-uniq-dev_0.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-prim-uniq-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-dependent-sum-dev"
+  "libghc-primitive-dev"
+  "libgmp10"
+]
+extra-source "libghc-prim-uniq-dev_0.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-prim-uniq/libghc-prim-uniq-dev_0.2-1+b2_amd64.deb"
+}

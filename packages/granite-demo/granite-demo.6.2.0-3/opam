@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i granite-demo_6.2.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r granite-demo"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgee-0-8-2" {>= "0.8.3"}
+  "libglib2-0-0" {>= "2.43.92"}
+  "libgranite6" {= "6.2.0-3"}
+  "libgtk-3-0" {>= "3.16.2"}
+]
+extra-source "granite-demo_6.2.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/granite/granite-demo_6.2.0-3_amd64.deb"
+}

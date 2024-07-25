@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-software-plugin-snap_3.38.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-software-plugin-snap"]
+]
+depends: [
+  "gnome-software" {= "3.38.1-1"}
+  "libappstream-glib8" {>= "0.7.14"}
+  "libc6" {>= "2.29"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.56.0"}
+  "libgtk-3-0" {>= "3.22.4"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libpolkit-gobject-1-0" {>= "0.99"}
+  "libsnapd-glib1" {>= "1.50"}
+  "libsoup2-4-1" {>= "2.52.0"}
+  "snapd"
+]
+extra-source "gnome-software-plugin-snap_3.38.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-software/gnome-software-plugin-snap_3.38.1-1_amd64.deb"
+}

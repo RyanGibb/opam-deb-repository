@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-github-linguist_7.22.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-github-linguist"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.2"}
+  "ruby-charlock-holmes" {>= "0.7.7~"}
+  "ruby-escape-utils"
+  "ruby-mini-mime"
+  "ruby-rugged"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-github-linguist_7.22.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-github-linguist/ruby-github-linguist_7.22.1-1+b2_amd64.deb"
+}

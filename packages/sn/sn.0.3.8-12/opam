@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sn_0.3.8-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sn"]
+]
+depends: [
+  "ed"
+  "libc6" {>= "2.14"}
+  "netbase"
+  "psmisc"
+  "tcpd"
+  "zlib1g" {>= "1-1.1.4"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("default-mta" | "mail-transport-agent")
+  ("heirloom-mailx" | "mailx")
+  ("openbsd-inetd" | "inet-superserver")
+]
+conflicts: [
+  "news-transport-system"
+]
+extra-source "sn_0.3.8-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sn/sn_0.3.8-12_amd64.deb"
+}

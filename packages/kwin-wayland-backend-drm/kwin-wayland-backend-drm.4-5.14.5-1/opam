@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kwin-wayland-backend-drm_4:5.14.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kwin-wayland-backend-drm"]
+]
+depends: [
+  "kwin-common"
+  "libc6" {>= "2.14"}
+  "libdrm2" {>= "2.4.62"}
+  "libepoxy0" {>= "1.0"}
+  "libgbm1" {>= "10.2~0"}
+  "libkf5configcore5" {>= "4.97.0"}
+  "libkf5coreaddons5" {>= "5.20.0"}
+  "libkf5i18n5" {>= "4.97.0"}
+  "libkf5waylandserver5" {>= "4-5.50.0"}
+  "libkwineffects11" {>= "4-5.1.95+git20150122"}
+  "libkwinglutils11" {>= "4-5.10.3.1"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.11.0~"}
+  "libqt5widgets5" {>= "5.11.0~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "kwin-wayland-backend-drm_4:5.14.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kwin/kwin-wayland-backend-drm_5.14.5-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gobjc++-sh4-linux-gnu_4:8.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gobjc++-sh4-linux-gnu"]
+]
+depends: [
+  "cpp-sh4-linux-gnu" {>= "4-8.3.0-1"}
+  "gcc-sh4-linux-gnu" {>= "4-8.3.0-1"}
+  "gobjc++-8-sh4-linux-gnu" {>= "8.3.0-1~"}
+]
+extra-source "gobjc++-sh4-linux-gnu_4:8.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-ports/gobjc++-sh4-linux-gnu_8.3.0-1_amd64.deb"
+}

@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcegui-mk2-dev_0.8.7-9+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcegui-mk2-dev"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcegui-mk2-0-8-7" {= "0.8.7-9+b2"}
+  "libdevil-dev"
+  "libfreeimage-dev"
+  "libfreetype6-dev"
+  "libgcc-s1" {>= "3.0"}
+  "libjpeg-dev"
+  "liblcms2-dev"
+  "libmng-dev"
+  "libpcre3-dev"
+  "libpng-dev"
+  "libstdc++6" {>= "5.2"}
+  "libtiff5-dev"
+  "libxerces-c3-2"
+  "lua-expat-dev"
+  ("zlib1g-dev" | "libz-dev")
+]
+extra-source "libcegui-mk2-dev_0.8.7-9+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cegui-mk2/libcegui-mk2-dev_0.8.7-9+b2_amd64.deb"
+}

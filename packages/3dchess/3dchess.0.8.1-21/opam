@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i 3dchess_0.8.1-21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r 3dchess"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6"
+  "libxpm4"
+  "libxt6"
+  "xaw3dg" {>= "1.5+E-1"}
+]
+extra-source "3dchess_0.8.1-21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/3/3dchess/3dchess_0.8.1-21_amd64.deb"
+}

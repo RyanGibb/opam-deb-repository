@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lomiri-indicator-network_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lomiri-indicator-network"]
+]
+depends: [
+  "ayatana-indicator-common"
+  "init-system-helpers" {>= "1.52"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.37.0"}
+  "liblomiri-url-dispatcher0" {>= "0.1.0"}
+  "libqofono-qt5-0" {>= "0.103"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libsecret-1-0" {>= "0.7"}
+  "libstdc++6" {>= "11"}
+  "network-manager"
+  "network-manager-openvpn"
+  "network-manager-pptp"
+  "suru-icon-theme"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+conflicts: [
+  "chewie"
+  "indicator-network-autopilot"
+  "indicator-network-tools"
+  "indicators-client-plugin-network"
+]
+extra-source "lomiri-indicator-network_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri-indicator-network/lomiri-indicator-network_1.0.0-1_amd64.deb"
+}

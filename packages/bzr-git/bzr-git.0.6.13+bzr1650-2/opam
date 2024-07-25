@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bzr-git_0.6.13+bzr1650-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bzr-git"]
+]
+depends: [
+  "bzr" {< "2.8.0"}
+  "bzr" {>= "2.5~"}
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-any" {>= "2.6.6-7~"}
+  "python-dulwich" {>= "0.19.11~"}
+]
+extra-source "bzr-git_0.6.13+bzr1650-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bzr-git/bzr-git_0.6.13+bzr1650-2_all.deb"
+}

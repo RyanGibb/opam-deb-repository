@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pypy-argon2_18.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pypy-argon2"]
+]
+depends: [
+  "libargon2-1" {>= "0~20171227"}
+  "libc6" {>= "2.2.5"}
+  "pypy"
+  "pypy-enum34"
+  "pypy-lib"
+  "pypy-six"
+]
+extra-source "pypy-argon2_18.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-argon2/pypy-argon2_18.3.0-1_amd64.deb"
+}

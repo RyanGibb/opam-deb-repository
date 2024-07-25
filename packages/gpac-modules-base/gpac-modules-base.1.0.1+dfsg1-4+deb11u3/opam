@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gpac-modules-base_1.0.1+dfsg1-4+deb11u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gpac-modules-base"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.15"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgl1"
+  "libgpac10" {>= "1.0.1+dfsg1-1~"}
+  "libpulse0" {>= "0.99.1"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libx11-6"
+  "libxext6"
+  "libxv1"
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "gpac-modules-base_1.0.1+dfsg1-4+deb11u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gpac/gpac-modules-base_1.0.1+dfsg1-4+deb11u3_amd64.deb"
+}

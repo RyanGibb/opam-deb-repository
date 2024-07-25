@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib64stdc++6-powerpc-cross_10.2.1-6cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib64stdc++6-powerpc-cross"]
+]
+depends: [
+  "gcc-10-cross-base-ports" {= "10.2.1-6cross1"}
+  "lib64gcc-s1-powerpc-cross" {>= "10.2.1-6cross1"}
+  "libc6-ppc64-powerpc-cross" {>= "2.31"}
+]
+extra-source "lib64stdc++6-powerpc-cross_10.2.1-6cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10-cross-ports/lib64stdc++6-powerpc-cross_10.2.1-6cross1_all.deb"
+}

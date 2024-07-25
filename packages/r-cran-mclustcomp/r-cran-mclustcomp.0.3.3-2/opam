@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-mclustcomp_0.3.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-mclustcomp"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-cran-rcpp"
+  "r-cran-rcpparmadillo"
+  "r-cran-rdpack"
+]
+extra-source "r-cran-mclustcomp_0.3.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-mclustcomp/r-cran-mclustcomp_0.3.3-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-discordrb-webhooks_3.3.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-discordrb-webhooks"]
+]
+depends: [
+  "ruby-rest-client" {>= "2.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-discordrb-webhooks_3.3.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-discordrb-webhooks/ruby-discordrb-webhooks_3.3.0-1.1_all.deb"
+}

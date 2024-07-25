@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mtp-tools_1.1.20-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mtp-tools"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libmtp9" {>= "1.1.18"}
+]
+extra-source "mtp-tools_1.1.20-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmtp/mtp-tools_1.1.20-1_amd64.deb"
+}

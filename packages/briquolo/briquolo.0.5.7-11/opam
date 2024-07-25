@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i briquolo_0.5.7-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r briquolo"]
+]
+depends: [
+  "briquolo-data" {>= "0.5.7-11"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl-mixer1-2" {>= "1.2.12"}
+  "libsdl-ttf2-0-0"
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "5.2"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "briquolo_0.5.7-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/briquolo/briquolo_0.5.7-11_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libperl-dev_5.36.0-7+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libperl-dev"]
+]
+depends: [
+  "libperl5-36" {= "5.36.0-7+deb12u1"}
+  "perl-any" {= "5.36.0-7+deb12u1"}
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "libperl-dev_5.36.0-7+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/perl/libperl-dev_5.36.0-7+deb12u1_amd64.deb"
+}

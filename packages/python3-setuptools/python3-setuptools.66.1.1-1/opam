@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-setuptools_66.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-setuptools"]
+]
+depends: [
+  "python3-any"
+  "python3-distutils"
+  "python3-pkg-resources" {= "66.1.1-1"}
+]
+extra-source "python3-setuptools_66.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/setuptools/python3-setuptools_66.1.1-1_all.deb"
+}

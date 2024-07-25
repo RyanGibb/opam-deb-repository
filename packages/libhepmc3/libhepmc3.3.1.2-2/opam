@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhepmc3_3.1.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhepmc3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "9"}
+]
+extra-source "libhepmc3_3.1.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hepmc3/libhepmc3_3.1.2-2_amd64.deb"
+}

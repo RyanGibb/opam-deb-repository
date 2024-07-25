@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenxr-loader1_1.0.20~dfsg1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenxr-loader1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libjsoncpp25" {>= "1.9.5"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libopenxr-loader1_1.0.20~dfsg1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openxr-sdk-source/libopenxr-loader1_1.0.20~dfsg1-1+b2_amd64.deb"
+}

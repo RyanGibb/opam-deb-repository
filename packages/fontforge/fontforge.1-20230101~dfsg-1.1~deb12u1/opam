@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fontforge_1:20230101~dfsg-1.1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fontforge"]
+]
+depends: [
+  "fontforge-common" {= "1-20230101~dfsg-1.1~deb12u1"}
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.14.0"}
+  "libfontforge4" {= "1-20230101~dfsg-1.1~deb12u1"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libgtk-3-0" {>= "3.21.4"}
+  "libpango-1-0-0" {>= "1.18.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpython3-11" {>= "3.11.0"}
+]
+conflicts: [
+  "fontforge-nox"
+]
+extra-source "fontforge_1:20230101~dfsg-1.1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fontforge/fontforge_20230101~dfsg-1.1~deb12u1_amd64.deb"
+}

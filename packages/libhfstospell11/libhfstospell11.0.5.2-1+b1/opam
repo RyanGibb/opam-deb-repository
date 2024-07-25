@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhfstospell11_0.5.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhfstospell11"]
+]
+depends: [
+  "libarchive13" {>= "3.0.4"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libhfstospell"
+  "libhfstospell10"
+]
+extra-source "libhfstospell11_0.5.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hfst-ospell/libhfstospell11_0.5.2-1+b1_amd64.deb"
+}

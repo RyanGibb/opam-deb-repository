@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-diagrams-gtk-prof_1.4-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-diagrams-gtk-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-cairo-prof"
+  "libghc-diagrams-cairo-prof"
+  "libghc-diagrams-gtk-dev" {= "1.4-5+b1"}
+  "libghc-diagrams-lib-prof"
+  "libghc-gtk-prof"
+]
+extra-source "libghc-diagrams-gtk-prof_1.4-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-diagrams-gtk/libghc-diagrams-gtk-prof_1.4-5+b1_amd64.deb"
+}

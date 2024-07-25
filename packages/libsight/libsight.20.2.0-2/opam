@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsight_20.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsight"]
+]
+depends: [
+  "libboost-iostreams1-74-0" {>= "1.74.0"}
+  "libboost-locale1-74-0" {>= "1.74.0"}
+  "libboost-log1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libboost-thread1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libcamp0-8" {>= "0.8.4"}
+  "libdcmtk15" {>= "3.6.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdcm3-0" {>= "3.0.8"}
+  "libinsighttoolkit4-13" {>= "4.13.3withdata-dfsg1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5help5" {>= "5.6.0~beta"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libqt5quickwidgets5" {>= "5.4.0"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "9"}
+  "libvtk7-1p"
+  "libvtk7-1p-qt"
+  "libvtkgdcm3-0" {>= "3.0.8"}
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+conflicts: [
+  "fw4spl"
+]
+extra-source "libsight_20.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sight/libsight_20.2.0-2_amd64.deb"
+}

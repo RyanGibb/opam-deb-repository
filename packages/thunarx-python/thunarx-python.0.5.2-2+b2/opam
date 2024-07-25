@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i thunarx-python_0.5.2-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r thunarx-python"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libpython3-11" {>= "3.11.0"}
+  "libthunarx-3-0" {>= "1.1.0"}
+  "thunar" {>= "0.4.0"}
+]
+extra-source "thunarx-python_0.5.2-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/thunarx-python/thunarx-python_0.5.2-2+b2_amd64.deb"
+}

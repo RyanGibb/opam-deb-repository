@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdnssec6_2.7.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdnssec6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgnutls30" {>= "3.6.5"}
+]
+extra-source "libdnssec6_2.7.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/knot/libdnssec6_2.7.6-2_amd64.deb"
+}

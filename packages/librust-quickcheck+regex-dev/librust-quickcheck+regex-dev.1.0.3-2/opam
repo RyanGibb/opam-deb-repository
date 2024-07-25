@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-quickcheck+regex-dev_1.0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-quickcheck+regex-dev"]
+]
+depends: [
+  "librust-quickcheck-dev" {= "1.0.3-2"}
+  ("librust-env-logger-0-9+regex-dev" | "librust-env-logger-0-8+regex-dev" {>= "0.8.2-~~"})
+]
+extra-source "librust-quickcheck+regex-dev_1.0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-quickcheck/librust-quickcheck+regex-dev_1.0.3-2_amd64.deb"
+}

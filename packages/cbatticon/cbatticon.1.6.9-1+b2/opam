@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cbatticon_1.6.9-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cbatticon"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.18.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libnotify-bin" {>= "0.7.6"}
+  "libnotify4" {>= "0.7.6"}
+]
+extra-source "cbatticon_1.6.9-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cbatticon/cbatticon_1.6.9-1+b2_amd64.deb"
+}

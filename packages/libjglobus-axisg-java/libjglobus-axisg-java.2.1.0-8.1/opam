@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjglobus-axisg-java_2.1.0-8.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjglobus-axisg-java"]
+]
+depends: [
+  "libaxis-java"
+  "libcommons-httpclient-java"
+  "libjglobus-gss-java" {= "2.1.0-8.1"}
+  "libservlet3-1-java"
+]
+extra-source "libjglobus-axisg-java_2.1.0-8.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jglobus/libjglobus-axisg-java_2.1.0-8.1_all.deb"
+}

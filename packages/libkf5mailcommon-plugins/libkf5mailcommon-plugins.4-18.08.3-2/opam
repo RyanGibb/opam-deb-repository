@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5mailcommon-plugins_4:18.08.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5mailcommon-plugins"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libkf5mailcommon5abi2" {>= "4-18.07.90"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.9.0~"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libkf5mailcommon-plugins_4:18.08.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkf5mailcommon/libkf5mailcommon-plugins_18.08.3-2_amd64.deb"
+}

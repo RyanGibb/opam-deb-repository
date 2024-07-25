@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zabbix-proxy-sqlite3_1:5.0.8+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zabbix-proxy-sqlite3"]
+]
+depends: [
+  "adduser"
+  "fping"
+  "libc6" {>= "2.29"}
+  "libcurl3-gnutls" {>= "7.28.0"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "libgnutls30" {>= "3.7.0"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libodbc1" {>= "2.3.1"}
+  "libopenipmi0" {>= "2.0.29"}
+  "libpcre3"
+  "libsnmp40" {>= "5.9+dfsg"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libssh2-1" {>= "1.0"}
+  "libxml2" {>= "2.7.4"}
+  "lsb-base"
+  "sqlite3"
+  "ucf"
+  "zlib1g" {>= "1-1.2.0"}
+]
+conflicts: [
+  "zabbix-proxy-mysql"
+  "zabbix-proxy-pgsql"
+  "zabbix-server-mysql"
+  "zabbix-server-pgsql"
+]
+extra-source "zabbix-proxy-sqlite3_1:5.0.8+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zabbix/zabbix-proxy-sqlite3_5.0.8+dfsg-1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freehdl_0.0.8-2.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freehdl"]
+]
+depends: [
+  "g++"
+  "libc6" {>= "2.14"}
+  "libfreehdl0"
+  "libfreehdl0-dev"
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtool-bin"
+  "pkg-config"
+  ("guile-2-0" | "guile")
+]
+extra-source "freehdl_0.0.8-2.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freehdl/freehdl_0.0.8-2.2_amd64.deb"
+}

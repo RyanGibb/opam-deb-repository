@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gpgv2_2.2.40-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gpgv2"]
+]
+depends: [
+  "gpgv" {>= "2.2.40-1.1"}
+]
+extra-source "gpgv2_2.2.40-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnupg2/gpgv2_2.2.40-1.1_all.deb"
+}

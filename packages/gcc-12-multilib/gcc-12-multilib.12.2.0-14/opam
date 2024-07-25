@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-12-multilib_12.2.0-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-12-multilib"]
+]
+depends: [
+  "gcc-12" {= "12.2.0-14"}
+  "gcc-12-base" {= "12.2.0-14"}
+  "lib32gcc-12-dev" {= "12.2.0-14"}
+  "libc6-dev-i386" {>= "2.23-1~"}
+  "libc6-dev-x32" {>= "2.23-1~"}
+  "libx32gcc-12-dev" {= "12.2.0-14"}
+]
+extra-source "gcc-12-multilib_12.2.0-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12/gcc-12-multilib_12.2.0-14_amd64.deb"
+}

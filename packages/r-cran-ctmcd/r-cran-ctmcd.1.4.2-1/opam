@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-ctmcd_1.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-ctmcd"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.0-1"}
+  "r-cran-coda"
+  "r-cran-expm"
+  "r-cran-numderiv"
+  "r-cran-rcpp" {>= "0.12.17"}
+  "r-cran-rcpparmadillo"
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "r-cran-ctmcd_1.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-ctmcd/r-cran-ctmcd_1.4.2-1_amd64.deb"
+}

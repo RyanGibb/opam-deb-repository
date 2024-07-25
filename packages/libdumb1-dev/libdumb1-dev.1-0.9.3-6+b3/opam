@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdumb1-dev_1:0.9.3-6+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdumb1-dev"]
+]
+depends: [
+  "libdumb1" {= "1-0.9.3-6+b3"}
+]
+conflicts: [
+  "libdumb0-dev"
+]
+extra-source "libdumb1-dev_1:0.9.3-6+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdumb/libdumb1-dev_0.9.3-6+b3_amd64.deb"
+}

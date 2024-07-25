@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnotmuch5_0.31.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnotmuch5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libgmime-3-0-0" {>= "3.0.4"}
+  "libstdc++6" {>= "5.2"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+  "libxapian30" {>= "1.4.17~"}
+]
+extra-source "libnotmuch5_0.31.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/notmuch/libnotmuch5_0.31.4-2_amd64.deb"
+}

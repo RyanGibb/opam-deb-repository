@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uphpmvault_0.8+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uphpmvault"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+]
+extra-source "uphpmvault_0.8+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uphpmvault/uphpmvault_0.8+b2_amd64.deb"
+}

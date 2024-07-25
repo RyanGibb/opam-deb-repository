@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i atomicparsley_20210715.151551.e7ad03a-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r atomicparsley"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libstdc++6" {>= "4.1.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "atomicparsley_20210715.151551.e7ad03a-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/atomicparsley/atomicparsley_20210715.151551.e7ad03a-1+b1_amd64.deb"
+}

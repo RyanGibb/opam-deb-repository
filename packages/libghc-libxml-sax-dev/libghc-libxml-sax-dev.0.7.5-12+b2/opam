@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-libxml-sax-dev_0.7.5-12+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-libxml-sax-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-xml-types-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libxml2" {>= "2.7.4"}
+  "libxml2-dev"
+]
+extra-source "libghc-libxml-sax-dev_0.7.5-12+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-libxml-sax/libghc-libxml-sax-dev_0.7.5-12+b2_amd64.deb"
+}

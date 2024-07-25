@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-plplot-qt_5.15.0+dfsg-19_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-plplot-qt"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libplplotqt2" {>= "5.15.0+dfsg"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  "plplot-driver-qt" {= "5.15.0+dfsg-19"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  "python3-plplot" {= "5.15.0+dfsg-19"}
+]
+extra-source "python3-plplot-qt_5.15.0+dfsg-19_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plplot/python3-plplot-qt_5.15.0+dfsg-19_amd64.deb"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nova-compute-ironic_2:26.1.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nova-compute-ironic"]
+]
+depends: [
+  "adduser"
+  "dpkg-dev"
+  "nova-common"
+  "nova-compute"
+  "python3-ironicclient"
+  "python3-libvirt"
+]
+conflicts: [
+  "nova-baremetal"
+  "nova-compute-kvm"
+  "nova-compute-lxc"
+  "nova-compute-qemu"
+  "nova-compute-xen"
+]
+extra-source "nova-compute-ironic_2:26.1.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nova/nova-compute-ironic_26.1.0-4_all.deb"
+}

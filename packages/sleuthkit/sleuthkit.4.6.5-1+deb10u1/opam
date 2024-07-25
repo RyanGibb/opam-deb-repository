@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sleuthkit_4.6.5-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sleuthkit"]
+]
+depends: [
+  "file"
+  "libafflib0v5" {>= "3.7.6"}
+  "libc6" {>= "2.14"}
+  "libdate-manip-perl"
+  "libewf2" {>= "20090606"}
+  "libgcc1" {>= "1-4.2"}
+  "libstdc++6" {>= "5.2"}
+  "libtsk13" {>= "4.4.1"}
+  "perl-any"
+]
+conflicts: [
+  "tct"
+]
+extra-source "sleuthkit_4.6.5-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sleuthkit/sleuthkit_4.6.5-1+deb10u1_amd64.deb"
+}

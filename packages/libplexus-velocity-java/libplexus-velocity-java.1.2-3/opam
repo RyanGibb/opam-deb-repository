@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplexus-velocity-java_1.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplexus-velocity-java"]
+]
+depends: [
+  "libcommons-collections3-java"
+  "libplexus-container-default1-5-java" {>= "1.5.5"}
+  "velocity"
+]
+extra-source "libplexus-velocity-java_1.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plexus-velocity/libplexus-velocity-java_1.2-3_all.deb"
+}

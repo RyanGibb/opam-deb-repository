@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-psqueue-dev_1.1-13+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-psqueue-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libgmp10"
+]
+extra-source "libghc-psqueue-dev_1.1-13+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-psqueue/libghc-psqueue-dev_1.1-13+b2_amd64.deb"
+}

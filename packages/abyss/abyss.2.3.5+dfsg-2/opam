@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i abyss_2.3.5+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r abyss"]
+]
+depends: [
+  "bsdextrautils"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libopenmpi3" {>= "4.1.4"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "12"}
+  "make"
+  "openmpi-bin"
+  "openmpi-common"
+  "perl-any"
+]
+extra-source "abyss_2.3.5+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/abyss/abyss_2.3.5+dfsg-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libevhtp0_1.2.18-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libevhtp0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "libevent-openssl-2-1-7" {>= "2.1.8-stable"}
+  "libonig5" {>= "6.8.1"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "libevhtp0_1.2.18-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libevhtp/libevhtp0_1.2.18-1_amd64.deb"
+}

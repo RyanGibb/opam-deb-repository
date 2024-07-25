@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i singular-ui_1:4.1.1-p2+ds-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r singular-ui"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgmp10"
+  "libsingular4m1" {= "1-4.1.1-p2+ds-4+b2"}
+  "singular-data" {= "1-4.1.1-p2+ds-4"}
+]
+extra-source "singular-ui_1:4.1.1-p2+ds-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/singular/singular-ui_4.1.1-p2+ds-4+b2_amd64.deb"
+}

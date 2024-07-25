@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-adegraphics_1.0-15-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-adegraphics"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "3.5.2-1"}
+  "r-cran-ade4" {>= "1.7-13"}
+  "r-cran-kernsmooth"
+  "r-cran-lattice"
+  "r-cran-latticeextra"
+  "r-cran-rcolorbrewer"
+  "r-cran-sp" {>= "1.1-1"}
+]
+extra-source "r-cran-adegraphics_1.0-15-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-adegraphics/r-cran-adegraphics_1.0-15-1_all.deb"
+}

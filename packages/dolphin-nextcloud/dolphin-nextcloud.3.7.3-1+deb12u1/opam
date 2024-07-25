@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dolphin-nextcloud_3.7.3-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dolphin-nextcloud"]
+]
+depends: [
+  "dolphin" {>= "4-15.12.1"}
+  "kio"
+  "libc6" {>= "2.14"}
+  "libkf5coreaddons5" {>= "5.16.0~"}
+  "libkf5kiocore5" {>= "5.69.0"}
+  "libkf5kiowidgets5" {>= "5.69.0"}
+  "libnextcloudsync0" {= "3.7.3-1+deb12u1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.15.0~"}
+  "libqt5widgets5" {>= "5.15.0~"}
+  "libstdc++6" {>= "5"}
+  "nextcloud-desktop"
+  ("libqt5gui5" {>= "5.15.0~"} | "libqt5gui5-gles" {>= "5.15.0~"})
+]
+extra-source "dolphin-nextcloud_3.7.3-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nextcloud-desktop/dolphin-nextcloud_3.7.3-1+deb12u1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpolkit-backend-1-dev_0.105-25+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpolkit-backend-1-dev"]
+]
+depends: [
+  "libpolkit-backend-1-0" {= "0.105-25+deb10u1"}
+  "libpolkit-gobject-1-dev"
+]
+extra-source "libpolkit-backend-1-dev_0.105-25+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/policykit-1/libpolkit-backend-1-dev_0.105-25+deb10u1_amd64.deb"
+}

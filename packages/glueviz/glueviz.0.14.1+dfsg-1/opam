@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i glueviz_0.14.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r glueviz"]
+]
+depends: [
+  "ipython3" {>= "5.1.0"}
+  "python3-any"
+  "python3-glue" {= "0.14.1+dfsg-1"}
+  "python3-mpl-scatter-density"
+  "python3-pandas" {>= "0.14.1"}
+  "python3-pyqt5" {>= "4.11.2"}
+  "python3-qtconsole" {>= "4.2.0"}
+  "python3-qtpy"
+]
+conflicts: [
+  "glue-sprite"
+]
+extra-source "glueviz_0.14.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glueviz/glueviz_0.14.1+dfsg-1_all.deb"
+}

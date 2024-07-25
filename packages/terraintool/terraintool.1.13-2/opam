@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i terraintool_1.13-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r terraintool"]
+]
+depends: [
+  "jarwrapper" {>= "0.5"}
+  ("default-jre" | "java7-runtime" | "java8-runtime" | "java9-runtime")
+]
+extra-source "terraintool_1.13-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/terraintool/terraintool_1.13-2_all.deb"
+}

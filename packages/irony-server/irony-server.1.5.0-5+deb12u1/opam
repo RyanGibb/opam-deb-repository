@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i irony-server_1.5.0-5+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r irony-server"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libclang1-15" {>= "1-15.0.6-4+b1"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "irony-server_1.5.0-5+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/irony-mode/irony-server_1.5.0-5+deb12u1_amd64.deb"
+}

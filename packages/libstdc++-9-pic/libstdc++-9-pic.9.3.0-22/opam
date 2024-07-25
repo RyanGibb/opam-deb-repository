@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstdc++-9-pic_9.3.0-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstdc++-9-pic"]
+]
+depends: [
+  "gcc-9-base" {= "9.3.0-22"}
+  "libstdc++-9-dev" {= "9.3.0-22"}
+  "libstdc++6" {>= "9.3.0-22"}
+]
+extra-source "libstdc++-9-pic_9.3.0-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-9/libstdc++-9-pic_9.3.0-22_amd64.deb"
+}

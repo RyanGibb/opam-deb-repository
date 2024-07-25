@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gccgo-9-multilib-s390x-linux-gnu_9.3.0-22cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gccgo-9-multilib-s390x-linux-gnu"]
+]
+depends: [
+  "gcc-9-multilib-s390x-linux-gnu" {= "9.3.0-22cross1"}
+  "gcc-9-s390x-linux-gnu-base" {= "9.3.0-22cross1"}
+  "gccgo-9-s390x-linux-gnu" {= "9.3.0-22cross1"}
+  "lib32go-9-dev-s390x-cross" {>= "9.3.0-22cross1"}
+]
+extra-source "gccgo-9-multilib-s390x-linux-gnu_9.3.0-22cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-9-cross/gccgo-9-multilib-s390x-linux-gnu_9.3.0-22cross1_amd64.deb"
+}

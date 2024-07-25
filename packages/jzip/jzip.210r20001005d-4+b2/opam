@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jzip_210r20001005d-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jzip"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "jzip_210r20001005d-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jzip/jzip_210r20001005d-4+b2_amd64.deb"
+}

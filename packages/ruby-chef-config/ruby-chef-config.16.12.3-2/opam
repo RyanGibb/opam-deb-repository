@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-chef-config_16.12.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-chef-config"]
+]
+depends: [
+  "ruby-addressable"
+  "ruby-chef-utils" {>= "16.12.3"}
+  "ruby-fuzzyurl"
+  "ruby-mixlib-config" {< "4.0"}
+  "ruby-mixlib-config" {>= "2.2.12"}
+  "ruby-mixlib-shellout" {< "4.0"}
+  "ruby-mixlib-shellout" {>= "2.0"}
+  "ruby-tomlrb" {>= "1.2"}
+]
+extra-source "ruby-chef-config_16.12.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-chef-config/ruby-chef-config_16.12.3-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibniz_1.18-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibniz"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libx11-6"
+]
+extra-source "ibniz_1.18-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibniz/ibniz_1.18-1+b1_amd64.deb"
+}

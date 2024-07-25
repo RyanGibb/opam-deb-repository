@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i frame-tools_2.5.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r frame-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libframe6" {= "2.5.0-4"}
+  "libx11-6" {>= "2-1.2.99.901"}
+  "libxi6" {>= "2-1.5.99.2"}
+]
+extra-source "frame-tools_2.5.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/frame/frame-tools_2.5.0-4_amd64.deb"
+}

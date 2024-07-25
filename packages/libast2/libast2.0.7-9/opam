@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libast2_0.7-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libast2"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libice6" {>= "1-1.0.0"}
+  "libimlib2" {>= "1.4.5"}
+  "libsm6"
+]
+conflicts: [
+  "libast1"
+]
+extra-source "libast2_0.7-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libast/libast2_0.7-9_amd64.deb"
+}

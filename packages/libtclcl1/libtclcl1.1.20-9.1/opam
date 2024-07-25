@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtclcl1_1.20-9.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtclcl1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "libtcl8-6" {>= "8.6.0"}
+]
+extra-source "libtclcl1_1.20-9.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tclcl/libtclcl1_1.20-9.1_amd64.deb"
+}

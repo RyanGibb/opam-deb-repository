@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcatalyst-plugin-cache-perl_0.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcatalyst-plugin-cache-perl"]
+]
+depends: [
+  "libcatalyst-perl" {>= "5.8"}
+  "libmro-compat-perl"
+  "libtask-weaken-perl"
+  "perl"
+]
+extra-source "libcatalyst-plugin-cache-perl_0.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcatalyst-plugin-cache-perl/libcatalyst-plugin-cache-perl_0.12-2_all.deb"
+}

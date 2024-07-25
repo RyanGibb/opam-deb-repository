@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmoose-perl_2.2011-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmoose-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libclass-load-perl"
+  "libclass-load-xs-perl"
+  "libdata-optlist-perl"
+  "libdevel-globaldestruction-perl"
+  "libdevel-overloadinfo-perl" {>= "0.005"}
+  "libdevel-stacktrace-perl" {>= "2.0300"}
+  "libeval-closure-perl"
+  "libmodule-runtime-conflicts-perl" {>= "0.002"}
+  "libmodule-runtime-perl" {>= "0.014"}
+  "libmro-compat-perl"
+  "libpackage-deprecationmanager-perl"
+  "libpackage-stash-perl"
+  "libpackage-stash-xs-perl"
+  "libparams-util-perl"
+  "libsub-exporter-perl"
+  "libsub-identify-perl"
+  "libsub-name-perl" {>= "0.20"}
+  "libtry-tiny-perl" {>= "0.17"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libmoose-perl_2.2011-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmoose-perl/libmoose-perl_2.2011-1+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gap-nq_2.5.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gap-nq"]
+]
+depends: [
+  "gap-alnuth"
+  "gap-polycyclic"
+  "libc6" {>= "2.34"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "gap-nq_2.5.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gap-nq/gap-nq_2.5.9-1_amd64.deb"
+}

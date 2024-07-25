@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhighwayhash0_0~git20200803.9490b14-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhighwayhash0"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libhighwayhash0_0~git20200803.9490b14-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/highwayhash/libhighwayhash0_0~git20200803.9490b14-3+b1_amd64.deb"
+}

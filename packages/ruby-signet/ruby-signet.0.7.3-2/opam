@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-signet_0.7.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-signet"]
+]
+depends: [
+  "ruby-addressable" {>= "2.3"}
+  "ruby-faraday" {>= "0.9"}
+  "ruby-jwt" {>= "1.5"}
+  "ruby-multi-json" {>= "1.10"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-signet_0.7.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-signet/ruby-signet_0.7.3-2_all.deb"
+}

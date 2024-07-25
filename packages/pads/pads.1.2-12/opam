@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pads_1.2-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pads"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcap0-8" {>= "0.9.8"}
+  "libpcre3"
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "pads_1.2-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pads/pads_1.2-12_amd64.deb"
+}

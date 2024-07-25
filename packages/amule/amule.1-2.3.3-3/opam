@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i amule_1:2.3.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r amule"]
+]
+depends: [
+  "amule-common" {= "1-2.3.3-3"}
+  "libc6" {>= "2.34"}
+  "libcrypto++8" {>= "8.7.0+git220824"}
+  "libgcc-s1" {>= "3.0"}
+  "libgeoip1" {>= "1.6.12"}
+  "libixml10" {>= "1-1.8.0"}
+  "libstdc++6" {>= "11"}
+  "libupnp13" {>= "1-1.8.3"}
+  "libwxbase3-2-1" {>= "3.2.2+dfsg"}
+  "libwxgtk3-2-1" {>= "3.2.1+dfsg-2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "amule_1:2.3.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/amule/amule_2.3.3-3_amd64.deb"
+}

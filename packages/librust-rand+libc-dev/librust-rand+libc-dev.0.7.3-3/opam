@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-rand+libc-dev_0.7.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-rand+libc-dev"]
+]
+depends: [
+  "librust-libc-dev"
+  "librust-rand-dev" {= "0.7.3-3"}
+]
+extra-source "librust-rand+libc-dev_0.7.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-rand/librust-rand+libc-dev_0.7.3-3_amd64.deb"
+}

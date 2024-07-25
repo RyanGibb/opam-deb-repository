@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rspec-parameterized_0.4.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rspec-parameterized"]
+]
+depends: [
+  "ruby-binding-ninja" {>= "0.2.3"}
+  "ruby-proc-to-ast"
+  "ruby-rspec" {< "4"}
+  "ruby-rspec" {>= "2.13"}
+  "ruby-unparser"
+  "ruby-whitequark-parser"
+]
+extra-source "ruby-rspec-parameterized_0.4.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rspec-parameterized/ruby-rspec-parameterized_0.4.2-2_all.deb"
+}

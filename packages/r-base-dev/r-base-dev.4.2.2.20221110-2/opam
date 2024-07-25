@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-base-dev_4.2.2.20221110-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-base-dev"]
+]
+depends: [
+  "build-essential"
+  "g++"
+  "gcc"
+  "gfortran"
+  "libbz2-dev"
+  "libicu-dev"
+  "libjpeg-dev"
+  "liblzma-dev"
+  "libncurses5-dev"
+  "libpcre2-dev"
+  "libpcre3-dev"
+  "libpng-dev"
+  "libreadline-dev"
+  "pkg-config"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "xauth"
+  "zlib1g-dev"
+  ("libblas-dev" | "libatlas-base-dev")
+  ("liblapack-dev" | "libatlas-base-dev")
+]
+extra-source "r-base-dev_4.2.2.20221110-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-base/r-base-dev_4.2.2.20221110-2_all.deb"
+}

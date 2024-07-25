@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i task-turkish_3.68+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r task-turkish"]
+]
+depends: [
+  "locales"
+  "manpages-tr"
+  "tasksel" {= "3.68+deb11u1"}
+]
+extra-source "task-turkish_3.68+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tasksel/task-turkish_3.68+deb11u1_all.deb"
+}

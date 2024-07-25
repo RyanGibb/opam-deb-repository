@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-zope.i18n_4.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-zope.i18n"]
+]
+depends: [
+  "gettext"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-pkg-resources"
+  "python-tz"
+  "python-zope-component"
+  "python-zope-i18nmessageid"
+  "python-zope-schema"
+]
+extra-source "python-zope.i18n_4.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zope.i18n/python-zope.i18n_4.1.0-1_all.deb"
+}

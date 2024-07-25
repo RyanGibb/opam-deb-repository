@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstartup-notification0-dev_0.12-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstartup-notification0-dev"]
+]
+depends: [
+  "libstartup-notification0" {= "0.12-6+b1"}
+  "libx11-dev"
+  "pkg-config"
+]
+extra-source "libstartup-notification0-dev_0.12-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/startup-notification/libstartup-notification0-dev_0.12-6+b1_amd64.deb"
+}

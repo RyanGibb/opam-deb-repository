@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nscd_2.36-9+deb12u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nscd"]
+]
+depends: [
+  "libaudit1" {>= "1-2.2.1"}
+  "libc6" {< "2.37"}
+  "libc6" {> "2.36"}
+  "libcap2" {>= "1-2.10"}
+  "libselinux1" {>= "3.1~"}
+  "sysvinit-utils"
+]
+extra-source "nscd_2.36-9+deb12u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glibc/nscd_2.36-9+deb12u7_amd64.deb"
+}

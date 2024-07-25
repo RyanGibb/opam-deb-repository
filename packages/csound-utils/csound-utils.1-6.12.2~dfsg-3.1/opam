@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i csound-utils_1:6.12.2~dfsg-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r csound-utils"]
+]
+depends: [
+  "csound"
+  "libc6" {>= "2.7"}
+  "libcsound64-6-0" {>= "1-6.00~dfsg"}
+  "libsamplerate0" {>= "0.1.7"}
+  "libsndfile1" {>= "1.0.20"}
+]
+extra-source "csound-utils_1:6.12.2~dfsg-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/csound/csound-utils_6.12.2~dfsg-3.1_amd64.deb"
+}

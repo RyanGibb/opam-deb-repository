@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-openssl_20.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-openssl"]
+]
+depends: [
+  "python3-any"
+  "python3-cryptography" {>= "3.2"}
+  "python3-six" {>= "1.5.2"}
+]
+extra-source "python3-openssl_20.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyopenssl/python3-openssl_20.0.1-1_all.deb"
+}

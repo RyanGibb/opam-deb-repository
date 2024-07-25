@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i minetest-server_5.6.1+dfsg+~1.9.0mt8+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r minetest-server"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libjsoncpp25" {>= "1.9.5"}
+  "libleveldb1d" {>= "1.23"}
+  "libncursesw6" {>= "6"}
+  "libpq5" {>= "9.1~"}
+  "libspatialindex6" {>= "1.8.5"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "12"}
+  "libtinfo6" {>= "6"}
+  "libzstd1" {>= "1.5.2"}
+  "minetest-data" {= "5.6.1+dfsg+~1.9.0mt8+dfsg-2"}
+  "sysvinit-utils"
+  "zlib1g" {>= "1-1.1.4"}
+  ("libluajit-5-1-2" {>= "2.0.4+dfsg"} | "libluajit2-5-1-2" {>= "2.1~"})
+]
+extra-source "minetest-server_5.6.1+dfsg+~1.9.0mt8+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/minetest/minetest-server_5.6.1+dfsg+~1.9.0mt8+dfsg-2_amd64.deb"
+}

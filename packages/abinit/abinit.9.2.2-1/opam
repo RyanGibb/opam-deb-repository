@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i abinit_9.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r abinit"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgfortran5" {>= "10"}
+  "libnetcdff7" {>= "4.1.1"}
+  "libopenmpi3" {>= "4.1.0"}
+  "libxc5" {>= "4.2.1"}
+  "mpi-default-bin"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "abinit_9.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/abinit/abinit_9.2.2-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-apcluster_1.4.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-apcluster"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.0-1"}
+  "r-cran-matrix"
+  "r-cran-rcpp" {>= "0.11.1"}
+]
+extra-source "r-cran-apcluster_1.4.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-apcluster/r-cran-apcluster_1.4.10-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i defendguin_0.0.12-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r defendguin"]
+]
+depends: [
+  "defendguin-data"
+  "libc6" {>= "2.4"}
+  "libsdl-mixer1-2"
+  "libsdl1-2debian" {>= "1.2.11"}
+]
+extra-source "defendguin_0.0.12-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/defendguin/defendguin_0.0.12-7_amd64.deb"
+}

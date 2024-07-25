@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhtml-html5-sanity-perl_0.105-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhtml-html5-sanity-perl"]
+]
+depends: [
+  "libxml-libxml-perl"
+  "perl"
+  ("liblocale-codes-perl" | "perl" {< "5.28"})
+]
+extra-source "libhtml-html5-sanity-perl_0.105-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhtml-html5-sanity-perl/libhtml-html5-sanity-perl_0.105-4_all.deb"
+}

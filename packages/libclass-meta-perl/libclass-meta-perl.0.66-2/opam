@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclass-meta-perl_0.66-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclass-meta-perl"]
+]
+depends: [
+  "libdata-types-perl"
+  "perl"
+  ("libclass-isa-perl" | "perl" {< "5.10.1-13"})
+]
+extra-source "libclass-meta-perl_0.66-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libclass-meta-perl/libclass-meta-perl_0.66-2_all.deb"
+}

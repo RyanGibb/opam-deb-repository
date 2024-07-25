@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bind9utils_1:9.16.48-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bind9utils"]
+]
+depends: [
+  "bind9-utils"
+]
+extra-source "bind9utils_1:9.16.48-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bind9/bind9utils_9.16.48-1_all.deb"
+}

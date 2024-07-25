@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-openems_0.0.35+git20190103.6a75e98+dfsg.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-openems"]
+]
+depends: [
+  "epstool"
+  "fig2dev"
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "octave"
+  "openems" {= "0.0.35+git20190103.6a75e98+dfsg.1-3"}
+]
+extra-source "octave-openems_0.0.35+git20190103.6a75e98+dfsg.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openems/octave-openems_0.0.35+git20190103.6a75e98+dfsg.1-3_amd64.deb"
+}

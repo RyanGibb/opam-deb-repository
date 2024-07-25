@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i reprozip_1.0.14-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r reprozip"]
+]
+depends: [
+  "python3-any" {>= "3.3~"}
+  "python3-reprozip"
+]
+extra-source "reprozip_1.0.14-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/reprozip/reprozip_1.0.14-2_all.deb"
+}

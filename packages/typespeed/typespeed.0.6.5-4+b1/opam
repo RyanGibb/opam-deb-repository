@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i typespeed_0.6.5-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r typespeed"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  ("fileutils" {>= "4.0-5"} | "coreutils")
+]
+conflicts: [
+  "suidmanager (<< 0.50)"
+]
+extra-source "typespeed_0.6.5-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/typespeed/typespeed_0.6.5-4+b1_amd64.deb"
+}

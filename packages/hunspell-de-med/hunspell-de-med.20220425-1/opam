@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hunspell-de-med_20220425-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hunspell-de-med"]
+]
+depends: [
+  "dictionaries-common"
+  "hunspell"
+  ("hunspell-de-de" | "hunspell-de-at" | "hunspell-de-ch")
+]
+extra-source "hunspell-de-med_20220425-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/medicalterms/hunspell-de-med_20220425-1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i initscripts_2.96-7+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r initscripts"]
+]
+depends: [
+  "lsb-base"
+  ("sysv-rc" | "file-rc" | "openrc")
+]
+extra-source "initscripts_2.96-7+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sysvinit/initscripts_2.96-7+deb11u1_all.deb"
+}

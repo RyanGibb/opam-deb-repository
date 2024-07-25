@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debsig-verify_0.23+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debsig-verify"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  ("gpg" | "gnupg")
+]
+extra-source "debsig-verify_0.23+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debsig-verify/debsig-verify_0.23+b3_amd64.deb"
+}

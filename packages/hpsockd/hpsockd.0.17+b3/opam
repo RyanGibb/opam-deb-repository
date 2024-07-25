@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hpsockd_0.17+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hpsockd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdb5-3"
+]
+extra-source "hpsockd_0.17+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hpsockd/hpsockd_0.17+b3_amd64.deb"
+}

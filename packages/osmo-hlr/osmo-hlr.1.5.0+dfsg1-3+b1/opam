@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osmo-hlr_1.5.0+dfsg1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osmo-hlr"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdbd-sqlite3"
+  "libosmo-gsup-client0" {>= "1.4.0"}
+  "libosmo-mslookup0" {>= "1.5.0+dfsg1"}
+  "libosmoabis10" {>= "1.3.0"}
+  "libosmocore19" {>= "1.7.0"}
+  "libosmoctrl0" {>= "1.7.0"}
+  "libosmogsm18" {>= "1.7.0"}
+  "libosmovty9" {>= "1.7.0"}
+  "libsqlite3-0" {>= "3.6.23"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "osmo-hlr_1.5.0+dfsg1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmo-hlr/osmo-hlr_1.5.0+dfsg1-3+b1_amd64.deb"
+}

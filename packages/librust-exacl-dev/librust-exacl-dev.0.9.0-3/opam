@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-exacl-dev_0.9.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-exacl-dev"]
+]
+depends: [
+  "libacl1-dev"
+  "librust-bitflags-dev"
+  "librust-log-dev"
+  "librust-scopeguard-dev"
+  "librust-uuid-dev"
+]
+extra-source "librust-exacl-dev_0.9.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-exacl/librust-exacl-dev_0.9.0-3_amd64.deb"
+}

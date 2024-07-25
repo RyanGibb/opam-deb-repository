@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaccountsservice-dev_0.6.45-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaccountsservice-dev"]
+]
+depends: [
+  "gir1-2-accountsservice-1-0" {= "0.6.45-2"}
+  "libaccountsservice0" {= "0.6.45-2"}
+  "libglib2-0-dev" {>= "2.25.11"}
+  "libpolkit-gobject-1-dev"
+]
+extra-source "libaccountsservice-dev_0.6.45-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/accountsservice/libaccountsservice-dev_0.6.45-2_amd64.deb"
+}

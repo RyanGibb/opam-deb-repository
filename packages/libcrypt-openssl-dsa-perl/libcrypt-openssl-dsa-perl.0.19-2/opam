@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypt-openssl-dsa-perl_0.19-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypt-openssl-dsa-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libssl1-1" {>= "1.1.0"}
+  "perl"
+  "perl-base"
+  "perl-openssl-defaults"
+]
+extra-source "libcrypt-openssl-dsa-perl_0.19-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcrypt-openssl-dsa-perl/libcrypt-openssl-dsa-perl_0.19-2_amd64.deb"
+}

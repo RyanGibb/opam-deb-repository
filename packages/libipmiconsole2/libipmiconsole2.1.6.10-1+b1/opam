@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libipmiconsole2_1.6.10-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libipmiconsole2"]
+]
+depends: [
+  "freeipmi-common" {= "1.6.10-1"}
+  "libc6" {>= "2.34"}
+  "libfreeipmi17" {>= "1.4.4"}
+]
+extra-source "libipmiconsole2_1.6.10-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeipmi/libipmiconsole2_1.6.10-1+b1_amd64.deb"
+}

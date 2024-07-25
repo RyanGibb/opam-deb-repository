@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatcoll-lzma2-dev_21.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatcoll-lzma2-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-10"
+  "libgnatcoll-lzma2" {= "21.0.0-4"}
+  "libgnatcoll19-dev"
+  "liblzma-dev"
+]
+extra-source "libgnatcoll-lzma2-dev_21.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnatcoll-bindings/libgnatcoll-lzma2-dev_21.0.0-4_amd64.deb"
+}

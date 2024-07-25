@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-gtk3-dev_0.15.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-gtk3-dev"]
+]
+depends: [
+  "ghc"
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.14"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libghc-cairo-dev"
+  "libghc-gio-dev"
+  "libghc-glib-dev"
+  "libghc-pango-dev"
+  "libglib2-0-0" {>= "2.31.8"}
+  "libgmp10"
+  "libgtk-3-0" {>= "3.19.12"}
+  "libgtk-3-dev"
+  "libharfbuzz0b" {>= "0.6.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-gtk3-dev_0.15.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-gtk3/libghc-gtk3-dev_0.15.5-1_amd64.deb"
+}

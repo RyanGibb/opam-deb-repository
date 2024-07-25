@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libyaml-cpp0.6_0.6.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libyaml-cpp0.6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libyaml-cpp0.6_0.6.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yaml-cpp/libyaml-cpp0.6_0.6.2-4_amd64.deb"
+}

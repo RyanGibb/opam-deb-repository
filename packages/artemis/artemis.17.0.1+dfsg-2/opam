@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i artemis_17.0.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r artemis"]
+]
+depends: [
+  "jarwrapper" {>= "0.5"}
+  "jemboss"
+  "libbatik-java"
+  "libbiojava-java"
+  "libbiojava1-7-java"
+  "libcommons-lang3-java"
+  "libcommons-net-java"
+  "libhtsjdk-java"
+  "libibatis-java"
+  "libj2ssh-java"
+  "liblog4j1-2-java"
+  "libpicard-java"
+  "libpostgresql-jdbc-java"
+  ("default-jre" | "java8-runtime" | "java9-runtime" | "java10-runtime" | "java11-runtime")
+]
+extra-source "artemis_17.0.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/artemis/artemis_17.0.1+dfsg-2_amd64.deb"
+}

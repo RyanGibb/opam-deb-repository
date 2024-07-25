@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsyncevolution0_2.0.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsyncevolution0"]
+]
+depends: [
+  "dbus"
+  "libbluetooth3" {>= "4.91"}
+  "libc6" {>= "2.34"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdbussyncevo0" {>= "1.5.2-3~"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libopenobex2" {>= "1.7.2"}
+  "libsmltk0" {>= "3.4.0.47.5+syncevolution-1.5.3"}
+  "libstdc++6" {>= "11"}
+  "libsynthesis0v5" {>= "3.4.0.47.5+syncevolution-1.5.3"}
+  "syncevolution-common" {= "2.0.0-3"}
+]
+extra-source "libsyncevolution0_2.0.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/syncevolution/libsyncevolution0_2.0.0-3+b1_amd64.deb"
+}

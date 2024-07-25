@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-cookie-parser_1.4.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-cookie-parser"]
+]
+depends: [
+  "node-cookie" {>= "0.3.1"}
+  "node-cookie-signature" {>= "1.0.3"}
+  "nodejs"
+]
+extra-source "node-cookie-parser_1.4.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-cookie-parser/node-cookie-parser_1.4.3-1_all.deb"
+}

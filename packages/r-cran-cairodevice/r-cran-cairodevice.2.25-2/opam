@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-cairodevice_2.25-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-cairodevice"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.2.4"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libfribidi0" {>= "0.19.2"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libgtk2-0-0" {>= "2.8.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpangoft2-1-0-0" {>= "1.14.0"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.0-5"}
+]
+extra-source "r-cran-cairodevice_2.25-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cairodevice/r-cran-cairodevice_2.25-2_amd64.deb"
+}

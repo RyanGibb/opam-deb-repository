@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vnstat_2.10-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vnstat"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libsqlite3-0" {>= "3.7.6.1"}
+]
+extra-source "vnstat_2.10-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vnstat/vnstat_2.10-2_amd64.deb"
+}

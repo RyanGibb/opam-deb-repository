@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i julia_1.0.3+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r julia"]
+]
+depends: [
+  "julia-common" {= "1.0.3+dfsg-4"}
+  "libc6" {>= "2.14"}
+  "libcholmod3" {>= "1-4.5.2"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libdsfmt-19937-1" {>= "2.2.3"}
+  "libgit2-27" {>= "0.26.0"}
+  "libgmp10"
+  "libjulia1" {= "1.0.3+dfsg-4"}
+  "libmbedcrypto3" {>= "2.13"}
+  "libmbedtls12" {>= "2.13"}
+  "libmbedx509-0" {>= "2.0"}
+  "libmpfr6" {>= "3.1.3"}
+  "libopenblas-base"
+  "libopenlibm2" {>= "0.4"}
+  "libpcre2-8-0" {>= "10.32"}
+  "libspqr2" {>= "1-5.4.0+dfsg"}
+  "libssh2-1" {>= "1.0"}
+  "libsuitesparseconfig5" {>= "1-5.0.0"}
+  "libumfpack5" {>= "1-4.5.2"}
+  "libunwind8"
+  "libutf8proc2" {>= "1.3"}
+]
+extra-source "julia_1.0.3+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/julia/julia_1.0.3+dfsg-4_amd64.deb"
+}

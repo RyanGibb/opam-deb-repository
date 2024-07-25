@@ -1,0 +1,44 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kamoso_22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kamoso"]
+]
+depends: [
+  "gstreamer1-0-plugins-good" {>= "1.10~"}
+  "gstreamer1-0-x" {>= "1.10~"}
+  "kio"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.10~"}
+  "libgstreamer1-0-0" {>= "1.10~"}
+  "libkf5configcore5" {>= "5.70.0~"}
+  "libkf5configgui5" {>= "5.70.0~"}
+  "libkf5coreaddons5" {>= "5.61.0"}
+  "libkf5i18n5" {>= "5.70.0~"}
+  "libkf5itemviews5" {>= "4.96.0"}
+  "libkf5kiocore5" {>= "5.93.0"}
+  "libkf5kiofilewidgets5" {>= "5.70.0~"}
+  "libkf5kiowidgets5" {>= "5.70.0~"}
+  "libkf5notifications5" {>= "5.70.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.1.0"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.1.1"}
+  "qml-module-org-kde-kirigami2"
+  "qml-module-org-kde-purpose"
+  "qml-module-qtgraphicaleffects"
+  "qml-module-qtqml"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-dialogs"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick-window2"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+  ("libqt5quick5" {>= "5.15.1"} | "libqt5quick5-gles" {>= "5.15.1"})
+]
+extra-source "kamoso_22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kamoso/kamoso_22.12.3-1_amd64.deb"
+}

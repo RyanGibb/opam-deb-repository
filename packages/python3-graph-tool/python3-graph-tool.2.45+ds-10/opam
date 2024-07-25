@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-graph-tool_2.45+ds-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-graph-tool"]
+]
+depends: [
+  "libboost-context1-74-0" {>= "1.74.0"}
+  "libboost-iostreams1-74-0" {>= "1.74.0"}
+  "libboost-python1-74-0"
+  "libboost-python1-74-0" {>= "1.74.0"}
+  "libboost-regex1-74-0"
+  "libc6" {>= "2.32"}
+  "libcairomm-1-0-1v5" {>= "1.14.4"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc-s1" {>= "3.4"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libgomp1" {>= "9"}
+  "libpython3-11" {>= "3.11.0"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-scipy"
+]
+extra-source "python3-graph-tool_2.45+ds-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/graph-tool/python3-graph-tool_2.45+ds-10_amd64.deb"
+}

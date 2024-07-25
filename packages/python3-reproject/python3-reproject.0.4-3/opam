@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-reproject_0.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-reproject"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.6~"}
+  "python3-any"
+  "python3-astropy" {>= "1.0"}
+  "python3-astropy-healpix"
+  "python3-numpy"
+  "python3-scipy"
+]
+extra-source "python3-reproject_0.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/reproject/python3-reproject_0.4-3_amd64.deb"
+}

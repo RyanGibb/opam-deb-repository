@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i syslinux-utils_3:6.04~git20190206.bf6db5b4+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r syslinux-utils"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "syslinux-utils_3:6.04~git20190206.bf6db5b4+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/syslinux/syslinux-utils_6.04~git20190206.bf6db5b4+dfsg1-1_amd64.deb"
+}

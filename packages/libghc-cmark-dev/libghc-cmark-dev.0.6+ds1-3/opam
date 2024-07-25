@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cmark-dev_0.6+ds1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cmark-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libcmark-dev"
+  "libcmark0-29-0" {>= "0.29.0"}
+  "libgmp10"
+]
+extra-source "libghc-cmark-dev_0.6+ds1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cmark/libghc-cmark-dev_0.6+ds1-3_amd64.deb"
+}

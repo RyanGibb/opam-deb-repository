@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-ldb-dev_2:1.5.1+really1.4.6-3+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-ldb-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libldb-dev"
+  "pkg-config"
+  "python-ldb" {= "2-1.5.1+really1.4.6-3+deb10u1"}
+]
+extra-source "python-ldb-dev_2:1.5.1+really1.4.6-3+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ldb/python-ldb-dev_1.5.1+really1.4.6-3+deb10u1_amd64.deb"
+}

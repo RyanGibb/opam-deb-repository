@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i saint_2.5.0+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r saint"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgsl25" {>= "2.6"}
+]
+extra-source "saint_2.5.0+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/saint/saint_2.5.0+dfsg-4_amd64.deb"
+}

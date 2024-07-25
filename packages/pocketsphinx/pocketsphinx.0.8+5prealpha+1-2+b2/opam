@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pocketsphinx_0.8+5prealpha+1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pocketsphinx"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libjs-jquery"
+  "libpocketsphinx3"
+  "libsphinxbase3" {>= "0.8+5prealpha"}
+]
+extra-source "pocketsphinx_0.8+5prealpha+1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pocketsphinx/pocketsphinx_0.8+5prealpha+1-2+b2_amd64.deb"
+}

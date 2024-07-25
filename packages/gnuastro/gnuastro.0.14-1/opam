@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnuastro_0.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnuastro"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcfitsio9" {>= "3.480~"}
+  "libgnuastro12" {= "0.14-1"}
+  "libgsl25" {>= "2.6"}
+  "libwcs7" {>= "4.8.2"}
+]
+extra-source "gnuastro_0.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnuastro/gnuastro_0.14-1_amd64.deb"
+}

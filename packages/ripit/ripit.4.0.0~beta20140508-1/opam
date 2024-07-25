@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ripit_4.0.0~beta20140508-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ripit"]
+]
+depends: [
+  "libcddb-get-perl"
+  "libdigest-md5-file-perl"
+  "libmime-base64-urlsafe-perl"
+  "libmp3-tag-perl"
+  "libmusicbrainz-discid-perl"
+  "libtext-unidecode-perl"
+  "libunicode-utf8-perl"
+  "libwebservice-musicbrainz-perl"
+  "libwww-perl"
+  "libxml-simple-perl"
+  "normalize-audio"
+  "perl"
+  ("cdparanoia" | "cdda2wav" | "icedax")
+  ("vorbis-tools" | "lame" | "flac" | "bladeenc" | "faac" | "wavpack" | "ffmpeg")
+]
+extra-source "ripit_4.0.0~beta20140508-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ripit/ripit_4.0.0~beta20140508-1_all.deb"
+}

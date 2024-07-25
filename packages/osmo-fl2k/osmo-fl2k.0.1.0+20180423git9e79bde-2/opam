@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osmo-fl2k_0.1.0+20180423git9e79bde-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osmo-fl2k"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libosmo-fl2k0"
+  "libusb-1-0-0" {>= "2-1.0.8"}
+]
+extra-source "osmo-fl2k_0.1.0+20180423git9e79bde-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmo-fl2k/osmo-fl2k_0.1.0+20180423git9e79bde-2_amd64.deb"
+}

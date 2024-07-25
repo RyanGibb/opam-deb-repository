@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hexcompare_1.0.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hexcompare"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "hexcompare_1.0.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hexcompare/hexcompare_1.0.4-1+b1_amd64.deb"
+}

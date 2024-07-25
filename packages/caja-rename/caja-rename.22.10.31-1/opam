@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i caja-rename_22.10.31-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r caja-rename"]
+]
+depends: [
+  "caja"
+  "gir1-2-gtk-3-0"
+  "python3-any"
+  "python3-caja" {>= "1.23.0"}
+  "python3-gi"
+]
+extra-source "caja-rename_22.10.31-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/caja-rename/caja-rename_22.10.31-1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i chicken-bin_4.13.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r chicken-bin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libchicken-dev" {= "4.13.0-1"}
+  "libchicken8" {>= "4.13.0"}
+]
+conflicts: [
+  "chicken"
+  "chicken-dev"
+]
+extra-source "chicken-bin_4.13.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chicken/chicken-bin_4.13.0-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5webview5-dev_5.15.8-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5webview5-dev"]
+]
+depends: [
+  "libqt5webview5" {= "5.15.8-2+b1"}
+  "qtbase5-dev"
+  "qtdeclarative5-dev"
+]
+extra-source "libqt5webview5-dev_5.15.8-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtwebview-opensource-src/libqt5webview5-dev_5.15.8-2+b1_amd64.deb"
+}

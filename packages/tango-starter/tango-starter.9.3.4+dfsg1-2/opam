@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tango-starter_9.3.4+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tango-starter"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcos4-2" {>= "4.2.5+ds1"}
+  "libgcc-s1" {>= "3.0"}
+  "libomniorb4-2" {>= "4.2.5+ds1"}
+  "libomnithread4" {>= "4.2.5+ds1"}
+  "libstdc++6" {>= "11"}
+  "libtango-tools"
+  "libtango9" {>= "9.3.4+dfsg1"}
+  "lsb-base"
+]
+extra-source "tango-starter_9.3.4+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tango/tango-starter_9.3.4+dfsg1-2_amd64.deb"
+}

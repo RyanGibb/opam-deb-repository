@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-aws_2.10.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-aws"]
+]
+depends: [
+  "ruby-http-connection"
+  "ruby-uuidtools"
+  "ruby-xml-simple"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-aws_2.10.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-aws/ruby-aws_2.10.2-5_all.deb"
+}

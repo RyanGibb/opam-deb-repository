@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pan-xas_0.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pan-xas"]
+]
+depends: [
+  "pan-config" {= "0.4"}
+  "pan-tasks" {= "0.4"}
+  "pymca"
+  "quantum-espresso"
+]
+extra-source "pan-xas_0.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-pan/pan-xas_0.4_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dialog_1.3-20201126-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dialog"]
+]
+depends: [
+  "debianutils" {>= "1.6"}
+  "libc6" {>= "2.15"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "dialog_1.3-20201126-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dialog/dialog_1.3-20201126-1_amd64.deb"
+}

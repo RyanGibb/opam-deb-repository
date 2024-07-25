@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-jbuilder_2.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-jbuilder"]
+]
+depends: [
+  "ruby-activesupport" {>= "2-4.2.0"}
+  "ruby-multi-json" {>= "1.2"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-jbuilder_2.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-jbuilder/ruby-jbuilder_2.7.0-1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-script-provider-bsh_4:7.4.7-1+deb12u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-script-provider-bsh"]
+]
+depends: [
+  "libbsh-java"
+  "liblibreoffice-java"
+  "libreoffice-common"
+  "libreoffice-java-common"
+  ("default-jre" {>= "2-1.8"} | "java-runtime" {>= "8"} | "java8-runtime" | "jre")
+  ("libreoffice-core-nogui" | "libreoffice-core")
+]
+extra-source "libreoffice-script-provider-bsh_4:7.4.7-1+deb12u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-script-provider-bsh_7.4.7-1+deb12u3_all.deb"
+}

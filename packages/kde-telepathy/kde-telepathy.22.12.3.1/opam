@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kde-telepathy_22.12.3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kde-telepathy"]
+]
+depends: [
+  "kde-telepathy-call-ui" {>= "22.12.3"}
+  "kde-telepathy-desktop-applets" {>= "22.12.3"}
+  "kde-telepathy-filetransfer-handler" {>= "22.12.3"}
+  "kde-telepathy-minimal" {= "22.12.3.1"}
+  "kde-telepathy-send-file" {>= "22.12.3"}
+  "plasma-runner-telepathy-contact" {>= "22.12.3"}
+]
+extra-source "kde-telepathy_22.12.3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-kde-telepathy/kde-telepathy_22.12.3.1_amd64.deb"
+}

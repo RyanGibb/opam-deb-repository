@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblomiri-upload-manager-common-dev_0.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblomiri-upload-manager-common-dev"]
+]
+depends: [
+  "libldm-common-dev" {= "0.1.2-1"}
+  "liblomiri-upload-manager-common0" {= "0.1.2-1"}
+  "qtbase5-dev"
+]
+extra-source "liblomiri-upload-manager-common-dev_0.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri-download-manager/liblomiri-upload-manager-common-dev_0.1.2-1_amd64.deb"
+}

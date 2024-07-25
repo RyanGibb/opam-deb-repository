@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-defuse-php-encryption_2.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-defuse-php-encryption"]
+]
+depends: [
+  "php-cli"
+  "php-common"
+  "php-random-compat" {>= "2"}
+]
+extra-source "php-defuse-php-encryption_2.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-defuse-php-encryption/php-defuse-php-encryption_2.2.1-1_all.deb"
+}

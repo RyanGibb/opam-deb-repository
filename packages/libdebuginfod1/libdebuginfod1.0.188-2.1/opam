@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdebuginfod1_0.188-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdebuginfod1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcurl3-gnutls" {>= "7.28.0"}
+  "libdebuginfod-common" {>= "0.188-2.1"}
+  "libdw1" {= "0.188-2.1"}
+  "libelf1" {= "0.188-2.1"}
+]
+extra-source "libdebuginfod1_0.188-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elfutils/libdebuginfod1_0.188-2.1_amd64.deb"
+}

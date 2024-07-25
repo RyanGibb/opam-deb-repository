@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libppx-deriving-yojson-ocaml-dev_3.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libppx-deriving-yojson-ocaml-dev"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libppx-deriving-ocaml-dev"
+  "libppx-tools-ocaml-dev"
+  "libresult-ocaml-dev"
+  "ocaml-nox"
+]
+extra-source "libppx-deriving-yojson-ocaml-dev_3.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/ppx-deriving-yojson/libppx-deriving-yojson-ocaml-dev_3.1-4_amd64.deb"
+}

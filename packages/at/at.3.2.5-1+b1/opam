@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i at_3.2.5-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r at"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpam-runtime" {>= "1.0.1-11"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libselinux1" {>= "3.1~"}
+  "sysvinit-utils"
+]
+extra-source "at_3.2.5-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/at/at_3.2.5-1+b1_amd64.deb"
+}

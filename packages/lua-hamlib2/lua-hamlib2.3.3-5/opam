@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lua-hamlib2_3.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lua-hamlib2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libhamlib2" {>= "3.3"}
+]
+extra-source "lua-hamlib2_3.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hamlib/lua-hamlib2_3.3-5_amd64.deb"
+}

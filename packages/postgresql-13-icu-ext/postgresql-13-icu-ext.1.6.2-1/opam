@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-13-icu-ext_1.6.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-13-icu-ext"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libicu67" {>= "67.1-1~"}
+  "postgresql-13"
+]
+extra-source "postgresql-13-icu-ext_1.6.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/icu-ext/postgresql-13-icu-ext_1.6.2-1_amd64.deb"
+}

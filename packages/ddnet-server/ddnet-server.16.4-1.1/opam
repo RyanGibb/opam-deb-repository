@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ddnet-server_16.4-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ddnet-server"]
+]
+depends: [
+  "ddnet-data" {>= "16.4-1.1"}
+  "libc6" {>= "2.34"}
+  "libcurl4" {>= "7.16.2"}
+  "libjsonparser1-1" {>= "1.1.0"}
+  "libmariadb3" {>= "3.0.0"}
+  "libsqlite3-0" {>= "3.14.0"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "ddnet-server_16.4-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/ddnet/ddnet-server_16.4-1.1_amd64.deb"
+}

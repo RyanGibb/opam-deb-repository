@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-transformr_0.1.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-transformr"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  "r-cran-lpsolve"
+  "r-cran-rcpp" {>= "0.12.15"}
+  "r-cran-rlang"
+  "r-cran-sf"
+  "r-cran-tweenr"
+]
+extra-source "r-cran-transformr_0.1.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-transformr/r-cran-transformr_0.1.3-1_amd64.deb"
+}

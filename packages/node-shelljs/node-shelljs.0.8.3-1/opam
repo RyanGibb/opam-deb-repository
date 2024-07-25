@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-shelljs_0.8.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-shelljs"]
+]
+depends: [
+  "node-glob" {>= "7.0.0"}
+  "node-interpret"
+  "node-rechoir"
+  "nodejs" {>= "4"}
+]
+extra-source "node-shelljs_0.8.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-shelljs/node-shelljs_0.8.3-1_all.deb"
+}

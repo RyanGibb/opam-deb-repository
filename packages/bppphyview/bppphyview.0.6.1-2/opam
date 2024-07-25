@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bppphyview_0.6.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bppphyview"]
+]
+depends: [
+  "libbpp-core4" {>= "2.4.1"}
+  "libbpp-phyl12" {>= "2.4.1"}
+  "libbpp-qt2" {>= "2.4.1"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "9"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "bppphyview_0.6.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bppphyview/bppphyview_0.6.1-2_amd64.deb"
+}

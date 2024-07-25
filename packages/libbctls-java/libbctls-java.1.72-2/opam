@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbctls-java_1.72-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbctls-java"]
+]
+depends: [
+  "libbcprov-java" {>= "1.72-2"}
+  "libbcutil-java" {>= "1.72-2"}
+]
+extra-source "libbctls-java_1.72-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bouncycastle/libbctls-java_1.72-2_all.deb"
+}

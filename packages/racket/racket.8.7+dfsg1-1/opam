@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i racket_8.7+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r racket"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "liblz4-1" {>= "1.8.0"}
+  "racket-common" {= "8.7+dfsg1-1"}
+  "zlib1g" {>= "1-1.2.2.3"}
+]
+extra-source "racket_8.7+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/racket/racket_8.7+dfsg1-1_amd64.deb"
+}

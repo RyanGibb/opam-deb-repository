@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-lsp-ui_6.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-lsp-ui"]
+]
+depends: [
+  "elpa-dash" {>= "2.14"}
+  "elpa-dash-functional" {>= "1.2.0"}
+  "elpa-flycheck" {>= "31"}
+  "elpa-lsp-mode" {>= "6.0"}
+  "elpa-markdown-mode" {>= "2.3"}
+  "emacsen-common"
+]
+extra-source "elpa-lsp-ui_6.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emacs-lsp-ui/elpa-lsp-ui_6.0-2_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i syrthes-gui_4.3.5+20200129-dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r syrthes-gui"]
+]
+depends: [
+  "python3-any"
+  "python3-numpy"
+  "python3-pyqt5"
+  "python3-pyqt5-qtchart"
+  "syrthes" {>= "4.3.5~"}
+]
+extra-source "syrthes-gui_4.3.5+20200129-dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/syrthes/syrthes-gui_4.3.5+20200129-dfsg1-1_all.deb"
+}

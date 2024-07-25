@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hspec-wai-dev_0.9.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hspec-wai-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-base-compat-dev"
+  "libghc-case-insensitive-dev"
+  "libghc-hspec-core-dev"
+  "libghc-hspec-expectations-dev"
+  "libghc-http-types-dev"
+  "libghc-quickcheck2-dev"
+  "libghc-wai-dev"
+  "libghc-wai-extra-dev"
+  "libgmp10"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-hspec-wai-dev_0.9.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hspec-wai/libghc-hspec-wai-dev_0.9.0-3+b1_amd64.deb"
+}

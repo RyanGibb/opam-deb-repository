@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i docker.io_18.09.1+dfsg1-7.1+deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r docker.io"]
+]
+depends: [
+  "adduser"
+  "iptables"
+  "libc6" {>= "2.17"}
+  "libdevmapper1-02-1" {>= "2-1.02.97"}
+  "libltdl7" {>= "2.4.6"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libseccomp2" {>= "2.1.0"}
+  "libsystemd0"
+  "lsb-base"
+  "runc" {>= "1.0.0~rc6~"}
+  "tini"
+]
+conflicts: [
+  "docker-containerd"
+  "docker-runc"
+  "golang-libnetwork"
+]
+extra-source "docker.io_18.09.1+dfsg1-7.1+deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/docker.io/docker.io_18.09.1+dfsg1-7.1+deb10u3_amd64.deb"
+}

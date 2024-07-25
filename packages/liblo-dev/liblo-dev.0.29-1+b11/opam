@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblo-dev_0.29-1+b11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblo-dev"]
+]
+depends: [
+  "liblo7" {= "0.29-1+b11"}
+]
+conflicts: [
+  "liblo0-dev"
+]
+extra-source "liblo-dev_0.29-1+b11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblo/liblo-dev_0.29-1+b11_amd64.deb"
+}

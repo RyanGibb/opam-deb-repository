@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-asn1-encoding-dev_0.9.6-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-asn1-encoding-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-asn1-types-dev"
+  "libghc-hourglass-dev"
+  "libgmp10"
+]
+extra-source "libghc-asn1-encoding-dev_0.9.6-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-asn1-encoding/libghc-asn1-encoding-dev_0.9.6-1+b1_amd64.deb"
+}

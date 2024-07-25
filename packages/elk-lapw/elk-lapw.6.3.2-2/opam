@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elk-lapw_6.3.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elk-lapw"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc-s1" {>= "4.0"}
+  "libgfortran5" {>= "10"}
+  "libgomp1" {>= "4.9"}
+  "libopenmpi3" {>= "4.0.5"}
+  "libxc5" {>= "4.2.1"}
+  "mpi-default-bin"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "elk-lapw_6.3.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elkcode/elk-lapw_6.3.2-2_amd64.deb"
+}

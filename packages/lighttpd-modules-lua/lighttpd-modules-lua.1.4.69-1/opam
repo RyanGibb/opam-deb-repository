@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lighttpd-modules-lua_1.4.69-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lighttpd-modules-lua"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "liblua5-4-0" {>= "5.4.4"}
+  "libnettle8"
+  "lighttpd" {= "1.4.69-1"}
+]
+conflicts: [
+  "lighttpd-mod-cml"
+]
+extra-source "lighttpd-modules-lua_1.4.69-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lighttpd/lighttpd-modules-lua_1.4.69-1_amd64.deb"
+}

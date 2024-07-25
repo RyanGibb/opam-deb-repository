@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i emboss-lib_6.6.0+dfsg-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r emboss-lib"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libexpat1" {>= "2.0.1"}
+  "libgd3" {>= "2.1.0~alpha~"}
+  "libhpdf-2-3-0" {>= "2.3.0"}
+  "libmariadb3" {>= "3.0.0"}
+  "libpq5"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libajax6"
+  "libajax6-dev"
+  "libnucleus6"
+  "libnucleus6-dev"
+]
+extra-source "emboss-lib_6.6.0+dfsg-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emboss/emboss-lib_6.6.0+dfsg-12_amd64.deb"
+}

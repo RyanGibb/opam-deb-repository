@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i network-manager-fortisslvpn_1.2.8-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r network-manager-fortisslvpn"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.41.1"}
+  "libnm0" {>= "1.2.0"}
+  "network-manager" {>= "1.2.0"}
+  "openfortivpn"
+  "ppp" {< "2.4.9-2~"}
+  "ppp" {>= "2.4.9-1+~"}
+]
+extra-source "network-manager-fortisslvpn_1.2.8-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/network-manager-fortisslvpn/network-manager-fortisslvpn_1.2.8-2+b2_amd64.deb"
+}

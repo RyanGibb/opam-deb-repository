@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-gitdb_4.0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-gitdb"]
+]
+depends: [
+  "python3-any"
+  "python3-smmap" {> "2"}
+]
+extra-source "python3-gitdb_4.0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-gitdb/python3-gitdb_4.0.5-1_all.deb"
+}

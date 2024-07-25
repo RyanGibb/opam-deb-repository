@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qcoro-qt5-dev_0.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qcoro-qt5-dev"]
+]
+depends: [
+  "libqcoro5core0" {= "0.8.0-1"}
+  "libqcoro5dbus0" {= "0.8.0-1"}
+  "libqcoro5network0" {= "0.8.0-1"}
+  "libqcoro5qml0" {= "0.8.0-1"}
+  "libqcoro5quick0" {= "0.8.0-1"}
+  "libqcoro5websockets0" {= "0.8.0-1"}
+  "libqt5websockets5-dev" {>= "5.15.0~"}
+  "qtbase5-dev" {>= "5.15.0~"}
+]
+extra-source "qcoro-qt5-dev_0.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qcoro/qcoro-qt5-dev_0.8.0-1_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libacpi0_0.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libacpi0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+extra-source "libacpi0_0.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libacpi/libacpi0_0.2-5_amd64.deb"
+}

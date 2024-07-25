@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcaf-openmpi-3_2.4.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcaf-openmpi-3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgfortran5" {>= "8"}
+  "libopenmpi3"
+  "libquadmath0" {>= "4.6"}
+]
+extra-source "libcaf-openmpi-3_2.4.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/open-coarrays/libcaf-openmpi-3_2.4.0-2_amd64.deb"
+}

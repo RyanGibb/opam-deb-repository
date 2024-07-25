@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcatalyst-plugin-authorization-roles-perl_0.09-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcatalyst-plugin-authorization-roles-perl"]
+]
+depends: [
+  "libcatalyst-perl" {>= "5.7"}
+  "libcatalyst-plugin-authentication-perl" {>= "0.10003"}
+  "libset-object-perl" {>= "1.14"}
+  "libuniversal-isa-perl" {>= "0.05"}
+  "perl"
+]
+extra-source "libcatalyst-plugin-authorization-roles-perl_0.09-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcatalyst-plugin-authorization-roles-perl/libcatalyst-plugin-authorization-roles-perl_0.09-3_all.deb"
+}

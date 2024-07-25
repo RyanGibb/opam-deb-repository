@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-django-haystack-redis_0.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-django-haystack-redis"]
+]
+depends: [
+  "python3-any"
+  "python3-django"
+  "python3-django-haystack"
+  "python3-redis"
+  "python3-whoosh"
+]
+extra-source "python3-django-haystack-redis_0.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/django-haystack-redis/python3-django-haystack-redis_0.0.1-2_all.deb"
+}

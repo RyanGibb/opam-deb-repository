@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i createfp_3.4.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r createfp"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libexttextcat-2-0-0" {>= "3.3.0"}
+]
+extra-source "createfp_3.4.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libexttextcat/createfp_3.4.5-1_amd64.deb"
+}

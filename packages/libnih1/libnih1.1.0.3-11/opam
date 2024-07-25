@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnih1_1.0.3-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnih1"]
+]
+depends: [
+  "libc6" {< "2.32"}
+  "libc6" {> "2.31"}
+]
+extra-source "libnih1_1.0.3-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnih/libnih1_1.0.3-11_amd64.deb"
+}

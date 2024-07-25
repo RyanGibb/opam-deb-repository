@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt6chartsqml6_6.4.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt6chartsqml6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt6charts6" {>= "6.2.1"}
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6gui6" {>= "6.4.2+dfsg~"}
+  "libqt6opengl6" {>= "6.4.2+dfsg~"}
+  "libqt6qml6" {>= "6.4.2+dfsg~"}
+  "libqt6quick6" {>= "6.4.2+dfsg~"}
+  "libqt6widgets6" {>= "6.4.2+dfsg~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libqt6chartsqml6_6.4.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-charts/libqt6chartsqml6_6.4.2-3_amd64.deb"
+}

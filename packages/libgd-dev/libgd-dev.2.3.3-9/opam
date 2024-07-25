@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgd-dev_2.3.3-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgd-dev"]
+]
+depends: [
+  "libfontconfig-dev"
+  "libfreetype6-dev"
+  "libgd3" {= "2.3.3-9"}
+  "libjpeg-dev"
+  "libpng-dev"
+  "libtiff-dev"
+  "libvpx-dev"
+  "libwebp-dev"
+  "libx11-dev"
+  "libxpm-dev"
+  "zlib1g-dev"
+  ("libavif-dev" | "base-files" {< "11.1~"})
+  ("libheif-dev" | "base-files" {< "11.1~"})
+]
+extra-source "libgd-dev_2.3.3-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgd2/libgd-dev_2.3.3-9_amd64.deb"
+}

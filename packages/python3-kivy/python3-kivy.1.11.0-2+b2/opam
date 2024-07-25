@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-kivy_1.11.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-kivy"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgl1"
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgstreamer1-0-0" {>= "1.0.0"}
+  "libsdl2-2-0-0" {>= "2.0.12+dfsg1"}
+  "libsdl2-image-2-0-0" {>= "2.0.2"}
+  "libsdl2-mixer-2-0-0" {>= "2.0.2"}
+  "libsdl2-ttf-2-0-0" {>= "2.0.14"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-gst-1-0"
+]
+extra-source "python3-kivy_1.11.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kivy/python3-kivy_1.11.0-2+b2_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtntnet-dev_2.2.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtntnet-dev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcxxtools-dev"
+  "libcxxtools9v5"
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "libtntnet12v5" {= "2.2.1-4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "tntnet-dev (<< 1.6.3-3)"
+]
+extra-source "libtntnet-dev_2.2.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tntnet/libtntnet-dev_2.2.1-4_amd64.deb"
+}

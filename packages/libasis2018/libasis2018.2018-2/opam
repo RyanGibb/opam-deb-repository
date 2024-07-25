@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libasis2018_2018-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libasis2018"]
+]
+depends: [
+  "gnat"
+  "gnat-8"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnat-8" {>= "8.2.0-9"}
+  "libgnatvsn8" {>= "8.2.0-9"}
+]
+extra-source "libasis2018_2018-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/asis/libasis2018_2018-2_amd64.deb"
+}

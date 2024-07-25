@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mu-cite_8.1+0.20180823-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mu-cite"]
+]
+depends: [
+  "apel" {>= "10.7"}
+  "emacsen-common" {>= "2.0.8"}
+  "flim"
+  "make"
+  ("emacs-nox" | "emacs" | "emacsen")
+]
+extra-source "mu-cite_8.1+0.20180823-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mu-cite/mu-cite_8.1+0.20180823-1_all.deb"
+}

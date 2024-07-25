@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postfix-ldap_3.7.11-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postfix-ldap"]
+]
+depends: [
+  "libc6" {>= "2.11"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "postfix" {= "3.7.11-0+deb12u1"}
+]
+extra-source "postfix-ldap_3.7.11-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postfix/postfix-ldap_3.7.11-0+deb12u1_amd64.deb"
+}

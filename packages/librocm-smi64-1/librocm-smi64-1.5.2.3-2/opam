@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librocm-smi64-1_5.2.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librocm-smi64-1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "librocm-smi64-1_5.2.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rocm-smi-lib/librocm-smi64-1_5.2.3-2_amd64.deb"
+}

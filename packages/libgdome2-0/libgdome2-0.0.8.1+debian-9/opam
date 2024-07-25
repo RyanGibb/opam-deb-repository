@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgdome2-0_0.8.1+debian-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgdome2-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libxml2" {>= "2.9.0"}
+]
+extra-source "libgdome2-0_0.8.1+debian-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gdome2/libgdome2-0_0.8.1+debian-9_amd64.deb"
+}

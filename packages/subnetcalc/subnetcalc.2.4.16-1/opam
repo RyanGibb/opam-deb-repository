@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i subnetcalc_2.4.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r subnetcalc"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgeoip1" {>= "1.6.12"}
+  "libstdc++6" {>= "4.4.0"}
+]
+extra-source "subnetcalc_2.4.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/subnetcalc/subnetcalc_2.4.16-1_amd64.deb"
+}

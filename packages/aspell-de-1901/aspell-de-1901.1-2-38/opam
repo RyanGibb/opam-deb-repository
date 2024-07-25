@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aspell-de-1901_1:2-38_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aspell-de-1901"]
+]
+depends: [
+  "aspell"
+  "dictionaries-common" {>= "1.23~"}
+]
+extra-source "aspell-de-1901_1:2-38_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hkgerman/aspell-de-1901_2-38_all.deb"
+}

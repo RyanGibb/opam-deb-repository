@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eog-plugin-python-console_3.26.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eog-plugin-python-console"]
+]
+depends: [
+  "eog" {>= "3.20.3-1~"}
+  "eog-plugins-common" {>= "3.26.3-2"}
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-3-0"
+  "gir1-2-pango-1-0"
+  "gir1-2-peas-1-0"
+  "gsettings-desktop-schemas"
+  "python3-any"
+  "python3-gi"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "eog-plugin-python-console_3.26.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eog-plugins/eog-plugin-python-console_3.26.3-2_amd64.deb"
+}

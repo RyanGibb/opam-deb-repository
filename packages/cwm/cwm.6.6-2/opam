@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cwm_6.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cwm"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+  "libxrandr2" {>= "2-1.2.0"}
+]
+extra-source "cwm_6.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cwm/cwm_6.6-2_amd64.deb"
+}

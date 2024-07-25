@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-galpy_1.6.0.post0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-galpy"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgomp1" {>= "6"}
+  "libgsl25" {>= "2.6"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-distutils"
+  "python3-future"
+  "python3-matplotlib" {>= "1.5.2~rc2"}
+  "python3-numpy" {>= "1.7.0"}
+  "python3-pkg-resources"
+  "python3-pytest"
+  "python3-scipy" {>= "0.17.1"}
+  "python3-six" {>= "1.10.0"}
+  "python3-tk"
+]
+extra-source "python3-galpy_1.6.0.post0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/galpy/python3-galpy_1.6.0.post0-2_amd64.deb"
+}

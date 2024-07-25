@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-esqueleto-prof_3.3.3.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-esqueleto-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-attoparsec-prof"
+  "libghc-blaze-html-prof"
+  "libghc-conduit-prof"
+  "libghc-esqueleto-dev" {= "3.3.3.2-2"}
+  "libghc-monad-logger-prof"
+  "libghc-persistent-prof"
+  "libghc-resourcet-prof"
+  "libghc-tagged-prof"
+  "libghc-unliftio-prof"
+  "libghc-unordered-containers-prof"
+]
+extra-source "libghc-esqueleto-prof_3.3.3.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-esqueleto/libghc-esqueleto-prof_3.3.3.2-2_amd64.deb"
+}

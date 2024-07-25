@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bruteforce-salted-openssl_1.4.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bruteforce-salted-openssl"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "bruteforce-salted-openssl_1.4.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bruteforce-salted-openssl/bruteforce-salted-openssl_1.4.1-1_amd64.deb"
+}

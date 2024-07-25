@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenvlbi1_1.23.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenvlbi1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcfitsio10" {>= "4.2.0~"}
+  "libgcc-s1" {>= "3.0"}
+  "libopendsp1" {>= "1.23.5"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libopenvlbi1_1.23.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openvlbi/libopenvlbi1_1.23.5-2_amd64.deb"
+}

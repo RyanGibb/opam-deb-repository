@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-githash-prof_0.1.6.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-githash-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-githash-dev" {= "0.1.6.3-1"}
+  "libghc-th-compat-prof"
+]
+extra-source "libghc-githash-prof_0.1.6.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-githash/libghc-githash-prof_0.1.6.3-1_amd64.deb"
+}

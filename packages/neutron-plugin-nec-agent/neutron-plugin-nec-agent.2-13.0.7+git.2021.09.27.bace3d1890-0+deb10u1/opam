@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i neutron-plugin-nec-agent_2:13.0.7+git.2021.09.27.bace3d1890-0+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r neutron-plugin-nec-agent"]
+]
+depends: [
+  "neutron-common" {= "2-13.0.7+git.2021.09.27.bace3d1890-0+deb10u1"}
+  "sudo"
+]
+extra-source "neutron-plugin-nec-agent_2:13.0.7+git.2021.09.27.bace3d1890-0+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neutron/neutron-plugin-nec-agent_13.0.7+git.2021.09.27.bace3d1890-0+deb10u1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i metacity-common_1:3.30.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r metacity-common"]
+]
+depends: [
+  "sgml-base" {>= "1.28"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "metacity-common_1:3.30.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/metacity/metacity-common_3.30.1-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pike8.0-odbc_8.0.1738-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pike8.0-odbc"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libodbc2" {>= "2.3.1"}
+  "pike8-0-core" {= "8.0.1738-1+b2"}
+]
+extra-source "pike8.0-odbc_8.0.1738-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pike8.0/pike8.0-odbc_8.0.1738-1+b2_amd64.deb"
+}

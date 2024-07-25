@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libijs-dev_0.35-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libijs-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libijs-0-35" {= "0.35-14"}
+]
+extra-source "libijs-dev_0.35-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ijs/libijs-dev_0.35-14_amd64.deb"
+}

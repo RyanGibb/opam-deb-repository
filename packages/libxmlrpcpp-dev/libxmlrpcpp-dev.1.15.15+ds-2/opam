@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlrpcpp-dev_1.15.15+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlrpcpp-dev"]
+]
+depends: [
+  "libb64-dev"
+  "libroscpp-core-dev"
+  "libxmlrpcpp3d" {= "1.15.15+ds-2"}
+]
+extra-source "libxmlrpcpp-dev_1.15.15+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-ros-comm/libxmlrpcpp-dev_1.15.15+ds-2_amd64.deb"
+}

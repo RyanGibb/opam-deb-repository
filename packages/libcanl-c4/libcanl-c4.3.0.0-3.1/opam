@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcanl-c4_3.0.0-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcanl-c4"]
+]
+depends: [
+  "libc-ares2" {>= "1.7.0"}
+  "libc6" {>= "2.15"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "libcanl-c4_3.0.0-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/canl-c/libcanl-c4_3.0.0-3.1_amd64.deb"
+}

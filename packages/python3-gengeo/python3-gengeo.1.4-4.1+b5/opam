@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-gengeo_1.4-4.1+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-gengeo"]
+]
+depends: [
+  "libboost-python1-74-0"
+  "libboost-python1-74-0" {>= "1.74.0"}
+  "libboost-regex1-74-0"
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libpython3-11" {>= "3.11.0"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-gengeo_1.4-4.1+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-demgengeo/python3-gengeo_1.4-4.1+b5_amd64.deb"
+}

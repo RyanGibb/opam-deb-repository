@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sludge-compiler_2.2.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sludge-compiler"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "4.3"}
+]
+conflicts: [
+  "sludge-devkit (<= 2.1.1-1)"
+]
+extra-source "sludge-compiler_2.2.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sludge/sludge-compiler_2.2.2-4_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scim-modules-socket_1.4.18-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scim-modules-socket"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libscim8v5" {>= "1.4"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "scim-modules-socket_1.4.18-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scim/scim-modules-socket_1.4.18-2.1_amd64.deb"
+}

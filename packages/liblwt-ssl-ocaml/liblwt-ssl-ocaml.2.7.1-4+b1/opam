@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblwt-ssl-ocaml_2.7.1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblwt-ssl-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "liblwt-ocaml"
+  "libresult-ocaml"
+  "libssl-ocaml"
+  "ocaml-base-nox"
+]
+extra-source "liblwt-ssl-ocaml_2.7.1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lwt/liblwt-ssl-ocaml_2.7.1-4+b1_amd64.deb"
+}

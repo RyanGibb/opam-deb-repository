@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgmpada10-dev_1.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgmpada10-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-10"
+  "libgmp-dev"
+  "libgmpada8" {= "1.4-2"}
+]
+extra-source "libgmpada10-dev_1.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgmpada/libgmpada10-dev_1.4-2_amd64.deb"
+}

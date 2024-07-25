@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tortoize_2.0.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tortoize"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcifpp5" {>= "5.0.7.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libzeep5-1" {>= "5.1.8"}
+]
+extra-source "tortoize_2.0.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tortoize/tortoize_2.0.11-1_amd64.deb"
+}

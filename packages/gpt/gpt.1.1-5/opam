@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gpt_1.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gpt"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgportugol0"
+  "libpcrecpp0v5" {>= "7.7"}
+  "libstdc++6" {>= "5.2"}
+  "nasm"
+]
+extra-source "gpt_1.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gpt/gpt_1.1-5_amd64.deb"
+}

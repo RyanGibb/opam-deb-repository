@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libadacgi6-dev_1.6-32_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libadacgi6-dev"]
+]
+depends: [
+  "gnat" {< "13"}
+  "gnat" {>= "12"}
+  "libadacgi4" {= "1.6-32"}
+]
+extra-source "libadacgi6-dev_1.6-32_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/adacgi/libadacgi6-dev_1.6-32_amd64.deb"
+}

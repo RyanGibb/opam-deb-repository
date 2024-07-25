@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nss-updatedb_10-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nss-updatedb"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdb5-3"
+]
+extra-source "nss-updatedb_10-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nss-updatedb/nss-updatedb_10-6+b1_amd64.deb"
+}

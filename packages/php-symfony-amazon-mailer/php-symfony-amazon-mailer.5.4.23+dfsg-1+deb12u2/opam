@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-amazon-mailer_5.4.23+dfsg-1+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-amazon-mailer"]
+]
+depends: [
+  "php-async-aws-ses" {< "2~~"}
+  "php-async-aws-ses" {>= "1.0"}
+  "php-common"
+  "php-psr-event-dispatcher" {< "2~~"}
+  "php-psr-event-dispatcher" {>= "1"}
+  "php-symfony-deprecation-contracts"
+  "php-symfony-mailer"
+]
+extra-source "php-symfony-amazon-mailer_5.4.23+dfsg-1+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/symfony/php-symfony-amazon-mailer_5.4.23+dfsg-1+deb12u2_all.deb"
+}

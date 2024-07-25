@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i automx_0.10.0-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r automx"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-dateutil"
+  "python-ipaddr"
+  "python-lxml"
+  "python-m2crypto"
+  "python-memcache"
+  ("libapache2-mod-wsgi" | "httpd-wsgi")
+]
+extra-source "automx_0.10.0-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/automx/automx_0.10.0-2.1_all.deb"
+}

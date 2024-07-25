@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ganeti-testsuite_2.16.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ganeti-testsuite"]
+]
+depends: [
+  "ganeti" {= "2.16.0-5"}
+  "python"
+  "python-mock"
+  "python-yaml"
+  "qemu-utils"
+]
+extra-source "ganeti-testsuite_2.16.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/ganeti/ganeti-testsuite_2.16.0-5_all.deb"
+}

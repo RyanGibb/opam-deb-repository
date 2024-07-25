@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libebackend-1.2-11_3.46.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libebackend-1.2-11"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libcamel-1-2-64" {>= "3.19.92"}
+  "libdb5-3"
+  "libedataserver-1-2-27" {>= "3.45.2"}
+  "libglib2-0-0" {>= "2.65.1"}
+  "libsqlite3-0" {>= "3.6.0"}
+]
+extra-source "libebackend-1.2-11_3.46.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/evolution-data-server/libebackend-1.2-11_3.46.4-2_amd64.deb"
+}

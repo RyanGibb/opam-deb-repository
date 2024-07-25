@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i umis_1.0.7-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r umis"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-click"
+  "python3-pandas"
+  "python3-pysam"
+  "python3-regex"
+  "python3-scipy"
+  "python3-toolz"
+]
+extra-source "umis_1.0.7-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/umis/umis_1.0.7-1+b1_amd64.deb"
+}

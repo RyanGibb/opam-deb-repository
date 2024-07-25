@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpolkit-qt5-1-dev_0.112.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpolkit-qt5-1-dev"]
+]
+depends: [
+  "libpolkit-qt5-1-1" {= "0.112.0-6"}
+  "qtbase5-dev"
+]
+extra-source "libpolkit-qt5-1-dev_0.112.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/polkit-qt-1/libpolkit-qt5-1-dev_0.112.0-6_amd64.deb"
+}

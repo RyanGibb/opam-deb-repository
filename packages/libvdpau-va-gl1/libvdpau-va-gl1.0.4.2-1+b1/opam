@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvdpau-va-gl1_0.4.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvdpau-va-gl1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libgl1"
+  "libstdc++6" {>= "6"}
+  "libva-x11-2" {>= "1.0.3"}
+  "libva2" {>= "1.7.3"}
+  "libvdpau1"
+  "libx11-6"
+  "libxext6"
+]
+extra-source "libvdpau-va-gl1_0.4.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvdpau-va-gl/libvdpau-va-gl1_0.4.2-1+b1_amd64.deb"
+}

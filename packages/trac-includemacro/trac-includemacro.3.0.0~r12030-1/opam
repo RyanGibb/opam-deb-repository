@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i trac-includemacro_3.0.0~r12030-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r trac-includemacro"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  "trac" {>= "0.11.6"}
+]
+extra-source "trac-includemacro_3.0.0~r12030-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trac-includemacro/trac-includemacro_3.0.0~r12030-1_all.deb"
+}

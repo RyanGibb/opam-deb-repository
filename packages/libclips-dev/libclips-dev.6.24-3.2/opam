@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclips-dev_6.24-3.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclips-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libclips" {= "6.24-3.2"}
+]
+extra-source "libclips-dev_6.24-3.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clips/libclips-dev_6.24-3.2_amd64.deb"
+}

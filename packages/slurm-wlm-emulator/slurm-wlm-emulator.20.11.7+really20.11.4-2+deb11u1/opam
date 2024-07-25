@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slurm-wlm-emulator_20.11.7+really20.11.4-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slurm-wlm-emulator"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libhwloc15" {>= "2.4.1+dfsg"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libnuma1" {>= "2.0.11"}
+  "libpam0g" {>= "0.99.7.1"}
+  "slurmctld" {= "20.11.7+really20.11.4-2+deb11u1"}
+  "slurmd" {= "20.11.7+really20.11.4-2+deb11u1"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "slurm-wlm-emulator_20.11.7+really20.11.4-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-wlm/slurm-wlm-emulator_20.11.7+really20.11.4-2+deb11u1_amd64.deb"
+}

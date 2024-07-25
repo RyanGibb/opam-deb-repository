@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzbar0_0.22-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzbar0"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libice6" {>= "1-1.0.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libsm6"
+  "libv4l-0" {>= "0.5.0"}
+  "libx11-6"
+]
+extra-source "libzbar0_0.22-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zbar/libzbar0_0.22-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-orbit-predictor_1.15.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-orbit-predictor"]
+]
+depends: [
+  "python3-any"
+  "python3-numpy" {>= "1.8.2"}
+  "python3-requests"
+  "python3-scipy"
+  "python3-sgp4" {>= "2.5"}
+]
+extra-source "python3-orbit-predictor_1.15.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/orbit-predictor/python3-orbit-predictor_1.15.0-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-factory-bot-rails_5.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-factory-bot-rails"]
+]
+depends: [
+  "ruby"
+  "ruby-factory-bot" {>= "5.1~"}
+  "ruby-railties" {>= "2-4.2~"}
+]
+extra-source "ruby-factory-bot-rails_5.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-factory-bot-rails/ruby-factory-bot-rails_5.1.1-2_all.deb"
+}

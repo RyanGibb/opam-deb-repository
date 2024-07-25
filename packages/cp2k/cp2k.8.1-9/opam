@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cp2k_8.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cp2k"]
+]
+depends: [
+  "cp2k-data" {= "8.1-9"}
+  "libc6" {>= "2.29"}
+  "libelpa15" {>= "2019.11.001"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc-s1" {>= "4.0"}
+  "libgfortran5" {>= "10"}
+  "libgomp1" {>= "6"}
+  "libint2-2"
+  "libopenmpi3" {>= "4.1.0"}
+  "libscalapack-openmpi2-1" {>= "2.1.0"}
+  "libsymspg1" {>= "1.16.1"}
+  "libxc5" {>= "4.2.1"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "cp2k_8.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cp2k/cp2k_8.1-9_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i binutils-for-host_2.35.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r binutils-for-host"]
+]
+depends: [
+  "binutils-common" {= "2.35.2-2"}
+  "binutils-x86-64-linux-gnu-any" {>= "2.30-2"}
+]
+extra-source "binutils-for-host_2.35.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/binutils/binutils-for-host_2.35.2-2_amd64.deb"
+}

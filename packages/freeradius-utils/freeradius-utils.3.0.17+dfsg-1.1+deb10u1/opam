@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freeradius-utils_3.0.17+dfsg-1.1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freeradius-utils"]
+]
+depends: [
+  "freeradius-common"
+  "freeradius-config"
+  "libc6" {>= "2.14"}
+  "libcap2" {>= "1-2.10"}
+  "libcollectdclient1" {>= "4.6.0"}
+  "libfreeradius3" {= "3.0.17+dfsg-1.1+deb10u1"}
+  "libgdbm6" {>= "1.16"}
+  "libpcap0-8" {>= "0.9.8"}
+  "libpcre3"
+  "libreadline7" {>= "6.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+conflicts: [
+  "radiusd-livingston"
+  "yardradius"
+]
+extra-source "freeradius-utils_3.0.17+dfsg-1.1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeradius/freeradius-utils_3.0.17+dfsg-1.1+deb10u1_amd64.deb"
+}

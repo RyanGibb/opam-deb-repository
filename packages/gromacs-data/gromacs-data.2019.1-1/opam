@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gromacs-data_2019.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gromacs-data"]
+]
+depends: [
+  "libjs-mathjax"
+]
+conflicts: [
+  "gromacs-doc"
+]
+extra-source "gromacs-data_2019.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gromacs/gromacs-data_2019.1-1_all.deb"
+}

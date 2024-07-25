@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i texlive-latex-base-doc_2020.20210202-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r texlive-latex-base-doc"]
+]
+depends: [
+  "tex-common" {>= "6.13"}
+  "texlive-base" {>= "2020.20200417"}
+]
+extra-source "texlive-latex-base-doc_2020.20210202-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/texlive-base/texlive-latex-base-doc_2020.20210202-3_all.deb"
+}

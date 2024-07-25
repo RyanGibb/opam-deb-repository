@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i acpitail_0.1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r acpitail"]
+]
+depends: [
+  "libacpi0"
+  "libc6" {>= "2.4"}
+]
+extra-source "acpitail_0.1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/acpitail/acpitail_0.1-4+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libubertooth-dev_2018.12.R1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libubertooth-dev"]
+]
+depends: [
+  "libbluetooth-dev"
+  "libbtbb-dev"
+  "libpcap-dev"
+  "libubertooth1" {= "2018.12.R1-2"}
+  "libusb-1-0-0-dev"
+]
+extra-source "libubertooth-dev_2018.12.R1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ubertooth/libubertooth-dev_2018.12.R1-2_amd64.deb"
+}

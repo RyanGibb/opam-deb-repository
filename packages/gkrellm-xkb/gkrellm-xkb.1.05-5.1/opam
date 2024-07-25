@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gkrellm-xkb_1.05-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gkrellm-xkb"]
+]
+depends: [
+  "gkrellm" {>= "2.0.0"}
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.8.0"}
+]
+extra-source "gkrellm-xkb_1.05-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gkrellm-xkb/gkrellm-xkb_1.05-5.1_amd64.deb"
+}

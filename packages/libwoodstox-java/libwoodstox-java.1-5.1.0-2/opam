@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwoodstox-java_1:5.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwoodstox-java"]
+]
+depends: [
+  "libknopflerfish-osgi-framework-java"
+  "libmsv-java"
+  "librelaxng-datatype-java"
+  "libstax2-api-java" {>= "4.1"}
+]
+extra-source "libwoodstox-java_1:5.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libw/libwoodstox-java/libwoodstox-java_5.1.0-2_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cloudkitty-api_13.0.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cloudkitty-api"]
+]
+depends: [
+  "adduser"
+  "cloudkitty-common" {= "13.0.0-6"}
+  "debconf"
+  "lsb-base" {>= "3.0-6"}
+  "python3-openstackclient"
+  "python3-pastescript"
+  "python3-q-text-as-data"
+  "uwsgi-plugin-python3"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "cloudkitty-api_13.0.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cloudkitty/cloudkitty-api_13.0.0-6_all.deb"
+}

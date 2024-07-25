@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjs-dojo-dojox_1.17.2+dfsg1-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjs-dojo-dojox"]
+]
+depends: [
+  "libjs-dojo-core" {= "1.17.2+dfsg1-2.1"}
+  "libjs-dojo-dijit" {= "1.17.2+dfsg1-2.1"}
+]
+extra-source "libjs-dojo-dojox_1.17.2+dfsg1-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dojo/libjs-dojo-dojox_1.17.2+dfsg1-2.1_all.deb"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnotificationmanager1_4:5.20.5-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnotificationmanager1"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libkf5configcore5" {>= "5.74.0~"}
+  "libkf5configgui5" {>= "5.74.0~"}
+  "libkf5coreaddons5" {>= "5.74.0~"}
+  "libkf5i18n5" {>= "5.74.0~"}
+  "libkf5itemmodels5" {>= "5.74.0~"}
+  "libkf5kiofilewidgets5" {>= "5.74.0~"}
+  "libkf5screen-bin" {>= "4-5.17.5~"}
+  "libkf5screen7" {>= "4-5.20~"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "4.96.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.15.0~"}
+  "libqt5qml5" {>= "5.15.0~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.0~"} | "libqt5gui5-gles" {>= "5.15.0~"})
+]
+extra-source "libnotificationmanager1_4:5.20.5-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plasma-workspace/libnotificationmanager1_5.20.5-6_amd64.deb"
+}

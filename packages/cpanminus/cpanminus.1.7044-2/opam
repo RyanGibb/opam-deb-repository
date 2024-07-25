@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cpanminus_1.7044-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cpanminus"]
+]
+depends: [
+  "libcpan-distnameinfo-perl"
+  "libcpan-meta-check-perl" {>= "0.012"}
+  "libfile-pushd-perl"
+  "libjson-pp-perl"
+  "liblocal-lib-perl" {>= "2.000015"}
+  "libmodule-cpanfile-perl"
+  "libparse-cpan-meta-perl"
+  "libparse-pmfile-perl" {>= "0.36"}
+  "libstring-shellquote-perl"
+  "perl"
+  "perl-any"
+  ("libhttp-tiny-perl" {>= "0.056"} | "curl" | "wget")
+]
+extra-source "cpanminus_1.7044-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cpanminus/cpanminus_1.7044-2_all.deb"
+}

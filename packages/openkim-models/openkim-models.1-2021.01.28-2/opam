@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openkim-models_1:2021.01.28-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openkim-models"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgfortran5" {>= "10"}
+  "libkim-api2" {>= "2.2.1"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "openkim-models_1:2021.01.28-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openkim-models/openkim-models_2021.01.28-2_amd64.deb"
+}

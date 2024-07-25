@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pagure-milters_5.11.3+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pagure-milters"]
+]
+depends: [
+  "pagure" {= "5.11.3+dfsg-1"}
+  "postfix"
+  "python3-any"
+  "python3-milter"
+]
+extra-source "pagure-milters_5.11.3+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pagure/pagure-milters_5.11.3+dfsg-1_all.deb"
+}

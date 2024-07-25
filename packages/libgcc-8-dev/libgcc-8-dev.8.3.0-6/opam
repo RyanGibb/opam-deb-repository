@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgcc-8-dev_8.3.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgcc-8-dev"]
+]
+depends: [
+  "gcc-8-base" {= "8.3.0-6"}
+  "libasan5" {>= "8.3.0-6"}
+  "libatomic1" {>= "8.3.0-6"}
+  "libgcc1" {>= "1-8.3.0-6"}
+  "libgomp1" {>= "8.3.0-6"}
+  "libitm1" {>= "8.3.0-6"}
+  "liblsan0" {>= "8.3.0-6"}
+  "libmpx2" {>= "8.3.0-6"}
+  "libquadmath0" {>= "8.3.0-6"}
+  "libtsan0" {>= "8.3.0-6"}
+  "libubsan1" {>= "8.3.0-6"}
+]
+extra-source "libgcc-8-dev_8.3.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8/libgcc-8-dev_8.3.0-6_amd64.deb"
+}

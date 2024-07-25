@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdtkcore5_5.5.33-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdtkcore5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdtkcommon"
+  "libgcc-s1" {>= "3.0"}
+  "libgsettings-qt1" {>= "0.1+14.04.20140408"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  "lshw"
+]
+extra-source "libdtkcore5_5.5.33-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dtkcore/libdtkcore5_5.5.33-1+b3_amd64.deb"
+}

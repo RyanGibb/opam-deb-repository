@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-libvirt_5.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-libvirt"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libvirt0" {>= "4.10.0"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+]
+extra-source "python3-libvirt_5.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvirt-python/python3-libvirt_5.0.0-1_amd64.deb"
+}

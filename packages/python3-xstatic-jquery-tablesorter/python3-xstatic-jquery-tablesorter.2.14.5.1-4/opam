@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-xstatic-jquery.tablesorter_2.14.5.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-xstatic-jquery.tablesorter"]
+]
+depends: [
+  "libjs-jquery-tablesorter" {>= "1-2.14.5"}
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-xstatic"
+]
+extra-source "python3-xstatic-jquery.tablesorter_2.14.5.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-xstatic-jquery.tablesorter/python3-xstatic-jquery.tablesorter_2.14.5.1-4_all.deb"
+}

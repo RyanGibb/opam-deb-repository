@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pingus_0.7.6-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pingus"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2"
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "9"}
+  "pingus-data" {= "0.7.6-5.1"}
+]
+extra-source "pingus_0.7.6-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pingus/pingus_0.7.6-5.1_amd64.deb"
+}

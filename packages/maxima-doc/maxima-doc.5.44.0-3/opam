@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i maxima-doc_5.44.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r maxima-doc"]
+]
+depends: [
+  "tex-common" {>= "6.13"}
+]
+extra-source "maxima-doc_5.44.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maxima/maxima-doc_5.44.0-3_all.deb"
+}

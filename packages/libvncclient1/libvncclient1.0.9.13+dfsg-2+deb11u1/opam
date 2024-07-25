@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvncclient1_0.9.13+dfsg-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvncclient1"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libgnutls30" {>= "3.7.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "liblzo2-2" {>= "2.02"}
+  "libsasl2-2" {>= "2.1.27+dfsg"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libvncclient1_0.9.13+dfsg-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvncserver/libvncclient1_0.9.13+dfsg-2+deb11u1_amd64.deb"
+}

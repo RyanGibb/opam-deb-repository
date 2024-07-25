@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i doxygen-latex_1.9.4-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r doxygen-latex"]
+]
+depends: [
+  "cm-super-minimal"
+  "doxygen" {>= "1.9.4-4"}
+  "ghostscript"
+  "texlive-extra-utils"
+  "texlive-font-utils"
+  "texlive-fonts-recommended"
+  "texlive-latex-extra"
+  "texlive-latex-recommended"
+  "texlive-plain-generic"
+]
+extra-source "doxygen-latex_1.9.4-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/doxygen/doxygen-latex_1.9.4-4_all.deb"
+}

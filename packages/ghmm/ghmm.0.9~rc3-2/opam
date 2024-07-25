@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ghmm_0.9~rc3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ghmm"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libghmm1"
+  "python"
+]
+extra-source "ghmm_0.9~rc3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/ghmm/ghmm_0.9~rc3-2_amd64.deb"
+}

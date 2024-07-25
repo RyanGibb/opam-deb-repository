@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rust-markdown_0.3.0-1+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rust-markdown"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "4.2"}
+]
+extra-source "rust-markdown_0.3.0-1+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-markdown/rust-markdown_0.3.0-1+b5_amd64.deb"
+}

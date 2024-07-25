@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hostapd_2:2.10-12+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hostapd"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libnl-3-200" {>= "3.2.7"}
+  "libnl-genl-3-200" {>= "3.2.7"}
+  "libnl-route-3-200" {>= "3.2.7"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "hostapd_2:2.10-12+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wpa/hostapd_2.10-12+deb12u1_amd64.deb"
+}

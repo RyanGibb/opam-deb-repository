@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i primus_0~20150328-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r primus"]
+]
+depends: [
+  "bumblebee"
+  "primus-libs" {= "0~20150328-7"}
+  "socat"
+  ("xserver-xorg-core" {>= "2-1.18.3-2"} | "xserver-xorg-video-intel" {>= "2-2.99.917"})
+]
+extra-source "primus_0~20150328-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/primus/primus_0~20150328-7_amd64.deb"
+}

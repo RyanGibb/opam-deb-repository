@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i 389-ds-base_1.4.0.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r 389-ds-base"]
+]
+depends: [
+  "389-ds-base-legacy-tools" {= "1.4.0.21-1"}
+  "389-ds-base-libs" {= "1.4.0.21-1"}
+  "acl"
+  "adduser"
+  "ldap-utils"
+  "libc6" {>= "2.17"}
+  "libcrack2" {>= "2.8.12"}
+  "libdb5-3"
+  "libevent-2-1-6" {>= "2.1.8-stable"}
+  "libicu63" {>= "63.1-1~"}
+  "libldap-2-4-2" {>= "2.4.39"}
+  "libnspr4" {>= "2-4.10.9"}
+  "libnss3" {>= "2-3.14"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpci3" {>= "1-3.5.2-1"}
+  "libsasl2-2" {>= "2.1.27+dfsg"}
+  "libsasl2-modules-gssapi-mit"
+  "libsensors5" {>= "1-3.1.0"}
+  "libsnmp30" {>= "5.7.3+dfsg"}
+  "libssl1-1" {>= "1.1.0"}
+  "libsystemd0"
+  "libwrap0" {>= "7.6-4~"}
+  "python"
+  "python3-any"
+  "python3-lib389"
+  "python3-selinux"
+  "python3-semanage"
+  "python3-sepolicy"
+  "systemd"
+  ("libperl4-corelibs-perl" | "perl" {< "5.12.3-7"})
+]
+extra-source "389-ds-base_1.4.0.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/3/389-ds-base/389-ds-base_1.4.0.21-1_amd64.deb"
+}

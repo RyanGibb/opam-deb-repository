@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ganyremote_7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ganyremote"]
+]
+depends: [
+  "anyremote" {>= "6.7"}
+  "gir1-2-gtk-3-0"
+  "python-any"
+  "python-bluez" {>= "0.9.1"}
+  "python-gi"
+]
+extra-source "ganyremote_7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/ganyremote/ganyremote_7.0-3_all.deb"
+}

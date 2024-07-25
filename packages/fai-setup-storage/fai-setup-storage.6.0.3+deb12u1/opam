@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fai-setup-storage_6.0.3+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fai-setup-storage"]
+]
+depends: [
+  "e2fsprogs"
+  "liblinux-lvm-perl"
+  "libparse-recdescent-perl"
+  "parted"
+  "perl"
+]
+extra-source "fai-setup-storage_6.0.3+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fai/fai-setup-storage_6.0.3+deb12u1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i voms-dev_2.1.0~rc0-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r voms-dev"]
+]
+depends: [
+  "libssl-dev"
+  "libvomsapi1v5" {= "2.1.0~rc0-5+b1"}
+]
+extra-source "voms-dev_2.1.0~rc0-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/voms/voms-dev_2.1.0~rc0-5+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uwsgi-plugin-curl-cron_2.0.19.1-7.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uwsgi-plugin-curl-cron"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libcurl4" {>= "7.16.2"}
+  "uwsgi-core" {= "2.0.19.1-7.1"}
+]
+extra-source "uwsgi-plugin-curl-cron_2.0.19.1-7.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uwsgi/uwsgi-plugin-curl-cron_2.0.19.1-7.1_amd64.deb"
+}

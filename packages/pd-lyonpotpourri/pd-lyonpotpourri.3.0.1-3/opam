@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pd-lyonpotpourri_3.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pd-lyonpotpourri"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  ("puredata" | "pd")
+]
+extra-source "pd-lyonpotpourri_3.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pd-lyonpotpourri/pd-lyonpotpourri_3.0.1-3_amd64.deb"
+}

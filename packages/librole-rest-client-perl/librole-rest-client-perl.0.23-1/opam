@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librole-rest-client-perl_0.23-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librole-rest-client-perl"]
+]
+depends: [
+  "libdata-serializer-perl"
+  "libhttp-message-perl"
+  "libhttp-thin-perl"
+  "libmoo-perl" {>= "1.003000"}
+  "libmoox-handlesvia-perl"
+  "libplack-perl"
+  "libtry-tiny-perl"
+  "libtype-tiny-perl"
+  "liburi-escape-xs-perl"
+  "perl"
+]
+extra-source "librole-rest-client-perl_0.23-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librole-rest-client-perl/librole-rest-client-perl_0.23-1_all.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ndctl_76.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ndctl"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcxl1" {>= "75"}
+  "libdaxctl1" {>= "71"}
+  "libiniparser1" {>= "4.0"}
+  "libjson-c5" {>= "0.15"}
+  "libkeyutils1" {>= "1.4"}
+  "libndctl6" {>= "75"}
+  "libtraceevent1" {>= "5.4"}
+  "libtracefs1" {>= "1.2.0"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "ndctl_76.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ndctl/ndctl_76.1-1_amd64.deb"
+}

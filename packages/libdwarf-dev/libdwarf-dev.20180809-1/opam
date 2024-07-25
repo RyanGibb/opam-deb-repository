@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdwarf-dev_20180809-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdwarf-dev"]
+]
+depends: [
+  "libdwarf1" {= "20180809-1"}
+]
+extra-source "libdwarf-dev_20180809-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dwarfutils/libdwarf-dev_20180809-1_amd64.deb"
+}

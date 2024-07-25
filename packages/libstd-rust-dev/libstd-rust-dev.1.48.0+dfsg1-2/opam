@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstd-rust-dev_1.48.0+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstd-rust-dev"]
+]
+depends: [
+  "libstd-rust-1-48" {= "1.48.0+dfsg1-2"}
+]
+extra-source "libstd-rust-dev_1.48.0+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rustc/libstd-rust-dev_1.48.0+dfsg1-2_amd64.deb"
+}

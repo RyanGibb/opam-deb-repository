@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-qpdf_1.1+dfsg-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-qpdf"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqpdf28" {> "10.0~"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-askpass"
+  "r-cran-curl"
+  "r-cran-rcpp"
+]
+extra-source "r-cran-qpdf_1.1+dfsg-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-qpdf/r-cran-qpdf_1.1+dfsg-1+b4_amd64.deb"
+}

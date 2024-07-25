@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jfractionlab_0.92-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jfractionlab"]
+]
+depends: [
+  "libtablelayout-java"
+  ("default-jre" | "java7-runtime")
+]
+extra-source "jfractionlab_0.92-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jfractionlab/jfractionlab_0.92-2_all.deb"
+}

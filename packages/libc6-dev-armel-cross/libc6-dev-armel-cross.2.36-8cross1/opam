@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libc6-dev-armel-cross_2.36-8cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libc6-dev-armel-cross"]
+]
+depends: [
+  "libc6-armel-cross" {= "2.36-8cross1"}
+  "linux-libc-dev-armel-cross"
+]
+conflicts: [
+  "libc0.1-dev-armel-cross"
+  "libc0.3-dev-armel-cross"
+  "libc6.1-dev-armel-cross"
+]
+extra-source "libc6-dev-armel-cross_2.36-8cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cross-toolchain-base/libc6-dev-armel-cross_2.36-8cross1_all.deb"
+}

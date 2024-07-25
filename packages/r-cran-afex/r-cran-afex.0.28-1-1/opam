@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-afex_0.28-1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-afex"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-cran-car"
+  "r-cran-lme4" {>= "1.1-8"}
+  "r-cran-lmertest" {>= "3.0-0"}
+  "r-cran-pbkrtest" {>= "0.4-1"}
+  "r-cran-reshape2"
+]
+extra-source "r-cran-afex_0.28-1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-afex/r-cran-afex_0.28-1-1_all.deb"
+}

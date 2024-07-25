@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i internetarchive_1.8.1-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r internetarchive"]
+]
+depends: [
+  "python3-any"
+  "python3-internetarchive"
+]
+conflicts: [
+  "python-duckduckgo2 (<< 0.242+git20151019-2)"
+]
+extra-source "internetarchive_1.8.1-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-internetarchive/internetarchive_1.8.1-1+deb10u1_all.deb"
+}

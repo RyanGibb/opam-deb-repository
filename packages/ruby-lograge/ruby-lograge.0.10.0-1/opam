@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-lograge_0.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-lograge"]
+]
+depends: [
+  "ruby-actionpack" {>= "4"}
+  "ruby-activesupport" {>= "4"}
+  "ruby-railties" {>= "4"}
+  "ruby-request-store"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-lograge_0.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-lograge/ruby-lograge_0.10.0-1_all.deb"
+}

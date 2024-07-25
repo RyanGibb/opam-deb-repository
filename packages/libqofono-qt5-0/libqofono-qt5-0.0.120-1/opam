@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqofono-qt5-0_0.120-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqofono-qt5-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libqofono-qt5-0_0.120-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libq/libqofono/libqofono-qt5-0_0.120-1_amd64.deb"
+}

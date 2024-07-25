@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stax_1.37-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stax"]
+]
+depends: [
+  "liballegro4-4"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-4.1.1"}
+  "libstdc++6" {>= "4.6"}
+]
+extra-source "stax_1.37-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stax/stax_1.37-1_amd64.deb"
+}

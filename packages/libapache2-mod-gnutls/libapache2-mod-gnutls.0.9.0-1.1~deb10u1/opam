@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-gnutls_0.9.0-1.1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-gnutls"]
+]
+depends: [
+  "apache2-bin"
+  "apache2-bin" {>= "2.4.16"}
+  "libc6" {>= "2.14"}
+  "libgnutls30" {>= "3.6.6"}
+  "libmsv1"
+]
+extra-source "libapache2-mod-gnutls_0.9.0-1.1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mod-gnutls/libapache2-mod-gnutls_0.9.0-1.1~deb10u1_amd64.deb"
+}

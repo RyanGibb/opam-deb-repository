@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xpilot-ng-client-x11_1:4.7.3-2.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xpilot-ng-client-x11"]
+]
+depends: [
+  "libalut0" {>= "1.0.1"}
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "libopenal1" {>= "1.14"}
+  "libx11-6"
+  "xpilot-ng-common" {= "1-4.7.3-2.3"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "xpilot-ng-client-x11_1:4.7.3-2.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xpilot-ng/xpilot-ng-client-x11_4.7.3-2.3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsnmp-info-perl_3.92-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsnmp-info-perl"]
+]
+depends: [
+  "libnetaddr-ip-perl"
+  "libregexp-common-perl"
+  "libscalar-list-utils-perl"
+  "libsnmp-perl"
+  "perl-any"
+]
+extra-source "libsnmp-info-perl_3.92-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsnmp-info-perl/libsnmp-info-perl_3.92-1_all.deb"
+}

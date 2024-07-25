@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i anacron_2.3-30_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r anacron"]
+]
+depends: [
+  "debianutils" {>= "1.7"}
+  "libc6" {>= "2.7"}
+  "lsb-base" {>= "3.0-10"}
+]
+extra-source "anacron_2.3-30_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/anacron/anacron_2.3-30_amd64.deb"
+}

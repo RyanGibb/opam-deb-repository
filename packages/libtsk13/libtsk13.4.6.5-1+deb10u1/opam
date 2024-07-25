@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtsk13_4.6.5-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtsk13"]
+]
+depends: [
+  "libafflib0v5" {>= "3.7.6"}
+  "libc6" {>= "2.14"}
+  "libewf2" {>= "20121209"}
+  "libgcc1" {>= "1-4.2"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libtsk10v5"
+]
+extra-source "libtsk13_4.6.5-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sleuthkit/libtsk13_4.6.5-1+deb10u1_amd64.deb"
+}

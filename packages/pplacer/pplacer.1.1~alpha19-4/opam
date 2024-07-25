@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pplacer_1.1~alpha19-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pplacer"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgsl25" {>= "2.6"}
+  "libsqlite3-0" {>= "3.25.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "pplacer_1.1~alpha19-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pplacer/pplacer_1.1~alpha19-4_amd64.deb"
+}

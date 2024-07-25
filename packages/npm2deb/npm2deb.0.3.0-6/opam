@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i npm2deb_0.3.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r npm2deb"]
+]
+depends: [
+  "devscripts"
+  "node-github-url-from-git" {>= "1.4.0~"}
+  "npm"
+  "python3-any"
+  "python3-apt"
+  "python3-dateutil"
+]
+extra-source "npm2deb_0.3.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/npm2deb/npm2deb_0.3.0-6_all.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsimbody3.6_3.6.1+dfsg-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsimbody3.6"]
+]
+depends: [
+  "freeglut3"
+  "libc6" {>= "2.27"}
+  "libgcc-s1"
+  "libgl1"
+  "libstdc++6" {>= "6"}
+  "libxi6"
+  "libxmu6"
+  ("libblas3" | "libblas-so-3")
+  ("libglu1-mesa" | "libglu1")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libsimbody3.6_3.6.1+dfsg-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/simbody/libsimbody3.6_3.6.1+dfsg-7_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-gee_4.13-20-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-gee"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "r-cran-gee_4.13-20-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-gee/r-cran-gee_4.13-20-2_amd64.deb"
+}

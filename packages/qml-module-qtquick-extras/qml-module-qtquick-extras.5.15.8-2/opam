@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-qtquick-extras_5.15.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-qtquick-extras"]
+]
+depends: [
+  "fonts-open-sans"
+  "libc6" {>= "2.14"}
+  "libqt5core5a" {>= "5.15.8+dfsg~"}
+  "libqt5qml5" {< "5.15.9~"}
+  "libqt5qml5" {>= "5.15.8+dfsg~"}
+  "libstdc++6" {>= "5"}
+  "qml-module-qtgraphicaleffects"
+  "qml-module-qtqml"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick-window2"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.15.8+dfsg~"} | "libqt5gui5-gles" {>= "5.15.8+dfsg~"})
+  ("libqt5quick5" {>= "5.15.8+dfsg~"} | "libqt5quick5-gles" {>= "5.15.8+dfsg~"})
+]
+extra-source "qml-module-qtquick-extras_5.15.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtquickcontrols-opensource-src/qml-module-qtquick-extras_5.15.8-2_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsolvext1_0.7.23-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsolvext1"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libexpat1" {>= "2.0.1"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "librpm9" {>= "4.16"}
+  "librpmio9" {>= "4.14.0+dfsg1"}
+  "libsolv1" {>= "0.7.23"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.2.3.3"}
+]
+extra-source "libsolvext1_0.7.23-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsolv/libsolvext1_0.7.23-1+deb12u1_amd64.deb"
+}

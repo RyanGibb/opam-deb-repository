@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fabric_2.5.0-0.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fabric"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "2.4.3-5~"}
+  "python3-any"
+  "python3-decorator"
+  "python3-fabric" {>= "2.5.0-0.3"}
+  "python3-pkg-resources"
+]
+extra-source "fabric_2.5.0-0.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fabric/fabric_2.5.0-0.3_all.deb"
+}

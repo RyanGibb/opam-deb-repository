@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-worker-loader_3.0.8-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-worker-loader"]
+]
+depends: [
+  "node-loader-utils" {>= "2.0~"}
+  "node-schema-utils" {>= "3.0~"}
+  "webpack"
+]
+extra-source "node-worker-loader_3.0.8-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-worker-loader/node-worker-loader_3.0.8-5_all.deb"
+}

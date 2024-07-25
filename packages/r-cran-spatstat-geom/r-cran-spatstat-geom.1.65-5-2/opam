@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-spatstat.geom_1.65-5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-spatstat.geom"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-cran-deldir" {>= "0.0-21"}
+  "r-cran-polyclip" {>= "1.10-0"}
+  "r-cran-spatstat-data" {>= "1.6-1"}
+  "r-cran-spatstat-sparse"
+  "r-cran-spatstat-utils" {>= "1.18-0"}
+]
+extra-source "r-cran-spatstat.geom_1.65-5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-spatstat.geom/r-cran-spatstat.geom_1.65-5-2_amd64.deb"
+}

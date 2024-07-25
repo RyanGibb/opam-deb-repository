@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-13-pgpool2_4.1.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-13-pgpool2"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpgpool0" {>= "4.1.4-3"}
+  "postgresql-13"
+]
+extra-source "postgresql-13-pgpool2_4.1.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pgpool2/postgresql-13-pgpool2_4.1.4-3_amd64.deb"
+}

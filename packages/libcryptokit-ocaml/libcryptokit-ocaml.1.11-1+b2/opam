@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcryptokit-ocaml_1.11-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcryptokit-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libzarith-ocaml"
+  "ocaml-base-nox"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libcryptokit-ocaml_1.11-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cryptokit/libcryptokit-ocaml_1.11-1+b2_amd64.deb"
+}

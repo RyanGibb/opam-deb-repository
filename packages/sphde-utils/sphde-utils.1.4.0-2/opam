@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sphde-utils_1.4.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sphde-utils"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libsphde1" {>= "1.1.0"}
+]
+extra-source "sphde-utils_1.4.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sphde/sphde-utils_1.4.0-2_amd64.deb"
+}

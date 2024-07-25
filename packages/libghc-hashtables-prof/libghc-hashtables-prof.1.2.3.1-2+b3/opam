@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hashtables-prof_1.2.3.1-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hashtables-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hashable-prof"
+  "libghc-hashtables-dev" {= "1.2.3.1-2+b3"}
+  "libghc-primitive-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-hashtables-prof_1.2.3.1-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hashtables/libghc-hashtables-prof_1.2.3.1-2+b3_amd64.deb"
+}

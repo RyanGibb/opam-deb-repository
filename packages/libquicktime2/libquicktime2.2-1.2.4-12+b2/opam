@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libquicktime2_2:1.2.4-12+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libquicktime2"]
+]
+depends: [
+  "libavcodec-extra58"
+  "libc6" {>= "2.14"}
+  "libdv4" {>= "1.0.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libmp3lame0" {>= "3.100"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libswscale5" {>= "7-4.0"}
+  "libvorbis0a" {>= "1.1.2"}
+  "libvorbisenc2" {>= "1.1.2"}
+  "libvorbisfile3" {>= "1.1.2"}
+  "libx264-155"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libquicktime2_2:1.2.4-12+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libq/libquicktime/libquicktime2_1.2.4-12+b2_amd64.deb"
+}

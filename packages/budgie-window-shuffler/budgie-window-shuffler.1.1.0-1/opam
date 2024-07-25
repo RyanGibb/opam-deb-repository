@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i budgie-window-shuffler_1.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r budgie-window-shuffler"]
+]
+depends: [
+  "budgie-extras-common"
+  "budgie-extras-daemon"
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.56"}
+  "libgtk-3-0" {>= "3.21.4"}
+  "libwnck-3-0" {>= "3.2.0"}
+  "x11-utils"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "budgie-window-shuffler_1.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/budgie-extras/budgie-window-shuffler_1.1.0-1_amd64.deb"
+}

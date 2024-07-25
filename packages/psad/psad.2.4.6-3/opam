@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i psad_2.4.6-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r psad"]
+]
+depends: [
+  "iproute2"
+  "iptables"
+  "libc6" {>= "2.34"}
+  "libcarp-clan-perl"
+  "libdate-calc-perl"
+  "libiptables-chainmgr-perl"
+  "libiptables-parse-perl"
+  "libnet-ip-perl"
+  "libunix-syslog-perl"
+  "lsb-base"
+  "net-tools"
+  "perl-any"
+  "psmisc"
+  "whois"
+  ("bsd-mailx" | "mailx" | "mailutils")
+  ("default-mta" | "mail-transport-agent")
+  ("rsyslog" | "system-log-daemon")
+]
+extra-source "psad_2.4.6-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/psad/psad_2.4.6-3_amd64.deb"
+}

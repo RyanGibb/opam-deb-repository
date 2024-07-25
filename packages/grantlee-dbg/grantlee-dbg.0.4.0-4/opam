@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i grantlee-dbg_0.4.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r grantlee-dbg"]
+]
+depends: [
+  ("libgrantlee-core0" {= "0.4.0-4"} | "libgrantlee-gui0" {= "0.4.0-4"})
+]
+extra-source "grantlee-dbg_0.4.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grantlee/grantlee-dbg_0.4.0-4_amd64.deb"
+}

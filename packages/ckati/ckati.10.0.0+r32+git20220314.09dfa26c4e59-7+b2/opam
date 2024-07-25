@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ckati_10.0.0+r32+git20220314.09dfa26c4e59-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ckati"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.4"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "ckati_10.0.0+r32+git20220314.09dfa26c4e59-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-build-kati/ckati_10.0.0+r32+git20220314.09dfa26c4e59-7+b2_amd64.deb"
+}

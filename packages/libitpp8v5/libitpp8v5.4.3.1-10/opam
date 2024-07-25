@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libitpp8v5_4.3.1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libitpp8v5"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc-s1" {>= "4.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "9"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+conflicts: [
+  "libitpp8"
+]
+extra-source "libitpp8v5_4.3.1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libitpp/libitpp8v5_4.3.1-10_amd64.deb"
+}

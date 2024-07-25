@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcdb-file-perl_1.05-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcdb-file-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "perl"
+  "perl-base"
+]
+extra-source "libcdb-file-perl_1.05-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcdb-file-perl/libcdb-file-perl_1.05-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpmempool-dev_1.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpmempool-dev"]
+]
+depends: [
+  "libpmem-dev" {= "1.5.1-1"}
+  "libpmempool1" {= "1.5.1-1"}
+]
+extra-source "libpmempool-dev_1.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pmdk/libpmempool-dev_1.5.1-1_amd64.deb"
+}

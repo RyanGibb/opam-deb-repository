@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-platform-devel_1:3.30+1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-platform-devel"]
+]
+depends: [
+  "gtk-doc-tools" {>= "1.21"}
+  "libclutter-gtk-1-0-dev" {>= "1.8"}
+  "libgstreamer1-0-dev" {>= "1.10"}
+  "libgtk-3-dev" {>= "3.22"}
+  "meson"
+]
+extra-source "gnome-platform-devel_1:3.30+1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-gnome3/gnome-platform-devel_3.30+1_all.deb"
+}

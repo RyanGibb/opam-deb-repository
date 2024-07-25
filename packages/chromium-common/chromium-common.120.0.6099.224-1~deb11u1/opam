@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i chromium-common_120.0.6099.224-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r chromium-common"]
+]
+depends: [
+  "libc6" {>= "2.30"}
+  "libjsoncpp24" {>= "1.9.4"}
+  "libstdc++6" {>= "9"}
+  "libx11-6"
+  "libxnvctrl0"
+  "x11-utils"
+  "xdg-utils"
+  "zlib1g" {>= "1-1.2.2"}
+]
+extra-source "chromium-common_120.0.6099.224-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chromium/chromium-common_120.0.6099.224-1~deb11u1_amd64.deb"
+}

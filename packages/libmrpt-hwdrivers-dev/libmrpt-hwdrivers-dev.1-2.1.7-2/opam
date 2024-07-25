@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmrpt-hwdrivers-dev_1:2.1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmrpt-hwdrivers-dev"]
+]
+depends: [
+  "libmrpt-common-dev"
+  "libmrpt-comms-dev"
+  "libmrpt-gui-dev"
+  "libmrpt-hwdrivers2-1" {= "1-2.1.7-2"}
+  "libmrpt-maps-dev"
+  "libmrpt-vision-dev"
+]
+extra-source "libmrpt-hwdrivers-dev_1:2.1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrpt/libmrpt-hwdrivers-dev_2.1.7-2_amd64.deb"
+}

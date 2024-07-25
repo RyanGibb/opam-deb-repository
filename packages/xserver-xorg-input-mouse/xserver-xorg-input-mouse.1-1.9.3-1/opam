@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xserver-xorg-input-mouse_1:1.9.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xserver-xorg-input-mouse"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "xserver-xorg-core"
+  "xserver-xorg-core" {>= "2-1.18.99.901"}
+]
+extra-source "xserver-xorg-input-mouse_1:1.9.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xserver-xorg-input-mouse/xserver-xorg-input-mouse_1.9.3-1_amd64.deb"
+}

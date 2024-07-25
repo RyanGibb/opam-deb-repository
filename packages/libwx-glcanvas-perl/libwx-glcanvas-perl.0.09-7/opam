@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwx-glcanvas-perl_0.09-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwx-glcanvas-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libwx-perl" {>= "1-0.9932-8~"}
+  "libwxbase3-2-1" {>= "3.2.1+dfsg"}
+  "libwxgtk-gl3-2-1" {>= "3.2.1+dfsg"}
+  "libwxgtk3-2-1" {>= "3.2.1+dfsg-2"}
+  "perl" {>= "5.36.0-6"}
+  "perl-base"
+]
+extra-source "libwx-glcanvas-perl_0.09-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libw/libwx-glcanvas-perl/libwx-glcanvas-perl_0.09-7_amd64.deb"
+}

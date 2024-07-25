@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdate-tz3_3.0.1+ds-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdate-tz3"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libstdc++6" {>= "11"}
+  "tzdata"
+]
+extra-source "libdate-tz3_3.0.1+ds-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/howardhinnant-date/libdate-tz3_3.0.1+ds-5_amd64.deb"
+}

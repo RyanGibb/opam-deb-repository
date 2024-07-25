@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cookie-dev_0.4.5-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cookie-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-data-default-class-dev"
+  "libgmp10"
+]
+extra-source "libghc-cookie-dev_0.4.5-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cookie/libghc-cookie-dev_0.4.5-1+b1_amd64.deb"
+}

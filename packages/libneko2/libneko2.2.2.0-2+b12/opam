@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libneko2_2.2.0-2+b12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libneko2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgc1c2" {>= "1-7.2d"}
+]
+conflicts: [
+  "neko (<< 1.8.0-2)"
+  "neko-dev (<< 1.8.1)"
+]
+extra-source "libneko2_2.2.0-2+b12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neko/libneko2_2.2.0-2+b12_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxine2-ffmpeg_1.2.9-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxine2-ffmpeg"]
+]
+depends: [
+  "libavformat58" {>= "7-4.0"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.15"}
+  "libfaad2" {>= "2.7"}
+  "libmad0" {>= "0.15.1b-3"}
+  "libpostproc55" {>= "7-4.0"}
+  "libxine2-bin" {= "1.2.9-1+b2"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libavcodec58" {>= "7-4.0"} | "libavcodec-extra58" {>= "7-4.0"})
+]
+extra-source "libxine2-ffmpeg_1.2.9-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xine-lib-1.2/libxine2-ffmpeg_1.2.9-1+b2_amd64.deb"
+}

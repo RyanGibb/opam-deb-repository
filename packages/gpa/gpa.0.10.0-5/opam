@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gpa_0.10.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gpa"]
+]
+depends: [
+  "gpgsm"
+  "libassuan0" {>= "2.0.1"}
+  "libc6" {>= "2.34"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.39.91"}
+  "libgpg-error0" {>= "1.14"}
+  "libgpgme11" {>= "1.7.1"}
+  "libgtk2-0-0" {>= "2.18.0"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("gnupg" | "gnupg2")
+]
+extra-source "gpa_0.10.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gpa/gpa_0.10.0-5_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-crossterm+serde-dev_0.25.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-crossterm+serde-dev"]
+]
+depends: [
+  "librust-crossterm-dev" {= "0.25.0-2"}
+  "librust-serde-1+default-dev"
+  "librust-serde-1+derive-dev"
+]
+extra-source "librust-crossterm+serde-dev_0.25.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-crossterm/librust-crossterm+serde-dev_0.25.0-2_amd64.deb"
+}

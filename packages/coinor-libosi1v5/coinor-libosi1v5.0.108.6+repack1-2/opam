@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coinor-libosi1v5_0.108.6+repack1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coinor-libosi1v5"]
+]
+depends: [
+  "coinor-libcoinutils3v5"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+]
+conflicts: [
+  "coinor-libosi1"
+]
+extra-source "coinor-libosi1v5_0.108.6+repack1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coinor-osi/coinor-libosi1v5_0.108.6+repack1-2_amd64.deb"
+}

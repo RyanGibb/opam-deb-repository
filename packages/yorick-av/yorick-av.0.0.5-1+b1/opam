@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yorick-av_0.0.5-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yorick-av"]
+]
+depends: [
+  "libavformat58" {>= "7-4.0"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.4"}
+  "libswscale5" {>= "7-4.0"}
+  "yorick" {>= "2"}
+  ("libavcodec58" {>= "7-4.0"} | "libavcodec-extra58" {>= "7-4.0"})
+]
+extra-source "yorick-av_0.0.5-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yorick-av/yorick-av_0.0.5-1+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpostgresql-jdbc-java_42.2.5-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpostgresql-jdbc-java"]
+]
+conflicts: [
+  "libpg-java (<= 9.1-901-1)"
+  "libpgjava (<= 7.4.7-3)"
+]
+extra-source "libpostgresql-jdbc-java_42.2.5-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpgjava/libpostgresql-jdbc-java_42.2.5-2+deb10u1_all.deb"
+}

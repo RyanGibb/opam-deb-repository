@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dvi2ps-fontdata-rsp_1.0.1-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dvi2ps-fontdata-rsp"]
+]
+depends: [
+  "dvi2ps-fontdata-ja"
+]
+conflicts: [
+  "dvi2ps (<< 3.2j)"
+  "fontdata-j"
+  "fontdata-rsp"
+]
+extra-source "dvi2ps-fontdata-rsp_1.0.1-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dvi2ps-fontdata/dvi2ps-fontdata-rsp_1.0.1-3.1_all.deb"
+}

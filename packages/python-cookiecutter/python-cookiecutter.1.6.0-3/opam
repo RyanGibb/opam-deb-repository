@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-cookiecutter_1.6.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-cookiecutter"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-binaryornot"
+  "python-click"
+  "python-future"
+  "python-jinja2"
+  "python-jinja2-time"
+  "python-requests"
+  "python-ruamel-yaml" {>= "0.10.12"}
+  "python-whichcraft"
+  "python-yaml"
+]
+extra-source "python-cookiecutter_1.6.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cookiecutter/python-cookiecutter_1.6.0-3_all.deb"
+}

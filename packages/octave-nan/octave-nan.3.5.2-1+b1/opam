@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-nan_3.5.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-nan"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "6"}
+  "liboctave8"
+  "libstdc++6" {>= "5"}
+  "octave" {>= "6.1.0"}
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "octave-nan_3.5.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave-nan/octave-nan_3.5.2-1+b1_amd64.deb"
+}

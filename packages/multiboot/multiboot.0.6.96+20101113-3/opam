@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i multiboot_0.6.96+20101113-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r multiboot"]
+]
+depends: [
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "multiboot_0.6.96+20101113-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/multiboot/multiboot_0.6.96+20101113-3_all.deb"
+}

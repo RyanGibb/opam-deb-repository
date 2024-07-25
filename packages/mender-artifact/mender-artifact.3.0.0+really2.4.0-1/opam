@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mender-artifact_3.0.0+really2.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mender-artifact"]
+]
+depends: [
+  "e2fsprogs"
+  "libc6" {>= "2.3.2"}
+  "mtools"
+  "parted"
+]
+extra-source "mender-artifact_3.0.0+really2.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-mendersoftware-mender-artifact/mender-artifact_3.0.0+really2.4.0-1_amd64.deb"
+}

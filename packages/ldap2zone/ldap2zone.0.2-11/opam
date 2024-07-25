@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ldap2zone_0.2-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ldap2zone"]
+]
+depends: [
+  "bind9"
+  "libc6" {>= "2.14"}
+  "libldap-2-4-2" {>= "2.4.7"}
+]
+conflicts: [
+  "ldapdns"
+]
+extra-source "ldap2zone_0.2-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ldap2zone/ldap2zone_0.2-11_amd64.deb"
+}

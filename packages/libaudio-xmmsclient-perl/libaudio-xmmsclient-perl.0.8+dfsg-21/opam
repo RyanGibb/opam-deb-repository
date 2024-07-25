@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaudio-xmmsclient-perl_0.8+dfsg-21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaudio-xmmsclient-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libxmmsclient6" {>= "0.8"}
+  "perl"
+  "perl-base"
+]
+extra-source "libaudio-xmmsclient-perl_0.8+dfsg-21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmms2/libaudio-xmmsclient-perl_0.8+dfsg-21_amd64.deb"
+}

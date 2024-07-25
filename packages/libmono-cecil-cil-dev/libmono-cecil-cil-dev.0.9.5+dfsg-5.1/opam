@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmono-cecil-cil-dev_0.9.5+dfsg-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmono-cecil-cil-dev"]
+]
+depends: [
+  "libmono-cecil-cil" {= "0.9.5+dfsg-5.1"}
+]
+conflicts: [
+  "libmono-cecil0.3-cil"
+  "libmono-cecil0.4-cil"
+  "libmono-cecil0.5-cil"
+]
+extra-source "libmono-cecil-cil-dev_0.9.5+dfsg-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cecil/libmono-cecil-cil-dev_0.9.5+dfsg-5.1_all.deb"
+}

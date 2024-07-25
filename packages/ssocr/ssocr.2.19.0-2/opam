@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ssocr_2.19.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ssocr"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libimlib2" {>= "1.4.5"}
+]
+extra-source "ssocr_2.19.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/ssocr/ssocr_2.19.0-2_amd64.deb"
+}

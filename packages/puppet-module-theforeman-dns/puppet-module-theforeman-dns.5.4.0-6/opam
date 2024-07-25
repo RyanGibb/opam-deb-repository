@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-theforeman-dns_5.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-theforeman-dns"]
+]
+depends: [
+  "puppet"
+  "puppet-module-puppetlabs-concat"
+  "puppet-module-puppetlabs-stdlib"
+]
+extra-source "puppet-module-theforeman-dns_5.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-theforeman-dns/puppet-module-theforeman-dns_5.4.0-6_all.deb"
+}

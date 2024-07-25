@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gambas3-gb-media_3.15.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gambas3-gb-media"]
+]
+depends: [
+  "gambas3-gb-image" {>= "3.15.2-1"}
+  "gambas3-runtime" {>= "3.15.2-1"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.0.0"}
+  "libgstreamer1-0-0" {>= "1.4.0"}
+]
+extra-source "gambas3-gb-media_3.15.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gambas3/gambas3-gb-media_3.15.2-1_amd64.deb"
+}

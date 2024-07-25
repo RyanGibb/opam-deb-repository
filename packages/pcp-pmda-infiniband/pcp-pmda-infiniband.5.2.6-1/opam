@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcp-pmda-infiniband_5.2.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcp-pmda-infiniband"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libibmad5" {>= "1.3.11"}
+  "libibumad3" {>= "1.3.9"}
+  "libpcp-pmda3"
+  "libpcp3"
+]
+extra-source "pcp-pmda-infiniband_5.2.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcp/pcp-pmda-infiniband_5.2.6-1_amd64.deb"
+}

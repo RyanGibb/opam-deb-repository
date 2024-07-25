@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libitpp8v5-dbg_4.3.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libitpp8v5-dbg"]
+]
+depends: [
+  "libitpp8v5" {= "4.3.1-9"}
+]
+conflicts: [
+  "libitpp8-dbg"
+]
+extra-source "libitpp8v5-dbg_4.3.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libitpp/libitpp8v5-dbg_4.3.1-9_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mc_3:4.8.29-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mc"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libext2fs2" {>= "1.37"}
+  "libglib2-0-0" {>= "2.67.3"}
+  "libgpm2" {>= "1.20.7"}
+  "libslang2" {>= "2.2.4"}
+  "libssh2-1" {>= "1.2.8"}
+  "mc-data" {= "3-4.8.29-2"}
+]
+extra-source "mc_3:4.8.29-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mc/mc_4.8.29-2_amd64.deb"
+}

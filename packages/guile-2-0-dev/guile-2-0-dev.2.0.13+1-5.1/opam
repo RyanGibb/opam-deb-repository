@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guile-2.0-dev_2.0.13+1-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guile-2.0-dev"]
+]
+depends: [
+  "guile-2-0-any" {= "2.0.13+1-5.1"}
+  "guile-2-0-libs" {= "2.0.13+1-5.1"}
+  "libc6-dev"
+  "libgc-dev"
+  "libgmp-dev"
+  "libltdl-dev"
+  "libncurses5-dev"
+  "libreadline-dev"
+  "pkg-config"
+]
+conflicts: [
+  "libguile-dev"
+]
+extra-source "guile-2.0-dev_2.0.13+1-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guile-2.0/guile-2.0-dev_2.0.13+1-5.1_amd64.deb"
+}

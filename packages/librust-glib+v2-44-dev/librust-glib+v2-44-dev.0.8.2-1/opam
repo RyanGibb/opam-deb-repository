@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-glib+v2-44-dev_0.8.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-glib+v2-44-dev"]
+]
+depends: [
+  "librust-glib-dev" {= "0.8.2-1"}
+  "librust-glib-sys-0-9+v2-44-dev"
+  "librust-gobject-sys-0-9+v2-44-dev"
+]
+extra-source "librust-glib+v2-44-dev_0.8.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-glib/librust-glib+v2-44-dev_0.8.2-1_amd64.deb"
+}

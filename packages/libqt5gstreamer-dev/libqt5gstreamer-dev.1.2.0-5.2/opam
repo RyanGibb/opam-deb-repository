@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5gstreamer-dev_1.2.0-5.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5gstreamer-dev"]
+]
+depends: [
+  "libboost-dev" {>= "1.39"}
+  "libglib2-0-dev"
+  "libgstreamer-plugins-base1-0-dev" {>= "1.1.90"}
+  "libgstreamer1-0-dev"
+  "libqt5glib-2-0-0" {= "1.2.0-5.2"}
+  "libqt5gstreamer-1-0-0" {= "1.2.0-5.2"}
+  "libqt5gstreamerquick-1-0-0" {= "1.2.0-5.2"}
+  "libqt5gstreamerui-1-0-0" {= "1.2.0-5.2"}
+  "libqt5gstreamerutils-1-0-0" {= "1.2.0-5.2"}
+  "qtbase5-dev"
+]
+extra-source "libqt5gstreamer-dev_1.2.0-5.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt-gstreamer/libqt5gstreamer-dev_1.2.0-5.2_amd64.deb"
+}

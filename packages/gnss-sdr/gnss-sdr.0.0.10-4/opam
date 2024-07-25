@@ -1,0 +1,44 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnss-sdr_0.0.10-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnss-sdr"]
+]
+depends: [
+  "libarmadillo9" {>= "1-9.200.7+dfsg"}
+  "libboost-atomic1-67-0"
+  "libboost-chrono1-67-0"
+  "libboost-date-time1-67-0"
+  "libboost-filesystem1-67-0"
+  "libboost-serialization1-67-0"
+  "libboost-system1-67-0"
+  "libboost-thread1-67-0"
+  "libc6" {>= "2.28"}
+  "libgcc1" {>= "1-4.0"}
+  "libgflags2-2"
+  "libgnuradio-blocks3-7-13"
+  "libgnuradio-fft3-7-13"
+  "libgnuradio-filter3-7-13"
+  "libgnuradio-iio0"
+  "libgnuradio-osmosdr0-1-4" {>= "0.1.4-13"}
+  "libgnuradio-pmt3-7-13"
+  "libgnuradio-runtime3-7-13"
+  "libgnuradio-uhd3-7-13"
+  "libgnutls-openssl27" {>= "3.6.5-0"}
+  "libgnutls30" {>= "3.6.5"}
+  "libgoogle-glog0v5"
+  "libiio0"
+  "liblog4cpp5v5"
+  "libmatio4" {>= "1.5.4"}
+  "libpcap0-8" {>= "0.9.8"}
+  "libpugixml1v5" {>= "1.4"}
+  "libstdc++6" {>= "6"}
+  "libuhd3-13-1"
+  "libvolk1-4"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "gnss-sdr_0.0.10-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnss-sdr/gnss-sdr_0.0.10-4_amd64.deb"
+}

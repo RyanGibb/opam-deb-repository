@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-openstackclient_5.4.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-openstackclient"]
+]
+depends: [
+  "python3-any"
+  "python3-cinderclient"
+  "python3-cliff"
+  "python3-glanceclient"
+  "python3-keyring"
+  "python3-keystoneclient" {>= "1-3.22.0"}
+  "python3-neutronclient"
+  "python3-novaclient" {>= "2-15.1.0"}
+  "python3-openstacksdk" {>= "0.48.0"}
+  "python3-osc-lib" {>= "2.0.0"}
+  "python3-oslo-i18n"
+  "python3-oslo-serialization"
+  "python3-oslo-utils"
+  "python3-pbr"
+  "python3-six" {>= "1.10.0"}
+  "python3-stevedore" {>= "2.0.1"}
+]
+extra-source "python3-openstackclient_5.4.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-openstackclient/python3-openstackclient_5.4.0-4_all.deb"
+}

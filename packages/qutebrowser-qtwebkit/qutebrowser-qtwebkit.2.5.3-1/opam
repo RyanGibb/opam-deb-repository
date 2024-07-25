@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qutebrowser-qtwebkit_2.5.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qutebrowser-qtwebkit"]
+]
+depends: [
+  "libqt5webkit5" {>= "5.212"}
+  "python3-pyqt5-qtwebkit" {>= "5.12.1"}
+  "qutebrowser" {= "2.5.3-1"}
+]
+extra-source "qutebrowser-qtwebkit_2.5.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qutebrowser/qutebrowser-qtwebkit_2.5.3-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pyprompter_0.9.1-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pyprompter"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-presage" {>= "0.9.1-2.1"}
+  "python-wxgtk3-0"
+]
+extra-source "pyprompter_0.9.1-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/presage/pyprompter_0.9.1-2.1_all.deb"
+}

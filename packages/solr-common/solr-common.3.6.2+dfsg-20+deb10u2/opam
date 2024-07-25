@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i solr-common_3.6.2+dfsg-20+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r solr-common"]
+]
+depends: [
+  "curl"
+  "debconf" {>= "1.5"}
+  "libjs-jquery"
+  "libsolr-java" {= "3.6.2+dfsg-20+deb10u2"}
+  "procps"
+  ("default-jre-headless" | "java5-runtime-headless" | "java6-runtime-headless")
+]
+extra-source "solr-common_3.6.2+dfsg-20+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lucene-solr/solr-common_3.6.2+dfsg-20+deb10u2_all.deb"
+}

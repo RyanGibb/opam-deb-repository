@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zx_7.1.1+~cs6.7.23-2+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zx"]
+]
+depends: [
+  "node-chalk" {>= "5"}
+  "node-duplexer"
+  "node-fetch" {>= "3"}
+  "node-fs-extra"
+  "node-globby" {>= "12"}
+  "node-minimist" {>= "1.2.5"}
+  "node-split"
+  "node-through"
+  "node-which" {>= "2.0.2"}
+  "node-yaml"
+  "nodejs-any" {>= "14"}
+]
+extra-source "zx_7.1.1+~cs6.7.23-2+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-zx/zx_7.1.1+~cs6.7.23-2+deb12u1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnfsidmap2_0.25-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnfsidmap2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libldap-2-4-2" {>= "2.4.7"}
+]
+conflicts: [
+  "libnfsidmap1"
+]
+extra-source "libnfsidmap2_0.25-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnfsidmap/libnfsidmap2_0.25-5.1_amd64.deb"
+}

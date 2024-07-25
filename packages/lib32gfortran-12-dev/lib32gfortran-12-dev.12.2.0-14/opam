@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32gfortran-12-dev_12.2.0-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32gfortran-12-dev"]
+]
+depends: [
+  "gcc-12-base" {= "12.2.0-14"}
+  "lib32gcc-12-dev" {= "12.2.0-14"}
+  "lib32gfortran5" {>= "12.2.0-14"}
+]
+extra-source "lib32gfortran-12-dev_12.2.0-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12/lib32gfortran-12-dev_12.2.0-14_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ucspi-tcp-ipv6_1:0.88-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ucspi-tcp-ipv6"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+conflicts: [
+  "ucspi-tcp"
+]
+extra-source "ucspi-tcp-ipv6_1:0.88-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ucspi-tcp/ucspi-tcp-ipv6_0.88-6_amd64.deb"
+}

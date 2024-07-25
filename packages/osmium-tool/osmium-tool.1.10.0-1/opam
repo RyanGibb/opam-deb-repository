@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osmium-tool_1.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osmium-tool"]
+]
+depends: [
+  "libboost-program-options1-67-0"
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "7"}
+  "zlib1g" {>= "1-1.2.6"}
+]
+extra-source "osmium-tool_1.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmium-tool/osmium-tool_1.10.0-1_amd64.deb"
+}

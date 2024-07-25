@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libroken19-heimdal_7.8.git20221117.28daf24+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libroken19-heimdal"]
+]
+depends: [
+  "libc6" {>= "2.36"}
+  "libcrypt1" {>= "1-4.1.0"}
+]
+extra-source "libroken19-heimdal_7.8.git20221117.28daf24+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heimdal/libroken19-heimdal_7.8.git20221117.28daf24+dfsg-2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lxqt-build-tools_0.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lxqt-build-tools"]
+]
+depends: [
+  "binutils"
+  "cmake"
+  "libglib2-0-dev" {>= "2.5.0"}
+  "pkg-config"
+  "qttools5-dev"
+  "qttools5-dev-tools"
+]
+extra-source "lxqt-build-tools_0.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxqt-build-tools/lxqt-build-tools_0.8.0-1_all.deb"
+}

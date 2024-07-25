@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-jquerylib_0.1.4+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-jquerylib"]
+]
+depends: [
+  "libjs-jquery" {>= "3.6.1+dfsg+~3.5.14-1~"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-2"}
+  "r-cran-htmltools"
+]
+extra-source "r-cran-jquerylib_0.1.4+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-jquerylib/r-cran-jquerylib_0.1.4+dfsg-4_all.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rspectra_0.16-1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rspectra"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "4.0"}
+  "libstdc++6" {>= "11"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.0-1"}
+  "r-cran-matrix" {>= "1.1-0"}
+  "r-cran-rcpp" {>= "0.11.5"}
+  "r-cran-rcppeigen" {>= "0.3.3.3.0"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "r-cran-rspectra_0.16-1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-rspectra/r-cran-rspectra_0.16-1-1_amd64.deb"
+}

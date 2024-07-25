@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-platform-devel_1:43+1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-platform-devel"]
+]
+depends: [
+  "gtk-doc-tools" {>= "1.21"}
+  "libadwaita-1-dev" {>= "1.1"}
+  "libgstreamer1-0-dev" {>= "1.10"}
+  "libgtk-4-dev" {>= "4.6"}
+  "meson"
+]
+extra-source "gnome-platform-devel_1:43+1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-gnome3/gnome-platform-devel_43+1_all.deb"
+}

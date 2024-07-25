@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i binutils-aarch64-linux-gnu-dbg_2.35.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r binutils-aarch64-linux-gnu-dbg"]
+]
+depends: [
+  "binutils-aarch64-linux-gnu" {= "2.35.2-2"}
+]
+extra-source "binutils-aarch64-linux-gnu-dbg_2.35.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/binutils/binutils-aarch64-linux-gnu-dbg_2.35.2-2_amd64.deb"
+}

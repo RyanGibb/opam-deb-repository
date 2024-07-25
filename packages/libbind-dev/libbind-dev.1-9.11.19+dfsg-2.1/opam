@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbind-dev_1:9.11.19+dfsg-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbind-dev"]
+]
+depends: [
+  "libbind9-161" {= "1-9.11.19+dfsg-2.1"}
+  "libdns1110" {= "1-9.11.19+dfsg-2.1"}
+  "libirs161" {= "1-9.11.19+dfsg-2.1"}
+  "libisc1105" {= "1-9.11.19+dfsg-2.1"}
+  "libisccc161" {= "1-9.11.19+dfsg-2.1"}
+  "libisccfg163" {= "1-9.11.19+dfsg-2.1"}
+  "liblwres161" {= "1-9.11.19+dfsg-2.1"}
+]
+extra-source "libbind-dev_1:9.11.19+dfsg-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bind9-libs/libbind-dev_9.11.19+dfsg-2.1_amd64.deb"
+}

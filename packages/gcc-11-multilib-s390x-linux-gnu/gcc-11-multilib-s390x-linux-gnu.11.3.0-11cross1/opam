@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-11-multilib-s390x-linux-gnu_11.3.0-11cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-11-multilib-s390x-linux-gnu"]
+]
+depends: [
+  "gcc-11-s390x-linux-gnu" {= "11.3.0-11cross1"}
+  "gcc-11-s390x-linux-gnu-base" {= "11.3.0-11cross1"}
+  "lib32gcc-11-dev-s390x-cross" {>= "11.3.0-11cross1"}
+  "libc6-dev-s390-s390x-cross" {>= "2.23-1~"}
+]
+extra-source "gcc-11-multilib-s390x-linux-gnu_11.3.0-11cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-11-cross/gcc-11-multilib-s390x-linux-gnu_11.3.0-11cross1_amd64.deb"
+}

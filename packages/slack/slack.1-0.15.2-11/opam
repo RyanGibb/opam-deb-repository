@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slack_1:0.15.2-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slack"]
+]
+depends: [
+  "perl"
+  "rsync"
+]
+extra-source "slack_1:0.15.2-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slack/slack_0.15.2-11_all.deb"
+}

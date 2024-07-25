@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xvkbd_4.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xvkbd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libx11-6"
+  "libxaw7"
+  "libxmu6"
+  "libxt6"
+  "libxtst6"
+]
+extra-source "xvkbd_4.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xvkbd/xvkbd_4.1-1_amd64.deb"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i imagevis3d_3.1.0-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r imagevis3d"]
+]
+depends: [
+  "libboost-serialization1-67-0"
+  "libbz2-1-0"
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libglew2-1" {>= "1.12.0"}
+  "libgomp1" {>= "4.9"}
+  "liblua5-2-0"
+  "liblz4-1" {>= "0.0~r114"}
+  "libqt4-network" {>= "4-4.5.3"}
+  "libqt4-opengl" {>= "4-4.5.3"}
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libqtgui4" {>= "4-4.8.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtiff5" {>= "4.0.3"}
+  "zlib1g" {>= "1-1.2.3.3"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "imagevis3d_3.1.0-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/imagevis3d/imagevis3d_3.1.0-7+b2_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kdoctools5_5.54.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kdoctools5"]
+]
+depends: [
+  "docbook-xml" {>= "4.5"}
+  "docbook-xsl"
+  "libc6" {>= "2.14"}
+  "libkf5archive5" {>= "5.50.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "4.1.1"}
+  "libxml2" {>= "2.7.4"}
+  "libxml2-utils"
+  "libxslt1-1" {>= "1.1.25"}
+]
+extra-source "kdoctools5_5.54.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdoctools/kdoctools5_5.54.0-1_amd64.deb"
+}

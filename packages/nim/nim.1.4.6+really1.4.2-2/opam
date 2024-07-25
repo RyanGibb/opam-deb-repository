@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nim_1.4.6+really1.4.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nim"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libssl1-1"
+]
+extra-source "nim_1.4.6+really1.4.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nim/nim_1.4.6+really1.4.2-2_amd64.deb"
+}

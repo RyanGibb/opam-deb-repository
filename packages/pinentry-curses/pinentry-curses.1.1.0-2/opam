@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pinentry-curses_1.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pinentry-curses"]
+]
+depends: [
+  "libassuan0" {>= "2.1.0"}
+  "libc6" {>= "2.14"}
+  "libgpg-error0" {>= "1.16"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "pinentry-curses_1.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pinentry/pinentry-curses_1.1.0-2_amd64.deb"
+}

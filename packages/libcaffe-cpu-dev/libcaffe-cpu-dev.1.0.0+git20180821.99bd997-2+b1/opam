@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcaffe-cpu-dev_1.0.0+git20180821.99bd997-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcaffe-cpu-dev"]
+]
+depends: [
+  "libcaffe-cpu1" {= "1.0.0+git20180821.99bd997-2+b1"}
+]
+conflicts: [
+  "libcaffe-cuda-dev"
+]
+extra-source "libcaffe-cpu-dev_1.0.0+git20180821.99bd997-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/caffe/libcaffe-cpu-dev_1.0.0+git20180821.99bd997-2+b1_amd64.deb"
+}

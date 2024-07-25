@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lirc-x_0.10.1-6.3~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lirc-x"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "liblirc-client0"
+  "liblirc0" {= "0.10.1-6.3~deb10u1"}
+  "libx11-6"
+  "lirc" {= "0.10.1-6.3~deb10u1"}
+]
+extra-source "lirc-x_0.10.1-6.3~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lirc/lirc-x_0.10.1-6.3~deb10u1_amd64.deb"
+}

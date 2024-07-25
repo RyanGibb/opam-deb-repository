@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i glance-doc_2:25.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r glance-doc"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "5.2"}
+]
+extra-source "glance-doc_2:25.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glance/glance-doc_25.1.0-2_all.deb"
+}

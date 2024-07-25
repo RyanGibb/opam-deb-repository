@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-v-sim-1.0_3.7.2-8+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-v-sim-1.0"]
+]
+depends: [
+  "gir1-2-freedesktop"
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-3-0"
+  "v-sim" {= "3.7.2-8+b4"}
+]
+extra-source "gir1.2-v-sim-1.0_3.7.2-8+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/v-sim/gir1.2-v-sim-1.0_3.7.2-8+b4_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dicomscope_3.6.0-20_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dicomscope"]
+]
+depends: [
+  "default-jre"
+  "jarwrapper" {>= "0.5"}
+  "libdicomscope-jni"
+  ("tk8-6" | "tk8-5" | "tk8-4" | "wish")
+]
+extra-source "dicomscope_3.6.0-20_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dicomscope/dicomscope_3.6.0-20_all.deb"
+}

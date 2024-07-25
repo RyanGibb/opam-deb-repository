@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-gtk+dox-dev_0.7.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-gtk+dox-dev"]
+]
+depends: [
+  "librust-gdk-0-11+dox-dev"
+  "librust-gtk-dev" {= "0.7.0-1+b1"}
+  "librust-gtk-sys-0-9+dox-dev"
+]
+extra-source "librust-gtk+dox-dev_0.7.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-gtk/librust-gtk+dox-dev_0.7.0-1+b1_amd64.deb"
+}

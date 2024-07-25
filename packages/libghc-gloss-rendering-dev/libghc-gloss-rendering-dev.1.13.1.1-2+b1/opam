@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-gloss-rendering-dev_1.13.1.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-gloss-rendering-dev"]
+]
+depends: [
+  "freeglut3" {>= "2.8.1"}
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-bmp-dev"
+  "libghc-glut-dev"
+  "libghc-opengl-dev"
+  "libgl1"
+  "libgmp10"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "libghc-gloss-rendering-dev_1.13.1.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-gloss-rendering/libghc-gloss-rendering-dev_1.13.1.1-2+b1_amd64.deb"
+}

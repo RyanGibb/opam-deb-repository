@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i verilator_4.038-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r verilator"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+]
+extra-source "verilator_4.038-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/verilator/verilator_4.038-1_amd64.deb"
+}

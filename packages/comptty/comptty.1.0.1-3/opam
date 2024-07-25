@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i comptty_1.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r comptty"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfltk-images1-3"
+  "libfltk1-3" {>= "1.3.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+]
+extra-source "comptty_1.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/comptty/comptty_1.0.1-3_amd64.deb"
+}

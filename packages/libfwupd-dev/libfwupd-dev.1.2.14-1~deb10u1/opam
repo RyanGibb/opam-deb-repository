@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfwupd-dev_1.2.14-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfwupd-dev"]
+]
+depends: [
+  "gir1-2-fwupd-2-0" {= "1.2.14-1~deb10u1"}
+  "libfwupd2" {= "1.2.14-1~deb10u1"}
+]
+extra-source "libfwupd-dev_1.2.14-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fwupd/libfwupd-dev_1.2.14-1~deb10u1_amd64.deb"
+}

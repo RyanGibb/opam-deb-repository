@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stardict-plugin-festival_3.0.7+git20220909+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stardict-plugin-festival"]
+]
+depends: [
+  "festvox-us-slt-hts"
+  "libc6" {>= "2.29"}
+  "libestools2-5"
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "stardict-gtk" {= "3.0.7+git20220909+dfsg-4"}
+]
+extra-source "stardict-plugin-festival_3.0.7+git20220909+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stardict/stardict-plugin-festival_3.0.7+git20220909+dfsg-4_amd64.deb"
+}

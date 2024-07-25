@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-multipipe_1.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-multipipe"]
+]
+depends: [
+  "node-duplexer3"
+  "node-object-assign" {>= "4.1.0"}
+  "nodejs"
+]
+extra-source "node-multipipe_1.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-multipipe/node-multipipe_1.0.2-1_all.deb"
+}

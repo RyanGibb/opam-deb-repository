@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debichem-semiempirical_0.0.11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debichem-semiempirical"]
+]
+depends: [
+  "debichem-tasks" {= "0.0.11"}
+]
+extra-source "debichem-semiempirical_0.0.11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debichem/debichem-semiempirical_0.0.11_all.deb"
+}

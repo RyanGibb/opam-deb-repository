@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsocket6-perl_0.29-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsocket6-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libsocket6-perl_0.29-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsocket6-perl/libsocket6-perl_0.29-3_amd64.deb"
+}

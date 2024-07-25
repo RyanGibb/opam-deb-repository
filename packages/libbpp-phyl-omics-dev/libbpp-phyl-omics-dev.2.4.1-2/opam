@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbpp-phyl-omics-dev_2.4.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbpp-phyl-omics-dev"]
+]
+depends: [
+  "libbpp-phyl-dev" {>= "2.4.1"}
+  "libbpp-phyl-omics3" {= "2.4.1-2"}
+  "libbpp-seq-omics-dev" {>= "2.4.1"}
+]
+extra-source "libbpp-phyl-omics-dev_2.4.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbpp-phyl-omics/libbpp-phyl-omics-dev_2.4.1-2_amd64.deb"
+}

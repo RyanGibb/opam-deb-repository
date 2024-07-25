@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i schroot_1.6.10-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r schroot"]
+]
+depends: [
+  "libboost-filesystem1-67-0"
+  "libboost-iostreams1-67-0"
+  "libboost-program-options1-67-0"
+  "libboost-system1-67-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libstdc++6" {>= "5.2"}
+  "libuuid1" {>= "2.16"}
+  "lsb-base"
+  "schroot-common" {= "1.6.10-6"}
+]
+extra-source "schroot_1.6.10-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/schroot/schroot_1.6.10-6+b1_amd64.deb"
+}

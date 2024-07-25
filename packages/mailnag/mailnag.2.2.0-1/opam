@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mailnag_2.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mailnag"]
+]
+depends: [
+  "gir1-2-glib-2-0"
+  "gir1-2-gst-plugins-base-1-0"
+  "gir1-2-gtk-3-0"
+  "gir1-2-notify-0-7"
+  "gir1-2-secret-1"
+  "python3-any"
+  "python3-dbus"
+  "python3-gi"
+  "python3-xdg"
+]
+extra-source "mailnag_2.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mailnag/mailnag_2.2.0-1_all.deb"
+}

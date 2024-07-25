@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i weechat-scripts_20200815-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r weechat-scripts"]
+]
+depends: [
+  "base-files" {>= "4.0.1"}
+  "weechat-plugins" {>= "0.3.6"}
+]
+extra-source "weechat-scripts_20200815-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/weechat-scripts/weechat-scripts_20200815-1_all.deb"
+}

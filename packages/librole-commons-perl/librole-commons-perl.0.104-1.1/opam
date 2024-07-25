@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librole-commons-perl_0.104-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librole-commons-perl"]
+]
+depends: [
+  "libmatch-simple-perl"
+  "libmodule-runtime-perl"
+  "libmoo-perl"
+  "libobject-id-perl"
+  "libtype-tiny-perl"
+  "perl-any"
+]
+conflicts: [
+  "libauthority-shared-perl"
+  "libobject-authority-perl"
+]
+extra-source "librole-commons-perl_0.104-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librole-commons-perl/librole-commons-perl_0.104-1.1_all.deb"
+}

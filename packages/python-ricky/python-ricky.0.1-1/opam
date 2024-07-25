@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-ricky_0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-ricky"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-chardet"
+  "python-clint"
+  "python-debian"
+]
+extra-source "python-ricky_0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ricky/python-ricky_0.1-1_all.deb"
+}

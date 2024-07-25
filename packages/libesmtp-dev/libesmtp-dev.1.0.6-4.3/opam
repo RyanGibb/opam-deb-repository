@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libesmtp-dev_1.0.6-4.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libesmtp-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libesmtp6" {= "1.0.6-4.3"}
+]
+extra-source "libesmtp-dev_1.0.6-4.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libesmtp/libesmtp-dev_1.0.6-4.3_amd64.deb"
+}

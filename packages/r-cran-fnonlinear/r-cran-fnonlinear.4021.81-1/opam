@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-fnonlinear_4021.81-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-fnonlinear"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-3"}
+  "r-cran-fbasics" {>= "2100.78"}
+  "r-cran-fgarch" {>= "2100.79"}
+  "r-cran-timedate"
+  "r-cran-timeseries"
+]
+extra-source "r-cran-fnonlinear_4021.81-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fnonlinear/r-cran-fnonlinear_4021.81-1_amd64.deb"
+}

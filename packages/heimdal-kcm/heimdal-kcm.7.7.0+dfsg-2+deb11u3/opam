@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i heimdal-kcm_7.7.0+dfsg-2+deb11u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r heimdal-kcm"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libhcrypto4-heimdal" {>= "1.4.0+git20110226"}
+  "libheimntlm0-heimdal" {>= "1.4.0+git20110226"}
+  "libkrb5-26-heimdal" {>= "1.4.0+git20110226"}
+  "libroken18-heimdal" {>= "1.7~git20150920"}
+  "lsb-base"
+]
+extra-source "heimdal-kcm_7.7.0+dfsg-2+deb11u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heimdal/heimdal-kcm_7.7.0+dfsg-2+deb11u3_amd64.deb"
+}

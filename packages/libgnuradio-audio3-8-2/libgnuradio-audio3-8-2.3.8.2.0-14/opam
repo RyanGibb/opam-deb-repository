@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnuradio-audio3.8.2_3.8.2.0-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnuradio-audio3.8.2"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libboost-thread1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.17"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnuradio-pmt3-8-2" {>= "3.8.2.0"}
+  "libgnuradio-runtime3-8-2" {>= "3.8.2.0"}
+  "liblog4cpp5v5" {>= "1.1.3"}
+  "libportaudio2" {>= "19+svn20101113"}
+  "libstdc++6" {>= "9"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "libgnuradio-audio3.8.2_3.8.2.0-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnuradio/libgnuradio-audio3.8.2_3.8.2.0-14_amd64.deb"
+}

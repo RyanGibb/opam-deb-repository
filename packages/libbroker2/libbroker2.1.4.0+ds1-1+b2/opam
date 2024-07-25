@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbroker2_1.4.0+ds1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbroker2"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libcaf-core0-17" {>= "0.17.6"}
+  "libcaf-io0-17" {>= "0.17.6"}
+  "libcaf-openssl0-17" {>= "0.17.6"}
+  "libgcc-s1" {>= "3.0"}
+  "libsqlite3-0" {>= "3.8.7"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libbroker2_1.4.0+ds1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/broker/libbroker2_1.4.0+ds1-1+b2_amd64.deb"
+}

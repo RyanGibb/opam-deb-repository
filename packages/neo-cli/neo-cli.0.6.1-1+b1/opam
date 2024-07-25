@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i neo-cli_0.6.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r neo-cli"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libncursesw6" {>= "6.3"}
+  "libstdc++6" {>= "11"}
+  "libtinfo6" {>= "6.3"}
+]
+extra-source "neo-cli_0.6.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neo-cli/neo-cli_0.6.1-1+b1_amd64.deb"
+}

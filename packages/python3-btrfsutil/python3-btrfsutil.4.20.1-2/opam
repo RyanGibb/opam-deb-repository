@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-btrfsutil_4.20.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-btrfsutil"]
+]
+depends: [
+  "libbtrfsutil1" {>= "4.16.1"}
+  "libc6" {>= "2.2.5"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+]
+extra-source "python3-btrfsutil_4.20.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/btrfs-progs/python3-btrfsutil_4.20.1-2_amd64.deb"
+}

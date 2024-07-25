@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-spdep_0.8-1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-spdep"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-2"}
+  "r-cran-boot" {>= "1.3-1"}
+  "r-cran-coda"
+  "r-cran-deldir"
+  "r-cran-expm"
+  "r-cran-gmodels"
+  "r-cran-learnbayes"
+  "r-cran-mass"
+  "r-cran-matrix" {>= "1.0.12"}
+  "r-cran-nlme"
+  "r-cran-sp" {>= "1.0"}
+  "r-cran-spdata" {>= "0.2.6.0"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "r-cran-spdep_0.8-1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-spdep/r-cran-spdep_0.8-1+dfsg-1_amd64.deb"
+}

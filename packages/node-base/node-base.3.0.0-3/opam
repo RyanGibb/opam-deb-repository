@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-base_3.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-base"]
+]
+depends: [
+  "node-cache-base" {>= "4"}
+  "node-define-property"
+  "node-isobject"
+  "node-mixin-deep"
+  "node-pascalcase"
+]
+extra-source "node-base_3.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-base/node-base_3.0.0-3_all.deb"
+}

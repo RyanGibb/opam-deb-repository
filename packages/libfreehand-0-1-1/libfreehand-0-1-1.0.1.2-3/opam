@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfreehand-0.1-1_0.1.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfreehand-0.1-1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "liblcms2-2" {>= "2.2+git20110628"}
+  "librevenge-0-0-0"
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libfreehand-0.1-1_0.1.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfreehand/libfreehand-0.1-1_0.1.2-3_amd64.deb"
+}

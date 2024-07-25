@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pyface_4.5.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pyface"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-pygments"
+  "python-qt4"
+  "python-traits"
+  "python-wxgtk3-0"
+]
+extra-source "python-pyface_4.5.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pyface/python-pyface_4.5.2-1_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sphinxsearch_2.2.11-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sphinxsearch"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.28"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libmariadb3" {>= "3.0.0"}
+  "libpq5"
+  "libstdc++6" {>= "5"}
+  "libstemmer0d" {>= "0+svn527"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "sphinxsearch_2.2.11-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sphinxsearch/sphinxsearch_2.2.11-2+deb10u1_amd64.deb"
+}

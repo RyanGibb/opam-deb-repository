@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uwsgi-plugin-alarm-curl_2.0.18-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uwsgi-plugin-alarm-curl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl4" {>= "7.16.2"}
+  "uwsgi-core" {= "2.0.18-1"}
+]
+extra-source "uwsgi-plugin-alarm-curl_2.0.18-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uwsgi/uwsgi-plugin-alarm-curl_2.0.18-1_amd64.deb"
+}

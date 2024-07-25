@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-i18n-inflector-rails_1.0.7-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-i18n-inflector-rails"]
+]
+depends: [
+  "ruby-actionpack" {>= "2-3.0"}
+  "ruby-i18n-inflector"
+  "ruby-railties" {>= "2-3.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-i18n-inflector-rails_1.0.7-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-i18n-inflector-rails/ruby-i18n-inflector-rails_1.0.7-4_all.deb"
+}

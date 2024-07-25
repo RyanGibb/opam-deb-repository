@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-socketio_5.7.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-socketio"]
+]
+depends: [
+  "python3-any"
+  "python3-bidict"
+  "python3-engineio" {>= "4.3.0"}
+]
+extra-source "python3-socketio_5.7.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-socketio/python3-socketio_5.7.2-2_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfindlib-ocaml_1.7.3-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfindlib-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "ocaml-base-nox"
+]
+extra-source "libfindlib-ocaml_1.7.3-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/findlib/libfindlib-ocaml_1.7.3-2+b1_amd64.deb"
+}

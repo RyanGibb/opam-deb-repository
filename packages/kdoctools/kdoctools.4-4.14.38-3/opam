@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kdoctools_4:4.14.38-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kdoctools"]
+]
+depends: [
+  "docbook-xml"
+  "docbook-xsl"
+  "libc6" {>= "2.14"}
+  "libkdecore5" {= "4-4.14.38-3"}
+  "libkio5" {= "4-4.14.38-3"}
+  "libqtcore4" {>= "4-4.8.0"}
+  "libqtgui4" {>= "4-4.8.0"}
+  "libstdc++6" {>= "5"}
+  "libxml2" {>= "2.7.4"}
+  "libxml2-utils"
+  "libxslt1-1" {>= "1.1.25"}
+]
+extra-source "kdoctools_4:4.14.38-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kde4libs/kdoctools_4.14.38-3_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libportal-tests-gtk3_0.6-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libportal-tests-gtk3"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.58"}
+  "libgstreamer1-0-0" {>= "1.0.0"}
+  "libgtk-3-0" {>= "3.21.4"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libportal-gtk3-1" {>= "0.5"}
+  "libportal1" {>= "0.5"}
+]
+extra-source "libportal-tests-gtk3_0.6-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libportal/libportal-tests-gtk3_0.6-4_amd64.deb"
+}

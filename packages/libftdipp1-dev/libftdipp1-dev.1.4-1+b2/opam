@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libftdipp1-dev_1.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libftdipp1-dev"]
+]
+depends: [
+  "libboost-dev" {>= "1.58"}
+  "libftdi1-dev" {= "1.4-1+b2"}
+  "libftdipp1-3" {= "1.4-1+b2"}
+]
+extra-source "libftdipp1-dev_1.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libftdi1/libftdipp1-dev_1.4-1+b2_amd64.deb"
+}

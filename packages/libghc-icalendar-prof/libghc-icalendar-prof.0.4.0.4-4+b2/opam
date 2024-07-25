@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-icalendar-prof_0.4.0.4-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-icalendar-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-base64-bytestring-prof"
+  "libghc-case-insensitive-prof"
+  "libghc-data-default-prof"
+  "libghc-icalendar-dev" {= "0.4.0.4-4+b2"}
+  "libghc-mime-prof"
+  "libghc-network-prof"
+  "libghc-network-uri-prof"
+  "libghc-old-locale-prof"
+]
+extra-source "libghc-icalendar-prof_0.4.0.4-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-icalendar/libghc-icalendar-prof_0.4.0.4-4+b2_amd64.deb"
+}

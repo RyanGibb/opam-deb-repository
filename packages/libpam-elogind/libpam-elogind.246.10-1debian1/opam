@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-elogind_246.10-1debian1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-elogind"]
+]
+depends: [
+  "elogind" {= "246.10-1debian1"}
+  "libc6" {>= "2.34"}
+  "libcap2" {>= "1-2.10"}
+  "libpam-runtime"
+  "libpam0g" {>= "0.99.7.1"}
+]
+conflicts: [
+  "libpam-ck-connector"
+  "logind"
+]
+extra-source "libpam-elogind_246.10-1debian1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elogind/libpam-elogind_246.10-1debian1_amd64.deb"
+}

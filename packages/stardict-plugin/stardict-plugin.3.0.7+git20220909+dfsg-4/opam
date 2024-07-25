@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stardict-plugin_3.0.7+git20220909+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stardict-plugin"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libespeak-ng1" {>= "1.51+dfsg"}
+  "libflite1" {>= "1.4-release-9~"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.30.0"}
+  "libgucharmap-2-90-7" {>= "1-3.0.0"}
+  "libstdc++6" {>= "11"}
+  "man-db"
+  "stardict-gtk" {= "3.0.7+git20220909+dfsg-4"}
+  ("ncal" | "bsdmainutils")
+]
+extra-source "stardict-plugin_3.0.7+git20220909+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stardict/stardict-plugin_3.0.7+git20220909+dfsg-4_amd64.deb"
+}

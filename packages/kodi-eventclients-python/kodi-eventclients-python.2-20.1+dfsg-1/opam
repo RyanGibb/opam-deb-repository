@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kodi-eventclients-python_2:20.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kodi-eventclients-python"]
+]
+depends: [
+  "kodi-eventclients-common" {= "2-20.1+dfsg-1"}
+  "python3-any"
+  "python3-bluez"
+]
+extra-source "kodi-eventclients-python_2:20.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kodi/kodi-eventclients-python_20.1+dfsg-1_amd64.deb"
+}

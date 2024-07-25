@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvorbis-dev_1.3.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvorbis-dev"]
+]
+depends: [
+  "libogg-dev"
+  "libvorbis0a" {= "1.3.6-2"}
+  "libvorbisenc2" {= "1.3.6-2"}
+  "libvorbisfile3" {= "1.3.6-2"}
+]
+extra-source "libvorbis-dev_1.3.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvorbis/libvorbis-dev_1.3.6-2_amd64.deb"
+}

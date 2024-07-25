@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libthrift-java_0.16.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libthrift-java"]
+]
+depends: [
+  "libcommons-lang3-java"
+  "libgeronimo-annotation-1-3-spec-java"
+  "libhttpclient-java"
+  "libservlet-api-java"
+  "libslf4j-java"
+]
+extra-source "libthrift-java_0.16.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libthrift-java/libthrift-java_0.16.0-2_all.deb"
+}

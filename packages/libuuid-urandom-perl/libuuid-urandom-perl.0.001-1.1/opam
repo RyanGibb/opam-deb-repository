@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libuuid-urandom-perl_0.001-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libuuid-urandom-perl"]
+]
+depends: [
+  "libcrypt-urandom-perl" {>= "0.36"}
+  "perl-any"
+]
+extra-source "libuuid-urandom-perl_0.001-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libuuid-urandom-perl/libuuid-urandom-perl_0.001-1.1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libslurm-perl_20.11.7+really20.11.4-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libslurm-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libslurm36" {>= "20.11.2"}
+  "perl"
+  "perl-base"
+]
+extra-source "libslurm-perl_20.11.7+really20.11.4-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-wlm/libslurm-perl_20.11.7+really20.11.4-2+deb11u1_amd64.deb"
+}

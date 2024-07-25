@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkdl-parser1d_1.14.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkdl-parser1d"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "liborocos-kdl1-4" {>= "1.4.0"}
+  "librosconsole3d" {>= "1.14.3"}
+  "libstdc++6" {>= "5.2"}
+  "libtinyxml2-6-2v5"
+  "libtinyxml2-8" {>= "8.0.0"}
+  "liburdf1d" {>= "1.13.2"}
+  "liburdfdom-model"
+]
+extra-source "libkdl-parser1d_1.14.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-kdl-parser/libkdl-parser1d_1.14.1-2_amd64.deb"
+}

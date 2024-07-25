@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i andi_0.12-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r andi"]
+]
+depends: [
+  "libc6" {>= "2.26"}
+  "libdivsufsort3" {>= "2.0.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libgomp1" {>= "4.9"}
+  "libgsl23" {>= "2.5"}
+  "libgslcblas0" {>= "2.4"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "andi_0.12-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/andi/andi_0.12-4_amd64.deb"
+}

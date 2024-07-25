@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pymtp_0.0.6-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pymtp"]
+]
+depends: [
+  "libmtp9"
+  "python"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+]
+extra-source "python-pymtp_0.0.6-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pymtp/python-pymtp_0.0.6-1.1_all.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vmpk_0.8.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vmpk"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdrumstick-rt-backends" {>= "2.5"}
+  "libdrumstick-rt2" {>= "2.7.2"}
+  "libdrumstick-widgets2" {>= "2.7.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.2.0~alpha1"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+]
+extra-source "vmpk_0.8.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vmpk/vmpk_0.8.8-1_amd64.deb"
+}

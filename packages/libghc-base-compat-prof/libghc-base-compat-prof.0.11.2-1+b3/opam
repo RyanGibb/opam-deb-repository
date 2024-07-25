@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-base-compat-prof_0.11.2-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-base-compat-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-base-compat-dev" {= "0.11.2-1+b3"}
+]
+extra-source "libghc-base-compat-prof_0.11.2-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-base-compat/libghc-base-compat-prof_0.11.2-1+b3_amd64.deb"
+}

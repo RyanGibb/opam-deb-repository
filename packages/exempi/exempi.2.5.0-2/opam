@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i exempi_2.5.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r exempi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexempi8" {= "2.5.0-2"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "exempi_2.5.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/exempi/exempi_2.5.0-2_amd64.deb"
+}

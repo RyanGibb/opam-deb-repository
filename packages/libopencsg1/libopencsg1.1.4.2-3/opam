@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencsg1_1.4.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencsg1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libgl1"
+  "libglew2-1" {>= "1.12.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libopencsg1_1.4.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencsg/libopencsg1_1.4.2-3_amd64.deb"
+}

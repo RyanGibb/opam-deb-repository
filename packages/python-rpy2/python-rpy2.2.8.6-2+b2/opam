@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-rpy2_2.8.6-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-rpy2"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libgomp1" {>= "4.2.1"}
+  "libicu63" {>= "63.1-1~"}
+  "liblzma5" {>= "5.1.1alpha+20110809"}
+  "libpcre3"
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-numpy"
+  "python-singledispatch"
+  "python-six"
+  "r-base-core" {>= "3.3.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "python-rpy2_2.8.6-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rpy2-2.8/python-rpy2_2.8.6-2+b2_amd64.deb"
+}

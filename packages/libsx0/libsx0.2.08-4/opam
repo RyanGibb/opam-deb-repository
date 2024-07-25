@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsx0_2.08-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsx0"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libice6" {>= "1-1.0.0"}
+  "libsm6"
+  "libx11-6"
+  "libxaw3dxft8" {>= "1.6.2d"}
+  "libxext6"
+  "libxmu6"
+  "libxpm4"
+  "libxt6"
+]
+extra-source "libsx0_2.08-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsx/libsx0_2.08-4_amd64.deb"
+}

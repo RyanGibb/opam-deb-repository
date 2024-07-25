@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libperl-prereqscanner-notquitelite-perl_0.9913-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libperl-prereqscanner-notquitelite-perl"]
+]
+depends: [
+  "libdata-dump-perl"
+  "libmodule-corelist-perl"
+  "libmodule-cpanfile-perl" {>= "1.1004"}
+  "libmodule-find-perl"
+  "libregexp-trie-perl"
+  "liburi-cpan-perl"
+  "perl"
+  "perl" {>= "5.25.4"}
+  "perl-any"
+]
+extra-source "libperl-prereqscanner-notquitelite-perl_0.9913-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libperl-prereqscanner-notquitelite-perl/libperl-prereqscanner-notquitelite-perl_0.9913-1_all.deb"
+}

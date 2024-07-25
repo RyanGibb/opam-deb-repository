@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-openid_3.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-openid"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-defusedxml"
+]
+extra-source "python3-openid_3.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python3-openid/python3-openid_3.1.0-1_all.deb"
+}

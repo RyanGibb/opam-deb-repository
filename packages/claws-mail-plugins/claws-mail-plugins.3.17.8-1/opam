@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i claws-mail-plugins_3.17.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r claws-mail-plugins"]
+]
+depends: [
+  "claws-mail-bogofilter"
+  "claws-mail-pgpinline"
+  "claws-mail-pgpmime"
+  "claws-mail-smime-plugin"
+  "claws-mail-spamassassin"
+]
+extra-source "claws-mail-plugins_3.17.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/claws-mail/claws-mail-plugins_3.17.8-1_all.deb"
+}

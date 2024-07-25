@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eg25-manager_0.4.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eg25-manager"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcurl3-nss" {>= "7.23.1"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgpiod2" {>= "1.1"}
+  "libgudev-1-0-0" {>= "146"}
+  "libmm-glib0" {>= "0.7.991"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+  "modemmanager"
+]
+extra-source "eg25-manager_0.4.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eg25-manager/eg25-manager_0.4.6-1_amd64.deb"
+}

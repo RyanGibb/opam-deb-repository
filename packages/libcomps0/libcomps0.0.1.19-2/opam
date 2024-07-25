@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcomps0_0.1.19-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcomps0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libcomps0_0.1.19-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcomps/libcomps0_0.1.19-2_amd64.deb"
+}

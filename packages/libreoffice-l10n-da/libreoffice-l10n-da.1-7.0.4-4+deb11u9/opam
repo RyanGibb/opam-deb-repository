@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-l10n-da_1:7.0.4-4+deb11u9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-l10n-da"]
+]
+depends: [
+  "libreoffice-common" {>= "1-7.0.0~alpha~"}
+  "ucf" {>= "0.8"}
+  ("locales" | "locales-all")
+]
+extra-source "libreoffice-l10n-da_1:7.0.4-4+deb11u9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-l10n-da_7.0.4-4+deb11u9_all.deb"
+}

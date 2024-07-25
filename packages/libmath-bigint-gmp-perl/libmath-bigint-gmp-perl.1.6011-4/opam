@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmath-bigint-gmp-perl_1.6011-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmath-bigint-gmp-perl"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "perl"
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "libmath-bigint-gmp-perl_1.6011-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmath-bigint-gmp-perl/libmath-bigint-gmp-perl_1.6011-4_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-butcher-dev_1.3.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-butcher-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-bifunctors-dev"
+  "libghc-deque-dev"
+  "libghc-extra-dev"
+  "libghc-free-dev"
+  "libghc-microlens-dev"
+  "libghc-microlens-th-dev"
+  "libghc-multistate-dev"
+  "libghc-unsafe-dev"
+  "libghc-void-dev"
+  "libgmp10"
+]
+extra-source "libghc-butcher-dev_1.3.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-butcher/libghc-butcher-dev_1.3.3.2-1_amd64.deb"
+}

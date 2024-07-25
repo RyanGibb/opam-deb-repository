@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcgi-application-plugin-session-perl_1.05-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcgi-application-plugin-session-perl"]
+]
+depends: [
+  "libcgi-application-perl"
+  "libcgi-session-perl" {>= "4.48"}
+  "perl"
+]
+extra-source "libcgi-application-plugin-session-perl_1.05-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcgi-application-plugin-session-perl/libcgi-application-plugin-session-perl_1.05-2_all.deb"
+}

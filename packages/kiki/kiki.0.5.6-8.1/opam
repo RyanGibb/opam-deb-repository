@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kiki_0.5.6-8.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kiki"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-wxgtk3-0"
+]
+extra-source "kiki_0.5.6-8.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kiki/kiki_0.5.6-8.1_all.deb"
+}

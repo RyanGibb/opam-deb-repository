@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnative-platform-java_0.14-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnative-platform-java"]
+]
+depends: [
+  "libnative-platform-jni" {>= "0.14-5"}
+]
+extra-source "libnative-platform-java_0.14-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnative-platform-java/libnative-platform-java_0.14-5_all.deb"
+}

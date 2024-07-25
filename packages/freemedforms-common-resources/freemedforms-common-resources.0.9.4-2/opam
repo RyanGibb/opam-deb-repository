@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freemedforms-common-resources_0.9.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freemedforms-common-resources"]
+]
+depends: [
+  "freemedforms-i18n" {= "0.9.4-2"}
+  "freemedforms-theme" {= "0.9.4-2"}
+]
+extra-source "freemedforms-common-resources_0.9.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freemedforms-project/freemedforms-common-resources_0.9.4-2_all.deb"
+}

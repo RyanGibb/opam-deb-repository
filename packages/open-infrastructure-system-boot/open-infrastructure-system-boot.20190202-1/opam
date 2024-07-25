@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i open-infrastructure-system-boot_20190202-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r open-infrastructure-system-boot"]
+]
+depends: [
+  "initramfs-tools"
+  "udev"
+  ("busybox" | "busybox-initramfs")
+]
+conflicts: [
+  "live-boot"
+  "live-boot-doc"
+  "live-boot-initramfs-tools"
+]
+extra-source "open-infrastructure-system-boot_20190202-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/open-infrastructure-system-tools/open-infrastructure-system-boot_20190202-1_all.deb"
+}

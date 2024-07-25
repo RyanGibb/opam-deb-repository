@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-lua-arbitrary-prof_1.0.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-lua-arbitrary-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-lua-arbitrary-dev" {= "1.0.1-2+b1"}
+  "libghc-lua-prof"
+  "libghc-quickcheck2-prof"
+]
+extra-source "libghc-lua-arbitrary-prof_1.0.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-lua-arbitrary/libghc-lua-arbitrary-prof_1.0.1-2+b1_amd64.deb"
+}

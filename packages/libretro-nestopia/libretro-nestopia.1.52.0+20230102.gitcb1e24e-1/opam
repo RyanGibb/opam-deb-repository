@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libretro-nestopia_1.52.0+20230102.gitcb1e24e-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libretro-nestopia"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  ("retroarch" | "libretro-frontend")
+]
+extra-source "libretro-nestopia_1.52.0+20230102.gitcb1e24e-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libretro-nestopia/libretro-nestopia_1.52.0+20230102.gitcb1e24e-1_amd64.deb"
+}

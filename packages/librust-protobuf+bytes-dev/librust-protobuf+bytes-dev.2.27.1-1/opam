@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-protobuf+bytes-dev_2.27.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-protobuf+bytes-dev"]
+]
+depends: [
+  "librust-bytes-1+default-dev"
+  "librust-protobuf-dev" {= "2.27.1-1"}
+]
+extra-source "librust-protobuf+bytes-dev_2.27.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-protobuf/librust-protobuf+bytes-dev_2.27.1-1_amd64.deb"
+}

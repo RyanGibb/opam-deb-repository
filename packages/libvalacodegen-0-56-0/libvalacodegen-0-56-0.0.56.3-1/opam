@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvalacodegen-0.56-0_0.56.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvalacodegen-0.56-0"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libglib2-0-0" {>= "2.48"}
+  "libvala-0-56-0" {>= "0.55.90"}
+]
+conflicts: [
+  "valac-0.12"
+  "valac-0.14"
+  "valac-0.16"
+  "valac-0.18"
+  "valac-0.20"
+  "valac-0.22"
+  "valac-0.24"
+  "valac-0.26"
+  "valac-0.28"
+  "valac-0.30"
+]
+extra-source "libvalacodegen-0.56-0_0.56.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vala/libvalacodegen-0.56-0_0.56.3-1_amd64.deb"
+}

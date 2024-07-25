@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nco_5.1.4-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nco"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "6"}
+  "libgsl27" {>= "2.7.1"}
+  "libnetcdf19" {>= "4.9.0"}
+  "libstdc++6" {>= "11"}
+  "libudunits2-0" {>= "2.2.14"}
+]
+extra-source "nco_5.1.4-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nco/nco_5.1.4-1+deb12u1_amd64.deb"
+}

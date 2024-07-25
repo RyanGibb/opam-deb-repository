@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnat-8-sjlj-mipsisa64r6-linux-gnuabi64_8.3.0-2cross2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnat-8-sjlj-mipsisa64r6-linux-gnuabi64"]
+]
+depends: [
+  "gcc-8-mipsisa64r6-linux-gnuabi64-base" {= "8.3.0-2cross2"}
+  "gnat-8-mipsisa64r6-linux-gnuabi64" {= "8.3.0-2cross2"}
+]
+extra-source "gnat-8-sjlj-mipsisa64r6-linux-gnuabi64_8.3.0-2cross2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross-mipsen/gnat-8-sjlj-mipsisa64r6-linux-gnuabi64_8.3.0-2cross2_amd64.deb"
+}

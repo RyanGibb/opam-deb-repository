@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-npm-package-arg_6.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-npm-package-arg"]
+]
+depends: [
+  "node-hosted-git-info" {>= "2.5~"}
+  "node-osenv" {>= "0.1.4~"}
+  "node-semver" {>= "5.4.1~"}
+  "node-validate-npm-package-name" {>= "3.0~"}
+  "nodejs"
+]
+extra-source "node-npm-package-arg_6.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-npm-package-arg/node-npm-package-arg_6.0.0-2_all.deb"
+}

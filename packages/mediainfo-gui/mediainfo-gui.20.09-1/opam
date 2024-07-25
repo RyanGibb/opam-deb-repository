@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mediainfo-gui_20.09-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mediainfo-gui"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libmediainfo0v5" {>= "0.7.56"}
+  "libstdc++6" {>= "5.2"}
+  "libwxbase3-0-0v5" {>= "3.0.5.1+dfsg"}
+  "libwxgtk3-0-gtk3-0v5" {>= "3.0.5.1+dfsg"}
+  "libzen0v5" {>= "0.4.31-2~"}
+]
+extra-source "mediainfo-gui_20.09-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mediainfo/mediainfo-gui_20.09-1_amd64.deb"
+}

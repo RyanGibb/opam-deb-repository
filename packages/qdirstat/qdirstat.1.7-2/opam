@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qdirstat_1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qdirstat"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "5"}
+  "liburi-perl"
+  "perl-any"
+  "zlib1g" {>= "1-1.1.4"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "qdirstat_1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qdirstat/qdirstat_1.7-2_amd64.deb"
+}

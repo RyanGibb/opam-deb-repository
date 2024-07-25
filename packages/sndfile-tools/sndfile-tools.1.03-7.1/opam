@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sndfile-tools_1.03-7.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sndfile-tools"]
+]
+depends: [
+  "fonts-dejavu-core"
+  "libc6" {>= "2.7"}
+  "libcairo2" {>= "1.2.4"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libsndfile1" {>= "1.0.20"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "sndfile-tools_1.03-7.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sndfile-tools/sndfile-tools_1.03-7.1_amd64.deb"
+}

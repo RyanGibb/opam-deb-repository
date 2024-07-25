@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libprometheus-cpp-push1.0_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libprometheus-cpp-push1.0"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libcurl4" {>= "7.16.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libprometheus-cpp-core1-0" {= "1.0.1-1"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libprometheus-cpp-push1.0_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-cpp/libprometheus-cpp-push1.0_1.0.1-1_amd64.deb"
+}

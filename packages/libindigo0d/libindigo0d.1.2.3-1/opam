@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libindigo0d_1.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libindigo0d"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.6.0"}
+  "libgcc1" {>= "1-3.0"}
+  "libpixman-1-0"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "5.2"}
+  "libtinyxml2-6-2v5"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libindigo0d_1.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/indigo/libindigo0d_1.2.3-1_amd64.deb"
+}

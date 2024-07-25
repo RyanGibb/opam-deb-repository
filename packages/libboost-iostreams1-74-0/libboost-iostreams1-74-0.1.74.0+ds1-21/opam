@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libboost-iostreams1.74.0_1.74.0+ds1-21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libboost-iostreams1.74.0"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "liblzma5" {>= "5.2.2"}
+  "libstdc++6" {>= "5.2"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libboost-iostreams1.74.0_1.74.0+ds1-21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boost1.74/libboost-iostreams1.74.0_1.74.0+ds1-21_amd64.deb"
+}

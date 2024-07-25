@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-wgrep-helm_2.3.2+9.gf0ef9bf-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-wgrep-helm"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-wgrep" {>= "2.1.1"}
+  "emacsen-common"
+]
+extra-source "elpa-wgrep-helm_2.3.2+9.gf0ef9bf-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emacs-wgrep/elpa-wgrep-helm_2.3.2+9.gf0ef9bf-2_all.deb"
+}

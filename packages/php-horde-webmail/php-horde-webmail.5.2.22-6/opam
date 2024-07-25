@@ -1,0 +1,39 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-horde-webmail_5.2.22-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-horde-webmail"]
+]
+depends: [
+  "php-cli"
+  "php-common"
+  "php-horde" {< "8.0.0~alpha1"}
+  "php-horde" {>= "5.2.17"}
+  "php-horde-content" {< "3.0.0~alpha1"}
+  "php-horde-content" {>= "2.0.6"}
+  "php-horde-gollem" {< "4.0.0~alpha1"}
+  "php-horde-gollem" {>= "3.0.12"}
+  "php-horde-imp" {< "7.0.0~alpha1"}
+  "php-horde-imp" {>= "6.2.21"}
+  "php-horde-ingo" {< "4.0.0~alpha1"}
+  "php-horde-ingo" {>= "3.2.16"}
+  "php-horde-kronolith" {< "5.0.0~alpha1"}
+  "php-horde-kronolith" {>= "4.2.23"}
+  "php-horde-mnemo" {< "5.0.0~alpha1"}
+  "php-horde-mnemo" {>= "4.2.14"}
+  "php-horde-nag" {< "5.0.0~alpha1"}
+  "php-horde-nag" {>= "4.2.17"}
+  "php-horde-timeobjects" {< "3.0.0~alpha1"}
+  "php-horde-timeobjects" {>= "2.1.4"}
+  "php-horde-trean" {< "2.0.0~alpha1"}
+  "php-horde-trean" {>= "1.1.9"}
+  "php-horde-turba" {< "5.0.0~alpha1"}
+  "php-horde-turba" {>= "4.2.21"}
+]
+conflicts: [
+  "horde-bundle"
+]
+extra-source "php-horde-webmail_5.2.22-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-horde-webmail/php-horde-webmail_5.2.22-6_all.deb"
+}

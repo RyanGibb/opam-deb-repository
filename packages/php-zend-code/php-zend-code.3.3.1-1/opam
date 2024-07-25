@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-zend-code_3.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-zend-code"]
+]
+depends: [
+  "php-common"
+  "php-zend-eventmanager" {>= "2.6"}
+]
+extra-source "php-zend-code_3.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-zend-code/php-zend-code_3.3.1-1_all.deb"
+}

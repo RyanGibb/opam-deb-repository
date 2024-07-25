@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hedgewars_1.0.2-6+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hedgewars"]
+]
+depends: [
+  "fonts-dejavu-core"
+  "fonts-wqy-zenhei"
+  "hedgewars-data" {>= "1.0.2"}
+  "libc6" {>= "2.34"}
+  "libffi8" {>= "3.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "liblua5-1-0"
+  "libphysfs1" {>= "3.0.2"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libsdl2-image-2-0-0" {>= "2.0.5"}
+  "libsdl2-mixer-2-0-0" {>= "2.6.0"}
+  "libsdl2-net-2-0-0" {>= "2.0.1"}
+  "libsdl2-ttf-2-0-0" {>= "2.0.15"}
+  "libstdc++6" {>= "5"}
+  "qt5-style-plugins"
+  "zlib1g" {>= "1-1.2.0"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "hedgewars_1.0.2-6+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hedgewars/hedgewars_1.0.2-6+b2_amd64.deb"
+}

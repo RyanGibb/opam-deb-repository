@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i base58_1.0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r base58"]
+]
+depends: [
+  "python3-any"
+  "python3-base58" {= "1.0.3-2"}
+]
+extra-source "base58_1.0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-base58/base58_1.0.3-2_all.deb"
+}

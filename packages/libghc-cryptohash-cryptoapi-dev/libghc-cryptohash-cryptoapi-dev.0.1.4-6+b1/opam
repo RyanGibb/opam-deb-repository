@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cryptohash-cryptoapi-dev_0.1.4-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cryptohash-cryptoapi-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-cereal-dev"
+  "libghc-crypto-api-dev"
+  "libghc-cryptonite-dev"
+  "libghc-memory-dev"
+  "libghc-tagged-dev"
+  "libgmp10"
+]
+extra-source "libghc-cryptohash-cryptoapi-dev_0.1.4-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cryptohash-cryptoapi/libghc-cryptohash-cryptoapi-dev_0.1.4-6+b1_amd64.deb"
+}

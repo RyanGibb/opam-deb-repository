@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i med-imaging-dev_3.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r med-imaging-dev"]
+]
+depends: [
+  "med-config" {= "3.3"}
+  "med-tasks" {= "3.3"}
+]
+extra-source "med-imaging-dev_3.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-med/med-imaging-dev_3.3_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wbar_2.3.4-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wbar"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libimlib2" {>= "1.4.5"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+]
+extra-source "wbar_2.3.4-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wbar/wbar_2.3.4-9_amd64.deb"
+}

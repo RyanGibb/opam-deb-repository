@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gdb_13.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gdb"]
+]
+depends: [
+  "libbabeltrace1" {>= "1.5.4"}
+  "libc6" {>= "2.34"}
+  "libdebuginfod1" {>= "0.180"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc-s1" {>= "4.2"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libipt2" {>= "2.0"}
+  "liblzma5" {>= "5.1.1alpha+20110809"}
+  "libmpfr6" {>= "3.1.3"}
+  "libncursesw6" {>= "6"}
+  "libpython3-11" {>= "3.11.0"}
+  "libreadline8" {>= "8.2~beta"}
+  "libsource-highlight4v5" {>= "3.1.9"}
+  "libstdc++6" {>= "12"}
+  "libtinfo6" {>= "6"}
+  "libxxhash0" {>= "0.6.5"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+conflicts: [
+  "gdb"
+]
+extra-source "gdb_13.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gdb/gdb_13.1-3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-dmsh_0.2.11-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-dmsh"]
+]
+depends: [
+  "python3-any"
+  "python3-meshplex" {< "0.16"}
+  "python3-meshplex" {>= "0.15.8"}
+  "python3-numpy"
+  "python3-scipy"
+]
+extra-source "python3-dmsh_0.2.11-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-dmsh/python3-dmsh_0.2.11-3_all.deb"
+}

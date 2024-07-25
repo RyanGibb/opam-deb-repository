@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ask_1.1.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ask"]
+]
+depends: [
+  "libpython2-7-stdlib"
+  "python"
+  "python-any" {>= "2.6.6-7~"}
+  "python-numpy"
+  "python-scipy"
+  "r-base-core"
+  "r-cran-foptions"
+  "r-cran-gbm"
+  "r-cran-inline"
+  "r-cran-lattice"
+  "r-cran-lhs"
+  "r-cran-rjson"
+  "r-cran-rpart"
+  "r-cran-tgp" {>= "2.4-14-2"}
+]
+extra-source "ask_1.1.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ask/ask_1.1.1-3_all.deb"
+}

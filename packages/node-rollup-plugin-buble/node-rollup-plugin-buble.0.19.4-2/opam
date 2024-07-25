@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-rollup-plugin-buble_0.19.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-rollup-plugin-buble"]
+]
+depends: [
+  "node-buble"
+  "node-rollup-pluginutils" {>= "1.5.0"}
+  "nodejs"
+]
+extra-source "node-rollup-plugin-buble_0.19.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-rollup-plugin-buble/node-rollup-plugin-buble_0.19.4-2_all.deb"
+}

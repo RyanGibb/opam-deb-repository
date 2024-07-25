@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pk4_5+b12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pk4"]
+]
+depends: [
+  "debian-keyring"
+  "devscripts"
+  "dpkg-dev"
+  "libc6" {>= "2.3.2"}
+  "systemd-sysv"
+]
+extra-source "pk4_5+b12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pk4/pk4_5+b12_amd64.deb"
+}

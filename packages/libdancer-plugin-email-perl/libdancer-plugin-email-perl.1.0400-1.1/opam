@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdancer-plugin-email-perl_1.0400-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdancer-plugin-email-perl"]
+]
+depends: [
+  "libauthen-sasl-perl" {>= "2.16"}
+  "libdancer-perl"
+  "libemail-date-format-perl"
+  "libemail-sender-perl"
+  "libfile-type-perl"
+  "libmime-tools-perl"
+  "libnet-smtp-ssl-perl" {>= "1.01"}
+  "libnet-ssleay-perl" {>= "1.58"}
+  "perl" {>= "5.19.2"}
+  "perl-any"
+]
+extra-source "libdancer-plugin-email-perl_1.0400-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdancer-plugin-email-perl/libdancer-plugin-email-perl_1.0400-1.1_all.deb"
+}

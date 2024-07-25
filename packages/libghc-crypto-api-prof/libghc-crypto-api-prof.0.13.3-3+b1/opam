@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-crypto-api-prof_0.13.3-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-crypto-api-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-cereal-prof"
+  "libghc-crypto-api-dev" {= "0.13.3-3+b1"}
+  "libghc-entropy-prof"
+  "libghc-tagged-prof"
+]
+extra-source "libghc-crypto-api-prof_0.13.3-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-crypto-api/libghc-crypto-api-prof_0.13.3-3+b1_amd64.deb"
+}

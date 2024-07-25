@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nsca-ng-server_1.6-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nsca-ng-server"]
+]
+depends: [
+  "adduser"
+  "libbsd0" {>= "0.4.0"}
+  "libc6" {>= "2.34"}
+  "libconfuse2" {>= "3.2.1~"}
+  "libev4" {>= "1-4.04"}
+  "libssl3" {>= "3.0.0"}
+  "libsystemd0"
+  "lsb-base"
+]
+extra-source "nsca-ng-server_1.6-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nsca-ng/nsca-ng-server_1.6-6_amd64.deb"
+}

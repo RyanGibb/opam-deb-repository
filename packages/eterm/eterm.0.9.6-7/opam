@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eterm_0.9.6-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eterm"]
+]
+depends: [
+  "libast2" {>= "0.7"}
+  "libc6" {>= "2.34"}
+  "libimlib2" {>= "1.4.5"}
+  "libx11-6"
+  "libxext6"
+]
+conflicts: [
+  "eterm-backgrounds"
+  "eterm-ml"
+]
+extra-source "eterm_0.9.6-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eterm/eterm_0.9.6-7_amd64.deb"
+}

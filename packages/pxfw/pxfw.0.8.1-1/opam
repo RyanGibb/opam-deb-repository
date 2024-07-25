@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pxfw_0.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pxfw"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libqpx0" {= "0.8.1-1"}
+  "libstdc++6" {>= "5"}
+  "qpxtool"
+]
+extra-source "pxfw_0.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qpxtool/pxfw_0.8.1-1_amd64.deb"
+}

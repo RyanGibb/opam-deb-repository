@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-haplo.stats_1.7.9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-haplo.stats"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.0-5"}
+  "r-cran-rms"
+]
+extra-source "r-cran-haplo.stats_1.7.9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-haplo.stats/r-cran-haplo.stats_1.7.9-2_amd64.deb"
+}

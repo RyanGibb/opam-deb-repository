@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libappstream-glib8_0.7.14-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libappstream-glib8"]
+]
+depends: [
+  "libarchive13" {>= "3.0.4"}
+  "libc6" {>= "2.14"}
+  "libgdk-pixbuf2-0-0" {>= "2.25.2"}
+  "libglib2-0-0" {>= "2.46"}
+  "libsoup2-4-1" {>= "2.52"}
+  "libstemmer0d" {>= "0+svn527"}
+  "libuuid1" {>= "2.16"}
+  "libyaml-0-2"
+]
+extra-source "libappstream-glib8_0.7.14-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/appstream-glib/libappstream-glib8_0.7.14-1+deb10u1_amd64.deb"
+}

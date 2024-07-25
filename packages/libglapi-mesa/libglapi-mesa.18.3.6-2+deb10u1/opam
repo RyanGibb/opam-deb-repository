@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglapi-mesa_18.3.6-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglapi-mesa"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libglapi-mesa_18.3.6-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mesa/libglapi-mesa_18.3.6-2+deb10u1_amd64.deb"
+}

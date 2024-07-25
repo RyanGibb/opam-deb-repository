@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pptp-linux_1.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pptp-linux"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "ppp"
+]
+extra-source "pptp-linux_1.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pptp-linux/pptp-linux_1.10.0-1_amd64.deb"
+}

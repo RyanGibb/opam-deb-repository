@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-kombu_4.2.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-kombu"]
+]
+depends: [
+  "python-amqp" {>= "1.4.6"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-anyjson" {>= "0.3.3"}
+]
+extra-source "python-kombu_4.2.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kombu/python-kombu_4.2.1-3_all.deb"
+}

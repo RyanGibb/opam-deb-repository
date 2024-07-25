@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblsofui7_4:5.14.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblsofui7"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libkf5i18n5" {>= "4.97.0"}
+  "libkf5sysguard-data" {= "4-5.14.5-1"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "liblsofui7_4:5.14.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libksysguard/liblsofui7_5.14.5-1_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mediastreamer2-plugin-openh264_1.2.1~git20211104.9352c50-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mediastreamer2-plugin-openh264"]
+]
+depends: [
+  "libbctoolbox1" {< "5.2.0"}
+  "libbctoolbox1" {>= "5.1.64"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libmediastreamer12" {< "1-5.2.0"}
+  "libmediastreamer12" {>= "1-5.1.64"}
+  "libopenh264-7" {>= "2.3.1+dfsg"}
+  "libortp16" {< "1-5.2.0"}
+  "libortp16" {>= "1-5.1.64"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "mediastreamer2-plugin-openh264_1.2.1~git20211104.9352c50-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/msopenh264/mediastreamer2-plugin-openh264_1.2.1~git20211104.9352c50-2_amd64.deb"
+}

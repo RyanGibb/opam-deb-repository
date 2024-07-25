@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i psl_0.21.0-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r psl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpsl5" {>= "0.19.1"}
+]
+extra-source "psl_0.21.0-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpsl/psl_0.21.0-1.2_amd64.deb"
+}

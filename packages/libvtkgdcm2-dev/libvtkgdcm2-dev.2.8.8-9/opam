@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvtkgdcm2-dev_2.8.8-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvtkgdcm2-dev"]
+]
+depends: [
+  "libgdcm2-dev"
+  "libvtkgdcm2-8a" {= "2.8.8-9"}
+]
+extra-source "libvtkgdcm2-dev_2.8.8-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gdcm/libvtkgdcm2-dev_2.8.8-9_amd64.deb"
+}

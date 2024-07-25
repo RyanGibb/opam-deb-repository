@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jacal_1c7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jacal"]
+]
+depends: [
+  "slib" {>= "3a5-1"}
+  ("scm" | "guile")
+]
+extra-source "jacal_1c7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jacal/jacal_1c7-2_all.deb"
+}

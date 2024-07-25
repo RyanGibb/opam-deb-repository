@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lpr_1:2008.05.17.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lpr"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "netbase"
+]
+conflicts: [
+  "suidmanager (<< 0.50)"
+]
+extra-source "lpr_1:2008.05.17.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lpr/lpr_2008.05.17.3_amd64.deb"
+}

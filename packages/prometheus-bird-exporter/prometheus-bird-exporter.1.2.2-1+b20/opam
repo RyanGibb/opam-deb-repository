@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-bird-exporter_1.2.2-1+b20_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-bird-exporter"]
+]
+depends: [
+  "bird"
+  "libc6" {>= "2.3.2"}
+]
+extra-source "prometheus-bird-exporter_1.2.2-1+b20_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-bird-exporter/prometheus-bird-exporter_1.2.2-1+b20_amd64.deb"
+}

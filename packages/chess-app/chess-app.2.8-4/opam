@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i chess.app_2.8-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r chess.app"]
+]
+depends: [
+  "gnustep-back0-28" {>= "0.28.0"}
+  "gnustep-base-runtime" {>= "1.27.0"}
+  "gnustep-gui-runtime" {>= "0.28.0"}
+  "libc6" {>= "2.7"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnustep-base1-27" {>= "1.27.0"}
+  "libgnustep-gui0-28" {>= "0.28.0"}
+  "libobjc4" {>= "4.2.1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "chess.app_2.8-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chess.app/chess.app_2.8-4_amd64.deb"
+}

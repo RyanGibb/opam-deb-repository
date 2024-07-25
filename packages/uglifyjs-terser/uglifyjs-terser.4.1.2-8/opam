@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uglifyjs.terser_4.1.2-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uglifyjs.terser"]
+]
+depends: [
+  "node-commander"
+  "node-terser" {= "4.1.2-8"}
+  "nodejs"
+]
+extra-source "uglifyjs.terser_4.1.2-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-terser/uglifyjs.terser_4.1.2-8_all.deb"
+}

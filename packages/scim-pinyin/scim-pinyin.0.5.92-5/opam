@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scim-pinyin_0.5.92-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scim-pinyin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libscim8v5" {>= "1.4"}
+  "libstdc++6" {>= "11"}
+  "scim"
+]
+extra-source "scim-pinyin_0.5.92-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scim-pinyin/scim-pinyin_0.5.92-5_amd64.deb"
+}

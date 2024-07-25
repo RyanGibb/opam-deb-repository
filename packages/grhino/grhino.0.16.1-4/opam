@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i grhino_0.16.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r grhino"]
+]
+depends: [
+  "grhino-data" {= "0.16.1-4"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "quarry"
+]
+extra-source "grhino_0.16.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grhino/grhino_0.16.1-4_amd64.deb"
+}

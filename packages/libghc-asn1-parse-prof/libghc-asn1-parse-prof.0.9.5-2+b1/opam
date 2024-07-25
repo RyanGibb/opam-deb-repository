@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-asn1-parse-prof_0.9.5-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-asn1-parse-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-asn1-encoding-prof"
+  "libghc-asn1-parse-dev" {= "0.9.5-2+b1"}
+  "libghc-asn1-types-prof"
+]
+extra-source "libghc-asn1-parse-prof_0.9.5-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-asn1-parse/libghc-asn1-parse-prof_0.9.5-2+b1_amd64.deb"
+}

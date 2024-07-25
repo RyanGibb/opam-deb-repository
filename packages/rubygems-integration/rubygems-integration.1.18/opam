@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rubygems-integration_1.18_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rubygems-integration"]
+]
+depends: [
+  "ca-certificates"
+]
+extra-source "rubygems-integration_1.18_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rubygems-integration/rubygems-integration_1.18_all.deb"
+}

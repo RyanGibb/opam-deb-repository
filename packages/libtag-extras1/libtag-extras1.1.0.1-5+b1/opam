@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtag-extras1_1.0.1-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtag-extras1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "libtag1v5" {>= "1.9.1-2.2~"}
+]
+extra-source "libtag-extras1_1.0.1-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/taglib-extras/libtag-extras1_1.0.1-5+b1_amd64.deb"
+}

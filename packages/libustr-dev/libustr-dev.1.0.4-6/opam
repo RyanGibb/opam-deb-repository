@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libustr-dev_1.0.4-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libustr-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libustr-1-0-1" {= "1.0.4-6"}
+]
+extra-source "libustr-dev_1.0.4-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ustr/libustr-dev_1.0.4-6_amd64.deb"
+}

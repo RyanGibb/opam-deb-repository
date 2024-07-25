@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librdmacm-dev_44.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librdmacm-dev"]
+]
+depends: [
+  "libibverbs-dev"
+  "librdmacm1" {= "44.0-2"}
+]
+extra-source "librdmacm-dev_44.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rdma-core/librdmacm-dev_44.0-2_amd64.deb"
+}

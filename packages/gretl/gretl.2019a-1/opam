@@ -1,0 +1,43 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gretl_2019a-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gretl"]
+]
+depends: [
+  "gnuplot" {>= "4.2"}
+  "gretl-common" {>= "2019a-1"}
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.14"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc1" {>= "1-3.0"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libgfortran5" {>= "8"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgmp10"
+  "libgomp1" {>= "4.9"}
+  "libgretl1" {>= "2019a"}
+  "libgtk-3-0" {>= "3.16.2"}
+  "libgtksourceview-3-0-1" {>= "2.91.4"}
+  "libjson-glib-1-0-0" {>= "0.13.4"}
+  "libmpfr6" {>= "3.1.3"}
+  "libncurses6" {>= "6"}
+  "libodbc1" {>= "2.3.1"}
+  "libopenmpi3"
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libreadline7" {>= "6.0"}
+  "libstdc++6" {>= "5"}
+  "libtinfo6" {>= "6"}
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "gretl_2019a-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gretl/gretl_2019a-1_amd64.deb"
+}

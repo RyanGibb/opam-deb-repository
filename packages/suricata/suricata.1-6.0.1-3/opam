@@ -1,0 +1,44 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i suricata_1:6.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r suricata"]
+]
+depends: [
+  "libbpf0" {>= "5.2.6"}
+  "libc6" {>= "2.29"}
+  "libcap-ng0" {>= "0.7.9"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "libevent-pthreads-2-1-7" {>= "2.1.8-stable"}
+  "libgcc-s1" {>= "4.2"}
+  "libhiredis0-14" {>= "0.14.1"}
+  "libhtp2" {>= "1-0.5.36-1~"}
+  "libhyperscan5" {>= "5.4.0"}
+  "libjansson4" {>= "2.2"}
+  "libluajit-5-1-2" {>= "2.0.4+dfsg"}
+  "liblz4-1" {>= "0.0~r127"}
+  "libmagic1" {>= "5.12"}
+  "libmaxminddb0" {>= "1.0.2"}
+  "libnet1" {>= "1.1.5"}
+  "libnetfilter-log1" {>= "0.0.13"}
+  "libnetfilter-queue1" {>= "1.0.2"}
+  "libnfnetlink0"
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libpcap0-8" {>= "1.0.0"}
+  "libpcre3"
+  "libyaml-0-2"
+  "lsb-base" {>= "3.0-6"}
+  "python3" {>= "3.2"}
+  "python3-any"
+  "python3-simplejson"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libhtp1 (<< 0.5.16)"
+  "suricata-hyperscan (<< 3.2)"
+]
+extra-source "suricata_1:6.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/suricata/suricata_6.0.1-3_amd64.deb"
+}

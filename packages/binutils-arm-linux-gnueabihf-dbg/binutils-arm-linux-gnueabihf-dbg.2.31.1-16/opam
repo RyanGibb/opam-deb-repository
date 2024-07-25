@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i binutils-arm-linux-gnueabihf-dbg_2.31.1-16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r binutils-arm-linux-gnueabihf-dbg"]
+]
+depends: [
+  "binutils-arm-linux-gnueabihf" {= "2.31.1-16"}
+]
+extra-source "binutils-arm-linux-gnueabihf-dbg_2.31.1-16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/binutils/binutils-arm-linux-gnueabihf-dbg_2.31.1-16_amd64.deb"
+}

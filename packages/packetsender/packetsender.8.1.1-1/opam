@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i packetsender_8.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r packetsender"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.2.0~alpha1"} | "libqt5gui5-gles" {>= "5.2.0~alpha1"})
+]
+extra-source "packetsender_8.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/packetsender/packetsender_8.1.1-1_amd64.deb"
+}

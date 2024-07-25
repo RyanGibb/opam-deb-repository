@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpmix-bin_4.2.2-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpmix-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpmix2" {= "4.2.2-1+deb12u1"}
+]
+extra-source "libpmix-bin_4.2.2-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pmix/libpmix-bin_4.2.2-1+deb12u1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-gram-protocol3_13.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-gram-protocol3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglobus-common0" {>= "17"}
+  "libglobus-gss-assist3" {>= "11"}
+  "libglobus-gssapi-gsi4" {>= "13"}
+  "libglobus-io3" {>= "11"}
+  "perl-any"
+]
+extra-source "libglobus-gram-protocol3_13.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gram-protocol/libglobus-gram-protocol3_13.6-2_amd64.deb"
+}

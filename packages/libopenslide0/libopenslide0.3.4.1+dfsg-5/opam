@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenslide0_3.4.1+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenslide0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libopenjp2-7" {>= "2.0.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsqlite3-0" {>= "3.6.0"}
+  "libtiff5" {>= "4.0.3"}
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libopenslide0_3.4.1+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openslide/libopenslide0_3.4.1+dfsg-5_amd64.deb"
+}

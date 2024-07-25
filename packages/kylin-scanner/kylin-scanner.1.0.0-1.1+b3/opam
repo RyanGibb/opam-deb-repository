@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kylin-scanner_1.0.0-1.1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kylin-scanner"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.20.0"}
+  "liblept5"
+  "libopencv-core406" {>= "4.6.0+dfsg"}
+  "libopencv-imgcodecs406" {>= "4.6.0+dfsg"}
+  "libopencv-imgproc406" {>= "4.6.0+dfsg"}
+  "libopencv-photo406" {>= "4.6.0+dfsg"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libsane1" {>= "1.0.27"}
+  "libstdc++6" {>= "11"}
+  "libtesseract5"
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+]
+extra-source "kylin-scanner_1.0.0-1.1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kylin-scanner/kylin-scanner_1.0.0-1.1+b3_amd64.deb"
+}

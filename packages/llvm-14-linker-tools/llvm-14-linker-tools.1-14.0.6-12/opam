@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i llvm-14-linker-tools_1:14.0.6-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r llvm-14-linker-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libllvm14"
+  "libstdc++6" {>= "11"}
+]
+extra-source "llvm-14-linker-tools_1:14.0.6-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-14/llvm-14-linker-tools_14.0.6-12_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yard_0.9.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yard"]
+]
+depends: [
+  "libjs-jquery"
+  "ruby-gettext" {>= "2.2.1~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "yard_0.9.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yard/yard_0.9.16-1_all.deb"
+}

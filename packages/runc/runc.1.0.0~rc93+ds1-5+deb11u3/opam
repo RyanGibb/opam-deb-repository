@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i runc_1.0.0~rc93+ds1-5+deb11u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r runc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libseccomp2" {>= "2.4.1"}
+]
+extra-source "runc_1.0.0~rc93+ds1-5+deb11u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/runc/runc_1.0.0~rc93+ds1-5+deb11u3_amd64.deb"
+}

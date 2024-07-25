@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kde-baseapps_4:22.12.3+5.142_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kde-baseapps"]
+]
+depends: [
+  "dolphin" {>= "4-22.12.3"}
+  "kdialog" {>= "4-22.12.3"}
+  "keditbookmarks" {>= "22.12.3"}
+  "kfind" {>= "4-22.12.3"}
+  "konqueror" {>= "4-22.12.3"}
+  "konsole" {>= "4-22.12.3"}
+  "kwrite" {>= "4-22.12.3"}
+]
+extra-source "kde-baseapps_4:22.12.3+5.142_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-kde/kde-baseapps_22.12.3+5.142_amd64.deb"
+}

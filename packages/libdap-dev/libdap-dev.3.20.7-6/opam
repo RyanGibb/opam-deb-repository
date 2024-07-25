@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdap-dev_3.20.7-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdap-dev"]
+]
+depends: [
+  "libdap27" {= "3.20.7-6"}
+  "libdapclient6v5" {= "3.20.7-6"}
+  "libdapserver7v5" {= "3.20.7-6"}
+  "libxml2-dev"
+  "pkg-config"
+  "uuid-dev"
+  ("libcurl4-gnutls-dev" | "libcurl-dev")
+]
+extra-source "libdap-dev_3.20.7-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdap/libdap-dev_3.20.7-6_amd64.deb"
+}

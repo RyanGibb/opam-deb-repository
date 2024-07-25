@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-gi-gmodule-dev_2.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-gi-gmodule-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-gi-glib-dev"
+  "libghc-haskell-gi-base-dev"
+  "libghc-haskell-gi-dev"
+  "libgirepository-1-0-1" {>= "0.9.2"}
+  "libglib2-0-0" {>= "2.70.0"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-gi-gmodule-dev_2.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-gi-gmodule/libghc-gi-gmodule-dev_2.0.3-1_amd64.deb"
+}

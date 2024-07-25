@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nodejs_12.22.12~dfsg-1~deb11u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nodejs"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libnode72" {= "12.22.12~dfsg-1~deb11u4"}
+]
+conflicts: [
+  "nodejs-legacy"
+]
+extra-source "nodejs_12.22.12~dfsg-1~deb11u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nodejs/nodejs_12.22.12~dfsg-1~deb11u4_amd64.deb"
+}

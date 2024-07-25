@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i siconos_4.4.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r siconos"]
+]
+depends: [
+  "cmake"
+  "libboost-filesystem-dev" {>= "1.61"}
+  "libboost-serialization-dev" {>= "1.61"}
+  "libsiconos-control-dev" {>= "4.4.0+dfsg-2"}
+  "libsiconos-io-dev" {>= "4.4.0+dfsg-2"}
+  "libsiconos-kernel-dev" {>= "4.4.0+dfsg-2"}
+  "libsiconos-mechanics-dev" {>= "4.4.0+dfsg-2"}
+  "libsiconos-numerics-dev" {>= "4.4.0+dfsg-2"}
+  "python3-any" {>= "3.8~"}
+  "python3-numpy"
+]
+extra-source "siconos_4.4.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/siconos/siconos_4.4.0+dfsg-2_all.deb"
+}

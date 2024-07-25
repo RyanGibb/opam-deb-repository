@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsis-jhdf5-java_19.04.0+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsis-jhdf5-java"]
+]
+depends: [
+  "libargs4j-java"
+  "libcommons-io-java"
+  "libcommons-lang3-java"
+  "libsis-base-java"
+  "libsis-jhdf5-jni" {< "19.04.0+dfsg-4.1~"}
+  "libsis-jhdf5-jni" {>= "19.04.0+dfsg-4"}
+]
+extra-source "libsis-jhdf5-java_19.04.0+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsis-jhdf5-java/libsis-jhdf5-java_19.04.0+dfsg-4_all.deb"
+}

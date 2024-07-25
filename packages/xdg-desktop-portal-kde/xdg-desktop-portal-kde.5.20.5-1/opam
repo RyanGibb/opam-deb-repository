@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xdg-desktop-portal-kde_5.20.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xdg-desktop-portal-kde"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libkf5configcore5" {>= "5.74.0~"}
+  "libkf5coreaddons5" {>= "5.74.0~"}
+  "libkf5declarative5" {>= "5.74.0~"}
+  "libkf5i18n5" {>= "5.74.0~"}
+  "libkf5itemviews5" {>= "4.96.0"}
+  "libkf5kiocore5" {>= "5.74.0~"}
+  "libkf5kiofilewidgets5" {>= "5.74.0~"}
+  "libkf5kiowidgets5" {>= "5.74.0~"}
+  "libkf5notifications5" {>= "5.74.0~"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "5.69.0"}
+  "libkf5waylandclient5" {>= "4-5.74.0"}
+  "libkf5widgetsaddons5" {>= "5.74.0~"}
+  "libkf5windowsystem5" {>= "5.74.0~"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.15.0~"}
+  "libqt5printsupport5" {>= "5.15.0~"}
+  "libqt5qml5" {>= "5.15.0~"}
+  "libqt5quickwidgets5" {>= "5.15.0~"}
+  "libqt5widgets5" {>= "5.15.0~"}
+  "libstdc++6" {>= "4.1.1"}
+  "libwayland-client0" {>= "1.9.91"}
+  "xdg-desktop-portal"
+  ("libqt5gui5" {>= "5.15.0~"} | "libqt5gui5-gles" {>= "5.15.0~"})
+  ("libqt5quick5" {>= "5.15.0~"} | "libqt5quick5-gles" {>= "5.15.0~"})
+]
+extra-source "xdg-desktop-portal-kde_5.20.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xdg-desktop-portal-kde/xdg-desktop-portal-kde_5.20.5-1_amd64.deb"
+}

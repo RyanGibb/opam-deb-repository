@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdrumstick-rt1_1.1.3-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdrumstick-rt1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libqt5core5a" {>= "5.12.2"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libdrumstick-rt1_1.1.3-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdrumstick/libdrumstick-rt1_1.1.3-1+b2_amd64.deb"
+}

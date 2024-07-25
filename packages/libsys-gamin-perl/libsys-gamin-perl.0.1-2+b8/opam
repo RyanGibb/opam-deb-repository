@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsys-gamin-perl_0.1-2+b8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsys-gamin-perl"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgamin0"
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libsys-gamin-perl_0.1-2+b8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsys-gamin-perl/libsys-gamin-perl_0.1-2+b8_amd64.deb"
+}

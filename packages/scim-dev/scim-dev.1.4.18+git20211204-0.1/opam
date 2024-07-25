@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scim-dev_1.4.18+git20211204-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scim-dev"]
+]
+depends: [
+  "libscim-dev" {>= "1.4.18+git20211204-0.1"}
+  "scim-dev-doc" {= "1.4.18+git20211204-0.1"}
+]
+extra-source "scim-dev_1.4.18+git20211204-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scim/scim-dev_1.4.18+git20211204-0.1_all.deb"
+}

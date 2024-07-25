@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i checkstyle_8.15-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r checkstyle"]
+]
+depends: [
+  "antlr"
+  "java-wrappers" {>= "0.1.6"}
+  "libantlr4-runtime-java"
+  "libcommons-beanutils-java" {>= "1.5"}
+  "libcommons-lang3-java"
+  "libcommons-logging-java"
+  "libguava-java" {>= "1.0~rc2"}
+  "libpicocli-java"
+  ("default-jre-headless" | "java7-runtime-headless")
+]
+extra-source "checkstyle_8.15-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/checkstyle/checkstyle_8.15-1+deb10u1_all.deb"
+}

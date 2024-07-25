@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plasma-vault_5.27.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plasma-vault"]
+]
+depends: [
+  "cryfs"
+  "kio"
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libkf5activities5" {>= "5.102.0~"}
+  "libkf5configcore5" {>= "5.102.0~"}
+  "libkf5coreaddons5" {>= "5.102.0~"}
+  "libkf5dbusaddons5" {>= "5.102.0~"}
+  "libkf5i18n5" {>= "5.102.0~"}
+  "libkf5kiocore5" {>= "5.102.0~"}
+  "libkf5kiogui5" {>= "5.102.0~"}
+  "libkf5kiowidgets5" {>= "5.102.0~"}
+  "libkf5networkmanagerqt6" {>= "5.102.0~"}
+  "libkf5plasma5" {>= "5.102.0~"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "5.69.0"}
+  "libkf5widgetsaddons5" {>= "5.102.0~"}
+  "libprocesscore9" {>= "4-5.27.5~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5dbus5" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5.2"}
+  "plasma-framework"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "plasma-vault_5.27.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plasma-vault/plasma-vault_5.27.5-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gastables_0.3-2.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gastables"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-gastables"
+  "python-matplotlib"
+  "python-wxgtk3-0"
+]
+extra-source "gastables_0.3-2.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gastables/gastables_0.3-2.2_all.deb"
+}

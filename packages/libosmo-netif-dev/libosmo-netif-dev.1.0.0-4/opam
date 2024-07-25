@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmo-netif-dev_1.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmo-netif-dev"]
+]
+depends: [
+  "libosmocore-dev"
+  "libosmonetif8" {= "1.0.0-4"}
+]
+extra-source "libosmo-netif-dev_1.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libosmo-netif/libosmo-netif-dev_1.0.0-4_amd64.deb"
+}

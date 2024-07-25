@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-gpyfft-dbg_0.7.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-gpyfft-dbg"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libclfft2"
+  "python-dbg" {< "2.8"}
+  "python-dbg" {>= "2.7~"}
+  "python-dbg-any" {< "2.8"}
+  "python-dbg-any" {>= "2.7~"}
+  "python-gpyfft" {= "0.7.0-1+b1"}
+  "python-numpy"
+  "python-numpy" {>= "1-1.14.3"}
+  "python-numpy-dbg"
+  "python-pyopencl-dbg"
+]
+extra-source "python-gpyfft-dbg_0.7.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gpyfft/python-gpyfft-dbg_0.7.0-1+b1_amd64.deb"
+}

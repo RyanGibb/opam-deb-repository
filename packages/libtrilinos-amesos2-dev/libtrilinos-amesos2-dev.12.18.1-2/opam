@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrilinos-amesos2-dev_12.18.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrilinos-amesos2-dev"]
+]
+depends: [
+  "libmumps-dev"
+  "libtrilinos-amesos2-12" {= "12.18.1-2"}
+  "libtrilinos-trilinosss-dev"
+  "trilinos-dev"
+]
+extra-source "libtrilinos-amesos2-dev_12.18.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trilinos/libtrilinos-amesos2-dev_12.18.1-2_amd64.deb"
+}

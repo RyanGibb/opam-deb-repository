@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsymspg1_2.0.2-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsymspg1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgomp1" {>= "4.9"}
+]
+extra-source "libsymspg1_2.0.2-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spglib/libsymspg1_2.0.2-1+b3_amd64.deb"
+}

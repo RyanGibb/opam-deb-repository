@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sox_14.4.2+git20190427-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sox"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libsox-fmt-base" {= "14.4.2+git20190427-1"}
+  "libsox3" {= "14.4.2+git20190427-1"}
+  ("libsox-fmt-alsa" {= "14.4.2+git20190427-1"} | "libsox-fmt-ao" {= "14.4.2+git20190427-1"} | "libsox-fmt-oss" {= "14.4.2+git20190427-1"} | "libsox-fmt-pulse" {= "14.4.2+git20190427-1"})
+]
+extra-source "sox_14.4.2+git20190427-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sox/sox_14.4.2+git20190427-1_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsigsegv-dev_2.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsigsegv-dev"]
+]
+depends: [
+  "libsigsegv2" {= "2.12-2"}
+]
+extra-source "libsigsegv-dev_2.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsigsegv/libsigsegv-dev_2.12-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-libmount-dev_0.1.15-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-libmount-dev"]
+]
+depends: [
+  "libmount-dev"
+  "librust-libc-dev"
+  "librust-nix-dev"
+  "librust-quick-error-2+default-dev"
+]
+extra-source "librust-libmount-dev_0.1.15-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-libmount/librust-libmount-dev_0.1.15-6_amd64.deb"
+}

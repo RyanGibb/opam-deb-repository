@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-openems_0.0.35+git20190103.6a75e98+dfsg.1-3.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-openems"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcsxcad0"
+  "libgcc-s1" {>= "3.0"}
+  "libnf2ff0"
+  "libopenems0"
+  "libstdc++6" {>= "11"}
+  "openems" {= "0.0.35+git20190103.6a75e98+dfsg.1-3.2"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-h5py"
+  "python3-matplotlib"
+]
+extra-source "python3-openems_0.0.35+git20190103.6a75e98+dfsg.1-3.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openems/python3-openems_0.0.35+git20190103.6a75e98+dfsg.1-3.2_amd64.deb"
+}

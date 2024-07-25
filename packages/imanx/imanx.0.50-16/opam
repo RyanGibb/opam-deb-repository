@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i imanx_0.50-16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r imanx"]
+]
+depends: [
+  "dictionaries-common"
+  "ispell"
+  ("debconf" | "debconf-2-0")
+]
+extra-source "imanx_0.50-16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/imanx/imanx_0.50-16_amd64.deb"
+}

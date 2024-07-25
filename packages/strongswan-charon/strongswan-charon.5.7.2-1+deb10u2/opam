@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i strongswan-charon_5.7.2-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r strongswan-charon"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libstrongswan" {= "5.7.2-1+deb10u2"}
+  "strongswan-libcharon"
+  "strongswan-starter"
+  ("iproute2" | "iproute")
+]
+extra-source "strongswan-charon_5.7.2-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/strongswan/strongswan-charon_5.7.2-1+deb10u2_amd64.deb"
+}

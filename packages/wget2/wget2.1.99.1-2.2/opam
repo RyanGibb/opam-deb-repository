@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wget2_1.99.1-2.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wget2"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgpgme11" {>= "1.2.0"}
+  "libpcre2-8-0" {>= "10.22"}
+  "libwget0"
+]
+extra-source "wget2_1.99.1-2.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wget2/wget2_1.99.1-2.2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-client-11_11.16-0+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-client-11"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libedit2" {>= "3.1-20180525-0"}
+  "libpq5" {>= "11.16"}
+  "postgresql-client-common" {>= "182~"}
+  "sensible-utils"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "postgresql-client-11_11.16-0+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-11/postgresql-client-11_11.16-0+deb10u1_amd64.deb"
+}

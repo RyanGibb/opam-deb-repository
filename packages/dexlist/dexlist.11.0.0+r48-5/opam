@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dexlist_11.0.0+r48-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dexlist"]
+]
+depends: [
+  "android-libart" {>= "11.0.0+r48"}
+  "android-libbacktrace" {>= "1-29"}
+  "android-libbase" {>= "29.0.6"}
+  "android-liblog" {>= "29.0.6"}
+  "android-libnativeloader" {= "1-11.0.0+r48-5"}
+  "android-libziparchive" {>= "1-29"}
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "liblz4-1" {>= "0.0~r113"}
+  "libstdc++6" {>= "4.2.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "dexlist_11.0.0+r48-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-art/dexlist_11.0.0+r48-5_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ladvd_1.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ladvd"]
+]
+depends: [
+  "adduser"
+  "libbsd0" {>= "0.6.0"}
+  "libc6" {>= "2.14"}
+  "libcap-ng0" {>= "0.7.9"}
+  "libevent-2-1-6" {>= "2.1.8-stable"}
+  "libmnl0" {>= "1.0.3-4~"}
+  "libnl-3-200" {>= "3.2.7"}
+  "libpcap0-8" {>= "1.5.1"}
+  "libpci3" {>= "1-3.5.2-1"}
+  "libteam5" {>= "1.7"}
+  "pciutils"
+]
+extra-source "ladvd_1.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ladvd/ladvd_1.1.2-1_amd64.deb"
+}

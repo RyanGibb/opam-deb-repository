@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-tokyocabinet_1.31-6+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-tokyocabinet"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.4"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.2"}
+  "libtokyocabinet9" {>= "1.4.47"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-tokyocabinet_1.31-6+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-tokyocabinet/ruby-tokyocabinet_1.31-6+b2_amd64.deb"
+}

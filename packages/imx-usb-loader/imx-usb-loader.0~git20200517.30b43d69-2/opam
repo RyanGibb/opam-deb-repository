@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i imx-usb-loader_0~git20200517.30b43d69-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r imx-usb-loader"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libusb-1-0-0" {>= "2-1.0.16"}
+]
+extra-source "imx-usb-loader_0~git20200517.30b43d69-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/imx-usb-loader/imx-usb-loader_0~git20200517.30b43d69-2_amd64.deb"
+}

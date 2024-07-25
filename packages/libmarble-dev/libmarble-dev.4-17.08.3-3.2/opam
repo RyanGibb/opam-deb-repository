@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmarble-dev_4:17.08.3-3.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmarble-dev"]
+]
+depends: [
+  "libastro-dev" {= "4-17.08.3-3.2"}
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libmarblewidget-qt5-28" {= "4-17.08.3-3.2"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.4"}
+  "libqt5webkit5-dev" {>= "5.4"}
+  "libstdc++6" {>= "4.1.1"}
+  "qtbase5-dev" {>= "5.11.0~rc1"}
+  "qtdeclarative5-dev" {>= "5.4"}
+]
+extra-source "libmarble-dev_4:17.08.3-3.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/marble/libmarble-dev_17.08.3-3.2_amd64.deb"
+}

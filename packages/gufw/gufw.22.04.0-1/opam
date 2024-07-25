@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gufw_22.04.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gufw"]
+]
+depends: [
+  "gir1-2-gtk-3-0"
+  "gir1-2-webkit2-4-0"
+  "pkexec"
+  "python3-any"
+  "python3-gi"
+  "ufw"
+]
+extra-source "gufw_22.04.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gui-ufw/gufw_22.04.0-1_all.deb"
+}

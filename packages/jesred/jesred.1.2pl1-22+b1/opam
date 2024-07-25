@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jesred_1.2pl1-22+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jesred"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "squid" {>= "3.5.6"}
+]
+extra-source "jesred_1.2pl1-22+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jesred/jesred_1.2pl1-22+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-apt-dev_2.2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-apt-dev"]
+]
+depends: [
+  "libapt-pkg-dev" {>= "0.7.10"}
+  "python3-apt" {>= "2.2.1"}
+]
+extra-source "python-apt-dev_2.2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-apt/python-apt-dev_2.2.1_all.deb"
+}

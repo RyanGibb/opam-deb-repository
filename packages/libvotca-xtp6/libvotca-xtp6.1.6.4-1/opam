@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvotca-xtp6_1.6.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvotca-xtp6"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgomp1" {>= "6"}
+  "libhdf5-103-1"
+  "libhdf5-cpp-103-1" {>= "1.10.5"}
+  "libstdc++6" {>= "9"}
+  "libvotca-csg6" {>= "1.6.4"}
+  "libvotca-tools6" {>= "1.6.4"}
+  "libxc5" {>= "3.0.0"}
+]
+extra-source "libvotca-xtp6_1.6.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/votca-xtp/libvotca-xtp6_1.6.4-1_amd64.deb"
+}

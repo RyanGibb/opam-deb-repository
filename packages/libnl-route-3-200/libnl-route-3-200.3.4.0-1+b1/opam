@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnl-route-3-200_3.4.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnl-route-3-200"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libnl-3-200" {= "3.4.0-1+b1"}
+]
+extra-source "libnl-route-3-200_3.4.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnl3/libnl-route-3-200_3.4.0-1+b1_amd64.deb"
+}

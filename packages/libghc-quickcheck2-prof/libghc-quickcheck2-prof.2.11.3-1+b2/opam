@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-quickcheck2-prof_2.11.3-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-quickcheck2-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-quickcheck2-dev" {= "2.11.3-1+b2"}
+  "libghc-random-prof"
+  "libghc-tf-random-prof"
+]
+conflicts: [
+  "libghc-quickcheck-prof (<< 2.1.0.1-6)"
+]
+extra-source "libghc-quickcheck2-prof_2.11.3-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-quickcheck/libghc-quickcheck2-prof_2.11.3-1+b2_amd64.deb"
+}

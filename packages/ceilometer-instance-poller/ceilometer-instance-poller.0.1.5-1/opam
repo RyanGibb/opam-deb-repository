@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ceilometer-instance-poller_0.1.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ceilometer-instance-poller"]
+]
+depends: [
+  "python3-any"
+  "python3-guestfs"
+  "python3-libvirt"
+  "python3-oslo-config"
+  "python3-oslo-log"
+  "python3-pbr"
+]
+extra-source "ceilometer-instance-poller_0.1.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceilometer-instance-poller/ceilometer-instance-poller_0.1.5-1_all.deb"
+}

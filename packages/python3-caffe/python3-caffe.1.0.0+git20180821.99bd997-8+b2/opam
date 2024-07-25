@@ -1,0 +1,44 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-caffe_1.0.0+git20180821.99bd997-8+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-caffe"]
+]
+depends: [
+  "cython3"
+  "libboost-python1-74-0"
+  "libboost-python1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libcaffe1" {= "1.0.0+git20180821.99bd997-8+b2"}
+  "libgcc-s1" {>= "3.0"}
+  "libgoogle-glog0v5"
+  "libprotobuf23" {>= "3.12.3"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-dateutil"
+  "python3-gflags"
+  "python3-h5py-serial"
+  "python3-ipython"
+  "python3-matplotlib"
+  "python3-networkx"
+  "python3-nose"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  "python3-pandas"
+  "python3-pil"
+  "python3-protobuf"
+  "python3-scipy"
+  "python3-six" {>= "1.1.0"}
+  "python3-skimage"
+  "python3-yaml"
+]
+conflicts: [
+  "python3-caffe-cuda"
+]
+extra-source "python3-caffe_1.0.0+git20180821.99bd997-8+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/caffe/python3-caffe_1.0.0+git20180821.99bd997-8+b2_amd64.deb"
+}

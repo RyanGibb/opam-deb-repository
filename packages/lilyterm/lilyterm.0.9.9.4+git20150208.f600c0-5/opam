@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lilyterm_0.9.9.4+git20150208.f600c0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lilyterm"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.14.0"}
+  "libgtk-3-0" {>= "3.7.10"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libvte-2-91-0"
+  "libx11-6"
+]
+extra-source "lilyterm_0.9.9.4+git20150208.f600c0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lilyterm/lilyterm_0.9.9.4+git20150208.f600c0-5_amd64.deb"
+}

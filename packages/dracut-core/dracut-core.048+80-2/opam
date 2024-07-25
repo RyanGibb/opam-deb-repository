@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dracut-core_048+80-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dracut-core"]
+]
+depends: [
+  "cpio"
+  "e2fsprogs"
+  "kmod"
+  "kpartx"
+  "libc6" {>= "2.14"}
+  "libkmod2" {>= "22~"}
+  "pkg-config"
+  "udev"
+  "util-linux" {>= "2.20"}
+]
+extra-source "dracut-core_048+80-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dracut/dracut-core_048+80-2_amd64.deb"
+}

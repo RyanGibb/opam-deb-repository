@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i flightgear-data-all_1:2020.3.16+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r flightgear-data-all"]
+]
+depends: [
+  "flightgear-data-ai" {>= "1-2020.3.16+dfsg-1"}
+  "flightgear-data-base" {>= "1-2020.3.16+dfsg-1"}
+  "flightgear-data-models" {>= "1-2020.3.16+dfsg-1"}
+]
+extra-source "flightgear-data-all_1:2020.3.16+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flightgear-data/flightgear-data-all_2020.3.16+dfsg-1_all.deb"
+}

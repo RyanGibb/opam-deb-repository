@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i axel_2.16.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r axel"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "axel_2.16.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/axel/axel_2.16.1-4_amd64.deb"
+}

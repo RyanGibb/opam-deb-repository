@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i httraqt_1.4.9-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r httraqt"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libhttrack2" {>= "3.49.2"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+]
+extra-source "httraqt_1.4.9-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/httraqt/httraqt_1.4.9-5_amd64.deb"
+}

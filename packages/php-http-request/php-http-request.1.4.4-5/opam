@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-http-request_1.4.4-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-http-request"]
+]
+depends: [
+  "php-common"
+  "php-net-socket" {>= "1.0.7"}
+  "php-net-url" {>= "1.0.12"}
+]
+extra-source "php-http-request_1.4.4-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-http-request/php-http-request_1.4.4-5_all.deb"
+}

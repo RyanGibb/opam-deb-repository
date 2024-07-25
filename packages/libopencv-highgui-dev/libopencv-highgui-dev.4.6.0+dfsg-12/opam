@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencv-highgui-dev_4.6.0+dfsg-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencv-highgui-dev"]
+]
+depends: [
+  "libavcodec-dev"
+  "libavformat-dev"
+  "libdc1394-dev"
+  "libgphoto2-dev"
+  "libjpeg-dev"
+  "libopencv-highgui406" {= "4.6.0+dfsg-12"}
+  "libopencv-videoio-dev" {= "4.6.0+dfsg-12"}
+  "libopenexr-dev"
+  "libpng-dev"
+  "libraw1394-dev"
+  "libswscale-dev"
+  "libtiff-dev"
+]
+extra-source "libopencv-highgui-dev_4.6.0+dfsg-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencv/libopencv-highgui-dev_4.6.0+dfsg-12_amd64.deb"
+}

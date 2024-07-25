@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdist-zilla-role-pluginbundle-pluginremover-perl_0.104-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdist-zilla-role-pluginbundle-pluginremover-perl"]
+]
+depends: [
+  "libdist-zilla-perl"
+  "libmoose-perl"
+  "perl-any"
+  ("libscalar-list-utils-perl" {>= "1-1.45"} | "perl" {>= "5.25.1"})
+]
+extra-source "libdist-zilla-role-pluginbundle-pluginremover-perl_0.104-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdist-zilla-role-pluginbundle-pluginremover-perl/libdist-zilla-role-pluginbundle-pluginremover-perl_0.104-1.1_all.deb"
+}

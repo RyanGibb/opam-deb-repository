@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dh-buildinfo_0.11+nmu2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dh-buildinfo"]
+]
+depends: [
+  "build-essential" {>= "7"}
+  "debhelper"
+  "perl"
+]
+extra-source "dh-buildinfo_0.11+nmu2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dh-buildinfo/dh-buildinfo_0.11+nmu2_all.deb"
+}

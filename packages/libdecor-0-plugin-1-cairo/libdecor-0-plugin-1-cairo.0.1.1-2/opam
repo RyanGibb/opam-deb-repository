@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdecor-0-plugin-1-cairo_0.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdecor-0-plugin-1-cairo"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.14.0"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libdecor-0-0" {= "0.1.1-2"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libwayland-client0" {>= "1.20.0"}
+  "libwayland-cursor0" {>= "1.18"}
+]
+conflicts: [
+  "libdecor-plugin-cairo"
+]
+extra-source "libdecor-0-plugin-1-cairo_0.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdecor-0/libdecor-0-plugin-1-cairo_0.1.1-2_amd64.deb"
+}

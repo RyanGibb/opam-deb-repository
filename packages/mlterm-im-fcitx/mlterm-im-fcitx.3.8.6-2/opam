@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mlterm-im-fcitx_3.8.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mlterm-im-fcitx"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfcitx-gclient1" {>= "1-4.2.9.5"}
+  "libfcitx-utils0" {>= "4.2.7"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "mlterm-common" {= "3.8.6-2"}
+  ("mlterm" {= "3.8.6-2"} | "mlterm-tiny" {= "3.8.6-2"})
+]
+extra-source "mlterm-im-fcitx_3.8.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mlterm/mlterm-im-fcitx_3.8.6-2_amd64.deb"
+}

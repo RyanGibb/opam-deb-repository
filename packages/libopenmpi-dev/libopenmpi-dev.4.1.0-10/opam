@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenmpi-dev_4.1.0-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenmpi-dev"]
+]
+depends: [
+  "libevent-dev"
+  "libhwloc-dev"
+  "libibverbs-dev" {>= "1.1.7"}
+  "libjs-jquery"
+  "libjs-jquery-ui"
+  "libopenmpi3" {= "4.1.0-10"}
+  "libpmix-dev"
+  "openmpi-bin" {>= "3.0.0-1"}
+  "openmpi-common" {>= "4.1.0-10"}
+  "zlib1g-dev"
+  ("gfortran-10" | "gfortran-mod-15")
+]
+conflicts: [
+  "libopenmpi-dev"
+]
+extra-source "libopenmpi-dev_4.1.0-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openmpi/libopenmpi-dev_4.1.0-10_amd64.deb"
+}

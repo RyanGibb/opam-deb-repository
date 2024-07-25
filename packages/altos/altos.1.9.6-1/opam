@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i altos_1.9.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r altos"]
+]
+depends: [
+  "freetts"
+  "libc6" {>= "2.29"}
+  "libelf1" {>= "0.144"}
+  "libjansson4" {>= "2.0.1"}
+  "libjfreechart-java"
+  "libjson-c5" {>= "0.15"}
+  "libreadline8" {>= "6.0"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+  "nickle"
+  ("default-jre" | "java2-runtime")
+]
+conflicts: [
+  "altusmetrum-themes"
+  "slim-altusmetrum"
+]
+extra-source "altos_1.9.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/altos/altos_1.9.6-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmfsm_0.36-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmfsm"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libdockapp3" {>= "0.7.0"}
+  "libx11-6"
+  "libxext6"
+  "libxpm4"
+]
+extra-source "wmfsm_0.36-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmfsm/wmfsm_0.36-1+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libobjc4_12.2.0-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libobjc4"]
+]
+depends: [
+  "gcc-12-base" {= "12.2.0-14"}
+  "libc6" {>= "2.34"}
+  "libgc1" {>= "1-7.2d"}
+  "libgcc-s1" {>= "3.0"}
+]
+extra-source "libobjc4_12.2.0-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12/libobjc4_12.2.0-14_amd64.deb"
+}

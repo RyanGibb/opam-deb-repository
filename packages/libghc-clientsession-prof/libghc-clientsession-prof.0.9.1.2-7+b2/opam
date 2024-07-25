@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-clientsession-prof_0.9.1.2-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-clientsession-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-base64-bytestring-prof"
+  "libghc-cereal-prof"
+  "libghc-cipher-aes-prof"
+  "libghc-clientsession-dev" {= "0.9.1.2-7+b2"}
+  "libghc-cprng-aes-prof"
+  "libghc-crypto-api-prof"
+  "libghc-crypto-random-prof"
+  "libghc-entropy-prof"
+  "libghc-setenv-prof"
+  "libghc-skein-prof"
+  "libghc-tagged-prof"
+]
+extra-source "libghc-clientsession-prof_0.9.1.2-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-clientsession/libghc-clientsession-prof_0.9.1.2-7+b2_amd64.deb"
+}

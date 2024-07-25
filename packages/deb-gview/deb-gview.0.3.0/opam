@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i deb-gview_0.3.0_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r deb-gview"]
+]
+depends: [
+  "gvfs"
+  "gvfs-backends"
+  "libarchive13" {>= "3.0.4"}
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.34"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.70.0"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "sensible-utils"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "deb-gview_0.3.0_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/deb-gview/deb-gview_0.3.0_amd64.deb"
+}

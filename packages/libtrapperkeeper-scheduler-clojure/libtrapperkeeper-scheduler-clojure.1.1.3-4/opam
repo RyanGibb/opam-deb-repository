@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrapperkeeper-scheduler-clojure_1.1.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrapperkeeper-scheduler-clojure"]
+]
+depends: [
+  "libclojure-java"
+  "libkitchensink-clojure" {>= "3.1.1-2"}
+  "libprismatic-schema-clojure"
+  "libpuppetlabs-i18n-clojure" {>= "0.9.0"}
+  "libquartz2-java"
+  "libtrapperkeeper-clojure" {>= "3.1.0"}
+]
+extra-source "libtrapperkeeper-scheduler-clojure_1.1.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trapperkeeper-scheduler-clojure/libtrapperkeeper-scheduler-clojure_1.1.3-4_all.deb"
+}

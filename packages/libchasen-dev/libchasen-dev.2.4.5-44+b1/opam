@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libchasen-dev_2.4.5-44+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libchasen-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libchasen2" {= "2.4.5-44+b1"}
+]
+conflicts: [
+  "chasen-dev"
+]
+extra-source "libchasen-dev_2.4.5-44+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chasen/libchasen-dev_2.4.5-44+b1_amd64.deb"
+}

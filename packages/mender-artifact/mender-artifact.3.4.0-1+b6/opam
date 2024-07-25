@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mender-artifact_3.4.0-1+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mender-artifact"]
+]
+depends: [
+  "dosfstools"
+  "e2fsprogs"
+  "libc6" {>= "2.4"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "mtools"
+  "parted"
+]
+extra-source "mender-artifact_3.4.0-1+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-mendersoftware-mender-artifact/mender-artifact_3.4.0-1+b6_amd64.deb"
+}

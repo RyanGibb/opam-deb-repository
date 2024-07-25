@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpython2.7-stdlib_2.7.16-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpython2.7-stdlib"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.28"}
+  "libdb5-3"
+  "libexpat1" {>= "2.1~beta3"}
+  "libffi6" {>= "3.0.4"}
+  "libncursesw6" {>= "6"}
+  "libpython2-7-minimal" {= "2.7.16-2+deb10u1"}
+  "libreadline7" {>= "7.0~beta"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libssl1-1" {>= "1.1.1"}
+  "libtinfo6" {>= "6"}
+  "mime-support"
+]
+extra-source "libpython2.7-stdlib_2.7.16-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python2.7/libpython2.7-stdlib_2.7.16-2+deb10u1_amd64.deb"
+}

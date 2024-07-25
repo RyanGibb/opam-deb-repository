@@ -1,0 +1,43 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sqitch_1.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sqitch"]
+]
+depends: [
+  "libalgorithm-backoff-perl"
+  "libclone-perl"
+  "libconfig-gitlike-perl"
+  "libdatetime-perl"
+  "libdatetime-timezone-perl"
+  "libdbi-perl"
+  "libdevel-stacktrace-perl"
+  "libencode-locale-perl"
+  "libhash-merge-perl"
+  "libintl-perl"
+  "libio-pager-perl"
+  "libipc-run3-perl"
+  "libipc-system-simple-perl"
+  "liblist-moreutils-perl"
+  "libmoo-perl"
+  "libnamespace-autoclean-perl"
+  "libpath-class-perl"
+  "libperlio-utf8-strict-perl"
+  "libpod-parser-perl"
+  "libstring-formatter-perl"
+  "libstring-shellquote-perl"
+  "libsub-exporter-perl"
+  "libtemplate-tiny-perl"
+  "libthrowable-perl"
+  "libtry-tiny-perl"
+  "libtype-tiny-perl"
+  "liburi-db-perl" {>= "0.20"}
+  "liburi-perl"
+  "perl-any"
+  ("libdbd-pg-perl" | "libdbd-sqlite3-perl" | "libdbd-mysql-perl" | "libdbd-firebird-perl" | "libdbd-odbc-perl")
+  ("postgresql-client" | "sqlite3" | "default-mysql-client" | "virtual-mysql-client" | "firebird3-0-utils")
+]
+extra-source "sqitch_1.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sqitch/sqitch_1.3.1-1_all.deb"
+}

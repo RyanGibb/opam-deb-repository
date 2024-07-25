@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gkrellm-radio_2.0.4-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gkrellm-radio"]
+]
+depends: [
+  "gkrellm" {> "2.0.0"}
+  "libc6" {>= "2.2.5"}
+  "liblirc-client0"
+]
+conflicts: [
+  "gkrellm-radio2"
+]
+extra-source "gkrellm-radio_2.0.4-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gkrellm-radio/gkrellm-radio_2.0.4-1.2_amd64.deb"
+}

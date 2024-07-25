@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhexbox1.5-cil_1.5.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhexbox1.5-cil"]
+]
+depends: [
+  "cli-common" {>= "0.5.1"}
+  "libmono-corlib4-5-cil" {>= "4.2.0"}
+  "libmono-system-drawing4-0-cil" {>= "3.0.6"}
+  "libmono-system-windows-forms4-0-cil" {>= "1.0"}
+  "libmono-system4-0-cil" {>= "4.2.0"}
+]
+extra-source "libhexbox1.5-cil_1.5.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hexbox/libhexbox1.5-cil_1.5.0-5_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openjdk-11-dbg_11.0.16+8-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openjdk-11-dbg"]
+]
+depends: [
+  "openjdk-11-jre-headless" {= "11.0.16+8-1~deb10u1"}
+]
+conflicts: [
+  "openjdk-12-dbg"
+  "openjdk-13-dbg"
+  "openjdk-14-dbg"
+  "openjdk-15-dbg"
+  "openjdk-16-dbg"
+  "openjdk-17-dbg"
+]
+extra-source "openjdk-11-dbg_11.0.16+8-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openjdk-11/openjdk-11-dbg_11.0.16+8-1~deb10u1_amd64.deb"
+}

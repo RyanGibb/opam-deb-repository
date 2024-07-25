@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octavia-housekeeping_11.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octavia-housekeeping"]
+]
+depends: [
+  "octavia-common" {= "11.0.0-2"}
+  "sysvinit-utils"
+]
+extra-source "octavia-housekeeping_11.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octavia/octavia-housekeeping_11.0.0-2_all.deb"
+}

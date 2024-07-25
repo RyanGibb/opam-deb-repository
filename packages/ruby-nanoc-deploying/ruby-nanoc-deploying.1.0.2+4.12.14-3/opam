@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-nanoc-deploying_1.0.2+4.12.14-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-nanoc-deploying"]
+]
+depends: [
+  "ruby-nanoc-checking" {>= "1.0"}
+  "ruby-nanoc-cli" {>= "4.11.15"}
+  "ruby-nanoc-core" {>= "4.11.15"}
+]
+extra-source "ruby-nanoc-deploying_1.0.2+4.12.14-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nanoc/ruby-nanoc-deploying_1.0.2+4.12.14-3_all.deb"
+}

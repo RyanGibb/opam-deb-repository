@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sumo_1.8.0+dfsg2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sumo"]
+]
+depends: [
+  "fonts-roboto-unhinted"
+  "libavcodec-extra58"
+  "libavformat58" {>= "7-4.2"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.29"}
+  "libfox-1-6-0"
+  "libgcc-s1" {>= "3.0"}
+  "libgdal28" {>= "3.0.0"}
+  "libgl1"
+  "libgl2ps1-4" {>= "1.4.2+dfsg1"}
+  "libopenscenegraph161" {>= "3.6.5+dfsg1"}
+  "libopenthreads21" {>= "3.6.5+dfsg1"}
+  "libproj19" {>= "5.0.0"}
+  "libstdc++6" {>= "9"}
+  "libswscale5" {>= "7-4.0"}
+  "libxerces-c3-2"
+  "python3"
+  "zlib1g" {>= "1-1.1.4"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "sumo_1.8.0+dfsg2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sumo/sumo_1.8.0+dfsg2-5_amd64.deb"
+}

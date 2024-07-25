@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdancer2-plugin-passphrase-perl_3.3.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdancer2-plugin-passphrase-perl"]
+]
+depends: [
+  "libdancer2-perl" {>= "0.200000"}
+  "libdata-entropy-perl"
+  "libdigest-bcrypt-perl"
+  "perl" {>= "5.17.7"}
+]
+extra-source "libdancer2-plugin-passphrase-perl_3.3.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdancer2-plugin-passphrase-perl/libdancer2-plugin-passphrase-perl_3.3.3-1_all.deb"
+}

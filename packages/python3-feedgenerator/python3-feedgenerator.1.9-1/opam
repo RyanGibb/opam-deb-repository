@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-feedgenerator_1.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-feedgenerator"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-six"
+  "python3-tz"
+]
+extra-source "python3-feedgenerator_1.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/feedgenerator/python3-feedgenerator_1.9-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtexttools11_2.1.0-26_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtexttools11"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnat-12" {>= "12.2.0"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "libtexttools11_2.1.0-26_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtexttools/libtexttools11_2.1.0-26_amd64.deb"
+}

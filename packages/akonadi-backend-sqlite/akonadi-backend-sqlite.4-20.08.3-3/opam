@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i akonadi-backend-sqlite_4:20.08.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r akonadi-backend-sqlite"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5sql5" {>= "5.13.0~"}
+  "libqt5sql5-sqlite"
+  "libsqlite3-0" {>= "3.6.12"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "akonadi-backend-sqlite_4:20.08.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/akonadi/akonadi-backend-sqlite_20.08.3-3_amd64.deb"
+}

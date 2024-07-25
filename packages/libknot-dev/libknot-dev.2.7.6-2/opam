@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libknot-dev_2.7.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libknot-dev"]
+]
+depends: [
+  "libdnssec6" {= "2.7.6-2"}
+  "libgnutls28-dev"
+  "libknot8" {= "2.7.6-2"}
+  "libzscanner2" {= "2.7.6-2"}
+]
+extra-source "libknot-dev_2.7.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/knot/libknot-dev_2.7.6-2_amd64.deb"
+}

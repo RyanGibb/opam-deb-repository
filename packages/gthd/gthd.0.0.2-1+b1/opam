@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gthd_0.0.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gthd"]
+]
+depends: [
+  "init-system-helpers" {>= "1.52"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtherm-0-0-0" {>= "0.0"}
+]
+extra-source "gthd_0.0.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtherm/gthd_0.0.2-1+b1_amd64.deb"
+}

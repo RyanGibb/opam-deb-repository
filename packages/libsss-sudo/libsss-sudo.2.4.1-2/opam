@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsss-sudo_2.4.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsss-sudo"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+]
+extra-source "libsss-sudo_2.4.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sssd/libsss-sudo_2.4.1-2_amd64.deb"
+}

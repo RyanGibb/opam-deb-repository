@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pskc-utils_1.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pskc-utils"]
+]
+depends: [
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-pskc" {>= "1.1"}
+]
+extra-source "pskc-utils_1.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pskc/pskc-utils_1.1-3_all.deb"
+}

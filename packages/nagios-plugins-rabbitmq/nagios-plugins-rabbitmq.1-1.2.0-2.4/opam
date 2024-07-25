@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nagios-plugins-rabbitmq_1:1.2.0-2.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nagios-plugins-rabbitmq"]
+]
+depends: [
+  "libjson-perl"
+  "libmonitoring-plugin-perl"
+  "liburi-perl"
+  "libwww-perl"
+]
+extra-source "nagios-plugins-rabbitmq_1:1.2.0-2.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nagios-plugins-rabbitmq/nagios-plugins-rabbitmq_1.2.0-2.4_all.deb"
+}

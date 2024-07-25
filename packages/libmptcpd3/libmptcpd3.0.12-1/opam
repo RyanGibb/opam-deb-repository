@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmptcpd3_0.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmptcpd3"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libell0" {>= "0.33"}
+]
+extra-source "libmptcpd3_0.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mptcpd/libmptcpd3_0.12-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freecad-common_0.18~pre1+dfsg1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freecad-common"]
+]
+conflicts: [
+  "freecad (<< 0.18~)"
+  "freecad-python2 (<< 0.18~)"
+]
+extra-source "freecad-common_0.18~pre1+dfsg1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freecad/freecad-common_0.18~pre1+dfsg1-5_all.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i live-boot_1:20230131_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r live-boot"]
+]
+depends: [
+  ("live-boot-initramfs-tools" | "live-boot-backend")
+]
+extra-source "live-boot_1:20230131_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/live-boot/live-boot_20230131_all.deb"
+}

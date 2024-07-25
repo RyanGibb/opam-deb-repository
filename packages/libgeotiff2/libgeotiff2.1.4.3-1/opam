@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgeotiff2_1.4.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgeotiff2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libproj13" {>= "4.8.0"}
+  "libtiff5" {>= "4.0.3"}
+]
+extra-source "libgeotiff2_1.4.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgeotiff-dfsg/libgeotiff2_1.4.3-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cpl-plugin-visir_4.3.7+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cpl-plugin-visir"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcext0" {>= "5.3.1"}
+  "libcfitsio7" {>= "3.450~"}
+  "libcplcore26" {>= "6.3"}
+  "libcpldfs26" {>= "6.0"}
+  "libcpldrs26" {>= "6.4"}
+  "libcplui26" {>= "6.4"}
+]
+extra-source "cpl-plugin-visir_4.3.7+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cpl-plugin-visir/cpl-plugin-visir_4.3.7+dfsg-1+b1_amd64.deb"
+}

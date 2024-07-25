@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypt-cracklib-perl_1.7-2+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypt-cracklib-perl"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libcrack2" {>= "2.8.12"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libcrypt-cracklib-perl_1.7-2+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcrypt-cracklib-perl/libcrypt-cracklib-perl_1.7-2+b6_amd64.deb"
+}

@@ -1,0 +1,43 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i drkonqi_5.27.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r drkonqi"]
+]
+depends: [
+  "init-system-helpers" {>= "1.52"}
+  "kio"
+  "libc6" {>= "2.34"}
+  "libelogind0"
+  "libgcc-s1" {>= "3.0"}
+  "libkf5configcore5" {>= "5.102.0~"}
+  "libkf5configgui5" {>= "5.102.0~"}
+  "libkf5coreaddons5" {>= "5.102.0~"}
+  "libkf5crash5" {>= "5.102.0~"}
+  "libkf5i18n5" {>= "5.102.0~"}
+  "libkf5idletime5" {>= "5.102.0~"}
+  "libkf5jobwidgets5" {>= "5.102.0~"}
+  "libkf5kiocore5" {>= "5.102.0~"}
+  "libkf5kiogui5" {>= "5.102.0~"}
+  "libkf5notifications5" {>= "5.102.0~"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "5.102.0~"}
+  "libkf5syntaxhighlighting5" {>= "5.102.0~"}
+  "libkf5wallet-bin"
+  "libkf5wallet5" {>= "5.102.0~"}
+  "libkf5widgetsaddons5" {>= "5.102.0~"}
+  "libkf5windowsystem5" {>= "5.102.0~"}
+  "libkuserfeedbackcore1" {>= "1.0.0"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5dbus5" {>= "5.15.2~"}
+  "libqt5network5" {>= "5.15.2~"}
+  "libqt5qml5" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "9"}
+  "qml-module-org-kde-syntaxhighlighting"
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "drkonqi_5.27.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/drkonqi/drkonqi_5.27.5-2_amd64.deb"
+}

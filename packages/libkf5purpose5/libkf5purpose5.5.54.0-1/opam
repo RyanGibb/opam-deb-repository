@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5purpose5_5.54.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5purpose5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5configcore5" {>= "4.97.0"}
+  "libkf5coreaddons5" {>= "5.4.0+git20141202.0008+15.04"}
+  "libkf5i18n5" {>= "5.17.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5dbus5" {>= "5.9.0~"}
+  "libqt5gui5" {>= "5.9.0~"}
+  "libqt5network5" {>= "5.9.0~"}
+  "libqt5qml5" {>= "5.1.0"}
+  "libqt5widgets5" {>= "5.9.0~"}
+  "libstdc++6" {>= "4.5"}
+  "qml-module-org-kde-kquickcontrolsaddons" {>= "5.54"}
+  "qml-module-qtquick-controls2"
+]
+conflicts: [
+  "libkf5purposewidgets5 (<< 1.1-2~)"
+]
+extra-source "libkf5purpose5_5.54.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/purpose/libkf5purpose5_5.54.0-1_amd64.deb"
+}

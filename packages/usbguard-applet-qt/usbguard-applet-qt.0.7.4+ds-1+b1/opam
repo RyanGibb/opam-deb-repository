@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i usbguard-applet-qt_0.7.4+ds-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r usbguard-applet-qt"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.0.2"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  "libusbguard0"
+  "usbguard"
+]
+extra-source "usbguard-applet-qt_0.7.4+ds-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/usbguard/usbguard-applet-qt_0.7.4+ds-1+b1_amd64.deb"
+}

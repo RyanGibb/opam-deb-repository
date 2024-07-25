@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest-poe-server-tcp-perl_1.20-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest-poe-server-tcp-perl"]
+]
+depends: [
+  "libpoe-perl"
+  "perl-any"
+  ("perl" {>= "5.15.9"} | "libsocket-perl")
+]
+extra-source "libtest-poe-server-tcp-perl_1.20-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest-poe-server-tcp-perl/libtest-poe-server-tcp-perl_1.20-1.1_all.deb"
+}

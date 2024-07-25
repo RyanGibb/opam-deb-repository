@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjenkins-json-java_2.4-jenkins-3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjenkins-json-java"]
+]
+depends: [
+  "libcommons-beanutils-java"
+  "libcommons-collections3-java" {>= "3.2.1-7~"}
+  "libcommons-lang-java" {>= "2.6"}
+  "libcommons-logging-java"
+  "libezmorph-java"
+]
+extra-source "libjenkins-json-java_2.4-jenkins-3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jenkins-json/libjenkins-json-java_2.4-jenkins-3-5_all.deb"
+}

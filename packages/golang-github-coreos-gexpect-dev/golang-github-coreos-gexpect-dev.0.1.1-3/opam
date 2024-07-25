@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-coreos-gexpect-dev_0.1.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-coreos-gexpect-dev"]
+]
+depends: [
+  "golang-github-creack-pty-dev" {>= "1.1.10"}
+  "golang-github-kballard-go-shellquote-dev"
+]
+extra-source "golang-github-coreos-gexpect-dev_0.1.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-coreos-gexpect/golang-github-coreos-gexpect-dev_0.1.1-3_all.deb"
+}

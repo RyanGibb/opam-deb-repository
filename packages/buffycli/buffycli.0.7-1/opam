@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i buffycli_0.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r buffycli"]
+]
+depends: [
+  "libbuffy-perl" {>= "0.10"}
+  "libfile-which-perl"
+  "libproc-simple-perl"
+  "libtext-formattable-perl"
+  "libtie-ixhash-perl"
+  "perl"
+  "procps"
+]
+extra-source "buffycli_0.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/buffycli/buffycli_0.7-1_all.deb"
+}

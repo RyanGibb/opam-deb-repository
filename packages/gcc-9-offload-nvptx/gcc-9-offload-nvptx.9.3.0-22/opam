@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-9-offload-nvptx_9.3.0-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-9-offload-nvptx"]
+]
+depends: [
+  "gcc-9" {= "9.3.0-22"}
+  "gcc-9-base" {= "9.3.0-22"}
+  "libc6" {>= "2.14"}
+  "libc6-dev" {>= "2.13-5"}
+  "libgmp10" {>= "2-5.0.1~"}
+  "libgomp-plugin-nvptx1" {>= "9.3.0-22"}
+  "libmpc3" {>= "1.1.0"}
+  "libmpfr6" {>= "3.1.3"}
+  "nvptx-tools"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gcc-9-offload-nvptx_9.3.0-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-9/gcc-9-offload-nvptx_9.3.0-22_amd64.deb"
+}

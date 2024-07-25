@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i realmd_0.16.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r realmd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.39.1"}
+  "libkrb5-3" {>= "1.10+dfsg~alpha1"}
+  "libldap-2-4-2" {>= "2.4.25"}
+  "libpolkit-gobject-1-0" {>= "0.99"}
+  "libsystemd0"
+]
+extra-source "realmd_0.16.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/realmd/realmd_0.16.3-3_amd64.deb"
+}

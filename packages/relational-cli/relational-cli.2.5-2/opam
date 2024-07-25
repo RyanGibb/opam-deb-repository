@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i relational-cli_2.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r relational-cli"]
+]
+depends: [
+  "python3-any" {>= "3.4~"}
+  "python3-relational" {>= "2.5-2"}
+  "python3-xtermcolor"
+]
+extra-source "relational-cli_2.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/relational/relational-cli_2.5-2_all.deb"
+}

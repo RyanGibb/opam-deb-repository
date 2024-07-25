@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kodi-screensaver-pyro_20.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kodi-screensaver-pyro"]
+]
+depends: [
+  "kodi"
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "kodi-screensaver-pyro_20.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kodi-screensaver-pyro/kodi-screensaver-pyro_20.1.0-2_amd64.deb"
+}

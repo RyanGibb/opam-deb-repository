@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcap2_1:2.25-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcap2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libcap2_1:2.25-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcap2/libcap2_2.25-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mhc_1.2.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mhc"]
+]
+depends: [
+  "emacsen-common" {>= "2.0.8"}
+  "mhc-utils" {>= "1.1.1+0.20160622"}
+  ("emacs-nox" | "emacs" | "emacs25" | "emacs24" | "emacs-snapshot")
+]
+extra-source "mhc_1.2.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mhc/mhc_1.2.1-2_all.deb"
+}

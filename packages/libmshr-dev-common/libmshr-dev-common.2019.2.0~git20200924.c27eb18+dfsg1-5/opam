@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmshr-dev-common_2019.2.0~git20200924.c27eb18+dfsg1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmshr-dev-common"]
+]
+depends: [
+  "cmake" {>= "2.8.0"}
+  "libproj-dev"
+  "python3-ffc" {>= "2019.2"}
+]
+extra-source "libmshr-dev-common_2019.2.0~git20200924.c27eb18+dfsg1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mshr/libmshr-dev-common_2019.2.0~git20200924.c27eb18+dfsg1-5_amd64.deb"
+}

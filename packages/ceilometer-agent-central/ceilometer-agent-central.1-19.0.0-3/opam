@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ceilometer-agent-central_1:19.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ceilometer-agent-central"]
+]
+depends: [
+  "ceilometer-common" {= "1-19.0.0-3"}
+  "lsb-base"
+]
+extra-source "ceilometer-agent-central_1:19.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceilometer/ceilometer-agent-central_19.0.0-3_all.deb"
+}

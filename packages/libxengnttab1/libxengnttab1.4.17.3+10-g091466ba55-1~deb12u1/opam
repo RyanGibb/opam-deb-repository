@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxengnttab1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxengnttab1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libxentoolcore1" {>= "4.17.3+10-g091466ba55"}
+  "libxentoollog1" {>= "4.17.3+10-g091466ba55"}
+]
+extra-source "libxengnttab1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xen/libxengnttab1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb"
+}

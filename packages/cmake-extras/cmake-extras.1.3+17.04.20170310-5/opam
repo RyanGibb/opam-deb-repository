@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cmake-extras_1.3+17.04.20170310-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cmake-extras"]
+]
+depends: [
+  "cmake" {>= "3.1"}
+  "python"
+]
+extra-source "cmake-extras_1.3+17.04.20170310-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cmake-extras/cmake-extras_1.3+17.04.20170310-5_all.deb"
+}

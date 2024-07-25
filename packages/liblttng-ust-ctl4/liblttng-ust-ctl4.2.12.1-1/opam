@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblttng-ust-ctl4_2.12.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblttng-ust-ctl4"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libnuma1" {>= "2.0.11"}
+]
+conflicts: [
+  "liblttng-ust2"
+]
+extra-source "liblttng-ust-ctl4_2.12.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ust/liblttng-ust-ctl4_2.12.1-1_amd64.deb"
+}

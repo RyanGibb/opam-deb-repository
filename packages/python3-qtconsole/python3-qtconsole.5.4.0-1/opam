@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-qtconsole_5.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-qtconsole"]
+]
+depends: [
+  "python3-any"
+  "python3-ipykernel"
+  "python3-ipython" {>= "7"}
+  "python3-ipython-genutils"
+  "python3-jupyter-client"
+  "python3-jupyter-core"
+  "python3-pygments"
+  "python3-qtpy"
+  "python3-traitlets"
+  "python3-zmq"
+]
+extra-source "python3-qtconsole_5.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-qtconsole/python3-qtconsole_5.4.0-1_all.deb"
+}

@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mate-menu_18.04.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mate-menu"]
+]
+depends: [
+  "gir1-2-gtk-3-0"
+  "gir1-2-mate-panel" {>= "1.18"}
+  "gir1-2-matedesktop-2-0" {>= "1.20"}
+  "libglib2-0-bin"
+  "mate-menus" {>= "1.18"}
+  "python" {< "3"}
+  "python" {>= "2.4"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-configobj"
+  "python-mate-menu"
+  "python-pkg-resources"
+  "python-setproctitle"
+  "python-xdg"
+  "python-xlib"
+  "xdg-utils"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("mozo" | "menulibre")
+]
+extra-source "mate-menu_18.04.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mate-menu/mate-menu_18.04.3-3_all.deb"
+}

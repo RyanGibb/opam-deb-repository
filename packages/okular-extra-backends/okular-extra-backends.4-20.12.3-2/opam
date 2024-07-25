@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i okular-extra-backends_4:20.12.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r okular-extra-backends"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libchm1" {>= "0.40"}
+  "libdjvulibre21" {>= "3.5.28"}
+  "libepub0" {>= "0.1.1"}
+  "libkf5configcore5" {>= "5.68.0~"}
+  "libkf5configwidgets5" {>= "5.68.0~"}
+  "libkf5coreaddons5" {>= "5.68.0~"}
+  "libkf5i18n5" {>= "4.97.0"}
+  "libkf5khtml5" {>= "5.68.0~"}
+  "libkf5kiocore5" {>= "5.69.0"}
+  "libkf5parts5" {>= "5.68.0~"}
+  "libmarkdown2" {>= "2.0.6"}
+  "libokular5core9" {= "4-20.12.3-2"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5printsupport5" {>= "5.12.0~"}
+  "libqt5widgets5" {>= "5.12.0~"}
+  "libqt5xml5" {>= "5.12.0~"}
+  "libstdc++6" {>= "5"}
+  "libtiff5" {>= "4.0.3"}
+  "libzip4" {>= "0.10"}
+  ("libqt5gui5" {>= "5.12.0~"} | "libqt5gui5-gles" {>= "5.12.0~"})
+]
+extra-source "okular-extra-backends_4:20.12.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/okular/okular-extra-backends_20.12.3-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhogweed4_3.4.1-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhogweed4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgmp10" {>= "2-6.0.0"}
+  "libnettle6" {= "3.4.1-1+deb10u1"}
+]
+extra-source "libhogweed4_3.4.1-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nettle/libhogweed4_3.4.1-1+deb10u1_amd64.deb"
+}

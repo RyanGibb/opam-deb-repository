@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bottlerocket_0.05b3-18_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bottlerocket"]
+]
+depends: [
+  "debconf" {>= "0.5"}
+  "libc6" {>= "2.3.4"}
+]
+extra-source "bottlerocket_0.05b3-18_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bottlerocket/bottlerocket_0.05b3-18_amd64.deb"
+}

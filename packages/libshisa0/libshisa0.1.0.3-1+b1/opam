@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libshisa0_1.0.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libshisa0"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libshishi0" {>= "0.0.30"}
+  "sgml-base" {>= "1.28"}
+  "shishi-common" {= "1.0.3-1"}
+]
+extra-source "libshisa0_1.0.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shishi/libshisa0_1.0.3-1+b1_amd64.deb"
+}

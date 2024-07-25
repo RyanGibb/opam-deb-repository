@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-mutatormath_3.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-mutatormath"]
+]
+depends: [
+  "python3-any"
+  "python3-defcon" {>= "0.6.0"}
+  "python3-fontmath" {>= "0.4.8"}
+  "python3-fonttools" {>= "0.3.32"}
+]
+extra-source "python3-mutatormath_3.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mutatormath/python3-mutatormath_3.0.1-1_all.deb"
+}

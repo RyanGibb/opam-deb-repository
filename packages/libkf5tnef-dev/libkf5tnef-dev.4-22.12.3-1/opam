@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5tnef-dev_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5tnef-dev"]
+]
+depends: [
+  "libkf5calendarcore-dev" {>= "5-5.99.0~"}
+  "libkf5tnef5" {= "4-22.12.3-1"}
+]
+extra-source "libkf5tnef-dev_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/ktnef/libkf5tnef-dev_22.12.3-1_amd64.deb"
+}

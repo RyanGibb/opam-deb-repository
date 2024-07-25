@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tryton-modules-account-payment-clearing_5.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tryton-modules-account-payment-clearing"]
+]
+depends: [
+  "python3-any"
+  "python3-dateutil"
+  "python3-pkg-resources"
+  "tryton-modules-account-payment" {>= "5.0"}
+  "tryton-server" {>= "5.0"}
+]
+extra-source "tryton-modules-account-payment-clearing_5.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tryton-modules-account-payment-clearing/tryton-modules-account-payment-clearing_5.0.1-1_all.deb"
+}

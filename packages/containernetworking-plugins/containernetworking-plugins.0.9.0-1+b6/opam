@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i containernetworking-plugins_0.9.0-1+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r containernetworking-plugins"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+conflicts: [
+  "rkt"
+]
+extra-source "containernetworking-plugins_0.9.0-1+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-containernetworking-plugins/containernetworking-plugins_0.9.0-1+b6_amd64.deb"
+}

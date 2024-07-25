@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i monodoc-base_6.8.0.105+dfsg-3.3~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r monodoc-base"]
+]
+depends: [
+  "libmono-cecil-private-cil" {< "6.8.0.106"}
+  "libmono-cecil-private-cil" {>= "6.8.0.105"}
+  "libmono-corlib4-5-cil" {>= "5.18.0.240"}
+  "libmono-sharpzip4-84-cil" {>= "5.12.0.309"}
+  "libmono-system-configuration4-0-cil" {>= "4.0.0~alpha1"}
+  "libmono-system-core4-0-cil" {>= "5.18.0.240"}
+  "libmono-system-xml-linq4-0-cil" {>= "5.16.0.220"}
+  "libmono-system-xml4-0-cil" {>= "4.6.1.3"}
+  "libmono-system4-0-cil" {>= "5.18.0.240"}
+  "mono-runtime" {>= "3.0~"}
+  ("libc6" {>= "2.31"} | "libc6-1" {>= "2.31"} | "libc0-1" {>= "2.31"})
+]
+extra-source "monodoc-base_6.8.0.105+dfsg-3.3~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mono/monodoc-base_6.8.0.105+dfsg-3.3~deb11u1_all.deb"
+}

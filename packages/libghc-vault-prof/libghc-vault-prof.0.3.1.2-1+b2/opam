@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-vault-prof_0.3.1.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-vault-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hashable-prof"
+  "libghc-semigroups-prof"
+  "libghc-unordered-containers-prof"
+  "libghc-vault-dev" {= "0.3.1.2-1+b2"}
+]
+extra-source "libghc-vault-prof_0.3.1.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-vault/libghc-vault-prof_0.3.1.2-1+b2_amd64.deb"
+}

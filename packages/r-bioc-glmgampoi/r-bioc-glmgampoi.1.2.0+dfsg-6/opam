@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-glmgampoi_1.2.0+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-glmgampoi"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-bioc-beachmat"
+  "r-bioc-biocgenerics"
+  "r-bioc-delayedarray"
+  "r-bioc-delayedmatrixstats"
+  "r-bioc-hdf5array"
+  "r-bioc-summarizedexperiment"
+  "r-cran-matrixstats"
+  "r-cran-rcpp"
+  "r-cran-rcpparmadillo"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "r-bioc-glmgampoi_1.2.0+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-glmgampoi/r-bioc-glmgampoi_1.2.0+dfsg-6_amd64.deb"
+}

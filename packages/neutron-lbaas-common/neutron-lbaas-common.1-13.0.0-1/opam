@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i neutron-lbaas-common_1:13.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r neutron-lbaas-common"]
+]
+depends: [
+  "haproxy"
+  "neutron-common"
+  "python3-neutron-lbaas" {= "1-13.0.0-1"}
+]
+extra-source "neutron-lbaas-common_1:13.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neutron-lbaas/neutron-lbaas-common_13.0.0-1_all.deb"
+}

@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-books_3.31.90-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-books"]
+]
+depends: [
+  "gir1-2-evince-3-0" {>= "3.13.3"}
+  "gir1-2-gdkpixbuf-2-0"
+  "gir1-2-gepub-0-6"
+  "gir1-2-gnomedesktop-3-0" {>= "3.10"}
+  "gir1-2-gtk-3-0" {>= "3.22.15"}
+  "gir1-2-pango-1-0"
+  "gir1-2-tracker-2-0"
+  "gir1-2-webkit2-4-0"
+  "gjs" {>= "1.48.0"}
+  "gnome-online-miners"
+  "libc6" {>= "2.4"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.14.0"}
+  "libevdocument3-4" {>= "3.13.91"}
+  "libevview3-3" {>= "3.13.91"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.39.3"}
+  "libgnome-desktop-3-17" {>= "3.17.92"}
+  "libgtk-3-0" {>= "3.22.15"}
+  "libpango-1-0-0" {>= "1.37.5"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "tracker" {>= "1.99"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+conflicts: [
+  "libreoffice-gtk3 (<= 1:5.1.1-1)"
+]
+extra-source "gnome-books_3.31.90-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-books/gnome-books_3.31.90-3_amd64.deb"
+}

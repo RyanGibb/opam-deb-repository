@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-15-pgtap_1.2.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-15-pgtap"]
+]
+depends: [
+  "postgresql-15"
+]
+extra-source "postgresql-15-pgtap_1.2.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pgtap/postgresql-15-pgtap_1.2.0-3_all.deb"
+}

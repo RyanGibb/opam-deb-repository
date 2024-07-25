@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i milou_4:5.27.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r milou"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5configcore5" {>= "4.97.0"}
+  "libkf5coreaddons5" {>= "5.102.0~"}
+  "libkf5itemmodels5" {>= "5.102.0~"}
+  "libkf5runner5" {>= "5.102.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5qml5" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "4.1.1"}
+  "plasma-framework"
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "milou_4:5.27.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/milou/milou_5.27.5-2_amd64.deb"
+}

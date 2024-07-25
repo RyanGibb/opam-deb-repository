@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i akonadi-backend-mysql_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r akonadi-backend-mysql"]
+]
+depends: [
+  "libqt5sql5-mysql"
+  ("default-mysql-client-core" | "virtual-mysql-client-core")
+  ("default-mysql-server-core" | "virtual-mysql-server-core")
+]
+extra-source "akonadi-backend-mysql_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/akonadi/akonadi-backend-mysql_22.12.3-1_all.deb"
+}

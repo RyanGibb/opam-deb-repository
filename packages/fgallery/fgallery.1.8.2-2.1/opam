@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fgallery_1.8.2-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fgallery"]
+]
+depends: [
+  "imagemagick"
+  "libimage-exiftool-perl"
+  "libjs-mootools" {>= "1.4"}
+  "libjson-perl"
+  ("exiftran" | "libjpeg-turbo-progs")
+  ("zip" | "p7zip-full")
+]
+extra-source "fgallery_1.8.2-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fgallery/fgallery_1.8.2-2.1_all.deb"
+}

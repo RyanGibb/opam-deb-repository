@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpdal-plugins_1.8.0+ds-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpdal-plugins"]
+]
+depends: [
+  "libpdal-plugin-faux" {= "1.8.0+ds-1+b2"}
+  "libpdal-plugin-greyhound" {= "1.8.0+ds-1+b2"}
+  "libpdal-plugin-icebridge" {= "1.8.0+ds-1+b2"}
+  "libpdal-plugin-pgpointcloud" {= "1.8.0+ds-1+b2"}
+  "libpdal-plugin-python" {= "1.8.0+ds-1+b2"}
+  "libpdal-plugin-sqlite" {= "1.8.0+ds-1+b2"}
+]
+extra-source "libpdal-plugins_1.8.0+ds-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdal/libpdal-plugins_1.8.0+ds-1+b2_amd64.deb"
+}

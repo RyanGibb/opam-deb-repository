@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libament-index-cpp0d_1.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libament-index-cpp0d"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libament-index-cpp0d_1.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros2-ament-index/libament-index-cpp0d_1.5.1-1_amd64.deb"
+}

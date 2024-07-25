@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgeoip2-perl_2.006001-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgeoip2-perl"]
+]
+depends: [
+  "libdata-validate-ip-perl" {>= "0.25"}
+  "libhttp-message-perl"
+  "libjson-maybexs-perl"
+  "liblist-someutils-perl"
+  "liblwp-protocol-https-perl"
+  "libmaxmind-db-reader-perl"
+  "libmoo-perl"
+  "libnamespace-clean-perl"
+  "libparams-validate-perl"
+  "libsub-quote-perl"
+  "libthrowable-perl"
+  "libtry-tiny-perl"
+  "liburi-perl"
+  "libwww-perl"
+  "perl"
+]
+extra-source "libgeoip2-perl_2.006001-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgeoip2-perl/libgeoip2-perl_2.006001-2_all.deb"
+}

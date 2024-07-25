@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-vector-binary-instances-prof_0.2.4-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-vector-binary-instances-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-vector-binary-instances-dev" {= "0.2.4-3+b2"}
+  "libghc-vector-prof"
+]
+extra-source "libghc-vector-binary-instances-prof_0.2.4-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-vector-binary-instances/libghc-vector-binary-instances-prof_0.2.4-3+b2_amd64.deb"
+}

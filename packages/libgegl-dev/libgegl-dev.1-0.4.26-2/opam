@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgegl-dev_1:0.4.26-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgegl-dev"]
+]
+depends: [
+  "gir1-2-gegl-0-4" {= "1-0.4.26-2"}
+  "libbabl-dev" {>= "0.1.78"}
+  "libgegl-0-4-0" {= "1-0.4.26-2"}
+  "libglib2-0-dev" {>= "2.16.1"}
+  "libjson-glib-dev"
+]
+extra-source "libgegl-dev_1:0.4.26-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gegl/libgegl-dev_0.4.26-2_amd64.deb"
+}

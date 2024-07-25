@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhtml-calendarmonth-perl_2.04-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhtml-calendarmonth-perl"]
+]
+depends: [
+  "libclass-accessor-perl"
+  "libdatetime-locale-perl"
+  "libfile-which-perl"
+  "libhtml-element-extended-perl" {>= "1.18-0"}
+  "perl"
+  ("libdate-calc-perl" | "libdate-manip-perl" | "libdatetime-perl")
+]
+extra-source "libhtml-calendarmonth-perl_2.04-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhtml-calendarmonth-perl/libhtml-calendarmonth-perl_2.04-2_all.deb"
+}

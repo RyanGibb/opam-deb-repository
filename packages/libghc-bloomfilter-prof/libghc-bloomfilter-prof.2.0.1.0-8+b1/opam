@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-bloomfilter-prof_2.0.1.0-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-bloomfilter-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-bloomfilter-dev" {= "2.0.1.0-8+b1"}
+]
+extra-source "libghc-bloomfilter-prof_2.0.1.0-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-bloomfilter/libghc-bloomfilter-prof_2.0.1.0-8+b1_amd64.deb"
+}

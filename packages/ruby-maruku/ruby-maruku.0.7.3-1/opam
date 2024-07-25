@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-maruku_0.7.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-maruku"]
+]
+depends: [
+  "ruby-nokogiri"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-maruku_0.7.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-maruku/ruby-maruku_0.7.3-1_all.deb"
+}

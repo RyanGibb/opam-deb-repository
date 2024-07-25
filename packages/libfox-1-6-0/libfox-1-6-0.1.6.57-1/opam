@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfox-1.6-0_1.6.57-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfox-1.6-0"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc-s1"
+  "libgl1"
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "5"}
+  "libtiff5" {>= "4.0.3"}
+  "libx11-6"
+  "libxcursor1" {> "1.1.2"}
+  "libxext6"
+  "libxft2" {> "2.1.1"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "libfox-1.6-0_1.6.57-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fox1.6/libfox-1.6-0_1.6.57-1_amd64.deb"
+}

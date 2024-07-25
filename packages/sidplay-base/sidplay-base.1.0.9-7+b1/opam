@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sidplay-base_1.0.9-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sidplay-base"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1"
+  "libsidplay1v5"
+  "libstdc++6" {>= "4.4.0"}
+]
+extra-source "sidplay-base_1.0.9-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sidplay-base/sidplay-base_1.0.9-7+b1_amd64.deb"
+}

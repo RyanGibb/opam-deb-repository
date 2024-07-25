@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-libsigscan_20201117-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-libsigscan"]
+]
+depends: [
+  "libbfio1" {>= "20120425"}
+  "libc6" {>= "2.14"}
+  "libsigscan1" {= "20201117-1"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+]
+extra-source "python3-libsigscan_20201117-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsigscan/python3-libsigscan_20201117-1_amd64.deb"
+}

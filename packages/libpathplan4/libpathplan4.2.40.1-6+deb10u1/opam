@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpathplan4_2.40.1-6+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpathplan4"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+]
+conflicts: [
+  "libgraphviz4"
+]
+extra-source "libpathplan4_2.40.1-6+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/graphviz/libpathplan4_2.40.1-6+deb10u1_amd64.deb"
+}

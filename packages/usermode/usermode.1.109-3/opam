@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i usermode_1.109-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r usermode"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libblkid1" {>= "2.16"}
+  "libc6" {>= "2.27"}
+  "libcairo2" {>= "1.2.4"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libgtk2-0-0" {>= "2.24.0"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpangoft2-1-0-0" {>= "1.14.0"}
+  "libuser1" {>= "1-0.56.9.dfsg.1"}
+]
+extra-source "usermode_1.109-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/usermode/usermode_1.109-3_amd64.deb"
+}

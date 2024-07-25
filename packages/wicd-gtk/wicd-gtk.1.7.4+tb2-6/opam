@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wicd-gtk_1.7.4+tb2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wicd-gtk"]
+]
+depends: [
+  "python-any" {>= "2.7.5-5~"}
+  "python-glade2"
+  "python-gtk2"
+  "wicd-daemon" {= "1.7.4+tb2-6"}
+]
+extra-source "wicd-gtk_1.7.4+tb2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wicd/wicd-gtk_1.7.4+tb2-6_all.deb"
+}

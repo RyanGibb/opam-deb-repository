@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-millstone_0.6.19-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-millstone"]
+]
+depends: [
+  "node-generic-pool"
+  "node-mime-types"
+  "node-mkdirp" {>= "1"}
+  "node-optimist"
+  "node-request"
+  "node-sqlite3"
+  "node-srs"
+  "node-step"
+  "node-underscore"
+  "node-zipfile"
+  "nodejs"
+]
+extra-source "node-millstone_0.6.19-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-millstone/node-millstone_0.6.19-5_all.deb"
+}

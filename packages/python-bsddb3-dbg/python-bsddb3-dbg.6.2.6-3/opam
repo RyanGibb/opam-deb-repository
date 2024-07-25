@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-bsddb3-dbg_6.2.6-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-bsddb3-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdb5-3"
+  "python-bsddb3" {= "6.2.6-3"}
+  "python-dbg"
+]
+extra-source "python-bsddb3-dbg_6.2.6-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-bsddb3/python-bsddb3-dbg_6.2.6-3_amd64.deb"
+}

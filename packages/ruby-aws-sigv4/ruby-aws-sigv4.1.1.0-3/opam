@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-aws-sigv4_1.1.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-aws-sigv4"]
+]
+depends: [
+  "ruby-aws-eventstream" {>= "1.0.2"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-aws-sigv4_1.1.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-aws-sigv4/ruby-aws-sigv4_1.1.0-3_all.deb"
+}

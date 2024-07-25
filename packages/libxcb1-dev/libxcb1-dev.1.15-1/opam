@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxcb1-dev_1.15-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxcb1-dev"]
+]
+depends: [
+  "libpthread-stubs0-dev"
+  "libxau-dev" {>= "1-1.0.0-1"}
+  "libxcb1" {= "1.15-1"}
+  "libxdmcp-dev" {>= "1-1.0.0-1"}
+]
+extra-source "libxcb1-dev_1.15-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxcb/libxcb1-dev_1.15-1_amd64.deb"
+}

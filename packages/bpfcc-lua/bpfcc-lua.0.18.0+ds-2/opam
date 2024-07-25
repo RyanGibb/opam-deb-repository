@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bpfcc-lua_0.18.0+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bpfcc-lua"]
+]
+depends: [
+  "libbpfcc" {>= "0.18.0+ds-2"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.3"}
+]
+extra-source "bpfcc-lua_0.18.0+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bpfcc/bpfcc-lua_0.18.0+ds-2_amd64.deb"
+}

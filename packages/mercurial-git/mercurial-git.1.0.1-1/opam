@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mercurial-git_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mercurial-git"]
+]
+depends: [
+  "mercurial"
+  "python3-any"
+  "python3-dulwich" {>= "0.21"}
+]
+extra-source "mercurial-git_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hg-git/mercurial-git_1.0.1-1_all.deb"
+}

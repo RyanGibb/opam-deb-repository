@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eweouz_0.12+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eweouz"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libebook-1-2-21" {>= "3.33.4"}
+  "libebook-contacts-1-2-4" {>= "3.16.2"}
+  "libedataserver-1-2-27" {>= "3.33.4"}
+  "libglib2-0-0" {>= "2.28.0"}
+  ("emacs" | "emacsen")
+]
+extra-source "eweouz_0.12+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eweouz/eweouz_0.12+b3_amd64.deb"
+}

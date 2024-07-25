@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxcb-cursor0_0.1.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxcb-cursor0"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libxcb-image0" {>= "0.2.1"}
+  "libxcb-render-util0"
+  "libxcb-render0"
+  "libxcb-shm0"
+  "libxcb1"
+]
+extra-source "libxcb-cursor0_0.1.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xcb-util-cursor/libxcb-cursor0_0.1.1-4_amd64.deb"
+}

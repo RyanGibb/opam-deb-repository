@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i trac-sensitivetickets_0.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r trac-sensitivetickets"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  "trac" {>= "0.11.6"}
+  ("python2-7" | "python2-6")
+]
+extra-source "trac-sensitivetickets_0.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trac-sensitivetickets/trac-sensitivetickets_0.21-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gltfpack_0.18+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gltfpack"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc-s1" {>= "3.0"}
+  "libmeshoptimizer2d" {>= "0.18+dfsg"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "gltfpack_0.18+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meshoptimizer/gltfpack_0.18+dfsg-2_amd64.deb"
+}

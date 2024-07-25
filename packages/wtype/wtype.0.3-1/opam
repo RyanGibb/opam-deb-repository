@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wtype_0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wtype"]
+]
+depends: [
+  "libc6" {>= "2.26"}
+  "libwayland-client0" {>= "1.9.91"}
+  "libxkbcommon0" {>= "0.5.0"}
+]
+extra-source "wtype_0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wtype/wtype_0.3-1_amd64.deb"
+}

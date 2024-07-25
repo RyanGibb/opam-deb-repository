@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpdal-plugin-python_1.8.0+ds-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpdal-plugin-python"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libjsoncpp1" {>= "1.7.4"}
+  "libpdal-base7" {>= "1.8~rc1"}
+  "libpdal-util7" {>= "1.1.0"}
+  "libpython2-7" {>= "2.7"}
+  "libstdc++6" {>= "5.2"}
+  "python-numpy"
+  "python-numpy" {>= "1-1.16.0~rc1"}
+]
+extra-source "libpdal-plugin-python_1.8.0+ds-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdal/libpdal-plugin-python_1.8.0+ds-1+b2_amd64.deb"
+}

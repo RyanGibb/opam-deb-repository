@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcommon-sense-perl_3.75-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcommon-sense-perl"]
+]
+depends: [
+  "perl" {< "5.36.1~"}
+  "perl" {>= "5.36.0~"}
+  "perl-base"
+]
+extra-source "libcommon-sense-perl_3.75-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcommon-sense-perl/libcommon-sense-perl_3.75-3_amd64.deb"
+}

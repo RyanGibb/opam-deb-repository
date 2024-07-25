@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libraft0_0.9.25-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libraft0"]
+]
+depends: [
+  "libc6" {>= "2.16"}
+  "libuv1" {>= "1.4.2"}
+]
+extra-source "libraft0_0.9.25-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/raft/libraft0_0.9.25-1+b1_amd64.deb"
+}

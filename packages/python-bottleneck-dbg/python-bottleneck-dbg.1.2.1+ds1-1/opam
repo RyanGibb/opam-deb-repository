@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-bottleneck-dbg_1.2.1+ds1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-bottleneck-dbg"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python-bottleneck" {= "1.2.1+ds1-1"}
+  "python-dbg" {< "2.8"}
+  "python-dbg" {>= "2.7~"}
+  "python-dbg-any" {< "2.8"}
+  "python-dbg-any" {>= "2.7~"}
+  "python-numpy"
+  "python-numpy" {>= "1-1.14.3"}
+  "python-numpy-dbg"
+]
+extra-source "python-bottleneck-dbg_1.2.1+ds1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bottleneck/python-bottleneck-dbg_1.2.1+ds1-1_amd64.deb"
+}

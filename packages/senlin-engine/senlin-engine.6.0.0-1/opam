@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i senlin-engine_6.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r senlin-engine"]
+]
+depends: [
+  "adduser"
+  "lsb-base"
+  "senlin-common" {= "6.0.0-1"}
+]
+extra-source "senlin-engine_6.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/senlin/senlin-engine_6.0.0-1_all.deb"
+}

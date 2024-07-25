@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-org-kde-kopeninghours_22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-org-kde-kopeninghours"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkopeninghours1" {>= "22.08.2"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.14~"}
+  "libstdc++6" {>= "5"}
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick2"
+]
+extra-source "qml-module-org-kde-kopeninghours_22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kopeninghours/qml-module-org-kde-kopeninghours_22.12.3-1_amd64.deb"
+}

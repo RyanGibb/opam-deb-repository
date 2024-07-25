@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i looptools_2.8-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r looptools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-4.3"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+]
+extra-source "looptools_2.8-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/looptools/looptools_2.8-1+b3_amd64.deb"
+}

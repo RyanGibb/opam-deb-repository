@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpangomm-1.4-dev_2.42.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpangomm-1.4-dev"]
+]
+depends: [
+  "libcairomm-1-0-dev" {>= "1.12.0"}
+  "libglibmm-2-4-dev" {>= "2.48.0"}
+  "libpango1-0-dev" {>= "1.41.0"}
+  "libpangomm-1-4-1v5" {= "2.42.1-1"}
+]
+extra-source "libpangomm-1.4-dev_2.42.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pangomm/libpangomm-1.4-dev_2.42.1-1_amd64.deb"
+}

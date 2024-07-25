@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libudisks2-0_2.9.2-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libudisks2-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.50"}
+]
+extra-source "libudisks2-0_2.9.2-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/udisks2/libudisks2-0_2.9.2-2+deb11u1_amd64.deb"
+}

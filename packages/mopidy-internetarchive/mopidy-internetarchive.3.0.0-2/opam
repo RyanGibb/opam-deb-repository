@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mopidy-internetarchive_3.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mopidy-internetarchive"]
+]
+depends: [
+  "mopidy" {>= "3.0.0"}
+  "python3-any"
+  "python3-cachetools"
+  "python3-pkg-resources"
+  "python3-pykka" {>= "2.0.1"}
+  "python3-requests"
+  "python3-uritools"
+]
+extra-source "mopidy-internetarchive_3.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mopidy-internetarchive/mopidy-internetarchive_3.0.0-2_all.deb"
+}

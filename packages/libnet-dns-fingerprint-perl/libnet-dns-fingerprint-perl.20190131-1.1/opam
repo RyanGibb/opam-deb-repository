@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-dns-fingerprint-perl_20190131-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-dns-fingerprint-perl"]
+]
+depends: [
+  "libnet-dns-perl" {>= "0.77"}
+  "perl-any"
+]
+extra-source "libnet-dns-fingerprint-perl_20190131-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/net-dns-fingerprint/libnet-dns-fingerprint-perl_20190131-1.1_all.deb"
+}

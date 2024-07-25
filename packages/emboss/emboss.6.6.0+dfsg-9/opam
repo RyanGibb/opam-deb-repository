@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i emboss_6.6.0+dfsg-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r emboss"]
+]
+depends: [
+  "emboss-data" {= "6.6.0+dfsg-9"}
+  "emboss-lib" {= "6.6.0+dfsg-9"}
+  "libc6" {>= "2.29"}
+  "libexpat1" {>= "2.0.1"}
+  "libx11-6"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "emboss_6.6.0+dfsg-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emboss/emboss_6.6.0+dfsg-9_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i smbldap-tools_0.9.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r smbldap-tools"]
+]
+depends: [
+  "libcrypt-smbhash-perl"
+  "libio-socket-ssl-perl"
+  "libnet-ldap-perl"
+  "libunicode-maputf8-perl"
+  "perl-any"
+]
+extra-source "smbldap-tools_0.9.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/smbldap-tools/smbldap-tools_0.9.11-2_all.deb"
+}

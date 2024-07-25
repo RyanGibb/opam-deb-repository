@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pyfribidi-dbg_0.11.0+repack-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pyfribidi-dbg"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfribidi0" {>= "0.19.2"}
+  "python-pyfribidi" {= "0.11.0+repack-3"}
+]
+extra-source "python-pyfribidi-dbg_0.11.0+repack-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyfribidi/python-pyfribidi-dbg_0.11.0+repack-3_amd64.deb"
+}

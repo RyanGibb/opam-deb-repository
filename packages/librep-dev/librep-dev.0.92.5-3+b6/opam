@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librep-dev_0.92.5-3+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librep-dev"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgdbm6" {>= "1.16"}
+  "libgmp-dev"
+  "librep16" {= "0.92.5-3+b6"}
+]
+extra-source "librep-dev_0.92.5-3+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librep/librep-dev_0.92.5-3+b6_amd64.deb"
+}

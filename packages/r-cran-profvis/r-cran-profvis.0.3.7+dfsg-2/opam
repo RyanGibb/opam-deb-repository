@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-profvis_0.3.7+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-profvis"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libjs-d3"
+  "libjs-highlight-js"
+  "libjs-jquery"
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-1"}
+  "r-cran-htmlwidgets" {>= "0.3.2"}
+  "r-cran-stringr"
+]
+extra-source "r-cran-profvis_0.3.7+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-profvis/r-cran-profvis_0.3.7+dfsg-2_amd64.deb"
+}

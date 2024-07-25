@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aspell-pl_20150428-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aspell-pl"]
+]
+depends: [
+  "aspell" {>= "0.60.3-3"}
+  "dictionaries-common" {>= "1.25.2"}
+]
+extra-source "aspell-pl_20150428-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aspell-pl/aspell-pl_20150428-3.1_all.deb"
+}

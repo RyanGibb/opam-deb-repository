@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-git2-curl-dev_0.17.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-git2-curl-dev"]
+]
+depends: [
+  "librust-curl+ssl-dev"
+  "librust-git2-0-16-dev"
+  "librust-log-0-4+default-dev"
+  "librust-url-2+default-dev"
+]
+extra-source "librust-git2-curl-dev_0.17.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-git2-curl/librust-git2-curl-dev_0.17.0-1_amd64.deb"
+}

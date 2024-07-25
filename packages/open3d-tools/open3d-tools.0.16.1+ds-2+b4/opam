@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i open3d-tools_0.16.1+ds-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r open3d-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfmt9" {>= "9.1.0+ds1"}
+  "libgcc-s1" {>= "3.0"}
+  "libglfw3" {>= "3.0"}
+  "libopen3d0-16" {>= "0.16.1+ds"}
+  "libopengl0"
+  "libstdc++6" {>= "11"}
+]
+extra-source "open3d-tools_0.16.1+ds-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/open3d/open3d-tools_0.16.1+ds-2+b4_amd64.deb"
+}

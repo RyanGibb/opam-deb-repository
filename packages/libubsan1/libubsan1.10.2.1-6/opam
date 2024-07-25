@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libubsan1_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libubsan1"]
+]
+depends: [
+  "gcc-10-base" {= "10.2.1-6"}
+  "libc6" {>= "2.17"}
+  "libgcc-s1" {>= "3.3"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libubsan1_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/libubsan1_10.2.1-6_amd64.deb"
+}

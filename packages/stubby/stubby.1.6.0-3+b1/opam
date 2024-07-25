@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stubby_1.6.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stubby"]
+]
+depends: [
+  "libbsd0" {>= "0.2.0"}
+  "libc6" {>= "2.34"}
+  "libgetdns10" {= "1.6.0-3+b1"}
+  "libidn2-0" {>= "2.0.0"}
+  "libssl3" {>= "3.0.0"}
+  "libunbound8" {>= "1.8.0"}
+  "libyaml-0-2"
+]
+extra-source "stubby_1.6.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/getdns/stubby_1.6.0-3+b1_amd64.deb"
+}

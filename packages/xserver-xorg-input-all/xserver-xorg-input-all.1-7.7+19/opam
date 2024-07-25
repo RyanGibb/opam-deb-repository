@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xserver-xorg-input-all_1:7.7+19_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xserver-xorg-input-all"]
+]
+depends: [
+  "xserver-xorg-input-libinput"
+]
+extra-source "xserver-xorg-input-all_1:7.7+19_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xorg/xserver-xorg-input-all_7.7+19_amd64.deb"
+}

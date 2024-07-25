@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guile-3.0_3.0.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guile-3.0"]
+]
+depends: [
+  "guile-3-0-libs" {= "3.0.8-2"}
+]
+extra-source "guile-3.0_3.0.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guile-3.0/guile-3.0_3.0.8-2_amd64.deb"
+}

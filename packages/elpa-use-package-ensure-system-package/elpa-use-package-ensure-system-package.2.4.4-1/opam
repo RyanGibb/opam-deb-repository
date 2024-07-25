@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-use-package-ensure-system-package_2.4.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-use-package-ensure-system-package"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-system-packages" {>= "1.0.4"}
+  "elpa-use-package" {>= "2.1"}
+  "emacsen-common"
+]
+extra-source "elpa-use-package-ensure-system-package_2.4.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/use-package/elpa-use-package-ensure-system-package_2.4.4-1_all.deb"
+}

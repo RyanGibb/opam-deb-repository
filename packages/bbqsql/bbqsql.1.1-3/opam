@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bbqsql_1.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bbqsql"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-gevent"
+  "python-requests"
+  ("python" {>= "2.7"} | "python-argparse")
+]
+extra-source "bbqsql_1.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bbqsql/bbqsql_1.1-3_all.deb"
+}

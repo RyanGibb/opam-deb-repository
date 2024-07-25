@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ldapvi_1.7-10+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ldapvi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libpopt0" {>= "1.14"}
+  "libreadline8" {>= "6.0"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "ldapvi_1.7-10+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ldapvi/ldapvi_1.7-10+b5_amd64.deb"
+}

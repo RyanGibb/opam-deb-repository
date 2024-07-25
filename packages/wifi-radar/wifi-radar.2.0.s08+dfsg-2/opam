@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wifi-radar_2.0.s08+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wifi-radar"]
+]
+depends: [
+  "menu"
+  "python"
+  "python-gtk2" {>= "2.0"}
+  "wireless-tools"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("isc-dhcp-client" | "dhcp-client")
+]
+extra-source "wifi-radar_2.0.s08+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wifi-radar/wifi-radar_2.0.s08+dfsg-2_all.deb"
+}

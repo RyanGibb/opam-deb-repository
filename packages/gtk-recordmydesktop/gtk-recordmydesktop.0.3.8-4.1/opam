@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtk-recordmydesktop_0.3.8-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtk-recordmydesktop"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  "python-gtk2"
+  "recordmydesktop" {>= "0.3.8.1+svn602"}
+  ("python2-7" | "python2-6")
+]
+extra-source "gtk-recordmydesktop_0.3.8-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtk-recordmydesktop/gtk-recordmydesktop_0.3.8-4.1_all.deb"
+}

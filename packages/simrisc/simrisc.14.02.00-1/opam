@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i simrisc_14.02.00-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r simrisc"]
+]
+depends: [
+  "libbobcat5" {>= "5.07.00"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "simrisc_14.02.00-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/simrisc/simrisc_14.02.00-1_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vim-voom_5.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vim-voom"]
+]
+depends: [
+  ("vim-nox" {>= "7.2"} | "vim-gtk" {>= "7.2"} | "vim-gnome" {>= "7.2"})
+]
+extra-source "vim-voom_5.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vim-voom/vim-voom_5.3-1_all.deb"
+}

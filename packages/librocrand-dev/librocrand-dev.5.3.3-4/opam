@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librocrand-dev_5.3.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librocrand-dev"]
+]
+depends: [
+  "libamdhip64-dev"
+  "librocrand1" {= "5.3.3-4"}
+]
+extra-source "librocrand-dev_5.3.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rocrand/librocrand-dev_5.3.3-4_amd64.deb"
+}

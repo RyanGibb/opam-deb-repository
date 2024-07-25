@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sshcommand_0~20160110.1~2795f65-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sshcommand"]
+]
+depends: [
+  ("openssh-server" | "ssh-server")
+]
+extra-source "sshcommand_0~20160110.1~2795f65-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sshcommand/sshcommand_0~20160110.1~2795f65-1.1_all.deb"
+}

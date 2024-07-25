@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i flim_1:1.14.9+0.20230205-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r flim"]
+]
+depends: [
+  "apel"
+  "emacsen-common"
+]
+conflicts: [
+  "flim1.13"
+  "semi-gnus (<< 1:6.10.13)"
+  "tm"
+]
+extra-source "flim_1:1.14.9+0.20230205-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flim/flim_1.14.9+0.20230205-1_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slurm-wlm-emulator_18.08.5.2-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slurm-wlm-emulator"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libhwloc5" {>= "1.11.12"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libnuma1" {>= "2.0.11"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libssh2-1" {>= "1.2.8"}
+  "slurmctld" {= "18.08.5.2-1+deb10u2"}
+  "slurmd" {= "18.08.5.2-1+deb10u2"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "slurm-wlm-emulator_18.08.5.2-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-llnl/slurm-wlm-emulator_18.08.5.2-1+deb10u2_amd64.deb"
+}

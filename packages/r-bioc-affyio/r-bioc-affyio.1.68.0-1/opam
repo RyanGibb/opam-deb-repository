@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-affyio_1.68.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-affyio"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-zlibbioc"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "r-bioc-affyio_1.68.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-affyio/r-bioc-affyio_1.68.0-1_amd64.deb"
+}

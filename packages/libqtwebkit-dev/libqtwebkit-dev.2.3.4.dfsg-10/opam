@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqtwebkit-dev_2.3.4.dfsg-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqtwebkit-dev"]
+]
+depends: [
+  "libqt4-dev" {>= "4-4.8.0"}
+  "libqtwebkit4" {= "2.3.4.dfsg-10"}
+]
+extra-source "libqtwebkit-dev_2.3.4.dfsg-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtwebkit/libqtwebkit-dev_2.3.4.dfsg-10_amd64.deb"
+}

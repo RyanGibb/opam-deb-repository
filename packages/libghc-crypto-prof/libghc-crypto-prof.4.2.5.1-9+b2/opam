@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-crypto-prof_4.2.5.1-9+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-crypto-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-crypto-dev" {= "4.2.5.1-9+b2"}
+  "libghc-hunit-prof"
+  "libghc-random-prof"
+]
+extra-source "libghc-crypto-prof_4.2.5.1-9+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-crypto/libghc-crypto-prof_4.2.5.1-9+b2_amd64.deb"
+}

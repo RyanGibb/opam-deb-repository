@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-bourne_1.6.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-bourne"]
+]
+depends: [
+  "ruby-mocha" {>= "1.1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-bourne_1.6.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-bourne/ruby-bourne_1.6.0-2_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-proptest+std-dev_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-proptest+std-dev"]
+]
+depends: [
+  "librust-byteorder-dev"
+  "librust-num-traits-dev"
+  "librust-proptest+lazy-static-dev" {= "1.0.0-1"}
+  "librust-proptest+quick-error-dev" {= "1.0.0-1"}
+  "librust-proptest+regex-syntax-dev" {= "1.0.0-1"}
+  "librust-proptest-dev" {= "1.0.0-1"}
+  "librust-rand-0-8+std-dev"
+]
+extra-source "librust-proptest+std-dev_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-proptest/librust-proptest+std-dev_1.0.0-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxcb-keysyms1_0.4.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxcb-keysyms1"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libxcb1"
+]
+extra-source "libxcb-keysyms1_0.4.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xcb-util-keysyms/libxcb-keysyms1_0.4.0-1+b2_amd64.deb"
+}

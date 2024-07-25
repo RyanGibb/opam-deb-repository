@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libesedb-utils_20181229-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libesedb-utils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libesedb1" {>= "20150409"}
+]
+extra-source "libesedb-utils_20181229-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libesedb/libesedb-utils_20181229-3_amd64.deb"
+}

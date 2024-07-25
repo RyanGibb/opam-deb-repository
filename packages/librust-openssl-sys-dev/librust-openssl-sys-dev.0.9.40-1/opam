@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-openssl-sys-dev_0.9.40-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-openssl-sys-dev"]
+]
+depends: [
+  "librust-cc-1+default-dev"
+  "librust-libc-0-2+default-dev"
+  "librust-pkg-config-dev"
+  "librust-vcpkg-0-2+default-dev"
+  "libssl-dev"
+]
+extra-source "librust-openssl-sys-dev_0.9.40-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-openssl-sys/librust-openssl-sys-dev_0.9.40-1_amd64.deb"
+}

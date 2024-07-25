@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i camv-rnd-export-gd_1.1.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r camv-rnd-export-gd"]
+]
+depends: [
+  "camv-rnd-core" {= "1.1.0-3"}
+  "libc6" {>= "2.4"}
+  "librnd3-pixmap" {>= "3.2.0"}
+]
+extra-source "camv-rnd-export-gd_1.1.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/camv-rnd/camv-rnd-export-gd_1.1.0-3_amd64.deb"
+}

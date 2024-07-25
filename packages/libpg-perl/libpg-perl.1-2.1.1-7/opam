@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpg-perl_1:2.1.1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpg-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpq5"
+  "perl" {>= "5.28.1-4"}
+  "perl-base"
+]
+extra-source "libpg-perl_1:2.1.1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpg-perl/libpg-perl_2.1.1-7_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pysph-doc_1.0~b1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pysph-doc"]
+]
+depends: [
+  "libjs-mathjax"
+  "libjs-sphinxdoc" {>= "5.2"}
+  "sphinx-rtd-theme-common" {>= "1.2.0~rc1+dfsg"}
+]
+extra-source "pysph-doc_1.0~b1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pysph/pysph-doc_1.0~b1-5_all.deb"
+}

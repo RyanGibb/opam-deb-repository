@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zpspell_0.4.3-4.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zpspell"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdbus-glib-1-2" {>= "0.78"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libstdc++6" {>= "11"}
+  "sgml-base" {>= "1.28"}
+  "zemberek-server"
+]
+extra-source "zpspell_0.4.3-4.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zpspell/zpspell_0.4.3-4.2_amd64.deb"
+}

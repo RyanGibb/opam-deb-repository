@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gifti-bin_1.0.9-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gifti-bin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "libgiftiio0"
+  "libnifti2"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gifti-bin_1.0.9-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gifticlib/gifti-bin_1.0.9-3_amd64.deb"
+}

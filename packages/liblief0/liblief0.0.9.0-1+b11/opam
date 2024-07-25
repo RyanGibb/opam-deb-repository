@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblief0_0.9.0-1+b11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblief0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.4"}
+  "libmbedcrypto3" {>= "2.13"}
+  "libmbedx509-0" {>= "2.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "liblief0_0.9.0-1+b11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lief/liblief0_0.9.0-1+b11_amd64.deb"
+}

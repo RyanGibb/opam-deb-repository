@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdolphinvcs-dev_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdolphinvcs-dev"]
+]
+depends: [
+  "libdolphinvcs5" {= "4-22.12.3-1"}
+  "libkf5kio-dev" {>= "5.92.0~"}
+  "qtbase5-dev" {>= "5.15.2~"}
+]
+extra-source "libdolphinvcs-dev_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dolphin/libdolphinvcs-dev_22.12.3-1_amd64.deb"
+}

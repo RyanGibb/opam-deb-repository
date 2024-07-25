@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qmenu_5.0.2-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qmenu"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "qmenu_5.0.2-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qmenu/qmenu_5.0.2-2+b3_amd64.deb"
+}

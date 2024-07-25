@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-iospec-dev_0.3-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-iospec-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-quickcheck2-dev"
+  "libghc-stream-dev"
+  "libgmp10"
+]
+extra-source "libghc-iospec-dev_0.3-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-iospec/libghc-iospec-dev_0.3-7+b2_amd64.deb"
+}

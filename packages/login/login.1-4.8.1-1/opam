@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i login_1:4.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r login"]
+]
+conflicts: [
+  "amavisd-new (<< 2.3.3-8)"
+  "backupninja (<< 0.9.3-5)"
+  "echolot (<< 2.1.8-4)"
+  "gnunet (<< 0.7.0c-2)"
+  "python-4suite (<< 0.99cvs20060405-1)"
+]
+extra-source "login_1:4.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shadow/login_4.8.1-1_amd64.deb"
+}

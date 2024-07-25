@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbtbb1_2018.12.R1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbtbb1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libbtbb1_2018.12.R1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbtbb/libbtbb1_2018.12.R1-1_amd64.deb"
+}

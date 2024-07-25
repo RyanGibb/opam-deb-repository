@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libusbmuxd-dev_2.0.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libusbmuxd-dev"]
+]
+depends: [
+  "libplist-dev" {>= "2.2.0"}
+  "libusbmuxd6" {= "2.0.2-3"}
+]
+extra-source "libusbmuxd-dev_2.0.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libusbmuxd/libusbmuxd-dev_2.0.2-3_amd64.deb"
+}

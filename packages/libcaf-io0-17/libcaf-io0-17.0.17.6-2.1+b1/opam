@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcaf-io0.17_0.17.6-2.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcaf-io0.17"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libcaf-core0-17" {>= "0.17.6"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "12"}
+]
+extra-source "libcaf-io0.17_0.17.6-2.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/actor-framework/libcaf-io0.17_0.17.6-2.1+b1_amd64.deb"
+}

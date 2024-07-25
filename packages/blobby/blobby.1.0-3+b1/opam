@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i blobby_1.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r blobby"]
+]
+depends: [
+  "blobby-data" {>= "1.0-3"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "liblua5-2-0"
+  "libphysfs1"
+  "libsdl2-2-0-0" {>= "2.0.4"}
+  "libstdc++6" {>= "6"}
+  "libtinyxml2-6-2v5"
+  ("libgl1-mesa-glx" | "libgl1")
+]
+extra-source "blobby_1.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/blobby/blobby_1.0-3+b1_amd64.deb"
+}

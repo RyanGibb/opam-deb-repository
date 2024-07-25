@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgraphics-libplot-perl_2.2.2-7+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgraphics-libplot-perl"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libplot2c2" {>= "2.6"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libgraphics-libplot-perl_2.2.2-7+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgraphics-libplot-perl/libgraphics-libplot-perl_2.2.2-7+b3_amd64.deb"
+}

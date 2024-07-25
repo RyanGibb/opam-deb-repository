@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ccls_0.20210330-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ccls"]
+]
+depends: [
+  "libc6" {>= "2.30"}
+  "libclang-cpp11" {>= "1-11.0.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libllvm11" {>= "1-9~svn298832-1~"}
+  "libstdc++6" {>= "6"}
+]
+extra-source "ccls_0.20210330-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ccls/ccls_0.20210330-1_amd64.deb"
+}

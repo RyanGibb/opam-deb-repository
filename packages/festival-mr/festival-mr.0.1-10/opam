@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i festival-mr_0.1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r festival-mr"]
+]
+depends: [
+  "festival" {>= "1.4.3"}
+  "festvox-mr-nsk"
+]
+extra-source "festival-mr_0.1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/festival-mr/festival-mr_0.1-10_all.deb"
+}

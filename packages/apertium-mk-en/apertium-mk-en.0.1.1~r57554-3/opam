@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-mk-en_0.1.1~r57554-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-mk-en"]
+]
+depends: [
+  "apertium" {>= "3.4"}
+  "cg3"
+]
+conflicts: [
+  "apertium-en-mk"
+]
+extra-source "apertium-mk-en_0.1.1~r57554-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-mk-en/apertium-mk-en_0.1.1~r57554-3_all.deb"
+}

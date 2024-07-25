@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5sonnetcore5_5.78.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5sonnetcore5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5sonnet5-data" {= "5.78.0-2"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libkf5sonnetcore5_5.78.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sonnet/libkf5sonnetcore5_5.78.0-2_amd64.deb"
+}

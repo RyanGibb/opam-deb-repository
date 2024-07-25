@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i votca-tools_1.6.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r votca-tools"]
+]
+depends: [
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libvotca-tools6" {>= "1.6.4"}
+  "python3-any"
+]
+extra-source "votca-tools_1.6.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/votca-tools/votca-tools_1.6.4-1_amd64.deb"
+}

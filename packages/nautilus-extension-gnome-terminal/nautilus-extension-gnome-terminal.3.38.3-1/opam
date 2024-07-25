@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nautilus-extension-gnome-terminal_3.38.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nautilus-extension-gnome-terminal"]
+]
+depends: [
+  "gnome-terminal" {= "3.38.3-1"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.52.0"}
+  "libgtk-3-0" {>= "3.22.27"}
+  "libnautilus-extension1a" {>= "3.28.0"}
+]
+extra-source "nautilus-extension-gnome-terminal_3.38.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-terminal/nautilus-extension-gnome-terminal_3.38.3-1_amd64.deb"
+}

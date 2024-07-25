@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxklavier-dev_5.4-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxklavier-dev"]
+]
+depends: [
+  "gir1-2-xkl-1-0" {= "5.4-4"}
+  "libglib2-0-dev" {>= "2.16.0"}
+  "libx11-dev"
+  "libxklavier16" {= "5.4-4"}
+  "libxml2-dev" {>= "2.0.0"}
+]
+extra-source "libxklavier-dev_5.4-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxklavier/libxklavier-dev_5.4-4_amd64.deb"
+}

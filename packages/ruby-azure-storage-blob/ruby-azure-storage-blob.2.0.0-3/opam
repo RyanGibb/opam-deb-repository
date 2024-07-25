@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-azure-storage-blob_2.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-azure-storage-blob"]
+]
+depends: [
+  "ruby-azure-storage-common" {>= "2.0"}
+  "ruby-nokogiri" {>= "1.10.4"}
+]
+extra-source "ruby-azure-storage-blob_2.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-azure-storage-blob/ruby-azure-storage-blob_2.0.0-3_all.deb"
+}

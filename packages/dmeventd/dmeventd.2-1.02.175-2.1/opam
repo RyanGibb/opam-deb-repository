@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dmeventd_2:1.02.175-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dmeventd"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "libdevmapper-event1-02-1" {>= "2-1.02.110"}
+  "libdevmapper1-02-1" {>= "2-1.02.110"}
+  "liblvm2cmd2-03" {>= "2.03.11"}
+]
+extra-source "dmeventd_2:1.02.175-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lvm2/dmeventd_1.02.175-2.1_amd64.deb"
+}

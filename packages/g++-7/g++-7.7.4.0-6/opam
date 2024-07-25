@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i g++-7_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r g++-7"]
+]
+depends: [
+  "gcc-7" {= "7.4.0-6"}
+  "gcc-7-base" {= "7.4.0-6"}
+  "libc6" {>= "2.14"}
+  "libgmp10" {>= "2-5.0.1~"}
+  "libisl19" {>= "0.15"}
+  "libmpc3"
+  "libmpfr6" {>= "3.1.3"}
+  "libstdc++-7-dev" {= "7.4.0-6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "g++-7_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/g++-7_7.4.0-6_amd64.deb"
+}

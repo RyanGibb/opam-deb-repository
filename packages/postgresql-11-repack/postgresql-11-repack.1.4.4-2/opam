@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-11-repack_1.4.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-11-repack"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libpq5" {>= "8.3~rc1-1~"}
+  "postgresql-11"
+]
+extra-source "postgresql-11-repack_1.4.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pg-repack/postgresql-11-repack_1.4.4-2_amd64.deb"
+}

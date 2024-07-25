@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i x86dis_0.23-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r x86dis"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libdisasm0" {>= "0.23"}
+]
+extra-source "x86dis_0.23-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdisasm/x86dis_0.23-6+b1_amd64.deb"
+}

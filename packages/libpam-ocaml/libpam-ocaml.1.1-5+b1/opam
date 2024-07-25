@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-ocaml_1.1-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libpam0g" {>= "0.99.7.1"}
+  "ocaml-base-nox"
+]
+extra-source "libpam-ocaml_1.1-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocamlpam/libpam-ocaml_1.1-5+b1_amd64.deb"
+}

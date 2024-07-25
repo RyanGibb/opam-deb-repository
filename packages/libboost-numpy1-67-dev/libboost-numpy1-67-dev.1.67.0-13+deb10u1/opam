@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libboost-numpy1.67-dev_1.67.0-13+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libboost-numpy1.67-dev"]
+]
+depends: [
+  "libboost-numpy1-67-0" {= "1.67.0-13+deb10u1"}
+]
+conflicts: [
+  "libboost-numpy1.65-dev"
+]
+extra-source "libboost-numpy1.67-dev_1.67.0-13+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boost1.67/libboost-numpy1.67-dev_1.67.0-13+deb10u1_amd64.deb"
+}

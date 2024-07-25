@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i radvd_1:2.18-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r radvd"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.17"}
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "radvd_1:2.18-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/radvd/radvd_2.18-3_amd64.deb"
+}

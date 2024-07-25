@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqmobipocket2_4:17.08.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqmobipocket2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a" {>= "5.9.0~beta"}
+  "libqt5gui5" {>= "5.4.0~"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libqmobipocket2_4:17.08.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdegraphics-mobipocket/libqmobipocket2_17.08.3-2_amd64.deb"
+}

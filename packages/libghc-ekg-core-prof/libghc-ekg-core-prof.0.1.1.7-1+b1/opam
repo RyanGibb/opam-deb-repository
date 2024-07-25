@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-ekg-core-prof_0.1.1.7-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-ekg-core-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-ekg-core-dev" {= "0.1.1.7-1+b1"}
+  "libghc-unordered-containers-prof"
+]
+extra-source "libghc-ekg-core-prof_0.1.1.7-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-ekg-core/libghc-ekg-core-prof_0.1.1.7-1+b1_amd64.deb"
+}

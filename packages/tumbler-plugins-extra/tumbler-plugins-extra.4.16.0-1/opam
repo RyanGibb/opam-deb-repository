@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tumbler-plugins-extra_4.16.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tumbler-plugins-extra"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libffmpegthumbnailer4v5"
+  "libgdk-pixbuf-2-0-0" {>= "2.30.1"}
+  "libgepub-0-6-0" {>= "0.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgsf-1-114" {>= "1.14.24"}
+  "libopenrawgnome7"
+  "libtumbler-1-0" {>= "0.2.4"}
+  "tumbler" {= "4.16.0-1"}
+]
+extra-source "tumbler-plugins-extra_4.16.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tumbler/tumbler-plugins-extra_4.16.0-1_amd64.deb"
+}

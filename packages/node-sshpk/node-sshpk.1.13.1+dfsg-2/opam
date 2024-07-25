@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-sshpk_1.13.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-sshpk"]
+]
+depends: [
+  "node-asn1" {>= "0.2.3"}
+  "node-assert-plus" {>= "1.0.0"}
+  "node-bcrypt-pbkdf" {>= "1.0.0"}
+  "node-dashdash" {>= "1.12.0"}
+  "node-ecc-jsbn" {>= "0.1.1"}
+  "node-getpass" {>= "0.1.1"}
+  "node-jsbn" {>= "0.1.0"}
+  "node-tweetnacl" {>= "0.14.0"}
+  "nodejs"
+]
+extra-source "node-sshpk_1.13.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-sshpk/node-sshpk_1.13.1+dfsg-2_all.deb"
+}

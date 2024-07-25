@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-blockdev_2.25-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-blockdev"]
+]
+depends: [
+  "gir1-2-blockdev-2-0" {< "2.25-2.1~"}
+  "gir1-2-blockdev-2-0" {>= "2.25-2"}
+  "python3-any"
+  "python3-gi"
+]
+extra-source "python3-blockdev_2.25-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libblockdev/python3-blockdev_2.25-2_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mate-settings-daemon-dev_1.26.0-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mate-settings-daemon-dev"]
+]
+depends: [
+  "libdbus-1-dev"
+  "libdbus-glib-1-dev"
+  "libglib2-0-dev"
+  "mate-settings-daemon" {= "1.26.0-1+deb12u1"}
+]
+extra-source "mate-settings-daemon-dev_1.26.0-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mate-settings-daemon/mate-settings-daemon-dev_1.26.0-1+deb12u1_amd64.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-cartopy_0.21.1+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-cartopy"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgeos-c1v5" {>= "3.5.0"}
+  "libstdc++6" {>= "5.2"}
+  "python-cartopy-data" {= "0.21.1+dfsg-1"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-matplotlib"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-pyproj" {>= "3.0.0"}
+  "python3-pyshp"
+  "python3-shapely"
+]
+extra-source "python3-cartopy_0.21.1+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-cartopy/python3-cartopy_0.21.1+dfsg-1+b1_amd64.deb"
+}

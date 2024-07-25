@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dislocker_0.7.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dislocker"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdislocker0-7" {>= "0.7.3"}
+  "libfuse2" {>= "2.6"}
+  "libruby3-1" {>= "3.1.0~preview1"}
+]
+extra-source "dislocker_0.7.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dislocker/dislocker_0.7.3-3_amd64.deb"
+}

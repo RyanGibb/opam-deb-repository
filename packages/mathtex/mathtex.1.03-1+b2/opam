@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mathtex_1.03-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mathtex"]
+]
+depends: [
+  "dvipng"
+  "libc6" {>= "2.14"}
+  "texlive"
+]
+extra-source "mathtex_1.03-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mathtex/mathtex_1.03-1+b2_amd64.deb"
+}

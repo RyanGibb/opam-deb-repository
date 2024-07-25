@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcfitsio-bin_3.490-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcfitsio-bin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcfitsio9" {>= "3.480~"}
+]
+extra-source "libcfitsio-bin_3.490-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cfitsio/libcfitsio-bin_3.490-3_amd64.deb"
+}

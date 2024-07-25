@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i link-grammar_5.5.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r link-grammar"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libedit2" {>= "3.1-20140620-0"}
+  "liblink-grammar5" {>= "5.5.0"}
+  "link-grammar-dictionaries-en"
+]
+extra-source "link-grammar_5.5.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/link-grammar/link-grammar_5.5.1-6_amd64.deb"
+}

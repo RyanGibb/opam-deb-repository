@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmumps-scotch-dev_5.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmumps-scotch-dev"]
+]
+depends: [
+  "libmumps-dev"
+  "libmumps-scotch-5-5" {= "5.5.1-1"}
+]
+extra-source "libmumps-scotch-dev_5.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mumps/libmumps-scotch-dev_5.5.1-1_amd64.deb"
+}

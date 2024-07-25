@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblastfm-dev_1.0.9-1+b11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblastfm-dev"]
+]
+depends: [
+  "liblastfm-fingerprint1" {= "1.0.9-1+b11"}
+  "liblastfm1" {= "1.0.9-1+b11"}
+  "libqt4-dev"
+]
+extra-source "liblastfm-dev_1.0.9-1+b11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblastfm/liblastfm-dev_1.0.9-1+b11_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-backbone-on-rails_1.4.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-backbone-on-rails"]
+]
+depends: [
+  "libjs-backbone" {>= "1.3.3~"}
+  "ruby-jquery-rails"
+  "ruby-rails-assets-underscore"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-backbone-on-rails_1.4.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-backbone-on-rails/ruby-backbone-on-rails_1.4.0+dfsg-1_all.deb"
+}

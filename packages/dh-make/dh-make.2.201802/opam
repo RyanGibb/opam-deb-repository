@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dh-make_2.201802_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dh-make"]
+]
+depends: [
+  "debhelper" {>= "9"}
+  "dpkg-dev"
+  "make"
+  "python3-any"
+]
+extra-source "dh-make_2.201802_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dh-make/dh-make_2.201802_all.deb"
+}

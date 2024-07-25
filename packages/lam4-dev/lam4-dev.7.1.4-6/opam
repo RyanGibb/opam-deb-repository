@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lam4-dev_7.1.4-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lam4-dev"]
+]
+depends: [
+  "libc6-dev"
+  "liblam4" {= "7.1.4-6"}
+]
+conflicts: [
+  "lam"
+  "lam-dev"
+  "lam-runtime (<= 7.1.2-2)"
+  "lam1-dev"
+  "mpi-doc (<< 1.2.7-4)"
+]
+extra-source "lam4-dev_7.1.4-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lam/lam4-dev_7.1.4-6_amd64.deb"
+}

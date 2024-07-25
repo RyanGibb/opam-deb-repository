@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pykaraoke_0.7.5-1.2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pykaraoke"]
+]
+depends: [
+  "fonts-dejavu"
+  "libc6" {>= "2.14"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-any" {>= "2.6.6-7~"}
+  "python-pygame"
+]
+extra-source "python-pykaraoke_0.7.5-1.2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pykaraoke/python-pykaraoke_0.7.5-1.2+deb10u1_amd64.deb"
+}

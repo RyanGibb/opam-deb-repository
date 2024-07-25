@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-uuid-types-prof_1.0.3-14+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-uuid-types-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hashable-prof"
+  "libghc-random-prof"
+  "libghc-uuid-types-dev" {= "1.0.3-14+b1"}
+]
+extra-source "libghc-uuid-types-prof_1.0.3-14+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-uuid-types/libghc-uuid-types-prof_1.0.3-14+b1_amd64.deb"
+}

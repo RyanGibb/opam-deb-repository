@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dbus-test-runner_16.10.0~bzr100+repack1-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dbus-test-runner"]
+]
+depends: [
+  "dbus"
+  "libc6" {>= "2.4"}
+  "libdbustest1" {>= "15.04.0~bzr87"}
+  "libglib2-0-0" {>= "2.18.0"}
+  "procps"
+]
+extra-source "dbus-test-runner_16.10.0~bzr100+repack1-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dbus-test-runner/dbus-test-runner_16.10.0~bzr100+repack1-4.1_amd64.deb"
+}

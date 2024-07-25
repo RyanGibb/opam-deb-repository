@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-bytestring-progress-prof_1.2-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-bytestring-progress-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-bytestring-progress-dev" {= "1.2-2+b2"}
+  "libghc-terminal-progress-bar-prof"
+]
+extra-source "libghc-bytestring-progress-prof_1.2-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-bytestring-progress/libghc-bytestring-progress-prof_1.2-2+b2_amd64.deb"
+}

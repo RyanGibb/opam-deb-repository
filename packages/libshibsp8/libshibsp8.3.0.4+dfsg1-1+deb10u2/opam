@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libshibsp8_3.0.4+dfsg1-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libshibsp8"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc1" {>= "1-3.0"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "liblog4shib2"
+  "libsaml10"
+  "libstdc++6" {>= "5.2"}
+  "libxerces-c3-2"
+  "libxml-security-c20"
+  "libxmltooling8"
+  "opensaml-schemas" {>= "3~"}
+  "shibboleth-sp-common" {= "3.0.4+dfsg1-1+deb10u2"}
+  "xmltooling-schemas" {>= "3~"}
+]
+extra-source "libshibsp8_3.0.4+dfsg1-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shibboleth-sp/libshibsp8_3.0.4+dfsg1-1+deb10u2_amd64.deb"
+}

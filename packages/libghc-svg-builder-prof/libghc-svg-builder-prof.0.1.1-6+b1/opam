@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-svg-builder-prof_0.1.1-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-svg-builder-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-hashable-prof"
+  "libghc-svg-builder-dev" {= "0.1.1-6+b1"}
+  "libghc-unordered-containers-prof"
+]
+extra-source "libghc-svg-builder-prof_0.1.1-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-svg-builder/libghc-svg-builder-prof_0.1.1-6+b1_amd64.deb"
+}

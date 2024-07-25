@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openhpi-plugin-watchdog_3.8.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openhpi-plugin-watchdog"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libopenhpi3" {= "3.8.0-2"}
+]
+conflicts: [
+  "libopenhpi"
+  "libopenhpi2"
+]
+extra-source "openhpi-plugin-watchdog_3.8.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openhpi/openhpi-plugin-watchdog_3.8.0-2_amd64.deb"
+}

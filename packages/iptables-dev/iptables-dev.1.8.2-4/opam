@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iptables-dev_1.8.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iptables-dev"]
+]
+depends: [
+  "libip4tc-dev" {>= "1.8.2-4"}
+  "libip6tc-dev" {>= "1.8.2-4"}
+  "libiptc-dev" {>= "1.8.2-4"}
+  "libxtables-dev" {>= "1.8.2-4"}
+]
+extra-source "iptables-dev_1.8.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iptables/iptables-dev_1.8.2-4_amd64.deb"
+}

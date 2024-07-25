@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libuhttpmock-dev_0.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libuhttpmock-dev"]
+]
+depends: [
+  "libglib2-0-dev"
+  "libsoup2-4-dev"
+  "libuhttpmock-0-0-0" {= "0.5.0-1"}
+]
+extra-source "libuhttpmock-dev_0.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uhttpmock/libuhttpmock-dev_0.5.0-1_amd64.deb"
+}

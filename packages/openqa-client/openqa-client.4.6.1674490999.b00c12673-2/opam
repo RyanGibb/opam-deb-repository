@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openqa-client_4.6.1674490999.b00c12673-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openqa-client"]
+]
+depends: [
+  "libconfig-inifiles-perl"
+  "libdata-dump-perl"
+  "libjson-perl"
+  "libmojolicious-perl" {>= "9.30"}
+  "openqa-common" {= "4.6.1674490999.b00c12673-2"}
+  "perl-any"
+]
+extra-source "openqa-client_4.6.1674490999.b00c12673-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openqa/openqa-client_4.6.1674490999.b00c12673-2_all.deb"
+}

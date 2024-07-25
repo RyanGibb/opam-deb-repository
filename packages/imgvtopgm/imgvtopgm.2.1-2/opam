@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i imgvtopgm_2.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r imgvtopgm"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libnetpbm11" {>= "2-11.01.00"}
+  "netpbm"
+  "xli"
+]
+extra-source "imgvtopgm_2.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/imgvtopgm/imgvtopgm_2.1-2_amd64.deb"
+}

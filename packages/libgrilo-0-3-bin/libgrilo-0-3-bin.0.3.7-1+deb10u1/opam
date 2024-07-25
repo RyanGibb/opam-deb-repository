@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgrilo-0.3-bin_0.3.7-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgrilo-0.3-bin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.44"}
+  "libgrilo-0-3-0" {>= "0.3.0"}
+  "libgtk-3-0" {>= "3.9.10"}
+  "liboauth0" {>= "0.9.1"}
+]
+extra-source "libgrilo-0.3-bin_0.3.7-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grilo/libgrilo-0.3-bin_0.3.7-1+deb10u1_amd64.deb"
+}

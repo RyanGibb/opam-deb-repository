@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i crowdsec-firewall-bouncer_0.0.25-4~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r crowdsec-firewall-bouncer"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  ("nftables" | "ipset")
+  ("nftables" | "iptables")
+]
+extra-source "crowdsec-firewall-bouncer_0.0.25-4~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/crowdsec-firewall-bouncer/crowdsec-firewall-bouncer_0.0.25-4~deb12u1_amd64.deb"
+}

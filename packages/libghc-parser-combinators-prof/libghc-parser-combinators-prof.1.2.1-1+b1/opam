@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-parser-combinators-prof_1.2.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-parser-combinators-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-parser-combinators-dev" {= "1.2.1-1+b1"}
+]
+extra-source "libghc-parser-combinators-prof_1.2.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-parser-combinators/libghc-parser-combinators-prof_1.2.1-1+b1_amd64.deb"
+}

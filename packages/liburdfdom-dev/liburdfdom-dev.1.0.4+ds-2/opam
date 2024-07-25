@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liburdfdom-dev_1.0.4+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liburdfdom-dev"]
+]
+depends: [
+  "libconsole-bridge-dev"
+  "libtinyxml-dev"
+  "liburdfdom-headers-dev" {>= "1.0"}
+  "liburdfdom-model" {= "1.0.4+ds-2"}
+  "liburdfdom-model-state" {= "1.0.4+ds-2"}
+  "liburdfdom-sensor" {= "1.0.4+ds-2"}
+  "liburdfdom-world" {= "1.0.4+ds-2"}
+]
+extra-source "liburdfdom-dev_1.0.4+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/urdfdom/liburdfdom-dev_1.0.4+ds-2_amd64.deb"
+}

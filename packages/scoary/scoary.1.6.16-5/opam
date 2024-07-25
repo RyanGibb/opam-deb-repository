@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scoary_1.6.16-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scoary"]
+]
+depends: [
+  "python3" {>= "3.2"}
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-scipy"
+]
+extra-source "scoary_1.6.16-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scoary/scoary_1.6.16-5_all.deb"
+}

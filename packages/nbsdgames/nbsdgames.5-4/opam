@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nbsdgames_5-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nbsdgames"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "nbsdgames_5-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nbsdgames/nbsdgames_5-4_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstrongswan-standard-plugins_5.7.2-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstrongswan-standard-plugins"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libip4tc0" {>= "1.6.0+snapshot20161117"}
+  "libip6tc0" {>= "1.6.0+snapshot2016111"}
+  "libssl1-1" {>= "1.1.1"}
+  "libstrongswan" {= "5.7.2-1+deb10u2"}
+]
+extra-source "libstrongswan-standard-plugins_5.7.2-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/strongswan/libstrongswan-standard-plugins_5.7.2-1+deb10u2_amd64.deb"
+}

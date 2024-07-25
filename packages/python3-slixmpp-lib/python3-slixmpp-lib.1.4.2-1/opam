@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-slixmpp-lib_1.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-slixmpp-lib"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libidn11" {>= "1.13"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+]
+extra-source "python3-slixmpp-lib_1.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slixmpp/python3-slixmpp-lib_1.4.2-1_amd64.deb"
+}

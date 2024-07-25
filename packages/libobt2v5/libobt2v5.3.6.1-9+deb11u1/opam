@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libobt2v5_3.6.1-9+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libobt2v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libx11-6"
+  "libxext6"
+  "libxinerama1"
+  "libxml2" {>= "2.7.4"}
+  "libxrandr2"
+]
+conflicts: [
+  "libobt2"
+]
+extra-source "libobt2v5_3.6.1-9+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openbox/libobt2v5_3.6.1-9+deb11u1_amd64.deb"
+}

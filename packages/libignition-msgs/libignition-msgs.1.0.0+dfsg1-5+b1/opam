@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libignition-msgs_1.0.0+dfsg1-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libignition-msgs"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libignition-math4"
+  "libprotobuf17"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libignition-msgs_1.0.0+dfsg1-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ignition-msgs/libignition-msgs_1.0.0+dfsg1-5+b1_amd64.deb"
+}

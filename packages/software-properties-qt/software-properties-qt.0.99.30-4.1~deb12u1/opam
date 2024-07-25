@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i software-properties-qt_0.99.30-4.1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r software-properties-qt"]
+]
+depends: [
+  "debconf-kde-helper"
+  "python3"
+  "python3-any"
+  "python3-pyqt5"
+  "python3-software-properties" {= "0.99.30-4.1~deb12u1"}
+  "software-properties-common"
+]
+conflicts: [
+  "software-properties-kde"
+]
+extra-source "software-properties-qt_0.99.30-4.1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/software-properties/software-properties-qt_0.99.30-4.1~deb12u1_all.deb"
+}

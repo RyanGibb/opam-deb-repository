@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libubertooth1_2018.12.R1-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libubertooth1"]
+]
+depends: [
+  "libbtbb1" {>= "2015.10.R1+20161027git1eecca5"}
+  "libc6" {>= "2.34"}
+  "libusb-1-0-0" {>= "2-1.0.16"}
+]
+extra-source "libubertooth1_2018.12.R1-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ubertooth/libubertooth1_2018.12.R1-5.1_amd64.deb"
+}

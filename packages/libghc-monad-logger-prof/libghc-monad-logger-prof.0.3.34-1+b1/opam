@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-monad-logger-prof_0.3.34-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-monad-logger-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-conduit-extra-prof"
+  "libghc-conduit-prof"
+  "libghc-exceptions-prof"
+  "libghc-fast-logger-prof"
+  "libghc-lifted-base-prof"
+  "libghc-monad-control-prof"
+  "libghc-monad-logger-dev" {= "0.3.34-1+b1"}
+  "libghc-monad-loops-prof"
+  "libghc-resourcet-prof"
+  "libghc-stm-chans-prof"
+  "libghc-transformers-base-prof"
+  "libghc-transformers-compat-prof"
+  "libghc-unliftio-core-prof"
+]
+extra-source "libghc-monad-logger-prof_0.3.34-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-monad-logger/libghc-monad-logger-prof_0.3.34-1+b1_amd64.deb"
+}

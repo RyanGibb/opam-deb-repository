@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i maxima-test_5.44.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r maxima-test"]
+]
+depends: [
+  "maxima" {>= "5.44.0-3"}
+  "maxima-share" {>= "5.44.0-3"}
+  "maxima-src" {>= "5.44.0-3"}
+  "tex-common" {>= "6.13"}
+]
+extra-source "maxima-test_5.44.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maxima/maxima-test_5.44.0-3_all.deb"
+}

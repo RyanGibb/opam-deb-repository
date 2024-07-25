@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-configargparse_0.13.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-configargparse"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+]
+extra-source "python-configargparse_0.13.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-configargparse/python-configargparse_0.13.0-1_all.deb"
+}

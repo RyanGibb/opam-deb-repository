@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-broccoli_0.62-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-broccoli"]
+]
+depends: [
+  "libbroccoli5" {>= "1.97"}
+  "libc6" {>= "2.14"}
+  "libpython2-7" {>= "2.7"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+]
+extra-source "python-broccoli_0.62-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/broccoli-python/python-broccoli_0.62-1_amd64.deb"
+}

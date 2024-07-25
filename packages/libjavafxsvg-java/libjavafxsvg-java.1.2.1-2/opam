@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjavafxsvg-java_1.2.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjavafxsvg-java"]
+]
+depends: [
+  "libbatik-java" {>= "1.10"}
+  "libopenjfx-java"
+  "libxmlgraphics-commons-java"
+]
+extra-source "libjavafxsvg-java_1.2.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/javafxsvg/libjavafxsvg-java_1.2.1-2_all.deb"
+}

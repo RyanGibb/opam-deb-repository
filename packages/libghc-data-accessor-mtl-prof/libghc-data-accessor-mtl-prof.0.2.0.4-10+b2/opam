@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-data-accessor-mtl-prof_0.2.0.4-10+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-data-accessor-mtl-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-data-accessor-mtl-dev" {= "0.2.0.4-10+b2"}
+  "libghc-data-accessor-prof"
+]
+extra-source "libghc-data-accessor-mtl-prof_0.2.0.4-10+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-data-accessor-mtl/libghc-data-accessor-mtl-prof_0.2.0.4-10+b2_amd64.deb"
+}

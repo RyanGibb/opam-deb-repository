@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-xml-types-dev_0.3.6-8+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-xml-types-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libgmp10"
+]
+extra-source "libghc-xml-types-dev_0.3.6-8+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-xml-types/libghc-xml-types-dev_0.3.6-8+b2_amd64.deb"
+}

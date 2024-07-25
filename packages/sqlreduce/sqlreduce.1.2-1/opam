@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sqlreduce_1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sqlreduce"]
+]
+depends: [
+  "python3-any" {>= "3.8"}
+  "python3-pglast"
+  "python3-psycopg2"
+  "python3-yaml"
+]
+extra-source "sqlreduce_1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sqlreduce/sqlreduce_1.2-1_all.deb"
+}

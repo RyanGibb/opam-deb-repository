@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsymkey-jni_10.10.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsymkey-jni"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libnspr4" {>= "2-4.10.9"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libsymkey-jni_10.10.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dogtag-pki/libsymkey-jni_10.10.2-3_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-foptions_3042.86-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-foptions"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-fbasics" {>= "290.76"}
+]
+extra-source "r-cran-foptions_3042.86-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/foptions/r-cran-foptions_3042.86-1+b3_amd64.deb"
+}

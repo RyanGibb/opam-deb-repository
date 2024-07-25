@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-peek_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-peek"]
+]
+depends: [
+  "libjs-jquery-tipsy"
+  "ruby-concurrent" {>= "0.9.0"}
+  "ruby-concurrent-ext" {>= "0.9.0"}
+  "ruby-railties" {>= "4.0.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-peek_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-peek/ruby-peek_1.0.1-1_all.deb"
+}

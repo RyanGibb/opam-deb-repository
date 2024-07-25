@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sudo-ldap_1.8.27-1+deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sudo-ldap"]
+]
+depends: [
+  "libaudit1" {>= "1-2.2.1"}
+  "libc6" {>= "2.27"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libpam-modules"
+  "libpam0g" {>= "0.99.7.1"}
+  "libselinux1" {>= "1.32"}
+  "lsb-base"
+]
+conflicts: [
+  "sudo"
+]
+extra-source "sudo-ldap_1.8.27-1+deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sudo/sudo-ldap_1.8.27-1+deb10u3_amd64.deb"
+}

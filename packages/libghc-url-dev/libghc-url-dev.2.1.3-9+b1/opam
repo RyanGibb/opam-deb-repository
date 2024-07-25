@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-url-dev_2.1.3-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-url-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-utf8-string-dev"
+  "libgmp10"
+]
+extra-source "libghc-url-dev_2.1.3-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-url/libghc-url-dev_2.1.3-9+b1_amd64.deb"
+}

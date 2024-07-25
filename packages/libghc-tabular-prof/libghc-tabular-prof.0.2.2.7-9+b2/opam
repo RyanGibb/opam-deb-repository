@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tabular-prof_0.2.2.7-9+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tabular-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-csv-prof"
+  "libghc-html-prof"
+  "libghc-tabular-dev" {= "0.2.2.7-9+b2"}
+]
+extra-source "libghc-tabular-prof_0.2.2.7-9+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tabular/libghc-tabular-prof_0.2.2.7-9+b2_amd64.deb"
+}

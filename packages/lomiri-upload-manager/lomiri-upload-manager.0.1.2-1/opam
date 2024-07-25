@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lomiri-upload-manager_0.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lomiri-upload-manager"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgoogle-glog0v6" {>= "0.6.0"}
+  "libldm-common0" {= "0.1.2-1"}
+  "libldm-priv-common0" {= "0.1.2-1"}
+  "liblomiri-upload-manager-common0" {= "0.1.2-1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5network5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "lomiri-upload-manager_0.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri-download-manager/lomiri-upload-manager_0.1.2-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-inets_1:25.2.3+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-inets"]
+]
+depends: [
+  "erlang-base" {= "1-25.2.3+dfsg-1"}
+  "erlang-ftp" {= "1-25.2.3+dfsg-1"}
+  "erlang-mnesia" {= "1-25.2.3+dfsg-1"}
+  "erlang-runtime-tools" {= "1-25.2.3+dfsg-1"}
+  "erlang-ssl" {= "1-25.2.3+dfsg-1"}
+  "erlang-tftp" {= "1-25.2.3+dfsg-1"}
+]
+extra-source "erlang-inets_1:25.2.3+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-inets_25.2.3+dfsg-1_amd64.deb"
+}

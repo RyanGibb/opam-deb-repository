@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gobject-introspection_1.58.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gobject-introspection"]
+]
+depends: [
+  "build-essential"
+  "libc6" {>= "2.14"}
+  "libffi6" {>= "3.0.4"}
+  "libgirepository-1-0-1" {= "1.58.3-2"}
+  "libglib2-0-0" {>= "2.58.0"}
+  "python3-any"
+  "python3-distutils"
+  "python3-mako"
+  "python3-markdown"
+]
+extra-source "gobject-introspection_1.58.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.58.3-2_amd64.deb"
+}

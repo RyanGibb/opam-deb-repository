@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ovirt-guest-agent_1.0.15.dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ovirt-guest-agent"]
+]
+depends: [
+  "lsb-base"
+  "python-any"
+  "python-apt"
+  "python-dbus"
+  "python-ethtool"
+  "qemu-guest-agent"
+  "udev"
+  "usermode"
+]
+extra-source "ovirt-guest-agent_1.0.15.dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ovirt-guest-agent/ovirt-guest-agent_1.0.15.dfsg-1_all.deb"
+}

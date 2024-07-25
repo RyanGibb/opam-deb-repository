@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ghp-import_0.5.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ghp-import"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+]
+extra-source "ghp-import_0.5.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/ghp-import/ghp-import_0.5.5-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clevis-dracut_16-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clevis-dracut"]
+]
+depends: [
+  "clevis-systemd" {= "16-2"}
+  "dracut"
+  "dracut-network"
+]
+extra-source "clevis-dracut_16-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clevis/clevis-dracut_16-2_amd64.deb"
+}

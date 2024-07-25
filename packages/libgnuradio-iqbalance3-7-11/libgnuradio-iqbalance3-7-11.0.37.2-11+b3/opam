@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnuradio-iqbalance3.7.11_0.37.2-11+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnuradio-iqbalance3.7.11"]
+]
+depends: [
+  "libboost-system1-67-0"
+  "libc6" {>= "2.14"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc1" {>= "1-4.0"}
+  "libgnuradio-pmt3-7-13"
+  "libgnuradio-runtime3-7-13"
+  "liblog4cpp5v5"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libgnuradio-iqbalance3.7.11_0.37.2-11+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gr-iqbal/libgnuradio-iqbalance3.7.11_0.37.2-11+b3_amd64.deb"
+}

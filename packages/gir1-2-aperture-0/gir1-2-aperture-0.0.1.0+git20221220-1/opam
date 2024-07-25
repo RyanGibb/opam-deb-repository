@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-aperture-0_0.1.0+git20221220-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-aperture-0"]
+]
+depends: [
+  "gir1-2-gstreamer-1-0"
+  "gir1-2-gtk-3-0"
+  "libaperture-0-0" {>= "0.1.0+git20200908"}
+]
+extra-source "gir1.2-aperture-0_0.1.0+git20221220-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaperture-0/gir1.2-aperture-0_0.1.0+git20221220-1_amd64.deb"
+}

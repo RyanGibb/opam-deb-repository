@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liburcu6_0.10.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liburcu6"]
+]
+depends: [
+  "libc6" {>= "2.6"}
+]
+extra-source "liburcu6_0.10.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/liburcu/liburcu6_0.10.2-1_amd64.deb"
+}

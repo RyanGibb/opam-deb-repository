@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmobi-tools_0.11+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmobi-tools"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libmobi0" {= "0.11+dfsg-1"}
+]
+extra-source "libmobi-tools_0.11+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmobi/libmobi-tools_0.11+dfsg-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-doclayout-prof_0.3.1.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-doclayout-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-doclayout-dev" {= "0.3.1.1-1+b2"}
+  "libghc-emojis-prof"
+  "libghc-safe-prof"
+]
+extra-source "libghc-doclayout-prof_0.3.1.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-doclayout/libghc-doclayout-prof_0.3.1.1-1+b2_amd64.deb"
+}

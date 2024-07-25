@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hdf5-filter-plugin_0.0~git20221111.49e3b65-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hdf5-filter-plugin"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libhdf5-103-1"
+  "liblz4-1" {>= "0.0~r130"}
+]
+extra-source "hdf5-filter-plugin_0.0~git20221111.49e3b65-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hdf5-filter-plugin/hdf5-filter-plugin_0.0~git20221111.49e3b65-4_amd64.deb"
+}

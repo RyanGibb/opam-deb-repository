@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-lambdabot-social-plugins-prof_5.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-lambdabot-social-plugins-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-lambdabot-core-prof"
+  "libghc-lambdabot-social-plugins-dev" {= "5.3.1-1"}
+  "libghc-split-prof"
+]
+extra-source "libghc-lambdabot-social-plugins-prof_5.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-lambdabot-social-plugins/libghc-lambdabot-social-plugins-prof_5.3.1-1_amd64.deb"
+}

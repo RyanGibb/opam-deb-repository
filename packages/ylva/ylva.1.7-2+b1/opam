@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ylva_1.7-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ylva"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libqrcodegen1" {>= "1.2.1"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "ylva_1.7-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/ylva/ylva_1.7-2+b1_amd64.deb"
+}

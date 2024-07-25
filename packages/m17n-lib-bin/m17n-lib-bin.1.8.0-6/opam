@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i m17n-lib-bin_1.8.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r m17n-lib-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgd3" {>= "2.1.0~alpha~"}
+  "libm17n-0" {= "1.8.0-6"}
+  "libx11-6"
+  "libxaw7" {>= "2-1.0.14"}
+  "libxt6"
+]
+extra-source "m17n-lib-bin_1.8.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/m17n-lib/m17n-lib-bin_1.8.0-6_amd64.deb"
+}

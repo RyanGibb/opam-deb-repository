@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-biocneighbors_1.16.0+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-biocneighbors"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biocparallel"
+  "r-bioc-s4vectors"
+  "r-cran-matrix"
+  "r-cran-rcpp"
+  "r-cran-rcpphnsw"
+]
+extra-source "r-bioc-biocneighbors_1.16.0+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-biocneighbors/r-bioc-biocneighbors_1.16.0+ds-1_amd64.deb"
+}

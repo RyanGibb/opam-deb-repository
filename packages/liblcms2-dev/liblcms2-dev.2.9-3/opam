@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblcms2-dev_2.9-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblcms2-dev"]
+]
+depends: [
+  "liblcms2-2" {= "2.9-3"}
+]
+conflicts: [
+  "liblcms-dev"
+]
+extra-source "liblcms2-dev_2.9-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lcms2/liblcms2-dev_2.9-3_amd64.deb"
+}

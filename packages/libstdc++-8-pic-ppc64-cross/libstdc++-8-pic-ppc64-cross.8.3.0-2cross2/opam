@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstdc++-8-pic-ppc64-cross_8.3.0-2cross2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstdc++-8-pic-ppc64-cross"]
+]
+depends: [
+  "gcc-8-cross-base-ports" {= "8.3.0-2cross2"}
+  "libstdc++-8-dev-ppc64-cross" {= "8.3.0-2cross2"}
+  "libstdc++6-ppc64-cross" {>= "8.3.0-2cross2"}
+]
+extra-source "libstdc++-8-pic-ppc64-cross_8.3.0-2cross2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross-ports/libstdc++-8-pic-ppc64-cross_8.3.0-2cross2_all.deb"
+}

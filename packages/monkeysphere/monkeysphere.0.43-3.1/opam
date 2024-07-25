@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i monkeysphere_0.43-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r monkeysphere"]
+]
+depends: [
+  "adduser"
+  "gnupg" {>= "2.1.17"}
+  "libcrypt-openssl-rsa-perl"
+  "libdigest-sha-perl"
+  "openssh-client"
+  "perl-any"
+  ("lockfile-progs" | "procmail")
+]
+extra-source "monkeysphere_0.43-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/monkeysphere/monkeysphere_0.43-3.1_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wesnoth-1.14-server_1:1.14.15-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wesnoth-1.14-server"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-iostreams1-74-0" {>= "1.74.0"}
+  "libboost-locale1-74-0" {>= "1.74.0"}
+  "libboost-random1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "9"}
+  "lsb-base"
+]
+extra-source "wesnoth-1.14-server_1:1.14.15-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wesnoth-1.14/wesnoth-1.14-server_1.14.15-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-fast-logger-dev_3.0.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-fast-logger-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-auto-update-dev"
+  "libghc-easy-file-dev"
+  "libghc-unix-compat-dev"
+  "libghc-unix-time-dev"
+  "libgmp10"
+]
+extra-source "libghc-fast-logger-dev_3.0.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-fast-logger/libghc-fast-logger-dev_3.0.1-1+b1_amd64.deb"
+}

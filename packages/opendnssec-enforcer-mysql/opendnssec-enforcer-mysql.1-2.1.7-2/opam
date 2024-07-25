@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i opendnssec-enforcer-mysql_1:2.1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r opendnssec-enforcer-mysql"]
+]
+depends: [
+  "default-mysql-client"
+  "libc6" {>= "2.17"}
+  "libdbd-mysql-perl"
+  "libgcc-s1" {>= "4.2"}
+  "libldns3" {>= "1.7.1"}
+  "libmariadb3" {>= "3.0.0"}
+  "libreadline8" {>= "6.0"}
+  "libxml2" {>= "2.7.4"}
+  "opendnssec-common" {= "1-2.1.7-2"}
+]
+conflicts: [
+  "opendnssec-enforcer-backend"
+]
+extra-source "opendnssec-enforcer-mysql_1:2.1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opendnssec/opendnssec-enforcer-mysql_2.1.7-2_amd64.deb"
+}

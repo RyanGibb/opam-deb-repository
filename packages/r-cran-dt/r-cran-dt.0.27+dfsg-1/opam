@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-dt_0.27+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-dt"]
+]
+depends: [
+  "libjs-jquery"
+  "libjs-jquery-datatables" {>= "1.10.21"}
+  "libjs-jquery-datatables-extensions"
+  "libjs-jquery-selectize-js"
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-crosstalk"
+  "r-cran-htmltools" {>= "0.3.6"}
+  "r-cran-htmlwidgets" {>= "1.3"}
+  "r-cran-jquerylib"
+  "r-cran-jsonlite" {>= "0.9.16"}
+  "r-cran-magrittr"
+  "r-cran-promises"
+]
+extra-source "r-cran-dt_0.27+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-dt/r-cran-dt_0.27+dfsg-1_all.deb"
+}

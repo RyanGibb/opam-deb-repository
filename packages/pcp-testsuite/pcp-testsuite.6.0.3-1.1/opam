@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcp-testsuite_6.0.3-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcp-testsuite"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libpcp-pmda3"
+  "libpcp3"
+  "libqt5core5a" {>= "5.15.1"}
+  "libsasl2-2" {>= "2.1.28+dfsg"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "5"}
+  "libsystemd0"
+  "pcp" {= "6.0.3-1.1"}
+  "time"
+]
+conflicts: [
+  "pcp-gui-testsuite"
+  "pcpqa"
+]
+extra-source "pcp-testsuite_6.0.3-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcp/pcp-testsuite_6.0.3-1.1_amd64.deb"
+}

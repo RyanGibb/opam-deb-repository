@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i naev_0.7.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r naev"]
+]
+depends: [
+  "libbinutils" {< "2.31.2"}
+  "libbinutils" {>= "2.31.1"}
+  "libc6" {>= "2.17"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgl1"
+  "liblua5-1-0"
+  "libopenal1" {>= "1.14"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl2-2-0-0" {>= "2.0.8"}
+  "libvorbis0a" {>= "1.1.2"}
+  "libvorbisfile3" {>= "1.2.3"}
+  "libxml2" {>= "2.7.4"}
+  "naev-data" {= "0.7.0-2"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "naev_0.7.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/naev/naev_0.7.0-2_amd64.deb"
+}

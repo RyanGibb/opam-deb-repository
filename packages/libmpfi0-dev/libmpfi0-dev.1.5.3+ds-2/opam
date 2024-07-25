@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmpfi0-dev_1.5.3+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmpfi0-dev"]
+]
+depends: [
+  "libmpfi-dev" {< "1.5.3+ds-2.1~"}
+  "libmpfi-dev" {>= "1.5.3+ds-2"}
+]
+extra-source "libmpfi0-dev_1.5.3+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpfi/libmpfi0-dev_1.5.3+ds-2_all.deb"
+}

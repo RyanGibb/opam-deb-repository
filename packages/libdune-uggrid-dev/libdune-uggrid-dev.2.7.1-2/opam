@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdune-uggrid-dev_2.7.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdune-uggrid-dev"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libdune-common-dev"
+  "libdune-common-dev" {>= "2.7.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libopenmpi3" {>= "4.1.0"}
+  "libstdc++6" {>= "9"}
+]
+conflicts: [
+  "libug-dev"
+]
+extra-source "libdune-uggrid-dev_2.7.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dune-uggrid/libdune-uggrid-dev_2.7.1-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspnav0_0.2.3-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspnav0"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libx11-6"
+]
+extra-source "libspnav0_0.2.3-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libspnav/libspnav0_0.2.3-1+b2_amd64.deb"
+}

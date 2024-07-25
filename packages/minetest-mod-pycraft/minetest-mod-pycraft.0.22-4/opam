@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i minetest-mod-pycraft_0.22-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r minetest-mod-pycraft"]
+]
+depends: [
+  "lua-bitop"
+  "lua-socket"
+  "python3-minecraftpi"
+  ("minetest" | "minetest-server")
+]
+extra-source "minetest-mod-pycraft_0.22-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/minetest-mod-pycraft/minetest-mod-pycraft_0.22-4_all.deb"
+}

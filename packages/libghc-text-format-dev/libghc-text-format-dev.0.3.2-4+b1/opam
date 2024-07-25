@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-text-format-dev_0.3.2-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-text-format-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libdouble-conversion3" {>= "2.0.0"}
+  "libghc-double-conversion-dev"
+  "libghc-old-locale-dev"
+  "libgmp10"
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libghc-text-format-dev_0.3.2-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-text-format/libghc-text-format-dev_0.3.2-4+b1_amd64.deb"
+}

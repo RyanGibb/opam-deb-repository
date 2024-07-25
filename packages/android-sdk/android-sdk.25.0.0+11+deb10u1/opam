@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-sdk_25.0.0+11+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-sdk"]
+]
+depends: [
+  "android-sdk-build-tools"
+  "android-sdk-common" {>= "25.0.0+11+deb10u1"}
+  "android-sdk-platform-tools" {>= "20"}
+  "proguard-cli"
+  ("default-jdk-headless" {>= "2-1.8"} | "default-jdk" {>= "2-1.8"} | "oracle-java8-jdk" | "oracle-java9-jdk" | "oracle-java10-jdk" | "oracle-java11-jdk" | "oracle-java12-jdk" | "oracle-java8-installer" | "oracle-java9-installer" | "oracle-java10-installer" | "oracle-java11-installer" | "oracle-java12-installer")
+]
+extra-source "android-sdk_25.0.0+11+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-sdk-meta/android-sdk_25.0.0+11+deb10u1_amd64.deb"
+}

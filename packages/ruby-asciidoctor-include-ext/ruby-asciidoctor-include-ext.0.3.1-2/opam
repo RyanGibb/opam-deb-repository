@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-asciidoctor-include-ext_0.3.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-asciidoctor-include-ext"]
+]
+depends: [
+  "ruby-asciidoctor" {< "3.0.0"}
+  "ruby-asciidoctor" {>= "1.5.6"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-asciidoctor-include-ext_0.3.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-asciidoctor-include-ext/ruby-asciidoctor-include-ext_0.3.1-2_all.deb"
+}

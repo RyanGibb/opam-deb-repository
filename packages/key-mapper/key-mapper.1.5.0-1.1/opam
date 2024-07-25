@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i key-mapper_1.5.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r key-mapper"]
+]
+depends: [
+  "input-remapper"
+  "python3-any"
+]
+extra-source "key-mapper_1.5.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/input-remapper/key-mapper_1.5.0-1.1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmeschach-dev_1.2b-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmeschach-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libmeschach1-2" {= "1.2b-14"}
+]
+conflicts: [
+  "meschach-dev"
+]
+extra-source "libmeschach-dev_1.2b-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meschach/libmeschach-dev_1.2b-14_amd64.deb"
+}

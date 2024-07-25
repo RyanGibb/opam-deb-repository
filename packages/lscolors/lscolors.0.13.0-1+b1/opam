@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lscolors_0.13.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lscolors"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "4.2"}
+]
+extra-source "lscolors_0.13.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-lscolors/lscolors_0.13.0-1+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lighttpd-mod-cml_1.4.53-4+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lighttpd-mod-cml"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "liblua5-1-0"
+  "libmemcached11"
+  "lighttpd" {= "1.4.53-4+deb10u2"}
+]
+extra-source "lighttpd-mod-cml_1.4.53-4+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lighttpd/lighttpd-mod-cml_1.4.53-4+deb10u2_amd64.deb"
+}

@@ -1,0 +1,48 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmeep-mpich2-12_1.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmeep-mpich2-12"]
+]
+depends: [
+  "libatlas3-base"
+  "libc6" {>= "2.14"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc1" {>= "1-4.0"}
+  "libgfortran5" {>= "8"}
+  "libgsl23" {>= "2.5"}
+  "libgslcblas0" {>= "2.4"}
+  "libharminv3" {>= "1.4"}
+  "libhdf5-mpich-103" {>= "1.8.14"}
+  "libmpich12"
+  "libquadmath0" {>= "4.6"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("liblapack3" | "liblapack-so-3")
+]
+conflicts: [
+  "libmeep-lam4-12"
+  "libmeep-lam4-6"
+  "libmeep-lam4-7"
+  "libmeep-lam4-8"
+  "libmeep-mpi-default12"
+  "libmeep-mpi-default6"
+  "libmeep-mpi-default7"
+  "libmeep-mpi-default8"
+  "libmeep-mpich2-6"
+  "libmeep-mpich2-7"
+  "libmeep-mpich2-8"
+  "libmeep-openmpi12"
+  "libmeep-openmpi6"
+  "libmeep-openmpi7"
+  "libmeep-openmpi8"
+  "libmeep10"
+  "libmeep12"
+  "libmeep6"
+  "libmeep7"
+  "libmeep8"
+]
+extra-source "libmeep-mpich2-12_1.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meep-mpich2/libmeep-mpich2-12_1.7.0-3_amd64.deb"
+}

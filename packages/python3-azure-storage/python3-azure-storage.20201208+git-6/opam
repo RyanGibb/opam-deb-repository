@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-azure-storage_20201208+git-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-azure-storage"]
+]
+depends: [
+  "python3-any"
+  "python3-azure"
+  "python3-cryptography" {>= "2.1.4"}
+  "python3-msrest" {>= "0.5~"}
+]
+extra-source "python3-azure-storage_20201208+git-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-azure/python3-azure-storage_20201208+git-6_all.deb"
+}

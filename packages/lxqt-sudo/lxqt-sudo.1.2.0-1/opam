@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lxqt-sudo_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lxqt-sudo"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "liblxqt1" {>= "1.2.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "9"}
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+]
+extra-source "lxqt-sudo_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxqt-sudo/lxqt-sudo_1.2.0-1_amd64.deb"
+}

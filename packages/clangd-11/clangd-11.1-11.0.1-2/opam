@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clangd-11_1:11.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clangd-11"]
+]
+depends: [
+  "libc6" {>= "2.30"}
+  "libclang-common-11-dev" {= "1-11.0.1-2"}
+  "libclang-cpp11" {>= "1-11.0.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libllvm11" {>= "1-9~svn298832-1~"}
+  "libstdc++6" {>= "6"}
+]
+extra-source "clangd-11_1:11.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-11/clangd-11_11.0.1-2_amd64.deb"
+}

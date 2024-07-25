@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpoppler-cil_0.0.3-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpoppler-cil"]
+]
+depends: [
+  "libglib2-0-cil" {>= "2.12.40"}
+  "libmono-cairo4-0-cil" {>= "5.16.0.220"}
+  "libmono-corlib4-5-cil" {>= "5.18.0.240"}
+  "libpoppler-glib8"
+]
+extra-source "libpoppler-cil_0.0.3-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poppler-sharp/libpoppler-cil_0.0.3-4.1_all.deb"
+}

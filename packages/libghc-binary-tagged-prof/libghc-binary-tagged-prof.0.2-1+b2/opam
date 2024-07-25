@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-binary-tagged-prof_0.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-binary-tagged-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-base16-bytestring-prof"
+  "libghc-binary-tagged-dev" {= "0.2-1+b2"}
+  "libghc-cryptohash-sha1-prof"
+  "libghc-generics-sop-prof"
+  "libghc-hashable-prof"
+  "libghc-scientific-prof"
+  "libghc-tagged-prof"
+  "libghc-unordered-containers-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-binary-tagged-prof_0.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-binary-tagged/libghc-binary-tagged-prof_0.2-1+b2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hsopenssl-dev_0.11.7.2-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hsopenssl-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-network-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libssl-dev"
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "libghc-hsopenssl-dev_0.11.7.2-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hsopenssl/libghc-hsopenssl-dev_0.11.7.2-2+b2_amd64.deb"
+}

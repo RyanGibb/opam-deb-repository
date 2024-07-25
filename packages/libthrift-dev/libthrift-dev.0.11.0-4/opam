@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libthrift-dev_0.11.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libthrift-dev"]
+]
+depends: [
+  "libthrift-0-11-0" {= "0.11.0-4"}
+  "pkg-config"
+]
+extra-source "libthrift-dev_0.11.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/thrift/libthrift-dev_0.11.0-4_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-certbot-nginx_1.10.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-certbot-nginx"]
+]
+depends: [
+  "certbot"
+  "nginx"
+  "python3-acme"
+  "python3-any"
+  "python3-certbot"
+  "python3-openssl"
+  "python3-pkg-resources"
+  "python3-pyparsing"
+  "python3-zope-interface"
+]
+extra-source "python3-certbot-nginx_1.10.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-certbot-nginx/python3-certbot-nginx_1.10.1-1_all.deb"
+}

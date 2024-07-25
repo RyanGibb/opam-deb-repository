@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libphodav-3.0-0_3.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libphodav-3.0-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.65.1"}
+  "libphodav-3-0-common" {>= "3.0-8"}
+  "libsoup-3-0-0" {>= "3.0.3"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libphodav-3.0-0_3.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phodav/libphodav-3.0-0_3.0-8_amd64.deb"
+}

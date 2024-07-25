@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhwloc-dev_1.11.12-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhwloc-dev"]
+]
+depends: [
+  "libhwloc5" {= "1.11.12-3"}
+  "libltdl-dev"
+  "libnuma-dev"
+]
+extra-source "libhwloc-dev_1.11.12-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hwloc/libhwloc-dev_1.11.12-3_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nautilus-gtkhash_1.2-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nautilus-gtkhash"]
+]
+depends: [
+  "gtkhash" {= "1.2-1+b3"}
+  "libb2-1" {>= "0.98.1"}
+  "libc6" {>= "2.14"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libglib2-0-0" {>= "2.35.8"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libnautilus-extension1a" {>= "3.14.1"}
+  "libnettle8"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "nautilus-gtkhash_1.2-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtkhash/nautilus-gtkhash_1.2-1+b3_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-select2_4.0.13+dfsg1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-select2"]
+]
+depends: [
+  "libjs-select2-js"
+  "nodejs"
+  ("node-jquery-mousewheel" | "libjs-jquery-mousewheel")
+]
+extra-source "node-select2_4.0.13+dfsg1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/select2.js/node-select2_4.0.13+dfsg1-4_all.deb"
+}

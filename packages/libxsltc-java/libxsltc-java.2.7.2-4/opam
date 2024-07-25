@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxsltc-java_2.7.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxsltc-java"]
+]
+depends: [
+  "cup"
+  "jlex"
+  "libbcel-java" {>= "5.0"}
+  "libregexp-java"
+  "libxalan2-java"
+]
+extra-source "libxsltc-java_2.7.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxalan2-java/libxsltc-java_2.7.2-4_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgcrypt20-doc_1.10.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgcrypt20-doc"]
+]
+conflicts: [
+  "libgcrypt-doc"
+  "libgcrypt11-doc"
+  "libgcrypt7-doc"
+]
+extra-source "libgcrypt20-doc_1.10.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgcrypt20/libgcrypt20-doc_1.10.1-3_all.deb"
+}

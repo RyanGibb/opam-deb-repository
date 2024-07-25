@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgraphblas7_7.4.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgraphblas7"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libgomp1" {>= "6"}
+]
+extra-source "libgraphblas7_7.4.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/suitesparse-graphblas/libgraphblas7_7.4.0+dfsg-1_amd64.deb"
+}

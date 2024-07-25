@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ddnet-server_15.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ddnet-server"]
+]
+depends: [
+  "ddnet-data" {>= "15.3.2-1"}
+  "libc6" {>= "2.27"}
+  "libgcc-s1" {>= "3.0"}
+  "libjsonparser1-1" {>= "1.1.0"}
+  "libmysqlcppconn7v5" {>= "1.1.12"}
+  "libsqlite3-0" {>= "3.14.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "ddnet-server_15.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/ddnet/ddnet-server_15.3.2-1_amd64.deb"
+}

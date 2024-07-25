@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jasmin-sable_2.5.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jasmin-sable"]
+]
+depends: [
+  "cup" {>= "0.11a+20060608"}
+  ("default-jre" | "java2-runtime")
+]
+extra-source "jasmin-sable_2.5.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jasmin-sable/jasmin-sable_2.5.0-2_all.deb"
+}

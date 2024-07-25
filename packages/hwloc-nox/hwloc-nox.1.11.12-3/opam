@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hwloc-nox_1.11.12-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hwloc-nox"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libhwloc5" {>= "1.11.12"}
+  "libtinfo6" {>= "6"}
+]
+conflicts: [
+  "hwloc"
+]
+extra-source "hwloc-nox_1.11.12-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hwloc/hwloc-nox_1.11.12-3_amd64.deb"
+}

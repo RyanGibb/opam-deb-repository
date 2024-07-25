@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guile-gnutls_3.7.1-5+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guile-gnutls"]
+]
+depends: [
+  "guile-2-2"
+  "guile-2-2-libs"
+  "libc6" {>= "2.25"}
+  "libgnutls30" {>= "3.7.0"}
+]
+extra-source "guile-gnutls_3.7.1-5+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnutls28/guile-gnutls_3.7.1-5+deb11u5_amd64.deb"
+}

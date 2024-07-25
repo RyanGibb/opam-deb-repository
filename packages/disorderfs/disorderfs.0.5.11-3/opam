@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i disorderfs_0.5.11-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r disorderfs"]
+]
+depends: [
+  "fuse"
+  "libc6" {>= "2.34"}
+  "libfuse2" {>= "2.9"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "disorderfs_0.5.11-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/disorderfs/disorderfs_0.5.11-3_amd64.deb"
+}

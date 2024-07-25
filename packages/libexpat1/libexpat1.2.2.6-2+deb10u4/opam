@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libexpat1_2.2.6-2+deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libexpat1"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+]
+conflicts: [
+  "wink (<= 1.5.1060-4)"
+]
+extra-source "libexpat1_2.2.6-2+deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/expat/libexpat1_2.2.6-2+deb10u4_amd64.deb"
+}

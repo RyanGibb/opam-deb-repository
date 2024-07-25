@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-lazy-csv-prof_0.5.1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-lazy-csv-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-lazy-csv-dev" {= "0.5.1-4+b1"}
+]
+extra-source "libghc-lazy-csv-prof_0.5.1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-lazy-csv/libghc-lazy-csv-prof_0.5.1-4+b1_amd64.deb"
+}

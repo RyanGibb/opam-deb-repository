@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgexiv2-dev_0.10.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgexiv2-dev"]
+]
+depends: [
+  "gir1-2-gexiv2-0-10" {= "0.10.9-1"}
+  "libexiv2-dev"
+  "libgexiv2-2" {= "0.10.9-1"}
+  "libglib2-0-dev"
+]
+extra-source "libgexiv2-dev_0.10.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gexiv2/libgexiv2-dev_0.10.9-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nettle-dev_3.8.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nettle-dev"]
+]
+depends: [
+  "libgmp-dev"
+  "libhogweed6" {= "3.8.1-2"}
+  "libnettle8" {= "3.8.1-2"}
+]
+conflicts: [
+  "libnettle-dev"
+]
+extra-source "nettle-dev_3.8.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nettle/nettle-dev_3.8.1-2_amd64.deb"
+}

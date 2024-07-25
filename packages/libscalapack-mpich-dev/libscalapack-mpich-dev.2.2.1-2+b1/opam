@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libscalapack-mpich-dev_2.2.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libscalapack-mpich-dev"]
+]
+depends: [
+  "libscalapack-mpich2-2" {= "2.2.1-2+b1"}
+]
+extra-source "libscalapack-mpich-dev_2.2.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scalapack/libscalapack-mpich-dev_2.2.1-2+b1_amd64.deb"
+}

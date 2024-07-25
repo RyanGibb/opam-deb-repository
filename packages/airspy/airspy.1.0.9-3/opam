@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i airspy_1.0.9-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r airspy"]
+]
+depends: [
+  "libairspy0" {= "1.0.9-3"}
+  "libc6" {>= "2.7"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+]
+extra-source "airspy_1.0.9-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/airspy-host/airspy_1.0.9-3_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcgif-dev_0.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcgif-dev"]
+]
+depends: [
+  "libcgif0" {= "0.3.0-1"}
+  "pkg-config"
+]
+extra-source "libcgif-dev_0.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cgif/libcgif-dev_0.3.0-1_amd64.deb"
+}

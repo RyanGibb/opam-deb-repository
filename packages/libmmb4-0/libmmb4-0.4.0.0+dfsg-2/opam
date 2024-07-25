@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmmb4.0_4.0.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmmb4.0"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libopenmm7-7" {>= "7.7.0+dfsg"}
+  "libsimbody3-7" {>= "3.7+dfsg"}
+  "libsimtkmolmodel3-1" {>= "3.1.0"}
+  "libstdc++6" {>= "11"}
+  "zlib1g" {>= "1-1.2.6"}
+]
+extra-source "libmmb4.0_4.0.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/macromoleculebuilder/libmmb4.0_4.0.0+dfsg-2_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdlib19_19.10-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdlib19"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libdlib-data"
+  "libgcc1" {>= "1-4.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libdlib19_19.10-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dlib/libdlib19_19.10-3_amd64.deb"
+}

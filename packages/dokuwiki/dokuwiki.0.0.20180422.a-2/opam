@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dokuwiki_0.0.20180422.a-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dokuwiki"]
+]
+depends: [
+  "javascript-common"
+  "libjs-jquery"
+  "libjs-jquery-cookie"
+  "libjs-jquery-ui"
+  "libphp-simplepie"
+  "php"
+  "php-geshi"
+  "php-phpseclib" {>= "2"}
+  "php-random-compat"
+  "php-xml"
+  "ucf"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "dokuwiki_0.0.20180422.a-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dokuwiki/dokuwiki_0.0.20180422.a-2_all.deb"
+}

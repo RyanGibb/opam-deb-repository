@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-libziparchive-dev_1:29.0.6-28_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-libziparchive-dev"]
+]
+depends: [
+  "android-libziparchive" {= "1-29.0.6-28"}
+  "libgtest-dev"
+]
+extra-source "android-libziparchive-dev_1:29.0.6-28_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-tools/android-libziparchive-dev_29.0.6-28_amd64.deb"
+}

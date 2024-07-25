@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmunge-maven-plugin-java_1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmunge-maven-plugin-java"]
+]
+depends: [
+  "libmaven3-core-java" {>= "3.5.0"}
+]
+extra-source "libmunge-maven-plugin-java_1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/munge-maven-plugin/libmunge-maven-plugin-java_1.0-2_all.deb"
+}

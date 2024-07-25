@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nvme-cli_2.4+really2.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nvme-cli"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libjson-c5" {>= "0.15"}
+  "libnvme1" {>= "1.3"}
+  "uuid-runtime"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "nvme-cli_2.4+really2.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nvme-cli/nvme-cli_2.4+really2.3-3_amd64.deb"
+}

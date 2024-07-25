@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openbox_3.6.1-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openbox"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libice6" {>= "1-1.0.0"}
+  "libobrender32v5" {>= "3.6.0"}
+  "libobt2v5" {>= "3.6.0"}
+  "libsm6"
+  "libstartup-notification0" {>= "0.7"}
+  "libx11-6"
+  "libxau6"
+  "libxcursor1" {> "1.1.2"}
+  "libxext6"
+  "libxi6" {>= "2-1.2.99.4"}
+  "libxinerama1"
+  "libxrandr2"
+]
+extra-source "openbox_3.6.1-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openbox/openbox_3.6.1-8_amd64.deb"
+}

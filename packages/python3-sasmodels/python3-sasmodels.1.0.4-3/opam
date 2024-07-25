@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sasmodels_1.0.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sasmodels"]
+]
+depends: [
+  "gcc"
+  "python3-any"
+  "python3-numpy"
+  "python3-scipy"
+  "sasmodels-private-libs"
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "python3-sasmodels_1.0.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sasmodels/python3-sasmodels_1.0.4-3_all.deb"
+}

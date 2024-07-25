@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i haxe_1:3.4.7-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r haxe"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgc1c2" {>= "1-7.2d"}
+  "libneko2"
+  "libpcre3"
+  "neko" {>= "2.0.0"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "haxe_1:3.4.7-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haxe/haxe_3.4.7-1+b1_amd64.deb"
+}

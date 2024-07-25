@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freediams_0.9.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freediams"]
+]
+depends: [
+  "freemedforms-common-resources" {= "0.9.4-2"}
+  "freemedforms-freedata" {= "0.9.4-2"}
+  "freemedforms-libs" {= "0.9.4-2"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt4-network" {>= "4-4.5.3"}
+  "libqt4-script" {>= "4-4.5.3"}
+  "libqt4-sql" {>= "4-4.5.3"}
+  "libqt4-svg" {>= "4-4.5.3"}
+  "libqt4-xml" {>= "4-4.5.3"}
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libqtgui4" {>= "4-4.8.0"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  "libxext6"
+]
+extra-source "freediams_0.9.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freemedforms-project/freediams_0.9.4-2_amd64.deb"
+}

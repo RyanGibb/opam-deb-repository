@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-cubature_2.0.4.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-cubature"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-rcpp"
+]
+extra-source "r-cran-cubature_2.0.4.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-cubature/r-cran-cubature_2.0.4.6-1_amd64.deb"
+}

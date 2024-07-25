@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i oxref_2.00.00-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r oxref"]
+]
+depends: [
+  "binutils"
+  "libbobcat5" {>= "5.00.02"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "oxref_2.00.00-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oxref/oxref_2.00.00-2+b1_amd64.deb"
+}

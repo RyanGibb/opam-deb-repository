@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nutcracker_0.4.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nutcracker"]
+]
+depends: [
+  "adduser"
+  "init-system-helpers" {>= "1.18~"}
+  "libc6" {>= "2.14"}
+  "libyaml-0-2"
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "nutcracker_0.4.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nutcracker/nutcracker_0.4.1+dfsg-1_amd64.deb"
+}

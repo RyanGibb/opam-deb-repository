@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-dyre-prof_0.8.12-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-dyre-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-dyre-dev" {= "0.8.12-5+b2"}
+  "libghc-executable-path-prof"
+  "libghc-ghc-paths-prof"
+  "libghc-io-storage-prof"
+  "libghc-xdg-basedir-prof"
+]
+extra-source "libghc-dyre-prof_0.8.12-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-dyre/libghc-dyre-prof_0.8.12-5+b2_amd64.deb"
+}

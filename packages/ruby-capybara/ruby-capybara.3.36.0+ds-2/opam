@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-capybara_3.36.0+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-capybara"]
+]
+depends: [
+  "libjs-jquery"
+  "libjs-jquery-ui"
+  "ruby-addressable"
+  "ruby-mini-mime"
+  "ruby-nokogiri" {>= "1.8~"}
+  "ruby-rack" {>= "1.6~"}
+  "ruby-rack-test" {>= "0.6.3~"}
+  "ruby-regexp-parser"
+  "ruby-xpath" {>= "3.2~"}
+]
+extra-source "ruby-capybara_3.36.0+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-capybara/ruby-capybara_3.36.0+ds-2_all.deb"
+}

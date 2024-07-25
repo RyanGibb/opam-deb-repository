@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i katepart_4:4.14.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r katepart"]
+]
+depends: [
+  "kate-data" {>= "4-4.14.3-5"}
+  "libc6" {>= "2.14"}
+  "libkatepartinterfaces4" {= "4-4.14.3-5"}
+  "libkdecore5" {>= "4-4.14.2"}
+  "libkdeui5" {>= "4-4.14.2"}
+  "libkio5" {>= "4-4.14.2"}
+  "libkparts4" {>= "4-4.14.2"}
+  "libktexteditor4" {>= "4-4.14.2"}
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libqtgui4" {>= "4-4.5.3"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "katepart_4:4.14.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kate4/katepart_4.14.3-5_amd64.deb"
+}

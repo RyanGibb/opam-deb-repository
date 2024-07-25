@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbix-searchbuilder-perl_1.69-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbix-searchbuilder-perl"]
+]
+depends: [
+  "libcache-simple-timedexpiry-perl"
+  "libclass-accessor-perl"
+  "libclass-returnvalue-perl"
+  "libclone-perl"
+  "libdbix-dbschema-perl"
+  "libwant-perl"
+  "perl-any"
+  ("libdbd-pg-perl" | "libdbd-mysql-perl" | "libdbd-sqlite3-perl" | "libdbd-odbc-perl" | "libdbd-sqlite2-perl" | "libdbd-informix-perl" | "libdbd-sybase-perl" | "libdbd-oracle-perl")
+]
+extra-source "libdbix-searchbuilder-perl_1.69-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdbix-searchbuilder-perl/libdbix-searchbuilder-perl_1.69-1_all.deb"
+}

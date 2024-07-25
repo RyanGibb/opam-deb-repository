@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cc65_2.19-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cc65"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+]
+extra-source "cc65_2.19-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cc65/cc65_2.19-1_amd64.deb"
+}

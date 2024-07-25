@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-data-reify-prof_0.6.3-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-data-reify-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-data-reify-dev" {= "0.6.3-2+b2"}
+  "libghc-hashable-prof"
+  "libghc-unordered-containers-prof"
+]
+extra-source "libghc-data-reify-prof_0.6.3-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-data-reify/libghc-data-reify-prof_0.6.3-2+b2_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libngraph0_6.09.07-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libngraph0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.6.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.25.2"}
+  "libglib2-0-0" {>= "2.67.3"}
+  "libgsl27" {>= "2.7.1"}
+  "libgtk-3-0" {>= "3.23.1"}
+  "libgtksourceview-4-0" {>= "3.99.7"}
+  "libpango-1-0-0" {>= "1.18.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libreadline8" {>= "6.0"}
+]
+extra-source "libngraph0_6.09.07-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ngraph-gtk/libngraph0_6.09.07-1_amd64.deb"
+}

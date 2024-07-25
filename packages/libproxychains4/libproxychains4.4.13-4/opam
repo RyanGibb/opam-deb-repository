@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libproxychains4_4.13-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libproxychains4"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+]
+extra-source "libproxychains4_4.13-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/proxychains-ng/libproxychains4_4.13-4_amd64.deb"
+}

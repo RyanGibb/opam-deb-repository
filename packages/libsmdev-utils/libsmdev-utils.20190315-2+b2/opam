@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsmdev-utils_20190315-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsmdev-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libsmdev1" {>= "20150105"}
+]
+extra-source "libsmdev-utils_20190315-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsmdev/libsmdev-utils_20190315-2+b2_amd64.deb"
+}

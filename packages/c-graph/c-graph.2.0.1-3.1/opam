@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i c-graph_2.0.1-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r c-graph"]
+]
+depends: [
+  "gnuplot"
+  "imagemagick"
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+]
+extra-source "c-graph_2.0.1-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/c-graph/c-graph_2.0.1-3.1_amd64.deb"
+}

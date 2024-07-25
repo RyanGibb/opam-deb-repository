@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i linkchecker_10.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r linkchecker"]
+]
+depends: [
+  "python3"
+  "python3-any"
+  "python3-bs4" {>= "4.8.1"}
+  "python3-dnspython" {>= "2.0"}
+  "python3-requests" {>= "2.4"}
+  "python3-urllib3"
+  "python3-xdg"
+]
+extra-source "linkchecker_10.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linkchecker/linkchecker_10.0.1-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kmod_28-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kmod"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libkmod2" {= "28-1"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libssl1-1" {>= "1.1.0"}
+  "lsb-base"
+]
+extra-source "kmod_28-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kmod/kmod_28-1_amd64.deb"
+}

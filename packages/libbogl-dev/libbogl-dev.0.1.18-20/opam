@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbogl-dev_0.1.18-20_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbogl-dev"]
+]
+depends: [
+  "bogl-utils"
+  "libbogl0" {= "0.1.18-20"}
+  "libc6-dev"
+]
+extra-source "libbogl-dev_0.1.18-20_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bogl/libbogl-dev_0.1.18-20_amd64.deb"
+}

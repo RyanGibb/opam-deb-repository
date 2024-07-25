@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libportal-gtk4-dev_0.6-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libportal-gtk4-dev"]
+]
+depends: [
+  "gir1-2-xdpgtk4-1-0" {= "0.6-4"}
+  "libglib2-0-dev" {>= "2.58"}
+  "libgtk-4-dev"
+  "libportal-dev" {= "0.6-4"}
+  "libportal-gtk4-1" {= "0.6-4"}
+  "pkg-config"
+]
+extra-source "libportal-gtk4-dev_0.6-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libportal/libportal-gtk4-dev_0.6-4_amd64.deb"
+}

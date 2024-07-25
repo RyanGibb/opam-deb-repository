@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i squashfs-tools-ng_1.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r squashfs-tools-ng"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "liblzo2-2" {>= "2.02"}
+  "libselinux1" {>= "3.1~"}
+  "libsquashfs1" {>= "1.0.4"}
+]
+extra-source "squashfs-tools-ng_1.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/squashfs-tools-ng/squashfs-tools-ng_1.0.4-1_amd64.deb"
+}

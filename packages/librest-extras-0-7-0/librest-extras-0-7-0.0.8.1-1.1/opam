@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librest-extras-0.7-0_0.8.1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librest-extras-0.7-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "librest-0-7-0" {>= "0.7.92"}
+  "libsoup2-4-1" {>= "2.30"}
+]
+extra-source "librest-extras-0.7-0_0.8.1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librest/librest-extras-0.7-0_0.8.1-1.1_amd64.deb"
+}

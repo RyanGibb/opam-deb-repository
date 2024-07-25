@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaprutil1_1.6.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaprutil1"]
+]
+depends: [
+  "libapr1" {>= "1.6.2"}
+  "libc6" {>= "2.25"}
+  "libdb5-3"
+  "libexpat1" {>= "2.0.1"}
+  "libgdbm6" {>= "1.16"}
+  "libssl1-1" {>= "1.1.0"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "libaprutil1_1.6.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apr-util/libaprutil1_1.6.1-4_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lv2-c++-tools_1.0.5-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lv2-c++-tools"]
+]
+depends: [
+  "libboost-system1-67-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libpaq0"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "lv2-c++-tools_1.0.5-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lv2-c++-tools/lv2-c++-tools_1.0.5-4+b1_amd64.deb"
+}

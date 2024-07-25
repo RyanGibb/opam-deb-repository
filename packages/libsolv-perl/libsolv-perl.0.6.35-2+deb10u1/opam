@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsolv-perl_0.6.35-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsolv-perl"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "libsolv0" {= "0.6.35-2+deb10u1"}
+  "libsolvext0" {>= "0.6.35-2+deb10u1"}
+  "perl" {>= "5.28.1-6"}
+  "perl-base"
+]
+extra-source "libsolv-perl_0.6.35-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsolv/libsolv-perl_0.6.35-2+deb10u1_amd64.deb"
+}

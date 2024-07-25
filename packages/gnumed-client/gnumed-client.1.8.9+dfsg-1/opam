@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnumed-client_1.8.9+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnumed-client"]
+]
+depends: [
+  "file"
+  "gnumed-common" {= "1.8.9+dfsg-1"}
+  "imagemagick"
+  "python3-any"
+  "python3-enchant"
+  "python3-gnuplot"
+  "python3-hl7"
+  "python3-httplib2"
+  "python3-lxml"
+  "python3-psutil"
+  "python3-pyudev"
+  "python3-wxgtk4-0"
+  "texlive-latex-base"
+  ("hunspell" | "aspell" | "ispell" | "myspell-dictionary" | "hspell")
+]
+extra-source "gnumed-client_1.8.9+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnumed-client/gnumed-client_1.8.9+dfsg-1_all.deb"
+}

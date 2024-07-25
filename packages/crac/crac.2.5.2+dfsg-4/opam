@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i crac_2.5.2+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r crac"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgkarrays1" {>= "2.1.0+dfsg"}
+  "libgzstream0" {>= "1.5+dfsg"}
+  "libhts3" {>= "1.10"}
+  "libjellyfish-2-0-2" {>= "2.3.0"}
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "crac_2.5.2+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/crac/crac_2.5.2+dfsg-4_amd64.deb"
+}

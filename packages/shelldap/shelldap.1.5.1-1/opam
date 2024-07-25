@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shelldap_1.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shelldap"]
+]
+depends: [
+  "libalgorithm-diff-perl"
+  "libnet-ldap-perl"
+  "libterm-readkey-perl"
+  "libterm-readline-gnu-perl"
+  "libterm-shell-perl"
+  "libtie-ixhash-perl"
+  "libyaml-syck-perl"
+  "perl-any"
+]
+extra-source "shelldap_1.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shelldap/shelldap_1.5.1-1_all.deb"
+}

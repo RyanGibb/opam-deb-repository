@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-kubeclient_4.9.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-kubeclient"]
+]
+depends: [
+  "ruby-http" {>= "3.0~"}
+  "ruby-jsonpath"
+  "ruby-recursive-open-struct"
+  "ruby-rest-client" {>= "2.0~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-kubeclient_4.9.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-kubeclient/ruby-kubeclient_4.9.1-2_all.deb"
+}

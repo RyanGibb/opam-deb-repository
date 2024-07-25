@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ostree-tests_2019.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ostree-tests"]
+]
+depends: [
+  "attr"
+  "ca-certificates"
+  "cpio"
+  "fuse"
+  "gir1-2-ostree-1-0"
+  "gjs"
+  "gnupg"
+  "libarchive13" {>= "3.0.4"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libc6" {>= "2.28"}
+  "libglib2-0-0" {>= "2.51.0"}
+  "libgpgme11" {>= "1.2.0"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libostree-1-1" {>= "2018.9"}
+  "libsoup2-4-1" {>= "2.47.4"}
+  "ostree"
+  "python3"
+  "python3-yaml"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "ostree-tests_2019.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ostree/ostree-tests_2019.1-1_amd64.deb"
+}

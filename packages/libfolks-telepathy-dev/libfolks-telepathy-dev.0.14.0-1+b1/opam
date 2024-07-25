@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfolks-telepathy-dev_0.14.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfolks-telepathy-dev"]
+]
+depends: [
+  "libfolks-dev" {= "0.14.0-1+b1"}
+  "libfolks-telepathy25" {= "0.14.0-1+b1"}
+  "libglib2-0-dev" {>= "2.40"}
+  "libtelepathy-glib-dev" {>= "0.19.9"}
+]
+extra-source "libfolks-telepathy-dev_0.14.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/folks/libfolks-telepathy-dev_0.14.0-1+b1_amd64.deb"
+}

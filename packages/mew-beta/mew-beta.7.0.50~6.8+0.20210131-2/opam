@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mew-beta_7.0.50~6.8+0.20210131-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mew-beta"]
+]
+depends: [
+  "emacsen-common" {>= "2.0.8"}
+  "mew-beta-bin" {>= "5.2.53"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+  ("emacs-nox" | "emacs" | "emacs-snapshot")
+]
+conflicts: [
+  "mew"
+]
+extra-source "mew-beta_7.0.50~6.8+0.20210131-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mew-beta/mew-beta_7.0.50~6.8+0.20210131-2_all.deb"
+}

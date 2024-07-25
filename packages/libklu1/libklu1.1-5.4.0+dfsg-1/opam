@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libklu1_1:5.4.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libklu1"]
+]
+depends: [
+  "libamd2" {>= "1-4.5.2"}
+  "libbtf1" {>= "1-4.5.2"}
+  "libc6" {>= "2.4"}
+  "libcolamd2" {>= "1-4.5.2"}
+  "libsuitesparseconfig5" {>= "1-5.0.0"}
+]
+extra-source "libklu1_1:5.4.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/suitesparse/libklu1_5.4.0+dfsg-1_amd64.deb"
+}

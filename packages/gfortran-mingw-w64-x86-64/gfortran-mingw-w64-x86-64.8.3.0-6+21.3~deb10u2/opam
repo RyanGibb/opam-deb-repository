@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gfortran-mingw-w64-x86-64_8.3.0-6+21.3~deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gfortran-mingw-w64-x86-64"]
+]
+depends: [
+  "gcc-mingw-w64-base" {= "8.3.0-6+21.3~deb10u2"}
+  "gcc-mingw-w64-x86-64" {= "8.3.0-6+21.3~deb10u2"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-4.2"}
+  "libgmp10"
+  "libisl19" {>= "0.15"}
+  "libmpc3"
+  "libmpfr6" {>= "3.1.3"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gfortran-mingw-w64-x86-64_8.3.0-6+21.3~deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-mingw-w64/gfortran-mingw-w64-x86-64_8.3.0-6+21.3~deb10u2_amd64.deb"
+}

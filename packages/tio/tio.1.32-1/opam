@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tio_1.32-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tio"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+]
+extra-source "tio_1.32-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tio/tio_1.32-1_amd64.deb"
+}

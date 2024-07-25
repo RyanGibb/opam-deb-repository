@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgphobos76_9.3.0-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgphobos76"]
+]
+depends: [
+  "gcc-9-base" {= "9.3.0-22"}
+  "libc6" {>= "2.17"}
+  "libgcc-s1"
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "libgphobos76_9.3.0-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-9/libgphobos76_9.3.0-22_amd64.deb"
+}

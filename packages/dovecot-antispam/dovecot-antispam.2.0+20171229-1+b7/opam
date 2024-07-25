@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dovecot-antispam_2.0+20171229-1+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dovecot-antispam"]
+]
+depends: [
+  "dovecot-core"
+  "dovecot-imapd"
+  "libc6" {>= "2.14"}
+]
+extra-source "dovecot-antispam_2.0+20171229-1+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dovecot-antispam/dovecot-antispam_2.0+20171229-1+b7_amd64.deb"
+}

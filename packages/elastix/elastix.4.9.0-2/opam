@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elastix_4.9.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elastix"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgomp1" {>= "4.9"}
+  "libinsighttoolkit4-13" {>= "4.13.3withdata-dfsg1"}
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "elastix_4.9.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elastix/elastix_4.9.0-2_amd64.deb"
+}

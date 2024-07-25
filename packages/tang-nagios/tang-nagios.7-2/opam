@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tang-nagios_7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tang-nagios"]
+]
+depends: [
+  "jose"
+  "libc6" {>= "2.17"}
+  "libhttp-parser2-9" {>= "2.1"}
+  "libjansson4" {>= "2.3"}
+  "libjose0" {>= "10"}
+]
+extra-source "tang-nagios_7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nagios-tang/tang-nagios_7-2_amd64.deb"
+}

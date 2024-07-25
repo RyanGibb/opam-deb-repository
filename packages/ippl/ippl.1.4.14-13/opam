@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ippl_1.4.14-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ippl"]
+]
+depends: [
+  "adduser" {> "3.51"}
+  "libc6" {>= "2.32"}
+  "logrotate"
+  "sysvinit-utils"
+]
+extra-source "ippl_1.4.14-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ippl/ippl_1.4.14-13_amd64.deb"
+}

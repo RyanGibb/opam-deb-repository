@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cakephp-scripts_2.10.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cakephp-scripts"]
+]
+depends: [
+  "cakephp" {= "2.10.11-2"}
+  "php-cli"
+  "php-common"
+]
+extra-source "cakephp-scripts_2.10.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cakephp/cakephp-scripts_2.10.11-2_all.deb"
+}

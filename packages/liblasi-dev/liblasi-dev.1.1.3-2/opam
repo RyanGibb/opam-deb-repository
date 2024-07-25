@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblasi-dev_1.1.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblasi-dev"]
+]
+depends: [
+  "libfreetype-dev"
+  "liblasi0" {= "1.1.3-2"}
+  "libpango1-0-dev"
+]
+extra-source "liblasi-dev_1.1.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lasi/liblasi-dev_1.1.3-2_amd64.deb"
+}

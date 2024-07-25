@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i texlive-lang-greek_2022.20230122-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r texlive-lang-greek"]
+]
+depends: [
+  "fonts-gfs-baskerville"
+  "fonts-gfs-porson"
+  "tex-common" {>= "6.13"}
+  "texlive-base" {>= "2022.20220405"}
+  "texlive-binaries" {>= "2022.20220321"}
+]
+extra-source "texlive-lang-greek_2022.20230122-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/texlive-lang/texlive-lang-greek_2022.20230122-1_all.deb"
+}

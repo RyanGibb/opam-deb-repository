@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-rgw_12.2.11+dfsg1-2.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-rgw"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpython2-7" {>= "2.7"}
+  "librados2" {>= "0.72.2"}
+  "librgw2" {>= "12.2.11+dfsg1"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-rgw_12.2.11+dfsg1-2.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/python-rgw_12.2.11+dfsg1-2.1+b1_amd64.deb"
+}

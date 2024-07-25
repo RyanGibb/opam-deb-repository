@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrilinos-teuchos-dev_12.18.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrilinos-teuchos-dev"]
+]
+depends: [
+  "binutils-dev"
+  "libblas-dev"
+  "libiberty-dev"
+  "liblapack-dev"
+  "libtrilinos-teuchos12" {= "12.18.1-2"}
+  "trilinos-dev"
+]
+extra-source "libtrilinos-teuchos-dev_12.18.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trilinos/libtrilinos-teuchos-dev_12.18.1-2_amd64.deb"
+}

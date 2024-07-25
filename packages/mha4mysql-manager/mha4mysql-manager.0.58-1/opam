@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mha4mysql-manager_0.58-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mha4mysql-manager"]
+]
+depends: [
+  "libconfig-tiny-perl"
+  "libdbd-mysql-perl"
+  "libdbi-perl"
+  "liblog-dispatch-perl"
+  "libparallel-forkmanager-perl"
+  "mha4mysql-node"
+  "perl"
+]
+extra-source "mha4mysql-manager_0.58-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mha4mysql-manager/mha4mysql-manager_0.58-1_all.deb"
+}

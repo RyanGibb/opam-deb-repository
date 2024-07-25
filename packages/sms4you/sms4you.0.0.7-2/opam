@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sms4you_0.0.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sms4you"]
+]
+depends: [
+  "adduser"
+  "modemmanager"
+  "python3"
+  "python3-any"
+  "python3-dbussy"
+  "python3-sdnotify"
+  "python3-systemd"
+  ("sms4you-xmpp" {= "0.0.7-2"} | "sms4you-email" {= "0.0.7-2"})
+]
+extra-source "sms4you_0.0.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sms4you/sms4you_0.0.7-2_all.deb"
+}

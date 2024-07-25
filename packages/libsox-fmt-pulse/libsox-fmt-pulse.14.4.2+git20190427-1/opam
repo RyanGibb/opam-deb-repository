@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsox-fmt-pulse_14.4.2+git20190427-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsox-fmt-pulse"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libpulse0" {>= "0.99.1"}
+  "libsox3" {>= "14.4.2~"}
+]
+extra-source "libsox-fmt-pulse_14.4.2+git20190427-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sox/libsox-fmt-pulse_14.4.2+git20190427-1_amd64.deb"
+}

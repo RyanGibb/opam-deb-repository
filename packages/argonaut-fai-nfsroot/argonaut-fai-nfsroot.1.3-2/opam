@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i argonaut-fai-nfsroot_1.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r argonaut-fai-nfsroot"]
+]
+depends: [
+  "argonaut-common"
+  "argonaut-common-fai"
+  "fai-client" {>= "3.2.8"}
+]
+extra-source "argonaut-fai-nfsroot_1.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/argonaut/argonaut-fai-nfsroot_1.3-2_all.deb"
+}

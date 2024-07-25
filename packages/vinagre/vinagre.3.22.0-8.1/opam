@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vinagre_3.22.0-8.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vinagre"]
+]
+depends: [
+  "libavahi-common3" {>= "0.6.16"}
+  "libavahi-gobject0" {>= "0.6.26"}
+  "libavahi-ui-gtk3-0" {>= "0.6.30"}
+  "libc6" {>= "2.15"}
+  "libcairo2" {>= "1.6.0"}
+  "libfreerdp2-2" {>= "2.0.0~git20160317.1.75ae3f5+dfsg1"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.9.10"}
+  "libgtk-vnc-2-0-0" {>= "0.3.10"}
+  "libsecret-1-0" {>= "0.7"}
+  "libspice-client-glib-2-0-8" {>= "0.13"}
+  "libspice-client-gtk-3-0-5" {>= "0.32"}
+  "libvte-2-91-0" {>= "0.20"}
+  "libxml2" {>= "2.7.4"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "vinagre_3.22.0-8.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vinagre/vinagre_3.22.0-8.1_amd64.deb"
+}

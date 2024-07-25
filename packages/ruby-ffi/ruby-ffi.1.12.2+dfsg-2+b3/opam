@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-ffi_1.12.2+dfsg-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-ffi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libffi7" {>= "3.3~20180313"}
+  "libruby2-7" {>= "2.7.0"}
+  "ruby" {< "1-2.8~"}
+  "ruby" {>= "1-2.7~0"}
+]
+extra-source "ruby-ffi_1.12.2+dfsg-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-ffi/ruby-ffi_1.12.2+dfsg-2+b3_amd64.deb"
+}

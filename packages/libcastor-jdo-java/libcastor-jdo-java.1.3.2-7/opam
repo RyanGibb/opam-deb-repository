@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcastor-jdo-java_1.3.2-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcastor-jdo-java"]
+]
+depends: [
+  "libcastor-core-java"
+  "libcastor-xml-java"
+  "libcastor-xml-schema-java"
+  "libcglib-java" {>= "3.0"}
+  "libgeronimo-jpa-2-0-spec-java"
+  "libgeronimo-jta-1-2-spec-java"
+]
+extra-source "libcastor-jdo-java_1.3.2-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/castor/libcastor-jdo-java_1.3.2-7_all.deb"
+}

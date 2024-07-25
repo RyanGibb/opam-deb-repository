@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libldm-common-dev_0.1.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libldm-common-dev"]
+]
+depends: [
+  "libldm-common0" {= "0.1.0-8"}
+  "qtbase5-dev"
+]
+extra-source "libldm-common-dev_0.1.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri-download-manager/libldm-common-dev_0.1.0-8_amd64.deb"
+}

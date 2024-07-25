@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-num-bigint+serde-dev_0.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-num-bigint+serde-dev"]
+]
+depends: [
+  "librust-num-bigint-dev" {= "0.2.0-1"}
+  "librust-serde-1+std-dev"
+]
+extra-source "librust-num-bigint+serde-dev_0.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-num-bigint/librust-num-bigint+serde-dev_0.2.0-1_amd64.deb"
+}

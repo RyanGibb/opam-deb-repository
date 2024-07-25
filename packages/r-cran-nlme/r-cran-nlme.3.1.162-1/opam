@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-nlme_3.1.162-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-nlme"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-lattice" {>= "0.12-11.1"}
+]
+extra-source "r-cran-nlme_3.1.162-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nlme/r-cran-nlme_3.1.162-1_amd64.deb"
+}

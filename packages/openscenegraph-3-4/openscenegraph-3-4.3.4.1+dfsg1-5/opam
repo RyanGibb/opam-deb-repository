@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openscenegraph-3.4_3.4.1+dfsg1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openscenegraph-3.4"]
+]
+depends: [
+  "freeglut3"
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libopenscenegraph-3-4-131"
+  "libopenthreads20"
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "openscenegraph"
+]
+extra-source "openscenegraph-3.4_3.4.1+dfsg1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openscenegraph-3.4/openscenegraph-3.4_3.4.1+dfsg1-5_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt6-webview-plugins_6.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt6-webview-plugins"]
+]
+depends: [
+  "fontconfig"
+  "libc6" {>= "2.4"}
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6network6" {>= "6.4.2+dfsg~"}
+  "libqt6qml6" {>= "6.4.2+dfsg~"}
+  "libqt6quick6" {>= "6.4.2+dfsg~"}
+  "libqt6webenginecore6" {>= "6.4.2+dfsg~"}
+  "libqt6webenginecore6-bin" {>= "6.4.2+dfsg~"}
+  "libqt6webenginequick6" {>= "6.4.2+dfsg~"}
+  "libqt6webview6" {>= "6.3.0"}
+  "libqt6webviewquick6" {>= "6.2.2"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qt6-webview-plugins_6.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-webview/qt6-webview-plugins_6.4.2-1_amd64.deb"
+}

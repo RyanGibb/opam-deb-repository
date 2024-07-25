@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwant-perl_0.29-1+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwant-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libwant-perl_0.29-1+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libw/libwant-perl/libwant-perl_0.29-1+b6_amd64.deb"
+}

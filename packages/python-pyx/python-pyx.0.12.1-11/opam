@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pyx_0.12.1-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pyx"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libkpathsea6"
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "texlive-binaries"
+]
+extra-source "python-pyx_0.12.1-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyx/python-pyx_0.12.1-11_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-object-dev_0.30.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-object-dev"]
+]
+depends: [
+  "librust-compiler-builtins-dev"
+  "librust-crc32fast-dev"
+  "librust-flate2+miniz-oxide-dev"
+  "librust-hashbrown-0-12+ahash-dev"
+  "librust-indexmap-dev"
+  "librust-memchr-dev"
+]
+extra-source "librust-object-dev_0.30.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-object/librust-object-dev_0.30.0-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbd-sybase-perl_1.14-1+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbd-sybase-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libct4" {>= "1.00.82"}
+  "libdbi-perl"
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libdbd-sybase-perl_1.14-1+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdbd-sybase-perl/libdbd-sybase-perl_1.14-1+b6_amd64.deb"
+}

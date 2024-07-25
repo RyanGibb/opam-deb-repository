@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i konsole_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r konsole"]
+]
+depends: [
+  "kio"
+  "konsole-kpart" {= "4-22.12.3-1"}
+  "libc6" {>= "2.34"}
+  "libkf5configcore5" {>= "5.71.0~"}
+  "libkf5configwidgets5" {>= "5.83.0"}
+  "libkf5coreaddons5" {>= "5.96.0"}
+  "libkf5crash5" {>= "5.71.0~"}
+  "libkf5dbusaddons5" {>= "5.71.0~"}
+  "libkf5globalaccel-bin"
+  "libkf5globalaccel5" {>= "5.71.0~"}
+  "libkf5guiaddons5" {>= "5.71.0~"}
+  "libkf5i18n5" {>= "5.71.0~"}
+  "libkf5kiowidgets5" {>= "5.71.0~"}
+  "libkf5notifyconfig5" {>= "5.71.0~"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "5.71.0~"}
+  "libkf5widgetsaddons5" {>= "5.100.0"}
+  "libkf5windowsystem5" {>= "5.83.0"}
+  "libkf5xmlgui5" {>= "5.71.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.15.0~"}
+  "libstdc++6" {>= "11"}
+  ("libqt5gui5" {>= "5.15.0~"} | "libqt5gui5-gles" {>= "5.15.0~"})
+]
+extra-source "konsole_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/konsole/konsole_22.12.3-1_amd64.deb"
+}

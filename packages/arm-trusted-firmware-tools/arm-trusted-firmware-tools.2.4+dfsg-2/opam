@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i arm-trusted-firmware-tools_2.4+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r arm-trusted-firmware-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl1-1" {>= "1.1.1"}
+]
+extra-source "arm-trusted-firmware-tools_2.4+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/arm-trusted-firmware/arm-trusted-firmware-tools_2.4+dfsg-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cowpatty_4.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cowpatty"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcap0-8" {>= "0.9.8"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "cowpatty_4.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cowpatty/cowpatty_4.8-2_amd64.deb"
+}

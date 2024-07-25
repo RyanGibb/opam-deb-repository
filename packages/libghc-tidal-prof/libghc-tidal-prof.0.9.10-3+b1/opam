@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tidal-prof_0.9.10-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tidal-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-colour-prof"
+  "libghc-hashable-prof"
+  "libghc-hosc-prof"
+  "libghc-mersenne-random-pure64-prof"
+  "libghc-monad-loops-prof"
+  "libghc-safe-prof"
+  "libghc-tidal-dev" {= "0.9.10-3+b1"}
+  "libghc-websockets-prof"
+]
+extra-source "libghc-tidal-prof_0.9.10-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tidal/libghc-tidal-prof_0.9.10-3+b1_amd64.deb"
+}

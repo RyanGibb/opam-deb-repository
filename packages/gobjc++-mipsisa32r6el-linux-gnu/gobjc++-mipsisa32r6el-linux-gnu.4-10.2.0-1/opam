@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gobjc++-mipsisa32r6el-linux-gnu_4:10.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gobjc++-mipsisa32r6el-linux-gnu"]
+]
+depends: [
+  "cpp-mipsisa32r6el-linux-gnu" {>= "4-10.2.0-1"}
+  "gcc-mipsisa32r6el-linux-gnu" {>= "4-10.2.0-1"}
+  "gobjc++-10-mipsisa32r6el-linux-gnu" {>= "10.2.0-8~"}
+]
+extra-source "gobjc++-mipsisa32r6el-linux-gnu_4:10.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-mipsen/gobjc++-mipsisa32r6el-linux-gnu_10.2.0-1_amd64.deb"
+}

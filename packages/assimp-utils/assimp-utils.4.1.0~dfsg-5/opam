@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i assimp-utils_4.1.0~dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r assimp-utils"]
+]
+depends: [
+  "libassimp4"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "assimp-utils_4.1.0~dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/assimp/assimp-utils_4.1.0~dfsg-5_amd64.deb"
+}

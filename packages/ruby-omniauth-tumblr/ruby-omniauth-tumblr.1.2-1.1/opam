@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-omniauth-tumblr_1.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-omniauth-tumblr"]
+]
+depends: [
+  "ruby-omniauth-oauth"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-omniauth-tumblr_1.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-omniauth-tumblr/ruby-omniauth-tumblr_1.2-1.1_all.deb"
+}

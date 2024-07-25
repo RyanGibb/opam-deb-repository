@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cwdaemon_0.10.2-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cwdaemon"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcw7"
+  "sysvinit-utils"
+]
+conflicts: [
+  "winkeydaemon"
+]
+extra-source "cwdaemon_0.10.2-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cwdaemon/cwdaemon_0.10.2-3+b1_amd64.deb"
+}

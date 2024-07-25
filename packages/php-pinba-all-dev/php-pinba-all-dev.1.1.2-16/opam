@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-pinba-all-dev_1.1.2-16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-pinba-all-dev"]
+]
+depends: [
+  "php-all-dev"
+  "php8-2-pinba" {>= "1.1.2-16~"}
+]
+extra-source "php-pinba-all-dev_1.1.2-16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-pinba/php-pinba-all-dev_1.1.2-16_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgwrap-runtime2_1.9.15-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgwrap-runtime2"]
+]
+depends: [
+  "guile-2-2-libs"
+  "libc6" {>= "2.14"}
+  "libffi6" {>= "3.0.4"}
+  "libgc1c2" {>= "1-7.2d"}
+]
+extra-source "libgwrap-runtime2_1.9.15-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/g-wrap/libgwrap-runtime2_1.9.15-3_amd64.deb"
+}

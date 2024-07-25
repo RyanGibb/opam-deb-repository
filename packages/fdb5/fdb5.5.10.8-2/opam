@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fdb5_5.10.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fdb5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libeccodes0" {>= "2.27.0"}
+  "libeckit0d" {>= "1.20.2"}
+  "libfdb5-0d" {= "5.10.8-2"}
+  "libgcc-s1" {>= "3.0"}
+  "libmetkit0d" {>= "1.9.2"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "fdb5_5.10.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fdb/fdb5_5.10.8-2_amd64.deb"
+}

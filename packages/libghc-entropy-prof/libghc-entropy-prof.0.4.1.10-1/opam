@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-entropy-prof_0.4.1.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-entropy-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-entropy-dev" {= "0.4.1.10-1"}
+]
+extra-source "libghc-entropy-prof_0.4.1.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-entropy/libghc-entropy-prof_0.4.1.10-1_amd64.deb"
+}

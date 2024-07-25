@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cgreen1_1.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cgreen1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcgreen1" {>= "1.3.0"}
+]
+extra-source "cgreen1_1.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cgreen/cgreen1_1.3.0-2_amd64.deb"
+}

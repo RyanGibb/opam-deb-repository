@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmail-milter-perl_0.07-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmail-milter-perl"]
+]
+depends: [
+  "perl"
+  ("libsendmail-milter-perl" {>= "0.18"} | "libsendmail-pmilter-perl" {>= "0.80"})
+]
+extra-source "libmail-milter-perl_0.07-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmail-milter-perl/libmail-milter-perl_0.07-1_all.deb"
+}

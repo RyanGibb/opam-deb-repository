@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgo-10-dev-armhf-cross_10.2.1-6cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgo-10-dev-armhf-cross"]
+]
+depends: [
+  "gcc-10-cross-base" {>= "10.2.1-6"}
+  "libgcc-10-dev-armhf-cross" {= "10.2.1-6cross1"}
+  "libgo16-armhf-cross" {>= "10.2.1-6cross1"}
+]
+extra-source "libgo-10-dev-armhf-cross_10.2.1-6cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10-cross/libgo-10-dev-armhf-cross_10.2.1-6cross1_all.deb"
+}

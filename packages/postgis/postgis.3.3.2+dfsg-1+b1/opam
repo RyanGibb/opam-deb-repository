@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgis_3.3.2+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgis"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgdal32" {>= "2.0.1"}
+  "libgeos-c1v5" {>= "3.6"}
+  "libpq5"
+  "libproj25" {>= "5.2.0"}
+]
+extra-source "postgis_3.3.2+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgis/postgis_3.3.2+dfsg-1+b1_amd64.deb"
+}

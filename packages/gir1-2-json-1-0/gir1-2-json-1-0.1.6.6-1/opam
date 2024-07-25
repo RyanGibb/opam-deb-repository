@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-json-1.0_1.6.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-json-1.0"]
+]
+depends: [
+  "gir1-2-glib-2-0" {>= "0.9.12"}
+  "libjson-glib-1-0-0" {= "1.6.6-1"}
+]
+extra-source "gir1.2-json-1.0_1.6.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/json-glib/gir1.2-json-1.0_1.6.6-1_amd64.deb"
+}

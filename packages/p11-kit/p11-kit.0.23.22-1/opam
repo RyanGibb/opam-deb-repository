@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i p11-kit_0.23.22-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r p11-kit"]
+]
+depends: [
+  "libc6" {>= "2.26"}
+  "libp11-kit0" {>= "0.23.18.1"}
+  "libtasn1-6" {>= "4.14"}
+  "p11-kit-modules" {>= "0.23.22-1"}
+]
+extra-source "p11-kit_0.23.22-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.23.22-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i umview-mod-umlwip_0.8.2-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r umview-mod-umlwip"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "liblwipv6-2"
+  "libumlib0" {= "0.8.2-1.2"}
+]
+extra-source "umview-mod-umlwip_0.8.2-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/umview/umview-mod-umlwip_0.8.2-1.2_amd64.deb"
+}

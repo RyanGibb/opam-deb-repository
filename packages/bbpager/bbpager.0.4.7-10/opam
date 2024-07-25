@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bbpager_0.4.7-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bbpager"]
+]
+depends: [
+  "libbt0" {>= "0.70.1"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+]
+extra-source "bbpager_0.4.7-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bbpager/bbpager_0.4.7-10_amd64.deb"
+}

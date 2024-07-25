@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ceph_14.2.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ceph"]
+]
+depends: [
+  "python3-cephfs" {< "14.2.21-1.1~"}
+  "python3-cephfs" {>= "14.2.21-1"}
+  "python3-rados" {< "14.2.21-1.1~"}
+  "python3-rados" {>= "14.2.21-1"}
+  "python3-rbd" {< "14.2.21-1.1~"}
+  "python3-rbd" {>= "14.2.21-1"}
+  "python3-rgw" {< "14.2.21-1.1~"}
+  "python3-rgw" {>= "14.2.21-1"}
+]
+extra-source "python3-ceph_14.2.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/python3-ceph_14.2.21-1_all.deb"
+}

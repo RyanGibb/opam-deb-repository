@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i odin_2.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r odin"]
+]
+depends: [
+  "g++"
+  "gdb"
+  "libblitz0v5"
+  "libc6" {>= "2.27"}
+  "libdcmtk14"
+  "libgcc1" {>= "1-4.0"}
+  "libgsl-dev"
+  "libgsl23" {>= "2.5"}
+  "libgslcblas0" {>= "2.4"}
+  "libhdf5-103"
+  "libismrmrd1-3"
+  "libnifti2"
+  "libodin-dev"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libqtcore4" {>= "4-4.5.3"}
+  "libqtgui4" {>= "4-4.5.3"}
+  "libqwt6abi1" {>= "6.1.2"}
+  "libstdc++6" {>= "5.2"}
+  "libvtk6-3"
+  "mitools" {= "2.0.3-1"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libblas-dev" | "libatlas-base-dev")
+  ("libc6-dev" | "libc-dev")
+  ("liblapack3" | "liblapack-so-3")
+  ("xterm" | "x-terminal-emulator")
+]
+extra-source "odin_2.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/odin/odin_2.0.3-1_amd64.deb"
+}

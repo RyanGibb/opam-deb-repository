@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-rstcheck_6.1.1+~1.0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-rstcheck"]
+]
+depends: [
+  "python3-any"
+  "python3-docutils"
+  "python3-pydantic"
+  "python3-typer"
+  "python3-typeshed"
+  ("python3-importlib-metadata" | "python3" {> "3.8"})
+  ("python3-typing-extensions" | "python3" {> "3.8"})
+]
+extra-source "python3-rstcheck_6.1.1+~1.0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rstcheck/python3-rstcheck_6.1.1+~1.0.3-2_all.deb"
+}

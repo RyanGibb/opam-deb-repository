@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i afl++-clang_2.68c-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r afl++-clang"]
+]
+depends: [
+  "afl++" {= "2.68c-1+b1"}
+  "clang-11"
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "afl++-clang_2.68c-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aflplusplus/afl++-clang_2.68c-1+b1_amd64.deb"
+}

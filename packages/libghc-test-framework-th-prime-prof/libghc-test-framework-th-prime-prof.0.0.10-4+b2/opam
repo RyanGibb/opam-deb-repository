@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-test-framework-th-prime-prof_0.0.10-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-test-framework-th-prime-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-cpphs-prof"
+  "libghc-src-exts-prof"
+  "libghc-test-framework-prof"
+  "libghc-test-framework-th-prime-dev" {= "0.0.10-4+b2"}
+]
+extra-source "libghc-test-framework-th-prime-prof_0.0.10-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-test-framework-th-prime/libghc-test-framework-th-prime-prof_0.0.10-4+b2_amd64.deb"
+}

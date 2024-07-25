@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i crimson_0.5.2-1.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r crimson"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libsdl-mixer1-2"
+  "libsdl-ttf2-0-0"
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "crimson_0.5.2-1.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/crimson/crimson_0.5.2-1.1+b1_amd64.deb"
+}

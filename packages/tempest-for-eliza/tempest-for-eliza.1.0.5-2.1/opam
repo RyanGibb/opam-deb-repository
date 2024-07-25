@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tempest-for-eliza_1.0.5-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tempest-for-eliza"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1"
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "tempest-for-eliza_1.0.5-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tempest-for-eliza/tempest-for-eliza_1.0.5-2.1_amd64.deb"
+}

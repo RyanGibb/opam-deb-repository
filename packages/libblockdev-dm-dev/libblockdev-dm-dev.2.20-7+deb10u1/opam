@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libblockdev-dm-dev_2.20-7+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libblockdev-dm-dev"]
+]
+depends: [
+  "libblockdev-dm2" {= "2.20-7+deb10u1"}
+  "libblockdev-utils-dev" {= "2.20-7+deb10u1"}
+  "libdevmapper-dev"
+  "libdmraid-dev"
+  "libglib2-0-dev"
+  "libsystemd-dev"
+]
+extra-source "libblockdev-dm-dev_2.20-7+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libblockdev/libblockdev-dm-dev_2.20-7+deb10u1_amd64.deb"
+}

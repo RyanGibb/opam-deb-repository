@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i corosync-qnetd_3.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r corosync-qnetd"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.14"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libnss3-tools"
+  "libsystemd0"
+  "procps"
+]
+extra-source "corosync-qnetd_3.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/corosync-qdevice/corosync-qnetd_3.0.1-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pilot-link_0.12.5-dfsg-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pilot-link"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpisock9"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libpopt0" {>= "1.14"}
+  "libreadline7" {>= "6.0"}
+]
+extra-source "pilot-link_0.12.5-dfsg-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pilot-link/pilot-link_0.12.5-dfsg-2+b3_amd64.deb"
+}

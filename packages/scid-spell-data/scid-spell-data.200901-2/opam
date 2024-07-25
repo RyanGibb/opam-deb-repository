@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scid-spell-data_200901-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scid-spell-data"]
+]
+depends: [
+  "scid"
+]
+conflicts: [
+  "scid-rating-data"
+]
+extra-source "scid-spell-data_200901-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scid-spell-data/scid-spell-data_200901-2_all.deb"
+}

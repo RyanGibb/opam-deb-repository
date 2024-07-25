@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i git-annex_10.20230126-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r git-annex"]
+]
+depends: [
+  "curl"
+  "git" {>= "1-2.22"}
+  "libc6" {>= "2.34"}
+  "libffi8" {>= "3.4"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libmagic1" {>= "5.12"}
+  "libsqlite3-0" {>= "3.7.3"}
+  "libyaml-0-2"
+  "netbase"
+  "openssh-client" {>= "1-5.6p1"}
+  "rsync"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "git-annex_10.20230126-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/git-annex/git-annex_10.20230126-3_amd64.deb"
+}

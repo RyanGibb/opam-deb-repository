@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-deriving-compat-dev_0.5.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-deriving-compat-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-th-abstraction-dev"
+  "libghc-transformers-compat-dev"
+  "libgmp10"
+]
+extra-source "libghc-deriving-compat-dev_0.5.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-deriving-compat/libghc-deriving-compat-dev_0.5.9-1_amd64.deb"
+}

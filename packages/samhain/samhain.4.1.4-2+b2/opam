@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i samhain_4.1.4-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r samhain"]
+]
+depends: [
+  "libauparse0" {>= "1-2.2.1"}
+  "libc6" {>= "2.27"}
+  "libpcre3"
+  "libprelude28"
+  ("debconf" {>= "1.2.9"} | "debconf-2-0")
+]
+extra-source "samhain_4.1.4-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/samhain/samhain_4.1.4-2+b2_amd64.deb"
+}

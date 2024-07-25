@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apriltag_3.3.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apriltag"]
+]
+depends: [
+  "libapriltag3" {= "3.3.0-1+b1"}
+  "libc6" {>= "2.34"}
+  "libfreeimage3" {>= "3.18.0+ds2"}
+]
+extra-source "apriltag_3.3.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apriltag/apriltag_3.3.0-1+b1_amd64.deb"
+}

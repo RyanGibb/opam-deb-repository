@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i routino-www_3.3.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r routino-www"]
+]
+depends: [
+  "javascript-common"
+  "libjs-leaflet"
+  "perl-any"
+  "routino"
+  "sensible-utils"
+  ("apache2" | "httpd")
+]
+extra-source "routino-www_3.3.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/routino/routino-www_3.3.3-1_all.deb"
+}

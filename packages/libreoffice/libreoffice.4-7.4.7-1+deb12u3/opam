@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice_4:7.4.7-1+deb12u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice"]
+]
+depends: [
+  "libreoffice-base"
+  "libreoffice-calc"
+  "libreoffice-core" {= "4-7.4.7-1+deb12u3"}
+  "libreoffice-draw"
+  "libreoffice-impress"
+  "libreoffice-math"
+  "libreoffice-report-builder-bin"
+  "libreoffice-writer"
+  "python3-uno" {>= "4.4.0~beta2"}
+]
+conflicts: [
+  "libreoffice-dev (<= 1:5.0.3~rc1-2)"
+  "libreoffice-dev-doc (<= 1:5.0.3~rc1-2)"
+]
+extra-source "libreoffice_4:7.4.7-1+deb12u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice_7.4.7-1+deb12u3_amd64.deb"
+}

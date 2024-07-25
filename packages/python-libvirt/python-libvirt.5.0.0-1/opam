@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-libvirt_5.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-libvirt"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libvirt0" {>= "4.10.0"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-libvirt_5.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvirt-python/python-libvirt_5.0.0-1_amd64.deb"
+}

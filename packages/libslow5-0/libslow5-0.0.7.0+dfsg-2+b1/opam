@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libslow5-0_0.7.0+dfsg-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libslow5-0"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libzstd1" {>= "1.5.2"}
+]
+extra-source "libslow5-0_0.7.0+dfsg-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libslow5lib/libslow5-0_0.7.0+dfsg-2+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xteddy_2.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xteddy"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libimlib2" {>= "1.4.5"}
+  "libx11-6"
+  "libxext6"
+]
+extra-source "xteddy_2.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xteddy/xteddy_2.2-3_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gis-workstation_0.0.21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gis-workstation"]
+]
+depends: [
+  "gis-tasks" {= "0.0.21"}
+]
+extra-source "gis-workstation_0.0.21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-gis/gis-workstation_0.0.21_all.deb"
+}

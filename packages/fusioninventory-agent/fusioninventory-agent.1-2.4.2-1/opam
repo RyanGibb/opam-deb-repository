@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fusioninventory-agent_1:2.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fusioninventory-agent"]
+]
+depends: [
+  "hwdata"
+  "libfile-which-perl"
+  "libhttp-daemon-perl"
+  "libjson-pp-perl"
+  "libnet-cups-perl"
+  "libnet-ip-perl"
+  "libparse-edid-perl"
+  "libproc-daemon-perl"
+  "libsocket-getaddrinfo-perl"
+  "libtext-template-perl"
+  "libuniversal-require-perl"
+  "libwww-perl"
+  "libxml-treepp-perl" {>= "0.26"}
+  "libyaml-perl"
+  "lsb-base" {>= "3.0-6"}
+  "perl"
+  "perl-any"
+  "ucf"
+]
+extra-source "fusioninventory-agent_1:2.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fusioninventory-agent/fusioninventory-agent_2.4.2-1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sbws_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sbws"]
+]
+depends: [
+  "adduser"
+  "python3-any"
+  "python3-requests"
+  "python3-socks"
+  "python3-stem" {>= "1.7.0"}
+  "python3-versioneer"
+  "tor"
+]
+extra-source "sbws_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sbws/sbws_1.2.0-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbrlapi-dev_6.3+dfsg-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbrlapi-dev"]
+]
+depends: [
+  "libbrlapi0-8" {= "6.3+dfsg-1+deb11u1"}
+]
+conflicts: [
+  "libbrlapi1-dev (<< 3.8)"
+]
+extra-source "libbrlapi-dev_6.3+dfsg-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/brltty/libbrlapi-dev_6.3+dfsg-1+deb11u1_amd64.deb"
+}

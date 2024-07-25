@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhdf5-mpich-dev_1.10.4+repack-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhdf5-mpich-dev"]
+]
+depends: [
+  "libaec-dev"
+  "libhdf5-mpich-103" {= "1.10.4+repack-10"}
+  "libjpeg-dev"
+  "libmpich-dev"
+  "zlib1g-dev"
+]
+extra-source "libhdf5-mpich-dev_1.10.4+repack-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hdf5/libhdf5-mpich-dev_1.10.4+repack-10_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ksshaskpass_4:5.14.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ksshaskpass"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5coreaddons5" {>= "4.100.0"}
+  "libkf5i18n5" {>= "4.97.0"}
+  "libkf5wallet-bin"
+  "libkf5wallet5" {>= "4.96.0"}
+  "libkf5widgetsaddons5" {>= "4.96.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5widgets5" {>= "5.11.0~"}
+  "libstdc++6" {>= "4.1.1"}
+  "openssh-client"
+]
+extra-source "ksshaskpass_4:5.14.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/ksshaskpass/ksshaskpass_5.14.5-1_amd64.deb"
+}

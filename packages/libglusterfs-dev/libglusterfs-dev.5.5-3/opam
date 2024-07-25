@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglusterfs-dev_5.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglusterfs-dev"]
+]
+depends: [
+  "libacl1-dev"
+  "libgfapi0" {= "5.5-3"}
+  "libgfchangelog0" {= "5.5-3"}
+  "libgfdb0" {= "5.5-3"}
+  "libgfrpc0" {= "5.5-3"}
+  "libgfxdr0" {= "5.5-3"}
+  "libglusterfs0" {= "5.5-3"}
+]
+extra-source "libglusterfs-dev_5.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glusterfs/libglusterfs-dev_5.5-3_amd64.deb"
+}

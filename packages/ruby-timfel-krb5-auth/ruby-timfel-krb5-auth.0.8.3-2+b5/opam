@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-timfel-krb5-auth_0.8.3-2+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-timfel-krb5-auth"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcom-err2" {>= "1.01"}
+  "libgmp10"
+  "libkrb5-3" {>= "1.13~alpha1+dfsg"}
+  "libruby2-5" {>= "2.5.0~preview1"}
+  "ruby" {< "1-2.6~"}
+  "ruby" {>= "1-2.5~0"}
+]
+extra-source "ruby-timfel-krb5-auth_0.8.3-2+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-timfel-krb5-auth/ruby-timfel-krb5-auth_0.8.3-2+b5_amd64.deb"
+}

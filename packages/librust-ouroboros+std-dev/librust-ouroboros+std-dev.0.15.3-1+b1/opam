@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-ouroboros+std-dev_0.15.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-ouroboros+std-dev"]
+]
+depends: [
+  "librust-ouroboros-dev" {= "0.15.3-1+b1"}
+  "librust-ouroboros-macro-dev"
+]
+extra-source "librust-ouroboros+std-dev_0.15.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-ouroboros/librust-ouroboros+std-dev_0.15.3-1+b1_amd64.deb"
+}

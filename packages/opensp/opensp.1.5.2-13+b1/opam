@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i opensp_1.5.2-13+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r opensp"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libosp5" {>= "1.5.2-1"}
+  "libstdc++6" {>= "5"}
+  "sgml-base"
+]
+extra-source "opensp_1.5.2-13+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opensp/opensp_1.5.2-13+b1_amd64.deb"
+}

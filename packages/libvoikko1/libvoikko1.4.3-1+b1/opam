@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvoikko1_4.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvoikko1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libhfstospell11" {>= "0.5.2"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libvoikko1_4.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvoikko/libvoikko1_4.3-1+b1_amd64.deb"
+}

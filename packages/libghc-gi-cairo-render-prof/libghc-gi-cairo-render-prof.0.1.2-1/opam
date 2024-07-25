@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-gi-cairo-render-prof_0.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-gi-cairo-render-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-gi-cairo-render-dev" {= "0.1.2-1"}
+  "libghc-haskell-gi-base-prof"
+  "libghc-utf8-string-prof"
+]
+extra-source "libghc-gi-cairo-render-prof_0.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-gi-cairo-render/libghc-gi-cairo-render-prof_0.1.2-1_amd64.deb"
+}

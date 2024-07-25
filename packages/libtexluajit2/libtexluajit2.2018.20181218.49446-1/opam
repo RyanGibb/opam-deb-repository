@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtexluajit2_2018.20181218.49446-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtexluajit2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.3"}
+]
+extra-source "libtexluajit2_2018.20181218.49446-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/texlive-bin/libtexluajit2_2018.20181218.49446-1_amd64.deb"
+}

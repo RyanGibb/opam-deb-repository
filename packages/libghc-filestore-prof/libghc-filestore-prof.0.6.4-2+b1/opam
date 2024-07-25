@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-filestore-prof_0.6.4-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-filestore-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-diff-prof"
+  "libghc-filestore-dev" {= "0.6.4-2+b1"}
+  "libghc-old-locale-prof"
+  "libghc-split-prof"
+  "libghc-utf8-string-prof"
+  "libghc-xml-prof"
+]
+extra-source "libghc-filestore-prof_0.6.4-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-filestore/libghc-filestore-prof_0.6.4-2+b1_amd64.deb"
+}

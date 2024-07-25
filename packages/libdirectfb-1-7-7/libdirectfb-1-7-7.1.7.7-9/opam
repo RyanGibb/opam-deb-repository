@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdirectfb-1.7-7_1.7.7-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdirectfb-1.7-7"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libdrm2" {>= "2.3.1"}
+  "libegl1"
+  "libgbm1" {>= "7.11~1"}
+  "libgcc-s1"
+  "libgl1"
+  "libgles2"
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libdirectfb-1.7-7_1.7.7-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/directfb/libdirectfb-1.7-7_1.7.7-9_amd64.deb"
+}

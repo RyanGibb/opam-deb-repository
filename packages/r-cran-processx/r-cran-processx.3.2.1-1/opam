@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-processx_3.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-processx"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-2"}
+  "r-cran-ps"
+  "r-cran-r6"
+]
+extra-source "r-cran-processx_3.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-processx/r-cran-processx_3.2.1-1_amd64.deb"
+}

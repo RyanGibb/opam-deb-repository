@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnih-dbus1_1.0.3-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnih-dbus1"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libnih1" {= "1.0.3-11"}
+]
+extra-source "libnih-dbus1_1.0.3-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnih/libnih-dbus1_1.0.3-11_amd64.deb"
+}

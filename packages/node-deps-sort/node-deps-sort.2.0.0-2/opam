@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-deps-sort_2.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-deps-sort"]
+]
+depends: [
+  "node-jsonstream" {>= "1.0.3"}
+  "node-shasum" {>= "1.0.0"}
+  "node-subarg" {>= "1.0.0"}
+  "node-through2" {>= "2.0.0"}
+  "nodejs"
+]
+extra-source "node-deps-sort_2.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-deps-sort/node-deps-sort_2.0.0-2_all.deb"
+}

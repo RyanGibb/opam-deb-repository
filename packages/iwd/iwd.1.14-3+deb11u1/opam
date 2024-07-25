@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iwd_1.14-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iwd"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+  "libreadline8" {>= "6.0"}
+]
+extra-source "iwd_1.14-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iwd/iwd_1.14-3+deb11u1_amd64.deb"
+}

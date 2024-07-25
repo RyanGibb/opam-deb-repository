@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i redmine-plugin-redhopper_2.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r redmine-plugin-redhopper"]
+]
+depends: [
+  "redmine"
+  "ruby-acts-as-list" {>= "0.9.17"}
+  "ruby-byebug"
+  "ruby-haml" {>= "5.1.1"}
+  "ruby-sass" {>= "3.4.15"}
+]
+extra-source "redmine-plugin-redhopper_2.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/redmine-plugin-redhopper/redmine-plugin-redhopper_2.0.0-2_all.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgarcon-gtk3-1-0_4.18.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgarcon-gtk3-1-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.2.4"}
+  "libgarcon-1-0" {>= "0.6.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.9.10"}
+  "libxfce4ui-2-0" {>= "4.15.6"}
+  "libxfce4util7" {>= "4.15.3"}
+]
+extra-source "libgarcon-gtk3-1-0_4.18.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/garcon/libgarcon-gtk3-1-0_4.18.0-1_amd64.deb"
+}

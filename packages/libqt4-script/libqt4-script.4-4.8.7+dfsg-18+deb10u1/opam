@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt4-script_4:4.8.7+dfsg-18+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt4-script"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-4.0"}
+  "libqtcore4" {= "4-4.8.7+dfsg-18+deb10u1"}
+  "libqtdbus4" {= "4-4.8.7+dfsg-18+deb10u1"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libqt4-script_4:4.8.7+dfsg-18+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt4-x11/libqt4-script_4.8.7+dfsg-18+deb10u1_amd64.deb"
+}

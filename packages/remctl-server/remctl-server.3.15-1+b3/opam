@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i remctl-server_3.15-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r remctl-server"]
+]
+depends: [
+  "libc6" {>= "2.26"}
+  "libevent-2-1-6" {>= "2.1.8-stable"}
+  "libgssapi-krb5-2" {>= "1.14+dfsg"}
+  "libkrb5-3" {>= "1.6.dfsg.2"}
+  "libpcre3"
+  "libsystemd0"
+  "netbase" {>= "4.31"}
+  ("update-inetd" | "inet-superserver")
+]
+extra-source "remctl-server_3.15-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/remctl/remctl-server_3.15-1+b3_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i h5utils_1.13.1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r h5utils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libhdf4-0" {>= "4.0.2"}
+  "libhdf5-103"
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libmatheval1" {>= "1.1.3"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "h5utils_1.13.1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/h5utils/h5utils_1.13.1-3+b1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclamav-dev_0.103.10+dfsg-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclamav-dev"]
+]
+depends: [
+  "libbz2-dev"
+  "libclamav9" {= "0.103.10+dfsg-0+deb11u1"}
+  "libidn11-dev"
+  "libssl-dev"
+  "libtommath-dev"
+  "zlib1g-dev"
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "libclamav-dev_0.103.10+dfsg-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clamav/libclamav-dev_0.103.10+dfsg-0+deb11u1_amd64.deb"
+}

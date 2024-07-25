@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librtmp-dev_2.4+20151223.gitfa8646d.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librtmp-dev"]
+]
+depends: [
+  "libgmp-dev"
+  "libgnutls28-dev"
+  "librtmp1" {= "2.4+20151223.gitfa8646d.1-2"}
+  "nettle-dev"
+  "zlib1g-dev"
+]
+extra-source "librtmp-dev_2.4+20151223.gitfa8646d.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rtmpdump/librtmp-dev_2.4+20151223.gitfa8646d.1-2_amd64.deb"
+}

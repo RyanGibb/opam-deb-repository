@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i systemtap_4.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r systemtap"]
+]
+depends: [
+  "libavahi-client3" {>= "0.6.16"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libc6" {>= "2.27"}
+  "libdw1" {>= "0.167"}
+  "libelf1" {>= "0.142"}
+  "libgcc-s1" {>= "3.0"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "9"}
+  "lsb-release"
+  "make"
+  "systemtap-common" {= "4.4-2"}
+  "systemtap-runtime" {= "4.4-2"}
+]
+extra-source "systemtap_4.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/systemtap/systemtap_4.4-2_amd64.deb"
+}

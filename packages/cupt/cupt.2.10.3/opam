@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cupt_2.10.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cupt"]
+]
+depends: [
+  "libboost-program-options1-67-0"
+  "libc6" {>= "2.14"}
+  "libcupt4-2" {>= "2.10.3"}
+  "libgcc1" {>= "1-3.4"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "cupt_2.10.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cupt/cupt_2.10.3_amd64.deb"
+}

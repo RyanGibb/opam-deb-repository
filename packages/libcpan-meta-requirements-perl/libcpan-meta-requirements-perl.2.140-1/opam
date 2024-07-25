@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcpan-meta-requirements-perl_2.140-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcpan-meta-requirements-perl"]
+]
+depends: [
+  "perl"
+  ("perl" {>= "5.13.9"} | "libversion-perl" {>= "1-0.8800"})
+]
+extra-source "libcpan-meta-requirements-perl_2.140-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcpan-meta-requirements-perl/libcpan-meta-requirements-perl_2.140-1_all.deb"
+}

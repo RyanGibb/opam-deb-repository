@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcgi-session-perl_4.48-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcgi-session-perl"]
+]
+depends: [
+  "perl-any"
+  ("libcgi-pm-perl" | "perl" {< "5.19"})
+]
+extra-source "libcgi-session-perl_4.48-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcgi-session-perl/libcgi-session-perl_4.48-4_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libunshield0_1.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libunshield0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "liborange"
+  "libunshield"
+]
+extra-source "libunshield0_1.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unshield/libunshield0_1.4.2-1_amd64.deb"
+}

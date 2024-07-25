@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i g++-mipsisa32r6el-linux-gnu_4:8.3.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r g++-mipsisa32r6el-linux-gnu"]
+]
+depends: [
+  "cpp-mipsisa32r6el-linux-gnu" {= "4-8.3.0-1.1"}
+  "g++-8-mipsisa32r6el-linux-gnu" {>= "8.3.0-1~"}
+  "gcc-mipsisa32r6el-linux-gnu" {= "4-8.3.0-1.1"}
+]
+extra-source "g++-mipsisa32r6el-linux-gnu_4:8.3.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-mipsen/g++-mipsisa32r6el-linux-gnu_8.3.0-1.1_amd64.deb"
+}

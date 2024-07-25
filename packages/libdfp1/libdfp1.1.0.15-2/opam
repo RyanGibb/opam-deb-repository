@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdfp1_1.0.15-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdfp1"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+  "libgcc-s1" {>= "3.0"}
+]
+extra-source "libdfp1_1.0.15-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdfp/libdfp1_1.0.15-2_amd64.deb"
+}

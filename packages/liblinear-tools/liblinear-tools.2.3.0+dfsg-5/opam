@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblinear-tools_2.3.0+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblinear-tools"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "liblinear4" {= "2.3.0+dfsg-5"}
+]
+extra-source "liblinear-tools_2.3.0+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblinear/liblinear-tools_2.3.0+dfsg-5_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhypre-2.15.1_2.15.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhypre-2.15.1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libopenmpi3"
+  "libstdc++6" {>= "5"}
+  "libsuperlu-dist6" {>= "6.1.1+dfsg1"}
+  "libsuperlu5" {>= "5.2.1+dfsg1"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libhypre-2.15.1_2.15.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hypre/libhypre-2.15.1_2.15.1-5_amd64.deb"
+}

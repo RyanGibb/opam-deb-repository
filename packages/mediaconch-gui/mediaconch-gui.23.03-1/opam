@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mediaconch-gui_23.03-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mediaconch-gui"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "libgcc-s1" {>= "3.4"}
+  "libjansson4" {>= "2.14"}
+  "libmediainfo0v5" {>= "0.7.56"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5webkit5" {>= "5.212.0~alpha3"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libsqlite3-0" {>= "3.7.15"}
+  "libstdc++6" {>= "11"}
+  "libxml2" {>= "2.9.0"}
+  "libxslt1-1" {>= "1.1.25"}
+  "libzen0v5" {>= "0.4.31-2~"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "mediaconch-gui_23.03-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mediaconch/mediaconch-gui_23.03-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-readline_2:7.4+76_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-readline"]
+]
+depends: [
+  "php-common"
+  "php7-4-readline"
+]
+extra-source "php-readline_2:7.4+76_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-defaults/php-readline_7.4+76_all.deb"
+}

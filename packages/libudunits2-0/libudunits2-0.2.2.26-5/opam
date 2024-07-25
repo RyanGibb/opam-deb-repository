@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libudunits2-0_2.2.26-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libudunits2-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "libudunits2-data"
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "libudunits2-0_2.2.26-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/udunits/libudunits2-0_2.2.26-5_amd64.deb"
+}

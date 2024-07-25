@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmmsclient++-glib1v5_0.8+dfsg-21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmmsclient++-glib1v5"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libstdc++6" {>= "5"}
+  "libxmmsclient-glib1" {>= "0.6DrMattDestruction"}
+]
+conflicts: [
+  "libxmmsclient++-glib1"
+]
+extra-source "libxmmsclient++-glib1v5_0.8+dfsg-21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmms2/libxmmsclient++-glib1v5_0.8+dfsg-21_amd64.deb"
+}

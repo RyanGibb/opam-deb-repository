@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i spd_1.3.0-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r spd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "spd_1.3.0-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spd/spd_1.3.0-1+b4_amd64.deb"
+}

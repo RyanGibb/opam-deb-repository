@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-glance_17.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-glance"]
+]
+depends: [
+  "puppet"
+  "puppet-module-keystone" {>= "17.4.0"}
+  "puppet-module-openstacklib" {>= "17.4.0"}
+  "puppet-module-oslo" {>= "17.4.0"}
+  "puppet-module-puppetlabs-inifile"
+  "puppet-module-puppetlabs-stdlib"
+  "puppet-module-swift" {>= "17.4.0"}
+]
+extra-source "puppet-module-glance_17.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-glance/puppet-module-glance_17.5.0-1_all.deb"
+}

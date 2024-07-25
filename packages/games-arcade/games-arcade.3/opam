@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i games-arcade_3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r games-arcade"]
+]
+depends: [
+  "games-tasks" {= "3"}
+]
+extra-source "games-arcade_3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-games/games-arcade_3_all.deb"
+}

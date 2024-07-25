@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freeradius-krb5_3.2.1+dfsg-4+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freeradius-krb5"]
+]
+depends: [
+  "freeradius" {= "3.2.1+dfsg-4+deb12u1"}
+  "libc6" {>= "2.4"}
+  "libcom-err2" {>= "1.43.9"}
+  "libkrb5-3" {>= "1.13~alpha1+dfsg"}
+]
+extra-source "freeradius-krb5_3.2.1+dfsg-4+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeradius/freeradius-krb5_3.2.1+dfsg-4+deb12u1_amd64.deb"
+}

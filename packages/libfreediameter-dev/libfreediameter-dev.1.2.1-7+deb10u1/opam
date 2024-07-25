@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfreediameter-dev_1.2.1-7+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfreediameter-dev"]
+]
+depends: [
+  "libfdcore6" {= "1.2.1-7+deb10u1"}
+  "libfdproto6" {= "1.2.1-7+deb10u1"}
+  "libgcrypt20-dev"
+  "libgnutls28-dev"
+  "libidn11-dev"
+  "libsctp-dev"
+]
+extra-source "libfreediameter-dev_1.2.1-7+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freediameter/libfreediameter-dev_1.2.1-7+deb10u1_amd64.deb"
+}

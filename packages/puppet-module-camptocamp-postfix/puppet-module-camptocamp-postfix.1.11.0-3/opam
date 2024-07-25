@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-camptocamp-postfix_1.11.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-camptocamp-postfix"]
+]
+depends: [
+  "puppet"
+  "puppet-module-camptocamp-augeas"
+  "puppet-module-puppetlabs-mailalias-core"
+  "puppet-module-puppetlabs-stdlib"
+  "puppet-module-voxpupuli-alternatives"
+]
+extra-source "puppet-module-camptocamp-postfix_1.11.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-camptocamp-postfix/puppet-module-camptocamp-postfix_1.11.0-3_all.deb"
+}

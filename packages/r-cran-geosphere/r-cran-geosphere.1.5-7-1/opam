@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-geosphere_1.5-7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-geosphere"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+  "r-cran-sp"
+]
+extra-source "r-cran-geosphere_1.5-7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-geosphere/r-cran-geosphere_1.5-7-1_amd64.deb"
+}

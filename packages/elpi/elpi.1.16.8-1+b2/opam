@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpi_1.16.8-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpi"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libelpi-ocaml" {= "1.16.8-1+b2"}
+]
+extra-source "elpi_1.16.8-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elpi/elpi_1.16.8-1+b2_amd64.deb"
+}

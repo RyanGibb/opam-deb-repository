@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-sinatra_3.0.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-sinatra"]
+]
+depends: [
+  "ruby-mustermann" {>= "3.0"}
+  "ruby-rack" {>= "2.2.4"}
+  "ruby-rack-protection" {>= "3.0.5"}
+  "ruby-tilt" {>= "2.0"}
+]
+extra-source "ruby-sinatra_3.0.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-sinatra/ruby-sinatra_3.0.5-3_all.deb"
+}

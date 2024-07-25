@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i capistrano_3.17.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r capistrano"]
+]
+depends: [
+  "rake" {>= "10.0.0"}
+  "ruby"
+  "ruby-airbrussh" {>= "1.0.0"}
+  "ruby-i18n"
+  "ruby-sshkit" {>= "1.9.0"}
+]
+extra-source "capistrano_3.17.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/capistrano/capistrano_3.17.2-1_all.deb"
+}

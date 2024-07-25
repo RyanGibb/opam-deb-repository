@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgeocode-glib-dev_3.26.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgeocode-glib-dev"]
+]
+depends: [
+  "gir1-2-geocodeglib-1-0" {= "3.26.2-2"}
+  "libgeocode-glib0" {= "3.26.2-2"}
+  "libglib2-0-dev"
+]
+extra-source "libgeocode-glib-dev_3.26.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/geocode-glib/libgeocode-glib-dev_3.26.2-2_amd64.deb"
+}

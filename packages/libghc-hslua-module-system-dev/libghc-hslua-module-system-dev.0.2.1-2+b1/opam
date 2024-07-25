@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hslua-module-system-dev_0.2.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hslua-module-system-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-exceptions-dev"
+  "libghc-hslua-dev"
+  "libghc-temporary-dev"
+  "libgmp10"
+]
+extra-source "libghc-hslua-module-system-dev_0.2.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hslua-module-system/libghc-hslua-module-system-dev_0.2.1-2+b1_amd64.deb"
+}

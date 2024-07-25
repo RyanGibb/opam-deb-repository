@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcompiler-lexer-perl_0.23-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcompiler-lexer-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libcompiler-lexer-perl_0.23-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcompiler-lexer-perl/libcompiler-lexer-perl_0.23-3+b1_amd64.deb"
+}

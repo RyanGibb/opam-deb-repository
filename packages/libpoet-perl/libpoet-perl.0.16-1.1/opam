@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpoet-perl_0.16-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpoet-perl"]
+]
+depends: [
+  "libcapture-tiny-perl"
+  "libchi-perl"
+  "libclass-load-perl"
+  "libdata-rmap-perl"
+  "libfile-sharedir-install-perl" {>= "0.06"}
+  "libfile-sharedir-perl"
+  "libfile-slurp-perl"
+  "libguard-perl"
+  "libjson-xs-perl"
+  "libmason-perl"
+  "libmason-plugin-cache-perl"
+  "libmason-plugin-htmlfilters-perl"
+  "libmason-plugin-routersimple-perl"
+  "libmasonx-processdir-perl"
+  "libmethod-signatures-simple-perl"
+  "libmoose-perl" {>= "1.15"}
+  "libmoosex-app-cmd-perl"
+  "libmoosex-getopt-perl"
+  "libmoosex-hasdefaults-perl"
+  "libmoosex-strictconstructor-perl"
+  "libplack-middleware-debug-perl"
+  "libplack-middleware-session-perl"
+  "libplack-perl"
+  "libtry-tiny-perl"
+  "liburi-perl"
+  "libyaml-libyaml-perl"
+  "perl-any"
+  ("liblog-any-perl" {>= "1.00"} | "liblog-any-adapter-perl")
+]
+extra-source "libpoet-perl_0.16-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpoet-perl/libpoet-perl_0.16-1.1_all.deb"
+}

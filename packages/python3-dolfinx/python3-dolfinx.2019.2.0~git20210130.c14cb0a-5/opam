@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-dolfinx_2019.2.0~git20210130.c14cb0a-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-dolfinx"]
+]
+depends: [
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  ("python3-dolfinx-real" | "python3-dolfinx-complex")
+]
+extra-source "python3-dolfinx_2019.2.0~git20210130.c14cb0a-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dolfinx/python3-dolfinx_2019.2.0~git20210130.c14cb0a-5_amd64.deb"
+}

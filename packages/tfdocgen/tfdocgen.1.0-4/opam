@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tfdocgen_1.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tfdocgen"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.12.0"}
+]
+extra-source "tfdocgen_1.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tfdocgen/tfdocgen_1.0-4_amd64.deb"
+}

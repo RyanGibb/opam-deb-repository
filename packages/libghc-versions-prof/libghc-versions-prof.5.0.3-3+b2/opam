@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-versions-prof_5.0.3-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-versions-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hashable-prof"
+  "libghc-megaparsec-prof"
+  "libghc-parser-combinators-prof"
+  "libghc-versions-dev" {= "5.0.3-3+b2"}
+]
+extra-source "libghc-versions-prof_5.0.3-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-versions/libghc-versions-prof_5.0.3-3+b2_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pppoeconf_1.21+nmu3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pppoeconf"]
+]
+depends: [
+  "gettext-base" {>= "0.13"}
+  "ifupdown" {>= "0.7.44~"}
+  "iproute2"
+  "ppp" {>= "2.4.1.uus2-4"}
+  "sed" {>= "3.95"}
+  ("ppp" {>= "2.4.2+20040428-2"} | "pppoe" {>= "3.0"})
+  ("whiptail-provider" | "whiptail")
+]
+extra-source "pppoeconf_1.21+nmu3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pppoeconf/pppoeconf_1.21+nmu3_all.deb"
+}

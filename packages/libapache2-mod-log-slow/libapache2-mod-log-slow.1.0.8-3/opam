@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-log-slow_1.0.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-log-slow"]
+]
+depends: [
+  "apache2-bin"
+  "libc6" {>= "2.14"}
+]
+extra-source "libapache2-mod-log-slow_1.0.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapache2-mod-log-slow/libapache2-mod-log-slow_1.0.8-3_amd64.deb"
+}

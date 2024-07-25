@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-web-routes-happstack-prof_0.23.12-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-web-routes-happstack-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-happstack-server-prof"
+  "libghc-web-routes-happstack-dev" {= "0.23.12-1+b2"}
+  "libghc-web-routes-prof"
+]
+extra-source "libghc-web-routes-happstack-prof_0.23.12-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-web-routes-happstack/libghc-web-routes-happstack-prof_0.23.12-1+b2_amd64.deb"
+}

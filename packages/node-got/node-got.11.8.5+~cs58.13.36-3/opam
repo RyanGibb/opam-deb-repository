@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-got_11.8.5+~cs58.13.36-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-got"]
+]
+depends: [
+  "node-decompress-response"
+  "node-get-stream"
+  "node-json-buffer"
+  "node-lowercase-keys"
+  "node-mimic-response"
+  "node-p-cancelable" {>= "2.0.0~"}
+  "node-quick-lru"
+]
+extra-source "node-got_11.8.5+~cs58.13.36-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-got/node-got_11.8.5+~cs58.13.36-3_all.deb"
+}

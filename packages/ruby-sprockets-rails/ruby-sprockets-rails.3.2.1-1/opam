@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-sprockets-rails_3.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-sprockets-rails"]
+]
+depends: [
+  "ruby-actionpack" {>= "2-3.0"}
+  "ruby-activesupport" {>= "2-3.0"}
+  "ruby-sprockets" {< "4.0"}
+  "ruby-sprockets" {>= "2.8"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-sprockets-rails_3.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-sprockets-rails/ruby-sprockets-rails_3.2.1-1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-sequel_5.41.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-sequel"]
+]
+depends: [
+  "ruby-json"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-sequel_5.41.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-sequel/ruby-sequel_5.41.0-1_all.deb"
+}

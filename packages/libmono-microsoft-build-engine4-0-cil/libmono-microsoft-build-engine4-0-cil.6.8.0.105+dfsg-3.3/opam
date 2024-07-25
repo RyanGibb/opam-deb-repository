@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmono-microsoft-build-engine4.0-cil_6.8.0.105+dfsg-3.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmono-microsoft-build-engine4.0-cil"]
+]
+depends: [
+  "libmono-corlib4-5-cil" {>= "5.18.0.240"}
+  "libmono-microsoft-build-framework4-0-cil" {>= "3.6.0"}
+  "libmono-microsoft-build-utilities-v4-0-4-0-cil" {>= "5.12.0.309"}
+  "libmono-system-core4-0-cil" {>= "5.18.0.240"}
+  "libmono-system-xml4-0-cil" {>= "4.6.1.3"}
+  "libmono-system4-0-cil" {>= "5.18.0.240"}
+  ("libc6" {>= "2.36"} | "libc6-1" {>= "2.36"} | "libc0-1" {>= "2.36"})
+]
+extra-source "libmono-microsoft-build-engine4.0-cil_6.8.0.105+dfsg-3.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mono/libmono-microsoft-build-engine4.0-cil_6.8.0.105+dfsg-3.3_all.deb"
+}

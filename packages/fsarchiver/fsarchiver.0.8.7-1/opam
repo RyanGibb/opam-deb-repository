@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fsarchiver_0.8.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fsarchiver"]
+]
+depends: [
+  "libblkid1" {>= "2.16"}
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libext2fs2" {>= "1.37"}
+  "libgcrypt20" {>= "1.10.0"}
+  "liblz4-1" {>= "0.0~r130"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "liblzo2-2" {>= "2.02"}
+  "libuuid1" {>= "2.16"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "fsarchiver_0.8.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fsarchiver/fsarchiver_0.8.7-1_amd64.deb"
+}

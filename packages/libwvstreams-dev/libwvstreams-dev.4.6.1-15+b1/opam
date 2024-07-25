@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwvstreams-dev_4.6.1-15+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwvstreams-dev"]
+]
+depends: [
+  "libuniconf4-6" {= "4.6.1-15+b1"}
+  "libwvstreams4-6-base" {= "4.6.1-15+b1"}
+  "libwvstreams4-6-extras" {= "4.6.1-15+b1"}
+  "libxplc0-3-13-dev"
+]
+extra-source "libwvstreams-dev_4.6.1-15+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wvstreams/libwvstreams-dev_4.6.1-15+b1_amd64.deb"
+}

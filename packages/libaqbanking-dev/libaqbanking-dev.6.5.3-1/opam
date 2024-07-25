@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaqbanking-dev_6.5.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaqbanking-dev"]
+]
+depends: [
+  "libaqbanking44" {= "6.5.3-1"}
+  "libgwenhywfar-core-dev"
+]
+extra-source "libaqbanking-dev_6.5.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaqbanking/libaqbanking-dev_6.5.3-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qbs-dev_1.24.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qbs-dev"]
+]
+depends: [
+  "libqbscore1-24" {= "1.24.1+dfsg-2"}
+  "libqbsscriptengine1-24" {= "1.24.1+dfsg-2"}
+]
+extra-source "qbs-dev_1.24.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qbs/qbs-dev_1.24.1+dfsg-2_amd64.deb"
+}

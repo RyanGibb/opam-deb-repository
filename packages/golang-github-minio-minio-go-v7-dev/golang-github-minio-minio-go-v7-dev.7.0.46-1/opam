@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-minio-minio-go-v7-dev_7.0.46-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-minio-minio-go-v7-dev"]
+]
+depends: [
+  "golang-github-dustin-go-humanize-dev"
+  "golang-github-google-uuid-dev"
+  "golang-github-json-iterator-go-dev"
+  "golang-github-klauspost-compress-dev"
+  "golang-github-minio-md5-simd-dev" {>= "1.1.2"}
+  "golang-github-minio-sha256-simd-dev" {>= "1.0.0"}
+  "golang-github-rs-xid-dev" {>= "1.4.0"}
+  "golang-github-sirupsen-logrus-dev"
+  "golang-golang-x-crypto-dev"
+  "golang-golang-x-net-dev"
+  "golang-gopkg-ini-v1-dev"
+]
+extra-source "golang-github-minio-minio-go-v7-dev_7.0.46-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-minio-minio-go-v7/golang-github-minio-minio-go-v7-dev_7.0.46-1_all.deb"
+}

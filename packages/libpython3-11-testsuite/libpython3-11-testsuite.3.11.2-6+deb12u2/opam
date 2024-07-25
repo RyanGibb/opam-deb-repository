@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpython3.11-testsuite_3.11.2-6+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpython3.11-testsuite"]
+]
+depends: [
+  "net-tools"
+  "python3-11" {>= "3.11.2-6+deb12u2"}
+]
+extra-source "libpython3.11-testsuite_3.11.2-6+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python3.11/libpython3.11-testsuite_3.11.2-6+deb12u2_all.deb"
+}

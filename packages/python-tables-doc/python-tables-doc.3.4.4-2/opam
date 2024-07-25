@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-tables-doc_3.4.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-tables-doc"]
+]
+depends: [
+  "libjs-jquery-cookie"
+  "libjs-mathjax"
+  "libjs-sphinxdoc" {>= "1.0"}
+  "sphinx-rtd-theme-common" {>= "0.4.2+dfsg"}
+]
+extra-source "python-tables-doc_3.4.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pytables/python-tables-doc_3.4.4-2_all.deb"
+}

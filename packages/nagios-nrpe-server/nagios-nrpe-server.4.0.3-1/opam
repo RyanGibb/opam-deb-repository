@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nagios-nrpe-server_4.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nagios-nrpe-server"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libssl1-1" {>= "1.1.0"}
+  "libwrap0" {>= "7.6-4~"}
+  "lsb-base"
+]
+conflicts: [
+  "nagios-nrpe-doc"
+]
+extra-source "nagios-nrpe-server_4.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nagios-nrpe/nagios-nrpe-server_4.0.3-1_amd64.deb"
+}

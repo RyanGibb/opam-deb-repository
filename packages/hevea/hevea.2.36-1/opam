@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hevea_2.36-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hevea"]
+]
+depends: [
+  "ghostscript"
+  "imagemagick"
+  "libc6" {>= "2.34"}
+  "netpbm" {>= "2-9.10-1"}
+  "tex-common" {>= "6.13"}
+  "texlive-base"
+]
+extra-source "hevea_2.36-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hevea/hevea_2.36-1_amd64.deb"
+}

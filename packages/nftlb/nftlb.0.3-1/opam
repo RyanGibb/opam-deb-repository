@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nftlb_0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nftlb"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libev4" {>= "1-4.04"}
+  "libjansson4" {>= "2.3"}
+  "libmnl0" {>= "1.0.3-4~"}
+  "libnftables0"
+]
+extra-source "nftlb_0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nftlb/nftlb_0.3-1_amd64.deb"
+}

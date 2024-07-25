@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i h5utils_1.13.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r h5utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libhdf4-0" {>= "4.0.2"}
+  "libhdf5-103-1"
+  "libpng16-16" {>= "1.6.2-1"}
+]
+extra-source "h5utils_1.13.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/h5utils/h5utils_1.13.2-1_amd64.deb"
+}

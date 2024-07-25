@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libproxy-tools_0.4.15-5+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libproxy-tools"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libproxy1v5" {>= "0.4.14"}
+]
+extra-source "libproxy-tools_0.4.15-5+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libproxy/libproxy-tools_0.4.15-5+deb10u1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmemcached-tools_1.0.18-4.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmemcached-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libmemcached11"
+  "libmemcachedutil2"
+  "libstdc++6" {>= "4.4.0"}
+]
+extra-source "libmemcached-tools_1.0.18-4.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmemcached/libmemcached-tools_1.0.18-4.2_amd64.deb"
+}

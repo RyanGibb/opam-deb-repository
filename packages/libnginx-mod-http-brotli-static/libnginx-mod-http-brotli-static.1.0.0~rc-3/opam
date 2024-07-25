@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnginx-mod-http-brotli-static_1.0.0~rc-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnginx-mod-http-brotli-static"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "nginx"
+]
+extra-source "libnginx-mod-http-brotli-static_1.0.0~rc-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnginx-mod-http-brotli/libnginx-mod-http-brotli-static_1.0.0~rc-3_amd64.deb"
+}

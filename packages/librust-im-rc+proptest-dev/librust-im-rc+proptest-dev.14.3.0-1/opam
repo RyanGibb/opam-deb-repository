@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-im-rc+proptest-dev_14.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-im-rc+proptest-dev"]
+]
+depends: [
+  "librust-im-rc-dev" {= "14.3.0-1"}
+  "librust-proptest-0-9+default-dev"
+]
+extra-source "librust-im-rc+proptest-dev_14.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-im-rc/librust-im-rc+proptest-dev_14.3.0-1_amd64.deb"
+}

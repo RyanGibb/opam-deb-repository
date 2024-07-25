@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gmime-bin_3.2.13+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gmime-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.68~"}
+  "libgmime-3-0-0" {= "3.2.13+dfsg-2"}
+]
+extra-source "gmime-bin_3.2.13+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gmime/gmime-bin_3.2.13+dfsg-2_amd64.deb"
+}

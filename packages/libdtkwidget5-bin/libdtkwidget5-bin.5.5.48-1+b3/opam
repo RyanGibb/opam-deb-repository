@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdtkwidget5-bin_5.5.48-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdtkwidget5-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdtkcore-dev" {>= "5.5.17"}
+  "libdtkgui5" {>= "5.5.25~"}
+  "libdtkwidget5" {= "5.5.48-1+b3"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5svg5-dev"
+  "libqt5x11extras5-dev"
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "libdtkwidget5-bin_5.5.48-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dtkwidget/libdtkwidget5-bin_5.5.48-1+b3_amd64.deb"
+}

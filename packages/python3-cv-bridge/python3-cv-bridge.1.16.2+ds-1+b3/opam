@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-cv-bridge_1.16.2+ds-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-cv-bridge"]
+]
+depends: [
+  "libboost-python1-74-0"
+  "libboost-python1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libcv-bridge2d" {>= "1.16.2+ds"}
+  "libgcc-s1" {>= "3.0"}
+  "libopencv-core406" {>= "4.6.0+dfsg"}
+  "libpython3-11" {>= "3.11.0"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-genpy"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-opencv"
+  "python3-sensor-msgs"
+  "python3-std-msgs"
+]
+extra-source "python3-cv-bridge_1.16.2+ds-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-vision-opencv/python3-cv-bridge_1.16.2+ds-1+b3_amd64.deb"
+}

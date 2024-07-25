@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5core5a_5.15.8+dfsg-11+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5core5a"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libdouble-conversion3" {>= "2.0.0"}
+  "libgcc-s1" {>= "3.4"}
+  "libglib2-0-0" {>= "2.22.0"}
+  "libicu72" {>= "72.1~rc-1~"}
+  "libpcre2-16-0" {>= "10.22"}
+  "libstdc++6" {>= "11"}
+  "libzstd1" {>= "1.5.2"}
+  "shared-mime-info"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libqt5core5a_5.15.8+dfsg-11+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtbase-opensource-src/libqt5core5a_5.15.8+dfsg-11+deb12u2_amd64.deb"
+}

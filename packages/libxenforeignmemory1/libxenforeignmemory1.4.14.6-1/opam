@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxenforeignmemory1_4.14.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxenforeignmemory1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libxentoolcore1"
+  "libxentoollog1"
+]
+extra-source "libxenforeignmemory1_4.14.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xen/libxenforeignmemory1_4.14.6-1_amd64.deb"
+}

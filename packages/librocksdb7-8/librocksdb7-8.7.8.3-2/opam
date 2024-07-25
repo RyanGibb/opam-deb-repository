@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librocksdb7.8_7.8.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librocksdb7.8"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.4"}
+  "libgflags2-2" {>= "2.2.2"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libsnappy1v5" {>= "1.1.9"}
+  "libstdc++6" {>= "12"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "librocksdb7.8_7.8.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rocksdb/librocksdb7.8_7.8.3-2_amd64.deb"
+}

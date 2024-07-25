@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libflickcurl0-dbg_1.26-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libflickcurl0-dbg"]
+]
+depends: [
+  "flickcurl-utils" {= "1.26-7+b1"}
+  "libflickcurl0" {= "1.26-7+b1"}
+]
+extra-source "libflickcurl0-dbg_1.26-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flickcurl/libflickcurl0-dbg_1.26-7+b1_amd64.deb"
+}

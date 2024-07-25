@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-common_2:76_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-common"]
+]
+depends: [
+  "psmisc" {>= "22.15-1~"}
+  "sed" {>= "4.1.1-1"}
+]
+extra-source "php-common_2:76_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-defaults/php-common_76_all.deb"
+}

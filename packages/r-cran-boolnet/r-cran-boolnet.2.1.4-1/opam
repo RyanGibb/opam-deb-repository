@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-boolnet_2.1.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-boolnet"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.0-5"}
+  "r-cran-igraph" {>= "0.6"}
+  "r-cran-xml"
+]
+extra-source "r-cran-boolnet_2.1.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-boolnet/r-cran-boolnet_2.1.4-1_amd64.deb"
+}

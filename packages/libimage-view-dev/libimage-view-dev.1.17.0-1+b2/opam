@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libimage-view-dev_1.17.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libimage-view-dev"]
+]
+depends: [
+  "libcamera-calibration-parsers-dev"
+  "libcv-bridge-dev" {>= "1.15.0+ds-8~"}
+  "libdynamic-reconfigure-config-init-mutex-dev"
+  "libimage-transport-dev"
+  "libimage-view0d" {= "1.17.0-1+b2"}
+  "libmessage-filters-dev"
+  "libnodelet-dev"
+  "libsensor-msgs-dev"
+  "libstd-srvs-dev"
+  "libstereo-msgs-dev"
+]
+extra-source "libimage-view-dev_1.17.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-image-pipeline/libimage-view-dev_1.17.0-1+b2_amd64.deb"
+}

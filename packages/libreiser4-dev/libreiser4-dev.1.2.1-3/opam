@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreiser4-dev_1.2.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreiser4-dev"]
+]
+depends: [
+  "libaal-dev" {>= "1.0.7"}
+  "uuid-dev"
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "libreiser4-dev_1.2.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/reiser4progs/libreiser4-dev_1.2.1-3_amd64.deb"
+}

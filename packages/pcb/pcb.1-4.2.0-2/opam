@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcb_1:4.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcb"]
+]
+depends: [
+  "pcb-common"
+  ("pcb-gtk" | "pcb-lesstif")
+]
+extra-source "pcb_1:4.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcb/pcb_4.2.0-2_all.deb"
+}

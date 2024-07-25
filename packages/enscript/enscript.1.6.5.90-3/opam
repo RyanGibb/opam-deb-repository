@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i enscript_1.6.5.90-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r enscript"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpaper1"
+  "perl"
+]
+extra-source "enscript_1.6.5.90-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/enscript/enscript_1.6.5.90-3_amd64.deb"
+}

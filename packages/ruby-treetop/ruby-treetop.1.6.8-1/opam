@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-treetop_1.6.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-treetop"]
+]
+depends: [
+  "ruby-i18n"
+  "ruby-polyglot" {>= "0.3"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-treetop_1.6.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-treetop/ruby-treetop_1.6.8-1_all.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-goocalendar_0.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-goocalendar"]
+]
+depends: [
+  "gir1-2-goocanvas-2-0"
+  "gir1-2-gtk-3-0"
+  "libcanberra-gtk3-module"
+  "libjs-sphinxdoc" {>= "1.0"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-gi"
+  "python-pkg-resources"
+]
+extra-source "python-goocalendar_0.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/goocalendar/python-goocalendar_0.4-2_all.deb"
+}

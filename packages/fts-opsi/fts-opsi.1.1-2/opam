@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fts-opsi_1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fts-opsi"]
+]
+depends: [
+  "fts"
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-ldap"
+]
+extra-source "fts-opsi_1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fts/fts-opsi_1.1-2_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpoe-component-client-http-perl_0.949-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpoe-component-client-http-perl"]
+]
+depends: [
+  "libnet-ssleay-perl"
+  "libpoe-component-client-keepalive-perl"
+  "libpoe-perl"
+  "liburi-perl"
+  "libwww-perl"
+  "perl"
+  ("perl" {>= "5.16.0"} | "libsocket-perl")
+]
+extra-source "libpoe-component-client-http-perl_0.949-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpoe-component-client-http-perl/libpoe-component-client-http-perl_0.949-2_all.deb"
+}

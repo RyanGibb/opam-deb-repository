@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstdc++-10-pic_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstdc++-10-pic"]
+]
+depends: [
+  "gcc-10-base" {= "10.2.1-6"}
+  "libstdc++-10-dev" {= "10.2.1-6"}
+  "libstdc++6" {>= "10.2.1-6"}
+]
+extra-source "libstdc++-10-pic_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/libstdc++-10-pic_10.2.1-6_amd64.deb"
+}

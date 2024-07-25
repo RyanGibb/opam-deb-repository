@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guix_1.4.0-3+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guix"]
+]
+depends: [
+  "guile-3-0"
+  "guile-3-0-libs"
+  "guile-gcrypt" {>= "0.4.0"}
+  "guile-git" {>= "0.5.1"}
+  "guile-gnutls" {>= "3.7.2-3~"}
+  "guile-json" {>= "4.7"}
+  "guile-lzlib"
+  "guile-sqlite3" {>= "0.1.3-2~"}
+  "guile-ssh" {>= "0.16.0"}
+  "guile-zlib" {>= "0.1.0"}
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libssh-dev"
+  "libstdc++6" {>= "11"}
+  "zlib1g" {>= "1-1.2.6"}
+]
+extra-source "guix_1.4.0-3+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guix/guix_1.4.0-3+deb12u1_amd64.deb"
+}

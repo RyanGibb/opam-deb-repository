@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i initscripts_3.06-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r initscripts"]
+]
+depends: [
+  "sysvinit-utils" {>= "3.05-1"}
+  ("sysv-rc" | "file-rc" | "openrc")
+]
+extra-source "initscripts_3.06-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sysvinit/initscripts_3.06-4_all.deb"
+}

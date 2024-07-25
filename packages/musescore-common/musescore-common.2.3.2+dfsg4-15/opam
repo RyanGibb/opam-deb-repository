@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i musescore-common_2.3.2+dfsg4-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r musescore-common"]
+]
+depends: [
+  ("musescore-general-soundfont-small" | "musescore-compatible-soundfont")
+]
+extra-source "musescore-common_2.3.2+dfsg4-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/musescore2/musescore-common_2.3.2+dfsg4-15_all.deb"
+}

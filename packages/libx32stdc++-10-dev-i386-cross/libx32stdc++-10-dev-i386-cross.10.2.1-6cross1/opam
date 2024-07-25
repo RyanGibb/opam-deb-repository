@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libx32stdc++-10-dev-i386-cross_10.2.1-6cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libx32stdc++-10-dev-i386-cross"]
+]
+depends: [
+  "gcc-10-cross-base" {>= "10.2.1-6"}
+  "libstdc++-10-dev-i386-cross" {= "10.2.1-6cross1"}
+  "libx32gcc-10-dev-i386-cross" {= "10.2.1-6cross1"}
+  "libx32stdc++6-i386-cross" {>= "10.2.1-6cross1"}
+]
+extra-source "libx32stdc++-10-dev-i386-cross_10.2.1-6cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10-cross/libx32stdc++-10-dev-i386-cross_10.2.1-6cross1_all.deb"
+}

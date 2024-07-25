@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-url+rustc-serialize-dev_1.7.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-url+rustc-serialize-dev"]
+]
+depends: [
+  "librust-rustc-serialize-0-3+default-dev"
+  "librust-url-dev" {= "1.7.2-1"}
+]
+extra-source "librust-url+rustc-serialize-dev_1.7.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-url/librust-url+rustc-serialize-dev_1.7.2-1_amd64.deb"
+}

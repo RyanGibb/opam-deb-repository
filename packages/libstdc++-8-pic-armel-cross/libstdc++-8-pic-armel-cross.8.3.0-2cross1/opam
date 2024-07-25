@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstdc++-8-pic-armel-cross_8.3.0-2cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstdc++-8-pic-armel-cross"]
+]
+depends: [
+  "gcc-8-cross-base" {>= "8.3.0-2"}
+  "libstdc++-8-dev-armel-cross" {= "8.3.0-2cross1"}
+  "libstdc++6-armel-cross" {>= "8.3.0-2cross1"}
+]
+extra-source "libstdc++-8-pic-armel-cross_8.3.0-2cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross/libstdc++-8-pic-armel-cross_8.3.0-2cross1_all.deb"
+}

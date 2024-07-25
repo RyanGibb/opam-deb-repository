@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcl-surface1.11_1.11.1+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcl-surface1.11"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "6"}
+  "libpcl-common1-11" {>= "1.11.1+dfsg"}
+  "libpcl-kdtree1-11" {>= "1.11.1+dfsg"}
+  "libpcl-octree1-11" {>= "1.11.1+dfsg"}
+  "libpcl-search1-11" {>= "1.11.1+dfsg"}
+  "libqhull8-0" {>= "2020.1"}
+  "libstdc++6" {>= "9"}
+  "libvtk7-1p"
+]
+extra-source "libpcl-surface1.11_1.11.1+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcl/libpcl-surface1.11_1.11.1+dfsg-1+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcoarrays-openmpi-dev_2.4.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcoarrays-openmpi-dev"]
+]
+depends: [
+  "gfortran" {>= "6.1-1"}
+  "libcaf-openmpi-3" {= "2.4.0-2"}
+  "libcoarrays-dev"
+  "openmpi-bin"
+]
+extra-source "libcoarrays-openmpi-dev_2.4.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/open-coarrays/libcoarrays-openmpi-dev_2.4.0-2_amd64.deb"
+}

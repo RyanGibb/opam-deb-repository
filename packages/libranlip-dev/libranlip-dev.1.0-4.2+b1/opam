@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libranlip-dev_1.0-4.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libranlip-dev"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc-s1"
+  "libranlip1c2" {= "1.0-4.2+b1"}
+  "libstdc++6" {>= "5"}
+  "libtnt-dev"
+]
+extra-source "libranlip-dev_1.0-4.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libranlip/libranlip-dev_1.0-4.2+b1_amd64.deb"
+}

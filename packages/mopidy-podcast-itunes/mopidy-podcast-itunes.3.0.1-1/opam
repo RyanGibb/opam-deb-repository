@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mopidy-podcast-itunes_3.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mopidy-podcast-itunes"]
+]
+depends: [
+  "mopidy" {>= "3.0.0"}
+  "mopidy-podcast" {>= "3.0.0"}
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-pykka" {>= "2.0.1"}
+  "python3-requests"
+]
+extra-source "mopidy-podcast-itunes_3.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mopidy-podcast-itunes/mopidy-podcast-itunes_3.0.1-1_all.deb"
+}

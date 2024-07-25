@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfftw3-3_3.3.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfftw3-3"]
+]
+depends: [
+  "libfftw3-double3" {= "3.3.8-2"}
+  "libfftw3-long3" {= "3.3.8-2"}
+  "libfftw3-single3" {= "3.3.8-2"}
+]
+conflicts: [
+  "fftw3"
+]
+extra-source "libfftw3-3_3.3.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fftw3/libfftw3-3_3.3.8-2_amd64.deb"
+}

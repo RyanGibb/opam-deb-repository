@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-fpdf_3:1.8.4.dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-fpdf"]
+]
+depends: [
+  ("php" | "php-cli" | "php-common" | "php7-4" | "php7-4-cli")
+]
+extra-source "php-fpdf_3:1.8.4.dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-fpdf/php-fpdf_1.8.4.dfsg-1_all.deb"
+}

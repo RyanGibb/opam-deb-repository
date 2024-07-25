@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-phpdocumentor-type-resolver_1.6.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-phpdocumentor-type-resolver"]
+]
+depends: [
+  "php-common"
+  "php-phpdocumentor-reflection-common" {< "3~~"}
+  "php-phpdocumentor-reflection-common" {>= "2.0"}
+]
+extra-source "php-phpdocumentor-type-resolver_1.6.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-phpdocumentor-type-resolver/php-phpdocumentor-type-resolver_1.6.2-1_all.deb"
+}

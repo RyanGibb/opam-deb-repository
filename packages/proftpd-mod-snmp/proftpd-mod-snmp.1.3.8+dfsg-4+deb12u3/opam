@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i proftpd-mod-snmp_1.3.8+dfsg-4+deb12u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r proftpd-mod-snmp"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "proftpd-core" {= "1.3.8+dfsg-4+deb12u3"}
+]
+extra-source "proftpd-mod-snmp_1.3.8+dfsg-4+deb12u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/proftpd-dfsg/proftpd-mod-snmp_1.3.8+dfsg-4+deb12u3_amd64.deb"
+}

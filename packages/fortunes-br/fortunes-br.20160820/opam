@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fortunes-br_20160820_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fortunes-br"]
+]
+depends: [
+  "fortune-mod" {>= "9708-12"}
+]
+extra-source "fortunes-br_20160820_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fortunes-br/fortunes-br_20160820_all.deb"
+}

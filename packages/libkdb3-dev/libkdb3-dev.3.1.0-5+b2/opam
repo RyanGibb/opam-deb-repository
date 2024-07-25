@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkdb3-dev_3.1.0-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkdb3-dev"]
+]
+depends: [
+  "libkdb3-4" {= "3.1.0-5+b2"}
+  "libkf5coreaddons-dev" {>= "5.16.0"}
+  "qtbase5-dev" {>= "5.4.0"}
+]
+extra-source "libkdb3-dev_3.1.0-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdb/libkdb3-dev_3.1.0-5+b2_amd64.deb"
+}

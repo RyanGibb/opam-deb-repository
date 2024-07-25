@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i f2fs-tools_1.11.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r f2fs-tools"]
+]
+depends: [
+  "libblkid1" {>= "2.17.2"}
+  "libc6" {>= "2.14"}
+  "libf2fs-format4" {= "1.11.0-1.1"}
+  "libf2fs5" {= "1.11.0-1.1"}
+  "libselinux1" {>= "2.0.65"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "f2fs-tools_1.11.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/f2fs-tools/f2fs-tools_1.11.0-1.1_amd64.deb"
+}

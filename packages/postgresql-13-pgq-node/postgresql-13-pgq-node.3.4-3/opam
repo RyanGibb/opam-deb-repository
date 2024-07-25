@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-13-pgq-node_3.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-13-pgq-node"]
+]
+depends: [
+  "postgresql-13"
+  "postgresql-13-pgq3"
+]
+extra-source "postgresql-13-pgq-node_3.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pgq-node/postgresql-13-pgq-node_3.4-3_all.deb"
+}

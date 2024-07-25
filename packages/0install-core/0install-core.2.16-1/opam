@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i 0install-core_2.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r 0install-core"]
+]
+depends: [
+  "adduser"
+  "bzip2"
+  "ca-certificates"
+  "gnupg"
+  "libc6" {>= "2.29"}
+  "libcurl3-gnutls" {>= "7.56.1"}
+  "libev4" {>= "1-4.04"}
+  "xdg-utils"
+]
+extra-source "0install-core_2.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zeroinstall-injector/0install-core_2.16-1_amd64.deb"
+}

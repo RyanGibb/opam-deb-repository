@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i minetest-mod-unifieddyes_20210420.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r minetest-mod-unifieddyes"]
+]
+depends: [
+  "minetest-mod-basic-materials"
+  ("minetest" | "minetest-server")
+]
+extra-source "minetest-mod-unifieddyes_20210420.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/minetest-mod-unifieddyes/minetest-mod-unifieddyes_20210420.1-2_all.deb"
+}

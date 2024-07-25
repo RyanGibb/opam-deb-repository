@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopensurgsim-dev_0.7.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopensurgsim-dev"]
+]
+depends: [
+  "libboost-chrono-dev"
+  "libboost-date-time-dev"
+  "libboost-filesystem-dev"
+  "libboost-system-dev"
+  "libboost-thread-dev"
+  "libeigen3-dev"
+  "libopenscenegraph-dev"
+  "libopensurgsim" {= "0.7.0-8"}
+  "libyaml-cpp-dev"
+]
+extra-source "libopensurgsim-dev_0.7.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opensurgsim/libopensurgsim-dev_0.7.0-8_amd64.deb"
+}

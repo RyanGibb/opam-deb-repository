@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dhcp-helper_1.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dhcp-helper"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "netbase"
+]
+conflicts: [
+  "dhcp3-relay"
+  "dhcp3-server"
+  "isc-dhcp-relay"
+  "isc-dhcp-server"
+  "udhcpd"
+]
+extra-source "dhcp-helper_1.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dhcp-helper/dhcp-helper_1.2-1+b1_amd64.deb"
+}

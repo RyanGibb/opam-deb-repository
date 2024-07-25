@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rhythmbox_3.4.4-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rhythmbox"]
+]
+depends: [
+  "dbus"
+  "gstreamer1-0-plugins-base" {>= "1.4.0"}
+  "gstreamer1-0-plugins-good" {>= "1.4.0"}
+  "gstreamer1-0-x"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.38.0"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.4.0"}
+  "libgstreamer1-0-0" {>= "1.4.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libpeas-1-0-0" {>= "1.0.0"}
+  "librhythmbox-core10" {= "3.4.4-4"}
+  "libx11-6"
+  "media-player-info"
+  "rhythmbox-data" {>= "3.4.4-4"}
+]
+extra-source "rhythmbox_3.4.4-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rhythmbox/rhythmbox_3.4.4-4_amd64.deb"
+}

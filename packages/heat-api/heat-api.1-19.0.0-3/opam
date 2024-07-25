@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i heat-api_1:19.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r heat-api"]
+]
+depends: [
+  "adduser"
+  "heat-common" {= "1-19.0.0-3"}
+  "python3-any"
+  "python3-pastescript"
+  "uwsgi-plugin-python3"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "heat-api_1:19.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heat/heat-api_19.0.0-3_all.deb"
+}

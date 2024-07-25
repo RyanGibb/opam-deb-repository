@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tipa_2:1.3-21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tipa"]
+]
+depends: [
+  "tex-common" {>= "6.13"}
+  "texlive-binaries"
+  "texlive-latex-base"
+]
+conflicts: [
+  "tipa-type1"
+]
+extra-source "tipa_2:1.3-21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tipa/tipa_1.3-21_all.deb"
+}

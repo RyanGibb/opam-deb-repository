@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nyquist_3.12+ds-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nyquist"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "liblo7" {>= "0.26~repack"}
+  "libportaudio2" {>= "19+svn20101113"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "nyquist_3.12+ds-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nyquist/nyquist_3.12+ds-4_amd64.deb"
+}

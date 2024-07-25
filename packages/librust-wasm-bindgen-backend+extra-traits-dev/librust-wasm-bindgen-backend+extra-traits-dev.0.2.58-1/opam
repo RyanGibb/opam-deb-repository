@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-wasm-bindgen-backend+extra-traits-dev_0.2.58-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-wasm-bindgen-backend+extra-traits-dev"]
+]
+depends: [
+  "librust-syn-1+extra-traits-dev"
+  "librust-wasm-bindgen-backend-dev" {= "0.2.58-1"}
+]
+extra-source "librust-wasm-bindgen-backend+extra-traits-dev_0.2.58-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-wasm-bindgen-backend/librust-wasm-bindgen-backend+extra-traits-dev_0.2.58-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i acetoneiso_2.4-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r acetoneiso"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libqt5core5a" {>= "5.12.2"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "acetoneiso_2.4-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/acetoneiso/acetoneiso_2.4-3+b1_amd64.deb"
+}

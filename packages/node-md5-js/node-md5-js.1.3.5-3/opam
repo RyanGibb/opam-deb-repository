@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-md5.js_1.3.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-md5.js"]
+]
+depends: [
+  "node-hash-base" {>= "3.0.0"}
+  "node-inherits" {>= "2.0.1"}
+  "node-safe-buffer" {>= "5.1.2"}
+  "nodejs" {>= "10"}
+]
+extra-source "node-md5.js_1.3.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-md5.js/node-md5.js_1.3.5-3_all.deb"
+}

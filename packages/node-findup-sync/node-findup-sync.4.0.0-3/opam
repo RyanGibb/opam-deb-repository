@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-findup-sync_4.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-findup-sync"]
+]
+depends: [
+  "node-detect-file" {>= "1.0.0"}
+  "node-is-glob" {>= "4.0.0"}
+  "node-micromatch" {>= "4.0.2"}
+  "node-resolve-dir" {>= "1.0.1"}
+  "nodejs"
+]
+extra-source "node-findup-sync_4.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-findup-sync/node-findup-sync_4.0.0-3_all.deb"
+}

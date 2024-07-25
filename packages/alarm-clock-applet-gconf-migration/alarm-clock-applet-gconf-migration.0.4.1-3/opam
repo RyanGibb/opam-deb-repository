@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i alarm-clock-applet-gconf-migration_0.4.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r alarm-clock-applet-gconf-migration"]
+]
+depends: [
+  "alarm-clock-applet" {>= "0.4.1"}
+  "gconf-service"
+  "libc6" {>= "2.34"}
+  "libgconf-2-4" {>= "3.2.5"}
+  "libglib2-0-0" {>= "2.49.2"}
+]
+conflicts: [
+  "alarm-clock-applet (<< 0.4.1~)"
+]
+extra-source "alarm-clock-applet-gconf-migration_0.4.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alarm-clock-applet/alarm-clock-applet-gconf-migration_0.4.1-3_amd64.deb"
+}

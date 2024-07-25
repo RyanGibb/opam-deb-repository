@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i binutils-powerpc64le-linux-gnu-dbg_2.40-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r binutils-powerpc64le-linux-gnu-dbg"]
+]
+depends: [
+  "binutils-powerpc64le-linux-gnu" {= "2.40-2"}
+]
+extra-source "binutils-powerpc64le-linux-gnu-dbg_2.40-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/binutils/binutils-powerpc64le-linux-gnu-dbg_2.40-2_amd64.deb"
+}

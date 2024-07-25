@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sphinx-autoapi_2.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sphinx-autoapi"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "4.3"}
+  "python3-any"
+  "python3-astroid" {>= "2.7"}
+  "python3-jinja2"
+  "python3-sphinx"
+  "python3-unidecode"
+  "python3-yaml"
+  "sphinx-rtd-theme-common" {>= "1.0.0+dfsg"}
+]
+extra-source "python3-sphinx-autoapi_2.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sphinx-autoapi/python3-sphinx-autoapi_2.0.0-1_all.deb"
+}

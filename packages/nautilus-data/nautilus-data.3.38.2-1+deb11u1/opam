@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nautilus-data_3.38.2-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nautilus-data"]
+]
+depends: [
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "nautilus-data_3.38.2-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nautilus/nautilus-data_3.38.2-1+deb11u1_all.deb"
+}

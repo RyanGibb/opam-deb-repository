@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zope-debhelper_0.3.16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zope-debhelper"]
+]
+depends: [
+  "debhelper" {>= "4.2.32"}
+  "perl-any"
+]
+extra-source "zope-debhelper_0.3.16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zope-debhelper/zope-debhelper_0.3.16_all.deb"
+}

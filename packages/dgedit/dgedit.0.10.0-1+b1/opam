@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dgedit_0.10.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dgedit"]
+]
+depends: [
+  "libao4" {>= "1.1.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1"
+  "libqt5core5a" {>= "5.12.2"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "dgedit_0.10.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dgedit/dgedit_0.10.0-1+b1_amd64.deb"
+}

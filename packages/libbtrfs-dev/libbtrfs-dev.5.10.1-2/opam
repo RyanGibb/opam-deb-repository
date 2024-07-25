@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbtrfs-dev_5.10.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbtrfs-dev"]
+]
+depends: [
+  "libbtrfs0" {= "5.10.1-2"}
+]
+extra-source "libbtrfs-dev_5.10.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/btrfs-progs/libbtrfs-dev_5.10.1-2_amd64.deb"
+}

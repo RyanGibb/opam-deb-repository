@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgatk-bwamem-jni_1.0.4+dfsg2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgatk-bwamem-jni"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libgatk-bwamem-jni_1.0.4+dfsg2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gatk-bwamem/libgatk-bwamem-jni_1.0.4+dfsg2-2_amd64.deb"
+}

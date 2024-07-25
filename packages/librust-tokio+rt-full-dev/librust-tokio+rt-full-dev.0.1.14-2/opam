@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-tokio+rt-full-dev_0.1.14-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-tokio+rt-full-dev"]
+]
+depends: [
+  "librust-num-cpus-dev"
+  "librust-tokio+reactor-dev" {= "0.1.14-2"}
+  "librust-tokio+timer-dev" {= "0.1.14-2"}
+  "librust-tokio-current-thread-dev"
+  "librust-tokio-dev" {= "0.1.14-2"}
+  "librust-tokio-executor-dev"
+  "librust-tokio-threadpool-dev"
+]
+extra-source "librust-tokio+rt-full-dev_0.1.14-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-tokio/librust-tokio+rt-full-dev_0.1.14-2_amd64.deb"
+}

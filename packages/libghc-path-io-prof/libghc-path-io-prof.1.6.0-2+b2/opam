@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-path-io-prof_1.6.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-path-io-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-dlist-prof"
+  "libghc-exceptions-prof"
+  "libghc-path-io-dev" {= "1.6.0-2+b2"}
+  "libghc-path-prof"
+  "libghc-temporary-prof"
+  "libghc-unix-compat-prof"
+]
+extra-source "libghc-path-io-prof_1.6.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-path-io/libghc-path-io-prof_1.6.0-2+b2_amd64.deb"
+}

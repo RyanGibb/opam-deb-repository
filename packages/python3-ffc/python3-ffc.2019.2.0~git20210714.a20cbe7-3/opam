@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ffc_2019.2.0~git20210714.a20cbe7-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ffc"]
+]
+depends: [
+  "python3-any"
+  "python3-dijitso" {< "2019.3~"}
+  "python3-dijitso" {>= "2019.2"}
+  "python3-fiat" {< "2019.3~"}
+  "python3-fiat" {>= "2019.2"}
+  "python3-numpy"
+  "python3-ufl" {>= "2019.2"}
+]
+conflicts: [
+  "python-ffc (<< 2018.1~)"
+]
+extra-source "python3-ffc_2019.2.0~git20210714.a20cbe7-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/ffc/python3-ffc_2019.2.0~git20210714.a20cbe7-3_all.deb"
+}

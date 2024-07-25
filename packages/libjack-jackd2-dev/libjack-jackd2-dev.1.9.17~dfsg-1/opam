@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjack-jackd2-dev_1.9.17~dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjack-jackd2-dev"]
+]
+depends: [
+  "libjack-jackd2-0" {= "1.9.17~dfsg-1"}
+  "pkg-config"
+]
+conflicts: [
+  "libjack-dev"
+  "libjack0.100.0-dev (<< 0.102.20-2)"
+]
+extra-source "libjack-jackd2-dev_1.9.17~dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jackd2/libjack-jackd2-dev_1.9.17~dfsg-1_amd64.deb"
+}

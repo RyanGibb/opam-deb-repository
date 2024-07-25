@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdieharder-dev_3.31.1.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdieharder-dev"]
+]
+depends: [
+  "libdieharder3" {= "3.31.1.4-1"}
+  "libgsl-dev"
+]
+extra-source "libdieharder-dev_3.31.1.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dieharder/libdieharder-dev_3.31.1.4-1_amd64.deb"
+}

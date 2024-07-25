@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pd-purest-json_1.4.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pd-purest-json"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libjson-c3" {>= "0.10"}
+  "liboauth0" {>= "0.9.1"}
+  ("puredata-core" | "pd")
+]
+extra-source "pd-purest-json_1.4.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pd-purest-json/pd-purest-json_1.4.2-4_amd64.deb"
+}

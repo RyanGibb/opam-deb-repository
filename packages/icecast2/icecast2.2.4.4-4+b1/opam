@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i icecast2_2.4.4-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r icecast2"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.33"}
+  "libcurl4" {>= "7.16.2"}
+  "libogg0" {>= "1.0rc3"}
+  "libspeex1" {>= "1.2~"}
+  "libssl3" {>= "3.0.0"}
+  "libtheora0" {>= "0.0.0.alpha7.dfsg"}
+  "libvorbis0a" {>= "1.1.2"}
+  "libxml2" {>= "2.7.4"}
+  "libxslt1-1" {>= "1.1.25"}
+  "lsb-base"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "icecast2_2.4.4-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/icecast2/icecast2_2.4.4-4+b1_amd64.deb"
+}

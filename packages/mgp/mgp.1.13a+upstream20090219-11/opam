@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mgp_1.13a+upstream20090219-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mgp"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libimlib2" {>= "1.4.5"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+  ("libperl4-corelibs-perl" | "perl" {< "5.12.3-7"})
+  ("perl" | "perl5")
+]
+extra-source "mgp_1.13a+upstream20090219-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mgp/mgp_1.13a+upstream20090219-11_amd64.deb"
+}

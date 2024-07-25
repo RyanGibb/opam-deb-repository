@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdrumstick-rt-backends_2.7.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdrumstick-rt-backends"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdrumstick-alsa2" {>= "2.7.2"}
+  "libdrumstick-rt2" {>= "2.7.2"}
+  "libfluidsynth3" {>= "2.1.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libpulse0" {>= "0.99.1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.6.0~beta"}
+  "libsonivox3" {>= "3.6.11"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libdrumstick-rt-backends_2.7.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdrumstick/libdrumstick-rt-backends_2.7.2-1_amd64.deb"
+}

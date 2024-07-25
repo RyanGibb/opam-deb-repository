@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfile-stripnondeterminism-perl_1.12.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfile-stripnondeterminism-perl"]
+]
+depends: [
+  "file"
+  "libarchive-zip-perl"
+  "libsub-override-perl"
+  "perl-any"
+]
+extra-source "libfile-stripnondeterminism-perl_1.12.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/strip-nondeterminism/libfile-stripnondeterminism-perl_1.12.0-1_all.deb"
+}

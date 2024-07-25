@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i edb-debugger_1.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r edb-debugger"]
+]
+depends: [
+  "edb-debugger-plugins"
+  "libc6" {>= "2.34"}
+  "libcapstone4" {>= "4"}
+  "libcgraph6"
+  "libdouble-conversion3" {>= "2.0.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libgvc6"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.2.0"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libqt5xmlpatterns5" {>= "5.0.2"}
+  "libstdc++6" {>= "11"}
+  ("libqt5gui5" {>= "5.11.0~rc1"} | "libqt5gui5-gles" {>= "5.11.0~rc1"})
+]
+extra-source "edb-debugger_1.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/edb-debugger/edb-debugger_1.3.0-2_amd64.deb"
+}

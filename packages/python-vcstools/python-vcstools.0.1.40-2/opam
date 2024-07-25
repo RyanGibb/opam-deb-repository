@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-vcstools_0.1.40-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-vcstools"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-dateutil"
+  "python-yaml"
+]
+extra-source "python-vcstools_0.1.40-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-vcstools/python-vcstools_0.1.40-2_all.deb"
+}

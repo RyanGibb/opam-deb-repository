@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gstreamer1.0-libcamera_0.0.3-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gstreamer1.0-libcamera"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libcamera0-0-3" {>= "0.0.3"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.12.0"}
+  "libgstreamer1-0-0" {>= "1.18.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "gstreamer1.0-libcamera_0.0.3-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcamera/gstreamer1.0-libcamera_0.0.3-6_amd64.deb"
+}

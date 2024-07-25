@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jigzo_0.6.1-7.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jigzo"]
+]
+depends: [
+  "jigzo-data" {= "0.6.1-7.1"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl-mixer1-2" {>= "1.2.12"}
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "11"}
+]
+conflicts: [
+  "glpuzzle"
+]
+extra-source "jigzo_0.6.1-7.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jigzo/jigzo_0.6.1-7.1_amd64.deb"
+}

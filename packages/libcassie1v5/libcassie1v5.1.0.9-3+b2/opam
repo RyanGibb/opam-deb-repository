@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcassie1v5_1.0.9-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcassie1v5"]
+]
+depends: [
+  "libboost-serialization1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libgoogle-glog0v6" {>= "0.6.0~rc1"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libcassie1"
+]
+extra-source "libcassie1v5_1.0.9-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cassiopee/libcassie1v5_1.0.9-3+b2_amd64.deb"
+}

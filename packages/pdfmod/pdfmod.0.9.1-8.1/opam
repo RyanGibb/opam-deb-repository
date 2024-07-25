@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pdfmod_0.9.1-8.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pdfmod"]
+]
+depends: [
+  "libcairo2" {>= "1.14.0"}
+  "libglib2-0-0" {>= "2.58.1"}
+  "libglib2-0-cil" {>= "2.12.40"}
+  "libgtk2-0-0" {>= "2.24.0"}
+  "libgtk2-0-cil" {>= "2.12.40"}
+  "libmono-cairo4-0-cil" {>= "4.0.4.1"}
+  "libmono-corlib4-5-cil" {>= "4.6.1.3"}
+  "libmono-i18n-west4-0-cil"
+  "libmono-posix4-0-cil" {>= "4.6.1.3"}
+  "libmono-system-core4-0-cil" {>= "4.6.1.3"}
+  "libmono-system-drawing4-0-cil" {>= "4.6.1.3"}
+  "libmono-system-xml4-0-cil" {>= "4.6.1.3"}
+  "libmono-system4-0-cil" {>= "4.6.1.3"}
+  "libpangocairo-1-0-0" {>= "1.42.4"}
+  "libpoppler-glib8"
+  "mono-runtime" {>= "3.0~"}
+  ("libc6" {>= "2.27"} | "libc6-1" {>= "2.27"} | "libc0-1" {>= "2.27"})
+]
+extra-source "pdfmod_0.9.1-8.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdfmod/pdfmod_0.9.1-8.1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-retry-prof_0.9.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-retry-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-random-prof"
+  "libghc-retry-dev" {= "0.9.3.0-1"}
+  "libghc-unliftio-core-prof"
+]
+extra-source "libghc-retry-prof_0.9.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-retry/libghc-retry-prof_0.9.3.0-1_amd64.deb"
+}

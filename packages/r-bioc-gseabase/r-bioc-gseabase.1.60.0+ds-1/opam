@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-gseabase_1.60.0+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-gseabase"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-annotate" {>= "1.45.3"}
+  "r-bioc-annotationdbi"
+  "r-bioc-biobase" {>= "2.17.8"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.13.8"}
+  "r-bioc-graph" {>= "1.37.2"}
+  "r-cran-xml"
+]
+extra-source "r-bioc-gseabase_1.60.0+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-gseabase/r-bioc-gseabase_1.60.0+ds-1_all.deb"
+}

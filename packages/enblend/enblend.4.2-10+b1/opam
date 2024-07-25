@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i enblend_4.2-10+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r enblend"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "6"}
+  "libgsl27" {>= "2.7.1"}
+  "liblcms2-2" {>= "2.2+git20110628"}
+  "libstdc++6" {>= "11"}
+  "libtiff6" {>= "4.0.3"}
+  "libvigraimpex11" {>= "1.11.1+dfsg"}
+]
+extra-source "enblend_4.2-10+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/enblend-enfuse/enblend_4.2-10+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bioperl-run_1.7.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bioperl-run"]
+]
+depends: [
+  "bioperl"
+  "libbio-perl-run-perl" {= "1.7.2-4"}
+  "perl-any"
+]
+extra-source "bioperl-run_1.7.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bioperl-run/bioperl-run_1.7.2-4_all.deb"
+}

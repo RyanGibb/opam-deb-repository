@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rootlesskit_0.14.2-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rootlesskit"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "uidmap"
+]
+extra-source "rootlesskit_0.14.2-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rootlesskit/rootlesskit_0.14.2-1+b3_amd64.deb"
+}

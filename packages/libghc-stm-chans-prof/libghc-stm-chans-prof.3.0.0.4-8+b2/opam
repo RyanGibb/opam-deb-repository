@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-stm-chans-prof_3.0.0.4-8+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-stm-chans-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-stm-chans-dev" {= "3.0.0.4-8+b2"}
+]
+extra-source "libghc-stm-chans-prof_3.0.0.4-8+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-stm-chans/libghc-stm-chans-prof_3.0.0.4-8+b2_amd64.deb"
+}

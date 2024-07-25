@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libomp-13-dev_1:13.0.1-6~deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libomp-13-dev"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libelf1" {>= "0.144"}
+  "libffi6" {>= "3.0.4"}
+  "libgcc1" {>= "1-3.3"}
+  "libllvm13"
+  "libomp5-13" {= "1-13.0.1-6~deb10u4"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libomp-x.y-dev"
+]
+extra-source "libomp-13-dev_1:13.0.1-6~deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-13/libomp-13-dev_13.0.1-6~deb10u4_amd64.deb"
+}

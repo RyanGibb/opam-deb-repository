@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libconsole-bridge-dev_0.4.4+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libconsole-bridge-dev"]
+]
+depends: [
+  "libconsole-bridge0-4" {= "0.4.4+dfsg-1"}
+  "pkg-config"
+]
+extra-source "libconsole-bridge-dev_0.4.4+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/console-bridge/libconsole-bridge-dev_0.4.4+dfsg-1_amd64.deb"
+}

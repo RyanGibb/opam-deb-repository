@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kmouth_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kmouth"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.34"}
+  "libkf5completion5" {>= "5.90.0~"}
+  "libkf5configcore5" {>= "5.90.0~"}
+  "libkf5configgui5" {>= "5.90.0~"}
+  "libkf5configwidgets5" {>= "5.90.0~"}
+  "libkf5coreaddons5" {>= "5.90.0~"}
+  "libkf5i18n5" {>= "5.90.0~"}
+  "libkf5kiocore5" {>= "5.90.0~"}
+  "libkf5kiowidgets5" {>= "5.90.0~"}
+  "libkf5widgetsaddons5" {>= "5.100.0"}
+  "libkf5xmlgui5" {>= "5.90.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5printsupport5" {>= "5.15.2~"}
+  "libqt5texttospeech5" {>= "5.9.0~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libqt5xml5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+  ("qtspeech5-flite-plugin" {>= "5.9.0~"} | "qtspeech5-speechd-plugin" {>= "5.9.0~"})
+]
+extra-source "kmouth_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kmouth/kmouth_22.12.3-1_amd64.deb"
+}

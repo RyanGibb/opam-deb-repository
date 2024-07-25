@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gkrellweather_2.0.8-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gkrellweather"]
+]
+depends: [
+  "gkrellm" {>= "1.0.2"}
+  "libc6" {>= "2.7"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.8.0"}
+  "perl"
+  ("wget" | "libwww-perl")
+]
+extra-source "gkrellweather_2.0.8-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gkrellweather/gkrellweather_2.0.8-2.1_amd64.deb"
+}

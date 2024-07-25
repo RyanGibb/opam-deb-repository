@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clickhouse-tools_18.16.1+ds-7.3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clickhouse-tools"]
+]
+depends: [
+  "clickhouse-common" {= "18.16.1+ds-7.3+b2"}
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.34"}
+  "libdouble-conversion3" {>= "2.0.0"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libjemalloc2" {>= "5.0.0"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libpocofoundation80" {>= "1.11.0"}
+  "libpoconet80" {>= "1.11.0"}
+  "libpoconetssl80" {>= "1.11.0"}
+  "libpocoutil80" {>= "1.11.0"}
+  "libpocoxml80" {>= "1.11.0"}
+  "libre2-9" {>= "0+hg23"}
+  "libstdc++6" {>= "12.2.0-9"}
+  "libzstd1" {>= "1.5.2"}
+]
+extra-source "clickhouse-tools_18.16.1+ds-7.3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clickhouse/clickhouse-tools_18.16.1+ds-7.3+b2_amd64.deb"
+}

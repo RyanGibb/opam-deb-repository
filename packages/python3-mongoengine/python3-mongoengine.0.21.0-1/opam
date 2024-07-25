@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-mongoengine_0.21.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-mongoengine"]
+]
+depends: [
+  "python3-any"
+  "python3-gridfs"
+  "python3-pymongo" {>= "3.4"}
+]
+extra-source "python3-mongoengine_0.21.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-mongoengine/python3-mongoengine_0.21.0-1_all.deb"
+}

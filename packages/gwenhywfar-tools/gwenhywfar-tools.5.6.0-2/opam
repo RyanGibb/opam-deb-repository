@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gwenhywfar-tools_5.6.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gwenhywfar-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgwenhywfar79" {>= "4.99.19rc3"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "gwenhywfar-tools_5.6.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgwenhywfar/gwenhywfar-tools_5.6.0-2_amd64.deb"
+}

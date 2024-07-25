@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i todo.txt-gtd_0.8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r todo.txt-gtd"]
+]
+depends: [
+  "python3-any" {>= "3.6~"}
+  "python3-configargparse"
+  "python3-relatorio"
+  "todo-txt-base"
+  "topydo"
+]
+conflicts: [
+  "turnin-ng"
+]
+extra-source "todo.txt-gtd_0.8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/todo.txt-gtd/todo.txt-gtd_0.8_all.deb"
+}

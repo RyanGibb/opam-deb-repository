@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-control-monad-loop-prof_0.1-10+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-control-monad-loop-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-control-monad-loop-dev" {= "0.1-10+b2"}
+  "libghc-transformers-base-prof"
+]
+extra-source "libghc-control-monad-loop-prof_0.1-10+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-control-monad-loop/libghc-control-monad-loop-prof_0.1-10+b2_amd64.deb"
+}

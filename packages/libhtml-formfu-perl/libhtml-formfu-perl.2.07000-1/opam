@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhtml-formfu-perl_2.07000-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhtml-formfu-perl"]
+]
+depends: [
+  "libclone-perl"
+  "libconfig-any-perl"
+  "libdata-visitor-perl"
+  "libdatetime-format-builder-perl"
+  "libdatetime-format-natural-perl"
+  "libdatetime-format-strptime-perl"
+  "libdatetime-locale-perl"
+  "libdatetime-perl"
+  "libemail-valid-perl"
+  "libfile-sharedir-perl"
+  "libhash-flatten-perl"
+  "libhtml-scrubber-perl"
+  "libhtml-tokeparser-simple-perl"
+  "libjson-maybexs-perl"
+  "liblist-moreutils-perl"
+  "libmoose-perl"
+  "libmoosex-aliases-perl"
+  "libmoosex-attribute-chained-perl" {>= "1.0.2"}
+  "libnumber-format-perl"
+  "libpath-class-perl"
+  "libreadonly-perl"
+  "libregexp-common-perl"
+  "libtask-weaken-perl"
+  "libwww-perl"
+  "libyaml-libyaml-perl"
+  "perl"
+  "perl-base"
+  ("libcgi-pm-perl" | "perl" {< "5.19"})
+]
+extra-source "libhtml-formfu-perl_2.07000-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhtml-formfu-perl/libhtml-formfu-perl_2.07000-1_all.deb"
+}

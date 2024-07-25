@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phosh-tour_0.24.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phosh-tour"]
+]
+depends: [
+  "libadwaita-1-0" {>= "1.0.1"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.67.3+git20210214"}
+  "libgtk-4-1" {>= "4.0.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "phosh-tour_0.24.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phosh-tour/phosh-tour_0.24.0-2_amd64.deb"
+}

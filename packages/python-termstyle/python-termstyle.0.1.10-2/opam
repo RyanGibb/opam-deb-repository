@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-termstyle_0.1.10-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-termstyle"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-pkg-resources"
+]
+extra-source "python-termstyle_0.1.10-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-termstyle/python-termstyle_0.1.10-2_all.deb"
+}

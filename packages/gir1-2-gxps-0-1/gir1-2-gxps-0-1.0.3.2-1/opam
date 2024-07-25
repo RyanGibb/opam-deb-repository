@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-gxps-0.1_0.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-gxps-0.1"]
+]
+depends: [
+  "gir1-2-freedesktop"
+  "gir1-2-glib-2-0"
+  "libgxps2" {>= "0.2.3.1"}
+]
+extra-source "gir1.2-gxps-0.1_0.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgxps/gir1.2-gxps-0.1_0.3.2-1_amd64.deb"
+}

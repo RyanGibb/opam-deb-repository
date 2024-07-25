@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i manila-share_1:15.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r manila-share"]
+]
+depends: [
+  "lsb-base"
+  "manila-common" {= "1-15.1.0-2"}
+  "python3-ceph-argparse"
+  "python3-rados"
+]
+extra-source "manila-share_1:15.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/manila/manila-share_15.1.0-2_all.deb"
+}

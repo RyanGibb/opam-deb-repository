@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-topograph-prof_1.0.0.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-topograph-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-base-compat-prof"
+  "libghc-base-orphans-prof"
+  "libghc-topograph-dev" {= "1.0.0.2-1+b1"}
+  "libghc-vector-prof"
+]
+extra-source "libghc-topograph-prof_1.0.0.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-topograph/libghc-topograph-prof_1.0.0.2-1+b1_amd64.deb"
+}

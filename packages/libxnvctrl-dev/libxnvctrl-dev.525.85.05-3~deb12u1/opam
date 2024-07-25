@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxnvctrl-dev_525.85.05-3~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxnvctrl-dev"]
+]
+depends: [
+  "libx11-dev"
+  "libxnvctrl0" {= "525.85.05-3~deb12u1"}
+]
+extra-source "libxnvctrl-dev_525.85.05-3~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxnvctrl/libxnvctrl-dev_525.85.05-3~deb12u1_amd64.deb"
+}

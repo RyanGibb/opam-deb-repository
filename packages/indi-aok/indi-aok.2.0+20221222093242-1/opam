@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i indi-aok_2.0+20221222093242-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r indi-aok"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libindidriver1" {>= "1.9.9+dfsg"}
+  "libindilx200-1" {>= "1.9.9+dfsg"}
+  "libnova-0-16-0" {>= "0.16"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "indi-aok_2.0+20221222093242-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/indi-aok/indi-aok_2.0+20221222093242-1_amd64.deb"
+}

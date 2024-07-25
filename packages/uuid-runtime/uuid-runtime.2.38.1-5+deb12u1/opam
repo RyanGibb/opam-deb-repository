@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uuid-runtime_2.38.1-5+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uuid-runtime"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libsmartcols1" {>= "2.27~rc1"}
+  "libsystemd0"
+  "libuuid1" {>= "2.38.1-2~"}
+]
+extra-source "uuid-runtime_2.38.1-5+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/util-linux/uuid-runtime_2.38.1-5+deb12u1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-dns-native-perl_0.22-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-dns-native-perl"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "perl" {>= "5.32.0-5"}
+  "perl-base"
+]
+extra-source "libnet-dns-native-perl_0.22-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-dns-native-perl/libnet-dns-native-perl_0.22-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-babel-plugin-transform-decorators-legacy_1.3.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-babel-plugin-transform-decorators-legacy"]
+]
+depends: [
+  "node-babel-plugin-syntax-decorators" {>= "6.1.18"}
+  "node-babel-runtime" {>= "6.2.0"}
+  "node-babel-template" {>= "6.3.0"}
+  "nodejs"
+]
+extra-source "node-babel-plugin-transform-decorators-legacy_1.3.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-babel-plugin-transform-decorators-legacy/node-babel-plugin-transform-decorators-legacy_1.3.5-1_all.deb"
+}

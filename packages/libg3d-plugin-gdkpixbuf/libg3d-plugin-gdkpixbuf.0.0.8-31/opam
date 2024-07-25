@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libg3d-plugin-gdkpixbuf_0.0.8-31_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libg3d-plugin-gdkpixbuf"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libg3d0" {= "0.0.8-31"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.8.0"}
+]
+extra-source "libg3d-plugin-gdkpixbuf_0.0.8-31_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libg3d/libg3d-plugin-gdkpixbuf_0.0.8-31_amd64.deb"
+}

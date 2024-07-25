@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kdeadmin_4:20.12.0+5.111_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kdeadmin"]
+]
+depends: [
+  "kde-config-cron" {>= "4-20.12.0"}
+  "ksystemlog" {>= "4-20.12.0"}
+]
+extra-source "kdeadmin_4:20.12.0+5.111_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-kde/kdeadmin_20.12.0+5.111_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liborocos-kdl-dev_1.4.0-11+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liborocos-kdl-dev"]
+]
+depends: [
+  "libeigen3-dev"
+  "liborocos-kdl1-4" {= "1.4.0-11+b2"}
+]
+extra-source "liborocos-kdl-dev_1.4.0-11+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/orocos-kdl/liborocos-kdl-dev_1.4.0-11+b2_amd64.deb"
+}

@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-node21_20.11.10-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-node21"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.4"}
+  "libfdt1" {>= "1.6.0"}
+  "libnuma1" {>= "2.0.11"}
+  "librte-cryptodev21" {>= "18.05"}
+  "librte-eal21" {>= "20.11"}
+  "librte-ethdev21" {>= "20.11"}
+  "librte-graph21" {>= "20.11"}
+  "librte-hash21" {>= "18.11"}
+  "librte-kvargs21" {>= "18.08"}
+  "librte-lpm21" {>= "20.11"}
+  "librte-mbuf21" {>= "19.11"}
+  "librte-mempool21" {>= "18.05"}
+  "librte-meter21" {>= "20.08"}
+  "librte-net21" {>= "18.02"}
+  "librte-rcu21" {>= "19.11"}
+  "librte-ring21" {>= "20.08"}
+  "librte-telemetry21" {>= "19.11"}
+]
+extra-source "librte-node21_20.11.10-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-node21_20.11.10-1~deb11u1_amd64.deb"
+}

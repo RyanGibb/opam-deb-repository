@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nala_0.12.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nala"]
+]
+depends: [
+  "apt"
+  "python3-any"
+  "python3-anyio"
+  "python3-apt"
+  "python3-debian"
+  "python3-httpx"
+  "python3-pexpect"
+  "python3-rich"
+  "python3-tomli"
+  "python3-typer"
+  "python3-typing-extensions"
+]
+extra-source "nala_0.12.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nala/nala_0.12.2_all.deb"
+}

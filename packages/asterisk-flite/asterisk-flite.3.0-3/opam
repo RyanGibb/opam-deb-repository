@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i asterisk-flite_3.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r asterisk-flite"]
+]
+depends: [
+  "asterisk"
+  "libc6" {>= "2.14"}
+  "libflite1" {>= "1.4-release-9~"}
+]
+extra-source "asterisk-flite_3.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/asterisk-flite/asterisk-flite_3.0-3_amd64.deb"
+}

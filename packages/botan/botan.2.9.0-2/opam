@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i botan_2.9.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r botan"]
+]
+depends: [
+  "libbotan-2-9"
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "liblzma5" {>= "5.1.1alpha+20110809"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtspi1" {>= "0.3.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "botan_2.9.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/botan/botan_2.9.0-2_amd64.deb"
+}

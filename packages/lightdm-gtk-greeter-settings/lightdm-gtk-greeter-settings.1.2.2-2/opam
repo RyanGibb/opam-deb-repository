@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lightdm-gtk-greeter-settings_1.2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lightdm-gtk-greeter-settings"]
+]
+depends: [
+  "gir1-2-gdkpixbuf-2-0"
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-3-0"
+  "gir1-2-pango-1-0"
+  "lightdm-gtk-greeter"
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-gi" {>= "3.0"}
+]
+extra-source "lightdm-gtk-greeter-settings_1.2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lightdm-gtk-greeter-settings/lightdm-gtk-greeter-settings_1.2.2-2_all.deb"
+}

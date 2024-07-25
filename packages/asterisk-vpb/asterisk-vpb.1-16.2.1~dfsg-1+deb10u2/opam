@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i asterisk-vpb_1:16.2.1~dfsg-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r asterisk-vpb"]
+]
+depends: [
+  "asterisk" {= "1-16.2.1~dfsg-1+deb10u2"}
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libvpb1" {>= "4.2.22"}
+]
+extra-source "asterisk-vpb_1:16.2.1~dfsg-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/asterisk/asterisk-vpb_16.2.1~dfsg-1+deb10u2_amd64.deb"
+}

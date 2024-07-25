@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kodi-audiodecoder-fluidsynth_3.0.0+ds1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kodi-audiodecoder-fluidsynth"]
+]
+depends: [
+  "fluid-soundfont-gm"
+  "kodi"
+  "libc6" {>= "2.14"}
+  "libfluidsynth2" {>= "2.0.5"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "kodi-audiodecoder-fluidsynth_3.0.0+ds1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kodi-audiodecoder-fluidsynth/kodi-audiodecoder-fluidsynth_3.0.0+ds1-2_amd64.deb"
+}

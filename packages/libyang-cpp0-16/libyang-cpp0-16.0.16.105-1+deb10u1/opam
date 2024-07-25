@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libyang-cpp0.16_0.16.105-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libyang-cpp0.16"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libpcre3"
+  "libstdc++6" {>= "5.2"}
+  "libyang0-16" {= "0.16.105-1+deb10u1"}
+]
+extra-source "libyang-cpp0.16_0.16.105-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liby/libyang/libyang-cpp0.16_0.16.105-1+deb10u1_amd64.deb"
+}

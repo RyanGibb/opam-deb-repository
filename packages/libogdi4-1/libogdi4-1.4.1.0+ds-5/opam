@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libogdi4.1_4.1.0+ds-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libogdi4.1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libogdi4.1_4.1.0+ds-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ogdi-dfsg/libogdi4.1_4.1.0+ds-5_amd64.deb"
+}

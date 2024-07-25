@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-15-pgmemcache_2.3.0-11+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-15-pgmemcache"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmemcached11" {>= "1.0.18+"}
+  "libsasl2-2" {>= "2.1.28+dfsg"}
+  "postgresql-15"
+]
+extra-source "postgresql-15-pgmemcache_2.3.0-11+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-11+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtiles-request-java_1.0.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtiles-request-java"]
+]
+depends: [
+  "libfreemarker-java"
+  "libmustache-java" {>= "0.9.1"}
+  "libslf4j-java" {>= "1.7.32"}
+  "libspring-web-java"
+  "libvelocity-tools-java"
+]
+extra-source "libtiles-request-java_1.0.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tiles-request/libtiles-request-java_1.0.7-2_all.deb"
+}

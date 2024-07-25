@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-glob_7.1.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-glob"]
+]
+depends: [
+  "node-fs-realpath"
+  "node-inflight"
+  "node-inherits"
+  "node-minimatch" {>= "3.0.4~"}
+  "node-once" {>= "1.3~"}
+  "node-path-is-absolute"
+  "nodejs"
+]
+extra-source "node-glob_7.1.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-glob/node-glob_7.1.3-2_all.deb"
+}

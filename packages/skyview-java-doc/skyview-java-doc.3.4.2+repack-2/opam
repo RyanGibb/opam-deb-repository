@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i skyview-java-doc_3.4.2+repack-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r skyview-java-doc"]
+]
+depends: [
+  ("default-jre" | "java5-runtime" | "java6-runtime" | "java7-runtime" | "java8-runtime" | "java9-runtime" | "java10-runtime" | "java11-runtime")
+]
+extra-source "skyview-java-doc_3.4.2+repack-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/skyview/skyview-java-doc_3.4.2+repack-2_all.deb"
+}

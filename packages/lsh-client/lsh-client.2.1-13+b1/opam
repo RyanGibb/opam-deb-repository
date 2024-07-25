@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lsh-client_2.1-13+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lsh-client"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libhogweed6" {>= "3.4~"}
+  "libnettle8" {>= "3.4~"}
+  "liboop4" {>= "1.0~"}
+  "libreadline8" {>= "6.0"}
+  "libwrap0" {>= "7.6-4~"}
+  "libxau6" {>= "1-1.0.9"}
+  "lsh-utils" {= "2.1-13+b1"}
+  "nettle-bin"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "lsh-client_2.1-13+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lsh-utils/lsh-client_2.1-13+b1_amd64.deb"
+}

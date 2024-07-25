@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmoosex-yaml-perl_0.05-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmoosex-yaml-perl"]
+]
+depends: [
+  "libmoosex-blessed-reconstruct-perl"
+  "libnamespace-clean-perl"
+  "libsub-exporter-perl"
+  "perl-any"
+  ("libyaml-libyaml-perl" | "libyaml-perl" | "libyaml-syck-perl")
+]
+extra-source "libmoosex-yaml-perl_0.05-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmoosex-yaml-perl/libmoosex-yaml-perl_0.05-1_all.deb"
+}

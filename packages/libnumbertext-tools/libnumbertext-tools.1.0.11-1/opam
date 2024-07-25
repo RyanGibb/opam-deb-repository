@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnumbertext-tools_1.0.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnumbertext-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libnumbertext-1-0-0"
+  "libstdc++6" {>= "11"}
+]
+extra-source "libnumbertext-tools_1.0.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnumbertext/libnumbertext-tools_1.0.11-1_amd64.deb"
+}

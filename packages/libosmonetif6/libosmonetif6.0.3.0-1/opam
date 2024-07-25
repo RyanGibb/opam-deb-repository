@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmonetif6_0.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmonetif6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libosmocore11" {>= "0.11.0"}
+  "libsctp1" {>= "1.0.10+dfsg"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "libosmonetif6_0.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libosmo-netif/libosmonetif6_0.3.0-1_amd64.deb"
+}

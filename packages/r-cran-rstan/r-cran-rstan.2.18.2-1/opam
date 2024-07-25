@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rstan_2.18.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rstan"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-4.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-2"}
+  "r-cran-ggplot2" {>= "2.0.0"}
+  "r-cran-gridextra" {>= "2.0.0"}
+  "r-cran-inline"
+  "r-cran-loo" {>= "2.0.0"}
+  "r-cran-pkgbuild"
+  "r-cran-rcpp" {>= "0.12.0"}
+  "r-cran-stanheaders" {>= "2.18.0"}
+]
+extra-source "r-cran-rstan_2.18.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-rstan/r-cran-rstan_2.18.2-1_amd64.deb"
+}

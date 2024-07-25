@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-grep-searcher+simd-accel-dev_0.1.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-grep-searcher+simd-accel-dev"]
+]
+depends: [
+  "librust-encoding-rs+simd-accel-dev"
+  "librust-grep-searcher-dev" {= "0.1.7-1"}
+]
+extra-source "librust-grep-searcher+simd-accel-dev_0.1.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-grep-searcher/librust-grep-searcher+simd-accel-dev_0.1.7-1_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsc-dev_2.3.1-19_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsc-dev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgfortran5" {>= "8"}
+  "libint1"
+  "libopenmpi3"
+  "libquadmath0" {>= "4.6"}
+  "libsc7v5" {= "2.3.1-19"}
+  "libstdc++6" {>= "5"}
+  "mpi-default-dev"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libsc-dev_2.3.1-19_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpqc/libsc-dev_2.3.1-19_amd64.deb"
+}

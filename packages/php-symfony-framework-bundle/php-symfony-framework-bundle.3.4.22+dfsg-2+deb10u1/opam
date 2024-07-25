@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-framework-bundle_3.4.22+dfsg-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-framework-bundle"]
+]
+depends: [
+  "php-common"
+  "php-mbstring"
+  "php-symfony-cache" {> "3.4"}
+  "php-symfony-class-loader" {< "4~~"}
+  "php-symfony-class-loader" {>= "3.2"}
+  "php-symfony-config" {> "3.4"}
+  "php-symfony-dependency-injection" {> "3.4.3"}
+  "php-symfony-event-dispatcher" {> "3.4"}
+  "php-symfony-filesystem"
+  "php-symfony-finder"
+  "php-symfony-http-foundation" {> "3.4"}
+  "php-symfony-http-kernel" {> "3.4"}
+  "php-symfony-routing" {> "3.4.5"}
+  "php-xml"
+]
+extra-source "php-symfony-framework-bundle_3.4.22+dfsg-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/symfony/php-symfony-framework-bundle_3.4.22+dfsg-2+deb10u1_all.deb"
+}

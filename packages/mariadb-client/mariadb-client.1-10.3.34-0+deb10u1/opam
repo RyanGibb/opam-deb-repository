@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mariadb-client_1:10.3.34-0+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mariadb-client"]
+]
+depends: [
+  "mariadb-client-10-3" {>= "1-10.3.34-0+deb10u1"}
+]
+extra-source "mariadb-client_1:10.3.34-0+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mariadb-10.3/mariadb-client_10.3.34-0+deb10u1_all.deb"
+}

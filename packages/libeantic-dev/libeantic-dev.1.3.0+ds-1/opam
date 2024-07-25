@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libeantic-dev_1.3.0+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libeantic-dev"]
+]
+depends: [
+  "libantic-dev"
+  "libboost-dev"
+  "libeantic1" {= "1.3.0+ds-1"}
+  "libflint-arb-dev"
+  "libflint-dev"
+  "libgmp-dev"
+  "libmpfr-dev"
+]
+conflicts: [
+  "libeantic-dev"
+]
+extra-source "libeantic-dev_1.3.0+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/e-antic/libeantic-dev_1.3.0+ds-1_amd64.deb"
+}

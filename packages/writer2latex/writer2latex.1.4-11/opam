@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i writer2latex_1.4-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r writer2latex"]
+]
+depends: [
+  "libwriter2latex-java"
+  "tex-common" {>= "6.13"}
+  ("default-jre" | "java6-runtime")
+]
+extra-source "writer2latex_1.4-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/writer2latex/writer2latex_1.4-11_all.deb"
+}

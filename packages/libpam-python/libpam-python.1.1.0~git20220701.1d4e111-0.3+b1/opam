@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-python_1.1.0~git20220701.1d4e111-0.3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-python"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpython3-11" {>= "3.11.0"}
+]
+extra-source "libpam-python_1.1.0~git20220701.1d4e111-0.3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pam-python/libpam-python_1.1.0~git20220701.1d4e111-0.3+b1_amd64.deb"
+}

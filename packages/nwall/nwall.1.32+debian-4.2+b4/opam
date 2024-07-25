@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nwall_1.32+debian-4.2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nwall"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libncurses6" {>= "6"}
+  "libreadline7" {>= "6.0"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "nwall_1.32+debian-4.2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nwall/nwall_1.32+debian-4.2+b4_amd64.deb"
+}

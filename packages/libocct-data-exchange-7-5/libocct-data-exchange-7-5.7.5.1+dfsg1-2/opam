@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libocct-data-exchange-7.5_7.5.1+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libocct-data-exchange-7.5"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libocct-foundation-7-5" {>= "7.5.1+dfsg1"}
+  "libocct-modeling-algorithms-7-5" {>= "7.5.1+dfsg1"}
+  "libocct-modeling-data-7-5" {>= "7.5.1+dfsg1"}
+  "libocct-ocaf-7-5" {>= "7.5.1+dfsg1"}
+  "libocct-visualization-7-5" {>= "7.5.1+dfsg1"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libocct-data-exchange-7.5_7.5.1+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencascade/libocct-data-exchange-7.5_7.5.1+dfsg1-2_amd64.deb"
+}

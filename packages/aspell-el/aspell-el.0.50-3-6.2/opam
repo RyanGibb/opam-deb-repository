@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aspell-el_0.50-3-6.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aspell-el"]
+]
+depends: [
+  "aspell" {>= "0.60.3-2"}
+  "dictionaries-common" {>= "0.49.2"}
+]
+extra-source "aspell-el_0.50-3-6.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aspell-el/aspell-el_0.50-3-6.2_all.deb"
+}

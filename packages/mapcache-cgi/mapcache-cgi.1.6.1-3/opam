@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mapcache-cgi_1.6.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mapcache-cgi"]
+]
+depends: [
+  "libapr1" {>= "1.2.7"}
+  "libaprutil1" {>= "1.2.7+dfsg"}
+  "libc6" {>= "2.4"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libfcgi0ldbl"
+  "libgdal20" {>= "1.8.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libmapcache1" {>= "1.6.0"}
+  "libpcre3"
+  "libpixman-1-0"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libtiff5" {>= "4.0.3"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "mapcache-cgi_1.6.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mapcache/mapcache-cgi_1.6.1-3_amd64.deb"
+}

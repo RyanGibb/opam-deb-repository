@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnat-12-powerpc-cross_12.2.0-13cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnat-12-powerpc-cross"]
+]
+depends: [
+  "gcc-12-cross-base-ports" {= "12.2.0-13cross1"}
+  "libc6-powerpc-cross" {>= "2.36"}
+  "libgcc-s1-powerpc-cross" {>= "4.2"}
+]
+extra-source "libgnat-12-powerpc-cross_12.2.0-13cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12-cross-ports/libgnat-12-powerpc-cross_12.2.0-13cross1_all.deb"
+}

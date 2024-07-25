@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-lsp-haskell_1.0.20211214-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-lsp-haskell"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-haskell-mode" {>= "1.0"}
+  "elpa-lsp-mode" {>= "3.0"}
+  "emacsen-common"
+]
+extra-source "elpa-lsp-haskell_1.0.20211214-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emacs-lsp-haskell/elpa-lsp-haskell_1.0.20211214-1_all.deb"
+}

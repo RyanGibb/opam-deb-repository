@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i socks4-clients_4.3.beta2-20+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r socks4-clients"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libncurses6" {>= "6"}
+  "libsocks4"
+  "libtinfo6" {>= "6"}
+]
+extra-source "socks4-clients_4.3.beta2-20+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/socks4-server/socks4-clients_4.3.beta2-20+b2_amd64.deb"
+}

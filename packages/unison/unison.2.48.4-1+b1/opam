@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i unison_2.48.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r unison"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+]
+extra-source "unison_2.48.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unison/unison_2.48.4-1+b1_amd64.deb"
+}

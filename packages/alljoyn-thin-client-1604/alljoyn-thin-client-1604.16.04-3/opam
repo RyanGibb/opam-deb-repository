@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i alljoyn-thin-client-1604_16.04-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r alljoyn-thin-client-1604"]
+]
+depends: [
+  "libajtcl1604" {= "16.04-3"}
+  "libc6" {>= "2.15"}
+]
+extra-source "alljoyn-thin-client-1604_16.04-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alljoyn-thin-client-1604/alljoyn-thin-client-1604_16.04-3_amd64.deb"
+}

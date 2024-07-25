@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gpg-wks-server_2.2.40-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gpg-wks-server"]
+]
+depends: [
+  "gpg" {= "2.2.40-1.1"}
+  "gpg-agent" {= "2.2.40-1.1"}
+  "libc6" {>= "2.34"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libgpg-error0" {>= "1.42"}
+]
+extra-source "gpg-wks-server_2.2.40-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnupg2/gpg-wks-server_2.2.40-1.1_amd64.deb"
+}

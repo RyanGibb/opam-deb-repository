@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gradle-debian-helper_2.0.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gradle-debian-helper"]
+]
+depends: [
+  "gradle" {>= "3.4.1-8~"}
+  "maven-repo-helper"
+  ("default-jre-headless" | "java7-runtime-headless")
+]
+extra-source "gradle-debian-helper_2.0.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gradle-debian-helper/gradle-debian-helper_2.0.2_all.deb"
+}

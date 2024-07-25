@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qpdfview_0.5.0+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qpdfview"]
+]
+depends: [
+  "hicolor-icon-theme"
+  "libc6" {>= "2.34"}
+  "libcups2" {>= "1.4.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5concurrent5" {>= "5.6.0~rc"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5sql5" {>= "5.0.2"}
+  "libqt5sql5-sqlite"
+  "libqt5svg5"
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "4.1.1"}
+  "libsynctex2" {>= "2022.20220321.62855"}
+  "qpdfview-pdf-poppler-plugin"
+  ("libqt5gui5" {>= "5.12.2"} | "libqt5gui5-gles" {>= "5.12.2"})
+]
+extra-source "qpdfview_0.5.0+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qpdfview/qpdfview_0.5.0+ds-2_amd64.deb"
+}

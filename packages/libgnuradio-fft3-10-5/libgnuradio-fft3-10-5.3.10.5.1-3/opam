@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnuradio-fft3.10.5_3.10.5.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnuradio-fft3.10.5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfftw3-single3" {>= "3.3.10"}
+  "libfmt9" {>= "9.1.0+ds1"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnuradio-pmt3-10-5" {>= "3.10.5.1"}
+  "libgnuradio-runtime3-10-5" {>= "3.10.5.1"}
+  "libspdlog1-10"
+  "libstdc++6" {>= "12"}
+  "libvolk2-5" {>= "2.5.2"}
+]
+extra-source "libgnuradio-fft3.10.5_3.10.5.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnuradio/libgnuradio-fft3.10.5_3.10.5.1-3_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcoarrays-mpich-dev_2.10.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcoarrays-mpich-dev"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcaf-mpich-3" {= "2.10.1-1+b1"}
+  "libcoarrays-dev"
+  "libgfortran5" {>= "10"}
+  "libmpich12" {>= "4.0.2-3+b1"}
+  "mpich"
+  ("gfortran" | "fortran-compiler")
+]
+extra-source "libcoarrays-mpich-dev_2.10.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/open-coarrays/libcoarrays-mpich-dev_2.10.1-1+b1_amd64.deb"
+}

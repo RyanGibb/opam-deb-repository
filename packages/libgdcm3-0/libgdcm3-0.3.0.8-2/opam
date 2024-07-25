@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgdcm3.0_3.0.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgdcm3.0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcharls2" {>= "2.0.0+dfsg"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libjson-c5" {>= "0.15"}
+  "libopenjp2-7" {>= "2.2.0"}
+  "libsocket++1" {>= "1.12.13"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "9"}
+  "libuuid1" {>= "2.16"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libgdcm3.0_3.0.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gdcm/libgdcm3.0_3.0.8-2_amd64.deb"
+}

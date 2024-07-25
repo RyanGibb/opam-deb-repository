@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-bbmisc_1.11-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-bbmisc"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.0-5"}
+  "r-cran-checkmate" {>= "1.8.0"}
+]
+extra-source "r-cran-bbmisc_1.11-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-bbmisc/r-cran-bbmisc_1.11-3_amd64.deb"
+}

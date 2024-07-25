@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbson-1.0-0_1.14.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbson-1.0-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libbson-1.0-0_1.14.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mongo-c-driver/libbson-1.0-0_1.14.0-1_amd64.deb"
+}

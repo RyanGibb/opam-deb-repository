@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-restfulr_0.0.15-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-restfulr"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-1"}
+  "r-bioc-s4vectors" {>= "0.13.15"}
+  "r-cran-rcurl"
+  "r-cran-rjson"
+  "r-cran-xml"
+  "r-cran-yaml"
+]
+extra-source "r-cran-restfulr_0.0.15-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-restfulr/r-cran-restfulr_0.0.15-1_amd64.deb"
+}

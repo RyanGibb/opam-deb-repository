@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-settings-daemon-common_3.30.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-settings-daemon-common"]
+]
+depends: [
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-settings-daemon-common_3.30.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-settings-daemon/gnome-settings-daemon-common_3.30.2-3_all.deb"
+}

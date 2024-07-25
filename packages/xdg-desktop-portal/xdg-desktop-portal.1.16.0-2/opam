@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xdg-desktop-portal_1.16.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xdg-desktop-portal"]
+]
+depends: [
+  "bubblewrap"
+  "fuse3"
+  "init-system-helpers" {>= "1.52"}
+  "libc6" {>= "2.34"}
+  "libfuse3-3" {>= "3.12.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.70.0"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libpipewire-0-3-0" {>= "0.3.10"}
+  "libsystemd0"
+  ("default-dbus-session-bus" | "dbus-session-bus")
+]
+extra-source "xdg-desktop-portal_1.16.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xdg-desktop-portal/xdg-desktop-portal_1.16.0-2_amd64.deb"
+}

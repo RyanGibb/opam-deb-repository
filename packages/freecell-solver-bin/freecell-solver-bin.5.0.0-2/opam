@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freecell-solver-bin_5.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freecell-solver-bin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfreecell-solver0" {>= "2.0.0"}
+  "python3"
+]
+extra-source "freecell-solver-bin_5.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freecell-solver/freecell-solver-bin_5.0.0-2_amd64.deb"
+}

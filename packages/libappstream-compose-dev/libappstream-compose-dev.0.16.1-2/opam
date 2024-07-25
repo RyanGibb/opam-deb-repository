@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libappstream-compose-dev_0.16.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libappstream-compose-dev"]
+]
+depends: [
+  "gir1-2-appstreamcompose-1-0" {= "0.16.1-2"}
+  "libappstream-compose0" {= "0.16.1-2"}
+  "libappstream-dev" {= "0.16.1-2"}
+  "libgdk-pixbuf-2-0-dev"
+]
+extra-source "libappstream-compose-dev_0.16.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/appstream/libappstream-compose-dev_0.16.1-2_amd64.deb"
+}

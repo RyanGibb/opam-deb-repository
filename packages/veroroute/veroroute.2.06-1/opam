@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i veroroute_2.06-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r veroroute"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.2.0~alpha1"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.3.0"} | "libqt5gui5-gles" {>= "5.3.0"})
+]
+extra-source "veroroute_2.06-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/veroroute/veroroute_2.06-1_amd64.deb"
+}

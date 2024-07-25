@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-cbor_1.0.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-cbor"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+]
+extra-source "python-cbor_1.0.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-cbor/python-cbor_1.0.0-1+b1_amd64.deb"
+}

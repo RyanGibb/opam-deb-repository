@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-delayed-job_4.1.9-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-delayed-job"]
+]
+depends: [
+  "ruby-activesupport" {< "2-6.2"}
+  "ruby-activesupport" {>= "2-3.0"}
+]
+extra-source "ruby-delayed-job_4.1.9-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-delayed-job/ruby-delayed-job_4.1.9-1.1_all.deb"
+}

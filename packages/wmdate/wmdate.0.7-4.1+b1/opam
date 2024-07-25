@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmdate_0.7-4.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmdate"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdockapp3" {>= "0.6.2"}
+  "libx11-6"
+  "libxext6"
+  "libxpm4"
+]
+extra-source "wmdate_0.7-4.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmdate/wmdate_0.7-4.1+b1_amd64.deb"
+}

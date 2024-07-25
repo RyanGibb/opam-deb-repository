@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ardour-video-timeline_1:5.12.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ardour-video-timeline"]
+]
+depends: [
+  "ffmpeg" {>= "7-1.2"}
+  "harvid" {>= "0.7.0"}
+  "xjadeo" {>= "0.6.4"}
+]
+extra-source "ardour-video-timeline_1:5.12.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ardour/ardour-video-timeline_5.12.0-3_all.deb"
+}

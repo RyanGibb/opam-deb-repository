@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mm-common_1.0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mm-common"]
+]
+depends: [
+  "libtool"
+  "pkg-config"
+  ("automake" | "automaken")
+]
+extra-source "mm-common_1.0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mm-common/mm-common_1.0.5-1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-fontconfig-dbg_0.5.1-1+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-fontconfig-dbg"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfontconfig1" {>= "2.12.6"}
+  "python-dbg" {< "2.8"}
+  "python-dbg" {>= "2.7~"}
+  "python-dbg-any" {< "2.8"}
+  "python-dbg-any" {>= "2.7~"}
+  "python-fontconfig" {= "0.5.1-1+b6"}
+]
+extra-source "python-fontconfig-dbg_0.5.1-1+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-fontconfig/python-fontconfig-dbg_0.5.1-1+b6_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-ssleay-perl_1.88-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-ssleay-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl1-1" {>= "1.1.1"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+  "perl-openssl-defaults"
+]
+extra-source "libnet-ssleay-perl_1.88-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-ssleay-perl/libnet-ssleay-perl_1.88-3+b1_amd64.deb"
+}

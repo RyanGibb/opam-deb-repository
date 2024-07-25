@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpbbam-dev_0.19.0+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpbbam-dev"]
+]
+depends: [
+  "libhts-dev"
+  "libpbbam0-19-0" {= "0.19.0+dfsg-4"}
+  "libssl-dev"
+]
+extra-source "libpbbam-dev_0.19.0+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pbbam/libpbbam-dev_0.19.0+dfsg-4_amd64.deb"
+}

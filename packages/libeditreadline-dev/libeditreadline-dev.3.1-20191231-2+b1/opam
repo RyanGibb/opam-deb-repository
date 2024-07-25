@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libeditreadline-dev_3.1-20191231-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libeditreadline-dev"]
+]
+depends: [
+  "libedit-dev"
+]
+conflicts: [
+  "libreadline-dev"
+  "libreadline-gplv2-dev"
+  "libreadline5-dev"
+]
+extra-source "libeditreadline-dev_3.1-20191231-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libedit/libeditreadline-dev_3.1-20191231-2+b1_amd64.deb"
+}

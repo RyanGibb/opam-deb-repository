@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xcircuit_3.9.73+dfsg.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xcircuit"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.7.2"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libtk8-6" {>= "8.6.0"}
+  "libx11-6"
+  "tk"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "xcircuit_3.9.73+dfsg.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xcircuit/xcircuit_3.9.73+dfsg.1-1_amd64.deb"
+}

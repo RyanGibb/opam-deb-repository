@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-certbot-apache_2.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-certbot-apache"]
+]
+depends: [
+  "apache2"
+  "certbot"
+  "python3-acme"
+  "python3-any"
+  "python3-augeas"
+  "python3-certbot"
+  "python3-pkg-resources"
+]
+extra-source "python3-certbot-apache_2.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-certbot-apache/python3-certbot-apache_2.1.0-2_all.deb"
+}

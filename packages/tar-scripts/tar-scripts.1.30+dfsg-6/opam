@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tar-scripts_1.30+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tar-scripts"]
+]
+depends: [
+  "tar" {>= "1.26+dfsg-9"}
+]
+conflicts: [
+  "dump"
+  "openafs-client"
+  "tar (<< 1.26+dfsg-9)"
+]
+extra-source "tar-scripts_1.30+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tar/tar-scripts_1.30+dfsg-6_amd64.deb"
+}

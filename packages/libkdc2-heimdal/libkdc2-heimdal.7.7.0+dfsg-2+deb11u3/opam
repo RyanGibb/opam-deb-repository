@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkdc2-heimdal_7.7.0+dfsg-2+deb11u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkdc2-heimdal"]
+]
+depends: [
+  "libasn1-8-heimdal" {>= "1.6~git20120311g"}
+  "libc6" {>= "2.14"}
+  "libhcrypto4-heimdal" {>= "1.4.0+git20110226"}
+  "libhdb9-heimdal" {>= "1.6~git20120311"}
+  "libheimntlm0-heimdal" {>= "1.4.0+git20110226"}
+  "libhx509-5-heimdal" {>= "1.4.0+git20110226"}
+  "libkrb5-26-heimdal" {>= "7.7.0+dfsg"}
+  "libroken18-heimdal" {>= "1.4.0+git20110226"}
+]
+extra-source "libkdc2-heimdal_7.7.0+dfsg-2+deb11u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heimdal/libkdc2-heimdal_7.7.0+dfsg-2+deb11u3_amd64.deb"
+}

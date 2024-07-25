@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tasty-expected-failure-prof_0.11.1.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tasty-expected-failure-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-tagged-prof"
+  "libghc-tasty-expected-failure-dev" {= "0.11.1.2-1+b1"}
+  "libghc-tasty-prof"
+]
+extra-source "libghc-tasty-expected-failure-prof_0.11.1.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tasty-expected-failure/libghc-tasty-expected-failure-prof_0.11.1.2-1+b1_amd64.deb"
+}

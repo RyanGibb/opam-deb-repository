@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvidstab1.1_1.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvidstab1.1"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgomp1" {>= "4.9"}
+]
+extra-source "libvidstab1.1_1.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvidstab/libvidstab1.1_1.1.0-2_amd64.deb"
+}

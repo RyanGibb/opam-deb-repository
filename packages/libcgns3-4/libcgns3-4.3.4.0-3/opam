@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcgns3.4_3.4.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcgns3.4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libhdf5-103-1"
+]
+extra-source "libcgns3.4_3.4.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcgns/libcgns3.4_3.4.0-3_amd64.deb"
+}

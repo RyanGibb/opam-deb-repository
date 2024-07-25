@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnginx-mod-http-subs-filter_1:0.6.4-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnginx-mod-http-subs-filter"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "nginx"
+]
+extra-source "libnginx-mod-http-subs-filter_1:0.6.4-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnginx-mod-http-subs-filter/libnginx-mod-http-subs-filter_0.6.4-4_amd64.deb"
+}

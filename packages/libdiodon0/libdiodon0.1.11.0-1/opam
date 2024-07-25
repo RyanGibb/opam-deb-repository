@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdiodon0_1.11.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdiodon0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.46"}
+  "libgtk-3-0" {>= "3.22"}
+  "libpeas-1-0-0" {>= "1.1.1"}
+  "libx11-6"
+  "libxtst6"
+  "libzeitgeist-2-0-0" {>= "0.9.9"}
+]
+extra-source "libdiodon0_1.11.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/diodon/libdiodon0_1.11.0-1_amd64.deb"
+}

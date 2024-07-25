@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pg-auto-failover-cli_2.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pg-auto-failover-cli"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libncurses6" {>= "6"}
+  "libpq5" {>= "9.1~"}
+  "libtinfo6" {>= "6"}
+  "openssl"
+]
+extra-source "pg-auto-failover-cli_2.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pg-auto-failover/pg-auto-failover-cli_2.0-2+b1_amd64.deb"
+}

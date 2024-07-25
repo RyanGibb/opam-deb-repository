@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdate-calc-xs-perl_6.4-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdate-calc-xs-perl"]
+]
+depends: [
+  "libbit-vector-perl"
+  "libc6" {>= "2.4"}
+  "libcarp-clan-perl"
+  "libdate-calc-perl"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libdate-calc-xs-perl_6.4-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdate-calc-xs-perl/libdate-calc-xs-perl_6.4-2+b1_amd64.deb"
+}

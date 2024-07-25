@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rgtk2_2.20.36-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rgtk2"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.8.0"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.41.1"}
+  "libgtk2-0-0" {>= "2.20.0"}
+  "libpango-1-0-0" {>= "1.25.5"}
+  "libpangocairo-1-0-0" {>= "1.22.0"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+]
+extra-source "r-cran-rgtk2_2.20.36-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rgtk2/r-cran-rgtk2_2.20.36-2+b1_amd64.deb"
+}

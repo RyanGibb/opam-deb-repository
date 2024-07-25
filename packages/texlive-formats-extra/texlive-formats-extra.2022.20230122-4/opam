@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i texlive-formats-extra_2022.20230122-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r texlive-formats-extra"]
+]
+depends: [
+  "tex-common" {>= "6.13"}
+  "texlive-base" {>= "2022.20220405"}
+  "texlive-binaries" {>= "2022.20220321"}
+  "texlive-fonts-recommended" {>= "2022.20220405"}
+  "texlive-latex-base" {>= "2022.20220405"}
+  "texlive-plain-generic" {>= "2022.20220405"}
+  "texlive-xetex" {>= "2022.20220405"}
+]
+conflicts: [
+  "jadetex (<< 3.13-17)"
+  "xmltex (<< 1.9.debian.1-6)"
+]
+extra-source "texlive-formats-extra_2022.20230122-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/texlive-extra/texlive-formats-extra_2022.20230122-4_all.deb"
+}

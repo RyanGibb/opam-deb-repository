@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sidedoor_0.2.1-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sidedoor"]
+]
+depends: [
+  "adduser"
+  "openssh-client"
+  "sysvinit-utils"
+]
+extra-source "sidedoor_0.2.1-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sidedoor/sidedoor_0.2.1-1.2_all.deb"
+}

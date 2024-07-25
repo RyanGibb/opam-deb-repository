@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rsyslog-czmq_8.2102.0-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rsyslog-czmq"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libczmq4" {>= "4.0.0"}
+  "rsyslog" {= "8.2102.0-2+deb11u1"}
+]
+extra-source "rsyslog-czmq_8.2102.0-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rsyslog/rsyslog-czmq_8.2102.0-2+deb11u1_amd64.deb"
+}

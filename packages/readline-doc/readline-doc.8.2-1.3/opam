@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i readline-doc_8.2-1.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r readline-doc"]
+]
+depends: [
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "readline-doc_8.2-1.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/readline/readline-doc_8.2-1.3_all.deb"
+}

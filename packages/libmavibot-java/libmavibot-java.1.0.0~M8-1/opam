@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmavibot-java_1.0.0~M8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmavibot-java"]
+]
+depends: [
+  "libcommons-collections3-java"
+  "libslf4j-java" {>= "1.7.25"}
+]
+extra-source "libmavibot-java_1.0.0~M8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mavibot/libmavibot-java_1.0.0~M8-1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-semver-diff_2.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-semver-diff"]
+]
+depends: [
+  "node-semver" {>= "5.0.3"}
+  "nodejs"
+]
+extra-source "node-semver-diff_2.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-semver-diff/node-semver-diff_2.1.0-2_all.deb"
+}

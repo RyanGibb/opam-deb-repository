@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-puppetlabs-ntp_7.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-puppetlabs-ntp"]
+]
+depends: [
+  "puppet" {>= "4.9.4"}
+  "puppet-module-puppetlabs-stdlib" {>= "4.13.1"}
+]
+extra-source "puppet-module-puppetlabs-ntp_7.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-puppetlabs-ntp/puppet-module-puppetlabs-ntp_7.2.0-1_all.deb"
+}

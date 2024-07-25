@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i passenger_6.0.17+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r passenger"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcurl4" {>= "7.16.2"}
+  "libev4" {>= "1-4.04"}
+  "libgcc-s1" {>= "3.0"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.2"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "11"}
+  "libuv1" {>= "1.4.2"}
+  "ruby-rack"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "passenger_6.0.17+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/passenger/passenger_6.0.17+ds-1_amd64.deb"
+}

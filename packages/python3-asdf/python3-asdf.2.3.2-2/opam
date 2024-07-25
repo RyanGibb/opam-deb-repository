@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-asdf_2.3.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-asdf"]
+]
+depends: [
+  "python3-any"
+  "python3-jsonschema" {>= "2.3.0"}
+  "python3-numpy"
+  "python3-semantic-version" {>= "2.3.1"}
+  "python3-six" {>= "1.9.0"}
+  "python3-yaml" {>= "3.10"}
+]
+extra-source "python3-asdf_2.3.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-asdf/python3-asdf_2.3.2-2_all.deb"
+}

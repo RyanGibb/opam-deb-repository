@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcogl-pango20_1.22.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcogl-pango20"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.10"}
+  "libcogl20" {= "1.22.8-2"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libpango-1-0-0" {>= "1.28.3-5"}
+  "libpangocairo-1-0-0" {>= "1.28.3-5"}
+]
+extra-source "libcogl-pango20_1.22.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cogl/libcogl-pango20_1.22.8-2_amd64.deb"
+}

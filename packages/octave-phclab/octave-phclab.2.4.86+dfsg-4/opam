@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-phclab_2.4.86+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-phclab"]
+]
+depends: [
+  "octave" {>= "7.3.0"}
+  "phcpack" {>= "2.4.86+dfsg-4"}
+]
+extra-source "octave-phclab_2.4.86+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phcpack/octave-phclab_2.4.86+dfsg-4_all.deb"
+}

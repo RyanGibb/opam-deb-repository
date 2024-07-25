@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i baresip-ffmpeg_1.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r baresip-ffmpeg"]
+]
+depends: [
+  "baresip-core" {= "1.0.0-4"}
+  "libavcodec-extra58"
+  "libavdevice58" {>= "7-4.0"}
+  "libavfilter-extra7"
+  "libavformat58" {>= "7-4.1"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.14"}
+  "libswresample3" {>= "7-4.0"}
+  "libswscale5" {>= "7-4.0"}
+]
+extra-source "baresip-ffmpeg_1.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/baresip/baresip-ffmpeg_1.0.0-4_amd64.deb"
+}

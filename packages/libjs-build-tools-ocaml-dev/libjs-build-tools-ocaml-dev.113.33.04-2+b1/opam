@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjs-build-tools-ocaml-dev_113.33.04-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjs-build-tools-ocaml-dev"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "ocaml-findlib"
+  "ocaml-nox"
+]
+extra-source "libjs-build-tools-ocaml-dev_113.33.04-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/js-build-tools/libjs-build-tools-ocaml-dev_113.33.04-2+b1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golly_3.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golly"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1"
+  "libgl1"
+  "libstdc++6" {>= "9"}
+  "libwxbase3-0-0v5" {>= "3.0.4+dfsg"}
+  "libwxgtk3-0-gtk3-0v5" {>= "3.0.4+dfsg-10~"}
+  "zlib1g" {>= "1-1.2.6"}
+]
+extra-source "golly_3.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golly/golly_3.3-1_amd64.deb"
+}

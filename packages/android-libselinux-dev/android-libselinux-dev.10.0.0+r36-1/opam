@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-libselinux-dev_10.0.0+r36-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-libselinux-dev"]
+]
+depends: [
+  "android-libselinux" {= "10.0.0+r36-1"}
+]
+extra-source "android-libselinux-dev_10.0.0+r36-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-external-libselinux/android-libselinux-dev_10.0.0+r36-1_amd64.deb"
+}

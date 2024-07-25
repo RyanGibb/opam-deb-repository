@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freesasa_2.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freesasa"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libjson-c5" {>= "0.15"}
+  "libstdc++6" {>= "11"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "freesasa_2.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freesasa/freesasa_2.1.2-1_amd64.deb"
+}

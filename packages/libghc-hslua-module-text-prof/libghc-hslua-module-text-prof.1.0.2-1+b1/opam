@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hslua-module-text-prof_1.0.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hslua-module-text-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hslua-core-prof"
+  "libghc-hslua-marshalling-prof"
+  "libghc-hslua-module-text-dev" {= "1.0.2-1+b1"}
+  "libghc-hslua-packaging-prof"
+]
+extra-source "libghc-hslua-module-text-prof_1.0.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hslua-module-text/libghc-hslua-module-text-prof_1.0.2-1+b1_amd64.deb"
+}

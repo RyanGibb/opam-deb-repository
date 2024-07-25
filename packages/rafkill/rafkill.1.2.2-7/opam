@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rafkill_1.2.2-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rafkill"]
+]
+depends: [
+  "libaldmb1"
+  "liballegro4-4" {>= "2-4.4.3.1"}
+  "libc6" {>= "2.14"}
+  "libdumb1"
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "rafkill-data"
+]
+extra-source "rafkill_1.2.2-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rafkill/rafkill_1.2.2-7_amd64.deb"
+}

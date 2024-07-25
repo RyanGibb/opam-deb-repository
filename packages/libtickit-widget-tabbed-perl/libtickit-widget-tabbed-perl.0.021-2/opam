@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtickit-widget-tabbed-perl_0.021-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtickit-widget-tabbed-perl"]
+]
+depends: [
+  "libtickit-perl"
+  "libtickit-widgets-perl"
+  "perl"
+  ("perl" {>= "5.17.7"} | "libscalar-list-utils-perl" {>= "1-1.26"})
+]
+extra-source "libtickit-widget-tabbed-perl_0.021-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtickit-widget-tabbed-perl/libtickit-widget-tabbed-perl_0.021-2_all.deb"
+}

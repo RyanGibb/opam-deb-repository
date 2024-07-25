@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-certbot-dns-gehirn_0.31.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-certbot-dns-gehirn"]
+]
+depends: [
+  "python3-acme" {>= "0.31.0~"}
+  "python3-any"
+  "python3-certbot" {>= "0.31.0~"}
+  "python3-lexicon" {>= "2.1.22~"}
+  "python3-mock"
+  "python3-pkg-resources"
+  "python3-zope-interface"
+]
+extra-source "python3-certbot-dns-gehirn_0.31.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-certbot-dns-gehirn/python3-certbot-dns-gehirn_0.31.0-1_all.deb"
+}

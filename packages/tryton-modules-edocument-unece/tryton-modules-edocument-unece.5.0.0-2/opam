@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tryton-modules-edocument-unece_5.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tryton-modules-edocument-unece"]
+]
+depends: [
+  "python3-any"
+  "python3-pkg-resources"
+  "tryton-modules-account" {>= "5.0"}
+  "tryton-modules-product" {>= "5.0"}
+  "tryton-server" {>= "5.0"}
+]
+extra-source "tryton-modules-edocument-unece_5.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tryton-modules-edocument-unece/tryton-modules-edocument-unece_5.0.0-2_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i oclgrind_19.10-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r oclgrind"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "liboclgrind-19-10" {>= "19.10"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "oclgrind_19.10-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oclgrind/oclgrind_19.10-4_amd64.deb"
+}

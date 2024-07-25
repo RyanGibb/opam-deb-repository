@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-colcon-core_0.12.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-colcon-core"]
+]
+depends: [
+  "python3-any"
+  "python3-distlib"
+  "python3-empy"
+  "python3-pkg-resources"
+  "python3-pytest"
+  "python3-pytest-cov"
+  "python3-pytest-repeat"
+  "python3-pytest-rerunfailures"
+]
+extra-source "python3-colcon-core_0.12.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros2-colcon-core/python3-colcon-core_0.12.1-1_all.deb"
+}

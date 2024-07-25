@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-km.ci_0.5-6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-km.ci"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.0-1"}
+  "r-cran-survival"
+]
+extra-source "r-cran-km.ci_0.5-6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-km.ci/r-cran-km.ci_0.5-6-1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfuture-asyncawait-perl_0.63-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfuture-asyncawait-perl"]
+]
+depends: [
+  "libc6" {>= "2.11"}
+  "libfuture-perl" {>= "0.48"}
+  "libxs-parse-keyword-perl"
+  "libxs-parse-sublike-perl" {>= "0.14"}
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "libfuture-asyncawait-perl_0.63-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfuture-asyncawait-perl/libfuture-asyncawait-perl_0.63-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcgi-session-serialize-yaml-perl_4.26-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcgi-session-serialize-yaml-perl"]
+]
+depends: [
+  "libcgi-session-perl"
+  "perl-any"
+  ("libyaml-syck-perl" | "libyaml-perl")
+]
+extra-source "libcgi-session-serialize-yaml-perl_4.26-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcgi-session-serialize-yaml-perl/libcgi-session-serialize-yaml-perl_4.26-3_all.deb"
+}

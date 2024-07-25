@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libedata-book-1.2-27_3.46.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libedata-book-1.2-27"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libebackend-1-2-11" {>= "3.33.91"}
+  "libebook-contacts-1-2-4" {>= "3.43.2"}
+  "libedataserver-1-2-27" {>= "3.45.2"}
+  "libglib2-0-0" {>= "2.70.0"}
+  "libsoup-3-0-0" {>= "3.1.1"}
+  "libsqlite3-0" {>= "3.5.9"}
+]
+extra-source "libedata-book-1.2-27_3.46.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/evolution-data-server/libedata-book-1.2-27_3.46.4-2_amd64.deb"
+}

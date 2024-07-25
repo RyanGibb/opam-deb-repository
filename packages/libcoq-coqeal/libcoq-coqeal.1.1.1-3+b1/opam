@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcoq-coqeal_1.1.1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcoq-coqeal"]
+]
+depends: [
+  "libcoq-bignums"
+  "libcoq-mathcomp-algebra"
+  "libcoq-mathcomp-multinomials"
+  "libcoq-mathcomp-real-closed"
+  "libcoq-paramcoq"
+  "libcoq-stdlib"
+]
+extra-source "libcoq-coqeal_1.1.1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coqeal/libcoq-coqeal_1.1.1-3+b1_amd64.deb"
+}

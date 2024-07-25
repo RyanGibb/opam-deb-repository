@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tasty-ant-xml-prof_1.1.8-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tasty-ant-xml-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-generic-deriving-prof"
+  "libghc-tagged-prof"
+  "libghc-tasty-ant-xml-dev" {= "1.1.8-2+b3"}
+  "libghc-tasty-prof"
+  "libghc-xml-prof"
+]
+extra-source "libghc-tasty-ant-xml-prof_1.1.8-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tasty-ant-xml/libghc-tasty-ant-xml-prof_1.1.8-2+b3_amd64.deb"
+}

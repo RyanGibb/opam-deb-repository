@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libc6-dev-armhf-cross_2.31-9cross4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libc6-dev-armhf-cross"]
+]
+depends: [
+  "libc6-armhf-cross" {= "2.31-9cross4"}
+  "linux-libc-dev-armhf-cross"
+]
+conflicts: [
+  "libc0.1-dev-armhf-cross"
+  "libc0.3-dev-armhf-cross"
+  "libc6.1-dev-armhf-cross"
+]
+extra-source "libc6-dev-armhf-cross_2.31-9cross4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cross-toolchain-base/libc6-dev-armhf-cross_2.31-9cross4_all.deb"
+}

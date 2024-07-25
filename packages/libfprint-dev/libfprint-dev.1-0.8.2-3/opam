@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfprint-dev_1:0.8.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfprint-dev"]
+]
+depends: [
+  "libfprint0" {= "1-0.8.2-3"}
+]
+extra-source "libfprint-dev_1:0.8.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfprint/libfprint-dev_0.8.2-3_amd64.deb"
+}

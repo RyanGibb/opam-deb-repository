@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-gloss-rendering-prof_1.13.0.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-gloss-rendering-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-bmp-prof"
+  "libghc-gloss-rendering-dev" {= "1.13.0.2-1+b2"}
+  "libghc-glut-prof"
+  "libghc-opengl-prof"
+]
+extra-source "libghc-gloss-rendering-prof_1.13.0.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-gloss-rendering/libghc-gloss-rendering-prof_1.13.0.2-1+b2_amd64.deb"
+}

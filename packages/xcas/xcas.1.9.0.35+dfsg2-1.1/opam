@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xcas_1.9.0.35+dfsg2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xcas"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfltk-gl1-3"
+  "libfltk-images1-3"
+  "libfltk1-3" {>= "1.3.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libgiac0" {= "1.9.0.35+dfsg2-1.1"}
+  "libgl1"
+  "libgl2ps1-4" {>= "1.4.2+dfsg1"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libgsl27" {>= "2.7.1"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "11"}
+  "perl-any"
+]
+extra-source "xcas_1.9.0.35+dfsg2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/giac/xcas_1.9.0.35+dfsg2-1.1_amd64.deb"
+}

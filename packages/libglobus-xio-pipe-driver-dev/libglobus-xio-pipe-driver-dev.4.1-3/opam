@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-xio-pipe-driver-dev_4.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-xio-pipe-driver-dev"]
+]
+depends: [
+  "libglobus-common-dev" {>= "15"}
+  "libglobus-xio-dev" {>= "3"}
+  "libglobus-xio-pipe-driver" {= "4.1-3"}
+]
+extra-source "libglobus-xio-pipe-driver-dev_4.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-xio-pipe-driver/libglobus-xio-pipe-driver-dev_4.1-3_amd64.deb"
+}

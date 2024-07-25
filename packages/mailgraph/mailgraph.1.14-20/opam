@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mailgraph_1.14-20_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mailgraph"]
+]
+depends: [
+  "libfile-tail-perl"
+  "librrds-perl"
+  "perl-any"
+  "sysvinit-utils"
+  "ucf" {>= "0.28"}
+]
+extra-source "mailgraph_1.14-20_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mailgraph/mailgraph_1.14-20_all.deb"
+}

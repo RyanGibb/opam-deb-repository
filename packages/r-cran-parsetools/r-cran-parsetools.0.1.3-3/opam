@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-parsetools_0.1.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-parsetools"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.1.1-2"}
+]
+extra-source "r-cran-parsetools_0.1.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-parsetools/r-cran-parsetools_0.1.3-3_all.deb"
+}

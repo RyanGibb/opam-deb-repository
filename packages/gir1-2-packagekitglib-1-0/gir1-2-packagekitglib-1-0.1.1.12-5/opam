@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-packagekitglib-1.0_1.1.12-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-packagekitglib-1.0"]
+]
+depends: [
+  "gir1-2-glib-2-0" {>= "1.36"}
+  "libpackagekit-glib2-18" {>= "1.1.9"}
+]
+extra-source "gir1.2-packagekitglib-1.0_1.1.12-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/packagekit/gir1.2-packagekitglib-1.0_1.1.12-5_amd64.deb"
+}

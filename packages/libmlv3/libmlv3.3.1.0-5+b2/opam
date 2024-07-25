@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmlv3_3.1.0-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmlv3"]
+]
+depends: [
+  "fonts-dejavu-core"
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libsdl-gfx1-2-5" {>= "2.0.25"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2"
+  "libsdl-ttf2-0-0"
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libxml2" {>= "2.7.4"}
+]
+conflicts: [
+  "libmlv"
+  "libmlv-0.2"
+  "libmlv-0.4"
+]
+extra-source "libmlv3_3.1.0-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mlv/libmlv3_3.1.0-5+b2_amd64.deb"
+}

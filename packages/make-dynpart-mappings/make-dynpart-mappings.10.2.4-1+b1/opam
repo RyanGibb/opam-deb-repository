@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i make-dynpart-mappings_10.2.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r make-dynpart-mappings"]
+]
+depends: [
+  "libblkid1" {>= "2.20.1"}
+  "libc6" {>= "2.34"}
+  "libdevmapper1-02-1" {>= "2-1.02.20"}
+  "libmd0" {>= "0.0.0"}
+]
+extra-source "make-dynpart-mappings_10.2.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/make-dynpart-mappings/make-dynpart-mappings_10.2.4-1+b1_amd64.deb"
+}

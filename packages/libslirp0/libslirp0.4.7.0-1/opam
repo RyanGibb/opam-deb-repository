@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libslirp0_4.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libslirp0"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libglib2-0-0" {>= "2.57.2"}
+]
+extra-source "libslirp0_4.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libslirp/libslirp0_4.7.0-1_amd64.deb"
+}

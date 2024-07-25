@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-flashproxy_1.7-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-flashproxy"]
+]
+depends: [
+  "flashproxy-proxy" {= "1.7-4"}
+  "node-optimist"
+  "node-ws"
+  "node-xmlhttprequest"
+  "nodejs"
+]
+extra-source "node-flashproxy_1.7-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flashproxy/node-flashproxy_1.7-4_all.deb"
+}

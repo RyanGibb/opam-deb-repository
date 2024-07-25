@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ax25-tools_0.0.10-rc4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ax25-tools"]
+]
+depends: [
+  "libax25" {>= "0.0.12-rc4"}
+  "libc6" {>= "2.15"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "ax25-utils"
+]
+extra-source "ax25-tools_0.0.10-rc4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ax25-tools/ax25-tools_0.0.10-rc4-3_amd64.deb"
+}

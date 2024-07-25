@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gambas3-gb-opengl_3.12.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gambas3-gb-opengl"]
+]
+depends: [
+  "gambas3-gb-image" {>= "3.12.2-1"}
+  "gambas3-runtime" {>= "3.12.2-1"}
+  "libc6" {>= "2.4"}
+  "libgl1"
+  "libglew2-1" {>= "1.12.0"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "gambas3-gb-opengl_3.12.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gambas3/gambas3-gb-opengl_3.12.2-1_amd64.deb"
+}

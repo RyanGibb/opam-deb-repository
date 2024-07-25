@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i acct_6.6.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r acct"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "lsb-base"
+]
+extra-source "acct_6.6.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/acct/acct_6.6.4-2_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i krb5-kpropd_1.20.1-2+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r krb5-kpropd"]
+]
+depends: [
+  "krb5-kdc" {= "1.20.1-2+deb12u1"}
+  "libc6" {>= "2.34"}
+  "libcom-err2" {>= "1.43.9"}
+  "libgssrpc4" {>= "1.6.dfsg.2"}
+  "libk5crypto3" {>= "1.9+dfsg~beta1"}
+  "libkadm5clnt-mit12" {>= "1.18.2"}
+  "libkdb5-10" {>= "1.20.1"}
+  "libkrb5-3" {>= "1.16"}
+  "libkrb5support0" {>= "1.7dfsg~beta2"}
+  "lsb-base"
+]
+extra-source "krb5-kpropd_1.20.1-2+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/krb5/krb5-kpropd_1.20.1-2+deb12u1_amd64.deb"
+}

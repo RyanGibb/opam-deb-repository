@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libodfgen-0.1-1_0.1.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libodfgen-0.1-1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "librevenge-0-0-0"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libodfgen-0.1-1_0.1.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libodfgen/libodfgen-0.1-1_0.1.7-1_amd64.deb"
+}

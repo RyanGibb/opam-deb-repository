@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ges1.0-tools_1.18.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ges1.0-tools"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libges-1-0-0" {>= "1.12.0"}
+  "libglib2-0-0" {>= "2.44"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.18.0"}
+  "libgstreamer1-0-0" {>= "1.18.0"}
+]
+extra-source "ges1.0-tools_1.18.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gstreamer-editing-services1.0/ges1.0-tools_1.18.4-2_amd64.deb"
+}

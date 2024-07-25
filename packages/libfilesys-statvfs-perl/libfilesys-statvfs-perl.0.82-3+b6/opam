@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfilesys-statvfs-perl_0.82-3+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfilesys-statvfs-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libfilesys-statvfs-perl_0.82-3+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfilesys-statvfs-perl/libfilesys-statvfs-perl_0.82-3+b6_amd64.deb"
+}

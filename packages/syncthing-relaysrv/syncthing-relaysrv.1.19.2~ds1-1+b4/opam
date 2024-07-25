@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i syncthing-relaysrv_1.19.2~ds1-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r syncthing-relaysrv"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+]
+extra-source "syncthing-relaysrv_1.19.2~ds1-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/syncthing/syncthing-relaysrv_1.19.2~ds1-1+b4_amd64.deb"
+}

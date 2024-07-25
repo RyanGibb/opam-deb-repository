@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i corosync-qdevice_3.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r corosync-qdevice"]
+]
+depends: [
+  "corosync" {>= "2"}
+  "libc6" {>= "2.34"}
+  "libcmap4" {>= "1.99.9"}
+  "libcorosync-common4" {>= "1.99.9"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libnss3-tools"
+  "libsystemd0"
+  "libvotequorum8" {>= "2.4.2"}
+]
+extra-source "corosync-qdevice_3.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/corosync-qdevice/corosync-qdevice_3.0.3-1_amd64.deb"
+}

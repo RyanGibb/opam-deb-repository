@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkate-tools_0.4.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkate-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkate1" {>= "0.4.1"}
+  "libogg0" {>= "1.0rc3"}
+  "liboggkate1" {>= "0.3.7"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "oggz-tools"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-pythoncard"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libkate-tools_0.4.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkate/libkate-tools_0.4.1-9_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cdftools_4.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cdftools"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgfortran5" {>= "10"}
+  "libnetcdff7" {>= "4.1.1"}
+]
+extra-source "cdftools_4.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cdftools/cdftools_4.0.0-2_amd64.deb"
+}

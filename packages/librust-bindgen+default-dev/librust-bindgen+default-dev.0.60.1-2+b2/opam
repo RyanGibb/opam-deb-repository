@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-bindgen+default-dev_0.60.1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-bindgen+default-dev"]
+]
+depends: [
+  "librust-bindgen+clap-dev" {= "0.60.1-2+b2"}
+  "librust-bindgen+logging-dev" {= "0.60.1-2+b2"}
+  "librust-bindgen+runtime-dev" {= "0.60.1-2+b2"}
+  "librust-bindgen+which-dev"
+  "librust-bindgen-dev" {= "0.60.1-2+b2"}
+]
+extra-source "librust-bindgen+default-dev_0.60.1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-bindgen/librust-bindgen+default-dev_0.60.1-2+b2_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nitrokey-authenticator_1.2.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nitrokey-authenticator"]
+]
+depends: [
+  "libboost-log1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libnitrokey3" {>= "3.7"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "6"}
+  "libzbarqt0" {>= "0.23"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "nitrokey-authenticator_1.2.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nitrokey-authenticator/nitrokey-authenticator_1.2.4-2_amd64.deb"
+}

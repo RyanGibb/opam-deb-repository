@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vsdump_0.0.45-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vsdump"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgsf-1-114" {>= "1.14.8"}
+]
+extra-source "vsdump_0.0.45-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vsdump/vsdump_0.0.45-1+b2_amd64.deb"
+}

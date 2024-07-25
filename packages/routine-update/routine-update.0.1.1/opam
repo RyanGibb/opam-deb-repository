@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i routine-update_0.1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r routine-update"]
+]
+depends: [
+  "cme"
+  "devscripts"
+  "dpkg-dev"
+  "fakeroot"
+  "git"
+  "git-buildpackage"
+  "gobject-introspection"
+  "libconfig-model-dpkg-perl"
+  "lintian-brush"
+  "pristine-tar"
+  "quilt"
+]
+extra-source "routine-update_0.1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/routine-update/routine-update_0.1.1_all.deb"
+}

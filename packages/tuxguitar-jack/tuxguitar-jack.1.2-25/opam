@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tuxguitar-jack_1.2-25_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tuxguitar-jack"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "tuxguitar" {= "1.2-25"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "tuxguitar-jack_1.2-25_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tuxguitar/tuxguitar-jack_1.2-25_amd64.deb"
+}

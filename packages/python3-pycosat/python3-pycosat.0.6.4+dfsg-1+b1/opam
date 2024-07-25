@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pycosat_0.6.4+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pycosat"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "picosat" {>= "953"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+]
+extra-source "python3-pycosat_0.6.4+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pycosat/python3-pycosat_0.6.4+dfsg-1+b1_amd64.deb"
+}

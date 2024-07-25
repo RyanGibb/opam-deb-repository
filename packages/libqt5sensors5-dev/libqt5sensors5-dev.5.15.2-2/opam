@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5sensors5-dev_5.15.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5sensors5-dev"]
+]
+depends: [
+  "libqt5sensors5" {= "5.15.2-2"}
+  "qtbase5-dev"
+]
+extra-source "libqt5sensors5-dev_5.15.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtsensors-opensource-src/libqt5sensors5-dev_5.15.2-2_amd64.deb"
+}

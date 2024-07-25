@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcatalyst-action-rest-perl_1.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcatalyst-action-rest-perl"]
+]
+depends: [
+  "libcatalyst-perl" {>= "5.80030"}
+  "libclass-inspector-perl"
+  "libjson-maybexs-perl"
+  "libmoose-perl"
+  "libmro-compat-perl"
+  "libnamespace-autoclean-perl"
+  "libparams-validate-perl"
+  "liburi-find-perl"
+  "perl"
+  ("libmodule-pluggable-perl" | "perl" {< "5.17.0"})
+]
+extra-source "libcatalyst-action-rest-perl_1.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcatalyst-action-rest-perl/libcatalyst-action-rest-perl_1.21-1_all.deb"
+}

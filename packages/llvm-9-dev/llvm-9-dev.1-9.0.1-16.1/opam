@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i llvm-9-dev_1:9.0.1-16.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r llvm-9-dev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libclang-cpp9" {= "1-9.0.1-16.1"}
+  "libffi-dev" {>= "3.0.9"}
+  "libgcc-s1" {>= "3.0"}
+  "libllvm9" {= "1-9.0.1-16.1"}
+  "libstdc++6" {>= "9"}
+  "libtinfo-dev"
+  "libz3-dev"
+  "llvm-9" {= "1-9.0.1-16.1"}
+  "llvm-9-tools" {= "1-9.0.1-16.1"}
+]
+extra-source "llvm-9-dev_1:9.0.1-16.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-9/llvm-9-dev_9.0.1-16.1_amd64.deb"
+}

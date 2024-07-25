@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fiat-utils_1.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fiat-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfiat-0" {= "1.0.0-4"}
+  "libgomp1" {>= "4.9"}
+  "libopenmpi3" {>= "4.1.4"}
+]
+extra-source "fiat-utils_1.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fiat-ecmwf/fiat-utils_1.0.0-4_amd64.deb"
+}

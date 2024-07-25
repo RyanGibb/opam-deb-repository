@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtickit3_0.4.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtickit3"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libtermkey1" {>= "0.20"}
+  "libunibilium4" {>= "2.0"}
+]
+extra-source "libtickit3_0.4.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtickit/libtickit3_0.4.3-1_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-qtquick-scene3d_5.15.2+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-qtquick-scene3d"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt53danimation5" {>= "5.9.0"}
+  "libqt53dcore5" {>= "5.15.2"}
+  "libqt53dinput5" {>= "5.7.1~20161122"}
+  "libqt53dlogic5" {>= "5.7.1~20161122"}
+  "libqt53drender5" {>= "5.15.1"}
+  "libqt5core5a" {>= "5.15.2+dfsg~"}
+  "libqt5qml5" {>= "5.15.2+dfsg~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.2+dfsg~"} | "libqt5gui5-gles" {>= "5.15.2+dfsg~"})
+  ("libqt5quick5" {>= "5.15.2+dfsg~"} | "libqt5quick5-gles" {>= "5.15.2+dfsg~"})
+]
+extra-source "qml-module-qtquick-scene3d_5.15.2+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt3d-opensource-src/qml-module-qtquick-scene3d_5.15.2+dfsg-2_amd64.deb"
+}

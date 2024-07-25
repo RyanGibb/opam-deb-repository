@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i furiusisomount_0.11.3.1~repack1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r furiusisomount"]
+]
+depends: [
+  "fuseiso"
+  "fuseiso9660"
+  "nautilus"
+  "python" {>= "2.6.6-7~"}
+  "python-glade2"
+  "python-gtk2"
+]
+extra-source "furiusisomount_0.11.3.1~repack1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/furiusisomount/furiusisomount_0.11.3.1~repack1-1_all.deb"
+}

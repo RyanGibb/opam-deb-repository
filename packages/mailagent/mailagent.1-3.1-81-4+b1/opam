@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mailagent_1:3.1-81-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mailagent"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfile-fcntllock-perl"
+  "libperl4-corelibs-perl"
+  "perl"
+  ("debconf" {>= "1.2.0"} | "debconf-2-0")
+  ("exim4" | "postfix" | "sendmail" | "mail-transport-agent")
+]
+extra-source "mailagent_1:3.1-81-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mailagent/mailagent_3.1-81-4+b1_amd64.deb"
+}

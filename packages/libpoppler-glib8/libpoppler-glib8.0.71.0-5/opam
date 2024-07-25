@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpoppler-glib8_0.71.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpoppler-glib8"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.12.0"}
+  "libfreetype6" {>= "2.2.1"}
+  "libglib2-0-0" {>= "2.41"}
+  "libpoppler82" {= "0.71.0-5"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libpoppler-glib8_0.71.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poppler/libpoppler-glib8_0.71.0-5_amd64.deb"
+}

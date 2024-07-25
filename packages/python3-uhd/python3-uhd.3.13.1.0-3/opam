@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-uhd_3.13.1.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-uhd"]
+]
+depends: [
+  "libboost-atomic1-67-0"
+  "libboost-chrono1-67-0"
+  "libboost-date-time1-67-0"
+  "libboost-filesystem1-67-0"
+  "libboost-program-options1-67-0"
+  "libboost-python1-67-0"
+  "libboost-regex1-67-0" {>= "1.67.0-10"}
+  "libboost-serialization1-67-0"
+  "libboost-system1-67-0"
+  "libboost-test1-67-0"
+  "libboost-thread1-67-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libpython3-7" {>= "3.7.0"}
+  "libstdc++6" {>= "5.2"}
+  "libuhd3-13-1" {= "3.13.1.0-3"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+]
+extra-source "python3-uhd_3.13.1.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uhd/python3-uhd_3.13.1.0-3_amd64.deb"
+}

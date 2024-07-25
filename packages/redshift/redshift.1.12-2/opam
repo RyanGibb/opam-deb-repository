@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i redshift_1.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r redshift"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libdrm2" {>= "2.4.3"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libx11-6"
+  "libxcb-randr0" {>= "1.3"}
+  "libxcb1"
+  "libxxf86vm1"
+]
+extra-source "redshift_1.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/redshift/redshift_1.12-2_amd64.deb"
+}

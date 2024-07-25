@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libskk-dev_1.0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libskk-dev"]
+]
+depends: [
+  "gir1-2-skk-1-0" {= "1.0.5-1"}
+  "libgee-0-8-dev"
+  "libjson-glib-dev"
+  "libskk0" {= "1.0.5-1"}
+  "skkdic"
+]
+extra-source "libskk-dev_1.0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libskk/libskk-dev_1.0.5-1_amd64.deb"
+}

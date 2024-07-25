@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librelion-dev_1.4+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librelion-dev"]
+]
+depends: [
+  "librelion-1-4-1" {= "1.4+dfsg-4"}
+  "librelion-dev-common"
+]
+conflicts: [
+  "librelion+gui-dev"
+  "librelion+mpi+gui-dev"
+  "librelion+mpi-dev"
+]
+extra-source "librelion-dev_1.4+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/relion/librelion-dev_1.4+dfsg-4_amd64.deb"
+}

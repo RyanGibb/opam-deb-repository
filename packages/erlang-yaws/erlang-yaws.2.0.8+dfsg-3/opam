@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-yaws_2.0.8+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-yaws"]
+]
+depends: [
+  "erlang-crypto" {>= "1-23.2.6+dfsg"}
+  "erlang-inets" {>= "1-23.2.6+dfsg"}
+  "erlang-mnesia" {>= "1-23.2.6+dfsg"}
+  "erlang-ssl" {>= "1-23.2.6+dfsg"}
+  "erlang-tools" {>= "1-23.2.6+dfsg"}
+  "erlang-xmerl" {>= "1-23.2.6+dfsg"}
+  "libc6" {>= "2.4"}
+  "libpam0g" {>= "0.99.7.1"}
+  ("erlang-base" {>= "1-23.2.6+dfsg"} | "erlang-base-hipe" {>= "1-23.2.6+dfsg"})
+  ("erlang-base" | "erlang-base-hipe")
+]
+extra-source "erlang-yaws_2.0.8+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yaws/erlang-yaws_2.0.8+dfsg-3_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libflorist2020-dev_2017-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libflorist2020-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-10"
+  "libflorist2020" {= "2017-9"}
+]
+extra-source "libflorist2020-dev_2017-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libflorist/libflorist2020-dev_2017-9_amd64.deb"
+}

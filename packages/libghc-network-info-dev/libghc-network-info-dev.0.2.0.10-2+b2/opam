@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-network-info-dev_0.2.0.10-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-network-info-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.3"}
+  "libgmp10"
+]
+extra-source "libghc-network-info-dev_0.2.0.10-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-network-info/libghc-network-info-dev_0.2.0.10-2+b2_amd64.deb"
+}

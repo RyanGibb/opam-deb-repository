@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dropbear-bin_2020.81-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dropbear-bin"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libtomcrypt1" {>= "1.18.2"}
+  "libtommath1" {>= "1.2.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "dropbear-bin_2020.81-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dropbear/dropbear-bin_2020.81-3+deb11u1_amd64.deb"
+}

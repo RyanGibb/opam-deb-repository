@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsereal-decoder-perl_5.003+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsereal-decoder-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libzstd1" {>= "1.5.2"}
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "libsereal-decoder-perl_5.003+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsereal-decoder-perl/libsereal-decoder-perl_5.003+ds-1_amd64.deb"
+}

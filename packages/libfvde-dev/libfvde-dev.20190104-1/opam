@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfvde-dev_20190104-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfvde-dev"]
+]
+depends: [
+  "libfvde1" {= "20190104-1"}
+]
+extra-source "libfvde-dev_20190104-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfvde/libfvde-dev_20190104-1_amd64.deb"
+}

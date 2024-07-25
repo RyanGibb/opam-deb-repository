@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwine-development-dev_4.2-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwine-development-dev"]
+]
+depends: [
+  "libwine-development" {= "4.2-4+b1"}
+  ("libc6-dev" | "libc6-1-dev" | "libc0-3-dev" | "libc0-1-dev" | "libc-dev")
+]
+extra-source "libwine-development-dev_4.2-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wine-development/libwine-development-dev_4.2-4+b1_amd64.deb"
+}

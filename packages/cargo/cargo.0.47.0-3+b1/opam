@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cargo_0.47.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cargo"]
+]
+depends: [
+  "binutils"
+  "libc6" {>= "2.29"}
+  "libcurl3-gnutls" {>= "7.28.0"}
+  "libgcc-s1" {>= "4.2"}
+  "libgit2-1-1" {>= "1.1.0"}
+  "libssh2-1" {>= "1.2.5"}
+  "libssl1-1" {>= "1.1.0"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("gcc" | "clang" | "c-compiler")
+  ("rustc-mozilla" | "rustc-web")
+]
+extra-source "cargo_0.47.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cargo/cargo_0.47.0-3+b1_amd64.deb"
+}

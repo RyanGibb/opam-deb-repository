@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openvswitch-pki_2.15.0+ds1-2+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openvswitch-pki"]
+]
+depends: [
+  "openvswitch-common" {< "2.15.0+ds1-2+deb11u5.1~"}
+  "openvswitch-common" {>= "2.15.0+ds1-2+deb11u5"}
+]
+extra-source "openvswitch-pki_2.15.0+ds1-2+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openvswitch/openvswitch-pki_2.15.0+ds1-2+deb11u5_all.deb"
+}

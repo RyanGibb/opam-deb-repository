@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i finit-sysv_4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r finit-sysv"]
+]
+depends: [
+  "finit"
+]
+conflicts: [
+  "runit-init"
+  "systemd-sysv"
+  "sysvinit-core"
+  "upstart"
+]
+extra-source "finit-sysv_4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/finit/finit-sysv_4.2-1_all.deb"
+}

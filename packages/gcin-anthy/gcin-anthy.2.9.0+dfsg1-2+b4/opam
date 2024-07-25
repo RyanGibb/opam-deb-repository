@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcin-anthy_2.9.0+dfsg1-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcin-anthy"]
+]
+depends: [
+  "anthy"
+  "gcin" {>= "2.9.0+dfsg1-2"}
+  "libanthy1"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+]
+extra-source "gcin-anthy_2.9.0+dfsg1-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcin/gcin-anthy_2.9.0+dfsg1-2+b4_amd64.deb"
+}

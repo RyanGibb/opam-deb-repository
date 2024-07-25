@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kdenetwork_4:22.12.3+5.142_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kdenetwork"]
+]
+depends: [
+  "kget" {>= "4-22.12.3"}
+  "krdc" {>= "4-22.12.3"}
+  "krfb" {>= "4-22.12.3"}
+]
+extra-source "kdenetwork_4:22.12.3+5.142_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-kde/kdenetwork_22.12.3+5.142_amd64.deb"
+}

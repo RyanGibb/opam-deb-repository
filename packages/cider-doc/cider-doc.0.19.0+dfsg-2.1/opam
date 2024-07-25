@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cider-doc_0.19.0+dfsg-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cider-doc"]
+]
+depends: [
+  "elpa-cider" {= "0.19.0+dfsg-2.1"}
+  "fonts-font-awesome" {>= "5.0.10+really4.7.0~dfsg-2"}
+  "libjs-highlight-js"
+  "libjs-lunr" {>= "2.3.7~dfsg-1"}
+  "libjs-modernizr" {>= "2.6.2+ds1-3"}
+  "mkdocs" {>= "1.0.4+dfsg-2"}
+  "sphinx-rtd-theme-common" {>= "0.4.3+dfsg-3"}
+]
+extra-source "cider-doc_0.19.0+dfsg-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cider/cider-doc_0.19.0+dfsg-2.1_all.deb"
+}

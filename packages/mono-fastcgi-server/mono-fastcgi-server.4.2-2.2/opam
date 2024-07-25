@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mono-fastcgi-server_4.2-2.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mono-fastcgi-server"]
+]
+depends: [
+  "mono-fastcgi-server4" {= "4.2-2.2"}
+]
+conflicts: [
+  "mono-server"
+]
+extra-source "mono-fastcgi-server_4.2-2.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xsp/mono-fastcgi-server_4.2-2.2_all.deb"
+}

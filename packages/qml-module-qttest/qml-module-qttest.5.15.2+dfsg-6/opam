@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-qttest_5.15.2+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-qttest"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5"
+  "libqt5qml5" {>= "5.15.1"}
+  "libqt5quicktest5" {>= "5.0.2"}
+  "libqt5test5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  "qml-module-qtquick-window2"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.12.2"} | "libqt5gui5-gles" {>= "5.12.2"})
+  ("libqt5quick5" {>= "5.0.2"} | "libqt5quick5-gles" {>= "5.0.2"})
+]
+extra-source "qml-module-qttest_5.15.2+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtdeclarative-opensource-src/qml-module-qttest_5.15.2+dfsg-6_amd64.deb"
+}

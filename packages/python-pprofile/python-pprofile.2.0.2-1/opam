@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pprofile_2.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pprofile"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-pkg-resources"
+]
+extra-source "python-pprofile_2.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pprofile/python-pprofile_2.0.2-1_all.deb"
+}

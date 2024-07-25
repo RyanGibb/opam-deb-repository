@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mangohud_0.6.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mangohud"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfmt9" {>= "9.1.0+ds1"}
+  "libgcc-s1" {>= "3.0"}
+  "libspdlog1-10"
+  "libstdc++6" {>= "12"}
+]
+extra-source "mangohud_0.6.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mangohud/mangohud_0.6.8-2_amd64.deb"
+}

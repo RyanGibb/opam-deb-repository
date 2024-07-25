@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ncbi-tools-x11_6.1.20170106+dfsg1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ncbi-tools-x11"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libncbi6" {< "6.1.20170106+dfsg1.1"}
+  "libncbi6" {>= "6.1.20170106+dfsg1"}
+  "libvibrant6b" {< "6.1.20170106+dfsg1.1"}
+  "libvibrant6b" {>= "6.1.20170106+dfsg1"}
+  "ncbi-cn3d"
+]
+extra-source "ncbi-tools-x11_6.1.20170106+dfsg1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ncbi-tools6/ncbi-tools-x11_6.1.20170106+dfsg1-9_amd64.deb"
+}

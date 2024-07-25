@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mpich-doc_3.4.1-5~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mpich-doc"]
+]
+conflicts: [
+  "lam-mpidoc"
+  "lam4-dev"
+  "mpi-doc"
+  "openmpi-doc"
+  "openmpi-mpidoc"
+]
+extra-source "mpich-doc_3.4.1-5~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpich/mpich-doc_3.4.1-5~deb11u1_all.deb"
+}

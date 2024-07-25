@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-pangocairo+dox-dev_0.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-pangocairo+dox-dev"]
+]
+depends: [
+  "librust-cairo-rs-0-7+dox-dev"
+  "librust-glib-0-8+dox-dev"
+  "librust-pango-0-7+dox-dev"
+  "librust-pangocairo-dev" {= "0.8.0-1"}
+]
+extra-source "librust-pangocairo+dox-dev_0.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-pangocairo/librust-pangocairo+dox-dev_0.8.0-1_amd64.deb"
+}

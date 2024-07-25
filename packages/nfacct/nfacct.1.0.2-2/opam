@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nfacct_1.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nfacct"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libmnl0" {>= "1.0.3-4~"}
+  "libnetfilter-acct1"
+]
+extra-source "nfacct_1.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nfacct/nfacct_1.0.2-2_amd64.deb"
+}

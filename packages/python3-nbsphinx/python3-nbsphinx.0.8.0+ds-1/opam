@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-nbsphinx_0.8.0+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-nbsphinx"]
+]
+depends: [
+  "python3-any"
+  "python3-docutils"
+  "python3-jinja2"
+  "python3-nbconvert" {>= "5.4-2"}
+  "python3-nbformat"
+  "python3-sphinx"
+  "python3-traitlets"
+]
+extra-source "python3-nbsphinx_0.8.0+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nbsphinx/python3-nbsphinx_0.8.0+ds-1_all.deb"
+}

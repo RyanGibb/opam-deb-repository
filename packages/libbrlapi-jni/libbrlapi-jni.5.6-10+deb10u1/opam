@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbrlapi-jni_5.6-10+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbrlapi-jni"]
+]
+depends: [
+  "libbrlapi0-6"
+  "libc6" {>= "2.4"}
+]
+extra-source "libbrlapi-jni_5.6-10+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/brltty/libbrlapi-jni_5.6-10+deb10u1_amd64.deb"
+}

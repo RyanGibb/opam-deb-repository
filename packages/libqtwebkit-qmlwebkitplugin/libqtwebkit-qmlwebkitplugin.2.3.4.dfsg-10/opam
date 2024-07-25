@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqtwebkit-qmlwebkitplugin_2.3.4.dfsg-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqtwebkit-qmlwebkitplugin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt4-declarative" {>= "4-4.8.6+git64-g5dc8b2b+dfsg-2~"}
+  "libqtcore4" {>= "4-4.8.6+git64-g5dc8b2b+dfsg-2~"}
+  "libqtgui4" {>= "4-4.8.6+git64-g5dc8b2b+dfsg-2~"}
+  "libqtwebkit4" {>= "2.1.0~2011week13"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libqtwebkit-qmlwebkitplugin_2.3.4.dfsg-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtwebkit/libqtwebkit-qmlwebkitplugin_2.3.4.dfsg-10_amd64.deb"
+}

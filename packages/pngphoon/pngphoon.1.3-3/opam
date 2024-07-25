@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pngphoon_1.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pngphoon"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpng16-16" {>= "1.6.2-1"}
+]
+extra-source "pngphoon_1.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pngphoon/pngphoon_1.3-3_amd64.deb"
+}

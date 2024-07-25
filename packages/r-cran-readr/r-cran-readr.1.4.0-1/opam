@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-readr_1.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-readr"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.2.20201005-1"}
+  "r-cran-bh"
+  "r-cran-cli"
+  "r-cran-clipr"
+  "r-cran-cpp11"
+  "r-cran-crayon"
+  "r-cran-hms" {>= "0.4.1"}
+  "r-cran-lifecycle"
+  "r-cran-r6"
+  "r-cran-rcpp"
+  "r-cran-rlang"
+  "r-cran-tibble"
+]
+extra-source "r-cran-readr_1.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-readr/r-cran-readr_1.4.0-1_amd64.deb"
+}

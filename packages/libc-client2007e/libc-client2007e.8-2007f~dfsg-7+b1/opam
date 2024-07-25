@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libc-client2007e_8:2007f~dfsg-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libc-client2007e"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libkrb5-3" {>= "1.6.dfsg.2"}
+  "libpam-modules"
+  "libpam0g" {>= "0.99.7.1"}
+  "libssl1-1" {>= "1.1.0"}
+  "mlock"
+]
+extra-source "libc-client2007e_8:2007f~dfsg-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uw-imap/libc-client2007e_2007f~dfsg-7+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wswiss_20161207-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wswiss"]
+]
+depends: [
+  "dictionaries-common" {>= "1.0"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "wswiss_20161207-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/igerman98/wswiss_20161207-9_all.deb"
+}

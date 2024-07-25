@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uronode_2.13-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uronode"]
+]
+depends: [
+  "libax25"
+  "libc6" {>= "2.15"}
+]
+extra-source "uronode_2.13-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uronode/uronode_2.13-2_amd64.deb"
+}

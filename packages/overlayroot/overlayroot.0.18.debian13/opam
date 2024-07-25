@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i overlayroot_0.18.debian13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r overlayroot"]
+]
+depends: [
+  "cryptsetup"
+  "cryptsetup-bin"
+  "initramfs-tools"
+]
+extra-source "overlayroot_0.18.debian13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cloud-initramfs-tools/overlayroot_0.18.debian13_all.deb"
+}

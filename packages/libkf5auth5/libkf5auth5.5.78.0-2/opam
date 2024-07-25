@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5auth5_5.78.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5auth5"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libkf5auth-data" {= "5.78.0-2"}
+  "libkf5authcore5" {= "5.78.0-2"}
+  "libkf5coreaddons5" {>= "5.78.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.14.0~"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.14.0~"} | "libqt5gui5-gles" {>= "5.14.0~"})
+]
+extra-source "libkf5auth5_5.78.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kauth/libkf5auth5_5.78.0-2_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cairo-dock-logout-plug-in_3.4.1+git20201022.a0d3415c-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cairo-dock-logout-plug-in"]
+]
+depends: [
+  "cairo-dock-plug-in-data" {= "3.4.1+git20201022.a0d3415c-1"}
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.8.0"}
+  "libdbus-glib-1-2" {>= "0.78"}
+  "libglib2-0-0" {>= "2.14.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "sgml-base" {>= "1.28"}
+]
+extra-source "cairo-dock-logout-plug-in_3.4.1+git20201022.a0d3415c-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cairo-dock-plug-ins/cairo-dock-logout-plug-in_3.4.1+git20201022.a0d3415c-1+b1_amd64.deb"
+}

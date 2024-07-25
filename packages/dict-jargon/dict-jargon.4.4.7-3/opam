@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dict-jargon_4.4.7-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dict-jargon"]
+]
+depends: [
+  ("dictd" | "dict-server")
+]
+extra-source "dict-jargon_4.4.7-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dict-jargon/dict-jargon_4.4.7-3_all.deb"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libafterimage-dev_2.2.12-15+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libafterimage-dev"]
+]
+depends: [
+  "freeglut3-dev"
+  "libafterimage0" {= "2.2.12-15+b2"}
+  "libfreetype6-dev"
+  "libice-dev"
+  "libjpeg-dev"
+  "libpng-dev"
+  "librsvg2-dev"
+  "libsm-dev"
+  "libtiff5-dev"
+  "libxext-dev"
+  "libxinerama-dev"
+  "zlib1g-dev" {>= "1-1.1.4"}
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "libafterimage-dev_2.2.12-15+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/afterstep/libafterimage-dev_2.2.12-15+b2_amd64.deb"
+}

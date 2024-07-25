@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i swift-doc_2.26.0-10+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r swift-doc"]
+]
+depends: [
+  "libjs-bootstrap"
+  "libjs-jquery"
+  "libjs-sphinxdoc" {>= "2.4.3-5~"}
+  "libjs-underscore"
+  "python-os-api-ref-common"
+]
+extra-source "swift-doc_2.26.0-10+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/swift/swift-doc_2.26.0-10+deb11u1_all.deb"
+}

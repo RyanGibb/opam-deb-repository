@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nextepc-core_0.3.10+nods-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nextepc-core"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcrypt20" {>= "1.7.0"}
+  "libgnutls30" {>= "3.6.5"}
+  "libidn11" {>= "1.13"}
+  "libsctp1" {>= "1.0.12+dfsg"}
+]
+extra-source "nextepc-core_0.3.10+nods-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nextepc/nextepc-core_0.3.10+nods-3_amd64.deb"
+}

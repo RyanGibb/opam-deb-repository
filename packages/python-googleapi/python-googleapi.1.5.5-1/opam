@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-googleapi_1.5.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-googleapi"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-httplib2" {>= "0.8"}
+  "python-oauth2client" {>= "2.0.0"}
+  "python-six" {>= "1.6.1"}
+  "python-uritemplate" {>= "0.6"}
+]
+extra-source "python-googleapi_1.5.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-googleapi/python-googleapi_1.5.5-1_all.deb"
+}

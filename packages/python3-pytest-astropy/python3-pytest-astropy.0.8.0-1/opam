@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pytest-astropy_0.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pytest-astropy"]
+]
+depends: [
+  "python3-any"
+  "python3-hypothesis" {>= "5.1~"}
+  "python3-pytest" {>= "4.6~"}
+  "python3-pytest-arraydiff" {>= "0.1"}
+  "python3-pytest-astropy-header" {>= "0.1.2~"}
+  "python3-pytest-cov" {>= "2.0~"}
+  "python3-pytest-doctestplus" {>= "0.2.0"}
+  "python3-pytest-filter-subpackage"
+  "python3-pytest-openfiles" {>= "0.3.1"}
+  "python3-pytest-remotedata" {>= "0.3.1"}
+]
+extra-source "python3-pytest-astropy_0.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pytest-astropy/python3-pytest-astropy_0.8.0-1_all.deb"
+}

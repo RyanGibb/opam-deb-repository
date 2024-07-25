@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ncbi-entrez-direct_10.9.20190219+ds-1+b10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ncbi-entrez-direct"]
+]
+depends: [
+  "libc6" {>= "2.3.2"}
+  "libwww-perl"
+  "libxml-simple-perl"
+  "perl-any"
+]
+extra-source "ncbi-entrez-direct_10.9.20190219+ds-1+b10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ncbi-entrez-direct/ncbi-entrez-direct_10.9.20190219+ds-1+b10_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5glib-2.0-0_1.2.0-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5glib-2.0-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.26.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libqt5glib-2.0-0_1.2.0-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt-gstreamer/libqt5glib-2.0-0_1.2.0-5.1_amd64.deb"
+}

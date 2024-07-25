@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gap-core_4.12.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gap-core"]
+]
+depends: [
+  "gap-libs" {= "4.12.1-2"}
+  "libc6" {>= "2.35"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libreadline8" {>= "6.0"}
+  "zlib1g" {>= "1-1.2.3.4"}
+]
+extra-source "gap-core_4.12.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gap/gap-core_4.12.1-2_amd64.deb"
+}

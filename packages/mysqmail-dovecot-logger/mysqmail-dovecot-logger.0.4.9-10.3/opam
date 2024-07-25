@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mysqmail-dovecot-logger_0.4.9-10.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mysqmail-dovecot-logger"]
+]
+depends: [
+  "dovecot-imapd"
+  "dovecot-pop3d"
+  "libc6" {>= "2.14"}
+  "libdotconf0" {>= "1.0.13"}
+  "libmariadb3" {>= "3.0.0"}
+  "lsb-base"
+  "mysqmail"
+]
+extra-source "mysqmail-dovecot-logger_0.4.9-10.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mysqmail/mysqmail-dovecot-logger_0.4.9-10.3_amd64.deb"
+}

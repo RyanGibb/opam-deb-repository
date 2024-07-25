@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzulucrypt-exe1.2.0_5.4.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzulucrypt-exe1.2.0"]
+]
+depends: [
+  "libblkid1" {>= "2.17.2"}
+  "libc6" {>= "2.4"}
+  "libcryptsetup12" {>= "2-1.4"}
+  "libzulucrypt1-2-0" {>= "5.0.2"}
+  "libzulucryptpluginmanager1-0-0" {>= "5.0.2"}
+]
+extra-source "libzulucrypt-exe1.2.0_5.4.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zulucrypt/libzulucrypt-exe1.2.0_5.4.0-3_amd64.deb"
+}

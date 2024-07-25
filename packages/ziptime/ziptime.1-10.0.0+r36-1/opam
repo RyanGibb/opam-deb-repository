@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ziptime_1:10.0.0+r36-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ziptime"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "ziptime_1:10.0.0+r36-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-build/ziptime_10.0.0+r36-1_amd64.deb"
+}

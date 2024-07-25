@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gengetopt_2.22.6+dfsg0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gengetopt"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "gengetopt_2.22.6+dfsg0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gengetopt/gengetopt_2.22.6+dfsg0-3_amd64.deb"
+}

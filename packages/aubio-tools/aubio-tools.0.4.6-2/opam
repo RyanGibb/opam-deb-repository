@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aubio-tools_0.4.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aubio-tools"]
+]
+depends: [
+  "libaubio5" {>= "0.4.5"}
+  "libavformat58"
+  "libavutil56"
+  "libc6" {>= "2.14"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libsamplerate0" {>= "0.1.7"}
+  "libsndfile1" {>= "1.0.20"}
+  "libswresample3" {>= "7-4.0"}
+  "python3-any"
+  "python3-aubio" {= "0.4.6-2"}
+  ("libavcodec58" | "libavcodec-extra58")
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "aubio-tools_0.4.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aubio/aubio-tools_0.4.6-2_amd64.deb"
+}

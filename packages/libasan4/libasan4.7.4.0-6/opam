@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libasan4_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libasan4"]
+]
+depends: [
+  "gcc-7-base" {= "7.4.0-6"}
+  "libc6" {>= "2.23"}
+  "libgcc1"
+  "libstdc++6"
+]
+extra-source "libasan4_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/libasan4_7.4.0-6_amd64.deb"
+}

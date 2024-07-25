@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dose-builddebcheck_5.0.1-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dose-builddebcheck"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.28"}
+  "xz-utils"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "dose-builddebcheck_5.0.1-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dose3/dose-builddebcheck_5.0.1-12_amd64.deb"
+}

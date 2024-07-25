@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkkc-utils_0.3.5-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkkc-utils"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libkkc-data"
+  "libkkc2" {= "0.3.5-4"}
+]
+extra-source "libkkc-utils_0.3.5-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkkc/libkkc-utils_0.3.5-4_amd64.deb"
+}

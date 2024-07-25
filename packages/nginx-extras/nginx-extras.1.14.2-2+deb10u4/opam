@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nginx-extras_1.14.2-2+deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nginx-extras"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "libnginx-mod-http-auth-pam" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-http-cache-purge" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-http-dav-ext" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-http-echo" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-http-fancyindex" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-http-geoip" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-http-headers-more-filter" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-http-image-filter" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-http-lua" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-http-perl" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-http-subs-filter" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-http-uploadprogress" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-http-upstream-fair" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-http-xslt-filter" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-mail" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-nchan" {= "1.14.2-2+deb10u4"}
+  "libnginx-mod-stream" {= "1.14.2-2+deb10u4"}
+  "libpcre3"
+  "libssl1-1" {>= "1.1.0"}
+  "nginx-common" {= "1.14.2-2+deb10u4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "nginx-full"
+  "nginx-light"
+]
+extra-source "nginx-extras_1.14.2-2+deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nginx/nginx-extras_1.14.2-2+deb10u4_amd64.deb"
+}

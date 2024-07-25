@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i glade_3.38.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r glade"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libgladeui-2-13" {>= "3.38.1"}
+  "libglib2-0-0" {>= "2.64.0"}
+  "libgtk-3-0" {>= "3.24.0"}
+  "libpango-1-0-0" {>= "1.18.0"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "glade_3.38.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glade/glade_3.38.2-2_amd64.deb"
+}

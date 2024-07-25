@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsdl-pango1_0.1.2-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsdl-pango1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangoft2-1-0-0" {>= "1.14.0"}
+  "libsdl1-2-compat-shim"
+]
+extra-source "libsdl-pango1_0.1.2-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sdlpango/libsdl-pango1_0.1.2-8+b1_amd64.deb"
+}

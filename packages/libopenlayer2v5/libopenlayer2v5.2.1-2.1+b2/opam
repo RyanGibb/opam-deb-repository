@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenlayer2v5_2.1-2.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenlayer2v5"]
+]
+depends: [
+  "liballeggl4-4"
+  "liballegro4-4"
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libgl1"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "5.2"}
+  ("libglu1-mesa" | "libglu1")
+]
+conflicts: [
+  "libopenlayer2"
+]
+extra-source "libopenlayer2v5_2.1-2.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openlayer/libopenlayer2v5_2.1-2.1+b2_amd64.deb"
+}

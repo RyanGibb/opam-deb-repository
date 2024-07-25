@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octavia-worker_3.0.0-3+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octavia-worker"]
+]
+depends: [
+  "lsb-base" {>= "3.0-6"}
+  "octavia-common" {= "3.0.0-3+deb10u1"}
+]
+extra-source "octavia-worker_3.0.0-3+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octavia/octavia-worker_3.0.0-3+deb10u1_all.deb"
+}

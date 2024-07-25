@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osm2pgsql_1.8.0+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osm2pgsql"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc-s1" {>= "3.0"}
+  "liblua5-3-0"
+  "libpq5"
+  "libproj25" {>= "6.1.0"}
+  "libstdc++6" {>= "12"}
+  "python3-any"
+  "python3-psycopg2"
+  "python3-pyosmium"
+  "zlib1g" {>= "1-1.2.6"}
+]
+extra-source "osm2pgsql_1.8.0+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osm2pgsql/osm2pgsql_1.8.0+ds-1_amd64.deb"
+}

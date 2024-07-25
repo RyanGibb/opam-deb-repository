@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i composer_1.8.4-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r composer"]
+]
+depends: [
+  "jsonlint" {< "2~~"}
+  "jsonlint" {>= "1.4"}
+  "php-cli"
+  "php-common"
+  "php-composer-ca-bundle" {< "2~~"}
+  "php-composer-ca-bundle" {>= "1.0"}
+  "php-composer-semver" {< "2~~"}
+  "php-composer-semver" {>= "1.0"}
+  "php-composer-spdx-licenses" {< "2~~"}
+  "php-composer-spdx-licenses" {>= "1.2"}
+  "php-composer-xdebug-handler" {< "2~~"}
+  "php-composer-xdebug-handler" {>= "1.1"}
+  "php-json-schema"
+  "php-psr-log" {< "2~~"}
+  "php-psr-log" {>= "1.0"}
+  "php-symfony-console"
+  "php-symfony-filesystem"
+  "php-symfony-finder"
+  "php-symfony-process"
+]
+extra-source "composer_1.8.4-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/composer/composer_1.8.4-1+deb10u2_all.deb"
+}

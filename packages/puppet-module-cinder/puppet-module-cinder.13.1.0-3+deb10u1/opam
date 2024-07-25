@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-cinder_13.1.0-3+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-cinder"]
+]
+depends: [
+  "puppet-common"
+  "puppet-module-keystone" {>= "13.1.0"}
+  "puppet-module-openstacklib" {>= "13.1.0"}
+  "puppet-module-oslo" {>= "13.1.0"}
+  "puppet-module-puppetlabs-apache"
+  "puppet-module-puppetlabs-inifile"
+  "puppet-module-puppetlabs-rabbitmq"
+  "puppet-module-puppetlabs-stdlib"
+]
+extra-source "puppet-module-cinder_13.1.0-3+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-cinder/puppet-module-cinder_13.1.0-3+deb10u1_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i opendnssec-signer_1:2.1.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r opendnssec-signer"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc1" {>= "1-4.2"}
+  "libldns2" {>= "1.6.11"}
+  "libssl1-1" {>= "1.1.0"}
+  "libxml2" {>= "2.7.4"}
+  "opendnssec-common" {= "1-2.1.3-2"}
+]
+conflicts: [
+  "opendnssec-signer-tools (<< 1.2.0~)"
+]
+extra-source "opendnssec-signer_1:2.1.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opendnssec/opendnssec-signer_2.1.3-2_amd64.deb"
+}

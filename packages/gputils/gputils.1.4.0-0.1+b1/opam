@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gputils_1.4.0-0.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gputils"]
+]
+depends: [
+  "gputils-common" {= "1.4.0-0.1"}
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "gpal"
+  "gpasm"
+]
+extra-source "gputils_1.4.0-0.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gputils/gputils_1.4.0-0.1+b1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eclib-tools_20180815-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eclib-tools"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libec4" {= "20180815-2"}
+  "libgcc1" {>= "1-3.0"}
+  "libntl35"
+  "libpari-gmp-tls6" {>= "2.11.0-1"}
+  "libstdc++6" {>= "4.4.0"}
+]
+extra-source "eclib-tools_20180815-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eclib/eclib-tools_20180815-2_amd64.deb"
+}

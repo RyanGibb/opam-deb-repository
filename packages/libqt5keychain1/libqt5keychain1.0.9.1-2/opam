@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5keychain1_0.9.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5keychain1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libsecret-1-0" {>= "0.7"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libqt5keychain1_0.9.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtkeychain/libqt5keychain1_0.9.1-2_amd64.deb"
+}

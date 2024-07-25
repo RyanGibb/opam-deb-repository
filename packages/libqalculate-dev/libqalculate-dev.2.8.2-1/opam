@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqalculate-dev_2.8.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqalculate-dev"]
+]
+depends: [
+  "libcln-dev" {> "1.2"}
+  "libmpfr-dev"
+  "libqalculate20" {= "2.8.2-1"}
+  "libxml2-dev"
+]
+extra-source "libqalculate-dev_2.8.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libq/libqalculate/libqalculate-dev_2.8.2-1_amd64.deb"
+}

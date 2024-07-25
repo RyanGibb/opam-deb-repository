@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cvs-buildpackage_5.26+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cvs-buildpackage"]
+]
+depends: [
+  "cvs"
+  "dpkg-dev"
+]
+extra-source "cvs-buildpackage_5.26+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cvs-buildpackage/cvs-buildpackage_5.26+nmu1_all.deb"
+}

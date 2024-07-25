@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-packed-simd+sleef-sys-dev_0.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-packed-simd+sleef-sys-dev"]
+]
+depends: [
+  "librust-packed-simd-dev" {= "0.3.1-1"}
+  "librust-sleef-sys-0-1+default-dev"
+]
+extra-source "librust-packed-simd+sleef-sys-dev_0.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-packed-simd/librust-packed-simd+sleef-sys-dev_0.3.1-1_amd64.deb"
+}

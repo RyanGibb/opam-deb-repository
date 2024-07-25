@@ -1,0 +1,48 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xpra_3.1.3-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xpra"]
+]
+depends: [
+  "adduser"
+  "gir1-2-gtk-3-0"
+  "init-system-helpers" {>= "1.51"}
+  "libavcodec-extra59"
+  "libavformat-extra59"
+  "libavutil57" {>= "7-5.0"}
+  "libc6" {>= "2.17"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libswscale6" {>= "7-5.0"}
+  "libsystemd0"
+  "libturbojpeg0" {>= "1-1.4.0"}
+  "libvpx7" {>= "1.12.0"}
+  "libwebp7" {>= "1.2.4"}
+  "libx11-6" {>= "2-1.2.99.901"}
+  "libx264-164" {>= "2-0.164.3095+gitbaee400"}
+  "libx265-199" {>= "3.5"}
+  "libxcomposite1" {>= "1-0.4.5"}
+  "libxdamage1" {>= "1-1.1"}
+  "libxext6"
+  "libxfixes3"
+  "libxi6" {>= "2-1.2.99.4"}
+  "libxkbfile1" {>= "1-1.1.0"}
+  "libxrandr2" {>= "2-1.2.99.2"}
+  "libxtst6"
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-cairo"
+  "python3-gi"
+  "python3-rencode"
+  "x11-xserver-utils"
+  "xserver-xorg-video-dummy"
+  "xvfb"
+]
+extra-source "xpra_3.1.3-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xpra/xpra_3.1.3-0.1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debsigs_0.1.25_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debsigs"]
+]
+depends: [
+  "binutils"
+  "gnupg"
+  "perl-any"
+]
+extra-source "debsigs_0.1.25_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debsigs/debsigs_0.1.25_all.deb"
+}

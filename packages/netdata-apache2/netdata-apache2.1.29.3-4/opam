@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i netdata-apache2_1.29.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r netdata-apache2"]
+]
+depends: [
+  "apache2"
+  "netdata-web" {>= "1.29.3-4"}
+  ("netdata-core" {>= "1.29.3-4"} | "netdata-core-no-sse" {>= "1.29.3-4"})
+]
+extra-source "netdata-apache2_1.29.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netdata/netdata-apache2_1.29.3-4_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hstringtemplate-prof_0.8.7-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hstringtemplate-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-hstringtemplate-dev" {= "0.8.7-5+b1"}
+  "libghc-old-locale-prof"
+  "libghc-semigroups-prof"
+  "libghc-syb-prof"
+  "libghc-void-prof"
+]
+extra-source "libghc-hstringtemplate-prof_0.8.7-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hstringtemplate/libghc-hstringtemplate-prof_0.8.7-5+b1_amd64.deb"
+}

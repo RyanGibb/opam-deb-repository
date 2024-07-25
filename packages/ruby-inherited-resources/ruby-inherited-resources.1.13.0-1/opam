@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-inherited-resources_1.13.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-inherited-resources"]
+]
+depends: [
+  "ruby-actionpack" {< "2-6.2"}
+  "ruby-actionpack" {>= "2-5.2"}
+  "ruby-has-scope" {>= "0.6"}
+  "ruby-railties" {< "2-6.2"}
+  "ruby-railties" {>= "2-5.2"}
+  "ruby-responders" {< "4"}
+  "ruby-responders" {>= "2"}
+]
+extra-source "ruby-inherited-resources_1.13.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-inherited-resources/ruby-inherited-resources_1.13.0-1_all.deb"
+}

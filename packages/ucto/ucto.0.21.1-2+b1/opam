@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ucto_0.21.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ucto"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfolia14" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libicu67" {>= "67.1-1~"}
+  "libstdc++6" {>= "5.2"}
+  "libticcutils8" {>= "0.24"}
+  "libucto5" {>= "0.21.1"}
+  "uctodata"
+]
+extra-source "ucto_0.21.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ucto/ucto_0.21.1-2+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libblockdev-nvdimm-dev_2.25-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libblockdev-nvdimm-dev"]
+]
+depends: [
+  "libblockdev-nvdimm2" {= "2.25-2"}
+  "libblockdev-utils-dev" {= "2.25-2"}
+  "libglib2-0-dev"
+]
+extra-source "libblockdev-nvdimm-dev_2.25-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libblockdev/libblockdev-nvdimm-dev_2.25-2_amd64.deb"
+}

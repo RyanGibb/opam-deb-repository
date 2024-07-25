@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-enummapset-th-dev_0.6.1.1-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-enummapset-th-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-semigroups-dev"
+  "libgmp10"
+]
+extra-source "libghc-enummapset-th-dev_0.6.1.1-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-enummapset-th/libghc-enummapset-th-dev_0.6.1.1-4+b2_amd64.deb"
+}

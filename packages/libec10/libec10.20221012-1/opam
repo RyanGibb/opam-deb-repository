@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libec10_20221012-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libec10"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libntl44" {>= "11.5.1"}
+  "libpari-gmp-tls8"
+  "libstdc++6" {>= "11"}
+]
+extra-source "libec10_20221012-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eclib/libec10_20221012-1_amd64.deb"
+}

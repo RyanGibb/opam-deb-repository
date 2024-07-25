@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lmodern_2.005-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lmodern"]
+]
+depends: [
+  "fonts-lmodern" {= "2.005-1"}
+  "tex-common" {>= "6.13"}
+  "xfonts-utils"
+]
+conflicts: [
+  "lm"
+  "lmodern-x11"
+]
+extra-source "lmodern_2.005-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lmodern/lmodern_2.005-1_all.deb"
+}

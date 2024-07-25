@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-signal-hook+mio-dev_0.1.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-signal-hook+mio-dev"]
+]
+depends: [
+  "librust-mio-0-6+default-dev"
+  "librust-signal-hook-dev" {= "0.1.13-1"}
+]
+extra-source "librust-signal-hook+mio-dev_0.1.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-signal-hook/librust-signal-hook+mio-dev_0.1.13-1_amd64.deb"
+}

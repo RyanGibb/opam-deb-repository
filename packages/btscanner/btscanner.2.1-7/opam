@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i btscanner_2.1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r btscanner"]
+]
+depends: [
+  "ieee-data"
+  "libbluetooth3" {>= "4.91"}
+  "libc6" {>= "2.4"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libxml2" {>= "2.7.4"}
+  "perl"
+]
+extra-source "btscanner_2.1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/btscanner/btscanner_2.1-7_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-smallvec+serde-dev_1.4.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-smallvec+serde-dev"]
+]
+depends: [
+  "librust-serde-1-dev"
+  "librust-smallvec-dev" {= "1.4.2-2"}
+]
+extra-source "librust-smallvec+serde-dev_1.4.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-smallvec/librust-smallvec+serde-dev_1.4.2-2_amd64.deb"
+}

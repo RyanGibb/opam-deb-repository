@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgfortran-8-dev_8.3.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgfortran-8-dev"]
+]
+depends: [
+  "gcc-8-base" {= "8.3.0-6"}
+  "libgcc-8-dev" {= "8.3.0-6"}
+  "libgfortran5" {>= "8.3.0-6"}
+]
+extra-source "libgfortran-8-dev_8.3.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8/libgfortran-8-dev_8.3.0-6_amd64.deb"
+}

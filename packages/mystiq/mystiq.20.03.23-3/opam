@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mystiq_20.03.23-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mystiq"]
+]
+depends: [
+  "ffmpeg" {>= "3.0.0"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libnotify-bin"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5multimedia5" {>= "5.10.0"}
+  "libqt5multimediawidgets5" {>= "5.10.0"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5quickwidgets5" {>= "5.10.0"}
+  "libqt5widgets5" {>= "5.10.0"}
+  "libstdc++6" {>= "5"}
+  "qml-module-qtmultimedia" {>= "5.10.0"}
+  "qml-module-qtquick-dialogs" {>= "5.10.0"}
+  "qml-module-qtquick2" {>= "5.10.0"}
+  "sox"
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "mystiq_20.03.23-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mystiq/mystiq_20.03.23-3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-aptly_0.12.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-aptly"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-apt"
+  "python3-pkg-resources"
+  "python3-requests"
+  "python3-yaml"
+]
+extra-source "python3-aptly_0.12.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-aptly/python3-aptly_0.12.10-1_all.deb"
+}

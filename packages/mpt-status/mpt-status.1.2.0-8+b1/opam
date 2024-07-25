@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mpt-status_1.2.0-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mpt-status"]
+]
+depends: [
+  "daemon"
+  "libc6" {>= "2.4"}
+  "lsb-base"
+]
+extra-source "mpt-status_1.2.0-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpt-status/mpt-status_1.2.0-8+b1_amd64.deb"
+}

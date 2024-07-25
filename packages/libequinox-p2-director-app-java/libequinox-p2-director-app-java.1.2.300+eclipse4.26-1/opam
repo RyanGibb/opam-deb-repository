@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libequinox-p2-director-app-java_1.2.300+eclipse4.26-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libequinox-p2-director-app-java"]
+]
+depends: [
+  "libbcpg-java"
+  "libequinox-app-java"
+  "libequinox-common-java" {>= "3.16"}
+  "libequinox-p2-core-java"
+  "libequinox-p2-director-java"
+  "libequinox-p2-engine-java"
+  "libequinox-p2-metadata-java"
+  "libequinox-p2-repository-java"
+]
+extra-source "libequinox-p2-director-app-java_1.2.300+eclipse4.26-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/equinox-p2/libequinox-p2-director-app-java_1.2.300+eclipse4.26-1_all.deb"
+}

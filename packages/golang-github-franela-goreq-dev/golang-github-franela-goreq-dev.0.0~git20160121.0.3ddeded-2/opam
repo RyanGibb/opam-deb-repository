@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-franela-goreq-dev_0.0~git20160121.0.3ddeded-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-franela-goreq-dev"]
+]
+depends: [
+  "golang-github-franela-goblin-dev"
+  "golang-go"
+  ("golang-gomega-dev" | "golang-github-onsi-gomega-dev")
+]
+extra-source "golang-github-franela-goreq-dev_0.0~git20160121.0.3ddeded-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-franela-goreq/golang-github-franela-goreq-dev_0.0~git20160121.0.3ddeded-2_all.deb"
+}

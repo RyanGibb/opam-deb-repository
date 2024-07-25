@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-golang-x-net-dev_1:0.0+git20210119.5f4716e+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-golang-x-net-dev"]
+]
+depends: [
+  "golang-golang-x-sys-dev" {>= "0.0~git20200930.fdedc70"}
+  "golang-golang-x-text-dev" {>= "0.3.3"}
+]
+extra-source "golang-golang-x-net-dev_1:0.0+git20210119.5f4716e+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-golang-x-net/golang-golang-x-net-dev_0.0+git20210119.5f4716e+dfsg-4_all.deb"
+}

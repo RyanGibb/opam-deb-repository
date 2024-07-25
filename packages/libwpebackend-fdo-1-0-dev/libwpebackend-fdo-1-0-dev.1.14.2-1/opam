@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwpebackend-fdo-1.0-dev_1.14.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwpebackend-fdo-1.0-dev"]
+]
+depends: [
+  "libwpe-1-0-dev"
+  "libwpebackend-fdo-1-0-1" {= "1.14.2-1"}
+]
+extra-source "libwpebackend-fdo-1.0-dev_1.14.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wpebackend-fdo/libwpebackend-fdo-1.0-dev_1.14.2-1_amd64.deb"
+}

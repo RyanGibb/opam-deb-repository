@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i khangman_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r khangman"]
+]
+depends: [
+  "fonts-dustin"
+  "kdeedu-kvtml-data"
+  "libc6" {>= "2.34"}
+  "libkeduvocdocument5abi1" {>= "4-22.11.90"}
+  "libkf5configcore5" {>= "5.90.0~"}
+  "libkf5coreaddons5" {>= "5.90.0~"}
+  "libkf5crash5" {>= "5.90.0~"}
+  "libkf5i18n5" {>= "5.90.0~"}
+  "libkf5newstuff5" {>= "5.94.0"}
+  "libkf5newstuffcore5" {>= "5.90.0~"}
+  "libkf5widgetsaddons5" {>= "4.96.0"}
+  "libkf5xmlgui5" {>= "5.90.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5qml5" {>= "5.15.2~"}
+  "libqt5quickwidgets5" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libqt5xml5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  "qml-module-qtgraphicaleffects"
+  "qml-module-qtmultimedia"
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-dialogs"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick-window2"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "khangman_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/khangman/khangman_22.12.3-1_amd64.deb"
+}

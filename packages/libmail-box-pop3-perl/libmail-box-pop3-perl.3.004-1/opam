@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmail-box-pop3-perl_3.004-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmail-box-pop3-perl"]
+]
+depends: [
+  "libmail-box-perl" {>= "3"}
+  "libmail-message-perl" {>= "3"}
+  "libmail-transport-perl" {>= "3"}
+  "perl"
+]
+extra-source "libmail-box-pop3-perl_3.004-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmail-box-pop3-perl/libmail-box-pop3-perl_3.004-1_all.deb"
+}

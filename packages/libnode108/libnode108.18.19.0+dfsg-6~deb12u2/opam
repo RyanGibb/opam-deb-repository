@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnode108_18.19.0+dfsg-6~deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnode108"]
+]
+depends: [
+  "libbrotli1" {>= "1.0.0"}
+  "libc-ares2" {>= "1.18.1~"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.4"}
+  "libicu72" {>= "72.1~rc-1~"}
+  "libnghttp2-14" {>= "1.41.0"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "11"}
+  "libuv1" {>= "1.44.1"}
+  "node-acorn" {>= "6.2.1~"}
+  "node-cjs-module-lexer" {>= "1.2.2~"}
+  "node-undici" {>= "5.0.0~"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "nodejs-legacy"
+]
+extra-source "libnode108_18.19.0+dfsg-6~deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nodejs/libnode108_18.19.0+dfsg-6~deb12u2_amd64.deb"
+}

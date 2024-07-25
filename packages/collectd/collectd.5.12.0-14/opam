@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i collectd_5.12.0-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r collectd"]
+]
+depends: [
+  "collectd-core" {< "5.12.0-14.1~"}
+  "collectd-core" {>= "5.12.0-14"}
+  "libc6" {>= "2.34"}
+  "librrd8" {>= "1.3.0"}
+]
+extra-source "collectd_5.12.0-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/collectd/collectd_5.12.0-14_amd64.deb"
+}

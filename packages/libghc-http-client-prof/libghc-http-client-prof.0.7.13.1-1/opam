@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-http-client-prof_0.7.13.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-http-client-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-async-prof"
+  "libghc-base64-bytestring-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-case-insensitive-prof"
+  "libghc-cookie-prof"
+  "libghc-http-client-dev" {= "0.7.13.1-1"}
+  "libghc-http-types-prof"
+  "libghc-iproute-prof"
+  "libghc-mime-types-prof"
+  "libghc-network-prof"
+  "libghc-network-uri-prof"
+  "libghc-random-prof"
+  "libghc-streaming-commons-prof"
+]
+extra-source "libghc-http-client-prof_0.7.13.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-http-client/libghc-http-client-prof_0.7.13.1-1_amd64.deb"
+}

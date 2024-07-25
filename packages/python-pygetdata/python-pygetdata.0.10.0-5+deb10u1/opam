@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pygetdata_0.10.0-5+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pygetdata"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgetdata8" {= "0.10.0-5+deb10u1"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-numpy"
+  "python-numpy" {>= "1-1.16.0~rc1"}
+]
+extra-source "python-pygetdata_0.10.0-5+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgetdata/python-pygetdata_0.10.0-5+deb10u1_amd64.deb"
+}

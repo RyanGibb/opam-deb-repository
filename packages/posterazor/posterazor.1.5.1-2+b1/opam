@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i posterazor_1.5.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r posterazor"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfltk1-1" {>= "1.1.7"}
+  "libfreeimage3"
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  "libxpm4"
+]
+extra-source "posterazor_1.5.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/posterazor/posterazor_1.5.1-2+b1_amd64.deb"
+}

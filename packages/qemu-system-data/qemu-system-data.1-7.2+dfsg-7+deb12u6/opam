@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qemu-system-data_1:7.2+dfsg-7+deb12u6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qemu-system-data"]
+]
+conflicts: [
+  "openbios-ppc"
+  "openbios-sparc"
+  "qemu-skiboot"
+  "qemu-slof"
+  "sgabios"
+]
+extra-source "qemu-system-data_1:7.2+dfsg-7+deb12u6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qemu/qemu-system-data_7.2+dfsg-7+deb12u6_all.deb"
+}

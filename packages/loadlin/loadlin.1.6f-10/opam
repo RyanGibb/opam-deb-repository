@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i loadlin_1.6f-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r loadlin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+extra-source "loadlin_1.6f-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/loadlin/loadlin_1.6f-10_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwraster6_0.95.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwraster6"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgif7" {>= "5.1"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libmagickcore-6-q16-6" {>= "8-6.9.10.2"}
+  "libmagickwand-6-q16-6" {>= "8-6.9.10.2"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libtiff5" {>= "4.0.3"}
+  "libx11-6"
+  "libxext6"
+  "libxmu6"
+  "libxpm4"
+]
+extra-source "libwraster6_0.95.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmaker/libwraster6_0.95.8-3_amd64.deb"
+}

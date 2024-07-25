@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-chell-quickcheck2-prof_0.2.5.1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-chell-quickcheck2-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-chell-prof"
+  "libghc-chell-quickcheck2-dev" {= "0.2.5.1-3+b1"}
+  "libghc-quickcheck2-prof"
+  "libghc-random-prof"
+]
+extra-source "libghc-chell-quickcheck2-prof_0.2.5.1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-chell-quickcheck2/libghc-chell-quickcheck2-prof_0.2.5.1-3+b1_amd64.deb"
+}

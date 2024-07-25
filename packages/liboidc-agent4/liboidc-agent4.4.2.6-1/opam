@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liboidc-agent4_4.2.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liboidc-agent4"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libcjson1" {>= "1.7.5"}
+  "libsodium23" {>= "1.0.14"}
+]
+extra-source "liboidc-agent4_4.2.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oidc-agent/liboidc-agent4_4.2.6-1_amd64.deb"
+}

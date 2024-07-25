@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt4-qmake_4:4.8.7+dfsg-18+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt4-qmake"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5"}
+  "qtchooser" {>= "55-gc9562a1-1~"}
+]
+extra-source "qt4-qmake_4:4.8.7+dfsg-18+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt4-x11/qt4-qmake_4.8.7+dfsg-18+deb10u1_amd64.deb"
+}

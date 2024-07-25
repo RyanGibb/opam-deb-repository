@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-microlens-prof_0.4.11.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-microlens-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-microlens-dev" {= "0.4.11.2-1+b1"}
+]
+extra-source "libghc-microlens-prof_0.4.11.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-microlens/libghc-microlens-prof_0.4.11.2-1+b1_amd64.deb"
+}

@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-satpy_0.39.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-satpy"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "5.2"}
+  "python3-any"
+  "python3-appdirs"
+  "python3-dask" {>= "2.8"}
+  "python3-defusedxml"
+  "python3-donfig"
+  "python3-eccodes"
+  "python3-grib"
+  "python3-hdf4" {>= "0.10.1"}
+  "python3-numpy"
+  "python3-pil"
+  "python3-pooch"
+  "python3-pykdtree"
+  "python3-pyorbital" {>= "1.7.3"}
+  "python3-pyproj"
+  "python3-pyresample" {>= "1.24.0"}
+  "python3-scipy"
+  "python3-trollimage" {> "1.10.1"}
+  "python3-trollsift"
+  "python3-xarray"
+  "python3-yaml"
+  "python3-zarr"
+  "sphinx-rtd-theme-common" {>= "1.2.0~rc1+dfsg"}
+]
+extra-source "python3-satpy_0.39.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/satpy/python3-satpy_0.39.0-2_all.deb"
+}

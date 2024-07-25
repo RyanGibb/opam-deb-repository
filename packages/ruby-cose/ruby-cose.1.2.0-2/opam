@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-cose_1.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-cose"]
+]
+depends: [
+  "ruby-cbor" {>= "0.5.9"}
+  "ruby-openssl-signature-algorithm" {>= "1.0"}
+]
+extra-source "ruby-cose_1.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-cose/ruby-cose_1.2.0-2_all.deb"
+}

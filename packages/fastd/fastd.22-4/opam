@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fastd_22-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fastd"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcap2" {>= "1-2.10"}
+  "libjson-c5" {>= "0.15"}
+  "libmnl0" {>= "1.0.3-4~"}
+  "libsodium23" {>= "0.6.0"}
+  "libssl3" {>= "3.0.0"}
+  "libuecc0" {>= "6"}
+]
+extra-source "fastd_22-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fastd/fastd_22-4_amd64.deb"
+}

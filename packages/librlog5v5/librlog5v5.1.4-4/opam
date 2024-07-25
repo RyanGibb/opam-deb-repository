@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librlog5v5_1.4-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librlog5v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-4.1.1"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "librlog5"
+]
+extra-source "librlog5v5_1.4-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rlog/librlog5v5_1.4-4_amd64.deb"
+}

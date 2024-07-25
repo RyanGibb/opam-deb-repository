@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rtpengine-utils_10.5.3.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rtpengine-utils"]
+]
+depends: [
+  "libbencode-perl"
+  "libconfig-tiny-perl"
+  "libcrypt-rijndael-perl"
+  "libdigest-hmac-perl"
+  "libio-socket-inet6-perl"
+  "libio-socket-ip-perl"
+  "libsocket6-perl"
+  "perl-any"
+  ("netcat-openbsd" | "netcat")
+]
+conflicts: [
+  "ngcp-rtpengine-utils"
+]
+extra-source "rtpengine-utils_10.5.3.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rtpengine/rtpengine-utils_10.5.3.5-1_all.deb"
+}

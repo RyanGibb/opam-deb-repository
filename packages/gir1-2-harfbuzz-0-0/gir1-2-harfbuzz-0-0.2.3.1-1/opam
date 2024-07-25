@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-harfbuzz-0.0_2.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-harfbuzz-0.0"]
+]
+depends: [
+  "gir1-2-glib-2-0"
+  "libharfbuzz-gobject0" {>= "0.9.20"}
+  "libharfbuzz0b" {>= "2.2.0"}
+]
+extra-source "gir1.2-harfbuzz-0.0_2.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/harfbuzz/gir1.2-harfbuzz-0.0_2.3.1-1_amd64.deb"
+}

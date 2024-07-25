@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libalgorithm-lbfgs-perl_0.16-2+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libalgorithm-lbfgs-perl"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "liblbfgs0"
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libalgorithm-lbfgs-perl_0.16-2+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libalgorithm-lbfgs-perl/libalgorithm-lbfgs-perl_0.16-2+b7_amd64.deb"
+}

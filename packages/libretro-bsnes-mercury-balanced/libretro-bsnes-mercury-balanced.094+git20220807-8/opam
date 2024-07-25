@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libretro-bsnes-mercury-balanced_094+git20220807-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libretro-bsnes-mercury-balanced"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  ("retroarch" | "libretro-frontend" | "gnome-games-app")
+]
+extra-source "libretro-bsnes-mercury-balanced_094+git20220807-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libretro-bsnes-mercury/libretro-bsnes-mercury-balanced_094+git20220807-8_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libextractor-plugin-pdf_1:1.11-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libextractor-plugin-pdf"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libextractor3"
+  "poppler-utils"
+]
+extra-source "libextractor-plugin-pdf_1:1.11-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libextractor/libextractor-plugin-pdf_1.11-7_amd64.deb"
+}

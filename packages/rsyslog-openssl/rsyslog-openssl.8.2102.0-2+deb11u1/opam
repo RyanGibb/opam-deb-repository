@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rsyslog-openssl_8.2102.0-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rsyslog-openssl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl1-1" {>= "1.1.0"}
+  "rsyslog" {= "8.2102.0-2+deb11u1"}
+]
+extra-source "rsyslog-openssl_8.2102.0-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rsyslog/rsyslog-openssl_8.2102.0-2+deb11u1_amd64.deb"
+}

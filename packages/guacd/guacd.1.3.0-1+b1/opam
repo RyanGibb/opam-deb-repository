@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guacd_1.3.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guacd"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libguac19" {>= "0.9.14"}
+  "libssl1-1" {>= "1.1.0"}
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "guacd_1.3.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guacamole-server/guacd_1.3.0-1+b1_amd64.deb"
+}

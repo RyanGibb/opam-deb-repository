@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libczmq-dev_4.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libczmq-dev"]
+]
+depends: [
+  "libczmq4" {= "4.2.1-1"}
+  "libnss3-dev"
+  "libsystemd-dev"
+  "libzmq3-dev"
+  "uuid-dev"
+]
+extra-source "libczmq-dev_4.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/czmq/libczmq-dev_4.2.1-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libssh-4_0.8.7-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libssh-4"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libssl1-1" {>= "1.1.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libssh-4_0.8.7-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libssh/libssh-4_0.8.7-1+deb10u1_amd64.deb"
+}

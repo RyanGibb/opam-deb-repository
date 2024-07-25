@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsqlite3-mod-spatialite_4.3.0a-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsqlite3-mod-spatialite"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfreexl1" {>= "1.0.1"}
+  "libgeos-c1v5" {>= "3.4.2"}
+  "libproj13" {>= "4.8.0"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "libsqlite3-mod-spatialite_4.3.0a-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spatialite/libsqlite3-mod-spatialite_4.3.0a-5+b2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-flexmix_2.3-18-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-flexmix"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.0-1"}
+  "r-cran-lattice"
+  "r-cran-modeltools" {>= "0.2-16"}
+  "r-cran-nnet"
+]
+extra-source "r-cran-flexmix_2.3-18-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-flexmix/r-cran-flexmix_2.3-18-1_all.deb"
+}

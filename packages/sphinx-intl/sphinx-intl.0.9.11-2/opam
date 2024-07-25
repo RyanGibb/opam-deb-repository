@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sphinx-intl_0.9.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sphinx-intl"]
+]
+depends: [
+  "python3-any" {>= "3.4~"}
+  "python3-babel"
+  "python3-click"
+  "python3-pkg-resources"
+  "python3-six"
+  "python3-sphinx"
+]
+extra-source "sphinx-intl_0.9.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sphinx-intl/sphinx-intl_0.9.11-2_amd64.deb"
+}

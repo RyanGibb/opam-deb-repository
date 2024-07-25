@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i m16c-flash_0.1-1.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r m16c-flash"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+]
+extra-source "m16c-flash_0.1-1.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/m16c-flash/m16c-flash_0.1-1.1+b2_amd64.deb"
+}

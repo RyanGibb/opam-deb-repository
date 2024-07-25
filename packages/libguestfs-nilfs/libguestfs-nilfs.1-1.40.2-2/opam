@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libguestfs-nilfs_1:1.40.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libguestfs-nilfs"]
+]
+depends: [
+  "libguestfs0" {= "1-1.40.2-2"}
+  "nilfs-tools"
+]
+extra-source "libguestfs-nilfs_1:1.40.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libguestfs/libguestfs-nilfs_1.40.2-2_amd64.deb"
+}

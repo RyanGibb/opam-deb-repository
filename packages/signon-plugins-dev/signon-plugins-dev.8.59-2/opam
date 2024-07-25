@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i signon-plugins-dev_8.59-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r signon-plugins-dev"]
+]
+depends: [
+  "libsignon-plugins-common1" {= "8.59-2"}
+  "libsignon-qt5-dev"
+]
+extra-source "signon-plugins-dev_8.59-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/signond/signon-plugins-dev_8.59-2_amd64.deb"
+}

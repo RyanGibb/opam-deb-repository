@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-sdk-helper_0.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-sdk-helper"]
+]
+depends: [
+  "gradle" {>= "3.2.1"}
+  "libgradle-android-plugin-java" {>= "2.2.2"}
+]
+extra-source "android-sdk-helper_0.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-sdk-helper/android-sdk-helper_0.2_all.deb"
+}

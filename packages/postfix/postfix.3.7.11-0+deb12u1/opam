@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postfix_3.7.11-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postfix"]
+]
+depends: [
+  "adduser" {>= "3.48"}
+  "cpio"
+  "dpkg" {>= "1.8.3"}
+  "e2fsprogs"
+  "libc6" {>= "2.34"}
+  "libdb5-3"
+  "libicu72" {>= "72.1~rc-1~"}
+  "libnsl2" {>= "1.0"}
+  "libsasl2-2" {>= "2.1.28+dfsg"}
+  "libssl3" {>= "3.0.0"}
+  "netbase"
+  "ssl-cert"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+conflicts: [
+  "mail-transport-agent"
+  "smail"
+]
+extra-source "postfix_3.7.11-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postfix/postfix_3.7.11-0+deb12u1_amd64.deb"
+}

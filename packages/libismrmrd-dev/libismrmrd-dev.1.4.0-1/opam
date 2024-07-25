@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libismrmrd-dev_1.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libismrmrd-dev"]
+]
+depends: [
+  "libhdf5-dev"
+  "libismrmrd1-3" {= "1.4.0-1"}
+]
+extra-source "libismrmrd-dev_1.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ismrmrd/libismrmrd-dev_1.4.0-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i luksmeta_9-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r luksmeta"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libcryptsetup12" {>= "2-1.5.1"}
+  "libluksmeta0" {>= "8"}
+]
+extra-source "luksmeta_9-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/luksmeta/luksmeta_9-3_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i expect_5.45.4-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r expect"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libtcl8-6" {>= "8.6.0"}
+  "tcl-expect"
+  "tcl8-6"
+]
+conflicts: [
+  "expect-dev"
+]
+extra-source "expect_5.45.4-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/expect/expect_5.45.4-2+b1_amd64.deb"
+}

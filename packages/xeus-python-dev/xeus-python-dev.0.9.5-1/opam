@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xeus-python-dev_0.9.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xeus-python-dev"]
+]
+depends: [
+  "libxeus-python0" {= "0.9.5-1"}
+  "pybind11-dev"
+  "pybind11-json-dev"
+  "python3-dev"
+  "xeus-dev"
+]
+extra-source "xeus-python-dev_0.9.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xeus-python/xeus-python-dev_0.9.5-1_amd64.deb"
+}

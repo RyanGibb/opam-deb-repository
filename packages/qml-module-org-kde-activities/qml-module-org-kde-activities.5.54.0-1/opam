@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-org-kde-activities_5.54.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-org-kde-activities"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5activities5" {= "5.54.0-1"}
+  "libkf5configcore5" {>= "4.97.0"}
+  "libkf5coreaddons5" {>= "4.97.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.9.0~"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libqt5quick5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "qml-module-org-kde-activities_5.54.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kactivities-kf5/qml-module-org-kde-activities_5.54.0-1_amd64.deb"
+}

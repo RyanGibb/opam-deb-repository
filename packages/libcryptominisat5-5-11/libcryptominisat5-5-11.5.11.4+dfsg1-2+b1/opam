@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcryptominisat5-5.11_5.11.4+dfsg1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcryptominisat5-5.11"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libcryptominisat5-5.11_5.11.4+dfsg1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cryptominisat/libcryptominisat5-5.11_5.11.4+dfsg1-2+b1_amd64.deb"
+}

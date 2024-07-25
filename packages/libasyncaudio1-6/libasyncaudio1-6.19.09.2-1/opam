@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libasyncaudio1.6_19.09.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libasyncaudio1.6"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libasynccore1-6" {>= "19.09.2"}
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.0"}
+  "libgsm1" {>= "1.0.18"}
+  "libopus0" {>= "1.1"}
+  "libsigc++-2-0-0v5" {>= "2.8.0"}
+  "libspeex1" {>= "1.2~"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libasyncaudio1.6_19.09.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/svxlink/libasyncaudio1.6_19.09.2-1_amd64.deb"
+}

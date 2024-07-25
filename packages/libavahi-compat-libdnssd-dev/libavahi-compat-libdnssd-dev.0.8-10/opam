@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libavahi-compat-libdnssd-dev_0.8-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libavahi-compat-libdnssd-dev"]
+]
+depends: [
+  "libavahi-client-dev" {= "0.8-10"}
+  "libavahi-compat-libdnssd1" {= "0.8-10"}
+]
+extra-source "libavahi-compat-libdnssd-dev_0.8-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/avahi/libavahi-compat-libdnssd-dev_0.8-10_amd64.deb"
+}

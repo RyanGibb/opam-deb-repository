@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mini-httpd_1.30-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mini-httpd"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libssl3" {>= "3.0.0"}
+  "lsb-base"
+]
+extra-source "mini-httpd_1.30-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mini-httpd/mini-httpd_1.30-3_amd64.deb"
+}

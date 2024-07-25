@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-os-testr_1.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-os-testr"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-pbr" {>= "2.0.0"}
+  "python3-stestr"
+  "python3-subunit"
+  "python3-testtools"
+  "subunit"
+]
+extra-source "python3-os-testr_1.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-os-testr/python3-os-testr_1.0.0-4_all.deb"
+}

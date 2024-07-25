@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i obs-server_2.9.4-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r obs-server"]
+]
+depends: [
+  "adduser"
+  "apt-utils"
+  "diffutils"
+  "git"
+  "libbssolv-perl"
+  "libcompress-raw-zlib-perl"
+  "libfile-sync-perl"
+  "libjson-xs-perl"
+  "libnet-ssleay-perl"
+  "libsocket-msghdr-perl"
+  "libxml-parser-perl"
+  "libxml-simple-perl"
+  "obs-build"
+  "obs-productconverter" {>= "2.9.4-9"}
+  "patch"
+  "reprepro"
+  "sysvinit-utils" {>= "2.88dsf-59"}
+]
+extra-source "obs-server_2.9.4-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/open-build-service/obs-server_2.9.4-9_all.deb"
+}

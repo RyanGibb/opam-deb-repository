@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgmp-ocaml_20021123-21+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgmp-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libgmp10"
+  "ocaml-base-nox"
+]
+extra-source "libgmp-ocaml_20021123-21+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mlgmp/libgmp-ocaml_20021123-21+b1_amd64.deb"
+}

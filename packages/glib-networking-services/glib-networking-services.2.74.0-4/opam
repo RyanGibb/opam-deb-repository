@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i glib-networking-services_2.74.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r glib-networking-services"]
+]
+depends: [
+  "glib-networking-common" {>= "2.74.0-4"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.73.3"}
+  "libproxy1v5" {>= "0.4.18"}
+]
+extra-source "glib-networking-services_2.74.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glib-networking/glib-networking-services_2.74.0-4_amd64.deb"
+}

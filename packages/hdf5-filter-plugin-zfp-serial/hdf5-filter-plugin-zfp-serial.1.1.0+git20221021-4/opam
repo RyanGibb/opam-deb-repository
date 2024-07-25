@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hdf5-filter-plugin-zfp-serial_1.1.0+git20221021-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hdf5-filter-plugin-zfp-serial"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libhdf5-103-1"
+  "libjs-sphinxdoc" {>= "5.2"}
+  "libzfp1" {>= "1.0"}
+]
+conflicts: [
+  "hdf5-plugin-zfp"
+]
+extra-source "hdf5-filter-plugin-zfp-serial_1.1.0+git20221021-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/h5z-zfp/hdf5-filter-plugin-zfp-serial_1.1.0+git20221021-4_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hub_2.7.0~ds1-1+b10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hub"]
+]
+depends: [
+  "git"
+  "libc6" {>= "2.3.2"}
+]
+extra-source "hub_2.7.0~ds1-1+b10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hub/hub_2.7.0~ds1-1+b10_amd64.deb"
+}

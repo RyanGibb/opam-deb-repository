@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxcb-xfixes0-dev_1.15-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxcb-xfixes0-dev"]
+]
+depends: [
+  "libxcb-render0-dev"
+  "libxcb-shape0-dev"
+  "libxcb-xfixes0" {= "1.15-1"}
+  "libxcb1-dev"
+]
+extra-source "libxcb-xfixes0-dev_1.15-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxcb/libxcb-xfixes0-dev_1.15-1_amd64.deb"
+}

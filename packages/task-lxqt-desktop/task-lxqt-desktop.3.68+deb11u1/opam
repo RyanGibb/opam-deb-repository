@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i task-lxqt-desktop_3.68+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r task-lxqt-desktop"]
+]
+depends: [
+  "lxqt"
+  "sddm"
+  "task-desktop"
+  "tasksel" {= "3.68+deb11u1"}
+  ("sddm-theme-debian-elarun" | "sddm-theme-debian-elarun")
+]
+extra-source "task-lxqt-desktop_3.68+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tasksel/task-lxqt-desktop_3.68+deb11u1_all.deb"
+}

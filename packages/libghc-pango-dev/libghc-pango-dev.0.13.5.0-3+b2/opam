@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-pango-dev_0.13.5.0-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-pango-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libghc-cairo-dev"
+  "libghc-glib-dev"
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgmp10"
+  "libpango-1-0-0" {>= "1.18.0"}
+  "libpango1-0-dev"
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-pango-dev_0.13.5.0-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pango/libghc-pango-dev_0.13.5.0-3+b2_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i miniupnpd-iptables_2.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r miniupnpd-iptables"]
+]
+depends: [
+  "iptables"
+  "libc6" {>= "2.17"}
+  "libip4tc2" {>= "1.8.3"}
+  "libip6tc2" {>= "1.8.3"}
+]
+conflicts: [
+  "miniupnpd-nftables"
+]
+extra-source "miniupnpd-iptables_2.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/miniupnpd/miniupnpd-iptables_2.2.1-1_amd64.deb"
+}

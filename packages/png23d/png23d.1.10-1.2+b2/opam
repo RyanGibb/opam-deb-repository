@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i png23d_1.10-1.2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r png23d"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libpng16-16" {>= "1.6.2-1"}
+]
+extra-source "png23d_1.10-1.2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/png23d/png23d_1.10-1.2+b2_amd64.deb"
+}

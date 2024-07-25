@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-charmbracelet-lipgloss-dev_0.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-charmbracelet-lipgloss-dev"]
+]
+depends: [
+  "golang-github-lucasb-eyer-go-colorful-dev" {>= "1.2.0"}
+  "golang-github-mattn-go-runewidth-dev" {>= "0.0.13"}
+  "golang-github-muesli-reflow-dev"
+  "golang-github-muesli-termenv-dev" {>= "0.11.0+git20220204-5ac8409"}
+  "golang-golang-x-sys-dev" {>= "0.0~git20210630.0f9fa26"}
+]
+extra-source "golang-github-charmbracelet-lipgloss-dev_0.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-charmbracelet-lipgloss/golang-github-charmbracelet-lipgloss-dev_0.5.0-1_all.deb"
+}

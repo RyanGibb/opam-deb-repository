@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblld-13-dev_1:13.0.1-11+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblld-13-dev"]
+]
+depends: [
+  "liblld-13" {= "1-13.0.1-11+b2"}
+  "lld-13" {= "1-13.0.1-11+b2"}
+]
+extra-source "liblld-13-dev_1:13.0.1-11+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-13/liblld-13-dev_13.0.1-11+b2_amd64.deb"
+}

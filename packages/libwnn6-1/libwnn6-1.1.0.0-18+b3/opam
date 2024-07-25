@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwnn6-1_1.0.0-18+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwnn6-1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcrypt1" {>= "1-4.1.0"}
+]
+conflicts: [
+  "libwnn6"
+]
+extra-source "libwnn6-1_1.0.0-18+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wnn6-sdk/libwnn6-1_1.0.0-18+b3_amd64.deb"
+}

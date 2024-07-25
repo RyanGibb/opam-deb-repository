@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-sort-keys_2.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-sort-keys"]
+]
+depends: [
+  "node-is-plain-obj" {>= "1.0.0"}
+  "nodejs"
+]
+extra-source "node-sort-keys_2.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-sort-keys/node-sort-keys_2.0.0-2_all.deb"
+}

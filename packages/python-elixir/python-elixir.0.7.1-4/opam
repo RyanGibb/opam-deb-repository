@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-elixir_0.7.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-elixir"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-sqlalchemy" {>= "0.4.0"}
+]
+extra-source "python-elixir_0.7.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elixir/python-elixir_0.7.1-4_all.deb"
+}

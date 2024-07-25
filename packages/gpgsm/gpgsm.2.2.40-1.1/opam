@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gpgsm_2.2.40-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gpgsm"]
+]
+depends: [
+  "gpgconf" {= "2.2.40-1.1"}
+  "libassuan0" {>= "2.5.0"}
+  "libc6" {>= "2.34"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libgpg-error0" {>= "1.42"}
+  "libksba8" {>= "1.6.0"}
+  "libreadline8" {>= "6.0"}
+]
+extra-source "gpgsm_2.2.40-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnupg2/gpgsm_2.2.40-1.1_amd64.deb"
+}

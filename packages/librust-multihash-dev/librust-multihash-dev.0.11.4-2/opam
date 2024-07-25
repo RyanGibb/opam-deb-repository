@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-multihash-dev_0.11.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-multihash-dev"]
+]
+depends: [
+  "librust-blake2b-simd-0-5-dev" {>= "0.5.9-~~"}
+  "librust-blake2s-simd-dev"
+  "librust-digest-0-9-dev"
+  "librust-sha-1-0-9-dev"
+  "librust-sha2-0-9-dev"
+  "librust-sha3-0-9-dev"
+  "librust-unsigned-varint-0-5+default-dev"
+]
+extra-source "librust-multihash-dev_0.11.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-multihash/librust-multihash-dev_0.11.4-2_amd64.deb"
+}

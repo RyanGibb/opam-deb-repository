@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-doctrine-bridge_3.4.22+dfsg-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-doctrine-bridge"]
+]
+depends: [
+  "php-common"
+  "php-doctrine-common" {< "3~~"}
+  "php-doctrine-common" {>= "2.4"}
+  "php-mbstring"
+]
+extra-source "php-symfony-doctrine-bridge_3.4.22+dfsg-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/symfony/php-symfony-doctrine-bridge_3.4.22+dfsg-2+deb10u1_all.deb"
+}

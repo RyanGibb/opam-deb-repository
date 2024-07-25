@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdata-stream-bulk-perl_0.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdata-stream-bulk-perl"]
+]
+depends: [
+  "libmoose-perl" {>= "0.90"}
+  "libnamespace-clean-perl" {>= "0.08"}
+  "libpath-class-perl"
+  "libsub-exporter-perl"
+  "perl"
+]
+extra-source "libdata-stream-bulk-perl_0.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdata-stream-bulk-perl/libdata-stream-bulk-perl_0.11-1_all.deb"
+}

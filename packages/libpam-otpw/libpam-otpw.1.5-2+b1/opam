@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-otpw_1.5-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-otpw"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpam0g" {>= "0.99.7.1"}
+]
+extra-source "libpam-otpw_1.5-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/otpw/libpam-otpw_1.5-2+b1_amd64.deb"
+}

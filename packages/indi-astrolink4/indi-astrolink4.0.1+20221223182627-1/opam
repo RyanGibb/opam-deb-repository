@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i indi-astrolink4_0.1+20221223182627-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r indi-astrolink4"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libindidriver1" {>= "1.9.9+dfsg"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "indi-astrolink4_0.1+20221223182627-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/indi-astrolink4/indi-astrolink4_0.1+20221223182627-1_amd64.deb"
+}

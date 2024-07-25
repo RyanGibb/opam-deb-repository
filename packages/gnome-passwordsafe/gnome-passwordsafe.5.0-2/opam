@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-passwordsafe_5.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-passwordsafe"]
+]
+depends: [
+  "gir1-2-handy-1"
+  "python3-any"
+  "python3-construct"
+  "python3-dateutil"
+  "python3-gi"
+  "python3-pwquality"
+  "python3-pycryptodome"
+  "python3-pykeepass" {>= "3.2.1"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-passwordsafe_5.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-passwordsafe/gnome-passwordsafe_5.0-2_all.deb"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ansible-lint_6.13.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ansible-lint"]
+]
+depends: [
+  "ansible-core"
+  "black"
+  "git"
+  "python3-ansible-compat"
+  "python3-any"
+  "python3-enrich"
+  "python3-filelock"
+  "python3-jinja2"
+  "python3-jsonschema" {>= "4.10.0"}
+  "python3-packaging"
+  "python3-rich"
+  "python3-ruamel-yaml"
+  "python3-subprocess-tee"
+  "python3-tenacity"
+  "python3-wcmatch"
+  "python3-yaml"
+  "yamllint"
+]
+extra-source "ansible-lint_6.13.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ansible-lint/ansible-lint_6.13.1-1_all.deb"
+}

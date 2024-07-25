@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyfai_0.21.3+dfsg1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyfai"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "6"}
+  "libstdc++6" {>= "5"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-fabio"
+  "python3-h5py"
+  "python3-matplotlib"
+  "python3-numexpr"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-pkg-resources"
+  "python3-pyqt5"
+  "python3-scipy"
+  "python3-silx" {>= "0.10.1"}
+]
+extra-source "python3-pyfai_0.21.3+dfsg1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyfai/python3-pyfai_0.21.3+dfsg1-4_amd64.deb"
+}

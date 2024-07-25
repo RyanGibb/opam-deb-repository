@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jupyter-notebook_5.7.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jupyter-notebook"]
+]
+depends: [
+  "jupyter-core"
+  "python3-any"
+  "python3-notebook" {= "5.7.8-1"}
+]
+extra-source "jupyter-notebook_5.7.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jupyter-notebook/jupyter-notebook_5.7.8-1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-tokio+udp-dev_0.1.14-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-tokio+udp-dev"]
+]
+depends: [
+  "librust-tokio-dev" {= "0.1.14-2"}
+  "librust-tokio-udp-0-1+default-dev"
+]
+extra-source "librust-tokio+udp-dev_0.1.14-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-tokio/librust-tokio+udp-dev_0.1.14-2_amd64.deb"
+}

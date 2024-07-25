@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i merecat_2.31+git20220513+ds-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r merecat"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libconfuse2" {>= "3.2.1~"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libssl3" {>= "3.0.0"}
+  "ucf"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "apache2-utils"
+]
+extra-source "merecat_2.31+git20220513+ds-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/merecat/merecat_2.31+git20220513+ds-4.1_amd64.deb"
+}

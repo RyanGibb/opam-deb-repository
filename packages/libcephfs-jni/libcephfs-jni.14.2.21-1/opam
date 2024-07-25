@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcephfs-jni_14.2.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcephfs-jni"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcephfs2" {= "14.2.21-1"}
+  "libgcc-s1" {>= "3.0"}
+  "librados2" {>= "12.0.3"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libcephfs-jni_14.2.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/libcephfs-jni_14.2.21-1_amd64.deb"
+}

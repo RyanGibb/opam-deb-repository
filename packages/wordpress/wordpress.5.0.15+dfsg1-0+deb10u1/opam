@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wordpress_5.0.15+dfsg1-0+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wordpress"]
+]
+depends: [
+  "ca-certificates"
+  "libjs-cropper" {>= "1.2.2"}
+  "php-getid3" {>= "1.9.17+dfsg"}
+  ("apache2" | "httpd")
+  ("default-mysql-client" | "virtual-mysql-client")
+  ("libapache2-mod-php" | "libapache2-mod-php5" | "php" | "php5")
+  ("php-gd" | "php5-gd")
+  ("php-mysql" | "php5-mysql" | "php-mysqlnd" | "php5-mysqlnd")
+]
+extra-source "wordpress_5.0.15+dfsg1-0+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wordpress/wordpress_5.0.15+dfsg1-0+deb10u1_all.deb"
+}

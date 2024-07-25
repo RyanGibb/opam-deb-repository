@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrilinos-triutils-dev_12.18.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrilinos-triutils-dev"]
+]
+depends: [
+  "libtrilinos-triutils12" {= "12.18.1-2"}
+  "trilinos-dev"
+]
+extra-source "libtrilinos-triutils-dev_12.18.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trilinos/libtrilinos-triutils-dev_12.18.1-2_amd64.deb"
+}

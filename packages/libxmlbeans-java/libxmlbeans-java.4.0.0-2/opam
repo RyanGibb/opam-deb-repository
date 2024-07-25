@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlbeans-java_4.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlbeans-java"]
+]
+depends: [
+  "libjavaparser-java" {>= "3.16"}
+  "libsaxonhe-java"
+  "libxml-commons-resolver1-1-java"
+]
+extra-source "libxmlbeans-java_4.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmlbeans/libxmlbeans-java_4.0.0-2_all.deb"
+}

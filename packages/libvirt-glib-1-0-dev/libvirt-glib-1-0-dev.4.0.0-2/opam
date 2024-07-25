@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvirt-glib-1.0-dev_4.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvirt-glib-1.0-dev"]
+]
+depends: [
+  "gir1-2-libvirt-glib-1-0" {= "4.0.0-2"}
+  "libvirt-dev"
+  "libvirt-glib-1-0-0" {= "4.0.0-2"}
+]
+extra-source "libvirt-glib-1.0-dev_4.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvirt-glib/libvirt-glib-1.0-dev_4.0.0-2_amd64.deb"
+}

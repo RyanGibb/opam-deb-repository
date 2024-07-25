@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfile-write-rotate-perl_0.321-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfile-write-rotate-perl"]
+]
+depends: [
+  "libfile-flock-retry-perl" {>= "0.631"}
+  "libfile-which-perl"
+  "libproc-pid-file-perl"
+  "perl-any"
+]
+extra-source "libfile-write-rotate-perl_0.321-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfile-write-rotate-perl/libfile-write-rotate-perl_0.321-3_all.deb"
+}

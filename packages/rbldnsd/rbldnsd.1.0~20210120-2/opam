@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rbldnsd_1.0~20210120-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rbldnsd"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libsystemd0"
+  "zlib1g" {>= "1-1.1.4"}
+  ("systemd" | "systemd-standalone-sysusers" | "systemd-sysusers")
+]
+extra-source "rbldnsd_1.0~20210120-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rbldnsd/rbldnsd_1.0~20210120-2_amd64.deb"
+}

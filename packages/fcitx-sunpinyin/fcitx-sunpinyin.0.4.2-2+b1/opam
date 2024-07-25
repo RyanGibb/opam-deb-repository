@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx-sunpinyin_0.4.2-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx-sunpinyin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "libsunpinyin3v5"
+  "sunpinyin-data"
+]
+extra-source "fcitx-sunpinyin_0.4.2-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx-sunpinyin/fcitx-sunpinyin_0.4.2-2+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libepc-ui-1.0-3_0.4.6-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libepc-ui-1.0-3"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libepc-1-0-3" {>= "0.4.2"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+]
+extra-source "libepc-ui-1.0-3_0.4.6-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libepc/libepc-ui-1.0-3_0.4.6-2+b1_amd64.deb"
+}

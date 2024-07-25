@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clzip_1.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clzip"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "clzip_1.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clzip/clzip_1.12-2_amd64.deb"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-epi_2.32-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-epi"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+  "r-cran-cmprsk"
+  "r-cran-data-table"
+  "r-cran-etm"
+  "r-cran-mass"
+  "r-cran-matrix"
+  "r-cran-mgcv"
+  "r-cran-numderiv"
+  "r-cran-plyr"
+  "r-cran-survival"
+  "r-cran-zoo"
+]
+extra-source "r-cran-epi_2.32-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-epi/r-cran-epi_2.32-2_amd64.deb"
+}

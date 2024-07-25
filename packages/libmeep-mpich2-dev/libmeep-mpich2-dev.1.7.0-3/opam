@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmeep-mpich2-dev_1.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmeep-mpich2-dev"]
+]
+depends: [
+  "libmeep-mpich2-12" {= "1.7.0-3"}
+]
+conflicts: [
+  "libmeep-dev"
+  "libmeep-lam4-dev"
+  "libmeep-mpi-default-dev"
+  "libmeep-mpi-dev"
+  "libmeep-mpich-dev"
+  "libmeep-openmpi-dev"
+]
+extra-source "libmeep-mpich2-dev_1.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meep-mpich2/libmeep-mpich2-dev_1.7.0-3_amd64.deb"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libobrender32v5_3.6.1-9+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libobrender32v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libimlib2" {>= "1.4.5"}
+  "libobt2v5" {>= "3.6.0"}
+  "libpango-1-0-0" {>= "1.18.0"}
+  "libpangoxft-1-0-0" {>= "1.14.0"}
+  "librsvg2-2" {>= "2.14.4"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+]
+conflicts: [
+  "libobrender32"
+]
+extra-source "libobrender32v5_3.6.1-9+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openbox/libobrender32v5_3.6.1-9+deb11u1_amd64.deb"
+}

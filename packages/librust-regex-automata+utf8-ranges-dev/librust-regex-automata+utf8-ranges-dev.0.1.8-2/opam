@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-regex-automata+utf8-ranges-dev_0.1.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-regex-automata+utf8-ranges-dev"]
+]
+depends: [
+  "librust-regex-automata-dev" {= "0.1.8-2"}
+  "librust-utf8-ranges-1+default-dev"
+]
+extra-source "librust-regex-automata+utf8-ranges-dev_0.1.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-regex-automata/librust-regex-automata+utf8-ranges-dev_0.1.8-2_amd64.deb"
+}

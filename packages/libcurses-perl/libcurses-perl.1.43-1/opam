@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcurses-perl_1.43-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcurses-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "libcurses-perl_1.43-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcurses-perl/libcurses-perl_1.43-1_amd64.deb"
+}

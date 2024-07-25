@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qsynth_0.9.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qsynth"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfluidsynth3" {>= "2.2.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt6core6" {>= "6.3.0"}
+  "libqt6gui6" {>= "6.3.0"}
+  "libqt6network6" {>= "6.1.2"}
+  "libqt6widgets6" {>= "6.3.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qsynth_0.9.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qsynth/qsynth_0.9.9-1_amd64.deb"
+}

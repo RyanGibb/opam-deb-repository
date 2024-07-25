@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpiano0_2022.04.01-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpiano0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libjson-c5" {>= "0.15"}
+]
+extra-source "libpiano0_2022.04.01-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pianobar/libpiano0_2022.04.01-1+b1_amd64.deb"
+}

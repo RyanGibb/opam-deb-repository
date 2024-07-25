@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libelf-freebsd-dev_10.3~svn296373-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libelf-freebsd-dev"]
+]
+depends: [
+  "libelf-freebsd-1" {= "10.3~svn296373-10"}
+  ("libc0-1-dev" | "libc-dev")
+]
+conflicts: [
+  "libelf-dev"
+  "libelfg0-dev"
+]
+extra-source "libelf-freebsd-dev_10.3~svn296373-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freebsd-libs/libelf-freebsd-dev_10.3~svn296373-10_amd64.deb"
+}

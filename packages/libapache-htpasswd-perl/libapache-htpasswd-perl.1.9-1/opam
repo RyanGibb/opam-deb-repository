@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache-htpasswd-perl_1.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache-htpasswd-perl"]
+]
+depends: [
+  "libcrypt-passwdmd5-perl"
+  "perl"
+]
+extra-source "libapache-htpasswd-perl_1.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapache-htpasswd-perl/libapache-htpasswd-perl_1.9-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libretro-beetle-pce-fast_0.9.38.7+git20160609-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libretro-beetle-pce-fast"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc-s1"
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "5.2"}
+  ("retroarch" | "libretro-frontend")
+]
+extra-source "libretro-beetle-pce-fast_0.9.38.7+git20160609-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libretro-beetle-pce-fast/libretro-beetle-pce-fast_0.9.38.7+git20160609-2_amd64.deb"
+}

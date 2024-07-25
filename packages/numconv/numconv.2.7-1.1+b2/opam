@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i numconv_2.7-1.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r numconv"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgmp10"
+  "libuninum5"
+]
+extra-source "numconv_2.7-1.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libuninum/numconv_2.7-1.1+b2_amd64.deb"
+}

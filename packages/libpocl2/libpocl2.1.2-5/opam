@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpocl2_1.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpocl2"]
+]
+depends: [
+  "clang-6-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.4"}
+  "libhwloc5" {>= "1.11.12"}
+  "libllvm6-0" {>= "1-6.0~svn298832-1~"}
+  "libltdl7" {>= "2.4.6"}
+  "libpocl2-common" {= "1.2-5"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libpocl2_1.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pocl/libpocl2_1.2-5_amd64.deb"
+}

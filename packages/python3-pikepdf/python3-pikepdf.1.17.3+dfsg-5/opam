@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pikepdf_1.17.3+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pikepdf"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqpdf28" {> "10.1~"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-lxml"
+  "python3-pil"
+  "python3-pkg-resources"
+]
+extra-source "python3-pikepdf_1.17.3+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pikepdf/python3-pikepdf_1.17.3+dfsg-5_amd64.deb"
+}

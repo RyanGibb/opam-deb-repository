@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-libfsext_20201107-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-libfsext"]
+]
+depends: [
+  "libbfio1" {>= "20120425"}
+  "libc6" {>= "2.14"}
+  "libfsext1" {= "20201107-1+b2"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+]
+extra-source "python3-libfsext_20201107-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfsext/python3-libfsext_20201107-1+b2_amd64.deb"
+}

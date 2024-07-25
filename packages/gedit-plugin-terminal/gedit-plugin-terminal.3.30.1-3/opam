@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gedit-plugin-terminal_3.30.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gedit-plugin-terminal"]
+]
+depends: [
+  "gedit" {>= "3.30"}
+  "gedit-plugins-common" {>= "3.30.1-3"}
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-3-0"
+  "gir1-2-pango-1-0"
+  "gir1-2-peas-1-0"
+  "gir1-2-vte-2-91"
+  "python3-any"
+  "python3-gi"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gedit-plugin-terminal_3.30.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gedit-plugins/gedit-plugin-terminal_3.30.1-3_amd64.deb"
+}

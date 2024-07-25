@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i relion_3.1.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r relion"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libopenmpi3" {>= "4.0.5"}
+  "libstdc++6" {>= "9"}
+  "libtiff5" {>= "4.0.3"}
+  ("openmpi-gcc" | "openmpi-bin")
+]
+conflicts: [
+  "relion-cuda"
+]
+extra-source "relion_3.1.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/relion/relion_3.1.0-4_amd64.deb"
+}

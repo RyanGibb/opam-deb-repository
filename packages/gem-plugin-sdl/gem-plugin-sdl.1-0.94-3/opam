@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gem-plugin-sdl_1:0.94-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gem-plugin-sdl"]
+]
+depends: [
+  "gem" {< "1-0.94+1~"}
+  "gem" {>= "1-0.94-3"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "gem-plugin-sdl_1:0.94-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gem/gem-plugin-sdl_0.94-3_amd64.deb"
+}

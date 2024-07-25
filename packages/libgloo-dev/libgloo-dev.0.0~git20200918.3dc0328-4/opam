@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgloo-dev_0.0~git20200918.3dc0328-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgloo-dev"]
+]
+depends: [
+  "libgloo0" {= "0.0~git20200918.3dc0328-4"}
+  "libhiredis-dev"
+  "libibverbs-dev"
+]
+extra-source "libgloo-dev_0.0~git20200918.3dc0328-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gloo/libgloo-dev_0.0~git20200918.3dc0328-4_amd64.deb"
+}

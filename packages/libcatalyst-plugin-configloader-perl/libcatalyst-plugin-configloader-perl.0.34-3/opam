@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcatalyst-plugin-configloader-perl_0.34-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcatalyst-plugin-configloader-perl"]
+]
+depends: [
+  "libcatalyst-perl" {>= "5.7008"}
+  "libconfig-any-perl" {>= "0.20"}
+  "libdata-visitor-perl" {>= "0.24"}
+  "libmro-compat-perl" {>= "0.09"}
+  "perl"
+]
+extra-source "libcatalyst-plugin-configloader-perl_0.34-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcatalyst-plugin-configloader-perl/libcatalyst-plugin-configloader-perl_0.34-3_all.deb"
+}

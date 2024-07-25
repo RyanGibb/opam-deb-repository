@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i njplot_2.4-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r njplot"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libncbi6" {>= "6.1.20030421"}
+  "libvibrant6b" {>= "6.1.20060507"}
+  "libxm4" {>= "2.3.4"}
+  "libxt6"
+]
+extra-source "njplot_2.4-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/njplot/njplot_2.4-9_amd64.deb"
+}

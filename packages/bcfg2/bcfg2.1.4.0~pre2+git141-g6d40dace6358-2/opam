@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bcfg2_1.4.0~pre2+git141-g6d40dace6358-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bcfg2"]
+]
+depends: [
+  "debsums"
+  "lsb-base" {>= "3.1-9"}
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-any" {>= "2.6.6-7~"}
+  "python-apt" {>= "0.7.91"}
+  "ucf"
+]
+extra-source "bcfg2_1.4.0~pre2+git141-g6d40dace6358-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bcfg2/bcfg2_1.4.0~pre2+git141-g6d40dace6358-2_all.deb"
+}

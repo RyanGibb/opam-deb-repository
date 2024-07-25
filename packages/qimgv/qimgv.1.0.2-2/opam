@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qimgv_1.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qimgv"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libexiv2-27" {>= "0.27.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libopencv-core406" {>= "4.6.0+dfsg"}
+  "libopencv-imgproc406" {>= "4.6.0+dfsg"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5printsupport5" {>= "5.9~"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libstdc++6" {>= "9"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "qimgv_1.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qimgv/qimgv_1.0.2-2_amd64.deb"
+}

@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ldirectord_1:4.2.0-2+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ldirectord"]
+]
+depends: [
+  "ipvsadm"
+  "libauthen-radius-perl"
+  "libcrypt-ssleay-perl"
+  "libdbi-perl"
+  "libdigest-hmac-perl"
+  "libdigest-md5-perl"
+  "libio-socket-inet6-perl"
+  "libmail-pop3client-perl"
+  "libmailtools-perl"
+  "libnet-dns-perl"
+  "libnet-imap-simple-perl"
+  "libnet-imap-simple-ssl-perl"
+  "libnet-ldap-perl"
+  "libnet-perl"
+  "libsocket6-perl"
+  "libwww-perl"
+  "lsb-base"
+  "perl-any"
+]
+conflicts: [
+  "libpils0 (<< 2.0.8-3)"
+  "libstonith0 (<< 2.0.8-3)"
+  "stonith (<< 2.0.8-3)"
+]
+extra-source "ldirectord_1:4.2.0-2+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/resource-agents/ldirectord_4.2.0-2+deb10u2_all.deb"
+}

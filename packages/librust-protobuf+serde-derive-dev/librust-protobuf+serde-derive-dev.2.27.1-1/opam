@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-protobuf+serde-derive-dev_2.27.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-protobuf+serde-derive-dev"]
+]
+depends: [
+  "librust-protobuf-dev" {= "2.27.1-1"}
+  "librust-serde-derive-1+default-dev"
+]
+extra-source "librust-protobuf+serde-derive-dev_2.27.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-protobuf/librust-protobuf+serde-derive-dev_2.27.1-1_amd64.deb"
+}

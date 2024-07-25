@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-zram-generator-dev_1.1.2-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-zram-generator-dev"]
+]
+depends: [
+  "librust-anyhow-dev"
+  "librust-clap-2-dev" {>= "2.33-~~"}
+  "librust-fasteval-0-2-dev"
+  "librust-liboverdrop-0-0-2+default-dev"
+  "librust-log-0-4+default-dev"
+  "librust-log-0-4+std-dev"
+  "librust-rust-ini-dev"
+]
+extra-source "librust-zram-generator-dev_1.1.2-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-zram-generator/librust-zram-generator-dev_1.1.2-2+b2_amd64.deb"
+}

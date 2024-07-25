@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenmpi-dev_3.1.3-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenmpi-dev"]
+]
+depends: [
+  "libhwloc-dev"
+  "libibverbs-dev" {>= "1.1.7"}
+  "libopenmpi3" {= "3.1.3-11"}
+  "openmpi-bin" {>= "3.0.0-1"}
+  "openmpi-common" {>= "3.1.3-11"}
+]
+conflicts: [
+  "libopenmpi-dev"
+]
+extra-source "libopenmpi-dev_3.1.3-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openmpi/libopenmpi-dev_3.1.3-11_amd64.deb"
+}

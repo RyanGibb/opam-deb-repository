@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libslepc64-real3.14_3.14.2+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libslepc64-real3.14"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libopenmpi3" {>= "4.1.0"}
+  "libpetsc64-real3-14" {>= "3.14.4+dfsg1"}
+  "libscalapack-openmpi2-1" {>= "2.1.0"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+conflicts: [
+  "libslepc2.3.2"
+  "libslepc3.6 (<= 3.6.1.dfsg1-2)"
+]
+extra-source "libslepc64-real3.14_3.14.2+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slepc/libslepc64-real3.14_3.14.2+dfsg1-1_amd64.deb"
+}

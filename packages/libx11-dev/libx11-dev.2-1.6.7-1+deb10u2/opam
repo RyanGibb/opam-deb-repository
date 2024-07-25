@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libx11-dev_2:1.6.7-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libx11-dev"]
+]
+depends: [
+  "libx11-6" {= "2-1.6.7-1+deb10u2"}
+  "libxau-dev" {>= "1-1.0.0-1"}
+  "libxcb1-dev"
+  "libxdmcp-dev" {>= "1-1.0.0-1"}
+  "x11proto-core-dev" {>= "7.0.17"}
+  "x11proto-input-dev"
+  "x11proto-kb-dev"
+  "xtrans-dev"
+]
+extra-source "libx11-dev_2:1.6.7-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libx11/libx11-dev_1.6.7-1+deb10u2_amd64.deb"
+}

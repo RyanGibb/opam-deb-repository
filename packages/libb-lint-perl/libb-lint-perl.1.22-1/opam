@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libb-lint-perl_1.22-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libb-lint-perl"]
+]
+depends: [
+  "perl"
+  ("libmodule-pluggable-perl" | "perl" {< "5.17.9"})
+]
+extra-source "libb-lint-perl_1.22-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libb-lint-perl/libb-lint-perl_1.22-1_all.deb"
+}

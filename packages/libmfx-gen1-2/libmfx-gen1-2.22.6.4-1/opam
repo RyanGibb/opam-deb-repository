@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmfx-gen1.2_22.6.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmfx-gen1.2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdrm2" {>= "2.4.66"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "12"}
+  "libva-drm2" {>= "1.1.0"}
+  "libva2" {>= "2.9.0"}
+]
+extra-source "libmfx-gen1.2_22.6.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/onevpl-intel-gpu/libmfx-gen1.2_22.6.4-1_amd64.deb"
+}

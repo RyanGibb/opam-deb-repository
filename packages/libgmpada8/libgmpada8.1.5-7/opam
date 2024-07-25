@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgmpada8_1.5-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgmpada8"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libgnat-12" {>= "12.2.0"}
+]
+extra-source "libgmpada8_1.5-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgmpada/libgmpada8_1.5-7_amd64.deb"
+}

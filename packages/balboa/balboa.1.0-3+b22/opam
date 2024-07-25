@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i balboa_1.0-3+b22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r balboa"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.7"}
+  "librocksdb5-17"
+  "libtpl0"
+]
+extra-source "balboa_1.0-3+b22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/balboa/balboa_1.0-3+b22_amd64.deb"
+}

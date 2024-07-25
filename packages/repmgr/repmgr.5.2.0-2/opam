@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i repmgr_5.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r repmgr"]
+]
+depends: [
+  "postgresql-13-repmgr"
+]
+extra-source "repmgr_5.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/repmgr/repmgr_5.2.0-2_all.deb"
+}

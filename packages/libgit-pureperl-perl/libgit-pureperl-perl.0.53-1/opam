@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgit-pureperl-perl_0.53-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgit-pureperl-perl"]
+]
+depends: [
+  "libconfig-gitlike-perl"
+  "libdata-stream-bulk-perl"
+  "libdatetime-perl"
+  "libfile-find-rule-perl"
+  "libio-digest-perl"
+  "libmoose-perl"
+  "libmoosex-strictconstructor-perl"
+  "libmoosex-types-path-class-perl"
+  "perl"
+  ("libarchive-extract-perl" | "perl" {< "5.17.0"})
+]
+extra-source "libgit-pureperl-perl_0.53-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgit-pureperl-perl/libgit-pureperl-perl_0.53-1_all.deb"
+}

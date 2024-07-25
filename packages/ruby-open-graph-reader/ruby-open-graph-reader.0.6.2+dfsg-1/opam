@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-open-graph-reader_0.6.2+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-open-graph-reader"]
+]
+depends: [
+  "ruby-faraday" {>= "0.9.0"}
+  "ruby-nokogiri" {>= "1.6"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-open-graph-reader_0.6.2+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-open-graph-reader/ruby-open-graph-reader_0.6.2+dfsg-1_all.deb"
+}

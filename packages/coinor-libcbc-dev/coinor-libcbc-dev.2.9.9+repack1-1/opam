@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coinor-libcbc-dev_2.9.9+repack1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coinor-libcbc-dev"]
+]
+depends: [
+  "coinor-libcbc3" {= "2.9.9+repack1-1"}
+  "coinor-libcgl-dev" {>= "0.59.9"}
+  "coinor-libclp-dev" {>= "1.16.10"}
+  "coinor-libcoinutils-dev" {>= "2.10.13"}
+  "coinor-libosi-dev" {>= "0.107.8"}
+]
+extra-source "coinor-libcbc-dev_2.9.9+repack1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coinor-cbc/coinor-libcbc-dev_2.9.9+repack1-1_amd64.deb"
+}

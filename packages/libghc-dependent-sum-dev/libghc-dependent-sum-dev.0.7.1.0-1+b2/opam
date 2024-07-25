@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-dependent-sum-dev_0.7.1.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-dependent-sum-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-constraints-extras-dev"
+  "libghc-some-dev"
+  "libgmp10"
+]
+extra-source "libghc-dependent-sum-dev_0.7.1.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-dependent-sum/libghc-dependent-sum-dev_0.7.1.0-1+b2_amd64.deb"
+}

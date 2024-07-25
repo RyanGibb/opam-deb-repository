@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-markupsafe-dbg_1.1.1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-markupsafe-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3-dbg" {< "3.10"}
+  "python3-dbg" {>= "3.9~"}
+  "python3-markupsafe" {= "1.1.1-1+b3"}
+]
+extra-source "python3-markupsafe-dbg_1.1.1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/markupsafe/python3-markupsafe-dbg_1.1.1-1+b3_amd64.deb"
+}

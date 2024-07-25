@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-league-config_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-league-config"]
+]
+depends: [
+  "php-common"
+  "php-dflydev-dot-access-data" {< "4~~"}
+  "php-dflydev-dot-access-data" {>= "3.0.1"}
+  "php-nette-schema" {< "2~~"}
+  "php-nette-schema" {>= "1.2"}
+]
+extra-source "php-league-config_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-league-config/php-league-config_1.2.0-1_all.deb"
+}

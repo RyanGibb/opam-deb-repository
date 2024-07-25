@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-classy-prelude-conduit-prof_1.5.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-classy-prelude-conduit-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-classy-prelude-conduit-dev" {= "1.5.0-2+b2"}
+  "libghc-classy-prelude-prof"
+  "libghc-conduit-prof"
+  "libghc-monad-control-prof"
+  "libghc-resourcet-prof"
+  "libghc-void-prof"
+]
+extra-source "libghc-classy-prelude-conduit-prof_1.5.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-classy-prelude-conduit/libghc-classy-prelude-conduit-prof_1.5.0-2+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i local-apt-repository_0.7+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r local-apt-repository"]
+]
+depends: [
+  "apt-utils"
+  "systemd"
+]
+extra-source "local-apt-repository_0.7+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/local-apt-repository/local-apt-repository_0.7+nmu1_all.deb"
+}

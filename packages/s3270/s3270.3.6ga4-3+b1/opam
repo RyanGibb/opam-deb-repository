@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i s3270_3.6ga4-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r s3270"]
+]
+depends: [
+  "3270-common" {= "3.6ga4-3+b1"}
+  "libc6" {>= "2.15"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "s3270_3.6ga4-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibm-3270/s3270_3.6ga4-3+b1_amd64.deb"
+}

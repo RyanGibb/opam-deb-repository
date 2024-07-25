@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzltext0.13_0.12.10dfsg2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzltext0.13"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfribidi0" {>= "0.19.2"}
+  "libstdc++6" {>= "5.2"}
+  "libunibreak1" {>= "1.0"}
+  "libzlcore0-13" {= "0.12.10dfsg2-6"}
+  "libzltext-data" {>= "0.12.10dfsg2-6"}
+]
+extra-source "libzltext0.13_0.12.10dfsg2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fbreader/libzltext0.13_0.12.10dfsg2-6_amd64.deb"
+}

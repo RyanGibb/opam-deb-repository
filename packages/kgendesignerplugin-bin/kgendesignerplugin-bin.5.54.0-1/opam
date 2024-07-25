@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kgendesignerplugin-bin_5.54.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kgendesignerplugin-bin"]
+]
+depends: [
+  "kdesignerplugin-data" {= "5.54.0-1"}
+  "libc6" {>= "2.14"}
+  "libkf5configcore5" {>= "4.97.0"}
+  "libkf5coreaddons5" {>= "4.100.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "kgendesignerplugin-bin_5.54.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdesignerplugin/kgendesignerplugin-bin_5.54.0-1_amd64.deb"
+}

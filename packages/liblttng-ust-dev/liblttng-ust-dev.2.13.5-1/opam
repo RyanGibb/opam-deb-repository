@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblttng-ust-dev_2.13.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblttng-ust-dev"]
+]
+depends: [
+  "liblttng-ust-ctl5" {= "2.13.5-1"}
+  "liblttng-ust-python-agent1" {= "2.13.5-1"}
+  "liblttng-ust1" {= "2.13.5-1"}
+  "liburcu-dev" {>= "0.12~"}
+  "uuid-dev"
+]
+extra-source "liblttng-ust-dev_2.13.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ust/liblttng-ust-dev_2.13.5-1_amd64.deb"
+}

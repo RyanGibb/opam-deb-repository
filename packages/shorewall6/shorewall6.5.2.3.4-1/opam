@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shorewall6_5.2.3.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shorewall6"]
+]
+depends: [
+  "iptables" {>= "1.4.1"}
+  "libio-socket-inet6-perl"
+  "lsb-base" {>= "3.0-6"}
+  "shorewall" {< "5.2.4~"}
+  "shorewall" {>= "5.2.3~"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("debconf" {>= "1.4.69"} | "cdebconf" {>= "0.39"})
+  ("iproute2" | "iproute")
+]
+extra-source "shorewall6_5.2.3.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shorewall6/shorewall6_5.2.3.4-1_all.deb"
+}

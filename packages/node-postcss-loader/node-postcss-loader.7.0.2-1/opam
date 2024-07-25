@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-postcss-loader_7.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-postcss-loader"]
+]
+depends: [
+  "node-cosmiconfig"
+  "node-less-loader"
+  "node-postcss" {>= "7.0~"}
+  "node-semver" {>= "7.3.4~"}
+  "webpack" {>= "5.0~"}
+]
+extra-source "node-postcss-loader_7.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-postcss-loader/node-postcss-loader_7.0.2-1_all.deb"
+}

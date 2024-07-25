@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-client-13_13.15-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-client-13"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libpq5" {>= "13.15"}
+  "libreadline8" {>= "6.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "postgresql-client-common" {>= "182~"}
+  "sensible-utils"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "postgresql-client-13_13.15-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-13/postgresql-client-13_13.15-0+deb11u1_amd64.deb"
+}

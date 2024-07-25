@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i silx_0.9.0+dfsg-3+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r silx"]
+]
+depends: [
+  "python3-any"
+  "python3-numpy"
+  "python3-silx" {>= "0.9.0+dfsg-3+deb10u1"}
+]
+extra-source "silx_0.9.0+dfsg-3+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/silx/silx_0.9.0+dfsg-3+deb10u1_all.deb"
+}

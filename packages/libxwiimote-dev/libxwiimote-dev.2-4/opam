@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxwiimote-dev_2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxwiimote-dev"]
+]
+depends: [
+  "libudev-dev"
+  "libxwiimote2" {= "2-4"}
+]
+extra-source "libxwiimote-dev_2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xwiimote/libxwiimote-dev_2-4_amd64.deb"
+}

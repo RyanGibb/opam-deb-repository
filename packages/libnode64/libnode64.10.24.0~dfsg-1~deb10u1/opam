@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnode64_10.24.0~dfsg-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnode64"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libbrotli1" {>= "1.0.0"}
+  "libc-ares2" {>= "1.11.0~rc1"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.4"}
+  "libicu63" {>= "63.1-1~"}
+  "libssl1-1" {>= "1.1.1"}
+  "libstdc++6" {>= "5.2"}
+  "libuv1" {>= "1.23.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "nodejs-legacy"
+]
+extra-source "libnode64_10.24.0~dfsg-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nodejs/libnode64_10.24.0~dfsg-1~deb10u1_amd64.deb"
+}

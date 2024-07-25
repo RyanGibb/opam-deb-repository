@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-dap_2.2.6.7-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-dap"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-any" {>= "2.6.6-7~"}
+  "python-httplib2"
+]
+extra-source "python-dap_2.2.6.7-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pydap/python-dap_2.2.6.7-3_all.deb"
+}

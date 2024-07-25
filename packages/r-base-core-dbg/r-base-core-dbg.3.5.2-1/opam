@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-base-core-dbg_3.5.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-base-core-dbg"]
+]
+depends: [
+  "r-base-core" {= "3.5.2-1"}
+  "r-base-dev" {= "3.5.2-1"}
+]
+extra-source "r-base-core-dbg_3.5.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-base/r-base-core-dbg_3.5.2-1_amd64.deb"
+}

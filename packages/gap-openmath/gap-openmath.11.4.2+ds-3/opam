@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gap-openmath_11.4.2+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gap-openmath"]
+]
+depends: [
+  "gap" {>= "4r10p0-4"}
+  "gap-gapdoc" {>= "1.6.2"}
+  "gap-io" {>= "4.5.4"}
+]
+extra-source "gap-openmath_11.4.2+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gap-openmath/gap-openmath_11.4.2+ds-3_all.deb"
+}

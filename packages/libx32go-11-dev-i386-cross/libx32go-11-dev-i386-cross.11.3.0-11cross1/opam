@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libx32go-11-dev-i386-cross_11.3.0-11cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libx32go-11-dev-i386-cross"]
+]
+depends: [
+  "gcc-11-cross-base" {>= "11.3.0-11"}
+  "libx32gcc-11-dev-i386-cross" {= "11.3.0-11cross1"}
+  "libx32go19-i386-cross" {>= "11.3.0-11cross1"}
+]
+extra-source "libx32go-11-dev-i386-cross_11.3.0-11cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-11-cross/libx32go-11-dev-i386-cross_11.3.0-11cross1_all.deb"
+}

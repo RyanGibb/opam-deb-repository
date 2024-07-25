@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uwsgi-plugin-mongo_2.0.19.1+7.1+0.0.7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uwsgi-plugin-mongo"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libmongoclient0" {>= "1.1.3"}
+  "libstdc++6" {>= "5.2"}
+  "uwsgi-core"
+]
+extra-source "uwsgi-plugin-mongo_2.0.19.1+7.1+0.0.7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uwsgi-plugin-mongo/uwsgi-plugin-mongo_2.0.19.1+7.1+0.0.7+b1_amd64.deb"
+}

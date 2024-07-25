@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osk-sdl_0.62.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osk-sdl"]
+]
+depends: [
+  "cryptsetup"
+  "cryptsetup-initramfs"
+  "fonts-dejavu-core"
+  "libc6" {>= "2.14"}
+  "libcryptsetup12" {>= "2-1.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libgles2"
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libsdl2-ttf-2-0-0" {>= "2.0.14"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "osk-sdl_0.62.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osk-sdl/osk-sdl_0.62.1-2_amd64.deb"
+}

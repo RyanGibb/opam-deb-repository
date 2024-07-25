@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yokadi_1.2.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yokadi"]
+]
+depends: [
+  "python3" {>= "3.4"}
+  "python3-any"
+  "python3-dateutil"
+  "python3-sqlalchemy"
+  "sqlite3"
+]
+extra-source "yokadi_1.2.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yokadi/yokadi_1.2.0-4_all.deb"
+}

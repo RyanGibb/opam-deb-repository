@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i atheme-services_7.2.12-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r atheme-services"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libssl3" {>= "3.0.0"}
+  "lsb-base"
+]
+extra-source "atheme-services_7.2.12-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/atheme-services/atheme-services_7.2.12-1+b1_amd64.deb"
+}

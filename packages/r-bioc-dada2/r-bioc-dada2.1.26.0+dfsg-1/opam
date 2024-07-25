@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-dada2_1.26.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-dada2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.22.0"}
+  "r-bioc-biostrings" {>= "2.42.1"}
+  "r-bioc-iranges" {>= "2.6.0"}
+  "r-bioc-shortread" {>= "1.32.0"}
+  "r-bioc-xvector" {>= "0.16.0"}
+  "r-cran-ggplot2" {>= "2.1.0"}
+  "r-cran-rcpp" {>= "0.12.0"}
+  "r-cran-rcppparallel" {>= "4.3.0"}
+  "r-cran-reshape2" {>= "1.4.1"}
+]
+extra-source "r-bioc-dada2_1.26.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-dada2/r-bioc-dada2_1.26.0+dfsg-1_amd64.deb"
+}

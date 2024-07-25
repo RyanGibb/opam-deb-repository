@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fdm_1.9+git20181219-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fdm"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.33"}
+  "libssl3" {>= "3.0.0"}
+  "libtdb1" {>= "1.2.7+git20101214"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "fdm_1.9+git20181219-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fdm/fdm_1.9+git20181219-1+b2_amd64.deb"
+}

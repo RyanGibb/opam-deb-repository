@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i execline_2.5.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r execline"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexecline2-5" {>= "2.5.0.1"}
+  "libskarnet2-7" {>= "2.7.0.0"}
+]
+extra-source "execline_2.5.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/execline/execline_2.5.0.1-3_amd64.deb"
+}

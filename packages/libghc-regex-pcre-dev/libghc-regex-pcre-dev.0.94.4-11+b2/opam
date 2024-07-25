@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-regex-pcre-dev_0.94.4-11+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-regex-pcre-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libghc-regex-base-dev"
+  "libgmp10"
+  "libpcre3"
+  "libpcre3-dev"
+]
+extra-source "libghc-regex-pcre-dev_0.94.4-11+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-regex-pcre/libghc-regex-pcre-dev_0.94.4-11+b2_amd64.deb"
+}

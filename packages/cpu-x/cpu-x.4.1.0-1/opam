@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cpu-x_4.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cpu-x"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.2.4"}
+  "libcpuid15" {>= "0.5.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.30.0"}
+  "libgtk-3-0" {>= "3.13.7"}
+  "libncursesw6" {>= "6"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpci3" {>= "1-3.5.1"}
+  "libprocps8" {>= "2-3.3.16-1"}
+  "libtinfo6" {>= "6"}
+  "procps"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "cpu-x_4.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cpu-x/cpu-x_4.1.0-1_amd64.deb"
+}

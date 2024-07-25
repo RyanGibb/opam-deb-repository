@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-eaf_2.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-eaf"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgsl27" {>= "2.7.1"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-cran-matrixstats"
+  "r-cran-modeltools"
+  "r-cran-rdpack"
+]
+extra-source "r-cran-eaf_2.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-eaf/r-cran-eaf_2.4-1_amd64.deb"
+}

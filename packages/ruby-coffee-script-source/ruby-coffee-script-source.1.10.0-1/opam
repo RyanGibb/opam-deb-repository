@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-coffee-script-source_1.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-coffee-script-source"]
+]
+depends: [
+  "libjs-coffeescript" {>= "1.10.0~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-coffee-script-source_1.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-coffee-script-source/ruby-coffee-script-source_1.10.0-1_all.deb"
+}

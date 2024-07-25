@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i datalad-container_1.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r datalad-container"]
+]
+depends: [
+  "datalad" {>= "0.13~"}
+  "python3-any"
+  "python3-chardet" {>= "3.0.4"}
+  "python3-datalad"
+  "python3-requests" {>= "1.2"}
+]
+extra-source "datalad-container_1.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/datalad-container/datalad-container_1.1.2-1_all.deb"
+}

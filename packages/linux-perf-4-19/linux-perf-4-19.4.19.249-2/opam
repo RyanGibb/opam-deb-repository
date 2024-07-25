@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i linux-perf-4.19_4.19.249-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r linux-perf-4.19"]
+]
+depends: [
+  "libbabeltrace1" {>= "1.5.4"}
+  "libc6" {>= "2.28"}
+  "libdw1" {>= "0.157"}
+  "libelf1" {>= "0.144"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libnuma1" {>= "2.0.11"}
+  "libopencsd0"
+  "libperl5-28" {>= "5.28.0"}
+  "libpython3-7" {>= "3.7.0"}
+  "libslang2" {>= "2.2.4"}
+  "libunwind8"
+  "perl"
+  "python3-any"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "linux-tools-4.19"
+]
+extra-source "linux-perf-4.19_4.19.249-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linux/linux-perf-4.19_4.19.249-2_amd64.deb"
+}

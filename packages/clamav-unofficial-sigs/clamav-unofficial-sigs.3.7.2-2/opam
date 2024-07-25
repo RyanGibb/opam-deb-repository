@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clamav-unofficial-sigs_3.7.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clamav-unofficial-sigs"]
+]
+depends: [
+  "clamav"
+  "curl"
+  "dnsutils"
+  "gnupg"
+  "rsync"
+  ("bind9-host" | "host")
+]
+extra-source "clamav-unofficial-sigs_3.7.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clamav-unofficial-sigs/clamav-unofficial-sigs_3.7.2-2_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wikipedia2text_0.14-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wikipedia2text"]
+]
+depends: [
+  "liburi-perl"
+  ("lynx" | "www-browser")
+]
+extra-source "wikipedia2text_0.14-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wikipedia2text/wikipedia2text_0.14-4_all.deb"
+}

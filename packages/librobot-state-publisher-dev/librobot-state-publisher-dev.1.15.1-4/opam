@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librobot-state-publisher-dev_1.15.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librobot-state-publisher-dev"]
+]
+depends: [
+  "libjoint-state-listener1d" {= "1.15.1-4"}
+  "libkdl-parser-dev"
+  "liborocos-kdl-dev"
+  "librobot-state-publisher-solver1d" {= "1.15.1-4"}
+  "libsensor-msgs-dev"
+  "libtf2-kdl-dev"
+]
+extra-source "librobot-state-publisher-dev_1.15.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-robot-state-publisher/librobot-state-publisher-dev_1.15.1-4_amd64.deb"
+}

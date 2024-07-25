@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rungetty_1.2-16+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rungetty"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "rungetty_1.2-16+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rungetty/rungetty_1.2-16+b1_amd64.deb"
+}

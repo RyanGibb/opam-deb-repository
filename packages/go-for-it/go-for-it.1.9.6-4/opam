@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i go-for-it_1.9.6-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r go-for-it"]
+]
+depends: [
+  "libayatana-appindicator3-1" {>= "0.3.91"}
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libcanberra0" {>= "0.2"}
+  "libglib2-0-0" {>= "2.45.3"}
+  "libgranite6" {>= "6.0.0"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libpeas-1-0-0" {>= "1.1.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "go-for-it_1.9.6-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/go-for-it/go-for-it_1.9.6-4_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i victoria-metrics_1.79.5+ds1-2+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r victoria-metrics"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libzstd1" {>= "1.5.2"}
+]
+extra-source "victoria-metrics_1.79.5+ds1-2+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/victoriametrics/victoria-metrics_1.79.5+ds1-2+b5_amd64.deb"
+}

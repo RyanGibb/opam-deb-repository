@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdart-optimizer-ipopt-dev_6.12.1+dfsg4-12+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdart-optimizer-ipopt-dev"]
+]
+depends: [
+  "coinor-libipopt-dev"
+  "libdart-dev"
+  "libdart-optimizer-ipopt6-12" {= "6.12.1+dfsg4-12+b2"}
+]
+extra-source "libdart-optimizer-ipopt-dev_6.12.1+dfsg4-12+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dart/libdart-optimizer-ipopt-dev_6.12.1+dfsg4-12+b2_amd64.deb"
+}

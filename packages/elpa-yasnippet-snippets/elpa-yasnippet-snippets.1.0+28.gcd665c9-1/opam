@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-yasnippet-snippets_1.0+28.gcd665c9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-yasnippet-snippets"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-yasnippet" {>= "0.8.0"}
+  "emacsen-common"
+]
+extra-source "elpa-yasnippet-snippets_1.0+28.gcd665c9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yasnippet-snippets/elpa-yasnippet-snippets_1.0+28.gcd665c9-1_all.deb"
+}

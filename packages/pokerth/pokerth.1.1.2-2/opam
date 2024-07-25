@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pokerth_1.1.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pokerth"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0+ds1"}
+  "libboost-iostreams1-74-0" {>= "1.74.0+ds1"}
+  "libboost-random1-74-0" {>= "1.74.0+ds1"}
+  "libboost-regex1-74-0"
+  "libboost-thread1-74-0" {>= "1.74.0+ds1"}
+  "libc6" {>= "2.34"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libgcrypt20" {>= "1.10.0"}
+  "libgsasl18" {>= "1.1"}
+  "libprotobuf32" {>= "3.21.12"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libsdl-mixer1-2" {>= "1.2.12"}
+  "libsdl1-2-compat-shim"
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "11"}
+  "libtinyxml2-6-2v5" {>= "2.6.2"}
+  "pokerth-data" {= "1.1.2-2"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "pokerth_1.1.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pokerth/pokerth_1.1.2-2_amd64.deb"
+}

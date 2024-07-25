@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i byzanz_0.3.0+git20160312-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r byzanz"]
+]
+depends: [
+  "gstreamer1-0-libav"
+  "gstreamer1-0-plugins-base"
+  "gstreamer1-0-plugins-good"
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.10.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.0.0"}
+  "libgstreamer1-0-0" {>= "1.4.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libxdamage1" {>= "1-1.1"}
+  "libxfixes3"
+]
+extra-source "byzanz_0.3.0+git20160312-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/byzanz/byzanz_0.3.0+git20160312-3_amd64.deb"
+}

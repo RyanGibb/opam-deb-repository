@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmodule-build-tiny-perl_0.039-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmodule-build-tiny-perl"]
+]
+depends: [
+  "libextutils-config-perl"
+  "libextutils-helpers-perl"
+  "libextutils-installpaths-perl"
+  "perl"
+  ("perl" {>= "5.13.10"} | "libcpan-meta-perl")
+  ("perl" {>= "5.13.9"} | "libjson-pp-perl")
+  ("perl" {>= "5.19.5"} | "libtest-harness-perl" {>= "3.29"})
+]
+extra-source "libmodule-build-tiny-perl_0.039-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmodule-build-tiny-perl/libmodule-build-tiny-perl_0.039-1_all.deb"
+}

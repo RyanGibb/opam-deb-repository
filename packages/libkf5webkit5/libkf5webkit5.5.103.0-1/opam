@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5webkit5_5.103.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5webkit5"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libkf5configgui5" {>= "5.103.0~"}
+  "libkf5coreaddons5" {>= "5.103.0~"}
+  "libkf5jobwidgets5" {>= "5.103.0~"}
+  "libkf5kiocore5" {>= "5.103.0~"}
+  "libkf5kiogui5" {>= "5.103.0~"}
+  "libkf5kiowidgets5" {>= "5.103.0~"}
+  "libkf5parts5" {>= "5.103.0~"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "5.103.0~"}
+  "libkf5wallet-bin"
+  "libkf5wallet5" {>= "5.103.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5network5" {>= "5.15.2~"}
+  "libqt5webkit5" {>= "5.212.0~alpha3"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "libkf5webkit5_5.103.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdewebkit/libkf5webkit5_5.103.0-1_amd64.deb"
+}

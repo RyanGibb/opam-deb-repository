@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iptables_1.8.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iptables"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "libip4tc0" {= "1.8.2-4"}
+  "libip6tc0" {= "1.8.2-4"}
+  "libiptc0" {= "1.8.2-4"}
+  "libmnl0" {>= "1.0.3-4~"}
+  "libnetfilter-conntrack3"
+  "libnfnetlink0"
+  "libnftnl11" {>= "1.1.2"}
+  "libxtables12" {= "1.8.2-4"}
+]
+extra-source "iptables_1.8.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iptables/iptables_1.8.2-4_amd64.deb"
+}

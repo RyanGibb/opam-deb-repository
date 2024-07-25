@@ -1,0 +1,40 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pim-sieve-editor_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pim-sieve-editor"]
+]
+depends: [
+  "kinit"
+  "kio"
+  "libc6" {>= "2.34"}
+  "libkf5bookmarks5" {>= "5.99.0~"}
+  "libkf5configcore5" {>= "5.69.0"}
+  "libkf5configgui5" {>= "4.97.0"}
+  "libkf5configwidgets5" {>= "5.69.0"}
+  "libkf5coreaddons5" {>= "5.99.0~"}
+  "libkf5crash5" {>= "5.99.0~"}
+  "libkf5dbusaddons5" {>= "5.99.0~"}
+  "libkf5i18n5" {>= "4.97.0"}
+  "libkf5kmanagesieve5"
+  "libkf5kmanagesieve5" {>= "4-22.12.3"}
+  "libkf5ksieveui5"
+  "libkf5ksieveui5" {>= "4-22.12.3"}
+  "libkf5mailtransport5"
+  "libkf5mailtransport5" {>= "22.12.3"}
+  "libkf5pimcommon5abi2"
+  "libkf5pimcommon5abi2" {>= "4-22.12.3"}
+  "libkf5widgetsaddons5" {>= "5.100.0"}
+  "libkf5xmlgui5" {>= "4.98.0"}
+  "libkuserfeedbackcore1" {>= "1.2.0~"}
+  "libkuserfeedbackwidgets1" {>= "1.2.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5keychain1" {>= "0.7.0"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "pim-sieve-editor_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pim-sieve-editor/pim-sieve-editor_22.12.3-1_amd64.deb"
+}

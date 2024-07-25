@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i duktape_2.5.0-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r duktape"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+]
+extra-source "duktape_2.5.0-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/duktape/duktape_2.5.0-2+deb11u1_amd64.deb"
+}

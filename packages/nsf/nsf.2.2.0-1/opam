@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nsf_2.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nsf"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "tcl" {>= "8.5"}
+]
+extra-source "nsf_2.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nsf/nsf_2.2.0-1_amd64.deb"
+}

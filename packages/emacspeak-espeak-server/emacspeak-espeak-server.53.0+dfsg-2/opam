@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i emacspeak-espeak-server_53.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r emacspeak-espeak-server"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libespeak-ng1" {>= "1.51+dfsg"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtcl8-6" {>= "8.6.0"}
+]
+extra-source "emacspeak-espeak-server_53.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emacspeak/emacspeak-espeak-server_53.0+dfsg-2_amd64.deb"
+}

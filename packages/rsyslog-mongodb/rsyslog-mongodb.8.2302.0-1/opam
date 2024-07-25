@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rsyslog-mongodb_8.2302.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rsyslog-mongodb"]
+]
+depends: [
+  "libbson-1-0-0" {>= "1.23.1"}
+  "libc6" {>= "2.4"}
+  "libmongoc-1-0-0" {>= "1.23.1"}
+  "rsyslog" {= "8.2302.0-1"}
+]
+extra-source "rsyslog-mongodb_8.2302.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rsyslog/rsyslog-mongodb_8.2302.0-1_amd64.deb"
+}

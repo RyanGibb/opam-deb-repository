@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pypy-dulwich_0.19.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pypy-dulwich"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "pypy"
+]
+extra-source "pypy-dulwich_0.19.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dulwich/pypy-dulwich_0.19.11-2_amd64.deb"
+}

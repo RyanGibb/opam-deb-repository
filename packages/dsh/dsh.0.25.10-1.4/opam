@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dsh_0.25.10-1.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dsh"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  "libdshconfig1"
+]
+extra-source "dsh_0.25.10-1.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dsh/dsh_0.25.10-1.4_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-cclib_1.6.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-cclib"]
+]
+depends: [
+  "python3-any"
+  "python3-numpy" {> "1-1.6.2~rc1-1~"}
+  "python3-six"
+]
+extra-source "python3-cclib_1.6.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cclib/python3-cclib_1.6.2-2_all.deb"
+}

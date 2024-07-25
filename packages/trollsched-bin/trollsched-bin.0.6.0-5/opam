@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i trollsched-bin_0.6.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r trollsched-bin"]
+]
+depends: [
+  "python3-any"
+  "python3-trollsched" {= "0.6.0-5"}
+]
+extra-source "trollsched-bin_0.6.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pytroll-schedule/trollsched-bin_0.6.0-5_all.deb"
+}

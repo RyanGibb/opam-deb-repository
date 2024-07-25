@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apparmor-notify_3.0.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apparmor-notify"]
+]
+depends: [
+  "python3-any"
+  "python3-apparmor"
+  "python3-libapparmor"
+  "python3-notify2"
+  "python3-psutil"
+]
+extra-source "apparmor-notify_3.0.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apparmor/apparmor-notify_3.0.8-3_all.deb"
+}

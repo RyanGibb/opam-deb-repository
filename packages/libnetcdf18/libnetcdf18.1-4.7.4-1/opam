@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnetcdf18_1:4.7.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnetcdf18"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libhdf5-103-1"
+  "libhdf5-hl-100"
+]
+extra-source "libnetcdf18_1:4.7.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netcdf/libnetcdf18_4.7.4-1_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i onionprobe_1.0.0+ds-2.1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r onionprobe"]
+]
+depends: [
+  "adduser"
+  "init-system-helpers" {>= "1.51"}
+  "python3-any"
+  "python3-cryptography"
+  "python3-prometheus-client"
+  "python3-requests"
+  "python3-socks"
+  "python3-stem"
+  "python3-yaml"
+  "tor"
+]
+extra-source "onionprobe_1.0.0+ds-2.1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/onionprobe/onionprobe_1.0.0+ds-2.1+deb12u1_all.deb"
+}

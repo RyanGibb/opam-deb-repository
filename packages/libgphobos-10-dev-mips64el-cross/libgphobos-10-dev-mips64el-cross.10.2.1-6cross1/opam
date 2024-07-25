@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgphobos-10-dev-mips64el-cross_10.2.1-6cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgphobos-10-dev-mips64el-cross"]
+]
+depends: [
+  "gcc-10-cross-base-mipsen" {= "10.2.1-6cross1"}
+  "libgphobos1-mips64el-cross" {>= "10.2.1-6cross1"}
+  "zlib1g-dev"
+]
+extra-source "libgphobos-10-dev-mips64el-cross_10.2.1-6cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10-cross-mipsen/libgphobos-10-dev-mips64el-cross_10.2.1-6cross1_all.deb"
+}

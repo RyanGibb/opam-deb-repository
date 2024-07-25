@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-browserify-cipher_1.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-browserify-cipher"]
+]
+depends: [
+  "node-browserify-aes" {>= "1.0.4"}
+  "node-browserify-des" {>= "1.0.0"}
+  "node-evp-bytestokey" {>= "1.0.0"}
+  "nodejs"
+]
+extra-source "node-browserify-cipher_1.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-browserify-cipher/node-browserify-cipher_1.0.0-2_all.deb"
+}

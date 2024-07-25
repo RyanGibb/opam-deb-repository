@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfst-tools_1.7.9-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfst-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfst22" {= "1.7.9-5"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libfst-tools_1.7.9-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openfst/libfst-tools_1.7.9-5_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jxplorer_3.3.2+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jxplorer"]
+]
+depends: [
+  "ca-certificates-java"
+  "java-wrappers" {>= "0.1.14"}
+  "javahelp2"
+  ("default-jre" | "java6-runtime")
+]
+extra-source "jxplorer_3.3.2+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jxplorer/jxplorer_3.3.2+dfsg-6_all.deb"
+}

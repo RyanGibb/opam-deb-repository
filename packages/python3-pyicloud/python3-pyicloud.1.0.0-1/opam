@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyicloud_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyicloud"]
+]
+depends: [
+  "python3-any"
+  "python3-certifi"
+  "python3-click"
+  "python3-keyring"
+  "python3-keyrings-alt"
+  "python3-requests"
+  "python3-tzlocal" {>= "4.0"}
+]
+extra-source "python3-pyicloud_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyicloud/python3-pyicloud_1.0.0-1_all.deb"
+}

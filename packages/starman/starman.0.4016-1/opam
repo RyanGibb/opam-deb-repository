@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i starman_0.4016-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r starman"]
+]
+depends: [
+  "libdata-dump-perl"
+  "libhttp-date-perl"
+  "libhttp-parser-xs-perl"
+  "libnet-server-perl"
+  "libnet-server-ss-prefork-perl"
+  "libplack-perl"
+  "libwww-perl"
+  "perl-any"
+]
+extra-source "starman_0.4016-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/starman/starman_0.4016-1_all.deb"
+}

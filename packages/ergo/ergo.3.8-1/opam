@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ergo_3.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ergo"]
+]
+depends: [
+  "ergo-data" {>= "3.7"}
+  "libatlas3-base"
+  "libc6" {>= "2.27"}
+  "libgcc-s1"
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "5.2"}
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "ergo_3.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ergo/ergo_3.8-1_amd64.deb"
+}

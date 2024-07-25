@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-wayland-commons-dev_0.29.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-wayland-commons-dev"]
+]
+depends: [
+  "librust-nix-dev"
+  "librust-once-cell-dev"
+  "librust-smallvec-1+default-dev"
+  "librust-wayland-sys-dev"
+]
+extra-source "librust-wayland-commons-dev_0.29.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-wayland-commons/librust-wayland-commons-dev_0.29.4-2_amd64.deb"
+}

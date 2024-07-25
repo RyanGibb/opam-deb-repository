@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzorpll-7.0-4_7.0.4.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzorpll-7.0-4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcap2" {>= "1-2.10"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.31.18"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+  "libsystemd0"
+  "zlib1g" {>= "1-1.1.4"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "libzorpll-7.0-4_7.0.4.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libz/libzorpll/libzorpll-7.0-4_7.0.4.0-2_amd64.deb"
+}

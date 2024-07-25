@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtacacs+1-dev_4.0.4.27a-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtacacs+1-dev"]
+]
+depends: [
+  "libtacacs+1" {< "4.0.4.27a+1~"}
+  "libtacacs+1" {>= "4.0.4.27a"}
+]
+extra-source "libtacacs+1-dev_4.0.4.27a-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tacacs+/libtacacs+1-dev_4.0.4.27a-3_all.deb"
+}

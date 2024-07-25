@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openhpi-plugin-ilo2-ribcl_3.8.0-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openhpi-plugin-ilo2-ribcl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libopenhpi3" {= "3.8.0-2.1"}
+  "libxml2" {>= "2.7.4"}
+]
+conflicts: [
+  "libopenhpi"
+  "libopenhpi2"
+]
+extra-source "openhpi-plugin-ilo2-ribcl_3.8.0-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openhpi/openhpi-plugin-ilo2-ribcl_3.8.0-2.1_amd64.deb"
+}

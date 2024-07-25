@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gosa-plugins-mailaddress_2.8~git20211027.08b10a2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gosa-plugins-mailaddress"]
+]
+depends: [
+  "gosa" {>= "2.7.4+reloaded2-12~"}
+]
+conflicts: [
+  "gosa-plugin-mail"
+]
+extra-source "gosa-plugins-mailaddress_2.8~git20211027.08b10a2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gosa-plugins-mailaddress/gosa-plugins-mailaddress_2.8~git20211027.08b10a2-2_all.deb"
+}

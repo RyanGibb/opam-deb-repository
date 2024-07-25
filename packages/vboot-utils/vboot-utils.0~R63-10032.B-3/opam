@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vboot-utils_0~R63-10032.B-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vboot-utils"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+  "libyaml-0-2"
+  "vboot-kernel-utils"
+]
+extra-source "vboot-utils_0~R63-10032.B-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vboot-utils/vboot-utils_0~R63-10032.B-3_amd64.deb"
+}

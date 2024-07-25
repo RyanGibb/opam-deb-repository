@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-tf2_0.6.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-tf2"]
+]
+depends: [
+  "libboost-atomic1-67-0"
+  "libboost-chrono1-67-0"
+  "libboost-date-time1-67-0"
+  "libboost-system1-67-0"
+  "libboost-thread1-67-0"
+  "libc6" {>= "2.14"}
+  "libconsole-bridge0-4"
+  "libcpp-common0d"
+  "libgcc1" {>= "1-3.0"}
+  "libpython3-7" {>= "3.7.0"}
+  "libroscpp-serialization0d"
+  "librostime0d"
+  "libstdc++6" {>= "5.2"}
+  "libtf2-1d"
+  "libtf2-dev"
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+  "python3-geometry-msgs"
+  "python3-rospy"
+]
+extra-source "python3-tf2_0.6.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-geometry2/python3-tf2_0.6.5-3_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-sass-rails_6.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-sass-rails"]
+]
+depends: [
+  "ruby-railties" {< "2-7.0"}
+  "ruby-railties" {>= "2-4.0.0"}
+  "ruby-sass" {>= "3.1"}
+  "ruby-sassc-rails" {>= "2.1"}
+  "ruby-sprockets" {< "4.0"}
+  "ruby-sprockets" {>= "2.8"}
+  "ruby-sprockets-rails" {< "4.0"}
+  "ruby-sprockets-rails" {>= "2.0"}
+  "ruby-tilt" {>= "1.1"}
+]
+extra-source "ruby-sass-rails_6.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-sass-rails/ruby-sass-rails_6.0.0-1_all.deb"
+}

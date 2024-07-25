@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-hawk_6.0.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-hawk"]
+]
+depends: [
+  "node-boom" {>= "4.0.0"}
+  "node-cryptiles" {>= "3.0.0"}
+  "node-hoek" {>= "4.0.0"}
+  "node-sntp" {>= "2.0.0"}
+  "nodejs"
+]
+extra-source "node-hawk_6.0.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-hawk/node-hawk_6.0.1+dfsg-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libboost-mpi1.67.0_1.67.0-13+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libboost-mpi1.67.0"]
+]
+depends: [
+  "libboost-serialization1-67-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libopenmpi3"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libboost-mpi1.67.0_1.67.0-13+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boost1.67/libboost-mpi1.67.0_1.67.0-13+deb10u1_amd64.deb"
+}

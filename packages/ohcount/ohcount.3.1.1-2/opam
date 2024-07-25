@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ohcount_3.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ohcount"]
+]
+depends: [
+  "file"
+  "libc6" {>= "2.14"}
+  "libmagic1" {>= "5.12"}
+  "libpcre3"
+  "ruby-diff-lcs"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ohcount_3.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ohcount/ohcount_3.1.1-2_amd64.deb"
+}

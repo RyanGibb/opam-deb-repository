@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i photofilmstrip_3.7.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r photofilmstrip"]
+]
+depends: [
+  "gstreamer1-0-libav"
+  "libjs-sphinxdoc" {>= "2.4.3-5~"}
+  "python3-any"
+  "python3-gst-1-0"
+  "python3-pil"
+  "python3-wxgtk4-0"
+]
+extra-source "photofilmstrip_3.7.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/photofilmstrip/photofilmstrip_3.7.3-2_all.deb"
+}

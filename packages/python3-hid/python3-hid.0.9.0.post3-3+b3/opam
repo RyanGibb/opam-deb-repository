@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-hid_0.9.0.post3-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-hid"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libhidapi-hidraw0" {>= "0.8.0~rc1+git20140201.3a66d4e+dfsg"}
+  "libhidapi-libusb0" {>= "0.8.0~rc1+git20140201.3a66d4e+dfsg"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-pkg-resources"
+]
+extra-source "python3-hid_0.9.0.post3-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-hidapi/python3-hid_0.9.0.post3-3+b3_amd64.deb"
+}

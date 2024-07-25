@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblzo2-2_2.10-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblzo2-2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "liblzo2-2_2.10-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lzo2/liblzo2-2_2.10-2_amd64.deb"
+}

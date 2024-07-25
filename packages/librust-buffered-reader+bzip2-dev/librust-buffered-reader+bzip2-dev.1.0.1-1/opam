@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-buffered-reader+bzip2-dev_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-buffered-reader+bzip2-dev"]
+]
+depends: [
+  "librust-buffered-reader-dev" {= "1.0.1-1"}
+  "librust-bzip2-0-4+default-dev"
+]
+extra-source "librust-buffered-reader+bzip2-dev_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-buffered-reader/librust-buffered-reader+bzip2-dev_1.0.1-1_amd64.deb"
+}

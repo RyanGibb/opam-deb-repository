@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxrender-dev_1:0.9.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxrender-dev"]
+]
+depends: [
+  "libx11-dev" {>= "2-1.0.0"}
+  "libxrender1" {= "1-0.9.10-1"}
+  "x11proto-core-dev"
+  "x11proto-render-dev"
+]
+extra-source "libxrender-dev_1:0.9.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxrender/libxrender-dev_0.9.10-1_amd64.deb"
+}

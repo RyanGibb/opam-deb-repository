@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfreetype-dev_2.12.1+dfsg-5+deb12u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfreetype-dev"]
+]
+depends: [
+  "libbrotli-dev"
+  "libfreetype6" {= "2.12.1+dfsg-5+deb12u3"}
+  "libpng-dev"
+  ("libc6-dev" | "libc-dev")
+  ("zlib1g-dev" | "libz-dev")
+]
+extra-source "libfreetype-dev_2.12.1+dfsg-5+deb12u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freetype/libfreetype-dev_2.12.1+dfsg-5+deb12u3_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjavascriptcoregtk-4.0-bin_2.36.4-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjavascriptcoregtk-4.0-bin"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libglib2-0-0" {>= "2.44.0"}
+  "libicu63" {>= "63.1-1~"}
+  "libjavascriptcoregtk-4-0-18"
+  "libstdc++6" {>= "4.4.0"}
+  "libsystemd0"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libjavascriptcoregtk-4.0-bin_2.36.4-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/webkit2gtk/libjavascriptcoregtk-4.0-bin_2.36.4-1~deb10u1_amd64.deb"
+}

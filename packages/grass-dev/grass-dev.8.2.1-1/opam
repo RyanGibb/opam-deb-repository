@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i grass-dev_8.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r grass-dev"]
+]
+depends: [
+  "fakeroot"
+  "grass-core" {= "8.2.1-1"}
+  "libc6" {>= "2.34"}
+  "libfreetype-dev"
+  "libgdal-dev"
+  "libpq-dev"
+  "libproj-dev"
+  "python3-any"
+]
+extra-source "grass-dev_8.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/grass/grass-dev_8.2.1-1_amd64.deb"
+}

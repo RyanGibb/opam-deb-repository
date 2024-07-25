@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-caddyserver-certmagic-dev_0.17.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-caddyserver-certmagic-dev"]
+]
+depends: [
+  "golang-github-klauspost-cpuid-dev" {>= "2.0.6~"}
+  "golang-github-libdns-libdns-dev"
+  "golang-github-mholt-acmez-dev"
+  "golang-github-miekg-dns-dev"
+  "golang-go-uber-zap-dev"
+  "golang-golang-x-crypto-dev"
+  "golang-golang-x-net-dev"
+]
+extra-source "golang-github-caddyserver-certmagic-dev_0.17.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-caddyserver-certmagic/golang-github-caddyserver-certmagic-dev_0.17.2-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-polyfill-php83_1.27.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-polyfill-php83"]
+]
+depends: [
+  "php-common"
+  "php-symfony-polyfill-php80" {< "2~~"}
+  "php-symfony-polyfill-php80" {>= "1.14"}
+]
+extra-source "php-symfony-polyfill-php83_1.27.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-symfony-polyfill/php-symfony-polyfill-php83_1.27.0-2_all.deb"
+}

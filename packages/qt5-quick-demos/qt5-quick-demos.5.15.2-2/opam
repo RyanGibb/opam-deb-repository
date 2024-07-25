@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt5-quick-demos_5.15.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt5-quick-demos"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libqt5core5a" {>= "5.15.2+dfsg~"}
+  "libqt5qml5" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2+dfsg~"}
+  "libstdc++6" {>= "5"}
+  "qml-module-qt-labs-folderlistmodel"
+  "qml-module-qtqml-models2"
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-dialogs"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick-particles2"
+  "qml-module-qtquick-window2"
+  "qml-module-qtquick-xmllistmodel"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.15.2+dfsg~"} | "libqt5gui5-gles" {>= "5.15.2+dfsg~"})
+  ("libqt5quick5" {>= "5.15.2~"} | "libqt5quick5-gles" {>= "5.15.2~"})
+]
+extra-source "qt5-quick-demos_5.15.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtdoc-opensource-src/qt5-quick-demos_5.15.2-2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openfoam_1912.200626-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openfoam"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libopenfoam" {= "1912.200626-1"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "5.2"}
+  "mpi-default-bin"
+]
+extra-source "openfoam_1912.200626-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openfoam/openfoam_1912.200626-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-routes_2.4.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-routes"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "1.0"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-pkg-resources"
+  "python-repoze-lru"
+  "python-six"
+]
+extra-source "python-routes_2.4.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/routes/python-routes_2.4.1-1_all.deb"
+}

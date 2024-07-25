@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-solr-all-dev_2.6.0+2.4.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-solr-all-dev"]
+]
+depends: [
+  "php-all-dev"
+  "php8-2-solr" {>= "2.6.0+2.4.0-3~"}
+]
+extra-source "php-solr-all-dev_2.6.0+2.4.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-solr/php-solr-all-dev_2.6.0+2.4.0-3_all.deb"
+}

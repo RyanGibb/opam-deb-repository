@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-tracker-2.0_2.3.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-tracker-2.0"]
+]
+depends: [
+  "gir1-2-glib-2-0" {>= "0.10.7-1~"}
+  "libtracker-control-2-0-0" {= "2.3.6-2"}
+  "libtracker-miner-2-0-0" {= "2.3.6-2"}
+  "libtracker-sparql-2-0-0" {= "2.3.6-2"}
+]
+extra-source "gir1.2-tracker-2.0_2.3.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tracker/gir1.2-tracker-2.0_2.3.6-2_amd64.deb"
+}

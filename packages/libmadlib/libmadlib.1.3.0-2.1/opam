@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmadlib_1.3.0-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmadlib"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc1" {>= "1-4.1.1"}
+]
+extra-source "libmadlib_1.3.0-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/madlib/libmadlib_1.3.0-2.1_amd64.deb"
+}

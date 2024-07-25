@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hsemail-prof_2-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hsemail-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hsemail-dev" {= "2-5+b2"}
+  "libghc-old-time-prof"
+]
+extra-source "libghc-hsemail-prof_2-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hsemail/libghc-hsemail-prof_2-5+b2_amd64.deb"
+}

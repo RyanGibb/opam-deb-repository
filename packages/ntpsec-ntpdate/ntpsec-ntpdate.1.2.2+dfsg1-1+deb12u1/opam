@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ntpsec-ntpdate_1.2.2+dfsg1-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ntpsec-ntpdate"]
+]
+depends: [
+  "netbase"
+  "ntpsec-ntpdig" {= "1.2.2+dfsg1-1+deb12u1"}
+]
+extra-source "ntpsec-ntpdate_1.2.2+dfsg1-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ntpsec/ntpsec-ntpdate_1.2.2+dfsg1-1+deb12u1_amd64.deb"
+}

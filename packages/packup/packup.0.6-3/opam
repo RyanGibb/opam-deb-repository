@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i packup_0.6-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r packup"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libgmp10"
+  "libgmpxx4ldbl"
+  "libstdc++6" {>= "5.2"}
+  "minisat+"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "packup_0.6-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/packup/packup_0.6-3_amd64.deb"
+}

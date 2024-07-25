@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmircommon7_1.8.0+dfsg1-18_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmircommon7"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.30"}
+  "libcapnp-0-7-0"
+  "libgcc-s1" {>= "3.3.1"}
+  "libmircore1" {>= "1.7"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libmircommon7_1.8.0+dfsg1-18_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mir/libmircommon7_1.8.0+dfsg1-18_amd64.deb"
+}

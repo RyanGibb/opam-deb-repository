@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tz-converter_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tz-converter"]
+]
+depends: [
+  "python3-any" {>= "3.5~"}
+  "python3-dateutil"
+  "python3-pyqt5"
+  "python3-tz"
+]
+extra-source "tz-converter_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tz-converter/tz-converter_1.0.1-1_all.deb"
+}

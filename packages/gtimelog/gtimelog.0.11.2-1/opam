@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtimelog_0.11.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtimelog"]
+]
+depends: [
+  "gir1-2-gtk-3-0"
+  "gir1-2-pango-1-0" {>= "1.29.3+git20110916"}
+  "gir1-2-soup-2-4"
+  "python3-any"
+  "python3-gi"
+  "python3-setuptools"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gtimelog_0.11.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtimelog/gtimelog_0.11.2-1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-tinyvec+serde-dev_1.6.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-tinyvec+serde-dev"]
+]
+depends: [
+  "librust-serde-1-dev"
+  "librust-tinyvec-dev" {= "1.6.0-2"}
+]
+extra-source "librust-tinyvec+serde-dev_1.6.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-tinyvec/librust-tinyvec+serde-dev_1.6.0-2_amd64.deb"
+}

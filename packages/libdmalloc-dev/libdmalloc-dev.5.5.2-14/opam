@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdmalloc-dev_5.5.2-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdmalloc-dev"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libdmalloc5" {= "5.5.2-14"}
+]
+extra-source "libdmalloc-dev_5.5.2-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dmalloc/libdmalloc-dev_5.5.2-14_amd64.deb"
+}

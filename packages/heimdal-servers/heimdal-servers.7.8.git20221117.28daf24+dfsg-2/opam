@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i heimdal-servers_7.8.git20221117.28daf24+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r heimdal-servers"]
+]
+depends: [
+  "krb5-config"
+  "libc6" {>= "2.34"}
+  "libkrb5-26-heimdal" {>= "1.4.0+git20110226"}
+  "libroken19-heimdal" {>= "1.4.0+git20110226"}
+  ("openbsd-inetd" | "inet-superserver")
+]
+extra-source "heimdal-servers_7.8.git20221117.28daf24+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heimdal/heimdal-servers_7.8.git20221117.28daf24+dfsg-2_amd64.deb"
+}

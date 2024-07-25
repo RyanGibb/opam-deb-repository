@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i knxd_0.14.54.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r knxd"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libelogind0"
+  "libev4" {>= "1-4.04"}
+  "libfmt9" {>= "9.1.0+ds1"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libusb-1-0-0" {>= "2-1.0.22"}
+  "lsb-base"
+]
+conflicts: [
+  "eibd"
+  "eibd-server"
+]
+extra-source "knxd_0.14.54.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/knxd/knxd_0.14.54.1+b1_amd64.deb"
+}

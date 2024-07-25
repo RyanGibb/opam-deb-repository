@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-django-guardian_1.4.9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-django-guardian"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-django" {>= "1.2"}
+  "python3-six"
+]
+extra-source "python3-django-guardian_1.4.9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/django-guardian/python3-django-guardian_1.4.9-2_all.deb"
+}

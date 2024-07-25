@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-dompdf_2.0.3+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-dompdf"]
+]
+depends: [
+  "fonts-dejavu-core"
+  "fonts-dejavu-extra"
+  "php-common"
+  "php-dompdf-svg-lib" {< "1.0.0~~"}
+  "php-dompdf-svg-lib" {>= "0.3.3"}
+  "php-font-lib" {< "1.0.0~~"}
+  "php-font-lib" {>= "0.5.4"}
+  "php-masterminds-html5" {< "3~~"}
+  "php-masterminds-html5" {>= "2.0"}
+  "php-mbstring"
+  "php-xml"
+  "sdop"
+]
+extra-source "php-dompdf_2.0.3+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-dompdf/php-dompdf_2.0.3+dfsg-1_all.deb"
+}

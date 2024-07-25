@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-package-lint-flymake_0.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-package-lint-flymake"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-package-lint" {>= "0.5"}
+  "emacsen-common"
+]
+extra-source "elpa-package-lint-flymake_0.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/package-lint-el/elpa-package-lint-flymake_0.13-1_all.deb"
+}

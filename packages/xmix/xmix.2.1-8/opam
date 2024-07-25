@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xmix_2.1-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xmix"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libx11-6"
+  "libxaw7" {>= "2-1.0.14"}
+  "libxt6"
+]
+extra-source "xmix_2.1-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmix/xmix_2.1-8_amd64.deb"
+}

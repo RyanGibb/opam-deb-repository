@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xscreensaver-gl_5.45+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xscreensaver-gl"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcap2-bin"
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libgdk-pixbuf-xlib-2-0-0" {>= "2.22.0"}
+  "libgl1"
+  "libglib2-0-0" {>= "2.16.0"}
+  "libx11-6"
+  "libxext6"
+  "libxft2" {> "2.1.1"}
+  "libxmu6"
+  "libxt6"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "xscreensaver-gl_5.45+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xscreensaver/xscreensaver-gl_5.45+dfsg1-2_amd64.deb"
+}

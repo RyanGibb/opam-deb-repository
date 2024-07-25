@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fxload_0.0.20081013-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fxload"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+]
+conflicts: [
+  "hotplug-utils"
+]
+extra-source "fxload_0.0.20081013-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fxload/fxload_0.0.20081013-1+b2_amd64.deb"
+}

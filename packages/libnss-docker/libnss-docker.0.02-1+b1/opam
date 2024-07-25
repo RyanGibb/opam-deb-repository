@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnss-docker_0.02-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnss-docker"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libnss-docker_0.02-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnss-docker/libnss-docker_0.02-1+b1_amd64.deb"
+}

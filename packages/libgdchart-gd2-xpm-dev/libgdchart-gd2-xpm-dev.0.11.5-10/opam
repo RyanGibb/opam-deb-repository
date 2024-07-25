@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgdchart-gd2-xpm-dev_0.11.5-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgdchart-gd2-xpm-dev"]
+]
+depends: [
+  "libfreetype6-dev"
+  "libgd-dev"
+  "libgdchart-gd2-xpm" {= "0.11.5-10"}
+  "libjpeg-dev"
+  "libpng-dev"
+  "libx11-dev"
+  "libxpm-dev"
+  "zlib1g-dev"
+]
+conflicts: [
+  "libgdchart-gd2-dev"
+]
+extra-source "libgdchart-gd2-xpm-dev_0.11.5-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgdchart-gd2/libgdchart-gd2-xpm-dev_0.11.5-10_amd64.deb"
+}

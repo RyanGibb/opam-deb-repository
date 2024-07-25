@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debian-cd_3.2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debian-cd"]
+]
+depends: [
+  "apt"
+  "bc"
+  "bzip2"
+  "cpp"
+  "curl"
+  "dctrl-tools"
+  "dpkg-dev"
+  "libcompress-zlib-perl"
+  "libdigest-md5-perl"
+  "libdigest-sha-perl"
+  "libdpkg-perl"
+  "libfile-slurp-perl"
+  "libyaml-libyaml-perl"
+  "lynx"
+  "make"
+  "perl"
+  "pigz"
+  "tofrodos"
+  "uuid-runtime"
+  "wget"
+  ("xorriso" | "genisoimage")
+]
+extra-source "debian-cd_3.2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-cd/debian-cd_3.2.1_all.deb"
+}

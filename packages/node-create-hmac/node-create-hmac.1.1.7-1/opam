@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-create-hmac_1.1.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-create-hmac"]
+]
+depends: [
+  "node-cipher-base" {>= "1.0.3"}
+  "node-create-hash" {>= "1.1.0"}
+  "node-inherits" {>= "2.0.1"}
+  "node-ripemd160" {>= "2.0.0"}
+  "node-safe-buffer" {>= "5.0.1"}
+  "node-sha-js" {>= "2.4.8"}
+  "nodejs" {>= "7"}
+]
+extra-source "node-create-hmac_1.1.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-create-hmac/node-create-hmac_1.1.7-1_all.deb"
+}

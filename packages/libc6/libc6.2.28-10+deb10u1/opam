@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libc6_2.28-10+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libc6"]
+]
+depends: [
+  "libgcc1"
+]
+conflicts: [
+  "openrc (<< 0.27-2~)"
+]
+extra-source "libc6_2.28-10+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glibc/libc6_2.28-10+deb10u1_amd64.deb"
+}

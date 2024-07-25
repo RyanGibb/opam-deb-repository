@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-jsonpipe_0.0.8-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-jsonpipe"]
+]
+depends: [
+  "python"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-calabash"
+  "python-pkg-resources"
+  "python-simplejson"
+]
+extra-source "python-jsonpipe_0.0.8-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jsonpipe/python-jsonpipe_0.0.8-5_all.deb"
+}

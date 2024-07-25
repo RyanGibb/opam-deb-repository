@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cl-sql-postgresql_6.7.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cl-sql-postgresql"]
+]
+depends: [
+  "cl-sql" {= "6.7.1-3"}
+  "cl-sql-uffi" {>= "6.7.1-3"}
+  "libpq-dev"
+]
+extra-source "cl-sql-postgresql_6.7.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cl-sql/cl-sql-postgresql_6.7.1-3_all.deb"
+}

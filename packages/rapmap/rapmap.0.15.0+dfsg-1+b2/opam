@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rapmap_0.15.0+dfsg-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rapmap"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libdivsufsort3" {>= "2.0.1"}
+  "libgcc-s1" {>= "4.2"}
+  "libjemalloc2" {>= "5.0.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "rapmap_0.15.0+dfsg-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rapmap/rapmap_0.15.0+dfsg-1+b2_amd64.deb"
+}

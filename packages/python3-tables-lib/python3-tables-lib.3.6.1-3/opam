@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-tables-lib_3.6.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-tables-lib"]
+]
+depends: [
+  "libblosc1" {>= "1.20.1+ds1"}
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libhdf5-103-1"
+  "liblzo2-2" {>= "2.02"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+]
+extra-source "python3-tables-lib_3.6.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pytables/python3-tables-lib_3.6.1-3_amd64.deb"
+}

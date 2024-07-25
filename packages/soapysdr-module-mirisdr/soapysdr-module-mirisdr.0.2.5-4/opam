@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i soapysdr-module-mirisdr_0.2.5-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r soapysdr-module-mirisdr"]
+]
+depends: [
+  "soapyosmo-common0-7" {= "0.2.5-4"}
+  "soapysdr0-7-module-mirisdr"
+]
+extra-source "soapysdr-module-mirisdr_0.2.5-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/soapyosmo/soapysdr-module-mirisdr_0.2.5-4_amd64.deb"
+}

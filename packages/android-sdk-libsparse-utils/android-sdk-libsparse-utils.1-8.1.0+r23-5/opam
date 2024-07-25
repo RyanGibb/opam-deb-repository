@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-sdk-libsparse-utils_1:8.1.0+r23-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-sdk-libsparse-utils"]
+]
+depends: [
+  "android-libsparse"
+  "libc6" {>= "2.2.5"}
+  "python"
+]
+extra-source "android-sdk-libsparse-utils_1:8.1.0+r23-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-system-core/android-sdk-libsparse-utils_8.1.0+r23-5_amd64.deb"
+}

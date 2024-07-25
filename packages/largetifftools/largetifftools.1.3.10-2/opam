@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i largetifftools_1.3.10-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r largetifftools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgomp1" {>= "4.9"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libtiff5" {>= "4.0.3"}
+]
+extra-source "largetifftools_1.3.10-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/largetifftools/largetifftools_1.3.10-2_amd64.deb"
+}

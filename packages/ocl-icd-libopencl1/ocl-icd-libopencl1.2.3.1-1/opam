@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ocl-icd-libopencl1_2.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ocl-icd-libopencl1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+]
+conflicts: [
+  "amd-app"
+  "libopencl1"
+  "nvidia-libopencl1-dev"
+]
+extra-source "ocl-icd-libopencl1_2.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocl-icd/ocl-icd-libopencl1_2.3.1-1_amd64.deb"
+}

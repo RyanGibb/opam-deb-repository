@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplymouth5_22.02.122-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplymouth5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libudev1" {>= "183"}
+]
+extra-source "libplymouth5_22.02.122-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plymouth/libplymouth5_22.02.122-3_amd64.deb"
+}

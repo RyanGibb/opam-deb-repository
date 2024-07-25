@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-chemminer_3.50.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-chemminer"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biocgenerics"
+  "r-cran-base64enc"
+  "r-cran-bh"
+  "r-cran-dbi"
+  "r-cran-digest"
+  "r-cran-dt"
+  "r-cran-ggplot2"
+  "r-cran-gridextra"
+  "r-cran-jsonlite"
+  "r-cran-png"
+  "r-cran-rcpp" {>= "0.11.0"}
+  "r-cran-rcurl"
+  "r-cran-rjson"
+  "r-cran-rsvg"
+  "r-cran-stringi"
+]
+extra-source "r-bioc-chemminer_3.50.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-chemminer/r-bioc-chemminer_3.50.0+dfsg-1_amd64.deb"
+}

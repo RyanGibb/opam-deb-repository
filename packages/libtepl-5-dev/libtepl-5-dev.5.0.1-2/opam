@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtepl-5-dev_5.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtepl-5-dev"]
+]
+depends: [
+  "gir1-2-tepl-5" {= "5.0.1-2"}
+  "libamtk-5-dev" {>= "5.0"}
+  "libglib2-0-dev" {>= "2.64"}
+  "libgtk-3-dev" {>= "3.22"}
+  "libgtksourceview-4-dev" {>= "4.0"}
+  "libtepl-5-0" {= "5.0.1-2"}
+]
+extra-source "libtepl-5-dev_5.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tepl/libtepl-5-dev_5.0.1-2_amd64.deb"
+}

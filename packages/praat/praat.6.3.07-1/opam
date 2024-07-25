@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i praat_6.3.07-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r praat"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.36"}
+  "libcairo2" {>= "1.6.0"}
+  "libgcc-s1" {>= "4.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libpango-1-0-0" {>= "1.22.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpulse0" {>= "0.99.1"}
+  "libstdc++6" {>= "11"}
+  "oss-compat"
+  "python3-any"
+]
+extra-source "praat_6.3.07-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/praat/praat_6.3.07-1_amd64.deb"
+}

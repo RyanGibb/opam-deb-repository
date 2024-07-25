@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtracker-miner-2.0-0_2.1.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtracker-miner-2.0-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.44.0"}
+  "libtracker-sparql-2-0-0" {= "2.1.8-2"}
+]
+extra-source "libtracker-miner-2.0-0_2.1.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tracker/libtracker-miner-2.0-0_2.1.8-2_amd64.deb"
+}

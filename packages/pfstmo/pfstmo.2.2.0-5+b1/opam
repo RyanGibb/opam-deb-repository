@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pfstmo_2.2.0-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pfstmo"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfftw3-double3" {>= "3.3.10"}
+  "libfftw3-single3" {>= "3.3.10"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.2.1"}
+  "libgsl27" {>= "2.7.1"}
+  "libpfs2" {>= "2.1.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "pfstmo_2.2.0-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pfstools/pfstmo_2.2.0-5+b1_amd64.deb"
+}

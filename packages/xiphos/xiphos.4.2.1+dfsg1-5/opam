@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xiphos_4.2.1+dfsg1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xiphos"]
+]
+depends: [
+  "imagemagick"
+  "libbiblesync1-1" {> "1.1.2-0"}
+  "libc6" {>= "2.14"}
+  "libdbus-glib-1-2" {>= "0.88"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libicu67" {>= "67.1-1~"}
+  "libminizip1" {>= "1.1"}
+  "libstdc++6" {>= "5.2"}
+  "libsword1-9-0" {>= "1.9.0+dfsg"}
+  "libwebkit2gtk-4-0-37" {>= "2.5.3"}
+  "libxml2" {>= "2.7.4"}
+  "xiphos-data" {= "4.2.1+dfsg1-5"}
+]
+conflicts: [
+  "xiphos-svn"
+]
+extra-source "xiphos_4.2.1+dfsg1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xiphos/xiphos_4.2.1+dfsg1-5_amd64.deb"
+}

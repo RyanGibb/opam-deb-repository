@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cod-tools_3.7.0+dfsg-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cod-tools"]
+]
+depends: [
+  "curl"
+  "gawk"
+  "libc6" {>= "2.34"}
+  "libclone-perl"
+  "libcod-tools-perl"
+  "libdbd-mysql-perl"
+  "libdbd-sqlite3-perl"
+  "libdbi-perl"
+  "libdigest-sha-perl"
+  "libgraph-nauty-perl"
+  "libhtml-parser-perl"
+  "libjson-perl"
+  "liblist-moreutils-perl"
+  "libwww-curl-perl"
+  "libxml-simple-perl"
+  "openbabel"
+  "perl"
+]
+extra-source "cod-tools_3.7.0+dfsg-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cod-tools/cod-tools_3.7.0+dfsg-1+b3_amd64.deb"
+}

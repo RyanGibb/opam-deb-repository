@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencl-clang14_14.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencl-clang14"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libclang-cpp14" {>= "1-14.0.6"}
+  "libgcc-s1" {>= "3.0"}
+  "libllvm14"
+  "libllvmspirvlib14"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libopencl-clang14_14.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencl-clang-14/libopencl-clang14_14.0.0-4_amd64.deb"
+}

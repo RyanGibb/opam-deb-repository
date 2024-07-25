@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmgl-fltk8_8.0.1-4+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmgl-fltk8"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libfltk1-3" {>= "1.3.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.2.1"}
+  "libmgl8" {>= "8.0.1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libmgl-fltk8_8.0.1-4+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mathgl/libmgl-fltk8_8.0.1-4+b4_amd64.deb"
+}

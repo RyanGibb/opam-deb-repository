@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gigalomania_1.0+ds1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gigalomania"]
+]
+depends: [
+  "gigalomania-data" {= "1.0+ds1-1.1"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libsdl2-2-0-0" {>= "2.0.12+dfsg1"}
+  "libsdl2-image-2-0-0" {>= "2.0.2"}
+  "libsdl2-mixer-2-0-0" {>= "2.0.2"}
+  "libstdc++6" {>= "5.2"}
+  "libtinyxml2-6-2v5"
+]
+extra-source "gigalomania_1.0+ds1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gigalomania/gigalomania_1.0+ds1-1.1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmshr64-dev_2019.2.0~git20200924.c27eb18+dfsg1-7+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmshr64-dev"]
+]
+depends: [
+  "libdolfin64-dev" {>= "2019.2"}
+  "libmshr-dev-common" {= "2019.2.0~git20200924.c27eb18+dfsg1-7+b4"}
+  "libmshr64-2019-2" {= "2019.2.0~git20200924.c27eb18+dfsg1-7+b4"}
+]
+extra-source "libmshr64-dev_2019.2.0~git20200924.c27eb18+dfsg1-7+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mshr/libmshr64-dev_2019.2.0~git20200924.c27eb18+dfsg1-7+b4_amd64.deb"
+}

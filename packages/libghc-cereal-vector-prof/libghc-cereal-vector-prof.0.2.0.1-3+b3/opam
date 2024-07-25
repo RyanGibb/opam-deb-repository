@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cereal-vector-prof_0.2.0.1-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cereal-vector-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-cereal-prof"
+  "libghc-cereal-vector-dev" {= "0.2.0.1-3+b3"}
+  "libghc-vector-prof"
+]
+extra-source "libghc-cereal-vector-prof_0.2.0.1-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cereal-vector/libghc-cereal-vector-prof_0.2.0.1-3+b3_amd64.deb"
+}

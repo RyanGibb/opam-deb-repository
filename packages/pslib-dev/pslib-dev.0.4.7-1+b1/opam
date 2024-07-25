@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pslib-dev_0.4.7-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pslib-dev"]
+]
+depends: [
+  "libgif-dev"
+  "libjpeg-dev"
+  "pslib1" {= "0.4.7-1+b1"}
+  ("libpng-dev" | "libpng2-dev")
+]
+extra-source "pslib-dev_0.4.7-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pslib/pslib-dev_0.4.7-1+b1_amd64.deb"
+}

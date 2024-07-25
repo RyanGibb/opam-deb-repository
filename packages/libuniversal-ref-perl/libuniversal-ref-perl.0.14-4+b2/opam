@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libuniversal-ref-perl_0.14-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libuniversal-ref-perl"]
+]
+depends: [
+  "libb-utils-perl"
+  "libc6" {>= "2.2.5"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libuniversal-ref-perl_0.14-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libuniversal-ref-perl/libuniversal-ref-perl_0.14-4+b2_amd64.deb"
+}

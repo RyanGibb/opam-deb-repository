@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-pandoc-lua-marshal-prof_0.1.7-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-pandoc-lua-marshal-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hslua-marshalling-prof"
+  "libghc-hslua-prof"
+  "libghc-lua-prof"
+  "libghc-pandoc-lua-marshal-dev" {= "0.1.7-1+b3"}
+  "libghc-pandoc-types-prof"
+  "libghc-safe-prof"
+]
+extra-source "libghc-pandoc-lua-marshal-prof_0.1.7-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pandoc-lua-marshal/libghc-pandoc-lua-marshal-prof_0.1.7-1+b3_amd64.deb"
+}

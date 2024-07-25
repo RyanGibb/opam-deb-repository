@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-neutron-vpnaas-dashboard_3.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-neutron-vpnaas-dashboard"]
+]
+depends: [
+  "openstack-dashboard" {>= "3-17.1.0"}
+  "python3-any"
+  "python3-django-horizon"
+  "python3-neutronclient"
+  "python3-pbr"
+]
+extra-source "python3-neutron-vpnaas-dashboard_3.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neutron-vpnaas-dashboard/python3-neutron-vpnaas-dashboard_3.0.0-2_all.deb"
+}

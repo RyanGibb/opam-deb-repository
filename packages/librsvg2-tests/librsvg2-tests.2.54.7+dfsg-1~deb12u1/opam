@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librsvg2-tests_2.54.7+dfsg-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librsvg2-tests"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.10.0"}
+  "libfreetype6" {>= "2.8.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.23.5-2"}
+  "libglib2-0-0" {>= "2.50.0"}
+  "libharfbuzz0b" {>= "0.6.0"}
+  "libpango-1-0-0" {>= "1.48.11"}
+  "librsvg2-2" {>= "2.52.5"}
+]
+extra-source "librsvg2-tests_2.54.7+dfsg-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librsvg/librsvg2-tests_2.54.7+dfsg-1~deb12u1_amd64.deb"
+}

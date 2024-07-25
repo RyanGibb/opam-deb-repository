@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-libvirt-php_0.5.6-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-libvirt-php"]
+]
+depends: [
+  "php-imagick"
+  ("libapache2-mod-php8-2" | "libphp8-2-embed" | "php8-2-cgi" | "php8-2-cli" | "php8-2-fpm" | "php8-2-phpdbg")
+]
+extra-source "php-libvirt-php_0.5.6-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvirt-php/php-libvirt-php_0.5.6-6_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libid3-3.8.3v5_3.8.3-16.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libid3-3.8.3v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libid3-3.8.3"
+  "libid3-3.8.3c2"
+  "libid3-3.8.3c2a"
+]
+extra-source "libid3-3.8.3v5_3.8.3-16.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/id3lib3.8.3/libid3-3.8.3v5_3.8.3-16.3_amd64.deb"
+}

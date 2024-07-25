@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i riseup-vpn_0.21.11+ds1-5+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r riseup-vpn"]
+]
+depends: [
+  "ca-certificates"
+  "iproute2"
+  "iptables"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.14.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  "openvpn"
+  "pkexec"
+  "procps"
+  "python3-any"
+  "qml-module-qt-labs-platform"
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-dialogs"
+  "qml-module-qtquick-extras"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+  ("policykit-1-gnome" | "polkit-1-auth-agent")
+]
+extra-source "riseup-vpn_0.21.11+ds1-5+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/riseup-vpn/riseup-vpn_0.21.11+ds1-5+deb12u1_amd64.deb"
+}

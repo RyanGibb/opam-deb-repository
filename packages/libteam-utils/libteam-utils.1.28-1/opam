@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libteam-utils_1.28-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libteam-utils"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libdaemon0" {>= "0.14"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libjansson4" {>= "2.3"}
+  "libteam5" {>= "1.23"}
+  "libteamdctl0" {>= "1.9"}
+]
+extra-source "libteam-utils_1.28-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libteam/libteam-utils_1.28-1_amd64.deb"
+}

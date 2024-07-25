@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tuned-utils_2.15.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tuned-utils"]
+]
+depends: [
+  "powertop"
+  "python3-any"
+  "tuned" {= "2.15.0-1"}
+]
+extra-source "tuned-utils_2.15.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tuned/tuned-utils_2.15.0-1_all.deb"
+}

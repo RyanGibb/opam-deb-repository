@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfolks-telepathy26_0.15.5-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfolks-telepathy26"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfolks26" {= "0.15.5-2+b1"}
+  "libgee-0-8-2" {>= "0.8.4"}
+  "libglib2-0-0" {>= "2.59.0"}
+  "libtelepathy-glib0" {>= "0.19.9"}
+]
+extra-source "libfolks-telepathy26_0.15.5-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/folks/libfolks-telepathy26_0.15.5-2+b1_amd64.deb"
+}

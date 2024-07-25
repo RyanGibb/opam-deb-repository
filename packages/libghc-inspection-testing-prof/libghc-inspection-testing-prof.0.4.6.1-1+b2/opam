@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-inspection-testing-prof_0.4.6.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-inspection-testing-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-inspection-testing-dev" {= "0.4.6.1-1+b2"}
+]
+extra-source "libghc-inspection-testing-prof_0.4.6.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-inspection-testing/libghc-inspection-testing-prof_0.4.6.1-1+b2_amd64.deb"
+}

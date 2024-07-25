@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libposixsignalmanager0a_0.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libposixsignalmanager0a"]
+]
+depends: [
+  "libc6" {>= "2.9"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libposixsignalmanager0a_0.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/posixsignalmanager/libposixsignalmanager0a_0.3-3_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgsmme1v5_1.10+20120414.gita5e5ae9a-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgsmme1v5"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libgsmme1"
+  "libgsmme1c102"
+  "libgsmme1c2"
+  "libgsmme1c2a"
+]
+extra-source "libgsmme1v5_1.10+20120414.gita5e5ae9a-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gsmlib/libgsmme1v5_1.10+20120414.gita5e5ae9a-2+b1_amd64.deb"
+}

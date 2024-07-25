@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libalien-wxwidgets-perl_0.69+dfsg-6+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libalien-wxwidgets-perl"]
+]
+depends: [
+  "libmodule-pluggable-perl"
+  "libwxgtk-media3-2-dev" {< "3.2.3~"}
+  "libwxgtk-media3-2-dev" {>= "3.2.2"}
+  "libwxgtk3-2-dev" {< "3.2.3~"}
+  "libwxgtk3-2-dev" {>= "3.2.2"}
+  "perl"
+  "perl-base"
+]
+extra-source "libalien-wxwidgets-perl_0.69+dfsg-6+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libalien-wxwidgets-perl/libalien-wxwidgets-perl_0.69+dfsg-6+b2_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5webview5_5.15.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5webview5"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.2+dfsg~"}
+  "libqt5qml5"
+  "libqt5qml5" {>= "5.15.2~"}
+  "libqt5webengine5" {>= "5.15.2+dfsg~"}
+  "libqt5webenginecore5"
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.2+dfsg~"} | "libqt5gui5-gles" {>= "5.15.2+dfsg~"})
+  ("libqt5quick5" {>= "5.15.2~"} | "libqt5quick5-gles" {>= "5.15.2~"})
+]
+extra-source "libqt5webview5_5.15.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtwebview-opensource-src/libqt5webview5_5.15.2-2_amd64.deb"
+}

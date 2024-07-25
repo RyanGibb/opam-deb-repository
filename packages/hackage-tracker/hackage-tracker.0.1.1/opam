@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hackage-tracker_0.1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hackage-tracker"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.29"}
+  "libffi8" {>= "3.4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "hackage-tracker_0.1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hackage-tracker/hackage-tracker_0.1.1_amd64.deb"
+}

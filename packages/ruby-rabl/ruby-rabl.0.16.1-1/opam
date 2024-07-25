@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rabl_0.16.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rabl"]
+]
+depends: [
+  "ruby-activesupport" {>= "2-2.3.14"}
+  "ruby-bson"
+  "ruby-json"
+  "ruby-msgpack"
+]
+extra-source "ruby-rabl_0.16.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rabl/ruby-rabl_0.16.1-1_all.deb"
+}

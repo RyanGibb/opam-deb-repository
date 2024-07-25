@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-openslide-examples_1.1.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-openslide-examples"]
+]
+depends: [
+  "libjs-jquery"
+  ("python-flask" | "python3-flask")
+  ("python-openslide" | "python3-openslide")
+]
+extra-source "python-openslide-examples_1.1.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openslide-python/python-openslide-examples_1.1.1-4_all.deb"
+}

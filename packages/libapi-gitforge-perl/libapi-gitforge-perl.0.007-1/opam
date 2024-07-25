@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapi-gitforge-perl_0.007-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapi-gitforge-perl"]
+]
+depends: [
+  "libgit-wrapper-perl"
+  "libgitlab-api-v4-perl"
+  "libnet-github-perl"
+  "librole-tiny-perl"
+  "libterm-ui-perl"
+  "libtry-tiny-perl"
+  "perl" {>= "5.28.0"}
+  "perl-any"
+]
+extra-source "libapi-gitforge-perl_0.007-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapi-gitforge-perl/libapi-gitforge-perl_0.007-1_all.deb"
+}

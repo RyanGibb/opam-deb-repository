@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-chasingbottoms-prof_1.3.1.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-chasingbottoms-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-chasingbottoms-dev" {= "1.3.1.12-2"}
+  "libghc-quickcheck2-prof"
+  "libghc-random-prof"
+  "libghc-syb-prof"
+]
+extra-source "libghc-chasingbottoms-prof_1.3.1.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-chasingbottoms/libghc-chasingbottoms-prof_1.3.1.12-2_amd64.deb"
+}

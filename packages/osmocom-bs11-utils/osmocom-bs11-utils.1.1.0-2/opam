@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osmocom-bs11-utils_1.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osmocom-bs11-utils"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libosmoabis6" {>= "0.4.0"}
+  "libosmocore11" {>= "0.10.2"}
+  "libosmogsm10" {>= "0.11.0"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "osmocom-bs11-utils_1.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openbsc/osmocom-bs11-utils_1.1.0-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspring-context-java_4.3.22-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspring-context-java"]
+]
+depends: [
+  "libspring-aop-java" {= "4.3.22-4"}
+  "libspring-beans-java" {= "4.3.22-4"}
+  "libspring-core-java" {= "4.3.22-4"}
+  "libspring-expression-java" {= "4.3.22-4"}
+]
+extra-source "libspring-context-java_4.3.22-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libspring-java/libspring-context-java_4.3.22-4_all.deb"
+}

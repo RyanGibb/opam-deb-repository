@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-edaseq_2.24.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-edaseq"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-bioc-annotationdbi"
+  "r-bioc-aroma-light"
+  "r-bioc-biobase" {>= "2.15.1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biomart"
+  "r-bioc-biostrings"
+  "r-bioc-genomicfeatures"
+  "r-bioc-genomicranges"
+  "r-bioc-iranges" {>= "1.13.9"}
+  "r-bioc-rsamtools" {>= "1.5.75"}
+  "r-bioc-shortread" {>= "1.11.42"}
+  "r-cran-biocmanager"
+]
+extra-source "r-bioc-edaseq_2.24.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-edaseq/r-bioc-edaseq_2.24.0+dfsg-1_all.deb"
+}

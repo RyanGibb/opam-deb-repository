@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libva-dev_2.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libva-dev"]
+]
+depends: [
+  "libset-scalar-perl"
+  "libva-drm2" {= "2.10.0-1"}
+  "libva-glx2" {= "2.10.0-1"}
+  "libva-wayland2" {= "2.10.0-1"}
+  "libva-x11-2" {= "2.10.0-1"}
+  "libva2" {= "2.10.0-1"}
+  "libwayland-dev" {>= "1.0.0"}
+]
+extra-source "libva-dev_2.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libva/libva-dev_2.10.0-1_amd64.deb"
+}

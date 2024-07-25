@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspatialite-dbg_4.3.0a-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspatialite-dbg"]
+]
+depends: [
+  "libspatialite7" {= "4.3.0a-5+b2"}
+]
+extra-source "libspatialite-dbg_4.3.0a-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spatialite/libspatialite-dbg_4.3.0a-5+b2_amd64.deb"
+}

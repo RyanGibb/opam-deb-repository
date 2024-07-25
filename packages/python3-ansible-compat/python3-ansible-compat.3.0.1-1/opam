@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ansible-compat_3.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ansible-compat"]
+]
+depends: [
+  "ansible-core"
+  "python3-any"
+  "python3-jsonschema" {>= "4.6.0"}
+  "python3-packaging"
+  "python3-subprocess-tee"
+  "python3-yaml"
+]
+extra-source "python3-ansible-compat_3.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-ansible-compat/python3-ansible-compat_3.0.1-1_all.deb"
+}

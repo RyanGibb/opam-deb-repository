@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libui-utilcpp9v5_1.10.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libui-utilcpp9v5"]
+]
+depends: [
+  "libboost-test1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.15"}
+  "libcap2" {>= "1-2.10"}
+  "libgcc-s1" {>= "3.0"}
+  "libidn11" {>= "1.13"}
+  "libreadline8" {>= "6.0"}
+  "librecode0" {>= "3.6"}
+  "libstdc++6" {>= "9"}
+  "libucommon8" {>= "7.0.0"}
+]
+conflicts: [
+  "libui-utilcpp9"
+]
+extra-source "libui-utilcpp9v5_1.10.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ui-utilcpp/libui-utilcpp9v5_1.10.0-1+b2_amd64.deb"
+}

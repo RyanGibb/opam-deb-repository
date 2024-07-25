@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xotcl-shells_1.6.8-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xotcl-shells"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libtk8-6" {>= "8.6.0"}
+  "xotcl" {= "1.6.8-4.1"}
+]
+extra-source "xotcl-shells_1.6.8-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xotcl/xotcl-shells_1.6.8-4.1_amd64.deb"
+}

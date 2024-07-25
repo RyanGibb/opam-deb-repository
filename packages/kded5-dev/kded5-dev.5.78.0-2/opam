@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kded5-dev_5.78.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kded5-dev"]
+]
+depends: [
+  "kded5" {= "5.78.0-2"}
+  "libkf5coreaddons-dev" {>= "5.78.0~"}
+  "libkf5crash-dev" {>= "5.78.0~"}
+  "libkf5dbusaddons-dev" {>= "5.78.0~"}
+  "libkf5service-dev" {>= "5.78.0~"}
+]
+extra-source "kded5-dev_5.78.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kded/kded5-dev_5.78.0-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vim-command-t_5.0.2-5-g7147ba9-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vim-command-t"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libruby2-7" {>= "2.7.0-4"}
+  "vim-addon-manager"
+  ("vim-nox" | "vim-ruby")
+]
+extra-source "vim-command-t_5.0.2-5-g7147ba9-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vim-command-t/vim-command-t_5.0.2-5-g7147ba9-1+b3_amd64.deb"
+}

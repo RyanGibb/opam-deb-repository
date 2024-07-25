@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cockpit-pcp_188-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cockpit-pcp"]
+]
+depends: [
+  "cockpit-bridge" {>= "138"}
+  "libc6" {>= "2.11"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libjson-glib-1-0-0" {>= "0.16.0"}
+  "libpcp3"
+  "libsystemd0"
+  "pcp"
+]
+extra-source "cockpit-pcp_188-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cockpit/cockpit-pcp_188-1_amd64.deb"
+}

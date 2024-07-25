@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i amavisd-milter_1.7.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r amavisd-milter"]
+]
+depends: [
+  "amavisd-new"
+  "libc6" {>= "2.15"}
+  "libmilter1-0-1"
+  "lsb-base"
+]
+extra-source "amavisd-milter_1.7.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/amavisd-milter/amavisd-milter_1.7.1-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eggdrop_1.8.4+repack1-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eggdrop"]
+]
+depends: [
+  "eggdrop-data" {= "1.8.4+repack1-0.1"}
+  "libc6" {>= "2.33"}
+  "libssl3" {>= "3.0.0"}
+  "libtcl8-6" {>= "8.6.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "eggdrop_1.8.4+repack1-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eggdrop/eggdrop_1.8.4+repack1-0.1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libupsclient4_2.7.4-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libupsclient4"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.13.4-2~"}
+]
+extra-source "libupsclient4_2.7.4-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nut/libupsclient4_2.7.4-13_amd64.deb"
+}

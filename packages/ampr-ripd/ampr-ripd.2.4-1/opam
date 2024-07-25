@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ampr-ripd_2.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ampr-ripd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "ampr-ripd_2.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ampr-ripd/ampr-ripd_2.4-1_amd64.deb"
+}

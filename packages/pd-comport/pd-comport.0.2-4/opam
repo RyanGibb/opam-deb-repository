@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pd-comport_0.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pd-comport"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  ("puredata-core" | "pd")
+]
+extra-source "pd-comport_0.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pd-comport/pd-comport_0.2-4_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cernlib_20061220+dfsg3-4.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cernlib"]
+]
+depends: [
+  "cernlib-base" {= "20061220+dfsg3-4.4"}
+  "cernlib-core"
+  "cernlib-core-dev"
+  "cernlib-montecarlo"
+  "geant321"
+  "geant321-doc"
+]
+extra-source "cernlib_20061220+dfsg3-4.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cernlib/cernlib_20061220+dfsg3-4.4_all.deb"
+}

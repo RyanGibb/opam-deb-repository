@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i expeyes-clib_4.8.8+repack-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r expeyes-clib"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libej0" {>= "4.8.8+repack"}
+]
+extra-source "expeyes-clib_4.8.8+repack-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/expeyes/expeyes-clib_4.8.8+repack-2_amd64.deb"
+}

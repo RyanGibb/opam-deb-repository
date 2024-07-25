@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libprometheus-cpp-pull1.0_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libprometheus-cpp-pull1.0"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libcivetweb1" {>= "1.15"}
+  "libgcc-s1" {>= "3.0"}
+  "libprometheus-cpp-core1-0" {= "1.0.1-1"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libprometheus-cpp-pull1.0_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-cpp/libprometheus-cpp-pull1.0_1.0.1-1_amd64.deb"
+}

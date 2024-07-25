@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wadc_3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wadc"]
+]
+depends: [
+  "jarwrapper"
+  "libpicocli-java" {>= "4.6.1"}
+  ("default-jre" | "java8-runtime")
+]
+extra-source "wadc_3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wadc/wadc_3.1-1_all.deb"
+}

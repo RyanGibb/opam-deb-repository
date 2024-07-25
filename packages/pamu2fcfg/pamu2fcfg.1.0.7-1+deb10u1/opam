@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pamu2fcfg_1.0.7-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pamu2fcfg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libu2f-host0" {>= "0.0"}
+  "libu2f-server0" {>= "0.0.0"}
+]
+extra-source "pamu2fcfg_1.0.7-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pam-u2f/pamu2fcfg_1.0.7-1+deb10u1_amd64.deb"
+}

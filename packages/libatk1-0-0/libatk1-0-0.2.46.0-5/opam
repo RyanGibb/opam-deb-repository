@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libatk1.0-0_2.46.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libatk1.0-0"]
+]
+depends: [
+  "at-spi2-common"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.62"}
+]
+extra-source "libatk1.0-0_2.46.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/at-spi2-core/libatk1.0-0_2.46.0-5_amd64.deb"
+}

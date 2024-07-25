@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-packetfu_1.1.11-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-packetfu"]
+]
+depends: [
+  "ieee-data"
+  "ruby-pcaprub" {>= "0.12"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-packetfu_1.1.11-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-packetfu/ruby-packetfu_1.1.11-2.1_all.deb"
+}

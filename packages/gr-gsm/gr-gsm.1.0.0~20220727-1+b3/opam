@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gr-gsm_1.0.0~20220727-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gr-gsm"]
+]
+depends: [
+  "gnuradio"
+  "gr-osmosdr"
+  "libboost-thread1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "4.0"}
+  "libgnuradio-filter3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-pmt3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-runtime3-10-5" {>= "3.10.5.0"}
+  "libjs-jquery"
+  "libosmocoding0" {>= "0.11.0"}
+  "libosmocore19" {>= "0.10.2"}
+  "libosmogsm18" {>= "0.10.2"}
+  "libstdc++6" {>= "11"}
+  "libvolk2-5" {>= "2.5.2"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+]
+extra-source "gr-gsm_1.0.0~20220727-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gr-gsm/gr-gsm_1.0.0~20220727-1+b3_amd64.deb"
+}

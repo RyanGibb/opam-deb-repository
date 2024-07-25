@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xorgxrdp_1:0.9.19-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xorgxrdp"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libepoxy0" {>= "1.0"}
+  "xserver-xorg-core"
+  "xserver-xorg-core" {>= "2-21.1.1"}
+]
+extra-source "xorgxrdp_1:0.9.19-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xorgxrdp/xorgxrdp_0.9.19-1_amd64.deb"
+}

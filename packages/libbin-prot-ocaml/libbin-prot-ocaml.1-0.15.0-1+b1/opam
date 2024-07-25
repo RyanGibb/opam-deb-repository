@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbin-prot-ocaml_1:0.15.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbin-prot-ocaml"]
+]
+depends: [
+  "libbase-ocaml"
+  "libc6" {>= "2.14"}
+  "libppx-compare-ocaml"
+  "libppx-sexp-conv-ocaml"
+  "libsexplib0-ocaml"
+  "libvariantslib-ocaml"
+  "ocaml-base"
+]
+extra-source "libbin-prot-ocaml_1:0.15.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bin-prot/libbin-prot-ocaml_0.15.0-1+b1_amd64.deb"
+}

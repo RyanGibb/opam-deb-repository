@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-quamash_0.6.1~dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-quamash"]
+]
+depends: [
+  "python3-any"
+  ("python3-pyqt5" | "python3-pyqt4" | "python3-pyside")
+]
+extra-source "python3-quamash_0.6.1~dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-quamash/python3-quamash_0.6.1~dfsg-1_all.deb"
+}

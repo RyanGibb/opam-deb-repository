@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplexus-component-metadata-java_2.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplexus-component-metadata-java"]
+]
+depends: [
+  "libasm-java" {>= "7.0"}
+  "libcommons-cli-java"
+  "libjdom2-java"
+  "libmaven3-core-java"
+  "libplexus-cli-java"
+  "libplexus-component-annotations-java" {= "2.1.1-1"}
+  "libplexus-container-default-java" {= "2.1.1-1"}
+  "libqdox2-java"
+]
+extra-source "libplexus-component-metadata-java_2.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plexus-containers/libplexus-component-metadata-java_2.1.1-1_all.deb"
+}

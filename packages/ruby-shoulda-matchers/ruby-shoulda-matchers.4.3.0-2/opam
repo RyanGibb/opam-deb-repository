@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-shoulda-matchers_4.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-shoulda-matchers"]
+]
+depends: [
+  "ruby-activesupport" {>= "2-3.0.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-shoulda-matchers_4.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-shoulda-matchers/ruby-shoulda-matchers_4.3.0-2_all.deb"
+}

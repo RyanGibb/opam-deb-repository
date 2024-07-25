@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-textwrap+hyphenation-dev_0.11.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-textwrap+hyphenation-dev"]
+]
+depends: [
+  "librust-hyphenation+embed-all-dev"
+  "librust-hyphenation-dev"
+  "librust-textwrap-dev" {= "0.11.0-1"}
+]
+extra-source "librust-textwrap+hyphenation-dev_0.11.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-textwrap/librust-textwrap+hyphenation-dev_0.11.0-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-react-promise-stream_1.1.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-react-promise-stream"]
+]
+depends: [
+  "php-common"
+  "php-react-promise" {< "3~~"}
+  "php-react-promise" {>= "2.1"}
+  "php-react-stream" {< "2~~"}
+  "php-react-stream" {>= "1.0"}
+]
+extra-source "php-react-promise-stream_1.1.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/reactphp-promise-stream/php-react-promise-stream_1.1.1-3_all.deb"
+}

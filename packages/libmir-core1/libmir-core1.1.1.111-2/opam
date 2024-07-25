@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmir-core1_1.1.111-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmir-core1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libphobos2-ldc-shared100" {>= "1-1.30.0"}
+]
+extra-source "libmir-core1_1.1.111-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mir-core/libmir-core1_1.1.111-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vamp-plugin-sdk_2.7.1~repack0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vamp-plugin-sdk"]
+]
+depends: [
+  "libvamp-hostsdk3v5" {= "2.7.1~repack0-1"}
+  "libvamp-sdk2v5" {= "2.7.1~repack0-1"}
+]
+extra-source "vamp-plugin-sdk_2.7.1~repack0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vamp-plugin-sdk/vamp-plugin-sdk_2.7.1~repack0-1_amd64.deb"
+}

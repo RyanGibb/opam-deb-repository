@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kde-full_5:142_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kde-full"]
+]
+depends: [
+  "kde-plasma-desktop" {>= "5-142"}
+  "kde-standard" {>= "5-142"}
+  "kdeadmin" {>= "4-22.12.3"}
+  "kdeedu" {>= "4-22.12.3"}
+  "kdegames" {>= "4-22.12.3"}
+  "kdegraphics" {>= "4-22.12.3"}
+  "kdemultimedia" {>= "4-22.12.3"}
+  "kdenetwork" {>= "4-22.12.3"}
+  "kdepim" {>= "4-22.12.3"}
+  "kdeutils" {>= "4-22.12.3"}
+  "plasma-workspace-wallpapers" {>= "4-5.27.2"}
+]
+extra-source "kde-full_5:142_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-kde/kde-full_142_amd64.deb"
+}

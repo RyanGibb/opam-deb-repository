@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pytest-xdist_2.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pytest-xdist"]
+]
+depends: [
+  "python3-any"
+  "python3-execnet" {>= "1.1"}
+  "python3-pytest" {>= "6.0.0~"}
+  "python3-pytest-forked"
+]
+extra-source "python3-pytest-xdist_2.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pytest-xdist/python3-pytest-xdist_2.2.0-1_all.deb"
+}

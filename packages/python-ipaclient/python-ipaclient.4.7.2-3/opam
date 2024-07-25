@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-ipaclient_4.7.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-ipaclient"]
+]
+depends: [
+  "freeipa-common" {= "4.7.2-3"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-augeas"
+  "python-cryptography" {>= "1.6"}
+  "python-dnspython"
+  "python-ipalib" {>= "4.7.2-3"}
+  "python-jinja2"
+  "python-qrcode"
+  "python-six"
+]
+extra-source "python-ipaclient_4.7.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeipa/python-ipaclient_4.7.2-3_all.deb"
+}

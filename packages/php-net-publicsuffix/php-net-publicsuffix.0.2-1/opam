@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-net-publicsuffix_0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-net-publicsuffix"]
+]
+depends: [
+  "php-intl"
+  "php-mbstring"
+  "publicsuffix" {>= "20150507"}
+  ("php" | "php-cli")
+]
+extra-source "php-net-publicsuffix_0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-net-publicsuffix/php-net-publicsuffix_0.2-1_all.deb"
+}

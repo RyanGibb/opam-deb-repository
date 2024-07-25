@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclthreads2_2.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclthreads2"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+]
+extra-source "libclthreads2_2.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clthreads/libclthreads2_2.4.2-1_amd64.deb"
+}

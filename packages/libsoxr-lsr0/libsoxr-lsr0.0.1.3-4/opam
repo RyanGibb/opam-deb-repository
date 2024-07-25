@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsoxr-lsr0_0.1.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsoxr-lsr0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libsoxr0" {>= "0.1.0"}
+]
+extra-source "libsoxr-lsr0_0.1.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsoxr/libsoxr-lsr0_0.1.3-4_amd64.deb"
+}

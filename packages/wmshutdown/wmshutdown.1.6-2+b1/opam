@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmshutdown_1.6-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmshutdown"]
+]
+depends: [
+  "dbus"
+  "libc6" {>= "2.34"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.26.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libx11-6"
+  ("default-logind" | "logind")
+]
+extra-source "wmshutdown_1.6-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmshutdown/wmshutdown_1.6-2+b1_amd64.deb"
+}

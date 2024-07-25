@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-dnssd_0.6-3.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-dnssd"]
+]
+depends: [
+  "apache2-bin"
+  "apache2-bin" {>= "2.4.16"}
+  "avahi-daemon" {>= "0.6.5"}
+  "libapr1" {>= "1.2.7"}
+  "libavahi-client3" {>= "0.6.16"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libc6" {>= "2.4"}
+]
+extra-source "libapache2-mod-dnssd_0.6-3.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mod-dnssd/libapache2-mod-dnssd_0.6-3.2_amd64.deb"
+}

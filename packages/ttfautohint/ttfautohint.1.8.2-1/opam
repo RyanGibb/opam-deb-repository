@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ttfautohint_1.8.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ttfautohint"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  "libttfautohint1" {= "1.8.2-1"}
+]
+extra-source "ttfautohint_1.8.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/ttfautohint/ttfautohint_1.8.2-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-fined_1.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-fined"]
+]
+depends: [
+  "node-expand-tilde" {>= "1.2.1"}
+  "node-lodash-packages"
+  "node-parse-filepath" {>= "1.0.1"}
+  "nodejs"
+]
+extra-source "node-fined_1.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-fined/node-fined_1.0.2-2_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgringotts2_1:1.2.1-16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgringotts2"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libmcrypt4"
+  "libmhash2"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libgringotts2_1:1.2.1-16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgringotts/libgringotts2_1.2.1-16_amd64.deb"
+}

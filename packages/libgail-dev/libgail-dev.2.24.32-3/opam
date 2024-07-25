@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgail-dev_2.24.32-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgail-dev"]
+]
+depends: [
+  "libatk1-0-dev" {>= "1.13.0"}
+  "libgail-common" {= "2.24.32-3"}
+  "libgail18" {= "2.24.32-3"}
+  "libgtk2-0-dev" {= "2.24.32-3"}
+  "pkgconf"
+]
+extra-source "libgail-dev_2.24.32-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtk+2.0/libgail-dev_2.24.32-3_amd64.deb"
+}

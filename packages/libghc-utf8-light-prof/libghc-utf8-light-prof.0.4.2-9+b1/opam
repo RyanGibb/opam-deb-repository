@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-utf8-light-prof_0.4.2-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-utf8-light-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-utf8-light-dev" {= "0.4.2-9+b1"}
+]
+extra-source "libghc-utf8-light-prof_0.4.2-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-utf8-light/libghc-utf8-light-prof_0.4.2-9+b1_amd64.deb"
+}

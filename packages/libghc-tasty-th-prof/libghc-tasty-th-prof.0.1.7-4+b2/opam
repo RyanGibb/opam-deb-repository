@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tasty-th-prof_0.1.7-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tasty-th-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-src-exts-prof"
+  "libghc-tasty-prof"
+  "libghc-tasty-th-dev" {= "0.1.7-4+b2"}
+]
+extra-source "libghc-tasty-th-prof_0.1.7-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tasty-th/libghc-tasty-th-prof_0.1.7-4+b2_amd64.deb"
+}

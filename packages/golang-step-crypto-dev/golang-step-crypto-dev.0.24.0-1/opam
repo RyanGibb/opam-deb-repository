@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-step-crypto-dev_0.24.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-step-crypto-dev"]
+]
+depends: [
+  "golang-filippo-edwards25519-dev"
+  "golang-github-masterminds-sprig-dev"
+  "golang-github-pkg-errors-dev"
+  "golang-golang-x-crypto-dev"
+  "golang-golang-x-net-dev"
+  "golang-gopkg-square-go-jose-v2-dev"
+]
+extra-source "golang-step-crypto-dev_0.24.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-step-crypto/golang-step-crypto-dev_0.24.0-1_all.deb"
+}

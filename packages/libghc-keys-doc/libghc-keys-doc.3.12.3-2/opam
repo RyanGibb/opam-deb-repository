@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-keys-doc_3.12.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-keys-doc"]
+]
+depends: [
+  "ghc"
+  "sgml-base" {>= "1.28"}
+]
+extra-source "libghc-keys-doc_3.12.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-keys/libghc-keys-doc_3.12.3-2_all.deb"
+}

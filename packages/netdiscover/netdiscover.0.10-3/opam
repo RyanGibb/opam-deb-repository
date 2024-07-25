@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i netdiscover_0.10-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r netdiscover"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "netdiscover_0.10-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netdiscover/netdiscover_0.10-3_amd64.deb"
+}

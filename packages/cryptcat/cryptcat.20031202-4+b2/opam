@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cryptcat_20031202-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cryptcat"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+]
+extra-source "cryptcat_20031202-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cryptcat/cryptcat_20031202-4+b2_amd64.deb"
+}

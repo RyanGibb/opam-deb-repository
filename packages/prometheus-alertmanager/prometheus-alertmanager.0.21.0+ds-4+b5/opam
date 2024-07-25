@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-alertmanager_0.21.0+ds-4+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-alertmanager"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.4"}
+]
+extra-source "prometheus-alertmanager_0.21.0+ds-4+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-alertmanager/prometheus-alertmanager_0.21.0+ds-4+b5_amd64.deb"
+}

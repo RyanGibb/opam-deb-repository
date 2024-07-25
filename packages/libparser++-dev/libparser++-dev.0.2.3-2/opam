@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libparser++-dev_0.2.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libparser++-dev"]
+]
+depends: [
+  ("libboost1-38-dev" | "libboost1-37-dev" | "libboost1-35-dev" | "libboost-dev")
+]
+extra-source "libparser++-dev_0.2.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libparser++/libparser++-dev_0.2.3-2_all.deb"
+}

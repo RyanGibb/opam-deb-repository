@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i binutils-mipsisa64r6el-linux-gnuabi64_2.31.1-14cross3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r binutils-mipsisa64r6el-linux-gnuabi64"]
+]
+depends: [
+  "binutils-common" {>= "2.31.1-14"}
+  "libc6" {>= "2.27"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "binutils-mipsisa64r6el-linux-gnuabi64_2.31.1-14cross3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/binutils-mipsen/binutils-mipsisa64r6el-linux-gnuabi64_2.31.1-14cross3_amd64.deb"
+}

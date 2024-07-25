@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stoken_0.92-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stoken"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libstoken1" {= "0.92-1"}
+]
+extra-source "stoken_0.92-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stoken/stoken_0.92-1_amd64.deb"
+}

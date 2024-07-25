@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i statsvn_0.7.0.dfsg-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r statsvn"]
+]
+depends: [
+  "java-wrappers" {>= "0.1.22"}
+  "libsvnkit-java"
+  "statcvs" {>= "1-0.7.0.dfsg-4~"}
+  "subversion"
+  ("default-jre" | "java-runtime")
+]
+extra-source "statsvn_0.7.0.dfsg-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/statsvn/statsvn_0.7.0.dfsg-10_all.deb"
+}

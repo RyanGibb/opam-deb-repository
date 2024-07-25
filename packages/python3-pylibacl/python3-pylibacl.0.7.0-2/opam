@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pylibacl_0.7.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pylibacl"]
+]
+depends: [
+  "libacl1" {>= "2.2.23"}
+  "libc6" {>= "2.4"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+]
+extra-source "python3-pylibacl_0.7.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pylibacl/python3-pylibacl_0.7.0-2_amd64.deb"
+}

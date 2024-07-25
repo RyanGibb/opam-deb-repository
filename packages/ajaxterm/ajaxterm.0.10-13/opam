@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ajaxterm_0.10-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ajaxterm"]
+]
+depends: [
+  "adduser"
+  "python-any" {>= "2.6.6-7~"}
+]
+extra-source "ajaxterm_0.10-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ajaxterm/ajaxterm_0.10-13_all.deb"
+}

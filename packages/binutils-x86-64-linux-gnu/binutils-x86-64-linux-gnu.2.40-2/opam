@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i binutils-x86-64-linux-gnu_2.40-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r binutils-x86-64-linux-gnu"]
+]
+depends: [
+  "binutils-common" {= "2.40-2"}
+  "libbinutils" {= "2.40-2"}
+  "libc6" {>= "2.36"}
+  "libctf-nobfd0" {>= "2.36"}
+  "libctf0" {>= "2.36"}
+  "libgcc-s1" {>= "4.2"}
+  "libgprofng0" {>= "2.40-2"}
+  "libjansson4" {>= "2.14"}
+  "libstdc++6" {>= "5"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "binutils-x86-64-linux-gnu_2.40-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/binutils/binutils-x86-64-linux-gnu_2.40-2_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-skimage_0.14.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-skimage"]
+]
+depends: [
+  "python3-any"
+  "python3-cloudpickle"
+  "python3-matplotlib"
+  "python3-networkx"
+  "python3-numpy"
+  "python3-pil"
+  "python3-pywt"
+  "python3-scipy"
+  "python3-six" {>= "1.10.0"}
+  "python3-skimage-lib" {>= "0.14.2-2"}
+]
+extra-source "python3-skimage_0.14.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/skimage/python3-skimage_0.14.2-2_all.deb"
+}

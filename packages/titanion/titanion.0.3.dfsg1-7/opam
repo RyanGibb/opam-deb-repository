@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i titanion_0.3.dfsg1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r titanion"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libgphobos76"
+  "libsdl-mixer1-2"
+  "libsdl1-2debian" {>= "1.2.11"}
+  "titanion-data" {= "0.3.dfsg1-7"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "titanion_0.3.dfsg1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/titanion/titanion_0.3.dfsg1-7_amd64.deb"
+}

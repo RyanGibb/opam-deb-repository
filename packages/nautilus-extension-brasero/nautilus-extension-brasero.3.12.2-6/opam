@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nautilus-extension-brasero_3.12.2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nautilus-extension-brasero"]
+]
+depends: [
+  "gvfs"
+  "libbrasero-media3-1" {>= "3.0.0"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libnautilus-extension1a" {>= "3.21.92-3~"}
+]
+extra-source "nautilus-extension-brasero_3.12.2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/brasero/nautilus-extension-brasero_3.12.2-6_amd64.deb"
+}

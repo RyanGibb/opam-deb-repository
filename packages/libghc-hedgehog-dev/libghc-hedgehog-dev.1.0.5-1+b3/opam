@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hedgehog-dev_1.0.5-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hedgehog-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.29"}
+  "libghc-ansi-terminal-dev"
+  "libghc-async-dev"
+  "libghc-concurrent-output-dev"
+  "libghc-erf-dev"
+  "libghc-lifted-async-dev"
+  "libghc-mmorph-dev"
+  "libghc-monad-control-dev"
+  "libghc-pretty-show-dev"
+  "libghc-primitive-dev"
+  "libghc-random-dev"
+  "libghc-resourcet-dev"
+  "libghc-transformers-base-dev"
+  "libghc-wl-pprint-annotated-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-hedgehog-dev_1.0.5-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hedgehog/libghc-hedgehog-dev_1.0.5-1+b3_amd64.deb"
+}

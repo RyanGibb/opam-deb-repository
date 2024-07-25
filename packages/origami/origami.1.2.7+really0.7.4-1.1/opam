@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i origami_1.2.7+really0.7.4-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r origami"]
+]
+depends: [
+  "bash" {>= "3.2"}
+  ("wget" | "curl")
+]
+extra-source "origami_1.2.7+really0.7.4-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/origami/origami_1.2.7+really0.7.4-1.1_all.deb"
+}

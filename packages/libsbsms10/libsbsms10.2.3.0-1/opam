@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsbsms10_2.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsbsms10"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libsbsms10_2.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsbsms/libsbsms10_2.3.0-1_amd64.deb"
+}

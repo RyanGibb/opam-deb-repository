@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libadns1-dev_1.5.0~rc1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libadns1-dev"]
+]
+depends: [
+  "libadns1" {= "1.5.0~rc1-1.1"}
+  "libc6-dev"
+]
+conflicts: [
+  "libadns0"
+]
+extra-source "libadns1-dev_1.5.0~rc1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/adns/libadns1-dev_1.5.0~rc1-1.1_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfap6_1.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfap6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libfap6_1.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfap/libfap6_1.5-2_amd64.deb"
+}

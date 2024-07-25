@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpq-dev_13.15-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpq-dev"]
+]
+depends: [
+  "libpq5" {= "13.15-0+deb11u1"}
+]
+extra-source "libpq-dev_13.15-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-13/libpq-dev_13.15-0+deb11u1_amd64.deb"
+}

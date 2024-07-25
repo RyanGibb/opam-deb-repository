@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypt-pbkdf2-perl_0.161520-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypt-pbkdf2-perl"]
+]
+depends: [
+  "libdigest-hmac-perl"
+  "libdigest-sha3-perl"
+  "libmodule-runtime-perl"
+  "libmoo-perl" {>= "2.000000"}
+  "libnamespace-autoclean-perl"
+  "libstrictures-perl"
+  "libtry-tiny-perl"
+  "libtype-tiny-perl" {>= "1.000005"}
+  "perl"
+]
+extra-source "libcrypt-pbkdf2-perl_0.161520-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcrypt-pbkdf2-perl/libcrypt-pbkdf2-perl_0.161520-1_all.deb"
+}

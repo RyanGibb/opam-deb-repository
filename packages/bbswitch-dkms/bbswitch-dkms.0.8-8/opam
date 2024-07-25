@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bbswitch-dkms_0.8-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bbswitch-dkms"]
+]
+depends: [
+  "dkms" {>= "2.1.0.0"}
+]
+extra-source "bbswitch-dkms_0.8-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bbswitch/bbswitch-dkms_0.8-8_amd64.deb"
+}

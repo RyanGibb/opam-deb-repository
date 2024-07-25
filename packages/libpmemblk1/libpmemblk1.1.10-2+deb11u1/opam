@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpmemblk1_1.10-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpmemblk1"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libdaxctl1" {>= "64"}
+  "libndctl6" {>= "64"}
+  "libpmem1" {= "1.10-2+deb11u1"}
+]
+extra-source "libpmemblk1_1.10-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pmdk/libpmemblk1_1.10-2+deb11u1_amd64.deb"
+}

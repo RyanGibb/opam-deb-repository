@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-opentracing-contrib-go-grpc-dev_0.0~git20210225.73cb765-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-opentracing-contrib-go-grpc-dev"]
+]
+depends: [
+  "golang-github-grpc-ecosystem-grpc-opentracing-dev"
+  "golang-github-opentracing-opentracing-go-dev"
+  "golang-github-stretchr-testify-dev"
+  "golang-google-grpc-dev"
+  "golang-goprotobuf-dev"
+]
+extra-source "golang-github-opentracing-contrib-go-grpc-dev_0.0~git20210225.73cb765-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-opentracing-contrib-go-grpc/golang-github-opentracing-contrib-go-grpc-dev_0.0~git20210225.73cb765-3_all.deb"
+}

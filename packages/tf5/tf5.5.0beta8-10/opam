@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tf5_5.0beta8-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tf5"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libpcre3"
+  "libssl1-1" {>= "1.1.0"}
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "tf5_5.0beta8-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tf5/tf5_5.0beta8-10_amd64.deb"
+}

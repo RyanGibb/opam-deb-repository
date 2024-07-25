@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenjph0.9_0.9.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenjph0.9"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.4"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libopenjph0.9_0.9.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openjph/libopenjph0.9_0.9.0-3+b1_amd64.deb"
+}

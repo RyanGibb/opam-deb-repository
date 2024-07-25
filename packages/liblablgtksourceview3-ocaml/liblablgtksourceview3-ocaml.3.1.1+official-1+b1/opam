@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblablgtksourceview3-ocaml_3.1.1+official-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblablgtksourceview3-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libcairo2-ocaml"
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libgtksourceview-3-0-1" {>= "2.91.4"}
+  "liblablgtk3-ocaml"
+  "ocaml-base-nox"
+]
+extra-source "liblablgtksourceview3-ocaml_3.1.1+official-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lablgtk3/liblablgtksourceview3-ocaml_3.1.1+official-1+b1_amd64.deb"
+}

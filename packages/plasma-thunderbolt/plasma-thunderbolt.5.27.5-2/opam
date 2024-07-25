@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plasma-thunderbolt_5.27.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plasma-thunderbolt"]
+]
+depends: [
+  "bolt"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libkf5coreaddons5" {>= "5.97~"}
+  "libkf5dbusaddons5" {>= "5.97~"}
+  "libkf5i18n5" {>= "5.97~"}
+  "libkf5notifications5" {>= "5.97~"}
+  "libkf5quickaddons5" {>= "5.97~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5qml5" {>= "5.15.0~"}
+  "libstdc++6" {>= "5.2"}
+  "qml-module-org-kde-kcm"
+  "qml-module-org-kde-kirigami2"
+  "qml-module-org-kde-kquickcontrolsaddons"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "plasma-thunderbolt_5.27.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plasma-thunderbolt/plasma-thunderbolt_5.27.5-2_amd64.deb"
+}

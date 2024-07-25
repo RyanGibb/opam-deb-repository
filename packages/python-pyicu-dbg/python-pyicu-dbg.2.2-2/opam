@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pyicu-dbg_2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pyicu-dbg"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libicu63" {>= "63.1-1~"}
+  "libstdc++6" {>= "4.9"}
+  "python-dbg" {< "2.8"}
+  "python-dbg" {>= "2.7~"}
+  "python-dbg-any" {< "2.8"}
+  "python-dbg-any" {>= "2.7~"}
+  "python-pyicu" {= "2.2-2"}
+]
+extra-source "python-pyicu-dbg_2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyicu/python-pyicu-dbg_2.2-2_amd64.deb"
+}

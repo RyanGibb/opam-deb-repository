@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5coreaddons5_5.78.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5coreaddons5"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfam0"
+  "libgcc-s1" {>= "3.0"}
+  "libkf5coreaddons-data" {= "5.78.0-4"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "4.5"}
+  "shared-mime-info" {>= "1.3"}
+]
+extra-source "libkf5coreaddons5_5.78.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kcoreaddons/libkf5coreaddons5_5.78.0-4_amd64.deb"
+}

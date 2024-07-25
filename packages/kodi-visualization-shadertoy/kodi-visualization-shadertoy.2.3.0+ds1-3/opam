@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kodi-visualization-shadertoy_2.3.0+ds1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kodi-visualization-shadertoy"]
+]
+depends: [
+  "kodi"
+  "kodi-visualization-shadertoy-data" {= "2.3.0+ds1-3"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libgl1"
+  "libkissfft-float131" {>= "131.1.0~"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "kodi-visualization-shadertoy_2.3.0+ds1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kodi-visualization-shadertoy/kodi-visualization-shadertoy_2.3.0+ds1-3_amd64.deb"
+}

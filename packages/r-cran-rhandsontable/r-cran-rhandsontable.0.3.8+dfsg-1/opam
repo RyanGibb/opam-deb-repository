@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rhandsontable_0.3.8+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rhandsontable"]
+]
+depends: [
+  "libjs-jquery"
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-1"}
+  "r-cran-htmlwidgets" {>= "0.3.3"}
+  "r-cran-jsonlite"
+  "r-cran-magrittr"
+]
+extra-source "r-cran-rhandsontable_0.3.8+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-rhandsontable/r-cran-rhandsontable_0.3.8+dfsg-1_all.deb"
+}

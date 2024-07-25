@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-optim_1.6.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-optim"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "octave"
+  "octave" {>= "7.3.0"}
+  "octave-statistics" {>= "1.4.0"}
+  "octave-struct" {>= "1.0.12"}
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "octave-optim_1.6.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave-optim/octave-optim_1.6.2-3_amd64.deb"
+}

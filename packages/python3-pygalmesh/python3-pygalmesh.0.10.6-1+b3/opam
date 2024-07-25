@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pygalmesh_0.10.6-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pygalmesh"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libmpfr6" {>= "3.1.3"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-meshio" {>= "4"}
+  "python3-numpy"
+]
+extra-source "python3-pygalmesh_0.10.6-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pygalmesh/python3-pygalmesh_0.10.6-1+b3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pygopherd_3.0.0~git20221126.02c65d60-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pygopherd"]
+]
+depends: [
+  "adduser"
+  "logrotate"
+  "mime-support"
+  "python3-any"
+  "python3-simpletal"
+]
+extra-source "pygopherd_3.0.0~git20221126.02c65d60-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pygopherd/pygopherd_3.0.0~git20221126.02c65d60-3_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-gspell-1_1.12.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-gspell-1"]
+]
+depends: [
+  "gir1-2-gtk-3-0" {>= "3.20"}
+  "libgspell-1-2" {>= "1.8.2"}
+]
+extra-source "gir1.2-gspell-1_1.12.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gspell/gir1.2-gspell-1_1.12.0-1+b2_amd64.deb"
+}

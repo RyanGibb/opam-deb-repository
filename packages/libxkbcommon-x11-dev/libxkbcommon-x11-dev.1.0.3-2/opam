@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxkbcommon-x11-dev_1.0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxkbcommon-x11-dev"]
+]
+depends: [
+  "libxcb-xkb-dev"
+  "libxcb1-dev"
+  "libxkbcommon-dev" {= "1.0.3-2"}
+  "libxkbcommon-x11-0" {= "1.0.3-2"}
+]
+extra-source "libxkbcommon-x11-dev_1.0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxkbcommon/libxkbcommon-x11-dev_1.0.3-2_amd64.deb"
+}

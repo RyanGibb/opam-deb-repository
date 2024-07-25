@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-dns-parser+with-serde-dev_0.8.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-dns-parser+with-serde-dev"]
+]
+depends: [
+  "librust-dns-parser-dev" {= "0.8.0-1+b1"}
+  "librust-serde-1+default-dev"
+  "librust-serde-derive-1+default-dev"
+]
+extra-source "librust-dns-parser+with-serde-dev_0.8.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-dns-parser/librust-dns-parser+with-serde-dev_0.8.0-1+b1_amd64.deb"
+}

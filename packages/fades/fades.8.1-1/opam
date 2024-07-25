@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fades_8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fades"]
+]
+depends: [
+  "ca-certificates"
+  "python3-any"
+  "python3-distutils"
+  "python3-pkg-resources"
+]
+extra-source "fades_8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1_all.deb"
+}

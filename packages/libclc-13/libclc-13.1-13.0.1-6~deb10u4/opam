@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclc-13_1:13.0.1-6~deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclc-13"]
+]
+depends: [
+  "libclang-common-13-dev"
+  "libclc-13-dev" {= "1-13.0.1-6~deb10u4"}
+]
+conflicts: [
+  "libclc-x.y"
+]
+extra-source "libclc-13_1:13.0.1-6~deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-13/libclc-13_13.0.1-6~deb10u4_all.deb"
+}

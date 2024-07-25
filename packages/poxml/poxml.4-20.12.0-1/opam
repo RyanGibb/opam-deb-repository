@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i poxml_4:20.12.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r poxml"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgettextpo0" {>= "0.21"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5xml5" {>= "5.1.0"}
+  "libstdc++6" {>= "4.4.0"}
+]
+extra-source "poxml_4:20.12.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poxml/poxml_20.12.0-1_amd64.deb"
+}

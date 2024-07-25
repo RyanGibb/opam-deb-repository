@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfile-changenotify-perl_0.31-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfile-changenotify-perl"]
+]
+depends: [
+  "libmoo-perl" {>= "1.006000"}
+  "libnamespace-autoclean-perl"
+  "libtype-tiny-perl"
+  "perl"
+  ("libmodule-pluggable-perl" | "perl" {< "5.17.9"})
+]
+extra-source "libfile-changenotify-perl_0.31-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfile-changenotify-perl/libfile-changenotify-perl_0.31-1_all.deb"
+}

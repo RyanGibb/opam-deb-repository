@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pd-hcs_0.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pd-hcs"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "pd-cyclone"
+  "pd-libdir"
+  "pd-pddp"
+  "pd-purepd"
+  "pd-zexy"
+  ("puredata-core" | "pd")
+]
+extra-source "pd-hcs_0.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pd-hcs/pd-hcs_0.1-5_amd64.deb"
+}

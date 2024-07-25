@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencv-java_4.6.0+dfsg-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencv-java"]
+]
+depends: [
+  "libopencv406-jni" {>= "4.6.0+dfsg-12"}
+]
+extra-source "libopencv-java_4.6.0+dfsg-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencv/libopencv-java_4.6.0+dfsg-12_amd64.deb"
+}

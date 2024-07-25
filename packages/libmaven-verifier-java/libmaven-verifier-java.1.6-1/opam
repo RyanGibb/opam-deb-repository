@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmaven-verifier-java_1.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmaven-verifier-java"]
+]
+depends: [
+  "junit" {>= "3.8.2"}
+  "libmaven-shared-utils-java" {>= "3.1.0"}
+]
+extra-source "libmaven-verifier-java_1.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maven-verifier/libmaven-verifier-java_1.6-1_all.deb"
+}

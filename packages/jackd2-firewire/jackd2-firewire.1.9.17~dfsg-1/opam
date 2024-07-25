@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jackd2-firewire_1.9.17~dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jackd2-firewire"]
+]
+depends: [
+  "jackd2" {= "1.9.17~dfsg-1"}
+  "libc6" {>= "2.4"}
+  "libffado2"
+  "libgcc-s1" {>= "3.0"}
+  "libjack-jackd2-0" {>= "1.9.10+20150825git1ed50c92~dfsg-5"}
+  "libstdc++6" {>= "4.6"}
+]
+conflicts: [
+  "jackd-firewire"
+]
+extra-source "jackd2-firewire_1.9.17~dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jackd2/jackd2-firewire_1.9.17~dfsg-1_amd64.deb"
+}

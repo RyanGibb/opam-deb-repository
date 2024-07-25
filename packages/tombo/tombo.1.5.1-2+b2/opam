@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tombo_1.5.1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tombo"]
+]
+depends: [
+  "cython3"
+  "libc6" {>= "2.29"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-h5py"
+  "python3-h5py-serial"
+  "python3-mappy"
+  "python3-numpy"
+  "python3-pkg-resources"
+  "python3-scipy"
+  "python3-tqdm"
+]
+extra-source "tombo_1.5.1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tombo/tombo_1.5.1-2+b2_amd64.deb"
+}

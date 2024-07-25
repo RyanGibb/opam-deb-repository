@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i neutron-taas-openvswitch-agent_3.0.0+2018.08.05.git.84846d52fd-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r neutron-taas-openvswitch-agent"]
+]
+depends: [
+  "lsb-base" {>= "3.0.6"}
+  "neutron-common" {>= "2-12.0.0"}
+  "python3-neutron-taas" {= "3.0.0+2018.08.05.git.84846d52fd-1"}
+]
+extra-source "neutron-taas-openvswitch-agent_3.0.0+2018.08.05.git.84846d52fd-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neutron-taas/neutron-taas-openvswitch-agent_3.0.0+2018.08.05.git.84846d52fd-1_all.deb"
+}

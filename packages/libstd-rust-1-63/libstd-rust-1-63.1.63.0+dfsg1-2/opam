@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstd-rust-1.63_1.63.0+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstd-rust-1.63"]
+]
+depends: [
+  "libc6" {>= "2.36"}
+  "libgcc-s1" {>= "4.2"}
+  "libllvm14"
+]
+extra-source "libstd-rust-1.63_1.63.0+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rustc/libstd-rust-1.63_1.63.0+dfsg1-2_amd64.deb"
+}

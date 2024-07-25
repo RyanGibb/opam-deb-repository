@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-plotly_5.4.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-plotly"]
+]
+depends: [
+  "python3-any" {>= "3.7~"}
+  "python3-decorator" {>= "4.0.6"}
+  "python3-nbformat" {>= "4.2.0"}
+  "python3-requests" {>= "2.3.0"}
+  "python3-six" {>= "1.8.0"}
+  "python3-tenacity"
+  "python3-tz" {>= "2012c"}
+]
+extra-source "python3-plotly_5.4.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plotly/python3-plotly_5.4.1+dfsg-1_all.deb"
+}

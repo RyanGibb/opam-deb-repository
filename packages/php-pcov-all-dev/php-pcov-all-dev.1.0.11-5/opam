@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-pcov-all-dev_1.0.11-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-pcov-all-dev"]
+]
+depends: [
+  "php-all-dev"
+  "php8-2-pcov" {>= "1.0.11-5~"}
+]
+extra-source "php-pcov-all-dev_1.0.11-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-pcov/php-pcov-all-dev_1.0.11-5_all.deb"
+}

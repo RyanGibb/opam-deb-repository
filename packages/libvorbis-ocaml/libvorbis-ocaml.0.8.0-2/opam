@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvorbis-ocaml_0.8.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvorbis-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libogg-ocaml"
+  "libvorbis0a" {>= "1.1.2"}
+  "libvorbisenc2" {>= "1.1.2"}
+  "libvorbisfile3" {>= "1.1.2"}
+  "ocaml-base"
+]
+extra-source "libvorbis-ocaml_0.8.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-vorbis/libvorbis-ocaml_0.8.0-2_amd64.deb"
+}

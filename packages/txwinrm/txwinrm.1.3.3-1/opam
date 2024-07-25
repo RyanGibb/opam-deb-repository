@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i txwinrm_1.3.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r txwinrm"]
+]
+depends: [
+  "python-txwinrm"
+]
+conflicts: [
+  "winrm (= 0.0~git20160323.0752679-1)"
+]
+extra-source "txwinrm_1.3.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/txwinrm/txwinrm_1.3.3-1_all.deb"
+}

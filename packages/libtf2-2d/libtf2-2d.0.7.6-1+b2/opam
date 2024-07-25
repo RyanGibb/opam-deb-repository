@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtf2-2d_0.7.6-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtf2-2d"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libconsole-bridge1-0" {>= "1.0.1+dfsg2"}
+  "libgcc-s1" {>= "3.0"}
+  "librostime1d" {>= "0.7.2"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libtf2-2d_0.7.6-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-geometry2/libtf2-2d_0.7.6-1+b2_amd64.deb"
+}

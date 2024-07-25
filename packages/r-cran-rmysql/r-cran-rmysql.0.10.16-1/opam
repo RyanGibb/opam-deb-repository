@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rmysql_0.10.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rmysql"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmariadb3" {>= "3.0.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.2-1"}
+  "r-cran-dbi" {>= "0.4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "r-cran-rmysql_0.10.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rmysql/r-cran-rmysql_0.10.16-1_amd64.deb"
+}

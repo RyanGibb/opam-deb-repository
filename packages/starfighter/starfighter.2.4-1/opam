@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i starfighter_2.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r starfighter"]
+]
+depends: [
+  "fonts-takao-gothic" {>= "00303.01-3"}
+  "libc6" {>= "2.34"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libsdl2-image-2-0-0" {>= "2.0.5"}
+  "libsdl2-mixer-2-0-0" {>= "2.6.0"}
+  "starfighter-data" {= "2.4-1"}
+]
+extra-source "starfighter_2.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/starfighter/starfighter_2.4-1_amd64.deb"
+}

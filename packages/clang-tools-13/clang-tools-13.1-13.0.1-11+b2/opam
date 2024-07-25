@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clang-tools-13_1:13.0.1-11+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clang-tools-13"]
+]
+depends: [
+  "clang-13" {= "1-13.0.1-11+b2"}
+  "libc6" {>= "2.34"}
+  "libclang-cpp13" {>= "1-13.0.1"}
+  "libclang1-13" {>= "1-13~++20200417041528+cc0ec3fdb9d-1~"}
+  "libgcc-s1" {>= "3.0"}
+  "libllvm13"
+  "libstdc++6" {>= "11"}
+  "libxml2" {>= "2.7.4"}
+  "python3"
+]
+extra-source "clang-tools-13_1:13.0.1-11+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-13/clang-tools-13_13.0.1-11+b2_amd64.deb"
+}

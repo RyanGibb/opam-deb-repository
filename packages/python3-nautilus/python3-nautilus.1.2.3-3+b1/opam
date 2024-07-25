@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-nautilus_1.2.3-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-nautilus"]
+]
+depends: [
+  "gir1-2-nautilus-3-0"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libnautilus-extension1a" {>= "3.27.90"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "python3-gi" {>= "3.0"}
+]
+conflicts: [
+  "python-nautilus"
+]
+extra-source "python3-nautilus_1.2.3-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nautilus-python/python3-nautilus_1.2.3-3+b1_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypto++6-dbg_5.6.4-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypto++6-dbg"]
+]
+depends: [
+  "libcrypto++6" {= "5.6.4-8"}
+]
+extra-source "libcrypto++6-dbg_5.6.4-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcrypto++/libcrypto++6-dbg_5.6.4-8_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jack-tools_20131226-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jack-tools"]
+]
+depends: [
+  "jackd"
+  "libc6" {>= "2.34"}
+  "liblo7" {>= "0.26~repack"}
+  "libncurses6" {>= "6"}
+  "libsamplerate0" {>= "0.1.7"}
+  "libsndfile1" {>= "1.0.20"}
+  "libtinfo6" {>= "6"}
+  "libx11-6"
+  "libxext6"
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "jack-tools_20131226-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jack-tools/jack-tools_20131226-1.1_amd64.deb"
+}

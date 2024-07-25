@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ltsp-server-standalone_5.18.12-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ltsp-server-standalone"]
+]
+depends: [
+  "gnupg"
+  "ldm-server"
+  "libasound2-plugins"
+  "ltsp-server" {>= "5.18.12-3"}
+  "ltspfs"
+  "nbd-server" {>= "1-2.9.25-2"}
+  "openssh-server"
+  "squashfs-tools"
+  "x11-utils"
+  "xauth"
+  ("dnsmasq" {>= "2.41"} | "tftpd-hpa" | "atftpd")
+  ("dnsmasq" | "isc-dhcp-server" | "dhcp3-server")
+  ("mate-desktop-environment" | "gnome-session" | "x-session-manager" | "x-window-manager")
+  ("openbsd-inetd" | "inet-superserver")
+]
+extra-source "ltsp-server-standalone_5.18.12-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ltsp/ltsp-server-standalone_5.18.12-3_all.deb"
+}

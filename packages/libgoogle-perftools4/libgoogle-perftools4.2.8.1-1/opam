@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgoogle-perftools4_2.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgoogle-perftools4"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libstdc++6" {>= "5.2"}
+  "libtcmalloc-minimal4" {= "2.8.1-1"}
+  "libunwind8"
+]
+conflicts: [
+  "libgoogle-perftools0"
+]
+extra-source "libgoogle-perftools4_2.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/google-perftools/libgoogle-perftools4_2.8.1-1_amd64.deb"
+}

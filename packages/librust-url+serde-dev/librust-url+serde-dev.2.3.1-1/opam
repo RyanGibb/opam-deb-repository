@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-url+serde-dev_2.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-url+serde-dev"]
+]
+depends: [
+  "librust-serde-1+default-dev"
+  "librust-serde-1+derive-dev"
+  "librust-url-dev" {= "2.3.1-1"}
+]
+extra-source "librust-url+serde-dev_2.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-url/librust-url+serde-dev_2.3.1-1_amd64.deb"
+}

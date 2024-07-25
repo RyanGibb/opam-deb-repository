@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxv-dev_2:1.0.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxv-dev"]
+]
+depends: [
+  "libx11-dev"
+  "libxext-dev"
+  "libxv1" {= "2-1.0.11-1"}
+  "x11proto-video-dev"
+]
+extra-source "libxv-dev_2:1.0.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxv/libxv-dev_1.0.11-1_amd64.deb"
+}

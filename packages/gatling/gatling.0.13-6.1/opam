@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gatling_0.13-6.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gatling"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libmbedcrypto3" {>= "2.13"}
+  "libmbedtls12" {>= "2.13"}
+  "libmbedx509-0" {>= "2.0"}
+  "libowfat0" {>= "0.30"}
+  "libssl1-1" {>= "1.1.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gatling_0.13-6.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gatling/gatling_0.13-6.1_amd64.deb"
+}

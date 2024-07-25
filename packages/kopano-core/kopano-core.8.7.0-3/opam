@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kopano-core_8.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kopano-core"]
+]
+depends: [
+  "kopano-backup" {>= "8.7.0-3"}
+  "kopano-dagent" {>= "8.7.0-3"}
+  "kopano-gateway" {>= "8.7.0-3"}
+  "kopano-ical" {>= "8.7.0-3"}
+  "kopano-monitor" {>= "8.7.0-3"}
+  "kopano-search" {>= "8.7.0-3"}
+  "kopano-server" {>= "8.7.0-3"}
+  "kopano-spamd" {>= "8.7.0-3"}
+  "kopano-spooler" {>= "8.7.0-3"}
+  "kopano-utils" {>= "8.7.0-3"}
+]
+extra-source "kopano-core_8.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kopanocore/kopano-core_8.7.0-3_all.deb"
+}

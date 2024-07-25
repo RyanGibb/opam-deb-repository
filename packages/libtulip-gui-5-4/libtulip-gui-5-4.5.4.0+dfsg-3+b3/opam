@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtulip-gui-5.4_5.4.0+dfsg-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtulip-gui-5.4"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libglew2-2" {>= "2.2.0-4+b1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libquazip5-1" {>= "0.7.3"}
+  "libstdc++6" {>= "11"}
+  "libtulip-core-5-4" {>= "5.4.0+dfsg"}
+  "libtulip-ogl-5-4" {>= "5.4.0+dfsg"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "libtulip-gui-5.4_5.4.0+dfsg-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tulip/libtulip-gui-5.4_5.4.0+dfsg-3+b3_amd64.deb"
+}

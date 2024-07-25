@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gap-factint_1.6.3+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gap-factint"]
+]
+depends: [
+  "gap" {>= "4r9p3"}
+  "gap-gapdoc" {>= "1.5.1-3"}
+  "gap-io" {>= "4.4.6"}
+]
+extra-source "gap-factint_1.6.3+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gap-factint/gap-factint_1.6.3+ds-1_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i edfbrowser_1.67+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r edfbrowser"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libedf1" {>= "1.12"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.2.0"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "edfbrowser_1.67+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/edfbrowser/edfbrowser_1.67+dfsg-1_amd64.deb"
+}

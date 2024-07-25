@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhdf5-103_1.10.4+repack-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhdf5-103"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+  "libsz2"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libhdf5-100"
+]
+extra-source "libhdf5-103_1.10.4+repack-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hdf5/libhdf5-103_1.10.4+repack-10_amd64.deb"
+}

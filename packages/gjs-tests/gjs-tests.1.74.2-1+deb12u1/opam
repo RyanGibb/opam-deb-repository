@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gjs-tests_1.74.2-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gjs-tests"]
+]
+depends: [
+  "at-spi2-core"
+  "gjs"
+  "libc6" {>= "2.34"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libgirepository-1-0-1" {>= "1.64"}
+  "libgjs0g" {= "1.74.2-1+deb12u1"}
+  "libglib2-0-0" {>= "2.58.0"}
+  "libstdc++6" {>= "11"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gjs-tests_1.74.2-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gjs/gjs-tests_1.74.2-1+deb12u1_amd64.deb"
+}

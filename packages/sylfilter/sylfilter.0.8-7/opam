@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sylfilter_0.8-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sylfilter"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libsylfilter0" {>= "0.8"}
+]
+extra-source "sylfilter_0.8-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sylfilter/sylfilter_0.8-7_amd64.deb"
+}

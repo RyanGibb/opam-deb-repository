@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcmark0_0.28.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcmark0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libcmark0_0.28.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cmark/libcmark0_0.28.3-1_amd64.deb"
+}

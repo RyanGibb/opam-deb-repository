@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i w3c-sgml-lib_1.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r w3c-sgml-lib"]
+]
+depends: [
+  "xml-core" {>= "0.14"}
+]
+conflicts: [
+  "w3c-dtd-xhtml"
+]
+extra-source "w3c-sgml-lib_1.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/w3c-sgml-lib/w3c-sgml-lib_1.3-2_all.deb"
+}

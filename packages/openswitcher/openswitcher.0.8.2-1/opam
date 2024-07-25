@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openswitcher_0.8.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openswitcher"]
+]
+depends: [
+  "gir1-2-gtk-3-0"
+  "gir1-2-handy-1"
+  "python3-any"
+  "python3-cairo"
+  "python3-gi"
+  "python3-pyatem"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "openswitcher_0.8.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyatem/openswitcher_0.8.2-1_all.deb"
+}

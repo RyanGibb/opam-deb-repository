@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rman_3.2-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rman"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "rman_3.2-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rman/rman_3.2-9_amd64.deb"
+}

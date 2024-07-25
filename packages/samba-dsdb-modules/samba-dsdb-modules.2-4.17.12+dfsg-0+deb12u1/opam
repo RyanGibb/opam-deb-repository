@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i samba-dsdb-modules_2:4.17.12+dfsg-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r samba-dsdb-modules"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.33"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libgnutls30" {>= "3.7.0"}
+  "libgpgme11" {>= "1.2.0"}
+  "libldb2" {= "2-2.6.2+samba4.17.12+dfsg-0+deb12u1"}
+  "libtalloc2" {>= "2.3.4~"}
+  "libtdb1" {>= "1.4.7~"}
+  "libtevent0" {>= "0.13.0~"}
+  "samba-libs" {= "2-4.17.12+dfsg-0+deb12u1"}
+]
+extra-source "samba-dsdb-modules_2:4.17.12+dfsg-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/samba/samba-dsdb-modules_4.17.12+dfsg-0+deb12u1_amd64.deb"
+}

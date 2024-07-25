@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libags3_3.7.44-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libags3"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libglib2-0-0" {>= "2.55.1"}
+  "libsoup2-4-1" {>= "2.47.4"}
+  "libuuid1" {>= "2.20.1"}
+  "libxml2" {>= "2.9.1"}
+]
+extra-source "libags3_3.7.44-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gsequencer/libags3_3.7.44-3_amd64.deb"
+}

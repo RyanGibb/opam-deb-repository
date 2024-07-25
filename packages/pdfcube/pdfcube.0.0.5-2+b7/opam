@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pdfcube_0.0.5-2+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pdfcube"]
+]
+depends: [
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.8.0"}
+  "libgtkglext1"
+  "libpoppler-glib8" {>= "0.18.0"}
+  "libstdc++6" {>= "9"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "pdfcube_0.0.5-2+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdfcube/pdfcube_0.0.5-2+b7_amd64.deb"
+}

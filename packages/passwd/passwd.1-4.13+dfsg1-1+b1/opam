@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i passwd_1:4.13+dfsg1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r passwd"]
+]
+depends: [
+  "libaudit1" {>= "1-2.2.1"}
+  "libc6" {>= "2.36"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libpam-modules"
+  "libpam0g" {>= "0.99.7.1"}
+  "libselinux1" {>= "3.1~"}
+  "libsemanage2" {>= "2.0.32"}
+]
+extra-source "passwd_1:4.13+dfsg1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shadow/passwd_4.13+dfsg1-1+b1_amd64.deb"
+}

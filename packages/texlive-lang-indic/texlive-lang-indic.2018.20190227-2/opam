@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i texlive-lang-indic_2018.20190227-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r texlive-lang-indic"]
+]
+depends: [
+  "python"
+  "texlive-lang-other" {>= "2018.20190227"}
+]
+extra-source "texlive-lang-indic_2018.20190227-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/texlive-base/texlive-lang-indic_2018.20190227-2_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gconf-editor_3.0.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gconf-editor"]
+]
+depends: [
+  "gconf-defaults-service" {>= "2.28"}
+  "gconf-service"
+  "gconf2" {>= "2.28.1-2"}
+  "libc6" {>= "2.4"}
+  "libgconf-2-4" {>= "3.2.5"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  ("policykit-1-gnome" | "polkit-1-auth-agent")
+]
+extra-source "gconf-editor_3.0.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gconf-editor/gconf-editor_3.0.1-6_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i syncthing-gtk_0.9.4.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r syncthing-gtk"]
+]
+depends: [
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-3-0"
+  "gir1-2-notify-0-7"
+  "gir1-2-rsvg-2-0"
+  "libgtk-3-0"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-bcrypt"
+  "python-dateutil"
+  "python-gi-cairo"
+  ("python-gobject" | "python-gi")
+]
+extra-source "syncthing-gtk_0.9.4.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/syncthing-gtk/syncthing-gtk_0.9.4.3-1_all.deb"
+}

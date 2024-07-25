@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lxqt-archiver_0.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lxqt-archiver"]
+]
+depends: [
+  "bzip2"
+  "libc6" {>= "2.34"}
+  "libfm-qt12" {>= "1.2.0"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "11"}
+  "p7zip-full"
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+]
+extra-source "lxqt-archiver_0.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxqt-archiver/lxqt-archiver_0.7.0-3_amd64.deb"
+}

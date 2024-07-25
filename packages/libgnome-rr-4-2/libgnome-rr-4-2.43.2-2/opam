@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnome-rr-4-2_43.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnome-rr-4-2"]
+]
+depends: [
+  "gnome-desktop3-data" {< "44~"}
+  "gnome-desktop3-data" {>= "43.2-2"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.53.0"}
+  "libgtk-4-1" {>= "4.4.0"}
+]
+extra-source "libgnome-rr-4-2_43.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-desktop/libgnome-rr-4-2_43.2-2_amd64.deb"
+}

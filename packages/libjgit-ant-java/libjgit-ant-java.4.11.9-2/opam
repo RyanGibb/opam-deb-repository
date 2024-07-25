@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjgit-ant-java_4.11.9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjgit-ant-java"]
+]
+depends: [
+  "ant"
+  "libjgit-java" {= "4.11.9-2"}
+]
+extra-source "libjgit-ant-java_4.11.9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jgit/libjgit-ant-java_4.11.9-2_all.deb"
+}

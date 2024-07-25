@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mopidy_3.4.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mopidy"]
+]
+depends: [
+  "adduser"
+  "debconf"
+  "gir1-2-gst-plugins-base-1-0"
+  "gir1-2-gstreamer-1-0"
+  "gstreamer1-0-plugins-good"
+  "gstreamer1-0-plugins-ugly"
+  "lsb-base"
+  "python3-any"
+  "python3-gst-1-0"
+  "python3-pkg-resources"
+  "python3-pykka" {>= "2.0.1"}
+  "python3-requests"
+  "python3-tornado" {>= "4.4"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "mopidy_3.4.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mopidy/mopidy_3.4.1-1_all.deb"
+}

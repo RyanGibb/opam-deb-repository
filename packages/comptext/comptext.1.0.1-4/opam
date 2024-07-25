@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i comptext_1.0.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r comptext"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfltk1-3" {>= "1.3.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+]
+extra-source "comptext_1.0.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/comptext/comptext_1.0.1-4_amd64.deb"
+}

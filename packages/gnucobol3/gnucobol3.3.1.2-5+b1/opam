@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnucobol3_3.1.2-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnucobol3"]
+]
+depends: [
+  "gcc"
+  "libc6" {>= "2.34"}
+  "libcob4" {>= "3.1.2"}
+  "libcob4-dev" {= "3.1.2-5+b1"}
+  "libgmp-dev"
+  "libncurses5-dev"
+]
+extra-source "gnucobol3_3.1.2-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnucobol3/gnucobol3_3.1.2-5+b1_amd64.deb"
+}

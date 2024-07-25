@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-densityclust_0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-densityclust"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  "r-cran-fnn"
+  "r-cran-ggplot2"
+  "r-cran-ggrepel"
+  "r-cran-gridextra"
+  "r-cran-rcolorbrewer"
+  "r-cran-rcpp"
+  "r-cran-rtsne"
+]
+extra-source "r-cran-densityclust_0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-densityclust/r-cran-densityclust_0.3-2_amd64.deb"
+}

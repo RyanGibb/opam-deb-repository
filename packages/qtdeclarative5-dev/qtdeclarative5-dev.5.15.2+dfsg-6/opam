@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qtdeclarative5-dev_5.15.2+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qtdeclarative5-dev"]
+]
+depends: [
+  "libqt5qml5" {= "5.15.2+dfsg-6"}
+  "libqt5qmlmodels5" {= "5.15.2+dfsg-6"}
+  "libqt5qmlworkerscript5" {= "5.15.2+dfsg-6"}
+  "libqt5quickshapes5" {= "5.15.2+dfsg-6"}
+  "libqt5quicktest5" {= "5.15.2+dfsg-6"}
+  "libqt5quickwidgets5" {= "5.15.2+dfsg-6"}
+  "qt5-qmltooling-plugins"
+  "qtdeclarative5-dev-tools"
+  ("libqt5quick5" {= "5.15.2+dfsg-6"} | "libqt5quick5-gles" {>= "5.15"})
+  ("libqt5quickparticles5" {= "5.15.2+dfsg-6"} | "libqt5quickparticles5-gles" {>= "5.15"})
+  ("qtbase5-dev" | "qtbase5-gles-dev")
+]
+extra-source "qtdeclarative5-dev_5.15.2+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtdeclarative-opensource-src/qtdeclarative5-dev_5.15.2+dfsg-6_amd64.deb"
+}

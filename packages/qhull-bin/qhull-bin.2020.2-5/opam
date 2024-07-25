@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qhull-bin_2020.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qhull-bin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libqhull-r8-0" {>= "2020.1"}
+]
+extra-source "qhull-bin_2020.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qhull/qhull-bin_2020.2-5_amd64.deb"
+}

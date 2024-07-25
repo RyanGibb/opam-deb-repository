@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i playerctl_2.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r playerctl"]
+]
+depends: [
+  "dbus"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.39.90"}
+  "libplayerctl2" {>= "2.0.1"}
+]
+extra-source "playerctl_2.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/playerctl/playerctl_2.0.1-1_amd64.deb"
+}

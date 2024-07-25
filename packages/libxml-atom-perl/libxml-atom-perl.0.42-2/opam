@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxml-atom-perl_0.42-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxml-atom-perl"]
+]
+depends: [
+  "libclass-data-inheritable-perl"
+  "libdatetime-perl"
+  "libdatetime-timezone-perl"
+  "libhtml-parser-perl"
+  "liblwp-authen-wsse-perl"
+  "liburi-perl"
+  "libwww-perl"
+  "libxml-libxml-perl"
+  "libxml-libxslt-perl"
+  "libxml-xpath-perl"
+  "perl"
+  ("libcgi-pm-perl" | "perl" {< "5.19"})
+]
+extra-source "libxml-atom-perl_0.42-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxml-atom-perl/libxml-atom-perl_0.42-2_all.deb"
+}

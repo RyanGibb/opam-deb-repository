@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ftpd_0.17-37_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ftpd"]
+]
+depends: [
+  "ftpd-ssl" {>= "0.17.36+really0.17-2"}
+]
+extra-source "ftpd_0.17-37_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linux-ftpd/ftpd_0.17-37_all.deb"
+}

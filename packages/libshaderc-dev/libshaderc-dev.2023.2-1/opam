@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libshaderc-dev_2023.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libshaderc-dev"]
+]
+depends: [
+  "glslang-dev"
+  "libshaderc1" {= "2023.2-1"}
+  "spirv-headers"
+]
+extra-source "libshaderc-dev_2023.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shaderc/libshaderc-dev_2023.2-1_amd64.deb"
+}

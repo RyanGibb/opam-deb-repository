@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lrslib_0.71b-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lrslib"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libgmp10" {>= "2-6.2.1+dfsg"}
+  "liblrs1" {>= "0.71~4641"}
+]
+extra-source "lrslib_0.71b-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lrslib/lrslib_0.71b-2_amd64.deb"
+}

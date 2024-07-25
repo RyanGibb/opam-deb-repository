@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-backtrace+findshlibs-dev_0.3.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-backtrace+findshlibs-dev"]
+]
+depends: [
+  "librust-backtrace-dev" {= "0.3.13-1"}
+  "librust-findshlibs-0-4+default-dev"
+]
+extra-source "librust-backtrace+findshlibs-dev_0.3.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-backtrace/librust-backtrace+findshlibs-dev_0.3.13-1_amd64.deb"
+}

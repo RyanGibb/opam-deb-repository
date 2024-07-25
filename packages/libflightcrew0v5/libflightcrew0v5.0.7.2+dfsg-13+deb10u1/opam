@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libflightcrew0v5_0.7.2+dfsg-13+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libflightcrew0v5"]
+]
+depends: [
+  "libboost-filesystem1-67-0"
+  "libboost-regex1-67-0" {>= "1.67.0-10"}
+  "libboost-system1-67-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libxerces-c3-2"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libflightcrew0"
+]
+extra-source "libflightcrew0v5_0.7.2+dfsg-13+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flightcrew/libflightcrew0v5_0.7.2+dfsg-13+deb10u1_amd64.deb"
+}

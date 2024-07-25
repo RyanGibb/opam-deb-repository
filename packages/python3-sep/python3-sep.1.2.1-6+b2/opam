@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sep_1.2.1-6+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sep"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsep0" {= "1.2.1-6+b2"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+]
+extra-source "python3-sep_1.2.1-6+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sep/python3-sep_1.2.1-6+b2_amd64.deb"
+}

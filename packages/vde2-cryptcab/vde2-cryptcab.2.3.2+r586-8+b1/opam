@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vde2-cryptcab_2.3.2+r586-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vde2-cryptcab"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl3" {>= "3.0.0"}
+  "libvdeplug2" {>= "4.0.1"}
+  "sgml-base" {>= "1.28"}
+]
+extra-source "vde2-cryptcab_2.3.2+r586-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vde2/vde2-cryptcab_2.3.2+r586-8+b1_amd64.deb"
+}

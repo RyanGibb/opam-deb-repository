@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i findent_4.2.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r findent"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "findent_4.2.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/findent/findent_4.2.6-1_amd64.deb"
+}

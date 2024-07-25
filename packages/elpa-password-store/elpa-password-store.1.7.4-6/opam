@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-password-store_1.7.4-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-password-store"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-s" {>= "1.9.0"}
+  "elpa-with-editor" {>= "2.5.11"}
+  "emacsen-common"
+  "pass" {= "1.7.4-6"}
+]
+extra-source "elpa-password-store_1.7.4-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/password-store/elpa-password-store_1.7.4-6_all.deb"
+}

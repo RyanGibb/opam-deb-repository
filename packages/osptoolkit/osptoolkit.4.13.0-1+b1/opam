@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osptoolkit_4.13.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osptoolkit"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libosptk4" {>= "4.13.0"}
+  "libssl3" {>= "3.0.0"}
+  "openssl"
+]
+extra-source "osptoolkit_4.13.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osptoolkit/osptoolkit_4.13.0-1+b1_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i engrampa-common_1.24.1-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r engrampa-common"]
+]
+depends: [
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "engrampa-common_1.24.1-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/engrampa/engrampa-common_1.24.1-1+deb11u1_all.deb"
+}

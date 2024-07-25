@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librados-dev_16.2.11+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librados-dev"]
+]
+depends: [
+  "libboost-program-options1-74-0" {>= "1.74.0+ds1"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "librados2" {= "16.2.11+ds-2"}
+  "libstdc++6" {>= "11"}
+]
+conflicts: [
+  "librados1-dev"
+  "librados2-dev"
+]
+extra-source "librados-dev_16.2.11+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/librados-dev_16.2.11+ds-2_amd64.deb"
+}

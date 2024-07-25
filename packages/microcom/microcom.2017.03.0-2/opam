@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i microcom_2017.03.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r microcom"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libreadline7" {>= "6.0"}
+]
+extra-source "microcom_2017.03.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/microcom/microcom_2017.03.0-2_amd64.deb"
+}

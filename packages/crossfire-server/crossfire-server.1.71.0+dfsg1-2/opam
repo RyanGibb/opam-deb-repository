@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i crossfire-server_1.71.0+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r crossfire-server"]
+]
+depends: [
+  "bzip2"
+  "crossfire-common" {>= "1.71.0+dfsg1-2"}
+  "crossfire-maps"
+  "libc6" {>= "2.15"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libpython2-7" {>= "2.7"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "crossfire-server_1.71.0+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/crossfire/crossfire-server_1.71.0+dfsg1-2_amd64.deb"
+}

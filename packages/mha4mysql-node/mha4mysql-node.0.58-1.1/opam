@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mha4mysql-node_0.58-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mha4mysql-node"]
+]
+depends: [
+  "libdbd-mysql-perl"
+  "libdbi-perl"
+  "perl-any"
+]
+extra-source "mha4mysql-node_0.58-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mha4mysql-node/mha4mysql-node_0.58-1.1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplib-dev_1.8.5-14+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplib-dev"]
+]
+depends: [
+  "libglut-dev"
+  "libplib1" {= "1.8.5-14+b1"}
+  ("libgl1-mesa-dev" | "libgl-dev")
+]
+extra-source "libplib-dev_1.8.5-14+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plib/libplib-dev_1.8.5-14+b1_amd64.deb"
+}

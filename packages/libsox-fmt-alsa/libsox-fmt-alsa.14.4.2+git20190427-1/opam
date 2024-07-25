@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsox-fmt-alsa_14.4.2+git20190427-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsox-fmt-alsa"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.2.5"}
+  "libsox3" {>= "14.4.2~"}
+]
+extra-source "libsox-fmt-alsa_14.4.2+git20190427-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sox/libsox-fmt-alsa_14.4.2+git20190427-1_amd64.deb"
+}

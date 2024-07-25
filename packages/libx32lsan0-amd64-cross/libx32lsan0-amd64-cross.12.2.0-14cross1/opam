@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libx32lsan0-amd64-cross_12.2.0-14cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libx32lsan0-amd64-cross"]
+]
+depends: [
+  "gcc-12-cross-base" {>= "12.2.0-14"}
+]
+extra-source "libx32lsan0-amd64-cross_12.2.0-14cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12-cross/libx32lsan0-amd64-cross_12.2.0-14cross1_all.deb"
+}

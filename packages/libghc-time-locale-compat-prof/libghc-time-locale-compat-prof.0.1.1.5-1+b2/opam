@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-time-locale-compat-prof_0.1.1.5-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-time-locale-compat-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-time-locale-compat-dev" {= "0.1.1.5-1+b2"}
+]
+extra-source "libghc-time-locale-compat-prof_0.1.1.5-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-time-locale-compat/libghc-time-locale-compat-prof_0.1.1.5-1+b2_amd64.deb"
+}

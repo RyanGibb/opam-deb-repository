@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-convertible-prof_1.1.1.0-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-convertible-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-convertible-dev" {= "1.1.1.0-9+b1"}
+  "libghc-old-locale-prof"
+  "libghc-old-time-prof"
+]
+extra-source "libghc-convertible-prof_1.1.1.0-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-convertible/libghc-convertible-prof_1.1.1.0-9+b1_amd64.deb"
+}

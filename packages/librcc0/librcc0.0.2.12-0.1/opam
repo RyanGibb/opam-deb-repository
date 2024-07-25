@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librcc0_0.2.12-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librcc0"]
+]
+depends: [
+  "libaspell15" {>= "0.60.7~20110707"}
+  "libc6" {>= "2.15"}
+  "libdb5-3"
+  "libenca0"
+  "librcd0"
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "librcc0_0.2.12-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librcc/librcc0_0.2.12-0.1_amd64.deb"
+}

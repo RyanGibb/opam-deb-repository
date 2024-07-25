@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i melt_7.12.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r melt"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libmlt-data" {>= "7.12.0-1"}
+  "libmlt7" {>= "7.12.0"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+]
+extra-source "melt_7.12.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mlt/melt_7.12.0-1+b1_amd64.deb"
+}

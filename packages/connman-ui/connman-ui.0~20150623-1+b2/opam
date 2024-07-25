@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i connman-ui_0~20150623-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r connman-ui"]
+]
+depends: [
+  "connman"
+  "libc6" {>= "2.4"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.11.5"}
+]
+extra-source "connman-ui_0~20150623-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/connman-ui/connman-ui_0~20150623-1+b2_amd64.deb"
+}

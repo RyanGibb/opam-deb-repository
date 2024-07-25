@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xbrzscale_1.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xbrzscale"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libsdl2-image-2-0-0" {>= "2.0.5"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "xbrzscale_1.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xbrzscale/xbrzscale_1.8-2_amd64.deb"
+}

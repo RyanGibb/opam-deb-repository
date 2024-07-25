@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xml-core_0.18+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xml-core"]
+]
+depends: [
+  "sed" {>= "4.1.2-8"}
+  "sgml-base" {>= "1.28"}
+]
+extra-source "xml-core_0.18+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xml-core/xml-core_0.18+nmu1_all.deb"
+}

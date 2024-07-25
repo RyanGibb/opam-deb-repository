@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libresource-retriever-dev_1.12.7-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libresource-retriever-dev"]
+]
+depends: [
+  "libboost-thread-dev"
+  "libresource-retriever0d" {= "1.12.7-3"}
+  "librosconsole-dev"
+  "libroslib-dev"
+  "python3"
+]
+extra-source "libresource-retriever-dev_1.12.7-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-resource-retriever/libresource-retriever-dev_1.12.7-3_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-system-log_3.9.90-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-system-log"]
+]
+depends: [
+  "gsettings-desktop-schemas"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.9.11"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "policykit-1"
+  "zlib1g" {>= "1-1.1.4"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-system-log_3.9.90-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-system-log/gnome-system-log_3.9.90-8_amd64.deb"
+}

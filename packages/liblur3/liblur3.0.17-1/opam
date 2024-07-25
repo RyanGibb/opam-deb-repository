@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblur3_0.17-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblur3"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libudev1" {>= "183"}
+]
+extra-source "liblur3_0.17-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libratbag/liblur3_0.17-1_amd64.deb"
+}

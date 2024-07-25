@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcgsi-gsoap-dev_1.3.11-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcgsi-gsoap-dev"]
+]
+depends: [
+  "libcgsi-gsoap1" {= "1.3.11-1+b1"}
+  "libgsoap-dev" {< "2.8.76"}
+  "libgsoap-dev" {>= "2.8.75"}
+]
+conflicts: [
+  "cgsi-gsoap-dev (<< 1.3.3.1-1)"
+]
+extra-source "libcgsi-gsoap-dev_1.3.11-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cgsi-gsoap/libcgsi-gsoap-dev_1.3.11-1+b1_amd64.deb"
+}

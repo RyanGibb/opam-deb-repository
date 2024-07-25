@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i appstream-compose_0.16.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r appstream-compose"]
+]
+depends: [
+  "appstream"
+  "libappstream-compose0" {>= "0.16.1"}
+  "libappstream4" {>= "0.15.0"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.62"}
+]
+extra-source "appstream-compose_0.16.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/appstream/appstream-compose_0.16.1-2_amd64.deb"
+}

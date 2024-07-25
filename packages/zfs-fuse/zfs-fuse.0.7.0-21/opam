@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zfs-fuse_0.7.0-21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zfs-fuse"]
+]
+depends: [
+  "fuse3"
+  "libaio1" {>= "0.3.93"}
+  "libc6" {>= "2.29"}
+  "libfuse2" {>= "2.8.7-2"}
+  "libssl1-1" {>= "1.1.0"}
+  "lsb-base"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "zfs-fuse_0.7.0-21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zfs-fuse/zfs-fuse_0.7.0-21_amd64.deb"
+}

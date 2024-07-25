@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-rio-prof_0.1.18.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-rio-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-exceptions-prof"
+  "libghc-hashable-prof"
+  "libghc-microlens-mtl-prof"
+  "libghc-microlens-prof"
+  "libghc-primitive-prof"
+  "libghc-rio-dev" {= "0.1.18.0-1"}
+  "libghc-typed-process-prof"
+  "libghc-unliftio-core-prof"
+  "libghc-unliftio-prof"
+  "libghc-unordered-containers-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-rio-prof_0.1.18.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-rio/libghc-rio-prof_0.1.18.0-1_amd64.deb"
+}

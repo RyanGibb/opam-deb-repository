@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sdcc_3.8.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sdcc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.4"}
+  "libstdc++6" {>= "5.2"}
+  "sdcc-libraries" {= "3.8.0+dfsg-2"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "sdcc_3.8.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sdcc/sdcc_3.8.0+dfsg-2_amd64.deb"
+}

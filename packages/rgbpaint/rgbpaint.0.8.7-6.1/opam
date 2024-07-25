@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rgbpaint_0.8.7-6.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rgbpaint"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libgtk2-0-0" {>= "2.24.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libx11-6"
+]
+extra-source "rgbpaint_0.8.7-6.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rgbpaint/rgbpaint_0.8.7-6.1_amd64.deb"
+}

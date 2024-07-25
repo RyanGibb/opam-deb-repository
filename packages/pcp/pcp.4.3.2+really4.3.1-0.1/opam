@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcp_4.3.2+really4.3.1-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcp"]
+]
+depends: [
+  "gawk"
+  "libc6" {>= "2.17"}
+  "libncurses6" {>= "6"}
+  "libpapi5-7"
+  "libpcp-gui2"
+  "libpcp-mmv1"
+  "libpcp-pmda-perl"
+  "libpcp-pmda3"
+  "libpcp-trace2"
+  "libpcp-web1"
+  "libpcp3"
+  "libpfm4" {>= "4.9"}
+  "libreadline7" {>= "6.0"}
+  "libtinfo6" {>= "6"}
+  "procps"
+  "python3"
+  "python3-pcp"
+]
+conflicts: [
+  "dstat"
+  "pgpool2"
+]
+extra-source "pcp_4.3.2+really4.3.1-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcp/pcp_4.3.2+really4.3.1-0.1_amd64.deb"
+}

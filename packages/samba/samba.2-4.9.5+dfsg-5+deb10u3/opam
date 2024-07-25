@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i samba_2:4.9.5+dfsg-5+deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r samba"]
+]
+depends: [
+  "adduser"
+  "libbsd0" {>= "0.6.0"}
+  "libc6" {>= "2.14"}
+  "libldb1" {>= "2-1.5.1+really1.4.6"}
+  "libpam-modules"
+  "libpam-runtime" {>= "1.0.1-11"}
+  "libpopt0" {>= "1.14"}
+  "libpython2-7" {>= "2.7"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+  "libtdb1" {>= "1.2.7+git20101214"}
+  "libtevent0" {>= "0.9.16"}
+  "lsb-base" {>= "4.1+Debian"}
+  "procps"
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-dnspython"
+  "python-samba"
+  "python2-7-any"
+  "samba-common" {= "2-4.9.5+dfsg-5+deb10u3"}
+  "samba-common-bin" {= "2-4.9.5+dfsg-5+deb10u3"}
+  "samba-libs" {= "2-4.9.5+dfsg-5+deb10u3"}
+  "tdb-tools"
+]
+extra-source "samba_2:4.9.5+dfsg-5+deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/samba/samba_4.9.5+dfsg-5+deb10u3_amd64.deb"
+}

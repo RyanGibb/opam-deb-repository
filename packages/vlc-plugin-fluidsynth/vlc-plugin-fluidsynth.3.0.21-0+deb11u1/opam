@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vlc-plugin-fluidsynth_3.0.21-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vlc-plugin-fluidsynth"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libfluidsynth2" {>= "2.0.5"}
+  "libvlccore9"
+  "libvlccore9" {>= "3.0.21"}
+  ("fluid-soundfont-gm" | "timgm6mb-soundfont")
+]
+extra-source "vlc-plugin-fluidsynth_3.0.21-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vlc/vlc-plugin-fluidsynth_3.0.21-0+deb11u1_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i piperka-client_0.2.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r piperka-client"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libqt5core5a" {>= "5.12.2"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5qml5" {>= "5.1.0"}
+  "libstdc++6" {>= "5"}
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtwebview"
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "piperka-client_0.2.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/piperka-client/piperka-client_0.2.2-1+b1_amd64.deb"
+}

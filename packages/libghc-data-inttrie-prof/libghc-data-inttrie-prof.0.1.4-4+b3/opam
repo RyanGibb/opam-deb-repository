@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-data-inttrie-prof_0.1.4-4+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-data-inttrie-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-data-inttrie-dev" {= "0.1.4-4+b3"}
+]
+extra-source "libghc-data-inttrie-prof_0.1.4-4+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-data-inttrie/libghc-data-inttrie-prof_0.1.4-4+b3_amd64.deb"
+}

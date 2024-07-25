@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i httpfs2_0.1.4-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r httpfs2"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  "libfuse2" {>= "2.6"}
+]
+extra-source "httpfs2_0.1.4-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/httpfs2/httpfs2_0.1.4-1.1_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vim-poke_2.4+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vim-poke"]
+]
+depends: [
+  ("vim" {>= "2-8.1.0693-2~"} | "neovim" {>= "0.2.2-1~"})
+]
+extra-source "vim-poke_2.4+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poke/vim-poke_2.4+dfsg-1_all.deb"
+}

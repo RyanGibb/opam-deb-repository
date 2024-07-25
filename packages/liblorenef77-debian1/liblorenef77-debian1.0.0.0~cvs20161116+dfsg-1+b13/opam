@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblorenef77-debian1_0.0.0~cvs20161116+dfsg-1+b13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblorenef77-debian1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcpgplot0"
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc1" {>= "1-4.0"}
+  "libgfortran5" {>= "8"}
+  "libgsl23" {>= "2.5"}
+  "libgslcblas0" {>= "2.4"}
+  "libpgplot0"
+  "libquadmath0" {>= "4.6"}
+  "libstdc++6" {>= "4.1.1"}
+  "libx11-6"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "liblorenef77-debian1_0.0.0~cvs20161116+dfsg-1+b13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lorene/liblorenef77-debian1_0.0.0~cvs20161116+dfsg-1+b13_amd64.deb"
+}

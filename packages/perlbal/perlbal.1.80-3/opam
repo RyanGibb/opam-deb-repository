@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i perlbal_1.80-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r perlbal"]
+]
+depends: [
+  "libperlbal-perl" {= "1.80-3"}
+  "perl"
+]
+extra-source "perlbal_1.80-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/perlbal/perlbal_1.80-3_all.deb"
+}

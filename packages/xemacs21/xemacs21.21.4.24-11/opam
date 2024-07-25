@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xemacs21_21.4.24-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xemacs21"]
+]
+depends: [
+  ("xemacs21-mule" {>= "21.4.24-11"} | "xemacs21-mule-canna-wnn" {>= "21.4.24-11"} | "xemacs21-nomule" {>= "21.4.24-11"})
+]
+conflicts: [
+  "xemacs"
+  "xemacs-widget"
+]
+extra-source "xemacs21_21.4.24-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xemacs21/xemacs21_21.4.24-11_all.deb"
+}

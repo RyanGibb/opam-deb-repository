@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ncbi-blast+_2.11.0+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ncbi-blast+"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.4"}
+  "libgomp1" {>= "6"}
+  "liblmdb0" {>= "0.9.7"}
+  "libmbedcrypto3" {>= "2.13"}
+  "libmbedtls12" {>= "2.13"}
+  "libpcre3"
+  "libstdc++6" {>= "9"}
+  "ncbi-data"
+  "perl-any"
+  "python3"
+  "zlib1g" {>= "1-1.2.11.dfsg"}
+]
+extra-source "ncbi-blast+_2.11.0+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ncbi-blast+/ncbi-blast+_2.11.0+ds-1_amd64.deb"
+}

@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i network-manager_1.42.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r network-manager"]
+]
+depends: [
+  "adduser"
+  "libaudit1" {>= "1-2.2.1"}
+  "libbluetooth3" {>= "4.91"}
+  "libc6" {>= "2.34"}
+  "libcurl3-gnutls" {>= "7.24.0"}
+  "libelogind0"
+  "libglib2-0-0" {>= "2.68.0"}
+  "libgnutls30" {>= "3.7.2"}
+  "libjansson4" {>= "2.14"}
+  "libmm-glib0" {>= "1.4.0"}
+  "libndp0" {>= "1.2"}
+  "libnewt0-52" {>= "0.52.23"}
+  "libnm0" {= "1.42.4-1"}
+  "libpsl5" {>= "0.13.0"}
+  "libreadline8" {>= "6.0"}
+  "libselinux1" {>= "3.1~"}
+  "libteamdctl0" {>= "1.9"}
+  "libudev1" {>= "183"}
+  "udev"
+  ("default-dbus-system-bus" | "dbus-system-bus")
+  ("polkitd" | "policykit-1")
+]
+extra-source "network-manager_1.42.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/network-manager/network-manager_1.42.4-1_amd64.deb"
+}

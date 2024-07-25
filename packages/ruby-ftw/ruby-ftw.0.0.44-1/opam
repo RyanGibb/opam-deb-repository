@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-ftw_0.0.44-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-ftw"]
+]
+depends: [
+  "ruby-addressable"
+  "ruby-backports"
+  "ruby-cabin"
+  "ruby-http-parser-rb"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-ftw_0.0.44-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-ftw/ruby-ftw_0.0.44-1_all.deb"
+}

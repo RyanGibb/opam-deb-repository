@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i solid-auth_0.91-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r solid-auth"]
+]
+depends: [
+  "libfile-libmagic-perl"
+  "libjson-perl"
+  "liblog-any-adapter-log4perl-perl"
+  "liblog-any-perl"
+  "liblog-log4perl-perl"
+  "libpath-tiny-perl"
+  "libstring-escape-perl"
+  "libweb-solid-auth-perl"
+  "perl-any"
+]
+extra-source "solid-auth_0.91-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libw/libweb-solid-auth-perl/solid-auth_0.91-1_all.deb"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liboce-ocaf11_0.18.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liboce-ocaf11"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfreeimage3"
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libice6" {>= "1-1.0.0"}
+  "liboce-foundation11"
+  "liboce-modeling11"
+  "liboce-ocaf-lite11"
+  "liboce-visualization11"
+  "libsm6"
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "libxext6"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "liboce-ocaf11_0.18.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oce/liboce-ocaf11_0.18.2-3_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i irssi_1.4.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r irssi"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.61.2"}
+  "libperl5-36" {>= "5.36.0"}
+  "libssl3" {>= "3.0.0"}
+  "libtinfo6" {>= "6"}
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "irssi_1.4.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/irssi/irssi_1.4.3-2_amd64.deb"
+}

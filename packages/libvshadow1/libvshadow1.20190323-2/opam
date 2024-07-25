@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvshadow1_20190323-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvshadow1"]
+]
+depends: [
+  "libbfio1" {>= "20120425"}
+  "libc6" {>= "2.14"}
+]
+extra-source "libvshadow1_20190323-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvshadow/libvshadow1_20190323-2_amd64.deb"
+}

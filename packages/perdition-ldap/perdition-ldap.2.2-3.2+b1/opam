@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i perdition-ldap_2.2-3.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r perdition-ldap"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "libvanessa-logger0" {>= "0.0.6"}
+  "perdition" {= "2.2-3.2+b1"}
+]
+extra-source "perdition-ldap_2.2-3.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/perdition/perdition-ldap_2.2-3.2+b1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-globby_13.1.3+~cs16.25.40-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-globby"]
+]
+depends: [
+  "node-glob-parent"
+  "node-ignore"
+  "node-micromatch"
+  "node-path-type"
+  "node-queue-microtask"
+  "node-slash" {>= "4"}
+  "nodejs-any"
+]
+extra-source "node-globby_13.1.3+~cs16.25.40-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-globby/node-globby_13.1.3+~cs16.25.40-1_all.deb"
+}

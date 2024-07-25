@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pykdtree_1.3.4+ds-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pykdtree"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgomp1" {>= "4.9"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+]
+extra-source "python3-pykdtree_1.3.4+ds-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pykdtree/python3-pykdtree_1.3.4+ds-1+b1_amd64.deb"
+}

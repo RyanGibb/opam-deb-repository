@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i soapysdr-module-rfspace_0.2.5-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r soapysdr-module-rfspace"]
+]
+depends: [
+  "soapyosmo-common0-8" {= "0.2.5-8"}
+  "soapysdr0-8-module-rfspace"
+]
+extra-source "soapysdr-module-rfspace_0.2.5-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/soapyosmo/soapysdr-module-rfspace_0.2.5-8_amd64.deb"
+}

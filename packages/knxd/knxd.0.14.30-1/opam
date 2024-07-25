@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i knxd_0.14.30-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r knxd"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.14"}
+  "libev4" {>= "1-4.04"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libsystemd0" {>= "228"}
+  "libusb-1-0-0" {>= "2-1.0.9"}
+  "lsb-base"
+]
+conflicts: [
+  "eibd"
+  "eibd-server"
+]
+extra-source "knxd_0.14.30-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/knxd/knxd_0.14.30-1_amd64.deb"
+}

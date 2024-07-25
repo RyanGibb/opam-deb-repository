@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhdf4-alt-dev_4.2.15-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhdf4-alt-dev"]
+]
+depends: [
+  "libhdf4-0-alt" {= "4.2.15-3"}
+  "libjpeg-dev"
+  "libnetcdf-dev"
+  "zlib1g-dev"
+]
+conflicts: [
+  "libhdf4-dev"
+]
+extra-source "libhdf4-alt-dev_4.2.15-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhdf4/libhdf4-alt-dev_4.2.15-3_amd64.deb"
+}

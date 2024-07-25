@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcholmod3_1:5.8.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcholmod3"]
+]
+depends: [
+  "libamd2" {>= "1-4.5.2"}
+  "libc6" {>= "2.7"}
+  "libcamd2" {>= "1-4.5.2"}
+  "libccolamd2" {>= "1-4.5.2"}
+  "libcolamd2" {>= "1-4.5.2"}
+  "libgomp1" {>= "4.9"}
+  "libmetis5" {>= "5.1.0.dfsg"}
+  "libsuitesparseconfig5" {>= "1-5.0.0"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libcholmod3_1:5.8.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/suitesparse/libcholmod3_5.8.1+dfsg-2_amd64.deb"
+}

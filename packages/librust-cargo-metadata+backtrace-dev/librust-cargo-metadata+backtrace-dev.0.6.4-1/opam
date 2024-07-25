@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-cargo-metadata+backtrace-dev_0.6.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-cargo-metadata+backtrace-dev"]
+]
+depends: [
+  "librust-cargo-metadata-dev" {= "0.6.4-1"}
+  "librust-error-chain-0-12+backtrace-dev"
+]
+extra-source "librust-cargo-metadata+backtrace-dev_0.6.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-cargo-metadata/librust-cargo-metadata+backtrace-dev_0.6.4-1_amd64.deb"
+}

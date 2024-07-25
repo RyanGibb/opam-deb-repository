@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgenomicsdb-java_1.4.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgenomicsdb-java"]
+]
+depends: [
+  "libcommons-io-java" {>= "2.11.0"}
+  "libgenomicsdb-jni" {< "1.4.4-3.1~"}
+  "libgenomicsdb-jni" {>= "1.4.4-3"}
+  "libgetopt-java"
+  "libguava-java"
+  "libhtsjdk-java" {>= "3.0.2"}
+  "libjson-simple-java"
+  "liblog4j2-java" {>= "2.19.0"}
+  "libprotobuf-java"
+  "libprotobuf-java-format-java" {>= "1.3"}
+]
+extra-source "libgenomicsdb-java_1.4.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/genomicsdb/libgenomicsdb-java_1.4.4-3_all.deb"
+}

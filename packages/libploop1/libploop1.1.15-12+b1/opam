@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libploop1_1.15-12+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libploop1"]
+]
+depends: [
+  "e2fsprogs"
+  "libc6" {>= "2.34"}
+  "libxml2" {>= "2.7.4"}
+  "parted"
+]
+extra-source "libploop1_1.15-12+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/ploop/libploop1_1.15-12+b1_amd64.deb"
+}

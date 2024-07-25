@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i acl2-doc_8.3dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r acl2-doc"]
+]
+depends: [
+  "tex-common" {>= "6.13"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "acl2-doc_8.3dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/acl2/acl2-doc_8.3dfsg-2_all.deb"
+}

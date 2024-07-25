@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-genie_1.0.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-genie"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "6"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-cran-genieclust"
+  "r-cran-rcpp" {>= "1.0.0"}
+]
+extra-source "r-cran-genie_1.0.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-genie/r-cran-genie_1.0.5-2_amd64.deb"
+}

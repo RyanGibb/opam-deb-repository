@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hashable-prof_1.3.0.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hashable-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hashable-dev" {= "1.3.0.0-2+b1"}
+]
+extra-source "libghc-hashable-prof_1.3.0.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hashable/libghc-hashable-prof_1.3.0.0-2+b1_amd64.deb"
+}

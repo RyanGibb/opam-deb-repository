@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ditrack_0.8-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ditrack"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "subversion"
+]
+extra-source "ditrack_0.8-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/ditrack/ditrack_0.8-1.2_all.deb"
+}

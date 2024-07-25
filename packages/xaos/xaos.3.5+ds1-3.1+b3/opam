@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xaos_3.5+ds1-3.1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xaos"]
+]
+depends: [
+  "libaa1" {>= "1.4p5"}
+  "libc6" {>= "2.15"}
+  "libgsl23"
+  "libgslcblas0"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libx11-6"
+  "libxext6"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "xaos_3.5+ds1-3.1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xaos/xaos_3.5+ds1-3.1+b3_amd64.deb"
+}

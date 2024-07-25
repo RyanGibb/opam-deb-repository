@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-request-perl_2.13-7+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-request-perl"]
+]
+depends: [
+  "libapache2-mod-apreq2" {= "2.13-7+deb11u1"}
+  "libapache2-mod-perl2" {>= "1.99.23-1"}
+  "libapr1" {>= "1.2.7"}
+  "libapreq2-3" {= "2.13-7+deb11u1"}
+  "libaprutil1" {>= "1.2.7+dfsg"}
+  "libc6" {>= "2.14"}
+  "perl"
+  "perl-base"
+]
+extra-source "libapache2-request-perl_2.13-7+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapreq2/libapache2-request-perl_2.13-7+deb11u1_amd64.deb"
+}

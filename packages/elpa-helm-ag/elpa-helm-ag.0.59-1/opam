@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-helm-ag_0.59-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-helm-ag"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-helm" {>= "2.0"}
+  "emacsen-common"
+  ("silversearcher-ag" | "ack")
+]
+extra-source "elpa-helm-ag_0.59-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emacs-helm-ag/elpa-helm-ag_0.59-1_all.deb"
+}

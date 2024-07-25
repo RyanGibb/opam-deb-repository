@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i torch-core-free_20171127_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r torch-core-free"]
+]
+depends: [
+  "lua-cjson"
+  "lua-filesystem"
+  "lua-penlight"
+  "lua-torch-cwrap"
+  "lua-torch-dok"
+  "lua-torch-graph"
+  "lua-torch-image"
+  "lua-torch-nn"
+  "lua-torch-nngraph"
+  "lua-torch-optim"
+  "lua-torch-paths"
+  "lua-torch-sundown"
+  "lua-torch-sys"
+  "lua-torch-torch7"
+  "lua-torch-trepl"
+  "lua-torch-xlua"
+  "luajit" {>= "2.1.0~"}
+  "luarocks"
+  "torch-trepl"
+  ("libopenblas-base" | "libatlas-base" | "libblas-so-3")
+]
+extra-source "torch-core-free_20171127_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-torch-core-free/torch-core-free_20171127_amd64.deb"
+}

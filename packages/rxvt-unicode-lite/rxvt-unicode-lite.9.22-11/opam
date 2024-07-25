@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rxvt-unicode-lite_9.22-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rxvt-unicode-lite"]
+]
+depends: [
+  "rxvt-unicode" {>= "9.22-2"}
+]
+conflicts: [
+  "rxvt-unicode (<< 9.22-2)"
+]
+extra-source "rxvt-unicode-lite_9.22-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rxvt-unicode/rxvt-unicode-lite_9.22-11_all.deb"
+}

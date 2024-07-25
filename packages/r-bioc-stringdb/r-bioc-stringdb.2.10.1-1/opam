@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-stringdb_2.10.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-stringdb"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biocgenerics"
+  "r-cran-gplots"
+  "r-cran-hash"
+  "r-cran-igraph"
+  "r-cran-plotrix"
+  "r-cran-plyr"
+  "r-cran-png"
+  "r-cran-rcolorbrewer"
+  "r-cran-rcurl"
+  "r-cran-sqldf"
+]
+extra-source "r-bioc-stringdb_2.10.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-stringdb/r-bioc-stringdb_2.10.1-1_all.deb"
+}

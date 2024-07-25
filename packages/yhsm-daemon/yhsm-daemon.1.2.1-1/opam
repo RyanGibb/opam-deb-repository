@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yhsm-daemon_1.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yhsm-daemon"]
+]
+depends: [
+  "adduser"
+  "libpython2-7-stdlib"
+  "lsb-base"
+  "python-any"
+  "python-daemon"
+  "python-pyhsm" {= "1.2.1-1"}
+  "python-setuptools"
+]
+extra-source "yhsm-daemon_1.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pyhsm/yhsm-daemon_1.2.1-1_all.deb"
+}

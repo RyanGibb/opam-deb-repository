@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-tibble_3.1.8+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-tibble"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-1"}
+  "r-cran-fansi" {>= "0.4.0"}
+  "r-cran-lifecycle" {>= "1.0.0"}
+  "r-cran-magrittr"
+  "r-cran-pillar" {>= "1.7.0"}
+  "r-cran-pkgconfig"
+  "r-cran-rlang" {>= "1.0.2"}
+  "r-cran-vctrs" {>= "0.3.8"}
+]
+extra-source "r-cran-tibble_3.1.8+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-tibble/r-cran-tibble_3.1.8+dfsg-1_amd64.deb"
+}

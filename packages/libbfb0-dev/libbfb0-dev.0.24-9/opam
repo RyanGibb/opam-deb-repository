@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbfb0-dev_0.24-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbfb0-dev"]
+]
+depends: [
+  "libbfb0" {= "0.24-9"}
+]
+conflicts: [
+  "libbfb-dev"
+  "libobexftp-dev (<< 0.22)"
+]
+extra-source "libbfb0-dev_0.24-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/obexftp/libbfb0-dev_0.24-9_amd64.deb"
+}

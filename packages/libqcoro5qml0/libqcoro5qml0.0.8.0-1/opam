@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqcoro5qml0_0.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqcoro5qml0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libqcoro5qml0_0.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qcoro/libqcoro5qml0_0.8.0-1_amd64.deb"
+}

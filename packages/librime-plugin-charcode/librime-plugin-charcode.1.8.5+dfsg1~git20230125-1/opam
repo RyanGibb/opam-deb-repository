@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librime-plugin-charcode_1.8.5+dfsg1~git20230125-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librime-plugin-charcode"]
+]
+depends: [
+  "libboost-locale1-74-0" {>= "1.74.0+ds1"}
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "librime1" {>= "1.8.5+dfsg1~"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "librime-plugin-charcode_1.8.5+dfsg1~git20230125-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librime/librime-plugin-charcode_1.8.5+dfsg1~git20230125-1_amd64.deb"
+}

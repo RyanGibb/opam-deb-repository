@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplib1_1.8.5-14+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplib1"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+]
+extra-source "libplib1_1.8.5-14+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plib/libplib1_1.8.5-14+b1_amd64.deb"
+}

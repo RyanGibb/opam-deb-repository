@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtracker-sparql-2.0-0_2.1.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtracker-sparql-2.0-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.45.4"}
+  "libjson-glib-1-0-0" {>= "0.13.2"}
+  "libsoup2-4-1" {>= "2.41.90"}
+  "libsqlite3-0" {>= "3.20.0"}
+  "libstemmer0d" {>= "0+svn527"}
+  "libunistring2" {>= "0.9.7"}
+  "libuuid1" {>= "2.16"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libtracker-sparql-2.0-0_2.1.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tracker/libtracker-sparql-2.0-0_2.1.8-2_amd64.deb"
+}

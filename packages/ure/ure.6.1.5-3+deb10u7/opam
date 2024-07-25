@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ure_6.1.5-3+deb10u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ure"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libicu63" {>= "63.1-1~"}
+  "liblangtag1" {>= "0.4.0"}
+  "libstdc++6" {>= "5"}
+  "libxml2" {>= "2.7.4"}
+  "uno-libs3" {= "6.1.5-3+deb10u7"}
+]
+extra-source "ure_6.1.5-3+deb10u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/ure_6.1.5-3+deb10u7_amd64.deb"
+}

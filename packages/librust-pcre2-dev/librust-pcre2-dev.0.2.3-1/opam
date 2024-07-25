@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-pcre2-dev_0.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-pcre2-dev"]
+]
+depends: [
+  "librust-libc-dev"
+  "librust-log-dev"
+  "librust-pcre2-sys-0-2+default-dev"
+  "librust-thread-local-1+default-dev"
+]
+extra-source "librust-pcre2-dev_0.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-pcre2/librust-pcre2-dev_0.2.3-1_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sssd-idp_2.8.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sssd-idp"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcom-err2" {>= "1.43.9"}
+  "libcurl4" {>= "7.16.2"}
+  "libjansson4" {>= "2.14"}
+  "libjose0" {>= "10"}
+  "libkrad0" {>= "1.12~alpha1+dfsg"}
+  "libkrb5-3" {>= "1.7dfsg"}
+  "libpopt0" {>= "1.14"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+  "sssd-common" {= "2.8.2-4"}
+]
+extra-source "sssd-idp_2.8.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sssd/sssd-idp_2.8.2-4_amd64.deb"
+}

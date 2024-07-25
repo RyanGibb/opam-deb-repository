@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i langford-dkms_0.0.20130228-6.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r langford-dkms"]
+]
+depends: [
+  "dkms" {>= "3.0.3-4~"}
+]
+extra-source "langford-dkms_0.0.20130228-6.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/langford/langford-dkms_0.0.20130228-6.3_all.deb"
+}

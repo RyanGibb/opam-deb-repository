@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmuroard3_0.1.14-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmuroard3"]
+]
+depends: [
+  "libao4" {>= "1.1.0"}
+  "libc6" {>= "2.15"}
+  "libvorbisfile3" {>= "1.1.2"}
+]
+extra-source "libmuroard3_0.1.14-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/muroard/libmuroard3_0.1.14-6_amd64.deb"
+}

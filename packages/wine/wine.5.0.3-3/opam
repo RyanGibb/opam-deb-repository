@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wine_5.0.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wine"]
+]
+depends: [
+  ("wine64" {< "5.0.3-3.1~"} | "wine32" {< "5.0.3-3.1~"})
+  ("wine64" {>= "5.0.3-3"} | "wine32" {>= "5.0.3-3"})
+]
+extra-source "wine_5.0.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wine/wine_5.0.3-3_all.deb"
+}

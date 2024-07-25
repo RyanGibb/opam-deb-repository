@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ntp_1:4.2.8p15+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ntp"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.17"}
+  "libcap2" {>= "1-2.10"}
+  "libedit2" {>= "2.11-20080614-0"}
+  "libopts25" {>= "1-5.18.16"}
+  "libssl1-1" {>= "1.1.0"}
+  "lsb-base" {>= "3.2-13"}
+  "netbase"
+  "tzdata"
+]
+conflicts: [
+  "time-daemon"
+]
+extra-source "ntp_1:4.2.8p15+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ntp/ntp_4.2.8p15+dfsg-1_amd64.deb"
+}

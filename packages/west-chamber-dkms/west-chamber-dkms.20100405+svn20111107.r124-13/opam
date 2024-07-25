@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i west-chamber-dkms_20100405+svn20111107.r124-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r west-chamber-dkms"]
+]
+depends: [
+  "bzip2"
+  "dkms" {>= "2.1.0.0"}
+  "libxtables-dev" {>= "1.4.3"}
+  "make"
+  "xtables-addons-dkms" {>= "3.13"}
+]
+extra-source "west-chamber-dkms_20100405+svn20111107.r124-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/west-chamber/west-chamber-dkms_20100405+svn20111107.r124-13_all.deb"
+}

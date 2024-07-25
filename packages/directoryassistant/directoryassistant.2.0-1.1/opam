@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i directoryassistant_2.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r directoryassistant"]
+]
+depends: [
+  "python"
+  "python-gtk2" {>= "1.99.17-6"}
+  "python-ldap" {>= "1.9.999.pre14-1"}
+]
+extra-source "directoryassistant_2.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/directoryassistant/directoryassistant_2.0-1.1_all.deb"
+}

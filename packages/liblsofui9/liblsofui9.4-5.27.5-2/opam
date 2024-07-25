@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblsofui9_4:5.27.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblsofui9"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libkf5i18n5" {>= "5.102.0~"}
+  "libkf5sysguard-data" {= "4-5.27.5-2"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "liblsofui9_4:5.27.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libksysguard/liblsofui9_5.27.5-2_amd64.deb"
+}

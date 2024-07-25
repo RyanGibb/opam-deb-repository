@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ltspfs_1.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ltspfs"]
+]
+depends: [
+  "fuse"
+  "libc6" {>= "2.15"}
+  "libfuse2" {>= "2.8"}
+  "libx11-6"
+  "python3"
+]
+extra-source "ltspfs_1.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ltspfs/ltspfs_1.5-2_amd64.deb"
+}

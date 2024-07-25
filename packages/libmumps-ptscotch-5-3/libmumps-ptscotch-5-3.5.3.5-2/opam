@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmumps-ptscotch-5.3_5.3.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmumps-ptscotch-5.3"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgfortran5" {>= "10"}
+  "libopenmpi3" {>= "4.1.0"}
+  "libptscotch-6-1" {>= "6.1.0"}
+  "libscalapack-openmpi2-1" {>= "2.1.0"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libmumps-ptscotch-5.3_5.3.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mumps/libmumps-ptscotch-5.3_5.3.5-2_amd64.deb"
+}

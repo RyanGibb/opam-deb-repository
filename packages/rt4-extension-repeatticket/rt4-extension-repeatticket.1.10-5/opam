@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rt4-extension-repeatticket_1.10-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rt4-extension-repeatticket"]
+]
+depends: [
+  "libdatetime-event-ical-perl"
+  "perl-any"
+  "request-tracker4" {>= "4.0.6"}
+]
+extra-source "rt4-extension-repeatticket_1.10-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rt-extension-repeatticket/rt4-extension-repeatticket_1.10-5_all.deb"
+}

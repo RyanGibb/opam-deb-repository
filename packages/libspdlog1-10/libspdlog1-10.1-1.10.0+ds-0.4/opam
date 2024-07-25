@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspdlog1.10_1:1.10.0+ds-0.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspdlog1.10"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfmt9" {>= "9.0.0+ds1"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "12"}
+]
+extra-source "libspdlog1.10_1:1.10.0+ds-0.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spdlog/libspdlog1.10_1.10.0+ds-0.4_amd64.deb"
+}

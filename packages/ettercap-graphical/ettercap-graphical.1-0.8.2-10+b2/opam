@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ettercap-graphical_1:0.8.2-10+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ettercap-graphical"]
+]
+depends: [
+  "ettercap-common" {= "1-0.8.2-10+b2"}
+  "libatk1-0-0" {>= "1.12.4"}
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.7"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libgtk2-0-0" {>= "2.20.0"}
+  "libluajit-5-1-2" {>= "2.0.4+dfsg"}
+  "libncurses6" {>= "6"}
+  "libnet1" {>= "1.1.2.1"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpangoft2-1-0-0" {>= "1.14.0"}
+  "libpangoxft-1-0-0" {>= "1.14.0"}
+  "libpcap0-8" {>= "0.9.8"}
+  "libpcre3"
+  "libssl1-1" {>= "1.1.0"}
+  "libtinfo6" {>= "6"}
+  "policykit-1"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "ettercap"
+  "ettercap-gtk"
+]
+extra-source "ettercap-graphical_1:0.8.2-10+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ettercap/ettercap-graphical_0.8.2-10+b2_amd64.deb"
+}

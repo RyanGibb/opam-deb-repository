@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i console-setup-linux_1.205_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r console-setup-linux"]
+]
+depends: [
+  "keyboard-configuration" {= "1.205"}
+  ("init-system-helpers" {>= "1.29~"} | "initscripts")
+  ("kbd" {>= "0.99-12"} | "console-tools" {>= "1-0.2.3-16"})
+]
+conflicts: [
+  "console-setup-freebsd"
+]
+extra-source "console-setup-linux_1.205_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/console-setup/console-setup-linux_1.205_all.deb"
+}

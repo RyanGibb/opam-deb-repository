@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i graphdefang_2.84-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r graphdefang"]
+]
+depends: [
+  "libfile-readbackwards-perl"
+  "libgd-graph-perl"
+  "libgd-text-perl" {>= "0.86-1"}
+  "libmldbm-perl"
+  "libtimedate-perl"
+  "perl-any"
+  ("perl" {>= "5.8.3"} | "libstorable-perl")
+]
+extra-source "graphdefang_2.84-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mimedefang/graphdefang_2.84-4+b1_amd64.deb"
+}

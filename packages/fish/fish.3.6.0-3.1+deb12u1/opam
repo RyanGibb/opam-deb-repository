@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fish_3.6.0-3.1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fish"]
+]
+depends: [
+  "bsdextrautils"
+  "fish-common" {= "3.6.0-3.1+deb12u1"}
+  "groff-base"
+  "libc6" {>= "2.34"}
+  "libpcre2-32-0" {>= "10.22"}
+  "libstdc++6" {>= "12"}
+  "libtinfo6" {>= "6"}
+  "man-db"
+  "procps"
+  "python3"
+]
+extra-source "fish_3.6.0-3.1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fish/fish_3.6.0-3.1+deb12u1_amd64.deb"
+}

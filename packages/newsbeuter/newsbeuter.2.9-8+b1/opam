@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i newsbeuter_2.9-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r newsbeuter"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcc1" {>= "1-3.0"}
+  "libjson-c3" {>= "0.11"}
+  "libncursesw6" {>= "6"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "6"}
+  "libstfl0" {>= "0.22"}
+  "libtinfo6" {>= "6"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "newsbeuter_2.9-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/newsbeuter/newsbeuter_2.9-8+b1_amd64.deb"
+}

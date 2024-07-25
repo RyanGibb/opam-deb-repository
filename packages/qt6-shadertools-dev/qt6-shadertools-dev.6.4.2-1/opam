@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt6-shadertools-dev_6.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt6-shadertools-dev"]
+]
+depends: [
+  "libqt6shadertools6" {= "6.4.2-1"}
+  "qt6-shader-baker" {= "6.4.2-1"}
+]
+extra-source "qt6-shadertools-dev_6.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-shadertools/qt6-shadertools-dev_6.4.2-1_amd64.deb"
+}

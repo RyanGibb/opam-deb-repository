@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dcap-tunnel-ssl_2.47.12-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dcap-tunnel-ssl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdcap1" {= "2.47.12-3"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "dcap-tunnel-ssl_2.47.12-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dcap/dcap-tunnel-ssl_2.47.12-3_amd64.deb"
+}

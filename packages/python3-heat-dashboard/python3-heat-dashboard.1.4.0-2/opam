@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-heat-dashboard_1.4.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-heat-dashboard"]
+]
+depends: [
+  "openstack-dashboard" {>= "3-14.0.0~rc1"}
+  "python3-any"
+  "python3-django-horizon"
+  "python3-heatclient" {>= "1.10.0"}
+  "python3-pbr" {>= "2.0.0"}
+  "python3-xstatic-angular-uuid"
+  "python3-xstatic-angular-vis"
+  "python3-xstatic-filesaver"
+  "python3-xstatic-js-yaml"
+  "python3-xstatic-json2yaml"
+]
+extra-source "python3-heat-dashboard_1.4.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heat-dashboard/python3-heat-dashboard_1.4.0-2_all.deb"
+}

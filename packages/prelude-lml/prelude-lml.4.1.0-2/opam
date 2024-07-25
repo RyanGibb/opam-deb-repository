@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prelude-lml_4.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prelude-lml"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgnutls30" {>= "3.6.6"}
+  "libicu63" {>= "63.1-1~"}
+  "libltdl7" {>= "2.4.6"}
+  "libpcre3"
+  "libprelude23" {>= "4.1"}
+  "prelude-lml-rules" {>= "3.1.0-1"}
+]
+extra-source "prelude-lml_4.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prelude-lml/prelude-lml_4.1.0-2_amd64.deb"
+}

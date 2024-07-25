@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatcoll-sqlite20_21.0.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatcoll-sqlite20"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnat-10" {>= "10.2.1"}
+  "libgnatcoll-sql3" {>= "21.0.0"}
+  "libgnatcoll19" {>= "21.0.0"}
+  "libsqlite3-0" {>= "3.7.14"}
+]
+extra-source "libgnatcoll-sqlite20_21.0.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnatcoll-db/libgnatcoll-sqlite20_21.0.0-6_amd64.deb"
+}

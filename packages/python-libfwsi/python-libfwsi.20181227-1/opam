@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-libfwsi_20181227-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-libfwsi"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfwsi1" {= "20181227-1"}
+  "libpython2-7" {>= "2.7"}
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+]
+extra-source "python-libfwsi_20181227-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfwsi/python-libfwsi_20181227-1_amd64.deb"
+}

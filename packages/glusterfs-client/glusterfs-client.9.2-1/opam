@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i glusterfs-client_9.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r glusterfs-client"]
+]
+depends: [
+  "fuse"
+  "glusterfs-common" {>= "9.2-1"}
+  "libc6" {>= "2.14"}
+  "python3-any"
+]
+extra-source "glusterfs-client_9.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glusterfs/glusterfs-client_9.2-1_amd64.deb"
+}

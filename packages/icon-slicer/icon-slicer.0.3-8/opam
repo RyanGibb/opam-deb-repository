@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i icon-slicer_0.3-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r icon-slicer"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libpopt0" {>= "1.14"}
+  "x11-apps"
+]
+extra-source "icon-slicer_0.3-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/icon-slicer/icon-slicer_0.3-8_amd64.deb"
+}

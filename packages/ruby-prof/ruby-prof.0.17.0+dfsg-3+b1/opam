@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-prof_0.17.0+dfsg-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-prof"]
+]
+depends: [
+  "fonts-lato"
+  "libc6" {>= "2.14"}
+  "libgmp10"
+  "libjs-jquery"
+  "libruby2-5" {>= "2.5.0"}
+  "ruby" {< "1-2.6~"}
+  "ruby" {>= "1-2.5~0"}
+]
+extra-source "ruby-prof_0.17.0+dfsg-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-prof/ruby-prof_0.17.0+dfsg-3+b1_amd64.deb"
+}

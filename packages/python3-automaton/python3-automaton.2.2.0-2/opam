@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-automaton_2.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-automaton"]
+]
+depends: [
+  "python3-any"
+  "python3-debtcollector"
+  "python3-pbr"
+  "python3-prettytable"
+  "python3-six" {>= "1.10.0"}
+]
+extra-source "python3-automaton_2.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-automaton/python3-automaton_2.2.0-2_all.deb"
+}

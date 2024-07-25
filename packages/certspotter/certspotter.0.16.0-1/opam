@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i certspotter_0.16.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r certspotter"]
+]
+depends: [
+  "ca-certificates"
+  "libc6" {>= "2.34"}
+  ("systemd" | "systemd-standalone-sysusers" | "systemd-sysusers")
+]
+extra-source "certspotter_0.16.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/certspotter/certspotter_0.16.0-1_amd64.deb"
+}

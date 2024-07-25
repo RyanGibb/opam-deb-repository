@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pep8-simul_8.1.3+git20180702~ds1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pep8-simul"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libqt5core5a" {>= "5.12.2"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5webenginewidgets5" {>= "5.7.1"}
+  "libqt5widgets5" {>= "5.2.0"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+]
+extra-source "pep8-simul_8.1.3+git20180702~ds1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pep8-simul/pep8-simul_8.1.3+git20180702~ds1-3+b1_amd64.deb"
+}

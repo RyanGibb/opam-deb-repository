@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml_5.11.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.5.0"}
+  "libqt5gui5" {>= "5.0.2"}
+  "libqt5qml5" {>= "5.9.0~beta"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  "qtchooser"
+]
+extra-source "qml_5.11.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtdeclarative-opensource-src/qml_5.11.3-4_amd64.deb"
+}

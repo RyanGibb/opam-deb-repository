@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-xeddsa_1.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-xeddsa"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libxeddsa2" {>= "2.0.0"}
+  "python3" {>= "3~"}
+  "python3-any"
+  "python3-cffi-backend"
+]
+extra-source "python3-xeddsa_1.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-xeddsa/python3-xeddsa_1.0.2-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i intel-media-va-driver_23.1.1+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r intel-media-va-driver"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libigdgmm12" {>= "22.3.3+ds1"}
+  "libstdc++6" {>= "11"}
+  "libva2"
+]
+extra-source "intel-media-va-driver_23.1.1+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/intel-media-driver/intel-media-va-driver_23.1.1+dfsg1-1_amd64.deb"
+}

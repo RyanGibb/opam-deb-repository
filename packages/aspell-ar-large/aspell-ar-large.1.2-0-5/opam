@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aspell-ar-large_1.2-0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aspell-ar-large"]
+]
+depends: [
+  "aspell" {>= "0.60.4"}
+  "dictionaries-common" {>= "0.9.1"}
+]
+extra-source "aspell-ar-large_1.2-0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aspell-ar-large/aspell-ar-large_1.2-0-5_all.deb"
+}

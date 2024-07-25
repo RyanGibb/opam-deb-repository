@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scim-kmfl-imengine_0.9.9-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scim-kmfl-imengine"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.8.0"}
+  "libkmfl0" {>= "0.9.12"}
+  "libkmflcomp0"
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "libxkbfile1" {>= "1-1.1.0"}
+  "scim" {>= "1.4.4"}
+]
+extra-source "scim-kmfl-imengine_0.9.9-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scim-kmfl-imengine/scim-kmfl-imengine_0.9.9-1+b1_amd64.deb"
+}

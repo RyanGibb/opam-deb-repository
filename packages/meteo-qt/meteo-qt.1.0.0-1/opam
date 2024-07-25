@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i meteo-qt_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r meteo-qt"]
+]
+depends: [
+  "python3-any" {>= "3.6~"}
+  "python3-lxml"
+  "python3-pyqt5"
+  "python3-sip"
+]
+extra-source "meteo-qt_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meteo-qt/meteo-qt_1.0.0-1_amd64.deb"
+}

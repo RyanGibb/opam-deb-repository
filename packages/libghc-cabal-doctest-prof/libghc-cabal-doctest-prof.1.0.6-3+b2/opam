@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cabal-doctest-prof_1.0.6-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cabal-doctest-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-cabal-doctest-dev" {= "1.0.6-3+b2"}
+]
+extra-source "libghc-cabal-doctest-prof_1.0.6-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cabal-doctest/libghc-cabal-doctest-prof_1.0.6-3+b2_amd64.deb"
+}

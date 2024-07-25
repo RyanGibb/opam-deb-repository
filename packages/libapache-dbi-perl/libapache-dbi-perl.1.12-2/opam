@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache-dbi-perl_1.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache-dbi-perl"]
+]
+depends: [
+  "libapache2-mod-perl2"
+  "libdbi-perl"
+  "perl"
+]
+extra-source "libapache-dbi-perl_1.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapache-dbi-perl/libapache-dbi-perl_1.12-2_all.deb"
+}

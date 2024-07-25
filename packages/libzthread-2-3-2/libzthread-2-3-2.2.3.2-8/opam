@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzthread-2.3-2_2.3.2-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzthread-2.3-2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libzthread-2.3-2_2.3.2-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zthreads/libzthread-2.3-2_2.3.2-8_amd64.deb"
+}

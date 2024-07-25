@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-atomic-chrome_2.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-atomic-chrome"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-let-alist" {>= "1.0.4"}
+  "elpa-websocket" {>= "1.4"}
+  "emacsen-common"
+]
+extra-source "elpa-atomic-chrome_2.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/atomic-chrome-el/elpa-atomic-chrome_2.0.0-4_all.deb"
+}

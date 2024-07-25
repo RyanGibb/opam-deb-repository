@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-ownet_3.2p3+dfsg1-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-ownet"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-ownet_3.2p3+dfsg1-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/owfs/python-ownet_3.2p3+dfsg1-2+deb10u1_all.deb"
+}

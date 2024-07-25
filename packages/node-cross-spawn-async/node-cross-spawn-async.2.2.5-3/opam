@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-cross-spawn-async_2.2.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-cross-spawn-async"]
+]
+depends: [
+  "node-lru-cache" {>= "4.0~"}
+  "node-which" {>= "1.2.8~"}
+  "nodejs"
+]
+extra-source "node-cross-spawn-async_2.2.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-cross-spawn-async/node-cross-spawn-async_2.2.5-3_all.deb"
+}

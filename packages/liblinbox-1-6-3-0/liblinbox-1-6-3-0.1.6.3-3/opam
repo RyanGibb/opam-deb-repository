@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblinbox-1.6.3-0_1.6.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblinbox-1.6.3-0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgivaro9" {>= "4.0.2-8~"}
+  "libgmp10"
+  "libgomp1" {>= "9"}
+  "libstdc++6" {>= "5.2"}
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "liblinbox-1.6.3-0_1.6.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linbox/liblinbox-1.6.3-0_1.6.3-3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxpresent1_1.0.0-2+b10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxpresent1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6" {>= "2-1.4.99.1"}
+  "libxext6"
+  "libxfixes3"
+  "libxrandr2"
+]
+extra-source "libxpresent1_1.0.0-2+b10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxpresent/libxpresent1_1.0.0-2+b10_amd64.deb"
+}

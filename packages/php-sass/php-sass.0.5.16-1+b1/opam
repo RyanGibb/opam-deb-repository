@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-sass_0.5.16-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-sass"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsass1"
+  "libstdc++6" {>= "4.1.1"}
+  "php-common" {>= "1-7.0+33~"}
+  ("phpapi-20180731" | "phpapi-20170718")
+]
+extra-source "php-sass_0.5.16-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sassphp/php-sass_0.5.16-1+b1_amd64.deb"
+}

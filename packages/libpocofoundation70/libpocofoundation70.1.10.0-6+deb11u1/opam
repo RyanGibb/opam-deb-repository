@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpocofoundation70_1.10.0-6+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpocofoundation70"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc-s1" {>= "3.0"}
+  "libpcre3"
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libpocofoundation70_1.10.0-6+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poco/libpocofoundation70_1.10.0-6+deb11u1_amd64.deb"
+}

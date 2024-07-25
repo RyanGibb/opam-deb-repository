@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i obs-advanced-scene-switcher_1.20.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r obs-advanced-scene-switcher"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcurl4"
+  "libgcc-s1" {>= "3.0"}
+  "libobs0" {>= "28.0.1"}
+  "libopencv-core406" {>= "4.6.0+dfsg"}
+  "libopencv-imgproc406" {>= "4.6.0+dfsg"}
+  "libopencv-objdetect406" {>= "4.6.0+dfsg"}
+  "libproc2-0" {>= "2-4.0.2"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "11"}
+  "libx11-6"
+  "obs-advanced-scene-switcher-data" {>= "1.16.3-1~"}
+  "obs-studio" {>= "26.1.2"}
+  ("libqt5gui5" {>= "5.10.0"} | "libqt5gui5-gles" {>= "5.10.0"})
+]
+extra-source "obs-advanced-scene-switcher_1.20.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/obs-advanced-scene-switcher/obs-advanced-scene-switcher_1.20.4-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-eye_0.7-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-eye"]
+]
+depends: [
+  "ruby-celluloid" {>= "0.16.0-4~"}
+  "ruby-celluloid-io" {>= "0.16.0~"}
+  "ruby-sigar" {>= "0.7.3~"}
+  "ruby-state-machines"
+  "ruby-thor"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-eye_0.7-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-eye/ruby-eye_0.7-5.1_all.deb"
+}

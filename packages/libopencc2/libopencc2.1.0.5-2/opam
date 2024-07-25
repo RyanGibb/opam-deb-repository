@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencc2_1.0.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencc2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libopencc2-data"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libopencc2_1.0.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencc/libopencc2_1.0.5-2_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fish_3.0.2-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fish"]
+]
+depends: [
+  "bc"
+  "fish-common" {= "3.0.2-2+deb10u1"}
+  "libc6" {>= "2.15"}
+  "libgcc1" {>= "1-3.0"}
+  "libncurses6" {>= "6"}
+  "libpcre2-32-0" {>= "10.32"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+  "man-db"
+  "python3"
+  ("lynx" | "www-browser")
+]
+extra-source "fish_3.0.2-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fish/fish_3.0.2-2+deb10u1_amd64.deb"
+}

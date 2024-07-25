@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i biabam_0.9.7-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r biabam"]
+]
+depends: [
+  "sharutils"
+  ("default-mta" | "mail-transport-agent")
+]
+extra-source "biabam_0.9.7-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/biabam/biabam_0.9.7-8_all.deb"
+}

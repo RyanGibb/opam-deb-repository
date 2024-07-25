@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-openpyxl_2.4.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-openpyxl"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-any" {>= "2.6.6-7~"}
+  "python-et-xmlfile"
+  "python-jdcal"
+  "python-lxml" {>= "3.3.4"}
+]
+extra-source "python-openpyxl_2.4.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openpyxl/python-openpyxl_2.4.9-1_all.deb"
+}

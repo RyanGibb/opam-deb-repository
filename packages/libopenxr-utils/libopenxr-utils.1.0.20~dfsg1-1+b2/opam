@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenxr-utils_1.0.20~dfsg1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenxr-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libglx0"
+  "libopengl0"
+  "libopenxr-loader1" {>= "1.0.3"}
+  "libstdc++6" {>= "6"}
+  "libvulkan1" {>= "1.2.131.2"}
+  "libx11-6"
+  "libxxf86vm1"
+]
+extra-source "libopenxr-utils_1.0.20~dfsg1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openxr-sdk-source/libopenxr-utils_1.0.20~dfsg1-1+b2_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freetds-bin_1.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freetds-bin"]
+]
+depends: [
+  "freetds-common"
+  "libc6" {>= "2.17"}
+  "libgmp10"
+  "libgnutls30" {>= "3.6.14"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libhogweed6"
+  "libnettle8"
+  "libodbc1" {>= "2.3.1"}
+  "libreadline8" {>= "6.0"}
+  "libsybdb5" {>= "1.00.82"}
+]
+extra-source "freetds-bin_1.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freetds/freetds-bin_1.2.3-1_amd64.deb"
+}

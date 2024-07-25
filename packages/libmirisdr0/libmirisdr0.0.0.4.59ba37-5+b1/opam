@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmirisdr0_0.0.4.59ba37-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmirisdr0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+]
+extra-source "libmirisdr0_0.0.4.59ba37-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmirisdr/libmirisdr0_0.0.4.59ba37-5+b1_amd64.deb"
+}

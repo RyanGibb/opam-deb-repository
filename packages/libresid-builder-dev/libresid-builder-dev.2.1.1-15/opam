@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libresid-builder-dev_2.1.1-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libresid-builder-dev"]
+]
+depends: [
+  "libresid-builder0c2a" {= "2.1.1-15"}
+]
+conflicts: [
+  "libresid-dev (<= 2.1.0)"
+]
+extra-source "libresid-builder-dev_2.1.1-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sidplay-libs/libresid-builder-dev_2.1.1-15_amd64.deb"
+}

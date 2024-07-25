@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hgettext-prof_0.1.31.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hgettext-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hgettext-dev" {= "0.1.31.0-8"}
+  "libghc-setlocale-prof"
+]
+extra-source "libghc-hgettext-prof_0.1.31.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hgettext/libghc-hgettext-prof_0.1.31.0-8_amd64.deb"
+}

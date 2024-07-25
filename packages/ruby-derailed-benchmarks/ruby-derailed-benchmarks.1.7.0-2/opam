@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-derailed-benchmarks_1.7.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-derailed-benchmarks"]
+]
+depends: [
+  "rake" {< "14"}
+  "rake" {> "10"}
+  "ruby"
+  "ruby-benchmark-ips" {>= "2"}
+  "ruby-get-process-mem" {>= "0"}
+  "ruby-heapy" {>= "0"}
+  "ruby-memory-profiler" {>= "0"}
+  "ruby-mini-histogram" {>= "0"}
+  "ruby-rack" {>= "1"}
+  "ruby-statistics" {>= "2.1"}
+  "ruby-thor" {< "2"}
+  "ruby-thor" {>= "0.19"}
+  "ruby-unicode-plot" {< "1.0.0"}
+  "ruby-unicode-plot" {>= "0.0.4"}
+]
+extra-source "ruby-derailed-benchmarks_1.7.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-derailed-benchmarks/ruby-derailed-benchmarks_1.7.0-2_all.deb"
+}

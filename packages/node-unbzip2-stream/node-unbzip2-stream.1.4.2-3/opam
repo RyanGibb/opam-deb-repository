@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-unbzip2-stream_1.4.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-unbzip2-stream"]
+]
+depends: [
+  "node-buffer" {>= "5.2.1"}
+  "node-through" {>= "2.3.8"}
+  "nodejs" {>= "6"}
+]
+extra-source "node-unbzip2-stream_1.4.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-unbzip2-stream/node-unbzip2-stream_1.4.2-3_all.deb"
+}

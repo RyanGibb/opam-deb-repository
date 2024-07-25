@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libimage-librsvg-perl_0.07-8+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libimage-librsvg-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "librsvg2-2" {>= "2.14.4"}
+  "librsvg2-common"
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libimage-librsvg-perl_0.07-8+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libimage-librsvg-perl/libimage-librsvg-perl_0.07-8+b6_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i csync2_2.0-25-gc0faaf9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r csync2"]
+]
+depends: [
+  "init-system-helpers" {>= "1.51"}
+  "libc6" {>= "2.14"}
+  "libgnutls30" {>= "3.6.12"}
+  "librsync2" {>= "1.0.0"}
+  "netbase" {>= "4.25"}
+]
+extra-source "csync2_2.0-25-gc0faaf9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/csync2/csync2_2.0-25-gc0faaf9-1_amd64.deb"
+}

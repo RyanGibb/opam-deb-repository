@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i primus-libs_0~20150328-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r primus-libs"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libglapi-mesa" {>= "20.3.2"}
+  "libglx-mesa0"
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+]
+conflicts: [
+  "primus-libs-ia32"
+]
+extra-source "primus-libs_0~20150328-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/primus/primus-libs_0~20150328-13_amd64.deb"
+}

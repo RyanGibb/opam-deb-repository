@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-font-awesome-rails_4.7.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-font-awesome-rails"]
+]
+depends: [
+  "fonts-font-awesome" {>= "4.6.3~"}
+  "ruby-activesupport"
+  "ruby-railties"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-font-awesome-rails_4.7.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-font-awesome-rails/ruby-font-awesome-rails_4.7.0.4-1_all.deb"
+}

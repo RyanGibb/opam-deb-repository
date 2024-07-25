@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libyara-dev_4.2.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libyara-dev"]
+]
+depends: [
+  "libjansson-dev"
+  "libmagic-dev"
+  "libssl-dev"
+  "libyara9" {= "4.2.3-4"}
+]
+extra-source "libyara-dev_4.2.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yara/libyara-dev_4.2.3-4_amd64.deb"
+}

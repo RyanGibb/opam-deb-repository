@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpkg-www_2.64_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpkg-www"]
+]
+depends: [
+  "apt"
+  "dpkg" {>= "1.19.3"}
+  "libcgi-pm-perl"
+  "perl"
+]
+extra-source "dpkg-www_2.64_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpkg-www/dpkg-www_2.64_all.deb"
+}

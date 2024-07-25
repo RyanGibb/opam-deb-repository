@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i open-infrastructure-system-config_20190202-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r open-infrastructure-system-config"]
+]
+depends: [
+  "systemd"
+]
+conflicts: [
+  "live-config"
+  "live-config-doc"
+  "live-config-systemd"
+  "live-config-sysvinit"
+]
+extra-source "open-infrastructure-system-config_20190202-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/open-infrastructure-system-tools/open-infrastructure-system-config_20190202-1_all.deb"
+}

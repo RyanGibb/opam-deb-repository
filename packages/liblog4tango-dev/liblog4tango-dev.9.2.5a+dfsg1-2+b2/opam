@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblog4tango-dev_9.2.5a+dfsg1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblog4tango-dev"]
+]
+depends: [
+  "liblog4tango5v5" {= "9.2.5a+dfsg1-2+b2"}
+]
+conflicts: [
+  "liblog4tango4-dev"
+  "liblog4tango5-dev"
+]
+extra-source "liblog4tango-dev_9.2.5a+dfsg1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tango/liblog4tango-dev_9.2.5a+dfsg1-2+b2_amd64.deb"
+}

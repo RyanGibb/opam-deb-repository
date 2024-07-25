@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ivar_1.3+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ivar"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libhts3" {>= "1.10"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "ivar_1.3+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ivar/ivar_1.3+dfsg-1_amd64.deb"
+}

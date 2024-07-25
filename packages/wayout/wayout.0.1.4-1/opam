@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wayout_0.1.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wayout"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.6.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libwayland-client0" {>= "1.20.0"}
+]
+extra-source "wayout_0.1.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wayout/wayout_0.1.4-1_amd64.deb"
+}

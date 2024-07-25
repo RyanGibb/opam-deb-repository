@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eztrace_1.1-8-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eztrace"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libeztrace0" {= "1.1-8-3+b1"}
+  "libgtg0"
+  "liblitl0"
+  "opari2"
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "eztrace_1.1-8-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eztrace/eztrace_1.1-8-3+b1_amd64.deb"
+}

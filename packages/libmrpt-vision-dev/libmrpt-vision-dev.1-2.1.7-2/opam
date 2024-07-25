@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmrpt-vision-dev_1:2.1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmrpt-vision-dev"]
+]
+depends: [
+  "libmrpt-common-dev"
+  "libmrpt-obs-dev"
+  "libmrpt-vision2-1" {= "1-2.1.7-2"}
+]
+extra-source "libmrpt-vision-dev_1:2.1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrpt/libmrpt-vision-dev_2.1.7-2_amd64.deb"
+}

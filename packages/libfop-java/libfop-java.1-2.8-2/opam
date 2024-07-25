@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfop-java_1:2.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfop-java"]
+]
+depends: [
+  "java-wrappers" {>= "0.1.15"}
+  "libbatik-java" {>= "1.16"}
+  "libcommons-io-java" {>= "2.11.0"}
+  "libcommons-logging-java" {>= "1.2"}
+  "libfontbox2-java"
+  "libqdox-java" {>= "1.12.1"}
+  "libxmlgraphics-commons-java"
+]
+extra-source "libfop-java_1:2.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fop/libfop-java_2.8-2_all.deb"
+}

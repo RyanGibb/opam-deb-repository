@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libva-drm2_2.17.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libva-drm2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdrm2" {>= "2.4.60"}
+  "libva2" {< "2.17.0.1"}
+  "libva2" {>= "2.17.0"}
+]
+extra-source "libva-drm2_2.17.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libva/libva-drm2_2.17.0-1_amd64.deb"
+}

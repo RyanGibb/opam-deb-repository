@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfwupd2_1.8.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfwupd2"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libcurl3-gnutls" {>= "7.63.0"}
+  "libglib2-0-0" {>= "2.63.1"}
+  "libjcat1" {>= "0.1.0"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+]
+extra-source "libfwupd2_1.8.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fwupd/libfwupd2_1.8.12-2_amd64.deb"
+}

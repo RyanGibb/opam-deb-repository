@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtheora0_1.1.1+dfsg.1-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtheora0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libogg0" {>= "1.1.0"}
+]
+extra-source "libtheora0_1.1.1+dfsg.1-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtheora/libtheora0_1.1.1+dfsg.1-15_amd64.deb"
+}

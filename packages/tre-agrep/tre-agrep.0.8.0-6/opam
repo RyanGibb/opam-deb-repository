@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tre-agrep_0.8.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tre-agrep"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libtre5" {= "0.8.0-6"}
+]
+extra-source "tre-agrep_0.8.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tre/tre-agrep_0.8.0-6_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencv-viz-dev_4.5.1+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencv-viz-dev"]
+]
+depends: [
+  "libopencv-core-dev" {= "4.5.1+dfsg-5"}
+  "libopencv-viz4-5" {= "4.5.1+dfsg-5"}
+]
+extra-source "libopencv-viz-dev_4.5.1+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencv/libopencv-viz-dev_4.5.1+dfsg-5_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sanlock_3.8.5-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sanlock"]
+]
+depends: [
+  "adduser"
+  "libaio1" {>= "0.3.93"}
+  "libblkid1" {>= "2.17.2"}
+  "libc6" {>= "2.34"}
+  "libsanlock1" {>= "3.8.2"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "sanlock_3.8.5-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sanlock/sanlock_3.8.5-1+b1_amd64.deb"
+}

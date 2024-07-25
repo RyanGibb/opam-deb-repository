@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32stdc++6-12-dbg_12.2.0-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32stdc++6-12-dbg"]
+]
+depends: [
+  "gcc-12-base" {= "12.2.0-14"}
+  "lib32gcc-s1" {>= "4.2"}
+  "lib32stdc++6" {>= "12.2.0-14"}
+  "libc6-i386" {>= "2.36"}
+  "libstdc++-12-dev" {= "12.2.0-14"}
+]
+conflicts: [
+  "lib32stdc++6-10-dbg"
+  "lib32stdc++6-11-dbg"
+  "lib32stdc++6-4.0-dbg"
+  "lib32stdc++6-4.1-dbg"
+  "lib32stdc++6-4.2-dbg"
+  "lib32stdc++6-4.3-dbg"
+  "lib32stdc++6-4.4-dbg"
+  "lib32stdc++6-4.5-dbg"
+  "lib32stdc++6-4.6-dbg"
+  "lib32stdc++6-4.7-dbg"
+  "lib32stdc++6-4.8-dbg"
+  "lib32stdc++6-4.9-dbg"
+  "lib32stdc++6-5-dbg"
+  "lib32stdc++6-6-dbg"
+  "lib32stdc++6-7-dbg"
+  "lib32stdc++6-8-dbg"
+  "lib32stdc++6-9-dbg"
+  "lib32stdc++6-dbg"
+]
+extra-source "lib32stdc++6-12-dbg_12.2.0-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12/lib32stdc++6-12-dbg_12.2.0-14_amd64.deb"
+}

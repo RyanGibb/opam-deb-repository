@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kernelshark_2.9.3+really2.2.1-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kernelshark"]
+]
+depends: [
+  "fonts-freefont-ttf"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libkshark2" {>= "2.2.1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.2.0~alpha1"}
+  "libstdc++6" {>= "11"}
+  "libtraceevent1" {>= "5.4"}
+  "pkexec"
+  "trace-cmd" {>= "2.9.3"}
+  ("libqt5gui5" {>= "5.11.0~rc1"} | "libqt5gui5-gles" {>= "5.11.0~rc1"})
+]
+extra-source "kernelshark_2.9.3+really2.2.1-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kernelshark/kernelshark_2.9.3+really2.2.1-1~deb12u1_amd64.deb"
+}

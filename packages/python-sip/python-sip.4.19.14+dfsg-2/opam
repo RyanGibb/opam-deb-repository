@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-sip_4.19.14+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-sip"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-enum34"
+]
+extra-source "python-sip_4.19.14+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sip4/python-sip_4.19.14+dfsg-2_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cutecom_0.30.3-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cutecom"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libqt5core5a" {>= "5.12.2"}
+  "libqt5serialport5" {>= "5.6.0"}
+  "libqt5widgets5" {>= "5.2.0~alpha1"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.1.0"} | "libqt5gui5-gles" {>= "5.1.0"})
+]
+extra-source "cutecom_0.30.3-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cutecom/cutecom_0.30.3-1+b2_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmgl-mpi7.5.0_2.4.2.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmgl-mpi7.5.0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libmgl-data"
+  "libopenmpi3"
+  "libstdc++6" {>= "5"}
+]
+conflicts: [
+  "libmgl-mpi7.0.0"
+  "libmgl-mpi7.1.0"
+  "libmgl-mpi7.2.0"
+  "libmgl-mpi7.4.0"
+  "libmgl-mpi7.4.1"
+]
+extra-source "libmgl-mpi7.5.0_2.4.2.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mathgl/libmgl-mpi7.5.0_2.4.2.1-5_amd64.deb"
+}

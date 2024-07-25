@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gmt_6.4.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gmt"]
+]
+depends: [
+  "gmt-common" {= "6.4.0+dfsg-2"}
+  "libc6" {>= "2.35"}
+  "libgmt6" {>= "6.4.0"}
+  "libnetcdf19" {>= "3.6.1"}
+]
+extra-source "gmt_6.4.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gmt/gmt_6.4.0+dfsg-2_amd64.deb"
+}

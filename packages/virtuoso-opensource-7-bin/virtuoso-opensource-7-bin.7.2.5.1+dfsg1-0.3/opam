@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i virtuoso-opensource-7-bin_7.2.5.1+dfsg1-0.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r virtuoso-opensource-7-bin"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libminizip1" {>= "1.1"}
+  "libpcre3"
+  "libreadline8" {>= "6.0"}
+  "libssl3" {>= "3.0.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "virtuoso-opensource-7-bin_7.2.5.1+dfsg1-0.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/virtuoso-opensource/virtuoso-opensource-7-bin_7.2.5.1+dfsg1-0.3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gauche-gl_0.6-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gauche-gl"]
+]
+depends: [
+  "freeglut3" {>= "2.8.1"}
+  "libc6" {>= "2.14"}
+  "libgauche-0-97-0" {>= "0.9.10"}
+  "libgl1"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "gauche-gl_0.6-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gauche-gl/gauche-gl_0.6-4+b2_amd64.deb"
+}

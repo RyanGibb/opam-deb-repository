@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtelnet2_0.21-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtelnet2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libtelnet2_0.21-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtelnet/libtelnet2_0.21-5_amd64.deb"
+}

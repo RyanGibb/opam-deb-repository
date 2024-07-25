@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ngircd_26.1-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ngircd"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgnutls30" {>= "3.7.0"}
+  "libident" {>= "0.22-3"}
+  "libpam0g" {>= "0.99.7.1"}
+  "lsb-base"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "ircd-hybrid"
+  "ircd-irc2"
+  "ircd-ircu"
+]
+extra-source "ngircd_26.1-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ngircd/ngircd_26.1-1+deb11u1_amd64.deb"
+}

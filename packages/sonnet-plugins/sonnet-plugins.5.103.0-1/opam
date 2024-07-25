@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sonnet-plugins_5.103.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sonnet-plugins"]
+]
+depends: [
+  "libaspell15" {>= "0.60.8"}
+  "libc6" {>= "2.32"}
+  "libhunspell-1-7-0"
+  "libkf5sonnetcore5" {>= "4.96.0"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libstdc++6" {>= "5.2"}
+  "libvoikko1" {>= "4.3.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "sonnet-plugins_5.103.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sonnet/sonnet-plugins_5.103.0-1_amd64.deb"
+}

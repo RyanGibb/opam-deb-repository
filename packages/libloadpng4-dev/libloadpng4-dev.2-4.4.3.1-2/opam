@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libloadpng4-dev_2:4.4.3.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libloadpng4-dev"]
+]
+depends: [
+  "liballegro4-dev"
+  "libloadpng4-4" {= "2-4.4.3.1-2"}
+]
+extra-source "libloadpng4-dev_2:4.4.3.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/allegro4.4/libloadpng4-dev_4.4.3.1-2_amd64.deb"
+}

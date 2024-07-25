@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php8.2-memcache_8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php8.2-memcache"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+  "php8-2-common"
+  "zlib1g" {>= "1-1.1.4"}
+  ("libapache2-mod-php8-2" | "libphp8-2-embed" | "php8-2-cgi" | "php8-2-cli" | "php8-2-fpm" | "php8-2-phpdbg")
+]
+extra-source "php8.2-memcache_8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-memcache/php8.2-memcache_8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8_amd64.deb"
+}

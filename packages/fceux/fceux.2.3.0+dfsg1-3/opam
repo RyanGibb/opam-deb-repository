@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fceux_2.3.0+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fceux"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "liblua5-1-0"
+  "libminizip1" {>= "1.1"}
+  "libopengl0"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libqt5gui5" {>= "5.11.0~rc1"} | "libqt5gui5-gles" {>= "5.11.0~rc1"})
+]
+extra-source "fceux_2.3.0+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fceux/fceux_2.3.0+dfsg1-3_amd64.deb"
+}

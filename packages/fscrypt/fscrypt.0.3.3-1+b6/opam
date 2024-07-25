@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fscrypt_0.3.3-1+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fscrypt"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpam0g" {>= "0.99.7.1"}
+]
+extra-source "fscrypt_0.3.3-1+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fscrypt/fscrypt_0.3.3-1+b6_amd64.deb"
+}

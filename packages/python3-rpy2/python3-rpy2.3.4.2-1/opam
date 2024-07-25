@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-rpy2_3.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-rpy2"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python3" {>= "3~"}
+  "python3-any" {>= "3.6~"}
+  "python3-cffi-backend"
+  "python3-jinja2"
+  "python3-numpy"
+  "python3-tz"
+  "python3-tzlocal"
+  "r-base-core" {>= "3.5.0"}
+]
+extra-source "python3-rpy2_3.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rpy2/python3-rpy2_3.4.2-1_amd64.deb"
+}

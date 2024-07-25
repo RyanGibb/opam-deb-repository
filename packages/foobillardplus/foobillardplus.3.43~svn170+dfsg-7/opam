@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i foobillardplus_3.43~svn170+dfsg-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r foobillardplus"]
+]
+depends: [
+  "foobillardplus-data" {= "3.43~svn170+dfsg-7"}
+  "libc6" {>= "2.34"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgl1"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl-mixer1-2" {>= "1.2.12"}
+  "libsdl1-2-compat-shim"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "foobillardplus_3.43~svn170+dfsg-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/foobillardplus/foobillardplus_3.43~svn170+dfsg-7_amd64.deb"
+}

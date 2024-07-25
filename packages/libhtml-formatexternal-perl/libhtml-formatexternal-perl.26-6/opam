@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhtml-formatexternal-perl_26-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhtml-formatexternal-perl"]
+]
+depends: [
+  "libconstant-defer-perl"
+  "libipc-run-perl"
+  "perl-any"
+  ("liburi-perl" {>= "5.12"} | "liburi-perl" {< "5.11"})
+]
+extra-source "libhtml-formatexternal-perl_26-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhtml-formatexternal-perl/libhtml-formatexternal-perl_26-6_all.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libassa-3.5-5-dev_3.5.1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libassa-3.5-5-dev"]
+]
+depends: [
+  "libassa-3-5-5v5" {= "3.5.1-7"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "libtirpc-dev"
+]
+conflicts: [
+  "libassa0-dev"
+  "libassa3.4-0-dev"
+  "libassa3.5-5-dev"
+]
+extra-source "libassa-3.5-5-dev_3.5.1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libassa/libassa-3.5-5-dev_3.5.1-7_amd64.deb"
+}

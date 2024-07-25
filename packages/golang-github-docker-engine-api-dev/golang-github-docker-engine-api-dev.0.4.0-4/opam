@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-docker-engine-api-dev_0.4.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-docker-engine-api-dev"]
+]
+depends: [
+  "golang-github-docker-distribution-dev"
+  "golang-github-docker-go-connections-dev"
+  "golang-github-docker-go-units-dev" {>= "0.3.0"}
+]
+extra-source "golang-github-docker-engine-api-dev_0.4.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-docker-engine-api/golang-github-docker-engine-api-dev_0.4.0-4_all.deb"
+}

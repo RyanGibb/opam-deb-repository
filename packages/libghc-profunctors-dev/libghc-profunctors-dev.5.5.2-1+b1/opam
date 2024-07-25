@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-profunctors-dev_5.5.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-profunctors-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-base-orphans-dev"
+  "libghc-bifunctors-dev"
+  "libghc-comonad-dev"
+  "libghc-contravariant-dev"
+  "libghc-distributive-dev"
+  "libghc-tagged-dev"
+  "libgmp10"
+]
+extra-source "libghc-profunctors-dev_5.5.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-profunctors/libghc-profunctors-dev_5.5.2-1+b1_amd64.deb"
+}

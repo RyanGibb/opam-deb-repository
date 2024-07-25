@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gitk_1:2.30.2-1+deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gitk"]
+]
+depends: [
+  "git" {< "1-2.30.2-."}
+  "git" {> "1-2.30.2"}
+  "tk"
+]
+extra-source "gitk_1:2.30.2-1+deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/git/gitk_2.30.2-1+deb11u2_all.deb"
+}

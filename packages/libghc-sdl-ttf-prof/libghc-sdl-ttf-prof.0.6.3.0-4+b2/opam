@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-sdl-ttf-prof_0.6.3.0-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-sdl-ttf-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-sdl-prof"
+  "libghc-sdl-ttf-dev" {= "0.6.3.0-4+b2"}
+]
+extra-source "libghc-sdl-ttf-prof_0.6.3.0-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-sdl-ttf/libghc-sdl-ttf-prof_0.6.3.0-4+b2_amd64.deb"
+}

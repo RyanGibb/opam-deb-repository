@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdkim-dev_1:1.0.21-4+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdkim-dev"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdkim1d" {= "1-1.0.21-4+b3"}
+  "libssl-dev"
+]
+extra-source "libdkim-dev_1:1.0.21-4+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdkim/libdkim-dev_1.0.21-4+b3_amd64.deb"
+}

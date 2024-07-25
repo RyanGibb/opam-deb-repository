@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openvswitch-switch-dpdk_2.15.0+ds1-2+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openvswitch-switch-dpdk"]
+]
+depends: [
+  "dpdk"
+  "libc6" {>= "2.29"}
+  "libcap-ng0" {>= "0.7.9"}
+  "librte-eal21" {>= "20.11"}
+  "librte-ethdev21" {>= "20.11"}
+  "librte-mbuf21" {>= "20.11"}
+  "librte-mempool21" {>= "20.11"}
+  "librte-meter21" {>= "20.11"}
+  "librte-vhost21" {>= "20.11"}
+  "libssl1-1" {>= "1.1.0"}
+  "libunbound8" {>= "1.8.0"}
+  "openvswitch-common" {>= "2.15.0+ds1"}
+  "openvswitch-switch" {= "2.15.0+ds1-2+deb11u5"}
+]
+extra-source "openvswitch-switch-dpdk_2.15.0+ds1-2+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openvswitch/openvswitch-switch-dpdk_2.15.0+ds1-2+deb11u5_amd64.deb"
+}

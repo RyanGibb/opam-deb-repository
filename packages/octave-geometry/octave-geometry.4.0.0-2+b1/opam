@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-geometry_4.0.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-geometry"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "liboctave8"
+  "libstdc++6" {>= "5.2"}
+  "octave" {>= "6.1.0"}
+  "octave-matgeom" {>= "1.0.0"}
+  "python3"
+  "python3-lxml"
+]
+extra-source "octave-geometry_4.0.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave-geometry/octave-geometry_4.0.0-2+b1_amd64.deb"
+}

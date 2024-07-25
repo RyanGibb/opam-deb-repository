@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdaq2_2.0.4-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdaq2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "libdaq0"
+]
+extra-source "libdaq2_2.0.4-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/daq/libdaq2_2.0.4-3+b1_amd64.deb"
+}

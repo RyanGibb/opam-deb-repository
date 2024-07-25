@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsafec3_3.7.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsafec3"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+]
+extra-source "libsafec3_3.7.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/safeclib/libsafec3_3.7.1-2_amd64.deb"
+}

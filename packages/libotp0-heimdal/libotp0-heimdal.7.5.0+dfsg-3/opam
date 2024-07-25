@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libotp0-heimdal_7.5.0+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libotp0-heimdal"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdb5-3"
+  "libhcrypto4-heimdal" {>= "1.4.0+git20110226"}
+  "libroken18-heimdal" {>= "1.4.0+git20110226"}
+]
+conflicts: [
+  "libotp0-kerberos4kth"
+]
+extra-source "libotp0-heimdal_7.5.0+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heimdal/libotp0-heimdal_7.5.0+dfsg-3_amd64.deb"
+}

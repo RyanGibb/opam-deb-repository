@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgarmin-dev_0~svn320-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgarmin-dev"]
+]
+depends: [
+  "libgarmin0" {= "0~svn320-6"}
+]
+conflicts: [
+  "garmin-forerunner-tools (<< 0.10-1)"
+]
+extra-source "libgarmin-dev_0~svn320-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgarmin/libgarmin-dev_0~svn320-6_amd64.deb"
+}

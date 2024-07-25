@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-delayedarray_0.8.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-delayedarray"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.2-1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.27.1"}
+  "r-bioc-biocparallel"
+  "r-bioc-iranges" {>= "2.11.17"}
+  "r-bioc-s4vectors" {>= "0.19.15"}
+  "r-cran-matrixstats"
+]
+extra-source "r-bioc-delayedarray_0.8.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-delayedarray/r-bioc-delayedarray_0.8.0+dfsg-2_amd64.deb"
+}

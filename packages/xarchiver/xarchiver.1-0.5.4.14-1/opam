@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xarchiver_1:0.5.4.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xarchiver"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgtk-3-0" {>= "3.0.0"}
+]
+extra-source "xarchiver_1:0.5.4.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xarchiver/xarchiver_0.5.4.14-1_amd64.deb"
+}

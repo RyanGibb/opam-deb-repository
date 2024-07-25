@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhugs-x11-bundled_98.200609.21-5.4+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhugs-x11-bundled"]
+]
+depends: [
+  "hugs" {= "98.200609.21-5.4+b5"}
+  "libc6" {>= "2.2.5"}
+  "libhugs-base-bundled"
+  "libx11-6"
+]
+conflicts: [
+  "libhugs-x11"
+]
+extra-source "libhugs-x11-bundled_98.200609.21-5.4+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hugs98/libhugs-x11-bundled_98.200609.21-5.4+b5_amd64.deb"
+}

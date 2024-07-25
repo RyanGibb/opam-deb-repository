@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tshark_4.0.11-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tshark"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.35.8"}
+  "libpcap0-8" {>= "1.5.1"}
+  "libpcre2-8-0" {>= "10.22"}
+  "libwireshark16" {>= "4.0.0"}
+  "libwiretap13" {>= "3.5.0"}
+  "libwsutil14" {>= "3.7.0"}
+  "wireshark-common" {= "4.0.11-1~deb12u1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "tshark_4.0.11-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wireshark/tshark_4.0.11-1~deb12u1_amd64.deb"
+}

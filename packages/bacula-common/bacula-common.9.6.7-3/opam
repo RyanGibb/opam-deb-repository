@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bacula-common_9.6.7-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bacula-common"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "libcap2" {>= "1-2.10"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5"}
+  "libwrap0" {>= "7.6-4~"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "bacula-common_9.6.7-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bacula/bacula-common_9.6.7-3_amd64.deb"
+}

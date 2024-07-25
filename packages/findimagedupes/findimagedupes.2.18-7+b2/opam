@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i findimagedupes_2.18-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r findimagedupes"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libfile-mimeinfo-perl"
+  "libgraphics-magick-perl"
+  "libinline-perl"
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+  ("libinline-c-perl" | "libinline-perl" {< "0.57~"})
+]
+extra-source "findimagedupes_2.18-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/findimagedupes/findimagedupes_2.18-7+b2_amd64.deb"
+}

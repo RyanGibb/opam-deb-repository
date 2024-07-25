@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i docker-registry_2.8.2+ds1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r docker-registry"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "lsb-base"
+]
+extra-source "docker-registry_2.8.2+ds1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/docker-registry/docker-registry_2.8.2+ds1-1_amd64.deb"
+}

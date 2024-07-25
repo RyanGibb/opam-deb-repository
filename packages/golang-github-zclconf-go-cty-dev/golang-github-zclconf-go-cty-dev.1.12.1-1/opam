@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-zclconf-go-cty-dev_1.12.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-zclconf-go-cty-dev"]
+]
+depends: [
+  "golang-github-apparentlymart-go-textseg-dev" {>= "13.0.0~"}
+  "golang-golang-x-text-dev"
+  "golang-gopkg-vmihailenco-msgpack-v2-dev"
+]
+extra-source "golang-github-zclconf-go-cty-dev_1.12.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-zclconf-go-cty/golang-github-zclconf-go-cty-dev_1.12.1-1_all.deb"
+}

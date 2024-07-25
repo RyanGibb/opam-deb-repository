@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqdbm-java_1.8.78-12+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqdbm-java"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libqdbm14" {>= "1.8.74"}
+]
+extra-source "libqdbm-java_1.8.78-12+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qdbm/libqdbm-java_1.8.78-12+b1_amd64.deb"
+}

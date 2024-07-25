@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-gccjit_0.4-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-gccjit"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgccjit0" {>= "5.1"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+]
+extra-source "python3-gccjit_0.4-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pygccjit/python3-gccjit_0.4-11_amd64.deb"
+}

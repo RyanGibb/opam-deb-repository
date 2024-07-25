@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jhead_1:3.06.0.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jhead"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libjpeg-turbo-progs"
+  ("imagemagick" | "imagemagick-6-q16hdri" | "graphicsmagick-imagemagick-compat")
+]
+extra-source "jhead_1:3.06.0.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jhead/jhead_3.06.0.1-6_amd64.deb"
+}

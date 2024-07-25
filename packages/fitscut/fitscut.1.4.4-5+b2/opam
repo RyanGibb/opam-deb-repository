@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fitscut_1.4.4-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fitscut"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcfitsio10" {>= "4.2.0~"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libwcstools1" {>= "3.8.4"}
+]
+extra-source "fitscut_1.4.4-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fitscut/fitscut_1.4.4-5+b2_amd64.deb"
+}

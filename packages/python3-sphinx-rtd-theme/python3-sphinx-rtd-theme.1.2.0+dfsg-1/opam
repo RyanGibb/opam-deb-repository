@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sphinx-rtd-theme_1.2.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sphinx-rtd-theme"]
+]
+depends: [
+  "python3-any"
+  "python3-docutils"
+  "python3-sphinx"
+  "sphinx-rtd-theme-common" {= "1.2.0+dfsg-1"}
+]
+extra-source "python3-sphinx-rtd-theme_1.2.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sphinx-rtd-theme/python3-sphinx-rtd-theme_1.2.0+dfsg-1_all.deb"
+}

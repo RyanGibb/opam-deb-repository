@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libotbtransform-8.1-1_8.1.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libotbtransform-8.1-1"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.0"}
+  "libinsighttoolkit4-13" {>= "4.13.3withdata-dfsg2"}
+  "libotbcommon-8-1-1" {>= "6.6.0"}
+  "libotbiogdal-8-1-1" {>= "8.0.0"}
+  "libotbmetadata-8-1-1" {>= "8.0.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libotbtransform-8.1-1_8.1.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/otb/libotbtransform-8.1-1_8.1.1+dfsg-1_amd64.deb"
+}

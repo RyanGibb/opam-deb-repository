@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmysqlcppconn7v5_1.1.12-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmysqlcppconn7v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libmariadb3" {>= "3.0.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libmysqlcppconn7"
+]
+extra-source "libmysqlcppconn7v5_1.1.12-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mysql-connector-c++/libmysqlcppconn7v5_1.1.12-4_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgit2-glib-1.0-0_1.1.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgit2-glib-1.0-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgit2-1-5" {>= "1.5.0"}
+  "libglib2-0-0" {>= "2.67.3+git20210214"}
+]
+extra-source "libgit2-glib-1.0-0_1.1.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgit2-glib/libgit2-glib-1.0-0_1.1.0-1+b1_amd64.deb"
+}

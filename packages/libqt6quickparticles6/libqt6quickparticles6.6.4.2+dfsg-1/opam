@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt6quickparticles6_6.4.2+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt6quickparticles6"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libqt6core6"
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6gui6" {>= "6.4.2+dfsg~"}
+  "libqt6qml6" {>= "6.3.0"}
+  "libqt6quick6" {>= "6.2.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libqt6quickparticles6_6.4.2+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-declarative/libqt6quickparticles6_6.4.2+dfsg-1_amd64.deb"
+}

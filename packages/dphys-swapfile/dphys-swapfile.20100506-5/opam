@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dphys-swapfile_20100506-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dphys-swapfile"]
+]
+depends: [
+  "dc"
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "dphys-swapfile_20100506-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dphys-swapfile/dphys-swapfile_20100506-5_all.deb"
+}

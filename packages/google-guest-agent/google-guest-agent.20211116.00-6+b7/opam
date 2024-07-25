@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i google-guest-agent_20211116.00-6+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r google-guest-agent"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+]
+conflicts: [
+  "python3-google-compute-engine"
+]
+extra-source "google-guest-agent_20211116.00-6+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/google-guest-agent/google-guest-agent_20211116.00-6+b7_amd64.deb"
+}

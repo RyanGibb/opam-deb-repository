@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i papi-examples_5.7.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r papi-examples"]
+]
+depends: [
+  "libpapi-dev" {< "5.7.0+dfsg.~-~"}
+  "libpapi-dev" {>= "5.7.0+dfsg-2"}
+]
+extra-source "papi-examples_5.7.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/papi/papi-examples_5.7.0+dfsg-2_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest-fake-httpd-perl_0.08-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest-fake-httpd-perl"]
+]
+depends: [
+  "libhttp-daemon-perl"
+  "libplack-perl"
+  "libtest-tcp-perl"
+  "liburi-perl"
+  "perl"
+]
+extra-source "libtest-fake-httpd-perl_0.08-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest-fake-httpd-perl/libtest-fake-httpd-perl_0.08-1_all.deb"
+}

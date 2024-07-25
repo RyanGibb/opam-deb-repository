@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-crossbeam-epoch+nightly-dev_0.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-crossbeam-epoch+nightly-dev"]
+]
+depends: [
+  "librust-arrayvec-0-4+use-union-dev"
+  "librust-crossbeam-epoch-0-5-dev"
+  "librust-crossbeam-utils-0-6+nightly-dev"
+]
+extra-source "librust-crossbeam-epoch+nightly-dev_0.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-crossbeam-epoch/librust-crossbeam-epoch+nightly-dev_0.7.1-1_amd64.deb"
+}

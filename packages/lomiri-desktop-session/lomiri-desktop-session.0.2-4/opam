@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lomiri-desktop-session_0.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lomiri-desktop-session"]
+]
+depends: [
+  "dbus"
+  "lomiri"
+  "lomiri-terminal-app"
+  ("pulseaudio" | "pipewire-pulse")
+]
+extra-source "lomiri-desktop-session_0.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri-session/lomiri-desktop-session_0.2-4_all.deb"
+}

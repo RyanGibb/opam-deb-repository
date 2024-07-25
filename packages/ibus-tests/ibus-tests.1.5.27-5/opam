@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibus-tests_1.5.27-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibus-tests"]
+]
+depends: [
+  "dbus-x11"
+  "gnome-desktop-testing"
+  "gnome-session"
+  "gnome-shell"
+  "ibus" {= "1.5.27-5"}
+  "libc6" {>= "2.34"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libglib2-0-0" {>= "2.57.2"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libibus-1-0-5" {>= "1.5.21"}
+  "libx11-6"
+  "libxtst6"
+  "locales-all"
+  "xvfb"
+]
+extra-source "ibus-tests_1.5.27-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibus/ibus-tests_1.5.27-5_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnotcurses-dev_2.2.3+dfsg.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnotcurses-dev"]
+]
+depends: [
+  "libnotcurses-core-dev" {>= "2.2.3+dfsg.1-1"}
+  "libnotcurses2" {= "2.2.3+dfsg.1-1"}
+]
+extra-source "libnotcurses-dev_2.2.3+dfsg.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/notcurses/libnotcurses-dev_2.2.3+dfsg.1-1_amd64.deb"
+}

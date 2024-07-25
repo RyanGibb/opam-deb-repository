@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvotca-csg6_1.6.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvotca-csg6"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgromacs5" {>= "2020.5"}
+  "libstdc++6" {>= "9"}
+  "libvotca-tools6" {>= "1.6.4"}
+]
+extra-source "libvotca-csg6_1.6.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/votca-csg/libvotca-csg6_1.6.4-1_amd64.deb"
+}

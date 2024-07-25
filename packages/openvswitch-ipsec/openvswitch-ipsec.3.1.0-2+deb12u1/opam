@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openvswitch-ipsec_3.1.0-2+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openvswitch-ipsec"]
+]
+depends: [
+  "iproute2"
+  "openvswitch-common" {= "3.1.0-2+deb12u1"}
+  "openvswitch-switch" {= "3.1.0-2+deb12u1"}
+  "python3-openvswitch" {= "3.1.0-2+deb12u1"}
+  "strongswan"
+]
+extra-source "openvswitch-ipsec_3.1.0-2+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openvswitch/openvswitch-ipsec_3.1.0-2+deb12u1_amd64.deb"
+}

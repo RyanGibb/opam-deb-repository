@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhttp-cookiemonster-perl_0.09-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhttp-cookiemonster-perl"]
+]
+depends: [
+  "libhttp-cookies-perl"
+  "libmoo-perl" {>= "1.000003"}
+  "libsafe-isa-perl"
+  "libsub-exporter-perl"
+  "liburi-perl"
+  "perl"
+]
+extra-source "libhttp-cookiemonster-perl_0.09-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhttp-cookiemonster-perl/libhttp-cookiemonster-perl_0.09-1_all.deb"
+}

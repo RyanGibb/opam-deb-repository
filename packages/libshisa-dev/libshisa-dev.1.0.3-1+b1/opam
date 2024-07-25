@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libshisa-dev_1.0.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libshisa-dev"]
+]
+depends: [
+  "libshisa0" {= "1.0.3-1+b1"}
+  "libshishi-dev" {= "1.0.3-1+b1"}
+  "sgml-base" {>= "1.28"}
+]
+extra-source "libshisa-dev_1.0.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shishi/libshisa-dev_1.0.3-1+b1_amd64.deb"
+}

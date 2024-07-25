@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bioawk_1.0-4+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bioawk"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "bioawk_1.0-4+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bioawk/bioawk_1.0-4+deb12u1_amd64.deb"
+}

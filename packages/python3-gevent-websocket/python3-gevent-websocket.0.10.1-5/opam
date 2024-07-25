@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-gevent-websocket_0.10.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-gevent-websocket"]
+]
+depends: [
+  "python3-any" {>= "3.6~"}
+  "python3-gevent"
+]
+extra-source "python3-gevent-websocket_0.10.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gevent-websocket/python3-gevent-websocket_0.10.1-5_all.deb"
+}

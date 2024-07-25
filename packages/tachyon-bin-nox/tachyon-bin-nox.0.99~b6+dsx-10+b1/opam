@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tachyon-bin-nox_0.99~b6+dsx-10+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tachyon-bin-nox"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  ("libtachyon-mt-0" {= "0.99~b6+dsx-10+b1"} | "libtachyon")
+]
+extra-source "tachyon-bin-nox_0.99~b6+dsx-10+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tachyon/tachyon-bin-nox_0.99~b6+dsx-10+b1_amd64.deb"
+}

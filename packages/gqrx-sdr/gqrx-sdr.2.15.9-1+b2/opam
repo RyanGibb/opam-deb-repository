@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gqrx-sdr_2.15.9-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gqrx-sdr"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "4.0"}
+  "libgnuradio-analog3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-blocks3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-digital3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-fft3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-filter3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-network3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-osmosdr0-2-0" {>= "0.2.3"}
+  "libgnuradio-pmt3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-runtime3-10-5" {>= "3.10.5.0"}
+  "libpulse0" {>= "0.99.1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.8.0"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libstdc++6" {>= "11"}
+  "libvolk2-5" {>= "2.5.2"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "gqrx-sdr_2.15.9-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gqrx-sdr/gqrx-sdr_2.15.9-1+b2_amd64.deb"
+}

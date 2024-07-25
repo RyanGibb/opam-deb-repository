@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdune-functions-dev_2.7.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdune-functions-dev"]
+]
+depends: [
+  "libdune-grid-dev" {>= "2.7.1"}
+  "libdune-localfunctions-dev" {>= "2.7.1"}
+  "libdune-typetree-dev" {>= "2.7.1"}
+]
+extra-source "libdune-functions-dev_2.7.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dune-functions/libdune-functions-dev_2.7.1-2_all.deb"
+}

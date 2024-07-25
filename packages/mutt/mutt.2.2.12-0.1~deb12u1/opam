@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mutt_2.2.12-0.1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mutt"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgnutls30" {>= "3.7.5"}
+  "libgpg-error0" {>= "1.33"}
+  "libgpgme11" {>= "1.11.1"}
+  "libgsasl18" {>= "1.1"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libidn2-0" {>= "2.0.0"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libtokyocabinet9" {>= "1.4.47"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "mutt_2.2.12-0.1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mutt/mutt_2.2.12-0.1~deb12u1_amd64.deb"
+}

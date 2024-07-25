@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib64stdc++-9-dev-i386-cross_9.3.0-22cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib64stdc++-9-dev-i386-cross"]
+]
+depends: [
+  "gcc-9-cross-base" {>= "9.3.0-22"}
+  "lib64gcc-9-dev-i386-cross" {= "9.3.0-22cross1"}
+  "lib64stdc++6-i386-cross" {>= "9.3.0-22cross1"}
+  "libstdc++-9-dev-i386-cross" {= "9.3.0-22cross1"}
+]
+extra-source "lib64stdc++-9-dev-i386-cross_9.3.0-22cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-9-cross/lib64stdc++-9-dev-i386-cross_9.3.0-22cross1_all.deb"
+}

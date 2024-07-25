@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnugo_3.8-9+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnugo"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libncurses6" {>= "6"}
+  "libreadline7" {>= "6.0"}
+  "libtinfo6" {>= "6"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "gnugo_3.8-9+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnugo/gnugo_3.8-9+b3_amd64.deb"
+}

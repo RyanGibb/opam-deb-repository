@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libace-tkreactor-dev_7.0.8+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libace-tkreactor-dev"]
+]
+depends: [
+  "libace-dev" {= "7.0.8+dfsg-2"}
+  "libace-tkreactor-7-0-8" {= "7.0.8+dfsg-2"}
+  "tk-dev" {>= "8.5"}
+]
+extra-source "libace-tkreactor-dev_7.0.8+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ace/libace-tkreactor-dev_7.0.8+dfsg-2_amd64.deb"
+}

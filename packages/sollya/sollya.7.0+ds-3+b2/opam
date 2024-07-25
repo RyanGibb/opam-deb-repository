@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sollya_7.0+ds-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sollya"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libsollya7" {>= "7.0"}
+]
+extra-source "sollya_7.0+ds-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sollya/sollya_7.0+ds-3+b2_amd64.deb"
+}

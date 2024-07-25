@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcb-rnd-cloud_3.0.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcb-rnd-cloud"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfungw1"
+  "librnd3-cloud" {>= "3.2.0"}
+  "libxml2" {>= "2.7.4"}
+  "pcb-rnd-core" {= "3.0.6-1"}
+  "pcb-rnd-export" {= "3.0.6-1"}
+]
+extra-source "pcb-rnd-cloud_3.0.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcb-rnd/pcb-rnd-cloud_3.0.6-1_amd64.deb"
+}

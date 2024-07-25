@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libodb-boost-2.4_2.4.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libodb-boost-2.4"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc1" {>= "1-3.0"}
+  "libodb-2-4"
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libodb-boost-2.4_2.4.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libodb-boost/libodb-boost-2.4_2.4.0-1+b1_amd64.deb"
+}

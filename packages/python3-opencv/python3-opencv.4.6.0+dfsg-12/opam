@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-opencv_4.6.0+dfsg-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-opencv"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libopencv-calib3d406" {>= "4.6.0+dfsg"}
+  "libopencv-contrib406" {>= "4.6.0+dfsg"}
+  "libopencv-core406" {>= "4.6.0+dfsg"}
+  "libopencv-dnn406" {>= "4.6.0+dfsg"}
+  "libopencv-features2d406" {>= "4.6.0+dfsg"}
+  "libopencv-flann406" {>= "4.6.0+dfsg"}
+  "libopencv-highgui406" {>= "4.6.0+dfsg"}
+  "libopencv-imgcodecs406" {>= "4.6.0+dfsg"}
+  "libopencv-imgproc406" {>= "4.6.0+dfsg"}
+  "libopencv-ml406" {>= "4.6.0+dfsg"}
+  "libopencv-objdetect406" {>= "4.6.0+dfsg"}
+  "libopencv-photo406" {>= "4.6.0+dfsg"}
+  "libopencv-shape406" {>= "4.6.0+dfsg"}
+  "libopencv-stitching406" {>= "4.6.0+dfsg"}
+  "libopencv-video406" {>= "4.6.0+dfsg"}
+  "libopencv-videoio406" {>= "4.6.0+dfsg"}
+  "libopencv-viz406" {>= "4.6.0+dfsg"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+]
+extra-source "python3-opencv_4.6.0+dfsg-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencv/python3-opencv_4.6.0+dfsg-12_amd64.deb"
+}

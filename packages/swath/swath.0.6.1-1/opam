@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i swath_0.6.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r swath"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdatrie1" {>= "0.2.0"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5"}
+  "swath-data" {>= "0.5.5-2"}
+]
+extra-source "swath_0.6.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/swath/swath_0.6.1-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i samba-ad-dc_2:4.17.12+dfsg-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r samba-ad-dc"]
+]
+depends: [
+  "samba" {>= "2-4.17.12+dfsg-0+deb12u1"}
+  "samba-dsdb-modules"
+  "samba-vfs-modules"
+  "winbind"
+]
+extra-source "samba-ad-dc_2:4.17.12+dfsg-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/samba/samba-ad-dc_4.17.12+dfsg-0+deb12u1_all.deb"
+}

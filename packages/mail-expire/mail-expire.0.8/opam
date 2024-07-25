@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mail-expire_0.8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mail-expire"]
+]
+depends: [
+  "libcompress-zlib-perl"
+  "libdate-calc-perl"
+  "libmail-mbox-messageparser-perl"
+  "perl-any"
+]
+extra-source "mail-expire_0.8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mail-expire/mail-expire_0.8_all.deb"
+}

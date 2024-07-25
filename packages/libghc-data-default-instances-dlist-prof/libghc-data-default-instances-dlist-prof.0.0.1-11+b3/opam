@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-data-default-instances-dlist-prof_0.0.1-11+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-data-default-instances-dlist-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-data-default-class-prof"
+  "libghc-data-default-instances-dlist-dev" {= "0.0.1-11+b3"}
+  "libghc-dlist-prof"
+]
+extra-source "libghc-data-default-instances-dlist-prof_0.0.1-11+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-data-default-instances-dlist/libghc-data-default-instances-dlist-prof_0.0.1-11+b3_amd64.deb"
+}

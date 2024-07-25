@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mirtest-dev_2.12.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mirtest-dev"]
+]
+depends: [
+  "libboost-filesystem-dev"
+  "libboost-system-dev"
+  "libmircommon-dev" {= "2.12.1-1"}
+  "libmirplatform-dev" {= "2.12.1-1"}
+  "libmirserver-dev" {= "2.12.1-1"}
+  "mir-renderer-gl-dev" {= "2.12.1-1"}
+]
+extra-source "mirtest-dev_2.12.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mir/mirtest-dev_2.12.1-1_amd64.deb"
+}

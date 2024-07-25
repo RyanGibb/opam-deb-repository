@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i frama-c-base_20171101+sulfur+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r frama-c-base"]
+]
+depends: [
+  "gcc"
+  "libc6" {>= "2.27"}
+  "libfindlib-ocaml"
+  "libgmp10"
+  "libncurses6" {>= "6"}
+  "libocamlgraph-ocaml-dev"
+  "libtinfo6" {>= "6"}
+  "libzarith-ocaml"
+  "ocaml-base-nox"
+]
+extra-source "frama-c-base_20171101+sulfur+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/frama-c/frama-c-base_20171101+sulfur+dfsg-2_amd64.deb"
+}

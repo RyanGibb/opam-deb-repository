@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pdfposter_0.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pdfposter"]
+]
+depends: [
+  "libjs-jquery"
+  "libjs-sphinxdoc" {>= "4.3"}
+  "libjs-underscore"
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-pypdf2"
+]
+extra-source "pdfposter_0.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdfposter/pdfposter_0.8.1-1_all.deb"
+}

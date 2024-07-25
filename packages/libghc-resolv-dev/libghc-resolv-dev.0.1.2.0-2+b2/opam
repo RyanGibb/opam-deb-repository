@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-resolv-dev_0.1.2.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-resolv-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-base16-bytestring-dev"
+  "libgmp10"
+]
+extra-source "libghc-resolv-dev_0.1.2.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-resolv/libghc-resolv-dev_0.1.2.0-2+b2_amd64.deb"
+}

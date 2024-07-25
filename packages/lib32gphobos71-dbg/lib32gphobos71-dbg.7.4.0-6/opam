@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32gphobos71-dbg_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32gphobos71-dbg"]
+]
+depends: [
+  "gcc-7-base" {= "7.4.0-6"}
+  "lib32gphobos71" {= "7.4.0-6"}
+]
+extra-source "lib32gphobos71-dbg_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/lib32gphobos71-dbg_7.4.0-6_amd64.deb"
+}

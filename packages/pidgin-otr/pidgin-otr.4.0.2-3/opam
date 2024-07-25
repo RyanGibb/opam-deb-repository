@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pidgin-otr_4.0.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pidgin-otr"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libotr5" {>= "4.0.0"}
+]
+extra-source "pidgin-otr_4.0.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pidgin-otr/pidgin-otr_4.0.2-3_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mlucas_17.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mlucas"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "python"
+]
+extra-source "mlucas_17.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mlucas/mlucas_17.1-3_amd64.deb"
+}

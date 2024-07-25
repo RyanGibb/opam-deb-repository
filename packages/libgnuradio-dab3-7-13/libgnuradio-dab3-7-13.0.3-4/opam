@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnuradio-dab3.7.13_0.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnuradio-dab3.7.13"]
+]
+depends: [
+  "libboost-system1-67-0"
+  "libc6" {>= "2.14"}
+  "libfaad2" {>= "2.7"}
+  "libgcc1" {>= "1-4.0"}
+  "libgnuradio-filter3-7-13"
+  "libgnuradio-pmt3-7-13"
+  "libgnuradio-runtime3-7-13"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libgnuradio-dab3.7.13_0.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gr-dab/libgnuradio-dab3.7.13_0.3-4_amd64.deb"
+}

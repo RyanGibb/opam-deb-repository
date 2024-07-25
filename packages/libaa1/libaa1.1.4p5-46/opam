@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaa1_1.4p5-46_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaa1"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgpm2" {>= "1.20.7"}
+  "libncurses6" {>= "6"}
+  "libslang2" {>= "2.2.4"}
+  "libtinfo6" {>= "6"}
+  "libx11-6"
+]
+extra-source "libaa1_1.4p5-46_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aalib/libaa1_1.4p5-46_amd64.deb"
+}

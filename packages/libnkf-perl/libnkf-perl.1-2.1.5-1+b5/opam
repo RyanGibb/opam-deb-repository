@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnkf-perl_1:2.1.5-1+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnkf-perl"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libnkf-perl_1:2.1.5-1+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nkf/libnkf-perl_2.1.5-1+b5_amd64.deb"
+}

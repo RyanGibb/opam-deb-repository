@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-oligoclasses_1.60.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-oligoclasses"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-affyio" {>= "1.23.2"}
+  "r-bioc-biobase" {>= "2.17.8"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.27.1"}
+  "r-bioc-biostrings" {>= "2.23.6"}
+  "r-bioc-genomicranges" {>= "1.23.7"}
+  "r-bioc-iranges" {>= "2.5.17"}
+  "r-bioc-s4vectors" {>= "0.9.25"}
+  "r-bioc-summarizedexperiment"
+  "r-cran-biocmanager"
+  "r-cran-dbi"
+  "r-cran-ff"
+  "r-cran-foreach"
+  "r-cran-rsqlite"
+]
+extra-source "r-bioc-oligoclasses_1.60.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-oligoclasses/r-bioc-oligoclasses_1.60.0-1_all.deb"
+}

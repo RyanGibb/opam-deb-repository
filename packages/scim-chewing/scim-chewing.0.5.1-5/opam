@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scim-chewing_0.5.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scim-chewing"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libchewing3" {>= "0.4.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libscim8v5" {>= "1.4"}
+  "libstdc++6" {>= "5.2"}
+  "scim"
+]
+extra-source "scim-chewing_0.5.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scim-chewing/scim-chewing_0.5.1-5_amd64.deb"
+}

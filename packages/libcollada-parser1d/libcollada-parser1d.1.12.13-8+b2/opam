@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcollada-parser1d_1.12.13-8+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcollada-parser1d"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libclass-loader3d" {>= "2.4.0"}
+  "libcollada-dom2-5-dp0" {>= "2.5.0+ds1"}
+  "libconsole-bridge1-0" {>= "1.0.1+dfsg2"}
+  "libgcc-s1" {>= "3.0"}
+  "librosconsole3d" {>= "1.14.3"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libcollada-parser1d_1.12.13-8+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-collada-urdf/libcollada-parser1d_1.12.13-8+b2_amd64.deb"
+}

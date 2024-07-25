@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxapian-jni_1.4.22-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxapian-jni"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libxapian30" {>= "1.4.19~"}
+]
+extra-source "libxapian-jni_1.4.22-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xapian-bindings/libxapian-jni_1.4.22-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xmms2-plugin-daap_0.8+dfsg-18.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xmms2-plugin-daap"]
+]
+depends: [
+  "libavahi-client3" {>= "0.6.16"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libavahi-glib1" {>= "0.6.16"}
+  "libc6" {>= "2.15"}
+  "libcurl4" {>= "7.16.2"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "xmms2-core" {= "0.8+dfsg-18.2"}
+]
+extra-source "xmms2-plugin-daap_0.8+dfsg-18.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmms2/xmms2-plugin-daap_0.8+dfsg-18.2_amd64.deb"
+}

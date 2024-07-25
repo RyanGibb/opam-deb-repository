@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dico_2.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dico"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libdico2" {>= "2.3"}
+  "libgsasl7" {>= "1.1"}
+  "libreadline7" {>= "6.0"}
+]
+conflicts: [
+  "le-dico-de-rene-cougnenc"
+]
+extra-source "dico_2.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dico/dico_2.7-2_amd64.deb"
+}

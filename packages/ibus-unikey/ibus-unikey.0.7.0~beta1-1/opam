@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibus-unikey_0.7.0~beta1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibus-unikey"]
+]
+depends: [
+  "ibus" {>= "1.5.22-2"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.26.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libibus-1-0-5" {>= "1.5.22-2"}
+  "libstdc++6" {>= "5.2"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "ibus-unikey_0.7.0~beta1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibus-unikey/ibus-unikey_0.7.0~beta1-1_amd64.deb"
+}

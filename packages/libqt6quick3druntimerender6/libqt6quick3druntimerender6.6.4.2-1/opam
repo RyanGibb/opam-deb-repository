@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt6quick3druntimerender6_6.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt6quick3druntimerender6"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libqt6core6"
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6gui6" {>= "6.4.2+dfsg~"}
+  "libqt6quick3dutils6" {>= "6.4.0"}
+  "libqt6quick6" {>= "6.4.2+dfsg~"}
+  "libqt6shadertools6" {>= "6.2.0"}
+  "libstdc++6" {>= "11"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "libqt6quick3druntimerender6_6.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-quick3d/libqt6quick3druntimerender6_6.4.2-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libanalitzagui8_4:17.08.3-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libanalitzagui8"]
+]
+depends: [
+  "libanalitza8" {>= "4-17.08.3"}
+  "libc6" {>= "2.14"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.4"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libanalitzagui8_4:17.08.3-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/analitza/libanalitzagui8_17.08.3-2+b3_amd64.deb"
+}

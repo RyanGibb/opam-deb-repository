@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-wai-dev_3.2.2.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-wai-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-http-types-dev"
+  "libghc-network-dev"
+  "libghc-vault-dev"
+  "libgmp10"
+]
+extra-source "libghc-wai-dev_3.2.2.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-wai/libghc-wai-dev_3.2.2.1-2+b1_amd64.deb"
+}

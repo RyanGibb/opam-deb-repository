@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-activemodel-serializers-xml_1.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-activemodel-serializers-xml"]
+]
+depends: [
+  "ruby-activemodel" {>= "2-5.2.0"}
+  "ruby-activesupport" {>= "2-5.2.0"}
+  "ruby-builder" {>= "3.1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-activemodel-serializers-xml_1.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-activemodel-serializers-xml/ruby-activemodel-serializers-xml_1.0.2-2_all.deb"
+}

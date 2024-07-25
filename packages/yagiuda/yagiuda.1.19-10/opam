@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yagiuda_1.19-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yagiuda"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+]
+conflicts: [
+  "psi3"
+]
+extra-source "yagiuda_1.19-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yagiuda/yagiuda_1.19-10_amd64.deb"
+}

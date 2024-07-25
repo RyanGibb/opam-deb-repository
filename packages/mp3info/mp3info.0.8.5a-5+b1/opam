@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mp3info_0.8.5a-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mp3info"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  ("debconf" | "debconf-2-0")
+]
+extra-source "mp3info_0.8.5a-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mp3info/mp3info_0.8.5a-5+b1_amd64.deb"
+}

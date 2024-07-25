@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mauve-aligner_2.4.0+4736-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mauve-aligner"]
+]
+depends: [
+  "java-wrappers"
+  "libbiojava-java" {>= "1-1.9.5+dfsg-1"}
+  "libbiojava1-9-java"
+  "libcommons-cli-java"
+  "libdbus-java"
+  "libunixsocket-java"
+  "libzeus-jscl-java"
+  "progressivemauve"
+]
+extra-source "mauve-aligner_2.4.0+4736-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mauve-aligner/mauve-aligner_2.4.0+4736-6_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwayland-dev_1.16.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwayland-dev"]
+]
+depends: [
+  "libwayland-bin" {= "1.16.0-1"}
+  "libwayland-client0" {= "1.16.0-1"}
+  "libwayland-cursor0" {= "1.16.0-1"}
+  "libwayland-egl1" {= "1.16.0-1"}
+  "libwayland-server0" {= "1.16.0-1"}
+]
+extra-source "libwayland-dev_1.16.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wayland/libwayland-dev_1.16.0-1_amd64.deb"
+}

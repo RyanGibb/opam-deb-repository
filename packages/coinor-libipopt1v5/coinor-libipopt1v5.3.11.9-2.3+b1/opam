@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coinor-libipopt1v5_3.11.9-2.3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coinor-libipopt1v5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libmumps-seq-5-5" {>= "5.5.1"}
+  "libstdc++6" {>= "11"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+conflicts: [
+  "coinor-libipopt1"
+]
+extra-source "coinor-libipopt1v5_3.11.9-2.3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coinor-ipopt/coinor-libipopt1v5_3.11.9-2.3+b1_amd64.deb"
+}

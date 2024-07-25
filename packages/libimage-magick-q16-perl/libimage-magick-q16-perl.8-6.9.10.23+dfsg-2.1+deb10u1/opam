@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libimage-magick-q16-perl_8:6.9.10.23+dfsg-2.1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libimage-magick-q16-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmagickcore-6-q16-6" {>= "8-6.9.10.2"}
+  "libperl5-28" {>= "5.28.0"}
+  "perl" {>= "5.28.1-6"}
+  "perl-base"
+]
+extra-source "libimage-magick-q16-perl_8:6.9.10.23+dfsg-2.1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/imagemagick/libimage-magick-q16-perl_6.9.10.23+dfsg-2.1+deb10u1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slurm-wlm-plugins_22.05.8-4+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slurm-wlm-plugins"]
+]
+depends: [
+  "slurm-wlm-basic-plugins" {= "22.05.8-4+deb12u2"}
+  "slurm-wlm-elasticsearch-plugin" {= "22.05.8-4+deb12u2"}
+  "slurm-wlm-hdf5-plugin" {= "22.05.8-4+deb12u2"}
+  "slurm-wlm-influxdb-plugin" {= "22.05.8-4+deb12u2"}
+  "slurm-wlm-ipmi-plugins" {= "22.05.8-4+deb12u2"}
+  "slurm-wlm-jwt-plugin" {= "22.05.8-4+deb12u2"}
+  "slurm-wlm-mysql-plugin-dev" {= "22.05.8-4+deb12u2"}
+  "slurm-wlm-rrd-plugin" {= "22.05.8-4+deb12u2"}
+  "slurm-wlm-rsmi-plugin" {= "22.05.8-4+deb12u2"}
+]
+extra-source "slurm-wlm-plugins_22.05.8-4+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-wlm/slurm-wlm-plugins_22.05.8-4+deb12u2_amd64.deb"
+}

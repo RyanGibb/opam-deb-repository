@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-uuagc-cabal-dev_1.1.0.0-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-uuagc-cabal-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-uulib-dev"
+  "libgmp10"
+]
+extra-source "libghc-uuagc-cabal-dev_1.1.0.0-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-uuagc-cabal/libghc-uuagc-cabal-dev_1.1.0.0-4+b1_amd64.deb"
+}

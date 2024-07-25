@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gccgo-10-multilib_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gccgo-10-multilib"]
+]
+depends: [
+  "gcc-10-base" {= "10.2.1-6"}
+  "gcc-10-multilib" {= "10.2.1-6"}
+  "gccgo-10" {= "10.2.1-6"}
+  "lib32go-10-dev" {= "10.2.1-6"}
+  "libx32go-10-dev" {= "10.2.1-6"}
+]
+extra-source "gccgo-10-multilib_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/gccgo-10-multilib_10.2.1-6_amd64.deb"
+}

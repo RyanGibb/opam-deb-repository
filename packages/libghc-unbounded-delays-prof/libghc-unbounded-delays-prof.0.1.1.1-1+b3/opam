@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-unbounded-delays-prof_0.1.1.1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-unbounded-delays-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-unbounded-delays-dev" {= "0.1.1.1-1+b3"}
+]
+extra-source "libghc-unbounded-delays-prof_0.1.1.1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-unbounded-delays/libghc-unbounded-delays-prof_0.1.1.1-1+b3_amd64.deb"
+}

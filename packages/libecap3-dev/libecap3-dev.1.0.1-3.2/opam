@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libecap3-dev_1.0.1-3.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libecap3-dev"]
+]
+depends: [
+  "libecap3" {= "1.0.1-3.2"}
+]
+conflicts: [
+  "libecap2-dev"
+]
+extra-source "libecap3-dev_1.0.1-3.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libecap/libecap3-dev_1.0.1-3.2_amd64.deb"
+}

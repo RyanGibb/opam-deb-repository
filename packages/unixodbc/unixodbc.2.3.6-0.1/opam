@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i unixodbc_2.3.6-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r unixodbc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libodbc1" {>= "2.3.1"}
+  "libreadline7" {>= "6.0"}
+  "odbcinst1debian2" {>= "2.3.1"}
+]
+extra-source "unixodbc_2.3.6-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unixodbc/unixodbc_2.3.6-0.1_amd64.deb"
+}

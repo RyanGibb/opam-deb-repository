@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-josepy_1.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-josepy"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-cryptography" {>= "0.8"}
+  "python3-openssl" {>= "0.13"}
+  "python3-pkg-resources"
+  "python3-six" {>= "1.9.0"}
+]
+extra-source "python3-josepy_1.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-josepy/python3-josepy_1.1.0-2_all.deb"
+}

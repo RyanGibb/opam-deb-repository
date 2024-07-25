@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libphp-simplepie_1.3.1+dfsg-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libphp-simplepie"]
+]
+depends: [
+  "php-curl"
+  "php-intl"
+  ("php" {>= "5.2.0"} | "php-cli" {>= "5.2.0"})
+]
+conflicts: [
+  "simplepie"
+]
+extra-source "libphp-simplepie_1.3.1+dfsg-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/simplepie/libphp-simplepie_1.3.1+dfsg-3.1_all.deb"
+}

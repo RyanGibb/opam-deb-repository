@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-airr_1.2.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-airr"]
+]
+depends: [
+  "python3-any"
+  "python3-pandas" {>= "0.18.0"}
+  "python3-pkg-resources"
+  "python3-yaml" {>= "3.12"}
+  "python3-yamlordereddictloader"
+]
+extra-source "python3-airr_1.2.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-airr/python3-airr_1.2.1-2_all.deb"
+}

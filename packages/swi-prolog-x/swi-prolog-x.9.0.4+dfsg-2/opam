@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i swi-prolog-x_9.0.4+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r swi-prolog-x"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+  "libxpm4"
+  "libxt6"
+  "swi-prolog-nox" {= "9.0.4+dfsg-2"}
+]
+extra-source "swi-prolog-x_9.0.4+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/swi-prolog/swi-prolog-x_9.0.4+dfsg-2_amd64.deb"
+}

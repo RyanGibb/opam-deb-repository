@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-nlopt_2.7.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-nlopt"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libnlopt-cxx0" {= "2.7.1-5"}
+  "libstdc++6" {>= "11"}
+  "octave"
+  "octave" {>= "7.3.0"}
+]
+extra-source "octave-nlopt_2.7.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nlopt/octave-nlopt_2.7.1-5_amd64.deb"
+}

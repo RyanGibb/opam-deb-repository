@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mousetweaks_3.32.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mousetweaks"]
+]
+depends: [
+  "gsettings-desktop-schemas" {>= "0.1.0"}
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libx11-6"
+  "libxcursor1" {> "1.1.2"}
+  "libxfixes3"
+  "libxtst6"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "mousetweaks_3.32.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mousetweaks/mousetweaks_3.32.0-4_amd64.deb"
+}

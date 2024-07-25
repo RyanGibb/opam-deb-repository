@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mercurial-keyring_1.4.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mercurial-keyring"]
+]
+depends: [
+  "mercurial"
+  "python3-any"
+  "python3-keyring"
+  "python3-mercurial-extension-utils"
+]
+extra-source "mercurial-keyring_1.4.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mercurial-keyring/mercurial-keyring_1.4.3-1_all.deb"
+}

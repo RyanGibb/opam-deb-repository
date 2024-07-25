@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i logisim_2.7.1~dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r logisim"]
+]
+depends: [
+  "jarwrapper" {>= "0.5"}
+  "javahelp2"
+  "libcolorpicker-java"
+  "libfontchooser-java"
+  ("default-jre" | "java7-runtime" | "java8-runtime" | "java9-runtime" | "java10-runtime" | "java11-runtime")
+]
+extra-source "logisim_2.7.1~dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/logisim/logisim_2.7.1~dfsg-4_all.deb"
+}

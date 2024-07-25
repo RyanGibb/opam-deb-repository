@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfpga0_0.0+201212-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfpga0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libfpga0_0.0+201212-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fpgatools/libfpga0_0.0+201212-1+b2_amd64.deb"
+}

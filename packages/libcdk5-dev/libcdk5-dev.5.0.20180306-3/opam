@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcdk5-dev_5.0.20180306-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcdk5-dev"]
+]
+depends: [
+  "libcdk5nc6" {= "5.0.20180306-3"}
+  "libncurses-dev"
+]
+extra-source "libcdk5-dev_5.0.20180306-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcdk5/libcdk5-dev_5.0.20180306-3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i swisswatch_0.6-18_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r swisswatch"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6"
+  "libxext6"
+  "libxmu6"
+  "libxt6"
+]
+extra-source "swisswatch_0.6-18_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/swisswatch/swisswatch_0.6-18_amd64.deb"
+}

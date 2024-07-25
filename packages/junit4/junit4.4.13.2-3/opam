@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i junit4_4.13.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r junit4"]
+]
+depends: [
+  "libhamcrest-java" {>= "2.2"}
+  ("default-jre-headless" | "java5-runtime-headless")
+]
+extra-source "junit4_4.13.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/junit4/junit4_4.13.2-3_all.deb"
+}

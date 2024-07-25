@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i agent-transfer_0.43-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r agent-transfer"]
+]
+depends: [
+  "gnupg-agent" {>= "2.1.0"}
+  "libassuan0" {>= "2.0.1"}
+  "libc6" {>= "2.14"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libgpg-error0" {>= "1.14"}
+]
+extra-source "agent-transfer_0.43-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/monkeysphere/agent-transfer_0.43-3_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kdegraphics-thumbnailers_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kdegraphics-thumbnailers"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.15"}
+  "libkf5archive5" {>= "5.90.0~"}
+  "libkf5kdcraw5" {>= "4.12.3"}
+  "libkf5kexiv2-15-0-0" {>= "4.5.90"}
+  "libkf5kiowidgets5" {>= "5.90.0~"}
+  "libqmobipocket2" {>= "4-16.12.0"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "kdegraphics-thumbnailers_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdegraphics-thumbnailers/kdegraphics-thumbnailers_22.12.3-1_amd64.deb"
+}

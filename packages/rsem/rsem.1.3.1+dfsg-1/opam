@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rsem_1.3.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rsem"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc1" {>= "1-3.0"}
+  "libhts2" {>= "1.0"}
+  "libstdc++6" {>= "5.2"}
+  "perl"
+  "python"
+  "r-base-core"
+  "zlib1g" {>= "1-1.1.4"}
+  ("bowtie" | "bowtie2")
+]
+extra-source "rsem_1.3.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rsem/rsem_1.3.1+dfsg-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-zstandard_0.20.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-zstandard"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libzstd1" {< "1.5.5~"}
+  "libzstd1" {>= "1.5.4~"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-cffi-backend"
+]
+extra-source "python3-zstandard_0.20.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-zstandard/python3-zstandard_0.20.0-3_amd64.deb"
+}

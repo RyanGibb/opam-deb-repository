@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i py-cpuinfo_4.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r py-cpuinfo"]
+]
+depends: [
+  "python3-any" {>= "3.2~"}
+  "python3-cpuinfo"
+]
+extra-source "py-cpuinfo_4.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-cpuinfo/py-cpuinfo_4.0.0-1_all.deb"
+}

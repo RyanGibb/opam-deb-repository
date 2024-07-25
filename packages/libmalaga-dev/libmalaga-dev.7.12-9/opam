@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmalaga-dev_7.12-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmalaga-dev"]
+]
+depends: [
+  "libglib2-0-dev"
+  "libmalaga7" {= "7.12-9"}
+]
+conflicts: [
+  "libmalaga1-dev"
+  "libmalaga2-dev"
+]
+extra-source "libmalaga-dev_7.12-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/malaga/libmalaga-dev_7.12-9_amd64.deb"
+}

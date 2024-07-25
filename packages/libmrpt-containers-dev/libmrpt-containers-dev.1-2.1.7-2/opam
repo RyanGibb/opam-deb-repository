@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmrpt-containers-dev_1:2.1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmrpt-containers-dev"]
+]
+depends: [
+  "libmrpt-common-dev"
+  "libmrpt-containers2-1" {= "1-2.1.7-2"}
+  "libmrpt-core-dev"
+]
+extra-source "libmrpt-containers-dev_1:2.1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrpt/libmrpt-containers-dev_2.1.7-2_amd64.deb"
+}

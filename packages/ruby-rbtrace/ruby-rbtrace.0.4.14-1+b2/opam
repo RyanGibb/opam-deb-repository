@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rbtrace_0.4.14-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rbtrace"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.2"}
+  "ruby-ffi"
+  "ruby-msgpack"
+  "ruby-optimist"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-rbtrace_0.4.14-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rbtrace/ruby-rbtrace_0.4.14-1+b2_amd64.deb"
+}

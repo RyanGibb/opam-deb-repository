@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmozjs-102-0_102.15.1-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmozjs-102-0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.4"}
+  "libstdc++6" {>= "12"}
+  "tzdata"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libmozjs-102-0_102.15.1-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mozjs102/libmozjs-102-0_102.15.1-1~deb12u1_amd64.deb"
+}

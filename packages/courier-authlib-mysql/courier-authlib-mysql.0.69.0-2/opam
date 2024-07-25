@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i courier-authlib-mysql_0.69.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r courier-authlib-mysql"]
+]
+depends: [
+  "courier-authlib" {>= "0.69.0-2"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libmariadb3" {>= "3.0.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "courier-authlib-mysql_0.69.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/courier-authlib/courier-authlib-mysql_0.69.0-2_amd64.deb"
+}

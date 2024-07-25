@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libformsgl2_1.2.3-1.3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libformsgl2"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libforms2"
+  "libx11-6"
+  ("libgl1-mesa-glx" | "libgl1")
+]
+extra-source "libformsgl2_1.2.3-1.3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libforms/libformsgl2_1.2.3-1.3+b1_amd64.deb"
+}

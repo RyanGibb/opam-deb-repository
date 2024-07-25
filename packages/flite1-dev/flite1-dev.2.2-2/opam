@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i flite1-dev_2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r flite1-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libflite1" {= "2.2-2"}
+]
+conflicts: [
+  "flite-dev"
+]
+extra-source "flite1-dev_2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flite/flite1-dev_2.2-2_amd64.deb"
+}

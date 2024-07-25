@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cl-hunchentoot_1.2.38-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cl-hunchentoot"]
+]
+depends: [
+  "cl-base64"
+  "cl-bordeaux-threads"
+  "cl-chunga"
+  "cl-fad"
+  "cl-flexi-streams"
+  "cl-md5" {>= "1-20130312"}
+  "cl-plus-ssl"
+  "cl-ppcre"
+  "cl-rfc2388"
+  "cl-trivial-backtrace"
+  "cl-usocket"
+]
+conflicts: [
+  "hunchentoot (<< 1.2)"
+]
+extra-source "cl-hunchentoot_1.2.38-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hunchentoot/cl-hunchentoot_1.2.38-1.1_all.deb"
+}

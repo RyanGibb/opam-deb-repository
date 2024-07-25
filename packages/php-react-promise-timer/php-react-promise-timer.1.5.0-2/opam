@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-react-promise-timer_1.5.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-react-promise-timer"]
+]
+depends: [
+  "php-common"
+  "php-react-event-loop" {< "2~~"}
+  "php-react-event-loop" {>= "1.0"}
+  "php-react-promise" {< "3~~"}
+  "php-react-promise" {>= "2.7.0"}
+]
+extra-source "php-react-promise-timer_1.5.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/reactphp-promise-timer/php-react-promise-timer_1.5.0-2_all.deb"
+}

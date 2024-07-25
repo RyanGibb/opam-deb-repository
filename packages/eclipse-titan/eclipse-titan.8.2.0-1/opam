@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eclipse-titan_8.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eclipse-titan"]
+]
+depends: [
+  "expect"
+  "gcc"
+  "libc6" {>= "2.34"}
+  "libedit-dev"
+  "libedit2" {>= "2.11-20080614-0"}
+  "libgcc-s1" {>= "3.0"}
+  "libpcap-dev"
+  "libpcre3-dev"
+  "libsctp-dev"
+  "libssl-dev"
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "11"}
+  "libxml2" {>= "2.7.4"}
+  "libxml2-dev"
+  "make"
+  "perl"
+  "python3"
+]
+extra-source "eclipse-titan_8.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eclipse-titan/eclipse-titan_8.2.0-1_amd64.deb"
+}

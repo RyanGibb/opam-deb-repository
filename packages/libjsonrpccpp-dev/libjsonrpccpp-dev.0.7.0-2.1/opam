@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjsonrpccpp-dev_0.7.0-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjsonrpccpp-dev"]
+]
+depends: [
+  "libjsoncpp-dev"
+  "libjsonrpccpp-client0" {= "0.7.0-2.1"}
+  "libjsonrpccpp-common0" {= "0.7.0-2.1"}
+  "libjsonrpccpp-server0" {= "0.7.0-2.1"}
+  "libjsonrpccpp-stub0" {= "0.7.0-2.1"}
+  "libmicrohttpd-dev" {>= "0.9.71"}
+  ("libcurl4-openssl-dev" | "libcurl4-nss-dev")
+]
+extra-source "libjsonrpccpp-dev_0.7.0-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libj/libjson-rpc-cpp/libjsonrpccpp-dev_0.7.0-2.1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libteam-dev_1.28-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libteam-dev"]
+]
+depends: [
+  "libnl-3-dev"
+  "libteam5" {= "1.28-1"}
+  "libteamdctl0" {= "1.28-1"}
+]
+extra-source "libteam-dev_1.28-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libteam/libteam-dev_1.28-1_amd64.deb"
+}

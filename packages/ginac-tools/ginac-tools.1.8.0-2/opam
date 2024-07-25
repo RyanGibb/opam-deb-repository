@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ginac-tools_1.8.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ginac-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcln6"
+  "libgcc-s1" {>= "3.0"}
+  "libginac11" {>= "1.8.0"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "ginac-tools_1.8.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/ginac/ginac-tools_1.8.0-2_amd64.deb"
+}

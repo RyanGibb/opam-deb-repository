@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-ccreds_10-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-ccreds"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdb5-3"
+  "libgcrypt20" {>= "1.8.0"}
+  "libpam0g" {>= "0.99.7.1"}
+]
+extra-source "libpam-ccreds_10-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpam-ccreds/libpam-ccreds_10-7_amd64.deb"
+}

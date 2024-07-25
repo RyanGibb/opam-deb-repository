@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstemmer0d_2.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstemmer0d"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+extra-source "libstemmer0d_2.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snowball/libstemmer0d_2.1.0-1_amd64.deb"
+}

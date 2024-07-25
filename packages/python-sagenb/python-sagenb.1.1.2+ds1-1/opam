@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-sagenb_1.1.2+ds1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-sagenb"]
+]
+depends: [
+  "libjs-codemirror"
+  "libjs-jquery"
+  "libjs-jquery-colorpicker"
+  "libjs-jquery-form"
+  "libjs-jquery-ui"
+  "libjs-json"
+  "libjs-mathjax"
+  "libjs-prettify"
+  "libjs-three"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-flask" {>= "0.10.1"}
+  "python-flask-autoindex"
+  "python-flask-babel"
+  "python-flask-oldsessions"
+  "python-flask-openid"
+  "python-twisted-core"
+  "tinymce"
+]
+extra-source "python-sagenb_1.1.2+ds1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sagenb/python-sagenb_1.1.2+ds1-1_all.deb"
+}

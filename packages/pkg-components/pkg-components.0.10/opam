@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pkg-components_0.10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pkg-components"]
+]
+depends: [
+  "dh-make-perl" {>= "0.77"}
+  "dpkg-dev"
+  "libdebian-copyright-perl" {>= "0.2"}
+  "libperl6-slurp-perl"
+  "libreadonly-perl"
+  "libreadonly-xs-perl"
+  "libxml-libxml-perl"
+  "make"
+  "perl"
+]
+extra-source "pkg-components_0.10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pkg-components/pkg-components_0.10_all.deb"
+}

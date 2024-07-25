@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenhft-compiler-java_2.2.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenhft-compiler-java"]
+]
+depends: [
+  "libintellij-annotations-java"
+  "libslf4j-java" {>= "1.7.25"}
+]
+extra-source "libopenhft-compiler-java_2.2.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openhft-compiler/libopenhft-compiler-java_2.2.4-2_all.deb"
+}

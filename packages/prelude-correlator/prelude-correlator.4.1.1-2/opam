@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prelude-correlator_4.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prelude-correlator"]
+]
+depends: [
+  "adduser"
+  "prelude-utils" {>= "4.1.0"}
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-netaddr"
+  "python3-pkg-resources"
+  "python3-prelude" {>= "4.1.0"}
+]
+extra-source "prelude-correlator_4.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prelude-correlator/prelude-correlator_4.1.1-2_all.deb"
+}

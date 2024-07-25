@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fdupes_1:1.6.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fdupes"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "fdupes_1:1.6.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fdupes/fdupes_1.6.1-2_amd64.deb"
+}

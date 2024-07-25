@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nautilus-nextcloud_3.7.3-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nautilus-nextcloud"]
+]
+depends: [
+  "nautilus"
+  "nextcloud-desktop" {< "3.7.3-1+deb12u1.1~"}
+  "nextcloud-desktop" {>= "3.7.3-1+deb12u1"}
+  "nextcloud-desktop-common"
+  "python3-nautilus"
+]
+extra-source "nautilus-nextcloud_3.7.3-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nextcloud-desktop/nautilus-nextcloud_3.7.3-1+deb12u1_all.deb"
+}

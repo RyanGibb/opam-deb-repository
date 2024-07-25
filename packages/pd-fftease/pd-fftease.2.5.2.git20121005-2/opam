@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pd-fftease_2.5.2.git20121005-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pd-fftease"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "pd-libdir"
+  ("puredata-core" | "pd")
+]
+extra-source "pd-fftease_2.5.2.git20121005-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pd-fftease/pd-fftease_2.5.2.git20121005-2_amd64.deb"
+}

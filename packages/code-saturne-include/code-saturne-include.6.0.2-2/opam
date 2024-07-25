@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i code-saturne-include_6.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r code-saturne-include"]
+]
+depends: [
+  "libcgns-dev"
+  "libhdf5-dev"
+  "libmedc-dev"
+  "libxml2-dev"
+  "mpi-default-dev"
+  "python3-any"
+  "zlib1g-dev"
+]
+extra-source "code-saturne-include_6.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/code-saturne/code-saturne-include_6.0.2-2_amd64.deb"
+}

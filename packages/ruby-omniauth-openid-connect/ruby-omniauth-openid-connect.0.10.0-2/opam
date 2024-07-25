@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-omniauth-openid-connect_0.10.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-omniauth-openid-connect"]
+]
+depends: [
+  "ruby-addressable" {>= "2.7"}
+  "ruby-omniauth" {< "3"}
+  "ruby-omniauth" {>= "1.9"}
+  "ruby-openid-connect" {>= "1.2"}
+]
+extra-source "ruby-omniauth-openid-connect_0.10.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-omniauth-openid-connect/ruby-omniauth-openid-connect_0.10.0-2_all.deb"
+}

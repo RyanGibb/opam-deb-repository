@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i heimdal-clients_7.7.0+dfsg-2+deb11u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r heimdal-clients"]
+]
+depends: [
+  "krb5-config"
+  "libasn1-8-heimdal" {>= "1.4.0+git20110226"}
+  "libc6" {>= "2.14"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libedit2" {>= "2.11-20080614-0"}
+  "libgssapi3-heimdal" {>= "1.4.0+git20110226"}
+  "libhcrypto4-heimdal" {>= "1.4.0+git20110226"}
+  "libhdb9-heimdal" {>= "1.4.0+git20110226"}
+  "libheimntlm0-heimdal" {>= "1.4.0+git20110226"}
+  "libhx509-5-heimdal" {>= "1.6~rc2"}
+  "libkadm5clnt7-heimdal" {>= "1.7~git20150920"}
+  "libkadm5srv8-heimdal" {>= "1.6~git20120311"}
+  "libkafs0-heimdal" {>= "1.4.0+git20110226"}
+  "libkrb5-26-heimdal" {>= "7.7.0+dfsg"}
+  "libotp0-heimdal" {>= "1.4.0+git20110226"}
+  "libroken18-heimdal" {>= "1.7~git20150920"}
+  "libsl0-heimdal" {>= "1.6~git20120311"}
+]
+conflicts: [
+  "otp"
+]
+extra-source "heimdal-clients_7.7.0+dfsg-2+deb11u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heimdal/heimdal-clients_7.7.0+dfsg-2+deb11u3_amd64.deb"
+}

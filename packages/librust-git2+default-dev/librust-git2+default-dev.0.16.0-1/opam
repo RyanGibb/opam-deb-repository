@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-git2+default-dev_0.16.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-git2+default-dev"]
+]
+depends: [
+  "librust-git2+https-dev" {= "0.16.0-1"}
+  "librust-git2+ssh-dev" {= "0.16.0-1"}
+  "librust-git2+ssh-key-from-memory-dev" {= "0.16.0-1"}
+  "librust-git2-dev" {= "0.16.0-1"}
+]
+extra-source "librust-git2+default-dev_0.16.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-git2/librust-git2+default-dev_0.16.0-1_amd64.deb"
+}

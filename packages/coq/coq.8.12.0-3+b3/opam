@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coq_8.12.0-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coq"]
+]
+depends: [
+  "coq-theories" {= "8.12.0-3+b3"}
+  "libc6" {>= "2.29"}
+  "libcoq-ocaml"
+  "libnum-ocaml"
+  "ocaml-base-nox"
+  "ocaml-findlib"
+  "ocaml-nox"
+  "python3-any"
+]
+extra-source "coq_8.12.0-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coq/coq_8.12.0-3+b3_amd64.deb"
+}

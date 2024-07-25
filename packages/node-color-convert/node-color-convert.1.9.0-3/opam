@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-color-convert_1.9.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-color-convert"]
+]
+depends: [
+  "node-color-name" {>= "1.1.1"}
+  "nodejs" {>= "6.11~"}
+]
+extra-source "node-color-convert_1.9.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-color-convert/node-color-convert_1.9.0-3_all.deb"
+}

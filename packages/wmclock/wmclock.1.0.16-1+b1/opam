@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmclock_1.0.16-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmclock"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libx11-6"
+  "libxext6"
+  "libxpm4"
+]
+extra-source "wmclock_1.0.16-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmclock/wmclock_1.0.16-1+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-ghc-syb-utils-prof_0.3.0.0-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-ghc-syb-utils-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-ghc-syb-utils-dev" {= "0.3.0.0-1+b3"}
+  "libghc-syb-prof"
+]
+extra-source "libghc-ghc-syb-utils-prof_0.3.0.0-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-ghc-syb-utils/libghc-ghc-syb-utils-prof_0.3.0.0-1+b3_amd64.deb"
+}

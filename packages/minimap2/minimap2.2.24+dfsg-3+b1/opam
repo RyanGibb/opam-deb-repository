@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i minimap2_2.24+dfsg-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r minimap2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "minimap2_2.24+dfsg-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/minimap2/minimap2_2.24+dfsg-3+b1_amd64.deb"
+}

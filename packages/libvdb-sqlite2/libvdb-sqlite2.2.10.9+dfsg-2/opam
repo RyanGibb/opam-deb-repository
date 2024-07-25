@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvdb-sqlite2_2.10.9+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvdb-sqlite2"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.30"}
+  "libmbedcrypto3" {>= "2.13"}
+  "libmbedtls12" {>= "2.13"}
+  "libmbedx509-0" {>= "2.0"}
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.2.2"}
+]
+extra-source "libvdb-sqlite2_2.10.9+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ncbi-vdb/libvdb-sqlite2_2.10.9+dfsg-2_amd64.deb"
+}

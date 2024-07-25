@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-nettle-sys-dev_2.0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-nettle-sys-dev"]
+]
+depends: [
+  "librust-pkg-config-0-3+default-dev"
+  "nettle-dev" {>= "3.5.1~~"}
+  ("librust-bindgen-0-55-dev" | "librust-bindgen-0-54-dev" | "librust-bindgen-0-53-dev" {>= "0.53.1-~~"})
+]
+extra-source "librust-nettle-sys-dev_2.0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-nettle-sys/librust-nettle-sys-dev_2.0.5-1_amd64.deb"
+}

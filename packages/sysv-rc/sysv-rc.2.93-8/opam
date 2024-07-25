@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sysv-rc_2.93-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sysv-rc"]
+]
+depends: [
+  "insserv" {> "1.12.0-10"}
+  "startpar"
+  "sysvinit-utils" {>= "2.86.ds1-62"}
+]
+extra-source "sysv-rc_2.93-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sysvinit/sysv-rc_2.93-8_all.deb"
+}

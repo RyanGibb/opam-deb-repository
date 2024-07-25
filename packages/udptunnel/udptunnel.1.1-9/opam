@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i udptunnel_1.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r udptunnel"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libnsl2" {>= "1.0"}
+]
+extra-source "udptunnel_1.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/udptunnel/udptunnel_1.1-9_amd64.deb"
+}

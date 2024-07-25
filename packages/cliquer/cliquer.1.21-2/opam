@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cliquer_1.21-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cliquer"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcliquer1"
+]
+extra-source "cliquer_1.21-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cliquer/cliquer_1.21-2_amd64.deb"
+}

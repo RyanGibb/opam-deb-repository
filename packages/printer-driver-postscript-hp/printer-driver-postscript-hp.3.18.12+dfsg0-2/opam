@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i printer-driver-postscript-hp_3.18.12+dfsg0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r printer-driver-postscript-hp"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcups2" {>= "1.4.0"}
+  "python3-any"
+  "xz-utils"
+]
+extra-source "printer-driver-postscript-hp_3.18.12+dfsg0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hplip/printer-driver-postscript-hp_3.18.12+dfsg0-2_amd64.deb"
+}

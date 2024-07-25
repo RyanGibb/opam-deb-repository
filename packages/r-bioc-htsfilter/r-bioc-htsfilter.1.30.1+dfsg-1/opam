@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-htsfilter_1.30.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-htsfilter"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-bioc-biobase"
+  "r-bioc-biocgenerics"
+  "r-bioc-biocparallel"
+  "r-bioc-deseq2"
+  "r-bioc-edger"
+]
+extra-source "r-bioc-htsfilter_1.30.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-htsfilter/r-bioc-htsfilter_1.30.1+dfsg-1_all.deb"
+}

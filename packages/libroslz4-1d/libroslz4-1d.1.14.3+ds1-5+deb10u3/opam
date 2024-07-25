@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libroslz4-1d_1.14.3+ds1-5+deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libroslz4-1d"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "liblz4-1" {>= "0.0~r130"}
+]
+extra-source "libroslz4-1d_1.14.3+ds1-5+deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-ros-comm/libroslz4-1d_1.14.3+ds1-5+deb10u3_amd64.deb"
+}

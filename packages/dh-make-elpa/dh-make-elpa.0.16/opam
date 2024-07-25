@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dh-make-elpa_0.16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dh-make-elpa"]
+]
+depends: [
+  "dh-elpa"
+  "dh-make-perl" {>= "0.90"}
+  "libarray-utils-perl"
+  "libfile-find-rule-perl"
+  "libfile-grep-perl"
+  "libgit-repository-perl"
+  "libtrycatch-perl"
+  "perl"
+]
+extra-source "dh-make-elpa_0.16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dh-make-elpa/dh-make-elpa_0.16_all.deb"
+}

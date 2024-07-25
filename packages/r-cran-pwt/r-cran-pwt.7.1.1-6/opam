@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-pwt_7.1.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-pwt"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "3.5.0-5"}
+]
+extra-source "r-cran-pwt_7.1.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-pwt/r-cran-pwt_7.1.1-6_all.deb"
+}

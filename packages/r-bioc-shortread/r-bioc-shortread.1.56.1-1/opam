@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-shortread_1.56.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-shortread"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biobase"
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.23.3"}
+  "r-bioc-biocparallel"
+  "r-bioc-biostrings" {>= "2.47.6"}
+  "r-bioc-genomeinfodb" {>= "1.15.2"}
+  "r-bioc-genomicalignments" {>= "1.15.6"}
+  "r-bioc-genomicranges" {>= "1.31.8"}
+  "r-bioc-iranges" {>= "2.13.12"}
+  "r-bioc-rhtslib"
+  "r-bioc-rsamtools" {>= "1.31.2"}
+  "r-bioc-s4vectors" {>= "0.17.25"}
+  "r-bioc-xvector"
+  "r-bioc-zlibbioc"
+  "r-cran-hwriter"
+  "r-cran-lattice"
+  "r-cran-latticeextra"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "r-bioc-shortread_1.56.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-shortread/r-bioc-shortread_1.56.1-1_amd64.deb"
+}

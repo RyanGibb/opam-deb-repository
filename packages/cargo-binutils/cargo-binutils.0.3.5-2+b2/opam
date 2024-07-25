@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cargo-binutils_0.3.5-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cargo-binutils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "4.2"}
+]
+extra-source "cargo-binutils_0.3.5-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-cargo-binutils/cargo-binutils_0.3.5-2+b2_amd64.deb"
+}

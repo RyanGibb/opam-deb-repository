@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libloc1_0.9.16-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libloc1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "libloc1_0.9.16-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/libloc/libloc1_0.9.16-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fswatch_1.14.0+repack-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fswatch"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc-s1"
+  "libstdc++6" {>= "6"}
+]
+extra-source "fswatch_1.14.0+repack-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fswatch/fswatch_1.14.0+repack-13_amd64.deb"
+}

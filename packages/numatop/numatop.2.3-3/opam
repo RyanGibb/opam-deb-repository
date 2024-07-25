@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i numatop_2.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r numatop"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libncursesw6" {>= "6"}
+  "libnuma1" {>= "2.0.11"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "numatop_2.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/numatop/numatop_2.3-3_amd64.deb"
+}

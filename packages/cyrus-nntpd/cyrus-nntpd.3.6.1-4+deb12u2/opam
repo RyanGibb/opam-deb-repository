@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cyrus-nntpd_3.6.1-4+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cyrus-nntpd"]
+]
+depends: [
+  "cyrus-common" {= "3.6.1-4+deb12u2"}
+  "libc6" {>= "2.34"}
+  "libcom-err2" {>= "1.43.9"}
+  "libsasl2-2" {>= "2.1.28+dfsg"}
+  "libssl3" {>= "3.0.0"}
+  "libwrap0" {>= "7.6-4~"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "news-transport-system"
+]
+extra-source "cyrus-nntpd_3.6.1-4+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cyrus-imapd/cyrus-nntpd_3.6.1-4+deb12u2_amd64.deb"
+}

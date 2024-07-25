@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-validate-url_1.0.2+git-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-validate-url"]
+]
+depends: [
+  "ruby-activemodel"
+  "ruby-addressable"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-validate-url_1.0.2+git-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-validate-url/ruby-validate-url_1.0.2+git-2_all.deb"
+}

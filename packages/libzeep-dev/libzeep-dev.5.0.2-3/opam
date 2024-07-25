@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzeep-dev_5.0.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzeep-dev"]
+]
+depends: [
+  "libboost-date-time-dev"
+  "libboost-dev"
+  "libboost-program-options-dev"
+  "libboost-system-dev"
+  "libzeep5" {= "5.0.2-3"}
+  "pkg-config"
+]
+extra-source "libzeep-dev_5.0.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libz/libzeep/libzeep-dev_5.0.2-3_amd64.deb"
+}

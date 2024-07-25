@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libva-x11-2_2.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libva-x11-2"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libdrm2" {>= "2.3.1"}
+  "libva2" {< "2.4.0.1"}
+  "libva2" {>= "2.4.0"}
+  "libx11-6" {>= "2-1.4.99.1"}
+  "libxext6"
+  "libxfixes3"
+]
+extra-source "libva-x11-2_2.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libva/libva-x11-2_2.4.0-1_amd64.deb"
+}

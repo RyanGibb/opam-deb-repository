@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtalloc-dev_2.4.0-f2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtalloc-dev"]
+]
+depends: [
+  "libtalloc2" {= "2.4.0-f2"}
+  "pkg-config"
+]
+extra-source "libtalloc-dev_2.4.0-f2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/talloc/libtalloc-dev_2.4.0-f2_amd64.deb"
+}

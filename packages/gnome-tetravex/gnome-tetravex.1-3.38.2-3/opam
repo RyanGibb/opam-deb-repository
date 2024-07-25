@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-tetravex_1:3.38.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-tetravex"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.12.0"}
+  "libglib2-0-0" {>= "2.55.1"}
+  "libgtk-3-0" {>= "3.23.1"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-tetravex_1:3.38.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-tetravex/gnome-tetravex_3.38.2-3_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i soundmodem_0.20-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r soundmodem"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libatk1-0-0" {>= "1.12.4"}
+  "libaudiofile1" {>= "0.3.6"}
+  "libc6" {>= "2.34"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.20.0"}
+  "libhamlib4"
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "soundmodem_0.20-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/soundmodem/soundmodem_0.20-6+b1_amd64.deb"
+}

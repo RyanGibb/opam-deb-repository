@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libblocksruntime0_0.4.1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libblocksruntime0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libblocksruntime0_0.4.1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libblocksruntime/libblocksruntime0_0.4.1-1.1_amd64.deb"
+}

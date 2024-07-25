@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libygl4_4.2e-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libygl4"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libx11-6"
+  "libxext6"
+  ("libgl1-mesa-glx" | "libgl1")
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "libygl4_4.2e-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/ygl/libygl4_4.2e-4_amd64.deb"
+}

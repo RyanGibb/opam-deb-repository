@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i quakespasm_0.95.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r quakespasm"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libflac12" {>= "1.3.0"}
+  "libgl1"
+  "libmad0" {>= "0.15.1b-3"}
+  "libmikmod3" {>= "3.3.3"}
+  "libopusfile0" {>= "0.5"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libvorbisfile3" {>= "1.1.2"}
+]
+extra-source "quakespasm_0.95.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/quakespasm/quakespasm_0.95.1+dfsg-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i numlockx_1.2-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r numlockx"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6"
+  "libxext6"
+  "libxtst6"
+]
+extra-source "numlockx_1.2-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/numlockx/numlockx_1.2-8_amd64.deb"
+}

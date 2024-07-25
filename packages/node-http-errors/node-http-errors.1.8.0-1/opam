@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-http-errors_1.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-http-errors"]
+]
+depends: [
+  "node-depd" {>= "1.1.2~"}
+  "node-inherits" {>= "2.0.3~"}
+  "node-setprototypeof"
+  "node-statuses"
+  "node-toidentifier"
+  "nodejs"
+]
+extra-source "node-http-errors_1.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-http-errors/node-http-errors_1.8.0-1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sispmctl_3.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sispmctl"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libusb-0-1-4" {>= "2-0.1.12"}
+]
+extra-source "sispmctl_3.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sispmctl/sispmctl_3.1-3_amd64.deb"
+}

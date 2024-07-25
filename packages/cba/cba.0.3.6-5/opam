@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cba_0.3.6-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cba"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "libwxbase3-0-0v5" {>= "3.0.4+dfsg"}
+  "libwxgtk3-0-gtk3-0v5" {>= "3.0.4+dfsg-10~"}
+]
+extra-source "cba_0.3.6-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cba/cba_0.3.6-5_amd64.deb"
+}

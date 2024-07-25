@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freediameter-extensions_1.2.1-7+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freediameter-extensions"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libfdcore6" {= "1.2.1-7+deb10u1"}
+  "libfdproto6" {= "1.2.1-7+deb10u1"}
+]
+extra-source "freediameter-extensions_1.2.1-7+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freediameter/freediameter-extensions_1.2.1-7+deb10u1_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xfce4-notifyd_0.7.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xfce4-notifyd"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.14.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.55.2"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libnotify4" {>= "0.7.0"}
+  "libx11-6"
+  "libxfce4panel-2-0-4" {>= "4.13.0"}
+  "libxfce4ui-2-0" {>= "4.13.0"}
+  "libxfce4util7" {>= "4.12"}
+  "libxfconf-0-3" {>= "4.12"}
+]
+extra-source "xfce4-notifyd_0.7.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xfce4-notifyd/xfce4-notifyd_0.7.3-1_amd64.deb"
+}

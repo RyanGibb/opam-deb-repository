@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cross-gcc-dev_230_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cross-gcc-dev"]
+]
+depends: [
+  "make"
+  ("realpath" | "coreutils" {>= "8.26-1"})
+]
+extra-source "cross-gcc-dev_230_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cross-gcc/cross-gcc-dev_230_all.deb"
+}

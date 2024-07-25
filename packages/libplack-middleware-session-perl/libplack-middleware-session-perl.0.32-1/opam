@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplack-middleware-session-perl_0.32-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplack-middleware-session-perl"]
+]
+depends: [
+  "libcookie-baker-perl" {>= "0.10"}
+  "libdigest-hmac-perl"
+  "libplack-perl"
+  "perl"
+]
+extra-source "libplack-middleware-session-perl_0.32-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libplack-middleware-session-perl/libplack-middleware-session-perl_0.32-1_all.deb"
+}

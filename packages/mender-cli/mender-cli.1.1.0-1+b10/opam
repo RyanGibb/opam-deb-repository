@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mender-cli_1.1.0-1+b10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mender-cli"]
+]
+depends: [
+  "libc6" {>= "2.3.2"}
+]
+extra-source "mender-cli_1.1.0-1+b10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mender-cli/mender-cli_1.1.0-1+b10_amd64.deb"
+}

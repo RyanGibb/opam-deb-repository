@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-etm_1.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-etm"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  "r-cran-data-table"
+  "r-cran-lattice"
+  "r-cran-rcpp" {>= "0.11.4"}
+  "r-cran-rcpparmadillo"
+  "r-cran-survival"
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "r-cran-etm_1.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-etm/r-cran-etm_1.1.1-1_amd64.deb"
+}

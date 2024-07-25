@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libudf0_2.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libudf0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcdio18" {>= "2.0.0"}
+]
+extra-source "libudf0_2.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcdio/libudf0_2.0.0-2_amd64.deb"
+}

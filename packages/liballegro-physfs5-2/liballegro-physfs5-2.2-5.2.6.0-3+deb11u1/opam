@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liballegro-physfs5.2_2:5.2.6.0-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liballegro-physfs5.2"]
+]
+depends: [
+  "liballegro5-2" {= "2-5.2.6.0-3+deb11u1"}
+  "libc6" {>= "2.4"}
+  "libphysfs1" {>= "3.0.2"}
+]
+extra-source "liballegro-physfs5.2_2:5.2.6.0-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/allegro5/liballegro-physfs5.2_5.2.6.0-3+deb11u1_amd64.deb"
+}

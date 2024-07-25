@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nast-ier_20101212+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nast-ier"]
+]
+depends: [
+  "cdbfasta"
+  "libc6" {>= "2.4"}
+  "microbiomeutil-data"
+]
+extra-source "nast-ier_20101212+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/microbiomeutil/nast-ier_20101212+dfsg1-2_amd64.deb"
+}

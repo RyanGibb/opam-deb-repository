@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzeroc-ice-dev_3.7.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzeroc-ice-dev"]
+]
+depends: [
+  "libzeroc-ice3-7" {= "3.7.5-2"}
+  "zeroc-ice-compilers" {= "3.7.5-2"}
+  "zeroc-ice-slice" {= "3.7.5-2"}
+]
+extra-source "libzeroc-ice-dev_3.7.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zeroc-ice/libzeroc-ice-dev_3.7.5-2_amd64.deb"
+}

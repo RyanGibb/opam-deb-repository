@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fwupd-unsigned-dev_1:1.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fwupd-unsigned-dev"]
+]
+depends: [
+  "fwupd-unsigned" {= "1-1.4-1"}
+]
+extra-source "fwupd-unsigned-dev_1:1.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fwupd-efi/fwupd-unsigned-dev_1.4-1_amd64.deb"
+}

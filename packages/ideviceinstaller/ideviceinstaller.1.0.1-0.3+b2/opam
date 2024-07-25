@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ideviceinstaller_1.0.1-0.3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ideviceinstaller"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libimobiledevice6" {>= "1.1.5"}
+  "libplist3" {>= "1.11"}
+  "libzip4" {>= "0.10"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "ideviceinstaller_1.0.1-0.3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ideviceinstaller/ideviceinstaller_1.0.1-0.3+b2_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cryptohash-conduit-dev_0.1.1-10+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cryptohash-conduit-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-conduit-dev"
+  "libghc-conduit-extra-dev"
+  "libghc-cryptohash-dev"
+  "libghc-resourcet-dev"
+  "libgmp10"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-cryptohash-conduit-dev_0.1.1-10+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cryptohash-conduit/libghc-cryptohash-conduit-dev_0.1.1-10+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-tikzdevice_0.12-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-tikzdevice"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+  "r-cran-filehash" {>= "2.3"}
+  "r-cran-png"
+]
+extra-source "r-cran-tikzdevice_0.12-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-tikzdevice/r-cran-tikzdevice_0.12-1_amd64.deb"
+}

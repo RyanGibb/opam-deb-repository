@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i icingacli_2.8.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r icingacli"]
+]
+depends: [
+  "adduser"
+  "php-icinga" {= "2.8.2-2"}
+]
+extra-source "icingacli_2.8.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/icingaweb2/icingacli_2.8.2-2_all.deb"
+}

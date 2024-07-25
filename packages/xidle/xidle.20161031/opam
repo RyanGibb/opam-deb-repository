@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xidle_20161031_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xidle"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6"
+  "libxss1"
+]
+extra-source "xidle_20161031_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xidle/xidle_20161031_amd64.deb"
+}

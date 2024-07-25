@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-mnp_3.1-3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-mnp"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.0-1"}
+  "r-cran-mass"
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "r-cran-mnp_3.1-3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-mnp/r-cran-mnp_3.1-3-1_amd64.deb"
+}

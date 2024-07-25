@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plplot-driver-wxwidgets_5.15.0+dfsg-19_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plplot-driver-wxwidgets"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libplplot17" {>= "5.15.0+dfsg"}
+  "libplplotcxx15" {>= "5.15.0+dfsg"}
+  "libplplotwxwidgets1" {>= "5.15.0+dfsg"}
+  "libstdc++6" {>= "5.2"}
+  "libwxbase3-0-0v5" {>= "3.0.5.1+dfsg"}
+  "libwxgtk3-0-gtk3-0v5" {>= "3.0.5.1+dfsg"}
+]
+conflicts: [
+  "plplot12-driver-wxwidgets"
+]
+extra-source "plplot-driver-wxwidgets_5.15.0+dfsg-19_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plplot/plplot-driver-wxwidgets_5.15.0+dfsg-19_amd64.deb"
+}

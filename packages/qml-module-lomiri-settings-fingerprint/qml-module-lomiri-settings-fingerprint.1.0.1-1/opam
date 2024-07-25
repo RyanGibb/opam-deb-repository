@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-lomiri-settings-fingerprint_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-lomiri-settings-fingerprint"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.1.1"}
+  "lomiri-schemas"
+  "qml-module-biometryd"
+  "qml-module-gsettings1-0"
+  "qml-module-lomiri-components" {>= "1.1"}
+  "qml-module-lomiri-settings-components"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick2"
+  "suru-icon-theme"
+]
+extra-source "qml-module-lomiri-settings-fingerprint_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri-settings-components/qml-module-lomiri-settings-fingerprint_1.0.1-1_amd64.deb"
+}

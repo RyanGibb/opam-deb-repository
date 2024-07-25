@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xinetd_1:2.3.15.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xinetd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libselinux1" {>= "3.1~"}
+  "libtirpc3" {>= "1.0.2"}
+  "libwrap0" {>= "7.6-4~"}
+  "netbase"
+  "sysvinit-utils"
+]
+conflicts: [
+  "inet-superserver"
+]
+extra-source "xinetd_1:2.3.15.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xinetd/xinetd_2.3.15.3-1+b1_amd64.deb"
+}

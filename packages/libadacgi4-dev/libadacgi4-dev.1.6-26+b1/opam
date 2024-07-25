@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libadacgi4-dev_1.6-26+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libadacgi4-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-10"
+  "libadacgi4" {= "1.6-26+b1"}
+]
+extra-source "libadacgi4-dev_1.6-26+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/adacgi/libadacgi4-dev_1.6-26+b1_amd64.deb"
+}

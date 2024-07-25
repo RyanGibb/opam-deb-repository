@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libutf8-all-perl_0.024-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libutf8-all-perl"]
+]
+depends: [
+  "libimport-into-perl"
+  "libperlio-utf8-strict-perl"
+  "perl"
+  ("perl" {>= "5.17.2"} | "libautodie-perl")
+]
+extra-source "libutf8-all-perl_0.024-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libutf8-all-perl/libutf8-all-perl_0.024-1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cryptonite-conduit-prof_0.2.2-6+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cryptonite-conduit-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-conduit-extra-prof"
+  "libghc-conduit-prof"
+  "libghc-cryptonite-conduit-dev" {= "0.2.2-6+b4"}
+  "libghc-cryptonite-prof"
+  "libghc-memory-prof"
+  "libghc-resourcet-prof"
+]
+extra-source "libghc-cryptonite-conduit-prof_0.2.2-6+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cryptonite-conduit/libghc-cryptonite-conduit-prof_0.2.2-6+b4_amd64.deb"
+}

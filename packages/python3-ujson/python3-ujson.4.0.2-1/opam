@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ujson_4.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ujson"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdouble-conversion3" {>= "2.0.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+]
+extra-source "python3-ujson_4.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ujson/python3-ujson_4.0.2-1_amd64.deb"
+}

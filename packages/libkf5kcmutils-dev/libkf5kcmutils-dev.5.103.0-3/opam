@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5kcmutils-dev_5.103.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5kcmutils-dev"]
+]
+depends: [
+  "libkf5configwidgets-dev" {>= "5.103.0~"}
+  "libkf5itemviews-dev" {>= "5.103.0~"}
+  "libkf5kcmutils-bin" {= "5.103.0-3"}
+  "libkf5kcmutils5" {= "5.103.0-3"}
+  "libkf5kcmutilscore5" {= "5.103.0-3"}
+  "libkf5service-dev" {>= "5.103.0~"}
+  "libkf5xmlgui-dev" {>= "5.103.0~"}
+]
+extra-source "libkf5kcmutils-dev_5.103.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kcmutils/libkf5kcmutils-dev_5.103.0-3_amd64.deb"
+}

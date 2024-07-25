@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i indi-starbook_0.8+20221222163625-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r indi-starbook"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libindidriver1" {>= "1.9.9+dfsg"}
+  "libnova-0-16-0" {>= "0.16"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "indi-starbook_0.8+20221222163625-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/indi-starbook/indi-starbook_0.8+20221222163625-1_amd64.deb"
+}

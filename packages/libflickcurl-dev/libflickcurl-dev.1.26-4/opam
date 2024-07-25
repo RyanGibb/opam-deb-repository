@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libflickcurl-dev_1.26-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libflickcurl-dev"]
+]
+depends: [
+  "libflickcurl0" {= "1.26-4"}
+  "libraptor2-dev"
+  "libxml2-dev"
+]
+extra-source "libflickcurl-dev_1.26-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flickcurl/libflickcurl-dev_1.26-4_amd64.deb"
+}

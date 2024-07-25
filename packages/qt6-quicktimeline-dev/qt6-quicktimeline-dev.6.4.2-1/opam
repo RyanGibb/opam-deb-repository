@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt6-quicktimeline-dev_6.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt6-quicktimeline-dev"]
+]
+depends: [
+  "libqt6quicktimeline6" {= "6.4.2-1"}
+  "qml6-module-qtquick-timeline" {= "6.4.2-1"}
+]
+extra-source "qt6-quicktimeline-dev_6.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-quicktimeline/qt6-quicktimeline-dev_6.4.2-1_amd64.deb"
+}

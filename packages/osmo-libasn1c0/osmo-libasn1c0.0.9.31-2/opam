@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osmo-libasn1c0_0.9.31-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osmo-libasn1c0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "osmo-libasn1c0_0.9.31-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmo-libasn1c/osmo-libasn1c0_0.9.31-2_amd64.deb"
+}

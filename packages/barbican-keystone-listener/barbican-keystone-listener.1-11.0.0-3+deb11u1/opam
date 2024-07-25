@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i barbican-keystone-listener_1:11.0.0-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r barbican-keystone-listener"]
+]
+depends: [
+  "barbican-common" {= "1-11.0.0-3+deb11u1"}
+  "lsb-base"
+]
+extra-source "barbican-keystone-listener_1:11.0.0-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/barbican/barbican-keystone-listener_11.0.0-3+deb11u1_all.deb"
+}

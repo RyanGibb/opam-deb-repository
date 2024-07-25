@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgjs0g_1.74.2-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgjs0g"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.14.0"}
+  "libffi8" {>= "3.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libgirepository-1-0-1"
+  "libgirepository-1-0-1" {>= "1.71.0"}
+  "libglib2-0-0" {>= "2.71.2"}
+  "libmozjs-102-0" {>= "102.11.0"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "11"}
+  "libx11-6"
+]
+conflicts: [
+  "libgjs0"
+  "libgjs0a"
+  "libgjs0b"
+  "libgjs0c"
+  "libgjs0d"
+  "libgjs0e"
+  "libgjs0f"
+]
+extra-source "libgjs0g_1.74.2-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gjs/libgjs0g_1.74.2-1+deb12u1_amd64.deb"
+}

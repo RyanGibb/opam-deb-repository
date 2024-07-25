@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libballview1.5_1.5.0+git20180813.37fc53c-6+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libballview1.5"]
+]
+depends: [
+  "libball1-5" {>= "1.5.0+git20180813.37fc53c"}
+  "libboost-iostreams1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5opengl5" {>= "5.0.2"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5test5" {>= "5.0.2"}
+  "libqt5webenginewidgets5" {>= "5.14.1"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libstdc++6" {>= "5.2"}
+  ("libglu1-mesa" | "libglu1")
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "libballview1.5_1.5.0+git20180813.37fc53c-6+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/ball/libballview1.5_1.5.0+git20180813.37fc53c-6+b3_amd64.deb"
+}

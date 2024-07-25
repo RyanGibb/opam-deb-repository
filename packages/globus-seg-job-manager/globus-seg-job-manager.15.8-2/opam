@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i globus-seg-job-manager_15.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r globus-seg-job-manager"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libglobus-common0" {>= "17"}
+  "libglobus-scheduler-event-generator0" {>= "4"}
+]
+extra-source "globus-seg-job-manager_15.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gram-job-manager/globus-seg-job-manager_15.8-2_amd64.deb"
+}

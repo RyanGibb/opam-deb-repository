@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ricochet_0.9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ricochet"]
+]
+depends: [
+  "cairo-5c" {>= "1.7"}
+  "nickle" {>= "2.74"}
+]
+extra-source "ricochet_0.9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ricochet/ricochet_0.9_all.deb"
+}

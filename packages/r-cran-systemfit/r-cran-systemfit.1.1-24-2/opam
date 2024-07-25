@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-systemfit_1.1-24-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-systemfit"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-car" {>= "2.0-0"}
+  "r-cran-lmtest"
+  "r-cran-mass"
+  "r-cran-matrix"
+  "r-cran-sandwich" {>= "2.2-9"}
+]
+extra-source "r-cran-systemfit_1.1-24-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-systemfit/r-cran-systemfit_1.1-24-2_all.deb"
+}

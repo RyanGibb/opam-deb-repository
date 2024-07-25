@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-shell-mailnag_3.28.0-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-shell-mailnag"]
+]
+depends: [
+  "gnome-shell" {>= "3.16"}
+  "libc6" {>= "2.2.5"}
+  "libfolks25" {>= "0.9.5"}
+  "libgee-0-8-2" {>= "0.8.3"}
+  "libglib2-0-0" {>= "2.35.8"}
+  "mailnag" {>= "1.1.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-shell-mailnag_3.28.0-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-shell-mailnag/gnome-shell-mailnag_3.28.0-0.1_amd64.deb"
+}

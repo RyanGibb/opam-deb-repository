@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mecab-jumandic-utf8_7.0-20130310-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mecab-jumandic-utf8"]
+]
+depends: [
+  "mecab-utils" {>= "0.93"}
+]
+conflicts: [
+  "mecab-jumandic (<< 7.0-20130310-1)"
+]
+extra-source "mecab-jumandic-utf8_7.0-20130310-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mecab-jumandic/mecab-jumandic-utf8_7.0-20130310-7_all.deb"
+}

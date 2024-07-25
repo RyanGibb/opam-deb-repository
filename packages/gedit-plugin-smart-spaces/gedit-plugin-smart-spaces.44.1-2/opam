@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gedit-plugin-smart-spaces_44.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gedit-plugin-smart-spaces"]
+]
+depends: [
+  "gedit" {< "45~"}
+  "gedit" {>= "44.2"}
+  "gedit-plugins-common" {>= "44.1-2"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtksourceview-4-0" {>= "3.18.0"}
+  "libpeas-1-0-0" {>= "1.14.1"}
+]
+extra-source "gedit-plugin-smart-spaces_44.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gedit-plugins/gedit-plugin-smart-spaces_44.1-2_amd64.deb"
+}

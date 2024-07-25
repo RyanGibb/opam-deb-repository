@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pomegranate_0.13.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pomegranate"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-joblib" {>= "0.9.0b4"}
+  "python3-networkx" {>= "2.0"}
+  "python3-numpy"
+  "python3-scipy" {>= "0.17.0"}
+  "python3-yaml"
+]
+extra-source "python3-pomegranate_0.13.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pomegranate/python3-pomegranate_0.13.5-1_amd64.deb"
+}

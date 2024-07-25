@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libuima-adapter-soap-java_2.10.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libuima-adapter-soap-java"]
+]
+depends: [
+  "libaxis-java"
+  "libuima-core-java" {>= "2.10.2-3"}
+]
+extra-source "libuima-adapter-soap-java_2.10.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uimaj/libuima-adapter-soap-java_2.10.2-3_all.deb"
+}

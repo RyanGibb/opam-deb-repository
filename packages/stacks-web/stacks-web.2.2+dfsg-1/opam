@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stacks-web_2.2+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stacks-web"]
+]
+depends: [
+  "libdbd-mysql-perl"
+  "php-mdb2-driver-mysql"
+  ("apache2" | "httpd")
+  ("default-mysql-server" | "virtual-mysql-server")
+  ("libapache2-mod-php" | "php-cgi")
+]
+extra-source "stacks-web_2.2+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stacks/stacks-web_2.2+dfsg-1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rsbackup_8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rsbackup"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libsqlite3-0" {>= "3.7.15"}
+  "libstdc++6" {>= "11"}
+  "rsync"
+]
+extra-source "rsbackup_8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rsbackup/rsbackup_8.0-1_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lfc_1.10.0-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lfc"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgsoap-2-8-75"
+  "liblcgdm1"
+  "liblfc1" {= "1.10.0-2+b3"}
+  "libstdc++6" {>= "4.1.1"}
+]
+conflicts: [
+  "lfc-client (<< 1.8.1.2-2~)"
+]
+extra-source "lfc_1.10.0-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lcgdm/lfc_1.10.0-2+b3_amd64.deb"
+}

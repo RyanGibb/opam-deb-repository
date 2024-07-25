@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sssd_2.8.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sssd"]
+]
+depends: [
+  "python3-sss" {= "2.8.2-4"}
+  "sssd-ad" {= "2.8.2-4"}
+  "sssd-common" {= "2.8.2-4"}
+  "sssd-ipa" {= "2.8.2-4"}
+  "sssd-krb5" {= "2.8.2-4"}
+  "sssd-ldap" {= "2.8.2-4"}
+  "sssd-proxy" {= "2.8.2-4"}
+]
+extra-source "sssd_2.8.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sssd/sssd_2.8.2-4_amd64.deb"
+}

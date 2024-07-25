@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i acpica-tools_20200925-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r acpica-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+]
+extra-source "acpica-tools_20200925-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/acpica-unix/acpica-tools_20200925-8_amd64.deb"
+}

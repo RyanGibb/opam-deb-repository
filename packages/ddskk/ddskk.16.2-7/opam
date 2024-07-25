@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ddskk_16.2-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ddskk"]
+]
+depends: [
+  "emacsen-common" {>= "2.0.8"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+  ("emacs-nox" | "emacs" | "emacs25" | "emacs24" | "emacs23" | "emacs-snapshot" | "apel" {>= "10.7"})
+  ("emacs-nox" | "emacs" | "emacs25" | "emacs24" | "emacs23" | "emacs-snapshot" | "xemacs21-mule" | "xemacs21-mule-canna-wnn" | "xemacs21-gnome-mule" | "xemacs21-gnome-mule-canna-wnn")
+]
+conflicts: [
+  "skk"
+]
+extra-source "ddskk_16.2-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/ddskk/ddskk_16.2-7_all.deb"
+}

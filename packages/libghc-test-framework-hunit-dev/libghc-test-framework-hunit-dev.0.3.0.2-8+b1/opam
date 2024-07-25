@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-test-framework-hunit-dev_0.3.0.2-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-test-framework-hunit-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-extensible-exceptions-dev"
+  "libghc-hunit-dev"
+  "libghc-test-framework-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-test-framework-hunit-dev_0.3.0.2-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-test-framework-hunit/libghc-test-framework-hunit-dev_0.3.0.2-8+b1_amd64.deb"
+}

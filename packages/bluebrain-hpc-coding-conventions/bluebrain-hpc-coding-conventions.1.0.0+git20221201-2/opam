@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bluebrain-hpc-coding-conventions_1.0.0+git20221201-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bluebrain-hpc-coding-conventions"]
+]
+depends: [
+  "clang-format"
+  "clang-tidy"
+  "cmake-format"
+  "pre-commit"
+  "python3"
+  "python3-yaml"
+]
+extra-source "bluebrain-hpc-coding-conventions_1.0.0+git20221201-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bluebrain-hpc-coding-conventions/bluebrain-hpc-coding-conventions_1.0.0+git20221201-2_all.deb"
+}

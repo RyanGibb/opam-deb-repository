@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmypaint-dev_1.6.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmypaint-dev"]
+]
+depends: [
+  "gir1-2-mypaint-1-5" {= "1.6.0-2"}
+  "libglib2-0-dev"
+  "libjson-c-dev"
+  "libmypaint-1-5-1" {= "1.6.0-2"}
+]
+extra-source "libmypaint-dev_1.6.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmypaint/libmypaint-dev_1.6.0-2_amd64.deb"
+}

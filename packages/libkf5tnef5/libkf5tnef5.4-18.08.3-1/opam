@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5tnef5_4:18.08.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5tnef5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5calendarcore5abi2" {>= "4-18.07.90"}
+  "libkf5calendarutils5" {>= "4-17.12.2"}
+  "libkf5contacts5" {>= "4-17.08.0"}
+  "libkf5i18n5" {>= "4.97.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libkf5tnef5_4:18.08.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/ktnef/libkf5tnef5_18.08.3-1_amd64.deb"
+}

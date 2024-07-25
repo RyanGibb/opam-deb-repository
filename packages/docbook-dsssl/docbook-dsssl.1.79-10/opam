@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i docbook-dsssl_1.79-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r docbook-dsssl"]
+]
+depends: [
+  "openjade"
+  "perl-any"
+  "sgml-base" {>= "1.28"}
+  ("docbook" {>= "3.1"} | "docbook-xml")
+]
+conflicts: [
+  "docbook-stylesheets"
+]
+extra-source "docbook-dsssl_1.79-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/docbook-dsssl/docbook-dsssl_1.79-10_all.deb"
+}

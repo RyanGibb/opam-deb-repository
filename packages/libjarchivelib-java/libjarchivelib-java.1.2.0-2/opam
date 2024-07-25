@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjarchivelib-java_1.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjarchivelib-java"]
+]
+depends: [
+  "libcommons-compress-java" {>= "1.21"}
+  "libmaven-bundle-plugin-java" {>= "3.5.1"}
+  "libmaven-compiler-plugin-java" {>= "3.8.1"}
+]
+extra-source "libjarchivelib-java_1.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jarchivelib/libjarchivelib-java_1.2.0-2_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bzr-search_1.7.0~bzr94-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bzr-search"]
+]
+depends: [
+  "bzr" {>= "1.7~"}
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-any" {>= "2.6.6-7~"}
+]
+extra-source "bzr-search_1.7.0~bzr94-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bzr-search/bzr-search_1.7.0~bzr94-5_all.deb"
+}

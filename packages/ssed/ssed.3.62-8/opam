@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ssed_3.62-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ssed"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "ssed_3.62-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/ssed/ssed_3.62-8_amd64.deb"
+}

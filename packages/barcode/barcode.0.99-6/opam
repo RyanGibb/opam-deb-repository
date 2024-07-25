@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i barcode_0.99-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r barcode"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpaper1"
+]
+extra-source "barcode_0.99-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/barcode/barcode_0.99-6_amd64.deb"
+}

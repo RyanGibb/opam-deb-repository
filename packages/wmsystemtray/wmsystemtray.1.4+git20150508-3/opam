@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmsystemtray_1.4+git20150508-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmsystemtray"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libx11-6"
+  "libxext6"
+  "libxfixes3"
+  "libxmu6"
+  "libxpm4"
+]
+extra-source "wmsystemtray_1.4+git20150508-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmsystemtray/wmsystemtray_1.4+git20150508-3_amd64.deb"
+}

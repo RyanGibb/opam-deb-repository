@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libshout3_2.4.6-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libshout3"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libogg0" {>= "1.0rc3"}
+  "libspeex1" {>= "1.2~"}
+  "libssl3" {>= "3.0.0"}
+  "libtheora0" {>= "0.0.0.alpha7.dfsg"}
+  "libvorbis0a" {>= "1.1.2"}
+]
+extra-source "libshout3_2.4.6-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libshout/libshout3_2.4.6-1+b1_amd64.deb"
+}

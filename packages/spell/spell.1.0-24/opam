@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i spell_1.0-24_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r spell"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  ("iamerican" | "ibritish" | "ispell-dictionary")
+  ("ispell" | "aspell")
+]
+extra-source "spell_1.0-24_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spell/spell_1.0-24_amd64.deb"
+}

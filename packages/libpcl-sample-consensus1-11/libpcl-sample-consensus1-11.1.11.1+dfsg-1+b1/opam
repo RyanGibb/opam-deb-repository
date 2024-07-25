@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcl-sample-consensus1.11_1.11.1+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcl-sample-consensus1.11"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libpcl-common1-11" {>= "1.11.1+dfsg"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libpcl-sample-consensus1.11_1.11.1+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcl/libpcl-sample-consensus1.11_1.11.1+dfsg-1+b1_amd64.deb"
+}

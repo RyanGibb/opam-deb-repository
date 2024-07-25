@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i torch-trepl_0~20170619-ge5e17e3-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r torch-trepl"]
+]
+depends: [
+  "lua-torch-trepl" {< "0~20170619-ge5e17e3-7.1~"}
+  "lua-torch-trepl" {>= "0~20170619-ge5e17e3-7"}
+  ("luajit" | "lua5-1")
+]
+extra-source "torch-trepl_0~20170619-ge5e17e3-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lua-torch-trepl/torch-trepl_0~20170619-ge5e17e3-7_all.deb"
+}

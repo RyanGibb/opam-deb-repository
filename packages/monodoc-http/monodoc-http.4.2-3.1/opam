@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i monodoc-http_4.2-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r monodoc-http"]
+]
+depends: [
+  "libjs-xmlextras"
+  "monodoc-base"
+  "monodoc-manual"
+  ("mono-xsp4" | "mono-apache-server4" | "mono-fastcgi-server4")
+]
+extra-source "monodoc-http_4.2-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mono-tools/monodoc-http_4.2-3.1_all.deb"
+}

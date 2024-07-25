@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-gdk-pixbuf+fragile-dev_0.5.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-gdk-pixbuf+fragile-dev"]
+]
+depends: [
+  "librust-fragile-0-3+default-dev"
+  "librust-gdk-pixbuf-dev" {= "0.5.0-2"}
+]
+extra-source "librust-gdk-pixbuf+fragile-dev_0.5.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-gdk-pixbuf/librust-gdk-pixbuf+fragile-dev_0.5.0-2_amd64.deb"
+}

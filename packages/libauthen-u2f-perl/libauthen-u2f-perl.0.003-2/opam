@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libauthen-u2f-perl_0.003-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libauthen-u2f-perl"]
+]
+depends: [
+  "libcrypt-openssl-x509-perl"
+  "libcryptx-perl"
+  "libexporter-tiny-perl"
+  "libjson-perl"
+  "libmath-random-secure-perl"
+  "libnamespace-autoclean-perl"
+  "libtry-tiny-perl"
+  "libtype-tiny-perl"
+  "perl-any"
+]
+extra-source "libauthen-u2f-perl_0.003-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libauthen-u2f-perl/libauthen-u2f-perl_0.003-2_all.deb"
+}

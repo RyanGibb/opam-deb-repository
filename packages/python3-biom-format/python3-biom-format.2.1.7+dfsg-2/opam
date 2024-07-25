@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-biom-format_2.1.7+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-biom-format"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+  "python3-click"
+  "python3-future"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  "python3-pandas"
+  "python3-scipy"
+  "python3-six" {>= "1.10.0"}
+]
+extra-source "python3-biom-format_2.1.7+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-biom-format/python3-biom-format_2.1.7+dfsg-2_amd64.deb"
+}

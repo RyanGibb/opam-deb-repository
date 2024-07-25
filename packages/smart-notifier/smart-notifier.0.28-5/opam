@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i smart-notifier_0.28-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r smart-notifier"]
+]
+depends: [
+  "dbus"
+  "gir1-2-gtk-3-0"
+  "python" {>= "2.6.6-7~"}
+  "python-dbus"
+  "smartmontools" {>= "5.33+5.34cvs20050802-2"}
+]
+extra-source "smart-notifier_0.28-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/smart-notifier/smart-notifier_0.28-5_all.deb"
+}

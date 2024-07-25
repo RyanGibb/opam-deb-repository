@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yagf_0.9.5+repack1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yagf"]
+]
+depends: [
+  "libaspell15" {>= "0.60.8"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.12.2"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.8.0"} | "libqt5gui5-gles" {>= "5.8.0"})
+  ("tesseract-ocr" | "cuneiform")
+]
+extra-source "yagf_0.9.5+repack1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yagf/yagf_0.9.5+repack1-1_amd64.deb"
+}

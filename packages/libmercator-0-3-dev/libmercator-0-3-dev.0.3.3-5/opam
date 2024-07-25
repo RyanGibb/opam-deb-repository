@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmercator-0.3-dev_0.3.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmercator-0.3-dev"]
+]
+depends: [
+  "libmercator-0-3-4" {= "0.3.3-5"}
+  "libwfmath-1-0-dev" {>= "1.0.2+dfsg1-0.4"}
+]
+extra-source "libmercator-0.3-dev_0.3.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mercator/libmercator-0.3-dev_0.3.3-5_amd64.deb"
+}

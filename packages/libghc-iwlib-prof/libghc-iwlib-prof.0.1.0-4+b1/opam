@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-iwlib-prof_0.1.0-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-iwlib-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-iwlib-dev" {= "0.1.0-4+b1"}
+  "libiw-dev"
+]
+extra-source "libghc-iwlib-prof_0.1.0-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-iwlib/libghc-iwlib-prof_0.1.0-4+b1_amd64.deb"
+}

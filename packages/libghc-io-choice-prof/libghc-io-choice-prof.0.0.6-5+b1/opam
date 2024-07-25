@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-io-choice-prof_0.0.6-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-io-choice-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-io-choice-dev" {= "0.0.6-5+b1"}
+  "libghc-lifted-base-prof"
+  "libghc-monad-control-prof"
+  "libghc-transformers-base-prof"
+]
+extra-source "libghc-io-choice-prof_0.0.6-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-io-choice/libghc-io-choice-prof_0.0.6-5+b1_amd64.deb"
+}

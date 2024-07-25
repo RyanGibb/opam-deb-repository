@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i radon_4.1.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r radon"]
+]
+depends: [
+  "python3-any"
+  "python3-colorama"
+  "python3-flake8-polyfill"
+  "python3-future"
+  "python3-mando" {< "0.7"}
+  "python3-mando" {>= "0.6"}
+  "python3-pkg-resources"
+]
+extra-source "radon_4.1.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/radon/radon_4.1.0+dfsg-1_all.deb"
+}

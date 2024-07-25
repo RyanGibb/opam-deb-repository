@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i blt-demo_2.5.3+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r blt-demo"]
+]
+depends: [
+  "blt"
+  "tcl8-6"
+  "tk8-6"
+]
+conflicts: [
+  "blt4.2"
+  "blt8.0 (<< 2.4i-1)"
+]
+extra-source "blt-demo_2.5.3+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/blt/blt-demo_2.5.3+dfsg-4_all.deb"
+}

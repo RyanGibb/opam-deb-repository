@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libebook-1.2-21_3.46.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libebook-1.2-21"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcamel-1-2-64" {>= "3.42.1"}
+  "libebook-contacts-1-2-4" {>= "3.16.2"}
+  "libedata-book-1-2-27" {>= "3.43.2"}
+  "libedataserver-1-2-27" {>= "3.17"}
+  "libglib2-0-0" {>= "2.41.1"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libebook-1.2-21_3.46.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/evolution-data-server/libebook-1.2-21_3.46.4-2_amd64.deb"
+}

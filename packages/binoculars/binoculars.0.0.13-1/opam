@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i binoculars_0.0.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r binoculars"]
+]
+depends: [
+  "python3-any"
+  "python3-binoculars" {>= "0.0.13-1"}
+  "python3-numpy"
+]
+extra-source "binoculars_0.0.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/binoculars/binoculars_0.0.13-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpdk-rte-kni-dkms_18.11.11-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpdk-rte-kni-dkms"]
+]
+depends: [
+  "dkms" {>= "2.1.0.0"}
+  "libdpdk-dev" {= "18.11.11-1~deb10u1"}
+  "libelf-dev"
+  "make"
+]
+extra-source "dpdk-rte-kni-dkms_18.11.11-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/dpdk-rte-kni-dkms_18.11.11-1~deb10u1_amd64.deb"
+}

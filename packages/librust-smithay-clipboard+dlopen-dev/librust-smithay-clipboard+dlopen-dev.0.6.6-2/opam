@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-smithay-clipboard+dlopen-dev_0.6.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-smithay-clipboard+dlopen-dev"]
+]
+depends: [
+  "librust-smithay-client-toolkit-0-16+dlopen-dev"
+  "librust-smithay-clipboard-dev" {= "0.6.6-2"}
+  "librust-wayland-client-0-29+dlopen-dev"
+]
+extra-source "librust-smithay-clipboard+dlopen-dev_0.6.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-smithay-clipboard/librust-smithay-clipboard+dlopen-dev_0.6.6-2_amd64.deb"
+}

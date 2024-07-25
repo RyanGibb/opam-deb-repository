@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i procps_2:4.0.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r procps"]
+]
+depends: [
+  "init-system-helpers" {>= "1.29~"}
+  "libc6" {>= "2.34"}
+  "libncursesw6" {>= "6"}
+  "libproc2-0" {>= "2-4.0.2"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "procps_2:4.0.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/procps/procps_4.0.2-3_amd64.deb"
+}

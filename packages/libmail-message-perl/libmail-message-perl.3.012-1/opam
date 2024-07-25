@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmail-message-perl_3.012-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmail-message-perl"]
+]
+depends: [
+  "libio-stringy-perl"
+  "libmailtools-perl"
+  "libmime-types-perl"
+  "libtimedate-perl"
+  "liburi-perl"
+  "libuser-identity-perl" {>= "1.01"}
+  "perl-any"
+]
+extra-source "libmail-message-perl_3.012-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmail-message-perl/libmail-message-perl_3.012-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpeas-doc_1.28.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpeas-doc"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgirepository-1-0-1" {>= "1.39.0"}
+  "libglib2-0-0" {>= "2.38.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libpeas-1-0-0" {>= "1.1.0"}
+]
+extra-source "libpeas-doc_1.28.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpeas/libpeas-doc_1.28.0-2+b1_amd64.deb"
+}

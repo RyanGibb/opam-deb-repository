@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i greenbone-security-assistant_7.0.3+dfsg.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r greenbone-security-assistant"]
+]
+depends: [
+  "greenbone-security-assistant-common" {= "7.0.3+dfsg.1-1"}
+  "libc6" {>= "2.14"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libgnutls30" {>= "3.5.0"}
+  "libmicrohttpd12" {>= "0.9.50"}
+  "libopenvas9" {>= "9.0.0"}
+  "libxml2" {>= "2.7.4"}
+  "libxslt1-1" {>= "1.1.25"}
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "greenbone-security-assistant_7.0.3+dfsg.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/greenbone-security-assistant/greenbone-security-assistant_7.0.3+dfsg.1-1_amd64.deb"
+}

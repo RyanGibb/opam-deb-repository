@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-fonttools_4.19.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-fonttools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-brotli" {>= "1.0.9"}
+  "python3-fs" {>= "2.4.11"}
+  "python3-pkg-resources"
+  "python3-sympy"
+  ("python3-scipy" {>= "1.5.4"} | "python3-munkres" {>= "1.1.4"})
+  ("python3-ufolib2" {>= "0.6.2"} | "python3-defcon" {>= "0.6.0"})
+]
+extra-source "python3-fonttools_4.19.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fonttools/python3-fonttools_4.19.1-1_amd64.deb"
+}

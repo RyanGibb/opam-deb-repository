@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i roundcube-core_1.3.17+dfsg.1-1~deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r roundcube-core"]
+]
+depends: [
+  "dbconfig-common"
+  "debconf"
+  "libmagic1"
+  "php-auth-sasl" {>= "1.0.6"}
+  "php-cli"
+  "php-common"
+  "php-intl"
+  "php-json"
+  "php-mail-mime" {>= "1.10.0"}
+  "php-net-sieve" {>= "1.3.4"}
+  "php-net-smtp" {>= "1.7.1"}
+  "php-net-socket" {>= "1.0.14"}
+  "php-pear" {>= "1-1.10.1"}
+  "ucf"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("libapache2-mod-php" | "php")
+  ("roundcube-mysql" {= "1.3.17+dfsg.1-1~deb10u2"} | "roundcube-sqlite3" {= "1.3.17+dfsg.1-1~deb10u2"} | "roundcube-pgsql" {= "1.3.17+dfsg.1-1~deb10u2"})
+]
+extra-source "roundcube-core_1.3.17+dfsg.1-1~deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/roundcube/roundcube-core_1.3.17+dfsg.1-1~deb10u2_all.deb"
+}

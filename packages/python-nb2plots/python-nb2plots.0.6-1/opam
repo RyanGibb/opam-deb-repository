@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-nb2plots_0.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-nb2plots"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-ipython"
+  "python-matplotlib"
+  "python-numpy"
+  "python-six" {>= "1.7.0"}
+  "python-sphinx"
+  "python-sphinxtesters"
+  "python-texext"
+]
+extra-source "python-nb2plots_0.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nb2plots/python-nb2plots_0.6-1_all.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mono-gac_5.18.0.240+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mono-gac"]
+]
+depends: [
+  "mono-4-0-gac" {= "5.18.0.240+dfsg-3"}
+]
+extra-source "mono-gac_5.18.0.240+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mono/mono-gac_5.18.0.240+dfsg-3_all.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libudns0_0.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libudns0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libudns0_0.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/udns/libudns0_0.4-1+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-mpltoolkits.basemap-dbg_1.2.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-mpltoolkits.basemap-dbg"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgeos-c1v5" {>= "3.4.2"}
+  "python-dbg"
+  "python-mpltoolkits-basemap" {= "1.2.0+dfsg-1"}
+  "python-mpltoolkits-basemap-data" {>= "1.2.0+dfsg-1"}
+]
+extra-source "python-mpltoolkits.basemap-dbg_1.2.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/basemap/python-mpltoolkits.basemap-dbg_1.2.0+dfsg-1_amd64.deb"
+}

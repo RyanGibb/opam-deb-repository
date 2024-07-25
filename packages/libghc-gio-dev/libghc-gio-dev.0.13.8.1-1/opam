@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-gio-dev_0.13.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-gio-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-glib-dev"
+  "libglib2-0-0" {>= "2.24.0"}
+  "libgmp10"
+]
+extra-source "libghc-gio-dev_0.13.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-gio/libghc-gio-dev_0.13.8.1-1_amd64.deb"
+}

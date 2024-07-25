@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxcb-ewmh2_0.4.1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxcb-ewmh2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libxcb1"
+]
+extra-source "libxcb-ewmh2_0.4.1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xcb-util-wm/libxcb-ewmh2_0.4.1-1.1_amd64.deb"
+}

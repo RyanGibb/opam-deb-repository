@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libboost-graph1.81.0_1.81.0-5+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libboost-graph1.81.0"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libboost-graph1.81.0_1.81.0-5+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boost1.81/libboost-graph1.81.0_1.81.0-5+deb12u1_amd64.deb"
+}

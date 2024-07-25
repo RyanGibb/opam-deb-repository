@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i userbindmount_0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r userbindmount"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libuserbindmount0" {>= "0.1"}
+]
+extra-source "userbindmount_0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/userbindmount/userbindmount_0.1-3_amd64.deb"
+}

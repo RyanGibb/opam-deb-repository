@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjaxws-api-java_2.3.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjaxws-api-java"]
+]
+depends: [
+  "libjaxb-api-java" {>= "2.3.1"}
+  "libsaaj-java" {>= "1.4.0"}
+]
+extra-source "libjaxws-api-java_2.3.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jaxws-api/libjaxws-api-java_2.3.0-1.1_all.deb"
+}

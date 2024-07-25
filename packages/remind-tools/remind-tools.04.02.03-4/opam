@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i remind-tools_04.02.03-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r remind-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo-perl"
+  "libjson-maybexs-perl"
+  "libjsonparser1-1" {>= "1.1.0"}
+  "libpango-perl"
+  "perl-any"
+]
+extra-source "remind-tools_04.02.03-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/remind/remind-tools_04.02.03-4_amd64.deb"
+}

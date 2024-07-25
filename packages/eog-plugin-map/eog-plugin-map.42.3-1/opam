@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eog-plugin-map_42.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eog-plugin-map"]
+]
+depends: [
+  "eog" {>= "3.20.3-1~"}
+  "eog-plugins-common" {>= "42.3-1"}
+  "libc6" {>= "2.4"}
+  "libchamplain-0-12-0" {>= "0.11.0"}
+  "libchamplain-gtk-0-12-0" {>= "0.11.0"}
+  "libclutter-1-0-0" {>= "1.10.0"}
+  "libclutter-gtk-1-0-0" {>= "1.1.2"}
+  "libexif12" {>= "0.6.21-1~"}
+  "libglib2-0-0" {>= "2.38.0"}
+  "libgtk-3-0" {>= "3.14.0"}
+  "libpeas-1-0-0" {>= "1.0.0"}
+]
+extra-source "eog-plugin-map_42.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eog-plugins/eog-plugin-map_42.3-1_amd64.deb"
+}

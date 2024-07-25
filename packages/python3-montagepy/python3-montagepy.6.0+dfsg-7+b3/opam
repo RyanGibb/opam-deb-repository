@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-montagepy_6.0+dfsg-7+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-montagepy"]
+]
+depends: [
+  "fonts-freefont-ttf"
+  "libc6" {>= "2.14"}
+  "libcfitsio9" {>= "3.480~"}
+  "libfreetype6" {>= "2.2.1"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libwcstools1" {>= "3.8.4"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-requests"
+]
+extra-source "python3-montagepy_6.0+dfsg-7+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/montage/python3-montagepy_6.0+dfsg-7+b3_amd64.deb"
+}

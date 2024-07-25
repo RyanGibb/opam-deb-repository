@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-other-mott-happy.hbrem_2.4-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-other-mott-happy.hbrem"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "4.1.2-1"}
+  "r-cran-g-data"
+]
+extra-source "r-other-mott-happy.hbrem_2.4-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-other-mott-happy/r-other-mott-happy.hbrem_2.4-5_amd64.deb"
+}

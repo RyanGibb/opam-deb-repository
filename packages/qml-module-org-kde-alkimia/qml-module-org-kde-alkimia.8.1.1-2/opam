@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-org-kde-alkimia_8.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-org-kde-alkimia"]
+]
+depends: [
+  "libalkimia5-8" {= "8.1.1-2"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "qml-module-org-kde-alkimia_8.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alkimia/qml-module-org-kde-alkimia_8.1.1-2_amd64.deb"
+}

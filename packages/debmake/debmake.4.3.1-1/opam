@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debmake_4.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debmake"]
+]
+depends: [
+  "devscripts"
+  "dpkg-dev"
+  "python3-any"
+  "rsync"
+]
+extra-source "debmake_4.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debmake/debmake_4.3.1-1_all.deb"
+}

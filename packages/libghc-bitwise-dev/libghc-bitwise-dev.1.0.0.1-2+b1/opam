@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-bitwise-dev_1.0.0.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-bitwise-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-bitwise-dev_1.0.0.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-bitwise/libghc-bitwise-dev_1.0.0.1-2+b1_amd64.deb"
+}

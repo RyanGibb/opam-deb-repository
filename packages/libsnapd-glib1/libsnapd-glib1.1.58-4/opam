@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsnapd-glib1_1.58-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsnapd-glib1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.46"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libsoup2-4-1" {>= "2.39.2"}
+]
+extra-source "libsnapd-glib1_1.58-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snapd-glib/libsnapd-glib1_1.58-4_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gztool_1.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gztool"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "zlib1g" {>= "1-1.2.2.4"}
+]
+extra-source "gztool_1.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gztool/gztool_1.1.1-1_amd64.deb"
+}

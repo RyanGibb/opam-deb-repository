@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aosd-cat_0.2.7-1.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aosd-cat"]
+]
+depends: [
+  "libaosd-text2"
+  "libaosd2"
+  "libc6" {>= "2.2.5"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+]
+extra-source "aosd-cat_0.2.7-1.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaosd/aosd-cat_0.2.7-1.1+b1_amd64.deb"
+}

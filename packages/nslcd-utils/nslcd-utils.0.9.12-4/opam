@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nslcd-utils_0.9.12-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nslcd-utils"]
+]
+depends: [
+  "python3-any"
+  ("nslcd" {>= "0.9.0"} | "nslcd-2")
+]
+extra-source "nslcd-utils_0.9.12-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nss-pam-ldapd/nslcd-utils_0.9.12-4_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-nis-perl_0.44-1+b8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-nis-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libnsl2" {>= "1.0"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libnet-nis-perl_0.44-1+b8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-nis-perl/libnet-nis-perl_0.44-1+b8_amd64.deb"
+}

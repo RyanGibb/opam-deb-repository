@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsam-dev_3.1.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsam-dev"]
+]
+depends: [
+  "libcorosync-common-dev" {= "3.1.2-2"}
+  "libsam4" {= "3.1.2-2"}
+]
+extra-source "libsam-dev_3.1.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/corosync/libsam-dev_3.1.2-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nfs-ganesha-proxy_3.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nfs-ganesha-proxy"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libntirpc3-4" {>= "3.4"}
+  "liburcu6" {>= "0.12.0"}
+  "nfs-ganesha" {= "3.4-1"}
+]
+extra-source "nfs-ganesha-proxy_3.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nfs-ganesha/nfs-ganesha-proxy_3.4-1_amd64.deb"
+}

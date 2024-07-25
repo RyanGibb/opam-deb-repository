@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsundials-idas5_6.4.1+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsundials-idas5"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgfortran5" {>= "10"}
+]
+extra-source "libsundials-idas5_6.4.1+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sundials/libsundials-idas5_6.4.1+dfsg1-3_amd64.deb"
+}

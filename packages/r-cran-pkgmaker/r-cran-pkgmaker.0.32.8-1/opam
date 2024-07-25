@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-pkgmaker_0.32.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-pkgmaker"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-assertthat"
+  "r-cran-codetools"
+  "r-cran-digest"
+  "r-cran-registry"
+  "r-cran-stringr"
+  "r-cran-withr"
+  "r-cran-xtable"
+]
+extra-source "r-cran-pkgmaker_0.32.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-pkgmaker/r-cran-pkgmaker_0.32.8-1_all.deb"
+}

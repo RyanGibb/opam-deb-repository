@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i alsamixergui_0.9.0rc2-1-10+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r alsamixergui"]
+]
+depends: [
+  "alsa-utils"
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.14"}
+  "libfltk1-1" {>= "1.1.6-6"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+]
+extra-source "alsamixergui_0.9.0rc2-1-10+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alsamixergui/alsamixergui_0.9.0rc2-1-10+b1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhpmud0_3.22.10+dfsg0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhpmud0"]
+]
+depends: [
+  "libavahi-client3" {>= "0.6.16"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libc6" {>= "2.34"}
+  "libcups2" {>= "1.6.0"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libsnmp40" {>= "5.9.3+dfsg"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+]
+extra-source "libhpmud0_3.22.10+dfsg0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hplip/libhpmud0_3.22.10+dfsg0-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i enca_1.19-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r enca"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libenca0" {>= "1.9"}
+  "librecode0" {>= "3.6"}
+]
+extra-source "enca_1.19-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/enca/enca_1.19-1+b1_amd64.deb"
+}

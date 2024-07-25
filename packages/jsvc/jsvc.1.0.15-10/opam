@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jsvc_1.0.15-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jsvc"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libcommons-daemon-java"
+]
+extra-source "jsvc_1.0.15-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/commons-daemon/jsvc_1.0.15-10_amd64.deb"
+}

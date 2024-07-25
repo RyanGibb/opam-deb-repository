@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hotswap-gui_0.4.0-15+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hotswap-gui"]
+]
+depends: [
+  "hotswap-text"
+  "libc6" {>= "2.4"}
+  "libx11-6"
+  "libxext6"
+  "libxm4" {>= "2.3.4"}
+  "libxt6"
+]
+extra-source "hotswap-gui_0.4.0-15+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hotswap/hotswap-gui_0.4.0-15+b1_amd64.deb"
+}

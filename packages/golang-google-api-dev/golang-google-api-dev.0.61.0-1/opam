@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-google-api-dev_0.61.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-google-api-dev"]
+]
+depends: [
+  "golang-github-google-go-cmp-dev" {>= "0.5.6"}
+  "golang-github-googleapis-gax-go-dev" {>= "2.0.5"}
+  "golang-go-opencensus-dev" {>= "0.23.0"}
+  "golang-golang-x-net-dev" {>= "1-0.0+git20210503.7fd8e65"}
+  "golang-golang-x-oauth2-dev" {>= "0.0~git20211104.d3ed0bb"}
+  "golang-golang-x-oauth2-google-dev" {>= "0.0~git20211104.d3ed0bb"}
+  "golang-golang-x-sync-dev" {>= "0.0~git20210220.036812b"}
+  "golang-golang-x-sys-dev" {>= "0.0~git20211124.fe61309"}
+  "golang-google-cloud-compute-metadata-dev" {>= "0.56.0"}
+  "golang-google-genproto-dev"
+  "golang-google-grpc-dev"
+]
+extra-source "golang-google-api-dev_0.61.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-google-api/golang-google-api-dev_0.61.0-1_all.deb"
+}

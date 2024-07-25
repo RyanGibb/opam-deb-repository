@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i packagekit-tools_1.1.12-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r packagekit-tools"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libglib2-0-0" {>= "2.46"}
+  "libpackagekit-glib2-18" {>= "1.1.9"}
+  "packagekit" {= "1.1.12-5"}
+]
+extra-source "packagekit-tools_1.1.12-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/packagekit/packagekit-tools_1.1.12-5_amd64.deb"
+}

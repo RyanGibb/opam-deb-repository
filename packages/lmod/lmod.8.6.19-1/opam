@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lmod_8.6.19-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lmod"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libtcl8-6" {>= "8.6.0"}
+  "lua-filesystem"
+  "lua-json"
+  "lua-posix"
+  "lua-term"
+  "lua5-3"
+  "tcl"
+]
+conflicts: [
+  "environment-modules"
+]
+extra-source "lmod_8.6.19-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lmod/lmod_8.6.19-1_amd64.deb"
+}

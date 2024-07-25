@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i umview_0.8.2-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r umview"]
+]
+depends: [
+  "libc6" {>= "2.22"}
+  "libumlib0" {= "0.8.2-1.2"}
+]
+extra-source "umview_0.8.2-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/umview/umview_0.8.2-1.2_amd64.deb"
+}

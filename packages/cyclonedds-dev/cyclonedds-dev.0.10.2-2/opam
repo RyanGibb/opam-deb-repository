@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cyclonedds-dev_0.10.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cyclonedds-dev"]
+]
+depends: [
+  "libcycloneddsidl0" {= "0.10.2-2"}
+  "libddsc0debian" {= "0.10.2-2"}
+  "libiceoryx-binding-c-dev"
+]
+extra-source "cyclonedds-dev_0.10.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cyclonedds/cyclonedds-dev_0.10.2-2_amd64.deb"
+}

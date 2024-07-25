@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libb-utils-perl_0.27-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libb-utils-perl"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  "libtask-weaken-perl"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libb-utils-perl_0.27-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libb-utils-perl/libb-utils-perl_0.27-2+b1_amd64.deb"
+}

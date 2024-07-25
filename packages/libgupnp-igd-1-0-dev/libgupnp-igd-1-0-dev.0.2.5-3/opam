@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgupnp-igd-1.0-dev_0.2.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgupnp-igd-1.0-dev"]
+]
+depends: [
+  "gir1-2-gupnpigd-1-0" {= "0.2.5-3"}
+  "libglib2-0-dev" {>= "2.26"}
+  "libgupnp-1-0-dev" {>= "0.18"}
+  "libgupnp-igd-1-0-4" {= "0.2.5-3"}
+]
+extra-source "libgupnp-igd-1.0-dev_0.2.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gupnp-igd/libgupnp-igd-1.0-dev_0.2.5-3_amd64.deb"
+}

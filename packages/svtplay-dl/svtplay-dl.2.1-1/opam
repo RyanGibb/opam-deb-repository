@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i svtplay-dl_2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r svtplay-dl"]
+]
+depends: [
+  "python3" {>= "3.4"}
+  "python3-crypto"
+  "python3-requests"
+  "python3-yaml"
+  "rtmpdump" {>= "2.4"}
+  ("ffmpeg" | "libavtools")
+]
+extra-source "svtplay-dl_2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/svtplay-dl/svtplay-dl_2.1-1_all.deb"
+}

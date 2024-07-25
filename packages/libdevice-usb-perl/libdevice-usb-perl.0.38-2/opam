@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdevice-usb-perl_0.38-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdevice-usb-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libinline-c-perl"
+  "libinline-perl"
+  "libusb-0-1-4" {>= "2-0.1.12"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libdevice-usb-perl_0.38-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdevice-usb-perl/libdevice-usb-perl_0.38-2_amd64.deb"
+}

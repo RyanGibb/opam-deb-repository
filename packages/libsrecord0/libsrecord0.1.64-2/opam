@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsrecord0_1.64-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsrecord0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libsrecord0_1.64-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/srecord/libsrecord0_1.64-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i valabind_1.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r valabind"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libvala-0-42-0" {>= "0.39.7"}
+  "valac" {< "0.43"}
+  "valac" {>= "0.42"}
+]
+extra-source "valabind_1.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/valabind/valabind_1.7.1-1_amd64.deb"
+}

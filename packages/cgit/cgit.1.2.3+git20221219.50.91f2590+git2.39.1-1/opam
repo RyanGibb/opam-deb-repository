@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cgit_1.2.3+git20221219.50.91f2590+git2.39.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cgit"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "liblua5-1-0"
+  "zlib1g" {>= "1-1.2.2"}
+]
+extra-source "cgit_1.2.3+git20221219.50.91f2590+git2.39.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cgit/cgit_1.2.3+git20221219.50.91f2590+git2.39.1-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i giflib-tools_5.2.1-2.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r giflib-tools"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgif7" {>= "5.1"}
+  ("libperl4-corelibs-perl" | "perl" {< "5.12.3-7"})
+]
+extra-source "giflib-tools_5.2.1-2.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/giflib/giflib-tools_5.2.1-2.5_amd64.deb"
+}

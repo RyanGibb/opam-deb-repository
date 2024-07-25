@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i meep-openmpi_1.17.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r meep-openmpi"]
+]
+depends: [
+  "guile-2-2-libs"
+  "libc6" {>= "2.29"}
+  "libctl7" {>= "4.5.0-8"}
+  "libgcc-s1" {>= "3.0"}
+  "libmeep-openmpi23" {>= "1.17.1"}
+  "libstdc++6" {>= "5"}
+  "openmpi-bin"
+]
+conflicts: [
+  "meep"
+  "meep-mpi-default"
+  "meep-mpich2"
+]
+extra-source "meep-openmpi_1.17.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meep-openmpi/meep-openmpi_1.17.1-2_amd64.deb"
+}

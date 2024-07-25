@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zookeeper_3.4.13-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zookeeper"]
+]
+depends: [
+  "adduser"
+  "libzookeeper-java" {= "3.4.13-2"}
+  ("default-jre-headless" | "java6-runtime-headless")
+]
+extra-source "zookeeper_3.4.13-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zookeeper/zookeeper_3.4.13-2_all.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i setbfree_0.8.11-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r setbfree"]
+]
+depends: [
+  "fonts-dejavu-core"
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libftgl2" {>= "2.4.0"}
+  "libgl1"
+  "libglib2-0-0" {>= "2.12.0"}
+  "liblo7" {>= "0.26~repack"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libx11-6"
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "setbfree_0.8.11-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/setbfree/setbfree_0.8.11-3_amd64.deb"
+}

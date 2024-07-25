@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i opam_2.0.3-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r opam"]
+]
+depends: [
+  "bubblewrap"
+  "build-essential"
+  "libbz2-1-0"
+  "libc6" {>= "2.28"}
+  "mccs"
+  "opam-doc" {= "2.0.3-1+deb10u1"}
+  "opam-installer" {= "2.0.3-1+deb10u1"}
+  "unzip"
+  "zlib1g" {>= "1-1.1.4"}
+  ("wget" | "curl")
+]
+extra-source "opam_2.0.3-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opam/opam_2.0.3-1+deb10u1_amd64.deb"
+}

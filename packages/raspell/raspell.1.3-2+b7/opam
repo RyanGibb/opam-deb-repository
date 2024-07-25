@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i raspell_1.3-2+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r raspell"]
+]
+depends: [
+  "libaspell15" {>= "0.60.8"}
+  "libc6" {>= "2.4"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.0~preview1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "raspell_1.3-2+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/raspell/raspell_1.3-2+b7_amd64.deb"
+}

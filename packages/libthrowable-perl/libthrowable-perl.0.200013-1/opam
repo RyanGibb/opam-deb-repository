@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libthrowable-perl_0.200013-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libthrowable-perl"]
+]
+depends: [
+  "libdevel-stacktrace-perl" {>= "1.3200"}
+  "libmodule-runtime-perl"
+  "libmoo-perl" {>= "1.000001"}
+  "perl"
+]
+extra-source "libthrowable-perl_0.200013-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libthrowable-perl/libthrowable-perl_0.200013-1_all.deb"
+}

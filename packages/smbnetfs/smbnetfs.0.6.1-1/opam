@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i smbnetfs_0.6.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r smbnetfs"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libfuse2" {>= "2.6"}
+  "libglib2-0-0" {>= "2.30"}
+  "libsecret-1-0" {>= "0.18.5"}
+  "libsmbclient" {>= "2-4.0.3+dfsg1"}
+]
+extra-source "smbnetfs_0.6.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/smbnetfs/smbnetfs_0.6.1-1_amd64.deb"
+}

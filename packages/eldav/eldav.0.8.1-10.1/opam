@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eldav_0.8.1-10.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eldav"]
+]
+depends: [
+  "apel" {>= "10.4+cvs.2003.05.29-1"}
+  "nd" {>= "0.7.0"}
+  ("emacs" | "emacsen")
+]
+extra-source "eldav_0.8.1-10.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eldav/eldav_0.8.1-10.1_all.deb"
+}

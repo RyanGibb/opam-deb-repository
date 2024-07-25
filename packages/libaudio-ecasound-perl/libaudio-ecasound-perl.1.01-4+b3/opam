@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaudio-ecasound-perl_1.01-4+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaudio-ecasound-perl"]
+]
+depends: [
+  "ecasound" {>= "2.9.1-2~"}
+  "libecasoundc1v5" {>= "2.9.3"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libaudio-ecasound-perl_1.01-4+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaudio-ecasound-perl/libaudio-ecasound-perl_1.01-4+b3_amd64.deb"
+}

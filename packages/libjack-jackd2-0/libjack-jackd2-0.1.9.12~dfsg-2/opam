@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjack-jackd2-0_1.9.12~dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjack-jackd2-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libopus0" {>= "1.1"}
+  "libsamplerate0" {>= "0.1.7"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "jackd2 (<< 1.9.12~dfsg-2)"
+  "jackd2 (>> 1.9.12~dfsg-2)"
+  "libjack-0.116"
+  "libjack-0.125"
+  "libjack0"
+]
+extra-source "libjack-jackd2-0_1.9.12~dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jackd2/libjack-jackd2-0_1.9.12~dfsg-2_amd64.deb"
+}

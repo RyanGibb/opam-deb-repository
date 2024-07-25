@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnetfilter-conntrack3_1.0.9-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnetfilter-conntrack3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmnl0" {>= "1.0.3-4~"}
+  "libnfnetlink0" {>= "1.0.2"}
+]
+extra-source "libnetfilter-conntrack3_1.0.9-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnetfilter-conntrack/libnetfilter-conntrack3_1.0.9-3_amd64.deb"
+}

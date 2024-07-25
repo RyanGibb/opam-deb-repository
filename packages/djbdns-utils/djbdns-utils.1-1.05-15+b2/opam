@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i djbdns-utils_1:1.05-15+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r djbdns-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "ucspi-tcp"
+]
+extra-source "djbdns-utils_1:1.05-15+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/djbdns/djbdns-utils_1.05-15+b2_amd64.deb"
+}

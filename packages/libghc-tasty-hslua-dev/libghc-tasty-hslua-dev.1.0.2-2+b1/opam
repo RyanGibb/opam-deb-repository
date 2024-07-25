@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tasty-hslua-dev_1.0.2-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tasty-hslua-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-hslua-core-dev"
+  "libghc-tasty-dev"
+  "libghc-tasty-hunit-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "liblua5-3-0"
+]
+extra-source "libghc-tasty-hslua-dev_1.0.2-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tasty-hslua/libghc-tasty-hslua-dev_1.0.2-2+b1_amd64.deb"
+}

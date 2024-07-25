@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libssh-gcrypt-4_0.9.8-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libssh-gcrypt-4"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libgpg-error0" {>= "1.14"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libssh-gcrypt-4_0.9.8-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libssh/libssh-gcrypt-4_0.9.8-0+deb11u1_amd64.deb"
+}

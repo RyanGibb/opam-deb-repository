@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lomiri-docviewer-app_3.0.3+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lomiri-docviewer-app"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libpoppler-qt5-1" {>= "0.24.5"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libqt5xml5" {>= "5.4.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "qml-module-lomiri-components"
+  "qml-module-lomiri-content"
+  "qml-module-lomiri-layouts"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick-window2"
+  "qml-module-qtquick2"
+  "suru-icon-theme" {>= "14.04+15.10.20150707-0ubuntu1"}
+  ("libqt5gui5" {>= "5.4.0"} | "libqt5gui5-gles" {>= "5.4.0"})
+  ("libqt5quick5" {>= "5.6.0~beta"} | "libqt5quick5-gles" {>= "5.6.0~beta"})
+  ("libreoffice-vanilla" {>= "5.0.0"} | "libreoffice" {>= "5.0.0"})
+]
+extra-source "lomiri-docviewer-app_3.0.3+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri-docviewer-app/lomiri-docviewer-app_3.0.3+dfsg-1_amd64.deb"
+}

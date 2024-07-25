@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gamemode-daemon_1.7-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gamemode-daemon"]
+]
+depends: [
+  "init-system-helpers" {>= "1.52"}
+  "libc6" {>= "2.34"}
+  "libelogind0"
+  "libinih1" {>= "40"}
+]
+extra-source "gamemode-daemon_1.7-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gamemode/gamemode-daemon_1.7-2+b1_amd64.deb"
+}

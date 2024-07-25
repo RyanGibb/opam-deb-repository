@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i command-not-found_18.04.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r command-not-found"]
+]
+depends: [
+  "apt-file" {>= "3.0~exp1~"}
+  "lsb-release"
+  "python3-any"
+  "python3-apt"
+]
+extra-source "command-not-found_18.04.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/command-not-found/command-not-found_18.04.5-1_all.deb"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-copilot-theorem-dev_3.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-copilot-theorem-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-bimap-dev"
+  "libghc-bv-sized-dev"
+  "libghc-copilot-core-dev"
+  "libghc-copilot-prettyprinter-dev"
+  "libghc-data-default-dev"
+  "libghc-libbf-dev"
+  "libghc-panic-dev"
+  "libghc-parameterized-utils-dev"
+  "libghc-random-dev"
+  "libghc-what4-dev"
+  "libghc-xml-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-copilot-theorem-dev_3.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-copilot-theorem/libghc-copilot-theorem-dev_3.13-1_amd64.deb"
+}

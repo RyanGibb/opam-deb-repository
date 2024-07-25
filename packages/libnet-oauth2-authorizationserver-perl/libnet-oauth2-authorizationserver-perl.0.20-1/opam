@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-oauth2-authorizationserver-perl_0.20-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-oauth2-authorizationserver-perl"]
+]
+depends: [
+  "libcryptx-perl"
+  "libmojo-jwt-perl"
+  "libmoo-perl" {>= "2.000002"}
+  "libtry-tiny-perl" {>= "0.22"}
+  "libtype-tiny-perl" {>= "1.000005"}
+  "perl"
+]
+extra-source "libnet-oauth2-authorizationserver-perl_0.20-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-oauth2-authorizationserver-perl/libnet-oauth2-authorizationserver-perl_0.20-1_all.deb"
+}

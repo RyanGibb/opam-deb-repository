@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-diagrams-core-dev_1.5.0.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-diagrams-core-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-adjunctions-dev"
+  "libghc-distributive-dev"
+  "libghc-dual-tree-dev"
+  "libghc-lens-dev"
+  "libghc-linear-dev"
+  "libghc-monoid-extras-dev"
+  "libghc-profunctors-dev"
+  "libghc-semigroups-dev"
+  "libghc-unordered-containers-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-diagrams-core-dev_1.5.0.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-diagrams-core/libghc-diagrams-core-dev_1.5.0.1-1+b1_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i twine_4.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r twine"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "5.2"}
+  "python3-any"
+  "python3-importlib-metadata" {>= "3.6"}
+  "python3-keyring"
+  "python3-pkginfo" {>= "1.8.1"}
+  "python3-readme-renderer" {>= "35"}
+  "python3-requests"
+  "python3-requests-toolbelt"
+  "python3-rfc3986" {>= "1.4.0"}
+  "python3-rich" {>= "12"}
+  "python3-urllib3"
+  "sphinx-rtd-theme-common" {>= "1.1.1+dfsg"}
+]
+extra-source "twine_4.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/twine/twine_4.0.2-1_all.deb"
+}

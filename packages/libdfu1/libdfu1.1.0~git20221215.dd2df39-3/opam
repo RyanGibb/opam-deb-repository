@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdfu1_1.0~git20221215.dd2df39-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdfu1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libusb-1-0-0" {>= "2-1.0.16"}
+]
+extra-source "libdfu1_1.0~git20221215.dd2df39-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdfu-ahp/libdfu1_1.0~git20221215.dd2df39-3_amd64.deb"
+}

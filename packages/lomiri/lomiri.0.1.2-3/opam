@@ -1,0 +1,68 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lomiri_0.1.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lomiri"]
+]
+depends: [
+  "ayatana-indicator-bluetooth"
+  "ayatana-indicator-datetime"
+  "ayatana-indicator-display"
+  "ayatana-indicator-keyboard"
+  "ayatana-indicator-messages"
+  "ayatana-indicator-power"
+  "ayatana-indicator-session"
+  "ayatana-indicator-sound"
+  "dmz-cursor-theme"
+  "gsettings-desktop-schemas"
+  "libc6" {>= "2.34"}
+  "libcap2-bin"
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-bin"
+  "libgsettings-qt1" {>= "0.1+14.04.20140408"}
+  "liblomiri-connectivity-qt1-1" {>= "1.0.0~git20220718.2ca3619"}
+  "liblomiri-private0"
+  "liblomiri-private0" {= "0.1.2-3"}
+  "libmiral5" {>= "3.6.0"}
+  "libmiroil3" {>= "2.11.0"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.6"}
+  "libqt5network5" {>= "5.6"}
+  "libqt5qml5" {>= "5.6"}
+  "libqt5test5" {>= "5.6"}
+  "libqtmirserver2" {>= "0.8.0~git20230223.bd21224-3~"}
+  "libstdc++6" {>= "11"}
+  "libsystemd0"
+  "libx11-6"
+  "libxi6" {>= "2-1.2.99.4"}
+  "lomiri-app-launch" {>= "0.1.5"}
+  "lomiri-common" {< "0.1.2-3.1~"}
+  "lomiri-common" {>= "0.1.2-3"}
+  "lomiri-indicator-network"
+  "lomiri-system-settings" {>= "0.4"}
+  "lomiri-url-dispatcher"
+  "qml-module-biometryd"
+  "qml-module-hfd"
+  "qml-module-lomiri-components"
+  "qml-module-lomiri-layouts"
+  "qml-module-lomiri-settings-menus"
+  "qml-module-lomiri-telephony"
+  "qml-module-qmenumodel1"
+  "qml-module-qt-labs-folderlistmodel"
+  "qml-module-qt-labs-settings"
+  "qml-module-qtmir" {>= "0.4.8"}
+  "qml-module-qtqml-statemachine"
+  "qml-module-qtquick-xmllistmodel"
+  "qml-module-qtsysteminfo"
+  "qtmir"
+  ("libqt5gui5" {>= "5.6"} | "libqt5gui5-gles" {>= "5.6"})
+  ("libqt5quick5" {>= "5.6"} | "libqt5quick5-gles" {>= "5.6"})
+]
+conflicts: [
+  "lomiri-system-settings-wizard"
+]
+extra-source "lomiri_0.1.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri/lomiri_0.1.2-3_amd64.deb"
+}

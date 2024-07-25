@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eflite_0.4.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eflite"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libflite1" {>= "1.4-release-9~"}
+]
+extra-source "eflite_0.4.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eflite/eflite_0.4.1-9_amd64.deb"
+}

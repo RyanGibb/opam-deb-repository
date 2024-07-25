@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libshell-utils-clojure_1.0.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libshell-utils-clojure"]
+]
+depends: [
+  "libclojure-java"
+  "libcommons-exec-java"
+  "libcommons-io-java"
+  "libkitchensink-clojure" {>= "3.1.1"}
+  "libprismatic-schema-clojure" {>= "1.1.12"}
+  "libpuppetlabs-i18n-clojure" {>= "0.9.0-2"}
+  "libslf4j-java"
+  "libtrapperkeeper-clojure" {>= "3.1.0"}
+]
+extra-source "libshell-utils-clojure_1.0.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shell-utils-clojure/libshell-utils-clojure_1.0.2-3_all.deb"
+}

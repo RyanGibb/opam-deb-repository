@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i varmon_1.2.1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r varmon"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "varmon_1.2.1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/varmon/varmon_1.2.1-1+b3_amd64.deb"
+}

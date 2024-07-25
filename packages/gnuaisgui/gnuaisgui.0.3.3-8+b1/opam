@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnuaisgui_0.3.3-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnuaisgui"]
+]
+depends: [
+  "gnuais" {= "0.3.3-8+b1"}
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libosmgpsmap-1-0-1" {>= "1.0.1"}
+]
+extra-source "gnuaisgui_0.3.3-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnuais/gnuaisgui_0.3.3-8+b1_amd64.deb"
+}

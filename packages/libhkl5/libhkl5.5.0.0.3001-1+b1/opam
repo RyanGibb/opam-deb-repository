@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhkl5_5.0.0.3001-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhkl5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libgsl27" {>= "2.7.1"}
+]
+extra-source "libhkl5_5.0.0.3001-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hkl/libhkl5_5.0.0.3001-1+b1_amd64.deb"
+}

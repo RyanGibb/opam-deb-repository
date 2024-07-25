@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xdg-desktop-portal-gnome_43.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xdg-desktop-portal-gnome"]
+]
+depends: [
+  "gsettings-desktop-schemas"
+  "libadwaita-1-0" {>= "1.0.0"}
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.55.1"}
+  "libgnome-bg-4-2" {>= "3.17.92"}
+  "libgnome-desktop-4-2" {>= "3.17.92"}
+  "libgtk-4-1" {>= "4.0.0"}
+  "libx11-6"
+  "xdg-desktop-portal" {>= "1.15.0"}
+  "xdg-desktop-portal-gtk"
+  ("dbus-user-session" | "dbus-x11")
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "xdg-desktop-portal-gnome_43.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xdg-desktop-portal-gnome/xdg-desktop-portal-gnome_43.1-2_amd64.deb"
+}

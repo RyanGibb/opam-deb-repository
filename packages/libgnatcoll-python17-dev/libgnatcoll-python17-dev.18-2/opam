@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatcoll-python17-dev_18-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatcoll-python17-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-8"
+  "libgnatcoll-python17" {= "18-2"}
+  "libgnatcoll17-dev"
+  "libpython-dev"
+]
+extra-source "libgnatcoll-python17-dev_18-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnatcoll-bindings/libgnatcoll-python17-dev_18-2_amd64.deb"
+}

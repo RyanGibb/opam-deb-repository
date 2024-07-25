@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i peek_1.5.1+git20230114-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r peek"]
+]
+depends: [
+  "ffmpeg"
+  "gstreamer1-0-plugins-good"
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.10.0"}
+  "libglib2-0-0" {>= "2.43.92"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libkeybinder-3-0-0" {>= "0.3.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "peek_1.5.1+git20230114-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/peek/peek_1.5.1+git20230114-1_amd64.deb"
+}

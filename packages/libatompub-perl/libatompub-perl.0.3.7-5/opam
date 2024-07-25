@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libatompub-perl_0.3.7-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libatompub-perl"]
+]
+depends: [
+  "libclass-accessor-perl"
+  "libclass-data-inheritable-perl"
+  "libdatetime-format-w3cdtf-perl"
+  "libdatetime-perl"
+  "libdatetime-timezone-perl"
+  "libfile-slurp-perl"
+  "libmime-types-perl"
+  "libperl6-export-attrs-perl"
+  "libxml-atom-service-perl"
+  "perl-any"
+  ("libhttp-date-perl" | "libwww-perl" {< "6"})
+  ("libhttp-message-perl" | "libwww-perl" {< "6"})
+]
+extra-source "libatompub-perl_0.3.7-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libatompub-perl/libatompub-perl_0.3.7-5_all.deb"
+}

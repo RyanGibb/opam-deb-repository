@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-nno-nob_1.1.0~r66076-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-nno-nob"]
+]
+depends: [
+  "apertium" {>= "3.4"}
+  "apertium-lex-tools"
+  "cg3"
+]
+conflicts: [
+  "apertium-nob-nno"
+]
+extra-source "apertium-nno-nob_1.1.0~r66076-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-nno-nob/apertium-nno-nob_1.1.0~r66076-2_all.deb"
+}

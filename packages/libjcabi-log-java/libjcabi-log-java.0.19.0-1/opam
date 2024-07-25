@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjcabi-log-java_0.19.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjcabi-log-java"]
+]
+depends: [
+  "liblombok-java" {>= "1.16.22"}
+  "libslf4j-java" {>= "1.7.25"}
+]
+extra-source "libjcabi-log-java_0.19.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jcabi-log/libjcabi-log-java_0.19.0-1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hmatrix-prof_0.20.0.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hmatrix-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hmatrix-dev" {= "0.20.0.0-1+b1"}
+  "libghc-random-prof"
+  "libghc-semigroups-prof"
+  "libghc-split-prof"
+  "libghc-storable-complex-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-hmatrix-prof_0.20.0.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hmatrix/libghc-hmatrix-prof_0.20.0.0-1+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kconfig-frontends-nox_4.11.0.1+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kconfig-frontends-nox"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libncurses-dev"
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "python3"
+]
+extra-source "kconfig-frontends-nox_4.11.0.1+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kconfig-frontends/kconfig-frontends-nox_4.11.0.1+dfsg-6_amd64.deb"
+}

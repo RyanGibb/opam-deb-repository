@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdevel-caller-perl_2.06-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdevel-caller-perl"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  "libpadwalker-perl"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libdevel-caller-perl_2.06-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdevel-caller-perl/libdevel-caller-perl_2.06-3+b1_amd64.deb"
+}

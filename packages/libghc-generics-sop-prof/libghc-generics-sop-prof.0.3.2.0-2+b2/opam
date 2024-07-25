@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-generics-sop-prof_0.3.2.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-generics-sop-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-generics-sop-dev" {= "0.3.2.0-2+b2"}
+]
+extra-source "libghc-generics-sop-prof_0.3.2.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-generics-sop/libghc-generics-sop-prof_0.3.2.0-2+b2_amd64.deb"
+}

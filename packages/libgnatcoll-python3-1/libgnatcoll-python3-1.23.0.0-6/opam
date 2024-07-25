@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatcoll-python3-1_23.0.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatcoll-python3-1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnat-12" {>= "12.2.0"}
+  "libgnatcoll21" {>= "23.0.0"}
+  "libpython3-11" {>= "3.11.0"}
+]
+extra-source "libgnatcoll-python3-1_23.0.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnatcoll-bindings/libgnatcoll-python3-1_23.0.0-6_amd64.deb"
+}

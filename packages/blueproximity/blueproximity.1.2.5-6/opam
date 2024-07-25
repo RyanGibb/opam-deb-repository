@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i blueproximity_1.2.5-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r blueproximity"]
+]
+depends: [
+  "bluetooth"
+  "librsvg2-common"
+  "python" {>= "2.6.6-7~"}
+  "python-bluez"
+  "python-configobj" {>= "4.7.0"}
+  "python-glade2"
+  "python-gobject"
+  "python-gtk2"
+]
+extra-source "blueproximity_1.2.5-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/blueproximity/blueproximity_1.2.5-6_all.deb"
+}

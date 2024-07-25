@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvisio-tools_0.1.7-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvisio-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "librevenge-0-0-0"
+  "libstdc++6" {>= "4.4"}
+  "libvisio-0-1-1"
+]
+extra-source "libvisio-tools_0.1.7-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvisio/libvisio-tools_0.1.7-1+b3_amd64.deb"
+}

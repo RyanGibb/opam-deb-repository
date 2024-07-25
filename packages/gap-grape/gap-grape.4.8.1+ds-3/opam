@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gap-grape_4.8.1+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gap-grape"]
+]
+depends: [
+  "gap" {>= "4r9p3"}
+  "nauty"
+]
+extra-source "gap-grape_4.8.1+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gap-grape/gap-grape_4.8.1+ds-3_all.deb"
+}

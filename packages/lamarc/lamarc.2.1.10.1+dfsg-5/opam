@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lamarc_2.1.10.1+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lamarc"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "libtinyxml2-6-2v5"
+  "libwxbase3-0-0v5" {>= "3.0.5.1+dfsg"}
+  "libwxgtk3-0-gtk3-0v5" {>= "3.0.5.1+dfsg"}
+]
+extra-source "lamarc_2.1.10.1+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lamarc/lamarc_2.1.10.1+dfsg-5_amd64.deb"
+}

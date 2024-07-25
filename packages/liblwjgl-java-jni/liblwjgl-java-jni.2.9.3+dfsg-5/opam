@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblwjgl-java-jni_2.9.3+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblwjgl-java-jni"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libx11-6"
+  "libxcursor1" {> "1.1.2"}
+  "libxrandr2" {>= "4.3"}
+  "libxxf86vm1"
+]
+extra-source "liblwjgl-java-jni_2.9.3+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lwjgl/liblwjgl-java-jni_2.9.3+dfsg-5_amd64.deb"
+}

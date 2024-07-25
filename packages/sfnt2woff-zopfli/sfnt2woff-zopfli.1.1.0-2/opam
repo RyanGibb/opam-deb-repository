@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sfnt2woff-zopfli_1.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sfnt2woff-zopfli"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "sfnt2woff-zopfli_1.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sfnt2woff-zopfli/sfnt2woff-zopfli_1.1.0-2_amd64.deb"
+}

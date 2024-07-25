@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-gi-dev_3.30.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-gi-dev"]
+]
+depends: [
+  "libffi-dev" {>= "3.0.5"}
+  "libglib2-0-dev" {>= "2.35.9"}
+  "python-gi" {= "3.30.4-1"}
+  "python3-gi" {= "3.30.4-1"}
+]
+extra-source "python-gi-dev_3.30.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pygobject/python-gi-dev_3.30.4-1_amd64.deb"
+}

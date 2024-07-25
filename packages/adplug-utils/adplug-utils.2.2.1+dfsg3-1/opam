@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i adplug-utils_2.2.1+dfsg3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r adplug-utils"]
+]
+depends: [
+  "libadplug-2-2-1-0v5" {>= "2.2.1-0"}
+  "libbinio1v5" {>= "1.4+dfsg1"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "adplug-utils_2.2.1+dfsg3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/adplug/adplug-utils_2.2.1+dfsg3-1_amd64.deb"
+}

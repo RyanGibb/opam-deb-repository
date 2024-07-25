@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lomiri-url-dispatcher-tools_0.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lomiri-url-dispatcher-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "liblomiri-url-dispatcher0" {>= "0.1.0"}
+  "lomiri-url-dispatcher" {= "0.1.2-1"}
+]
+extra-source "lomiri-url-dispatcher-tools_0.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri-url-dispatcher/lomiri-url-dispatcher-tools_0.1.2-1_amd64.deb"
+}

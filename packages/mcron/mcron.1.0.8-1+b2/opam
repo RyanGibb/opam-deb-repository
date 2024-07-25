@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mcron_1.0.8-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mcron"]
+]
+depends: [
+  "guile-2-0"
+  "guile-2-0-libs"
+  "libc6" {>= "2.2.5"}
+  "libgc1c2" {>= "1-7.2d"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+  ("sendmail" | "mail-transport-agent")
+]
+extra-source "mcron_1.0.8-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mcron/mcron_1.0.8-1+b2_amd64.deb"
+}

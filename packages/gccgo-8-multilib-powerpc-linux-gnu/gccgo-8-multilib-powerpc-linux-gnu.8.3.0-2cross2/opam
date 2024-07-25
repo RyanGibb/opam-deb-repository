@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gccgo-8-multilib-powerpc-linux-gnu_8.3.0-2cross2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gccgo-8-multilib-powerpc-linux-gnu"]
+]
+depends: [
+  "gcc-8-multilib-powerpc-linux-gnu" {= "8.3.0-2cross2"}
+  "gcc-8-powerpc-linux-gnu-base" {= "8.3.0-2cross2"}
+  "gccgo-8-powerpc-linux-gnu" {= "8.3.0-2cross2"}
+  "lib64go13-powerpc-cross" {>= "8.3.0-2cross2"}
+]
+extra-source "gccgo-8-multilib-powerpc-linux-gnu_8.3.0-2cross2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross-ports/gccgo-8-multilib-powerpc-linux-gnu_8.3.0-2cross2_amd64.deb"
+}

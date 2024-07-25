@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gxemul_0.6.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gxemul"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "libx11-6"
+]
+extra-source "gxemul_0.6.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gxemul/gxemul_0.6.2-2_amd64.deb"
+}

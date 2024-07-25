@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hosc-dev_0.16-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hosc-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libghc-blaze-builder-dev"
+  "libghc-data-binary-ieee754-dev"
+  "libghc-network-dev"
+  "libgmp10"
+]
+extra-source "libghc-hosc-dev_0.16-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hosc/libghc-hosc-dev_0.16-2+b2_amd64.deb"
+}

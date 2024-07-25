@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhugs-alut-bundled_98.200609.21-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhugs-alut-bundled"]
+]
+depends: [
+  "hugs" {= "98.200609.21-6+b1"}
+  "libalut0" {>= "1.1.0"}
+  "libhugs-base-bundled"
+  "libhugs-openal-bundled"
+  "libhugs-opengl-bundled"
+]
+conflicts: [
+  "libhugs-alut"
+]
+extra-source "libhugs-alut-bundled_98.200609.21-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hugs98/libhugs-alut-bundled_98.200609.21-6+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-directory-tree-prof_0.12.1-7+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-directory-tree-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-directory-tree-dev" {= "0.12.1-7+b3"}
+]
+extra-source "libghc-directory-tree-prof_0.12.1-7+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-directory-tree/libghc-directory-tree-prof_0.12.1-7+b3_amd64.deb"
+}

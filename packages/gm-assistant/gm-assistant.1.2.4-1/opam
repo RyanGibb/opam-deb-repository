@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gm-assistant_1.2.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gm-assistant"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpocofoundation80" {>= "1.11.0"}
+  "libpocoxml80" {>= "1.11.0"}
+  "libpocozip80" {>= "1.11.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5multimedia5" {>= "5.6.0~beta"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libstdc++6" {>= "11"}
+  ("libqt5gui5" {>= "5.8.0"} | "libqt5gui5-gles" {>= "5.8.0"})
+]
+extra-source "gm-assistant_1.2.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gm-assistant/gm-assistant_1.2.4-1_amd64.deb"
+}

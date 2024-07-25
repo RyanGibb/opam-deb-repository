@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rng-tools-debian_2-unofficial-mt.14-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rng-tools-debian"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "lsb-base"
+  ("udev" {>= "0.053"} | "makedev" {>= "2.3.1-77"})
+]
+conflicts: [
+  "intel-rng-tools"
+  "rng-tools"
+]
+extra-source "rng-tools-debian_2-unofficial-mt.14-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rng-tools-debian/rng-tools-debian_2-unofficial-mt.14-3_amd64.deb"
+}

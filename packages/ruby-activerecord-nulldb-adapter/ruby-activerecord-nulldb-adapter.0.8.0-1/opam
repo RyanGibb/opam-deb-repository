@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-activerecord-nulldb-adapter_0.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-activerecord-nulldb-adapter"]
+]
+depends: [
+  "ruby-activerecord" {< "2-7.1"}
+  "ruby-activerecord" {>= "2-5.2.0"}
+]
+extra-source "ruby-activerecord-nulldb-adapter_0.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-activerecord-nulldb-adapter/ruby-activerecord-nulldb-adapter_0.8.0-1_all.deb"
+}

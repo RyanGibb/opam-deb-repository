@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jruby-maven-plugins_1.1.5+ds1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jruby-maven-plugins"]
+]
+depends: [
+  "ant"
+  "libmaven3-core-java" {>= "3.5.0"}
+  "libplexus-archiver-java" {>= "3.5"}
+  "libplexus-build-api-java" {>= "0.0.7"}
+  "libplexus-classworlds-java"
+  "libplexus-component-annotations-java" {>= "1.5.5"}
+  "libplexus-utils-java"
+  "libplexus-velocity-java" {>= "1.2"}
+  "libyaml-snake-java"
+]
+extra-source "jruby-maven-plugins_1.1.5+ds1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jruby-maven-plugins/jruby-maven-plugins_1.1.5+ds1-2_all.deb"
+}

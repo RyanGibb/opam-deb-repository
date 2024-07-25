@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lv2proc_0.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lv2proc"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "liblilv-0-0" {>= "0.4.2"}
+  "libsndfile1" {>= "1.0.20"}
+]
+extra-source "lv2proc_0.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lv2proc/lv2proc_0.5.1-1_amd64.deb"
+}

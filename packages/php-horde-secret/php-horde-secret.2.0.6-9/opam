@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-horde-secret_2.0.6-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-horde-secret"]
+]
+depends: [
+  "php-common"
+  "php-horde-crypt-blowfish" {< "2.0.0~alpha1"}
+  "php-horde-crypt-blowfish" {>= "1.0.0"}
+  "php-horde-exception" {< "3.0.0~alpha1"}
+  "php-horde-exception" {>= "2.0.0"}
+  "php-horde-support" {< "3.0.0~alpha1"}
+  "php-horde-support" {>= "2.0.0"}
+]
+extra-source "php-horde-secret_2.0.6-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-horde-secret/php-horde-secret_2.0.6-9_all.deb"
+}

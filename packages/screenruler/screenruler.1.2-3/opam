@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i screenruler_1.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r screenruler"]
+]
+depends: [
+  "libcanberra-gtk3-module"
+  "ruby-cairo"
+  "ruby-cairo-gobject"
+  "ruby-gettext"
+  "ruby-gtk3"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "screenruler_1.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/screenruler/screenruler_1.2-3_all.deb"
+}

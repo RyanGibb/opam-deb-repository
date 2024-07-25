@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i activemq_5.17.2+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r activemq"]
+]
+depends: [
+  "adduser" {>= "3.11"}
+  "libactivemq-java" {= "5.17.2+dfsg-2"}
+  "libgeronimo-jacc-1-1-spec-java"
+  "liblog4j1-2-java"
+  ("default-jre-headless" | "java7-runtime-headless")
+]
+extra-source "activemq_5.17.2+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/activemq/activemq_5.17.2+dfsg-2_all.deb"
+}

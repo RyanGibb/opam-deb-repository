@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uil_2.3.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uil"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libmrm4" {>= "2.3.4"}
+  "libuil4" {>= "2.3.4"}
+  "libxt6"
+]
+conflicts: [
+  "lesstif-bin"
+]
+extra-source "uil_2.3.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/motif/uil_2.3.8-2_amd64.deb"
+}

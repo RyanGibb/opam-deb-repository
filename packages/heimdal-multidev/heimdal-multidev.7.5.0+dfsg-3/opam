@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i heimdal-multidev_7.5.0+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r heimdal-multidev"]
+]
+depends: [
+  "comerr-dev"
+  "libasn1-8-heimdal" {= "7.5.0+dfsg-3"}
+  "libc6" {>= "2.14"}
+  "libcom-err2" {>= "1.43.9"}
+  "libgssapi3-heimdal" {= "7.5.0+dfsg-3"}
+  "libhcrypto4-heimdal" {= "7.5.0+dfsg-3"}
+  "libhdb9-heimdal" {= "7.5.0+dfsg-3"}
+  "libheimbase1-heimdal" {= "7.5.0+dfsg-3"}
+  "libhx509-5-heimdal" {= "7.5.0+dfsg-3"}
+  "libkadm5clnt7-heimdal" {= "7.5.0+dfsg-3"}
+  "libkadm5srv8-heimdal" {= "7.5.0+dfsg-3"}
+  "libkafs0-heimdal" {= "7.5.0+dfsg-3"}
+  "libkdc2-heimdal" {= "7.5.0+dfsg-3"}
+  "libkrb5-26-heimdal" {= "7.5.0+dfsg-3"}
+  "libotp0-heimdal" {= "7.5.0+dfsg-3"}
+  "libroken18-heimdal" {>= "1.4.0+git20110226"}
+  "libsl0-heimdal" {= "7.5.0+dfsg-3"}
+  "libwind0-heimdal" {= "7.5.0+dfsg-3"}
+]
+conflicts: [
+  "heimdal-clients (<< 0.4e-7)"
+  "kerberos4kth-dev"
+]
+extra-source "heimdal-multidev_7.5.0+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/heimdal/heimdal-multidev_7.5.0+dfsg-3_amd64.deb"
+}

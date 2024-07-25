@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i context_2021.03.05.20230120+dfsg-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r context"]
+]
+depends: [
+  "lmodern"
+  "ruby"
+  "tex-common" {>= "6.13"}
+  "tex-gyre"
+  "texlive-base" {>= "2019"}
+  "texlive-binaries" {>= "2019"}
+  "texlive-metapost" {>= "2019"}
+]
+conflicts: [
+  "texlive-context"
+]
+extra-source "context_2021.03.05.20230120+dfsg-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/context/context_2021.03.05.20230120+dfsg-1+deb12u1_all.deb"
+}

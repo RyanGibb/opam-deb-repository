@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdate-simple-perl_3.0300-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdate-simple-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "perl" {>= "5.28.1-3"}
+  "perl-base"
+]
+extra-source "libdate-simple-perl_3.0300-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdate-simple-perl/libdate-simple-perl_3.0300-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglibmm-2.4-dev_2.58.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglibmm-2.4-dev"]
+]
+depends: [
+  "libglib2-0-dev"
+  "libglibmm-2-4-1v5" {= "2.58.0-2"}
+  "libsigc++-2-0-dev"
+  "pkg-config"
+]
+extra-source "libglibmm-2.4-dev_2.58.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glibmm2.4/libglibmm-2.4-dev_2.58.0-2_amd64.deb"
+}

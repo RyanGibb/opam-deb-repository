@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zile_2.4.15-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zile"]
+]
+depends: [
+  "libacl1" {>= "2.2.23"}
+  "libc6" {>= "2.17"}
+  "libgc1" {>= "1-7.2d"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "zile_2.4.15-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zile/zile_2.4.15-2_amd64.deb"
+}

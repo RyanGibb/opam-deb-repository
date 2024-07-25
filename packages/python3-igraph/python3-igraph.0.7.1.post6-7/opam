@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-igraph_0.7.1.post6-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-igraph"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libigraph0v5" {>= "0.7.1"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+  "python3-texttable"
+]
+extra-source "python3-igraph_0.7.1.post6-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-igraph/python3-igraph_0.7.1.post6-7_amd64.deb"
+}

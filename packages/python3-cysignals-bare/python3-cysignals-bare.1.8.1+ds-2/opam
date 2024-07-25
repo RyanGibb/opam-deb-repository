@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-cysignals-bare_1.8.1+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-cysignals-bare"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any" {>= "3.6~"}
+]
+conflicts: [
+  "python3-cysignals-pari"
+]
+extra-source "python3-cysignals-bare_1.8.1+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cysignals/python3-cysignals-bare_1.8.1+ds-2_amd64.deb"
+}

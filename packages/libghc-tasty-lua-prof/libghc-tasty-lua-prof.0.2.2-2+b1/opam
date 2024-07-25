@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tasty-lua-prof_0.2.2-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tasty-lua-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-file-embed-prof"
+  "libghc-hslua-prof"
+  "libghc-tasty-lua-dev" {= "0.2.2-2+b1"}
+  "libghc-tasty-prof"
+]
+extra-source "libghc-tasty-lua-prof_0.2.2-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tasty-lua/libghc-tasty-lua-prof_0.2.2-2+b1_amd64.deb"
+}

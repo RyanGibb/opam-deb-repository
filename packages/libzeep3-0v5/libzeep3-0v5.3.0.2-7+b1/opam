@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzeep3.0v5_3.0.2-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzeep3.0v5"]
+]
+depends: [
+  "libboost-filesystem1-67-0"
+  "libboost-math1-67-0"
+  "libboost-regex1-67-0" {>= "1.67.0-10"}
+  "libboost-system1-67-0"
+  "libboost-thread1-67-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libzeep3.0"
+]
+extra-source "libzeep3.0v5_3.0.2-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libz/libzeep/libzeep3.0v5_3.0.2-7+b1_amd64.deb"
+}

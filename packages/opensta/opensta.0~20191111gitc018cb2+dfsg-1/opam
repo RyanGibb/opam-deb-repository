@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i opensta_0~20191111gitc018cb2+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r opensta"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1"
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "6"}
+  "libtcl8-6" {>= "8.6.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "opensta_0~20191111gitc018cb2+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opensta/opensta_0~20191111gitc018cb2+dfsg-1_amd64.deb"
+}

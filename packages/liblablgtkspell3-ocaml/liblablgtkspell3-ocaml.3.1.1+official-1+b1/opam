@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblablgtkspell3-ocaml_3.1.1+official-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblablgtkspell3-ocaml"]
+]
+depends: [
+  "libcairo2-ocaml"
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libgtkspell3-3-0"
+  "liblablgtk3-ocaml"
+  "ocaml-base-nox"
+]
+extra-source "liblablgtkspell3-ocaml_3.1.1+official-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lablgtk3/liblablgtkspell3-ocaml_3.1.1+official-1+b1_amd64.deb"
+}

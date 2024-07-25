@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i image-factory_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r image-factory"]
+]
+depends: [
+  "libvirt-clients"
+  "python3-any"
+  "python3-httplib2"
+  "python3-parted"
+  "qemu-utils"
+  "virtinst" {>= "1-2.1"}
+  "zerofree"
+]
+extra-source "image-factory_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/image-factory/image-factory_1.0.1-1_all.deb"
+}

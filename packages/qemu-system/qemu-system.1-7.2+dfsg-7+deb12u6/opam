@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qemu-system_1:7.2+dfsg-7+deb12u6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qemu-system"]
+]
+depends: [
+  "qemu-system-arm"
+  "qemu-system-mips"
+  "qemu-system-misc"
+  "qemu-system-ppc"
+  "qemu-system-sparc"
+  "qemu-system-x86"
+]
+extra-source "qemu-system_1:7.2+dfsg-7+deb12u6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qemu/qemu-system_7.2+dfsg-7+deb12u6_amd64.deb"
+}

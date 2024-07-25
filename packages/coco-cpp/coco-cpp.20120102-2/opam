@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coco-cpp_20120102-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coco-cpp"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "coco-cpp_20120102-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coco-cpp/coco-cpp_20120102-2_amd64.deb"
+}

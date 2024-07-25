@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspectre1_0.2.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspectre1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgs9" {>= "8.61.dfsg.1"}
+]
+extra-source "libspectre1_0.2.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libspectre/libspectre1_0.2.9-1_amd64.deb"
+}

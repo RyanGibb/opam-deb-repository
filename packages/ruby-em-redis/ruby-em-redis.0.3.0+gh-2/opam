@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-em-redis_0.3.0+gh-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-em-redis"]
+]
+depends: [
+  "ruby-eventmachine"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-em-redis_0.3.0+gh-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-em-redis/ruby-em-redis_0.3.0+gh-2_all.deb"
+}

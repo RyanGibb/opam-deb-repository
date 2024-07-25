@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liboggz2_1.1.1-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liboggz2"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libogg0" {>= "1.0rc3"}
+]
+extra-source "liboggz2_1.1.1-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/liboggz/liboggz2_1.1.1-8+b1_amd64.deb"
+}

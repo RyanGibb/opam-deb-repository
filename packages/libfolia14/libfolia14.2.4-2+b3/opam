@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfolia14_2.4-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfolia14"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libicu72" {>= "72.1~rc-1~"}
+  "libstdc++6" {>= "11"}
+  "libticcutils8" {>= "0.24"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libfolia14_2.4-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfolia/libfolia14_2.4-2+b3_amd64.deb"
+}

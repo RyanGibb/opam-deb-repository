@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-libselinux-dev_8.1.0+r23-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-libselinux-dev"]
+]
+depends: [
+  "android-libselinux" {= "8.1.0+r23-2"}
+]
+extra-source "android-libselinux-dev_8.1.0+r23-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-external-libselinux/android-libselinux-dev_8.1.0+r23-2_amd64.deb"
+}

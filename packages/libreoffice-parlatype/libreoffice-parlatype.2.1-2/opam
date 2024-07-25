@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-parlatype_2.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-parlatype"]
+]
+depends: [
+  "libreoffice-script-provider-python"
+  "parlatype" {>= "2.1"}
+]
+extra-source "libreoffice-parlatype_2.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/parlatype-libreoffice-extension/libreoffice-parlatype_2.1-2_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwnck-dev_2.30.7-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwnck-dev"]
+]
+depends: [
+  "gir1-2-wnck-1-0" {= "2.30.7-6+b1"}
+  "libcairo2-dev"
+  "libglib2-0-dev" {>= "2.13.0"}
+  "libgtk2-0-dev" {>= "2.19.7"}
+  "libpango1-0-dev"
+  "libstartup-notification0-dev" {>= "0.7-1"}
+  "libwnck22" {= "2.30.7-6+b1"}
+  "libx11-dev"
+  "libxres-dev"
+]
+extra-source "libwnck-dev_2.30.7-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libw/libwnck/libwnck-dev_2.30.7-6+b1_amd64.deb"
+}

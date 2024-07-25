@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-libc+rustc-dep-of-std-dev_0.2.139-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-libc+rustc-dep-of-std-dev"]
+]
+depends: [
+  "librust-libc+rustc-std-workspace-core-dev" {= "0.2.139-1"}
+  "librust-libc-dev"
+  "librust-libc-dev" {= "0.2.139-1"}
+]
+extra-source "librust-libc+rustc-dep-of-std-dev_0.2.139-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-libc/librust-libc+rustc-dep-of-std-dev_0.2.139-1_amd64.deb"
+}

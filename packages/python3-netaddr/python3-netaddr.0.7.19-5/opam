@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-netaddr_0.7.19-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-netaddr"]
+]
+depends: [
+  "ieee-data"
+  "python3-any"
+]
+conflicts: [
+  "python-netaddr (<< 0.7.19-4)"
+]
+extra-source "python3-netaddr_0.7.19-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-netaddr/python3-netaddr_0.7.19-5_all.deb"
+}

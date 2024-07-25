@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenjpip-server_2.4.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenjpip-server"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libfcgi0ldbl" {>= "2.4.2"}
+  "libwww-perl"
+  "spawn-fcgi" {>= "1.6.1"}
+]
+conflicts: [
+  "openjpip-server"
+]
+extra-source "libopenjpip-server_2.4.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openjpeg2/libopenjpip-server_2.4.0-3_amd64.deb"
+}

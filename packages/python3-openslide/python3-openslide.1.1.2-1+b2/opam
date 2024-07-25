@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-openslide_1.1.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-openslide"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libopenslide0"
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-pil"
+]
+extra-source "python3-openslide_1.1.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openslide-python/python3-openslide_1.1.2-1+b2_amd64.deb"
+}

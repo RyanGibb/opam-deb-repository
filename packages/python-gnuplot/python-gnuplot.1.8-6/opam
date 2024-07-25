@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-gnuplot_1.8-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-gnuplot"]
+]
+depends: [
+  "gnuplot"
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-numpy"
+]
+extra-source "python-gnuplot_1.8-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-gnuplot/python-gnuplot_1.8-6_all.deb"
+}

@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i webcamoid-plugins_8.5.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r webcamoid-plugins"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libavcodec-extra58"
+  "libavformat58" {>= "7-4.1"}
+  "libavkys8" {>= "8.5.0"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.6.0"}
+  "libgstreamer1-0-0" {>= "1.4.0"}
+  "libpulse0" {>= "0.99.1"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.4.0"}
+  "libqt5multimedia5" {>= "5.6.0~beta"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  "libswresample3" {>= "7-4.0"}
+  "libswscale5" {>= "7-4.0"}
+  "libv4l-0" {>= "0.5.0"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "webcamoid-plugins_8.5.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/webcamoid/webcamoid-plugins_8.5.0+dfsg-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gambas3-runtime_3.18.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gambas3-runtime"]
+]
+depends: [
+  "gambas3-gb-gui" {>= "3.18.0-4"}
+  "libc6" {>= "2.35"}
+  "libffi8" {>= "3.4"}
+  "xdg-utils"
+]
+extra-source "gambas3-runtime_3.18.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gambas3/gambas3-runtime_3.18.0-4_amd64.deb"
+}

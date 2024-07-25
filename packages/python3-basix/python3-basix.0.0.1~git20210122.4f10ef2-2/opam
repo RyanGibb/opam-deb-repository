@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-basix_0.0.1~git20210122.4f10ef2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-basix"]
+]
+depends: [
+  "libbasix-dev" {= "0.0.1~git20210122.4f10ef2-2"}
+  "libbasix0" {>= "0.0.1~git20210122.4f10ef2"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libstdc++6" {>= "7"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+]
+extra-source "python3-basix_0.0.1~git20210122.4f10ef2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/basix/python3-basix_0.0.1~git20210122.4f10ef2-2_amd64.deb"
+}

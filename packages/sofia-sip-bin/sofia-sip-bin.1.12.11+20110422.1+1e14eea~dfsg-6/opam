@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sofia-sip-bin_1.12.11+20110422.1+1e14eea~dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sofia-sip-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libsofia-sip-ua0" {>= "1.12.11+20110422.1+1e14eea~dfsg-6"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "sofia-sip-bin_1.12.11+20110422.1+1e14eea~dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sofia-sip/sofia-sip-bin_1.12.11+20110422.1+1e14eea~dfsg-6_amd64.deb"
+}

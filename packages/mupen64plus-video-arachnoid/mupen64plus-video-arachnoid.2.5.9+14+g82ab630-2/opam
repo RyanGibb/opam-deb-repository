@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mupen64plus-video-arachnoid_2.5.9+14+g82ab630-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mupen64plus-video-arachnoid"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libmupen64plus2"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "mupen64plus-video-arachnoid_2.5.9+14+g82ab630-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mupen64plus-video-arachnoid/mupen64plus-video-arachnoid_2.5.9+14+g82ab630-2_amd64.deb"
+}

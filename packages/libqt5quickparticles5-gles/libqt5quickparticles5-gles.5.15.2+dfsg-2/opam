@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5quickparticles5-gles_5.15.2+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5quickparticles5-gles"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5"
+  "libqt5qml5" {>= "5.15.1"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+  ("libqt5quick5" {>= "5.14.1"} | "libqt5quick5-gles" {>= "5.14.1"})
+]
+conflicts: [
+  "libqt5quickparticles5"
+]
+extra-source "libqt5quickparticles5-gles_5.15.2+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtdeclarative-opensource-src-gles/libqt5quickparticles5-gles_5.15.2+dfsg-2_amd64.deb"
+}

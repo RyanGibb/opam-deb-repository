@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatcoll-xref20-dev_21.0.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatcoll-xref20-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-10"
+  "libgnatcoll-iconv19-dev"
+  "libgnatcoll-sql3-dev" {= "21.0.0-6"}
+  "libgnatcoll-sqlite19-dev" {= "21.0.0-6"}
+  "libgnatcoll-xref20" {= "21.0.0-6"}
+  "libgnatcoll19-dev"
+]
+extra-source "libgnatcoll-xref20-dev_21.0.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnatcoll-db/libgnatcoll-xref20-dev_21.0.0-6_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-lewton+async-ogg-dev_0.9.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-lewton+async-ogg-dev"]
+]
+depends: [
+  "librust-futures-0-1+default-dev"
+  "librust-lewton-dev" {= "0.9.4-3"}
+  "librust-ogg-0-7+async-dev"
+  "librust-ogg-0-7+default-dev"
+  "librust-tokio-io-0-1+default-dev"
+]
+extra-source "librust-lewton+async-ogg-dev_0.9.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-lewton/librust-lewton+async-ogg-dev_0.9.4-3_amd64.deb"
+}

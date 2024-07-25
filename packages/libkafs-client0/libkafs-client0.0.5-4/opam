@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkafs-client0_0.5-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkafs-client0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+]
+extra-source "libkafs-client0_0.5-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kafs-client/libkafs-client0_0.5-4_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zathura-djvu_0.2.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zathura-djvu"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.2.4"}
+  "libdjvulibre21" {>= "3.5.27.1"}
+  "libgirara-gtk3-3" {>= "0.1.3"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "zathura"
+]
+extra-source "zathura-djvu_0.2.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zathura-djvu/zathura-djvu_0.2.9-1_amd64.deb"
+}

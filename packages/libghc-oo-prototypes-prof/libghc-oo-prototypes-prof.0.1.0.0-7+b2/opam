@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-oo-prototypes-prof_0.1.0.0-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-oo-prototypes-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-oo-prototypes-dev" {= "0.1.0.0-7+b2"}
+]
+extra-source "libghc-oo-prototypes-prof_0.1.0.0-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-oo-prototypes/libghc-oo-prototypes-prof_0.1.0.0-7+b2_amd64.deb"
+}

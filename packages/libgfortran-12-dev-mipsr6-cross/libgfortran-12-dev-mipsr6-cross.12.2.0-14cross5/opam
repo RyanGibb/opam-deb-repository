@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgfortran-12-dev-mipsr6-cross_12.2.0-14cross5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgfortran-12-dev-mipsr6-cross"]
+]
+depends: [
+  "gcc-12-cross-base-mipsen" {= "12.2.0-14cross5"}
+  "libgcc-12-dev-mipsr6-cross" {= "12.2.0-14cross5"}
+  "libgfortran5-mipsr6-cross" {>= "12.2.0-14cross5"}
+]
+extra-source "libgfortran-12-dev-mipsr6-cross_12.2.0-14cross5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12-cross-mipsen/libgfortran-12-dev-mipsr6-cross_12.2.0-14cross5_all.deb"
+}

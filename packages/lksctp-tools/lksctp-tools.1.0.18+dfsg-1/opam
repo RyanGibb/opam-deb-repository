@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lksctp-tools_1.0.18+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lksctp-tools"]
+]
+depends: [
+  "libc6" {>= "2.16"}
+  "libsctp1" {>= "1.0.12+dfsg"}
+]
+extra-source "lksctp-tools_1.0.18+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lksctp-tools/lksctp-tools_1.0.18+dfsg-1_amd64.deb"
+}

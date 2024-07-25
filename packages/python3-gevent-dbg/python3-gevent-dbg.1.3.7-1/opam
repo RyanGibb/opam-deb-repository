@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-gevent-dbg_1.3.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-gevent-dbg"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "python3-dbg" {< "3.8"}
+  "python3-dbg" {>= "3.6~"}
+  "python3-gevent" {= "1.3.7-1"}
+  "python3-greenlet-dbg"
+]
+extra-source "python3-gevent-dbg_1.3.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-gevent/python3-gevent-dbg_1.3.7-1_amd64.deb"
+}

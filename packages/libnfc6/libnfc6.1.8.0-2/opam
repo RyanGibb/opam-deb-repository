@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnfc6_1.8.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnfc6"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libusb-0-1-4" {>= "2-0.1.12"}
+]
+extra-source "libnfc6_1.8.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnfc/libnfc6_1.8.0-2_amd64.deb"
+}

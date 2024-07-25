@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pd-pool_0.2.2+git20161105.1.4b157f51-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pd-pool"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libflext-pd0"
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "pd-pool_0.2.2+git20161105.1.4b157f51-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pd-pool/pd-pool_0.2.2+git20161105.1.4b157f51-1_amd64.deb"
+}

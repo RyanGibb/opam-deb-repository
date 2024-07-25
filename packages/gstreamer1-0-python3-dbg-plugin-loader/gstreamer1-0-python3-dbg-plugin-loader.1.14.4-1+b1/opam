@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gstreamer1.0-python3-dbg-plugin-loader_1.14.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gstreamer1.0-python3-dbg-plugin-loader"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgstreamer1-0-0" {>= "1.14.4"}
+  "libpython3-7-dbg" {>= "3.7.0"}
+  "python3-gi" {>= "3.8"}
+  "python3-gst-1-0-dbg" {= "1.14.4-1+b1"}
+]
+conflicts: [
+  "gstreamer1.0-python-dbg-plugin-loader"
+  "gstreamer1.0-python-plugin-loader"
+  "gstreamer1.0-python3-plugin-loader"
+]
+extra-source "gstreamer1.0-python3-dbg-plugin-loader_1.14.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gst-python1.0/gstreamer1.0-python3-dbg-plugin-loader_1.14.4-1+b1_amd64.deb"
+}

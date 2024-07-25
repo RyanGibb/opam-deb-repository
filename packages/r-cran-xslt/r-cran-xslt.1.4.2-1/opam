@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-xslt_1.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-xslt"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libxml2" {>= "2.7.4"}
+  "libxslt1-1" {>= "1.1.25"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-rcpp"
+  "r-cran-xml2" {>= "1.3.0"}
+]
+extra-source "r-cran-xslt_1.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-xslt/r-cran-xslt_1.4.2-1_amd64.deb"
+}

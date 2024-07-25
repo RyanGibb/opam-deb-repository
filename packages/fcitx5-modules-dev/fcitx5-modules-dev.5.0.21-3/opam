@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx5-modules-dev_5.0.21-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx5-modules-dev"]
+]
+depends: [
+  "fcitx5-modules" {= "5.0.21-3"}
+  "libfcitx5core-dev" {= "5.0.21-3"}
+  "libfcitx5utils-dev" {= "5.0.21-3"}
+]
+extra-source "fcitx5-modules-dev_5.0.21-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx5/fcitx5-modules-dev_5.0.21-3_amd64.deb"
+}

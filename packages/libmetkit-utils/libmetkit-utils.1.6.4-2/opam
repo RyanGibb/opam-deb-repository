@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmetkit-utils_1.6.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmetkit-utils"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libeckit0d" {>= "1.15.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libmetkit0d" {= "1.6.4-2"}
+  "libstdc++6" {>= "4.4.0"}
+]
+extra-source "libmetkit-utils_1.6.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/metkit/libmetkit-utils_1.6.4-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwebp-dev_0.6.1-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwebp-dev"]
+]
+depends: [
+  "libwebp6" {= "0.6.1-2+deb10u1"}
+  "libwebpdemux2" {= "0.6.1-2+deb10u1"}
+  "libwebpmux3" {= "0.6.1-2+deb10u1"}
+]
+extra-source "libwebp-dev_0.6.1-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libw/libwebp/libwebp-dev_0.6.1-2+deb10u1_amd64.deb"
+}

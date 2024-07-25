@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-silo_4.11-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-silo"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libsiloh5-0" {= "4.11-3+b2"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+]
+extra-source "python3-silo_4.11-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/silo-llnl/python3-silo_4.11-3+b2_amd64.deb"
+}

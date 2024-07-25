@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-os-xenapi_0.3.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-os-xenapi"]
+]
+depends: [
+  "python3-any"
+  "python3-babel"
+  "python3-eventlet"
+  "python3-oslo-concurrency" {>= "3.26.0"}
+  "python3-oslo-i18n" {>= "3.15.3"}
+  "python3-oslo-log" {>= "3.36.0"}
+  "python3-oslo-utils" {>= "3.33.0"}
+  "python3-paramiko"
+  "python3-pbr" {>= "2.0.0"}
+  "python3-six" {>= "1.10.0"}
+]
+extra-source "python3-os-xenapi_0.3.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-os-xenapi/python3-os-xenapi_0.3.3-3_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rtkit_0.13-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rtkit"]
+]
+depends: [
+  "adduser"
+  "dbus"
+  "libc6" {>= "2.17"}
+  "libcap2" {>= "1-2.10"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libsystemd0"
+  "policykit-1"
+]
+extra-source "rtkit_0.13-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rtkit/rtkit_0.13-4_amd64.deb"
+}

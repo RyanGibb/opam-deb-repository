@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-ghc-typelits-extra-dev_0.4.3-2+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-ghc-typelits-extra-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-ghc-tcplugins-extra-dev"
+  "libghc-ghc-typelits-knownnat-dev"
+  "libghc-ghc-typelits-natnormalise-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "libghc-ghc-typelits-extra-dev_0.4.3-2+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-ghc-typelits-extra/libghc-ghc-typelits-extra-dev_0.4.3-2+b5_amd64.deb"
+}

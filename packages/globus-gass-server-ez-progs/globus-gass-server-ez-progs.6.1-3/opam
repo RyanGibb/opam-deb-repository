@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i globus-gass-server-ez-progs_6.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r globus-gass-server-ez-progs"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglobus-common0" {>= "17"}
+  "libglobus-gass-server-ez2" {>= "4"}
+  "libglobus-gass-transfer2" {>= "7"}
+  "libglobus-gss-assist3" {>= "11"}
+  "libglobus-gssapi-gsi4" {>= "13"}
+]
+extra-source "globus-gass-server-ez-progs_6.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gass-server-ez/globus-gass-server-ez-progs_6.1-3_amd64.deb"
+}

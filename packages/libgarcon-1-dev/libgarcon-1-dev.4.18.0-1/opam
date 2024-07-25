@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgarcon-1-dev_4.18.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgarcon-1-dev"]
+]
+depends: [
+  "gir1-2-garcon-1-0" {= "4.18.0-1"}
+  "libgarcon-1-0" {= "4.18.0-1"}
+]
+extra-source "libgarcon-1-dev_4.18.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/garcon/libgarcon-1-dev_4.18.0-1_amd64.deb"
+}

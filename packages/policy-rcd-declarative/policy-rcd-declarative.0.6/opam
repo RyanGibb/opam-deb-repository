@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i policy-rcd-declarative_0.6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r policy-rcd-declarative"]
+]
+depends: [
+  "libre-engine-re2-perl"
+  "perl-any"
+  ("policy-rcd-declarative-allow-all" | "policy-rcd-default-policy")
+]
+extra-source "policy-rcd-declarative_0.6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/policy-rcd-declarative/policy-rcd-declarative_0.6_all.deb"
+}

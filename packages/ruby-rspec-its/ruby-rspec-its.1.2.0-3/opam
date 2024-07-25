@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rspec-its_1.2.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rspec-its"]
+]
+depends: [
+  "ruby-rspec-core" {>= "3~"}
+  "ruby-rspec-expectations" {>= "3~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-rspec-its_1.2.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rspec-its/ruby-rspec-its_1.2.0-3_all.deb"
+}

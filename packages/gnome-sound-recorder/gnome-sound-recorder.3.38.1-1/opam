@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-sound-recorder_3.38.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-sound-recorder"]
+]
+depends: [
+  "gir1-2-gdkpixbuf-2-0"
+  "gir1-2-glib-2-0"
+  "gir1-2-gst-plugins-bad-1-0"
+  "gir1-2-gst-plugins-base-1-0"
+  "gir1-2-gstreamer-1-0"
+  "gir1-2-gtk-3-0"
+  "gir1-2-handy-1"
+  "gir1-2-pango-1-0"
+  "gjs"
+  "gstreamer1-0-plugins-base"
+  "gstreamer1-0-plugins-good" {>= "1.18.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-sound-recorder_3.38.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-sound-recorder/gnome-sound-recorder_3.38.1-1_all.deb"
+}

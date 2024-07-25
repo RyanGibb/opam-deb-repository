@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wireshark-gtk_3.4.10-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wireshark-gtk"]
+]
+depends: [
+  "wireshark-qt" {>= "3.0.0~"}
+]
+extra-source "wireshark-gtk_3.4.10-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wireshark/wireshark-gtk_3.4.10-0+deb11u1_amd64.deb"
+}

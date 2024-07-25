@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cairo-dock-powermanager-plug-in_3.4.1+git20201022.a0d3415c-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cairo-dock-powermanager-plug-in"]
+]
+depends: [
+  "cairo-dock-plug-in-data" {= "3.4.1+git20201022.a0d3415c-1"}
+  "gnome-power-manager"
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.8.0"}
+  "libglib2-0-0" {>= "2.14.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libupower-glib3" {>= "0.99.0"}
+]
+extra-source "cairo-dock-powermanager-plug-in_3.4.1+git20201022.a0d3415c-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cairo-dock-plug-ins/cairo-dock-powermanager-plug-in_3.4.1+git20201022.a0d3415c-1_amd64.deb"
+}

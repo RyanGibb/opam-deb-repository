@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libomp5-7_1:7.0.1-8+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libomp5-7"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "libomp-x.y"
+]
+extra-source "libomp5-7_1:7.0.1-8+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-7/libomp5-7_7.0.1-8+deb10u2_amd64.deb"
+}

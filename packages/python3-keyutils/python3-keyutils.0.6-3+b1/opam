@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-keyutils_0.6-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-keyutils"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libkeyutils1" {>= "1.4"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-keyutils_0.6-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-keyutils/python3-keyutils_0.6-3+b1_amd64.deb"
+}

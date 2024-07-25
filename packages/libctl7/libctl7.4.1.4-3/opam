@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libctl7_4.1.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libctl7"]
+]
+depends: [
+  "guile-2-2-libs"
+  "libc6" {>= "2.14"}
+  "libgc1c2" {>= "1-7.2d"}
+]
+conflicts: [
+  "libctl3"
+  "libctl5"
+  "libctl6"
+]
+extra-source "libctl7_4.1.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libctl/libctl7_4.1.4-3_amd64.deb"
+}

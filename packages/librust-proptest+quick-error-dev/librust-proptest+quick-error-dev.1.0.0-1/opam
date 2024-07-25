@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-proptest+quick-error-dev_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-proptest+quick-error-dev"]
+]
+depends: [
+  "librust-proptest-dev" {= "1.0.0-1"}
+  "librust-quick-error-2+default-dev"
+]
+extra-source "librust-proptest+quick-error-dev_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-proptest/librust-proptest+quick-error-dev_1.0.0-1_amd64.deb"
+}

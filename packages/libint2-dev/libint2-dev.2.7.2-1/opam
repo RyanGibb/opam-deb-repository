@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libint2-dev_2.7.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libint2-dev"]
+]
+depends: [
+  "libboost-dev"
+  "libeigen3-dev"
+  "libint2-2" {= "2.7.2-1"}
+]
+extra-source "libint2-dev_2.7.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libint2/libint2-dev_2.7.2-1_amd64.deb"
+}

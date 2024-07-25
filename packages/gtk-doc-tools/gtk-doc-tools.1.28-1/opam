@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtk-doc-tools_1.28-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtk-doc-tools"]
+]
+depends: [
+  "docbook-to-man"
+  "docbook-xml" {>= "4.3"}
+  "docbook-xsl" {>= "1.64.1.0"}
+  "highlight" {>= "3.4"}
+  "pkgconf"
+  "python-any" {>= "2.7~"}
+  "python-mock"
+  "python-six"
+  "xsltproc" {>= "1.1.15"}
+]
+extra-source "gtk-doc-tools_1.28-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtk-doc/gtk-doc-tools_1.28-1_all.deb"
+}

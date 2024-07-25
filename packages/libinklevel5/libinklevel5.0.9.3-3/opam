@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libinklevel5_0.9.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libinklevel5"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libusb-1-0-0" {>= "2-1.0.16"}
+]
+extra-source "libinklevel5_0.9.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libinklevel/libinklevel5_0.9.3-3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pinfo_0.6.13-1.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pinfo"]
+]
+depends: [
+  "install-info"
+  "libc6" {>= "2.33"}
+  "libncursesw6" {>= "6"}
+  "libreadline8" {>= "6.0"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "pinfo_0.6.13-1.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pinfo/pinfo_0.6.13-1.3_amd64.deb"
+}

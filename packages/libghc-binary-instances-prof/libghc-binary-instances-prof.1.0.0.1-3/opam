@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-binary-instances-prof_1.0.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-binary-instances-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-binary-instances-dev" {= "1.0.0.1-3"}
+  "libghc-binary-orphans-prof"
+  "libghc-case-insensitive-prof"
+  "libghc-hashable-prof"
+  "libghc-scientific-prof"
+  "libghc-tagged-prof"
+  "libghc-text-binary-prof"
+  "libghc-time-compat-prof"
+  "libghc-unordered-containers-prof"
+  "libghc-vector-binary-instances-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-binary-instances-prof_1.0.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-binary-instances/libghc-binary-instances-prof_1.0.0.1-3_amd64.deb"
+}

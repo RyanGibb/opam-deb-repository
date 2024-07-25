@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i infinoted_0.7.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r infinoted"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdaemon0" {>= "0.10"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgnutls30" {>= "3.7.0"}
+  "libinfinity-0-7-0" {>= "0.7.1"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libxml2" {>= "2.7.4"}
+]
+conflicts: [
+  "infinoted-0.3"
+  "infinoted-0.4"
+]
+extra-source "infinoted_0.7.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libinfinity/infinoted_0.7.2-1+b2_amd64.deb"
+}

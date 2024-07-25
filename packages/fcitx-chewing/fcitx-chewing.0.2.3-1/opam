@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx-chewing_0.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx-chewing"]
+]
+depends: [
+  "fcitx-bin"
+  "fcitx-data" {>= "1-4.2.9"}
+  "fcitx-modules"
+  "libc6" {>= "2.4"}
+  "libchewing3" {>= "0.4.0"}
+]
+extra-source "fcitx-chewing_0.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx-chewing/fcitx-chewing_0.2.3-1_amd64.deb"
+}

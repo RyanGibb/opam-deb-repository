@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-multiparty_4.2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-multiparty"]
+]
+depends: [
+  "node-fd-slicer"
+  "node-http-errors"
+  "node-safe-buffer"
+  "node-uid-safe" {>= "2.1.5"}
+  "nodejs"
+]
+extra-source "node-multiparty_4.2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-multiparty/node-multiparty_4.2.2-2_all.deb"
+}

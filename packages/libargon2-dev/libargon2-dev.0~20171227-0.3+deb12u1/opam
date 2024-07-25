@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libargon2-dev_0~20171227-0.3+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libargon2-dev"]
+]
+depends: [
+  "libargon2-1" {= "0~20171227-0.3+deb12u1"}
+]
+conflicts: [
+  "libargon2-0-dev"
+]
+extra-source "libargon2-dev_0~20171227-0.3+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/argon2/libargon2-dev_0~20171227-0.3+deb12u1_amd64.deb"
+}

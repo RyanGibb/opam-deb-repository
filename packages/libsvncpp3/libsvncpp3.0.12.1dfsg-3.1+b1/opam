@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsvncpp3_0.12.1dfsg-3.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsvncpp3"]
+]
+depends: [
+  "libapr1" {>= "1.2.7"}
+  "libaprutil1" {>= "1.2.7+dfsg"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libsvn1" {>= "1.8"}
+]
+conflicts: [
+  "libsvncpp0"
+  "libsvncpp0c2"
+  "libsvncpp0c2a"
+]
+extra-source "libsvncpp3_0.12.1dfsg-3.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rapidsvn/libsvncpp3_0.12.1dfsg-3.1+b1_amd64.deb"
+}

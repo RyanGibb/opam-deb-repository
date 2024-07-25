@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-horde-log_2.3.0-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-horde-log"]
+]
+depends: [
+  "php-common"
+  "php-horde-constraint" {< "3.0.0~alpha1"}
+  "php-horde-constraint" {>= "2.0.0"}
+  "php-horde-exception" {< "3.0.0~alpha1"}
+  "php-horde-exception" {>= "2.0.0"}
+  "php-horde-util" {< "3.0.0~alpha1"}
+  "php-horde-util" {>= "2.0.0"}
+]
+extra-source "php-horde-log_2.3.0-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-horde-log/php-horde-log_2.3.0-9_all.deb"
+}

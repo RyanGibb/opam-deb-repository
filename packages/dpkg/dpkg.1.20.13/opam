@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpkg_1.20.13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpkg"]
+]
+depends: [
+  "tar" {>= "1.28-1"}
+]
+extra-source "dpkg_1.20.13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpkg/dpkg_1.20.13_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-lumberjack-prof_1.0.1.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-lumberjack-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-contravariant-prof"
+  "libghc-lumberjack-dev" {= "1.0.1.0-2+b1"}
+  "libghc-prettyprinter-ansi-terminal-prof"
+  "libghc-prettyprinter-prof"
+]
+extra-source "libghc-lumberjack-prof_1.0.1.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-lumberjack/libghc-lumberjack-prof_1.0.1.0-2+b1_amd64.deb"
+}

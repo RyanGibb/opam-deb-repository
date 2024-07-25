@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-python-flask-jwt-extended_3.24.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-python-flask-jwt-extended"]
+]
+depends: [
+  "python3-any"
+  "python3-flask" {>= "1.0"}
+  "python3-jwt"
+  "python3-six"
+  "python3-werkzeug"
+]
+extra-source "python3-python-flask-jwt-extended_3.24.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-flask-jwt-extended/python3-python-flask-jwt-extended_3.24.1-2_all.deb"
+}

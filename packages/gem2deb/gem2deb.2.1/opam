@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gem2deb_2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gem2deb"]
+]
+depends: [
+  "devscripts"
+  "gem2deb-test-runner" {= "2.1"}
+  "perl-any"
+  "rake"
+  "ruby-all-dev" {>= "1-2.5"}
+  "ruby-any"
+  ("debhelper" | "debhelper" | "debhelper" | "debhelper" | "debhelper")
+]
+extra-source "gem2deb_2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gem2deb/gem2deb_2.1_amd64.deb"
+}

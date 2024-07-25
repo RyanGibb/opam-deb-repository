@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i verilator_5.006-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r verilator"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libjs-sphinxdoc" {>= "5.2"}
+  "perl-any"
+  "python3"
+  "sphinx-rtd-theme-common" {>= "1.2.0+dfsg"}
+]
+extra-source "verilator_5.006-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/verilator/verilator_5.006-3_amd64.deb"
+}

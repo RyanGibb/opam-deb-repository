@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmnet_1.06-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmnet"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libx11-6"
+  "libxext6"
+  "netbase"
+]
+extra-source "wmnet_1.06-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmnet/wmnet_1.06-1+b2_amd64.deb"
+}

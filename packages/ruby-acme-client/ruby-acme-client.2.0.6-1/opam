@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-acme-client_2.0.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-acme-client"]
+]
+depends: [
+  "ruby-faraday" {>= "0.17~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-acme-client_2.0.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-acme-client/ruby-acme-client_2.0.6-1_all.deb"
+}

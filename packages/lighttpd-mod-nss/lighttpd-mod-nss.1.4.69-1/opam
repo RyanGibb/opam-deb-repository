@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lighttpd-mod-nss_1.4.69-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lighttpd-mod-nss"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.66"}
+  "lighttpd" {= "1.4.69-1"}
+]
+extra-source "lighttpd-mod-nss_1.4.69-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lighttpd/lighttpd-mod-nss_1.4.69-1_amd64.deb"
+}

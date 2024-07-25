@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-horde-mapi_1.0.10-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-horde-mapi"]
+]
+depends: [
+  "php-bcmath"
+  "php-common"
+  "php-horde-date" {< "3.0.0~alpha1"}
+  "php-horde-date" {>= "2.3.0"}
+  "php-horde-exception" {< "3.0.0~alpha1"}
+  "php-horde-exception" {>= "2.0.0"}
+  "php-phpseclib"
+]
+extra-source "php-horde-mapi_1.0.10-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-horde-mapi/php-horde-mapi_1.0.10-4_all.deb"
+}

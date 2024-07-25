@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dh-ada-library_8.6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dh-ada-library"]
+]
+depends: [
+  "debhelper"
+  "perl-any"
+  ("gnat-12" | "gnat-11" | "gnat-10" | "gnat-9" | "gnat-8" | "gnat-7" | "gnat-6")
+]
+extra-source "dh-ada-library_8.6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dh-ada-library/dh-ada-library_8.6_all.deb"
+}

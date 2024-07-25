@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-numbers-prof_3000.2.0.2-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-numbers-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-numbers-dev" {= "3000.2.0.2-2+b2"}
+]
+extra-source "libghc-numbers-prof_3000.2.0.2-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-numbers/libghc-numbers-prof_3000.2.0.2-2+b2_amd64.deb"
+}

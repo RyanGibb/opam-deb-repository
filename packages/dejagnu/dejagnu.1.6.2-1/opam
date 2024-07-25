@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dejagnu_1.6.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dejagnu"]
+]
+depends: [
+  "expect"
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "dejagnu_1.6.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dejagnu/dejagnu_1.6.2-1_all.deb"
+}

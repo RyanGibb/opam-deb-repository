@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-witherable-prof_0.4.2-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-witherable-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-base-orphans-prof"
+  "libghc-hashable-prof"
+  "libghc-indexed-traversable-instances-prof"
+  "libghc-indexed-traversable-prof"
+  "libghc-unordered-containers-prof"
+  "libghc-vector-prof"
+  "libghc-witherable-dev" {= "0.4.2-2+b3"}
+]
+extra-source "libghc-witherable-prof_0.4.2-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-witherable/libghc-witherable-prof_0.4.2-2+b3_amd64.deb"
+}

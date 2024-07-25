@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i matanza_0.13+ds1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r matanza"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libpng16-16" {>= "1.6.2-1"}
+]
+extra-source "matanza_0.13+ds1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/matanza/matanza_0.13+ds1-6_amd64.deb"
+}

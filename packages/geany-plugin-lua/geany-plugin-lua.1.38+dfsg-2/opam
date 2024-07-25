@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i geany-plugin-lua_1.38+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r geany-plugin-lua"]
+]
+depends: [
+  "geany"
+  "geany-plugins-common" {= "1.38+dfsg-2"}
+  "libc6" {>= "2.33"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "liblua5-1-0"
+]
+extra-source "geany-plugin-lua_1.38+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/geany-plugins/geany-plugin-lua_1.38+dfsg-2_amd64.deb"
+}

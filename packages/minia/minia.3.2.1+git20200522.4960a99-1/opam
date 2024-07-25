@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i minia_3.2.1+git20200522.4960a99-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r minia"]
+]
+depends: [
+  "bc"
+  "libc6" {>= "2.14"}
+  "libgatbcore3" {>= "1.4.1+git20191130.664696c+dfsg"}
+  "libgcc-s1" {>= "3.0"}
+  "libhdf5-103-1"
+  "libstdc++6" {>= "9"}
+  "zlib1g"
+]
+extra-source "minia_3.2.1+git20200522.4960a99-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/minia/minia_3.2.1+git20200522.4960a99-1_amd64.deb"
+}

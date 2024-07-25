@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnutls-openssl27_3.7.1-5+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnutls-openssl27"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+  "libgnutls30" {= "3.7.1-5+deb11u5"}
+]
+extra-source "libgnutls-openssl27_3.7.1-5+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnutls28/libgnutls-openssl27_3.7.1-5+deb11u5_amd64.deb"
+}

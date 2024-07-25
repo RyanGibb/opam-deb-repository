@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mangoapp_0.6.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mangoapp"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfmt9" {>= "9.1.0+ds1"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libglew2-2" {>= "2.2.0-4+b1"}
+  "libglfw3" {>= "3.1"}
+  "libspdlog1-10"
+  "libstdc++6" {>= "12"}
+  "libx11-6"
+  "mangohud" {= "0.6.8-2"}
+]
+extra-source "mangoapp_0.6.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mangohud/mangoapp_0.6.8-2_amd64.deb"
+}

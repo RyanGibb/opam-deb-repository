@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pagure-ev-server_5.11.3+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pagure-ev-server"]
+]
+depends: [
+  "pagure" {= "5.11.3+dfsg-1"}
+  "python3-any"
+  "python3-trololio"
+]
+extra-source "pagure-ev-server_5.11.3+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pagure/pagure-ev-server_5.11.3+dfsg-1_all.deb"
+}

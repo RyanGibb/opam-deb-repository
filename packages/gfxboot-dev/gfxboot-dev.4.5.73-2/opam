@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gfxboot-dev_4.5.73-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gfxboot-dev"]
+]
+depends: [
+  "cpio"
+  "gfxboot" {= "4.5.73-2"}
+  "libc6" {>= "2.14"}
+  "libfreetype6" {>= "2.2.1"}
+  "libfribidi0"
+  "libhtml-parser-perl"
+  "perl-any"
+]
+conflicts: [
+  "gfxboot-examples"
+]
+extra-source "gfxboot-dev_4.5.73-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gfxboot/gfxboot-dev_4.5.73-2_amd64.deb"
+}

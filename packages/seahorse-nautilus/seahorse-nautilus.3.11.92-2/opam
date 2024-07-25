@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i seahorse-nautilus_3.11.92-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r seahorse-nautilus"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcryptui0a"
+  "libdbus-glib-1-2" {>= "0.78"}
+  "libgcr-base-3-1" {>= "3.8.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgpgme11" {>= "1.2.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libnautilus-extension1a" {>= "3.14.1"}
+  "libnotify4" {>= "0.7.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "seahorse-nautilus_3.11.92-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/seahorse-nautilus/seahorse-nautilus_3.11.92-2_amd64.deb"
+}

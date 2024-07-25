@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-chemps2_1.8.10-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-chemps2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libchemps2-3" {= "1.8.10-2"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+]
+extra-source "python3-chemps2_1.8.10-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chemps2/python3-chemps2_1.8.10-2_amd64.deb"
+}

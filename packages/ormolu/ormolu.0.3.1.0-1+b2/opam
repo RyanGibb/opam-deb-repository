@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ormolu_0.3.1.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ormolu"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libffi8" {>= "3.4"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "ormolu_0.3.1.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-ormolu/ormolu_0.3.1.0-1+b2_amd64.deb"
+}

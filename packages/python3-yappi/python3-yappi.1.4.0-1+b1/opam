@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-yappi_1.4.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-yappi"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-11-any"
+  "python3-any"
+  "python3-gevent"
+]
+extra-source "python3-yappi_1.4.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-yappi/python3-yappi_1.4.0-1+b1_amd64.deb"
+}

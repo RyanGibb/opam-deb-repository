@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmnl0_1.0.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmnl0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libmnl0_1.0.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmnl/libmnl0_1.0.4-3_amd64.deb"
+}

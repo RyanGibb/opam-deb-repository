@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcdi-dev_2.1.1-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcdi-dev"]
+]
+depends: [
+  "libcdi0" {= "2.1.1-1+deb12u1"}
+  ("gfortran-12" | "gfortran-mod-15")
+]
+extra-source "libcdi-dev_2.1.1-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cdo/libcdi-dev_2.1.1-1+deb12u1_amd64.deb"
+}

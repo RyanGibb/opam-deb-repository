@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libantlr4-runtime4.7.2_4.7.2+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libantlr4-runtime4.7.2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.4"}
+  "libstdc++6" {>= "7"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "libantlr4-runtime4.7.2_4.7.2+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/antlr4-cpp-runtime/libantlr4-runtime4.7.2_4.7.2+dfsg-1_amd64.deb"
+}

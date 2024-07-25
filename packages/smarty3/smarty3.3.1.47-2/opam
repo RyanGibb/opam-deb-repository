@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i smarty3_3.1.47-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r smarty3"]
+]
+depends: [
+  "php-common"
+  ("php" | "php-cgi" | "php-cli")
+]
+extra-source "smarty3_3.1.47-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/smarty3/smarty3_3.1.47-2_all.deb"
+}

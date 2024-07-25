@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plasma-pass_1.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plasma-pass"]
+]
+depends: [
+  "gnupg2"
+  "libc6" {>= "2.14"}
+  "libkf5coreaddons5" {>= "4.97.0"}
+  "libkf5i18n5" {>= "5.57.0~"}
+  "libkf5itemmodels5" {>= "5.57.0~"}
+  "libkf5plasma5" {>= "5.57.0~"}
+  "liboath0" {>= "1.12.0"}
+  "libqt5concurrent5" {>= "5.11.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.11.0~"}
+  "libqt5qml5" {>= "5.11.0~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.11.0~"} | "libqt5gui5-gles" {>= "5.11.0~"})
+]
+extra-source "plasma-pass_1.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plasma-pass/plasma-pass_1.2.0-2_amd64.deb"
+}

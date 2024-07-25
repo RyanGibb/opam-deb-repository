@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnubik_2.4.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnubik"]
+]
+depends: [
+  "guile-2-2-libs"
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.2.4"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgc1c2" {>= "1-7.2d"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libgl1"
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk2-0-0" {>= "2.24.32"}
+  "libgtkglext1"
+  "libice6" {>= "1-1.0.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpangoft2-1-0-0" {>= "1.14.0"}
+  "libpangox-1-0-0" {>= "0.0.2"}
+  "libsm6"
+  "libx11-6"
+  "libxmu6"
+  "libxt6"
+  ("dpkg" {>= "1.18.25"} | "install-info")
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "gnubik_2.4.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnubik/gnubik_2.4.3-3_amd64.deb"
+}

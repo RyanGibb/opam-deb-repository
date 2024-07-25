@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ceph-fuse_14.2.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ceph-fuse"]
+]
+depends: [
+  "libc6" {>= "2.30"}
+  "libfuse2" {>= "2.9"}
+  "libgcc-s1" {>= "3.0"}
+  "librados2" {>= "14.2.0"}
+  "libstdc++6" {>= "9"}
+  "python3"
+]
+extra-source "ceph-fuse_14.2.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/ceph-fuse_14.2.21-1_amd64.deb"
+}

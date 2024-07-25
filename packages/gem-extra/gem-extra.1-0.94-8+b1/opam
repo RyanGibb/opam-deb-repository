@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gem-extra_1:0.94-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gem-extra"]
+]
+depends: [
+  "gem" {< "1-0.94+1~"}
+  "gem" {>= "1-0.94-8"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "gem-extra_1:0.94-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gem/gem-extra_0.94-8+b1_amd64.deb"
+}

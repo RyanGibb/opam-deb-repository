@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tagcoll_2.0.14-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tagcoll"]
+]
+depends: [
+  "libc6" {>= "2.22"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "tagcoll_2.0.14-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tagcoll2/tagcoll_2.0.14-2_amd64.deb"
+}

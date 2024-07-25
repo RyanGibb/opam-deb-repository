@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-eo-ca_1:0.9.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-eo-ca"]
+]
+depends: [
+  "apertium" {>= "3.7.1"}
+]
+conflicts: [
+  "apertium-ca-eo"
+  "apertium-cat-epo"
+  "apertium-epo-cat"
+]
+extra-source "apertium-eo-ca_1:0.9.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-eo-ca/apertium-eo-ca_0.9.2-1_all.deb"
+}

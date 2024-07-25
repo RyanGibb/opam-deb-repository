@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpkg-repack_1.52_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpkg-repack"]
+]
+depends: [
+  "dpkg" {>= "1.21.0"}
+  "libdpkg-perl"
+  "perl-any"
+]
+extra-source "dpkg-repack_1.52_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpkg-repack/dpkg-repack_1.52_all.deb"
+}

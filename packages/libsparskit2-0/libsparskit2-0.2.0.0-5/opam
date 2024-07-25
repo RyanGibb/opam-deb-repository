@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsparskit2.0_2.0.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsparskit2.0"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc-s1" {>= "4.0"}
+  "libgfortran5" {>= "8"}
+]
+extra-source "libsparskit2.0_2.0.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sparskit/libsparskit2.0_2.0.0-5_amd64.deb"
+}

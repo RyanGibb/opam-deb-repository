@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nunit-gui_2.6.4+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nunit-gui"]
+]
+depends: [
+  "libmono-corlib4-5-cil" {>= "4.2.0"}
+  "libmono-system-drawing4-0-cil" {>= "3.0.6"}
+  "libmono-system-windows-forms4-0-cil" {>= "1.0"}
+  "libmono-system-xml4-0-cil" {>= "4.2.0"}
+  "libmono-system4-0-cil" {>= "4.2.0"}
+  "libnunit-core-interfaces2-6-3-cil"
+  "libnunit-core2-6-3-cil"
+  "libnunit-util2-6-3-cil"
+  "mono-runtime" {>= "3.0~"}
+]
+extra-source "nunit-gui_2.6.4+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nunit/nunit-gui_2.6.4+dfsg-1_all.deb"
+}

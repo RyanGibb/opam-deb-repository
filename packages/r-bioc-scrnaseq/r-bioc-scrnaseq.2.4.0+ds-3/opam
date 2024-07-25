@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-scrnaseq_2.4.0+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-scrnaseq"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-bioc-annotationdbi"
+  "r-bioc-annotationhub"
+  "r-bioc-biocgenerics"
+  "r-bioc-ensembldb"
+  "r-bioc-experimenthub"
+  "r-bioc-genomicfeatures"
+  "r-bioc-genomicranges"
+  "r-bioc-s4vectors"
+  "r-bioc-singlecellexperiment"
+  "r-bioc-summarizedexperiment"
+]
+extra-source "r-bioc-scrnaseq_2.4.0+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-scrnaseq/r-bioc-scrnaseq_2.4.0+ds-3_all.deb"
+}

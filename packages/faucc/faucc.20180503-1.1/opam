@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i faucc_20180503-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r faucc"]
+]
+depends: [
+  "gcc"
+  "libc6" {>= "2.14"}
+]
+extra-source "faucc_20180503-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/faucc/faucc_20180503-1.1_amd64.deb"
+}

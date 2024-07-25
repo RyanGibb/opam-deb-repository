@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hcxtools_6.2.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hcxtools"]
+]
+depends: [
+  "ieee-data"
+  "libc6" {>= "2.34"}
+  "libcurl4" {>= "7.16.2"}
+  "libssl3" {>= "3.0.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "hcxtools_6.2.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hcxtools/hcxtools_6.2.7-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tinymux_2.10.1.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tinymux"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "tinymux_2.10.1.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tinymux/tinymux_2.10.1.14-1_amd64.deb"
+}

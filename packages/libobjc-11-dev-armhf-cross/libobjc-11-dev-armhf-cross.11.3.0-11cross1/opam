@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libobjc-11-dev-armhf-cross_11.3.0-11cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libobjc-11-dev-armhf-cross"]
+]
+depends: [
+  "gcc-11-cross-base" {>= "11.3.0-11"}
+  "libgcc-11-dev-armhf-cross" {= "11.3.0-11cross1"}
+  "libobjc4-armhf-cross" {>= "11.3.0-11cross1"}
+]
+extra-source "libobjc-11-dev-armhf-cross_11.3.0-11cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-11-cross/libobjc-11-dev-armhf-cross_11.3.0-11cross1_all.deb"
+}

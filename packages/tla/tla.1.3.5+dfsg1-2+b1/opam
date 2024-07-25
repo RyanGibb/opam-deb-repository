@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tla_1.3.5+dfsg1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tla"]
+]
+depends: [
+  "gawk"
+  "libc6" {>= "2.15"}
+  "libexpat1" {>= "2.0.1"}
+  "patch"
+]
+extra-source "tla_1.3.5+dfsg1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tla/tla_1.3.5+dfsg1-2+b1_amd64.deb"
+}

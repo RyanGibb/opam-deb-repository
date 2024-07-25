@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ecl_16.1.3+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ecl"]
+]
+depends: [
+  "gcc"
+  "libatomic-ops-dev"
+  "libc6" {>= "2.28"}
+  "libffi-dev"
+  "libffi6" {>= "3.0.4"}
+  "libgc-dev"
+  "libgc1c2" {>= "1-7.4.2"}
+  "libgmp10"
+  "libgmp3-dev"
+  "libncurses5-dev"
+]
+extra-source "ecl_16.1.3+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ecl/ecl_16.1.3+ds-2_amd64.deb"
+}

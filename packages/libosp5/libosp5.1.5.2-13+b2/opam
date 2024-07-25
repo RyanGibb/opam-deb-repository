@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosp5_1.5.2-13+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosp5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libosp5_1.5.2-13+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opensp/libosp5_1.5.2-13+b2_amd64.deb"
+}

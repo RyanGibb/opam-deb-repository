@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcoq-ocaml-dev_8.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcoq-ocaml-dev"]
+]
+depends: [
+  "camlp5"
+  "coq" {= "8.9.0-1"}
+  "libcoq-ocaml"
+  "ocaml-nox"
+]
+extra-source "libcoq-ocaml-dev_8.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coq/libcoq-ocaml-dev_8.9.0-1_amd64.deb"
+}

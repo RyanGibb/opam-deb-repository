@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-octavia-dashboard_6.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-octavia-dashboard"]
+]
+depends: [
+  "openstack-dashboard" {>= "3-17.1.0"}
+  "python3-any"
+  "python3-babel"
+  "python3-barbicanclient"
+  "python3-django"
+  "python3-django-horizon"
+  "python3-keystoneclient" {>= "1-3.22.0"}
+  "python3-openstacksdk" {>= "0.46.0"}
+  "python3-oslo-log"
+  "python3-pbr"
+]
+extra-source "python3-octavia-dashboard_6.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octavia-dashboard/python3-octavia-dashboard_6.0.0-2_all.deb"
+}

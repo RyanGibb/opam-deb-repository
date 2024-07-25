@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-twig-bundle_4.4.19+dfsg-2+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-twig-bundle"]
+]
+depends: [
+  "php-common"
+  "php-symfony-http-foundation"
+  "php-symfony-http-kernel" {< "5~~"}
+  "php-symfony-http-kernel" {>= "4.4"}
+  "php-symfony-twig-bridge"
+  "php-twig" {>= "2.13"}
+]
+extra-source "php-symfony-twig-bundle_4.4.19+dfsg-2+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/symfony/php-symfony-twig-bundle_4.4.19+dfsg-2+deb11u5_all.deb"
+}

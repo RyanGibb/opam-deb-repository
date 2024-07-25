@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsox-fmt-all_14.4.2+git20190427-3.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsox-fmt-all"]
+]
+depends: [
+  "libsox-fmt-alsa" {= "14.4.2+git20190427-3.5"}
+  "libsox-fmt-ao" {= "14.4.2+git20190427-3.5"}
+  "libsox-fmt-base" {= "14.4.2+git20190427-3.5"}
+  "libsox-fmt-mp3" {= "14.4.2+git20190427-3.5"}
+  "libsox-fmt-oss" {= "14.4.2+git20190427-3.5"}
+  "libsox-fmt-pulse" {= "14.4.2+git20190427-3.5"}
+]
+extra-source "libsox-fmt-all_14.4.2+git20190427-3.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sox/libsox-fmt-all_14.4.2+git20190427-3.5_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgstreamer1-perl_0.003-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgstreamer1-perl"]
+]
+depends: [
+  "gir1-2-gst-plugins-base-1-0"
+  "gir1-2-gstreamer-1-0"
+  "libglib-object-introspection-perl"
+  "perl"
+]
+extra-source "libgstreamer1-perl_0.003-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgstreamer1-perl/libgstreamer1-perl_0.003-3_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-lldb-7_1:7.0.1-8+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-lldb-7"]
+]
+depends: [
+  "python"
+  "python-six"
+]
+conflicts: [
+  "python-lldb-3.8"
+  "python-lldb-3.9"
+  "python-lldb-x.y"
+]
+extra-source "python-lldb-7_1:7.0.1-8+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-7/python-lldb-7_7.0.1-8+deb10u2_amd64.deb"
+}

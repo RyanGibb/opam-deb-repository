@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i remembrance-agent_2.12-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r remembrance-agent"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcre3"
+  ("debconf" | "debconf-2-0")
+  ("emacs21" | "emacsen")
+]
+extra-source "remembrance-agent_2.12-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/remem/remembrance-agent_2.12-7+b2_amd64.deb"
+}

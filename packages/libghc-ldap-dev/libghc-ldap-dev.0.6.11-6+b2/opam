@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-ldap-dev_0.6.11-6+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-ldap-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "libldap2-dev"
+]
+extra-source "libghc-ldap-dev_0.6.11-6+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ldap-haskell/libghc-ldap-dev_0.6.11-6+b2_amd64.deb"
+}

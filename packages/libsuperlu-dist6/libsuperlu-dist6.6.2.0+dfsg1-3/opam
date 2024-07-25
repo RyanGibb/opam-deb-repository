@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsuperlu-dist6_6.2.0+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsuperlu-dist6"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcombblas1-16-0" {>= "1.6.2"}
+  "libgcc-s1"
+  "libgomp1" {>= "6"}
+  "libopenmpi3" {>= "4.0.2"}
+  "libstdc++6" {>= "9"}
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "libsuperlu-dist6_6.2.0+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/superlu-dist/libsuperlu-dist6_6.2.0+dfsg1-3_amd64.deb"
+}

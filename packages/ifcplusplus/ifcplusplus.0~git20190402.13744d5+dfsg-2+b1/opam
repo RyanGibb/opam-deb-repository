@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ifcplusplus_0~git20190402.13744d5+dfsg-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ifcplusplus"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libifcplusplus" {= "0~git20190402.13744d5+dfsg-2+b1"}
+  "libopenscenegraph161" {>= "3.6.5+dfsg1"}
+  "libopenthreads21" {>= "3.6.5+dfsg1"}
+  "libqt5core5a" {>= "5.12.2"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "9"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "ifcplusplus_0~git20190402.13744d5+dfsg-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ifcplusplus/ifcplusplus_0~git20190402.13744d5+dfsg-2+b1_amd64.deb"
+}

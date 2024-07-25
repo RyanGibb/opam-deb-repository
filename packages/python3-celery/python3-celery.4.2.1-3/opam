@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-celery_4.2.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-celery"]
+]
+depends: [
+  "python3-any"
+  "python3-billiard" {>= "3.3.0.23"}
+  "python3-dateutil"
+  "python3-ephem"
+  "python3-kombu" {>= "4.2.0"}
+  "python3-memcache"
+  "python3-pkg-resources"
+  "python3-pyparsing"
+  "python3-tz"
+]
+extra-source "python3-celery_4.2.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/celery/python3-celery_4.2.1-3_all.deb"
+}

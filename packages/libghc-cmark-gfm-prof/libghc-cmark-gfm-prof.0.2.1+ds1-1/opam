@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cmark-gfm-prof_0.2.1+ds1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cmark-gfm-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-cmark-gfm-dev" {= "0.2.1+ds1-1"}
+]
+extra-source "libghc-cmark-gfm-prof_0.2.1+ds1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cmark-gfm/libghc-cmark-gfm-prof_0.2.1+ds1-1_amd64.deb"
+}

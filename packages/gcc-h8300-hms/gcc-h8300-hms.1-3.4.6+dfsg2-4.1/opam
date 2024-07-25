@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-h8300-hms_1:3.4.6+dfsg2-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-h8300-hms"]
+]
+depends: [
+  "binutils-h8300-hms"
+  "libc6" {>= "2.14"}
+]
+extra-source "gcc-h8300-hms_1:3.4.6+dfsg2-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-h8300-hms/gcc-h8300-hms_3.4.6+dfsg2-4.1_amd64.deb"
+}

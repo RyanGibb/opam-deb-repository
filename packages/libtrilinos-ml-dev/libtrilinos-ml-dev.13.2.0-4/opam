@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrilinos-ml-dev_13.2.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrilinos-ml-dev"]
+]
+depends: [
+  "libtrilinos-aztecoo-dev"
+  "libtrilinos-ml-13-2" {= "13.2.0-4"}
+  "libtrilinos-trilinosss-dev"
+  "trilinos-dev"
+]
+extra-source "libtrilinos-ml-dev_13.2.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trilinos/libtrilinos-ml-dev_13.2.0-4_amd64.deb"
+}

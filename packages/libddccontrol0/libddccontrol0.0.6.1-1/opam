@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libddccontrol0_0.6.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libddccontrol0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libpci3" {>= "1-3.8.0"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libddccontrol0_0.6.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/ddccontrol/libddccontrol0_0.6.1-1_amd64.deb"
+}

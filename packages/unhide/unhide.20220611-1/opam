@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i unhide_20220611-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r unhide"]
+]
+depends: [
+  "iproute2"
+  "libc6" {>= "2.34"}
+  "lsof"
+  "net-tools"
+  "procps"
+  "psmisc"
+]
+extra-source "unhide_20220611-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unhide/unhide_20220611-1_amd64.deb"
+}

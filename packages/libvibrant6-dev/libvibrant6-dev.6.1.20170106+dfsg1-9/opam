@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvibrant6-dev_6.1.20170106+dfsg1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvibrant6-dev"]
+]
+depends: [
+  "libmotif-dev"
+  "libncbi6-dev" {= "6.1.20170106+dfsg1-9"}
+  "libvibrant6b" {= "6.1.20170106+dfsg1-9"}
+  "libxmu-dev"
+  ("libglu1-mesa-dev" | "libglu-dev")
+]
+extra-source "libvibrant6-dev_6.1.20170106+dfsg1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ncbi-tools6/libvibrant6-dev_6.1.20170106+dfsg1-9_amd64.deb"
+}

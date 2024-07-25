@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-timeseries_3062.100-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-timeseries"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-timedate" {>= "2150.95"}
+]
+extra-source "r-cran-timeseries_3062.100-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-timeseries/r-cran-timeseries_3062.100-2_all.deb"
+}

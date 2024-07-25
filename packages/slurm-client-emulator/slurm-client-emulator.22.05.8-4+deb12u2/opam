@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slurm-client-emulator_22.05.8-4+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slurm-client-emulator"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libreadline8" {>= "6.0"}
+]
+extra-source "slurm-client-emulator_22.05.8-4+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-wlm/slurm-client-emulator_22.05.8-4+deb12u2_amd64.deb"
+}

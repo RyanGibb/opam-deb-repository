@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclang-rt-dev-wasm32_1:14.0-55.7~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclang-rt-dev-wasm32"]
+]
+depends: [
+  "libclang-rt-14-dev-wasm32" {>= "14~"}
+]
+extra-source "libclang-rt-dev-wasm32_1:14.0-55.7~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-defaults/libclang-rt-dev-wasm32_14.0-55.7~deb12u1_amd64.deb"
+}

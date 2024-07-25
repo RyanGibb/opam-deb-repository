@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rocketcea_1.1.18+dfsg-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rocketcea"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgfortran5" {>= "8"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-future"
+  "python3-matplotlib"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-scipy"
+]
+extra-source "rocketcea_1.1.18+dfsg-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rocketcea/rocketcea_1.1.18+dfsg-3+b1_amd64.deb"
+}

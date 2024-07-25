@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsundials-arkode2_3.1.2+dfsg-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsundials-arkode2"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+extra-source "libsundials-arkode2_3.1.2+dfsg-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sundials/libsundials-arkode2_3.1.2+dfsg-3+b1_amd64.deb"
+}

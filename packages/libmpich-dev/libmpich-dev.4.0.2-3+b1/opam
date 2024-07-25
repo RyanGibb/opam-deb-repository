@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmpich-dev_4.0.2-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmpich-dev"]
+]
+depends: [
+  "g++"
+  "libhwloc-dev"
+  "libmpich12" {= "4.0.2-3+b1"}
+  "libucx-dev"
+  "mpich" {= "4.0.2-3+b1"}
+  ("gfortran" | "fortran-compiler")
+  ("gfortran-12" | "gfortran-mod-15")
+]
+extra-source "libmpich-dev_4.0.2-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpich/libmpich-dev_4.0.2-3+b1_amd64.deb"
+}

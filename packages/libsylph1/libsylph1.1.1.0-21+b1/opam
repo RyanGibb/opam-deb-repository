@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsylph1_1.1.0-21+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsylph1"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libonig5" {>= "6.9.6"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "libsylph1_1.1.0-21+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsylph/libsylph1_1.1.0-21+b1_amd64.deb"
+}

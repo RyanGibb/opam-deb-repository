@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i printer-driver-splix_2.0.0+svn315-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r printer-driver-splix"]
+]
+depends: [
+  "cups" {>= "1.5.0-3~"}
+  "cups-client"
+  "cups-filters" {>= "1.0.36"}
+  "libc6" {>= "2.14"}
+  "libcups2" {>= "1.4.0"}
+  "libcupsimage2" {>= "1.4.0"}
+  "libgcc-s1"
+  "libjbig0" {>= "2.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "printer-driver-splix_2.0.0+svn315-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/splix/printer-driver-splix_2.0.0+svn315-7_amd64.deb"
+}

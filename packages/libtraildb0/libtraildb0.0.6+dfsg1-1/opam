@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtraildb0_0.6+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtraildb0"]
+]
+depends: [
+  "libarchive13" {>= "3.0.4"}
+  "libc6" {>= "2.14"}
+  "libjudydebian1"
+]
+extra-source "libtraildb0_0.6+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/traildb/libtraildb0_0.6+dfsg1-1_amd64.deb"
+}

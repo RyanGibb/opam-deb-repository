@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-mount-bin_2.16-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-mount-bin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcryptsetup12" {>= "2-1.4"}
+  "libhx28" {>= "3.22"}
+  "libpam-mount"
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "libpam-mount-bin_2.16-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpam-mount/libpam-mount-bin_2.16-9_amd64.deb"
+}

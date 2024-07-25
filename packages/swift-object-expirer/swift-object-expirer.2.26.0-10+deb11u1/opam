@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i swift-object-expirer_2.26.0-10+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r swift-object-expirer"]
+]
+depends: [
+  "lsb-base" {>= "3.0-6"}
+  "python3-any"
+  "python3-swift" {= "2.26.0-10+deb11u1"}
+  "rsync"
+  "swift" {= "2.26.0-10+deb11u1"}
+]
+extra-source "swift-object-expirer_2.26.0-10+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/swift/swift-object-expirer_2.26.0-10+deb11u1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnftnl11_1.1.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnftnl11"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmnl0" {>= "1.0.3-4~"}
+]
+extra-source "libnftnl11_1.1.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnftnl/libnftnl11_1.1.9-1_amd64.deb"
+}

@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pki-base-java_10.10.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pki-base-java"]
+]
+depends: [
+  "libcommons-cli-java"
+  "libcommons-codec-java"
+  "libcommons-httpclient-java"
+  "libcommons-io-java"
+  "libcommons-lang3-java"
+  "libcommons-logging-java"
+  "libcommons-net-java"
+  "libhttpclient-java"
+  "libhttpcore-java"
+  "libjaxp1-3-java"
+  "libjettison-java"
+  "libjss-java" {>= "4.8.0~"}
+  "libldap-java" {>= "4.21.0+dfsg1"}
+  "libresteasy3-0-java" {>= "3.0.19-5"}
+  "libslf4j-java"
+  "libstax-java"
+  "libxalan2-java"
+  "libxerces2-java"
+  "libxml-commons-external-java"
+  "libxml-commons-resolver1-1-java"
+  "openjdk-11-jre-headless"
+  "pki-base" {= "10.10.2-3"}
+]
+extra-source "pki-base-java_10.10.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dogtag-pki/pki-base-java_10.10.2-3_all.deb"
+}

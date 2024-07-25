@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lgc-pg_1.4.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lgc-pg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsdl1-2debian" {>= "1.2.11"}
+]
+extra-source "lgc-pg_1.4.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lgeneral/lgc-pg_1.4.4-1_amd64.deb"
+}

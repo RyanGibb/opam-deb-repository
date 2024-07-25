@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglfw3-wayland_3.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglfw3-wayland"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libegl1"
+  "libgl1"
+  "libwayland-client0" {>= "1.9.91"}
+  "libwayland-cursor0"
+  "libwayland-egl1"
+  "libxkbcommon0" {>= "0.5.0"}
+]
+conflicts: [
+  "libglfw3"
+]
+extra-source "libglfw3-wayland_3.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glfw3/libglfw3-wayland_3.3.2-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdynamicedt3d1.8_1.8.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdynamicedt3d1.8"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "liboctomap1-8"
+  "libstdc++6" {>= "5"}
+]
+extra-source "libdynamicedt3d1.8_1.8.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octomap/libdynamicedt3d1.8_1.8.1+dfsg-1_amd64.deb"
+}

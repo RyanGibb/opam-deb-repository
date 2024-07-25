@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-proptest+default-code-coverage-dev_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-proptest+default-code-coverage-dev"]
+]
+depends: [
+  "librust-proptest+bit-set-dev" {= "1.0.0-1"}
+  "librust-proptest+fork-dev" {= "1.0.0-1"}
+  "librust-proptest+std-dev" {= "1.0.0-1"}
+  "librust-proptest+timeout-dev" {= "1.0.0-1"}
+  "librust-proptest-dev" {= "1.0.0-1"}
+]
+extra-source "librust-proptest+default-code-coverage-dev_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-proptest/librust-proptest+default-code-coverage-dev_1.0.0-1_amd64.deb"
+}

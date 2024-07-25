@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt5-ukui-platformtheme_1.0.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt5-ukui-platformtheme"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgsettings-qt1" {>= "0.1+14.04.20140408"}
+  "libqt5-ukui-style1"
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5widgets5" {>= "5.1.0"}
+  "libstdc++6" {>= "5"}
+  "qt5-styles-ukui"
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "qt5-ukui-platformtheme_1.0.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt5-ukui-platformtheme/qt5-ukui-platformtheme_1.0.6-1_amd64.deb"
+}

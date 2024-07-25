@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-smash_0.0.15-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-smash"]
+]
+depends: [
+  "node-optimist" {>= "0.3"}
+  "node-queue-async" {>= "1.0.0"}
+  "nodejs" {>= "0.10.0"}
+]
+extra-source "node-smash_0.0.15-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/smash/node-smash_0.0.15-1_all.deb"
+}

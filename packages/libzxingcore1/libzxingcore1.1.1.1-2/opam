@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzxingcore1_1.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzxingcore1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.4"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libzxingcore1_1.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zxing-cpp/libzxingcore1_1.1.1-2_amd64.deb"
+}

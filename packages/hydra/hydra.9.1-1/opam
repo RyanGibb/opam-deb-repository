@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hydra_9.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hydra"]
+]
+depends: [
+  "libapr1" {>= "1.2.7"}
+  "libbson-1-0-0" {>= "1.17.0"}
+  "libc6" {>= "2.29"}
+  "libfbclient2" {>= "2.5.0.25784~ReleaseCandidate1.ds2"}
+  "libfreerdp2-2" {>= "2.0.0~git20160317.1.75ae3f5+dfsg1"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libidn11" {>= "1.13"}
+  "libmariadb3" {>= "3.0.0"}
+  "libmemcached11"
+  "libmongoc-1-0-0" {>= "1.17.0"}
+  "libpcre3"
+  "libpq5"
+  "libssh-4" {>= "0.8.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libsvn1" {>= "1.10"}
+  "libtinfo6" {>= "6"}
+  "libwinpr2-2" {>= "2.0.0~git20160317.1.75ae3f5+dfsg1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "hydra_9.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hydra/hydra_9.1-1_amd64.deb"
+}

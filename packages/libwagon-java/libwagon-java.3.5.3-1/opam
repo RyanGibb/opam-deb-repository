@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwagon-java_3.5.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwagon-java"]
+]
+depends: [
+  "libwagon-file-java" {>= "3.5.3-1"}
+  "libwagon-ftp-java" {>= "3.5.3-1"}
+  "libwagon-http-java" {>= "3.5.3-1"}
+  "libwagon-http-shaded-java" {>= "3.5.3-1"}
+  "libwagon-provider-api-java" {>= "3.5.3-1"}
+]
+extra-source "libwagon-java_3.5.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wagon/libwagon-java_3.5.3-1_all.deb"
+}

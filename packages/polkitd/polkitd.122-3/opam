@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i polkitd_122-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r polkitd"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libduktape207" {>= "2.0.3"}
+  "libelogind0"
+  "libexpat1" {>= "2.0.1"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpolkit-agent-1-0" {= "122-3"}
+  "libpolkit-gobject-1-0" {= "122-3"}
+  "xml-core" {>= "0.14"}
+  ("adduser" | "systemd-sysusers")
+  ("default-dbus-system-bus" | "dbus-system-bus")
+  ("default-logind" | "logind")
+]
+extra-source "polkitd_122-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/policykit-1/polkitd_122-3_amd64.deb"
+}

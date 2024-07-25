@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmessagingmenu12.10-cil_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmessagingmenu12.10-cil"]
+]
+depends: [
+  "cli-common" {>= "0.5.1"}
+  "libglib2-0-0" {>= "2.56.1"}
+  "libglib2-0-cil" {>= "2.12.40"}
+  "libmessaging-menu0"
+  "libmono-corlib4-5-cil" {>= "4.6.1.3"}
+  "libmono-system4-0-cil" {>= "4.6.1.3"}
+]
+extra-source "libmessagingmenu12.10-cil_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/messagingmenu-sharp/libmessagingmenu12.10-cil_1.0.1-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-bandit_1.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-bandit"]
+]
+depends: [
+  "python3-any"
+  "python3-git" {>= "2.0.2"}
+  "python3-six" {>= "1.10.0"}
+  "python3-stevedore" {>= "1.20.0"}
+  "python3-yaml" {>= "3.12"}
+]
+extra-source "python3-bandit_1.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bandit/python3-bandit_1.5.1-1_all.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nginx-core_1.22.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nginx-core"]
+]
+depends: [
+  "libnginx-mod-http-geoip" {< "1.22.1-9.1~"}
+  "libnginx-mod-http-geoip" {>= "1.22.1-9"}
+  "libnginx-mod-http-image-filter" {< "1.22.1-9.1~"}
+  "libnginx-mod-http-image-filter" {>= "1.22.1-9"}
+  "libnginx-mod-http-xslt-filter" {< "1.22.1-9.1~"}
+  "libnginx-mod-http-xslt-filter" {>= "1.22.1-9"}
+  "libnginx-mod-mail" {< "1.22.1-9.1~"}
+  "libnginx-mod-mail" {>= "1.22.1-9"}
+  "libnginx-mod-stream" {< "1.22.1-9.1~"}
+  "libnginx-mod-stream" {>= "1.22.1-9"}
+  "libnginx-mod-stream-geoip" {< "1.22.1-9.1~"}
+  "libnginx-mod-stream-geoip" {>= "1.22.1-9"}
+  "nginx" {< "1.22.1-9.1~"}
+  "nginx" {>= "1.22.1-9"}
+]
+extra-source "nginx-core_1.22.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nginx/nginx-core_1.22.1-9_all.deb"
+}

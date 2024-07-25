@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpod-elemental-perl_0.103004-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpod-elemental-perl"]
+]
+depends: [
+  "libclass-load-perl"
+  "libmixin-linewise-perl"
+  "libmoose-perl"
+  "libmoosex-types-perl"
+  "libnamespace-autoclean-perl"
+  "libpod-eventual-perl"
+  "libstring-rewriteprefix-perl"
+  "libstring-truncate-perl"
+  "libsub-exporter-formethods-perl"
+  "libsub-exporter-perl"
+  "perl"
+  ("perl" {>= "5.19.5"} | "libscalar-list-utils-perl" {>= "1-1.33"})
+]
+extra-source "libpod-elemental-perl_0.103004-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpod-elemental-perl/libpod-elemental-perl_0.103004-1_all.deb"
+}

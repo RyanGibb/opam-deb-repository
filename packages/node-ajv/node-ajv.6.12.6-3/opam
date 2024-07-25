@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-ajv_6.12.6-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-ajv"]
+]
+depends: [
+  "node-fast-deep-equal"
+  "node-json-schema-traverse"
+  "node-json-stable-stringify"
+  "node-uri-js"
+  "nodejs-any"
+]
+extra-source "node-ajv_6.12.6-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-ajv/node-ajv_6.12.6-3_all.deb"
+}

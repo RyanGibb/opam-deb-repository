@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mate-polkit_1.20.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mate-polkit"]
+]
+depends: [
+  "accountsservice"
+  "libatk1-0-0" {>= "1.12.4"}
+  "libayatana-appindicator3-1" {>= "0.2.92"}
+  "libc6" {>= "2.4"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libdbusmenu-glib4" {>= "0.4.2"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.16.2"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpolkit-agent-1-0" {>= "0.99"}
+  "libpolkit-gobject-1-0" {>= "0.99"}
+  "mate-polkit-common" {= "1.20.2-1"}
+  "policykit-1"
+]
+extra-source "mate-polkit_1.20.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mate-polkit/mate-polkit_1.20.2-1_amd64.deb"
+}

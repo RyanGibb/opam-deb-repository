@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-strings_1.2.0-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-strings"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "liboctave8"
+  "libstdc++6" {>= "5.2"}
+  "octave" {>= "6.1.0"}
+]
+extra-source "octave-strings_1.2.0-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave-strings/octave-strings_1.2.0-10_amd64.deb"
+}

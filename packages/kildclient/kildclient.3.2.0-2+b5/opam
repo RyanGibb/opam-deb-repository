@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kildclient_3.2.0-2+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kildclient"]
+]
+depends: [
+  "desktop-file-utils"
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.32.0"}
+  "libgnutls30" {>= "3.7.5"}
+  "libgtk-3-0" {>= "3.22.0"}
+  "libgtkspell3-3-0" {>= "3.0.3"}
+  "libjson-perl"
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libperl5-36" {>= "5.36.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "kildclient_3.2.0-2+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kildclient/kildclient_3.2.0-2+b5_amd64.deb"
+}

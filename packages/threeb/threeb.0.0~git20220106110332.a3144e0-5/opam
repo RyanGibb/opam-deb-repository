@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i threeb_0.0~git20220106110332.a3144e0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r threeb"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libcvd2" {>= "0.0~git20220106103934.34d8e26+ds1"}
+  "libgcc-s1" {>= "3.0"}
+  "libgvars3-headless0" {>= "0.0~git20220105194034.62f5a78"}
+  "libstdc++6" {>= "11"}
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "threeb_0.0~git20220106110332.a3144e0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/threeb/threeb_0.0~git20220106110332.a3144e0-5_amd64.deb"
+}

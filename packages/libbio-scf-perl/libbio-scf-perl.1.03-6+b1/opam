@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbio-scf-perl_1.03-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbio-scf-perl"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libstaden-read14" {>= "1.14.12"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libbio-scf-perl_1.03-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbio-scf-perl/libbio-scf-perl_1.03-6+b1_amd64.deb"
+}

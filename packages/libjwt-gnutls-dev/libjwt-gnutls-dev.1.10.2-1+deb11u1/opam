@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjwt-gnutls-dev_1.10.2-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjwt-gnutls-dev"]
+]
+depends: [
+  "libjwt-gnutls0" {= "1.10.2-1+deb11u1"}
+]
+conflicts: [
+  "libjwt-dev"
+]
+extra-source "libjwt-gnutls-dev_1.10.2-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libj/libjwt/libjwt-gnutls-dev_1.10.2-1+deb11u1_amd64.deb"
+}

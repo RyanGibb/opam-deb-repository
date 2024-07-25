@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnat-gps_18-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnat-gps"]
+]
+depends: [
+  "gir1-2-gtk-3-0"
+  "gnat-gps-common" {= "18-5"}
+  "gprbuild"
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libclang1-7" {>= "1-5.0~svn298832-1~"}
+  "libgcc1" {>= "1-3.0"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.28.0"}
+  "libgnat-8" {>= "8.2.0-12"}
+  "libgnatcoll-iconv18"
+  "libgnatcoll-python17"
+  "libgnatcoll-sql1"
+  "libgnatcoll-sqlite-bin"
+  "libgnatcoll-sqlite18"
+  "libgnatcoll-xref18"
+  "libgnatcoll17"
+  "libgpr18"
+  "libgtk-3-0" {>= "3.10.0"}
+  "libgtkada18"
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpython2-7" {>= "2.7"}
+  "libtemplates-parser18"
+  "libxmlada-dom5"
+  "libxmlada-input5"
+  "libxmlada-sax5"
+  "libxmlada-schema5"
+  "libxmlada-unicode5"
+  "python-gi"
+  "python-six"
+]
+extra-source "gnat-gps_18-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnat-gps/gnat-gps_18-5_amd64.deb"
+}

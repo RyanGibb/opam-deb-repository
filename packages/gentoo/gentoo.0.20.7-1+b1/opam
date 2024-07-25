@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gentoo_0.20.7-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gentoo"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgtk-3-0" {>= "3.16.2"}
+  "libpango-1-0-0" {>= "1.14.0"}
+]
+extra-source "gentoo_0.20.7-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gentoo/gentoo_0.20.7-1+b1_amd64.deb"
+}

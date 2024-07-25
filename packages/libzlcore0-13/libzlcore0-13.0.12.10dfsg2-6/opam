@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzlcore0.13_0.12.10dfsg2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzlcore0.13"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.33"}
+  "libcurl3-gnutls" {>= "7.17"}
+  "libexpat1" {>= "2.0.1"}
+  "libstdc++6" {>= "11"}
+  "libzlcore-data" {>= "0.12.10dfsg2-6"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "fbreader-gtk"
+  "fbreader-qt"
+  "fbreader-qt4"
+]
+extra-source "libzlcore0.13_0.12.10dfsg2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fbreader/libzlcore0.13_0.12.10dfsg2-6_amd64.deb"
+}

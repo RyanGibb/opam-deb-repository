@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i floppyd_4.0.26-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r floppyd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libx11-6"
+  "libxau6"
+]
+extra-source "floppyd_4.0.26-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mtools/floppyd_4.0.26-1_amd64.deb"
+}

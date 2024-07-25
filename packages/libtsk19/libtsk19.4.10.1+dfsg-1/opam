@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtsk19_4.10.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtsk19"]
+]
+depends: [
+  "libafflib0v5" {>= "3.7.6"}
+  "libc6" {>= "2.14"}
+  "libewf2" {>= "20130416"}
+  "libgcc-s1" {>= "4.2"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+  "libvhdi1" {>= "20150110"}
+  "libvmdk1" {>= "20150516"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libtsk10v5"
+]
+extra-source "libtsk19_4.10.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sleuthkit/libtsk19_4.10.1+dfsg-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i consul_1.8.7+dfsg1-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r consul"]
+]
+depends: [
+  "adduser"
+  "init-system-helpers" {>= "1.51"}
+  "libc6" {>= "2.4"}
+  "pipexec"
+  "procps"
+]
+extra-source "consul_1.8.7+dfsg1-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/consul/consul_1.8.7+dfsg1-2+b3_amd64.deb"
+}

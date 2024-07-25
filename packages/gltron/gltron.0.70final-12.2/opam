@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gltron_0.70final-12.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gltron"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc-s1"
+  "libgl1"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl-sound1-2" {>= "1.0.1"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "5"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "gltron_0.70final-12.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gltron/gltron_0.70final-12.2_amd64.deb"
+}

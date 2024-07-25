@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-readdirp_3.5.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-readdirp"]
+]
+depends: [
+  "node-anymatch" {>= "3.0.3"}
+  "node-graceful-fs" {>= "4.1.2~"}
+  "node-set-immediate-shim"
+  "nodejs"
+]
+extra-source "node-readdirp_3.5.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-readdirp/node-readdirp_3.5.0-2_all.deb"
+}

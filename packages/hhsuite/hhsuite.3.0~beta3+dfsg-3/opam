@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hhsuite_3.0~beta3+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hhsuite"]
+]
+depends: [
+  "ffindex" {>= "0.9.9.8"}
+  "hhsuite-data" {= "3.0~beta3+dfsg-3"}
+  "libc6" {>= "2.27"}
+  "libffindex0" {>= "0.9.9.9"}
+  "libgcc1" {>= "1-3.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "5.2"}
+  "python"
+]
+extra-source "hhsuite_3.0~beta3+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hhsuite/hhsuite_3.0~beta3+dfsg-3_amd64.deb"
+}

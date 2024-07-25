@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ceph-iscsi_3.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ceph-iscsi"]
+]
+depends: [
+  "python3-any"
+  "python3-configshell-fb"
+  "python3-cryptography"
+  "python3-distutils"
+  "python3-flask"
+  "python3-netifaces"
+  "python3-openssl"
+  "python3-rados"
+  "python3-rbd"
+  "python3-requests"
+  "python3-rpm"
+  "python3-rtslib-fb"
+  "tcmu-runner" {>= "1.4.0"}
+]
+extra-source "ceph-iscsi_3.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph-iscsi/ceph-iscsi_3.4-1_all.deb"
+}

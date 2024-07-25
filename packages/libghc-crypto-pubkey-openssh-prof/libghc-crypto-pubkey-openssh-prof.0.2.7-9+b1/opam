@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-crypto-pubkey-openssh-prof_0.2.7-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-crypto-pubkey-openssh-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-asn1-encoding-prof"
+  "libghc-asn1-types-prof"
+  "libghc-attoparsec-prof"
+  "libghc-base64-bytestring-prof"
+  "libghc-cereal-prof"
+  "libghc-crypto-pubkey-openssh-dev" {= "0.2.7-9+b1"}
+  "libghc-crypto-pubkey-types-prof"
+  "libghc-pem-prof"
+]
+extra-source "libghc-crypto-pubkey-openssh-prof_0.2.7-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-crypto-pubkey-openssh/libghc-crypto-pubkey-openssh-prof_0.2.7-9+b1_amd64.deb"
+}

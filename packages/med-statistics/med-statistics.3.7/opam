@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i med-statistics_3.7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r med-statistics"]
+]
+depends: [
+  "med-config" {= "3.7"}
+  "med-tasks" {= "3.7"}
+]
+extra-source "med-statistics_3.7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-med/med-statistics_3.7_all.deb"
+}

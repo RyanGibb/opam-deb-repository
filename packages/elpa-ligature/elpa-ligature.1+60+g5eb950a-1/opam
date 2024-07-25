@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-ligature_1+60+g5eb950a-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-ligature"]
+]
+depends: [
+  "dh-elpa-helper"
+  "emacs-gtk" {>= "1-28"}
+  "emacsen-common"
+  "libcairo2" {>= "1.16.0"}
+]
+extra-source "elpa-ligature_1+60+g5eb950a-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elpa-ligature/elpa-ligature_1+60+g5eb950a-1_all.deb"
+}

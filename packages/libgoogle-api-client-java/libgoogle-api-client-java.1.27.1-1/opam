@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgoogle-api-client-java_1.27.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgoogle-api-client-java"]
+]
+depends: [
+  "libgoogle-http-client-java" {>= "1.27.0"}
+  "libguava-java"
+]
+extra-source "libgoogle-api-client-java_1.27.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/google-api-client-java/libgoogle-api-client-java_1.27.1-1_all.deb"
+}

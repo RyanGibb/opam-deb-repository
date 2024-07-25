@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxaw3dxft8-dev_1.6.2e-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxaw3dxft8-dev"]
+]
+depends: [
+  "libx11-dev"
+  "libxaw3dxft8" {= "1.6.2e-2"}
+  "libxft-dev"
+  "libxmu-dev"
+  "libxt-dev"
+]
+conflicts: [
+  "libxaw3dxft-dev"
+  "xpaint-dev"
+]
+extra-source "libxaw3dxft8-dev_1.6.2e-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxaw3dxft/libxaw3dxft8-dev_1.6.2e-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ssh_1:7.9p1-10+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ssh"]
+]
+depends: [
+  "openssh-client" {>= "1-7.9p1-10+deb10u2"}
+  "openssh-server" {>= "1-7.9p1-10+deb10u2"}
+]
+extra-source "ssh_1:7.9p1-10+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openssh/ssh_7.9p1-10+deb10u2_all.deb"
+}

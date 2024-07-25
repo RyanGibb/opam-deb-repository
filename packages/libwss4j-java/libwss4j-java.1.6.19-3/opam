@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwss4j-java_1.6.19-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwss4j-java"]
+]
+depends: [
+  "libapache-pom-java" {>= "29"}
+  "libcommons-logging-java" {>= "1.2"}
+  "libslf4j-java" {>= "1.7.32"}
+  "libxml-security-java" {>= "2.1.7"}
+]
+extra-source "libwss4j-java_1.6.19-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wss4j/libwss4j-java_1.6.19-3_all.deb"
+}

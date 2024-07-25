@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-xstatic-jquery-ui_1.12.0.1+debian+dfsg3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-xstatic-jquery-ui"]
+]
+depends: [
+  "libjs-jquery-ui" {>= "1.12.0"}
+  "python3-any"
+  "python3-xstatic"
+  "python3-xstatic-jquery"
+]
+extra-source "python3-xstatic-jquery-ui_1.12.0.1+debian+dfsg3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-xstatic-jquery-ui/python3-xstatic-jquery-ui_1.12.0.1+debian+dfsg3-4_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-s4vectors_0.20.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-s4vectors"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-2"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.23.3"}
+]
+extra-source "r-bioc-s4vectors_0.20.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-s4vectors/r-bioc-s4vectors_0.20.1-2_amd64.deb"
+}

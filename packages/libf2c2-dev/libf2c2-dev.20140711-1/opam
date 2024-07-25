@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libf2c2-dev_20140711-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libf2c2-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libf2c2" {= "20140711-1"}
+]
+extra-source "libf2c2-dev_20140711-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libf2c2/libf2c2-dev_20140711-1_amd64.deb"
+}

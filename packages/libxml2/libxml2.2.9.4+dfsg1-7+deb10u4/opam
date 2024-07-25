@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxml2_2.9.4+dfsg1-7+deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxml2"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "libicu63" {>= "63.1-1~"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "zlib1g" {>= "1-1.2.3.3"}
+]
+extra-source "libxml2_2.9.4+dfsg1-7+deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.4+dfsg1-7+deb10u4_amd64.deb"
+}

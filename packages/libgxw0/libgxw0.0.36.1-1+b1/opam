@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgxw0_0.36.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgxw0"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libcairo2" {>= "1.4.10"}
+  "libgdk-pixbuf2-0-0" {>= "2.25.2"}
+  "libglib2-0-0" {>= "2.41.1"}
+  "libgtk2-0-0" {>= "2.24.32"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+]
+extra-source "libgxw0_0.36.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guitarix/libgxw0_0.36.1-1+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgexiv2-2_0.14.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgexiv2-2"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libexiv2-27" {>= "0.27.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libgexiv2-2_0.14.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gexiv2/libgexiv2-2_0.14.0-1+b1_amd64.deb"
+}

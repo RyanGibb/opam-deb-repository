@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhocr-python_0.10.18-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhocr-python"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libhocr0" {>= "0.10.17"}
+  "libstdc++6" {>= "5"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "libhocr-python_0.10.18-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hocr/libhocr-python_0.10.18-3_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i claws-mail-tnef-parser_4.1.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r claws-mail-tnef-parser"]
+]
+depends: [
+  "claws-mail" {= "4.1.1-2+b1"}
+  "libc6" {>= "2.33"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libytnef0"
+]
+extra-source "claws-mail-tnef-parser_4.1.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/claws-mail/claws-mail-tnef-parser_4.1.1-2+b1_amd64.deb"
+}

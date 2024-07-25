@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblttng-ust-python-agent0_2.10.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblttng-ust-python-agent0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "liblttng-ust0" {= "2.10.3-1"}
+  "liburcu6" {>= "0.10.0"}
+]
+extra-source "liblttng-ust-python-agent0_2.10.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ust/liblttng-ust-python-agent0_2.10.3-1_amd64.deb"
+}

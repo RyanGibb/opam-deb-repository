@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmrpt-math2.1_1:2.1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmrpt-math2.1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcxsparse3" {>= "1-4.5.2"}
+  "libgcc-s1" {>= "4.0"}
+  "libmrpt-core2-1" {>= "1-2.1.7"}
+  "libmrpt-random2-1" {>= "1-2.1.7"}
+  "libmrpt-rtti2-1" {>= "1-2.1.7"}
+  "libmrpt-serialization2-1" {>= "1-2.1.7"}
+  "libmrpt-system2-1" {>= "1-2.1.7"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libmrpt-math2.1_1:2.1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrpt/libmrpt-math2.1_2.1.7-2_amd64.deb"
+}

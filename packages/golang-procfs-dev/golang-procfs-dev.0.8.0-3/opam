@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-procfs-dev_0.8.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-procfs-dev"]
+]
+depends: [
+  "golang-github-prometheus-procfs-dev" {= "0.8.0-3"}
+]
+extra-source "golang-procfs-dev_0.8.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-prometheus-procfs/golang-procfs-dev_0.8.0-3_all.deb"
+}

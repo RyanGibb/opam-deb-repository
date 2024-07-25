@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i charmap.app_0.3~rc1-4+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r charmap.app"]
+]
+depends: [
+  "charmap-app-common" {= "0.3~rc1-4"}
+  "gnustep-back0-29" {>= "0.29.0"}
+  "gnustep-base-runtime" {>= "1.28.0"}
+  "gnustep-gui-runtime" {>= "0.29.0"}
+  "libc6" {>= "2.34"}
+  "libgnustep-base1-28" {>= "1.28.0"}
+  "libgnustep-gui0-29" {>= "0.29.0"}
+  "libobjc4" {>= "4.2.1"}
+]
+extra-source "charmap.app_0.3~rc1-4+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/charmap.app/charmap.app_0.3~rc1-4+b3_amd64.deb"
+}

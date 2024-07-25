@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpkg-source-gitarchive_0.1.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpkg-source-gitarchive"]
+]
+depends: [
+  "dpkg-dev" {>= "1.18.0"}
+  "git"
+  "perl-any"
+  "pristine-lfs"
+]
+extra-source "dpkg-source-gitarchive_0.1.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpkg-source-gitarchive/dpkg-source-gitarchive_0.1.4_all.deb"
+}

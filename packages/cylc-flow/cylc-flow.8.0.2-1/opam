@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cylc-flow_8.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cylc-flow"]
+]
+depends: [
+  "at"
+  "perl"
+  "python3"
+  "python3-ansimarkup"
+  "python3-cylc"
+  "python3-isodatetime"
+  "sqlite3"
+]
+extra-source "cylc-flow_8.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cylc-flow/cylc-flow_8.0.2-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdolfinx-complex-dev_2019.2.0~git20210130.c14cb0a-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdolfinx-complex-dev"]
+]
+depends: [
+  "libdolfinx-complex2019-2" {= "2019.2.0~git20210130.c14cb0a-5"}
+  "libpetsc-complex3-14-dev"
+  "libslepc-complex3-14-dev"
+]
+extra-source "libdolfinx-complex-dev_2019.2.0~git20210130.c14cb0a-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dolfinx/libdolfinx-complex-dev_2019.2.0~git20210130.c14cb0a-5_amd64.deb"
+}

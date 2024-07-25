@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-http-prof_1:4000.3.14-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-http-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-http-dev" {= "1-4000.3.14-2+b1"}
+  "libghc-network-prof"
+  "libghc-network-uri-prof"
+]
+extra-source "libghc-http-prof_1:4000.3.14-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-http/libghc-http-prof_4000.3.14-2+b1_amd64.deb"
+}

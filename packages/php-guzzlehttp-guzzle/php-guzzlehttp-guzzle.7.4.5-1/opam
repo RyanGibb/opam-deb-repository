@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-guzzlehttp-guzzle_7.4.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-guzzlehttp-guzzle"]
+]
+depends: [
+  "php-common"
+  "php-guzzlehttp-promises" {< "2~~"}
+  "php-guzzlehttp-promises" {>= "1.5"}
+  "php-guzzlehttp-psr7"
+  "php-json"
+  "php-psr-http-client" {< "2~~"}
+  "php-psr-http-client" {>= "1.0"}
+  "php-symfony-deprecation-contracts"
+]
+extra-source "php-guzzlehttp-guzzle_7.4.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guzzle/php-guzzlehttp-guzzle_7.4.5-1_all.deb"
+}

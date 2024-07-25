@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ejabberd-contrib_0.2018.12.10~dfsg0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ejabberd-contrib"]
+]
+depends: [
+  "ejabberd" {= "18.12.1-2"}
+  "ejabberd-mod-cron"
+  "ejabberd-mod-log-chat"
+  "ejabberd-mod-logsession"
+  "ejabberd-mod-logxml"
+  "ejabberd-mod-message-log"
+  "ejabberd-mod-muc-log-http"
+  "ejabberd-mod-post-log"
+  "ejabberd-mod-pottymouth"
+  "ejabberd-mod-rest"
+  "ejabberd-mod-s2s-log"
+  "ejabberd-mod-shcommands"
+  "ejabberd-mod-statsdx"
+  "ejabberd-mod-webpresence"
+  ("erlang-base" {>= "1-17"} | "erlang-abi-17-0")
+]
+extra-source "ejabberd-contrib_0.2018.12.10~dfsg0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ejabberd-contrib/ejabberd-contrib_0.2018.12.10~dfsg0-3_all.deb"
+}

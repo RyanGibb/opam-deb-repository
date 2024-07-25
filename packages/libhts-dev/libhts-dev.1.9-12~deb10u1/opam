@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhts-dev_1.9-12~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhts-dev"]
+]
+depends: [
+  "libhts2" {= "1.9-12~deb10u1"}
+  "liblzma-dev"
+  "zlib1g-dev"
+]
+extra-source "libhts-dev_1.9-12~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/htslib/libhts-dev_1.9-12~deb10u1_amd64.deb"
+}

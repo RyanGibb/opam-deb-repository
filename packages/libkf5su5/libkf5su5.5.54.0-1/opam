@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5su5_5.54.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5su5"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libkf5configcore5" {>= "4.97.0"}
+  "libkf5coreaddons5" {>= "4.97.0"}
+  "libkf5pty5" {>= "4.96.0"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "4.96.0"}
+  "libkf5su-data" {= "5.54.0-1"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "4.1.1"}
+  "sudo"
+]
+extra-source "libkf5su5_5.54.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdesu/libkf5su5_5.54.0-1_amd64.deb"
+}

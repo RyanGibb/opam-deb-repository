@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guile-gnome2-dev_2.16.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guile-gnome2-dev"]
+]
+depends: [
+  "g-wrap" {>= "1.9.15-1"}
+  "guile-gnome2-glib" {= "2.16.5-2"}
+]
+extra-source "guile-gnome2-dev_2.16.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guile-gnome-platform/guile-gnome2-dev_2.16.5-2_amd64.deb"
+}

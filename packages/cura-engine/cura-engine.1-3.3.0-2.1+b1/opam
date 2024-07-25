@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cura-engine_1:3.3.0-2.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cura-engine"]
+]
+depends: [
+  "libarcus3" {>= "2.3.1"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-4.2"}
+  "libgomp1" {>= "4.9"}
+  "libpolyclipping22"
+  "libprotobuf17"
+]
+extra-source "cura-engine_1:3.3.0-2.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cura-engine/cura-engine_3.3.0-2.1+b1_amd64.deb"
+}

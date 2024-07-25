@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstdc++-8-dev-mips64r6-cross_8.3.0-2cross2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstdc++-8-dev-mips64r6-cross"]
+]
+depends: [
+  "gcc-8-cross-base-mipsen" {= "8.3.0-2cross2"}
+  "libc6-dev-mips64r6-cross" {>= "2.13-5"}
+  "libgcc-8-dev-mips64r6-cross" {= "8.3.0-2cross2"}
+  "libstdc++6-mips64r6-cross" {>= "8.3.0-2cross2"}
+]
+extra-source "libstdc++-8-dev-mips64r6-cross_8.3.0-2cross2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross-mipsen/libstdc++-8-dev-mips64r6-cross_8.3.0-2cross2_all.deb"
+}

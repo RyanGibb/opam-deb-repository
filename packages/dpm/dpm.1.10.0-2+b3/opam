@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpm_1.10.0-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpm"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdpm1" {= "1.10.0-2+b3"}
+  "liblcgdm1"
+  "libstdc++6" {>= "4.1.1"}
+]
+conflicts: [
+  "dpm-client (<< 1.8.1.2-2~)"
+]
+extra-source "dpm_1.10.0-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lcgdm/dpm_1.10.0-2+b3_amd64.deb"
+}

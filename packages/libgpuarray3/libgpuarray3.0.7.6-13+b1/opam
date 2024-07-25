@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgpuarray3_0.7.6-13+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgpuarray3"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  ("ocl-icd-opencl-dev" | "nvidia-cuda-dev")
+]
+extra-source "libgpuarray3_0.7.6-13+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgpuarray/libgpuarray3_0.7.6-13+b1_amd64.deb"
+}

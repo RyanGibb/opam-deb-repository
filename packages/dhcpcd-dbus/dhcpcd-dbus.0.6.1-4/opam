@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dhcpcd-dbus_0.6.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dhcpcd-dbus"]
+]
+depends: [
+  "dhcpcd"
+  "libc6" {>= "2.34"}
+  "libdbus-1-3" {>= "1.9.14"}
+]
+extra-source "dhcpcd-dbus_0.6.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dhcpcd-dbus/dhcpcd-dbus_0.6.1-4_amd64.deb"
+}

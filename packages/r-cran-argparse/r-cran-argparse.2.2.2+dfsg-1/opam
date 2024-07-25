@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-argparse_2.2.2+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-argparse"]
+]
+depends: [
+  "python3"
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-findpython"
+  "r-cran-jsonlite"
+  "r-cran-r6"
+]
+extra-source "r-cran-argparse_2.2.2+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-argparse/r-cran-argparse_2.2.2+dfsg-1_all.deb"
+}

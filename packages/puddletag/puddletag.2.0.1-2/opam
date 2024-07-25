@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puddletag_2.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puddletag"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "2.4.3-5~"}
+  "python3-acoustid"
+  "python3-any"
+  "python3-audioread"
+  "python3-configobj" {>= "4.5"}
+  "python3-mutagen" {>= "1.14"}
+  "python3-pyparsing" {>= "1.5.1"}
+  "python3-pyqt5"
+  "python3-pyqt5-qtsvg"
+]
+extra-source "puddletag_2.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puddletag/puddletag_2.0.1-2_all.deb"
+}

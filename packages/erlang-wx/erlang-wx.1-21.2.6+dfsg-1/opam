@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-wx_1:21.2.6+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-wx"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libstdc++6" {>= "5.2"}
+  "libwxbase3-0-0v5" {>= "3.0.4+dfsg"}
+  "libwxgtk3-0-0v5" {>= "3.0.4+dfsg"}
+  ("erlang-base" {= "1-21.2.6+dfsg-1"} | "erlang-base-hipe" {= "1-21.2.6+dfsg-1"})
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "erlang-wx_1:21.2.6+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-wx_21.2.6+dfsg-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcoordgen1_1.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcoordgen1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libcoordgen1_1.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/schroedinger-coordgenlibs/libcoordgen1_1.4.2-1_amd64.deb"
+}

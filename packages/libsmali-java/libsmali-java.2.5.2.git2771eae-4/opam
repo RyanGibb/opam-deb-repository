@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsmali-java_2.5.2.git2771eae-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsmali-java"]
+]
+depends: [
+  "java-wrappers"
+  "libantlr3-runtime-java"
+  "libguava-java"
+  "libjcommander-java"
+]
+conflicts: [
+  "smali"
+]
+extra-source "libsmali-java_2.5.2.git2771eae-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsmali-java/libsmali-java_2.5.2.git2771eae-4_all.deb"
+}

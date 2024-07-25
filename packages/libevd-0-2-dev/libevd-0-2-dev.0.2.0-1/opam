@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libevd-0.2-dev_0.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libevd-0.2-dev"]
+]
+depends: [
+  "gir1-2-evd-0-2" {= "0.2.0-1"}
+  "libevd-0-2-0" {= "0.2.0-1"}
+  "libglib2-0-dev" {>= "2.28.0"}
+  "libgnutls28-dev"
+  "libjson-glib-dev" {>= "0.14.0"}
+  "libsoup2-4-dev" {>= "2.28.0"}
+]
+extra-source "libevd-0.2-dev_0.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/event-dance/libevd-0.2-dev_0.2.0-1_amd64.deb"
+}

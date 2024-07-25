@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxi6_2:1.8-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxi6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libx11-6" {>= "2-1.6.0"}
+  "libxext6"
+]
+extra-source "libxi6_2:1.8-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxi/libxi6_1.8-1+b1_amd64.deb"
+}

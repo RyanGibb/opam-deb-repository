@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libimage-seek-perl_0.06-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libimage-seek-perl"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "4.6"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libimage-seek-perl_0.06-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libimage-seek-perl/libimage-seek-perl_0.06-3+b1_amd64.deb"
+}

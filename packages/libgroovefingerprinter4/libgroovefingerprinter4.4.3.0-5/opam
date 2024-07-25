@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgroovefingerprinter4_4.3.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgroovefingerprinter4"]
+]
+depends: [
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.4"}
+  "libchromaprint1" {>= "1.3.2"}
+  "libgroove4" {>= "4.0.1"}
+]
+extra-source "libgroovefingerprinter4_4.3.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgroove/libgroovefingerprinter4_4.3.0-5_amd64.deb"
+}

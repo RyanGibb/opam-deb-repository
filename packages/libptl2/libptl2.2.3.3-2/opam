@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libptl2_2.3.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libptl2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "12"}
+  "libtbb12" {>= "2021.4.0"}
+]
+extra-source "libptl2_2.3.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/ptl/libptl2_2.3.3-2_amd64.deb"
+}

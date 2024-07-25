@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-framework-bundle_4.4.19+dfsg-2+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-framework-bundle"]
+]
+depends: [
+  "php-common"
+  "php-mbstring"
+  "php-symfony-cache"
+  "php-symfony-config"
+  "php-symfony-dependency-injection"
+  "php-symfony-error-handler"
+  "php-symfony-filesystem"
+  "php-symfony-finder"
+  "php-symfony-http-foundation"
+  "php-symfony-http-kernel" {< "5~~"}
+  "php-symfony-http-kernel" {>= "4.4"}
+  "php-symfony-routing"
+  "php-xml"
+]
+extra-source "php-symfony-framework-bundle_4.4.19+dfsg-2+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/symfony/php-symfony-framework-bundle_4.4.19+dfsg-2+deb11u5_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i calc_2.12.7.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r calc"]
+]
+depends: [
+  "calc-common" {= "2.12.7.2-4"}
+  "libc6" {>= "2.17"}
+  "libreadline8" {>= "6.0"}
+  "sensible-utils"
+]
+extra-source "calc_2.12.7.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/calc/calc_2.12.7.2-4_amd64.deb"
+}

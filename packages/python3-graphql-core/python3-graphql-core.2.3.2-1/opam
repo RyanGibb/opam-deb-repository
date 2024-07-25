@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-graphql-core_2.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-graphql-core"]
+]
+depends: [
+  "python3-any"
+  "python3-promise"
+  "python3-rx"
+  "python3-six" {>= "1.10.0"}
+]
+extra-source "python3-graphql-core_2.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/graphql-core/python3-graphql-core_2.3.2-1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i printer-driver-foo2zjs_20171202dfsg0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r printer-driver-foo2zjs"]
+]
+depends: [
+  "dc"
+  "libc6" {>= "2.14"}
+  "libcups2" {>= "1.4.0"}
+  "libjbig0" {>= "2.0"}
+  "liblcms2-utils"
+  "printer-driver-foo2zjs-common" {>= "20171202dfsg0-2"}
+  ("cups-filters" | "foomatic-filters")
+]
+extra-source "printer-driver-foo2zjs_20171202dfsg0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/foo2zjs/printer-driver-foo2zjs_20171202dfsg0-2_amd64.deb"
+}

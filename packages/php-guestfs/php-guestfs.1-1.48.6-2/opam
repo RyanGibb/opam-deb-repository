@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-guestfs_1:1.48.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-guestfs"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libguestfs0" {>= "1-1.43.3"}
+  "php-common" {>= "1-7.0+33~"}
+  ("libapache2-mod-php8-2" | "libphp8-2-embed" | "php8-2-cgi" | "php8-2-cli" | "php8-2-fpm" | "php8-2-phpdbg")
+]
+extra-source "php-guestfs_1:1.48.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libguestfs/php-guestfs_1.48.6-2_amd64.deb"
+}

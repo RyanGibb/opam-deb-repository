@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libigfxcmrt7_23.1.1+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libigfxcmrt7"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libva2" {>= "2.12"}
+  ("intel-media-va-driver" {= "23.1.1+dfsg1-1"} | "intel-media-va-driver-non-free" {>= "23.1.1+dfsg1"})
+]
+extra-source "libigfxcmrt7_23.1.1+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/intel-media-driver/libigfxcmrt7_23.1.1+dfsg1-1_amd64.deb"
+}

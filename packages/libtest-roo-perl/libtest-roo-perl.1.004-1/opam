@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest-roo-perl_1.004-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest-roo-perl"]
+]
+depends: [
+  "libmoo-perl" {>= "1.000008"}
+  "libmoox-types-mooselike-perl"
+  "libstrictures-perl"
+  "libsub-install-perl"
+  "perl"
+  ("perl" {>= "5.13.4"} | "libtest-simple-perl" {>= "0.96"})
+]
+extra-source "libtest-roo-perl_1.004-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest-roo-perl/libtest-roo-perl_1.004-1_all.deb"
+}

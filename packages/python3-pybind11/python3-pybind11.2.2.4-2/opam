@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pybind11_2.2.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pybind11"]
+]
+depends: [
+  "pybind11-dev" {= "2.2.4-2"}
+  "python3-any"
+]
+extra-source "python3-pybind11_2.2.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pybind11/python3-pybind11_2.2.4-2_all.deb"
+}

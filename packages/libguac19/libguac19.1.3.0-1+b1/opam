@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libguac19_1.3.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libguac19"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcairo2" {>= "1.2.4"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libossp-uuid16"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libssl1-1" {>= "1.1.0"}
+  "libwebp6" {>= "0.5.1"}
+]
+extra-source "libguac19_1.3.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guacamole-server/libguac19_1.3.0-1+b1_amd64.deb"
+}

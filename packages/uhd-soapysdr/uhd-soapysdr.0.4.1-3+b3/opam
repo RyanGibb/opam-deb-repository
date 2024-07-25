@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uhd-soapysdr_0.4.1-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uhd-soapysdr"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libsoapysdr0-8" {>= "0.8.1"}
+  "libstdc++6" {>= "11"}
+  "libuhd4-3-0" {>= "4.3.0.0+ds1"}
+]
+extra-source "uhd-soapysdr_0.4.1-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/soapyuhd/uhd-soapysdr_0.4.1-3+b3_amd64.deb"
+}

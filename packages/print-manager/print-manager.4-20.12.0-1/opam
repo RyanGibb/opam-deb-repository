@@ -1,0 +1,41 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i print-manager_4:20.12.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r print-manager"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libcups2" {>= "1.6.0"}
+  "libkf5configcore5" {>= "5.72.0~"}
+  "libkf5configgui5" {>= "5.72.0~"}
+  "libkf5configwidgets5" {>= "5.72.0~"}
+  "libkf5coreaddons5" {>= "5.72.0~"}
+  "libkf5dbusaddons5" {>= "5.72.0~"}
+  "libkf5i18n5" {>= "5.72.0~"}
+  "libkf5iconthemes5" {>= "4.96.0"}
+  "libkf5kiocore5" {>= "5.72.0~"}
+  "libkf5kiogui5" {>= "5.72.0~"}
+  "libkf5kiowidgets5" {>= "5.72.0~"}
+  "libkf5notifications5" {>= "5.72.0~"}
+  "libkf5widgetsaddons5" {>= "5.72.0~"}
+  "libkf5windowsystem5" {>= "5.72.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5network5" {>= "5.9.0~"}
+  "libqt5qml5" {>= "5.9.0~"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "4.1.1"}
+  "plasma-framework" {>= "5.72.0~"}
+  "qml-module-org-kde-kquickcontrolsaddons" {>= "5.72.0~"}
+  "qml-module-qtquick-controls" {>= "5.9.0~"}
+  "qml-module-qtquick-controls2" {>= "5.9.0~"}
+  "qml-module-qtquick-layouts" {>= "5.9.0~"}
+  "qml-module-qtquick2" {>= "5.9.0~"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "print-manager_4:20.12.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/print-manager/print-manager_20.12.0-1_amd64.deb"
+}

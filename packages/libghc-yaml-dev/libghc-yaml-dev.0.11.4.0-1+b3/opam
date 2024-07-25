@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-yaml-dev_0.11.4.0-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-yaml-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.29"}
+  "libffi7" {>= "3.3~20180313"}
+  "libghc-aeson-dev"
+  "libghc-attoparsec-dev"
+  "libghc-conduit-dev"
+  "libghc-libyaml-dev"
+  "libghc-resourcet-dev"
+  "libghc-scientific-dev"
+  "libghc-unordered-containers-dev"
+  "libghc-vector-dev"
+  "libgmp10"
+  "libyaml-0-2"
+  "libyaml-dev"
+]
+extra-source "libghc-yaml-dev_0.11.4.0-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-yaml/libghc-yaml-dev_0.11.4.0-1+b3_amd64.deb"
+}

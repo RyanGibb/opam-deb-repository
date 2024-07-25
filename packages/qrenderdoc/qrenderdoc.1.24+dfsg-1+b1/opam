@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qrenderdoc_1.24+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qrenderdoc"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libpython3-11" {>= "3.11.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libqt5x11extras5" {>= "5.6.0"}
+  "librenderdoc" {= "1.24+dfsg-1+b1"}
+  "libstdc++6" {>= "11"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "qrenderdoc_1.24+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/renderdoc/qrenderdoc_1.24+dfsg-1+b1_amd64.deb"
+}

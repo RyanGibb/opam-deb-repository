@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kde-telepathy-minimal_20.08.0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kde-telepathy-minimal"]
+]
+depends: [
+  "kde-config-telepathy-accounts" {>= "20.08.0"}
+  "kde-telepathy-approver" {>= "20.08.0"}
+  "kde-telepathy-auth-handler" {>= "20.08.0"}
+  "kde-telepathy-contact-list" {>= "20.08.0"}
+  "kde-telepathy-integration-module" {>= "20.08.0"}
+  "kde-telepathy-text-ui" {>= "20.08.0"}
+  "telepathy-mission-control-5" {>= "1-5.16.5"}
+  ("telepathy-haze" | "telepathy-idle" | "telepathy-rakia" | "telepathy-ring" | "telepathy-salut")
+]
+extra-source "kde-telepathy-minimal_20.08.0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-kde-telepathy/kde-telepathy-minimal_20.08.0.1_amd64.deb"
+}

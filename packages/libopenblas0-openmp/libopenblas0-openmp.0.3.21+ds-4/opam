@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenblas0-openmp_0.3.21+ds-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenblas0-openmp"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgfortran5" {>= "8"}
+  "libgomp1" {>= "6"}
+]
+extra-source "libopenblas0-openmp_0.3.21+ds-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openblas/libopenblas0-openmp_0.3.21+ds-4_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-libcutils_1:10.0.0+r36-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-libcutils"]
+]
+depends: [
+  "android-libbase" {>= "1-10.0.0+r36"}
+  "android-liblog" {= "1-10.0.0+r36-7"}
+  "libbsd0"
+  "libc6" {>= "2.15"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "android-libcutils_1:10.0.0+r36-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-system-core/android-libcutils_10.0.0+r36-7_amd64.deb"
+}

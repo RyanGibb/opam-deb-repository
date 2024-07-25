@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apache2-utils_2.4.59-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apache2-utils"]
+]
+depends: [
+  "libapr1" {>= "1.4.8-2~"}
+  "libaprutil1" {>= "1.5.0"}
+  "libc6" {>= "2.14"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libssl1-1" {>= "1.1.1"}
+]
+extra-source "apache2-utils_2.4.59-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apache2/apache2-utils_2.4.59-1~deb11u1_amd64.deb"
+}

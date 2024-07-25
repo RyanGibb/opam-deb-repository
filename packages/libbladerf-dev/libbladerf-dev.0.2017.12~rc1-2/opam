@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbladerf-dev_0.2017.12~rc1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbladerf-dev"]
+]
+depends: [
+  "libbladerf1" {= "0.2017.12~rc1-2"}
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "libbladerf-dev_0.2017.12~rc1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bladerf/libbladerf-dev_0.2017.12~rc1-2_amd64.deb"
+}

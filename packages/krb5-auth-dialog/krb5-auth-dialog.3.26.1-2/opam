@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i krb5-auth-dialog_3.26.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r krb5-auth-dialog"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.21.4"}
+  "libkrb5-3" {>= "1.8+dfsg"}
+  "libnm0" {>= "1.0.0"}
+  "libnotify4" {>= "0.7.1"}
+  "libpam0g" {>= "0.99.7.1"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "krb5-auth-dialog_3.26.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/krb5-auth-dialog/krb5-auth-dialog_3.26.1-2_amd64.deb"
+}

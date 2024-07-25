@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tasty-hedgehog-prof_0.2.0.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tasty-hedgehog-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hedgehog-prof"
+  "libghc-tagged-prof"
+  "libghc-tasty-hedgehog-dev" {= "0.2.0.0-2+b1"}
+  "libghc-tasty-prof"
+]
+extra-source "libghc-tasty-hedgehog-prof_0.2.0.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tasty-hedgehog/libghc-tasty-hedgehog-prof_0.2.0.0-2+b1_amd64.deb"
+}

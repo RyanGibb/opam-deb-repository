@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uniconf-tools_4.6.1-15+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uniconf-tools"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "libwvstreams4-6-base"
+]
+extra-source "uniconf-tools_4.6.1-15+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wvstreams/uniconf-tools_4.6.1-15+b1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i obitools_1.2.12+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r obitools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libjs-sphinxdoc" {>= "1.0"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "obitools_1.2.12+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/obitools/obitools_1.2.12+dfsg-2_amd64.deb"
+}

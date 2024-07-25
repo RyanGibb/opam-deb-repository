@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-relational-record-dev_0.2.2.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-relational-record-dev"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libghc-persistable-types-hdbc-pg-dev"
+  "libghc-relational-query-dev" {>= "0.3"}
+  "libghc-relational-query-hdbc-dev"
+  "libgmp10"
+]
+extra-source "libghc-relational-record-dev_0.2.2.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-relational-record/libghc-relational-record-dev_0.2.2.0-5_amd64.deb"
+}

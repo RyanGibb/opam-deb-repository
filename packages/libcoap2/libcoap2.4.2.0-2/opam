@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcoap2_4.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcoap2"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgnutls30" {>= "3.6.6"}
+  "libssl1-1" {>= "1.1.1"}
+]
+extra-source "libcoap2_4.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcoap2/libcoap2_4.2.0-2_amd64.deb"
+}

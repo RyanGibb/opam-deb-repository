@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkido-gui0.1_0.1.0+dfsg-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkido-gui0.1"]
+]
+depends: [
+  "freeglut3"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libkido-utils0-1"
+  "libkido0-1"
+  "libstdc++6" {>= "5.2"}
+  "liburdfdom-world"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "libkido-gui0.1_0.1.0+dfsg-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kido/libkido-gui0.1_0.1.0+dfsg-6+b1_amd64.deb"
+}

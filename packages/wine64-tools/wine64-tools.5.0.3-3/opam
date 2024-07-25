@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wine64-tools_5.0.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wine64-tools"]
+]
+depends: [
+  "gcc"
+  "libc6" {>= "2.14"}
+  "libgettextpo0" {>= "0.21"}
+  "perl-any"
+  ("libwine-dev" {= "5.0.3-3"} | "libwine-dev-i386" {= "5.0.3-3"})
+]
+conflicts: [
+  "wine32-tools"
+]
+extra-source "wine64-tools_5.0.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wine/wine64-tools_5.0.3-3_amd64.deb"
+}

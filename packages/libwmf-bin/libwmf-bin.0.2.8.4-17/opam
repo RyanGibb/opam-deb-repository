@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwmf-bin_0.2.8.4-17_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwmf-bin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libwmf0-2-7" {>= "0.2.8.4"}
+  "libx11-6"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libwmf-bin_0.2.8.4-17_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libw/libwmf/libwmf-bin_0.2.8.4-17_amd64.deb"
+}

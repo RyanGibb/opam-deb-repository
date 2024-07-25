@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsignon-glib1_1.12-2+b11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsignon-glib1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.41.1"}
+]
+extra-source "libsignon-glib1_1.12-2+b11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsignon-glib/libsignon-glib1_1.12-2+b11_amd64.deb"
+}

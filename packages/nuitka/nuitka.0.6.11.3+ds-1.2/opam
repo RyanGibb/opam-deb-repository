@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nuitka_0.6.11.3+ds-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nuitka"]
+]
+depends: [
+  "base-files" {>= "11"}
+  "python3-any" {>= "3.3~"}
+  "python3-dev"
+  "scons" {>= "2.0.0"}
+  ("gcc" {>= "5.0"} | "g++" {>= "4.4"} | "clang" {>= "3.0"})
+  ("python3-appdirs" | "base-files" {< "7.2"})
+]
+extra-source "nuitka_0.6.11.3+ds-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nuitka/nuitka_0.6.11.3+ds-1.2_all.deb"
+}

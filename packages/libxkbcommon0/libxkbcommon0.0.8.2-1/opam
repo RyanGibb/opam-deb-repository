@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxkbcommon0_0.8.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxkbcommon0"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "xkb-data"
+]
+extra-source "libxkbcommon0_0.8.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxkbcommon/libxkbcommon0_0.8.2-1_amd64.deb"
+}

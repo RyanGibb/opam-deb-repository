@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pyotherside-tests_1.5.9-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pyotherside-tests"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libqt5quicktest5" {>= "5.0.2"}
+  "libqt5test5" {>= "5.5.0"}
+  "libstdc++6" {>= "5"}
+  "python3"
+  "qml-module-io-thp-pyotherside" {= "1.5.9-2+b3"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "pyotherside-tests_1.5.9-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyotherside/pyotherside-tests_1.5.9-2+b3_amd64.deb"
+}

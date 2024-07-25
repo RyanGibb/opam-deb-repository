@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i omniorb_4.2.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r omniorb"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libomniorb4-2" {>= "4.2.0"}
+  "libomnithread4" {>= "4.2.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "omniorb_4.2.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/omniorb-dfsg/omniorb_4.2.2-1+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-glasso_1.11-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-glasso"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgfortran5" {>= "8"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+]
+extra-source "r-cran-glasso_1.11-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-glasso/r-cran-glasso_1.11-1+b1_amd64.deb"
+}

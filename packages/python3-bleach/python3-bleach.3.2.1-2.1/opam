@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-bleach_3.2.1-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-bleach"]
+]
+depends: [
+  "python3-any"
+  "python3-html5lib" {>= "1.0.1~"}
+  "python3-packaging"
+  "python3-six" {>= "1.9.0"}
+  "python3-webencodings"
+]
+extra-source "python3-bleach_3.2.1-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-bleach/python3-bleach_3.2.1-2.1_all.deb"
+}

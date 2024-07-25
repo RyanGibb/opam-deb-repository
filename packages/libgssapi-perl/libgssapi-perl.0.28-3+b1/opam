@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgssapi-perl_0.28-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgssapi-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgssapi-krb5-2" {>= "1.14+dfsg"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libgssapi-perl_0.28-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgssapi-perl/libgssapi-perl_0.28-3+b1_amd64.deb"
+}

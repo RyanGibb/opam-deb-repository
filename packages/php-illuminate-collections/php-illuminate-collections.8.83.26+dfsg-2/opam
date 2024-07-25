@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-illuminate-collections_8.83.26+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-illuminate-collections"]
+]
+depends: [
+  "php-common"
+  "php-illuminate-contracts" {< "9~~"}
+  "php-illuminate-contracts" {>= "8.0"}
+  "php-illuminate-macroable" {< "9~~"}
+  "php-illuminate-macroable" {>= "8.0"}
+]
+extra-source "php-illuminate-collections_8.83.26+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-laravel-framework/php-illuminate-collections_8.83.26+dfsg-2_all.deb"
+}

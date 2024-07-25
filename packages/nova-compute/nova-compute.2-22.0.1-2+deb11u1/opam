@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nova-compute_2:22.0.1-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nova-compute"]
+]
+depends: [
+  "adduser"
+  "cgroup-tools"
+  "conntrack"
+  "curl"
+  "dosfstools"
+  "ebtables"
+  "gawk"
+  "iptables"
+  "kpartx"
+  "lsb-base" {>= "3.0.6"}
+  "nova-common" {= "2-22.0.1-2+deb11u1"}
+  "open-iscsi"
+  "parted"
+  "python3-any"
+  "qemu-utils"
+  "rsync"
+  "vlan"
+  ("fdisk" | "util-linux" {< "2.29.2-3~"})
+  ("nova-compute-kvm" | "nova-compute-hypervisor")
+]
+extra-source "nova-compute_2:22.0.1-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nova/nova-compute_22.0.1-2+deb11u1_all.deb"
+}

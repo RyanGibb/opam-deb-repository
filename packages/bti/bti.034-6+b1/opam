@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bti_034-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bti"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libjson-c5" {>= "0.15"}
+  "liboauth0" {>= "0.9.1"}
+  "libpcre2-8-0" {>= "10.22"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "bti_034-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bti/bti_034-6+b1_amd64.deb"
+}

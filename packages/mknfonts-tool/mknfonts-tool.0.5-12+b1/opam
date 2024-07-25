@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mknfonts.tool_0.5-12+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mknfonts.tool"]
+]
+depends: [
+  "gnustep-base-runtime" {>= "1.26.0"}
+  "libc6" {>= "2.2.5"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgnustep-base1-26" {>= "1.26.0"}
+  "libobjc4" {>= "4.2.1"}
+]
+extra-source "mknfonts.tool_0.5-12+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mknfonts.tool/mknfonts.tool_0.5-12+b1_amd64.deb"
+}

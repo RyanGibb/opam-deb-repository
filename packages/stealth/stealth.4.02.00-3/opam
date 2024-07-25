@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stealth_4.02.00-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stealth"]
+]
+depends: [
+  "libbobcat5" {>= "5.02.00"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "stealth_4.02.00-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stealth/stealth_4.02.00-3_amd64.deb"
+}

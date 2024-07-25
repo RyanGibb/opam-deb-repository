@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i quotatool_1:1.6.2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r quotatool"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+]
+extra-source "quotatool_1:1.6.2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/quotatool/quotatool_1.6.2-6_amd64.deb"
+}

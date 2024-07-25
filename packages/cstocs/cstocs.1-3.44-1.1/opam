@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cstocs_1:3.44-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cstocs"]
+]
+depends: [
+  "libdbd-xbase-perl"
+  "perl"
+]
+conflicts: [
+  "cstools-vn"
+]
+extra-source "cstocs_1:3.44-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cstocs/cstocs_3.44-1.1_all.deb"
+}

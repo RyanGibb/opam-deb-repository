@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaunit20_21.0.0.fa386849-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaunit20"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnat-10" {>= "10.2.1"}
+]
+extra-source "libaunit20_21.0.0.fa386849-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaunit/libaunit20_21.0.0.fa386849-2_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsundials-idas3_4.1.0+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsundials-idas3"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+]
+extra-source "libsundials-idas3_4.1.0+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sundials/libsundials-idas3_4.1.0+dfsg-4_amd64.deb"
+}

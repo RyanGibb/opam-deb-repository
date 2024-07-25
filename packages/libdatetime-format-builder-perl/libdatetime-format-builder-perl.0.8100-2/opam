@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdatetime-format-builder-perl_0.8100-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdatetime-format-builder-perl"]
+]
+depends: [
+  "libclass-factory-util-perl"
+  "libdatetime-format-strptime-perl"
+  "libdatetime-perl" {>= "2-1.00"}
+  "libparams-validate-perl"
+  "perl"
+]
+extra-source "libdatetime-format-builder-perl_0.8100-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdatetime-format-builder-perl/libdatetime-format-builder-perl_0.8100-2_all.deb"
+}

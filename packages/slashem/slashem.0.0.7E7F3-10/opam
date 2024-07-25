@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slashem_0.0.7E7F3-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slashem"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "slashem-common" {= "0.0.7E7F3-10"}
+]
+extra-source "slashem_0.0.7E7F3-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slashem/slashem_0.0.7E7F3-10_amd64.deb"
+}

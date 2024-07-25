@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-eo-es_1:0.9.1~r60655-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-eo-es"]
+]
+depends: [
+  "apertium" {>= "3.4"}
+  "cg3"
+]
+conflicts: [
+  "apertium-es-eo"
+]
+extra-source "apertium-eo-es_1:0.9.1~r60655-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-eo-es/apertium-eo-es_0.9.1~r60655-3_all.deb"
+}

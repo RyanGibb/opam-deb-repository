@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i quagga_1.2.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r quagga"]
+]
+depends: [
+  "quagga-bgpd" {= "1.2.4-3"}
+  "quagga-core" {= "1.2.4-3"}
+  "quagga-isisd" {= "1.2.4-3"}
+  "quagga-ospf6d" {= "1.2.4-3"}
+  "quagga-ospfd" {= "1.2.4-3"}
+  "quagga-pimd" {= "1.2.4-3"}
+  "quagga-ripd" {= "1.2.4-3"}
+  "quagga-ripngd" {= "1.2.4-3"}
+]
+extra-source "quagga_1.2.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/quagga/quagga_1.2.4-3_amd64.deb"
+}

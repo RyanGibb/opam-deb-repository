@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-disk-utility_43.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-disk-utility"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libcanberra-gtk3-0" {>= "0.25"}
+  "libdvdread8" {>= "4.2.0"}
+  "libelogind0"
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.43.2"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libhandy-1-0" {>= "1.5.0"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libnotify4" {>= "0.7.0"}
+  "libpango-1-0-0" {>= "1.18.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpwquality1" {>= "1.1.0"}
+  "libsecret-1-0" {>= "0.7"}
+  "libudisks2-0" {>= "2.7.6"}
+  "udisks2" {>= "2.7.6"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-disk-utility_43.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-disk-utility/gnome-disk-utility_43.0-1_amd64.deb"
+}

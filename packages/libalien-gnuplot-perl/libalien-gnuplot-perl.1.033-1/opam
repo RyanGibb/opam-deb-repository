@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libalien-gnuplot-perl_1.033-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libalien-gnuplot-perl"]
+]
+depends: [
+  "perl"
+  ("gnuplot-qt" | "gnuplot-x11" | "gnuplot-nox")
+]
+extra-source "libalien-gnuplot-perl_1.033-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libalien-gnuplot-perl/libalien-gnuplot-perl_1.033-1_all.deb"
+}

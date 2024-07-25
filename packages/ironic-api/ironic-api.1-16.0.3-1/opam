@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ironic-api_1:16.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ironic-api"]
+]
+depends: [
+  "adduser"
+  "ironic-common" {= "1-16.0.3-1"}
+  "lsb-base" {>= "3.0.6"}
+  "python3-openstackclient"
+  "python3-q-text-as-data"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "ironic-api_1:16.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ironic/ironic-api_16.0.3-1_all.deb"
+}

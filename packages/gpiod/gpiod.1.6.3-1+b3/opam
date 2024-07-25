@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gpiod_1.6.3-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gpiod"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgpiod2" {>= "1.5.1"}
+]
+extra-source "gpiod_1.6.3-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgpiod/gpiod_1.6.3-1+b3_amd64.deb"
+}

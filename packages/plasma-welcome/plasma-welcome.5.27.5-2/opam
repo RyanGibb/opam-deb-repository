@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plasma-welcome_5.27.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plasma-welcome"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libkf5configcore5" {>= "4.98.0"}
+  "libkf5configgui5" {>= "4.97.0"}
+  "libkf5coreaddons5" {>= "5.98~"}
+  "libkf5dbusaddons5" {>= "5.98~"}
+  "libkf5i18n5" {>= "5.98~"}
+  "libkf5kiogui5" {>= "5.98~"}
+  "libkf5notifications5" {>= "5.98~"}
+  "libkf5quickaddons5" {>= "5.98~"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "5.98~"}
+  "libkf5windowsystem5" {>= "5.98~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5network5" {>= "5.15.2~"}
+  "libqt5qml5" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  "plasma-framework"
+  "qml-module-org-kde-kirigami2"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+  ("libqt5quick5" {>= "5.15.2~"} | "libqt5quick5-gles" {>= "5.15.2~"})
+]
+extra-source "plasma-welcome_5.27.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plasma-welcome/plasma-welcome_5.27.5-2_amd64.deb"
+}

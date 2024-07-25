@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-arm-linux-gnueabihf_4:12.2.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-arm-linux-gnueabihf"]
+]
+depends: [
+  "cpp-arm-linux-gnueabihf" {= "4-12.2.0-3"}
+  "gcc-12-arm-linux-gnueabihf" {>= "12.2.0-1~"}
+]
+extra-source "gcc-arm-linux-gnueabihf_4:12.2.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults/gcc-arm-linux-gnueabihf_12.2.0-3_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i websockify_0.8.0+dfsg1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r websockify"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python-numpy"
+  ("python-websockify" {>= "0.8.0+dfsg1-10"} | "python3-websockify" {>= "0.8.0+dfsg1-10"})
+]
+extra-source "websockify_0.8.0+dfsg1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/websockify/websockify_0.8.0+dfsg1-10_amd64.deb"
+}

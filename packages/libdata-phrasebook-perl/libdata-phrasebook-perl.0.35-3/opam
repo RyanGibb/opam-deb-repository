@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdata-phrasebook-perl_0.35-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdata-phrasebook-perl"]
+]
+depends: [
+  "perl-any"
+  ("libmodule-pluggable-perl" | "perl-any" {< "5.17.0"})
+]
+extra-source "libdata-phrasebook-perl_0.35-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdata-phrasebook-perl/libdata-phrasebook-perl_0.35-3_all.deb"
+}

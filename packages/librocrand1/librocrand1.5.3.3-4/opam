@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librocrand1_5.3.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librocrand1"]
+]
+depends: [
+  "libamdhip64-5" {>= "4.5.2"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "librocrand1_5.3.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rocrand/librocrand1_5.3.3-4_amd64.deb"
+}

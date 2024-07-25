@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pwgen_2.08-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pwgen"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "pwgen_2.08-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pwgen/pwgen_2.08-2_amd64.deb"
+}

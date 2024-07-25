@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenhft-chronicle-core-java_2.17.5-v1.1.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenhft-chronicle-core-java"]
+]
+depends: [
+  "libintellij-annotations-java"
+  "libopenhft-affinity-java" {>= "2.2"}
+  "libslf4j-java" {>= "1.7.25"}
+]
+extra-source "libopenhft-chronicle-core-java_2.17.5-v1.1.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openhft-chronicle-core/libopenhft-chronicle-core-java_2.17.5-v1.1.8-2_all.deb"
+}

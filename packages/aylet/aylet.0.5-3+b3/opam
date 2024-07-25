@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aylet_0.5-3+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aylet"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "aylet_0.5-3+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aylet/aylet_0.5-3+b3_amd64.deb"
+}

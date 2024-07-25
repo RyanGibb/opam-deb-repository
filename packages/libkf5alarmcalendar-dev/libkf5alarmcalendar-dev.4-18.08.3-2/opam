@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5alarmcalendar-dev_4:18.08.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5alarmcalendar-dev"]
+]
+depends: [
+  "libkf5akonadi-dev" {>= "4-18.08.3~"}
+  "libkf5alarmcalendar5abi1" {= "4-18.08.3-2"}
+  "libkf5calendarcore-dev" {>= "4-18.08.3~"}
+  "libkf5holidays-dev" {>= "1-5.47.0~"}
+  "libkf5identitymanagement-dev" {>= "18.08.3~"}
+]
+extra-source "libkf5alarmcalendar-dev_4:18.08.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kalarmcal/libkf5alarmcalendar-dev_18.08.3-2_amd64.deb"
+}

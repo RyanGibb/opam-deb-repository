@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmlir-15-dev_1:15.0.6-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmlir-15-dev"]
+]
+depends: [
+  "libmlir-15" {= "1-15.0.6-4+b1"}
+]
+conflicts: [
+  "libmlir-x.y-dev"
+]
+extra-source "libmlir-15-dev_1:15.0.6-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-15/libmlir-15-dev_15.0.6-4+b1_amd64.deb"
+}

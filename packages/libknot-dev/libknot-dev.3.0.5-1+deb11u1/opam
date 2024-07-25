@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libknot-dev_3.0.5-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libknot-dev"]
+]
+depends: [
+  "libdnssec8" {= "3.0.5-1+deb11u1"}
+  "libgnutls28-dev"
+  "libknot11" {= "3.0.5-1+deb11u1"}
+  "libzscanner3" {= "3.0.5-1+deb11u1"}
+]
+extra-source "libknot-dev_3.0.5-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/knot/libknot-dev_3.0.5-1+deb11u1_amd64.deb"
+}

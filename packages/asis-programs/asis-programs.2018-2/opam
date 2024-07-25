@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i asis-programs_2018-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r asis-programs"]
+]
+depends: [
+  "gnat"
+  "gnat-8"
+  "libasis2018"
+  "libc6" {>= "2.14"}
+  "libgnatcoll17"
+  "libgnatvsn8" {>= "8.2.0-9"}
+  "libgpr18"
+  "libxmlada-dom5"
+  "libxmlada-input5"
+  "libxmlada-sax5"
+  "libxmlada-schema5"
+  "libxmlada-unicode5"
+]
+extra-source "asis-programs_2018-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/asis/asis-programs_2018-2_amd64.deb"
+}

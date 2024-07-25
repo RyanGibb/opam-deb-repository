@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jool-tools_4.1.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jool-tools"]
+]
+depends: [
+  "init-system-helpers" {>= "1.51"}
+  "libc6" {>= "2.34"}
+  "libnl-3-200" {>= "3.2.24"}
+  "libnl-genl-3-200" {>= "3.2.21"}
+]
+extra-source "jool-tools_4.1.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jool/jool-tools_4.1.9-1_amd64.deb"
+}

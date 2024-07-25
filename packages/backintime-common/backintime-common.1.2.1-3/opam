@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i backintime-common_1.2.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r backintime-common"]
+]
+depends: [
+  "openssh-client"
+  "python3-any"
+  "python3-dbus"
+  "python3-keyring"
+  "rsync"
+  ("cron" | "cron-daemon")
+]
+extra-source "backintime-common_1.2.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/backintime/backintime-common_1.2.1-3_all.deb"
+}

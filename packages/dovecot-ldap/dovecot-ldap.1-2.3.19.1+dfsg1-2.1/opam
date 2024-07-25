@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dovecot-ldap_1:2.3.19.1+dfsg1-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dovecot-ldap"]
+]
+depends: [
+  "dovecot-core" {= "1-2.3.19.1+dfsg1-2.1"}
+  "libc6" {>= "2.4"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "ucf"
+]
+extra-source "dovecot-ldap_1:2.3.19.1+dfsg1-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dovecot/dovecot-ldap_2.3.19.1+dfsg1-2.1_amd64.deb"
+}

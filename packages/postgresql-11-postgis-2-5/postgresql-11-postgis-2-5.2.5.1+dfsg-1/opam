@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-11-postgis-2.5_2.5.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-11-postgis-2.5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgdal20" {>= "2.0.1"}
+  "libgeos-c1v5" {>= "3.7.0"}
+  "libjson-c3" {>= "0.11"}
+  "liblwgeom-2-5-0" {>= "2.5.0~beta1"}
+  "libpcre3"
+  "libproj13" {>= "4.9.0"}
+  "libprotobuf-c1" {>= "1.0.1"}
+  "libsfcgal1" {>= "1.2.0"}
+  "libxml2" {>= "2.7.4"}
+  "postgresql-11"
+]
+extra-source "postgresql-11-postgis-2.5_2.5.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgis/postgresql-11-postgis-2.5_2.5.1+dfsg-1_amd64.deb"
+}

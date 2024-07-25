@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i speex_1.2~rc1.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r speex"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libogg0" {>= "1.1.0"}
+  "libspeex1" {>= "1.2~beta3-1"}
+  "libspeexdsp1" {>= "1.2~beta3.2-1"}
+]
+extra-source "speex_1.2~rc1.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/speex/speex_1.2~rc1.2-1+b2_amd64.deb"
+}

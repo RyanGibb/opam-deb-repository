@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ltspfsd-core_1.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ltspfsd-core"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "lsof"
+  "procps"
+  "python3"
+]
+extra-source "ltspfsd-core_1.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ltspfs/ltspfsd-core_1.5-2_amd64.deb"
+}

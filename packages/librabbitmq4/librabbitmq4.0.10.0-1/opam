@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librabbitmq4_0.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librabbitmq4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "librabbitmq4_0.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librabbitmq/librabbitmq4_0.10.0-1_amd64.deb"
+}

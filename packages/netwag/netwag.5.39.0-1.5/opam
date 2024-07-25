@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i netwag_5.39.0-1.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r netwag"]
+]
+depends: [
+  "netwox" {>= "5.39.0-1.5"}
+  "tk"
+  ("xterm" | "x-terminal-emulator")
+]
+extra-source "netwag_5.39.0-1.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netw-ib-ox-ag/netwag_5.39.0-1.5_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmaven-file-management-java_3.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmaven-file-management-java"]
+]
+depends: [
+  "libmaven-shared-io-java"
+  "libmaven-shared-utils-java" {>= "3.1.0"}
+  "libmaven3-core-java" {>= "3.5.0"}
+  "libplexus-utils-java"
+]
+extra-source "libmaven-file-management-java_3.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maven-file-management/libmaven-file-management-java_3.0.0-1_all.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cron-apt_0.13.0+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cron-apt"]
+]
+depends: [
+  "apt"
+]
+extra-source "cron-apt_0.13.0+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cron-apt/cron-apt_0.13.0+nmu1_all.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mesa-utils-extra_8.4.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mesa-utils-extra"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libegl1"
+  "libgl1"
+  "libgles2"
+  "libglew2-1" {>= "1.12.0"}
+  "libwayland-client0" {>= "1.9.91"}
+  "libwayland-egl1" {>= "1.15.0"}
+  "libx11-6"
+  "libxext6"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "mesa-utils-extra_8.4.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mesa-demos/mesa-utils-extra_8.4.0-1+b1_amd64.deb"
+}

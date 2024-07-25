@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gridengine-drmaa1.0_8.1.9+dfsg-10+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gridengine-drmaa1.0"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libjemalloc2" {>= "2.1.1"}
+  "libmunge2" {>= "0.5.8"}
+  "libssl3" {>= "3.0.0"}
+  "libtirpc3" {>= "1.0.2"}
+  "sensible-utils"
+]
+extra-source "gridengine-drmaa1.0_8.1.9+dfsg-10+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gridengine/gridengine-drmaa1.0_8.1.9+dfsg-10+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ldmtool_0.2.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ldmtool"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libglib2-0-0" {>= "2.31.18"}
+  "libjson-glib-1-0-0" {>= "0.13.2"}
+  "libldm-1-0-0" {>= "0.2.3"}
+  "libreadline7" {>= "6.0"}
+]
+extra-source "ldmtool_0.2.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/libldm/ldmtool_0.2.4-2_amd64.deb"
+}

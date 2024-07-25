@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libctl-dev_4.5.0-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libctl-dev"]
+]
+depends: [
+  "guile-2-2-dev"
+  "libc6-dev"
+  "libctl7" {= "4.5.0-9"}
+]
+extra-source "libctl-dev_4.5.0-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libctl/libctl-dev_4.5.0-9_amd64.deb"
+}

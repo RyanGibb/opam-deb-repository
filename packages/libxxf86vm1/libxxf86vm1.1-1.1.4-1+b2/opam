@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxxf86vm1_1:1.1.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxxf86vm1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6" {>= "2-1.6.0"}
+  "libxext6"
+]
+extra-source "libxxf86vm1_1:1.1.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxxf86vm/libxxf86vm1_1.1.4-1+b2_amd64.deb"
+}

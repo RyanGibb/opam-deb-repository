@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tzc_2.6.15-5.4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tzc"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libcom-err2" {>= "1.43.9"}
+  "libzephyr4"
+  "zephyr-clients"
+]
+extra-source "tzc_2.6.15-5.4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tzc/tzc_2.6.15-5.4+b1_amd64.deb"
+}

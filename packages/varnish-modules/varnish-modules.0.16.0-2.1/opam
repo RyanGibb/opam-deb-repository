@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i varnish-modules_0.16.0-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r varnish-modules"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libvarnishapi2" {>= "6.5.0"}
+  "varnish"
+]
+extra-source "varnish-modules_0.16.0-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/varnish-modules/varnish-modules_0.16.0-2.1_amd64.deb"
+}

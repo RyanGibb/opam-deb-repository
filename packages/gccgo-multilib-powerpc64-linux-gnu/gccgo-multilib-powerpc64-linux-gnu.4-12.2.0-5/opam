@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gccgo-multilib-powerpc64-linux-gnu_4:12.2.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gccgo-multilib-powerpc64-linux-gnu"]
+]
+depends: [
+  "cpp-powerpc64-linux-gnu" {>= "4-12.2.0-5"}
+  "g++-multilib-powerpc64-linux-gnu" {>= "4-12.2.0-5"}
+  "gccgo-12-multilib-powerpc64-linux-gnu" {>= "12.2.0-1~"}
+  "gccgo-powerpc64-linux-gnu" {>= "4-12.2.0-5"}
+]
+extra-source "gccgo-multilib-powerpc64-linux-gnu_4:12.2.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-ports/gccgo-multilib-powerpc64-linux-gnu_12.2.0-5_amd64.deb"
+}

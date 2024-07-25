@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-statsmodels_0.8.0-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-statsmodels"]
+]
+depends: [
+  "python3-any"
+  "python3-numpy"
+  "python3-pandas"
+  "python3-patsy"
+  "python3-scipy"
+  "python3-statsmodels-lib" {>= "0.8.0-9"}
+]
+extra-source "python3-statsmodels_0.8.0-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/statsmodels/python3-statsmodels_0.8.0-9_all.deb"
+}

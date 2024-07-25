@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-mapscript_8.0.0-3+b8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-mapscript"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmapserver2" {>= "8.0.0"}
+  "libpython3-11" {>= "3.11.0"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-mapscript_8.0.0-3+b8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mapserver/python3-mapscript_8.0.0-3+b8_amd64.deb"
+}

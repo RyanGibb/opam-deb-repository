@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstatgen1_1.0.15-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstatgen1"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libstatgen1_1.0.15-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libstatgen/libstatgen1_1.0.15-6_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnginx-mod-http-xslt-filter_1.22.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnginx-mod-http-xslt-filter"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libxml2" {>= "2.7.4"}
+  "libxslt1-1" {>= "1.1.25"}
+  "nginx"
+]
+extra-source "libnginx-mod-http-xslt-filter_1.22.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nginx/libnginx-mod-http-xslt-filter_1.22.1-9_amd64.deb"
+}

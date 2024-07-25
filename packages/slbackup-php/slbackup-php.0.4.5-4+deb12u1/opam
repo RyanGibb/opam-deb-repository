@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slbackup-php_0.4.5-4+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slbackup-php"]
+]
+depends: [
+  "php"
+  "php-cli"
+  "smarty-gettext" {>= "1.0b1-7"}
+  "smarty3"
+  "ssh"
+  ("apache2" | "httpd")
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "slbackup-php_0.4.5-4+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slbackup-php/slbackup-php_0.4.5-4+deb12u1_all.deb"
+}

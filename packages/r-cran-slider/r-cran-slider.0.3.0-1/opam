@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-slider_0.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-slider"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-cran-cli" {>= "3.4.1"}
+  "r-cran-rlang" {>= "1.0.6"}
+  "r-cran-vctrs" {>= "0.5.0"}
+  "r-cran-warp"
+]
+extra-source "r-cran-slider_0.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-slider/r-cran-slider_0.3.0-1_amd64.deb"
+}

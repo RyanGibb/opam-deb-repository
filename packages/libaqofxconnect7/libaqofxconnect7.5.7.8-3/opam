@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaqofxconnect7_5.7.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaqofxconnect7"]
+]
+depends: [
+  "libaqbanking35" {>= "4.99.20"}
+  "libc6" {>= "2.4"}
+  "libgwenhywfar60" {>= "4.17.0"}
+]
+extra-source "libaqofxconnect7_5.7.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaqbanking/libaqofxconnect7_5.7.8-3_amd64.deb"
+}

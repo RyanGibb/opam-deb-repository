@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rstanarm_2.21.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rstanarm"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libtbb12" {>= "2021.4.0"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-2"}
+  "r-cran-bayesplot" {>= "1.7.0"}
+  "r-cran-bh" {>= "1.72.0-2"}
+  "r-cran-ggplot2" {>= "2.2.1"}
+  "r-cran-lme4" {>= "1.1-8"}
+  "r-cran-loo" {>= "2.1.0"}
+  "r-cran-matrix" {>= "1.2-13"}
+  "r-cran-nlme" {>= "3.1-124"}
+  "r-cran-rcpp" {>= "0.12.0"}
+  "r-cran-rcppeigen" {>= "0.3.3.3.0"}
+  "r-cran-rcppparallel" {>= "5.0.1"}
+  "r-cran-rstan" {>= "2.21.1"}
+  "r-cran-rstantools" {>= "2.1.0"}
+  "r-cran-shinystan" {>= "2.3.0"}
+  "r-cran-stanheaders" {>= "2.21.0"}
+  "r-cran-survival" {>= "2.40.1"}
+]
+extra-source "r-cran-rstanarm_2.21.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-rstanarm/r-cran-rstanarm_2.21.3-2_amd64.deb"
+}

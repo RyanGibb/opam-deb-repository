@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i opendnssec-enforcer_1:2.1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r opendnssec-enforcer"]
+]
+depends: [
+  "opendnssec-common"
+  "procps"
+  "runit-helper" {>= "2.10.0~"}
+  ("opendnssec-enforcer-sqlite3" | "opendnssec-enforcer-backend")
+]
+conflicts: [
+  "runit (<< 2.1.2-36~)"
+]
+extra-source "opendnssec-enforcer_1:2.1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opendnssec/opendnssec-enforcer_2.1.7-2_all.deb"
+}

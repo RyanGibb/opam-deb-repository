@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i masakari-process-monitor_14.0.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r masakari-process-monitor"]
+]
+depends: [
+  "lsb-base"
+  "masakari-monitors-common" {= "14.0.0-1.1"}
+]
+extra-source "masakari-process-monitor_14.0.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/masakari-monitors/masakari-process-monitor_14.0.0-1.1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfishsound1-dev_1.0.0-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfishsound1-dev"]
+]
+depends: [
+  "libfishsound1" {= "1.0.0-9+b1"}
+  "libflac-dev"
+  "libspeex-dev"
+  "libvorbis-dev"
+]
+conflicts: [
+  "libfishsound-dev"
+]
+extra-source "libfishsound1-dev_1.0.0-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfishsound/libfishsound1-dev_1.0.0-9+b1_amd64.deb"
+}

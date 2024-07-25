@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ofx_1:0.9.15-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ofx"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcc-s1"
+  "libglibmm-2-4-1v5" {>= "2.54.0"}
+  "libofx7" {>= "0.9.14"}
+  "libstdc++6" {>= "5.2"}
+  "libxml++2-6-2v5" {>= "2.40.0"}
+]
+extra-source "ofx_1:0.9.15-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libofx/ofx_0.9.15-3_amd64.deb"
+}

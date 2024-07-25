@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsdl-gst_3.2.5-1.3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsdl-gst"]
+]
+depends: [
+  "gnu-smalltalk" {= "3.2.5-1.3+b2"}
+  "libc6" {>= "2.2.5"}
+  "libgl-gst" {>= "3.2.5"}
+  "libgtk2-gst" {>= "3.2.5"}
+  "libsdl1-2debian" {>= "1.2.11"}
+]
+extra-source "libsdl-gst_3.2.5-1.3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnu-smalltalk/libsdl-gst_3.2.5-1.3+b2_amd64.deb"
+}

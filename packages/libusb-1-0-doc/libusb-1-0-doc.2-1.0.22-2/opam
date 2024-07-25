@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libusb-1.0-doc_2:1.0.22-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libusb-1.0-doc"]
+]
+conflicts: [
+  "libusb-1.0-0-dev (<< 1.0.16)"
+]
+extra-source "libusb-1.0-doc_2:1.0.22-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libusb-1.0/libusb-1.0-doc_1.0.22-2_all.deb"
+}

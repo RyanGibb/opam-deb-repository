@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plasma-widget-foreigncurrencies_8.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plasma-widget-foreigncurrencies"]
+]
+depends: [
+  "plasma-desktop"
+  "qml-module-org-kde-alkimia" {>= "8.1.1-2"}
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-dialogs"
+  "qml-module-qtquick-layouts"
+]
+extra-source "plasma-widget-foreigncurrencies_8.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alkimia/plasma-widget-foreigncurrencies_8.1.1-2_all.deb"
+}

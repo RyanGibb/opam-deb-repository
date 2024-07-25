@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pssh_2.3.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pssh"]
+]
+depends: [
+  "openssh-client"
+  "python3-any"
+  "python3-psshlib" {= "2.3.4-2"}
+]
+extra-source "pssh_2.3.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pssh/pssh_2.3.4-2_all.deb"
+}

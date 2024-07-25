@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i network-manager-openconnect-gnome_1.2.8-3+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r network-manager-openconnect-gnome"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcr-base-3-1" {>= "3.8.0"}
+  "libgcr-ui-3-1" {>= "3.8.0"}
+  "libglib2-0-0" {>= "2.31.18"}
+  "libgtk-3-0" {>= "3.11.5"}
+  "libgtk-4-1" {>= "4.0.0"}
+  "libnm0" {>= "1.2.0"}
+  "libnma-gtk4-0" {>= "1.8.34"}
+  "libnma0" {>= "1.8.0"}
+  "libopenconnect5" {>= "9.00"}
+  "libsecret-1-0" {>= "0.7"}
+  "libsoup2-4-1" {>= "2.24.3"}
+  "libwebkit2gtk-4-0-37" {>= "2.19.2"}
+  "libxml2" {>= "2.7.4"}
+  "network-manager-openconnect" {= "1.2.8-3+deb12u1"}
+]
+extra-source "network-manager-openconnect-gnome_1.2.8-3+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/network-manager-openconnect/network-manager-openconnect-gnome_1.2.8-3+deb12u1_amd64.deb"
+}

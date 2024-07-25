@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-plfit_0.9.4+ds-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-plfit"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libplfit0" {>= "0.8.2"}
+  "libpython3-11" {>= "3.11.0"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-plfit_0.9.4+ds-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plfit/python3-plfit_0.9.4+ds-1+b1_amd64.deb"
+}

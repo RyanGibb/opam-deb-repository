@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-gerritlib_0.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-gerritlib"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-paramiko"
+  "python-pbr"
+  "python-six" {>= "1.7.0"}
+]
+extra-source "python-gerritlib_0.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gerritlib/python-gerritlib_0.8.0-1_all.deb"
+}

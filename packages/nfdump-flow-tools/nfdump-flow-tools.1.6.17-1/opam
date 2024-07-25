@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nfdump-flow-tools_1.6.17-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nfdump-flow-tools"]
+]
+depends: [
+  "flow-tools"
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "nfdump" {= "1.6.17-1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "nfdump-flow-tools_1.6.17-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nfdump/nfdump-flow-tools_1.6.17-1_amd64.deb"
+}

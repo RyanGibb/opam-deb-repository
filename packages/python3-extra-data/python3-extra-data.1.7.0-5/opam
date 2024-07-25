@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-extra-data_1.7.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-extra-data"]
+]
+depends: [
+  "python3-any"
+  "python3-fabio"
+  "python3-h5py-serial"
+  "python3-karabo-bridge"
+  "python3-matplotlib"
+  "python3-numpy"
+  "python3-pandas"
+  "python3-psutil"
+  "python3-xarray"
+]
+extra-source "python3-extra-data_1.7.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/extra-data/python3-extra-data_1.7.0-5_all.deb"
+}

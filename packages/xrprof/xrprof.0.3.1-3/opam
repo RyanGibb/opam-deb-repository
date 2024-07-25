@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xrprof_0.3.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xrprof"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libelf1" {>= "0.131"}
+  "libunwind8"
+]
+extra-source "xrprof_0.3.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xrprof/xrprof_0.3.1-3_amd64.deb"
+}

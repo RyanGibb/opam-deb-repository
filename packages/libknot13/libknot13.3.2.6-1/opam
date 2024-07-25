@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libknot13_3.2.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libknot13"]
+]
+depends: [
+  "libbpf1" {>= "1-0.7.0"}
+  "libc6" {>= "2.34"}
+  "libdnssec9" {>= "3.2.0"}
+  "libgnutls30" {>= "3.7.5"}
+  "liblmdb0" {>= "0.9.7"}
+  "libxdp1" {>= "1.2.0"}
+]
+extra-source "libknot13_3.2.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/knot/libknot13_3.2.6-1_amd64.deb"
+}

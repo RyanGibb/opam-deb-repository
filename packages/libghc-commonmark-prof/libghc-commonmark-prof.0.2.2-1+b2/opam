@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-commonmark-prof_0.2.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-commonmark-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-commonmark-dev" {= "0.2.2-1+b2"}
+  "libghc-unicode-data-prof"
+  "libghc-unicode-transforms-prof"
+]
+extra-source "libghc-commonmark-prof_0.2.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-commonmark/libghc-commonmark-prof_0.2.2-1+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lua-systemd_0~git20160517-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lua-systemd"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libsystemd0"
+]
+extra-source "lua-systemd_0~git20160517-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lua-systemd/lua-systemd_0~git20160517-2_amd64.deb"
+}

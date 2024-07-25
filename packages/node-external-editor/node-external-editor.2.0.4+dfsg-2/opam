@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-external-editor_2.0.4+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-external-editor"]
+]
+depends: [
+  "node-iconv-lite"
+  "node-jschardet"
+  "node-tmp" {>= "0.0.28"}
+  "nodejs"
+]
+extra-source "node-external-editor_2.0.4+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-external-editor/node-external-editor_2.0.4+dfsg-2_all.deb"
+}

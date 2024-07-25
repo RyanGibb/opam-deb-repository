@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lilypond-data_2.22.0-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lilypond-data"]
+]
+depends: [
+  "lilypond-fonts"
+  "python3-any"
+]
+extra-source "lilypond-data_2.22.0-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lilypond/lilypond-data_2.22.0-10_all.deb"
+}

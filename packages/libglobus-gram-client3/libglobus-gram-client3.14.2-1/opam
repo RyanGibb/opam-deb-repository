@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-gram-client3_14.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-gram-client3"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglobus-common0" {>= "17"}
+  "libglobus-gram-protocol3" {>= "11"}
+  "libglobus-gss-assist3" {>= "11"}
+  "libglobus-io3" {>= "11"}
+  "libglobus-rsl2" {>= "9"}
+]
+extra-source "libglobus-gram-client3_14.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gram-client/libglobus-gram-client3_14.2-1_amd64.deb"
+}

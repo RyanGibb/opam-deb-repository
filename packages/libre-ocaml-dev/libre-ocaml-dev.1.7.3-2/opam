@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libre-ocaml-dev_1.7.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libre-ocaml-dev"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "ocaml-nox"
+]
+extra-source "libre-ocaml-dev_1.7.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-re/libre-ocaml-dev_1.7.3-2_amd64.deb"
+}

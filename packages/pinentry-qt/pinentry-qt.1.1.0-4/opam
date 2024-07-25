@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pinentry-qt_1.1.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pinentry-qt"]
+]
+depends: [
+  "libassuan0" {>= "2.1.0"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgpg-error0" {>= "1.16"}
+  "libncursesw6" {>= "6"}
+  "libqt5core5a" {>= "5.12.2"}
+  "libqt5widgets5" {>= "5.2.0~alpha1"}
+  "libstdc++6" {>= "4.1.1"}
+  "libtinfo6" {>= "6"}
+  ("libqt5gui5" {>= "5.8.0"} | "libqt5gui5-gles" {>= "5.8.0"})
+]
+extra-source "pinentry-qt_1.1.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pinentry/pinentry-qt_1.1.0-4_amd64.deb"
+}

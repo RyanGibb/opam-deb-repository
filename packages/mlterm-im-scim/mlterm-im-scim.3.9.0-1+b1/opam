@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mlterm-im-scim_3.9.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mlterm-im-scim"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libscim8v5" {>= "1.4"}
+  "mlterm-common" {= "3.9.0-1+b1"}
+  ("mlterm" {= "3.9.0-1+b1"} | "mlterm-tiny" {= "3.9.0-1+b1"})
+]
+extra-source "mlterm-im-scim_3.9.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mlterm/mlterm-im-scim_3.9.0-1+b1_amd64.deb"
+}

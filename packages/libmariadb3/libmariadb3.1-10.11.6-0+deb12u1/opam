@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmariadb3_1:10.11.6-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmariadb3"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libssl3" {>= "3.0.0"}
+  "mariadb-common"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "mariadb-galera-server-10.0"
+  "mariadb-galera-server-5.5"
+  "mariadb-server-10.0"
+  "mariadb-server-5.1"
+  "mariadb-server-5.2"
+  "mariadb-server-5.3"
+  "mariadb-server-5.5"
+]
+extra-source "libmariadb3_1:10.11.6-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mariadb/libmariadb3_10.11.6-0+deb12u1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-echo-prof_0.1.4-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-echo-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-echo-dev" {= "0.1.4-1+b3"}
+]
+extra-source "libghc-echo-prof_0.1.4-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-echo/libghc-echo-prof_0.1.4-1+b3_amd64.deb"
+}

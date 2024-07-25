@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyosmium_3.6.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyosmium"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc-s1" {>= "3.3.1"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libstdc++6" {>= "12"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-requests"
+  "zlib1g" {>= "1-1.2.6"}
+]
+extra-source "python3-pyosmium_3.6.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyosmium/python3-pyosmium_3.6.0-1+b1_amd64.deb"
+}

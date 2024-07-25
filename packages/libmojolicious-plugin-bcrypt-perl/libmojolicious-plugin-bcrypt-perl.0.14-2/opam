@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmojolicious-plugin-bcrypt-perl_0.14-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmojolicious-plugin-bcrypt-perl"]
+]
+depends: [
+  "libcrypt-eksblowfish-perl"
+  "libmojolicious-perl" {>= "4.0"}
+  "perl"
+]
+extra-source "libmojolicious-plugin-bcrypt-perl_0.14-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmojolicious-plugin-bcrypt-perl/libmojolicious-plugin-bcrypt-perl_0.14-2_all.deb"
+}

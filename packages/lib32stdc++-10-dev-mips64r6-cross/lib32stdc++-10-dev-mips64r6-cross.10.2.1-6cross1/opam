@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32stdc++-10-dev-mips64r6-cross_10.2.1-6cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32stdc++-10-dev-mips64r6-cross"]
+]
+depends: [
+  "gcc-10-cross-base-mipsen" {= "10.2.1-6cross1"}
+  "lib32gcc-10-dev-mips64r6-cross" {= "10.2.1-6cross1"}
+  "lib32stdc++6-mips64r6-cross" {>= "10.2.1-6cross1"}
+  "libstdc++-10-dev-mips64r6-cross" {= "10.2.1-6cross1"}
+]
+extra-source "lib32stdc++-10-dev-mips64r6-cross_10.2.1-6cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10-cross-mipsen/lib32stdc++-10-dev-mips64r6-cross_10.2.1-6cross1_all.deb"
+}

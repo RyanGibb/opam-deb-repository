@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i groonga-token-filter-stem_13.0.0+dfsg-3~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r groonga-token-filter-stem"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgroonga0" {= "13.0.0+dfsg-3~deb12u1"}
+  "libstemmer0d" {>= "0+svn527"}
+]
+extra-source "groonga-token-filter-stem_13.0.0+dfsg-3~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/groonga/groonga-token-filter-stem_13.0.0+dfsg-3~deb12u1_amd64.deb"
+}

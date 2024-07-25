@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yi_0.18.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yi"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.27"}
+  "libffi6" {>= "3.0.4"}
+  "libghc-yi-frontend-pango-dev"
+  "libgmp10"
+  "libtinfo6" {>= "6"}
+]
+extra-source "yi_0.18.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yi/yi_0.18.0-1_amd64.deb"
+}

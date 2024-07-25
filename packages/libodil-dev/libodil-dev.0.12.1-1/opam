@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libodil-dev_0.12.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libodil-dev"]
+]
+depends: [
+  "libboost-filesystem1-74-dev"
+  "libboost-log-dev"
+  "libdcmtk-dev"
+  "libicu-dev"
+  "libjsoncpp-dev"
+  "libodil0" {= "0.12.1-1"}
+]
+conflicts: [
+  "libdcmtkpp-dev"
+  "libodil0-dev"
+]
+extra-source "libodil-dev_0.12.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/odil/libodil-dev_0.12.1-1_amd64.deb"
+}

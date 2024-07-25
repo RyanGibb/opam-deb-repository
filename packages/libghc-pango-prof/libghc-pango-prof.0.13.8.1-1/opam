@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-pango-prof_0.13.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-pango-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-cairo-prof"
+  "libghc-glib-prof"
+  "libghc-pango-dev" {= "0.13.8.1-1"}
+]
+extra-source "libghc-pango-prof_0.13.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pango/libghc-pango-prof_0.13.8.1-1_amd64.deb"
+}

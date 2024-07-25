@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfftw3-double3_3.3.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfftw3-double3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgomp1" {>= "4.9"}
+]
+extra-source "libfftw3-double3_3.3.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fftw3/libfftw3-double3_3.3.8-2_amd64.deb"
+}

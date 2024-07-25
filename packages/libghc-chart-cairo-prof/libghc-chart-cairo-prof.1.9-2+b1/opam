@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-chart-cairo-prof_1.9-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-chart-cairo-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-cairo-prof"
+  "libghc-chart-cairo-dev" {= "1.9-2+b1"}
+  "libghc-chart-prof"
+  "libghc-colour-prof"
+  "libghc-data-default-class-prof"
+  "libghc-lens-prof"
+  "libghc-old-locale-prof"
+  "libghc-operational-prof"
+]
+extra-source "libghc-chart-cairo-prof_1.9-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-chart-cairo/libghc-chart-cairo-prof_1.9-2+b1_amd64.deb"
+}

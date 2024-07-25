@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaudcore5_4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaudcore5"]
+]
+depends: [
+  "libarchive13" {>= "3.0.4"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "12"}
+]
+extra-source "libaudcore5_4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/audacious/libaudcore5_4.2-1_amd64.deb"
+}

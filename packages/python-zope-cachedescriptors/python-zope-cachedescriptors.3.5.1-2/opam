@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-zope.cachedescriptors_3.5.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-zope.cachedescriptors"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  "python-pkg-resources"
+  ("python2-7" | "python2-6")
+]
+conflicts: [
+  "zope3"
+]
+extra-source "python-zope.cachedescriptors_3.5.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zope.cachedescriptors/python-zope.cachedescriptors_3.5.1-2_all.deb"
+}

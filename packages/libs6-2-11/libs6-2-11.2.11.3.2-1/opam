@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libs6-2.11_2.11.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libs6-2.11"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libskarnet2-13" {>= "2.13.1.0"}
+]
+extra-source "libs6-2.11_2.11.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/s6/libs6-2.11_2.11.3.2-1_amd64.deb"
+}

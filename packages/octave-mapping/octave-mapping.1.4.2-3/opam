@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-mapping_1.4.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-mapping"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdal32" {>= "3.0.0"}
+  "libstdc++6" {>= "11"}
+  "octave"
+  "octave" {>= "7.3.0"}
+  "octave-geometry" {>= "4.0.0"}
+  "octave-io" {>= "2.2.7"}
+]
+extra-source "octave-mapping_1.4.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave-mapping/octave-mapping_1.4.2-3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kodi-visualization-waveform_4.4.0+ds1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kodi-visualization-waveform"]
+]
+depends: [
+  "kodi"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libgl1"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "kodi-visualization-waveform_4.4.0+ds1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kodi-visualization-waveform/kodi-visualization-waveform_4.4.0+ds1-2_amd64.deb"
+}

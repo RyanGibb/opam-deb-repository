@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblinux-systemd-perl_1.201600-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblinux-systemd-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmoo-perl"
+  "libstrictures-perl"
+  "libsystemd0"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "liblinux-systemd-perl_1.201600-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblinux-systemd-perl/liblinux-systemd-perl_1.201600-4+b1_amd64.deb"
+}

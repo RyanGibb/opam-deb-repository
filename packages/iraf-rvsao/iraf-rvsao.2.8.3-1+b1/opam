@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iraf-rvsao_2.8.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iraf-rvsao"]
+]
+depends: [
+  "iraf"
+  "libc6" {>= "2.15"}
+  "libcfitsio7" {>= "3.450~"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libexpat1" {>= "2.0.1"}
+]
+extra-source "iraf-rvsao_2.8.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iraf-rvsao/iraf-rvsao_2.8.3-1+b1_amd64.deb"
+}

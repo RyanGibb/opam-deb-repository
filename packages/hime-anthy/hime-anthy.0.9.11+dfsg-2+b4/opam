@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hime-anthy_0.9.11+dfsg-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hime-anthy"]
+]
+depends: [
+  "anthy"
+  "hime" {>= "0.9.11+dfsg-2"}
+  "libanthy1"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.20.0"}
+]
+extra-source "hime-anthy_0.9.11+dfsg-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hime/hime-anthy_0.9.11+dfsg-2+b4_amd64.deb"
+}

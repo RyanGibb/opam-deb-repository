@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-p1-utils_1.0.25-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-p1-utils"]
+]
+depends: [
+  "erlang-base"
+  "erlang-base" {>= "1-25.2.2+dfsg"}
+  "erlang-crypto" {>= "1-25.2.2+dfsg"}
+  "erlang-inets" {>= "1-25.2.2+dfsg"}
+  "erlang-tools" {>= "1-25.2.2+dfsg"}
+]
+extra-source "erlang-p1-utils_1.0.25-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/erlang-p1-utils/erlang-p1-utils_1.0.25-2_amd64.deb"
+}

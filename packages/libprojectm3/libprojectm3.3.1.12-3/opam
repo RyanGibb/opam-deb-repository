@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libprojectm3_3.1.12-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libprojectm3"]
+]
+depends: [
+  "fonts-dejavu-core"
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libstdc++6" {>= "11"}
+  "projectm-data" {= "3.1.12-3"}
+]
+extra-source "libprojectm3_3.1.12-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/projectm/libprojectm3_3.1.12-3_amd64.deb"
+}

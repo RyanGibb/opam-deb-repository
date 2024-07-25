@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdtkcore-bin_2.0.9.17-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdtkcore-bin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdtkcore2" {= "2.0.9.17-1"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libdtkcore-bin_2.0.9.17-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dtkcore/libdtkcore-bin_2.0.9.17-1_amd64.deb"
+}

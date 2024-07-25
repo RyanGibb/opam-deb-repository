@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vdens_0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vdens"]
+]
+depends: [
+  "libc6" {>= "2.9"}
+  "libcap2" {>= "1-2.10"}
+  "libexecs0"
+  "libvdeplug2"
+]
+extra-source "vdens_0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vdens/vdens_0.2-1_amd64.deb"
+}

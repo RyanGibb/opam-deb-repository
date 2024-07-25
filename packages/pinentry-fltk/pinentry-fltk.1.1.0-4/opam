@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pinentry-fltk_1.1.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pinentry-fltk"]
+]
+depends: [
+  "libassuan0" {>= "2.1.0"}
+  "libc6" {>= "2.14"}
+  "libfltk1-3" {>= "1.3.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libgpg-error0" {>= "1.16"}
+  "libncursesw6" {>= "6"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "pinentry-fltk_1.1.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pinentry/pinentry-fltk_1.1.0-4_amd64.deb"
+}

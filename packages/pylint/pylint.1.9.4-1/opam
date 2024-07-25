@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pylint_1.9.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pylint"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-astroid" {>= "1.4.5"}
+  "python-backports-functools-lru-cache"
+  "python-configparser"
+  "python-isort"
+  "python-logilab-common" {>= "0.19.0"}
+  "python-mccabe"
+  "python-setuptools"
+  "python-singledispatch"
+  "python-six"
+  "python2-7-any"
+]
+extra-source "pylint_1.9.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pylint2/pylint_1.9.4-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i smartlist_3.15-25+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r smartlist"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "procmail"
+  ("default-mta" | "mail-transport-agent")
+]
+extra-source "smartlist_3.15-25+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/smartlist/smartlist_3.15-25+b1_amd64.deb"
+}

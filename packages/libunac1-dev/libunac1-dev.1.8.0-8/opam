@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libunac1-dev_1.8.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libunac1-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libunac1" {= "1.8.0-8"}
+]
+extra-source "libunac1-dev_1.8.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/unac/libunac1-dev_1.8.0-8_amd64.deb"
+}

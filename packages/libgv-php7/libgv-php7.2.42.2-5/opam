@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgv-php7_2.42.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgv-php7"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcgraph6"
+  "libgvc6"
+]
+extra-source "libgv-php7_2.42.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/graphviz/libgv-php7_2.42.2-5_amd64.deb"
+}

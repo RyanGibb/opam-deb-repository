@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libconsole-bridge1.0_1.0.1+dfsg2-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libconsole-bridge1.0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libconsole-bridge1.0_1.0.1+dfsg2-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/console-bridge/libconsole-bridge1.0_1.0.1+dfsg2-3+b1_amd64.deb"
+}

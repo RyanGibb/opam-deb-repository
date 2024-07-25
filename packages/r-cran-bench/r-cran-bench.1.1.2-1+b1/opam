@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-bench_1.1.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-bench"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.1-2"}
+  "r-cran-glue"
+  "r-cran-pillar"
+  "r-cran-profmem"
+  "r-cran-rlang" {>= "0.2.0"}
+  "r-cran-tibble" {>= "3.0.1"}
+]
+extra-source "r-cran-bench_1.1.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-bench/r-cran-bench_1.1.2-1+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-word-trie-prof_0.3.0-8+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-word-trie-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-word-trie-dev" {= "0.3.0-8+b2"}
+]
+extra-source "libghc-word-trie-prof_0.3.0-8+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-word-trie/libghc-word-trie-prof_0.3.0-8+b2_amd64.deb"
+}

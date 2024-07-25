@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freedroidrpg_1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freedroidrpg"]
+]
+depends: [
+  "freedroidrpg-data" {= "1.0-1"}
+  "libc6" {>= "2.34"}
+  "libgl1"
+  "libglew2-2" {>= "2.2.0-4+b1"}
+  "liblua5-3-0"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl-gfx1-2-5" {>= "2.0.25"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2" {>= "1.2.12"}
+  "libsdl1-2-compat-shim"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "freedroidrpg_1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freedroidrpg/freedroidrpg_1.0-1_amd64.deb"
+}

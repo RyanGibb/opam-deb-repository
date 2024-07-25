@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pipewire-bin_0.3.19-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pipewire-bin"]
+]
+depends: [
+  "libasound2" {>= "1.2.1.1"}
+  "libc6" {>= "2.29"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libncurses6" {>= "6"}
+  "libpipewire-0-3-0" {= "0.3.19-4"}
+  "libpipewire-0-3-modules" {= "0.3.19-4"}
+  "libsndfile1" {>= "1.0.20"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "pipewire-bin_0.3.19-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pipewire/pipewire-bin_0.3.19-4_amd64.deb"
+}

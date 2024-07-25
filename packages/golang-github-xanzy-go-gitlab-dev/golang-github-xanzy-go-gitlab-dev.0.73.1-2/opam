@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-xanzy-go-gitlab-dev_0.73.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-xanzy-go-gitlab-dev"]
+]
+depends: [
+  "golang-github-google-go-querystring-dev" {>= "1.1.0"}
+  "golang-github-hashicorp-go-cleanhttp-dev" {>= "0.5.2"}
+  "golang-github-hashicorp-go-retryablehttp-dev" {>= "0.7.1"}
+  "golang-github-stretchr-testify-dev" {>= "1.8.0"}
+  "golang-golang-x-oauth2-dev" {>= "0.0~git20220722.d3ed0bb"}
+  "golang-golang-x-time-dev" {>= "0.0~git20220722.e5dcc9c"}
+]
+extra-source "golang-github-xanzy-go-gitlab-dev_0.73.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-xanzy-go-gitlab/golang-github-xanzy-go-gitlab-dev_0.73.1-2_all.deb"
+}

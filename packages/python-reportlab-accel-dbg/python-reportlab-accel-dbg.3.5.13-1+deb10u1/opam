@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-reportlab-accel-dbg_3.5.13-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-reportlab-accel-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python-dbg"
+  "python-reportlab-accel" {= "3.5.13-1+deb10u1"}
+]
+extra-source "python-reportlab-accel-dbg_3.5.13-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-reportlab/python-reportlab-accel-dbg_3.5.13-1+deb10u1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i redshift-gtk_1.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r redshift-gtk"]
+]
+depends: [
+  "gir1-2-appindicator3-0-1"
+  "python3-any"
+  "python3-gi"
+  "python3-xdg"
+  "redshift" {>= "1.12-2"}
+]
+extra-source "redshift-gtk_1.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/redshift/redshift-gtk_1.12-2_all.deb"
+}

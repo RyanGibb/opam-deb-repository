@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pydocstyle_2.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pydocstyle"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-six"
+  "python3-snowballstemmer"
+]
+conflicts: [
+  "pep257"
+]
+extra-source "python3-pydocstyle_2.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pydocstyle/python3-pydocstyle_2.1.1-1_all.deb"
+}

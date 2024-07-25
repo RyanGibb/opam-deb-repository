@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt6qmlcompiler6_6.4.2+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt6qmlcompiler6"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6qml6" {>= "6.4.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libqt6qmlcompiler6_6.4.2+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-declarative/libqt6qmlcompiler6_6.4.2+dfsg-1_amd64.deb"
+}

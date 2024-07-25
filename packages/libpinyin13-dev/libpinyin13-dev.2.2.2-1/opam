@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpinyin13-dev_2.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpinyin13-dev"]
+]
+depends: [
+  "libglib2-0-dev"
+  "libpinyin-common-dev" {= "2.2.2-1"}
+  "libpinyin13" {= "2.2.2-1"}
+]
+conflicts: [
+  "libpinyin-dev"
+]
+extra-source "libpinyin13-dev_2.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpinyin/libpinyin13-dev_2.2.2-1_amd64.deb"
+}

@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xygrib_1.2.6.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xygrib"]
+]
+depends: [
+  "fonts-liberation"
+  "libbz2-1-0"
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libopenjp2-7" {>= "2.0.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libproj25" {>= "5.1.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.14.1"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libstdc++6" {>= "11"}
+  "xygrib-maps"
+  "zlib1g" {>= "1-1.1.4"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "xygrib_1.2.6.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xygrib/xygrib_1.2.6.1-2_amd64.deb"
+}

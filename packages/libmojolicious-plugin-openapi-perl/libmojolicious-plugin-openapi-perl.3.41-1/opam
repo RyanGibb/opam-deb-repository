@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmojolicious-plugin-openapi-perl_3.41-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmojolicious-plugin-openapi-perl"]
+]
+depends: [
+  "libdata-validate-domain-perl"
+  "libdata-validate-ip-perl"
+  "libjson-validator-perl" {>= "4.11"}
+  "libmojolicious-perl" {>= "8.67"}
+  "libtext-markdown-perl" {>= "1.000031"}
+  "perl-any"
+]
+extra-source "libmojolicious-plugin-openapi-perl_3.41-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmojolicious-plugin-openapi-perl/libmojolicious-plugin-openapi-perl_3.41-1_all.deb"
+}

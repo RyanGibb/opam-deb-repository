@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-patchwork-utf8_1.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-patchwork-utf8"]
+]
+depends: [
+  "libpcre3" {>= "7.3"}
+  "php-common"
+]
+extra-source "php-patchwork-utf8_1.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-patchwork-utf8/php-patchwork-utf8_1.3.1-1_all.deb"
+}

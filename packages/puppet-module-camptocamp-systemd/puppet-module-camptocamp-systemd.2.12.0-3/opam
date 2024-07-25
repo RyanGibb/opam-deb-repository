@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-camptocamp-systemd_2.12.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-camptocamp-systemd"]
+]
+depends: [
+  "puppet-module-puppetlabs-apt"
+  "puppet-module-puppetlabs-inifile"
+  "puppet-module-puppetlabs-stdlib"
+]
+extra-source "puppet-module-camptocamp-systemd_2.12.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-camptocamp-systemd/puppet-module-camptocamp-systemd_2.12.0-3_all.deb"
+}

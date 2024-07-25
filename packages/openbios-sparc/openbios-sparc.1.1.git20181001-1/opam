@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openbios-sparc_1.1.git20181001-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openbios-sparc"]
+]
+conflicts: [
+  "qemu (<< 0.10.0)"
+  "qemu-system (<< 0.14.0)"
+]
+extra-source "openbios-sparc_1.1.git20181001-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openbios/openbios-sparc_1.1.git20181001-1_all.deb"
+}

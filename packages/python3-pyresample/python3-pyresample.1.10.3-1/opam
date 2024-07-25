@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyresample_1.10.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyresample"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "python-pyresample-test"
+  "python3" {< "3.8"}
+  "python3" {>= "3.6~"}
+  "python3-any"
+  "python3-configobj"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.14.3"}
+  "python3-pkg-resources"
+  "python3-pykdtree" {>= "1.3.1"}
+  "python3-pyproj"
+  "python3-rasterio"
+  "python3-six"
+  "python3-yaml"
+]
+extra-source "python3-pyresample_1.10.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyresample/python3-pyresample_1.10.3-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvotequorum8_3.0.1-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvotequorum8"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcorosync-common4" {>= "1.99.9"}
+  "libqb0" {>= "1.0.3"}
+]
+extra-source "libvotequorum8_3.0.1-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/corosync/libvotequorum8_3.0.1-2+deb10u1_amd64.deb"
+}

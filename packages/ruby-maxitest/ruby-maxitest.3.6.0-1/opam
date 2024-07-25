@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-maxitest_3.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-maxitest"]
+]
+depends: [
+  "ruby-minitest" {< "5.14.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-maxitest_3.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-maxitest/ruby-maxitest_3.6.0-1_all.deb"
+}

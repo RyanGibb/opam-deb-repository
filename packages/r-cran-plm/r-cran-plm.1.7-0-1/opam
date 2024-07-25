@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-plm_1.7-0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-plm"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "3.5.2-1"}
+  "r-cran-bdsmatrix"
+  "r-cran-formula" {>= "0.2-0"}
+  "r-cran-lattice"
+  "r-cran-lmtest"
+  "r-cran-mass"
+  "r-cran-maxlik"
+  "r-cran-nlme"
+  "r-cran-sandwich"
+  "r-cran-zoo"
+]
+extra-source "r-cran-plm_1.7-0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-plm/r-cran-plm_1.7-0-1_all.deb"
+}

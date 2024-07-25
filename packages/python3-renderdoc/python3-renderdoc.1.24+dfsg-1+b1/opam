@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-renderdoc_1.24+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-renderdoc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "librenderdoc" {= "1.24+dfsg-1+b1"}
+  "libstdc++6" {>= "5"}
+  "python3"
+]
+extra-source "python3-renderdoc_1.24+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/renderdoc/python3-renderdoc_1.24+dfsg-1+b1_amd64.deb"
+}

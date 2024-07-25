@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-bzlib-dev_0.5.1.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-bzlib-dev"]
+]
+depends: [
+  "ghc"
+  "libbz2-1-0"
+  "libbz2-dev"
+  "libc6" {>= "2.2.5"}
+  "libgmp10"
+]
+extra-source "libghc-bzlib-dev_0.5.1.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-bzlib/libghc-bzlib-dev_0.5.1.0-1+b1_amd64.deb"
+}

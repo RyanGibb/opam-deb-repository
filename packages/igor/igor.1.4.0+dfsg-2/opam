@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i igor_1.4.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r igor"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "6"}
+  "libgsl25" {>= "2.6"}
+  "libjemalloc2" {>= "5.0.0"}
+  "libstdc++6" {>= "5.2"}
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "igor_1.4.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/igor/igor_1.4.0+dfsg-2_amd64.deb"
+}

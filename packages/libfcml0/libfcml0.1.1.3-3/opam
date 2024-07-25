@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfcml0_1.1.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfcml0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+extra-source "libfcml0_1.1.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcml/libfcml0_1.1.3-3_amd64.deb"
+}

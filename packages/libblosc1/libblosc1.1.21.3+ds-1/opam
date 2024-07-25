@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libblosc1_1.21.3+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libblosc1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libsnappy1v5" {>= "1.1.9"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libblosc1_1.21.3+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/c-blosc/libblosc1_1.21.3+ds-1_amd64.deb"
+}

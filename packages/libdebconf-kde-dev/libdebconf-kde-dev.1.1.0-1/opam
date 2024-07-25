@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdebconf-kde-dev_1.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdebconf-kde-dev"]
+]
+depends: [
+  "libdebconf-kde1" {= "1.1.0-1"}
+  "libkf5coreaddons-dev"
+  "libkf5i18n-dev"
+  "libkf5iconthemes-dev"
+  "libkf5textwidgets-dev"
+  "libkf5widgetsaddons-dev"
+  "qtbase5-dev" {>= "5.2.0"}
+]
+extra-source "libdebconf-kde-dev_1.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debconf-kde/libdebconf-kde-dev_1.1.0-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-sqlalchemy_1.2.18+ds1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-sqlalchemy"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-sqlalchemy_1.2.18+ds1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sqlalchemy/python-sqlalchemy_1.2.18+ds1-2_all.deb"
+}

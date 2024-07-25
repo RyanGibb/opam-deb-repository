@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-hitimes_1.2.1-3+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-hitimes"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgmp10"
+  "libruby2-5" {>= "2.5.0~preview1"}
+  "ruby" {< "1-2.6~"}
+  "ruby" {>= "1-2.5~0"}
+]
+extra-source "ruby-hitimes_1.2.1-3+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-hitimes/ruby-hitimes_1.2.1-3+b5_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-cosmiconfig_7.0.0+ds1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-cosmiconfig"]
+]
+depends: [
+  "node-import-fresh"
+  "node-parse-json" {>= "5.1.0+~cs5.1.6~"}
+  "node-path-type"
+  "node-resolve-from"
+  "node-yaml"
+]
+extra-source "node-cosmiconfig_7.0.0+ds1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-cosmiconfig/node-cosmiconfig_7.0.0+ds1-1_all.deb"
+}

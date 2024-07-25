@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guake_3.9.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guake"]
+]
+depends: [
+  "gir1-2-glib-2-0" {>= "1.54.1"}
+  "gir1-2-gtk-3-0" {>= "3.22.26"}
+  "gir1-2-keybinder-3-0" {>= "0.3.2"}
+  "gir1-2-notify-0-7" {>= "0.7.7"}
+  "gir1-2-pango-1-0" {>= "1.40.14"}
+  "gir1-2-vte-2-91" {>= "0.50.2"}
+  "gir1-2-wnck-3-0"
+  "libglib2-0-bin"
+  "libutempter0"
+  "python3-any"
+  "python3-cairo"
+  "python3-dbus" {>= "1.2.4"}
+  "python3-gi" {>= "3.26.1"}
+  "python3-gi-cairo"
+  "python3-setuptools-scm"
+  "python3-yaml"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+  ("default-dbus-session-bus" | "dbus-session-bus")
+  ("python3-importlib-metadata" | "python3" {> "3.8"})
+]
+extra-source "guake_3.9.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guake/guake_3.9.0-2_all.deb"
+}

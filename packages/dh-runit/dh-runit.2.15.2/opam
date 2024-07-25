@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dh-runit_2.15.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dh-runit"]
+]
+depends: [
+  "debhelper" {>= "9"}
+  "libfile-copy-recursive-perl"
+  "libfile-slurp-perl"
+  "libtext-hogan-perl"
+  "perl-any"
+]
+extra-source "dh-runit_2.15.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dh-runit/dh-runit_2.15.2_all.deb"
+}

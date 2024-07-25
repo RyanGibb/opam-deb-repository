@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libk5crypto3_1.20.1-2+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libk5crypto3"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libkrb5support0" {>= "1.20"}
+]
+extra-source "libk5crypto3_1.20.1-2+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/krb5/libk5crypto3_1.20.1-2+deb12u1_amd64.deb"
+}

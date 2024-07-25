@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i workrave-ayatana_1.10.50-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r workrave-ayatana"]
+]
+depends: [
+  "libayatana-indicator3-7" {>= "0.6.0"}
+  "libc6" {>= "2.4"}
+  "libdbusmenu-gtk3-4" {>= "0.4.2"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "workrave" {= "1.10.50-3"}
+]
+extra-source "workrave-ayatana_1.10.50-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/workrave/workrave-ayatana_1.10.50-3_amd64.deb"
+}

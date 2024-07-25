@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kapidox_5.103.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kapidox"]
+]
+depends: [
+  "doxyqml"
+  "libjs-jquery" {>= "3.6.1+dfsg+~3.5.14"}
+  "python3-any"
+  "python3-doxypypy"
+  "python3-jinja2"
+  "python3-requests"
+  "python3-yaml"
+]
+extra-source "kapidox_5.103.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kapidox/kapidox_5.103.0-1_all.deb"
+}

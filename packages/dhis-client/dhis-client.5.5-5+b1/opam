@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dhis-client_5.5-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dhis-client"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgmp10"
+  ("debconf" {>= "0.5.00"} | "debconf-2-0")
+]
+conflicts: [
+  "dhid (<< 5.1-5)"
+]
+extra-source "dhis-client_5.5-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dhis-client/dhis-client_5.5-5+b1_amd64.deb"
+}

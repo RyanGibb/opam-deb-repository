@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdist-zilla-plugin-makemaker-awesome-perl_0.47-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdist-zilla-plugin-makemaker-awesome-perl"]
+]
+depends: [
+  "libdist-zilla-perl" {>= "5.001"}
+  "libmoose-perl"
+  "libmoosex-types-perl"
+  "libmoosex-types-stringlike-perl"
+  "libnamespace-autoclean-perl"
+  "libpath-tiny-perl"
+  "perl"
+  ("perl" {>= "5.17.1"} | "libcpan-meta-requirements-perl" {>= "2.121"})
+  ("perl" {>= "5.19.3"} | "libscalar-list-utils-perl" {>= "1-1.29"})
+]
+extra-source "libdist-zilla-plugin-makemaker-awesome-perl_0.47-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdist-zilla-plugin-makemaker-awesome-perl/libdist-zilla-plugin-makemaker-awesome-perl_0.47-1_all.deb"
+}

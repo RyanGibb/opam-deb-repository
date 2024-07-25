@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mssh_2.2-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mssh"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.11.5"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libvte-2-91-0" {>= "0.47.90"}
+  "openssh-client"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "mssh_2.2-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mssh/mssh_2.2-5.1_amd64.deb"
+}

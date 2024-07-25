@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zvbi_0.2.35-18_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zvbi"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libzvbi0" {>= "0.2.35"}
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "zvbi_0.2.35-18_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zvbi/zvbi_0.2.35-18_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-libkdumpfile_0.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-libkdumpfile"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkdumpfile10" {>= "0.5.1"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-libkdumpfile_0.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkdumpfile/python3-libkdumpfile_0.5.1-1_amd64.deb"
+}

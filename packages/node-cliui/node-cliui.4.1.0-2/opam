@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-cliui_4.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-cliui"]
+]
+depends: [
+  "node-string-width" {>= "2.1.1"}
+  "node-strip-ansi" {>= "4.0.0"}
+  "node-wrap-ansi" {>= "2.0.0"}
+  "nodejs"
+]
+extra-source "node-cliui_4.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-cliui/node-cliui_4.1.0-2_all.deb"
+}

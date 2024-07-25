@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i linux-compiler-gcc-8-x86_4.19.249-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r linux-compiler-gcc-8-x86"]
+]
+depends: [
+  "gcc-8" {>= "8-20180123-1~"}
+]
+extra-source "linux-compiler-gcc-8-x86_4.19.249-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linux/linux-compiler-gcc-8-x86_4.19.249-2_amd64.deb"
+}

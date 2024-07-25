@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wpewebkit-driver_2.38.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wpewebkit-driver"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "7"}
+  "libglib2-0-0" {>= "2.65.1"}
+  "libicu72" {>= "72.1~rc-1~"}
+  "libsoup-3-0-0" {>= "3.0.3"}
+  "libstdc++6" {>= "12"}
+  "libsystemd0"
+]
+extra-source "wpewebkit-driver_2.38.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wpewebkit/wpewebkit-driver_2.38.6-1_amd64.deb"
+}

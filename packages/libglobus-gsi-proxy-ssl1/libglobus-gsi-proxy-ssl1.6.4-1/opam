@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-gsi-proxy-ssl1_6.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-gsi-proxy-ssl1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "libglobus-gsi-proxy-ssl1_6.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-gsi-proxy-ssl/libglobus-gsi-proxy-ssl1_6.4-1_amd64.deb"
+}

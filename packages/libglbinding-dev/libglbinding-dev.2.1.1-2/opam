@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglbinding-dev_2.1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglbinding-dev"]
+]
+depends: [
+  "libglbinding2" {= "2.1.1-2"}
+  ("libgl1-mesa-dev" | "libgl-dev")
+]
+extra-source "libglbinding-dev_2.1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glbinding/libglbinding-dev_2.1.1-2_amd64.deb"
+}

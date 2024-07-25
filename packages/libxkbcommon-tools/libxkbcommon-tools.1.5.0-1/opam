@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxkbcommon-tools_1.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxkbcommon-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libwayland-client0" {>= "1.20.0"}
+  "libxcb-xkb1"
+  "libxcb1"
+  "libxkbcommon-x11-0" {>= "0.5.0"}
+  "libxkbcommon0" {>= "1.0.0"}
+  "libxkbregistry0" {>= "1.0.0"}
+]
+extra-source "libxkbcommon-tools_1.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxkbcommon/libxkbcommon-tools_1.5.0-1_amd64.deb"
+}

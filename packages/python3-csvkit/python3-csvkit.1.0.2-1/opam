@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-csvkit_1.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-csvkit"]
+]
+depends: [
+  "python3-agate"
+  "python3-agatedbf"
+  "python3-agateexcel"
+  "python3-agatesql"
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-six" {>= "1.6.1"}
+]
+extra-source "python3-csvkit_1.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/csvkit/python3-csvkit_1.0.2-1_all.deb"
+}

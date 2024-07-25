@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bogofilter-bdb_1.2.4+dfsg1-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bogofilter-bdb"]
+]
+depends: [
+  "bogofilter-common" {= "1.2.4+dfsg1-13"}
+  "libc6" {>= "2.14"}
+  "libdb5-3"
+  "libgsl23"
+  "libgslcblas0"
+]
+extra-source "bogofilter-bdb_1.2.4+dfsg1-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bogofilter/bogofilter-bdb_1.2.4+dfsg1-13_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pacemaker-remote_2.0.1-5+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pacemaker-remote"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcrmcommon34" {>= "2.0.1~rc2"}
+  "libcrmservice28" {>= "1.1.18~rc3"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libgnutls30" {>= "3.6.5"}
+  "liblrmd28" {>= "1.1.9"}
+  "libqb0" {>= "0.17.1"}
+  "libstonithd26" {>= "1.1.9"}
+  "lsb-base" {>= "3.0-6"}
+  "pacemaker-common"
+  "pacemaker-resource-agents"
+]
+extra-source "pacemaker-remote_2.0.1-5+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pacemaker/pacemaker-remote_2.0.1-5+deb10u2_amd64.deb"
+}

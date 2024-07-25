@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pdns-ixfrdist_4.7.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pdns-ixfrdist"]
+]
+depends: [
+  "adduser"
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.4"}
+  "libp11-kit0" {>= "0.23.18.1"}
+  "libsodium23" {>= "0.6.0"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "12"}
+  "libyaml-cpp0-7" {>= "0.7.0"}
+]
+extra-source "pdns-ixfrdist_4.7.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdns/pdns-ixfrdist_4.7.3-2_amd64.deb"
+}

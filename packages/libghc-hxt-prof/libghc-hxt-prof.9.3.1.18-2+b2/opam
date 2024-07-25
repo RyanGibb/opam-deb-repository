@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hxt-prof_9.3.1.18-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hxt-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hxt-charproperties-prof"
+  "libghc-hxt-dev" {= "9.3.1.18-2+b2"}
+  "libghc-hxt-regex-xmlschema-prof"
+  "libghc-hxt-unicode-prof"
+  "libghc-network-uri-prof"
+]
+extra-source "libghc-hxt-prof_9.3.1.18-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hxt/libghc-hxt-prof_9.3.1.18-2+b2_amd64.deb"
+}

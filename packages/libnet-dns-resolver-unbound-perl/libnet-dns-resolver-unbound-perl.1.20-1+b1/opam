@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-dns-resolver-unbound-perl_1.20-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-dns-resolver-unbound-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libnet-dns-perl"
+  "libunbound8" {>= "1.9.0"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libnet-dns-resolver-unbound-perl_1.20-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-dns-resolver-unbound-perl/libnet-dns-resolver-unbound-perl_1.20-1+b1_amd64.deb"
+}

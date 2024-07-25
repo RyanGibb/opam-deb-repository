@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdevel-checklib-perl_1.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdevel-checklib-perl"]
+]
+depends: [
+  "perl"
+  ("gcc" | "c-compiler")
+]
+extra-source "libdevel-checklib-perl_1.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdevel-checklib-perl/libdevel-checklib-perl_1.13-1_all.deb"
+}

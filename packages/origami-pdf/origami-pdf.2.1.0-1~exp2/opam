@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i origami-pdf_2.1.0-1~exp2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r origami-pdf"]
+]
+depends: [
+  "ruby-any"
+  "ruby-origami" {= "2.1.0-1~exp2"}
+]
+extra-source "origami-pdf_2.1.0-1~exp2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/origami-pdf/origami-pdf_2.1.0-1~exp2_all.deb"
+}

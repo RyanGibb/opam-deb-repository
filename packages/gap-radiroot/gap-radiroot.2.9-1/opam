@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gap-radiroot_2.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gap-radiroot"]
+]
+depends: [
+  "gap-alnuth"
+  "gap-polycyclic" {>= "2.14"}
+  "texlive-latex-base"
+]
+extra-source "gap-radiroot_2.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gap-radiroot/gap-radiroot_2.9-1_all.deb"
+}

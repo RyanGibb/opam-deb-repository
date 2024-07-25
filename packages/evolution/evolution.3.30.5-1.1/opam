@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i evolution_3.30.5-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r evolution"]
+]
+depends: [
+  "dbus"
+  "evolution-common" {= "3.30.5-1.1"}
+  "evolution-data-server" {< "3.31"}
+  "evolution-data-server" {>= "3.30.5"}
+  "libc6" {>= "2.14"}
+  "libcamel-1-2-62" {>= "3.30.5"}
+  "libclutter-gtk-1-0-0" {>= "0.91.8"}
+  "libecal-1-2-19" {>= "3.30.5"}
+  "libedataserver-1-2-23" {>= "3.30.5"}
+  "libevolution" {< "3.31"}
+  "libevolution" {>= "3.30.5"}
+  "libglib2-0-0" {>= "2.46.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libical3" {>= "3.0.0"}
+  "libnotify4" {>= "0.7.0"}
+  "libsoup2-4-1" {>= "2.42"}
+  "libwebkit2gtk-4-0-37" {>= "2.5.3"}
+  "libxml2" {>= "2.7.4"}
+  "psmisc"
+]
+extra-source "evolution_3.30.5-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/evolution/evolution_3.30.5-1.1_amd64.deb"
+}

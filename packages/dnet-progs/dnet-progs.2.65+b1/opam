@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dnet-progs_2.65+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dnet-progs"]
+]
+depends: [
+  "dnet-common" {>= "2.65"}
+  "libc6" {>= "2.27"}
+  "libdnet" {>= "2.65+b1"}
+  "libfuse2" {>= "2.6"}
+  "libgcc1" {>= "1-3.0"}
+  "libncurses6" {>= "6"}
+  "libstdc++6" {>= "5"}
+  "libtinfo6" {>= "6"}
+  "lsb-base"
+]
+extra-source "dnet-progs_2.65+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dnprogs/dnet-progs_2.65+b1_amd64.deb"
+}

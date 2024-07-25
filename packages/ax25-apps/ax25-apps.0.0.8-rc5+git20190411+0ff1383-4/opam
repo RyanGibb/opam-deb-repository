@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ax25-apps_0.0.8-rc5+git20190411+0ff1383-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ax25-apps"]
+]
+depends: [
+  "libax25"
+  "libc6" {>= "2.15"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+conflicts: [
+  "ax25-utils"
+]
+extra-source "ax25-apps_0.0.8-rc5+git20190411+0ff1383-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ax25-apps/ax25-apps_0.0.8-rc5+git20190411+0ff1383-4_amd64.deb"
+}

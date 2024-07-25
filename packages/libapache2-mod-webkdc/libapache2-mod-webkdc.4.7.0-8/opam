@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-webkdc_4.7.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-webkdc"]
+]
+depends: [
+  "apache2-bin"
+  "apache2-bin" {>= "2.4.16"}
+  "libc6" {>= "2.14"}
+  "libwebauth12" {>= "4.7.0"}
+]
+extra-source "libapache2-mod-webkdc_4.7.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/webauth/libapache2-mod-webkdc_4.7.0-8_amd64.deb"
+}

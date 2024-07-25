@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbusada4-dev_0.4.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbusada4-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-8"
+  "libdbus-1-dev"
+  "libdbus-glib-1-dev"
+  "libdbusada0-4-1" {= "0.4.2-3"}
+]
+extra-source "libdbusada4-dev_0.4.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dbusada/libdbusada4-dev_0.4.2-3_amd64.deb"
+}

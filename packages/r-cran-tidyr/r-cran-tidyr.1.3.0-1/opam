@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-tidyr_1.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-tidyr"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-cli" {>= "3.4.1"}
+  "r-cran-cpp11" {>= "0.4.0"}
+  "r-cran-dplyr" {>= "1.0.10"}
+  "r-cran-glue"
+  "r-cran-lifecycle" {>= "1.0.3"}
+  "r-cran-magrittr"
+  "r-cran-purrr" {>= "1.0.1"}
+  "r-cran-rlang" {>= "1.0.4"}
+  "r-cran-stringr" {>= "1.5.0"}
+  "r-cran-tibble" {>= "2.1.1"}
+  "r-cran-tidyselect" {>= "1.2.0"}
+  "r-cran-vctrs" {>= "0.5.2"}
+]
+extra-source "r-cran-tidyr_1.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-tidyr/r-cran-tidyr_1.3.0-1_amd64.deb"
+}

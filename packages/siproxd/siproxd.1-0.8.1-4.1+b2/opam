@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i siproxd_1:0.8.1-4.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r siproxd"]
+]
+depends: [
+  "adduser" {>= "3.56"}
+  "libc6" {>= "2.15"}
+  "libltdl7" {>= "2.4.6"}
+  "libosip2-11"
+]
+extra-source "siproxd_1:0.8.1-4.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/siproxd/siproxd_0.8.1-4.1+b2_amd64.deb"
+}

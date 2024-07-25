@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-hiredis_0.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-hiredis"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libhiredis0-14" {>= "0.14.0"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-hiredis_0.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-hiredis/python-hiredis_0.3.1-1_amd64.deb"
+}

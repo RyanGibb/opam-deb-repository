@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencv-videoio4.5_4.5.1+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencv-videoio4.5"]
+]
+depends: [
+  "libavcodec-extra58"
+  "libavformat58" {>= "7-4.2"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.17"}
+  "libdc1394-25" {>= "2.2.6"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgphoto2-6" {>= "2.5.10"}
+  "libgphoto2-port12" {>= "2.5.10"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.0.0"}
+  "libgstreamer1-0-0" {>= "1.4.0"}
+  "libopencv-core4-5" {>= "4.5.1+dfsg"}
+  "libopencv-imgcodecs4-5" {>= "4.5.1+dfsg"}
+  "libopencv-imgproc4-5" {>= "4.5.1+dfsg"}
+  "libstdc++6" {>= "9"}
+  "libswscale5" {>= "7-4.0"}
+]
+extra-source "libopencv-videoio4.5_4.5.1+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencv/libopencv-videoio4.5_4.5.1+dfsg-5_amd64.deb"
+}

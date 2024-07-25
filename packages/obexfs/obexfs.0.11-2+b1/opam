@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i obexfs_0.11-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r obexfs"]
+]
+depends: [
+  "fuse"
+  "libbfb0"
+  "libbluetooth3" {>= "4.91"}
+  "libc6" {>= "2.14"}
+  "libfuse2" {>= "2.5"}
+  "libmulticobex1"
+  "libobexftp0"
+  "libopenobex2"
+]
+extra-source "obexfs_0.11-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/obexfs/obexfs_0.11-2+b1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtr-tid2_3.5.4+2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtr-tid2"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcom-err2" {>= "1.43.9"}
+  "libglib2-0-0" {>= "2.61.2"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libjansson4" {>= "2.14"}
+  "libssl3" {>= "3.0.0"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "libtr-tid2_3.5.4+2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/moonshot-trust-router/libtr-tid2_3.5.4+2_amd64.deb"
+}

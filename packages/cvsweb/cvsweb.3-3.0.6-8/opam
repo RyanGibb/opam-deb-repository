@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cvsweb_3:3.0.6-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cvsweb"]
+]
+depends: [
+  "cvs"
+  "libipc-run-perl"
+  "libmime-tools-perl"
+  "liburi-perl"
+  "rcs"
+  ("apache2" | "httpd")
+]
+extra-source "cvsweb_3:3.0.6-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cvsweb/cvsweb_3.0.6-8_all.deb"
+}

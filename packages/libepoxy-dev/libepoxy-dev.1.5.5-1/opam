@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libepoxy-dev_1.5.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libepoxy-dev"]
+]
+depends: [
+  "libegl-dev"
+  "libepoxy0" {= "1.5.5-1"}
+  "libgl-dev"
+]
+extra-source "libepoxy-dev_1.5.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libepoxy/libepoxy-dev_1.5.5-1_amd64.deb"
+}

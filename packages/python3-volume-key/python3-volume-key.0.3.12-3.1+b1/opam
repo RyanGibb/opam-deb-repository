@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-volume-key_0.3.12-3.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-volume-key"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.18.0"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libvolume-key1" {>= "0.3.9"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+]
+extra-source "python3-volume-key_0.3.12-3.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/volume-key/python3-volume-key_0.3.12-3.1+b1_amd64.deb"
+}

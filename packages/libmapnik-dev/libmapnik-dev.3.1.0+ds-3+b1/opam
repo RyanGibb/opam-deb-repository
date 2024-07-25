@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmapnik-dev_3.1.0+ds-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmapnik-dev"]
+]
+depends: [
+  "libboost-filesystem-dev"
+  "libboost-program-options-dev"
+  "libboost-regex-dev"
+  "libboost-system-dev"
+  "libboost-thread-dev"
+  "libcairo2-dev"
+  "libfreetype6-dev"
+  "libgdal-dev"
+  "libharfbuzz-dev"
+  "libicu-dev"
+  "libjpeg-dev"
+  "libmapbox-variant-dev" {>= "1.1.5"}
+  "libmapnik3-1" {= "3.1.0+ds-3+b1"}
+  "libpng-dev"
+  "libpq-dev"
+  "libproj-dev"
+  "libsqlite3-dev"
+  "libtiff-dev"
+  "libwebp-dev"
+  "libxml2-dev"
+  "pkg-config"
+  "zlib1g-dev"
+  ("libc6-dev" | "libc-dev")
+  ("libcurl4-gnutls-dev" | "libcurl-ssl-dev")
+]
+extra-source "libmapnik-dev_3.1.0+ds-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mapnik/libmapnik-dev_3.1.0+ds-3+b1_amd64.deb"
+}

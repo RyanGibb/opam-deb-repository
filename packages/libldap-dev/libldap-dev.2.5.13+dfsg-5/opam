@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libldap-dev_2.5.13+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libldap-dev"]
+]
+depends: [
+  "libldap-2-5-0" {= "2.5.13+dfsg-5"}
+]
+extra-source "libldap-dev_2.5.13+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openldap/libldap-dev_2.5.13+dfsg-5_amd64.deb"
+}

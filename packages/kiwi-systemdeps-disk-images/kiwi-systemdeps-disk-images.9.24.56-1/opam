@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kiwi-systemdeps-disk-images_9.24.56-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kiwi-systemdeps-disk-images"]
+]
+depends: [
+  "kiwi-systemdeps-bootloaders"
+  "kiwi-systemdeps-filesystems"
+  "kiwi-systemdeps-iso-media"
+]
+extra-source "kiwi-systemdeps-disk-images_9.24.56-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kiwi/kiwi-systemdeps-disk-images_9.24.56-1_amd64.deb"
+}

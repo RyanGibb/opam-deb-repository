@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql_15+248_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql"]
+]
+depends: [
+  "postgresql-15"
+]
+extra-source "postgresql_15+248_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-common/postgresql_15+248_all.deb"
+}

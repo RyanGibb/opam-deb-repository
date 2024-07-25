@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i murano-cfapi_1:10.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r murano-cfapi"]
+]
+depends: [
+  "adduser"
+  "lsb-base" {>= "3.0.6"}
+  "murano-common" {= "1-10.0.0-1"}
+]
+extra-source "murano-cfapi_1:10.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/murano/murano-cfapi_10.0.0-1_all.deb"
+}

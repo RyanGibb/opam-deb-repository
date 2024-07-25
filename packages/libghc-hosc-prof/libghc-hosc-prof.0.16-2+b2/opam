@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hosc-prof_0.16-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hosc-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-data-binary-ieee754-prof"
+  "libghc-hosc-dev" {= "0.16-2+b2"}
+  "libghc-network-prof"
+]
+extra-source "libghc-hosc-prof_0.16-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hosc/libghc-hosc-prof_0.16-2+b2_amd64.deb"
+}

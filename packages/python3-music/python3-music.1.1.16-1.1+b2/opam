@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-music_1.1.16-1.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-music"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libmusic1v5"
+  "libopenmpi3" {>= "4.0.5"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-mpi4py"
+  "python3-six"
+]
+extra-source "python3-music_1.1.16-1.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/music/python3-music_1.1.16-1.1+b2_amd64.deb"
+}

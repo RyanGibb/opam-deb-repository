@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tmispell-voikko_0.7.1-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tmispell-voikko"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libglibmm-2-4-1v5" {>= "2.66.4"}
+  "libncursesw6" {>= "6"}
+  "libstdc++6" {>= "11"}
+  "libtinfo6" {>= "6"}
+  "libvoikko1" {>= "4.3.1"}
+  "voikko-fi"
+]
+conflicts: [
+  "tmispell"
+  "tmispell-soikko"
+]
+extra-source "tmispell-voikko_0.7.1-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tmispell-voikko/tmispell-voikko_0.7.1-5+b1_amd64.deb"
+}

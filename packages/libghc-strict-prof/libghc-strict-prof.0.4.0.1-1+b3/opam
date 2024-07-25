@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-strict-prof_0.4.0.1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-strict-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-assoc-prof"
+  "libghc-hashable-prof"
+  "libghc-strict-dev" {= "0.4.0.1-1+b3"}
+  "libghc-these-prof"
+]
+extra-source "libghc-strict-prof_0.4.0.1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-strict/libghc-strict-prof_0.4.0.1-1+b3_amd64.deb"
+}

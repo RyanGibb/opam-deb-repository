@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5holidays5_1:5.103.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5holidays5"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libkf5holidays-data" {= "1-5.103.0-1"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libkf5holidays5_1:5.103.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kholidays/libkf5holidays5_5.103.0-1_amd64.deb"
+}

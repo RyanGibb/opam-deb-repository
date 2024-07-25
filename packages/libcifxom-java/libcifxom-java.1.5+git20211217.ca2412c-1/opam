@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcifxom-java_1.5+git20211217.ca2412c-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcifxom-java"]
+]
+depends: [
+  "liblog4j1-2-java" {>= "1.2.17"}
+  "libxom-java"
+]
+extra-source "libcifxom-java_1.5+git20211217.ca2412c-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cifxom/libcifxom-java_1.5+git20211217.ca2412c-1_all.deb"
+}

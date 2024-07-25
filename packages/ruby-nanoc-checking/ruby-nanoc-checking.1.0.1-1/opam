@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-nanoc-checking_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-nanoc-checking"]
+]
+depends: [
+  "ruby-nanoc-cli" {>= "4.11.15"}
+  "ruby-nanoc-core" {>= "4.11.15"}
+]
+extra-source "ruby-nanoc-checking_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nanoc/ruby-nanoc-checking_1.0.1-1_all.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libknet1_1.25-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libknet1"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "liblz4-1" {>= "0.0~r130"}
+  "liblzma5" {>= "5.1.1alpha+20110809"}
+  "liblzo2-2" {>= "2.02"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libssl3" {>= "3.0.0"}
+  "libzstd1" {>= "1.5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libknet1_1.25-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kronosnet/libknet1_1.25-1_amd64.deb"
+}

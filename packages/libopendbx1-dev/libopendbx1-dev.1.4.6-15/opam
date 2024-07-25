@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopendbx1-dev_1.4.6-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopendbx1-dev"]
+]
+depends: [
+  "libopendbx1" {= "1.4.6-15"}
+]
+conflicts: [
+  "libopendbx-dev"
+]
+extra-source "libopendbx1-dev_1.4.6-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libopendbx/libopendbx1-dev_1.4.6-15_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qemu-user-static_1:3.1+dfsg-8+deb10u8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qemu-user-static"]
+]
+conflicts: [
+  "qemu-user-binfmt"
+]
+extra-source "qemu-user-static_1:3.1+dfsg-8+deb10u8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qemu/qemu-user-static_3.1+dfsg-8+deb10u8_amd64.deb"
+}

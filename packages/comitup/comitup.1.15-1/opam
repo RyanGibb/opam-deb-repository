@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i comitup_1.15-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r comitup"]
+]
+depends: [
+  "avahi-daemon"
+  "dnsmasq-base"
+  "iw"
+  "python3-any"
+  "python3-cairo"
+  "python3-dbus"
+  "python3-flask"
+  "python3-gi"
+  "python3-jinja2"
+  "python3-networkmanager" {>= "2.1-1"}
+  "python3-pkg-resources"
+  "systemd"
+]
+extra-source "comitup_1.15-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/comitup/comitup_1.15-1_all.deb"
+}

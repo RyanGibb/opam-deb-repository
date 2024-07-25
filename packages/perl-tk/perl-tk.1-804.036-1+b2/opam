@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i perl-tk_1:804.036-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r perl-tk"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+conflicts: [
+  "libtk-png-perl"
+]
+extra-source "perl-tk_1:804.036-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/perl-tk/perl-tk_804.036-1+b2_amd64.deb"
+}

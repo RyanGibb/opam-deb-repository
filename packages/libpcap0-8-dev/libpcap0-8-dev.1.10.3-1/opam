@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcap0.8-dev_1.10.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcap0.8-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libdbus-1-dev"
+  "libpcap0-8" {= "1.10.3-1"}
+]
+conflicts: [
+  "libpcap0.7-dev"
+]
+extra-source "libpcap0.8-dev_1.10.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpcap/libpcap0.8-dev_1.10.3-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tinyca_0.7.5-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tinyca"]
+]
+depends: [
+  "libgtk2-perl"
+  "liblocale-gettext-perl"
+  "openssl" {> "0.9.7e"}
+]
+extra-source "tinyca_0.7.5-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tinyca/tinyca_0.7.5-6_all.deb"
+}

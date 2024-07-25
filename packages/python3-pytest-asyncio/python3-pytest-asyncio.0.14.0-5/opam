@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pytest-asyncio_0.14.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pytest-asyncio"]
+]
+depends: [
+  "python3-any"
+  "python3-async-generator"
+  "python3-pytest" {>= "5.4.0"}
+]
+extra-source "python3-pytest-asyncio_0.14.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pytest-asyncio/python3-pytest-asyncio_0.14.0-5_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i maria_1.3.5-4.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r maria"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libncurses6" {>= "6"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "4.6"}
+  "libtinfo6" {>= "6"}
+]
+conflicts: [
+  "maria-vis"
+]
+extra-source "maria_1.3.5-4.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maria/maria_1.3.5-4.1+b2_amd64.deb"
+}

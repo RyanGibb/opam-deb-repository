@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pybit-client_1.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pybit-client"]
+]
+depends: [
+  "dpkg-dev"
+  "dput"
+  "libcrypt-ssleay-perl"
+  "libjson-perl"
+  "lsb-base"
+  "pbuilder"
+  "pybit-common"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-requests"
+  "python2-7"
+  "sbuild"
+  "subversion"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "pybit-client_1.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pybit/pybit-client_1.0.0-4_all.deb"
+}

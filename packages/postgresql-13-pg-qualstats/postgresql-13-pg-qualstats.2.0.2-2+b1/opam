@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-13-pg-qualstats_2.0.2-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-13-pg-qualstats"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "postgresql-13"
+]
+extra-source "postgresql-13-pg-qualstats_2.0.2-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pg-qualstats/postgresql-13-pg-qualstats_2.0.2-2+b1_amd64.deb"
+}

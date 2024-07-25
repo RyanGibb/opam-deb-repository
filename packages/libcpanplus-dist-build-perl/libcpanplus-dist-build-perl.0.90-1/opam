@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcpanplus-dist-build-perl_0.90-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcpanplus-dist-build-perl"]
+]
+depends: [
+  "perl"
+  ("libcpanplus-perl" | "perl" {< "5.17.9"})
+]
+extra-source "libcpanplus-dist-build-perl_0.90-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcpanplus-dist-build-perl/libcpanplus-dist-build-perl_0.90-1_all.deb"
+}

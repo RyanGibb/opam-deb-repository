@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgccjit-9-dev_9.3.0-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgccjit-9-dev"]
+]
+depends: [
+  "gcc-9-base" {= "9.3.0-22"}
+  "libgccjit0" {>= "9.3.0-22"}
+]
+extra-source "libgccjit-9-dev_9.3.0-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-9/libgccjit-9-dev_9.3.0-22_amd64.deb"
+}

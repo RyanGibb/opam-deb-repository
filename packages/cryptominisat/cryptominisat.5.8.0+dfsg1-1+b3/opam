@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cryptominisat_5.8.0+dfsg1-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cryptominisat"]
+]
+depends: [
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libcryptominisat5-5-8" {>= "5.8.0+dfsg1"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "cryptominisat_5.8.0+dfsg1-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cryptominisat/cryptominisat_5.8.0+dfsg1-1+b3_amd64.deb"
+}

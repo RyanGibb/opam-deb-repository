@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgpgme-dev_1.12.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgpgme-dev"]
+]
+depends: [
+  "libassuan-dev"
+  "libassuan0" {>= "2.4.2"}
+  "libc6" {>= "2.4"}
+  "libc6-dev"
+  "libgpg-error-dev"
+  "libgpg-error0" {>= "1.24"}
+  "libgpgme11" {= "1.12.0-6"}
+]
+extra-source "libgpgme-dev_1.12.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gpgme1.0/libgpgme-dev_1.12.0-6_amd64.deb"
+}

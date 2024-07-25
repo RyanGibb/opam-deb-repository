@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjwt0_1.10.2-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjwt0"]
+]
+depends: [
+  "libb64-0d" {>= "1.2"}
+  "libc6" {>= "2.14"}
+  "libjansson4" {>= "2.0.1"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "libjwt0_1.10.2-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libj/libjwt/libjwt0_1.10.2-1+deb11u1_amd64.deb"
+}

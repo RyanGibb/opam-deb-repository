@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vor_0.5.7-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vor"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2"
+  "libsdl1-2debian" {>= "1.2.11"}
+]
+extra-source "vor_0.5.7-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vor/vor_0.5.7-3_amd64.deb"
+}

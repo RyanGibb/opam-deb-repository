@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dnsmasq_2.89-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dnsmasq"]
+]
+depends: [
+  "dnsmasq-base"
+  "init-system-helpers" {>= "1.18~"}
+  "netbase"
+  "runit-helper" {>= "2.14.0~"}
+  "sysvinit-utils"
+]
+conflicts: [
+  "resolvconf (<< 1.15)"
+  "runit (<< 2.1.2-51~)"
+]
+extra-source "dnsmasq_2.89-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dnsmasq/dnsmasq_2.89-1_all.deb"
+}

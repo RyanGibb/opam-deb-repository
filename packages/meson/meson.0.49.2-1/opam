@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i meson_0.49.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r meson"]
+]
+depends: [
+  "ninja-build" {>= "1.6"}
+  "python3"
+  "python3-pkg-resources"
+]
+extra-source "meson_0.49.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meson/meson_0.49.2-1_all.deb"
+}

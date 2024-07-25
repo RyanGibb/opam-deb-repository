@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzephyr-dev_3.1.2-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzephyr-dev"]
+]
+depends: [
+  "libc6-dev"
+  ("libzephyr4" {= "3.1.2-1+b3"} | "libzephyr4-krb" {= "3.1.2-1+b3"} | "libzephyr4-krb5" {= "3.1.2-1+b3"} | "libzephyr4-krb45" {= "3.1.2-1+b3"})
+]
+extra-source "libzephyr-dev_3.1.2-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zephyr/libzephyr-dev_3.1.2-1+b3_amd64.deb"
+}

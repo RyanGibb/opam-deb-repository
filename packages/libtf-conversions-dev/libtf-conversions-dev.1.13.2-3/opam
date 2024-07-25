@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtf-conversions-dev_1.13.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtf-conversions-dev"]
+]
+depends: [
+  "libeigen3-dev"
+  "libgeometry-msgs-dev"
+  "liborocos-kdl-dev"
+  "libtf-conversions0d" {= "1.13.2-3"}
+  "libtf-dev"
+]
+extra-source "libtf-conversions-dev_1.13.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-geometry/libtf-conversions-dev_1.13.2-3_amd64.deb"
+}

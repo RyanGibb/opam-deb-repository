@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtorrent-rasterbar-dev_1.2.9-0.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtorrent-rasterbar-dev"]
+]
+depends: [
+  "libboost-system-dev"
+  "libssl-dev"
+  "libtorrent-rasterbar10" {= "1.2.9-0.3"}
+  "pkg-config"
+]
+extra-source "libtorrent-rasterbar-dev_1.2.9-0.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtorrent-rasterbar/libtorrent-rasterbar-dev_1.2.9-0.3_amd64.deb"
+}

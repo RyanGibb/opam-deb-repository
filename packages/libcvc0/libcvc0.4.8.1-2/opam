@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcvc0_4.8.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcvc0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libpulse-mainloop-glib0" {>= "0.99.1"}
+  "libpulse0" {>= "0.99.1"}
+]
+extra-source "libcvc0_4.8.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cinnamon-desktop/libcvc0_4.8.1-2_amd64.deb"
+}

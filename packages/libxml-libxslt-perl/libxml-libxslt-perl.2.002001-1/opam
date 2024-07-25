@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxml-libxslt-perl_2.002001-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxml-libxslt-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libxml-libxml-perl"
+  "libxml2" {>= "2.7.4"}
+  "libxslt1-1" {>= "1.1.27"}
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "libxml-libxslt-perl_2.002001-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxml-libxslt-perl/libxml-libxslt-perl_2.002001-1_amd64.deb"
+}

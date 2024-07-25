@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-firmware_43.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-firmware"]
+]
+depends: [
+  "fwupd" {>= "1.7.5"}
+  "libadwaita-1-0" {>= "1.2~alpha"}
+  "libc6" {>= "2.34"}
+  "libfwupd2" {>= "1.8.1"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-4-1" {>= "4.6"}
+  "libxmlb2" {>= "0.1.0"}
+]
+extra-source "gnome-firmware_43.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-firmware/gnome-firmware_43.2-1_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libudev1_247.3-7+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libudev1"]
+]
+depends: [
+  "libc6" {>= "2.30"}
+]
+extra-source "libudev1_247.3-7+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/systemd/libudev1_247.3-7+deb11u5_amd64.deb"
+}

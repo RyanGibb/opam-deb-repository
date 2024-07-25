@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scim-qt-immodule_1.4.18-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scim-qt-immodule"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc1" {>= "1-3.0"}
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libqtgui4" {>= "4-4.5.3"}
+  "libstdc++6" {>= "5"}
+  "scim" {= "1.4.18-2.1"}
+  "scim-im-agent" {= "1.4.18-2.1"}
+]
+conflicts: [
+  "scim-bridge-client-qt"
+  "scim-bridge-client-qt4"
+]
+extra-source "scim-qt-immodule_1.4.18-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scim/scim-qt-immodule_1.4.18-2.1_amd64.deb"
+}

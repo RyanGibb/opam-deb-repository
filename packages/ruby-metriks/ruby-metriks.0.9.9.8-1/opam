@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-metriks_0.9.9.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-metriks"]
+]
+depends: [
+  "ruby-atomic"
+  "ruby-avl-tree" {>= "1.2~"}
+  "ruby-hitimes"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-metriks_0.9.9.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-metriks/ruby-metriks_0.9.9.8-1_all.deb"
+}

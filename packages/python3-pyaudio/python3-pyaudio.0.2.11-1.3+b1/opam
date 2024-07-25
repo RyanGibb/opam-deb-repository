@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyaudio_0.2.11-1.3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyaudio"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libportaudio2" {>= "19+svn20101113"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+]
+extra-source "python3-pyaudio_0.2.11-1.3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pyaudio/python3-pyaudio_0.2.11-1.3+b1_amd64.deb"
+}

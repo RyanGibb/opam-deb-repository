@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rubocop-rspec_1.42.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rubocop-rspec"]
+]
+depends: [
+  "rubocop" {>= "0.87.0"}
+]
+extra-source "ruby-rubocop-rspec_1.42.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rubocop-rspec/ruby-rubocop-rspec_1.42.0-1_all.deb"
+}

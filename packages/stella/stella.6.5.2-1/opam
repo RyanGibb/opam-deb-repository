@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stella_6.5.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stella"]
+]
+depends: [
+  "libc6" {>= "2.30"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "stella_6.5.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/stella/stella_6.5.2-1_amd64.deb"
+}

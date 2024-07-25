@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-chronic-duration_0.10.6.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-chronic-duration"]
+]
+depends: [
+  "ruby-numerizer" {>= "0.2~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-chronic-duration_0.10.6.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-chronic-duration/ruby-chronic-duration_0.10.6.2-2_all.deb"
+}

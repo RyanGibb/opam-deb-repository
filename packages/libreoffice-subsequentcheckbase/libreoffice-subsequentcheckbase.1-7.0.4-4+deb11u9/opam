@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-subsequentcheckbase_1:7.0.4-4+deb11u9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-subsequentcheckbase"]
+]
+depends: [
+  "junit4" {>= "4.8.2-2"}
+  "liblibreoffice-java"
+]
+extra-source "libreoffice-subsequentcheckbase_1:7.0.4-4+deb11u9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-subsequentcheckbase_7.0.4-4+deb11u9_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-wai-cors-prof_0.2.7-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-wai-cors-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-attoparsec-prof"
+  "libghc-base-unicode-symbols-prof"
+  "libghc-case-insensitive-prof"
+  "libghc-http-types-prof"
+  "libghc-wai-cors-dev" {= "0.2.7-1+b1"}
+  "libghc-wai-prof"
+]
+extra-source "libghc-wai-cors-prof_0.2.7-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-wai-cors/libghc-wai-cors-prof_0.2.7-1+b1_amd64.deb"
+}

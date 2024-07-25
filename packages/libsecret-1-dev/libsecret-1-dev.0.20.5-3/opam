@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsecret-1-dev_0.20.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsecret-1-dev"]
+]
+depends: [
+  "gir1-2-secret-1" {= "0.20.5-3"}
+  "libgcrypt20-dev" {>= "1.2.2"}
+  "libglib2-0-dev" {>= "2.44.0"}
+  "libsecret-1-0" {= "0.20.5-3"}
+]
+extra-source "libsecret-1-dev_0.20.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsecret/libsecret-1-dev_0.20.5-3_amd64.deb"
+}

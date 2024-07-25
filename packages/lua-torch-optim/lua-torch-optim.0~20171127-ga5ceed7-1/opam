@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lua-torch-optim_0~20171127-ga5ceed7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lua-torch-optim"]
+]
+depends: [
+  "lua-torch-torch7"
+  "lua-torch-xlua"
+  ("lua5-1" | "luajit")
+]
+extra-source "lua-torch-optim_0~20171127-ga5ceed7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lua-torch-optim/lua-torch-optim_0~20171127-ga5ceed7-1_all.deb"
+}

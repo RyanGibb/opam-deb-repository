@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdrumstick-alsa2_2.7.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdrumstick-alsa2"]
+]
+depends: [
+  "libasound2" {>= "1.0.17"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libdrumstick-alsa2_2.7.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdrumstick/libdrumstick-alsa2_2.7.2-1_amd64.deb"
+}

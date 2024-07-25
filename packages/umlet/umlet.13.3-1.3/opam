@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i umlet_13.3-1.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r umlet"]
+]
+depends: [
+  "jarwrapper"
+  "libautocomplete-java"
+  "libbatik-java"
+  "libbcel-java"
+  "libcommons-io-java"
+  "libecj-java"
+  "libfop-java"
+  "libitext5-java"
+  "libjavaparser-java"
+  "libjlibeps-java"
+  "libjsyntaxpane-java"
+  "liblog4j1-2-java"
+  "libmail-java"
+  "librsyntaxtextarea-java"
+  ("default-jdk" | "java6-sdk")
+  ("default-jre" | "java7-runtime" | "java8-runtime" | "java9-runtime" | "java10-runtime" | "java11-runtime")
+]
+extra-source "umlet_13.3-1.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/umlet/umlet_13.3-1.3_all.deb"
+}

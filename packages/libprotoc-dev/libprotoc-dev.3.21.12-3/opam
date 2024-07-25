@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libprotoc-dev_3.21.12-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libprotoc-dev"]
+]
+depends: [
+  "libprotobuf-dev" {= "3.21.12-3"}
+  "libprotoc32" {= "3.21.12-3"}
+]
+extra-source "libprotoc-dev_3.21.12-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/protobuf/libprotoc-dev_3.21.12-3_amd64.deb"
+}

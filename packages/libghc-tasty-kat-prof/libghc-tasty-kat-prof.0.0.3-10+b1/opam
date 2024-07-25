@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tasty-kat-prof_0.0.3-10+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tasty-kat-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-tasty-kat-dev" {= "0.0.3-10+b1"}
+  "libghc-tasty-prof"
+]
+extra-source "libghc-tasty-kat-prof_0.0.3-10+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tasty-kat/libghc-tasty-kat-prof_0.0.3-10+b1_amd64.deb"
+}

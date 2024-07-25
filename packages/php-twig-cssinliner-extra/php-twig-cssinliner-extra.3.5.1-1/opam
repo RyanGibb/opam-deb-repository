@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-twig-cssinliner-extra_3.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-twig-cssinliner-extra"]
+]
+depends: [
+  "php-common"
+  "php-tijsverkoyen-css-to-inline-styles" {< "3~~"}
+  "php-tijsverkoyen-css-to-inline-styles" {>= "2.0"}
+  "php-twig"
+]
+extra-source "php-twig-cssinliner-extra_3.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-twig/php-twig-cssinliner-extra_3.5.1-1_all.deb"
+}

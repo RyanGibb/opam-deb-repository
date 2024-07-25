@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rsbackup-graph_8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rsbackup-graph"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.34"}
+  "libcairomm-1-0-1v5" {>= "1.14.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libglibmm-2-4-1v5" {>= "2.66.5"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpangomm-1-4-1v5" {>= "2.46.3"}
+  "libsigc++-2-0-0v5" {>= "2.2.0"}
+  "libsqlite3-0" {>= "3.7.15"}
+  "libstdc++6" {>= "11"}
+  "rsbackup"
+]
+extra-source "rsbackup-graph_8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rsbackup/rsbackup-graph_8.0-1_amd64.deb"
+}

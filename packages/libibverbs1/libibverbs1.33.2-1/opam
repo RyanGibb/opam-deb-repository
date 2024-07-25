@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libibverbs1_33.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libibverbs1"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.15"}
+  "libnl-3-200" {>= "3.2.7"}
+  "libnl-route-3-200" {>= "3.2.7"}
+]
+extra-source "libibverbs1_33.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rdma-core/libibverbs1_33.2-1_amd64.deb"
+}

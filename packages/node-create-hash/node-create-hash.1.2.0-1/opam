@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-create-hash_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-create-hash"]
+]
+depends: [
+  "node-cipher-base" {>= "1.0.1"}
+  "node-inherits" {>= "2.0.1"}
+  "node-md5-js" {>= "1.3.4"}
+  "node-ripemd160" {>= "2.0.1"}
+  "node-sha-js" {>= "2.4.0"}
+  "nodejs" {>= "6.0"}
+]
+extra-source "node-create-hash_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-create-hash/node-create-hash_1.2.0-1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i easytag-nautilus_2.4.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r easytag-nautilus"]
+]
+depends: [
+  "easytag" {= "2.4.3-4"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.38"}
+  "libgtk-3-0" {>= "3.10"}
+  "libnautilus-extension1a" {>= "3.21.92-3~"}
+  "nautilus" {>= "3"}
+]
+extra-source "easytag-nautilus_2.4.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/easytag/easytag-nautilus_2.4.3-4_amd64.deb"
+}

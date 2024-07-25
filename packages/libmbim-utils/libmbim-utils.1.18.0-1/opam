@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmbim-utils_1.18.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmbim-utils"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.36"}
+  "libmbim-glib4" {>= "1.18.0"}
+  "libmbim-proxy"
+]
+extra-source "libmbim-utils_1.18.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmbim/libmbim-utils_1.18.0-1_amd64.deb"
+}

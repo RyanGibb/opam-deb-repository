@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-async-irc-perl_0.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-async-irc-perl"]
+]
+depends: [
+  "libio-async-perl" {>= "0.59"}
+  "libprotocol-irc-perl" {>= "0.12"}
+  "perl"
+]
+extra-source "libnet-async-irc-perl_0.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-async-irc-perl/libnet-async-irc-perl_0.11-1_all.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libh2o-dev-common_2.2.5+dfsg2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libh2o-dev-common"]
+]
+depends: [
+  ("libh2o0-13" {>= "2.2.5+dfsg2-6"} | "libh2o-evloop0-13" {>= "2.2.5+dfsg2-6"})
+]
+extra-source "libh2o-dev-common_2.2.5+dfsg2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/h2o/libh2o-dev-common_2.2.5+dfsg2-6_all.deb"
+}

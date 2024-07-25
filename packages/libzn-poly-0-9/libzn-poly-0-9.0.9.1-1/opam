@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzn-poly-0.9_0.9.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzn-poly-0.9"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgmp10"
+]
+extra-source "libzn-poly-0.9_0.9.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libz/libzn-poly/libzn-poly-0.9_0.9.1-1_amd64.deb"
+}

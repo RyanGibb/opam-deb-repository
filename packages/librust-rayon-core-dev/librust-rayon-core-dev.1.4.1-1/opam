@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-rayon-core-dev_1.4.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-rayon-core-dev"]
+]
+depends: [
+  "librust-crossbeam-deque-0-6+default-dev"
+  "librust-lazy-static-1+default-dev"
+  "librust-libc-dev"
+  "librust-num-cpus-dev"
+]
+extra-source "librust-rayon-core-dev_1.4.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-rayon-core/librust-rayon-core-dev_1.4.1-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debci-worker_3.6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debci-worker"]
+]
+depends: [
+  "autodep8" {>= "0.2~"}
+  "autopkgtest" {>= "5.5~"}
+  "debci" {= "3.6"}
+]
+extra-source "debci-worker_3.6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debci/debci-worker_3.6_all.deb"
+}

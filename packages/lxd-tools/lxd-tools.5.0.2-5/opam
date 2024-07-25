@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lxd-tools_5.0.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lxd-tools"]
+]
+depends: [
+  "libacl1" {>= "2.2.23"}
+  "libc6" {>= "2.34"}
+  "libdqlite0" {>= "1.11.1"}
+  "libgcc-s1" {>= "3.3.1"}
+  "liblxc1" {>= "1-4.0.2"}
+  "libsqlite3-0" {>= "3.12.0"}
+]
+extra-source "lxd-tools_5.0.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxd/lxd-tools_5.0.2-5_amd64.deb"
+}

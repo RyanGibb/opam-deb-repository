@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libotcl1_1.14+dfsg-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libotcl1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libtcl8-6" {>= "8.6.0"}
+]
+extra-source "libotcl1_1.14+dfsg-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/otcl/libotcl1_1.14+dfsg-8_amd64.deb"
+}

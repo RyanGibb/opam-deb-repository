@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liboce-modeling11_0.18.3-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liboce-modeling11"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "liboce-foundation11" {>= "0.18.3"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "liboce-modeling11_0.18.3-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oce/liboce-modeling11_0.18.3-2+b1_amd64.deb"
+}

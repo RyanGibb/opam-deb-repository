@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libufo1_0.16.0.52.gbd831ab-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libufo1"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libufo-data" {= "0.16.0.52.gbd831ab-1"}
+  ("ocl-icd-libopencl1" | "libopencl1")
+]
+extra-source "libufo1_0.16.0.52.gbd831ab-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ufo-core/libufo1_0.16.0.52.gbd831ab-1+b1_amd64.deb"
+}

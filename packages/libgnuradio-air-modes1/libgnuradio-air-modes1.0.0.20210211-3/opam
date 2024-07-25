@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnuradio-air-modes1_0.0.20210211-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnuradio-air-modes1"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnuradio-pmt3-10-5" {>= "3.10.5.1"}
+  "libgnuradio-runtime3-10-5" {>= "3.10.5.1"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libgnuradio-air-modes1_0.0.20210211-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gr-air-modes/libgnuradio-air-modes1_0.0.20210211-3_amd64.deb"
+}

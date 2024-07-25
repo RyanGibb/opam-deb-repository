@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbus-c++-dev_0.9.0-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbus-c++-dev"]
+]
+depends: [
+  "libdbus-1-dev" {>= "0.60"}
+  "libdbus-c++-1-0v5" {= "0.9.0-11"}
+  "libdbus-c++-bin-any" {= "0.9.0-11"}
+]
+extra-source "libdbus-c++-dev_0.9.0-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dbus-c++/libdbus-c++-dev_0.9.0-11_amd64.deb"
+}

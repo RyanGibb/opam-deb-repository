@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-navarp_1.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-navarp"]
+]
+depends: [
+  "python3-any"
+  "python3-click"
+  "python3-colorcet"
+  "python3-h5py-serial"
+  "python3-igor"
+  "python3-matplotlib" {>= "3.1.0"}
+  "python3-numpy"
+  "python3-pyqt5"
+  "python3-scipy"
+  "python3-yaml"
+]
+extra-source "python3-navarp_1.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/navarp/python3-navarp_1.3.0-1_all.deb"
+}

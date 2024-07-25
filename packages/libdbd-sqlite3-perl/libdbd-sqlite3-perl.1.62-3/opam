@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbd-sqlite3-perl_1.62-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbd-sqlite3-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdbi-perl"
+  "libsqlite3-0" {>= "3.10.0"}
+  "perl" {>= "5.28.1-4"}
+  "perl-base"
+]
+extra-source "libdbd-sqlite3-perl_1.62-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdbd-sqlite3-perl/libdbd-sqlite3-perl_1.62-3_amd64.deb"
+}

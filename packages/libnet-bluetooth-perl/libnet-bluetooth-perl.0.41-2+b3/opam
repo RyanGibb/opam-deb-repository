@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-bluetooth-perl_0.41-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-bluetooth-perl"]
+]
+depends: [
+  "libbluetooth3" {>= "4.91"}
+  "libc6" {>= "2.4"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libnet-bluetooth-perl_0.41-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-bluetooth-perl/libnet-bluetooth-perl_0.41-2+b3_amd64.deb"
+}

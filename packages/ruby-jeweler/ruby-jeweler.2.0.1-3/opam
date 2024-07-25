@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-jeweler_2.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-jeweler"]
+]
+depends: [
+  "bundler"
+  "cucumber" {>= "1.1.4"}
+  "git"
+  "rake"
+  "ruby-builder"
+  "ruby-highline"
+  "ruby-nokogiri" {>= "1.5.10"}
+  "ruby-simplecov"
+  "yard" {>= "0.8.5"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-jeweler_2.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-jeweler/ruby-jeweler_2.0.1-3_all.deb"
+}

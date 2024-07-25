@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcam-pdf-perl_1.60-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcam-pdf-perl"]
+]
+depends: [
+  "libcrypt-rc4-perl"
+  "libtext-pdf-perl"
+  "perl-any"
+  ("tcsh" | "csh" | "c-shell")
+]
+extra-source "libcam-pdf-perl_1.60-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcam-pdf-perl/libcam-pdf-perl_1.60-5_all.deb"
+}

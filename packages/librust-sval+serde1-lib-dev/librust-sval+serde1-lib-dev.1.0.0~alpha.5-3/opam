@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-sval+serde1-lib-dev_1.0.0~alpha.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-sval+serde1-lib-dev"]
+]
+depends: [
+  "librust-serde-dev"
+  "librust-sval-dev" {= "1.0.0~alpha.5-3"}
+]
+extra-source "librust-sval+serde1-lib-dev_1.0.0~alpha.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-sval/librust-sval+serde1-lib-dev_1.0.0~alpha.5-3_amd64.deb"
+}

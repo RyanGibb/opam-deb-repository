@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dolphin-owncloud_2.5.1.10973+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dolphin-owncloud"]
+]
+depends: [
+  "dolphin" {>= "4-15.12.1"}
+  "kio"
+  "libc6" {>= "2.14"}
+  "libkf5coreaddons5" {>= "4.99.0"}
+  "libkf5kiocore5" {>= "4.96.0"}
+  "libkf5kiowidgets5" {>= "5.16.0"}
+  "libowncloudsync0" {= "2.5.1.10973+dfsg-1"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  "owncloud-client"
+]
+extra-source "dolphin-owncloud_2.5.1.10973+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/owncloud-client/dolphin-owncloud_2.5.1.10973+dfsg-1_amd64.deb"
+}

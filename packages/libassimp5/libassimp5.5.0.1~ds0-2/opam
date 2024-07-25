@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libassimp5_5.0.1~ds0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libassimp5"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libminizip1" {>= "1.1"}
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "libassimp5_5.0.1~ds0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/assimp/libassimp5_5.0.1~ds0-2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fuse3_3.14.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fuse3"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libfuse3-3" {= "3.14.0-4"}
+  "mount" {>= "2.19.1"}
+  "sed" {>= "4"}
+]
+extra-source "fuse3_3.14.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fuse3/fuse3_3.14.0-4_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbraiding0_1.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbraiding0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1"
+  "libstdc++6" {>= "4.9"}
+]
+extra-source "libbraiding0_1.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbraiding/libbraiding0_1.0-1+b1_amd64.deb"
+}

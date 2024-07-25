@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-fog-local_0.6.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-fog-local"]
+]
+depends: [
+  "ruby-fog-core"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-fog-local_0.6.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-fog-local/ruby-fog-local_0.6.0-1.1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-pretty-show-prof_1.7-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-pretty-show-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-haskell-lexer-prof"
+  "libghc-pretty-show-dev" {= "1.7-2+b2"}
+]
+extra-source "libghc-pretty-show-prof_1.7-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pretty-show/libghc-pretty-show-prof_1.7-2+b2_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gunroar_0.15.dfsg1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gunroar"]
+]
+depends: [
+  "gunroar-data" {= "0.15.dfsg1-10"}
+  "libc6" {>= "2.17"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libgphobos3" {>= "12"}
+  "libsdl-mixer1-2" {>= "1.2.12"}
+  "libsdl1-2-compat-shim"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "gunroar_0.15.dfsg1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gunroar/gunroar_0.15.dfsg1-10_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcsound64-6.0_1:6.18.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcsound64-6.0"]
+]
+depends: [
+  "csound-data"
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.0"}
+  "liblo7" {>= "0.26~repack"}
+  "libportaudio2" {>= "19+svn20101113"}
+  "libportmidi0"
+  "libpulse0" {>= "0.99.1"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "5.2"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "libcsound64-6.0_1:6.18.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/csound/libcsound64-6.0_6.18.1+dfsg-1_amd64.deb"
+}

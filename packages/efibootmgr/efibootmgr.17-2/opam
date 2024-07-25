@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i efibootmgr_17-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r efibootmgr"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libefiboot1" {>= "37"}
+  "libefivar1" {>= "37"}
+  "libpopt0" {>= "1.14"}
+]
+extra-source "efibootmgr_17-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/efibootmgr/efibootmgr_17-2_amd64.deb"
+}

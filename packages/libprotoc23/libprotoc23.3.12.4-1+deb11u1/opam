@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libprotoc23_3.12.4-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libprotoc23"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc-s1" {>= "3.0"}
+  "libprotobuf23" {>= "3.12.4"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libprotoc23_3.12.4-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/protobuf/libprotoc23_3.12.4-1+deb11u1_amd64.deb"
+}

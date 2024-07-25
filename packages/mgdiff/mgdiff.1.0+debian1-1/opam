@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mgdiff_1.0+debian1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mgdiff"]
+]
+depends: [
+  "debianutils" {>= "1.7"}
+  "file"
+  "libc6" {>= "2.34"}
+  "libx11-6"
+  "libxm4" {>= "2.3.4"}
+  "libxt6"
+  "mawk"
+]
+extra-source "mgdiff_1.0+debian1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mgdiff/mgdiff_1.0+debian1-1_amd64.deb"
+}

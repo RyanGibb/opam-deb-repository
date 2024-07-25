@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i srsenb_18.06.1-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r srsenb"]
+]
+depends: [
+  "libboost-program-options1-67-0"
+  "libc6" {>= "2.27"}
+  "libconfig++9v5" {>= "1.5-0.4~"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc1" {>= "1-4.0"}
+  "libmbedcrypto3" {>= "2.13"}
+  "libsctp1" {>= "1.0.10+dfsg"}
+  "libstdc++6" {>= "5.2"}
+  "srslte-core" {= "18.06.1-8+b1"}
+]
+extra-source "srsenb_18.06.1-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/srslte/srsenb_18.06.1-8+b1_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfast5-dev_0.6.5-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfast5-dev"]
+]
+depends: [
+  ("libhdf5-dev" | "libhdf5-mpich-dev" | "libhdf5-openmpi-dev")
+]
+extra-source "libfast5-dev_0.6.5-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fast5/libfast5-dev_0.6.5-4_all.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i polkit-kde-1_4:5.14.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r polkit-kde-1"]
+]
+depends: [
+  "polkit-kde-agent-1"
+]
+extra-source "polkit-kde-1_4:5.14.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/polkit-kde-agent-1/polkit-kde-1_5.14.5-1_all.deb"
+}

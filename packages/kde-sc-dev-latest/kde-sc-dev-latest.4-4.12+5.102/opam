@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kde-sc-dev-latest_4:4.12+5.102_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kde-sc-dev-latest"]
+]
+depends: [
+  "automoc" {>= "1.0~version-0.9.88"}
+  "cmake" {>= "2.8.6"}
+  "debhelper" {>= "9"}
+  "pkg-kde-tools" {>= "0.12"}
+]
+conflicts: [
+  "kdebase-workspace-dev"
+]
+extra-source "kde-sc-dev-latest_4:4.12+5.102_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-kde/kde-sc-dev-latest_4.12+5.102_all.deb"
+}

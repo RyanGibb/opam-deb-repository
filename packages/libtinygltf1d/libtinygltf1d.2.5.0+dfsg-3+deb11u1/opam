@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtinygltf1d_2.5.0+dfsg-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtinygltf1d"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstb0" {>= "0.0~git20180212.15.e6afb9c"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libtinygltf1d_2.5.0+dfsg-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tinygltf/libtinygltf1d_2.5.0+dfsg-3+deb11u1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-djinn-ghc-prof_0.0.2.3-9+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-djinn-ghc-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-async-prof"
+  "libghc-djinn-ghc-dev" {= "0.0.2.3-9+b3"}
+  "libghc-djinn-lib-prof"
+]
+extra-source "libghc-djinn-ghc-prof_0.0.2.3-9+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-djinn-ghc/libghc-djinn-ghc-prof_0.0.2.3-9+b3_amd64.deb"
+}

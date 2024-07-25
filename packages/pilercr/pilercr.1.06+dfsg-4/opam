@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pilercr_1.06+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pilercr"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "pilercr_1.06+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pilercr/pilercr_1.06+dfsg-4_amd64.deb"
+}

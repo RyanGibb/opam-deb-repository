@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-xio-gridftp-driver-dev_3.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-xio-gridftp-driver-dev"]
+]
+depends: [
+  "libglobus-common-dev" {>= "15"}
+  "libglobus-ftp-client-dev" {>= "7"}
+  "libglobus-xio-dev" {>= "3"}
+  "libglobus-xio-gridftp-driver" {= "3.6-2"}
+  "libglobus-xio-gsi-driver-dev" {>= "2"}
+]
+extra-source "libglobus-xio-gridftp-driver-dev_3.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-xio-gridftp-driver/libglobus-xio-gridftp-driver-dev_3.6-2_amd64.deb"
+}

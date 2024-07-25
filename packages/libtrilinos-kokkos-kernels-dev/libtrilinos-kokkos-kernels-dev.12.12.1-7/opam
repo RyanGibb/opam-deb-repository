@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrilinos-kokkos-kernels-dev_12.12.1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrilinos-kokkos-kernels-dev"]
+]
+depends: [
+  "libtrilinos-kokkos-kernels12" {= "12.12.1-7"}
+  "trilinos-dev"
+]
+extra-source "libtrilinos-kokkos-kernels-dev_12.12.1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trilinos/libtrilinos-kokkos-kernels-dev_12.12.1-7_amd64.deb"
+}

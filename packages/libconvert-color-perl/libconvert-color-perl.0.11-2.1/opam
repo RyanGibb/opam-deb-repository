@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libconvert-color-perl_0.11-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libconvert-color-perl"]
+]
+depends: [
+  "liblist-utilsby-perl"
+  "perl-any"
+  ("libmodule-pluggable-perl" | "perl" {< "5.17.0"})
+]
+extra-source "libconvert-color-perl_0.11-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libconvert-color-perl/libconvert-color-perl_0.11-2.1_all.deb"
+}

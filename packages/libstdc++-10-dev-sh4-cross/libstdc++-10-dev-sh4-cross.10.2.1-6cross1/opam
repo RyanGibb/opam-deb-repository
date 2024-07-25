@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstdc++-10-dev-sh4-cross_10.2.1-6cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstdc++-10-dev-sh4-cross"]
+]
+depends: [
+  "gcc-10-cross-base-ports" {= "10.2.1-6cross1"}
+  "libc6-dev-sh4-cross" {>= "2.30-1~"}
+  "libgcc-10-dev-sh4-cross" {= "10.2.1-6cross1"}
+  "libstdc++6-sh4-cross" {>= "10.2.1-6cross1"}
+]
+extra-source "libstdc++-10-dev-sh4-cross_10.2.1-6cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10-cross-ports/libstdc++-10-dev-sh4-cross_10.2.1-6cross1_all.deb"
+}

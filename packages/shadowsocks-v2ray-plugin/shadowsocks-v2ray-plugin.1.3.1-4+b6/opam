@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shadowsocks-v2ray-plugin_1.3.1-4+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shadowsocks-v2ray-plugin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "shadowsocks-libev"
+]
+extra-source "shadowsocks-v2ray-plugin_1.3.1-4+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shadowsocks-v2ray-plugin/shadowsocks-v2ray-plugin_1.3.1-4+b6_amd64.deb"
+}

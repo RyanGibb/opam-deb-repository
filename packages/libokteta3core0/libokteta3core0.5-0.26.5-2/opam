@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libokteta3core0_5:0.26.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libokteta3core0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5codecs5" {>= "5.48.0~"}
+  "libkf5i18n5" {>= "5.48.0~"}
+  "libokteta-l10n" {>= "5-0.26.5-2"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libokteta3core0_5:0.26.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/okteta/libokteta3core0_0.26.5-2_amd64.deb"
+}

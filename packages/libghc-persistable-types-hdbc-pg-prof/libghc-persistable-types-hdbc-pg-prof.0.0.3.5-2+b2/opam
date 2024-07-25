@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-persistable-types-hdbc-pg-prof_0.0.3.5-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-persistable-types-hdbc-pg-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-convertible-prof"
+  "libghc-dlist-prof"
+  "libghc-hdbc-prof"
+  "libghc-persistable-record-prof"
+  "libghc-persistable-types-hdbc-pg-dev" {= "0.0.3.5-2+b2"}
+  "libghc-relational-query-hdbc-prof"
+  "libghc-relational-query-prof"
+  "libghc-text-postgresql-prof"
+]
+extra-source "libghc-persistable-types-hdbc-pg-prof_0.0.3.5-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-persistable-types-hdbc-pg/libghc-persistable-types-hdbc-pg-prof_0.0.3.5-2+b2_amd64.deb"
+}

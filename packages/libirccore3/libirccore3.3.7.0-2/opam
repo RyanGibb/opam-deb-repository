@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libirccore3_3.7.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libirccore3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.15.1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libirccore3_3.7.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcommuni/libirccore3_3.7.0-2_amd64.deb"
+}

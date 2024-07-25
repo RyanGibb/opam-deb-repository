@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debug-me_1.20220324-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debug-me"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libffi8" {>= "3.4"}
+  "libgmp10" {>= "2-6.2.1+dfsg"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "debug-me_1.20220324-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debug-me/debug-me_1.20220324-1_amd64.deb"
+}

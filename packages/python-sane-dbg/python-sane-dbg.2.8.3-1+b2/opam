@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-sane-dbg_2.8.3-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-sane-dbg"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsane" {>= "1.0.24"}
+  "python-dbg"
+  "python-pil-dbg" {>= "2.7.0"}
+  "python-sane" {= "2.8.3-1+b2"}
+]
+extra-source "python-sane-dbg_2.8.3-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pillow-sane/python-sane-dbg_2.8.3-1+b2_amd64.deb"
+}

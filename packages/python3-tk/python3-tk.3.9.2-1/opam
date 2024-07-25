@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-tk_3.9.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-tk"]
+]
+depends: [
+  "blt" {>= "2.4z-9"}
+  "libc6" {>= "2.4"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libtk8-6" {>= "8.6.0"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9.1-0~"}
+  "tk8-6-blt2-5" {>= "2.5.3"}
+]
+extra-source "python3-tk_3.9.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-tk_3.9.2-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaudtag3_4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaudtag3"]
+]
+depends: [
+  "libaudcore5" {>= "3.8"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libaudtag3_4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/audacious/libaudtag3_4.2-1_amd64.deb"
+}

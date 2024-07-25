@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libobjcryst0_2022.1.4+ds1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libobjcryst0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcctbx0" {>= "2022.9+ds2+~3.11.2+ds1"}
+  "libgcc-s1" {>= "4.0"}
+  "libnewmat10ldbl"
+  "libstdc++6" {>= "11"}
+]
+extra-source "libobjcryst0_2022.1.4+ds1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libobjcryst/libobjcryst0_2022.1.4+ds1-2_amd64.deb"
+}

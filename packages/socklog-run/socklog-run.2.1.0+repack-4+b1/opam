@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i socklog-run_2.1.0+repack-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r socklog-run"]
+]
+depends: [
+  "runit"
+  "runit-helper" {>= "2.10.0~"}
+  "socklog" {= "2.1.0+repack-4+b1"}
+  "sysuser-helper" {< "1.4"}
+]
+conflicts: [
+  "linux-kernel-log-daemon"
+  "runit (<< 2.1.2-36~)"
+  "system-log-daemon"
+]
+extra-source "socklog-run_2.1.0+repack-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/socklog/socklog-run_2.1.0+repack-4+b1_amd64.deb"
+}

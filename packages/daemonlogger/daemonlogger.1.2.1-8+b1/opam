@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i daemonlogger_1.2.1-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r daemonlogger"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libdumbnet1" {>= "1.8"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "daemonlogger_1.2.1-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/daemonlogger/daemonlogger_1.2.1-8+b1_amd64.deb"
+}

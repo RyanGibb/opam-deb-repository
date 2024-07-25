@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tryton-modules-sale-advance-payment_6.0.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tryton-modules-sale-advance-payment"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "5.2"}
+  "python3-any"
+  "python3-pkg-resources"
+  "python3-simpleeval"
+  "tryton-modules-account" {>= "6.0"}
+  "tryton-modules-account-invoice" {>= "6.0"}
+  "tryton-modules-sale" {>= "6.0"}
+  "tryton-server"
+  "tryton-server" {>= "6.0"}
+]
+extra-source "tryton-modules-sale-advance-payment_6.0.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tryton-modules-sale-advance-payment/tryton-modules-sale-advance-payment_6.0.1-3_all.deb"
+}

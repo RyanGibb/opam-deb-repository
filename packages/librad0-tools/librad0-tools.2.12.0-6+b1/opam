@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librad0-tools_2.12.0-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librad0-tools"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "librad0" {= "2.12.0-6+b1"}
+  "libsqlite3-0" {>= "3.5.9"}
+]
+extra-source "librad0-tools_2.12.0-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/radlib/librad0-tools_2.12.0-6+b1_amd64.deb"
+}

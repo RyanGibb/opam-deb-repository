@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mcollective_2.12.5+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mcollective"]
+]
+depends: [
+  "mcollective-common" {>= "2.12.5+dfsg-1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "mcollective_2.12.5+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mcollective/mcollective_2.12.5+dfsg-1_all.deb"
+}

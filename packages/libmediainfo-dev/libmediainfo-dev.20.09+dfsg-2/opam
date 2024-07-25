@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmediainfo-dev_20.09+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmediainfo-dev"]
+]
+depends: [
+  "libcurl4-gnutls-dev"
+  "libmediainfo0v5" {= "20.09+dfsg-2"}
+  "libzen-dev"
+  "zlib1g-dev"
+]
+extra-source "libmediainfo-dev_20.09+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmediainfo/libmediainfo-dev_20.09+dfsg-2_amd64.deb"
+}

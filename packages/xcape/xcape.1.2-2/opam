@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xcape_1.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xcape"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6"
+  "libxtst6"
+]
+extra-source "xcape_1.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xcape/xcape_1.2-2_amd64.deb"
+}

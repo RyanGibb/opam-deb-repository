@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencc-dev_1.0.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencc-dev"]
+]
+depends: [
+  "libjs-jquery"
+  "libopencc2" {= "1.0.5-2"}
+]
+extra-source "libopencc-dev_1.0.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencc/libopencc-dev_1.0.5-2_amd64.deb"
+}

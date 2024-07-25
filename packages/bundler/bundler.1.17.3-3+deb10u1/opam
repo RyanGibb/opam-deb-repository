@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bundler_1.17.3-3+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bundler"]
+]
+depends: [
+  "ruby-bundler" {= "1.17.3-3+deb10u1"}
+]
+extra-source "bundler_1.17.3-3+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bundler/bundler_1.17.3-3+deb10u1_all.deb"
+}

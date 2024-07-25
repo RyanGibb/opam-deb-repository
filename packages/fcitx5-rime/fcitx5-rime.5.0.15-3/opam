@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx5-rime_5.0.15-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx5-rime"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libfcitx5config6" {>= "5.0.21"}
+  "libfcitx5core7" {>= "5.0.21"}
+  "libfcitx5utils2" {>= "5.0.21"}
+  "libgcc-s1" {>= "3.0"}
+  "librime-data"
+  "librime1" {>= "1.8.5+dfsg1~"}
+  "libstdc++6" {>= "11"}
+]
+conflicts: [
+  "fcitx-rime"
+]
+extra-source "fcitx5-rime_5.0.15-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx5-rime/fcitx5-rime_5.0.15-3_amd64.deb"
+}

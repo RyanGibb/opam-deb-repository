@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-adjunctions-prof_4.4.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-adjunctions-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-adjunctions-dev" {= "4.4.2-1+b2"}
+  "libghc-comonad-prof"
+  "libghc-contravariant-prof"
+  "libghc-distributive-prof"
+  "libghc-free-prof"
+  "libghc-profunctors-prof"
+  "libghc-semigroupoids-prof"
+  "libghc-semigroups-prof"
+  "libghc-tagged-prof"
+  "libghc-transformers-compat-prof"
+  "libghc-void-prof"
+]
+extra-source "libghc-adjunctions-prof_4.4.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-adjunctions/libghc-adjunctions-prof_4.4.2-1+b2_amd64.deb"
+}

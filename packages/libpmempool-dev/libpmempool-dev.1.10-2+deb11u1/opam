@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpmempool-dev_1.10-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpmempool-dev"]
+]
+depends: [
+  "libdaxctl-dev" {>= "63"}
+  "libndctl-dev" {>= "63"}
+  "libpmem-dev" {= "1.10-2+deb11u1"}
+  "libpmempool1" {= "1.10-2+deb11u1"}
+]
+extra-source "libpmempool-dev_1.10-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pmdk/libpmempool-dev_1.10-2+deb11u1_amd64.deb"
+}

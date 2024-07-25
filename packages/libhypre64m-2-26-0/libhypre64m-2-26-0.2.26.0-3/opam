@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhypre64m-2.26.0_2.26.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhypre64m-2.26.0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libopenmpi3" {>= "4.1.4"}
+  "libsuperlu-dist8" {>= "8.1.2+dfsg1"}
+  ("libblas64-3" | "libblas64-so-3")
+  ("liblapack64-3" | "liblapack64-so-3")
+]
+extra-source "libhypre64m-2.26.0_2.26.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hypre/libhypre64m-2.26.0_2.26.0-3_amd64.deb"
+}

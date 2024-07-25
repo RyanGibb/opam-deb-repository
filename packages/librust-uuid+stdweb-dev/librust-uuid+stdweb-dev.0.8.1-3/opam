@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-uuid+stdweb-dev_0.8.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-uuid+stdweb-dev"]
+]
+depends: [
+  "librust-rand-0-7+stdweb-dev"
+  "librust-uuid-dev" {= "0.8.1-3"}
+]
+extra-source "librust-uuid+stdweb-dev_0.8.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-uuid/librust-uuid+stdweb-dev_0.8.1-3_amd64.deb"
+}

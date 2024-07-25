@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-barbicanclient_5.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-barbicanclient"]
+]
+depends: [
+  "python3-any"
+  "python3-cliff"
+  "python3-keystoneauth1"
+  "python3-oslo-i18n"
+  "python3-oslo-serialization"
+  "python3-oslo-utils"
+  "python3-pbr"
+  "python3-requests"
+  "python3-six" {>= "1.10.0"}
+]
+extra-source "python3-barbicanclient_5.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-barbicanclient/python3-barbicanclient_5.0.1-2_all.deb"
+}

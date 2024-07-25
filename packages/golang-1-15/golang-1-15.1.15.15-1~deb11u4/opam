@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-1.15_1.15.15-1~deb11u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-1.15"]
+]
+depends: [
+  "golang-1-15-doc" {>= "1.15.15-1~deb11u4"}
+  "golang-1-15-go" {>= "1.15.15-1~deb11u4"}
+  "golang-1-15-src" {>= "1.15.15-1~deb11u4"}
+]
+extra-source "golang-1.15_1.15.15-1~deb11u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-1.15/golang-1.15_1.15.15-1~deb11u4_all.deb"
+}

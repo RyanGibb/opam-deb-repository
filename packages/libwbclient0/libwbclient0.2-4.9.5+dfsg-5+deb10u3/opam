@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwbclient0_2:4.9.5+dfsg-5+deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwbclient0"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.14"}
+]
+extra-source "libwbclient0_2:4.9.5+dfsg-5+deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/samba/libwbclient0_4.9.5+dfsg-5+deb10u3_amd64.deb"
+}

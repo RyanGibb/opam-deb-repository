@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-armon-go-metrics-dev_0.3.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-armon-go-metrics-dev"]
+]
+depends: [
+  "golang-github-circonus-labs-circonus-gometrics-dev" {>= "2.3.1~"}
+  "golang-github-datadog-datadog-go-dev"
+  "golang-github-hashicorp-go-immutable-radix-dev"
+  "golang-github-pascaldekloe-goe-dev"
+  "golang-github-prometheus-client-golang-dev"
+]
+extra-source "golang-github-armon-go-metrics-dev_0.3.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-armon-go-metrics/golang-github-armon-go-metrics-dev_0.3.4-1_all.deb"
+}

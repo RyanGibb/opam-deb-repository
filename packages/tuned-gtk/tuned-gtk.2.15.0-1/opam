@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tuned-gtk_2.15.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tuned-gtk"]
+]
+depends: [
+  "gir1-2-gtk-3-0"
+  "powertop"
+  "python3-any"
+  "python3-gi"
+  "tuned" {= "2.15.0-1"}
+]
+extra-source "tuned-gtk_2.15.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tuned/tuned-gtk_2.15.0-1_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i radvdump_1:2.18-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r radvdump"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "radvd (<= 1:2.16-1)"
+]
+extra-source "radvdump_1:2.18-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/radvd/radvdump_2.18-3_amd64.deb"
+}

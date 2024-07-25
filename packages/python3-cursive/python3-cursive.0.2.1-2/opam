@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-cursive_0.2.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-cursive"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-castellan"
+  "python3-cryptography"
+  "python3-lxml"
+  "python3-netifaces"
+  "python3-oslo-i18n"
+  "python3-oslo-log"
+  "python3-oslo-serialization"
+  "python3-oslo-utils"
+  "python3-pbr"
+  "python3-six" {>= "1.9.0"}
+]
+extra-source "python3-cursive_0.2.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-cursive/python3-cursive_0.2.1-2_all.deb"
+}

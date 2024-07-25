@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i neutron-dynamic-routing-common_2:21.0.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r neutron-dynamic-routing-common"]
+]
+depends: [
+  "neutron-common"
+  "python3-neutron-dynamic-routing" {= "2-21.0.0-1.1"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "neutron-dynamic-routing-common_2:21.0.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neutron-dynamic-routing/neutron-dynamic-routing-common_21.0.0-1.1_all.deb"
+}

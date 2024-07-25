@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i baresip-x11_1.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r baresip-x11"]
+]
+depends: [
+  "baresip-core" {= "1.0.0-4"}
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libmpg123-0" {>= "1.6.2"}
+  "libomxil-bellagio0"
+  "libpulse0" {>= "0.99.1"}
+  "libsdl2-2-0-0" {>= "2.0.12+dfsg1"}
+  "libx11-6"
+  "libxext6"
+]
+extra-source "baresip-x11_1.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/baresip/baresip-x11_1.0.0-4_amd64.deb"
+}

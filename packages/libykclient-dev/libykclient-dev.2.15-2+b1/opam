@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libykclient-dev_2.15-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libykclient-dev"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libykclient3" {= "2.15-2+b1"}
+]
+extra-source "libykclient-dev_2.15-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/ykclient/libykclient-dev_2.15-2+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-mock-integration_2.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-mock-integration"]
+]
+depends: [
+  "php-common"
+  "php-mock" {< "3~~"}
+  "php-mock" {>= "2.2"}
+  "php-text-template"
+]
+extra-source "php-mock-integration_2.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-mock-integration/php-mock-integration_2.1.0-2_all.deb"
+}

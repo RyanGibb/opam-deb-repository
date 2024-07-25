@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yelp_3.31.90-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yelp"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.38.0"}
+  "libgtk-3-0" {>= "3.13.3"}
+  "libwebkit2gtk-4-0-37" {>= "2.5.3"}
+  "libyelp0" {= "3.31.90-1"}
+  "man-db" {>= "2.5.1-1"}
+  "python3-distro"
+  "yelp-xsl" {>= "3.27.1"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "yelp_3.31.90-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yelp/yelp_3.31.90-1_amd64.deb"
+}

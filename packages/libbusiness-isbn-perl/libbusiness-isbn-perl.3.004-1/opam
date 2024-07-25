@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbusiness-isbn-perl_3.004-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbusiness-isbn-perl"]
+]
+depends: [
+  "libbusiness-isbn-data-perl" {>= "20140910.002"}
+  "libwww-perl"
+  "perl"
+]
+extra-source "libbusiness-isbn-perl_3.004-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbusiness-isbn-perl/libbusiness-isbn-perl_3.004-1_all.deb"
+}

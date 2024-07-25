@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-modules_1.4.0-9+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-modules"]
+]
+conflicts: [
+  "libpam-mkhomedir"
+  "libpam-motd"
+  "libpam-umask"
+]
+extra-source "libpam-modules_1.4.0-9+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pam/libpam-modules_1.4.0-9+deb11u1_amd64.deb"
+}

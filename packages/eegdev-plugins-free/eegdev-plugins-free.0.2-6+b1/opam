@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eegdev-plugins-free_0.2-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eegdev-plugins-free"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libeegdev0" {= "0.2-6+b1"}
+  "libexpat1" {>= "2.0.1"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+  "libxdffileio0" {>= "0.0"}
+]
+extra-source "eegdev-plugins-free_0.2-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eegdev/eegdev-plugins-free_0.2-6+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libexpect-ocaml_0.0.5-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libexpect-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libpcre-ocaml"
+  "ocaml-base-nox"
+]
+extra-source "libexpect-ocaml_0.0.5-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-expect/libexpect-ocaml_0.0.5-2+b2_amd64.deb"
+}

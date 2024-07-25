@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i semanage-utils_2.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r semanage-utils"]
+]
+depends: [
+  "libsepol1" {>= "2.8"}
+  "python3" {>= "3.2"}
+  "python3-selinux" {>= "2.8"}
+  "python3-semanage" {>= "2.8"}
+]
+extra-source "semanage-utils_2.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsemanage/semanage-utils_2.8-2_amd64.deb"
+}

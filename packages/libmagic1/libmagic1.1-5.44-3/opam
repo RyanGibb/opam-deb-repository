@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmagic1_1:5.44-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmagic1"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.33"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libmagic-mgc" {= "1-5.44-3"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libmagic1_1:5.44-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/file/libmagic1_5.44-3_amd64.deb"
+}

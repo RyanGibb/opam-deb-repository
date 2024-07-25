@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libibverbs-dev_22.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libibverbs-dev"]
+]
+depends: [
+  "ibverbs-providers" {= "22.1-1"}
+  "libibverbs1" {= "22.1-1"}
+  "libnl-3-dev"
+  "libnl-route-3-dev"
+]
+extra-source "libibverbs-dev_22.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rdma-core/libibverbs-dev_22.1-1_amd64.deb"
+}

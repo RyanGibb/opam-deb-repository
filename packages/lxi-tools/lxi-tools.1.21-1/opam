@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lxi-tools_1.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lxi-tools"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "liblua5-2-0"
+  "liblxi1" {>= "1.8"}
+  "libreadline7" {>= "6.0"}
+]
+extra-source "lxi-tools_1.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxi-tools/lxi-tools_1.21-1_amd64.deb"
+}

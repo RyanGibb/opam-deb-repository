@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ninka_1.3.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ninka"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libio-captureoutput-perl"
+  "libstdc++6" {>= "4.4.0"}
+  "perl"
+]
+extra-source "ninka_1.3.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ninka/ninka_1.3.2-3_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i snek-bin_1.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r snek-bin"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libreadline8" {>= "6.0"}
+  "snek"
+]
+extra-source "snek-bin_1.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snek/snek-bin_1.5-1_amd64.deb"
+}

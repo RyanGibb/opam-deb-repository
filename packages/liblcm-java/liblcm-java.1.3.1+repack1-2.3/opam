@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblcm-java_1.3.1+repack1-2.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblcm-java"]
+]
+depends: [
+  "liblcm-bin"
+  "liblcm1" {= "1.3.1+repack1-2.3"}
+]
+extra-source "liblcm-java_1.3.1+repack1-2.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lcm/liblcm-java_1.3.1+repack1-2.3_amd64.deb"
+}

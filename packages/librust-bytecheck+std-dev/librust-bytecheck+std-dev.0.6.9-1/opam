@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-bytecheck+std-dev_0.6.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-bytecheck+std-dev"]
+]
+depends: [
+  "librust-bytecheck-derive-0-6-9+std-dev"
+  "librust-bytecheck-dev" {= "0.6.9-1"}
+  "librust-ptr-meta-0-1+std-dev"
+]
+extra-source "librust-bytecheck+std-dev_0.6.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-bytecheck/librust-bytecheck+std-dev_0.6.9-1_amd64.deb"
+}

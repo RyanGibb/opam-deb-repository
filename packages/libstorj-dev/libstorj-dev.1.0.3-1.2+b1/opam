@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstorj-dev_1.0.3-1.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstorj-dev"]
+]
+depends: [
+  "libcurl4-gnutls-dev"
+  "libjson-c-dev"
+  "libmicrohttpd-dev"
+  "libstorj0" {= "1.0.3-1.2+b1"}
+  "libuv1-dev"
+  "nettle-dev"
+]
+conflicts: [
+  "libstorj-dev"
+]
+extra-source "libstorj-dev_1.0.3-1.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libstorj/libstorj-dev_1.0.3-1.2+b1_amd64.deb"
+}

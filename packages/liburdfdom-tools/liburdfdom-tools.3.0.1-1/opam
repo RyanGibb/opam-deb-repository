@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liburdfdom-tools_3.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liburdfdom-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "liburdfdom-model3-0" {>= "3.0.1"}
+]
+extra-source "liburdfdom-tools_3.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/urdfdom/liburdfdom-tools_3.0.1-1_amd64.deb"
+}

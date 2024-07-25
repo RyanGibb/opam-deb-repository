@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-djangorestframework-gis_0.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-djangorestframework-gis"]
+]
+depends: [
+  "python3-any"
+  "python3-django-filters"
+  "python3-djangorestframework" {>= "3.0.4"}
+]
+extra-source "python3-djangorestframework-gis_0.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/djangorestframework-gis/python3-djangorestframework-gis_0.14-1_all.deb"
+}

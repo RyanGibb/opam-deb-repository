@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-mizuho_0.9.20+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-mizuho"]
+]
+depends: [
+  "asciidoc"
+  "libjs-jquery"
+  "ruby-nokogiri"
+  "ruby-sqlite3"
+  "source-highlight"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-mizuho_0.9.20+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-mizuho/ruby-mizuho_0.9.20+dfsg-1_all.deb"
+}

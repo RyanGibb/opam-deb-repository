@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-pfstools_2.2.0-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-pfstools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpfs2" {>= "2.1.0"}
+  "libstdc++6" {>= "11"}
+  "octave"
+]
+extra-source "octave-pfstools_2.2.0-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pfstools/octave-pfstools_2.2.0-5+b1_amd64.deb"
+}

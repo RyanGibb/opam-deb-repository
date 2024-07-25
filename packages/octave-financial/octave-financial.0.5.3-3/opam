@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-financial_0.5.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-financial"]
+]
+depends: [
+  "octave" {>= "5.2.0"}
+  "octave-io" {>= "2.4.11"}
+  "octave-statistics" {>= "1.4.0"}
+]
+conflicts: [
+  "octave-time"
+]
+extra-source "octave-financial_0.5.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave-financial/octave-financial_0.5.3-3_all.deb"
+}

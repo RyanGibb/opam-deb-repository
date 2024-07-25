@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet1-dev_1.1.6+dfsg-3.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet1-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libnet1" {= "1.1.6+dfsg-3.2"}
+  "sgml-base" {>= "1.28"}
+]
+conflicts: [
+  "libnet-dev"
+]
+extra-source "libnet1-dev_1.1.6+dfsg-3.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet/libnet1-dev_1.1.6+dfsg-3.2_amd64.deb"
+}

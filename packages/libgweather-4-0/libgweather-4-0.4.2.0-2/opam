@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgweather-4-0_4.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgweather-4-0"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgeocode-glib-2-0" {>= "3.26.3"}
+  "libglib2-0-0" {>= "2.68.0"}
+  "libgweather-4-common" {>= "3.5.0"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libsoup-3-0-0" {>= "3.0.3"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libgweather-4-0_4.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgweather4/libgweather-4-0_4.2.0-2_amd64.deb"
+}

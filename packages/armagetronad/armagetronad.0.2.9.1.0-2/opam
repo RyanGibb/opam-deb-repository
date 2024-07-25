@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i armagetronad_0.2.9.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r armagetronad"]
+]
+depends: [
+  "armagetronad-common" {= "0.2.9.1.0-2"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "9"}
+  "libxml2" {>= "2.8.0"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "armagetronad_0.2.9.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/armagetronad/armagetronad_0.2.9.1.0-2_amd64.deb"
+}

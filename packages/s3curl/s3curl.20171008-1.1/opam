@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i s3curl_20171008-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r s3curl"]
+]
+depends: [
+  "curl"
+  "libdigest-hmac-perl"
+  "libdigest-md5-file-perl"
+  "libfindbin-libs-perl"
+  "libgetopt-long-descriptive-perl"
+]
+extra-source "s3curl_20171008-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/s3curl/s3curl_20171008-1.1_all.deb"
+}

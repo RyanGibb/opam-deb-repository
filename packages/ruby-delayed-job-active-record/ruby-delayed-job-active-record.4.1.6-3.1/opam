@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-delayed-job-active-record_4.1.6-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-delayed-job-active-record"]
+]
+depends: [
+  "ruby-activerecord" {< "2-6.2"}
+  "ruby-activerecord" {>= "2-3.0"}
+  "ruby-delayed-job" {< "5"}
+  "ruby-delayed-job" {>= "3.0"}
+]
+extra-source "ruby-delayed-job-active-record_4.1.6-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-delayed-job-active-record/ruby-delayed-job-active-record_4.1.6-3.1_all.deb"
+}

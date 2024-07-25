@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-eipack_0.2-1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-eipack"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.0-3"}
+  "r-cran-coda"
+  "r-cran-mass"
+  "r-cran-msm"
+]
+extra-source "r-cran-eipack_0.2-1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-eipack/r-cran-eipack_0.2-1-1+b1_amd64.deb"
+}

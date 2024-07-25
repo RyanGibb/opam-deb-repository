@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-idna-dev_0.3.0-10+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-idna-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-punycode-dev"
+  "libghc-stringprep-dev"
+  "libgmp10"
+  "libicu63" {>= "63.1-1~"}
+]
+extra-source "libghc-idna-dev_0.3.0-10+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-idna/libghc-idna-dev_0.3.0-10+b3_amd64.deb"
+}

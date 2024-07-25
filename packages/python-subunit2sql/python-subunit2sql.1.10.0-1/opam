@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-subunit2sql_1.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-subunit2sql"]
+]
+depends: [
+  "alembic" {>= "0.8.10"}
+  "python-alembic" {>= "0.8.10"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-dateutil"
+  "python-oslo-config" {>= "1-4.0.0"}
+  "python-oslo-db" {>= "4.24.0"}
+  "python-pbr" {>= "2.0.0"}
+  "python-six" {>= "1.9.0"}
+  "python-sqlalchemy"
+  "python-stevedore" {>= "1.20.0"}
+  "python-subunit"
+  "python2-7-any"
+  "subunit"
+]
+extra-source "python-subunit2sql_1.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-subunit2sql/python-subunit2sql_1.10.0-1_all.deb"
+}

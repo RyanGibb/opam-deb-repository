@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nvidia-vaapi-driver_0.0.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nvidia-vaapi-driver"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libegl1"
+  "libgstreamer-plugins-bad1-0-0" {>= "1.20.4"}
+  "libva2"
+]
+extra-source "nvidia-vaapi-driver_0.0.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nvidia-vaapi-driver/nvidia-vaapi-driver_0.0.8-1_amd64.deb"
+}

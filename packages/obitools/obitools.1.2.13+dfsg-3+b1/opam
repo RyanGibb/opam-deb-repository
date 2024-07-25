@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i obitools_1.2.13+dfsg-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r obitools"]
+]
+depends: [
+  "cython3"
+  "libc6" {>= "2.14"}
+  "libjs-sphinxdoc"
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-ipython"
+  "python3-sphinx"
+  "python3-virtualenv"
+  "python3-wheel"
+]
+extra-source "obitools_1.2.13+dfsg-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/obitools/obitools_1.2.13+dfsg-3+b1_amd64.deb"
+}

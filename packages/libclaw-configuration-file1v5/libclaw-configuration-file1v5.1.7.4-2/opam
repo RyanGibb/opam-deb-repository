@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclaw-configuration-file1v5_1.7.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclaw-configuration-file1v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libclaw-configuration-file1"
+]
+extra-source "libclaw-configuration-file1v5_1.7.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libclaw/libclaw-configuration-file1v5_1.7.4-2_amd64.deb"
+}

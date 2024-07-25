@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i paraview-dev_5.4.1+dfsg4-3.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r paraview-dev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libeigen3-dev"
+  "paraview" {= "5.4.1+dfsg4-3.1+b2"}
+  "qt4-dev-tools"
+]
+extra-source "paraview-dev_5.4.1+dfsg4-3.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/paraview/paraview-dev_5.4.1+dfsg4-3.1+b2_amd64.deb"
+}

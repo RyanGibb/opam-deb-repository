@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx5-hangul_5.0.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx5-hangul"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libfcitx5config6" {>= "5.0.18"}
+  "libfcitx5core7" {>= "5.0.18"}
+  "libfcitx5utils2" {>= "5.0.18"}
+  "libgcc-s1" {>= "3.0"}
+  "libhangul-data"
+  "libhangul1" {>= "0.1.0"}
+  "libstdc++6" {>= "11"}
+]
+conflicts: [
+  "fcitx-hangul"
+]
+extra-source "fcitx5-hangul_5.0.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx5-hangul/fcitx5-hangul_5.0.10-1_amd64.deb"
+}

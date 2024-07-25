@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i proj-bin_9.1.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r proj-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libproj25" {>= "9.1.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "proj-bin_9.1.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/proj/proj-bin_9.1.1-1+b1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libseed-gtk4-dev_4.0.0+20161014+6c77960+dfsg1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libseed-gtk4-dev"]
+]
+depends: [
+  "libgirepository1-0-dev" {>= "0.10.0"}
+  "libglib2-0-dev"
+  "libseed-gtk4-0" {= "4.0.0+20161014+6c77960+dfsg1-6"}
+  "libwebkit2gtk-4-0-dev"
+]
+conflicts: [
+  "libseed-dev"
+]
+extra-source "libseed-gtk4-dev_4.0.0+20161014+6c77960+dfsg1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/seed-webkit2/libseed-gtk4-dev_4.0.0+20161014+6c77960+dfsg1-6_amd64.deb"
+}

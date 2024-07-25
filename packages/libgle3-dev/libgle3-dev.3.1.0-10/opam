@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgle3-dev_3.1.0-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgle3-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libgle3" {= "3.1.0-10"}
+  ("libgl1-mesa-dev" | "libgl-dev")
+]
+conflicts: [
+  "glutg3-dev (<< 3.7-13)"
+  "libgle-dev (<= 3.0.7-2)"
+]
+extra-source "libgle3-dev_3.1.0-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gle/libgle3-dev_3.1.0-10_amd64.deb"
+}

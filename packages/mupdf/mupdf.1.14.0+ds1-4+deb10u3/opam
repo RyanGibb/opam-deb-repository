@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mupdf_1.14.0+ds1-4+deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mupdf"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libfreetype6" {>= "2.6"}
+  "libharfbuzz0b" {>= "0.9.11"}
+  "libjbig2dec0" {>= "0.15+20190209"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libopenjp2-7" {>= "2.0.0"}
+  "libx11-6"
+  "libxext6"
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "mupdf_1.14.0+ds1-4+deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mupdf/mupdf_1.14.0+ds1-4+deb10u3_amd64.deb"
+}

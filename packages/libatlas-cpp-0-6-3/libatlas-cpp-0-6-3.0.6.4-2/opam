@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libatlas-cpp-0.6-3_0.6.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libatlas-cpp-0.6-3"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libatlas-cpp-0.6-3_0.6.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/atlas-cpp/libatlas-cpp-0.6-3_0.6.4-2_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkldap4_4:4.14.10-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkldap4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkdecore5" {>= "4-4.14.2"}
+  "libkdeui5" {>= "4-4.14.2"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libqtcore4" {>= "4-4.8"}
+  "libqtgui4" {>= "4-4.8.0"}
+  "libsasl2-2" {>= "2.1.27+dfsg"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libkldap4_4:4.14.10-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdepimlibs/libkldap4_4.14.10-11_amd64.deb"
+}

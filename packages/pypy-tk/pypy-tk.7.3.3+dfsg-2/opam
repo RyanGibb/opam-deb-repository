@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pypy-tk_7.3.3+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pypy-tk"]
+]
+depends: [
+  "libtcl8-6" {>= "8.6.0"}
+  "libtk8-6" {>= "8.6.0"}
+  "pypy" {= "7.3.3+dfsg-2"}
+]
+extra-source "pypy-tk_7.3.3+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pypy/pypy-tk_7.3.3+dfsg-2_amd64.deb"
+}

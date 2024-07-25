@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i partimage_0.6.9-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r partimage"]
+]
+depends: [
+  "fdisk"
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libnewt0-52" {>= "0.52.21"}
+  "libslang2" {>= "2.2.4"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5"}
+  "zlib1g" {>= "1-1.2.3.3"}
+]
+conflicts: [
+  "partimage-doc (<= 20020126-6)"
+  "partimage-server (<< 0.6.0)"
+]
+extra-source "partimage_0.6.9-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/partimage/partimage_0.6.9-8_amd64.deb"
+}

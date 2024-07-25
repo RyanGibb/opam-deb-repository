@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-uuagc-cabal-prof_1.1.0.0-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-uuagc-cabal-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-uuagc-cabal-dev" {= "1.1.0.0-3+b2"}
+  "libghc-uulib-prof"
+]
+extra-source "libghc-uuagc-cabal-prof_1.1.0.0-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-uuagc-cabal/libghc-uuagc-cabal-prof_1.1.0.0-3+b2_amd64.deb"
+}

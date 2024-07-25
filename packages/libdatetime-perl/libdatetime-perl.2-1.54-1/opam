@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdatetime-perl_2:1.54-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdatetime-perl"]
+]
+depends: [
+  "libdatetime-locale-perl" {>= "1-1.06"}
+  "libdatetime-timezone-perl" {>= "1-2.44"}
+  "libnamespace-autoclean-perl"
+  "libparams-validationcompiler-perl" {>= "0.26"}
+  "libspecio-perl"
+  "libtry-tiny-perl"
+  "perl"
+  "perl-base"
+]
+extra-source "libdatetime-perl_2:1.54-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdatetime-perl/libdatetime-perl_1.54-1_amd64.deb"
+}

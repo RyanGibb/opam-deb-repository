@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i e2tools_0.0.16-6.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r e2tools"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libcom-err2"
+  "libext2fs2"
+]
+extra-source "e2tools_0.0.16-6.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/e2tools/e2tools_0.0.16-6.1+b2_amd64.deb"
+}

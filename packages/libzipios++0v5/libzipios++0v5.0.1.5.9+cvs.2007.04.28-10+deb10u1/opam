@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzipios++0v5_0.1.5.9+cvs.2007.04.28-10+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzipios++0v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libzipios++0c2a"
+]
+extra-source "libzipios++0v5_0.1.5.9+cvs.2007.04.28-10+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zipios++/libzipios++0v5_0.1.5.9+cvs.2007.04.28-10+deb10u1_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgwenhywfar60-dev_4.20.0-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgwenhywfar60-dev"]
+]
+depends: [
+  "gwenhywfar-tools" {>= "4.20.0-9"}
+  "libgwengui-fox16-dev" {= "4.20.0-9"}
+  "libgwengui-gtk3-dev" {= "4.20.0-9"}
+  "libgwengui-qt5-dev" {= "4.20.0-9"}
+  "libgwenhywfar-core-dev" {= "4.20.0-9"}
+]
+conflicts: [
+  "libgwenhywfar-dev"
+]
+extra-source "libgwenhywfar60-dev_4.20.0-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgwenhywfar/libgwenhywfar60-dev_4.20.0-9_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libantic0_0.2.5+ds-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libantic0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libflint17"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libmpfr6" {>= "3.1.3"}
+]
+conflicts: [
+  "libantic"
+]
+extra-source "libantic0_0.2.5+ds-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/antic/libantic0_0.2.5+ds-1+b2_amd64.deb"
+}

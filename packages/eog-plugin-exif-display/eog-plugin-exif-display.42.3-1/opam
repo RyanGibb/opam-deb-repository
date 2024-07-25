@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eog-plugin-exif-display_42.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eog-plugin-exif-display"]
+]
+depends: [
+  "eog" {>= "3.20.3-1~"}
+  "eog-plugins-common" {>= "42.3-1"}
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.2.4"}
+  "libexif12" {>= "0.6.21-1~"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.38.0"}
+  "libgtk-3-0" {>= "3.14.0"}
+  "libpeas-1-0-0" {>= "1.0.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "eog-plugin-exif-display_42.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eog-plugins/eog-plugin-exif-display_42.3-1_amd64.deb"
+}

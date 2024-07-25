@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenblas0_0.3.21+ds-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenblas0"]
+]
+depends: [
+  ("libopenblas0-pthread" | "libopenblas0-openmp" | "libopenblas0-serial")
+]
+extra-source "libopenblas0_0.3.21+ds-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openblas/libopenblas0_0.3.21+ds-4_amd64.deb"
+}

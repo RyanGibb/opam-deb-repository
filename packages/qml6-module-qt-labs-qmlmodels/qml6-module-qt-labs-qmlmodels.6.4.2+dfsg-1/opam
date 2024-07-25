@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml6-module-qt-labs-qmlmodels_6.4.2+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml6-module-qt-labs-qmlmodels"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libqt6core6" {>= "6.4.2+dfsg~"}
+  "libqt6labsqmlmodels6" {>= "6.2.0"}
+  "libqt6qml6" {>= "6.2.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qml6-module-qt-labs-qmlmodels_6.4.2+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt6-declarative/qml6-module-qt-labs-qmlmodels_6.4.2+dfsg-1_amd64.deb"
+}

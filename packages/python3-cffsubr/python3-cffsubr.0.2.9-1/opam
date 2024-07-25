@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-cffsubr_0.2.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-cffsubr"]
+]
+depends: [
+  "afdko-bin"
+  "python3-any"
+  "python3-fonttools" {>= "4.10.2"}
+  ("python3-importlib-resources" | "python3" {> "3.7"})
+]
+extra-source "python3-cffsubr_0.2.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cffsubr/python3-cffsubr_0.2.9-1_all.deb"
+}

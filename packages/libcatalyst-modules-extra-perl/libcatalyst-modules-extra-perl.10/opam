@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcatalyst-modules-extra-perl_10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcatalyst-modules-extra-perl"]
+]
+depends: [
+  "libcatalyst-model-adaptor-perl"
+  "libcatalyst-model-cdbi-crud-perl"
+  "libcatalyst-plugin-authentication-credential-openid-perl"
+  "libcatalyst-plugin-captcha-perl"
+  "libcatalyst-plugin-setenv-perl"
+]
+extra-source "libcatalyst-modules-extra-perl_10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcatalyst-modules-extra-perl/libcatalyst-modules-extra-perl_10_all.deb"
+}

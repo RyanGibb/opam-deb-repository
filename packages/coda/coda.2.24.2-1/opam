@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coda_2.24.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coda"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcoda15" {= "2.24.2-1"}
+  "libhdf4-0-alt" {>= "4.2r4"}
+]
+extra-source "coda_2.24.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coda/coda_2.24.2-1_amd64.deb"
+}

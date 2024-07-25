@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblouisxml-bin_2.4.0-12+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblouisxml-bin"]
+]
+depends: [
+  "antiword"
+  "libc6" {>= "2.34"}
+  "liblouis20" {>= "3.23.0"}
+  "liblouisxml1" {>= "2.4.0"}
+  "poppler-utils"
+]
+extra-source "liblouisxml-bin_2.4.0-12+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/liblouisxml/liblouisxml-bin_2.4.0-12+b1_amd64.deb"
+}

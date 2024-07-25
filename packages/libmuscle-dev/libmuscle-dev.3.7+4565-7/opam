@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmuscle-dev_3.7+4565-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmuscle-dev"]
+]
+depends: [
+  "libmuscle1" {= "3.7+4565-7"}
+]
+conflicts: [
+  "libmuscle-3.7-dev"
+]
+extra-source "libmuscle-dev_3.7+4565-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmuscle/libmuscle-dev_3.7+4565-7_amd64.deb"
+}

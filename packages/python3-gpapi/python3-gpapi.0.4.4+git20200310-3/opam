@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-gpapi_0.4.4+git20200310-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-gpapi"]
+]
+depends: [
+  "python3-any"
+  "python3-cryptography" {>= "2.2"}
+  "python3-protobuf" {>= "3.5.2"}
+  "python3-requests"
+]
+extra-source "python3-gpapi_0.4.4+git20200310-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/googleplay-api/python3-gpapi_0.4.4+git20200310-3_all.deb"
+}

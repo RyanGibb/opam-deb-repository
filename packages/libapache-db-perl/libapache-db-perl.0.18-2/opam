@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache-db-perl_0.18-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache-db-perl"]
+]
+depends: [
+  "libapache2-mod-perl2"
+  "libc6" {>= "2.3"}
+  "libdevel-dprof-perl"
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libapache-db-perl_0.18-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libapache-db-perl/libapache-db-perl_0.18-2_amd64.deb"
+}

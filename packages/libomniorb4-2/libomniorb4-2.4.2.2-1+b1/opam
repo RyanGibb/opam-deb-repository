@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libomniorb4-2_4.2.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libomniorb4-2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libomnithread4" {>= "4.2.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+conflicts: [
+  "libomniorb4-1"
+]
+extra-source "libomniorb4-2_4.2.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/omniorb-dfsg/libomniorb4-2_4.2.2-1+b1_amd64.deb"
+}

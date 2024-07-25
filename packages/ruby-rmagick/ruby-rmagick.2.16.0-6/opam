@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rmagick_2.16.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rmagick"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgmp10"
+  "libmagickcore-6-q16-6" {>= "8-6.9.10.2"}
+  "libmagickwand-6-q16-6" {>= "8-6.9.10.2"}
+  "libruby2-5" {>= "2.5.0~preview1"}
+  "ruby" {< "1-2.6~"}
+  "ruby" {>= "1-2.5~0"}
+]
+extra-source "ruby-rmagick_2.16.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rmagick/ruby-rmagick_2.16.0-6_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mmorph_2.3.4.2-17_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mmorph"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdb5-3"
+]
+extra-source "mmorph_2.3.4.2-17_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mmorph/mmorph_2.3.4.2-17_amd64.deb"
+}

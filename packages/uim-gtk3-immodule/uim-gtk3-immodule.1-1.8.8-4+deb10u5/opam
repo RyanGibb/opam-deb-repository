@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uim-gtk3-immodule_1:1.8.8-4+deb10u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uim-gtk3-immodule"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libuim-scm0" {>= "1-1.5.7"}
+  "libuim8" {>= "1-1.8.6"}
+  "libx11-6"
+  "uim" {= "1-1.8.8-4+deb10u5"}
+]
+extra-source "uim-gtk3-immodule_1:1.8.8-4+deb10u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uim/uim-gtk3-immodule_1.8.8-4+deb10u5_amd64.deb"
+}

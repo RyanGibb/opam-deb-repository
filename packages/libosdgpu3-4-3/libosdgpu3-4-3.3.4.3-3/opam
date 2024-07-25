@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosdgpu3.4.3_3.4.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosdgpu3.4.3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libosdcpu3-4-3" {>= "3.4.3"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libosdgpu3.4.3_3.4.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opensubdiv/libosdgpu3.4.3_3.4.3-3_amd64.deb"
+}

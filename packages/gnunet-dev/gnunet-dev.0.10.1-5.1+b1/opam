@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnunet-dev_0.10.1-5.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnunet-dev"]
+]
+depends: [
+  "gnunet" {= "0.10.1-5.1+b1"}
+  "libextractor-dev" {>= "1-0.6.3"}
+  "libgcrypt20-dev" {>= "1.6"}
+  "libmicrohttpd-dev" {>= "0.9.33"}
+]
+extra-source "gnunet-dev_0.10.1-5.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnunet/gnunet-dev_0.10.1-5.1+b1_amd64.deb"
+}

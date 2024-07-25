@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxosd2_2.2.14-2.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxosd2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libx11-6"
+  "libxext6"
+  "libxinerama1"
+]
+conflicts: [
+  "libxosd"
+]
+extra-source "libxosd2_2.2.14-2.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xosd/libxosd2_2.2.14-2.1+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mfoc_0.10.7+git20180724-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mfoc"]
+]
+depends: [
+  "libc6" {>= "2.10"}
+  "libnfc5" {>= "1.7.0~rc7"}
+  "libusb-0-1-4" {>= "2-0.1.12"}
+]
+extra-source "mfoc_0.10.7+git20180724-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mfoc/mfoc_0.10.7+git20180724-1_amd64.deb"
+}

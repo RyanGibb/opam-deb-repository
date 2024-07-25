@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhfsp-dev_1.0.4-16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhfsp-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libhfsp0" {= "1.0.4-16"}
+]
+extra-source "libhfsp-dev_1.0.4-16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hfsplus/libhfsp-dev_1.0.4-16_amd64.deb"
+}

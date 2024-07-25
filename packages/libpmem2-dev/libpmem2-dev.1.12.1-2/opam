@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpmem2-dev_1.12.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpmem2-dev"]
+]
+depends: [
+  "libpmem2" {= "1.12.1-2"}
+]
+extra-source "libpmem2-dev_1.12.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pmdk/libpmem2-dev_1.12.1-2_amd64.deb"
+}

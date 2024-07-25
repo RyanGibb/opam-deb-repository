@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kodi-pvr-zattoo_20.3.3+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kodi-pvr-zattoo"]
+]
+depends: [
+  "kodi"
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "kodi-pvr-zattoo_20.3.3+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kodi-pvr-zattoo/kodi-pvr-zattoo_20.3.3+ds-1_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmnd-snmp_0.4.17-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmnd-snmp"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsnmp30" {>= "5.7.3+dfsg-3~dfsg"}
+  "libx11-6"
+  "libxext6"
+  "libxpm4"
+]
+conflicts: [
+  "wmnd"
+]
+extra-source "wmnd-snmp_0.4.17-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmnd/wmnd-snmp_0.4.17-3_amd64.deb"
+}

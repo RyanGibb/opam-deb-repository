@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dexdump_10.0.0+r36-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dexdump"]
+]
+depends: [
+  "android-libart" {>= "10.0.0+r36"}
+  "android-libbase" {>= "1-10.0.0+r36"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "dexdump_10.0.0+r36-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-art/dexdump_10.0.0+r36-3_amd64.deb"
+}

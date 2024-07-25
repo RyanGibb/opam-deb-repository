@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libchemicaltagger-java_1.6.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libchemicaltagger-java"]
+]
+depends: [
+  "antlr4"
+  "libantlr4-runtime-java"
+  "libapache-opennlp-java" {>= "2.0.0"}
+  "libcommons-io-java" {>= "2.11.0"}
+  "libcommons-lang-java" {>= "2.6"}
+  "libjsoup-java" {>= "1.15.3"}
+  "liblog4j2-java" {>= "2.17.2"}
+  "liboscar4-java" {>= "5.2.0"}
+  "libxom-java"
+]
+extra-source "libchemicaltagger-java_1.6.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chemicaltagger/libchemicaltagger-java_1.6.2-2_all.deb"
+}

@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pulseaudio_14.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pulseaudio"]
+]
+depends: [
+  "adduser"
+  "libasound2" {>= "1.2.1.1"}
+  "libasound2-plugins"
+  "libc6" {>= "2.29"}
+  "libcap2" {>= "1-2.10"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libice6" {>= "1-1.0.0"}
+  "libltdl7" {>= "2.4.6"}
+  "liborc-0-4-0" {>= "1-0.4.25"}
+  "libpulse0" {= "14.2-2"}
+  "libsm6"
+  "libsndfile1" {>= "1.0.20"}
+  "libsoxr0" {>= "0.1.1"}
+  "libspeexdsp1" {>= "1.2~beta3.2-1"}
+  "libstdc++6" {>= "4.1.1"}
+  "libsystemd0"
+  "libtdb1" {>= "1.2.7+git20101214"}
+  "libudev1" {>= "183"}
+  "libwebrtc-audio-processing1"
+  "libx11-6"
+  "libx11-xcb1" {>= "2-1.7.0"}
+  "libxcb1"
+  "libxtst6"
+  "lsb-base" {>= "3.2-13"}
+  "pulseaudio-utils"
+]
+extra-source "pulseaudio_14.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pulseaudio/pulseaudio_14.2-2_amd64.deb"
+}

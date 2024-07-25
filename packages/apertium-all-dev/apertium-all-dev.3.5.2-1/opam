@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-all-dev_3.5.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-all-dev"]
+]
+depends: [
+  "apertium-dev" {>= "3.5.2-1"}
+  "automake"
+  "cg3" {>= "1.1.6"}
+  "gawk"
+  "git"
+  "hfst" {>= "3.14.0"}
+  "libcg3-dev" {>= "1.1.6"}
+  "libhfst-dev" {>= "3.14.0"}
+  "libtool"
+  "locales"
+  "pkg-config"
+  "subversion"
+]
+extra-source "apertium-all-dev_3.5.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium/apertium-all-dev_3.5.2-1_all.deb"
+}

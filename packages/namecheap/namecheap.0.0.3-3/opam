@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i namecheap_0.0.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r namecheap"]
+]
+depends: [
+  "python3-any"
+  "python3-namecheap" {= "0.0.3-3"}
+]
+extra-source "namecheap_0.0.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/namecheap/namecheap_0.0.3-3_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tryton-server-nginx_6.0.29-2+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tryton-server-nginx"]
+]
+depends: [
+  "tryton-server"
+  "tryton-server-uwsgi"
+  "ucf"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("python3-certbot-nginx" | "nginx")
+]
+extra-source "tryton-server-nginx_6.0.29-2+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tryton-server/tryton-server-nginx_6.0.29-2+deb12u2_all.deb"
+}

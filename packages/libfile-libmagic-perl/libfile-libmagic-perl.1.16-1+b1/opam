@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfile-libmagic-perl_1.16-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfile-libmagic-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmagic1" {>= "5.13"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libfile-libmagic-perl_1.16-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfile-libmagic-perl/libfile-libmagic-perl_1.16-1+b1_amd64.deb"
+}

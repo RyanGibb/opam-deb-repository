@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmaven-site-plugin-java_3.12.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmaven-site-plugin-java"]
+]
+depends: [
+  "libdoxia-core-java" {>= "1.11.1"}
+  "libdoxia-java" {>= "1.11.1"}
+  "libdoxia-sitetools-java" {>= "1.11.1"}
+  "libjetty9-java"
+  "libmaven-archiver-java" {>= "3.6.0"}
+  "libmaven-parent-java" {>= "35"}
+  "libmaven-reporting-api-java" {>= "3.1.1"}
+  "libmaven-reporting-exec-java" {>= "1.6.0"}
+  "libmaven-shared-utils-java" {>= "3.3.4"}
+  "libplexus-archiver-java" {>= "4.6.1"}
+  "libplexus-i18n-java" {>= "1.0-beta-10"}
+  "libplexus-utils2-java" {>= "2.x"}
+]
+extra-source "libmaven-site-plugin-java_3.12.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maven-site-plugin/libmaven-site-plugin-java_3.12.1-2_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx5-chewing_5.0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx5-chewing"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libchewing3" {>= "0.4.0"}
+  "libfcitx5config6" {>= "5.0.3"}
+  "libfcitx5core7" {>= "5.0.3"}
+  "libfcitx5utils2" {>= "5.0.3"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "fcitx5-chewing_5.0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx5-chewing/fcitx5-chewing_5.0.3-1_amd64.deb"
+}

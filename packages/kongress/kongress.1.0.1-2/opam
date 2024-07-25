@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kongress_1.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kongress"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libkf5calendarcore5abi2" {>= "5-5.67.0"}
+  "libkf5configcore5" {>= "5.63.0~"}
+  "libkf5coreaddons5" {>= "5.63.0~"}
+  "libkf5dbusaddons5" {>= "5.63.0~"}
+  "libkf5i18n5" {>= "5.63.0~"}
+  "libkf5notifications5" {>= "5.63.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5network5" {>= "5.7.0~"}
+  "libqt5qml5" {>= "5.7.0~"}
+  "libqt5widgets5" {>= "5.7.0~"}
+  "libstdc++6" {>= "5"}
+  "qml-module-org-kde-kirigami2"
+  "qml-module-qtqml"
+  "qml-module-qtqml-models2"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+]
+extra-source "kongress_1.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kongress/kongress_1.0.1-2_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclucene-core1v5_2.3.3.4+dfsg-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclucene-core1v5"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libclucene-core1"
+]
+extra-source "libclucene-core1v5_2.3.3.4+dfsg-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clucene-core/libclucene-core1v5_2.3.3.4+dfsg-1.1_amd64.deb"
+}

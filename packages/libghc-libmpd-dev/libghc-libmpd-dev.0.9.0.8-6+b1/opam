@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-libmpd-dev_0.9.0.8-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-libmpd-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-attoparsec-dev"
+  "libghc-data-default-class-dev"
+  "libghc-network-dev"
+  "libghc-old-locale-dev"
+  "libghc-utf8-string-dev"
+  "libgmp10"
+]
+extra-source "libghc-libmpd-dev_0.9.0.8-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-libmpd/libghc-libmpd-dev_0.9.0.8-6+b1_amd64.deb"
+}

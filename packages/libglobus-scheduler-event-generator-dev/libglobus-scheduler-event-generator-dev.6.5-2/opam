@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-scheduler-event-generator-dev_6.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-scheduler-event-generator-dev"]
+]
+depends: [
+  "libglobus-common-dev" {>= "15"}
+  "libglobus-gram-protocol-dev" {>= "11"}
+  "libglobus-scheduler-event-generator0" {= "6.5-2"}
+  "libglobus-xio-dev" {>= "3"}
+  "libglobus-xio-gsi-driver-dev" {>= "2"}
+  "libltdl-dev"
+]
+extra-source "libglobus-scheduler-event-generator-dev_6.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-scheduler-event-generator/libglobus-scheduler-event-generator-dev_6.5-2_amd64.deb"
+}

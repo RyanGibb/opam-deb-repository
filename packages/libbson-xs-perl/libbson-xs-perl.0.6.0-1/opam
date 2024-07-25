@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbson-xs-perl_0.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbson-xs-perl"]
+]
+depends: [
+  "libboolean-perl"
+  "libbson-perl" {>= "1.10.1"}
+  "libc6" {>= "2.14"}
+  "perl" {>= "5.28.1-1"}
+  "perl-base"
+]
+extra-source "libbson-xs-perl_0.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbson-xs-perl/libbson-xs-perl_0.6.0-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aodh-doc_15.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aodh-doc"]
+]
+depends: [
+  "adduser"
+  "aodh-common" {= "15.0.0-3"}
+  "debconf"
+  "lsb-base"
+  "python3-openstackclient"
+  "python3-q-text-as-data"
+]
+extra-source "aodh-doc_15.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aodh/aodh-doc_15.0.0-3_all.deb"
+}

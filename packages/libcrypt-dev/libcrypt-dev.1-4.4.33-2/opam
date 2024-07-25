@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypt-dev_1:4.4.33-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypt-dev"]
+]
+depends: [
+  "libcrypt1" {= "1-4.4.33-2"}
+]
+conflicts: [
+  "libcrypt1-dev"
+  "libcrypt2-dev"
+]
+extra-source "libcrypt-dev_1:4.4.33-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxcrypt/libcrypt-dev_4.4.33-2_amd64.deb"
+}

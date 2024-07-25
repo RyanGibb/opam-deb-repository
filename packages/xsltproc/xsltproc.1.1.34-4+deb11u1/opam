@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xsltproc_1.1.34-4+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xsltproc"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libxml2" {>= "2.7.4"}
+  "libxslt1-1" {>= "1.1.25"}
+]
+extra-source "xsltproc_1.1.34-4+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxslt/xsltproc_1.1.34-4+deb11u1_amd64.deb"
+}

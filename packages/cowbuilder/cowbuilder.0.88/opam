@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cowbuilder_0.88_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cowbuilder"]
+]
+depends: [
+  "cowdancer"
+  "libc6" {>= "2.14"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "pbuilder"
+]
+extra-source "cowbuilder_0.88_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cowdancer/cowbuilder_0.88_amd64.deb"
+}

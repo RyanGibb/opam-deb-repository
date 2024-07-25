@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liboctave-dev_4.4.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liboctave-dev"]
+]
+depends: [
+  "g++"
+  "gcc"
+  "gfortran"
+  "libc6" {>= "2.14"}
+  "libfftw3-dev"
+  "libgcc1" {>= "1-3.0"}
+  "libgomp1" {>= "4.2.1"}
+  "libncurses5-dev"
+  "liboctave6" {= "4.4.1-5"}
+  "libstdc++6" {>= "5.2"}
+  "octave" {= "4.4.1-5"}
+  ("libblas-dev" | "libblas-so")
+  ("libgl1-mesa-dev" | "libgl-dev")
+  ("libhdf5-dev" | "libhdf5-openmpi-dev" | "libhdf5-mpich-dev")
+  ("liblapack-dev" | "liblapack-so")
+  ("libreadline-dev" | "libreadline-gplv2-dev")
+]
+extra-source "liboctave-dev_4.4.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave/liboctave-dev_4.4.1-5_amd64.deb"
+}

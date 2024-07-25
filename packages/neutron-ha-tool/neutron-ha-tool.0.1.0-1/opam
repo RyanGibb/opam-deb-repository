@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i neutron-ha-tool_0.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r neutron-ha-tool"]
+]
+depends: [
+  "bind9-host"
+  "openssl"
+  "python3-any"
+  "python3-jinja2"
+  "python3-keystoneclient"
+  "python3-neutronclient"
+  "python3-openstackclient"
+  "python3-paramiko"
+  "python3-pbr"
+  "python3-retrying"
+]
+extra-source "neutron-ha-tool_0.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neutron-ha-tool/neutron-ha-tool_0.1.0-1_all.deb"
+}

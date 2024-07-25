@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coinor-libipopt1v5-dbg_3.11.9-2.2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coinor-libipopt1v5-dbg"]
+]
+depends: [
+  "coinor-libipopt1v5" {= "3.11.9-2.2+b4"}
+]
+conflicts: [
+  "coinor-libipopt1-dbg"
+]
+extra-source "coinor-libipopt1v5-dbg_3.11.9-2.2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coinor-ipopt/coinor-libipopt1v5-dbg_3.11.9-2.2+b4_amd64.deb"
+}

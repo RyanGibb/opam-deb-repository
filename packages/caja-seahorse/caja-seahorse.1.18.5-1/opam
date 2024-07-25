@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i caja-seahorse_1.18.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r caja-seahorse"]
+]
+depends: [
+  "caja"
+  "libc6" {>= "2.4"}
+  "libcaja-extension1" {>= "1.18.0"}
+  "libcryptui0a" {>= "3.12.2"}
+  "libdbus-glib-1-2" {>= "0.78"}
+  "libgcr-base-3-1" {>= "3.8.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgpgme11" {>= "1.2.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libnotify4" {>= "0.7.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "caja-seahorse_1.18.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/caja-seahorse/caja-seahorse_1.18.5-1_amd64.deb"
+}

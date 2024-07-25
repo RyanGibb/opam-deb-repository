@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libomxil-bellagio0-components-vorbis_0.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libomxil-bellagio0-components-vorbis"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libomxil-bellagio0"
+  "libvorbis0a" {>= "1.1.2"}
+]
+extra-source "libomxil-bellagio0-components-vorbis_0.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libomxvorbis/libomxil-bellagio0-components-vorbis_0.1-4_amd64.deb"
+}

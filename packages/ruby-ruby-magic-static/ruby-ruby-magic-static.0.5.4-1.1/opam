@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-ruby-magic-static_0.5.4-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-ruby-magic-static"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmagic1" {>= "5.32"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.2"}
+  "ruby-mini-portile2" {>= "2.5"}
+]
+extra-source "ruby-ruby-magic-static_0.5.4-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-ruby-magic-static/ruby-ruby-magic-static_0.5.4-1.1_amd64.deb"
+}

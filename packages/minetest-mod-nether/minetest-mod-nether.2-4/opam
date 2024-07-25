@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i minetest-mod-nether_2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r minetest-mod-nether"]
+]
+depends: [
+  "minetest-mod-moreblocks" {>= "0~20161028"}
+  ("minetest" | "minetest-server")
+]
+extra-source "minetest-mod-nether_2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/minetest-mod-nether/minetest-mod-nether_2-4_all.deb"
+}

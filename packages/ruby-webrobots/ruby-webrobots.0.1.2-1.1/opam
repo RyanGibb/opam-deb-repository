@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-webrobots_0.1.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-webrobots"]
+]
+depends: [
+  "racc"
+  "ruby-nokogiri"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-webrobots_0.1.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-webrobots/ruby-webrobots_0.1.2-1.1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rsyslog-relp_8.1901.0-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rsyslog-relp"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "librelp0" {>= "1.2.16"}
+  "rsyslog" {= "8.1901.0-1+deb10u2"}
+]
+extra-source "rsyslog-relp_8.1901.0-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rsyslog/rsyslog-relp_8.1901.0-1+deb10u2_amd64.deb"
+}

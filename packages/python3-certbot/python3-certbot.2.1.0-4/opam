@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-certbot_2.1.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-certbot"]
+]
+depends: [
+  "python3-acme"
+  "python3-any"
+  "python3-configargparse"
+  "python3-configobj"
+  "python3-cryptography" {>= "2.5.0"}
+  "python3-distro"
+  "python3-josepy" {>= "1.13.0~"}
+  "python3-parsedatetime" {>= "2.4"}
+  "python3-pkg-resources"
+  "python3-requests"
+  "python3-rfc3339"
+  "python3-tz" {>= "2019.3"}
+]
+extra-source "python3-certbot_2.1.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-certbot/python3-certbot_2.1.0-4_all.deb"
+}

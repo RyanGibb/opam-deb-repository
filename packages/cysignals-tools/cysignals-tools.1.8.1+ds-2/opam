@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cysignals-tools_1.8.1+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cysignals-tools"]
+]
+depends: [
+  "gdb"
+  "python3-any" {>= "3.6~"}
+  "python3-distutils"
+]
+extra-source "cysignals-tools_1.8.1+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cysignals/cysignals-tools_1.8.1+ds-2_all.deb"
+}

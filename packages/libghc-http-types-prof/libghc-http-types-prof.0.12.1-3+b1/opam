@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-http-types-prof_0.12.1-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-http-types-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-case-insensitive-prof"
+  "libghc-http-types-dev" {= "0.12.1-3+b1"}
+]
+extra-source "libghc-http-types-prof_0.12.1-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-http-types/libghc-http-types-prof_0.12.1-3+b1_amd64.deb"
+}

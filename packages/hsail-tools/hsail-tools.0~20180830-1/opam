@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hsail-tools_0~20180830-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hsail-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdwarf1" {>= "20160507+git20160523.9086738"}
+  "libelf1" {>= "0.131"}
+  "libgcc-s1"
+  "libstdc++6" {>= "9"}
+]
+extra-source "hsail-tools_0~20180830-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hsail-tools/hsail-tools_0~20180830-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhidapi-libusb0_0.8.0~rc1+git20140818.d17db57+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhidapi-libusb0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libusb-1-0-0" {>= "2-1.0.9"}
+]
+extra-source "libhidapi-libusb0_0.8.0~rc1+git20140818.d17db57+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hidapi/libhidapi-libusb0_0.8.0~rc1+git20140818.d17db57+dfsg-2_amd64.deb"
+}

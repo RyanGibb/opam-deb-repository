@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-axios_1.2.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-axios"]
+]
+depends: [
+  "node-follow-redirects" {>= "1.13.0"}
+  "node-form-data" {>= "4"}
+  "node-proxy-from-env"
+]
+extra-source "node-axios_1.2.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-axios/node-axios_1.2.1+dfsg-1_all.deb"
+}

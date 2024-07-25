@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i terser_5.16.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r terser"]
+]
+depends: [
+  "node-commander" {>= "7"}
+  "node-terser" {= "5.16.5-2"}
+  "nodejs-any"
+]
+extra-source "terser_5.16.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-terser/terser_5.16.5-2_all.deb"
+}

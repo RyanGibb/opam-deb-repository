@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbenchmark1_1.5.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbenchmark1"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.4"}
+  "libstdc++6" {>= "6"}
+]
+extra-source "libbenchmark1_1.5.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/benchmark/libbenchmark1_1.5.2-2_amd64.deb"
+}

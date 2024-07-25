@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-doctrine-persistence_2.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-doctrine-persistence"]
+]
+depends: [
+  "php-common"
+  "php-doctrine-annotations" {< "2~~"}
+  "php-doctrine-annotations" {>= "1.0"}
+  "php-doctrine-cache" {< "2~~"}
+  "php-doctrine-cache" {>= "1.0"}
+  "php-doctrine-collections" {< "2~~"}
+  "php-doctrine-collections" {>= "1.0"}
+  "php-doctrine-event-manager" {< "2~~"}
+  "php-doctrine-event-manager" {>= "1.0"}
+]
+extra-source "php-doctrine-persistence_2.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-doctrine-persistence/php-doctrine-persistence_2.1.0-2_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mp3cd_1.27.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mp3cd"]
+]
+depends: [
+  "cdrdao"
+  "gstreamer1-0-tools"
+  "libconfig-simple-perl"
+  "libsox-fmt-mp3"
+  "normalize-audio"
+  "perl"
+  "sox" {>= "14.1.0-1"}
+]
+extra-source "mp3cd_1.27.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mp3cd/mp3cd_1.27.0-3_all.deb"
+}

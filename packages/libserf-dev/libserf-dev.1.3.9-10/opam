@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libserf-dev_1.3.9-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libserf-dev"]
+]
+depends: [
+  "libapr1-dev"
+  "libaprutil1-dev"
+  "libserf-1-1" {= "1.3.9-10"}
+  "libssl-dev"
+]
+extra-source "libserf-dev_1.3.9-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/serf/libserf-dev_1.3.9-10_amd64.deb"
+}

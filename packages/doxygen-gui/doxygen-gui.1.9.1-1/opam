@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i doxygen-gui_1.9.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r doxygen-gui"]
+]
+depends: [
+  "doxygen"
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.12.5+dfsg-3"}
+  "libqt5xml5" {>= "5.12.5+dfsg-3"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.12.5+dfsg-3"} | "libqt5gui5-gles" {>= "5.12.5+dfsg-3"})
+]
+extra-source "doxygen-gui_1.9.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/doxygen/doxygen-gui_1.9.1-1_amd64.deb"
+}

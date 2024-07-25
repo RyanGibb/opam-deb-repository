@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnzb0v5_0.0.20050629-6.2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnzb0v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "libxml2" {>= "2.7.4"}
+]
+conflicts: [
+  "libnzb0"
+  "libnzb0c2a"
+]
+extra-source "libnzb0v5_0.0.20050629-6.2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnzb/libnzb0v5_0.0.20050629-6.2+b2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i only_0.0.6.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r only"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libffi8" {>= "3.4"}
+  "libgmp10" {>= "2-6.2.1+dfsg"}
+]
+extra-source "only_0.0.6.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/only/only_0.0.6.0-2+b2_amd64.deb"
+}

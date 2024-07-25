@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-libnativebridge-dev_1:8.1.0+r23-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-libnativebridge-dev"]
+]
+depends: [
+  "android-libnativebridge" {= "1-8.1.0+r23-5"}
+  "android-libnativehelper-dev"
+]
+extra-source "android-libnativebridge-dev_1:8.1.0+r23-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-system-core/android-libnativebridge-dev_8.1.0+r23-5_amd64.deb"
+}

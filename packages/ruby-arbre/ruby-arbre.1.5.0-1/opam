@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-arbre_1.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-arbre"]
+]
+depends: [
+  "ruby-activesupport" {< "2-7.1"}
+  "ruby-activesupport" {>= "2-3.0.0"}
+  "ruby-ruby2-keywords" {< "1.0"}
+  "ruby-ruby2-keywords" {>= "0.0.2"}
+]
+extra-source "ruby-arbre_1.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-arbre/ruby-arbre_1.5.0-1_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libparted-dev_3.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libparted-dev"]
+]
+depends: [
+  "libblkid-dev"
+  "libc6-dev"
+  "libdevmapper-dev" {>= "1.02.33"}
+  "libparted-fs-resize0" {= "3.4-1"}
+  "libparted2" {= "3.4-1"}
+  "uuid-dev"
+]
+extra-source "libparted-dev_3.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/parted/libparted-dev_3.4-1_amd64.deb"
+}

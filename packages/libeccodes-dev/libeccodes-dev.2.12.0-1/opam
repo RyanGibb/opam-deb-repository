@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libeccodes-dev_2.12.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libeccodes-dev"]
+]
+depends: [
+  "libaec-dev"
+  "libeccodes0" {= "2.12.0-1"}
+  "libjpeg-dev"
+  "libpng-dev"
+  "zlib1g-dev"
+]
+conflicts: [
+  "libgrib-api-dev"
+]
+extra-source "libeccodes-dev_2.12.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eccodes/libeccodes-dev_2.12.0-1_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgstreamermm-1.0-1_1.10.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgstreamermm-1.0-1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libglibmm-2-4-1v5" {>= "2.54.0"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.8.0"}
+  "libgstreamer1-0-0" {>= "1.8.0"}
+  "libsigc++-2-0-0v5" {>= "2.2.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libgstreamermm-1.0-1_1.10.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gstreamermm-1.0/libgstreamermm-1.0-1_1.10.0+dfsg-2_amd64.deb"
+}

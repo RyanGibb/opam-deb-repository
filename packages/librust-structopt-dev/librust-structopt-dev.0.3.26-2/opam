@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-structopt-dev_0.3.26-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-structopt-dev"]
+]
+depends: [
+  "librust-clap-2-dev" {>= "2.33-~~"}
+  "librust-lazy-static-dev"
+  "librust-structopt-derive-0-4-18+default-dev"
+]
+extra-source "librust-structopt-dev_0.3.26-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-structopt/librust-structopt-dev_0.3.26-2_amd64.deb"
+}

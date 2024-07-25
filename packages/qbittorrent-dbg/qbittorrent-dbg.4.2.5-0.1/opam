@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qbittorrent-dbg_4.2.5-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qbittorrent-dbg"]
+]
+depends: [
+  ("qbittorrent" {= "4.2.5-0.1"} | "qbittorrent-nox" {= "4.2.5-0.1"})
+]
+extra-source "qbittorrent-dbg_4.2.5-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qbittorrent/qbittorrent-dbg_4.2.5-0.1_amd64.deb"
+}

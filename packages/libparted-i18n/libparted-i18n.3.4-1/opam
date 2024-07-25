@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libparted-i18n_3.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libparted-i18n"]
+]
+depends: [
+  "libparted2"
+]
+conflicts: [
+  "libparted0-i18n"
+]
+extra-source "libparted-i18n_3.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/parted/libparted-i18n_3.4-1_all.deb"
+}

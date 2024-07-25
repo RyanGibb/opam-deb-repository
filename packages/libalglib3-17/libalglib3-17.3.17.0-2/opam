@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libalglib3.17_3.17.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libalglib3.17"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libalglib3.17_3.17.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alglib/libalglib3.17_3.17.0-2_amd64.deb"
+}

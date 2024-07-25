@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nd_0.8.2-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nd"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmhash2"
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "nd_0.8.2-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nd/nd_0.8.2-8+b1_amd64.deb"
+}

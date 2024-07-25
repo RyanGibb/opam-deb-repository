@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xmms2_0.8+dfsg-21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xmms2"]
+]
+depends: [
+  "xmms2-client-cli"
+  "xmms2-core"
+  "xmms2-icon"
+  "xmms2-plugin-id3v2"
+  "xmms2-plugin-mad"
+  "xmms2-plugin-vorbis"
+  ("xmms2-plugin-alsa" | "xmms2-plugin-output")
+]
+conflicts: [
+  "xmms2-plugin-nulstripper"
+]
+extra-source "xmms2_0.8+dfsg-21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmms2/xmms2_0.8+dfsg-21_amd64.deb"
+}

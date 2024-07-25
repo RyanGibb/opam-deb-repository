@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mpc123_0.2.4-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mpc123"]
+]
+depends: [
+  "libao4" {>= "1.1.0"}
+  "libc6" {>= "2.4"}
+  "libmpcdec6" {>= "1-0.1~r435"}
+]
+extra-source "mpc123_0.2.4-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpc123/mpc123_0.2.4-5_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmo-ranap3_0.6.1+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmo-ranap3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libosmo-sigtran5" {>= "1.3.0"}
+  "libosmocore16" {>= "1.4.0"}
+  "libosmogsm15" {>= "1.4.0"}
+  "libosmovty4" {>= "1.4.0"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+  "osmo-libasn1c1" {>= "0.9.30"}
+]
+extra-source "libosmo-ranap3_0.6.1+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osmo-iuh/libosmo-ranap3_0.6.1+dfsg1-2_amd64.deb"
+}

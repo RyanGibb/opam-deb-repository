@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt5-qmake_5.15.8+dfsg-11+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt5-qmake"]
+]
+depends: [
+  "qt5-qmake-bin" {= "5.15.8+dfsg-11+deb12u2"}
+  "qtchooser" {>= "55-gc9562a1-1~"}
+]
+extra-source "qt5-qmake_5.15.8+dfsg-11+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtbase-opensource-src/qt5-qmake_5.15.8+dfsg-11+deb12u2_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i datefudge_1.24_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r datefudge"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+extra-source "datefudge_1.24_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/datefudge/datefudge_1.24_amd64.deb"
+}

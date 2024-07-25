@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i munin-libvirt-plugins_0.0.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r munin-libvirt-plugins"]
+]
+depends: [
+  "munin-node"
+  "python"
+  "python-libvirt"
+  "python-libxml2"
+]
+extra-source "munin-libvirt-plugins_0.0.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/munin-libvirt-plugins/munin-libvirt-plugins_0.0.6-1_all.deb"
+}

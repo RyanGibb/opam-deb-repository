@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pcs_0.5+debian-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pcs"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-any" {>= "2.6.6-7~"}
+  "python-pypcap"
+]
+extra-source "python-pcs_0.5+debian-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pcs/python-pcs_0.5+debian-2_all.deb"
+}

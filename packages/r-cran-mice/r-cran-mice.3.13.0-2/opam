@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-mice_3.13.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-mice"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-cran-broom"
+  "r-cran-cpp11"
+  "r-cran-dplyr"
+  "r-cran-generics"
+  "r-cran-lattice"
+  "r-cran-rcpp"
+  "r-cran-rlang"
+  "r-cran-tidyr"
+]
+extra-source "r-cran-mice_3.13.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-mice/r-cran-mice_3.13.0-2_amd64.deb"
+}

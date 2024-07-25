@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-gtkclutter-1.0_1.8.4-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-gtkclutter-1.0"]
+]
+depends: [
+  "gir1-2-clutter-1-0" {>= "1.23.7"}
+  "gir1-2-gtk-3-0" {>= "3.21.0"}
+  "libclutter-gtk-1-0-0" {>= "1.8.4"}
+]
+extra-source "gir1.2-gtkclutter-1.0_1.8.4-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clutter-gtk/gir1.2-gtkclutter-1.0_1.8.4-4+b1_amd64.deb"
+}

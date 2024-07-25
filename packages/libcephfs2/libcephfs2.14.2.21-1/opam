@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcephfs2_14.2.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcephfs2"]
+]
+depends: [
+  "libc6" {>= "2.30"}
+  "libgcc-s1" {>= "3.0"}
+  "librados2" {>= "12.0.3"}
+  "libstdc++6" {>= "9"}
+]
+conflicts: [
+  "libceph"
+  "libceph1"
+  "libcephfs"
+]
+extra-source "libcephfs2_14.2.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/libcephfs2_14.2.21-1_amd64.deb"
+}

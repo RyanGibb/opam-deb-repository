@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dssi-host-jack_1.1.1~dfsg0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dssi-host-jack"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.14"}
+  "liblo7" {>= "0.26~repack"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "dssi-host-jack_1.1.1~dfsg0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dssi/dssi-host-jack_1.1.1~dfsg0-1+b2_amd64.deb"
+}

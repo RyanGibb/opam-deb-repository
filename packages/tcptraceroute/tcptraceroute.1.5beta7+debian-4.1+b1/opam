@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tcptraceroute_1.5beta7+debian-4.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tcptraceroute"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libnet1" {>= "1.1.2.1"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "tcptraceroute_1.5beta7+debian-4.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tcptraceroute/tcptraceroute_1.5beta7+debian-4.1+b1_amd64.deb"
+}

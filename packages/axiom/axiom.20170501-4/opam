@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i axiom_20170501-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r axiom"]
+]
+depends: [
+  "axiom-databases" {= "20170501-4"}
+  "libc6" {>= "2.15"}
+  "libgmp10"
+  "libreadline7" {>= "6.0"}
+  "libx11-6"
+  "libxpm4"
+]
+extra-source "axiom_20170501-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/axiom/axiom_20170501-4_amd64.deb"
+}

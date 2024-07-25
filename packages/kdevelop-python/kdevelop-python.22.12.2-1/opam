@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kdevelop-python_22.12.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kdevelop-python"]
+]
+depends: [
+  "kdevelop-python-data" {>= "22.12.2-1"}
+  "kdevelop510-libs" {>= "4-22.12.2"}
+  "libc6" {>= "2.14"}
+  "libkf5configcore5" {>= "4.97.0"}
+  "libkf5coreaddons5" {>= "4.99.0"}
+  "libkf5i18n5" {>= "5.78.0~"}
+  "libkf5parts5" {>= "4.96.0"}
+  "libkf5texteditor5" {>= "5.78.0~"}
+  "libkf5threadweaver5" {>= "5.78.0~"}
+  "libkf5widgetsaddons5" {>= "4.96.0"}
+  "libkf5xmlgui5" {>= "4.96.0"}
+  "libpython3-11" {>= "3.11.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.15.0~"}
+  "libstdc++6" {>= "5"}
+  "python3-11"
+  ("libqt5gui5" {>= "5.15.0~"} | "libqt5gui5-gles" {>= "5.15.0~"})
+]
+extra-source "kdevelop-python_22.12.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdevelop-python/kdevelop-python_22.12.2-1_amd64.deb"
+}

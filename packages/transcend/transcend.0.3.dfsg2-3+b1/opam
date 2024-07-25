@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i transcend_0.3.dfsg2-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r transcend"]
+]
+depends: [
+  "freeglut3"
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libportaudio2" {>= "19+svn20101113"}
+  "libstdc++6" {>= "5"}
+  ("libgl1-mesa-glx" | "libgl1")
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "transcend_0.3.dfsg2-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/transcend/transcend_0.3.dfsg2-3+b1_amd64.deb"
+}

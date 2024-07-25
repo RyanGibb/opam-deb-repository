@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i reposurgeon_4.25-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r reposurgeon"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "tzdata"
+]
+extra-source "reposurgeon_4.25-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/reposurgeon/reposurgeon_4.25-1+b4_amd64.deb"
+}

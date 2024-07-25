@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tboot_1.9.12+hg20200718-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tboot"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl1-1" {>= "1.1.1"}
+  "libtspi1" {>= "0.3.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "tboot_1.9.12+hg20200718-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tboot/tboot_1.9.12+hg20200718-1+b1_amd64.deb"
+}

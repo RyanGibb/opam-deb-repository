@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-backtrace+verify-winapi-dev_0.3.67-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-backtrace+verify-winapi-dev"]
+]
+depends: [
+  "librust-backtrace-dev" {= "0.3.67-2"}
+  "librust-winapi-dev"
+]
+extra-source "librust-backtrace+verify-winapi-dev_0.3.67-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-backtrace/librust-backtrace+verify-winapi-dev_0.3.67-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fakeroot_1.31-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fakeroot"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfakeroot" {>= "1.31-1.2"}
+]
+extra-source "fakeroot_1.31-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fakeroot/fakeroot_1.31-1.2_amd64.deb"
+}

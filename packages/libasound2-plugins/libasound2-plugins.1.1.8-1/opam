@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libasound2-plugins_1.1.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libasound2-plugins"]
+]
+depends: [
+  "libasound2" {>= "1.1.7"}
+  "libavcodec-extra58"
+  "libavresample4" {>= "7-4.0"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.15"}
+  "libpulse0" {>= "0.99.1"}
+  "libsamplerate0" {>= "0.1.7"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "libasound2-plugins_1.1.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alsa-plugins/libasound2-plugins_1.1.8-1_amd64.deb"
+}

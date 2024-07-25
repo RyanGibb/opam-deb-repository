@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-modelr_0.1.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-modelr"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-cran-broom"
+  "r-cran-magrittr"
+  "r-cran-purrr" {>= "0.2.2"}
+  "r-cran-rlang" {>= "1.0.6"}
+  "r-cran-tibble"
+  "r-cran-tidyr" {>= "0.8.0"}
+  "r-cran-tidyselect"
+  "r-cran-vctrs"
+]
+extra-source "r-cran-modelr_0.1.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-modelr/r-cran-modelr_0.1.10-1_all.deb"
+}

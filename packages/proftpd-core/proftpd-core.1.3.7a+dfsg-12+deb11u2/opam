@@ -1,0 +1,36 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i proftpd-core_1.3.7a+dfsg-12+deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r proftpd-core"]
+]
+depends: [
+  "adduser"
+  "debianutils" {>= "1.21.0"}
+  "libacl1" {>= "2.2.23"}
+  "libc6" {>= "2.25"}
+  "libcap2" {>= "1-2.10"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libhiredis0-14" {>= "0.14.0"}
+  "libmemcached11"
+  "libmemcachedutil2"
+  "libncursesw6" {>= "6"}
+  "libpam-runtime" {>= "0.76-13.1"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libpcre3"
+  "libssl1-1" {>= "1.1.0"}
+  "libtinfo6" {>= "6"}
+  "lsb-base" {>= "3.0-6"}
+  "netbase" {>= "4.13"}
+  "sed" {>= "4.1.5"}
+  "ucf" {>= "0.30"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "ftp-server"
+  "proftpd-mod-dnsbl"
+]
+extra-source "proftpd-core_1.3.7a+dfsg-12+deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/proftpd-dfsg/proftpd-core_1.3.7a+dfsg-12+deb11u2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwebrtc-audio-processing1_0.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwebrtc-audio-processing1"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-4.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libwebrtc-audio-processing1_0.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/webrtc-audio-processing/libwebrtc-audio-processing1_0.3-1_amd64.deb"
+}

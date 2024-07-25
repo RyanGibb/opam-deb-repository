@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-binding-of-caller_0.7.2+debian1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-binding-of-caller"]
+]
+depends: [
+  "ruby-debug-inspector" {>= "0.0.1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-binding-of-caller_0.7.2+debian1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-binding-of-caller/ruby-binding-of-caller_0.7.2+debian1-3_all.deb"
+}

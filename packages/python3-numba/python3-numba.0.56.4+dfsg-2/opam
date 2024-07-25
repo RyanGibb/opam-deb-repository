@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-numba_0.56.4+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-numba"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-llvmlite" {>= "0.39~"}
+  "python3-numpy"
+  "python3-numpy" {< "1-1.25"}
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-pkg-resources"
+  "python3-scipy"
+]
+extra-source "python3-numba_0.56.4+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/numba/python3-numba_0.56.4+dfsg-2_amd64.deb"
+}

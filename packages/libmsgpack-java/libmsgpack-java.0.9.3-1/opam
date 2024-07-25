@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmsgpack-java_0.9.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmsgpack-java"]
+]
+depends: [
+  "libjackson2-databind-java"
+  "libmaven-compiler-plugin-java" {>= "3.8.1"}
+  "libmaven-jar-plugin-java" {>= "3.1.2"}
+]
+extra-source "libmsgpack-java_0.9.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/msgpack-java/libmsgpack-java_0.9.3-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-13-debversion_1.1.1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-13-debversion"]
+]
+depends: [
+  "libapt-pkg6-0" {>= "0.8.0"}
+  "libc6" {>= "2.2.5"}
+  "postgresql-13"
+]
+extra-source "postgresql-13-debversion_1.1.1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-debversion/postgresql-13-debversion_1.1.1-4+b1_amd64.deb"
+}

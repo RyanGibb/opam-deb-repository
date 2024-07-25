@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdnswire-dev_0.3.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdnswire-dev"]
+]
+depends: [
+  "libdnswire1" {= "0.3.3-4"}
+  "libprotobuf-c-dev"
+  "libtinyframe-dev"
+]
+extra-source "libdnswire-dev_0.3.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dnswire/libdnswire-dev_0.3.3-4_amd64.deb"
+}

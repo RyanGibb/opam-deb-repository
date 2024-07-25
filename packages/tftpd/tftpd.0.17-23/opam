@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tftpd_0.17-23_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tftpd"]
+]
+depends: [
+  "libc6" {>= "2.11"}
+  ("openbsd-inetd" | "inet-superserver")
+]
+extra-source "tftpd_0.17-23_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netkit-tftp/tftpd_0.17-23_amd64.deb"
+}

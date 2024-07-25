@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-dbus-prof_1.2.22-1+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-dbus-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-cereal-prof"
+  "libghc-conduit-prof"
+  "libghc-dbus-dev" {= "1.2.22-1+b6"}
+  "libghc-lens-prof"
+  "libghc-network-prof"
+  "libghc-random-prof"
+  "libghc-split-prof"
+  "libghc-th-lift-prof"
+  "libghc-vector-prof"
+  "libghc-xml-conduit-prof"
+  "libghc-xml-types-prof"
+]
+extra-source "libghc-dbus-prof_1.2.22-1+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-dbus/libghc-dbus-prof_1.2.22-1+b6_amd64.deb"
+}

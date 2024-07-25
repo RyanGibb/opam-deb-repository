@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i toilet_0.3-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r toilet"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libcaca0" {>= "0.99.beta17-1"}
+  "toilet-fonts"
+]
+conflicts: [
+  "figlet (<= 2.2.1-4)"
+]
+extra-source "toilet_0.3-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/toilet/toilet_0.3-1.2_amd64.deb"
+}

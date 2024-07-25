@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmdc3_0.16.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmdc3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libnifti2"
+  "libpng16-16" {>= "1.6.2-1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libmdc2"
+]
+extra-source "libmdc3_0.16.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmedcon/libmdc3_0.16.1+dfsg-1_amd64.deb"
+}

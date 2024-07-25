@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtinyxml2-8_8.0.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtinyxml2-8"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libtinyxml2-8_8.0.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tinyxml2/libtinyxml2-8_8.0.0+dfsg-2_amd64.deb"
+}

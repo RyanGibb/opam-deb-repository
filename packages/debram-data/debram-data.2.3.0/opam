@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debram-data_2.3.0_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debram-data"]
+]
+conflicts: [
+  "debram (<< 0.5.1)"
+]
+extra-source "debram-data_2.3.0_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debram/debram-data_2.3.0_all.deb"
+}

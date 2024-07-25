@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i skycat_3.1.2+starlink1~b+dfsg-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r skycat"]
+]
+depends: [
+  "blt"
+  "iwidgets4"
+  "libc6" {>= "2.35"}
+  "libcfitsio10" {>= "4.2.0~"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtk-img"
+  "libwcstools1" {>= "3.8.4"}
+  "libx11-6"
+  "libxext6"
+  "tcl-expect"
+  "tcl8-6"
+  "tk8-6"
+  "tk8-6-blt2-5" {>= "2.5.3"}
+]
+extra-source "skycat_3.1.2+starlink1~b+dfsg-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/skycat/skycat_3.1.2+starlink1~b+dfsg-7+b2_amd64.deb"
+}

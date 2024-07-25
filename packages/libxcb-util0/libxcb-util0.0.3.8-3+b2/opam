@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxcb-util0_0.3.8-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxcb-util0"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libxcb1"
+]
+extra-source "libxcb-util0_0.3.8-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xcb-util/libxcb-util0_0.3.8-3+b2_amd64.deb"
+}

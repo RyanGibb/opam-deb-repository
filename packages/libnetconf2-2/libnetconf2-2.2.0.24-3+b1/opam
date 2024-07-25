@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnetconf2-2_2.0.24-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnetconf2-2"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libssh-4" {>= "0.8.0"}
+  "libssl3" {>= "3.0.0"}
+  "libyang2" {>= "2.0.0~"}
+]
+extra-source "libnetconf2-2_2.0.24-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnetconf2/libnetconf2-2_2.0.24-3+b1_amd64.deb"
+}

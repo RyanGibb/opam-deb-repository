@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-grib_2.1.4-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-grib"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libeccodes-data"
+  "libeccodes-dev"
+  "libeccodes0" {>= "2.27.1"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-distutils"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-pyproj"
+  ("libg2c-dev" | "libgrib2c-dev")
+]
+extra-source "python3-grib_2.1.4-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pygrib/python3-grib_2.1.4-2+b3_amd64.deb"
+}

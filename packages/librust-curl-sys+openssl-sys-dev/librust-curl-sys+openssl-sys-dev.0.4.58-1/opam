@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-curl-sys+openssl-sys-dev_0.4.58-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-curl-sys+openssl-sys-dev"]
+]
+depends: [
+  "librust-curl-sys-dev" {= "0.4.58-1"}
+  "librust-openssl-sys-0-9+default-dev"
+]
+extra-source "librust-curl-sys+openssl-sys-dev_0.4.58-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-curl-sys/librust-curl-sys+openssl-sys-dev_0.4.58-1_amd64.deb"
+}

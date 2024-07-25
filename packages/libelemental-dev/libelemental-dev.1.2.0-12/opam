@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libelemental-dev_1.2.0-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libelemental-dev"]
+]
+depends: [
+  "libelemental0" {= "1.2.0-12"}
+  "libglibmm-2-4-dev"
+  "libpango1-0-dev"
+]
+conflicts: [
+  "libelemental"
+]
+extra-source "libelemental-dev_1.2.0-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gelemental/libelemental-dev_1.2.0-12_amd64.deb"
+}

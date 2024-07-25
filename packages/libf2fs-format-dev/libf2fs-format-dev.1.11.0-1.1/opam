@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libf2fs-format-dev_1.11.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libf2fs-format-dev"]
+]
+depends: [
+  "libf2fs-format4" {= "1.11.0-1.1"}
+  "uuid-dev"
+]
+extra-source "libf2fs-format-dev_1.11.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/f2fs-tools/libf2fs-format-dev_1.11.0-1.1_amd64.deb"
+}

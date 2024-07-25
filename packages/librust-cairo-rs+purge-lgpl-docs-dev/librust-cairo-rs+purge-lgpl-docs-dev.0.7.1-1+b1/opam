@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-cairo-rs+purge-lgpl-docs-dev_0.7.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-cairo-rs+purge-lgpl-docs-dev"]
+]
+depends: [
+  "librust-cairo-rs-dev" {= "0.7.1-1+b1"}
+  "librust-gtk-rs-lgpl-docs-dev"
+]
+extra-source "librust-cairo-rs+purge-lgpl-docs-dev_0.7.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-cairo-rs/librust-cairo-rs+purge-lgpl-docs-dev_0.7.1-1+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ioprocess_0.15.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ioprocess"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libyajl2" {>= "2.0.4"}
+]
+extra-source "ioprocess_0.15.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ioprocess/ioprocess_0.15.1-3_amd64.deb"
+}

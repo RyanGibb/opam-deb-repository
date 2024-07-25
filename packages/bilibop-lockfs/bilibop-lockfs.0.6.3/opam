@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bilibop-lockfs_0.6.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bilibop-lockfs"]
+]
+depends: [
+  "bilibop-common" {= "0.6.3"}
+  "initramfs-tools"
+  "udev" {>= "242-6"}
+]
+extra-source "bilibop-lockfs_0.6.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bilibop/bilibop-lockfs_0.6.3_amd64.deb"
+}

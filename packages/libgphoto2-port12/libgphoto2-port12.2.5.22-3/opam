@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgphoto2-port12_2.5.22-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgphoto2-port12"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libltdl7" {>= "2.4.6"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+]
+extra-source "libgphoto2-port12_2.5.22-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgphoto2/libgphoto2-port12_2.5.22-3_amd64.deb"
+}

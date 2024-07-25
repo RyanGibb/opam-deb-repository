@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsnapd-glib-dev_1.63-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsnapd-glib-dev"]
+]
+depends: [
+  "gir1-2-snapd-2" {= "1.63-5"}
+  "libglib2-0-dev"
+  "libjson-glib-dev"
+  "libsnapd-glib-2-1" {= "1.63-5"}
+  "libsoup-3-0-dev"
+]
+extra-source "libsnapd-glib-dev_1.63-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snapd-glib/libsnapd-glib-dev_1.63-5_amd64.deb"
+}

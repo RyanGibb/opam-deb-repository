@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i giggle-terminal-view-plugin_0.7-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r giggle-terminal-view-plugin"]
+]
+depends: [
+  "giggle" {= "0.7-5+b1"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libvte-2-91-0"
+]
+extra-source "giggle-terminal-view-plugin_0.7-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/giggle/giggle-terminal-view-plugin_0.7-5+b1_amd64.deb"
+}

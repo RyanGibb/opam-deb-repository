@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-haxml-prof_1:1.25.11-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-haxml-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-haxml-dev" {= "1-1.25.11-1"}
+  "libghc-polyparse-prof"
+  "libghc-random-prof"
+]
+extra-source "libghc-haxml-prof_1:1.25.11-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haxml/libghc-haxml-prof_1.25.11-1_amd64.deb"
+}

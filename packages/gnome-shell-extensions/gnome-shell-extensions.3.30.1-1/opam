@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-shell-extensions_3.30.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-shell-extensions"]
+]
+depends: [
+  "gir1-2-atk-1-0"
+  "gir1-2-clutter-1-0"
+  "gir1-2-gdkpixbuf-2-0"
+  "gir1-2-glib-2-0"
+  "gir1-2-gmenu-3-0"
+  "gir1-2-gtk-3-0"
+  "gir1-2-pango-1-0"
+  "gnome-session-bin" {>= "3.8"}
+  "gnome-settings-daemon" {>= "3.24"}
+  "gnome-shell" {< "3.31"}
+  "gnome-shell" {>= "3.30"}
+  "gvfs" {>= "1.16.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-shell-extensions_3.30.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-shell-extensions/gnome-shell-extensions_3.30.1-1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-pipes-safe-dev_2.3.4-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-pipes-safe-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-monad-control-dev"
+  "libghc-pipes-dev"
+  "libghc-primitive-dev"
+  "libghc-transformers-base-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-pipes-safe-dev_2.3.4-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pipes-safe/libghc-pipes-safe-dev_2.3.4-1+b3_amd64.deb"
+}

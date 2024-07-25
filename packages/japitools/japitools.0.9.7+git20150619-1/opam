@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i japitools_0.9.7+git20150619-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r japitools"]
+]
+depends: [
+  "perl-any"
+  ("default-jre-headless" | "java2-runtime-headless")
+]
+extra-source "japitools_0.9.7+git20150619-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/japitools/japitools_0.9.7+git20150619-1_all.deb"
+}

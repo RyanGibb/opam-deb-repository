@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cloudkitty-tempest-plugin_2.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cloudkitty-tempest-plugin"]
+]
+depends: [
+  "python3-any"
+  "python3-gabbi"
+  "python3-keystoneauth1"
+  "python3-keystoneclient"
+  "python3-oslo-config"
+  "python3-oslo-serialization"
+  "python3-oslo-utils"
+  "python3-pbr"
+  "python3-six" {>= "1.9.0"}
+  "python3-tempest"
+  "tempest"
+]
+extra-source "cloudkitty-tempest-plugin_2.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cloudkitty-tempest-plugin/cloudkitty-tempest-plugin_2.1.0-2_all.deb"
+}

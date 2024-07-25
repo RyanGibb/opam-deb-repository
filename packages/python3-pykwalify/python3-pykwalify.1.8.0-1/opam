@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pykwalify_1.8.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pykwalify"]
+]
+depends: [
+  "python3-any" {>= "3.6~"}
+  "python3-dateutil" {>= "2.8.0"}
+  "python3-docopt" {>= "0.6.2"}
+  "python3-ruamel-yaml" {>= "0.16.0"}
+]
+extra-source "python3-pykwalify_1.8.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pykwalify/python3-pykwalify_1.8.0-1_amd64.deb"
+}

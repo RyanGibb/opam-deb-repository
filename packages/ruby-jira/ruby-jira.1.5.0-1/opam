@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-jira_1.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-jira"]
+]
+depends: [
+  "ruby-activesupport"
+  "ruby-multipart-post"
+  "ruby-oauth" {>= "0.5"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-jira_1.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-jira/ruby-jira_1.5.0-1_all.deb"
+}

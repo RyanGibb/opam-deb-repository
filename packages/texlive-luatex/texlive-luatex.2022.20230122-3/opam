@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i texlive-luatex_2022.20230122-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r texlive-luatex"]
+]
+depends: [
+  "libjs-jquery"
+  "lmodern"
+  "tex-common" {>= "6.13"}
+  "texlive-base" {>= "2022.20220405"}
+  "texlive-binaries" {>= "2022.20220321"}
+]
+extra-source "texlive-luatex_2022.20230122-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/texlive-base/texlive-luatex_2022.20230122-3_all.deb"
+}

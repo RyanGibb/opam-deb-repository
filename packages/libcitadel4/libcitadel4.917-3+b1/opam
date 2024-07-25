@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcitadel4_917-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcitadel4"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "shared-mime-info"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libcitadel4_917-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcitadel/libcitadel4_917-3+b1_amd64.deb"
+}

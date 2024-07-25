@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sudo_1.8.27-1+deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sudo"]
+]
+depends: [
+  "libaudit1" {>= "1-2.2.1"}
+  "libc6" {>= "2.27"}
+  "libpam-modules"
+  "libpam0g" {>= "0.99.7.1"}
+  "libselinux1" {>= "1.32"}
+  "lsb-base"
+]
+conflicts: [
+  "sudo-ldap"
+]
+extra-source "sudo_1.8.27-1+deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sudo/sudo_1.8.27-1+deb10u3_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wit_3.01a-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wit"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.22"}
+  "libmhash2"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "wit_3.01a-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wit/wit_3.01a-2_amd64.deb"
+}

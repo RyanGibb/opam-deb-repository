@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rcon_2.3.9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rcon"]
+]
+depends: [
+  "python3-any"
+  "python3-gi"
+  "python3-rcon" {= "2.3.9-1"}
+]
+extra-source "rcon_2.3.9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-rcon/rcon_2.3.9-1_all.deb"
+}

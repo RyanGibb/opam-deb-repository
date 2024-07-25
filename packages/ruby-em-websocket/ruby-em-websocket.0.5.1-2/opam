@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-em-websocket_0.5.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-em-websocket"]
+]
+depends: [
+  "ruby-eventmachine" {>= "0.12.9"}
+  "ruby-http-parser-rb" {>= "0.6.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-em-websocket_0.5.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-em-websocket/ruby-em-websocket_0.5.1-2_all.deb"
+}

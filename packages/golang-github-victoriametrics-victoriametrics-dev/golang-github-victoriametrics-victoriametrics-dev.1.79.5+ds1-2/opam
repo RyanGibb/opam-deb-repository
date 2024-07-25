@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-victoriametrics-victoriametrics-dev_1.79.5+ds1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-victoriametrics-victoriametrics-dev"]
+]
+depends: [
+  "golang-github-aws-aws-sdk-go-dev"
+  "golang-github-cespare-xxhash-dev" {>= "2.1.1~"}
+  "golang-github-golang-snappy-dev"
+  "golang-github-klauspost-compress-dev" {>= "1.9.5~"}
+  "golang-github-valyala-fasttemplate-dev"
+  "golang-golang-x-oauth2-google-dev"
+  "golang-golang-x-sys-dev"
+  "golang-google-api-dev" {>= "0.15.0~"}
+  "golang-google-cloud-dev" {>= "0.49.0~"}
+  "golang-gopkg-yaml-v2-dev"
+]
+extra-source "golang-github-victoriametrics-victoriametrics-dev_1.79.5+ds1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/victoriametrics/golang-github-victoriametrics-victoriametrics-dev_1.79.5+ds1-2_all.deb"
+}

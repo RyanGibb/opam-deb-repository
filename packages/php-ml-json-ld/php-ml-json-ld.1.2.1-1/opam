@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-ml-json-ld_1.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-ml-json-ld"]
+]
+depends: [
+  "php-common"
+  "php-json"
+  "php-ml-iri" {< "2~~"}
+  "php-ml-iri" {>= "1.1.1"}
+]
+extra-source "php-ml-json-ld_1.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-ml-json-ld/php-ml-json-ld_1.2.1-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fontconfig-config_2.13.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fontconfig-config"]
+]
+depends: [
+  "ucf" {>= "0.29"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("fonts-dejavu-core" | "ttf-bitstream-vera" | "fonts-liberation" | "fonts-freefont")
+]
+extra-source "fontconfig-config_2.13.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fontconfig/fontconfig-config_2.13.1-2_all.deb"
+}

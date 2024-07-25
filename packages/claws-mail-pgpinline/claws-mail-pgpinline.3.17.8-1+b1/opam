@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i claws-mail-pgpinline_3.17.8-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r claws-mail-pgpinline"]
+]
+depends: [
+  "claws-mail" {= "3.17.8-1+b1"}
+  "claws-mail-pgpmime"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgpgme11" {>= "1.1.2"}
+]
+extra-source "claws-mail-pgpinline_3.17.8-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/claws-mail/claws-mail-pgpinline_3.17.8-1+b1_amd64.deb"
+}

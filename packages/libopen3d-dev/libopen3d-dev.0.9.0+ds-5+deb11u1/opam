@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopen3d-dev_0.9.0+ds-5+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopen3d-dev"]
+]
+depends: [
+  "libeigen3-dev"
+  "libfmt-dev"
+  "libglew-dev"
+  "libglfw3-dev"
+  "libopen3d0d" {= "0.9.0+ds-5+deb11u1"}
+]
+extra-source "libopen3d-dev_0.9.0+ds-5+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/open3d/libopen3d-dev_0.9.0+ds-5+deb11u1_amd64.deb"
+}

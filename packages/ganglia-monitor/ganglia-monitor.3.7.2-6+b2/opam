@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ganglia-monitor_3.7.2-6+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ganglia-monitor"]
+]
+depends: [
+  "adduser"
+  "libapr1" {>= "1.2.7"}
+  "libc6" {>= "2.34"}
+  "libconfuse2" {>= "3.2.1~"}
+  "libganglia1" {= "3.7.2-6+b2"}
+  "libpcre3"
+  "libtirpc3" {>= "1.0.2"}
+  "lsb-base"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "ganglia-monitor_3.7.2-6+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/ganglia/ganglia-monitor_3.7.2-6+b2_amd64.deb"
+}

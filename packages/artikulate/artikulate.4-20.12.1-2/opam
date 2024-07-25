@@ -1,0 +1,42 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i artikulate_4:20.12.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r artikulate"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libkf5archive5" {>= "5.64.0~"}
+  "libkf5configcore5" {>= "5.64.0~"}
+  "libkf5configgui5" {>= "5.64.0~"}
+  "libkf5coreaddons5" {>= "5.53.1"}
+  "libkf5crash5" {>= "5.64.0~"}
+  "libkf5i18n5" {>= "5.64.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5multimedia5" {>= "5.11.0~"}
+  "libqt5multimedia5-plugins"
+  "libqt5qml5" {>= "5.11.0~"}
+  "libqt5sql5" {>= "5.11.0~"}
+  "libqt5widgets5" {>= "5.11.0~"}
+  "libqt5xml5" {>= "5.11.0~"}
+  "libqt5xmlpatterns5" {>= "5.11.0~"}
+  "libstdc++6" {>= "4.5"}
+  "qml-module-org-kde-kirigami2"
+  "qml-module-org-kde-kquickcontrolsaddons"
+  "qml-module-org-kde-newstuff"
+  "qml-module-qtqml-models2"
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-dialogs"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick-shapes"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.11.0~"} | "libqt5gui5-gles" {>= "5.11.0~"})
+  ("libqt5quick5" {>= "5.11.0~"} | "libqt5quick5-gles" {>= "5.11.0~"})
+]
+extra-source "artikulate_4:20.12.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/artikulate/artikulate_20.12.1-2_amd64.deb"
+}

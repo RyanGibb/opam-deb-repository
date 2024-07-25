@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpdal-plugin-icebridge_1.8.0+ds-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpdal-plugin-icebridge"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libhdf5-103"
+  "libhdf5-cpp-103" {>= "1.10.3"}
+  "libpdal-base7" {>= "1.8~rc1"}
+  "libpdal-util7" {>= "1.3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libsz2"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libpdal-plugin-icebridge_1.8.0+ds-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdal/libpdal-plugin-icebridge_1.8.0+ds-1+b2_amd64.deb"
+}

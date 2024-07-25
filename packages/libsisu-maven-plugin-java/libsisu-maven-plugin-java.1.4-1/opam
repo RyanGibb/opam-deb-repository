@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsisu-maven-plugin-java_1.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsisu-maven-plugin-java"]
+]
+depends: [
+  "libmaven-common-artifact-filters-java"
+  "libmaven3-core-java" {>= "3.5.0"}
+  "libplexus-utils-java"
+  "libsisu-ioc-java"
+]
+extra-source "libsisu-maven-plugin-java_1.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sisu-maven-plugin/libsisu-maven-plugin-java_1.4-1_all.deb"
+}

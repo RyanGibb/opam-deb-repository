@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-apertium-core_3.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-apertium-core"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "liblttoolbox3-3-5-1" {>= "3.5.3"}
+  "libpcre3"
+  "libstdc++6" {>= "9"}
+  "libxml2" {>= "2.7.4"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+]
+extra-source "python3-apertium-core_3.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium/python3-apertium-core_3.7.1-1_amd64.deb"
+}

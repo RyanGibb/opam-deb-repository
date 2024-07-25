@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rmpi_0.6-9.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rmpi"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libopenmpi3" {>= "4.1.2"}
+  "mpi-default-bin"
+  "r-base-core"
+  "r-base-core" {>= "4.1.2-1"}
+]
+extra-source "r-cran-rmpi_0.6-9.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rmpi/r-cran-rmpi_0.6-9.2-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-opentelemetry-otel-dev_1.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-opentelemetry-otel-dev"]
+]
+depends: [
+  "golang-github-masterminds-semver-dev" {>= "3.1.1~"}
+  "golang-golang-x-sys-dev"
+  "golang-gopkg-yaml-v2-dev"
+]
+extra-source "golang-opentelemetry-otel-dev_1.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-opentelemetry-otel/golang-opentelemetry-otel-dev_1.1.0-2_all.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cp2k_6.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cp2k"]
+]
+depends: [
+  "cp2k-data" {= "6.1-2"}
+  "libc6" {>= "2.14"}
+  "libelpa4" {>= "2013.11.008"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc1" {>= "1-4.0"}
+  "libgfortran5" {>= "8"}
+  "libopenmpi3"
+  "libquadmath0" {>= "4.6"}
+  "libscalapack-openmpi2-0"
+  "libxc5" {>= "4.2.1-1"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "cp2k_6.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cp2k/cp2k_6.1-2_amd64.deb"
+}

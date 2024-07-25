@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ipykernel_6.17.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ipykernel"]
+]
+depends: [
+  "python3-any"
+  "python3-debugpy"
+  "python3-ipython" {>= "5.8.0-2~"}
+  "python3-jupyter-client" {>= "6.1.11~"}
+  "python3-matplotlib-inline"
+  "python3-nest-asyncio"
+  "python3-packaging"
+  "python3-psutil"
+  "python3-tornado"
+  "python3-traitlets"
+  "python3-zmq"
+]
+extra-source "python3-ipykernel_6.17.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ipykernel/python3-ipykernel_6.17.0-1_all.deb"
+}

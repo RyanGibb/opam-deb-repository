@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-zvariant-derive-dev_2.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-zvariant-derive-dev"]
+]
+depends: [
+  "librust-proc-macro2-1+default-dev"
+  "librust-quote+proc-macro-dev"
+  "librust-syn+default-dev" {>= "1.0.12-~~"}
+]
+extra-source "librust-zvariant-derive-dev_2.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-zvariant-derive/librust-zvariant-derive-dev_2.0.0-2_amd64.deb"
+}

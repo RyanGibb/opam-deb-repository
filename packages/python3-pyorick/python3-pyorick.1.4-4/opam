@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyorick_1.4-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyorick"]
+]
+depends: [
+  "python3-any"
+  "python3-numpy"
+  "yorick" {>= "2.2.04+dfsg-2~"}
+]
+extra-source "python3-pyorick_1.4-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pyorick/python3-pyorick_1.4-4_all.deb"
+}

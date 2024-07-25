@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openscap-daemon_0.1.10-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openscap-daemon"]
+]
+depends: [
+  "dbus"
+  "libopenscap8"
+  "lsb-base"
+  "python3-any" {>= "3.5~"}
+  "python3-dbus"
+  "python3-docker"
+  "python3-gi"
+  "python3-lxml"
+  "ssg-base"
+]
+extra-source "openscap-daemon_0.1.10-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openscap-daemon/openscap-daemon_0.1.10-3_all.deb"
+}

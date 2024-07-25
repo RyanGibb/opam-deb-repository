@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-path-io-dev_1.3.3-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-path-io-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-dlist-dev"
+  "libghc-exceptions-dev"
+  "libghc-path-dev"
+  "libghc-temporary-dev"
+  "libghc-unix-compat-dev"
+  "libgmp10"
+]
+extra-source "libghc-path-io-dev_1.3.3-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-path-io/libghc-path-io-dev_1.3.3-3+b1_amd64.deb"
+}

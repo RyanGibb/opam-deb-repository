@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-lazy-static+spin-no-std-dev_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-lazy-static+spin-no-std-dev"]
+]
+depends: [
+  "librust-lazy-static-dev" {= "1.2.0-1"}
+  "librust-spin-dev"
+]
+extra-source "librust-lazy-static+spin-no-std-dev_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-lazy-static/librust-lazy-static+spin-no-std-dev_1.2.0-1_amd64.deb"
+}

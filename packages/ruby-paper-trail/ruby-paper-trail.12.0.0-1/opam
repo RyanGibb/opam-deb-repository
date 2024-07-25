@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-paper-trail_12.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-paper-trail"]
+]
+depends: [
+  "ruby-activerecord" {< "2-6.2"}
+  "ruby-activerecord" {>= "2-5.2"}
+  "ruby-request-store"
+]
+extra-source "ruby-paper-trail_12.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-paper-trail/ruby-paper-trail_12.0.0-1_all.deb"
+}

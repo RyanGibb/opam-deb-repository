@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gobjc++-8-multilib-mipsisa32r6el-linux-gnu_8.3.0-2cross2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gobjc++-8-multilib-mipsisa32r6el-linux-gnu"]
+]
+depends: [
+  "g++-8-multilib-mipsisa32r6el-linux-gnu" {= "8.3.0-2cross2"}
+  "gcc-8-mipsisa32r6el-linux-gnu-base" {= "8.3.0-2cross2"}
+  "gobjc++-8-mipsisa32r6el-linux-gnu" {= "8.3.0-2cross2"}
+  "gobjc-8-multilib-mipsisa32r6el-linux-gnu" {= "8.3.0-2cross2"}
+]
+extra-source "gobjc++-8-multilib-mipsisa32r6el-linux-gnu_8.3.0-2cross2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross-mipsen/gobjc++-8-multilib-mipsisa32r6el-linux-gnu_8.3.0-2cross2_amd64.deb"
+}

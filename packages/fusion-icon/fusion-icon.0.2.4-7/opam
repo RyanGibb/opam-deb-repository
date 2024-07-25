@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fusion-icon_0.2.4-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fusion-icon"]
+]
+depends: [
+  "gir1-2-ayatanaappindicator3-0-1"
+  "gir1-2-gtk-3-0"
+  "mesa-utils"
+  "python3-any"
+  "python3-compizconfig" {>= "0.8.14~0"}
+  "python3-gi"
+  "x11-utils"
+  ("compiz-gnome" | "emerald")
+]
+extra-source "fusion-icon_0.2.4-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fusion-icon/fusion-icon_0.2.4-7_all.deb"
+}

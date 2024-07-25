@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmmsclient++-dev_0.8+dfsg-18.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmmsclient++-dev"]
+]
+depends: [
+  "libboost-dev"
+  "libxmmsclient++4v5" {= "0.8+dfsg-18.2"}
+  "libxmmsclient-dev"
+  "pkg-config"
+]
+extra-source "libxmmsclient++-dev_0.8+dfsg-18.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmms2/libxmmsclient++-dev_0.8+dfsg-18.2_amd64.deb"
+}

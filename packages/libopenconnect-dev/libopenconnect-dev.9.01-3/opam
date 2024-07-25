@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenconnect-dev_9.01-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenconnect-dev"]
+]
+depends: [
+  "libgnutls28-dev"
+  "liblz4-dev"
+  "libopenconnect5" {= "9.01-3"}
+  "libp11-kit-dev"
+  "libpcsclite-dev"
+  "libproxy-dev"
+  "libpskc-dev"
+  "libstoken-dev"
+  "libxml2-dev"
+  "zlib1g-dev"
+]
+extra-source "libopenconnect-dev_9.01-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openconnect/libopenconnect-dev_9.01-3_amd64.deb"
+}

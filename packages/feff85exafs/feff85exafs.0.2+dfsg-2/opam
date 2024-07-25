@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i feff85exafs_0.2+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r feff85exafs"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgfortran5" {>= "10"}
+  "python3-any"
+  "python3-pkg-resources"
+]
+extra-source "feff85exafs_0.2+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/feff85exafs/feff85exafs_0.2+dfsg-2_amd64.deb"
+}

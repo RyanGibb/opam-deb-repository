@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatvsn9_9.3.0-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatvsn9"]
+]
+depends: [
+  "gcc-9-base" {= "9.3.0-22"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libgnat-9" {= "9.3.0-22"}
+]
+extra-source "libgnatvsn9_9.3.0-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-9/libgnatvsn9_9.3.0-22_amd64.deb"
+}

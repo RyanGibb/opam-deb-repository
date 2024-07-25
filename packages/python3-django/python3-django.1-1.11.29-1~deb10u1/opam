@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-django_1:1.11.29-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-django"]
+]
+depends: [
+  "python-django-common" {= "1-1.11.29-1~deb10u1"}
+  "python3-any"
+  "python3-tz"
+]
+extra-source "python3-django_1:1.11.29-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-django/python3-django_1.11.29-1~deb10u1_all.deb"
+}

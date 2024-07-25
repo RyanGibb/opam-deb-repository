@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-selinux-dev_0.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-selinux-dev"]
+]
+depends: [
+  "librust-bitflags-dev"
+  "librust-libc-0-2+default-dev"
+  "librust-once-cell-dev"
+  "librust-reference-counted-singleton-0-1+default-dev"
+  "librust-selinux-sys-0-6+default-dev"
+  "librust-thiserror-1+default-dev"
+]
+extra-source "librust-selinux-dev_0.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-selinux/librust-selinux-dev_0.3.2-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clearsilver-dev_0.10.5-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clearsilver-dev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libc6-dev"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libcgi-dev"
+]
+extra-source "clearsilver-dev_0.10.5-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clearsilver/clearsilver-dev_0.10.5-3+b1_amd64.deb"
+}

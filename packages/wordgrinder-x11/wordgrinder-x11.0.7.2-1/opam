@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wordgrinder-x11_0.7.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wordgrinder-x11"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "liblua5-3-0"
+  "libminizip1" {>= "1.1"}
+  "libx11-6"
+  "libxft2" {> "2.1.1"}
+  "lua-filesystem"
+  "wordgrinder-doc"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "wordgrinder-x11_0.7.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wordgrinder/wordgrinder-x11_0.7.2-1_amd64.deb"
+}

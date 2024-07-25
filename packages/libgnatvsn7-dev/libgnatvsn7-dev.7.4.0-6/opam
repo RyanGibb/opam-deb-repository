@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatvsn7-dev_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatvsn7-dev"]
+]
+depends: [
+  "gcc-7-base" {= "7.4.0-6"}
+  "gnat-7" {= "7.4.0-6"}
+  "libgnatvsn7" {= "7.4.0-6"}
+]
+conflicts: [
+  "libgnatvsn-dev (<< 7)"
+  "libgnatvsn4.1-dev"
+  "libgnatvsn4.3-dev"
+  "libgnatvsn4.4-dev"
+  "libgnatvsn4.5-dev"
+  "libgnatvsn4.6-dev"
+  "libgnatvsn4.9-dev"
+  "libgnatvsn5-dev"
+  "libgnatvsn6-dev"
+]
+extra-source "libgnatvsn7-dev_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/libgnatvsn7-dev_7.4.0-6_amd64.deb"
+}

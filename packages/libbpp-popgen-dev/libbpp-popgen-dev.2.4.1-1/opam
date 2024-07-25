@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbpp-popgen-dev_2.4.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbpp-popgen-dev"]
+]
+depends: [
+  "libbpp-core-dev" {>= "2.4.1"}
+  "libbpp-popgen8" {= "2.4.1-1"}
+  "libbpp-seq-dev" {>= "2.4.1"}
+]
+extra-source "libbpp-popgen-dev_2.4.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbpp-popgen/libbpp-popgen-dev_2.4.1-1_amd64.deb"
+}

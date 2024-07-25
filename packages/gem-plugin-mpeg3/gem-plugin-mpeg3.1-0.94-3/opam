@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gem-plugin-mpeg3_1:0.94-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gem-plugin-mpeg3"]
+]
+depends: [
+  "gem" {< "1-0.94+1~"}
+  "gem" {>= "1-0.94-3"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libmpeg3-2" {>= "1.8.dfsg"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "gem-plugin-mpeg3_1:0.94-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gem/gem-plugin-mpeg3_0.94-3_amd64.deb"
+}

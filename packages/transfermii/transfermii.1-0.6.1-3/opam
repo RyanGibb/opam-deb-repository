@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i transfermii_1:0.6.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r transfermii"]
+]
+depends: [
+  "libbluetooth3" {>= "4.91"}
+  "libc6" {>= "2.14"}
+  "libcwiid1" {>= "0.6.00+svn184"}
+]
+extra-source "transfermii_1:0.6.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/transfermii/transfermii_0.6.1-3_amd64.deb"
+}

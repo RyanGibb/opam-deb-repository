@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-qcengine_0.17.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-qcengine"]
+]
+depends: [
+  "python3-any"
+  "python3-cpuinfo"
+  "python3-psutil"
+  "python3-pydantic"
+  "python3-qcelemental" {>= "0.13.0"}
+  "python3-yaml"
+]
+extra-source "python3-qcengine_0.17.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qcengine/python3-qcengine_0.17.0-1_all.deb"
+}

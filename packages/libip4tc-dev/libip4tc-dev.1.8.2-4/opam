@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libip4tc-dev_1.8.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libip4tc-dev"]
+]
+depends: [
+  "libip4tc0" {= "1.8.2-4"}
+  "libiptc0" {= "1.8.2-4"}
+]
+extra-source "libip4tc-dev_1.8.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iptables/libip4tc-dev_1.8.2-4_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-public-key_1:25.2.3+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-public-key"]
+]
+depends: [
+  "erlang-asn1" {= "1-25.2.3+dfsg-1"}
+  "erlang-base" {= "1-25.2.3+dfsg-1"}
+  "erlang-crypto" {= "1-25.2.3+dfsg-1"}
+]
+extra-source "erlang-public-key_1:25.2.3+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-public-key_25.2.3+dfsg-1_amd64.deb"
+}

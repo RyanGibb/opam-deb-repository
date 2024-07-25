@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i odbc-mariadb_3.1.15-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r odbc-mariadb"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libmariadb3" {>= "3.0.0"}
+  "libodbcinst2" {>= "2.3.1"}
+  "odbcinst"
+]
+extra-source "odbc-mariadb_3.1.15-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mariadb-connector-odbc/odbc-mariadb_3.1.15-3_amd64.deb"
+}

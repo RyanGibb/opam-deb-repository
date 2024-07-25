@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octomap-tools_1.8.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octomap-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "liboctomap1-8" {= "1.8.1+dfsg-1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "octomap-tools_1.8.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octomap/octomap-tools_1.8.1+dfsg-1_amd64.deb"
+}

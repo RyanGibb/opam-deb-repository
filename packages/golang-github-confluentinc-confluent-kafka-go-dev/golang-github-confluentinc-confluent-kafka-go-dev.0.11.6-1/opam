@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-confluentinc-confluent-kafka-go-dev_0.11.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-confluentinc-confluent-kafka-go-dev"]
+]
+depends: [
+  "librdkafka-dev" {>= "0.11.6~"}
+  "pkg-config"
+]
+extra-source "golang-github-confluentinc-confluent-kafka-go-dev_0.11.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-confluentinc-confluent-kafka-go/golang-github-confluentinc-confluent-kafka-go-dev_0.11.6-1_all.deb"
+}

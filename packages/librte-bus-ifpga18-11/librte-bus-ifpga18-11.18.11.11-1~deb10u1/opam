@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-bus-ifpga18.11_18.11.11-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-bus-ifpga18.11"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.4"}
+  "libnuma1" {>= "2.0.11"}
+  "librte-eal18-11" {>= "18.11"}
+  "librte-kvargs18-11" {>= "16.04"}
+  "librte-pci18-11" {>= "17.11"}
+  "librte-rawdev18-11" {>= "18.08"}
+]
+extra-source "librte-bus-ifpga18.11_18.11.11-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-bus-ifpga18.11_18.11.11-1~deb10u1_amd64.deb"
+}

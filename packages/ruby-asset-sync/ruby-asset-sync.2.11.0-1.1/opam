@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-asset-sync_2.11.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-asset-sync"]
+]
+depends: [
+  "ruby-activemodel" {>= "2-4.1~"}
+  "ruby-fog-core"
+  "ruby-mime-types" {>= "2.99~"}
+  "ruby-unf"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-asset-sync_2.11.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-asset-sync/ruby-asset-sync_2.11.0-1.1_all.deb"
+}

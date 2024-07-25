@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gem-plugin-dv4l_1:0.94-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gem-plugin-dv4l"]
+]
+depends: [
+  "gem" {< "1-0.94+1~"}
+  "gem" {>= "1-0.94-8"}
+  "libc6" {>= "2.15"}
+  "libdv4" {>= "1.0.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libiec61883-0" {>= "1.2.0"}
+  "libraw1394-11" {>= "2.1.2"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "gem-plugin-dv4l_1:0.94-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gem/gem-plugin-dv4l_0.94-8+b1_amd64.deb"
+}

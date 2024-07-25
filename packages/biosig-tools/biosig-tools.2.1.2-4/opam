@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i biosig-tools_2.1.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r biosig-tools"]
+]
+depends: [
+  "libb64-0d" {>= "1.2"}
+  "libbiosig3" {= "2.1.2-4"}
+  "libc6" {>= "2.14"}
+]
+extra-source "biosig-tools_2.1.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/biosig/biosig-tools_2.1.2-4_amd64.deb"
+}

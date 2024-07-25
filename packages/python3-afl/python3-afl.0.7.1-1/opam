@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-afl_0.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-afl"]
+]
+depends: [
+  "afl"
+  "libc6" {>= "2.4"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.6~"}
+]
+extra-source "python3-afl_0.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-afl/python3-afl_0.7.1-1_amd64.deb"
+}

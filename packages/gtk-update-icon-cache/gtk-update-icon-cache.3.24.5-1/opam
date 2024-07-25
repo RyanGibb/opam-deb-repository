@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtk-update-icon-cache_3.24.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtk-update-icon-cache"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.30.0"}
+  "libglib2-0-0" {>= "2.55.2"}
+]
+extra-source "gtk-update-icon-cache_3.24.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtk+3.0/gtk-update-icon-cache_3.24.5-1_amd64.deb"
+}

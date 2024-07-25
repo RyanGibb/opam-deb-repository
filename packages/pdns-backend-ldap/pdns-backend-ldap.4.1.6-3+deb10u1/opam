@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pdns-backend-ldap_4.1.6-3+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pdns-backend-ldap"]
+]
+depends: [
+  "libc6" {>= "2.16"}
+  "libgcc1" {>= "1-3.0"}
+  "libkrb5-3" {>= "1.6.dfsg.2"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+  "pdns-server" {= "4.1.6-3+deb10u1"}
+]
+extra-source "pdns-backend-ldap_4.1.6-3+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pdns/pdns-backend-ldap_4.1.6-3+deb10u1_amd64.deb"
+}

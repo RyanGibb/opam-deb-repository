@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i camlp4_4.05+1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r camlp4"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcamlp4-ocaml-dev"
+  "ocaml-base-nox"
+]
+extra-source "camlp4_4.05+1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/camlp4/camlp4_4.05+1-2_amd64.deb"
+}

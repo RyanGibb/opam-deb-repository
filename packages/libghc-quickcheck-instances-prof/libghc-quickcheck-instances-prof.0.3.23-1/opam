@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-quickcheck-instances-prof_0.3.23-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-quickcheck-instances-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-base-compat-prof"
+  "libghc-case-insensitive-prof"
+  "libghc-hashable-prof"
+  "libghc-old-time-prof"
+  "libghc-quickcheck-instances-dev" {= "0.3.23-1"}
+  "libghc-quickcheck2-prof"
+  "libghc-scientific-prof"
+  "libghc-splitmix-prof"
+  "libghc-tagged-prof"
+  "libghc-these-prof"
+  "libghc-time-compat-prof"
+  "libghc-transformers-compat-prof"
+  "libghc-unordered-containers-prof"
+  "libghc-uuid-types-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-quickcheck-instances-prof_0.3.23-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-quickcheck-instances/libghc-quickcheck-instances-prof_0.3.23-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lifelines_3.0.61-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lifelines"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "lifelines_3.0.61-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lifelines/lifelines_3.0.61-2+b3_amd64.deb"
+}

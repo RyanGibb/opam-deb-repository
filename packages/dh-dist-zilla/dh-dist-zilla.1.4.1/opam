@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dh-dist-zilla_1.4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dh-dist-zilla"]
+]
+depends: [
+  "debhelper" {>= "7"}
+  "libdist-zilla-perl"
+  "perl-any"
+  ("debhelper" {< "10.10.6~"} | "debhelper" {>= "11.1.3~"})
+]
+extra-source "dh-dist-zilla_1.4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dh-dist-zilla/dh-dist-zilla_1.4.1_all.deb"
+}

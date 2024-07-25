@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i procenv_0.50-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r procenv"]
+]
+depends: [
+  "libapparmor1" {>= "2.6~devel"}
+  "libc6" {>= "2.17"}
+  "libcap2" {>= "1-2.10"}
+  "libnuma1" {>= "2.0.11"}
+  "libselinux1" {>= "1.32"}
+]
+extra-source "procenv_0.50-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/procenv/procenv_0.50-1_amd64.deb"
+}

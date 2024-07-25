@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i i2c-tools_4.3-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r i2c-tools"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libi2c0" {>= "4.0"}
+  "perl-any"
+  "udev"
+]
+extra-source "i2c-tools_4.3-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/i2c-tools/i2c-tools_4.3-2+b3_amd64.deb"
+}

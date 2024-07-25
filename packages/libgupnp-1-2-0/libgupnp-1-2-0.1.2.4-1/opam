@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgupnp-1.2-0_1.2.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgupnp-1.2-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.58"}
+  "libgssdp-1-2-0" {>= "1.2.3-0ubuntu1~build1"}
+  "libsoup2-4-1" {>= "2.48.0"}
+  "libuuid1" {>= "2.16"}
+  "libxml2" {>= "2.7.4"}
+  "shared-mime-info"
+]
+extra-source "libgupnp-1.2-0_1.2.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gupnp/libgupnp-1.2-0_1.2.4-1_amd64.deb"
+}

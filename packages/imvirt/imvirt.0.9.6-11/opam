@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i imvirt_0.9.6-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r imvirt"]
+]
+depends: [
+  "libimvirt-perl" {= "0.9.6-11"}
+  "perl-any"
+]
+extra-source "imvirt_0.9.6-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/imvirt/imvirt_0.9.6-11_all.deb"
+}

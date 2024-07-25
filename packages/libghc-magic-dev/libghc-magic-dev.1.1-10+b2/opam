@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-magic-dev_1.1-10+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-magic-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libmagic-dev"
+  "libmagic1" {>= "5.12"}
+]
+extra-source "libghc-magic-dev_1.1-10+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/magic-haskell/libghc-magic-dev_1.1-10+b2_amd64.deb"
+}

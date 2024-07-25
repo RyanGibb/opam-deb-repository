@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lives-plugins_3.0.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lives-plugins"]
+]
+depends: [
+  "libavcodec-extra58"
+  "libavformat58" {>= "7-4.2"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.6.0"}
+  "libdv4" {>= "1.0.0"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libmjpegutils-2-1-0"
+  "libogg0" {>= "1.0rc3"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libstdc++6" {>= "5"}
+  "libswresample3" {>= "7-4.0"}
+  "libswscale5" {>= "7-4.0"}
+  "libtheora0" {>= "0.0.0.alpha7.dfsg"}
+  "libx11-6"
+  "libxrender1"
+  "perl-any"
+  "python3"
+  "python3-any"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "lives-plugins_3.0.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lives/lives-plugins_3.0.2-1.1_amd64.deb"
+}

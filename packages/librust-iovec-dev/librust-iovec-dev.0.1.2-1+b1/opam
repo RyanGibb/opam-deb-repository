@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-iovec-dev_0.1.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-iovec-dev"]
+]
+depends: [
+  "librust-libc-0-2+default-dev"
+  "librust-winapi-0-3+default-dev"
+  "librust-winapi-0-3+minwindef-dev"
+  "librust-winapi-0-3+ws2def-dev"
+]
+extra-source "librust-iovec-dev_0.1.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-iovec/librust-iovec-dev_0.1.2-1+b1_amd64.deb"
+}

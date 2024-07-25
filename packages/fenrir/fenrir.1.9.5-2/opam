@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fenrir_1.9.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fenrir"]
+]
+depends: [
+  "python3-any"
+  "python3-daemonize" {>= "2.4.7~"}
+  "python3-dbus"
+  "python3-evdev"
+  "python3-pexpect"
+  "python3-pkg-resources"
+  "python3-pyte"
+  "python3-pyudev"
+  "python3-xdg"
+]
+extra-source "fenrir_1.9.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fenrir/fenrir_1.9.5-2_all.deb"
+}

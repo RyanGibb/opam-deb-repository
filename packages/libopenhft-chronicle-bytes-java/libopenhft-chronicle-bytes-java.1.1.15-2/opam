@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenhft-chronicle-bytes-java_1.1.15-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenhft-chronicle-bytes-java"]
+]
+depends: [
+  "libintellij-annotations-java"
+  "libopenhft-chronicle-core-java" {>= "1.1.8"}
+  "libslf4j-java" {>= "1.7.25"}
+  "libsnappy-java" {>= "1.1.7.2"}
+]
+extra-source "libopenhft-chronicle-bytes-java_1.1.15-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openhft-chronicle-bytes/libopenhft-chronicle-bytes-java_1.1.15-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liburing-dev_2.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liburing-dev"]
+]
+depends: [
+  "liburing2" {= "2.3-3"}
+  "linux-libc-dev" {>= "5.1"}
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "liburing-dev_2.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/liburing/liburing-dev_2.3-3_amd64.deb"
+}

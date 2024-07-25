@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i task-print-server_3.53_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r task-print-server"]
+]
+depends: [
+  "cups"
+  "cups-bsd"
+  "cups-client"
+  "tasksel" {= "3.53"}
+]
+extra-source "task-print-server_3.53_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tasksel/task-print-server_3.53_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librsvg2-bin_2.54.7+dfsg-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librsvg2-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.15.10"}
+  "libgcc-s1" {>= "4.2"}
+  "libgdk-pixbuf-2-0-0" {>= "2.25.2"}
+  "libglib2-0-0" {>= "2.50.0"}
+  "libpango-1-0-0" {>= "1.48.11"}
+  "libpangocairo-1-0-0" {>= "1.48.11"}
+  "librsvg2-2" {>= "2.54.7+dfsg-1~deb12u1"}
+  "libxml2" {>= "2.9.0"}
+]
+extra-source "librsvg2-bin_2.54.7+dfsg-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librsvg/librsvg2-bin_2.54.7+dfsg-1~deb12u1_amd64.deb"
+}

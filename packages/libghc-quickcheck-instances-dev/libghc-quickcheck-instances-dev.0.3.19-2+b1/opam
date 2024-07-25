@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-quickcheck-instances-dev_0.3.19-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-quickcheck-instances-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-base-compat-dev"
+  "libghc-case-insensitive-dev"
+  "libghc-hashable-dev"
+  "libghc-old-time-dev"
+  "libghc-quickcheck2-dev"
+  "libghc-scientific-dev"
+  "libghc-tagged-dev"
+  "libghc-transformers-compat-dev"
+  "libghc-unordered-containers-dev"
+  "libghc-uuid-types-dev"
+  "libghc-vector-dev"
+  "libgmp10"
+]
+extra-source "libghc-quickcheck-instances-dev_0.3.19-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-quickcheck-instances/libghc-quickcheck-instances-dev_0.3.19-2+b1_amd64.deb"
+}

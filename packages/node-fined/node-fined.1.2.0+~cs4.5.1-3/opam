@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-fined_1.2.0+~cs4.5.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-fined"]
+]
+depends: [
+  "node-expand-tilde"
+  "node-for-own"
+  "node-is-plain-object" {>= "5~"}
+  "node-isobject"
+  "node-parse-filepath"
+]
+extra-source "node-fined_1.2.0+~cs4.5.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-fined/node-fined_1.2.0+~cs4.5.1-3_all.deb"
+}

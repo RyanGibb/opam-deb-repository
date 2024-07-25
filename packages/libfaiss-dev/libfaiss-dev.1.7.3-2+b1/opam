@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfaiss-dev_1.7.3-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfaiss-dev"]
+]
+depends: [
+  ("libblas-dev" | "libblas-so")
+  ("liblapack-dev" | "liblapack-so")
+]
+extra-source "libfaiss-dev_1.7.3-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/faiss/libfaiss-dev_1.7.3-2+b1_amd64.deb"
+}

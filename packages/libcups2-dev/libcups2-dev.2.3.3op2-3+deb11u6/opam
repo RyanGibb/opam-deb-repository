@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcups2-dev_2.3.3op2-3+deb11u6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcups2-dev"]
+]
+depends: [
+  "dpkg-dev"
+  "libcups2" {= "2.3.3op2-3+deb11u6"}
+  "libcupsimage2-dev" {= "2.3.3op2-3+deb11u6"}
+]
+extra-source "libcups2-dev_2.3.3op2-3+deb11u6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cups/libcups2-dev_2.3.3op2-3+deb11u6_amd64.deb"
+}

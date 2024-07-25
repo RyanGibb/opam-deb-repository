@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libadplug-2.2.1-0v5_2.2.1+dfsg3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libadplug-2.2.1-0v5"]
+]
+depends: [
+  "libbinio1v5" {>= "1.4+dfsg1"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "libadplug-2.2.1-0"
+]
+extra-source "libadplug-2.2.1-0v5_2.2.1+dfsg3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/adplug/libadplug-2.2.1-0v5_2.2.1+dfsg3-1_amd64.deb"
+}

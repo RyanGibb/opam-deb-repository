@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-mpi_0.3.0-1+b9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-mpi"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgmp10"
+  "libopenmpi3"
+  "libruby2-5" {>= "2.5.0~preview1"}
+  "ruby" {< "1-2.6~"}
+  "ruby" {>= "1-2.5~0"}
+  "ruby-narray"
+]
+extra-source "ruby-mpi_0.3.0-1+b9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-mpi/ruby-mpi_0.3.0-1+b9_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i 7kaa_2.15.4p1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r 7kaa"]
+]
+depends: [
+  "7kaa-data" {= "2.15.4p1+dfsg-1"}
+  "libc6" {>= "2.27"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libenet7"
+  "libgcc-s1" {>= "3.0"}
+  "libopenal1" {>= "1.14"}
+  "libsdl2-2-0-0" {>= "2.0.12+dfsg1"}
+  "libstdc++6" {>= "5.2"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "7kaa_2.15.4p1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/7/7kaa/7kaa_2.15.4p1+dfsg-1_amd64.deb"
+}

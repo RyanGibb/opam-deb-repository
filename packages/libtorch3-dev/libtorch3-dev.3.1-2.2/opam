@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtorch3-dev_3.1-2.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtorch3-dev"]
+]
+depends: [
+  "libtorch3c2" {= "3.1-2.2"}
+]
+conflicts: [
+  "libtorch-dev"
+  "libtorch1-dev"
+]
+extra-source "libtorch3-dev_3.1-2.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/torch3/libtorch3-dev_3.1-2.2_amd64.deb"
+}

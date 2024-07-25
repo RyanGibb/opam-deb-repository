@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-qutip_4.7.1-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-qutip"]
+]
+depends: [
+  "g++"
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-dev"
+  "python3-matplotlib"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-packaging"
+  "python3-scipy" {>= "1.0"}
+]
+extra-source "python3-qutip_4.7.1-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qutip/python3-qutip_4.7.1-2+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libskypat3_3.1.1-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libskypat3"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libskypat3_3.1.1-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/skypat/libskypat3_3.1.1-8_amd64.deb"
+}

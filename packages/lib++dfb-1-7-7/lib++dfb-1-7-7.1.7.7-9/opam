@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib++dfb-1.7-7_1.7.7-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib++dfb-1.7-7"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdirectfb-1-7-7" {>= "1.7.7"}
+  "libgcc-s1"
+  "libstdc++6" {>= "4.4.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "lib++dfb-1.7-7_1.7.7-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/directfb/lib++dfb-1.7-7_1.7.7-9_amd64.deb"
+}

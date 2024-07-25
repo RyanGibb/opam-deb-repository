@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgambit4_4.9.3-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgambit4"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "libgambit4_4.9.3-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gambc/libgambit4_4.9.3-1.1_amd64.deb"
+}

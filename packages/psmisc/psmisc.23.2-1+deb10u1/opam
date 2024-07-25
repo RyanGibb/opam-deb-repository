@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i psmisc_23.2-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r psmisc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libselinux1" {>= "1.32"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "psmisc_23.2-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/psmisc/psmisc_23.2-1+deb10u1_amd64.deb"
+}

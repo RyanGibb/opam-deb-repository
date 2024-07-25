@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvkd3d-utils1_1.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvkd3d-utils1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libvkd3d1" {>= "1.0"}
+]
+extra-source "libvkd3d-utils1_1.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vkd3d/libvkd3d-utils1_1.1-5_amd64.deb"
+}

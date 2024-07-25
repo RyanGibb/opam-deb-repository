@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-async-http_0.52.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-async-http"]
+]
+depends: [
+  "ruby-async" {>= "1.25"}
+  "ruby-async-io" {>= "1.28"}
+  "ruby-async-pool" {>= "0.2"}
+  "ruby-protocol-http" {>= "0.20.0"}
+  "ruby-protocol-http1" {>= "0.13.0"}
+  "ruby-protocol-http2" {>= "0.14.0"}
+]
+extra-source "ruby-async-http_0.52.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-async-http/ruby-async-http_0.52.5-1_all.deb"
+}

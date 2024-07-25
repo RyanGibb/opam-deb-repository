@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqdjango-dev_0.6.2-3.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqdjango-dev"]
+]
+depends: [
+  "libqdjango-db0" {= "0.6.2-3.3"}
+  "libqdjango-http0" {= "0.6.2-3.3"}
+  "qtbase5-dev"
+]
+extra-source "libqdjango-dev_0.6.2-3.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qdjango/libqdjango-dev_0.6.2-3.3_amd64.deb"
+}

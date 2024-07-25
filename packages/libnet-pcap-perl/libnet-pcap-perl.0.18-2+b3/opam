@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-pcap-perl_0.18-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-pcap-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpcap0-8" {>= "1.0.0"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libnet-pcap-perl_0.18-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-pcap-perl/libnet-pcap-perl_0.18-2+b3_amd64.deb"
+}

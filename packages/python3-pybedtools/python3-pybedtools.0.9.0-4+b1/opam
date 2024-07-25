@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pybedtools_0.9.0-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pybedtools"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-pysam"
+  "python3-six"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "python3-pybedtools_0.9.0-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pybedtools/python3-pybedtools_0.9.0-4+b1_amd64.deb"
+}

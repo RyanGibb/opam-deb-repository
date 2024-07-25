@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i slurm-wlm_18.08.5.2-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r slurm-wlm"]
+]
+depends: [
+  "slurm-client" {= "18.08.5.2-1+deb10u2"}
+  "slurmctld" {= "18.08.5.2-1+deb10u2"}
+  "slurmd" {= "18.08.5.2-1+deb10u2"}
+]
+extra-source "slurm-wlm_18.08.5.2-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-llnl/slurm-wlm_18.08.5.2-1+deb10u2_amd64.deb"
+}

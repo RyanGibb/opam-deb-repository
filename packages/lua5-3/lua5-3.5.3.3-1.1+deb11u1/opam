@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lua5.3_5.3.3-1.1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lua5.3"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libreadline8" {>= "6.0"}
+]
+extra-source "lua5.3_5.3.3-1.1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lua5.3/lua5.3_5.3.3-1.1+deb11u1_amd64.deb"
+}

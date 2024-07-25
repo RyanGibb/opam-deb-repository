@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mlterm-im-wnn_3.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mlterm-im-wnn"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libwnn0"
+  "mlterm-common" {= "3.9.0-1"}
+  ("mlterm" {= "3.9.0-1"} | "mlterm-tiny" {= "3.9.0-1"})
+]
+extra-source "mlterm-im-wnn_3.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mlterm/mlterm-im-wnn_3.9.0-1_amd64.deb"
+}

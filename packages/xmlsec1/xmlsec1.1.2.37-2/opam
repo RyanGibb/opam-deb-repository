@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xmlsec1_1.2.37-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xmlsec1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libxml2" {>= "2.7.4"}
+  "libxmlsec1" {>= "1.2.35"}
+  "libxmlsec1-openssl" {>= "1.2.31"}
+  "libxslt1-1" {>= "1.1.25"}
+]
+extra-source "xmlsec1_1.2.37-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmlsec1/xmlsec1_1.2.37-2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkseexpr-dev_4.0.4.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkseexpr-dev"]
+]
+depends: [
+  "libkseexpr4" {= "4.0.4.0-4"}
+  "libkseexprui4" {= "4.0.4.0-4"}
+  "qtbase5-dev"
+]
+extra-source "libkseexpr-dev_4.0.4.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kseexpr/libkseexpr-dev_4.0.4.0-4_amd64.deb"
+}

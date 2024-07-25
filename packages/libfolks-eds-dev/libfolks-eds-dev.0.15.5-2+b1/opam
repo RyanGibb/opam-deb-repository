@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfolks-eds-dev_0.15.5-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfolks-eds-dev"]
+]
+depends: [
+  "libebook1-2-dev" {>= "3.13.90"}
+  "libedataserver1-2-dev" {>= "3.13.90"}
+  "libfolks-dev" {= "0.15.5-2+b1"}
+  "libfolks-eds26" {= "0.15.5-2+b1"}
+  "libglib2-0-dev" {>= "2.58"}
+]
+extra-source "libfolks-eds-dev_0.15.5-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/folks/libfolks-eds-dev_0.15.5-2+b1_amd64.deb"
+}

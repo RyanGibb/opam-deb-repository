@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-callout0_4.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-callout0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglobus-common0" {>= "17"}
+  "libltdl7" {>= "2.4.6"}
+]
+extra-source "libglobus-callout0_4.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-callout/libglobus-callout0_4.3-1_amd64.deb"
+}

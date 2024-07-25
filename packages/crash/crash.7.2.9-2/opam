@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i crash_7.2.9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r crash"]
+]
+depends: [
+  "binutils"
+  "libc6" {>= "2.29"}
+  "liblzo2-2" {>= "2.02"}
+  "libncurses6" {>= "6"}
+  "libsnappy1v5" {>= "1.1.8"}
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "crash_7.2.9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/crash/crash_7.2.9-2_amd64.deb"
+}

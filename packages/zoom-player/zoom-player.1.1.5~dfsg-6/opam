@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zoom-player_1.1.5~dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zoom-player"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libx11-6"
+  "libxext6"
+  "libxft2" {> "2.1.1"}
+  "libxrender1"
+]
+extra-source "zoom-player_1.1.5~dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zoom-player/zoom-player_1.1.5~dfsg-6_amd64.deb"
+}

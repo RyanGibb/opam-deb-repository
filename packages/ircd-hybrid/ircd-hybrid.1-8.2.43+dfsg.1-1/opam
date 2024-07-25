@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ircd-hybrid_1:8.2.43+dfsg.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ircd-hybrid"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libgnutls30" {>= "3.7.5"}
+  "libltdl7" {>= "2.4.7"}
+  "openssl"
+  "sysvinit-utils"
+]
+conflicts: [
+  "dancer-ircd"
+  "ircd-irc2"
+  "ircd-ircu"
+  "oftc-hybrid"
+]
+extra-source "ircd-hybrid_1:8.2.43+dfsg.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ircd-hybrid/ircd-hybrid_8.2.43+dfsg.1-1_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pachi-data_1:1.0-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pachi-data"]
+]
+conflicts: [
+  "pachi (<< 20031005-2)"
+]
+extra-source "pachi-data_1:1.0-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pachi/pachi-data_1.0-10_all.deb"
+}

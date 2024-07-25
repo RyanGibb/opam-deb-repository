@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ronn_0.8.0-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ronn"]
+]
+depends: [
+  "ruby-ronn" {= "0.8.0-2+deb10u1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ronn_0.8.0-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-ronn/ronn_0.8.0-2+deb10u1_all.deb"
+}

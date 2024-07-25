@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-subnet-perl_1.03-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-subnet-perl"]
+]
+depends: [
+  "libsocket6-perl" {>= "0.23"}
+  "perl-any"
+]
+extra-source "libnet-subnet-perl_1.03-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-subnet-perl/libnet-subnet-perl_1.03-1.1_all.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-http-api-data-dev_0.3.8.1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-http-api-data-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libghc-attoparsec-dev"
+  "libghc-attoparsec-iso8601-dev"
+  "libghc-hashable-dev"
+  "libghc-http-types-dev"
+  "libghc-time-locale-compat-dev"
+  "libghc-unordered-containers-dev"
+  "libghc-uri-bytestring-dev"
+  "libghc-uuid-types-dev"
+  "libgmp10"
+]
+extra-source "libghc-http-api-data-dev_0.3.8.1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-http-api-data/libghc-http-api-data-dev_0.3.8.1-4+b1_amd64.deb"
+}

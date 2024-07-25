@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xwiimote_2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xwiimote"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libxwiimote2" {>= "2"}
+]
+extra-source "xwiimote_2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xwiimote/xwiimote_2-4_amd64.deb"
+}

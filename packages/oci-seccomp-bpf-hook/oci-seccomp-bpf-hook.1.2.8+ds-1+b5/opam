@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i oci-seccomp-bpf-hook_1.2.8+ds-1+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r oci-seccomp-bpf-hook"]
+]
+depends: [
+  "libbpfcc" {>= "0.26.0+ds"}
+  "libc6" {>= "2.34"}
+  "libseccomp2" {>= "2.5.0"}
+]
+extra-source "oci-seccomp-bpf-hook_1.2.8+ds-1+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oci-seccomp-bpf-hook/oci-seccomp-bpf-hook_1.2.8+ds-1+b5_amd64.deb"
+}

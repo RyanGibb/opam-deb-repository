@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sqlite3-pcre_0~git20070120091816+4229ecc-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sqlite3-pcre"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpcre3"
+]
+extra-source "sqlite3-pcre_0~git20070120091816+4229ecc-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sqlite3-pcre/sqlite3-pcre_0~git20070120091816+4229ecc-2_amd64.deb"
+}

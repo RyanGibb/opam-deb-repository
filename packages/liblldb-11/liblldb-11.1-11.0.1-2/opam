@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblldb-11_1:11.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblldb-11"]
+]
+depends: [
+  "libc6" {>= "2.30"}
+  "libclang-cpp11" {>= "1-11.0.1"}
+  "libedit2" {>= "3.1-20140620-0"}
+  "libgcc-s1" {>= "3.0"}
+  "libllvm11" {= "1-11.0.1-2"}
+  "libncurses6" {>= "6"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libstdc++6" {>= "9"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "liblldb-11_1:11.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-11/liblldb-11_11.0.1-2_amd64.deb"
+}

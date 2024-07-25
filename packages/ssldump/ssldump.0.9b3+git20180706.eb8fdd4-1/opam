@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ssldump_0.9b3+git20180706.eb8fdd4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ssldump"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcap0-8" {>= "0.9.8"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "ssldump_0.9b3+git20180706.eb8fdd4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/ssldump/ssldump_0.9b3+git20180706.eb8fdd4-1_amd64.deb"
+}

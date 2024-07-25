@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gmic-zart_2.9.4-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gmic-zart"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libgmic1" {= "2.9.4-4"}
+  "libgomp1" {>= "4.9"}
+  "libopencv-core4-5" {>= "4.5.1+dfsg"}
+  "libopencv-imgproc4-5" {>= "4.5.1+dfsg"}
+  "libopencv-videoio4-5" {>= "4.5.1+dfsg"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.2.0~alpha1"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "gmic-zart_2.9.4-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gmic/gmic-zart_2.9.4-4_amd64.deb"
+}

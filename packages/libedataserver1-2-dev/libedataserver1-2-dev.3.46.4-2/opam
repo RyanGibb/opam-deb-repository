@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libedataserver1.2-dev_3.46.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libedataserver1.2-dev"]
+]
+depends: [
+  "gir1-2-edataserver-1-2" {= "3.46.4-2"}
+  "libcamel1-2-dev" {= "3.46.4-2"}
+  "libedataserver-1-2-27" {= "3.46.4-2"}
+  "libglib2-0-dev" {>= "2.40"}
+  "libsecret-1-dev"
+  "libsoup-3-0-dev" {>= "3.1.1"}
+  "libxml2-dev"
+]
+extra-source "libedataserver1.2-dev_3.46.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/evolution-data-server/libedataserver1.2-dev_3.46.4-2_amd64.deb"
+}

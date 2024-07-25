@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gfortran-9-multilib_9.3.0-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gfortran-9-multilib"]
+]
+depends: [
+  "gcc-9-base" {= "9.3.0-22"}
+  "gcc-9-multilib" {= "9.3.0-22"}
+  "gfortran-9" {= "9.3.0-22"}
+  "lib32gfortran-9-dev" {= "9.3.0-22"}
+  "libx32gfortran-9-dev" {= "9.3.0-22"}
+]
+extra-source "gfortran-9-multilib_9.3.0-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-9/gfortran-9-multilib_9.3.0-22_amd64.deb"
+}

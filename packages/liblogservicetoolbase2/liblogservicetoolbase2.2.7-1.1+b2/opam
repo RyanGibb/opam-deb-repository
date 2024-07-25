@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblogservicetoolbase2_2.7-1.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblogservicetoolbase2"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libgcc1" {>= "1-3.0"}
+  "liblogforwarderutils2v5"
+  "libomniorb4-2" {>= "4.2.0"}
+  "libomnithread4" {>= "4.2.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "liblogservicetoolbase2_2.7-1.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/logservice/liblogservicetoolbase2_2.7-1.1+b2_amd64.deb"
+}

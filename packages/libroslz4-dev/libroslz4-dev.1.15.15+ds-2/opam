@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libroslz4-dev_1.15.15+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libroslz4-dev"]
+]
+depends: [
+  "liblz4-dev"
+  "libroscpp-core-dev"
+  "libroslz4-1d" {= "1.15.15+ds-2"}
+]
+extra-source "libroslz4-dev_1.15.15+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-ros-comm/libroslz4-dev_1.15.15+ds-2_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gap-float_0.9.1+ds-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gap-float"]
+]
+depends: [
+  "gap" {>= "4r10p0-4"}
+  "libc6" {>= "2.14"}
+  "libfplll5" {>= "5.2.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libmpc3"
+  "libmpfi0" {>= "1.5.1"}
+  "libmpfr6" {>= "4.0.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "gap-float_0.9.1+ds-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gap-float/gap-float_0.9.1+ds-4_amd64.deb"
+}

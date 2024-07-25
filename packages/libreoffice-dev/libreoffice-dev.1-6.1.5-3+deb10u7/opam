@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-dev_1:6.1.5-3+deb10u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-dev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libreoffice-core" {= "1-6.1.5-3+deb10u7"}
+  "libreoffice-dev-common" {= "1-6.1.5-3+deb10u7"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  "ucpp"
+  "uno-libs3" {>= "4.4.0~alpha"}
+  "ure"
+]
+conflicts: [
+  "libreoffice (<< 1:5.2.5-2~)"
+  "libreoffice-dev-doc (<< 1:5.2.5-2~)"
+]
+extra-source "libreoffice-dev_1:6.1.5-3+deb10u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-dev_6.1.5-3+deb10u7_amd64.deb"
+}

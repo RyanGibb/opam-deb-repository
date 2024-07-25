@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i flightcrew_0.7.2+dfsg-13+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r flightcrew"]
+]
+depends: [
+  "libboost-program-options1-67-0"
+  "libc6" {>= "2.14"}
+  "libflightcrew0v5" {>= "0.7.2+dfsg"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt4-network" {>= "4-4.5.3"}
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libqtgui4" {>= "4-4.5.3"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "flightcrew_0.7.2+dfsg-13+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flightcrew/flightcrew_0.7.2+dfsg-13+deb10u1_amd64.deb"
+}

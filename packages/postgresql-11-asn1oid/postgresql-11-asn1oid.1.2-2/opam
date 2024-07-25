@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-11-asn1oid_1.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-11-asn1oid"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "postgresql-11"
+]
+extra-source "postgresql-11-asn1oid_1.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pgsql-asn1oid/postgresql-11-asn1oid_1.2-2_amd64.deb"
+}

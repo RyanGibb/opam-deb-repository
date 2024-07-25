@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgcc-8-dev-mips64el-cross_8.3.0-2cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgcc-8-dev-mips64el-cross"]
+]
+depends: [
+  "gcc-8-cross-base" {>= "8.3.0-2"}
+  "libatomic1-mips64el-cross" {>= "8.3.0-2cross1"}
+  "libgcc1-mips64el-cross" {>= "1-8.3.0-2cross1"}
+  "libgomp1-mips64el-cross" {>= "8.3.0-2cross1"}
+]
+extra-source "libgcc-8-dev-mips64el-cross_8.3.0-2cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross/libgcc-8-dev-mips64el-cross_8.3.0-2cross1_all.deb"
+}

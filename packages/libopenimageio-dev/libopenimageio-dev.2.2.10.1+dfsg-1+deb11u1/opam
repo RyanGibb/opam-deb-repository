@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenimageio-dev_2.2.10.1+dfsg-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenimageio-dev"]
+]
+depends: [
+  "libilmbase-dev"
+  "libopenimageio-doc" {>= "1.6.10~dfsg0-1"}
+  "libopenimageio2-2" {= "2.2.10.1+dfsg-1+deb11u1"}
+]
+extra-source "libopenimageio-dev_2.2.10.1+dfsg-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openimageio/libopenimageio-dev_2.2.10.1+dfsg-1+deb11u1_amd64.deb"
+}

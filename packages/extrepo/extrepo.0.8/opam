@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i extrepo_0.8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r extrepo"]
+]
+depends: [
+  "gpgv"
+  "libcryptx-perl"
+  "libdpkg-perl"
+  "libwww-perl"
+  "libyaml-libyaml-perl"
+  "perl-any"
+]
+extra-source "extrepo_0.8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/extrepo/extrepo_0.8_all.deb"
+}

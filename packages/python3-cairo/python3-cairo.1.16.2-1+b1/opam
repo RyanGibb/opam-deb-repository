@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-cairo_1.16.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-cairo"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.14.0"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.6~"}
+  "python3-any" {>= "3.3.2-2~"}
+]
+extra-source "python3-cairo_1.16.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pycairo/python3-cairo_1.16.2-1+b1_amd64.deb"
+}

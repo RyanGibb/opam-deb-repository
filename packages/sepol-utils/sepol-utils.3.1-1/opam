@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sepol-utils_3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sepol-utils"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libsepol1" {>= "2.5"}
+]
+extra-source "sepol-utils_3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsepol/sepol-utils_3.1-1_amd64.deb"
+}

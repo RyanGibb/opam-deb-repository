@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tuned_2.20.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tuned"]
+]
+depends: [
+  "dbus"
+  "ethtool"
+  "gawk"
+  "polkitd"
+  "procps"
+  "python3-any"
+  "python3-dbus"
+  "python3-gi"
+  "python3-linux-procfs"
+  "python3-pyudev"
+  "virt-what"
+]
+extra-source "tuned_2.20.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tuned/tuned_2.20.0-1_all.deb"
+}

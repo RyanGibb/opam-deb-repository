@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-autodoc_1.41+20200921-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-autodoc"]
+]
+depends: [
+  "libdbd-pg-perl"
+  "libhtml-template-perl"
+  "libterm-readkey-perl"
+]
+extra-source "postgresql-autodoc_1.41+20200921-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-autodoc/postgresql-autodoc_1.41+20200921-1.1_all.deb"
+}

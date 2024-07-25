@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pynfft_1.3.2-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pynfft"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libnfft3-double2"
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-numpy"
+  "python-numpy" {>= "1-1.14.3"}
+]
+extra-source "python-pynfft_1.3.2-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pynfft/python-pynfft_1.3.2-2+b3_amd64.deb"
+}

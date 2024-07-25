@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vdpauinfo_1.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vdpauinfo"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "libvdpau1" {>= "1.4"}
+  "libx11-6"
+]
+extra-source "vdpauinfo_1.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vdpauinfo/vdpauinfo_1.4-2_amd64.deb"
+}

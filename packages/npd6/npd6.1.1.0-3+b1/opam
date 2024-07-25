@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i npd6_1.1.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r npd6"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "npd6_1.1.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/npd6/npd6_1.1.0-3+b1_amd64.deb"
+}

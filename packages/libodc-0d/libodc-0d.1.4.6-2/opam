@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libodc-0d_1.4.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libodc-0d"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libeckit0d" {>= "1.20.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libgfortran5" {>= "10"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libodc-0d_1.4.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/odc/libodc-0d_1.4.6-2_amd64.deb"
+}

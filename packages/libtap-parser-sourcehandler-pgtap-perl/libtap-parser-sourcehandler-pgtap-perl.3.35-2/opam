@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtap-parser-sourcehandler-pgtap-perl_3.35-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtap-parser-sourcehandler-pgtap-perl"]
+]
+depends: [
+  "perl"
+]
+conflicts: [
+  "pgtap (<= 0.24-1)"
+]
+extra-source "libtap-parser-sourcehandler-pgtap-perl_3.35-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtap-parser-sourcehandler-pgtap-perl/libtap-parser-sourcehandler-pgtap-perl_3.35-2_all.deb"
+}

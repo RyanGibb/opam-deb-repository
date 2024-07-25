@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmatemixer-dev_1.26.0-2+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmatemixer-dev"]
+]
+depends: [
+  "libglib2-0-dev"
+  "libmatemixer0" {= "1.26.0-2+deb12u1"}
+]
+extra-source "libmatemixer-dev_1.26.0-2+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmatemixer/libmatemixer-dev_1.26.0-2+deb12u1_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dirmngr_2.2.12-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dirmngr"]
+]
+depends: [
+  "adduser"
+  "gpgconf" {= "2.2.12-1+deb10u2"}
+  "libassuan0" {>= "2.5.0"}
+  "libc6" {>= "2.25"}
+  "libgcrypt20" {>= "1.8.0"}
+  "libgnutls30" {>= "3.6.6"}
+  "libgpg-error0" {>= "1.35"}
+  "libksba8" {>= "1.3.4"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libnpth0" {>= "0.90"}
+  "lsb-base" {>= "3.2-13"}
+]
+extra-source "dirmngr_2.2.12-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnupg2/dirmngr_2.2.12-1+deb10u2_amd64.deb"
+}

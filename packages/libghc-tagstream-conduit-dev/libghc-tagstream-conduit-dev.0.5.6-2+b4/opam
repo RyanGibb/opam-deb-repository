@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tagstream-conduit-dev_0.5.6-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tagstream-conduit-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-attoparsec-dev"
+  "libghc-blaze-builder-dev"
+  "libghc-case-insensitive-dev"
+  "libghc-conduit-dev"
+  "libghc-conduit-extra-dev"
+  "libghc-data-default-dev"
+  "libghc-resourcet-dev"
+  "libghc-xml-conduit-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-tagstream-conduit-dev_0.5.6-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tagstream-conduit/libghc-tagstream-conduit-dev_0.5.6-2+b4_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdiagnostic-aggregator-dev_1.10.1+ds1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdiagnostic-aggregator-dev"]
+]
+depends: [
+  "libdiagnostic-aggregator1d" {= "1.10.1+ds1-3"}
+  "libdiagnostic-msgs-dev"
+  "libroscpp-dev"
+  "librostest-dev"
+  "libxmlrpcpp-dev"
+  "pluginlib-dev"
+  "python3-rospy"
+]
+extra-source "libdiagnostic-aggregator-dev_1.10.1+ds1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-diagnostics/libdiagnostic-aggregator-dev_1.10.1+ds1-3_amd64.deb"
+}

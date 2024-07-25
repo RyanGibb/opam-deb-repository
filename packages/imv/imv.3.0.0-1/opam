@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i imv_3.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r imv"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreeimage3"
+  "libinih1" {>= "40"}
+  "libsdl2-2-0-0" {>= "2.0.8"}
+  "libsdl2-ttf-2-0-0" {>= "2.0.14"}
+]
+extra-source "imv_3.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/imv/imv_3.0.0-1_amd64.deb"
+}

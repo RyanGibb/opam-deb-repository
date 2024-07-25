@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i binutils-mingw-w64_2.40-2+10.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r binutils-mingw-w64"]
+]
+depends: [
+  "binutils-mingw-w64-i686"
+  "binutils-mingw-w64-x86-64"
+]
+extra-source "binutils-mingw-w64_2.40-2+10.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/binutils-mingw-w64/binutils-mingw-w64_2.40-2+10.4_all.deb"
+}

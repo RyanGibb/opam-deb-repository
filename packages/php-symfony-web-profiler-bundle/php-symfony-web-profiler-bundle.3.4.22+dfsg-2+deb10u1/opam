@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-web-profiler-bundle_3.4.22+dfsg-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-web-profiler-bundle"]
+]
+depends: [
+  "php-common"
+  "php-symfony-http-kernel" {> "3.3"}
+  "php-symfony-routing"
+  "php-symfony-twig-bridge"
+  "php-symfony-var-dumper" {> "3.3"}
+  "php-twig"
+]
+extra-source "php-symfony-web-profiler-bundle_3.4.22+dfsg-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/symfony/php-symfony-web-profiler-bundle_3.4.22+dfsg-2+deb10u1_all.deb"
+}

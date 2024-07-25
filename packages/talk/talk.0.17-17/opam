@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i talk_0.17-17_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r talk"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "talk_0.17-17_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netkit-ntalk/talk_0.17-17_amd64.deb"
+}

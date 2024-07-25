@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libusrsctp-examples_0.9.3.0+20201102-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libusrsctp-examples"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libusrsctp1" {= "0.9.3.0+20201102-2"}
+]
+extra-source "libusrsctp-examples_0.9.3.0+20201102-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libusrsctp/libusrsctp-examples_0.9.3.0+20201102-2_amd64.deb"
+}

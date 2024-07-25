@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-lua_2.0.5+1.1.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-lua"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "liblua5-2-0"
+  "php-common" {>= "1-7.0+33~"}
+  "ucf"
+  ("libapache2-mod-php7-3" | "libphp7-3-embed" | "php7-3-cgi" | "php7-3-cli" | "php7-3-fpm" | "php7-3-phpdbg")
+]
+extra-source "php-lua_2.0.5+1.1.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-lua/php-lua_2.0.5+1.1.0-3_amd64.deb"
+}

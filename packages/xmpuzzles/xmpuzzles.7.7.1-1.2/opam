@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xmpuzzles_7.7.1-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xmpuzzles"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgl1"
+  "libx11-6"
+  "libxm4" {>= "2.3.4"}
+  "libxpm4"
+  "libxt6"
+  ("libglu1-mesa" | "libglu1")
+]
+conflicts: [
+  "xpuzzles"
+]
+extra-source "xmpuzzles_7.7.1-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xpuzzles/xmpuzzles_7.7.1-1.2_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxtst-dev_2:1.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxtst-dev"]
+]
+depends: [
+  "libx11-dev"
+  "libxext-dev"
+  "libxi-dev"
+  "libxtst6" {= "2-1.2.3-1"}
+  "x11proto-record-dev" {>= "1.13.99.1"}
+  "x11proto-xext-dev" {>= "7.0.99.3"}
+]
+extra-source "libxtst-dev_2:1.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxtst/libxtst-dev_1.2.3-1_amd64.deb"
+}

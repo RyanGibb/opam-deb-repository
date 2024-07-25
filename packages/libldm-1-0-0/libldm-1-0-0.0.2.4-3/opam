@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libldm-1.0-0_0.2.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libldm-1.0-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdevmapper1-02-1" {>= "2-1.02.74"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libuuid1" {>= "2.16"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libldm-1.0-0_0.2.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libl/libldm/libldm-1.0-0_0.2.4-3_amd64.deb"
+}

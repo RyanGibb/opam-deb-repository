@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i snapper-gui_0git.960a94834f-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r snapper-gui"]
+]
+depends: [
+  "gir1-2-gtksource-3-0"
+  "python3-any" {>= "3.2~"}
+  "snapper"
+]
+extra-source "snapper-gui_0git.960a94834f-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snapper-gui/snapper-gui_0git.960a94834f-3.1_all.deb"
+}

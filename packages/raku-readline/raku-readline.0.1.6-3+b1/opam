@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i raku-readline_0.1.6-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r raku-readline"]
+]
+depends: [
+  "libreadline8"
+  "rakudo"
+  "rakudo" {>= "2022.07-2"}
+]
+conflicts: [
+  "perl6-readline"
+]
+extra-source "raku-readline_0.1.6-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/raku-readline/raku-readline_0.1.6-3+b1_amd64.deb"
+}

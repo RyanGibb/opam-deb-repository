@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bsdtar_3.3.3-4+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bsdtar"]
+]
+depends: [
+  "libarchive-tools" {>= "3.3.3-4+deb10u1"}
+]
+extra-source "bsdtar_3.3.3-4+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libarchive/bsdtar_3.3.3-4+deb10u1_all.deb"
+}

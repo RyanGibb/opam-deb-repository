@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcifpp-dev_5.0.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcifpp-dev"]
+]
+depends: [
+  "libboost-regex-dev"
+  "libcifpp5" {= "5.0.7.1-1"}
+  "zlib1g-dev"
+]
+extra-source "libcifpp-dev_5.0.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcifpp/libcifpp-dev_5.0.7.1-1_amd64.deb"
+}

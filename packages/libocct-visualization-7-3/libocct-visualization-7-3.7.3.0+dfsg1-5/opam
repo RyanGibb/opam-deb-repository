@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libocct-visualization-7.3_7.3.0+dfsg1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libocct-visualization-7.3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfreeimage3"
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libocct-foundation-7-3"
+  "libocct-modeling-algorithms-7-3"
+  "libocct-modeling-data-7-3"
+  "libstdc++6" {>= "5.2"}
+  "libtbb2" {>= "2017~U7"}
+  "libx11-6"
+  "libxext6"
+  "libxi6"
+  "libxmu6"
+]
+extra-source "libocct-visualization-7.3_7.3.0+dfsg1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencascade/libocct-visualization-7.3_7.3.0+dfsg1-5_amd64.deb"
+}

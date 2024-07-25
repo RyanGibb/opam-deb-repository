@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lv2file_0.95-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lv2file"]
+]
+depends: [
+  "libargtable2-0" {>= "7"}
+  "libc6" {>= "2.34"}
+  "liblilv-0-0" {>= "0.14.2~dfsg0"}
+  "libsndfile1" {>= "1.0.20"}
+]
+extra-source "lv2file_0.95-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lv2file/lv2file_0.95-2_amd64.deb"
+}

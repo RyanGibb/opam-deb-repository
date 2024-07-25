@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hdbc-session-dev_0.1.2.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hdbc-session-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-hdbc-dev"
+  "libgmp10"
+]
+extra-source "libghc-hdbc-session-dev_0.1.2.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hdbc-session/libghc-hdbc-session-dev_0.1.2.0-3+b1_amd64.deb"
+}

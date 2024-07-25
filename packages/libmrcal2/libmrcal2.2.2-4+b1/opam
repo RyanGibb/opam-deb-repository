@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmrcal2_2.2-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmrcal2"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libdogleg2" {>= "0.15.3"}
+  "libfreeimage3" {>= "3.18.0+ds2"}
+]
+extra-source "libmrcal2_2.2-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrcal/libmrcal2_2.2-4+b1_amd64.deb"
+}

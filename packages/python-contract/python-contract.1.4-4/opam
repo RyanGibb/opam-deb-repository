@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-contract_1.4-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-contract"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+]
+extra-source "python-contract_1.4-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-contract/python-contract_1.4-4_all.deb"
+}

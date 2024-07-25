@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-dev-is-python2_2.7.18-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-dev-is-python2"]
+]
+depends: [
+  "python-is-python2" {= "2.7.18-9"}
+  "python2-dev"
+]
+extra-source "python-dev-is-python2_2.7.18-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/what-is-python/python-dev-is-python2_2.7.18-9_all.deb"
+}

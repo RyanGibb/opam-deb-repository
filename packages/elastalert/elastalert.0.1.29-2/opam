@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elastalert_0.1.29-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elastalert"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-aws-requests-auth"
+  "python-blist"
+  "python-boto3"
+  "python-configparser"
+  "python-croniter"
+  "python-dateutil"
+  "python-elasticsearch"
+  "python-envparse"
+  "python-exotel"
+  "python-jira"
+  "python-jsonschema"
+  "python-mock"
+  "python-requests"
+  "python-simplejson"
+  "python-staticconf"
+  "python-stomp"
+  "python-texttable"
+  "python-twilio"
+  "python-yaml"
+]
+extra-source "elastalert_0.1.29-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elastalert/elastalert_0.1.29-2_all.deb"
+}

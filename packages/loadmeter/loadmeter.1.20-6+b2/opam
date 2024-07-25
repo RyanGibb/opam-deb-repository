@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i loadmeter_1.20-6+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r loadmeter"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libx11-6"
+]
+extra-source "loadmeter_1.20-6+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/loadmeter/loadmeter_1.20-6+b2_amd64.deb"
+}

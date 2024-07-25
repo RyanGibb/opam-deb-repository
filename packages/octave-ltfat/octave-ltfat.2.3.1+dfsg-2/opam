@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-ltfat_2.3.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-ltfat"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc1" {>= "1-4.0"}
+  "libgfortran5" {>= "8"}
+  "libgomp1" {>= "4.2.1"}
+  "liboctave6"
+  "libquadmath0" {>= "4.6"}
+  "libstdc++6" {>= "5.2"}
+  "octave" {>= "4.4.1"}
+  "octave-ltfat-common" {= "2.3.1+dfsg-2"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "octave-ltfat_2.3.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave-ltfat/octave-ltfat_2.3.1+dfsg-2_amd64.deb"
+}

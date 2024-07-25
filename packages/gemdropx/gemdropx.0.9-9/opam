@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gemdropx_0.9-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gemdropx"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libsdl-mixer1-2" {>= "1.2.12"}
+  "libsdl1-2-compat-shim"
+]
+extra-source "gemdropx_0.9-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gemdropx/gemdropx_0.9-9_amd64.deb"
+}

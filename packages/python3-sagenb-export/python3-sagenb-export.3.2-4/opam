@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sagenb-export_3.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sagenb-export"]
+]
+depends: [
+  "python3-any"
+  "python3-ipython" {>= "5"}
+  "python3-nbconvert"
+  "python3-six"
+]
+extra-source "python3-sagenb-export_3.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sagenb-export/python3-sagenb-export_3.2-4_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspqr2_1:5.8.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspqr2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcholmod3" {>= "1-4.5.2"}
+  "libgcc-s1" {>= "4.0"}
+  "libsuitesparseconfig5" {>= "1-5.0.0"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libspqr2_1:5.8.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/suitesparse/libspqr2_5.8.1+dfsg-2_amd64.deb"
+}

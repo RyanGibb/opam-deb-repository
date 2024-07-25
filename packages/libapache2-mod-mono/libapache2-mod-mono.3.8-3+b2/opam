@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapache2-mod-mono_3.8-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapache2-mod-mono"]
+]
+depends: [
+  "apache2-bin"
+  "apache2-bin" {>= "2.4.16"}
+  "debconf" {>= "1.2.0"}
+  "libc6" {>= "2.14"}
+  "mono-runtime" {>= "2.10"}
+  ("mono-apache-server" {< "4.4"} | "mono-apache-server4" {< "4.4"})
+  ("mono-apache-server" {>= "4.2"} | "mono-apache-server4" {>= "4.2"})
+]
+extra-source "libapache2-mod-mono_3.8-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mod-mono/libapache2-mod-mono_3.8-3+b2_amd64.deb"
+}

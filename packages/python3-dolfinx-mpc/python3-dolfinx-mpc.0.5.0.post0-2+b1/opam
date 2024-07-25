@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-dolfinx-mpc_0.5.0.post0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-dolfinx-mpc"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libdolfinx-mpc0-5" {= "0.5.0.post0-2+b1"}
+  "libdolfinx-real0-5" {>= "1-0.5.2"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libpetsc-real3-18" {>= "3.18.3+dfsg1"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-dolfinx-real"
+  "python3-numpy"
+]
+extra-source "python3-dolfinx-mpc_0.5.0.post0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dolfinx-mpc/python3-dolfinx-mpc_0.5.0.post0-2+b1_amd64.deb"
+}

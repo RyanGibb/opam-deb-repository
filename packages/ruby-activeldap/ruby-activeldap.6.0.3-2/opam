@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-activeldap_6.0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-activeldap"]
+]
+depends: [
+  "ruby-activemodel" {>= "5.2"}
+  "ruby-builder"
+  "ruby-gettext"
+  "ruby-locale"
+  "ruby-net-ldap" {>= "0.9.13"}
+]
+extra-source "ruby-activeldap_6.0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-activeldap/ruby-activeldap_6.0.3-2_all.deb"
+}

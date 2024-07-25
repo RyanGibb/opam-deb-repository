@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-offload-amdgcn_4:12.2.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-offload-amdgcn"]
+]
+depends: [
+  "cpp" {>= "4-12.2.0-3"}
+  "gcc" {>= "4-12.2.0-3"}
+  "gcc-12-offload-amdgcn" {>= "12.2.0-1~"}
+]
+extra-source "gcc-offload-amdgcn_4:12.2.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults/gcc-offload-amdgcn_12.2.0-3_amd64.deb"
+}

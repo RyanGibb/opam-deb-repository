@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-miio_0.5.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-miio"]
+]
+depends: [
+  "python3-any"
+  "python3-appdirs"
+  "python3-attr"
+  "python3-click"
+  "python3-construct" {>= "2.9.45"}
+  "python3-cryptography"
+  "python3-netifaces"
+  "python3-tqdm"
+  "python3-tz"
+  "python3-zeroconf"
+]
+extra-source "python3-miio_0.5.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-miio/python3-miio_0.5.0.1-1_all.deb"
+}

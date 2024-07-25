@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-malcontent_0.10.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-malcontent"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.60"}
+  "libmalcontent-0-0" {>= "0.6.0"}
+  "libpam0g" {>= "0.99.7.1"}
+]
+extra-source "libpam-malcontent_0.10.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/malcontent/libpam-malcontent_0.10.0-2_amd64.deb"
+}

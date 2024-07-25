@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmrtd-dev_0.1.6-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmrtd-dev"]
+]
+depends: [
+  "libgcrypt20-dev"
+  "libmrtd0" {= "0.1.6-3+b1"}
+  "libnfc-dev"
+]
+extra-source "libmrtd-dev_0.1.6-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrtdreader/libmrtd-dev_0.1.6-3+b1_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-dictionary_3.26.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-dictionary"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.42.0"}
+  "libgtk-3-0" {>= "3.21.6"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+conflicts: [
+  "libgdict-common"
+]
+extra-source "gnome-dictionary_3.26.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-dictionary/gnome-dictionary_3.26.1-6_amd64.deb"
+}

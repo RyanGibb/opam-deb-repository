@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rt5-apache2_5.0.3+dfsg-3~deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rt5-apache2"]
+]
+depends: [
+  "apache2"
+  ("libapache2-mod-fcgid" | "libapache2-mod-perl2")
+]
+extra-source "rt5-apache2_5.0.3+dfsg-3~deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/request-tracker5/rt5-apache2_5.0.3+dfsg-3~deb12u2_all.deb"
+}

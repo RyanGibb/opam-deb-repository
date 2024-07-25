@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libactionlib1d_1.13.2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libactionlib1d"]
+]
+depends: [
+  "libboost-thread1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.17"}
+  "libgcc-s1" {>= "3.0"}
+  "librosconsole3d" {>= "1.14.3"}
+  "libroscpp3d" {>= "1.15.9+ds1"}
+  "librostime1d" {>= "0.7.2"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libactionlib1d_1.13.2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-actionlib/libactionlib1d_1.13.2-6_amd64.deb"
+}

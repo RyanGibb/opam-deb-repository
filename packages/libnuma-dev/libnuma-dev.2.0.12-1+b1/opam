@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnuma-dev_2.0.12-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnuma-dev"]
+]
+depends: [
+  "libnuma1" {= "2.0.12-1+b1"}
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "libnuma-dev_2.0.12-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/numactl/libnuma-dev_2.0.12-1+b1_amd64.deb"
+}

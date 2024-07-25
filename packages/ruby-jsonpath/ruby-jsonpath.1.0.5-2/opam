@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-jsonpath_1.0.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-jsonpath"]
+]
+depends: [
+  "ruby-multi-json"
+  "ruby-to-regexp" {>= "0.2.1~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-jsonpath_1.0.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-jsonpath/ruby-jsonpath_1.0.5-2_all.deb"
+}

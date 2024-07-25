@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i guile-ssh_0.13.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r guile-ssh"]
+]
+depends: [
+  "libguile-ssh13"
+  ("guile-3-0" | "guile-2-2")
+]
+extra-source "guile-ssh_0.13.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/guile-ssh/guile-ssh_0.13.1-4_amd64.deb"
+}

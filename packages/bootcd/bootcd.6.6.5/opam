@@ -1,0 +1,35 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bootcd_6.6.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bootcd"]
+]
+depends: [
+  "cpio"
+  "dosfstools"
+  "e2fsprogs"
+  "file"
+  "genisoimage"
+  "grub-efi-amd64-bin"
+  "initramfs-tools"
+  "isolinux"
+  "rsync"
+  "shellia" {>= "5.7.5"}
+  "syslinux"
+  "syslinux-common"
+  "sysvinit-utils"
+  "uuid-runtime"
+  "xorriso"
+  ("busybox" | "busybox-static" | "busybox-cvs" | "busybox-cvs-static")
+  ("fdisk" | "util-linux" {< "2.29.2-3~"})
+]
+conflicts: [
+  "bootcd-backup"
+  "bootcd-i386"
+  "bootcd-ia64"
+  "bootcd-mkinitramfs"
+]
+extra-source "bootcd_6.6.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bootcd/bootcd_6.6.5_all.deb"
+}

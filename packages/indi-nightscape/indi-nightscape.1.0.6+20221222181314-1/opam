@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i indi-nightscape_1.0.6+20221222181314-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r indi-nightscape"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libftdi1"
+  "libftdi1-2" {>= "1.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libindidriver1" {>= "1.9.9+dfsg"}
+  "libstdc++6" {>= "12"}
+]
+extra-source "indi-nightscape_1.0.6+20221222181314-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/indi-nightscape/indi-nightscape_1.0.6+20221222181314-1_amd64.deb"
+}

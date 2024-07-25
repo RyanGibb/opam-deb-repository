@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-bencode-prof_0.6.0.0-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-bencode-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-bencode-dev" {= "0.6.0.0-7+b2"}
+]
+extra-source "libghc-bencode-prof_0.6.0.0-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-bencode/libghc-bencode-prof_0.6.0.0-7+b2_amd64.deb"
+}

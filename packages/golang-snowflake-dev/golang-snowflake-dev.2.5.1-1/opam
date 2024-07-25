@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-snowflake-dev_2.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-snowflake-dev"]
+]
+depends: [
+  "golang-github-google-uuid-dev"
+  "golang-github-gorilla-websocket-dev"
+  "golang-github-pion-webrtc-v3-dev" {>= "3.1.56-1~"}
+  "golang-github-prometheus-client-golang-dev"
+  "golang-github-prometheus-client-model-dev"
+  "golang-github-smartystreets-goconvey-dev"
+  "golang-github-xtaci-kcp-dev"
+  "golang-github-xtaci-smux-dev"
+  "golang-golang-x-crypto-dev"
+  "golang-golang-x-net-dev"
+  "golang-google-protobuf-dev"
+  "golang-goptlib-dev" {>= "1.2.0"}
+  "golang-refraction-networking-utls-dev"
+]
+extra-source "golang-snowflake-dev_2.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snowflake/golang-snowflake-dev_2.5.1-1_all.deb"
+}

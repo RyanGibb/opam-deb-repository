@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bettercap_2.32.0-1+b9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bettercap"]
+]
+depends: [
+  "ca-certificates"
+  "iproute2"
+  "iptables"
+  "iw"
+  "libc6" {>= "2.34"}
+  "libnetfilter-queue1" {>= "1.0.0"}
+  "libpcap0-8" {>= "1.5.1"}
+  "libusb-1-0-0" {>= "2-1.0.22"}
+]
+extra-source "bettercap_2.32.0-1+b9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bettercap/bettercap_2.32.0-1+b9_amd64.deb"
+}

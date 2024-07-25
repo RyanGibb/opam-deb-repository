@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i acl_2.2.53-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r acl"]
+]
+depends: [
+  "libacl1" {= "2.2.53-10"}
+  "libc6" {>= "2.14"}
+]
+extra-source "acl_2.2.53-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/acl/acl_2.2.53-10_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpreferencepanes1_1.2.0-2+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpreferencepanes1"]
+]
+depends: [
+  "gnustep-base-runtime" {>= "1.26.0"}
+  "gnustep-common"
+  "libc6" {>= "2.4"}
+  "libgnustep-base1-26" {>= "1.26.0"}
+  "libobjc4" {>= "4.2.1"}
+]
+extra-source "libpreferencepanes1_1.2.0-2+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/systempreferences.app/libpreferencepanes1_1.2.0-2+b5_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sfftw2_2.1.5-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sfftw2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libopenmpi3" {>= "4.1.2"}
+]
+conflicts: [
+  "fftw2-single"
+]
+extra-source "sfftw2_2.1.5-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fftw/sfftw2_2.1.5-6_amd64.deb"
+}

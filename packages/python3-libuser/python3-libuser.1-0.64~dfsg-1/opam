@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-libuser_1:0.64~dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-libuser"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libuser1" {>= "1-0.60~dfsg"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+]
+extra-source "python3-libuser_1:0.64~dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libuser/python3-libuser_0.64~dfsg-1_amd64.deb"
+}

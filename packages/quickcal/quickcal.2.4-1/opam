@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i quickcal_2.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r quickcal"]
+]
+depends: [
+  "gawk"
+  "gir1-2-gtk-3-0"
+  "gir1-2-pango-1-0"
+  "python3-any"
+  "python3-gi"
+]
+extra-source "quickcal_2.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/quickcal/quickcal_2.4-1_all.deb"
+}

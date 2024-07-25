@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-zeta-unit-test_1.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-zeta-unit-test"]
+]
+depends: [
+  "php-common"
+  "phpunit" {< "8~~"}
+  "phpunit" {>= "7.0"}
+]
+extra-source "php-zeta-unit-test_1.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-zeta-unit-test/php-zeta-unit-test_1.1.2-1_all.deb"
+}

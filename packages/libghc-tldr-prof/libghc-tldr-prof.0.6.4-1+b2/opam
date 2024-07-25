@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tldr-prof_0.6.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tldr-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-ansi-terminal-prof"
+  "libghc-cmark-prof"
+  "libghc-tldr-dev" {= "0.6.4-1+b2"}
+]
+extra-source "libghc-tldr-prof_0.6.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tldr/libghc-tldr-prof_0.6.4-1+b2_amd64.deb"
+}

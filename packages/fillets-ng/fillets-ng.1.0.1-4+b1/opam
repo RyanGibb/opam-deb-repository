@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fillets-ng_1.0.1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fillets-ng"]
+]
+depends: [
+  "fillets-ng-data" {>= "1.0.0"}
+  "libc6" {>= "2.14"}
+  "libfribidi0" {>= "0.19.2"}
+  "libgcc-s1"
+  "liblua5-1-0"
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2"
+  "libsdl-ttf2-0-0"
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+]
+extra-source "fillets-ng_1.0.1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fillets-ng/fillets-ng_1.0.1-4+b1_amd64.deb"
+}

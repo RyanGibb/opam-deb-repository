@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xmltv-gui_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xmltv-gui"]
+]
+depends: [
+  "libdate-manip-perl"
+  "libtk-tablematrix-perl"
+  "libwww-perl"
+  "libxml-parser-perl"
+  "libxml-twig-perl"
+  "libxml-writer-perl"
+  "libxmltv-perl" {= "1.0.0-1"}
+  "perl-any"
+  "perl-tk"
+  "xmltv-util" {= "1.0.0-1"}
+]
+extra-source "xmltv-gui_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmltv/xmltv-gui_1.0.0-1_all.deb"
+}

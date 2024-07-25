@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-gyp_7.1.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-gyp"]
+]
+depends: [
+  "gyp" {>= "0.1+20200513gitcaa6002"}
+  "libnode-dev"
+  "node-glob"
+  "node-graceful-fs"
+  "node-mkdirp"
+  "node-nopt"
+  "node-npmlog"
+  "node-osenv"
+  "node-rimraf"
+  "node-semver" {>= "7"}
+  "node-tar"
+  "node-which"
+  "nodejs"
+]
+extra-source "node-gyp_7.1.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-gyp/node-gyp_7.1.2-4_all.deb"
+}

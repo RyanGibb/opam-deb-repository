@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tableau-parm_0.2.0-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tableau-parm"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libsgutils2-1-46-2" {>= "1.27"}
+]
+extra-source "tableau-parm_0.2.0-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tableau-parm/tableau-parm_0.2.0-6+b1_amd64.deb"
+}

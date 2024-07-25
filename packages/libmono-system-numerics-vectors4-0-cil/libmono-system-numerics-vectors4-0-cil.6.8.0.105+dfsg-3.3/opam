@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmono-system-numerics-vectors4.0-cil_6.8.0.105+dfsg-3.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmono-system-numerics-vectors4.0-cil"]
+]
+depends: [
+  "libmono-corlib4-5-cil" {>= "5.18.0.240"}
+  "libmono-system-numerics4-0-cil" {>= "5.16.0.220"}
+]
+extra-source "libmono-system-numerics-vectors4.0-cil_6.8.0.105+dfsg-3.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mono/libmono-system-numerics-vectors4.0-cil_6.8.0.105+dfsg-3.3_all.deb"
+}

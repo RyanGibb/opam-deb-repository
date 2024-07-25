@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libotbapplicationengine-8.1-1_8.1.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libotbapplicationengine-8.1-1"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.0"}
+  "libinsighttoolkit4-13" {>= "4.13.3withdata-dfsg2"}
+  "libotbcommon-8-1-1" {>= "7.0.0"}
+  "libotbextendedfilename-8-1-1" {>= "7.2.0~rc2"}
+  "libotbgdaladapters-8-1-1" {>= "7.1.0"}
+  "libotbimagebase-8-1-1" {>= "8.0.0"}
+  "libotbimageio-8-1-1" {>= "7.0.0"}
+  "libotbiogdal-8-1-1" {>= "8.1.1"}
+  "libotbmetadata-8-1-1" {>= "8.1.0"}
+  "libotbstreaming-8-1-1" {>= "6.6.0"}
+  "libotbtransform-8-1-1" {>= "8.0.0"}
+  "libotbvectordatabase-8-1-1" {>= "5.2.0"}
+  "libotbvectordataio-8-1-1" {>= "5.2.0"}
+  "libstdc++6" {>= "11"}
+  "libtinyxml2-6-2v5" {>= "2.6.2"}
+]
+extra-source "libotbapplicationengine-8.1-1_8.1.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/otb/libotbapplicationengine-8.1-1_8.1.1+dfsg-1_amd64.deb"
+}

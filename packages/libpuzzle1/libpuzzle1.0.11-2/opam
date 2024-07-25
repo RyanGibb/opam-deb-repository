@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpuzzle1_0.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpuzzle1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgd3" {>= "2.1.0~alpha~"}
+]
+extra-source "libpuzzle1_0.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpuzzle/libpuzzle1_0.11-2_amd64.deb"
+}

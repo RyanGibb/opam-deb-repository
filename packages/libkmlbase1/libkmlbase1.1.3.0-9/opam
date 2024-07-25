@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkmlbase1_1.3.0-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkmlbase1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libminizip1" {>= "1.1"}
+  "libstdc++6" {>= "5.2"}
+  "liburiparser1" {>= "0.7.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libkmlbase1_1.3.0-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkml/libkmlbase1_1.3.0-9_amd64.deb"
+}

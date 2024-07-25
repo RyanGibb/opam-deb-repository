@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-django-hyperkitty_1.2.2-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-django-hyperkitty"]
+]
+depends: [
+  "fonts-glewlwyd"
+  "libjs-bootstrap"
+  "python3-any"
+  "python3-dateutil"
+  "python3-django" {>= "1-1.11"}
+  "python3-django-compressor"
+  "python3-django-extensions"
+  "python3-django-gravatar2"
+  "python3-django-haystack" {>= "2.8.0"}
+  "python3-django-mailman3" {>= "1.2.0"}
+  "python3-django-q" {>= "0.9.4-2"}
+  "python3-djangorestframework"
+  "python3-lockfile"
+  "python3-mailmanclient" {>= "3.2.0"}
+  "python3-networkx"
+  "python3-robot-detection"
+  "python3-tz"
+]
+conflicts: [
+  "python-django-hyperkitty"
+]
+extra-source "python3-django-hyperkitty_1.2.2-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hyperkitty/python3-django-hyperkitty_1.2.2-1+deb10u1_all.deb"
+}

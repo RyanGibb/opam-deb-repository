@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjack0_1:0.126.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjack0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdb5-3"
+]
+conflicts: [
+  "libjack-0.116"
+  "libjack-0.125"
+]
+extra-source "libjack0_1:0.126.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jack-audio-connection-kit/libjack0_0.126.0-2_amd64.deb"
+}

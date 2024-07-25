@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-remctl_3.18-1+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-remctl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libremctl1" {>= "3.1"}
+  "php-common" {>= "1-7.0+33~"}
+  ("libapache2-mod-php8-2" | "libphp8-2-embed" | "php8-2-cgi" | "php8-2-cli" | "php8-2-fpm" | "php8-2-phpdbg")
+]
+extra-source "php-remctl_3.18-1+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/remctl/php-remctl_3.18-1+b7_amd64.deb"
+}

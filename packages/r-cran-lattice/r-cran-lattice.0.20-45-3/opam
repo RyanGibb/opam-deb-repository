@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-lattice_0.20-45-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-lattice"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.0-1"}
+]
+extra-source "r-cran-lattice_0.20-45-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lattice/r-cran-lattice_0.20-45-3_amd64.deb"
+}

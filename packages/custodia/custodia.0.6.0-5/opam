@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i custodia_0.6.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r custodia"]
+]
+depends: [
+  "adduser"
+  "python3-any"
+  "python3-custodia"
+  "python3-jwcrypto" {>= "0.4.2"}
+  "python3-six"
+]
+extra-source "custodia_0.6.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/custodia/custodia_0.6.0-5_all.deb"
+}

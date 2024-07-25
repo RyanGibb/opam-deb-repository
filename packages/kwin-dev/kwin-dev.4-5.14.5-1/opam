@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kwin-dev_4:5.14.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kwin-dev"]
+]
+depends: [
+  "kwin-common" {= "4-5.14.5-1"}
+  "libegl1-mesa-dev" {>= "1.2~"}
+  "libepoxy-dev" {>= "1.2"}
+  "libkf5config-dev" {>= "5.42.0~"}
+  "libkf5coreaddons-dev" {>= "5.42.0~"}
+  "libkf5windowsystem-dev" {>= "5.42.0~"}
+  "libqt5x11extras5-dev" {>= "5.11.0~"}
+  "qtbase5-dev" {>= "5.11.0~"}
+]
+extra-source "kwin-dev_4:5.14.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kwin/kwin-dev_5.14.5-1_amd64.deb"
+}

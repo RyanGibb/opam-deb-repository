@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfaudio0_21.02-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfaudio0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.10.0"}
+  "libgstreamer1-0-0" {>= "1.0.0"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libstb0" {>= "0.0~git20180212.15.e6afb9c"}
+]
+extra-source "libfaudio0_21.02-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/faudio/libfaudio0_21.02-1_amd64.deb"
+}

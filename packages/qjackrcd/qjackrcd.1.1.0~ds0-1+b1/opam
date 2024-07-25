@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qjackrcd_1.1.0~ds0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qjackrcd"]
+]
+depends: [
+  "jackd"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt5core5a" {>= "5.7.0"}
+  "libqt5gui5" {>= "5.2.0"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "5"}
+  ("libgl1-mesa-glx" | "libgl1")
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "qjackrcd_1.1.0~ds0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qjackrcd/qjackrcd_1.1.0~ds0-1+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-psr-http-client_1.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-psr-http-client"]
+]
+depends: [
+  "php-common"
+  "php-psr-http-message" {< "2~~"}
+  "php-psr-http-message" {>= "1.0"}
+]
+extra-source "php-psr-http-client_1.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-psr-http-client/php-psr-http-client_1.0.1-2_all.deb"
+}

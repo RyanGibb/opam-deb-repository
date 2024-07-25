@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ktexteditor-katepart_5.103.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ktexteditor-katepart"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libkf5coreaddons5" {>= "5.77.0"}
+  "libkf5texteditor5" {= "5.103.0-1.1"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "ktexteditor-katepart_5.103.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/ktexteditor/ktexteditor-katepart_5.103.0-1.1_amd64.deb"
+}

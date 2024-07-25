@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-flask-openid_1.2.5+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-flask-openid"]
+]
+depends: [
+  "python3-any"
+  "python3-flask" {>= "0.10.1"}
+  "python3-openid" {>= "2.0"}
+]
+extra-source "python3-flask-openid_1.2.5+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flask-openid/python3-flask-openid_1.2.5+dfsg-4_all.deb"
+}

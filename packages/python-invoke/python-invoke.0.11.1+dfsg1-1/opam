@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-invoke_0.11.1+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-invoke"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-six"
+  "python-yaml"
+  "python2-7-any"
+]
+extra-source "python-invoke_0.11.1+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-invoke/python-invoke_0.11.1+dfsg1-1_all.deb"
+}

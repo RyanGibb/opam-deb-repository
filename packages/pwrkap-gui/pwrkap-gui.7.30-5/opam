@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pwrkap-gui_7.30-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pwrkap-gui"]
+]
+depends: [
+  "pwrkap" {= "7.30-5"}
+  "python" {>= "2.4"}
+  "python-gtk2"
+  "python-matplotlib"
+]
+extra-source "pwrkap-gui_7.30-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pwrkap/pwrkap-gui_7.30-5_all.deb"
+}

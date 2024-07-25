@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gajim-appindicatorintegration_1.3.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gajim-appindicatorintegration"]
+]
+depends: [
+  "gajim" {>= "1.2.91~"}
+  "gir1-2-ayatanaappindicator3-0-1"
+  "python3-pkg-resources"
+]
+extra-source "gajim-appindicatorintegration_1.3.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gajim-appindicatorintegration/gajim-appindicatorintegration_1.3.3-2_all.deb"
+}

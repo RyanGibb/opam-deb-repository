@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libanimal-sniffer-java_1.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libanimal-sniffer-java"]
+]
+depends: [
+  "libasm-java" {>= "6.0~alpha"}
+  "libmaven-common-artifact-filters-java" {>= "3.0.1"}
+  "libmaven-enforcer-plugin-java"
+  "libmaven3-core-java" {>= "3.5.0"}
+  "libplexus-container-default1-5-java" {>= "1.5.5"}
+  "libplexus-utils-java"
+]
+extra-source "libanimal-sniffer-java_1.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/animal-sniffer/libanimal-sniffer-java_1.16-1_all.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsynthesis0v5_3.4.0.47.5+syncevolution-1.5.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsynthesis0v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc-s1"
+  "libical3" {>= "3.0.0"}
+  "libpcre3"
+  "libsmltk0" {>= "3.4.0.47.5+syncevolution-1.5.3"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libsynthesis0"
+]
+extra-source "libsynthesis0v5_3.4.0.47.5+syncevolution-1.5.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsynthesis/libsynthesis0v5_3.4.0.47.5+syncevolution-1.5.3-1_amd64.deb"
+}

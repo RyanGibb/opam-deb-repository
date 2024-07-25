@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kodi_2:20.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kodi"]
+]
+depends: [
+  "kodi-bin" {< "2-20.1+dfsg-1.1~"}
+  "kodi-bin" {>= "2-20.1+dfsg-1"}
+  "kodi-data" {>= "2-20.1+dfsg-1"}
+]
+extra-source "kodi_2:20.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kodi/kodi_20.1+dfsg-1_amd64.deb"
+}

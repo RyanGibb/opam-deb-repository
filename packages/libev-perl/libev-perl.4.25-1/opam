@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libev-perl_4.25-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libev-perl"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "libcommon-sense-perl"
+  "perl" {>= "5.28.1-3"}
+  "perl-base"
+]
+extra-source "libev-perl_4.25-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libev-perl/libev-perl_4.25-1_amd64.deb"
+}

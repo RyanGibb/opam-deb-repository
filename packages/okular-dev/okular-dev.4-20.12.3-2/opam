@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i okular-dev_4:20.12.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r okular-dev"]
+]
+depends: [
+  "libkf5config-dev" {>= "5.68.0~"}
+  "libkf5coreaddons-dev" {>= "5.68.0~"}
+  "libkf5xmlgui-dev" {>= "5.68.0~"}
+  "libokular5core9" {= "4-20.12.3-2"}
+  "qtbase5-dev" {>= "5.12.0~"}
+]
+extra-source "okular-dev_4:20.12.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/okular/okular-dev_20.12.3-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libisccc-export161_1:9.11.19+dfsg-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libisccc-export161"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libisc-export1105"
+]
+extra-source "libisccc-export161_1:9.11.19+dfsg-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bind9-libs/libisccc-export161_9.11.19+dfsg-2.1_amd64.deb"
+}

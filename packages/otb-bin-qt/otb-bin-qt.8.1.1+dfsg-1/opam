@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i otb-bin-qt_8.1.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r otb-bin-qt"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libinsighttoolkit4-13" {>= "4.13.3withdata-dfsg2"}
+  "libotb-apps" {= "8.1.1+dfsg-1"}
+  "libotbapplicationengine-8-1-1" {>= "5.2.0"}
+  "libotbcommon-8-1-1" {>= "6.6.1"}
+  "libotbqtwidget-8-1-1" {= "8.1.1+dfsg-1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "otb-bin-qt_8.1.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/otb/otb-bin-qt_8.1.1+dfsg-1_amd64.deb"
+}

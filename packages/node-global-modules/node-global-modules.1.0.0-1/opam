@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-global-modules_1.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-global-modules"]
+]
+depends: [
+  "node-global-prefix" {>= "1.0.1"}
+  "node-is-windows" {>= "1.0.1"}
+  "node-resolve-dir" {>= "1.0"}
+  "nodejs"
+]
+extra-source "node-global-modules_1.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-global-modules/node-global-modules_1.0.0-1_all.deb"
+}

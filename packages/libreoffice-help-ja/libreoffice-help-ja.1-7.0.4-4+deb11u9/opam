@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-help-ja_1:7.0.4-4+deb11u9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-help-ja"]
+]
+depends: [
+  "libreoffice-common" {>= "1-6.1.0~"}
+  "libreoffice-help-common" {= "1-7.0.4-4+deb11u9"}
+  "libreoffice-l10n-ja"
+  ("firefox-esr" | "epiphany-browser" | "konqueror" | "chromium" | "firefox")
+]
+extra-source "libreoffice-help-ja_1:7.0.4-4+deb11u9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-help-ja_7.0.4-4+deb11u9_all.deb"
+}

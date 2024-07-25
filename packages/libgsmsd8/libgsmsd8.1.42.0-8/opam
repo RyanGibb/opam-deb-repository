@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgsmsd8_1.42.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgsmsd8"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libdbi1" {>= "0.8.4"}
+  "libgammu8" {>= "1.42.0"}
+  "libmariadb3" {>= "3.0.0"}
+  "libodbc2" {>= "2.3.1"}
+  "libpq5"
+]
+extra-source "libgsmsd8_1.42.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gammu/libgsmsd8_1.42.0-8_amd64.deb"
+}

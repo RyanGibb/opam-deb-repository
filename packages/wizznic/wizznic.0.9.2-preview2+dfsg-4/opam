@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wizznic_0.9.2-preview2+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wizznic"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2"
+  "libsdl1-2debian" {>= "1.2.11"}
+  "wizznic-data"
+  "zlib1g"
+]
+extra-source "wizznic_0.9.2-preview2+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wizznic/wizznic_0.9.2-preview2+dfsg-4_amd64.deb"
+}

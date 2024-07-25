@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clawsker_1.3.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clawsker"]
+]
+depends: [
+  "libfile-which-perl" {>= "1.21"}
+  "libgtk3-perl" {>= "0.030"}
+  "liblocale-gettext-perl" {>= "1.05"}
+  "perl-any"
+]
+extra-source "clawsker_1.3.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clawsker/clawsker_1.3.4-1_all.deb"
+}

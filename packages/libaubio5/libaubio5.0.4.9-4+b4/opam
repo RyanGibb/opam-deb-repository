@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaubio5_0.4.9-4+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaubio5"]
+]
+depends: [
+  "libavcodec-extra58"
+  "libavformat58" {>= "7-4.1"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.27"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libsamplerate0" {>= "0.1.7"}
+  "libsndfile1" {>= "1.0.20"}
+  "libswresample3" {>= "7-4.0"}
+]
+extra-source "libaubio5_0.4.9-4+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aubio/libaubio5_0.4.9-4+b4_amd64.deb"
+}

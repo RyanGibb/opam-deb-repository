@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pgpainless-cli_1.3.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pgpainless-cli"]
+]
+depends: [
+  "default-jre-headless"
+  "java-wrappers"
+  "libpgpainless-cli-java" {= "1.3.16-1"}
+]
+extra-source "pgpainless-cli_1.3.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pgpainless/pgpainless-cli_1.3.16-1_all.deb"
+}

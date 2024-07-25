@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-sdbc-firebird_1:6.1.5-3+deb10u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-sdbc-firebird"]
+]
+depends: [
+  "firebird3-0-server-core"
+  "libc6" {>= "2.14"}
+  "libfbclient2" {>= "3.0.5~"}
+  "libgcc1" {>= "1-3.0"}
+  "libreoffice-core" {= "1-6.1.5-3+deb10u7"}
+  "libstdc++6" {>= "5"}
+  "uno-libs3" {>= "5.3.0~alpha"}
+  "ure"
+]
+extra-source "libreoffice-sdbc-firebird_1:6.1.5-3+deb10u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-sdbc-firebird_6.1.5-3+deb10u7_amd64.deb"
+}

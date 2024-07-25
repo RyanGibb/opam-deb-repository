@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-clap+suggestions-dev_2.32.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-clap+suggestions-dev"]
+]
+depends: [
+  "librust-clap-dev" {= "2.32.0-4"}
+  "librust-strsim-0-7+default-dev"
+]
+extra-source "librust-clap+suggestions-dev_2.32.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-clap/librust-clap+suggestions-dev_2.32.0-4_amd64.deb"
+}

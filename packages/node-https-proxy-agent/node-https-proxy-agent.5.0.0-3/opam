@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-https-proxy-agent_5.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-https-proxy-agent"]
+]
+depends: [
+  "node-agent-base" {>= "6"}
+  "node-debug" {>= "4"}
+  "nodejs" {>= "6"}
+]
+extra-source "node-https-proxy-agent_5.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-https-proxy-agent/node-https-proxy-agent_5.0.0-3_all.deb"
+}

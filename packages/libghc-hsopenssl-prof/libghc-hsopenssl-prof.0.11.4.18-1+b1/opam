@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hsopenssl-prof_0.11.4.18-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hsopenssl-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hsopenssl-dev" {= "0.11.4.18-1+b1"}
+  "libghc-network-prof"
+]
+extra-source "libghc-hsopenssl-prof_0.11.4.18-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hsopenssl/libghc-hsopenssl-prof_0.11.4.18-1+b1_amd64.deb"
+}

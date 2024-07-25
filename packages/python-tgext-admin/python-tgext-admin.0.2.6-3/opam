@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-tgext.admin_0.2.6-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-tgext.admin"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-pkg-resources"
+  "python-sprox"
+  "python-toscawidgets"
+  "python-turbogears2"
+]
+extra-source "python-tgext.admin_0.2.6-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-tgext.admin/python-tgext.admin_0.2.6-3_all.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjpeg62-turbo-dev_1:2.0.6-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjpeg62-turbo-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libjpeg62-turbo" {= "1-2.0.6-4"}
+]
+conflicts: [
+  "libjpeg62-dev"
+  "libjpeg7-dev"
+  "libjpeg8-dev"
+  "libjpeg9-dev"
+]
+extra-source "libjpeg62-turbo-dev_1:2.0.6-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg62-turbo-dev_2.0.6-4_amd64.deb"
+}

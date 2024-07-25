@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jamnntpd_1.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jamnntpd"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "sysvinit-utils"
+]
+extra-source "jamnntpd_1.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jamnntpd/jamnntpd_1.3-1_amd64.deb"
+}

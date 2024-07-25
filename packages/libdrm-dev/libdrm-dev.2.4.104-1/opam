@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdrm-dev_2.4.104-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdrm-dev"]
+]
+depends: [
+  "libdrm-amdgpu1" {= "2.4.104-1"}
+  "libdrm-intel1" {= "2.4.104-1"}
+  "libdrm-nouveau2" {= "2.4.104-1"}
+  "libdrm-radeon1" {= "2.4.104-1"}
+  "libdrm2" {= "2.4.104-1"}
+]
+extra-source "libdrm-dev_2.4.104-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdrm/libdrm-dev_2.4.104-1_amd64.deb"
+}

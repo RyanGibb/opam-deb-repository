@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gopher_3.0.17.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gopher"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "gopher_3.0.17.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gopher/gopher_3.0.17.3_amd64.deb"
+}

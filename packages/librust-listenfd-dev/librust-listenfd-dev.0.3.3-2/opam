@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-listenfd-dev_0.3.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-listenfd-dev"]
+]
+depends: [
+  "librust-libc-dev"
+  "librust-winapi-dev"
+  ("librust-uuid-0-8+default-dev" | "librust-uuid-0-7+default-dev" | "librust-uuid-0-6+default-dev" {>= "0.6.3-~~"})
+]
+extra-source "librust-listenfd-dev_0.3.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-listenfd/librust-listenfd-dev_0.3.3-2_amd64.deb"
+}

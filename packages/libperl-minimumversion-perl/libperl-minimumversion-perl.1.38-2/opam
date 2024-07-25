@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libperl-minimumversion-perl_1.38-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libperl-minimumversion-perl"]
+]
+depends: [
+  "libfile-find-rule-perl"
+  "libfile-find-rule-perl-perl"
+  "libparams-util-perl"
+  "libperl-critic-perl"
+  "libppi-perl" {>= "1.215"}
+  "libppix-regexp-perl" {>= "0.033"}
+  "perl"
+]
+extra-source "libperl-minimumversion-perl_1.38-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libperl-minimumversion-perl/libperl-minimumversion-perl_1.38-2_all.deb"
+}

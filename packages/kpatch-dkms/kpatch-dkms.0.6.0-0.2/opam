@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kpatch-dkms_0.6.0-0.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kpatch-dkms"]
+]
+depends: [
+  "dkms" {>= "2.1.0.0"}
+  ("linux-headers-amd64" | "linux-headers-generic")
+]
+extra-source "kpatch-dkms_0.6.0-0.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kpatch/kpatch-dkms_0.6.0-0.2_amd64.deb"
+}

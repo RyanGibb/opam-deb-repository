@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-which+failure-dev_3.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-which+failure-dev"]
+]
+depends: [
+  "librust-failure+backtrace-dev"
+  "librust-which-dev" {= "3.0.0-2"}
+]
+extra-source "librust-which+failure-dev_3.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-which/librust-which+failure-dev_3.0.0-2_amd64.deb"
+}

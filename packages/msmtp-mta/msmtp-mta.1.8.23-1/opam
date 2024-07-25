@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i msmtp-mta_1.8.23-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r msmtp-mta"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.34"}
+  "libsecret-1-0" {>= "0.7"}
+  "msmtp" {= "1.8.23-1"}
+]
+conflicts: [
+  "mail-transport-agent"
+]
+extra-source "msmtp-mta_1.8.23-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/msmtp/msmtp-mta_1.8.23-1_amd64.deb"
+}

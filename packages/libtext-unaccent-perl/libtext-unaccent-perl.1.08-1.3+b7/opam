@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtext-unaccent-perl_1.08-1.3+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtext-unaccent-perl"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libtext-unaccent-perl_1.08-1.3+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtext-unaccent-perl/libtext-unaccent-perl_1.08-1.3+b7_amd64.deb"
+}

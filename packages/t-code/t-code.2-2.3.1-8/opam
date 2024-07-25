@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i t-code_2:2.3.1-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r t-code"]
+]
+depends: [
+  "t-code-common" {= "2-2.3.1-8"}
+  ("emacs25" | "xemacs21-mule" | "xemacs21-mule-canna-wnn" | "emacsen")
+]
+extra-source "t-code_2:2.3.1-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/t-code/t-code_2.3.1-8_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-httpcore_0.16.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-httpcore"]
+]
+depends: [
+  "python3-any"
+  "python3-anyio"
+  "python3-certifi"
+  "python3-h11" {>= "0.11"}
+  "python3-sniffio"
+]
+extra-source "python3-httpcore_0.16.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/httpcore/python3-httpcore_0.16.3-1_all.deb"
+}

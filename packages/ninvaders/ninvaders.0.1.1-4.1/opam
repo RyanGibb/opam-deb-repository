@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ninvaders_0.1.1-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ninvaders"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "ninvaders_0.1.1-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ninvaders/ninvaders_0.1.1-4.1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i glabels-data_3.4.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r glabels-data"]
+]
+depends: [
+  "gnome-desktop3-data"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "glabels-data_3.4.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glabels/glabels-data_3.4.1-3_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tlf_1.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tlf"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libhamlib2"
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libxmlrpc-core-c3"
+]
+extra-source "tlf_1.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tlf/tlf_1.3.2-1_amd64.deb"
+}

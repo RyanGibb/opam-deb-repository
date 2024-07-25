@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ykcs11_2.2.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ykcs11"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libssl3" {>= "3.0.0"}
+  "libykpiv2" {= "2.2.0-1.1"}
+]
+extra-source "ykcs11_2.2.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yubico-piv-tool/ykcs11_2.2.0-1.1_amd64.deb"
+}

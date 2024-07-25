@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nordugrid-arc-nordugridmap_6.17.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nordugrid-arc-nordugridmap"]
+]
+depends: [
+  "liblwp-protocol-https-perl"
+  "libsoap-lite-perl"
+  "liburi-perl"
+  "libxml-dom-perl"
+  "perl-any"
+]
+conflicts: [
+  "nordugrid-arc-gridmap-utils (<< 6.0.0~)"
+]
+extra-source "nordugrid-arc-nordugridmap_6.17.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nordugrid-arc/nordugrid-arc-nordugridmap_6.17.0-3_all.deb"
+}

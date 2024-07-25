@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kball_0.0.20041216-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kball"]
+]
+depends: [
+  "kball-data" {>= "0.0.20041216-11"}
+  "libaldmb1"
+  "liballegro4-4" {>= "2-4.4.3.1"}
+  "libc6" {>= "2.14"}
+  "libdumb1"
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "kball_0.0.20041216-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kball/kball_0.0.20041216-11_amd64.deb"
+}

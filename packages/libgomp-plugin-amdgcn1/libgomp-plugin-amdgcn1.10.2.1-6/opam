@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgomp-plugin-amdgcn1_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgomp-plugin-amdgcn1"]
+]
+depends: [
+  "gcc-10-base" {= "10.2.1-6"}
+  "libc6" {>= "2.17"}
+  "libgomp1" {>= "10"}
+]
+extra-source "libgomp-plugin-amdgcn1_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/libgomp-plugin-amdgcn1_10.2.1-6_amd64.deb"
+}

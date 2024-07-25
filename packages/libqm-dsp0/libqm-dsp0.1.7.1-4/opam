@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqm-dsp0_1.7.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqm-dsp0"]
+]
+depends: [
+  "libatlas3-base"
+  "libc6" {>= "2.22"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "vamp-plugin-sdk"
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "libqm-dsp0_1.7.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qm-dsp/libqm-dsp0_1.7.1-4_amd64.deb"
+}

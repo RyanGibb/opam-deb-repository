@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-openid-consumer-perl_1.18-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-openid-consumer-perl"]
+]
+depends: [
+  "libcrypt-ssleay-perl"
+  "libjson-perl"
+  "libnet-openid-common-perl" {>= "1.19"}
+  "liburi-perl"
+  "libwww-perl"
+  "perl"
+]
+extra-source "libnet-openid-consumer-perl_1.18-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-openid-consumer-perl/libnet-openid-consumer-perl_1.18-1_all.deb"
+}

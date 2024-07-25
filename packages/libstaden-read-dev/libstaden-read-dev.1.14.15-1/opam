@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstaden-read-dev_1.14.15-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstaden-read-dev"]
+]
+depends: [
+  "libbz2-dev"
+  "libcurl4-gnutls-dev"
+  "libhtscodecs-dev"
+  "liblzma-dev"
+  "libstaden-read14" {= "1.14.15-1"}
+  "zlib1g-dev"
+]
+extra-source "libstaden-read-dev_1.14.15-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/staden-io-lib/libstaden-read-dev_1.14.15-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i homer-api-mysql_5.0.6+dfsg2-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r homer-api-mysql"]
+]
+depends: [
+  "homer-api" {= "5.0.6+dfsg2-3.1"}
+  "kamailio-mysql-modules" {>= "4.3.0"}
+  "libdbd-mysql-perl"
+  ("php-mysql" | "php5-mysql")
+]
+conflicts: [
+  "homer-api-postgresql"
+]
+extra-source "homer-api-mysql_5.0.6+dfsg2-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/homer-api/homer-api-mysql_5.0.6+dfsg2-3.1_amd64.deb"
+}

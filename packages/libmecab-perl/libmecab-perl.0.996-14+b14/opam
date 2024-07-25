@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmecab-perl_0.996-14+b14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmecab-perl"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libmecab2" {>= "0.996"}
+  "libstdc++6" {>= "5"}
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "libmecab-perl_0.996-14+b14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mecab/libmecab-perl_0.996-14+b14_amd64.deb"
+}

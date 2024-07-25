@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aliki_0.3.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aliki"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libclthreads2"
+  "libclxclient3"
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc-s1"
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  "libzita-alsa-pcmi0" {>= "0.2.0"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+]
+extra-source "aliki_0.3.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aliki/aliki_0.3.0-5_amd64.deb"
+}

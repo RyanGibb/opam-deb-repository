@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-uri-prof_0.1.6.4-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-uri-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-safe-prof"
+  "libghc-uri-dev" {= "0.1.6.4-3+b2"}
+  "libghc-utf8-string-prof"
+]
+extra-source "libghc-uri-prof_0.1.6.4-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-uri/libghc-uri-prof_0.1.6.4-3+b2_amd64.deb"
+}

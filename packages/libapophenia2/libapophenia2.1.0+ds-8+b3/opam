@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libapophenia2_1.0+ds-8+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libapophenia2"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgomp1" {>= "4.9"}
+  "libgsl27" {>= "2.7.1"}
+  "libgslcblas0" {>= "2.7.1"}
+  "libmariadb3" {>= "3.0.0"}
+  "libsqlite3-0" {>= "3.5.9"}
+]
+conflicts: [
+  "libapophenia"
+]
+extra-source "libapophenia2_1.0+ds-8+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apophenia/libapophenia2_1.0+ds-8+b3_amd64.deb"
+}

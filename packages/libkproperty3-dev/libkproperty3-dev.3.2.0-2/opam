@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkproperty3-dev_3.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkproperty3-dev"]
+]
+depends: [
+  "libkf5widgetsaddons-dev"
+  "libkpropertycore3-4" {= "3.2.0-2"}
+  "libkpropertywidgets3-4" {= "3.2.0-2"}
+  "qtbase5-dev"
+]
+extra-source "libkproperty3-dev_3.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kproperty/libkproperty3-dev_3.2.0-2_amd64.deb"
+}

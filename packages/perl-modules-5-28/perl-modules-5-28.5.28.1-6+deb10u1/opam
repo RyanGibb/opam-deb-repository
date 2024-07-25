@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i perl-modules-5.28_5.28.1-6+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r perl-modules-5.28"]
+]
+depends: [
+  "perl-base" {>= "5.28.1-1"}
+]
+conflicts: [
+  "perl-modules (<< 5.22.0~)"
+]
+extra-source "perl-modules-5.28_5.28.1-6+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/perl/perl-modules-5.28_5.28.1-6+deb10u1_all.deb"
+}

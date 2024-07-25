@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kruler_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kruler"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libkf5configcore5" {>= "4.98.0"}
+  "libkf5configgui5" {>= "4.97.0"}
+  "libkf5configwidgets5" {>= "4.98.0"}
+  "libkf5coreaddons5" {>= "5.90.0~"}
+  "libkf5i18n5" {>= "5.90.0~"}
+  "libkf5notifications5" {>= "5.90.0~"}
+  "libkf5widgetsaddons5" {>= "4.96.0"}
+  "libkf5windowsystem5" {>= "5.90.0~"}
+  "libkf5xmlgui5" {>= "5.90.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libqt5x11extras5" {>= "5.15.0~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "kruler_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kruler/kruler_22.12.3-1_amd64.deb"
+}

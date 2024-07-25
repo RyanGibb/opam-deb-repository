@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-http-perl_6.18-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-http-perl"]
+]
+depends: [
+  "liburi-perl"
+  "perl"
+  ("perl" {>= "5.19.8"} | "libio-socket-ip-perl" {>= "0.26"})
+]
+extra-source "libnet-http-perl_6.18-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-http-perl/libnet-http-perl_6.18-1_all.deb"
+}

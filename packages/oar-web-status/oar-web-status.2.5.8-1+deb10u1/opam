@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i oar-web-status_2.5.8-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r oar-web-status"]
+]
+depends: [
+  "libappconfig-perl"
+  "libdbi-perl"
+  "libsort-naturally-perl"
+  "libtie-ixhash-perl"
+  "perl"
+  "php"
+  ("apache2" | "httpd-cgi")
+  ("libdbd-mysql-perl" | "libdbd-pg-perl")
+  ("php-mysql" | "php-pgsql")
+]
+extra-source "oar-web-status_2.5.8-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oar/oar-web-status_2.5.8-1+deb10u1_all.deb"
+}

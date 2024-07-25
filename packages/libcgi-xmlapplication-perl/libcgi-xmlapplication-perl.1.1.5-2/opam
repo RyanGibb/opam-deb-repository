@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcgi-xmlapplication-perl_1.1.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcgi-xmlapplication-perl"]
+]
+depends: [
+  "libxml-libxml-perl"
+  "libxml-libxslt-perl"
+  "perl-any"
+  ("libcgi-pm-perl" | "perl" {< "5.19"})
+]
+extra-source "libcgi-xmlapplication-perl_1.1.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcgi-xmlapplication-perl/libcgi-xmlapplication-perl_1.1.5-2_all.deb"
+}

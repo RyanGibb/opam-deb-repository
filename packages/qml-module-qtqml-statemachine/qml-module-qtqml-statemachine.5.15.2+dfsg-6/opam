@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-qtqml-statemachine_5.15.2+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-qtqml-statemachine"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5"
+  "libqt5qml5" {>= "5.15.1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qml-module-qtqml-statemachine_5.15.2+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtdeclarative-opensource-src/qml-module-qtqml-statemachine_5.15.2+dfsg-6_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i azure-cli_2.18.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r azure-cli"]
+]
+depends: [
+  "python3-any"
+  "python3-azure-cli" {>= "2.18.0-2"}
+]
+extra-source "azure-cli_2.18.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/azure-cli/azure-cli_2.18.0-2_all.deb"
+}

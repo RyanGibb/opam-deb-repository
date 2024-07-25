@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cyrus-dev_3.6.1-4+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cyrus-dev"]
+]
+depends: [
+  "cyrus-common" {= "3.6.1-4+deb12u2"}
+  "libcyrus-imap-perl" {>= "3.6.1-4+deb12u2"}
+  "libsasl2-dev"
+]
+extra-source "cyrus-dev_3.6.1-4+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cyrus-imapd/cyrus-dev_3.6.1-4+deb12u2_amd64.deb"
+}

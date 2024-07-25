@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ssh-askpass-gnome_1:8.4p1-5+deb11u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ssh-askpass-gnome"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libx11-6"
+  ("openssh-client" | "ssh" {>= "1-1.2pre7-4"})
+]
+extra-source "ssh-askpass-gnome_1:8.4p1-5+deb11u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openssh/ssh-askpass-gnome_8.4p1-5+deb11u3_amd64.deb"
+}

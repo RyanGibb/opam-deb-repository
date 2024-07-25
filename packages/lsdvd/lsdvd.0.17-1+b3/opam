@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lsdvd_0.17-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lsdvd"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdvdread8" {>= "4.1.3"}
+]
+extra-source "lsdvd_0.17-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lsdvd/lsdvd_0.17-1+b3_amd64.deb"
+}

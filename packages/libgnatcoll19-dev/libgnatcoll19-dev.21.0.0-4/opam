@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatcoll19-dev_21.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatcoll19-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-10"
+  "libgnatcoll19" {= "21.0.0-4"}
+  "libgnatprj8-dev"
+]
+extra-source "libgnatcoll19-dev_21.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnatcoll/libgnatcoll19-dev_21.0.0-4_amd64.deb"
+}

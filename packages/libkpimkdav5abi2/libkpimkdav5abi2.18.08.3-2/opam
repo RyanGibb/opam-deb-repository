@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkpimkdav5abi2_18.08.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkpimkdav5abi2"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libkf5coreaddons5" {>= "4.97.0"}
+  "libkf5i18n5" {>= "4.97.0"}
+  "libkf5kiocore5" {>= "4.96.0"}
+  "libkpimkdav-data" {= "18.08.3-2"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.9.0~"}
+  "libqt5xml5" {>= "5.9.0~"}
+  "libqt5xmlpatterns5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libkpimkdav5abi2_18.08.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kdav/libkpimkdav5abi2_18.08.3-2_amd64.deb"
+}

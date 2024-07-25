@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpdl-linearalgebra-perl_0.12-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpdl-linearalgebra-perl"]
+]
+depends: [
+  "libatlas3-base"
+  "libc6" {>= "2.4"}
+  "libquadmath0" {>= "4.6"}
+  "pdl"
+  "pdl" {>= "1-2.019-5+b1"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libpdl-linearalgebra-perl_0.12-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpdl-linearalgebra-perl/libpdl-linearalgebra-perl_0.12-3+b1_amd64.deb"
+}

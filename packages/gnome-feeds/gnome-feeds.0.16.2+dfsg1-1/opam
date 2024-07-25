@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-feeds_0.16.2+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-feeds"]
+]
+depends: [
+  "gir1-2-handy-1"
+  "gir1-2-webkit2-4-0"
+  "python3-any"
+  "python3-arrow"
+  "python3-bs4"
+  "python3-feedparser"
+  "python3-gi"
+  "python3-html5lib"
+  "python3-listparser"
+  "python3-lxml"
+  "python3-pil"
+  "python3-pygments"
+  "python3-readability"
+  "python3-requests"
+  "python3-tz"
+  "xdg-utils"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-feeds_0.16.2+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-feeds/gnome-feeds_0.16.2+dfsg1-1_all.deb"
+}

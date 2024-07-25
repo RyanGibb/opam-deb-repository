@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstdc++-7-pic_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstdc++-7-pic"]
+]
+depends: [
+  "gcc-7-base" {= "7.4.0-6"}
+  "libstdc++-7-dev" {= "7.4.0-6"}
+  "libstdc++6" {>= "7.4.0-6"}
+]
+extra-source "libstdc++-7-pic_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/libstdc++-7-pic_7.4.0-6_amd64.deb"
+}

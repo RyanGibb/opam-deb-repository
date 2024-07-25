@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-blaze-textual-prof_0.2.1.0-8+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-blaze-textual-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-blaze-textual-dev" {= "0.2.1.0-8+b3"}
+  "libghc-old-locale-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-blaze-textual-prof_0.2.1.0-8+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-blaze-textual/libghc-blaze-textual-prof_0.2.1.0-8+b3_amd64.deb"
+}

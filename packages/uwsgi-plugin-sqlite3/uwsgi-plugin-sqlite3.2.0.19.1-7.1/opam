@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uwsgi-plugin-sqlite3_2.0.19.1-7.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uwsgi-plugin-sqlite3"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "uwsgi-core" {= "2.0.19.1-7.1"}
+]
+extra-source "uwsgi-plugin-sqlite3_2.0.19.1-7.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uwsgi/uwsgi-plugin-sqlite3_2.0.19.1-7.1_amd64.deb"
+}

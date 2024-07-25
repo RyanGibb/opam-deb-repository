@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdeps-renderer-dot-perl_0.13-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdeps-renderer-dot-perl"]
+]
+depends: [
+  "graphviz"
+  "libdeps-perl"
+  "perl"
+]
+conflicts: [
+  "graph-includes (<< 0.12)"
+]
+extra-source "libdeps-renderer-dot-perl_0.13-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/deps/libdeps-renderer-dot-perl_0.13-4_all.deb"
+}

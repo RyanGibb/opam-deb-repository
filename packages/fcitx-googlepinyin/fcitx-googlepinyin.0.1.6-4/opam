@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fcitx-googlepinyin_0.1.6-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fcitx-googlepinyin"]
+]
+depends: [
+  "fcitx-bin"
+  "fcitx-data" {>= "1-4.2.0"}
+  "fcitx-modules"
+  "libc6" {>= "2.4"}
+  "libgooglepinyin0" {>= "0.1.2"}
+]
+extra-source "fcitx-googlepinyin_0.1.6-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fcitx-googlepinyin/fcitx-googlepinyin_0.1.6-4_amd64.deb"
+}

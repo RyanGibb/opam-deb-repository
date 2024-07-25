@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i syncthing_1.0.0~ds1-1+b11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r syncthing"]
+]
+depends: [
+  "libc6" {>= "2.3.2"}
+]
+extra-source "syncthing_1.0.0~ds1-1+b11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/syncthing/syncthing_1.0.0~ds1-1+b11_amd64.deb"
+}

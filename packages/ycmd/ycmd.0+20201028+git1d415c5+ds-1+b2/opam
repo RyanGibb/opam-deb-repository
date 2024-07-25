@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ycmd_0+20201028+git1d415c5+ds-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ycmd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libclang1-11" {>= "1-7~svn334604-1~+0~"}
+  "libgcc-s1" {>= "3.0"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libstdc++6" {>= "9"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-bottle"
+  "python3-frozendict"
+  "python3-future"
+  "python3-jedi" {>= "0.16.0"}
+  "python3-requests" {>= "2.2.1"}
+  "python3-waitress"
+  "python3-watchdog"
+]
+extra-source "ycmd_0+20201028+git1d415c5+ds-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/ycmd/ycmd_0+20201028+git1d415c5+ds-1+b2_amd64.deb"
+}

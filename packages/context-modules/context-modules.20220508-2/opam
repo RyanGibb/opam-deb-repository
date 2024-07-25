@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i context-modules_20220508-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r context-modules"]
+]
+depends: [
+  "context"
+  "tex-common" {>= "6.13"}
+]
+extra-source "context-modules_20220508-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/context-modules/context-modules_20220508-2_all.deb"
+}

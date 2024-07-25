@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i anki_2.1.8+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r anki"]
+]
+depends: [
+  "libjs-jquery"
+  "libjs-jquery-flot"
+  "libjs-jquery-ui"
+  "libjs-mathjax"
+  "libqt5core5a" {>= "5.11"}
+  "python3-any" {>= "3.6~"}
+  "python3-bs4"
+  "python3-decorator"
+  "python3-distutils"
+  "python3-markdown"
+  "python3-pyaudio"
+  "python3-pyqt5" {> "5.11"}
+  "python3-pyqt5-qtwebchannel" {> "5.11"}
+  "python3-pyqt5-qtwebengine" {> "5.11"}
+  "python3-requests"
+  "python3-send2trash"
+]
+extra-source "anki_2.1.8+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/anki/anki_2.1.8+dfsg-1_all.deb"
+}

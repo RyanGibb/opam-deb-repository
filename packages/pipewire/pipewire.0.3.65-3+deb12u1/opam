@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pipewire_0.3.65-3+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pipewire"]
+]
+depends: [
+  "adduser"
+  "init-system-helpers" {>= "1.52"}
+  "libpipewire-0-3-modules" {= "0.3.65-3+deb12u1"}
+  "pipewire-bin" {= "0.3.65-3+deb12u1"}
+]
+extra-source "pipewire_0.3.65-3+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pipewire/pipewire_0.3.65-3+deb12u1_amd64.deb"
+}

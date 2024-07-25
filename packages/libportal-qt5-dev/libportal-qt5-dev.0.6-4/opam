@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libportal-qt5-dev_0.6-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libportal-qt5-dev"]
+]
+depends: [
+  "libportal-dev" {= "0.6-4"}
+  "libportal-qt5-1" {= "0.6-4"}
+  "libqt5x11extras5-dev"
+  "pkg-config"
+  "qtbase5-dev"
+]
+extra-source "libportal-qt5-dev_0.6-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libportal/libportal-qt5-dev_0.6-4_amd64.deb"
+}

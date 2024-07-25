@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvirt-clients_9.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvirt-clients"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libglib2-0-0" {>= "2.43.2"}
+  "libgnutls30" {>= "3.7.0"}
+  "libreadline8" {>= "6.0"}
+  "libvirt0" {= "9.0.0-4"}
+  "libxml2" {>= "2.7.4"}
+  "sensible-utils"
+]
+extra-source "libvirt-clients_9.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvirt/libvirt-clients_9.0.0-4_amd64.deb"
+}

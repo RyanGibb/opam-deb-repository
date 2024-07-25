@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vuls_0.6.1-1+b11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vuls"]
+]
+depends: [
+  "libc6" {>= "2.3.2"}
+  "libsqlite3-0" {>= "3.7.15"}
+]
+extra-source "vuls_0.6.1-1+b11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vuls/vuls_0.6.1-1+b11_amd64.deb"
+}

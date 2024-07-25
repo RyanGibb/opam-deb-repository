@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcp-testsuite_4.3.2+really4.3.1-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcp-testsuite"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libpcp-pmda3"
+  "libpcp3"
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "5"}
+  "pcp" {= "4.3.2+really4.3.1-0.1"}
+  "time"
+]
+conflicts: [
+  "pcp-gui-testsuite"
+  "pcpqa"
+]
+extra-source "pcp-testsuite_4.3.2+really4.3.1-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcp/pcp-testsuite_4.3.2+really4.3.1-0.1_amd64.deb"
+}

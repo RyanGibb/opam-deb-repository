@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i paperwork-backend_2.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r paperwork-backend"]
+]
+depends: [
+  "gir1-2-libinsane-1-0"
+  "openpaperwork-core" {= "2.1.1-1"}
+  "python3-any"
+  "python3-gi"
+  "python3-gi-cairo"
+  "python3-levenshtein"
+  "python3-pil"
+  "python3-psutil"
+  "python3-pycountry"
+  "python3-pyocr"
+  "python3-pypillowfight"
+  "python3-sklearn"
+  "python3-whoosh"
+]
+extra-source "paperwork-backend_2.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/paperwork/paperwork-backend_2.1.1-1_all.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gravit_0.5.1+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gravit"]
+]
+depends: [
+  "gravit-data" {= "0.5.1+dfsg-6"}
+  "libc6" {>= "2.34"}
+  "libgl1"
+  "libgomp1" {>= "6"}
+  "liblua5-1-0"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-ttf2-0-0"
+  "libsdl1-2-compat-shim"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "gravit_0.5.1+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gravit/gravit_0.5.1+dfsg-6_amd64.deb"
+}

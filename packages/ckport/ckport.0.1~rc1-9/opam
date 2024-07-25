@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ckport_0.1~rc1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ckport"]
+]
+depends: [
+  "ckport-database" {>= "0.1~rc1-9"}
+  "perl-any"
+  ("binutils-multiarch" | "binutils")
+]
+extra-source "ckport_0.1~rc1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ckport/ckport_0.1~rc1-9_all.deb"
+}

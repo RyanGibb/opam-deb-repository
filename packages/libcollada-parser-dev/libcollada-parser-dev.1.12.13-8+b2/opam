@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcollada-parser-dev_1.12.13-8+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcollada-parser-dev"]
+]
+depends: [
+  "libclass-loader-dev"
+  "libcollada-dom-dev"
+  "libcollada-parser1d" {= "1.12.13-8+b2"}
+  "libroscpp-dev"
+  "liburdf-parser-plugin-dev"
+  "liburdfdom-headers-dev"
+]
+extra-source "libcollada-parser-dev_1.12.13-8+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-collada-urdf/libcollada-parser-dev_1.12.13-8+b2_amd64.deb"
+}

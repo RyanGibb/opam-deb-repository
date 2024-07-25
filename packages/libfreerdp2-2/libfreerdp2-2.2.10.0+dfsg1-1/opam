@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfreerdp2-2_2.10.0+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfreerdp2-2"]
+]
+depends: [
+  "libavcodec-extra59"
+  "libavutil57" {>= "7-5.0"}
+  "libc6" {>= "2.32"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libssl3" {>= "3.0.0"}
+  "libswresample4" {>= "7-5.0"}
+  "libswscale6" {>= "7-5.0"}
+  "libwinpr2-2" {= "2.10.0+dfsg1-1"}
+  "libx11-6"
+  "libxkbfile1" {>= "1-1.1.0"}
+]
+extra-source "libfreerdp2-2_2.10.0+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freerdp2/libfreerdp2-2_2.10.0+dfsg1-1_amd64.deb"
+}

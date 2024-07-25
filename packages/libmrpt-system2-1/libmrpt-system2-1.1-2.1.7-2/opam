@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmrpt-system2.1_1:2.1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmrpt-system2.1"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc-s1" {>= "3.0"}
+  "libmrpt-containers2-1" {>= "1-2.1.7"}
+  "libmrpt-core2-1" {>= "1-2.1.7"}
+  "libstdc++6" {>= "6"}
+]
+extra-source "libmrpt-system2.1_1:2.1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrpt/libmrpt-system2.1_2.1.7-2_amd64.deb"
+}

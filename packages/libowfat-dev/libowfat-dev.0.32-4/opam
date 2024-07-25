@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libowfat-dev_0.32-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libowfat-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libowfat0" {= "0.32-4"}
+]
+conflicts: [
+  "libcdb-dev"
+  "libdjbdns1-dev"
+  "libudt-dev"
+]
+extra-source "libowfat-dev_0.32-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libowfat/libowfat-dev_0.32-4_amd64.deb"
+}

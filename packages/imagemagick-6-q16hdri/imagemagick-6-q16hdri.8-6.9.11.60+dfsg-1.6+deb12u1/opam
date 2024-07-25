@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i imagemagick-6.q16hdri_8:6.9.11.60+dfsg-1.6+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r imagemagick-6.q16hdri"]
+]
+depends: [
+  "hicolor-icon-theme"
+  "libc6" {>= "2.34"}
+  "libmagickcore-6-q16hdri-6" {>= "8-6.9.10.2"}
+  "libmagickwand-6-q16hdri-6" {>= "8-6.9.10.2"}
+]
+extra-source "imagemagick-6.q16hdri_8:6.9.11.60+dfsg-1.6+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/imagemagick/imagemagick-6.q16hdri_6.9.11.60+dfsg-1.6+deb12u1_amd64.deb"
+}

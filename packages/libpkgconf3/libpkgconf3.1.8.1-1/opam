@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpkgconf3_1.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpkgconf3"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+]
+extra-source "libpkgconf3_1.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pkgconf/libpkgconf3_1.8.1-1_amd64.deb"
+}

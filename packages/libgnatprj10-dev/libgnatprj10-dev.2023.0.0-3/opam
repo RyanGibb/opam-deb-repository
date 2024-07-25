@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnatprj10-dev_2023.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnatprj10-dev"]
+]
+depends: [
+  "gnat" {< "13"}
+  "gnat" {>= "12"}
+  "libgnatprj10" {= "2023.0.0-3"}
+  "libxmlada-dom12-dev"
+  "libxmlada-input12-dev"
+  "libxmlada-sax12-dev"
+  "libxmlada-schema12-dev"
+]
+extra-source "libgnatprj10-dev_2023.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gprbuild/libgnatprj10-dev_2023.0.0-3_amd64.deb"
+}

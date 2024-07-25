@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pluma-plugin-quickhighlight_1.27.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pluma-plugin-quickhighlight"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libgtksourceview-4-0" {>= "3.10.1"}
+  "libpeas-1-0-0" {>= "1.14.1"}
+  "pluma"
+  "pluma-plugins-common"
+]
+extra-source "pluma-plugin-quickhighlight_1.27.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pluma-plugins/pluma-plugin-quickhighlight_1.27.0-3_amd64.deb"
+}

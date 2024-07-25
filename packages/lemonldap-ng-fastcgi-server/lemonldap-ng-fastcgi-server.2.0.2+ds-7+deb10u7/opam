@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lemonldap-ng-fastcgi-server_2.0.2+ds-7+deb10u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lemonldap-ng-fastcgi-server"]
+]
+depends: [
+  "libfcgi-perl"
+  "libfcgi-procmanager-perl"
+  "liblemonldap-ng-handler-perl" {= "2.0.2+ds-7+deb10u7"}
+  "libplack-perl"
+  "lsb-base"
+  "perl-any"
+]
+extra-source "lemonldap-ng-fastcgi-server_2.0.2+ds-7+deb10u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lemonldap-ng/lemonldap-ng-fastcgi-server_2.0.2+ds-7+deb10u7_all.deb"
+}

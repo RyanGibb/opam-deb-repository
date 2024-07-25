@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcoq-elpi_1.16.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcoq-elpi"]
+]
+depends: [
+  "libcoq-core-ocaml"
+  "libcoq-core-ocaml-dev" {>= "8.15"}
+  "libcoq-stdlib"
+  "libelpi-ocaml"
+  "libelpi-ocaml-dev"
+  "libzarith-ocaml"
+  "ocaml-base"
+]
+extra-source "libcoq-elpi_1.16.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coq-elpi/libcoq-elpi_1.16.0-2+b1_amd64.deb"
+}

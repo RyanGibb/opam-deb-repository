@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xpat2_1.07-20+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xpat2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libx11-6"
+  "libxaw7"
+  "libxmu6"
+  "libxpm4"
+  "libxt6"
+]
+extra-source "xpat2_1.07-20+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xpat2/xpat2_1.07-20+b1_amd64.deb"
+}

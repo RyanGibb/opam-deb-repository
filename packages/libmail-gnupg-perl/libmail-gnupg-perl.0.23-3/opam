@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmail-gnupg-perl_0.23-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmail-gnupg-perl"]
+]
+depends: [
+  "gnupg"
+  "libgnupg-interface-perl"
+  "libmailtools-perl"
+  "libmime-tools-perl"
+  "perl-any"
+]
+extra-source "libmail-gnupg-perl_0.23-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmail-gnupg-perl/libmail-gnupg-perl_0.23-3_all.deb"
+}

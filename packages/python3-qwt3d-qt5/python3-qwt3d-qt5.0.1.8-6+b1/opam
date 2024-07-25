@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-qwt3d-qt5_0.1.8-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-qwt3d-qt5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libqwtplot3d-qt5-0" {>= "0.2.7"}
+  "libstdc++6" {>= "5"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-pyqt5-qtopengl"
+  "python3-sip"
+  ("libglu1-mesa" | "libglu1")
+]
+conflicts: [
+  "python-qwt3d-qt4"
+]
+extra-source "python3-qwt3d-qt5_0.1.8-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyqwt3d/python3-qwt3d-qt5_0.1.8-6+b1_amd64.deb"
+}

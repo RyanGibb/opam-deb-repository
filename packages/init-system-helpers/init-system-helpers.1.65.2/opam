@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i init-system-helpers_1.65.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r init-system-helpers"]
+]
+depends: [
+  ("usrmerge" | "usr-is-merged")
+]
+extra-source "init-system-helpers_1.65.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/init-system-helpers/init-system-helpers_1.65.2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apt-offline-gui_1.8.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apt-offline-gui"]
+]
+depends: [
+  "apt-offline" {= "1.8.2-2"}
+  "python3-any"
+  "python3-pyqt5"
+]
+extra-source "apt-offline-gui_1.8.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apt-offline/apt-offline-gui_1.8.2-2_all.deb"
+}

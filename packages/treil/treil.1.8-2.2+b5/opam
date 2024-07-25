@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i treil_1.8-2.2+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r treil"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libruby2-7" {>= "2.7.0~preview2"}
+  "libtreil0"
+  "ruby"
+  "ruby-cairo"
+]
+extra-source "treil_1.8-2.2+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/treil/treil_1.8-2.2+b5_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gstreamer1.0-pulseaudio_1.22.0-5+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gstreamer1.0-pulseaudio"]
+]
+depends: [
+  "gstreamer1-0-plugins-good" {>= "1.22.0"}
+]
+extra-source "gstreamer1.0-pulseaudio_1.22.0-5+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gst-plugins-good1.0/gstreamer1.0-pulseaudio_1.22.0-5+deb12u1_amd64.deb"
+}

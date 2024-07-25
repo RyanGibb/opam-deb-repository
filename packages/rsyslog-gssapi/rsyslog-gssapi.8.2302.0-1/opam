@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rsyslog-gssapi_8.2302.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rsyslog-gssapi"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "rsyslog" {= "8.2302.0-1"}
+]
+extra-source "rsyslog-gssapi_8.2302.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rsyslog/rsyslog-gssapi_8.2302.0-1_amd64.deb"
+}

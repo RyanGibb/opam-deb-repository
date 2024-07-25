@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cryptol-dev_2.8.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cryptol-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.29"}
+  "libghc-base-compat-dev"
+  "libghc-cryptohash-sha1-dev"
+  "libghc-gitrev-dev"
+  "libghc-graphscc-dev"
+  "libghc-heredoc-dev"
+  "libghc-monad-control-dev"
+  "libghc-monadlib-dev"
+  "libghc-panic-dev"
+  "libghc-random-dev"
+  "libghc-sbv-dev"
+  "libghc-simple-smt-dev"
+  "libghc-strict-dev"
+  "libghc-tf-random-dev"
+  "libghc-transformers-base-dev"
+  "libgmp10"
+]
+extra-source "libghc-cryptol-dev_2.8.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cryptol/libghc-cryptol-dev_2.8.0-1+b2_amd64.deb"
+}

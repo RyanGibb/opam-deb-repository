@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5i18n-dev_5.103.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5i18n-dev"]
+]
+depends: [
+  "gettext"
+  "libkf5i18n5" {= "5.103.0-1"}
+  "libkf5i18nlocaledata5" {= "5.103.0-1"}
+  "python3-any"
+  "qtscript5-dev" {>= "5.8.0~"}
+]
+extra-source "libkf5i18n-dev_5.103.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/ki18n/libkf5i18n-dev_5.103.0-1_amd64.deb"
+}

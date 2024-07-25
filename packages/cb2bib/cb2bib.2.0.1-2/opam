@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cb2bib_2.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cb2bib"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.14.1"}
+  "libqt5webkit5" {>= "5.212.0~alpha3"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "cb2bib_2.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cb2bib/cb2bib_2.0.1-2_amd64.deb"
+}

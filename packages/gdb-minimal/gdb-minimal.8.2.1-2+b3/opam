@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gdb-minimal_8.2.1-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gdb-minimal"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libexpat1" {>= "2.0.1"}
+  "libipt2" {>= "2.0"}
+  "libreadline7" {>= "6.0"}
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+conflicts: [
+  "gdb"
+]
+extra-source "gdb-minimal_8.2.1-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gdb/gdb-minimal_8.2.1-2+b3_amd64.deb"
+}

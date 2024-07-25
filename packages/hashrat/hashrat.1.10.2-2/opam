@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hashrat_1.10.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hashrat"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+]
+extra-source "hashrat_1.10.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hashrat/hashrat_1.10.2-2_amd64.deb"
+}

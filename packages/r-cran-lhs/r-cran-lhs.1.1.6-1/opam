@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-lhs_1.1.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-lhs"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-cran-rcpp"
+]
+extra-source "r-cran-lhs_1.1.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-lhs/r-cran-lhs_1.1.6-1_amd64.deb"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtranslator_42.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtranslator"]
+]
+depends: [
+  "gsettings-desktop-schemas"
+  "iso-codes"
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.2.4"}
+  "libgda-5-0-4" {>= "5.0.2"}
+  "libgettextpo0" {>= "0.21"}
+  "libglib2-0-0" {>= "2.71.3"}
+  "libgspell-1-2" {>= "1.8.2"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libgtksourceview-4-0" {>= "4.0.2"}
+  "libhandy-1-0" {>= "1.5.0"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libpango-1-0-0" {>= "1.42.0"}
+  "libsoup-3-0-0" {>= "3.0.3"}
+  "libxml2" {>= "2.7.4"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gtranslator_42.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtranslator/gtranslator_42.0-1_amd64.deb"
+}

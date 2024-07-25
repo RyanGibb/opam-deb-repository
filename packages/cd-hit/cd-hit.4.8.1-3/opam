@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cd-hit_4.8.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cd-hit"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "6"}
+  "libstdc++6" {>= "5.2"}
+  "perl-any"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "cd-hit_4.8.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cd-hit/cd-hit_4.8.1-3_amd64.deb"
+}

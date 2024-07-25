@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i multipath-tools_0.8.5-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r multipath-tools"]
+]
+depends: [
+  "kpartx" {>= "0.8.5-2+deb11u1"}
+  "libaio1" {>= "0.3.93"}
+  "libc6" {>= "2.29"}
+  "libdevmapper1-02-1" {>= "2-1.02.110"}
+  "libjson-c5" {>= "0.15"}
+  "libreadline8" {>= "6.0"}
+  "libsystemd0"
+  "libudev1" {>= "199"}
+  "liburcu6" {>= "0.11.1"}
+  "lsb-base"
+  "sg3-utils-udev"
+  "udev"
+]
+extra-source "multipath-tools_0.8.5-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/multipath-tools/multipath-tools_0.8.5-2+deb11u1_amd64.deb"
+}

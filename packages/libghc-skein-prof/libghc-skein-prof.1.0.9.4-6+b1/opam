@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-skein-prof_1.0.9.4-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-skein-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-cereal-prof"
+  "libghc-crypto-api-prof"
+  "libghc-skein-dev" {= "1.0.9.4-6+b1"}
+  "libghc-tagged-prof"
+]
+extra-source "libghc-skein-prof_1.0.9.4-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-skein/libghc-skein-prof_1.0.9.4-6+b1_amd64.deb"
+}

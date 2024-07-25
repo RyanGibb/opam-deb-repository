@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-backtrace+default-dev_0.3.44-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-backtrace+default-dev"]
+]
+depends: [
+  "librust-backtrace+backtrace-sys-dev"
+  "librust-backtrace-dev"
+  "librust-backtrace-dev" {= "0.3.44-6"}
+]
+extra-source "librust-backtrace+default-dev_0.3.44-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-backtrace/librust-backtrace+default-dev_0.3.44-6_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mkgmap_0.0.0+svn4262-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mkgmap"]
+]
+depends: [
+  "libfastutil-java"
+  "libosmpbf-java"
+  "libprotobuf-java"
+  ("default-jre-headless" {>= "2-1.8"} | "java8-runtime-headless")
+]
+extra-source "mkgmap_0.0.0+svn4262-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mkgmap/mkgmap_0.0.0+svn4262-1_all.deb"
+}

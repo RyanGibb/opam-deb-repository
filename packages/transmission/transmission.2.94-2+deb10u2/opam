@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i transmission_2.94-2+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r transmission"]
+]
+depends: [
+  "transmission-common" {>= "2.94-2+deb10u2"}
+  ("transmission-gtk" {>= "2.94-2+deb10u2"} | "transmission-qt" {>= "2.94-2+deb10u2"} | "transmission-cli" {>= "2.94-2+deb10u2"})
+]
+extra-source "transmission_2.94-2+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/transmission/transmission_2.94-2+deb10u2_all.deb"
+}

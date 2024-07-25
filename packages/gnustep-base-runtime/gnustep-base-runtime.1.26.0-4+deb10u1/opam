@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnustep-base-runtime_1.26.0-4+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnustep-base-runtime"]
+]
+depends: [
+  "gnustep-base-common" {= "1.26.0-4+deb10u1"}
+  "init-system-helpers" {>= "1.51"}
+  "libc6" {>= "2.15"}
+  "libgcc1" {>= "1-3.0"}
+  "libgnustep-base1-26" {>= "1.26.0"}
+  "libobjc4" {>= "4.2.1"}
+  "lsb-base"
+]
+extra-source "gnustep-base-runtime_1.26.0-4+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnustep-base/gnustep-base-runtime_1.26.0-4+deb10u1_amd64.deb"
+}

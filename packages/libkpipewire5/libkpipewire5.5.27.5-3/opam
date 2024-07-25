@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkpipewire5_5.27.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkpipewire5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libepoxy0" {>= "1.0"}
+  "libgbm1" {>= "8.1~0"}
+  "libkf5i18n5" {>= "5.98.0~"}
+  "libpipewire-0-3-0" {>= "0.3.1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.8.0"} | "libqt5gui5-gles" {>= "5.8.0"})
+  ("libqt5quick5" {>= "5.14.1"} | "libqt5quick5-gles" {>= "5.14.1"})
+]
+extra-source "libkpipewire5_5.27.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kpipewire/libkpipewire5_5.27.5-3_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i joe-jupp_3.1.41-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r joe-jupp"]
+]
+depends: [
+  "jupp" {>= "3.1.37"}
+]
+conflicts: [
+  "joe"
+]
+extra-source "joe-jupp_3.1.41-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jupp/joe-jupp_3.1.41-1_all.deb"
+}

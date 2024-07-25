@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbiosig3_2.1.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbiosig3"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libdcmtk15" {>= "3.6.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtinyxml2-6-2v5"
+]
+extra-source "libbiosig3_2.1.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/biosig/libbiosig3_2.1.2-4_amd64.deb"
+}

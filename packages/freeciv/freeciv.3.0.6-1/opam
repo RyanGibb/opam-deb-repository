@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freeciv_3.0.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freeciv"]
+]
+depends: [
+  "freeciv-client-gtk3"
+  "freeciv-data" {= "3.0.6-1"}
+]
+extra-source "freeciv_3.0.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeciv/freeciv_3.0.6-1_all.deb"
+}

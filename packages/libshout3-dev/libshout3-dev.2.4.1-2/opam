@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libshout3-dev_2.4.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libshout3-dev"]
+]
+depends: [
+  "libogg-dev"
+  "libshout3" {= "2.4.1-2"}
+  "libspeex-dev"
+  "libssl-dev"
+  "libtheora-dev"
+  "libvorbis-dev"
+  "pkg-config"
+]
+conflicts: [
+  "libshout-dev"
+]
+extra-source "libshout3-dev_2.4.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libshout/libshout3-dev_2.4.1-2_amd64.deb"
+}

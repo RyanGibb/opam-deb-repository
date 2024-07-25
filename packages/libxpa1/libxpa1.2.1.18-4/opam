@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxpa1_2.1.18-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxpa1"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+]
+extra-source "libxpa1_2.1.18-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xpa/libxpa1_2.1.18-4_amd64.deb"
+}

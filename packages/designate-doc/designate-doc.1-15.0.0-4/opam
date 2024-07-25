@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i designate-doc_1:15.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r designate-doc"]
+]
+depends: [
+  "libjs-bootstrap"
+  "libjs-jquery"
+  "libjs-sphinxdoc" {>= "5.2"}
+]
+extra-source "designate-doc_1:15.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/designate/designate-doc_15.0.0-4_all.deb"
+}

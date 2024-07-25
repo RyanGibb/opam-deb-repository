@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdatetime-format-strptime-perl_1.7600-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdatetime-format-strptime-perl"]
+]
+depends: [
+  "libdatetime-locale-perl" {>= "1-1.23"}
+  "libdatetime-perl" {>= "2-1.00"}
+  "libdatetime-timezone-perl" {>= "1-2.09"}
+  "libparams-validationcompiler-perl"
+  "libspecio-perl"
+  "libtry-tiny-perl"
+  "perl"
+]
+extra-source "libdatetime-format-strptime-perl_1.7600-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdatetime-format-strptime-perl/libdatetime-format-strptime-perl_1.7600-1_all.deb"
+}

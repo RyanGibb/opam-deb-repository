@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sonic_0.2.0-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sonic"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libsonic0" {= "0.2.0-10"}
+]
+extra-source "sonic_0.2.0-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sonic/sonic_0.2.0-10_amd64.deb"
+}

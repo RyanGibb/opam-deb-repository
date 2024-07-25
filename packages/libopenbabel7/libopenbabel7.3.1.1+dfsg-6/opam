@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopenbabel7_3.1.1+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopenbabel7"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcairo2" {>= "1.2.4"}
+  "libgcc-s1" {>= "3.4"}
+  "libgomp1" {>= "4.9"}
+  "libinchi1" {>= "1.03+dfsg"}
+  "libmaeparser1" {>= "1.2.4"}
+  "libstdc++6" {>= "9"}
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libopenbabel4"
+]
+extra-source "libopenbabel7_3.1.1+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openbabel/libopenbabel7_3.1.1+dfsg-6_amd64.deb"
+}

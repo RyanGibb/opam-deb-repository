@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i totem_43.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r totem"]
+]
+depends: [
+  "grilo-plugins-0-3"
+  "gsettings-desktop-schemas"
+  "gstreamer1-0-gl"
+  "gstreamer1-0-gtk3"
+  "gstreamer1-0-plugins-base" {>= "1.6.0"}
+  "gstreamer1-0-plugins-good" {>= "1.10"}
+  "gstreamer1-0-x"
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.14.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.23.0"}
+  "libglib2-0-0" {>= "2.72.0"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.0.0"}
+  "libgstreamer1-0-0" {>= "1.6.0"}
+  "libgtk-3-0" {>= "3.22.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libtotem-plparser18" {>= "3.26.0"}
+  "libtotem0" {< "43.1"}
+  "libtotem0" {>= "43.0-2"}
+  "totem-common" {>= "43.0-2"}
+]
+extra-source "totem_43.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/totem/totem_43.0-2_amd64.deb"
+}

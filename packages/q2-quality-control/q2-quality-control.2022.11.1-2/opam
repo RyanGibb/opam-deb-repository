@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i q2-quality-control_2022.11.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r q2-quality-control"]
+]
+depends: [
+  "bowtie2"
+  "ncbi-blast+"
+  "python3-any"
+  "python3-biom-format"
+  "python3-h5py"
+  "python3-numpy"
+  "python3-pandas"
+  "python3-scipy"
+  "python3-seaborn"
+  "q2-taxa" {>= "2022.11.1"}
+  "q2templates" {>= "2022.11.1"}
+  "qiime" {>= "2022.11.1"}
+  "samtools"
+  "vsearch"
+]
+extra-source "q2-quality-control_2022.11.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/q2-quality-control/q2-quality-control_2022.11.1-2_all.deb"
+}

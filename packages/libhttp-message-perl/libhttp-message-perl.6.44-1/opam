@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhttp-message-perl_6.44-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhttp-message-perl"]
+]
+depends: [
+  "libclone-perl" {>= "0.46"}
+  "libcompress-raw-bzip2-perl"
+  "libcompress-raw-zlib-perl"
+  "libencode-locale-perl"
+  "libhttp-date-perl"
+  "libio-html-perl"
+  "liblwp-mediatypes-perl"
+  "liburi-perl"
+  "perl"
+  "perl-any"
+]
+extra-source "libhttp-message-perl_6.44-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhttp-message-perl/libhttp-message-perl_6.44-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freeradius-python3_3.0.21+dfsg-2.2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freeradius-python3"]
+]
+depends: [
+  "freeradius" {= "3.0.21+dfsg-2.2+deb11u1"}
+  "libc6" {>= "2.4"}
+  "libpython3-9" {>= "3.9.1"}
+]
+extra-source "freeradius-python3_3.0.21+dfsg-2.2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeradius/freeradius-python3_3.0.21+dfsg-2.2+deb11u1_amd64.deb"
+}

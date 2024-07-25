@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-highr_0.10+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-highr"]
+]
+depends: [
+  "libjs-highlight-js"
+  "libjs-jquery"
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-cran-xfun" {>= "0.18"}
+]
+extra-source "r-cran-highr_0.10+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-highr/r-cran-highr_0.10+dfsg-1_all.deb"
+}

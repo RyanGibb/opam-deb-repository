@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i savi_1.5.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r savi"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libtcl8-6" {>= "8.6.0"}
+  "libtk8-6" {>= "8.6.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "savi_1.5.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/savi/savi_1.5.1-4_amd64.deb"
+}

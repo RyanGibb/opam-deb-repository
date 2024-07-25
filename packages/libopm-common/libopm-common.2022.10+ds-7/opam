@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopm-common_2022.10+ds-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopm-common"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libcjson1" {>= "1.7.5"}
+  "libfmt9" {>= "9.1.0+ds1"}
+  "libgcc-s1" {>= "3.4"}
+  "libgomp1" {>= "4.9"}
+  "libpython3-11" {>= "3.11.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libopm-common_2022.10+ds-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opm-common/libopm-common_2022.10+ds-7_amd64.deb"
+}

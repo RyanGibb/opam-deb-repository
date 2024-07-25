@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i syrthes-tools_4.3.5+20200129-dfsg1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r syrthes-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmedc11"
+  "libmetis5" {>= "5.1.0.dfsg"}
+  "libscotch-6-1" {>= "6.1.0"}
+  "syrthes" {>= "4.3.5~"}
+]
+extra-source "syrthes-tools_4.3.5+20200129-dfsg1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/syrthes/syrthes-tools_4.3.5+20200129-dfsg1-1+b1_amd64.deb"
+}

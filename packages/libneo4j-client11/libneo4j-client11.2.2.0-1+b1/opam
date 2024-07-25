@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libneo4j-client11_2.2.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libneo4j-client11"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.15"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "libneo4j-client11_2.2.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libneo4j-client/libneo4j-client11_2.2.0-1+b1_amd64.deb"
+}

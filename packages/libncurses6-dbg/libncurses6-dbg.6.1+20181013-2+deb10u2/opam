@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libncurses6-dbg_6.1+20181013-2+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libncurses6-dbg"]
+]
+depends: [
+  "libncurses6" {= "6.1+20181013-2+deb10u2"}
+  "libtinfo6" {= "6.1+20181013-2+deb10u2"}
+  "libtinfo6-dbg" {= "6.1+20181013-2+deb10u2"}
+]
+extra-source "libncurses6-dbg_6.1+20181013-2+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ncurses/libncurses6-dbg_6.1+20181013-2+deb10u2_amd64.deb"
+}

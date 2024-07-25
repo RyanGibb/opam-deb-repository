@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nss-tlsd_1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nss-tlsd"]
+]
+depends: [
+  "init-system-helpers" {>= "1.52"}
+  "libc6" {>= "2.9"}
+  "libglib2-0-0" {>= "2.44"}
+  "libsoup2-4-1" {>= "2.41.90"}
+]
+extra-source "nss-tlsd_1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nss-tls/nss-tlsd_1.1-1_amd64.deb"
+}

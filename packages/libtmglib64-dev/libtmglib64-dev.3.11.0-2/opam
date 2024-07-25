@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtmglib64-dev_3.11.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtmglib64-dev"]
+]
+depends: [
+  "libtmglib64-3" {= "3.11.0-2"}
+  ("libblas64-dev" | "libblas64-so")
+  ("liblapack64-dev" | "liblapack64-so")
+]
+extra-source "libtmglib64-dev_3.11.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lapack/libtmglib64-dev_3.11.0-2_amd64.deb"
+}

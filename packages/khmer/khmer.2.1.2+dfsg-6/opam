@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i khmer_2.1.2+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r khmer"]
+]
+depends: [
+  "cython3" {>= "0.26.1"}
+  "khmer-common"
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.4"}
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+  "python3-bz2file"
+  "python3-screed" {>= "1.0"}
+  "zlib1g" {>= "1-1.2.3.4"}
+]
+extra-source "khmer_2.1.2+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/khmer/khmer_2.1.2+dfsg-6_amd64.deb"
+}

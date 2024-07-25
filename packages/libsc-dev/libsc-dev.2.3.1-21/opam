@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsc-dev_2.3.1-21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsc-dev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libopenmpi3" {>= "4.0.5"}
+  "libsc7v5" {= "2.3.1-21"}
+  "libstdc++6" {>= "5"}
+  "mpi-default-dev"
+]
+extra-source "libsc-dev_2.3.1-21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpqc/libsc-dev_2.3.1-21_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gsasl_1.10.0-4+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gsasl"]
+]
+depends: [
+  "libc6" {>= "2.16"}
+  "libgnutls30" {>= "3.7.0"}
+  "libgsasl7" {>= "1.9.2"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "gsasl_1.10.0-4+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gsasl/gsasl_1.10.0-4+deb11u1_amd64.deb"
+}

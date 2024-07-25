@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-api-docs_1:43+1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-api-docs"]
+]
+depends: [
+  "gnome-devel-docs"
+  "libadwaita-1-doc"
+  "libatk1-0-doc"
+  "libgdk-pixbuf2-0-doc"
+  "libglib2-0-doc"
+  "libgtk-4-doc"
+  "libpango1-0-doc"
+]
+extra-source "gnome-api-docs_1:43+1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-gnome3/gnome-api-docs_43+1_all.deb"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-kan-extensions-dev_5.2-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-kan-extensions-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-adjunctions-dev"
+  "libghc-comonad-dev"
+  "libghc-contravariant-dev"
+  "libghc-distributive-dev"
+  "libghc-free-dev"
+  "libghc-invariant-dev"
+  "libghc-profunctors-dev"
+  "libghc-semigroupoids-dev"
+  "libghc-tagged-dev"
+  "libghc-transformers-compat-dev"
+  "libgmp10"
+]
+extra-source "libghc-kan-extensions-dev_5.2-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-kan-extensions/libghc-kan-extensions-dev_5.2-3+b1_amd64.deb"
+}

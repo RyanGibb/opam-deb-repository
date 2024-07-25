@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i itcl3-dev_3.4.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r itcl3-dev"]
+]
+depends: [
+  "itcl3" {= "3.4.4-2"}
+  ("tcl-dev" | "tcl8-6-dev")
+]
+conflicts: [
+  "itcl-dev"
+  "tcl-itcl-dev"
+]
+extra-source "itcl3-dev_3.4.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/itcl3/itcl3-dev_3.4.4-2_amd64.deb"
+}

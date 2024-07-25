@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gocr-dev_0.52-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gocr-dev"]
+]
+depends: [
+  "gocr"
+  ("tk" | "wish")
+]
+extra-source "gocr-dev_0.52-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gocr/gocr-dev_0.52-3_all.deb"
+}

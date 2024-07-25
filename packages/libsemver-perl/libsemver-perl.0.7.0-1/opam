@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsemver-perl_0.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsemver-perl"]
+]
+depends: [
+  "perl"
+  "perl-any" {>= "5.11.5"}
+]
+extra-source "libsemver-perl_0.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsemver-perl/libsemver-perl_0.7.0-1_all.deb"
+}

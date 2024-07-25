@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i neutron-tempest-plugin_2.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r neutron-tempest-plugin"]
+]
+depends: [
+  "python3-any"
+  "python3-ddt"
+  "python3-debtcollector"
+  "python3-eventlet"
+  "python3-netaddr"
+  "python3-neutron-lib" {>= "2.10.1"}
+  "python3-nose"
+  "python3-os-ken"
+  "python3-oslo-config"
+  "python3-oslo-log"
+  "python3-oslo-serialization"
+  "python3-oslo-utils"
+  "python3-packaging"
+  "python3-paramiko"
+  "python3-pbr"
+  "python3-tempest"
+  "python3-tenacity"
+  "python3-testscenarios"
+  "python3-testtools"
+  "tempest" {>= "1-29.2.0"}
+]
+extra-source "neutron-tempest-plugin_2.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/neutron-tempest-plugin/neutron-tempest-plugin_2.0.0-2_all.deb"
+}

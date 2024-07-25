@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgamin-dev_0.1.10-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgamin-dev"]
+]
+depends: [
+  "libgamin0" {= "0.1.10-5+b1"}
+]
+conflicts: [
+  "libfam-dev"
+]
+extra-source "libgamin-dev_0.1.10-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gamin/libgamin-dev_0.1.10-5+b1_amd64.deb"
+}

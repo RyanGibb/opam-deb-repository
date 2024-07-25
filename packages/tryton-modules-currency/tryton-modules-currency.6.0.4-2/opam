@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tryton-modules-currency_6.0.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tryton-modules-currency"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "5.2"}
+  "python3-any"
+  "python3-dateutil"
+  "python3-pkg-resources"
+  "python3-sql"
+  "tryton-server"
+  "tryton-server" {>= "6.0"}
+]
+extra-source "tryton-modules-currency_6.0.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tryton-modules-currency/tryton-modules-currency_6.0.4-2_all.deb"
+}

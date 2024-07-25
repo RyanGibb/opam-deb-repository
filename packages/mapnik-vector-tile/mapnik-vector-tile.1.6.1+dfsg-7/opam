@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mapnik-vector-tile_1.6.1+dfsg-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mapnik-vector-tile"]
+]
+depends: [
+  "libmapbox-geometry-dev"
+  "libmapbox-wagyu-dev"
+  "libmapnik-dev" {>= "3.0.14"}
+  "libprotobuf-dev"
+  "libprotozero-dev"
+]
+extra-source "mapnik-vector-tile_1.6.1+dfsg-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mapnik-vector-tile/mapnik-vector-tile_1.6.1+dfsg-7_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stetl_1.2+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stetl"]
+]
+depends: [
+  "python-any"
+  "python-stetl" {>= "1.2+ds-1"}
+]
+extra-source "stetl_1.2+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-stetl/stetl_1.2+ds-1_all.deb"
+}

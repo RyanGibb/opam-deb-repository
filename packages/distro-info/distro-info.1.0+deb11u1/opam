@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i distro-info_1.0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r distro-info"]
+]
+depends: [
+  "distro-info-data" {>= "0.46"}
+  "libc6" {>= "2.7"}
+]
+extra-source "distro-info_1.0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/distro-info/distro-info_1.0+deb11u1_amd64.deb"
+}

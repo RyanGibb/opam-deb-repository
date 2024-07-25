@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i trove-doc_1:18.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r trove-doc"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "5.2"}
+]
+extra-source "trove-doc_1:18.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openstack-trove/trove-doc_18.0.0-2_all.deb"
+}

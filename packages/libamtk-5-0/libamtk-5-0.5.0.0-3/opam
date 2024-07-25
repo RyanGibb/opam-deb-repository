@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libamtk-5-0_5.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libamtk-5-0"]
+]
+depends: [
+  "libamtk-5-common" {= "5.0.0-3"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.52"}
+  "libgtk-3-0" {>= "3.19.12"}
+]
+extra-source "libamtk-5-0_5.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/amtk/libamtk-5-0_5.0.0-3_amd64.deb"
+}

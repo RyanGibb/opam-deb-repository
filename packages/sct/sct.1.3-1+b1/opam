@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sct_1.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sct"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libx11-6"
+  "libxrandr2" {>= "2-1.2.99.2"}
+]
+extra-source "sct_1.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/setcolortemperature/sct_1.3-1+b1_amd64.deb"
+}

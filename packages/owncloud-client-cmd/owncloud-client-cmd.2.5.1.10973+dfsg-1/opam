@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i owncloud-client-cmd_2.5.1.10973+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r owncloud-client-cmd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libowncloudsync0" {= "2.5.1.10973+dfsg-1"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5sql5-sqlite"
+  "libstdc++6" {>= "5.2"}
+  "owncloud-client-l10n"
+]
+extra-source "owncloud-client-cmd_2.5.1.10973+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/owncloud-client/owncloud-client-cmd_2.5.1.10973+dfsg-1_amd64.deb"
+}

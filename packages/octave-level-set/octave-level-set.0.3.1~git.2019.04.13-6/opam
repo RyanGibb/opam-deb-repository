@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-level-set_0.3.1~git.2019.04.13-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-level-set"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "octave"
+  "octave" {>= "7.3.0"}
+  "octave-parallel"
+]
+extra-source "octave-level-set_0.3.1~git.2019.04.13-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave-level-set/octave-level-set_0.3.1~git.2019.04.13-6_amd64.deb"
+}

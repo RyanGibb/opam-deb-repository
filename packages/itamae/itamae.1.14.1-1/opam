@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i itamae_1.14.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r itamae"]
+]
+depends: [
+  "ruby"
+  "ruby-ansi"
+  "ruby-hashie"
+  "ruby-schash" {>= "0.1.0"}
+  "ruby-specinfra" {< "3.0.0"}
+  "ruby-specinfra" {>= "2.64.0"}
+  "ruby-thor" {>= "1.0.0"}
+]
+extra-source "itamae_1.14.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/itamae/itamae_1.14.1-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdogleg-dev_0.15.4-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdogleg-dev"]
+]
+depends: [
+  "libdogleg-doc"
+  "libdogleg2" {= "0.15.4-2+b1"}
+  ("libsuitesparse-dev" | "libsuitesparse-metis-dev")
+]
+extra-source "libdogleg-dev_0.15.4-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdogleg/libdogleg-dev_0.15.4-2+b1_amd64.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tigervnc-viewer_1.12.0+dfsg-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tigervnc-viewer"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libfltk-images1-3" {>= "1.3.3"}
+  "libfltk1-3" {>= "1.3.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnutls30" {>= "3.7.5"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpixman-1-0"
+  "libstdc++6" {>= "5.2"}
+  "libx11-6" {>= "2-1.2.99.901"}
+  "libxext6"
+  "libxi6" {>= "2-1.5.99.2"}
+  "libxrandr2" {>= "2-1.2.0"}
+  "libxrender1"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "tigervnc-viewer_1.12.0+dfsg-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tigervnc/tigervnc-viewer_1.12.0+dfsg-8_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypt-ssleay-perl_0.73.06-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypt-ssleay-perl"]
+]
+depends: [
+  "libbytes-random-secure-perl"
+  "libc6" {>= "2.4"}
+  "libssl1-1" {>= "1.1.0"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+  "perl-openssl-defaults"
+]
+extra-source "libcrypt-ssleay-perl_0.73.06-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcrypt-ssleay-perl/libcrypt-ssleay-perl_0.73.06-1+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgo-10-dev_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgo-10-dev"]
+]
+depends: [
+  "gcc-10-base" {= "10.2.1-6"}
+  "libgcc-10-dev" {= "10.2.1-6"}
+  "libgo16" {>= "10.2.1-6"}
+]
+extra-source "libgo-10-dev_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/libgo-10-dev_10.2.1-6_amd64.deb"
+}

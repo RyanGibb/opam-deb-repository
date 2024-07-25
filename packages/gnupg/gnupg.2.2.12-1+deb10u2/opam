@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnupg_2.2.12-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnupg"]
+]
+depends: [
+  "dirmngr" {< "2.2.12-1+deb10u2.1~"}
+  "dirmngr" {>= "2.2.12-1+deb10u2"}
+  "gnupg-l10n" {= "2.2.12-1+deb10u2"}
+  "gnupg-utils" {< "2.2.12-1+deb10u2.1~"}
+  "gnupg-utils" {>= "2.2.12-1+deb10u2"}
+  "gpg" {< "2.2.12-1+deb10u2.1~"}
+  "gpg" {>= "2.2.12-1+deb10u2"}
+  "gpg-agent" {< "2.2.12-1+deb10u2.1~"}
+  "gpg-agent" {>= "2.2.12-1+deb10u2"}
+  "gpg-wks-client" {< "2.2.12-1+deb10u2.1~"}
+  "gpg-wks-client" {>= "2.2.12-1+deb10u2"}
+  "gpg-wks-server" {< "2.2.12-1+deb10u2.1~"}
+  "gpg-wks-server" {>= "2.2.12-1+deb10u2"}
+  "gpgsm" {< "2.2.12-1+deb10u2.1~"}
+  "gpgsm" {>= "2.2.12-1+deb10u2"}
+  "gpgv" {< "2.2.12-1+deb10u2.1~"}
+  "gpgv" {>= "2.2.12-1+deb10u2"}
+]
+extra-source "gnupg_2.2.12-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnupg2/gnupg_2.2.12-1+deb10u2_all.deb"
+}

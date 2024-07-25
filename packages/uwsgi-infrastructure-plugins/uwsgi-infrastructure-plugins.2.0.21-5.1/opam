@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uwsgi-infrastructure-plugins_2.0.21-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uwsgi-infrastructure-plugins"]
+]
+depends: [
+  "uwsgi-plugin-alarm-curl" {= "2.0.21-5.1"}
+  "uwsgi-plugin-alarm-xmpp" {= "2.0.21-5.1"}
+  "uwsgi-plugin-curl-cron" {= "2.0.21-5.1"}
+  "uwsgi-plugin-emperor-pg" {= "2.0.21-5.1"}
+  "uwsgi-plugin-geoip" {= "2.0.21-5.1"}
+  "uwsgi-plugin-glusterfs" {= "2.0.21-5.1"}
+  "uwsgi-plugin-graylog2" {= "2.0.21-5.1"}
+  "uwsgi-plugin-ldap" {= "2.0.21-5.1"}
+  "uwsgi-plugin-rados" {= "2.0.21-5.1"}
+  "uwsgi-plugin-router-access" {= "2.0.21-5.1"}
+  "uwsgi-plugin-sqlite3" {= "2.0.21-5.1"}
+  "uwsgi-plugin-xslt" {= "2.0.21-5.1"}
+]
+extra-source "uwsgi-infrastructure-plugins_2.0.21-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uwsgi/uwsgi-infrastructure-plugins_2.0.21-5.1_amd64.deb"
+}

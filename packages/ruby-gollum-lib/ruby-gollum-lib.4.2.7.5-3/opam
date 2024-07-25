@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-gollum-lib_4.2.7.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-gollum-lib"]
+]
+depends: [
+  "ruby-gemojione" {>= "3.2~"}
+  "ruby-github-markup" {>= "1.6~"}
+  "ruby-gollum-rugged-adapter" {>= "0.4.4.1~"}
+  "ruby-nokogiri" {>= "1.6.4~"}
+  "ruby-rouge" {>= "3.1~"}
+  "ruby-sanitize" {>= "4.6.4~"}
+  "ruby-stringex" {>= "2.6~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-gollum-lib_4.2.7.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-gollum-lib/ruby-gollum-lib_4.2.7.5-3_all.deb"
+}

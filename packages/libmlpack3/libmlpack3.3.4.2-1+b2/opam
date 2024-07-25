@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmlpack3_3.4.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmlpack3"]
+]
+depends: [
+  "libarmadillo10" {>= "1-10.1.2+dfsg"}
+  "libboost-serialization1-74-0" {>= "1.74.0"}
+  "libboost-test1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libmlpack3_3.4.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mlpack/libmlpack3_3.4.2-1+b2_amd64.deb"
+}

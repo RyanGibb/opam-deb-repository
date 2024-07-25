@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtext-levenshteinxs-perl_0.03-4+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtext-levenshteinxs-perl"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libtext-levenshteinxs-perl_0.03-4+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtext-levenshteinxs-perl/libtext-levenshteinxs-perl_0.03-4+b6_amd64.deb"
+}

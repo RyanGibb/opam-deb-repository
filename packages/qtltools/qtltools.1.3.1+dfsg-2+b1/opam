@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qtltools_1.3.1+dfsg-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qtltools"]
+]
+depends: [
+  "libboost-iostreams1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgsl25" {>= "2.6"}
+  "libhts3" {>= "1.10"}
+  "libstdc++6" {>= "5.2"}
+  "r-mathlib"
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "qtltools_1.3.1+dfsg-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtltools/qtltools_1.3.1+dfsg-2+b1_amd64.deb"
+}

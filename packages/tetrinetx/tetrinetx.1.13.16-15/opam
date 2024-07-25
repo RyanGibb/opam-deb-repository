@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tetrinetx_1.13.16-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tetrinetx"]
+]
+depends: [
+  "libadns1" {>= "1.5.0~"}
+  "libc6" {>= "2.34"}
+]
+extra-source "tetrinetx_1.13.16-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tetrinetx/tetrinetx_1.13.16-15_amd64.deb"
+}

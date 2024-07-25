@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmatekbd-dev_1.24.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmatekbd-dev"]
+]
+depends: [
+  "gir1-2-matekbd-1-0" {= "1.24.1-1"}
+  "libglib2-0-dev"
+  "libgtk-3-dev"
+  "libmatekbd4" {= "1.24.1-1"}
+  "libx11-dev"
+  "libxklavier-dev"
+]
+extra-source "libmatekbd-dev_1.24.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmatekbd/libmatekbd-dev_1.24.1-1_amd64.deb"
+}

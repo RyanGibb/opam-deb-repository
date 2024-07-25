@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcorkipset1_1.1.1+20150311-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcorkipset1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcork16" {>= "0.15.0+ds-8"}
+]
+extra-source "libcorkipset1_1.1.1+20150311-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcorkipset/libcorkipset1_1.1.1+20150311-11_amd64.deb"
+}

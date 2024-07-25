@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xml-security-c-utils_2.0.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xml-security-c-utils"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc-s1" {>= "3.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5"}
+  "libxalan-c112" {>= "1.12"}
+  "libxerces-c3-2"
+  "libxml-security-c20" {>= "2.0.2"}
+]
+extra-source "xml-security-c-utils_2.0.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xml-security-c/xml-security-c-utils_2.0.2-4_amd64.deb"
+}

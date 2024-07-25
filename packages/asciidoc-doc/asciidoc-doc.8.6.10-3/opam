@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i asciidoc-doc_8.6.10-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r asciidoc-doc"]
+]
+depends: [
+  "asciidoc-common" {= "8.6.10-3"}
+]
+extra-source "asciidoc-doc_8.6.10-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/asciidoc/asciidoc-doc_8.6.10-3_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlezout10-dev_1.06.2-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlezout10-dev"]
+]
+depends: [
+  "gnat" {< "13"}
+  "gnat" {>= "12"}
+  "libxmlezout7" {= "1.06.2-10"}
+]
+extra-source "libxmlezout10-dev_1.06.2-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxmlezout/libxmlezout10-dev_1.06.2-10_amd64.deb"
+}

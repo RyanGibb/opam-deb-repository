@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apertium-mkd-bul_0.2.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apertium-mkd-bul"]
+]
+depends: [
+  "apertium" {>= "3.8.1"}
+  "cg3" {>= "1.3.6"}
+]
+conflicts: [
+  "apertium-bul-mkd"
+]
+extra-source "apertium-mkd-bul_0.2.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apertium-mkd-bul/apertium-mkd-bul_0.2.1-2_all.deb"
+}

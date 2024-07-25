@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ros-desktop-dev_1.16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ros-desktop-dev"]
+]
+depends: [
+  "ros-desktop"
+  "ros-robot-dev"
+  "ros-viz-dev"
+]
+extra-source "ros-desktop-dev_1.16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-metapackages/ros-desktop-dev_1.16_all.deb"
+}

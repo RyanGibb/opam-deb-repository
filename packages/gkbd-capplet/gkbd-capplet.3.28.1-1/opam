@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gkbd-capplet_3.28.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gkbd-capplet"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgnomekbd8" {>= "3.6.0"}
+  "libgtk-3-0" {>= "3.9.10"}
+  "libxklavier16" {>= "5.2"}
+]
+extra-source "gkbd-capplet_3.28.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgnomekbd/gkbd-capplet_3.28.1-1_amd64.deb"
+}

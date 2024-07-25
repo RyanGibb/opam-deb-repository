@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openimageio-tools_2.2.10.1+dfsg-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openimageio-tools"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libilmbase25" {>= "2.5.4"}
+  "libopenexr25" {>= "2.5.4"}
+  "libopenimageio2-2" {>= "2.2.10.1+dfsg"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.4.0"}
+  "libstdc++6" {>= "9"}
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+]
+extra-source "openimageio-tools_2.2.10.1+dfsg-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openimageio/openimageio-tools_2.2.10.1+dfsg-1+deb11u1_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-deeptools_3.5.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-deeptools"]
+]
+depends: [
+  "python3-any"
+  "python3-deeptoolsintervals"
+  "python3-matplotlib" {>= "3.3.0"}
+  "python3-numpy"
+  "python3-numpydoc"
+  "python3-plotly" {>= "4.9.0"}
+  "python3-py2bit"
+  "python3-pybigwig"
+  "python3-pysam" {>= "0.14.0"}
+  "python3-scipy"
+]
+extra-source "python3-deeptools_3.5.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-deeptools/python3-deeptools_3.5.1-3_all.deb"
+}

@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i blinken_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r blinken"]
+]
+depends: [
+  "fonts-sjfonts"
+  "libc6" {>= "2.34"}
+  "libkf5configcore5" {>= "4.98.0"}
+  "libkf5configgui5" {>= "4.97.0"}
+  "libkf5coreaddons5" {>= "5.90.0~"}
+  "libkf5crash5" {>= "5.90.0~"}
+  "libkf5dbusaddons5" {>= "5.90.0~"}
+  "libkf5guiaddons5" {>= "5.90.0~"}
+  "libkf5i18n5" {>= "5.90.0~"}
+  "libkf5xmlgui5" {>= "5.90.0~"}
+  "libphonon4qt5-4" {>= "4-4.8.0"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5svg5" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  "phonon4qt5"
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "blinken_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/blinken/blinken_22.12.3-1_amd64.deb"
+}

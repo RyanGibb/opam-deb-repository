@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-gollum-lib_4.2.7.10~gitlab.2+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-gollum-lib"]
+]
+depends: [
+  "ruby-gemojione"
+  "ruby-github-markup"
+  "ruby-gollum-rugged-adapter" {>= "0.4.4.3~"}
+  "ruby-nokogiri"
+  "ruby-rouge"
+  "ruby-sanitize" {>= "6.0~"}
+  "ruby-stringex"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-gollum-lib_4.2.7.10~gitlab.2+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-gollum-lib/ruby-gollum-lib_4.2.7.10~gitlab.2+dfsg-1_all.deb"
+}

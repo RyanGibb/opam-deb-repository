@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libharp12_1.12-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libharp12"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libcoda15" {>= "2.21.2"}
+  "libhdf4-0-alt" {>= "4.2r4"}
+  "libnetcdf18" {>= "3.6.1"}
+  "libudunits2-0" {>= "2.2.14"}
+  "python3-cffi-backend"
+  "python3-numpy"
+]
+extra-source "libharp12_1.12-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/harp/libharp12_1.12-1+b1_amd64.deb"
+}

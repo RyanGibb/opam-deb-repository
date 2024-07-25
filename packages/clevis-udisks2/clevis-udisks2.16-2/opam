@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clevis-udisks2_16-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clevis-udisks2"]
+]
+depends: [
+  "adduser"
+  "clevis-luks" {= "16-2"}
+  "libaudit1" {>= "1-2.7.8"}
+  "libblockdev-crypto2"
+  "libc6" {>= "2.4"}
+  "libcryptsetup12" {>= "2-2.0"}
+  "libglib2-0-0" {>= "2.35.8"}
+  "libjansson4" {>= "2.0.1"}
+  "libluksmeta0" {>= "8"}
+  "libudisks2-0" {>= "2.0.0"}
+  "udisks2"
+]
+extra-source "clevis-udisks2_16-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clevis/clevis-udisks2_16-2_amd64.deb"
+}

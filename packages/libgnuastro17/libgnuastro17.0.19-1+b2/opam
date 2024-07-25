@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnuastro17_0.19-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnuastro17"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcfitsio10" {>= "4.2.0~"}
+  "libgit2-1-5" {>= "1.5.0"}
+  "libgsl27" {>= "2.7.1"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libtiff6" {>= "4.0.3"}
+  "libwcs7" {>= "7.6"}
+]
+extra-source "libgnuastro17_0.19-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnuastro/libgnuastro17_0.19-1+b2_amd64.deb"
+}

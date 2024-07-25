@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cryptocipher-dev_0.6.2-9+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cryptocipher-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-cipher-aes-dev"
+  "libghc-cipher-blowfish-dev"
+  "libghc-cipher-camellia-dev"
+  "libghc-cipher-des-dev"
+  "libghc-cipher-rc4-dev"
+  "libghc-crypto-cipher-types-dev"
+  "libgmp10"
+]
+extra-source "libghc-cryptocipher-dev_0.6.2-9+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cryptocipher/libghc-cryptocipher-dev_0.6.2-9+b3_amd64.deb"
+}

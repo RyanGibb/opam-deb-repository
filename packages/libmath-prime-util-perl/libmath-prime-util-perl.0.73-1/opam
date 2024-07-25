@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmath-prime-util-perl_0.73-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmath-prime-util-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmath-prime-util-gmp-perl" {>= "0.50"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libmath-prime-util-perl_0.73-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmath-prime-util-perl/libmath-prime-util-perl_0.73-1_amd64.deb"
+}

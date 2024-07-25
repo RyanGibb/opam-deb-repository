@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mosquitto_2.0.11-1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mosquitto"]
+]
+depends: [
+  "adduser" {>= "3.10"}
+  "libc6" {>= "2.29"}
+  "libcjson1" {>= "1.7.13"}
+  "libdlt2" {>= "2.18.6"}
+  "libmosquitto1" {= "2.0.11-1+deb11u1"}
+  "libssl1-1" {>= "1.1.1"}
+  "libsystemd0"
+  "libwebsockets16" {>= "1.6.0"}
+  "libwrap0" {>= "7.6-4~"}
+  "lsb-base" {>= "4.1+Debian3"}
+]
+extra-source "mosquitto_2.0.11-1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mosquitto/mosquitto_2.0.11-1+deb11u1_amd64.deb"
+}

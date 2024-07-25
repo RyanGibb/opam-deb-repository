@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-passenger_5.0.30-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-passenger"]
+]
+depends: [
+  "passenger" {>= "5.0.30-1.1"}
+]
+extra-source "ruby-passenger_5.0.30-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/passenger/ruby-passenger_5.0.30-1.1_all.deb"
+}

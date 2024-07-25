@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i threeb-imagej_0.0~git20220106110332.a3144e0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r threeb-imagej"]
+]
+depends: [
+  "imagej"
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  ("default-jre" {>= "2-1.8"} | "java8-runtime")
+]
+extra-source "threeb-imagej_0.0~git20220106110332.a3144e0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/threeb/threeb-imagej_0.0~git20220106110332.a3144e0-5_amd64.deb"
+}

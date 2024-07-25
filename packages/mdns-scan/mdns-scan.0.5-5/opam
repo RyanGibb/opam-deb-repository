@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mdns-scan_0.5-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mdns-scan"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+]
+extra-source "mdns-scan_0.5-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mdns-scan/mdns-scan_0.5-5_amd64.deb"
+}

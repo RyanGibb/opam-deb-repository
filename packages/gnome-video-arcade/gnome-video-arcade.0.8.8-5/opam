@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-video-arcade_0.8.8-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-video-arcade"]
+]
+depends: [
+  "gsettings-desktop-schemas"
+  "libc6" {>= "2.14"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libsoup2-4-1" {>= "2.33.92"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libwnck-3-0" {>= "2.91.6"}
+  "mame"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnome-video-arcade_0.8.8-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-video-arcade/gnome-video-arcade_0.8.8-5_amd64.deb"
+}

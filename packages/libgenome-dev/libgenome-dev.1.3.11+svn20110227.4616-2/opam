@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgenome-dev_1.3.11+svn20110227.4616-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgenome-dev"]
+]
+depends: [
+  "libgenome0" {= "1.3.11+svn20110227.4616-2"}
+]
+conflicts: [
+  "libgenome-1.3-dev"
+]
+extra-source "libgenome-dev_1.3.11+svn20110227.4616-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgenome/libgenome-dev_1.3.11+svn20110227.4616-2_amd64.deb"
+}

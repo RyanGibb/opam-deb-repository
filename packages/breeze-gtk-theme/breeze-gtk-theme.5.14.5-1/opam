@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i breeze-gtk-theme_5.14.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r breeze-gtk-theme"]
+]
+depends: [
+  "gtk2-engines-pixbuf"
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "breeze-gtk-theme_5.14.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/breeze-gtk/breeze-gtk-theme_5.14.5-1_amd64.deb"
+}

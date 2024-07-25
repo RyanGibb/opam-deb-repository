@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5kdegamesprivate7_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5kdegamesprivate7"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5archive5" {>= "5.98.0~"}
+  "libkf5completion5" {>= "5.98.0~"}
+  "libkf5configcore5" {>= "5.98.0~"}
+  "libkf5coreaddons5" {>= "5.6.0+git20150124.0026+15.04"}
+  "libkf5dnssd5" {>= "5.98.0~"}
+  "libkf5i18n5" {>= "5.98.0~"}
+  "libkf5kdegames7" {= "4-22.12.3-1"}
+  "libkf5newstuffwidgets5" {>= "5.98.0~"}
+  "libkf5widgetsaddons5" {>= "5.98.0~"}
+  "libkf5xmlgui5" {>= "5.98.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.15.0~"}
+  "libqt5xml5" {>= "5.15.0~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.0~"} | "libqt5gui5-gles" {>= "5.15.0~"})
+]
+extra-source "libkf5kdegamesprivate7_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkdegames/libkf5kdegamesprivate7_22.12.3-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqt5feedback5-hfd_0.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqt5feedback5-hfd"]
+]
+depends: [
+  "hfd-service"
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5feedback5" {>= "5.0~git20180329.a14bd0bb"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libqt5feedback5-hfd_0.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hfd-service/libqt5feedback5-hfd_0.2.0-1_amd64.deb"
+}

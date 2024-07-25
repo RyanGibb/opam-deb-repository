@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cheesecutter_2.9+git20181112-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cheesecutter"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libgphobos76"
+  "libstdc++6" {>= "5"}
+]
+extra-source "cheesecutter_2.9+git20181112-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cheesecutter/cheesecutter_2.9+git20181112-2_amd64.deb"
+}

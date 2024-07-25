@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-spyder-reports_0.1.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-spyder-reports"]
+]
+depends: [
+  "pandoc"
+  "python3-any" {>= "3.5~"}
+  "python3-matplotlib"
+  "python3-pweave"
+  "python3-spyder" {>= "3.3.2"}
+]
+extra-source "python3-spyder-reports_0.1.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spyder-reports/python3-spyder-reports_0.1.1-3_all.deb"
+}

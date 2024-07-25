@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i surfraw_2.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r surfraw"]
+]
+depends: [
+  "sensible-utils"
+  ("lynx" | "www-browser")
+]
+extra-source "surfraw_2.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/surfraw/surfraw_2.3.0-2_all.deb"
+}

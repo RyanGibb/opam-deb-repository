@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtritonus-jni_20070428-14.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtritonus-jni"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.34"}
+  "libcdparanoia0" {>= "3.10.2+debian"}
+  "libfluidsynth3" {>= "2.0.5"}
+  "libogg0" {>= "1.1.0"}
+  "libvorbis0a" {>= "1.1.2"}
+  "libvorbisenc2" {>= "1.1.2"}
+]
+conflicts: [
+  "libtritonus-bin"
+]
+extra-source "libtritonus-jni_20070428-14.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtritonus-java/libtritonus-jni_20070428-14.1+b2_amd64.deb"
+}

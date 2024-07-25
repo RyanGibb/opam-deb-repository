@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblapacke-dev_3.8.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblapacke-dev"]
+]
+depends: [
+  "liblapacke" {= "3.8.0-2"}
+  "libtmglib-dev"
+  ("libblas-dev" | "libblas-so")
+  ("liblapack-dev" | "liblapack-so")
+]
+extra-source "liblapacke-dev_3.8.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lapack/liblapacke-dev_3.8.0-2_amd64.deb"
+}

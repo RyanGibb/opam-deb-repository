@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbelcard-dev_5.1.64-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbelcard-dev"]
+]
+depends: [
+  "libbctoolbox-dev" {>= "5.1.64~"}
+  "libbelcard1" {= "5.1.64-2"}
+  "libbelr-dev" {>= "5.1.64~"}
+]
+extra-source "libbelcard-dev_5.1.64-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/belcard/libbelcard-dev_5.1.64-2_amd64.deb"
+}

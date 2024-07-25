@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcre2-posix0_10.32-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcre2-posix0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpcre2-8-0" {>= "10.32"}
+]
+extra-source "libpcre2-posix0_10.32-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcre2/libpcre2-posix0_10.32-5_amd64.deb"
+}

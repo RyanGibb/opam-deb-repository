@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hex-doc_0.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hex-doc"]
+]
+depends: [
+  "ghc"
+  "sgml-base" {>= "1.28"}
+]
+extra-source "libghc-hex-doc_0.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hex/libghc-hex-doc_0.2.0-1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-msh_1.0.10-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-msh"]
+]
+depends: [
+  "gmsh"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "octave"
+  "octave" {>= "7.3.0"}
+  "octave-splines"
+]
+extra-source "octave-msh_1.0.10-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/octave-msh/octave-msh_1.0.10-12_amd64.deb"
+}

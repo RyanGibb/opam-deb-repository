@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i crash_8.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r crash"]
+]
+depends: [
+  "binutils"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.4"}
+  "liblzo2-2" {>= "2.02"}
+  "libncursesw6" {>= "6"}
+  "libsnappy1v5" {>= "1.1.9"}
+  "libstdc++6" {>= "12.2.0-9"}
+  "libtinfo6" {>= "6"}
+  "libzstd1" {>= "1.5.2"}
+]
+extra-source "crash_8.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/crash/crash_8.0.2-1_amd64.deb"
+}

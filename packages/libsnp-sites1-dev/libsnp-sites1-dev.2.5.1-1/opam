@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsnp-sites1-dev_2.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsnp-sites1-dev"]
+]
+depends: [
+  "libsnp-sites1" {= "2.5.1-1"}
+]
+conflicts: [
+  "libsnp-sites-dev"
+]
+extra-source "libsnp-sites1-dev_2.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/snp-sites/libsnp-sites1-dev_2.5.1-1_amd64.deb"
+}

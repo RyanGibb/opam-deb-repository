@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvte-dev_1:0.28.2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvte-dev"]
+]
+depends: [
+  "libcairo2-dev"
+  "libglib2-0-dev" {>= "2.26.0"}
+  "libgtk2-0-dev" {>= "2.20.0"}
+  "libpango1-0-dev" {>= "1.22.0"}
+  "libvte-common"
+  "libvte9" {= "1-0.28.2-6"}
+  "libx11-dev"
+]
+extra-source "libvte-dev_1:0.28.2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vte/libvte-dev_0.28.2-6_amd64.deb"
+}

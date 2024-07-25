@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwala-java_1.5.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwala-java"]
+]
+depends: [
+  "libcommons-cli-java"
+  "libcommons-io-java"
+  "libguava-java"
+  "liblogback-java"
+  "libslf4j-java"
+  "libsmali-java" {>= "2.2.6"}
+]
+extra-source "libwala-java_1.5.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wala/libwala-java_1.5.2-1_all.deb"
+}

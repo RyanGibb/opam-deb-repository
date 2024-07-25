@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aprsdigi_3.10.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aprsdigi"]
+]
+depends: [
+  "libax25"
+  "libc6" {>= "2.15"}
+]
+extra-source "aprsdigi_3.10.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aprsdigi/aprsdigi_3.10.0-3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dh-cmake_0.6.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dh-cmake"]
+]
+depends: [
+  "debhelper"
+  "dpkg-dev"
+  "perl-any"
+  "python3-any"
+  "python3-debian"
+]
+extra-source "dh-cmake_0.6.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dh-cmake/dh-cmake_0.6.2_all.deb"
+}

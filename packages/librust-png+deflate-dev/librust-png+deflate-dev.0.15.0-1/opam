@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-png+deflate-dev_0.15.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-png+deflate-dev"]
+]
+depends: [
+  "librust-deflate-dev"
+  "librust-png-dev" {= "0.15.0-1"}
+]
+extra-source "librust-png+deflate-dev_0.15.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-png/librust-png+deflate-dev_0.15.0-1_amd64.deb"
+}

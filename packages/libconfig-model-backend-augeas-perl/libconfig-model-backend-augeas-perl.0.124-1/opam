@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libconfig-model-backend-augeas-perl_0.124-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libconfig-model-backend-augeas-perl"]
+]
+depends: [
+  "libconfig-augeas-perl"
+  "libconfig-model-perl" {>= "2.117"}
+  "libexception-class-perl"
+  "liblog-log4perl-perl"
+  "libmouse-perl"
+  "perl"
+]
+extra-source "libconfig-model-backend-augeas-perl_0.124-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libconfig-model-backend-augeas-perl/libconfig-model-backend-augeas-perl_0.124-1_all.deb"
+}

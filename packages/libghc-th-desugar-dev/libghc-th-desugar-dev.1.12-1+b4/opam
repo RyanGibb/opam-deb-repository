@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-th-desugar-dev_1.12-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-th-desugar-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-ordered-containers-dev"
+  "libghc-syb-dev"
+  "libghc-th-abstraction-dev"
+  "libghc-th-lift-dev"
+  "libghc-th-orphans-dev"
+  "libghc-transformers-compat-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-th-desugar-dev_1.12-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-th-desugar/libghc-th-desugar-dev_1.12-1+b4_amd64.deb"
+}

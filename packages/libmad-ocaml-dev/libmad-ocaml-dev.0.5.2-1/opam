@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmad-ocaml-dev_0.5.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmad-ocaml-dev"]
+]
+depends: [
+  "libmad-ocaml"
+  "libmad-ocaml" {= "0.5.2-1"}
+  "libmad0-dev"
+  "ocaml"
+]
+extra-source "libmad-ocaml-dev_0.5.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-mad/libmad-ocaml-dev_0.5.2-1_amd64.deb"
+}

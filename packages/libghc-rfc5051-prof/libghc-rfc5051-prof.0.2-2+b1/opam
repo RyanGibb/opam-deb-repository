@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-rfc5051-prof_0.2-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-rfc5051-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-rfc5051-dev" {= "0.2-2+b1"}
+]
+extra-source "libghc-rfc5051-prof_0.2-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-rfc5051/libghc-rfc5051-prof_0.2-2+b1_amd64.deb"
+}

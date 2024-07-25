@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaec-tools_1.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaec-tools"]
+]
+depends: [
+  "libaec0"
+  "libc6" {>= "2.4"}
+]
+extra-source "libaec-tools_1.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaec/libaec-tools_1.0.2-1_amd64.deb"
+}

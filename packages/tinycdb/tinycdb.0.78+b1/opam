@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tinycdb_0.78+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tinycdb"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcdb1"
+]
+extra-source "tinycdb_0.78+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tinycdb/tinycdb_0.78+b1_amd64.deb"
+}

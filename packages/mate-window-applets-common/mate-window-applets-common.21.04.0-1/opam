@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mate-window-applets-common_21.04.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mate-window-applets-common"]
+]
+depends: [
+  "libglib2-0-bin"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "mate-window-applets-common_21.04.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mate-window-applets/mate-window-applets-common_21.04.0-1_all.deb"
+}

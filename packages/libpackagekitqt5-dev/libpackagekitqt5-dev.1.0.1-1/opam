@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpackagekitqt5-dev_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpackagekitqt5-dev"]
+]
+depends: [
+  "libpackagekitqt5-1" {= "1.0.1-1"}
+  "qtbase5-dev" {>= "5.8"}
+]
+extra-source "libpackagekitqt5-dev_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/packagekit-qt/libpackagekitqt5-dev_1.0.1-1_amd64.deb"
+}

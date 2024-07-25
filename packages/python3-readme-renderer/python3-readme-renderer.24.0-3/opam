@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-readme-renderer_24.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-readme-renderer"]
+]
+depends: [
+  "python3-any"
+  "python3-bleach" {>= "3.0.2"}
+  "python3-cmarkgfm"
+  "python3-docutils"
+  "python3-pygments" {>= "2.7.1+dfsg-1~"}
+  "python3-six"
+]
+extra-source "python3-readme-renderer_24.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-readme-renderer/python3-readme-renderer_24.0-3_all.deb"
+}

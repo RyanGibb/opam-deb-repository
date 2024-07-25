@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sane-airscan_0.99.24-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sane-airscan"]
+]
+depends: [
+  "libavahi-client3" {>= "0.6.16"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libc6" {>= "2.29"}
+  "libgnutls30" {>= "3.7.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "sane-airscan_0.99.24-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sane-airscan/sane-airscan_0.99.24-1_amd64.deb"
+}

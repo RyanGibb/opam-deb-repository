@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mothur_1.44.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mothur"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "9"}
+]
+conflicts: [
+  "uchime"
+]
+extra-source "mothur_1.44.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mothur/mothur_1.44.3-2_amd64.deb"
+}

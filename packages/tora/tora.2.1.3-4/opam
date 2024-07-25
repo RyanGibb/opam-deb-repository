@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tora_2.1.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tora"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.4"}
+  "libpq5"
+  "libqscintilla2-qt4-13" {>= "2.8.4"}
+  "libqt4-network" {>= "4-4.5.3"}
+  "libqt4-sql" {>= "4-4.5.3"}
+  "libqt4-xml" {>= "4-4.5.3"}
+  "libqtcore4" {>= "4-4.8.0"}
+  "libqtgui4" {>= "4-4.8.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "tora_2.1.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tora/tora_2.1.3-4_amd64.deb"
+}

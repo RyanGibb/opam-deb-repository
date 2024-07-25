@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phlipple_0.8.5-5.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phlipple"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgl1"
+  "libglew2-2" {>= "2.2.0-4+b1"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2" {>= "1.2.12"}
+  "libsdl1-2-compat-shim"
+  "phlipple-data" {>= "0.8.5-5.1"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "phlipple_0.8.5-5.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phlipple/phlipple_0.8.5-5.1+b1_amd64.deb"
+}

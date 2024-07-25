@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-filesystem_0.5-5.1+b8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-filesystem"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgmp10"
+  "libruby2-5" {>= "2.5.0~preview1"}
+  "ruby" {< "1-2.6~"}
+  "ruby" {>= "1-2.5~0"}
+]
+extra-source "ruby-filesystem_0.5-5.1+b8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-filesystem/ruby-filesystem_0.5-5.1+b8_amd64.deb"
+}

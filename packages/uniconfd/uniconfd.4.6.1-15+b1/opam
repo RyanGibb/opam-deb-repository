@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uniconfd_4.6.1-15+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uniconfd"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "libuniconf4-6"
+  "libwvstreams4-6-base"
+  "libwvstreams4-6-extras"
+]
+extra-source "uniconfd_4.6.1-15+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wvstreams/uniconfd_4.6.1-15+b1_amd64.deb"
+}

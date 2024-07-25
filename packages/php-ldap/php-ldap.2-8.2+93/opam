@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-ldap_2:8.2+93_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-ldap"]
+]
+depends: [
+  "php-common"
+  "php8-2-ldap"
+]
+extra-source "php-ldap_2:8.2+93_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-defaults/php-ldap_8.2+93_all.deb"
+}

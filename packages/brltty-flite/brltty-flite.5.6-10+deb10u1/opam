@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i brltty-flite_5.6-10+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r brltty-flite"]
+]
+depends: [
+  "brltty" {= "5.6-10+deb10u1"}
+  "libc6" {>= "2.14"}
+  "libflite1" {>= "1.4-release-9~"}
+]
+extra-source "brltty-flite_5.6-10+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/brltty/brltty-flite_5.6-10+deb10u1_amd64.deb"
+}

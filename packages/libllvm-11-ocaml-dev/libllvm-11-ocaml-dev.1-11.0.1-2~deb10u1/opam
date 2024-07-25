@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libllvm-11-ocaml-dev_1:11.0.1-2~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libllvm-11-ocaml-dev"]
+]
+depends: [
+  "libctypes-ocaml-dev"
+  "llvm-11-dev" {= "1-11.0.1-2~deb10u1"}
+  "ocaml-nox"
+]
+conflicts: [
+  "libllvm-x.y-ocaml-dev"
+]
+extra-source "libllvm-11-ocaml-dev_1:11.0.1-2~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-11/libllvm-11-ocaml-dev_11.0.1-2~deb10u1_amd64.deb"
+}

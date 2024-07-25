@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-examples_1:25.2.3+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-examples"]
+]
+depends: [
+  "erlang-base-any" {< "1-25.2.3+dfsg-1.0"}
+  "erlang-base-any" {>= "1-25.2.3+dfsg-1"}
+]
+extra-source "erlang-examples_1:25.2.3+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/erlang/erlang-examples_25.2.3+dfsg-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-all-dev_2.7.18-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-all-dev"]
+]
+depends: [
+  "libpython-all-dev" {= "2.7.18-3"}
+  "python-all" {= "2.7.18-3"}
+  "python2" {= "2.7.18-3"}
+  "python2-7-dev" {>= "2.7-7"}
+  "python2-dev" {= "2.7.18-3"}
+]
+extra-source "python-all-dev_2.7.18-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-defaults/python-all-dev_2.7.18-3_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mp3roaster_0.3.0-6.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mp3roaster"]
+]
+depends: [
+  "flac"
+  "libaudio-flac-header-perl"
+  "libaudio-wav-perl"
+  "libfile-mmagic-perl"
+  "libmp3-info-perl"
+  "libogg-vorbis-header-pureperl-perl"
+  "libterm-readkey-perl"
+  "normalize-audio"
+  "perl" {>= "5.8.4"}
+  "vorbis-tools"
+  "wodim"
+  ("mpg321" | "mpg123")
+]
+extra-source "mp3roaster_0.3.0-6.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mp3roaster/mp3roaster_0.3.0-6.1_all.deb"
+}

@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i evolution-data-server_3.46.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r evolution-data-server"]
+]
+depends: [
+  "evolution-data-server-common" {>= "3.46.4-2"}
+  "gnome-keyring"
+  "libc6" {>= "2.34"}
+  "libcamel-1-2-64" {= "3.46.4-2"}
+  "libcanberra-gtk3-0" {>= "0.25"}
+  "libcanberra0" {>= "0.2"}
+  "libdb5-3"
+  "libebackend-1-2-11" {>= "3.38.0"}
+  "libebook-1-2-21" {>= "3.17"}
+  "libebook-contacts-1-2-4" {>= "3.43.2"}
+  "libecal-2-0-2" {>= "3.39.2"}
+  "libedata-book-1-2-27" {>= "3.43.2"}
+  "libedata-cal-2-0-2" {>= "3.26.2"}
+  "libedataserver-1-2-27" {>= "3.45.2"}
+  "libedataserverui-1-2-4" {>= "3.45.3"}
+  "libglib2-0-0" {>= "2.70.0"}
+  "libgoa-1-0-0b" {>= "3.11.90"}
+  "libgtk-3-0" {>= "3.10"}
+  "libgweather-4-0" {>= "4.1"}
+  "libical3" {>= "3.0.7"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libsecret-1-0" {>= "0.7"}
+  "libsoup-3-0-0" {>= "3.1.1"}
+  "libxml2" {>= "2.9.0"}
+]
+extra-source "evolution-data-server_3.46.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/evolution-data-server/evolution-data-server_3.46.4-2_amd64.deb"
+}

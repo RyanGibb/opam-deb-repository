@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmgl-dev_8.0.1-4+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmgl-dev"]
+]
+depends: [
+  "libgif-dev"
+  "libgsl-dev"
+  "libhdf4-dev"
+  "libhdf5-dev"
+  "libhpdf-dev"
+  "libmgl-fltk8" {= "8.0.1-4+b4"}
+  "libmgl-glut8" {= "8.0.1-4+b4"}
+  "libmgl-mpi8" {= "8.0.1-4+b4"}
+  "libmgl-qt5-8" {= "8.0.1-4+b4"}
+  "libmgl-wnd8" {= "8.0.1-4+b4"}
+  "libmgl-wx8" {= "8.0.1-4+b4"}
+  "libmgl8" {= "8.0.1-4+b4"}
+  "libpng-dev"
+  "mathgl"
+  "udav"
+  ("libgl1-mesa-dev" | "libgl-dev")
+]
+extra-source "libmgl-dev_8.0.1-4+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mathgl/libmgl-dev_8.0.1-4+b4_amd64.deb"
+}

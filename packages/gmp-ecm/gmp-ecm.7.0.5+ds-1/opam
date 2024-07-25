@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gmp-ecm_7.0.5+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gmp-ecm"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libecm1" {>= "7.0.5+ds"}
+  "libgmp10" {>= "2-6.2.1+dfsg"}
+]
+extra-source "gmp-ecm_7.0.5+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gmp-ecm/gmp-ecm_7.0.5+ds-1_amd64.deb"
+}

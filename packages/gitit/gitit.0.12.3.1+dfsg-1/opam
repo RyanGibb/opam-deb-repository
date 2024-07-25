@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gitit_0.12.3.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gitit"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.27"}
+  "libffi6" {>= "3.0.4"}
+  "libghc-gitit-data" {= "0.12.3.1+dfsg-1"}
+  "libgmp10"
+  "liblua5-1-0"
+  "libpcre3"
+  "libyaml-0-2"
+  "zlib1g" {>= "1-1.1.4"}
+  ("git" | "darcs" | "mercurial")
+]
+extra-source "gitit_0.12.3.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gitit/gitit_0.12.3.1+dfsg-1_amd64.deb"
+}

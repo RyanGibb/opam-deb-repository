@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdb5.3-sql-dev_5.3.28+dfsg2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdb5.3-sql-dev"]
+]
+depends: [
+  "libdb5-3" {= "5.3.28+dfsg2-1"}
+  "libdb5-3-sql" {= "5.3.28+dfsg2-1"}
+]
+conflicts: [
+  "libdb5.1-sql-dev"
+  "libdb5.2-sql-dev"
+]
+extra-source "libdb5.3-sql-dev_5.3.28+dfsg2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/db5.3/libdb5.3-sql-dev_5.3.28+dfsg2-1_amd64.deb"
+}

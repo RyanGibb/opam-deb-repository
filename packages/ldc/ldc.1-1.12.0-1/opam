@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ldc_1:1.12.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ldc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-4.2"}
+  "libllvm6-0" {>= "1-6.0~svn298832-1~"}
+  "libphobos2-ldc-shared-dev" {= "1-1.12.0-1"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "ldc_1:1.12.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ldc/ldc_1.12.0-1_amd64.deb"
+}

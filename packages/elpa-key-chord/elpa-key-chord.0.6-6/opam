@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-key-chord_0.6-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-key-chord"]
+]
+depends: [
+  "dh-elpa-helper"
+  "emacsen-common" {>= "2.0.8"}
+]
+extra-source "elpa-key-chord_0.6-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/key-chord-el/elpa-key-chord_0.6-6_all.deb"
+}

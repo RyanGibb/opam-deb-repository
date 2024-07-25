@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsc7v5_2.3.1-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsc7v5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "4.0"}
+  "libgfortran5" {>= "8"}
+  "libint1"
+  "libopenmpi3" {>= "4.1.4"}
+  "libsc-data" {= "2.3.1-22"}
+  "libstdc++6" {>= "11"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+conflicts: [
+  "libsc7"
+]
+extra-source "libsc7v5_2.3.1-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpqc/libsc7v5_2.3.1-22_amd64.deb"
+}

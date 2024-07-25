@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i coop-computing-tools_7.1.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r coop-computing-tools"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfuse2" {>= "2.8"}
+  "libglobus-common0" {>= "17"}
+  "libglobus-gss-assist3" {>= "11"}
+  "libglobus-gssapi-gsi4" {>= "13"}
+  "libgomp1" {>= "4.2.1"}
+  "libjsonparser1-1" {>= "1.1.0"}
+  "libncurses6" {>= "6"}
+  "libopenmpi3" {>= "4.0.5"}
+  "libreadline8" {>= "6.0"}
+  "libsqlite3-0" {>= "3.7.15"}
+  "libtinfo6" {>= "6"}
+  "python3"
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "coop-computing-tools_7.1.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cctools/coop-computing-tools_7.1.2-5_amd64.deb"
+}

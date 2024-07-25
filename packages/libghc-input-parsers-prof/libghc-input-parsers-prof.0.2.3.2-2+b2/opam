@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-input-parsers-prof_0.2.3.2-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-input-parsers-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-attoparsec-prof"
+  "libghc-input-parsers-dev" {= "0.2.3.2-2+b2"}
+  "libghc-monoid-subclasses-prof"
+  "libghc-parsers-prof"
+]
+extra-source "libghc-input-parsers-prof_0.2.3.2-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-input-parsers/libghc-input-parsers-prof_0.2.3.2-2+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxcomposite1_1:0.4.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxcomposite1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6" {>= "2-1.4.99.1"}
+]
+extra-source "libxcomposite1_1:0.4.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxcomposite/libxcomposite1_0.4.4-2_amd64.deb"
+}

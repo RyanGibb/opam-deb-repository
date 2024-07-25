@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sacc_1.06-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sacc"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libtinfo6" {>= "6"}
+  "libtls26" {>= "3.5.0"}
+]
+extra-source "sacc_1.06-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sacc/sacc_1.06-1+b1_amd64.deb"
+}

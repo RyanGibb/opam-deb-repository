@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i seahorse_43.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r seahorse"]
+]
+depends: [
+  "gcr" {>= "3.4"}
+  "gnome-keyring" {>= "3.4"}
+  "gnupg" {>= "2.0.12"}
+  "libc6" {>= "2.34"}
+  "libgck-1-0" {>= "3.12.0"}
+  "libgcr-base-3-1" {>= "3.38"}
+  "libgcr-ui-3-1" {>= "3.38"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.66"}
+  "libgpgme11" {>= "1.14.0"}
+  "libgtk-3-0" {>= "3.24"}
+  "libhandy-1-0" {>= "1.6.0"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "libpwquality1" {>= "1.1.0"}
+  "libsecret-1-0" {>= "0.18"}
+  "libsoup-3-0-0" {>= "3.0.3"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "seahorse_43.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/seahorse/seahorse_43.0-1_amd64.deb"
+}

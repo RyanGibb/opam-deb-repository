@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-zope.sendmail_3.7.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-zope.sendmail"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+  "python-pkg-resources"
+  "python-transaction"
+  "python-zope-component"
+  "python-zope-configuration"
+  "python-zope-i18nmessageid"
+  "python-zope-interface"
+  "python-zope-schema"
+  ("python2-7" | "python2-6")
+]
+extra-source "python-zope.sendmail_3.7.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zope.sendmail/python-zope.sendmail_3.7.4-2_all.deb"
+}

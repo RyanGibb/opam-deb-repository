@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yubioath-desktop_5.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yubioath-desktop"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5multimedia5" {>= "5.6.0~beta"}
+  "libqt5qml5" {>= "5.1.0"}
+  "libqt5quickcontrols2-5" {>= "5.7.1"}
+  "libqt5widgets5" {>= "5.12"}
+  "libstdc++6" {>= "11"}
+  "pcscd"
+  "python3-yubikey-manager"
+  "qml-module-io-thp-pyotherside"
+  "qml-module-qt-labs-platform"
+  "qml-module-qt-labs-settings"
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-dialogs"
+  ("libqt5gui5" {>= "5.12.2"} | "libqt5gui5-gles" {>= "5.12.2"})
+  ("libqt5quick5" {>= "5.4.0"} | "libqt5quick5-gles" {>= "5.4.0"})
+]
+extra-source "yubioath-desktop_5.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yubioath-desktop/yubioath-desktop_5.1.0-1_amd64.deb"
+}

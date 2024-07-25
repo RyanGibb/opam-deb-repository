@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-test-unit-rr_1.0.5-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-test-unit-rr"]
+]
+depends: [
+  "ruby-rr"
+  "ruby-test-unit"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-test-unit-rr_1.0.5-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-test-unit-rr/ruby-test-unit-rr_1.0.5-3.1_all.deb"
+}

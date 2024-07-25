@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-wayland-client-dev_0.29.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-wayland-client-dev"]
+]
+depends: [
+  "librust-bitflags-1+default-dev"
+  "librust-downcast-rs-1+default-dev"
+  "librust-libc-0-2+default-dev"
+  "librust-nix-dev"
+  "librust-wayland-commons-dev"
+  "librust-wayland-scanner-dev"
+  "librust-wayland-sys-dev"
+]
+extra-source "librust-wayland-client-dev_0.29.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-wayland-client/librust-wayland-client-dev_0.29.4-2_amd64.deb"
+}

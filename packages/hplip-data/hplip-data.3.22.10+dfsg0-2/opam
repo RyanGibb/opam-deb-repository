@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hplip-data_3.22.10+dfsg0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hplip-data"]
+]
+depends: [
+  "python3-any"
+  "python3-distro"
+  "xz-utils"
+]
+extra-source "hplip-data_3.22.10+dfsg0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hplip/hplip-data_3.22.10+dfsg0-2_all.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnat-util10-dev_10.2.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnat-util10-dev"]
+]
+depends: [
+  "gcc-10-base" {= "10.2.1-6"}
+  "gnat-10" {= "10.2.1-6"}
+  "libgnat-util10" {= "10.2.1-6"}
+]
+conflicts: [
+  "libgnatvsn7-dev"
+  "libgnatvsn8-dev"
+  "libgnatvsn9-dev"
+]
+extra-source "libgnat-util10-dev_10.2.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10/libgnat-util10-dev_10.2.1-6_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkeepalive0_0.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkeepalive0"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+]
+extra-source "libkeepalive0_0.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkeepalive/libkeepalive0_0.3-2_amd64.deb"
+}

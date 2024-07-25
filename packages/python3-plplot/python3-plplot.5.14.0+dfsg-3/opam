@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-plplot_5.14.0+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-plplot"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libplplot16"
+  "libpython3-7" {>= "3.7.0"}
+  "plplot-tcl"
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+]
+extra-source "python3-plplot_5.14.0+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plplot/python3-plplot_5.14.0+dfsg-3_amd64.deb"
+}

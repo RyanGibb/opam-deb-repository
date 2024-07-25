@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-alecthomas-assert-dev_2.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-alecthomas-assert-dev"]
+]
+depends: [
+  "golang-github-alecthomas-repr-dev" {>= "0.2.0"}
+  "golang-github-hexops-gotextdiff-dev" {>= "1.0.3"}
+]
+extra-source "golang-github-alecthomas-assert-dev_2.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-alecthomas-assert/golang-github-alecthomas-assert-dev_2.2.1-1_all.deb"
+}

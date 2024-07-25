@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mopidy-tunein_0.4.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mopidy-tunein"]
+]
+depends: [
+  "mopidy" {>= "1.1"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-pkg-resources"
+  "python-pykka"
+  "python-requests"
+]
+extra-source "mopidy-tunein_0.4.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mopidy-tunein/mopidy-tunein_0.4.1-2_all.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libslurmdb-dev_18.08.5.2-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libslurmdb-dev"]
+]
+depends: [
+  "libslurmdb33" {= "18.08.5.2-1+deb10u2"}
+]
+extra-source "libslurmdb-dev_18.08.5.2-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-llnl/libslurmdb-dev_18.08.5.2-1+deb10u2_amd64.deb"
+}

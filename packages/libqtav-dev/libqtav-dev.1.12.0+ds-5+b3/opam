@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqtav-dev_1.12.0+ds-5+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqtav-dev"]
+]
+depends: [
+  "libqt5opengl5-dev"
+  "libqtav1" {= "1.12.0+ds-5+b3"}
+  "libqtavwidgets1" {= "1.12.0+ds-5+b3"}
+]
+extra-source "libqtav-dev_1.12.0+ds-5+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtav/libqtav-dev_1.12.0+ds-5+b3_amd64.deb"
+}

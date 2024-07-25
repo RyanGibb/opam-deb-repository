@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-gir-ffi_0.15.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-gir-ffi"]
+]
+depends: [
+  "libgirepository-1-0-1"
+  "libglib2-0-dev"
+  "ruby-ffi"
+  "ruby-ffi-bit-masks"
+  "ruby-indentation"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-gir-ffi_0.15.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-gir-ffi/ruby-gir-ffi_0.15.7-1_all.deb"
+}

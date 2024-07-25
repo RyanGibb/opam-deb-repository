@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ewf-tools_20140807-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ewf-tools"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libewf2" {= "20140807-2+b2"}
+  "libfuse2" {>= "2.6"}
+  "libssl1-1" {>= "1.1.0"}
+]
+conflicts: [
+  "libewf1 (<< 20090606+debian-1)"
+]
+extra-source "ewf-tools_20140807-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libewf/ewf-tools_20140807-2+b2_amd64.deb"
+}

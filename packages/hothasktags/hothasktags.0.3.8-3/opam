@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hothasktags_0.3.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hothasktags"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libffi6" {>= "3.0.4"}
+  "libgmp10"
+]
+extra-source "hothasktags_0.3.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hothasktags/hothasktags_0.3.8-3_amd64.deb"
+}

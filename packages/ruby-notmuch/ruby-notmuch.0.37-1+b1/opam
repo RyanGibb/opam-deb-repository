@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-notmuch_0.37-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-notmuch"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libnotmuch5" {>= "0.31~rc0"}
+  "libruby3-1" {>= "3.1.2"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+]
+extra-source "ruby-notmuch_0.37-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/notmuch/ruby-notmuch_0.37-1+b1_amd64.deb"
+}

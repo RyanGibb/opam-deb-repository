@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i proteinortho_6.1.7+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r proteinortho"]
+]
+depends: [
+  "diamond-aligner" {>= "2.0.10~"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "4.9"}
+  "liblapack3"
+  "libstdc++6" {>= "12"}
+  "ncbi-blast+"
+  "perl-any"
+  "procps"
+  "python3"
+]
+extra-source "proteinortho_6.1.7+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/proteinortho/proteinortho_6.1.7+dfsg-1_amd64.deb"
+}

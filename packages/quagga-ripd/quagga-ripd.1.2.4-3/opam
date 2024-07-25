@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i quagga-ripd_1.2.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r quagga-ripd"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcap2" {>= "1-2.10"}
+  "quagga-core" {= "1.2.4-3"}
+]
+extra-source "quagga-ripd_1.2.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/quagga/quagga-ripd_1.2.4-3_amd64.deb"
+}

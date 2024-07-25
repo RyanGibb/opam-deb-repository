@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libconfig-model-backend-yaml-perl_2.134-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libconfig-model-backend-yaml-perl"]
+]
+depends: [
+  "libboolean-perl"
+  "libconfig-model-perl" {>= "2.131"}
+  "liblog-log4perl-perl"
+  "libyaml-libyaml-perl" {>= "0.69"}
+  "perl-any"
+]
+extra-source "libconfig-model-backend-yaml-perl_2.134-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libconfig-model-backend-yaml-perl/libconfig-model-backend-yaml-perl_2.134-1_all.deb"
+}

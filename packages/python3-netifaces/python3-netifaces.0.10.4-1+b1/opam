@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-netifaces_0.10.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-netifaces"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.6~"}
+]
+extra-source "python3-netifaces_0.10.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netifaces/python3-netifaces_0.10.4-1+b1_amd64.deb"
+}

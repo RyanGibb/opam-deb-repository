@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pidgin-blinklight_0.11.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pidgin-blinklight"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "pidgin" {< "3.0"}
+  "pidgin" {>= "2.14"}
+]
+conflicts: [
+  "pidgin (>= 3.0)"
+]
+extra-source "pidgin-blinklight_0.11.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pidgin-blinklight/pidgin-blinklight_0.11.1-5_amd64.deb"
+}

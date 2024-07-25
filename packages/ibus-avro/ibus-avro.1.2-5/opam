@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibus-avro_1.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibus-avro"]
+]
+depends: [
+  "gjs"
+  "ibus"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+conflicts: [
+  "avro"
+  "ibus-avro-trusty"
+]
+extra-source "ibus-avro_1.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibus-avro/ibus-avro_1.2-5_all.deb"
+}

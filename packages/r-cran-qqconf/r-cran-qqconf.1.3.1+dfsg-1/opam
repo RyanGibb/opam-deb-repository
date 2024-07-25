@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-qqconf_1.3.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-qqconf"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfftw3-double3" {>= "3.3.10"}
+  "libgcc-s1" {>= "4.0"}
+  "libstdc++6" {>= "11"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-cran-mass" {>= "7.3-50"}
+  "r-cran-rcpp"
+  "r-cran-robustbase" {>= "0.93-4"}
+]
+extra-source "r-cran-qqconf_1.3.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-qqconf/r-cran-qqconf_1.3.1+dfsg-1_amd64.deb"
+}

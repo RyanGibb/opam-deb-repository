@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-ldns-perl_0.75-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-ldns-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libldns3" {>= "1.7.1"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libnet-ldns-perl_0.75-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-ldns-perl/libnet-ldns-perl_0.75-7+b1_amd64.deb"
+}

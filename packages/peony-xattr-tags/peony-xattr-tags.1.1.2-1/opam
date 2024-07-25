@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i peony-xattr-tags_1.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r peony-xattr-tags"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.2.5"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.18.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpeony-extension1"
+  "peony-extensions-common" {= "1.1.2-1"}
+]
+extra-source "peony-xattr-tags_1.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/peony-extensions/peony-xattr-tags_1.1.2-1_amd64.deb"
+}

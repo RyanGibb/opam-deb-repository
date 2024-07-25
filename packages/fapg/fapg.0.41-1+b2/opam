@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fapg_0.41-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fapg"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  "liburiparser1" {>= "0.6.0"}
+]
+extra-source "fapg_0.41-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fapg/fapg_0.41-1+b2_amd64.deb"
+}

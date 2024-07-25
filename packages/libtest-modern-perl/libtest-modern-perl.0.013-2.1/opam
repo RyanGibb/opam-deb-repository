@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest-modern-perl_0.013-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest-modern-perl"]
+]
+depends: [
+  "libexporter-tiny-perl"
+  "libimport-into-perl"
+  "libmodule-runtime-perl" {>= "0.012"}
+  "libtest-api-perl"
+  "libtest-deep-perl" {>= "0.111"}
+  "libtest-fatal-perl"
+  "libtest-longstring-perl" {>= "0.15"}
+  "libtest-warnings-perl"
+  "libtry-tiny-perl"
+  "perl-any"
+  ("perl" {>= "5.13.4"} | "libtest-simple-perl" {>= "0.96"})
+]
+extra-source "libtest-modern-perl_0.013-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest-modern-perl/libtest-modern-perl_0.013-2.1_all.deb"
+}

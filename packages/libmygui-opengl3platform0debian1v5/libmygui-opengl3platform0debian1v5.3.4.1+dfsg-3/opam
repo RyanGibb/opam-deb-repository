@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmygui.opengl3platform0debian1v5_3.4.1+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmygui.opengl3platform0debian1v5"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libglew2-2" {>= "2.2.0-4+b1"}
+  "libmyguiengine3debian1v5" {>= "3.4.1"}
+  "libstdc++6" {>= "9"}
+]
+conflicts: [
+  "libmygui.opengl3platform0debian1"
+]
+extra-source "libmygui.opengl3platform0debian1v5_3.4.1+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mygui/libmygui.opengl3platform0debian1v5_3.4.1+dfsg-3_amd64.deb"
+}

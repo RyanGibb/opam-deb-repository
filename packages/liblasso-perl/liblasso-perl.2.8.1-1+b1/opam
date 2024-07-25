@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblasso-perl_2.8.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblasso-perl"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+  "libglib2-0-0" {>= "2.41.1"}
+  "liblasso3" {>= "2.8.0"}
+  "libxml2" {>= "2.7.4"}
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "liblasso-perl_2.8.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lasso/liblasso-perl_2.8.1-1+b1_amd64.deb"
+}

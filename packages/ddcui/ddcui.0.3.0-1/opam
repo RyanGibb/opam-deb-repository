@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ddcui_0.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ddcui"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libddcutil4" {>= "1.2.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.39.4"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.9.0~beta"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.9.0~beta"} | "libqt5gui5-gles" {>= "5.9.0~beta"})
+]
+extra-source "ddcui_0.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/ddcui/ddcui_0.3.0-1_amd64.deb"
+}

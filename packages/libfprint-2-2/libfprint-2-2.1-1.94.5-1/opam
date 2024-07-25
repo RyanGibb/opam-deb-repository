@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfprint-2-2_1:1.94.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfprint-2-2"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libglib2-0-0" {>= "2.67.3"}
+  "libgudev-1-0-0" {>= "146"}
+  "libgusb2" {>= "0.3.0"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "libpixman-1-0" {>= "0.30.0"}
+]
+extra-source "libfprint-2-2_1:1.94.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfprint/libfprint-2-2_1.94.5-1_amd64.deb"
+}

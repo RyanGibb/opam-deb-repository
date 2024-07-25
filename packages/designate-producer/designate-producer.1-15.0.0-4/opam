@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i designate-producer_1:15.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r designate-producer"]
+]
+depends: [
+  "designate-common" {= "1-15.0.0-4"}
+  "python3-designate" {= "1-15.0.0-4"}
+]
+extra-source "designate-producer_1:15.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/designate/designate-producer_15.0.0-4_all.deb"
+}

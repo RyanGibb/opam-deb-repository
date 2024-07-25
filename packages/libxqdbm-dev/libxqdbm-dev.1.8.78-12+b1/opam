@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxqdbm-dev_1.8.78-12+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxqdbm-dev"]
+]
+depends: [
+  "libqdbm-dev" {= "1.8.78-12+b1"}
+  "libxqdbm3c2" {= "1.8.78-12+b1"}
+]
+extra-source "libxqdbm-dev_1.8.78-12+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qdbm/libxqdbm-dev_1.8.78-12+b1_amd64.deb"
+}

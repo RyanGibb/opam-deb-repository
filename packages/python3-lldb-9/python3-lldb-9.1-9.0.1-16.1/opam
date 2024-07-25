@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-lldb-9_1:9.0.1-16.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-lldb-9"]
+]
+depends: [
+  "liblldb-9" {= "1-9.0.1-16.1"}
+  "python3-six"
+]
+conflicts: [
+  "python3-lldb-x.y"
+]
+extra-source "python3-lldb-9_1:9.0.1-16.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-9/python3-lldb-9_9.0.1-16.1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-gi-gobject-prof_2.0.28-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-gi-gobject-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-gi-glib-prof"
+  "libghc-gi-gobject-dev" {= "2.0.28-1"}
+  "libghc-haskell-gi-base-prof"
+  "libghc-haskell-gi-prof"
+]
+extra-source "libghc-gi-gobject-prof_2.0.28-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-gi-gobject/libghc-gi-gobject-prof_2.0.28-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtext-qrcode-perl_0.05-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtext-qrcode-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libqrencode4" {>= "3.2.0"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libtext-qrcode-perl_0.05-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtext-qrcode-perl/libtext-qrcode-perl_0.05-2+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-csv-dev_0.1.2-14+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-csv-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libgmp10"
+]
+extra-source "libghc-csv-dev_0.1.2-14+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-csv/libghc-csv-dev_0.1.2-14+b2_amd64.deb"
+}

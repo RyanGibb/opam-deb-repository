@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rsdmx_1:0.6-2+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rsdmx"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-httr"
+  "r-cran-plyr"
+  "r-cran-r6"
+  "r-cran-xml" {>= "3.98-1.3"}
+]
+extra-source "r-cran-rsdmx_1:0.6-2+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-rsdmx/r-cran-rsdmx_0.6-2+dfsg-1_all.deb"
+}

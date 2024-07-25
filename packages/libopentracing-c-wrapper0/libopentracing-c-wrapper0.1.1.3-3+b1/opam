@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopentracing-c-wrapper0_1.1.3-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopentracing-c-wrapper0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libopentracing1" {>= "1.6.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libopentracing-c-wrapper0_1.1.3-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opentracing-c-wrapper/libopentracing-c-wrapper0_1.1.3-3+b1_amd64.deb"
+}

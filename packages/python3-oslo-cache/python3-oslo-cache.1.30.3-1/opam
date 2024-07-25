@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-oslo.cache_1.30.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-oslo.cache"]
+]
+depends: [
+  "python3-any"
+  "python3-dogpile-cache"
+  "python3-memcache"
+  "python3-oslo-config" {>= "1-5.2.0"}
+  "python3-oslo-i18n" {>= "3.15.3"}
+  "python3-oslo-log" {>= "3.36.0"}
+  "python3-oslo-utils" {>= "3.33.0"}
+  "python3-six" {>= "1.10.0"}
+]
+extra-source "python3-oslo.cache_1.30.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-oslo.cache/python3-oslo.cache_1.30.3-1_all.deb"
+}

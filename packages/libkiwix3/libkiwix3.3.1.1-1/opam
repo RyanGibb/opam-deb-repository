@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkiwix3_3.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkiwix3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libctpp2-2v5" {>= "2.8.3"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcc1" {>= "1-3.0"}
+  "libicu63" {>= "63.1-1~"}
+  "libpugixml1v5" {>= "1.6"}
+  "libstdc++6" {>= "5.2"}
+  "libxapian30" {>= "1.4.8~"}
+  "libzim4" {>= "4.0.4"}
+]
+conflicts: [
+  "libkiwix0"
+]
+extra-source "libkiwix3_3.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkiwix/libkiwix3_3.1.1-1_amd64.deb"
+}

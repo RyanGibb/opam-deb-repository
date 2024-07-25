@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mdk4_4.1+git20200420-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mdk4"]
+]
+depends: [
+  "aircrack-ng"
+  "libc6" {>= "2.14"}
+  "libnl-3-200" {>= "3.2.7"}
+  "libnl-genl-3-200" {>= "3.2.7"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "mdk4_4.1+git20200420-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mdk4/mdk4_4.1+git20200420-2_amd64.deb"
+}

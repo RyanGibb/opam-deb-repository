@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pysph-viewer_0~20180411.git1ae58e1-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pysph-viewer"]
+]
+depends: [
+  "python-any"
+  "python-numpy"
+  "python-numpy" {>= "1-1.16.0~rc1"}
+  "python-pysph"
+]
+extra-source "pysph-viewer_0~20180411.git1ae58e1-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pysph/pysph-viewer_0~20180411.git1ae58e1-2.1_amd64.deb"
+}

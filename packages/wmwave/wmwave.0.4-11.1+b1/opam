@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmwave_0.4-11.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmwave"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libiw30" {>= "30~pre1"}
+  "libx11-6"
+  "libxext6"
+  "libxpm4"
+]
+extra-source "wmwave_0.4-11.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmwave/wmwave_0.4-11.1+b1_amd64.deb"
+}

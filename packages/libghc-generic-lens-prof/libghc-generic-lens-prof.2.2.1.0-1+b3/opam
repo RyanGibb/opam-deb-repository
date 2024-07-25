@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-generic-lens-prof_2.2.1.0-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-generic-lens-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-generic-lens-core-prof"
+  "libghc-generic-lens-dev" {= "2.2.1.0-1+b3"}
+  "libghc-profunctors-prof"
+]
+extra-source "libghc-generic-lens-prof_2.2.1.0-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-generic-lens/libghc-generic-lens-prof_2.2.1.0-1+b3_amd64.deb"
+}

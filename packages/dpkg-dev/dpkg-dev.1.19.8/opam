@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpkg-dev_1.19.8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpkg-dev"]
+]
+depends: [
+  "binutils"
+  "bzip2"
+  "libdpkg-perl" {= "1.19.8"}
+  "make"
+  "patch" {>= "2.7"}
+  "perl-any"
+  "tar" {>= "1.28-1"}
+  "xz-utils"
+]
+extra-source "dpkg-dev_1.19.8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpkg/dpkg-dev_1.19.8_all.deb"
+}

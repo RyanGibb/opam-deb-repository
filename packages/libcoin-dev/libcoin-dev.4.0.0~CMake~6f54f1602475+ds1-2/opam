@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcoin-dev_4.0.0~CMake~6f54f1602475+ds1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcoin-dev"]
+]
+depends: [
+  "libcoin80c" {= "4.0.0~CMake~6f54f1602475+ds1-2"}
+  "libx11-dev"
+  "libxext-dev"
+  "libxi-dev"
+  "libxmu-dev"
+  "libxpm-dev"
+  "libxt-dev"
+  ("libgl1-mesa-dev" | "libgl-dev")
+]
+conflicts: [
+  "inventor-dev"
+]
+extra-source "libcoin-dev_4.0.0~CMake~6f54f1602475+ds1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/coin3/libcoin-dev_4.0.0~CMake~6f54f1602475+ds1-2_amd64.deb"
+}

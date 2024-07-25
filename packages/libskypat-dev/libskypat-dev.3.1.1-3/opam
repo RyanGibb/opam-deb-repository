@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libskypat-dev_3.1.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libskypat-dev"]
+]
+depends: [
+  "autoconf"
+  "automake"
+  "build-essential"
+  "libskypat3" {= "3.1.1-3"}
+  "libtool"
+  "wget"
+]
+extra-source "libskypat-dev_3.1.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/skypat/libskypat-dev_3.1.1-3_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-web-routes-th-prof_0.22.6.3-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-web-routes-th-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-split-prof"
+  "libghc-web-routes-prof"
+  "libghc-web-routes-th-dev" {= "0.22.6.3-4+b1"}
+]
+extra-source "libghc-web-routes-th-prof_0.22.6.3-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-web-routes-th/libghc-web-routes-th-prof_0.22.6.3-4+b1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnginx-mod-http-perl_1.22.1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnginx-mod-http-perl"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libperl5-36" {>= "5.36.0"}
+  "nginx"
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "libnginx-mod-http-perl_1.22.1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nginx/libnginx-mod-http-perl_1.22.1-9_amd64.deb"
+}

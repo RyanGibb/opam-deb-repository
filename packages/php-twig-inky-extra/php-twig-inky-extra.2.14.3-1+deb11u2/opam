@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-twig-inky-extra_2.14.3-1+deb11u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-twig-inky-extra"]
+]
+depends: [
+  "php-common"
+  "php-lorenzo-pinky" {< "2~~"}
+  "php-lorenzo-pinky" {>= "1.0.5"}
+  "php-twig"
+]
+extra-source "php-twig-inky-extra_2.14.3-1+deb11u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-twig/php-twig-inky-extra_2.14.3-1+deb11u2_all.deb"
+}

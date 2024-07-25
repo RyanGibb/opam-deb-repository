@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uim-data_1:1.8.8-4+deb10u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uim-data"]
+]
+depends: [
+  "libuim-data" {>= "1-1.8.8-4+deb10u5"}
+  "m17n-db"
+]
+extra-source "uim-data_1:1.8.8-4+deb10u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uim/uim-data_1.8.8-4+deb10u5_all.deb"
+}

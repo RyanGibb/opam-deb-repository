@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kiwix_2.0.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kiwix"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libkiwix9" {>= "9.4.1+dfsg"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5webchannel5" {>= "5.6.1"}
+  "libqt5webenginecore5" {>= "5.12.2"}
+  "libqt5webenginewidgets5" {>= "5.14.1"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+]
+extra-source "kiwix_2.0.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kiwix/kiwix_2.0.5-3_amd64.deb"
+}

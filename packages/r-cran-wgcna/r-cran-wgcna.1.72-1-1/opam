@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-wgcna_1.72-1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-wgcna"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-bioc-annotationdbi"
+  "r-bioc-go-db"
+  "r-bioc-impute"
+  "r-bioc-preprocesscore"
+  "r-cran-doparallel"
+  "r-cran-dynamictreecut" {>= "1.62"}
+  "r-cran-fastcluster"
+  "r-cran-foreach"
+  "r-cran-hmisc"
+  "r-cran-matrixstats" {>= "0.8.1"}
+  "r-cran-rcpp" {>= "0.11.0"}
+  "r-cran-survival"
+]
+extra-source "r-cran-wgcna_1.72-1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-wgcna/r-cran-wgcna_1.72-1-1_amd64.deb"
+}

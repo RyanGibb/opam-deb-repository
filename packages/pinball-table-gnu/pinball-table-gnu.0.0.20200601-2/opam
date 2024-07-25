@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pinball-table-gnu_0.0.20200601-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pinball-table-gnu"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "pinball"
+  "pinball-table-gnu-data" {= "0.0.20200601-2"}
+]
+extra-source "pinball-table-gnu_0.0.20200601-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pinball-table-gnu/pinball-table-gnu_0.0.20200601-2_amd64.deb"
+}

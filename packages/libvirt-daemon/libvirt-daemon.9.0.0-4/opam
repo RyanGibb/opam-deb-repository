@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvirt-daemon_9.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvirt-daemon"]
+]
+depends: [
+  "libacl1" {>= "2.2.23"}
+  "libblkid1" {>= "2.17.2"}
+  "libc6" {>= "2.34"}
+  "libdevmapper1-02-1" {>= "2-1.02.97"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libglib2-0-0" {>= "2.43.91"}
+  "libparted2" {>= "3.1"}
+  "libpcap0-8" {>= "1.5.1"}
+  "libpciaccess0"
+  "libselinux1" {>= "3.1~"}
+  "libtirpc3" {>= "1.0.2"}
+  "libudev1" {>= "183"}
+  "libvirt-daemon-driver-qemu" {= "9.0.0-4"}
+  "libvirt0" {= "9.0.0-4"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libvirt-daemon_9.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvirt/libvirt-daemon_9.0.0-4_amd64.deb"
+}

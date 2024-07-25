@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tombo-doc_1.5.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tombo-doc"]
+]
+depends: [
+  "libjs-mathjax"
+  "libjs-sphinxdoc" {>= "4.3"}
+  "sphinx-rtd-theme-common" {>= "1.1.1+dfsg"}
+]
+extra-source "tombo-doc_1.5.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tombo/tombo-doc_1.5.1-4_all.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libperlbal-xs-httpheaders-perl_0.20-2+b10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libperlbal-xs-httpheaders-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libperlbal-perl"
+  "libstdc++6" {>= "5"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libperlbal-xs-httpheaders-perl_0.20-2+b10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libperlbal-xs-httpheaders-perl/libperlbal-xs-httpheaders-perl_0.20-2+b10_amd64.deb"
+}

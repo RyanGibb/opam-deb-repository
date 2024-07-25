@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libflorist2022-dev_2022.0.1~20220616-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libflorist2022-dev"]
+]
+depends: [
+  "gnat" {< "13"}
+  "gnat" {>= "12"}
+  "libflorist2021" {= "2022.0.1~20220616-3"}
+]
+extra-source "libflorist2022-dev_2022.0.1~20220616-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libflorist/libflorist2022-dev_2022.0.1~20220616-3_amd64.deb"
+}

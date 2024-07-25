@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-authz0_4.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-authz0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglobus-authz-callout-error0" {>= "2"}
+  "libglobus-callout0" {>= "3"}
+  "libglobus-common0" {>= "17"}
+  "libglobus-gsi-sysconfig1" {>= "8"}
+]
+extra-source "libglobus-authz0_4.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-authz/libglobus-authz0_4.6-2_amd64.deb"
+}

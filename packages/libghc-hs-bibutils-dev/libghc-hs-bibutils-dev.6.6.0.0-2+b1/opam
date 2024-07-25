@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hs-bibutils-dev_6.6.0.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hs-bibutils-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libbibutils-dev" {>= "6.2"}
+  "libbibutils6" {>= "4.12"}
+  "libc6" {>= "2.2.5"}
+  "libghc-syb-dev"
+  "libgmp10"
+]
+extra-source "libghc-hs-bibutils-dev_6.6.0.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hs-bibutils/libghc-hs-bibutils-dev_6.6.0.0-2+b1_amd64.deb"
+}

@@ -1,0 +1,44 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ejabberd_18.12.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ejabberd"]
+]
+depends: [
+  "adduser"
+  "erlang-asn1" {>= "1-21.2.2+dfsg"}
+  "erlang-base64url" {>= "1.0"}
+  "erlang-crypto" {>= "1-21.2.2+dfsg"}
+  "erlang-goldrush" {>= "0.1.9"}
+  "erlang-inets" {>= "1-21.2.2+dfsg"}
+  "erlang-jiffy" {>= "0.14.8"}
+  "erlang-jose" {>= "1.8.4"}
+  "erlang-lager" {>= "3.6.7"}
+  "erlang-mnesia" {>= "1-21.2.2+dfsg"}
+  "erlang-odbc" {>= "1-21.2.2+dfsg"}
+  "erlang-os-mon" {>= "1-21.2.2+dfsg"}
+  "erlang-p1-cache-tab" {>= "1.0.17"}
+  "erlang-p1-eimp" {>= "1.0.9"}
+  "erlang-p1-iconv" {>= "1.0.10"}
+  "erlang-p1-pkix" {>= "1.0.0"}
+  "erlang-p1-stringprep" {>= "1.0.14"}
+  "erlang-p1-tls" {>= "1.0.26"}
+  "erlang-p1-utils" {>= "1.0.13"}
+  "erlang-p1-xml" {>= "1.1.34"}
+  "erlang-p1-xmpp" {>= "1.2.8"}
+  "erlang-p1-yaml" {>= "1.0.17"}
+  "erlang-p1-zlib" {>= "1.0.4"}
+  "erlang-public-key" {>= "1-21.2.2+dfsg"}
+  "erlang-ssl" {>= "1-21.2.2+dfsg"}
+  "erlang-syntax-tools" {>= "1-21.2.2+dfsg"}
+  "erlang-xmerl" {>= "1-19.2"}
+  "lsb-base"
+  "ucf"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("erlang-base" {>= "1-19.2"} | "erlang-abi-17-0")
+  ("erlang-base" {>= "1-21.2.2+dfsg"} | "erlang-base-hipe" {>= "1-21.2.2+dfsg"})
+]
+extra-source "ejabberd_18.12.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ejabberd/ejabberd_18.12.1-2_amd64.deb"
+}

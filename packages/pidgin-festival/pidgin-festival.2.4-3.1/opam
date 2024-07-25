@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pidgin-festival_2.4-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pidgin-festival"]
+]
+depends: [
+  "festival"
+  "libc6" {>= "2.7"}
+  "pidgin" {< "3.0"}
+  "pidgin" {>= "2.14"}
+]
+extra-source "pidgin-festival_2.4-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pidgin-festival/pidgin-festival_2.4-3.1_amd64.deb"
+}

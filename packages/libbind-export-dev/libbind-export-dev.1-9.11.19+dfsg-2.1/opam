@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbind-export-dev_1:9.11.19+dfsg-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbind-export-dev"]
+]
+depends: [
+  "libdns-export1110" {= "1-9.11.19+dfsg-2.1"}
+  "libirs-export161" {= "1-9.11.19+dfsg-2.1"}
+  "libisc-export1105" {= "1-9.11.19+dfsg-2.1"}
+  "libisccc-export161" {= "1-9.11.19+dfsg-2.1"}
+  "libisccfg-export163" {= "1-9.11.19+dfsg-2.1"}
+]
+conflicts: [
+  "libbind-dev"
+]
+extra-source "libbind-export-dev_1:9.11.19+dfsg-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bind9-libs/libbind-export-dev_9.11.19+dfsg-2.1_amd64.deb"
+}

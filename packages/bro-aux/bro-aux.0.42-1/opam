@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bro-aux_0.42-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bro-aux"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "bro-aux_0.42-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bro-aux/bro-aux_0.42-1_amd64.deb"
+}

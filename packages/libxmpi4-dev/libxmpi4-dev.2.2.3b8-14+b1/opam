@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmpi4-dev_2.2.3b8-14+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmpi4-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libxmpi4" {= "2.2.3b8-14+b1"}
+]
+conflicts: [
+  "libxmpi-dev"
+  "xmpi-dev"
+]
+extra-source "libxmpi4-dev_2.2.3b8-14+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmpi/libxmpi4-dev_2.2.3b8-14+b1_amd64.deb"
+}

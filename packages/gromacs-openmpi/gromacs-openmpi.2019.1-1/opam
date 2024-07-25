@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gromacs-openmpi_2019.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gromacs-openmpi"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc1" {>= "1-3.0"}
+  "libgomp1" {>= "4.9"}
+  "libhwloc5" {>= "1.11.12"}
+  "libopenmpi3"
+  "libstdc++6" {>= "5.2"}
+  "openmpi-bin" {>= "1.2.3"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "gromacs-openmpi_2019.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gromacs/gromacs-openmpi_2019.1-1_amd64.deb"
+}

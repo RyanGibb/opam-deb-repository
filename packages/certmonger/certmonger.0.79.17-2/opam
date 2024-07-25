@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i certmonger_0.79.17-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r certmonger"]
+]
+depends: [
+  "dbus"
+  "libc6" {>= "2.34"}
+  "libcom-err2" {>= "1.43.9"}
+  "libcurl4" {>= "7.16.2"}
+  "libdbus-1-3" {>= "1.9.14"}
+  "libidn2-0" {>= "2.0.0"}
+  "libjansson4" {>= "2.14"}
+  "libkrb5-3" {>= "1.13~alpha1+dfsg"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.69"}
+  "libpopt0" {>= "1.14"}
+  "libssl3" {>= "3.0.0"}
+  "libtalloc2" {>= "2.0.4~git20101213"}
+  "libtevent0" {>= "0.9.9"}
+  "libuuid1" {>= "2.16"}
+  "libxml2" {>= "2.7.4"}
+  "nss-plugin-pem"
+]
+extra-source "certmonger_0.79.17-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/certmonger/certmonger_0.79.17-2_amd64.deb"
+}

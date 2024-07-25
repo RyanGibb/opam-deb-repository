@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zonemaster-cli_5.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zonemaster-cli"]
+]
+depends: [
+  "libgetopt-long-descriptive-perl"
+  "libintl-perl"
+  "libjson-xs-perl"
+  "libmoosex-getopt-perl"
+  "libnet-ldns-perl"
+  "libtext-reflow-perl"
+  "libzonemaster-perl" {>= "4.6.2"}
+  "perl-any"
+]
+extra-source "zonemaster-cli_5.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zonemaster-cli/zonemaster-cli_5.0.2-1_all.deb"
+}

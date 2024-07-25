@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liboglappth2_1.0.0-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liboglappth2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libgl1"
+  "libstdc++6" {>= "5"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "liboglappth2_1.0.0-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/liboglappth/liboglappth2_1.0.0-2+b2_amd64.deb"
+}

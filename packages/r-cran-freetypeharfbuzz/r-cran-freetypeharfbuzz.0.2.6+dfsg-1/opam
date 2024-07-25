@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-freetypeharfbuzz_0.2.6+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-freetypeharfbuzz"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libfreetype6" {>= "2.2.1"}
+  "libharfbuzz0b" {>= "1.2.6"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-cran-fontquiver"
+]
+extra-source "r-cran-freetypeharfbuzz_0.2.6+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-freetypeharfbuzz/r-cran-freetypeharfbuzz_0.2.6+dfsg-1_amd64.deb"
+}

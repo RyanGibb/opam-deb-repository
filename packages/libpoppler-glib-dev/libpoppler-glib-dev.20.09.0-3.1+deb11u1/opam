@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpoppler-glib-dev_20.09.0-3.1+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpoppler-glib-dev"]
+]
+depends: [
+  "gir1-2-poppler-0-18" {= "20.09.0-3.1+deb11u1"}
+  "libcairo2-dev" {>= "1.10.0"}
+  "libglib2-0-dev" {>= "2.41"}
+  "libpoppler-dev" {= "20.09.0-3.1+deb11u1"}
+  "libpoppler-glib8" {= "20.09.0-3.1+deb11u1"}
+]
+extra-source "libpoppler-glib-dev_20.09.0-3.1+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poppler/libpoppler-glib-dev_20.09.0-3.1+deb11u1_amd64.deb"
+}

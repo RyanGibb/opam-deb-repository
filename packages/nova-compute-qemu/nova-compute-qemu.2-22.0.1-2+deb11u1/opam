@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nova-compute-qemu_2:22.0.1-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nova-compute-qemu"]
+]
+depends: [
+  "adduser"
+  "dpkg-dev"
+  "libvirt-daemon-system"
+  "nova-common"
+  "nova-compute"
+  "python3-libvirt"
+  "qemu-block-extra" {>= "1-5.0"}
+  "qemu-system" {>= "1-5.0"}
+]
+conflicts: [
+  "nova-compute-ironic"
+  "nova-compute-kvm"
+  "nova-compute-lxc"
+  "nova-compute-xen"
+]
+extra-source "nova-compute-qemu_2:22.0.1-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nova/nova-compute-qemu_22.0.1-2+deb11u1_all.deb"
+}

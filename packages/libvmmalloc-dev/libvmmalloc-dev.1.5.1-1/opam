@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvmmalloc-dev_1.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvmmalloc-dev"]
+]
+depends: [
+  "libpmem-dev" {= "1.5.1-1"}
+  "libvmmalloc1" {= "1.5.1-1"}
+]
+extra-source "libvmmalloc-dev_1.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pmdk/libvmmalloc-dev_1.5.1-1_amd64.deb"
+}

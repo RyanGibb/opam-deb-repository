@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-hyphenation+nfd-dev_0.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-hyphenation+nfd-dev"]
+]
+depends: [
+  "librust-hyphenation-dev" {= "0.7.1-1"}
+  "librust-unicode-normalization-0-1+default-dev"
+]
+extra-source "librust-hyphenation+nfd-dev_0.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-hyphenation/librust-hyphenation+nfd-dev_0.7.1-1_amd64.deb"
+}

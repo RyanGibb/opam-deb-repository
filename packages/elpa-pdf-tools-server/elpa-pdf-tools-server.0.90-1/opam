@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-pdf-tools-server_0.90-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-pdf-tools-server"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.10.0"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libpoppler-glib8" {>= "0.26.0"}
+  "libpoppler82" {>= "0.71.0"}
+  "libsynctex2"
+]
+extra-source "elpa-pdf-tools-server_0.90-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/emacs-pdf-tools/elpa-pdf-tools-server_0.90-1_amd64.deb"
+}

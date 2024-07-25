@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gpaw_1.5.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gpaw"]
+]
+depends: [
+  "gpaw-data"
+  "libc6" {>= "2.14"}
+  "libfftw3-dev"
+  "libopenmpi3"
+  "libpython3-7" {>= "3.7.0"}
+  "libscalapack-openmpi2-0"
+  "libxc5" {>= "4.2.1-1"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+  "python3-ase" {>= "3.17.0"}
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "gpaw_1.5.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gpaw/gpaw_1.5.1-1_amd64.deb"
+}

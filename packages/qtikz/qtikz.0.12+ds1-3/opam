@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qtikz_0.12+ds1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qtikz"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libpoppler-qt5-1" {>= "0.24.5"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.8.0"}
+  "libqt5printsupport5" {>= "5.2.0"}
+  "libqt5widgets5" {>= "5.2.0"}
+  "libstdc++6" {>= "5"}
+  "preview-latex-style"
+  "texlive-pictures"
+]
+extra-source "qtikz_0.12+ds1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/ktikz/qtikz_0.12+ds1-3_amd64.deb"
+}

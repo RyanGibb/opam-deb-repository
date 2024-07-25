@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i deluge-gtk_2.0.3-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r deluge-gtk"]
+]
+depends: [
+  "deluge-common" {= "2.0.3-3.1"}
+  "gir1-2-gtk-3-0"
+  "libnotify4"
+  "librsvg2-common"
+  "python3-any"
+  "python3-gi"
+  "python3-gi-cairo"
+  "xdg-utils"
+]
+extra-source "deluge-gtk_2.0.3-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/deluge/deluge-gtk_2.0.3-3.1_all.deb"
+}

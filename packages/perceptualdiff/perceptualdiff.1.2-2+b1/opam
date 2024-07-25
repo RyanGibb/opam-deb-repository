@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i perceptualdiff_1.2-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r perceptualdiff"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfreeimage3"
+  "libgcc-s1"
+  "libgomp1" {>= "4.9"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "perceptualdiff_1.2-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/perceptualdiff/perceptualdiff_1.2-2+b1_amd64.deb"
+}

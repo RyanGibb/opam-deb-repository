@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lua-luacsnd6_1:6.18.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lua-luacsnd6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcsnd6-6-0v5" {>= "1-6.18.1+dfsg"}
+  "libcsound64-6-0" {>= "1-6.17.0~dfsg"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "lua-luacsnd6_1:6.18.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/csound/lua-luacsnd6_6.18.1+dfsg-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgoogle-glog-dev_0.4.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgoogle-glog-dev"]
+]
+depends: [
+  "libgflags-dev"
+  "libgoogle-glog0v5" {= "0.4.0-4"}
+  ("libunwind-dev" | "libunwind7-dev")
+]
+extra-source "libgoogle-glog-dev_0.4.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/google-glog/libgoogle-glog-dev_0.4.0-4_amd64.deb"
+}

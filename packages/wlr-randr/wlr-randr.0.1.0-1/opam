@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wlr-randr_0.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wlr-randr"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libwayland-client0" {>= "1.16"}
+]
+extra-source "wlr-randr_0.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wlr-randr/wlr-randr_0.1.0-1_amd64.deb"
+}

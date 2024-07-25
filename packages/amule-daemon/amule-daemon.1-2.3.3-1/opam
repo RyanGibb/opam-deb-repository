@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i amule-daemon_1:2.3.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r amule-daemon"]
+]
+depends: [
+  "amule-common" {= "1-2.3.3-1"}
+  "libc6" {>= "2.29"}
+  "libcrypto++8" {>= "8.4.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libixml10" {>= "1-1.8.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "9"}
+  "libupnp13" {>= "1-1.8.3"}
+  "libwxbase3-0-0v5" {>= "3.0.5.1+dfsg"}
+  "lsb-base"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "amule-daemon_1:2.3.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/amule/amule-daemon_2.3.3-1_amd64.deb"
+}

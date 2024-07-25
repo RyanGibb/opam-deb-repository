@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phosh-full_24_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phosh-full"]
+]
+depends: [
+  "avahi-daemon"
+  "cups-pk-helper"
+  "desktop-base"
+  "gnome-clocks" {>= "3.38"}
+  "gnome-console"
+  "gstreamer1-0-libav"
+  "gstreamer1-0-plugins-ugly"
+  "libproxy1-plugin-networkmanager"
+  "lollypop"
+  "phosh-core" {= "24"}
+  "totem-plugins"
+  "xdg-user-dirs-gtk"
+  ("phosh-phone" {= "24"} | "phosh-tablet" {= "24"})
+]
+extra-source "phosh-full_24_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-phosh/phosh-full_24_amd64.deb"
+}

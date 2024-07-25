@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cavepacker_2.4+git20160609-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cavepacker"]
+]
+depends: [
+  "cavepacker-data" {= "2.4+git20160609-4"}
+  "libc6" {>= "2.14"}
+  "liblua5-2-0"
+  "libncurses6" {>= "6"}
+  "libsdl2-2-0-0" {>= "2.0.8"}
+  "libsdl2-image-2-0-0" {>= "2.0.2"}
+  "libsdl2-mixer-2-0-0" {>= "2.0.2"}
+  "libsdl2-net-2-0-0" {>= "2.0.1"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "cavepacker_2.4+git20160609-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/caveexpress/cavepacker_2.4+git20160609-4+b1_amd64.deb"
+}

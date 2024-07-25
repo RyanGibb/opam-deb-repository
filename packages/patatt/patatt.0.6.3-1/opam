@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i patatt_0.6.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r patatt"]
+]
+depends: [
+  "python3-any"
+  "python3-patatt" {>= "0.6.3-1"}
+]
+extra-source "patatt_0.6.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/patatt/patatt_0.6.3-1_all.deb"
+}

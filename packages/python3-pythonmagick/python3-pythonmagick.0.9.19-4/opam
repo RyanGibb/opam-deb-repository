@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pythonmagick_0.9.19-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pythonmagick"]
+]
+depends: [
+  "libboost-python1-67-0"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgomp1" {>= "4.2.1"}
+  "libmagick++-6-q16-8"
+  "libmagickcore-6-q16-6" {>= "8-6.9.10.2"}
+  "libmagickwand-6-q16-6" {>= "8-6.9.10.2"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+]
+extra-source "python3-pythonmagick_0.9.19-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pythonmagick/python3-pythonmagick_0.9.19-4_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php8.2-memcached_3.2.0+2.2.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php8.2-memcached"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmemcached11" {>= "1.0.18+"}
+  "libsasl2-2" {>= "2.1.28+dfsg"}
+  "php8-2-common"
+  "php8-2-igbinary"
+  "php8-2-msgpack"
+  "ucf"
+  "zlib1g" {>= "1-1.1.4"}
+  ("libapache2-mod-php8-2" | "libphp8-2-embed" | "php8-2-cgi" | "php8-2-cli" | "php8-2-fpm" | "php8-2-phpdbg")
+]
+extra-source "php8.2-memcached_3.2.0+2.2.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-memcached/php8.2-memcached_3.2.0+2.2.0-4_amd64.deb"
+}

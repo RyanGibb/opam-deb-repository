@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apticron_1.2.5+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apticron"]
+]
+depends: [
+  "apt" {>= "1.1~exp9"}
+  "bzip2"
+  "ucf" {>= "0.28"}
+  ("bsd-mailx" | "mailx")
+  ("cron" | "cron-daemon")
+]
+extra-source "apticron_1.2.5+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apticron/apticron_1.2.5+nmu1_all.deb"
+}

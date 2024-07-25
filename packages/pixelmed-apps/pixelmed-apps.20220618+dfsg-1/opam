@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pixelmed-apps_20220618+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pixelmed-apps"]
+]
+depends: [
+  "java-wrappers"
+  "libpixelmed-java" {= "20220618+dfsg-1"}
+  ("default-jre-headless" {>= "2-1.7"} | "java7-runtime-headless")
+]
+conflicts: [
+  "pixelmed-java"
+]
+extra-source "pixelmed-apps_20220618+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pixelmed/pixelmed-apps_20220618+dfsg-1_all.deb"
+}

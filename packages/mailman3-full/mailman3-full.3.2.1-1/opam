@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mailman3-full_3.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mailman3-full"]
+]
+depends: [
+  "mailman3"
+  "mailman3-web" {>= "0+20180916-1"}
+  "python3-mailman-hyperkitty"
+]
+extra-source "mailman3-full_3.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mailman3/mailman3-full_3.2.1-1_all.deb"
+}

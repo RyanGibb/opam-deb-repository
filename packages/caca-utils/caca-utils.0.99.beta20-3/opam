@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i caca-utils_0.99.beta20-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r caca-utils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcaca0" {>= "0.99.beta20"}
+  "libimlib2" {>= "1.4.5"}
+]
+extra-source "caca-utils_0.99.beta20-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcaca/caca-utils_0.99.beta20-3_amd64.deb"
+}

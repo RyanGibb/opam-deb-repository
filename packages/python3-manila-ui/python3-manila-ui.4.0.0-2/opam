@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-manila-ui_4.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-manila-ui"]
+]
+depends: [
+  "openstack-dashboard" {>= "3-17.1.0"}
+  "python3-any"
+  "python3-django"
+  "python3-django-compressor"
+  "python3-django-horizon" {>= "3-17.1.0"}
+  "python3-iso8601"
+  "python3-keystoneclient" {>= "1-3.22.0"}
+  "python3-manilaclient" {>= "1.29.0"}
+  "python3-oslo-utils"
+  "python3-pbr"
+]
+conflicts: [
+  "python-manila-ui"
+]
+extra-source "python3-manila-ui_4.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/manila-ui/python3-manila-ui_4.0.0-2_all.deb"
+}

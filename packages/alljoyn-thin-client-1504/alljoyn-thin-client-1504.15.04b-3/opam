@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i alljoyn-thin-client-1504_15.04b-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r alljoyn-thin-client-1504"]
+]
+depends: [
+  "libajtcl1504" {= "15.04b-3"}
+  "libc6" {>= "2.15"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "alljoyn-thin-client-1504_15.04b-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alljoyn-thin-client-1504/alljoyn-thin-client-1504_15.04b-3_amd64.deb"
+}

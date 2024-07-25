@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pybridge_0.3.0-7.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pybridge"]
+]
+depends: [
+  "pybridge-common" {>= "0.3"}
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-cairo" {>= "1.0"}
+  "python-configobj" {>= "4.0"}
+  "python-glade2" {>= "2.8"}
+  "python-gtk2" {>= "2.8"}
+]
+extra-source "pybridge_0.3.0-7.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pybridge/pybridge_0.3.0-7.2_all.deb"
+}

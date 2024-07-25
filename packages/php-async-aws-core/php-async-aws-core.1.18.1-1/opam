@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-async-aws-core_1.18.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-async-aws-core"]
+]
+depends: [
+  "php-common"
+  "php-json"
+  "php-psr-cache"
+  "php-psr-log"
+  "php-symfony-deprecation-contracts"
+  "php-symfony-http-client"
+  "php-symfony-http-client-contracts"
+  "php-symfony-service-contracts"
+  "php-xml"
+]
+extra-source "php-async-aws-core_1.18.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-async-aws-core/php-async-aws-core_1.18.1-1_all.deb"
+}

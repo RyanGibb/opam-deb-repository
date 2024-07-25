@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopusenc0_0.2.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopusenc0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libopus0" {>= "1.3~beta+20180516"}
+]
+extra-source "libopusenc0_0.2.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libopusenc/libopusenc0_0.2.1-2_amd64.deb"
+}

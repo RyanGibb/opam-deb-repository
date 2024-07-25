@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pfm_2.0.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pfm"]
+]
+depends: [
+  "itcl3"
+  "postgresql-client"
+  "sensible-utils"
+  "tcl" {>= "8.5"}
+  "tk" {>= "8.5"}
+  ("libpgtcl" | "libpgtcl1-5")
+]
+extra-source "pfm_2.0.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pfm/pfm_2.0.8-3_all.deb"
+}

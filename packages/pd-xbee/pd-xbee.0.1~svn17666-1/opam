@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pd-xbee_0.1~svn17666-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pd-xbee"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  ("puredata" | "pd")
+]
+extra-source "pd-xbee_0.1~svn17666-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pd-mrpeach/pd-xbee_0.1~svn17666-1_amd64.deb"
+}

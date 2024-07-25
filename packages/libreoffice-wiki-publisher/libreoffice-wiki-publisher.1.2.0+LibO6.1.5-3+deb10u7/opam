@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-wiki-publisher_1.2.0+LibO6.1.5-3+deb10u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-wiki-publisher"]
+]
+depends: [
+  "libreoffice-core"
+  "libreoffice-java-common"
+  ("default-jre" | "sun-java6-jre" | "java6-runtime" | "jre")
+]
+extra-source "libreoffice-wiki-publisher_1.2.0+LibO6.1.5-3+deb10u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-wiki-publisher_1.2.0+LibO6.1.5-3+deb10u7_all.deb"
+}

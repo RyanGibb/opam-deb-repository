@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libirstlm1_6.00.05-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libirstlm1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "zlib1g" {>= "1-1.2.3.3"}
+]
+extra-source "libirstlm1_6.00.05-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/irstlm/libirstlm1_6.00.05-3+b1_amd64.deb"
+}

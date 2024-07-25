@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libchicken11_5.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libchicken11"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+]
+conflicts: [
+  "chicken"
+  "chicken-dev"
+  "libchicken0"
+  "libchicken3"
+  "libchicken4"
+  "libchicken5"
+  "libchicken6"
+  "libchicken7"
+  "libchicken8"
+  "libchicken9"
+]
+extra-source "libchicken11_5.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/chicken/libchicken11_5.2.0-2_amd64.deb"
+}

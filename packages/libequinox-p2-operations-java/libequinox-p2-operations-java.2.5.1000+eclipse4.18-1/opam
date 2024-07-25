@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libequinox-p2-operations-java_2.5.1000+eclipse4.18-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libequinox-p2-operations-java"]
+]
+depends: [
+  "libeclipse-core-jobs-java"
+  "libequinox-common-java" {>= "3.13"}
+  "libequinox-p2-core-java"
+  "libequinox-p2-director-java"
+  "libequinox-p2-engine-java"
+  "libequinox-p2-metadata-java"
+  "libequinox-p2-repository-java"
+  "libequinox-simpleconfigurator-java"
+]
+extra-source "libequinox-p2-operations-java_2.5.1000+eclipse4.18-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/equinox-p2/libequinox-p2-operations-java_2.5.1000+eclipse4.18-1_all.deb"
+}

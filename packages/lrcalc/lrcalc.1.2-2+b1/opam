@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lrcalc_1.2-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lrcalc"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "liblrcalc1"
+]
+extra-source "lrcalc_1.2-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lrcalc/lrcalc_1.2-2+b1_amd64.deb"
+}

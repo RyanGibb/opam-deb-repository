@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libahven30_2.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libahven30"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnat-10" {>= "10.2.1"}
+]
+extra-source "libahven30_2.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ahven/libahven30_2.8-1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bbmail_0.9.3-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bbmail"]
+]
+depends: [
+  "libbt0" {>= "0.70.1"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libice6" {>= "1-1.0.0"}
+  "libsm6"
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "libxext6"
+  ("blackbox" {> "0.70.0"} | "fluxbox" {> "0.9.12"})
+]
+extra-source "bbmail_0.9.3-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bbmail/bbmail_0.9.3-2+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-yarn-tool-resolve-package_2.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-yarn-tool-resolve-package"]
+]
+depends: [
+  "node-pkg-dir" {< "6"}
+  "node-pkg-dir" {>= "5"}
+  "node-tslib" {>= "2.3.1"}
+  "node-ws-iconv"
+]
+extra-source "node-yarn-tool-resolve-package_2.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-yarn-tool-resolve-package/node-yarn-tool-resolve-package_2.0.4-1_all.deb"
+}

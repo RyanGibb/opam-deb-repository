@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgc1_1:8.2.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgc1"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libstdc++6" {>= "4.1.1"}
+]
+conflicts: [
+  "libgc1c2"
+]
+extra-source "libgc1_1:8.2.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgc/libgc1_8.2.2-3_amd64.deb"
+}

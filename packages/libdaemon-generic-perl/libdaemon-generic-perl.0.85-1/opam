@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdaemon-generic-perl_0.85-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdaemon-generic-perl"]
+]
+depends: [
+  "libfile-flock-perl" {>= "2013.06"}
+  "libfile-slurp-perl"
+  "perl"
+]
+extra-source "libdaemon-generic-perl_0.85-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdaemon-generic-perl/libdaemon-generic-perl_0.85-1_all.deb"
+}

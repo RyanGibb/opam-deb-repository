@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i netcf_1:0.2.8-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r netcf"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libnetcf1" {= "1-0.2.8-1+b2"}
+  "libreadline7" {>= "6.0"}
+]
+extra-source "netcf_1:0.2.8-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netcf/netcf_0.2.8-1+b2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgutenprint-dev_5.3.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgutenprint-dev"]
+]
+depends: [
+  "libgutenprint9" {= "5.3.3-5"}
+  "pkg-config"
+]
+extra-source "libgutenprint-dev_5.3.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gutenprint/libgutenprint-dev_5.3.3-5_amd64.deb"
+}

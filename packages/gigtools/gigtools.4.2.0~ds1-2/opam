@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gigtools_4.2.0~ds1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gigtools"]
+]
+depends: [
+  "libakai0" {>= "4.2.0~ds1"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libgig9" {>= "4.2.0~ds1"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "gigtools_4.2.0~ds1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libgig/gigtools_4.2.0~ds1-2_amd64.deb"
+}

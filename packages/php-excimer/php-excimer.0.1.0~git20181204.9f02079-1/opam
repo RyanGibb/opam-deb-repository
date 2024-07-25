@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-excimer_0.1.0~git20181204.9f02079-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-excimer"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "php-common" {>= "1-7.0+33~"}
+  ("libapache2-mod-php7-3" | "libphp7-3-embed" | "php7-3-cgi" | "php7-3-cli" | "php7-3-fpm" | "php7-3-phpdbg")
+  ("php" | "php-cli")
+]
+extra-source "php-excimer_0.1.0~git20181204.9f02079-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-excimer/php-excimer_0.1.0~git20181204.9f02079-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iio-sensor-proxy_2.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iio-sensor-proxy"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libglib2-0-0" {>= "2.39.90"}
+  "libgudev-1-0-0" {>= "146"}
+  "systemd"
+]
+extra-source "iio-sensor-proxy_2.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iio-sensor-proxy/iio-sensor-proxy_2.4-2_amd64.deb"
+}

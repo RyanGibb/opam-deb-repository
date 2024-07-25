@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblemonldap-ng-portal-perl_2.16.1+ds-deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblemonldap-ng-portal-perl"]
+]
+depends: [
+  "fonts-font-awesome"
+  "libclone-perl"
+  "libemail-date-format-perl"
+  "libjs-bootstrap4"
+  "libjs-cryptojs"
+  "libjs-jquery"
+  "libjs-jquery-cookie"
+  "libjs-jquery-ui"
+  "liblemonldap-ng-handler-perl" {= "2.16.1+ds-deb12u2"}
+  "liblist-moreutils-perl"
+  "libregexp-assemble-perl"
+  "libtext-unidecode-perl"
+  "perl-any"
+  ("lemonldap-ng-fastcgi-server" {= "2.16.1+ds-deb12u2"} | "lemonldap-ng-uwsgi-app" {= "2.16.1+ds-deb12u2"} | "apache2" | "httpd-cgi")
+]
+extra-source "liblemonldap-ng-portal-perl_2.16.1+ds-deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lemonldap-ng/liblemonldap-ng-portal-perl_2.16.1+ds-deb12u2_all.deb"
+}

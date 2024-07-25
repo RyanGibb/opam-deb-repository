@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cucumber_2.4.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cucumber"]
+]
+depends: [
+  "libjs-jquery"
+  "ruby-builder"
+  "ruby-cucumber-core" {>= "1.5"}
+  "ruby-cucumber-wire"
+  "ruby-diff-lcs"
+  "ruby-gherkin" {>= "4"}
+  "ruby-multi-json" {>= "1.7.5~"}
+  "ruby-multi-test"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "cucumber_2.4.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cucumber/cucumber_2.4.0-4_all.deb"
+}

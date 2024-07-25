@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-jinzhu-gorm-dev_1.9.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-jinzhu-gorm-dev"]
+]
+depends: [
+  "golang-github-denisenkom-go-mssqldb-dev"
+  "golang-github-erikstmartin-go-testdb-dev"
+  "golang-github-go-sql-driver-mysql-dev"
+  "golang-github-jinzhu-inflection-dev"
+  "golang-github-jinzhu-now-dev"
+  "golang-github-mattn-go-sqlite3-dev"
+  ("golang-pq-dev" | "golang-github-lib-pq-dev")
+]
+extra-source "golang-github-jinzhu-gorm-dev_1.9.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-jinzhu-gorm/golang-github-jinzhu-gorm-dev_1.9.1-1_all.deb"
+}

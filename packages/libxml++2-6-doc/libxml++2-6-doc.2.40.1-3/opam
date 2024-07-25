@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxml++2.6-doc_2.40.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxml++2.6-doc"]
+]
+depends: [
+  "doc-base"
+  ("lynx" | "www-browser")
+]
+extra-source "libxml++2.6-doc_2.40.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxml++2.6/libxml++2.6-doc_2.40.1-3_all.deb"
+}

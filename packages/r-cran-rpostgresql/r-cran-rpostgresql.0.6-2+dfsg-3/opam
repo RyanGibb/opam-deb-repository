@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rpostgresql_0.6-2+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rpostgresql"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpq5"
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  "r-cran-dbi" {>= "0.3"}
+  "r-cran-littler"
+]
+extra-source "r-cran-rpostgresql_0.6-2+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-rpostgresql/r-cran-rpostgresql_0.6-2+dfsg-3_amd64.deb"
+}

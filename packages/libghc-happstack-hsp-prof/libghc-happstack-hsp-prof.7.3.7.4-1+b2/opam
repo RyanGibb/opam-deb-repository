@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-happstack-hsp-prof_7.3.7.4-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-happstack-hsp-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-happstack-hsp-dev" {= "7.3.7.4-1+b2"}
+  "libghc-happstack-server-prof"
+  "libghc-harp-prof"
+  "libghc-hsp-prof"
+  "libghc-hsx2hs-prof"
+  "libghc-syb-prof"
+  "libghc-utf8-string-prof"
+]
+extra-source "libghc-happstack-hsp-prof_7.3.7.4-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-happstack-hsp/libghc-happstack-hsp-prof_7.3.7.4-1+b2_amd64.deb"
+}

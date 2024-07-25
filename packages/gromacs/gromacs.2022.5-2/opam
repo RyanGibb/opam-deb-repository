@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gromacs_2022.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gromacs"]
+]
+depends: [
+  "gromacs-data" {= "2022.5-2"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgromacs7" {>= "2022.5"}
+  "libopenmpi3" {>= "4.1.4"}
+  "libstdc++6" {>= "11"}
+  "libx11-6"
+  "sse4-2-support"
+]
+extra-source "gromacs_2022.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gromacs/gromacs_2022.5-2_amd64.deb"
+}

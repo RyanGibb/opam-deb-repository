@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-taskw_1.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-taskw"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-dateutil"
+  "python3-kitchen"
+  "python3-six"
+  "python3-tz"
+  "taskwarrior" {>= "2.5"}
+]
+extra-source "python3-taskw_1.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/taskw/python3-taskw_1.2.0-2_all.deb"
+}

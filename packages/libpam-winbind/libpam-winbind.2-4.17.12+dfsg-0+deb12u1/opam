@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-winbind_2:4.17.12+dfsg-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-winbind"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.34"}
+  "libpam-runtime" {>= "1.0.1-6"}
+  "libpam0g" {>= "1.1.3-2~"}
+  "libtalloc2" {>= "2.3.4~"}
+  "winbind-any" {= "2-4.17.12+dfsg-0+deb12u1"}
+]
+extra-source "libpam-winbind_2:4.17.12+dfsg-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/samba/libpam-winbind_4.17.12+dfsg-0+deb12u1_amd64.deb"
+}

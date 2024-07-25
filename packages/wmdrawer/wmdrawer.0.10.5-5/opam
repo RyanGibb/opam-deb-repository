@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wmdrawer_0.10.5-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wmdrawer"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libx11-6"
+  "libxext6"
+  ("libgdk-pixbuf-2-0-0" {>= "2.22.0"} | "libgdk-pixbuf2-0-0" {>= "2.22.0"})
+  ("libgdk-pixbuf-xlib-2-0-0" {>= "2.22.0"} | "libgdk-pixbuf2-0-0" {>= "2.22.0"})
+]
+extra-source "wmdrawer_0.10.5-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wmdrawer/wmdrawer_0.10.5-5_amd64.deb"
+}

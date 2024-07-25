@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i metar_20061030.1-2.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r metar"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+]
+extra-source "metar_20061030.1-2.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/metar/metar_20061030.1-2.2+b1_amd64.deb"
+}

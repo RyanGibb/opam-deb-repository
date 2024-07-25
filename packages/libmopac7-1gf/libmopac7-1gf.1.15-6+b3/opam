@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmopac7-1gf_1.15-6+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmopac7-1gf"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+]
+conflicts: [
+  "libmopac7-1"
+]
+extra-source "libmopac7-1gf_1.15-6+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mopac7/libmopac7-1gf_1.15-6+b3_amd64.deb"
+}

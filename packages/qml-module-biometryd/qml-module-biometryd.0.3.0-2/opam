@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-biometryd_0.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-biometryd"]
+]
+depends: [
+  "libbiometry1" {= "0.3.0-2"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "qml-module-biometryd_0.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/biometryd/qml-module-biometryd_0.3.0-2_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lammps_20220106.git7586adbb6a+ds1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lammps"]
+]
+depends: [
+  "lammps-data"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "liblammps0" {>= "20220106.git7586adbb6a+ds1"}
+  "libopenmpi3" {>= "4.1.4"}
+  "libstdc++6" {>= "4.1.1"}
+  "mpi-default-bin"
+]
+extra-source "lammps_20220106.git7586adbb6a+ds1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lammps/lammps_20220106.git7586adbb6a+ds1-2+b2_amd64.deb"
+}

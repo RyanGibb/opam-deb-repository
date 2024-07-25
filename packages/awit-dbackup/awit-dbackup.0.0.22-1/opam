@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i awit-dbackup_0.0.22-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r awit-dbackup"]
+]
+depends: [
+  "libconfig-inifiles-perl"
+  "perl"
+  "tar" {>= "1.22"}
+  ("perl" {>= "5.14"} | "libio-compress-perl")
+]
+extra-source "awit-dbackup_0.0.22-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/awit-dbackup/awit-dbackup_0.0.22-1_all.deb"
+}

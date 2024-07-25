@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i knot-dnssecutils_3.2.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r knot-dnssecutils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libdnssec9" {= "3.2.6-1"}
+  "libelogind0"
+  "libknot13" {= "3.2.6-1"}
+  "liblmdb0" {>= "0.9.7"}
+  "liburcu8" {>= "0.13.0"}
+  "libzscanner4" {= "3.2.6-1"}
+]
+extra-source "knot-dnssecutils_3.2.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/knot/knot-dnssecutils_3.2.6-1_amd64.deb"
+}

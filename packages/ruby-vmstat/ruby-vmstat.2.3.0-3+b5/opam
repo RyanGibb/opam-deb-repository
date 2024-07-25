@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-vmstat_2.3.0-3+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-vmstat"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.0~preview1"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-vmstat_2.3.0-3+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-vmstat/ruby-vmstat_2.3.0-3+b5_amd64.deb"
+}

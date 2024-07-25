@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sptk_3.9-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sptk"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libx11-6"
+]
+extra-source "sptk_3.9-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sptk/sptk_3.9-2_amd64.deb"
+}

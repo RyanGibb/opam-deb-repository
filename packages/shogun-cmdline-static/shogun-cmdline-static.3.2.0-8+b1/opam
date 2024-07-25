@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shogun-cmdline-static_3.2.0-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shogun-cmdline-static"]
+]
+depends: [
+  "libarpack2" {>= "2.1"}
+  "libatlas3-base"
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libcolpack0v5"
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgcc1" {>= "1-3.0"}
+  "libglpk40" {>= "4.59"}
+  "libgomp1" {>= "4.2.1"}
+  "libhdf5-103"
+  "libjson-c3" {>= "0.10"}
+  "liblzma5" {>= "5.1.1alpha+20110809"}
+  "liblzo2-2"
+  "libnlopt0" {>= "2.2.4"}
+  "libprotobuf17"
+  "libshogun16" {= "3.2.0-8+b1"}
+  "libsnappy1v5"
+  "libstdc++6" {>= "4.1.1"}
+  "libsz2"
+  "libxml2" {>= "2.6.27"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("liblapack3" | "liblapack-so-3")
+]
+conflicts: [
+  "shogun-cmdline"
+]
+extra-source "shogun-cmdline-static_3.2.0-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shogun/shogun-cmdline-static_3.2.0-8+b1_amd64.deb"
+}

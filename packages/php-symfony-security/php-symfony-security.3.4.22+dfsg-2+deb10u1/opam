@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-security_3.4.22+dfsg-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-security"]
+]
+depends: [
+  "php-common"
+  "php-symfony-event-dispatcher"
+  "php-symfony-http-foundation" {> "3.4"}
+  "php-symfony-http-kernel" {> "3.3"}
+  "php-symfony-property-access"
+  "php-symfony-security-core" {= "3.4.22+dfsg-2+deb10u1"}
+  "php-symfony-security-csrf" {= "3.4.22+dfsg-2+deb10u1"}
+  "php-symfony-security-guard" {= "3.4.22+dfsg-2+deb10u1"}
+  "php-symfony-security-http" {= "3.4.22+dfsg-2+deb10u1"}
+]
+extra-source "php-symfony-security_3.4.22+dfsg-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/symfony/php-symfony-security_3.4.22+dfsg-2+deb10u1_all.deb"
+}

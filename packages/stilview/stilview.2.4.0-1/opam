@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i stilview_2.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r stilview"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libstdc++6" {>= "11"}
+  "libstilview0" {>= "2.4.0"}
+]
+extra-source "stilview_2.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sidplayfp/stilview_2.4.0-1_amd64.deb"
+}

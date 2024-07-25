@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-liblog-dev_1:8.1.0+r23-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-liblog-dev"]
+]
+depends: [
+  "android-liblog" {= "1-8.1.0+r23-5"}
+]
+extra-source "android-liblog-dev_1:8.1.0+r23-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-system-core/android-liblog-dev_8.1.0+r23-5_amd64.deb"
+}

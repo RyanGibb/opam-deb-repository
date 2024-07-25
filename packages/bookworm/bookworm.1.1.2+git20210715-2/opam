@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bookworm_1.1.2+git20210715-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bookworm"]
+]
+depends: [
+  "html2text"
+  "libc6" {>= "2.14"}
+  "libgdk-pixbuf-2-0-0" {>= "2.25.2"}
+  "libgee-0-8-2" {>= "0.20.0"}
+  "libglib2-0-0" {>= "2.43.92"}
+  "libgranite6" {>= "6.0.0"}
+  "libgtk-3-0" {>= "3.17.9"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpoppler-glib8" {>= "0.22.1"}
+  "libsoup2-4-1" {>= "2.4.0"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libwebkit2gtk-4-0-37" {>= "2.17.3"}
+  "libxml2" {>= "2.7.4"}
+  "poppler-utils"
+  "python3-any"
+  "unar"
+  "unzip"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+conflicts: [
+  "com.github.babluboy.bookworm"
+]
+extra-source "bookworm_1.1.2+git20210715-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bookworm/bookworm_1.1.2+git20210715-2_amd64.deb"
+}

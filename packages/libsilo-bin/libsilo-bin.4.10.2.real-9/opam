@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsilo-bin_4.10.2.real-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsilo-bin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libreadline8" {>= "6.0"}
+  "libsiloh5-0" {= "4.10.2.real-9"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "libsilo-bin_4.10.2.real-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/silo-llnl/libsilo-bin_4.10.2.real-9_amd64.deb"
+}

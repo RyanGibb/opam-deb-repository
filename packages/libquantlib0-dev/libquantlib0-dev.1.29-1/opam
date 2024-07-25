@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libquantlib0-dev_1.29-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libquantlib0-dev"]
+]
+depends: [
+  "libboost-test-dev"
+  "libc6" {>= "2.34"}
+  "libc6-dev"
+  "libgcc-s1" {>= "4.0"}
+  "libgomp1" {>= "4.9"}
+  "libquantlib0v5" {= "1.29-1"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libquantlib0-dev_1.29-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/quantlib/libquantlib0-dev_1.29-1_amd64.deb"
+}

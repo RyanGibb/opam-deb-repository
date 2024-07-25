@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libretro-gtk-0.14-dev_0.16.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libretro-gtk-0.14-dev"]
+]
+depends: [
+  "gir1-2-retro-0-14" {= "0.16.0-2"}
+  "libgtk-3-dev"
+  "libpulse-dev"
+  "libretro-gtk-0-14-0" {= "0.16.0-2"}
+]
+extra-source "libretro-gtk-0.14-dev_0.16.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/retro-gtk/libretro-gtk-0.14-dev_0.16.0-2_amd64.deb"
+}

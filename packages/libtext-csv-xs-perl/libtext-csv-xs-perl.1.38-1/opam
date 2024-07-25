@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtext-csv-xs-perl_1.38-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtext-csv-xs-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "perl" {>= "5.28.1-3"}
+  "perl-base"
+]
+extra-source "libtext-csv-xs-perl_1.38-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtext-csv-xs-perl/libtext-csv-xs-perl_1.38-1_amd64.deb"
+}

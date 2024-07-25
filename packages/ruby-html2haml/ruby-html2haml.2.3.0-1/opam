@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-html2haml_2.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-html2haml"]
+]
+depends: [
+  "ruby"
+  "ruby-erubis" {>= "2.7.0"}
+  "ruby-haml" {>= "4.0"}
+  "ruby-nokogiri" {>= "1.6.0"}
+  "ruby-ruby-parser" {>= "3.5"}
+]
+extra-source "ruby-html2haml_2.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-html2haml/ruby-html2haml_2.3.0-1_all.deb"
+}

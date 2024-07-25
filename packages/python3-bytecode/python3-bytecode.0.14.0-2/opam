@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-bytecode_0.14.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-bytecode"]
+]
+depends: [
+  "python3-any"
+  ("python3-typing-extensions" | "python3" {> "3.10"})
+]
+extra-source "python3-bytecode_0.14.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-bytecode/python3-bytecode_0.14.0-2_all.deb"
+}

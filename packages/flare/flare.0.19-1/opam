@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i flare_0.19-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r flare"]
+]
+depends: [
+  "flare-engine" {>= "0.19"}
+]
+extra-source "flare_0.19-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flare/flare_0.19-1_all.deb"
+}

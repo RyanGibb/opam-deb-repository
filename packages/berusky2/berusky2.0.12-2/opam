@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i berusky2_0.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r berusky2"]
+]
+depends: [
+  "berusky2-data" {>= "0.12"}
+  "libalut0" {>= "1.0.1"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libopenal1" {>= "1.14"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libstdc++6" {>= "5.2"}
+  "libvorbisfile3" {>= "1.1.2"}
+  "libx11-6"
+  "zlib1g" {>= "1-1.1.4"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "berusky2_0.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/berusky2/berusky2_0.12-2_amd64.deb"
+}

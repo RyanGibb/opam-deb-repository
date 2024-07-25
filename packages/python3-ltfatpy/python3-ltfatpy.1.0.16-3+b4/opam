@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ltfatpy_1.0.16-3+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ltfatpy"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfftw3-double3" {>= "3.3.5"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-matplotlib"
+  "python3-numpy"
+  "python3-scipy" {>= "0.18"}
+  "python3-six" {>= "1.10"}
+  "python3-tk"
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "python3-ltfatpy_1.0.16-3+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-ltfatpy/python3-ltfatpy_1.0.16-3+b4_amd64.deb"
+}

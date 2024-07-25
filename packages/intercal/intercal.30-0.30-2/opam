@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i intercal_30:0.30-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r intercal"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  ("gcc" | "c-compiler")
+]
+extra-source "intercal_30:0.30-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/intercal/intercal_0.30-2_amd64.deb"
+}

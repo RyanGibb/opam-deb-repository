@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libespeak-ng-libespeak-dev_1.50+dfsg-7+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libespeak-ng-libespeak-dev"]
+]
+depends: [
+  "libespeak-ng-dev" {= "1.50+dfsg-7+deb11u1"}
+]
+conflicts: [
+  "libespeak-dev"
+]
+extra-source "libespeak-ng-libespeak-dev_1.50+dfsg-7+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/espeak-ng/libespeak-ng-libespeak-dev_1.50+dfsg-7+deb11u1_amd64.deb"
+}

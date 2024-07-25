@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i entagged_0.35-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r entagged"]
+]
+depends: [
+  "libhsqldb-java"
+  "squareness"
+  ("default-jre" {>= "2-1.8"} | "java8-runtime")
+]
+extra-source "entagged_0.35-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/entagged/entagged_0.35-6_all.deb"
+}

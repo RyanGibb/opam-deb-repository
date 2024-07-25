@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-tables-dbg_3.4.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-tables-dbg"]
+]
+depends: [
+  "libblosc1"
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libhdf5-103"
+  "liblzo2-2"
+  "python-dbg" {< "2.8"}
+  "python-dbg" {>= "2.7~"}
+  "python-dbg-any" {< "2.8"}
+  "python-dbg-any" {>= "2.7~"}
+  "python-numexpr-dbg"
+  "python-numpy"
+  "python-numpy" {>= "1-1.16.0~rc1"}
+  "python-numpy-dbg"
+  "python-tables" {= "3.4.4-2"}
+  "python-tables-lib" {= "3.4.4-2"}
+]
+extra-source "python-tables-dbg_3.4.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pytables/python-tables-dbg_3.4.4-2_amd64.deb"
+}

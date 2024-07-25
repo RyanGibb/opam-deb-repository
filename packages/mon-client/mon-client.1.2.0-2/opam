@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mon-client_1.2.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mon-client"]
+]
+depends: [
+  "perl"
+]
+conflicts: [
+  "libmon-perl"
+]
+extra-source "mon-client_1.2.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mon-client/mon-client_1.2.0-2_all.deb"
+}

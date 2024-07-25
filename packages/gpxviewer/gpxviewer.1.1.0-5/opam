@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gpxviewer_1.1.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gpxviewer"]
+]
+depends: [
+  "gir1-2-osmgpsmap-1-0"
+  "librsvg2-common"
+  "python3-any"
+  "python3-cairo"
+  "python3-gi"
+  "python3-gi-cairo"
+  "python3-gpxpy"
+  "python3-matplotlib"
+]
+extra-source "gpxviewer_1.1.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gpxviewer/gpxviewer_1.1.0-5_all.deb"
+}

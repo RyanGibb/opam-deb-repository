@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i biobambam2_2.0.179+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r biobambam2"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.4"}
+  "libgomp1" {>= "6"}
+  "libmaus2-2" {>= "2.0.768+dfsg"}
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "biobambam2_2.0.179+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/biobambam2/biobambam2_2.0.179+ds-1_amd64.deb"
+}

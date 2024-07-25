@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-error-chain+backtrace-dev_0.12.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-error-chain+backtrace-dev"]
+]
+depends: [
+  "librust-backtrace-dev"
+  "librust-error-chain-dev" {= "0.12.4-1"}
+]
+extra-source "librust-error-chain+backtrace-dev_0.12.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-error-chain/librust-error-chain+backtrace-dev_0.12.4-1_amd64.deb"
+}

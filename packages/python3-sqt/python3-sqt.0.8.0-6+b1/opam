@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sqt_0.8.0-6+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sqt"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-cutadapt"
+  "python3-matplotlib"
+  "python3-pysam"
+  "python3-seaborn"
+  "python3-xopen"
+]
+extra-source "python3-sqt_0.8.0-6+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-sqt/python3-sqt_0.8.0-6+b1_amd64.deb"
+}

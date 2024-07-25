@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-grape-path-helpers_1.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-grape-path-helpers"]
+]
+depends: [
+  "rake"
+  "ruby-activesupport"
+  "ruby-grape" {>= "1.3~"}
+  "ruby-ruby2-keywords"
+]
+extra-source "ruby-grape-path-helpers_1.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-grape-path-helpers/ruby-grape-path-helpers_1.7.1-1_all.deb"
+}

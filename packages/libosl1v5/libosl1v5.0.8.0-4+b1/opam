@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosl1v5_0.8.0-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosl1v5"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-iostreams1-74-0" {>= "1.74.0"}
+  "libboost-serialization1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "12"}
+]
+conflicts: [
+  "libosl1"
+]
+extra-source "libosl1v5_0.8.0-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libosl/libosl1v5_0.8.0-4+b1_amd64.deb"
+}

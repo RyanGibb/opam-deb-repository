@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zipmerge_1.7.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zipmerge"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libzip4" {>= "1.0"}
+]
+extra-source "zipmerge_1.7.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libz/libzip/zipmerge_1.7.3-1_amd64.deb"
+}

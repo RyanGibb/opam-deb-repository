@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zxing-cpp-tools_1.4.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zxing-cpp-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libzxing2" {>= "1.4.0"}
+]
+extra-source "zxing-cpp-tools_1.4.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zxing-cpp/zxing-cpp-tools_1.4.0-3+b1_amd64.deb"
+}

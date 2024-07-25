@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i erlang-idna_6.1.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r erlang-idna"]
+]
+depends: [
+  "erlang-base" {>= "1-24.2+dfsg"}
+  "erlang-unicode-util-compat" {>= "0.7.0"}
+]
+extra-source "erlang-idna_6.1.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/erlang-idna/erlang-idna_6.1.1-4_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gmpc-plugins_11.8.16-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gmpc-plugins"]
+]
+depends: [
+  "gmpc" {>= "11.8.16-7"}
+  "libavahi-client3" {>= "0.6.16"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libavahi-glib1" {>= "0.6.16"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk2-0-0" {>= "2.24.0"}
+  "libmpd1"
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "gmpc-plugins_11.8.16-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gmpc-plugins/gmpc-plugins_11.8.16-6_amd64.deb"
+}

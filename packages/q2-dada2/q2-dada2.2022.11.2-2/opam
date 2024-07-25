@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i q2-dada2_2022.11.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r q2-dada2"]
+]
+depends: [
+  "python3-any"
+  "python3-biom-format"
+  "python3-skbio"
+  "q2-types" {>= "2022.11.1"}
+  "qiime" {>= "2022.11.1"}
+  "r-base-core"
+  "r-bioc-dada2" {>= "1.24.0+dfsg-2~"}
+  "r-cran-optparse"
+]
+extra-source "q2-dada2_2022.11.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/q2-dada2/q2-dada2_2022.11.2-2_amd64.deb"
+}

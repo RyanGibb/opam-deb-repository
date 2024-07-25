@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libidzebra-2.0-dev_2.2.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libidzebra-2.0-dev"]
+]
+depends: [
+  "libexpat1-dev"
+  "libicu-dev"
+  "libidzebra-2-0-0" {= "2.2.7-1"}
+  "libxslt1-dev"
+  "libyaz-dev" {>= "5.29.0"}
+  "tcl-dev"
+]
+extra-source "libidzebra-2.0-dev_2.2.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/idzebra/libidzebra-2.0-dev_2.2.7-1_amd64.deb"
+}

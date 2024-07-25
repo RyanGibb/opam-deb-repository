@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ceph-osd-dbg_16.2.11+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ceph-osd-dbg"]
+]
+depends: [
+  "ceph-osd" {= "16.2.11+ds-2"}
+]
+extra-source "ceph-osd-dbg_16.2.11+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/ceph-osd-dbg_16.2.11+ds-2_amd64.deb"
+}

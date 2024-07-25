@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvirt-sanlock_5.0.0-4+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvirt-sanlock"]
+]
+depends: [
+  "augeas-tools"
+  "libc6" {>= "2.14"}
+  "libsanlock-client1" {>= "3.6.0-3"}
+  "libvirt0" {= "5.0.0-4+deb10u1"}
+]
+extra-source "libvirt-sanlock_5.0.0-4+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libv/libvirt/libvirt-sanlock_5.0.0-4+deb10u1_amd64.deb"
+}

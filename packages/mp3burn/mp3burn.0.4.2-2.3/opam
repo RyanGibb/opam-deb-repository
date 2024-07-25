@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mp3burn_0.4.2-2.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mp3burn"]
+]
+depends: [
+  "file"
+  "libmp3-info-perl"
+  "libogg-vorbis-header-pureperl-perl"
+  "libstring-shellquote-perl"
+  "perl-any"
+  "vorbis-tools" {>= "1.0"}
+  "wodim"
+  ("mpg321" {>= "0.1.5.2"} | "mpg123")
+]
+extra-source "mp3burn_0.4.2-2.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mp3burn/mp3burn_0.4.2-2.3_all.deb"
+}

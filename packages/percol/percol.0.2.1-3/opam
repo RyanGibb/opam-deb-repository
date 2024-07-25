@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i percol_0.2.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r percol"]
+]
+depends: [
+  "python3-any"
+  "python3-six" {>= "1.7.3"}
+]
+extra-source "percol_0.2.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/percol/percol_0.2.1-3_all.deb"
+}

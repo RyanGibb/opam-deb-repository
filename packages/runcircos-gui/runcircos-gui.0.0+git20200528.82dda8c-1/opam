@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i runcircos-gui_0.0+git20200528.82dda8c-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r runcircos-gui"]
+]
+depends: [
+  "circos"
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.14.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.8.0"} | "libqt5gui5-gles" {>= "5.8.0"})
+]
+extra-source "runcircos-gui_0.0+git20200528.82dda8c-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/runcircos-gui/runcircos-gui_0.0+git20200528.82dda8c-1_amd64.deb"
+}

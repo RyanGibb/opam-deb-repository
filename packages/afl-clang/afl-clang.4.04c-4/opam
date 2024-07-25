@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i afl-clang_4.04c-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r afl-clang"]
+]
+depends: [
+  "afl++-clang"
+]
+extra-source "afl-clang_4.04c-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aflplusplus/afl-clang_4.04c-4_all.deb"
+}

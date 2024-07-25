@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dvtm_0.15+40.g311a8c0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dvtm"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "ncurses-term" {> "6.1+20180210-3"}
+]
+extra-source "dvtm_0.15+40.g311a8c0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dvtm/dvtm_0.15+40.g311a8c0-1_amd64.deb"
+}

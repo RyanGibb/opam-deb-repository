@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i alsoft-conf_1.4.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r alsoft-conf"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libqtgui4" {>= "4-4.5.3"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "alsoft-conf_1.4.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/alsoft-conf/alsoft-conf_1.4.3-2_amd64.deb"
+}

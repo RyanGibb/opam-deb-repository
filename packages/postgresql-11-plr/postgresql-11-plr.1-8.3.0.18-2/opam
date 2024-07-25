@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-11-plr_1:8.3.0.18-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-11-plr"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "postgresql-11"
+  "r-base-core" {>= "2.10"}
+]
+extra-source "postgresql-11-plr_1:8.3.0.18-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plr/postgresql-11-plr_8.3.0.18-2_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-swift_17.4.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-swift"]
+]
+depends: [
+  "puppet"
+  "puppet-module-keystone" {>= "17.4.0"}
+  "puppet-module-openstacklib" {>= "17.4.0"}
+  "puppet-module-puppetlabs-concat"
+  "puppet-module-puppetlabs-inifile"
+  "puppet-module-puppetlabs-rsync"
+  "puppet-module-puppetlabs-stdlib"
+  "puppet-module-puppetlabs-xinetd"
+  "puppet-module-saz-memcached"
+]
+extra-source "puppet-module-swift_17.4.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-swift/puppet-module-swift_17.4.1-3_all.deb"
+}

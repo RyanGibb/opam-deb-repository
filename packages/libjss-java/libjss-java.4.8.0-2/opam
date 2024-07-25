@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjss-java_4.8.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjss-java"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcommons-lang3-java"
+  "libjaxb-api-java"
+  "libnspr4" {>= "2-4.10.9"}
+  "libnss3" {>= "2-3.44.0"}
+]
+extra-source "libjss-java_4.8.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jss/libjss-java_4.8.0-2_amd64.deb"
+}

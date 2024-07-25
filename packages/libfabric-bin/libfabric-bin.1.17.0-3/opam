@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfabric-bin_1.17.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfabric-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfabric1" {>= "1.17.0"}
+]
+extra-source "libfabric-bin_1.17.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfabric/libfabric-bin_1.17.0-3_amd64.deb"
+}

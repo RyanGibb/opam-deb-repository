@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-hinawa-3.0_2.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-hinawa-3.0"]
+]
+depends: [
+  "gir1-2-glib-2-0" {>= "1.32.1"}
+  "libhinawa2" {= "2.2.0-1"}
+]
+extra-source "gir1.2-hinawa-3.0_2.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhinawa/gir1.2-hinawa-3.0_2.2.0-1_amd64.deb"
+}

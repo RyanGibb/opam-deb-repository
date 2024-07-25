@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwxsqlite3-3.2-dev_3.4.1~dfsg-9+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwxsqlite3-3.2-dev"]
+]
+depends: [
+  "libsqlite3-dev"
+  "libwxgtk3-2-dev"
+  "libwxsqlite3-3-2-0" {= "3.4.1~dfsg-9+b2"}
+]
+extra-source "libwxsqlite3-3.2-dev_3.4.1~dfsg-9+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wxsqlite3/libwxsqlite3-3.2-dev_3.4.1~dfsg-9+b2_amd64.deb"
+}

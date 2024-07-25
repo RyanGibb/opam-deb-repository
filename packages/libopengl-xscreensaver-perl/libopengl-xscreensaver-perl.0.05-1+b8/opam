@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopengl-xscreensaver-perl_0.05-1+b8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopengl-xscreensaver-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgl1"
+  "libx11-6"
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libopengl-xscreensaver-perl_0.05-1+b8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libopengl-xscreensaver-perl/libopengl-xscreensaver-perl_0.05-1+b8_amd64.deb"
+}

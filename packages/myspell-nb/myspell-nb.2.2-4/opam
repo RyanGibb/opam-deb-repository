@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i myspell-nb_2.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r myspell-nb"]
+]
+depends: [
+  ("dictionaries-common" {> "0.10"} | "openoffice-org-updatedicts")
+]
+extra-source "myspell-nb_2.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/norwegian/myspell-nb_2.2-4_all.deb"
+}

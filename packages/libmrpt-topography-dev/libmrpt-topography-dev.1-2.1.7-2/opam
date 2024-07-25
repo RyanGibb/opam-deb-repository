@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmrpt-topography-dev_1:2.1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmrpt-topography-dev"]
+]
+depends: [
+  "libmrpt-common-dev"
+  "libmrpt-obs-dev"
+  "libmrpt-topography2-1" {= "1-2.1.7-2"}
+]
+extra-source "libmrpt-topography-dev_1:2.1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrpt/libmrpt-topography-dev_2.1.7-2_amd64.deb"
+}

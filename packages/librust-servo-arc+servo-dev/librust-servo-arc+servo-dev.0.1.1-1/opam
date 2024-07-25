@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-servo-arc+servo-dev_0.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-servo-arc+servo-dev"]
+]
+depends: [
+  "librust-serde-1+default-dev"
+  "librust-servo-arc-dev" {= "0.1.1-1"}
+]
+extra-source "librust-servo-arc+servo-dev_0.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-servo-arc/librust-servo-arc+servo-dev_0.1.1-1_amd64.deb"
+}

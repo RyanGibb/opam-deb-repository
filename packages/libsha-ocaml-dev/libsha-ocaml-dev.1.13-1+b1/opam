@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsha-ocaml-dev_1.13-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsha-ocaml-dev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsha-ocaml"
+  "ocaml-nox"
+]
+extra-source "libsha-ocaml-dev_1.13-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-sha/libsha-ocaml-dev_1.13-1+b1_amd64.deb"
+}

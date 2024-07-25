@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libircmodel3_3.7.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libircmodel3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libirccore3" {>= "3.7.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libircmodel3_3.7.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcommuni/libircmodel3_3.7.0-2_amd64.deb"
+}

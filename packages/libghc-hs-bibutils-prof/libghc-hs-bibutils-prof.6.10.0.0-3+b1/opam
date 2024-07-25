@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hs-bibutils-prof_6.10.0.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hs-bibutils-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-hs-bibutils-dev" {= "6.10.0.0-3+b1"}
+  "libghc-syb-prof"
+]
+extra-source "libghc-hs-bibutils-prof_6.10.0.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hs-bibutils/libghc-hs-bibutils-prof_6.10.0.0-3+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osspd-pulseaudio_1.3.2-13.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osspd-pulseaudio"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpulse0" {>= "0.99.1"}
+  ("pulseaudio" | "pipewire-pulse")
+]
+extra-source "osspd-pulseaudio_1.3.2-13.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osspd/osspd-pulseaudio_1.3.2-13.1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-venv_3.11.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-venv"]
+]
+depends: [
+  "python3" {= "3.11.2-1+b1"}
+  "python3-11-venv" {>= "3.11.2-1~"}
+  "python3-distutils" {>= "3.11.2-1~"}
+]
+extra-source "python3-venv_3.11.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python3-defaults/python3-venv_3.11.2-1+b1_amd64.deb"
+}

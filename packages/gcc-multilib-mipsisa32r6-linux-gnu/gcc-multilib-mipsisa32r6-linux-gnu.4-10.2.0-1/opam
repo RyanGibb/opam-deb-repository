@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-multilib-mipsisa32r6-linux-gnu_4:10.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-multilib-mipsisa32r6-linux-gnu"]
+]
+depends: [
+  "cpp-mipsisa32r6-linux-gnu" {= "4-10.2.0-1"}
+  "gcc-10-multilib-mipsisa32r6-linux-gnu" {>= "10.2.0-8~"}
+  "gcc-mipsisa32r6-linux-gnu" {= "4-10.2.0-1"}
+]
+extra-source "gcc-multilib-mipsisa32r6-linux-gnu_4:10.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-mipsen/gcc-multilib-mipsisa32r6-linux-gnu_10.2.0-1_amd64.deb"
+}

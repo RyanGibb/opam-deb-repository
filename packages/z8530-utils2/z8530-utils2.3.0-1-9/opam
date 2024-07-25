@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i z8530-utils2_3.0-1-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r z8530-utils2"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "makedev" {>= "2.3.1-22"}
+]
+conflicts: [
+  "z8530-utils"
+]
+extra-source "z8530-utils2_3.0-1-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/z8530-utils2/z8530-utils2_3.0-1-9_amd64.deb"
+}

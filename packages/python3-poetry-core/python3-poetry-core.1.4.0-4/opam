@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-poetry-core_1.4.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-poetry-core"]
+]
+depends: [
+  "python3-any"
+  ("python3-importlib-metadata" | "python3" {> "3.8"})
+]
+extra-source "python3-poetry-core_1.4.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poetry-core/python3-poetry-core_1.4.0-4_all.deb"
+}

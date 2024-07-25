@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qsampler_0.9.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qsampler"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgig10" {>= "4.3.0~ds1"}
+  "liblscp6" {>= "0.5.8~repack"}
+  "libqt6core6" {>= "6.3.0"}
+  "libqt6gui6" {>= "6.1.2"}
+  "libqt6network6" {>= "6.1.2"}
+  "libqt6widgets6" {>= "6.3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "qsampler_0.9.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qsampler/qsampler_0.9.8-1_amd64.deb"
+}

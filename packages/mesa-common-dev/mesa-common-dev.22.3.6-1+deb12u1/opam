@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mesa-common-dev_22.3.6-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mesa-common-dev"]
+]
+depends: [
+  "libdrm-dev" {>= "2.4.95"}
+  "libgl-dev"
+  "libglx-dev"
+  "libx11-dev"
+]
+extra-source "mesa-common-dev_22.3.6-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mesa/mesa-common-dev_22.3.6-1+deb12u1_amd64.deb"
+}

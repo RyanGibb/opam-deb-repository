@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i weex_2.8.4.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r weex"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libssl3" {>= "3.0.0"}
+]
+extra-source "weex_2.8.4.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/weex/weex_2.8.4.2_amd64.deb"
+}

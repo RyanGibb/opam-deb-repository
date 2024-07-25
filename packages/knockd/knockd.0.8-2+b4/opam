@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i knockd_0.8-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r knockd"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpcap0-8" {>= "0.9.8"}
+  "logrotate"
+  "sysvinit-utils"
+]
+extra-source "knockd_0.8-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/knockd/knockd_0.8-2+b4_amd64.deb"
+}

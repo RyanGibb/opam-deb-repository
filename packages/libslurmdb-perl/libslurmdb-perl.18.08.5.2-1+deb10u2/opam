@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libslurmdb-perl_18.08.5.2-1+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libslurmdb-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libslurmdb33" {>= "15.08.0"}
+  "perl" {>= "5.28.1-6+deb10u1"}
+  "perl-base"
+]
+extra-source "libslurmdb-perl_18.08.5.2-1+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slurm-llnl/libslurmdb-perl_18.08.5.2-1+deb10u2_amd64.deb"
+}

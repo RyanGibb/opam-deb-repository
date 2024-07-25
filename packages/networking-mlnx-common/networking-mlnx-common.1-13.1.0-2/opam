@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i networking-mlnx-common_1:13.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r networking-mlnx-common"]
+]
+depends: [
+  "neutron-common" {>= "1-11.0.0"}
+  "python3-networking-mlnx" {= "1-13.1.0-2"}
+]
+extra-source "networking-mlnx-common_1:13.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/networking-mlnx/networking-mlnx-common_13.1.0-2_all.deb"
+}

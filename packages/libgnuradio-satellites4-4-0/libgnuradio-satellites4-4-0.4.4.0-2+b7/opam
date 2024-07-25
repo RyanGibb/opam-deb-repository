@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnuradio-satellites4.4.0_4.4.0-2+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnuradio-satellites4.4.0"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libfmt9" {>= "9.1.0+ds1"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnuradio-pmt3-10-5" {>= "3.10.5.0"}
+  "libgnuradio-runtime3-10-5" {>= "3.10.5.0"}
+  "libspdlog1-10"
+  "libstdc++6" {>= "11"}
+  "libvolk2-5" {>= "2.5.2"}
+]
+extra-source "libgnuradio-satellites4.4.0_4.4.0-2+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gr-satellites/libgnuradio-satellites4.4.0_4.4.0-2+b7_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest-yaml-perl_1.07-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest-yaml-perl"]
+]
+depends: [
+  "libtest-base-perl" {>= "0.74"}
+  "perl"
+]
+extra-source "libtest-yaml-perl_1.07-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest-yaml-perl/libtest-yaml-perl_1.07-1_all.deb"
+}

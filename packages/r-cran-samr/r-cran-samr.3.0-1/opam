@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-samr_3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-samr"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1.20181215-1"}
+  "r-bioc-impute"
+  "r-cran-gsa"
+  "r-cran-matrixstats"
+  "r-cran-openxlsx"
+  "r-cran-shiny"
+  "r-cran-shinyfiles"
+]
+extra-source "r-cran-samr_3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-samr/r-cran-samr_3.0-1_amd64.deb"
+}

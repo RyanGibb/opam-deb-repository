@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jed_1:0.99.19-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jed"]
+]
+depends: [
+  "jed-common" {= "1-0.99.19-7"}
+  "libc6" {>= "2.14"}
+  "libgpm2" {>= "1.20.4"}
+  "libslang2" {>= "2.2.4"}
+]
+extra-source "jed_1:0.99.19-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jed/jed_0.99.19-7+b1_amd64.deb"
+}

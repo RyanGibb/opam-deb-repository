@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-gpgme-sys-dev_0.10.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-gpgme-sys-dev"]
+]
+depends: [
+  "libgpgme-dev"
+  "librust-libc-0-2+default-dev"
+  "librust-libgpg-error-sys-dev"
+  "librust-winreg-0-6+default-dev"
+  "pkgconf"
+]
+extra-source "librust-gpgme-sys-dev_0.10.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-gpgme-sys/librust-gpgme-sys-dev_0.10.0-3_amd64.deb"
+}

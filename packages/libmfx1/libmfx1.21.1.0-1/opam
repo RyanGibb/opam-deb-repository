@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmfx1_21.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmfx1"]
+]
+depends: [
+  "libc6" {>= "2.30"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "libva2" {>= "2.9.0"}
+]
+extra-source "libmfx1_21.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/intel-mediasdk/libmfx1_21.1.0-1_amd64.deb"
+}

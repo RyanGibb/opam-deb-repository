@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i runoverssh_2.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r runoverssh"]
+]
+depends: [
+  "bash" {>= "4"}
+  "ssh"
+]
+extra-source "runoverssh_2.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/runoverssh/runoverssh_2.2-2_all.deb"
+}

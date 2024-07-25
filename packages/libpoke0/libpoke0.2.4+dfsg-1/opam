@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpoke0_2.4+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpoke0"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgc1" {>= "1-7.2d"}
+  "libnbd0" {>= "1.0.0"}
+]
+extra-source "libpoke0_2.4+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poke/libpoke0_2.4+dfsg-1_amd64.deb"
+}

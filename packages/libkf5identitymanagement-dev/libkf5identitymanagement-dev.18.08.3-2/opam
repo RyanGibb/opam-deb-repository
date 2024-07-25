@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5identitymanagement-dev_18.08.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5identitymanagement-dev"]
+]
+depends: [
+  "libkf5coreaddons-dev" {>= "5.47.0~"}
+  "libkf5identitymanagement5" {= "18.08.3-2"}
+  "libkf5pimtextedit-dev" {>= "18.08.3~"}
+]
+extra-source "libkf5identitymanagement-dev_18.08.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kidentitymanagement/libkf5identitymanagement-dev_18.08.3-2_amd64.deb"
+}

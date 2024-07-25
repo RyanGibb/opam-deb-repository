@@ -1,0 +1,34 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i systemd_241-7~deb10u8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r systemd"]
+]
+depends: [
+  "adduser"
+  "libacl1" {>= "2.2.23"}
+  "libapparmor1" {>= "2.9.0-3+exp2"}
+  "libaudit1" {>= "1-2.2.1"}
+  "libcap2" {>= "1-2.10"}
+  "libcryptsetup12" {>= "2-1.6.0"}
+  "libgnutls30" {>= "3.6.6"}
+  "libgpg-error0" {>= "1.14"}
+  "libidn11" {>= "1.13"}
+  "libip4tc0" {>= "1.6.0+snapshot20161117"}
+  "libkmod2" {>= "5~"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libmount1" {>= "2.30"}
+  "libpam0g" {>= "0.99.7.1"}
+  "libseccomp2" {>= "2.3.1"}
+  "libsystemd0" {= "241-7~deb10u8"}
+  "mount" {>= "2.26"}
+  "util-linux" {>= "2.27.1"}
+]
+conflicts: [
+  "consolekit"
+  "libpam-ck-connector"
+]
+extra-source "systemd_241-7~deb10u8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/systemd/systemd_241-7~deb10u8_amd64.deb"
+}

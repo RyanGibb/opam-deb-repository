@@ -1,0 +1,39 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-calc-nogui_4:7.4.7-1+deb12u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-calc-nogui"]
+]
+depends: [
+  "coinor-libcoinmp1v5"
+  "libc6" {>= "2.34"}
+  "libetonyek-0-1-1"
+  "libgcc-s1" {>= "3.3.1"}
+  "libicu72" {>= "72.1~rc-1~"}
+  "libmwaw-0-3-3"
+  "libodfgen-0-1-1"
+  "liborcus-0-17-0"
+  "liborcus-parser-0-17-0"
+  "libreoffice-base-core" {= "4-7.4.7-1+deb12u3"}
+  "libreoffice-common" {>= "1-7.0.0~alpha~"}
+  "librevenge-0-0-0"
+  "libstaroffice-0-0-0"
+  "libstdc++6" {>= "11"}
+  "libuno-cppu3" {>= "4.4.0~alpha"}
+  "libuno-cppuhelpergcc3-3" {>= "1-7.4.0~alpha"}
+  "libuno-sal3" {>= "1-7.3.0~beta1"}
+  "libuno-salhelpergcc3-3" {>= "3.6.0~beta"}
+  "libwps-0-4-4"
+  "libxml2" {>= "2.8"}
+  "lp-solve" {>= "5.5.0.13-5+b1"}
+  "ucf" {>= "0.8"}
+  "uno-libs-private"
+  ("libreoffice-core-nogui" {= "4-7.4.7-1+deb12u3"} | "libreoffice-core" {= "4-7.4.7-1+deb12u3"})
+]
+conflicts: [
+  "libreoffice-calc"
+]
+extra-source "libreoffice-calc-nogui_4:7.4.7-1+deb12u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-calc-nogui_7.4.7-1+deb12u3_amd64.deb"
+}

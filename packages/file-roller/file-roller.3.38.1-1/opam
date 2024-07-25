@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i file-roller_3.38.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r file-roller"]
+]
+depends: [
+  "bzip2"
+  "libarchive13" {>= "3.3.3"}
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.4.10"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.41.2"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libnautilus-extension1a" {>= "3.27.90"}
+  "libnotify4" {>= "0.7.0"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "p7zip-full"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "file-roller_3.38.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/file-roller/file-roller_3.38.1-1_amd64.deb"
+}

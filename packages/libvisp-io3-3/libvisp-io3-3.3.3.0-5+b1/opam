@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvisp-io3.3_3.3.0-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvisp-io3.3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libopencv-core4-5" {>= "4.5.0+dfsg"}
+  "libopencv-imgcodecs4-5" {>= "4.5.0+dfsg"}
+  "libopencv-imgproc4-5" {>= "4.5.0+dfsg"}
+  "libopencv-videoio4-5" {>= "4.5.0+dfsg"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "5.2"}
+  "libvisp-core3-3" {= "3.3.0-5+b1"}
+]
+extra-source "libvisp-io3.3_3.3.0-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/visp/libvisp-io3.3_3.3.0-5+b1_amd64.deb"
+}

@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ltsp-client-core_5.18.12-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ltsp-client-core"]
+]
+depends: [
+  "console-setup"
+  "init"
+  "initramfs-tools" {>= "0.99"}
+  "libc6" {>= "2.14"}
+  "libfl2" {>= "2.5.33"}
+  "libpopt0" {>= "1.14"}
+  "lsb-base"
+  "lsb-release"
+  "nbd-client" {>= "1-2.9.25-2"}
+  "python"
+  "syslinux-common"
+  "tftp-hpa"
+  ("fdisk" | "util-linux" {< "2.29.2-3~"})
+  ("iproute2" | "iproute")
+  ("kbd" | "console-tools")
+  ("pxelinux" | "syslinux-common" {<= "3-6"})
+]
+extra-source "ltsp-client-core_5.18.12-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ltsp/ltsp-client-core_5.18.12-3_amd64.deb"
+}

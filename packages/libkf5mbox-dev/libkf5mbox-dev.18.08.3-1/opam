@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5mbox-dev_18.08.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5mbox-dev"]
+]
+depends: [
+  "libkf5mbox5" {= "18.08.3-1"}
+  "libkf5mime-dev" {>= "18.08.3~"}
+  "qtbase5-dev"
+]
+extra-source "libkf5mbox-dev_18.08.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kmbox/libkf5mbox-dev_18.08.3-1_amd64.deb"
+}

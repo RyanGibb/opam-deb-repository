@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfiat-0_1.0.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfiat-0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfckit0d" {>= "0.10.0"}
+  "libgfortran5" {>= "10"}
+  "libgomp1" {>= "6"}
+  "libopenmpi3" {>= "4.1.4"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libfiat-0_1.0.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fiat-ecmwf/libfiat-0_1.0.0-4_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xpdf_3.04+git20210103-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xpdf"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpaper1"
+  "libpoppler102" {>= "20.09.0"}
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "libxm4" {>= "2.3.4"}
+  "libxt6"
+]
+extra-source "xpdf_3.04+git20210103-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xpdf/xpdf_3.04+git20210103-3_amd64.deb"
+}

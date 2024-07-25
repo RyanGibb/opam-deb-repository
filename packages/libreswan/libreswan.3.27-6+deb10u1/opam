@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreswan_3.27-6+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreswan"]
+]
+depends: [
+  "bind9-host"
+  "bsdmainutils"
+  "dns-root-data"
+  "iptables"
+  "libaudit1" {>= "1-2.2.1"}
+  "libc6" {>= "2.27"}
+  "libcap-ng0" {>= "0.7.9"}
+  "libcurl3-nss" {>= "7.23.1"}
+  "libevent-2-1-6" {>= "2.1.8-stable"}
+  "libevent-pthreads-2-1-6" {>= "2.1.8-stable"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libldns2" {>= "1.6.11"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.22"}
+  "libnss3-tools"
+  "libpam0g" {>= "0.99.7.1"}
+  "libselinux1" {>= "1.32"}
+  "libsystemd0"
+  "libunbound8" {>= "1.8.0"}
+  "systemd"
+  ("iproute2" | "iproute" {>= "20071016"})
+]
+conflicts: [
+  "ike-server"
+  "strongswan-libcharon"
+  "strongswan-starter"
+]
+extra-source "libreswan_3.27-6+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreswan/libreswan_3.27-6+deb10u1_amd64.deb"
+}

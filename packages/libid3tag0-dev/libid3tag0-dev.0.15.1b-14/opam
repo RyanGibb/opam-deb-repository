@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libid3tag0-dev_0.15.1b-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libid3tag0-dev"]
+]
+depends: [
+  "libid3tag0" {= "0.15.1b-14"}
+  "pkg-config"
+  "zlib1g-dev"
+]
+extra-source "libid3tag0-dev_0.15.1b-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libid3tag/libid3tag0-dev_0.15.1b-14_amd64.deb"
+}

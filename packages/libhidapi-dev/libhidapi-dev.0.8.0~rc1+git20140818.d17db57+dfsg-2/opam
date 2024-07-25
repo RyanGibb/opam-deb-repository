@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhidapi-dev_0.8.0~rc1+git20140818.d17db57+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhidapi-dev"]
+]
+depends: [
+  "libhidapi-hidraw0" {= "0.8.0~rc1+git20140818.d17db57+dfsg-2"}
+  "libhidapi-libusb0" {= "0.8.0~rc1+git20140818.d17db57+dfsg-2"}
+]
+extra-source "libhidapi-dev_0.8.0~rc1+git20140818.d17db57+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hidapi/libhidapi-dev_0.8.0~rc1+git20140818.d17db57+dfsg-2_amd64.deb"
+}

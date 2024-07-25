@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libring-defaults-clojure_0.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libring-defaults-clojure"]
+]
+depends: [
+  "libclojure-java"
+  "libring-anti-forgery-clojure"
+  "libring-core-clojure"
+  "libring-headers-clojure"
+  "libring-ssl-clojure"
+  "libservlet3-1-java"
+]
+extra-source "libring-defaults-clojure_0.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ring-defaults-clojure/libring-defaults-clojure_0.3.1-1_all.deb"
+}

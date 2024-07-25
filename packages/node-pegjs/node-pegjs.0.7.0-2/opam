@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-pegjs_0.7.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-pegjs"]
+]
+depends: [
+  "nodejs" {>= "0.6.19~dfsg1-3"}
+]
+conflicts: [
+  "node-peg"
+]
+extra-source "node-pegjs_0.7.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pegjs/node-pegjs_0.7.0-2_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freevial_1.3-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freevial"]
+]
+depends: [
+  "fonts-freefont-ttf"
+  "python-any" {>= "2.6.6-7~"}
+  "python-lxml"
+  "python-pygame" {>= "1.7"}
+  ("fonts-unfonts-core" | "ttf-unfonts-core" | "ttf-unfonts")
+]
+extra-source "freevial_1.3-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freevial/freevial_1.3-2.1_all.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-affy_1.76.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-affy"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-affyio" {>= "1.13.3"}
+  "r-bioc-biobase" {>= "2.5.5"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.1.12"}
+  "r-bioc-preprocesscore"
+  "r-bioc-zlibbioc"
+  "r-cran-biocmanager"
+]
+extra-source "r-bioc-affy_1.76.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-affy/r-bioc-affy_1.76.0-1_amd64.deb"
+}

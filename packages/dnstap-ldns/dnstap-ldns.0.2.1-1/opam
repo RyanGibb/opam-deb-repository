@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dnstap-ldns_0.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dnstap-ldns"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfstrm0" {>= "0.2.0"}
+  "libldns3" {>= "1.8.3"}
+  "libprotobuf-c1" {>= "1.0.1"}
+]
+extra-source "dnstap-ldns_0.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dnstap-ldns/dnstap-ldns_0.2.1-1_amd64.deb"
+}

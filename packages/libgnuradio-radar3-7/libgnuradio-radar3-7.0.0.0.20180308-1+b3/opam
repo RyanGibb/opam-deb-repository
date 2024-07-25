@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgnuradio-radar3.7_0.0.0.20180308-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgnuradio-radar3.7"]
+]
+depends: [
+  "libboost-filesystem1-67-0"
+  "libboost-system1-67-0"
+  "libc6" {>= "2.27"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc1" {>= "1-4.0"}
+  "libgnuradio-pmt3-7-13"
+  "libgnuradio-runtime3-7-13"
+  "liblog4cpp5v5"
+  "libqwt-qt5-6" {>= "6.1.2"}
+  "libstdc++6" {>= "5.2"}
+  "libuhd3-13-1"
+]
+extra-source "libgnuradio-radar3.7_0.0.0.20180308-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gr-radar/libgnuradio-radar3.7_0.0.0.20180308-1+b3_amd64.deb"
+}

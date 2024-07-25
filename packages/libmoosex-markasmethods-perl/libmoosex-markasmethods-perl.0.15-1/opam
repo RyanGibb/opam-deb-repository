@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmoosex-markasmethods-perl_0.15-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmoosex-markasmethods-perl"]
+]
+depends: [
+  "libb-hooks-endofscope-perl"
+  "libmoose-perl" {>= "0.94"}
+  "libnamespace-autoclean-perl" {>= "0.12"}
+  "perl"
+]
+extra-source "libmoosex-markasmethods-perl_0.15-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmoosex-markasmethods-perl/libmoosex-markasmethods-perl_0.15-1_all.deb"
+}

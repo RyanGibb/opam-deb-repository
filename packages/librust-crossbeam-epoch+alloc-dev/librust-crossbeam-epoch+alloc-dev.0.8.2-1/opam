@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-crossbeam-epoch+alloc-dev_0.8.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-crossbeam-epoch+alloc-dev"]
+]
+depends: [
+  "librust-crossbeam-epoch-dev" {= "0.8.2-1"}
+  "librust-crossbeam-utils-0-7+alloc-dev"
+]
+extra-source "librust-crossbeam-epoch+alloc-dev_0.8.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-crossbeam-epoch/librust-crossbeam-epoch+alloc-dev_0.8.2-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-pyim_5.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-pyim"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-async" {>= "1.6"}
+  "elpa-xr" {>= "1.13"}
+  "emacsen-common"
+]
+extra-source "elpa-pyim_5.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyim-el/elpa-pyim_5.3.0-1_all.deb"
+}

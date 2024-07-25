@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qprogram-starter_1.7.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qprogram-starter"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt5core5a" {>= "5.7.0"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5gui5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "5"}
+  ("libgl1-mesa-glx" | "libgl1")
+]
+extra-source "qprogram-starter_1.7.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shutdown-qapps/qprogram-starter_1.7.3-1_amd64.deb"
+}

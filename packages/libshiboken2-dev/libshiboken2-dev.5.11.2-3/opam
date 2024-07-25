@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libshiboken2-dev_5.11.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libshiboken2-dev"]
+]
+depends: [
+  "libshiboken2-5-11" {= "5.11.2-3"}
+  "libshiboken2-py3-5-11" {= "5.11.2-3"}
+  "python-dev"
+]
+extra-source "libshiboken2-dev_5.11.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyside2/libshiboken2-dev_5.11.2-3_amd64.deb"
+}

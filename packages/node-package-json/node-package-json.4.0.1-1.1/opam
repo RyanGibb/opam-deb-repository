@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-package-json_4.0.1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-package-json"]
+]
+depends: [
+  "node-got" {>= "6.7.1"}
+  "node-registry-auth-token" {>= "3.0.1"}
+  "node-registry-url" {>= "3.0.3"}
+  "node-semver" {>= "5.1.0"}
+  "nodejs"
+]
+extra-source "node-package-json_4.0.1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-package-json/node-package-json_4.0.1-1.1_all.deb"
+}

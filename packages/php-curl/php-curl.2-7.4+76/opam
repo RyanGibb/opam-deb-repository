@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-curl_2:7.4+76_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-curl"]
+]
+depends: [
+  "php-common"
+  "php7-4-curl"
+]
+extra-source "php-curl_2:7.4+76_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-defaults/php-curl_7.4+76_all.deb"
+}

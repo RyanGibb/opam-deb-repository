@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmarc-charset-perl_1.35-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmarc-charset-perl"]
+]
+depends: [
+  "libclass-accessor-perl"
+  "libxml-sax-perl"
+  "perl" {>= "5.28.1-5"}
+]
+extra-source "libmarc-charset-perl_1.35-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmarc-charset-perl/libmarc-charset-perl_1.35-3_amd64.deb"
+}

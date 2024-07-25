@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freefem_3.5.8-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freefem"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libfreefem0" {= "3.5.8-7"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+]
+extra-source "freefem_3.5.8-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freefem/freefem_3.5.8-7_amd64.deb"
+}

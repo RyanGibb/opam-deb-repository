@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mako-notifier_1.7.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mako-notifier"]
+]
+depends: [
+  "init-system-helpers" {>= "1.52"}
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.6.0"}
+  "libelogind0"
+  "libgdk-pixbuf-2-0-0" {>= "2.31.1"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libpango-1-0-0" {>= "1.29.4"}
+  "libpangocairo-1-0-0" {>= "1.22.0"}
+  "libwayland-client0" {>= "1.20.0"}
+  "libwayland-cursor0" {>= "1.0.2"}
+]
+extra-source "mako-notifier_1.7.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mako-notifier/mako-notifier_1.7.1-1+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwaili-dev_19990723-22.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwaili-dev"]
+]
+depends: [
+  "libc6-dev"
+  "libwaili1c2" {= "19990723-22.1+b2"}
+]
+extra-source "libwaili-dev_19990723-22.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/waili/libwaili-dev_19990723-22.1+b2_amd64.deb"
+}

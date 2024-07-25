@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debian-dad_1+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debian-dad"]
+]
+depends: [
+  "git-buildpackage"
+  "pkg-kde-tools"
+]
+extra-source "debian-dad_1+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-dad/debian-dad_1+nmu1_all.deb"
+}

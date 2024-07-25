@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i connectome-workbench_1.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r connectome-workbench"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libftgl2" {>= "2.4.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libgomp1" {>= "6"}
+  "libosmesa6" {>= "10.2~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.14.1"}
+  "libqt5opengl5" {>= "5.0.2"}
+  "libqt5printsupport5" {>= "5.0.2"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libqt5xml5" {>= "5.1.0"}
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.2.3.4"}
+  ("libglu1-mesa" | "libglu1")
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "connectome-workbench_1.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/connectome-workbench/connectome-workbench_1.5.0-1_amd64.deb"
+}

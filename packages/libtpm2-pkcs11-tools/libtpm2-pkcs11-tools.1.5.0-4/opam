@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtpm2-pkcs11-tools_1.5.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtpm2-pkcs11-tools"]
+]
+depends: [
+  "python3-any"
+  "python3-tpm2-pkcs11-tools" {>= "1.5.0-4"}
+]
+extra-source "libtpm2-pkcs11-tools_1.5.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tpm2-pkcs11/libtpm2-pkcs11-tools_1.5.0-4_all.deb"
+}

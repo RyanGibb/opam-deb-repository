@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hackage-security-dev_0.5.3.0-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hackage-security-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libghc-base16-bytestring-dev"
+  "libghc-base64-bytestring-dev"
+  "libghc-cryptohash-sha256-dev"
+  "libghc-ed25519-dev"
+  "libghc-network-dev"
+  "libghc-network-uri-dev"
+  "libghc-tar-dev"
+  "libghc-zlib-dev"
+  "libgmp10"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-hackage-security-dev_0.5.3.0-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hackage-security/libghc-hackage-security-dev_0.5.3.0-8+b1_amd64.deb"
+}

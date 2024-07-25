@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i flrig_1.3.53-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r flrig"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfltk1-3" {>= "1.3.4"}
+  "libflxmlrpc1"
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+  "libx11-6"
+]
+extra-source "flrig_1.3.53-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flrig/flrig_1.3.53-1_amd64.deb"
+}

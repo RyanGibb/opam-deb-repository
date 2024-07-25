@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyobjcryst_2.2.5-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyobjcryst"]
+]
+depends: [
+  "libboost-python1-74-0"
+  "libboost-python1-74-0" {>= "1.74.0+ds1"}
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libobjcryst0" {>= "2022.1.4+ds1"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+  "python3-pkg-resources"
+]
+extra-source "python3-pyobjcryst_2.2.5-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyobjcryst/python3-pyobjcryst_2.2.5-1+b1_amd64.deb"
+}

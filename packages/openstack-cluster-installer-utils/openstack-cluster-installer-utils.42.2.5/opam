@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openstack-cluster-installer-utils_42.2.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openstack-cluster-installer-utils"]
+]
+depends: [
+  "csvkit"
+  "facter"
+  "gnupg2"
+  "hdparm"
+  "iptables-persistent"
+  "openstack-cluster-installer-common" {= "42.2.5"}
+  "ssl-cert"
+  ("puppet" | "puppet-agent")
+]
+extra-source "openstack-cluster-installer-utils_42.2.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openstack-cluster-installer/openstack-cluster-installer-utils_42.2.5_all.deb"
+}

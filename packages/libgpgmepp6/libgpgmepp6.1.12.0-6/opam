@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgpgmepp6_1.12.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgpgmepp6"]
+]
+depends: [
+  "libassuan0" {>= "2.4.2"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgpg-error0" {>= "1.24"}
+  "libgpgme11" {>= "1.9.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libgpgmepp6_1.12.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gpgme1.0/libgpgmepp6_1.12.0-6_amd64.deb"
+}

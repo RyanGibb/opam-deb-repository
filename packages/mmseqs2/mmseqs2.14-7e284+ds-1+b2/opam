@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mmseqs2_14-7e284+ds-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mmseqs2"]
+]
+depends: [
+  "libatomic1" {>= "4.8"}
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.4"}
+  "libgomp1" {>= "6"}
+  "libgzstream0" {>= "1.5+dfsg"}
+  "libstdc++6" {>= "11"}
+  "zlib1g" {>= "1-1.2.6"}
+]
+extra-source "mmseqs2_14-7e284+ds-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mmseqs2/mmseqs2_14-7e284+ds-1+b2_amd64.deb"
+}

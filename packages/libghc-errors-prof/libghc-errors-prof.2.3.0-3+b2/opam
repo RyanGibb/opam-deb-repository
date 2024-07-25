@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-errors-prof_2.3.0-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-errors-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-errors-dev" {= "2.3.0-3+b2"}
+  "libghc-exceptions-prof"
+  "libghc-safe-prof"
+  "libghc-transformers-compat-prof"
+]
+extra-source "libghc-errors-prof_2.3.0-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-errors/libghc-errors-prof_2.3.0-3+b2_amd64.deb"
+}

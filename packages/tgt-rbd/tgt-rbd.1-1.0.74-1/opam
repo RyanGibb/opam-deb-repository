@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tgt-rbd_1:1.0.74-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tgt-rbd"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "librados2" {>= "0.72.2"}
+  "librbd1" {>= "0.72.2"}
+  "tgt" {= "1-1.0.74-1"}
+]
+extra-source "tgt-rbd_1:1.0.74-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tgt/tgt-rbd_1.0.74-1_amd64.deb"
+}

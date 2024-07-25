@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-statmake_0.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-statmake"]
+]
+depends: [
+  "python3-any"
+  "python3-attr" {>= "21.3"}
+  "python3-cattr" {>= "22.2"}
+  "python3-fonttools"
+  ("python3-importlib-metadata" | "python3" {> "3.8"})
+]
+extra-source "python3-statmake_0.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-statmake/python3-statmake_0.6.0-1_all.deb"
+}

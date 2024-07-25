@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-libvirt_0.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-libvirt"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgmp10"
+  "libruby2-5" {>= "2.5.0~preview1"}
+  "libvirt0" {>= "1.2.19~rc1"}
+  "ruby" {< "1-2.6~"}
+  "ruby" {>= "1-2.5~0"}
+]
+extra-source "ruby-libvirt_0.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-libvirt/ruby-libvirt_0.7.1-1_amd64.deb"
+}

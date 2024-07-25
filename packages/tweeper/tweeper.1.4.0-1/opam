@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tweeper_1.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tweeper"]
+]
+depends: [
+  "php-cli"
+  "php-common"
+  "php-curl"
+  "php-json"
+  "php-symfony-property-access" {>= "2.7.0"}
+  "php-symfony-serializer" {>= "2.7.0"}
+  "php-xml"
+]
+extra-source "tweeper_1.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tweeper/tweeper_1.4.0-1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-postgis_3.3.2+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-postgis"]
+]
+depends: [
+  "postgresql-15-postgis-3"
+  "postgresql-postgis-scripts"
+]
+extra-source "postgresql-postgis_3.3.2+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgis/postgresql-postgis_3.3.2+dfsg-1+b1_amd64.deb"
+}

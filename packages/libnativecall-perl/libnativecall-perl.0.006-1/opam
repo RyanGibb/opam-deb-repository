@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnativecall-perl_0.006-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnativecall-perl"]
+]
+depends: [
+  "libffi-checklib-perl"
+  "libffi-platypus-perl"
+  "perl"
+  ("perl" {>= "5.21.4"} | "libscalar-list-utils-perl")
+]
+extra-source "libnativecall-perl_0.006-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnativecall-perl/libnativecall-perl_0.006-1_all.deb"
+}

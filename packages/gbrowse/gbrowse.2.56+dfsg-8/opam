@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gbrowse_2.56+dfsg-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gbrowse"]
+]
+depends: [
+  "bioperl"
+  "libbio-coordinate-perl"
+  "libbio-db-seqfeature-perl"
+  "libbio-graphics-perl"
+  "libcgi-session-perl"
+  "libdbd-sqlite3-perl"
+  "libhttp-daemon-perl"
+  "libio-string-perl"
+  "libjs-prototype"
+  "libjs-scriptaculous"
+  "libjson-perl"
+  "libstatistics-descriptive-perl"
+  "libterm-readkey-perl"
+  "libvm-ec2-perl"
+  "libwww-perl"
+  "lsb-base"
+  "perl-any"
+  "sqlite3"
+  ("apache2" | "httpd-cgi")
+  ("libgd-gd2-noxpm-perl" | "libgd-gd2-perl")
+]
+extra-source "gbrowse_2.56+dfsg-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gbrowse/gbrowse_2.56+dfsg-8_all.deb"
+}

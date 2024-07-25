@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rest-client_2.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rest-client"]
+]
+depends: [
+  "ruby"
+  "ruby-http-accept" {< "2.0"}
+  "ruby-http-accept" {>= "1.7.0"}
+  "ruby-http-cookie" {< "2.0"}
+  "ruby-http-cookie" {>= "1.0.2"}
+  "ruby-mime-types" {< "4.0"}
+  "ruby-mime-types" {>= "1.16"}
+  "ruby-netrc" {>= "0.8"}
+]
+extra-source "ruby-rest-client_2.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rest-client/ruby-rest-client_2.1.0-1_all.deb"
+}

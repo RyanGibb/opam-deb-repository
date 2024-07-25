@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libx32cilkrts5_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libx32cilkrts5"]
+]
+depends: [
+  "gcc-7-base" {= "7.4.0-6"}
+  "libc6-x32" {>= "2.16"}
+  "libx32gcc1"
+  "libx32stdc++6"
+]
+extra-source "libx32cilkrts5_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/libx32cilkrts5_7.4.0-6_amd64.deb"
+}

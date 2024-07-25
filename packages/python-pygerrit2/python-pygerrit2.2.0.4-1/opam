@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pygerrit2_2.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pygerrit2"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-pbr"
+  "python-requests"
+]
+extra-source "python-pygerrit2_2.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pygerrit2/python-pygerrit2_2.0.4-1_all.deb"
+}

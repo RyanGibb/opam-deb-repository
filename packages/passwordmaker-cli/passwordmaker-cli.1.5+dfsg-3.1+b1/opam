@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i passwordmaker-cli_1.5+dfsg-3.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r passwordmaker-cli"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libmhash2"
+  "libpcrecpp0v5" {>= "7.7"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "passwordmaker-cli_1.5+dfsg-3.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/passwordmaker-cli/passwordmaker-cli_1.5+dfsg-3.1+b1_amd64.deb"
+}

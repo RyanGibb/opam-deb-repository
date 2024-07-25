@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tweak_3.02-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tweak"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "tweak_3.02-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tweak/tweak_3.02-6_amd64.deb"
+}

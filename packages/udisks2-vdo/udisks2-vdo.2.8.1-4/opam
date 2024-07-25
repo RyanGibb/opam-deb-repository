@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i udisks2-vdo_2.8.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r udisks2-vdo"]
+]
+depends: [
+  "libblockdev-vdo2"
+  "libblockdev2" {>= "2.20"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.50"}
+  "libgudev-1-0-0" {>= "165"}
+  "libpolkit-gobject-1-0" {>= "0.94"}
+  "udisks2" {= "2.8.1-4"}
+]
+extra-source "udisks2-vdo_2.8.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/udisks2/udisks2-vdo_2.8.1-4_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ghostscript-x_9.53.3~dfsg-7+deb11u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ghostscript-x"]
+]
+depends: [
+  "ghostscript" {= "9.53.3~dfsg-7+deb11u7"}
+  "libc6" {>= "2.14"}
+  "libx11-6"
+  "libxt6"
+]
+extra-source "ghostscript-x_9.53.3~dfsg-7+deb11u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/ghostscript/ghostscript-x_9.53.3~dfsg-7+deb11u7_amd64.deb"
+}

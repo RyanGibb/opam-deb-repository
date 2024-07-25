@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-safecopy-prof_0.9.4.1-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-safecopy-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-cereal-prof"
+  "libghc-old-time-prof"
+  "libghc-safecopy-dev" {= "0.9.4.1-3+b2"}
+  "libghc-vector-prof"
+]
+extra-source "libghc-safecopy-prof_0.9.4.1-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-safecopy/libghc-safecopy-prof_0.9.4.1-3+b2_amd64.deb"
+}

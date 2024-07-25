@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsdl-pango-dev_0.1.2-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsdl-pango-dev"]
+]
+depends: [
+  "libpango1-0-dev"
+  "libsdl-pango1" {= "0.1.2-8"}
+  "libsdl1-2-dev"
+]
+extra-source "libsdl-pango-dev_0.1.2-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sdlpango/libsdl-pango-dev_0.1.2-8_amd64.deb"
+}

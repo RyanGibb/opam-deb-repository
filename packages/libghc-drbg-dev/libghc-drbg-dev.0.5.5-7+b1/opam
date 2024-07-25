@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-drbg-dev_0.5.5-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-drbg-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.14"}
+  "libghc-cereal-dev"
+  "libghc-cipher-aes128-dev"
+  "libghc-crypto-api-dev"
+  "libghc-cryptohash-cryptoapi-dev"
+  "libghc-entropy-dev"
+  "libghc-parallel-dev"
+  "libghc-prettyclass-dev"
+  "libghc-tagged-dev"
+  "libgmp10"
+]
+extra-source "libghc-drbg-dev_0.5.5-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-drbg/libghc-drbg-dev_0.5.5-7+b1_amd64.deb"
+}

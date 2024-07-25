@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i confclerk_0.6.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r confclerk"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libqt5core5a" {>= "5.9.0~beta"}
+  "libqt5gui5" {>= "5.8.0"}
+  "libqt5network5" {>= "5.0.2"}
+  "libqt5sql5" {>= "5.0.2"}
+  "libqt5sql5-sqlite"
+  "libqt5widgets5" {>= "5.2.0~alpha1"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "confclerk_0.6.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/confclerk/confclerk_0.6.4-1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnetcdf-pnetcdf-dev_1:4.9.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnetcdf-pnetcdf-dev"]
+]
+depends: [
+  "libnetcdf-pnetcdf-19" {= "1-4.9.0-1+b1"}
+  "pkg-config"
+]
+extra-source "libnetcdf-pnetcdf-dev_1:4.9.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netcdf-parallel/libnetcdf-pnetcdf-dev_4.9.0-1+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i webhttrack_3.49.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r webhttrack"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libhttrack2" {>= "3.49.2"}
+  "webhttrack-common"
+  ("iceape-browser" | "iceweasel" | "icecat" | "mozilla" | "firefox" | "mozilla-firefox" | "www-browser")
+]
+extra-source "webhttrack_3.49.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/httrack/webhttrack_3.49.2-1.1_amd64.deb"
+}

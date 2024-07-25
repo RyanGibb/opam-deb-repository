@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gambas3-gb-db-sqlite3_3.12.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gambas3-gb-db-sqlite3"]
+]
+depends: [
+  "gambas3-gb-db" {>= "3.12.2-1"}
+  "libc6" {>= "2.14"}
+  "libsqlite3-0" {>= "3.5.9"}
+]
+extra-source "gambas3-gb-db-sqlite3_3.12.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gambas3/gambas3-gb-db-sqlite3_3.12.2-1_amd64.deb"
+}

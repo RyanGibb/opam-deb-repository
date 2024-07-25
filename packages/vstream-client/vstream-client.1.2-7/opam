@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vstream-client_1.2-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vstream-client"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "libvstream-dev"
+]
+extra-source "vstream-client_1.2-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vstream-client/vstream-client_1.2-7_amd64.deb"
+}

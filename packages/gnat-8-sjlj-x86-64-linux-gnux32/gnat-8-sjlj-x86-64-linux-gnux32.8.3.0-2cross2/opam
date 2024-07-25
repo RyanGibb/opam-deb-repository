@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnat-8-sjlj-x86-64-linux-gnux32_8.3.0-2cross2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnat-8-sjlj-x86-64-linux-gnux32"]
+]
+depends: [
+  "gcc-8-x86-64-linux-gnux32-base" {= "8.3.0-2cross2"}
+  "gnat-8-x86-64-linux-gnux32" {= "8.3.0-2cross2"}
+]
+extra-source "gnat-8-sjlj-x86-64-linux-gnux32_8.3.0-2cross2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross-ports/gnat-8-sjlj-x86-64-linux-gnux32_8.3.0-2cross2_amd64.deb"
+}

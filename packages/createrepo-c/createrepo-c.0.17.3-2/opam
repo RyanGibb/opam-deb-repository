@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i createrepo-c_0.17.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r createrepo-c"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcreaterepo-c0" {= "0.17.3-2"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libmodulemd2" {>= "2.9.4"}
+]
+extra-source "createrepo-c_0.17.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/createrepo-c/createrepo-c_0.17.3-2_amd64.deb"
+}

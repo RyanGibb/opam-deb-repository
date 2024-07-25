@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgphobos2-amd64-cross_11.3.0-11cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgphobos2-amd64-cross"]
+]
+depends: [
+  "gcc-11-cross-base" {>= "11.3.0-11"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1-amd64-cross"
+]
+extra-source "libgphobos2-amd64-cross_11.3.0-11cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-11-cross/libgphobos2-amd64-cross_11.3.0-11cross1_all.deb"
+}

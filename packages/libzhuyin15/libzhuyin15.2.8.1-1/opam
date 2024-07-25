@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzhuyin15_2.8.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzhuyin15"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libdb5-3"
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libpinyin-data" {= "2.8.1-1"}
+  "libstdc++6" {>= "5"}
+]
+conflicts: [
+  "libzhuyin6"
+  "libzhuyin7"
+]
+extra-source "libzhuyin15_2.8.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpinyin/libzhuyin15_2.8.1-1_amd64.deb"
+}

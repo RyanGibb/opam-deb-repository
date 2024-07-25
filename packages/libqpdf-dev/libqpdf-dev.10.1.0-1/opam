@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqpdf-dev_10.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqpdf-dev"]
+]
+depends: [
+  "libjpeg-dev"
+  "libqpdf28" {= "10.1.0-1"}
+  "zlib1g-dev"
+]
+extra-source "libqpdf-dev_10.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qpdf/libqpdf-dev_10.1.0-1_amd64.deb"
+}

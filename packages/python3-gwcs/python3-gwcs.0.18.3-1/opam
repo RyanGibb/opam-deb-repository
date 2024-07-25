@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-gwcs_0.18.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-gwcs"]
+]
+depends: [
+  "python3-any"
+  "python3-asdf"
+  "python3-asdf-astropy"
+  "python3-asdf-wcs-schemas"
+  "python3-astropy" {>= "4.0~"}
+  "python3-numpy"
+  "python3-scipy"
+]
+extra-source "python3-gwcs_0.18.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gwcs/python3-gwcs_0.18.3-1_all.deb"
+}

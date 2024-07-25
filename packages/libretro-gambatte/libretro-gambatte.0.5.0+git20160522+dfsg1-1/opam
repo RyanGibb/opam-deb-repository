@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libretro-gambatte_0.5.0+git20160522+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libretro-gambatte"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libstdc++6" {>= "5.2"}
+  ("retroarch" | "libretro-frontend")
+]
+extra-source "libretro-gambatte_0.5.0+git20160522+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libretro-gambatte/libretro-gambatte_0.5.0+git20160522+dfsg1-1_amd64.deb"
+}

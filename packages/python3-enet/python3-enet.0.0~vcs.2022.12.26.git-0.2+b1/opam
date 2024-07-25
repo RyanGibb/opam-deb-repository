@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-enet_0.0~vcs.2022.12.26.git-0.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-enet"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libenet7" {>= "1.3.17"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+]
+extra-source "python3-enet_0.0~vcs.2022.12.26.git-0.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-enet/python3-enet_0.0~vcs.2022.12.26.git-0.2+b1_amd64.deb"
+}

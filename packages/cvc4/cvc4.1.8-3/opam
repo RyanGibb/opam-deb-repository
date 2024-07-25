@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cvc4_1.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cvc4"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcln6"
+  "libcvc4-7" {= "1.8-3"}
+  "libcvc4parser7" {= "1.8-3"}
+  "libgcc-s1" {>= "3.0"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "cvc4_1.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cvc4/cvc4_1.8-3_amd64.deb"
+}

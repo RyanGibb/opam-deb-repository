@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libldap-ocaml-dev_2.1.8-10+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libldap-ocaml-dev"]
+]
+depends: [
+  "libocamlnet-ocaml-dev"
+  "libocamlnet-ocaml-dev" {>= "2.2.8.1-1"}
+  "libpcre-ocaml-dev"
+  "libssl-ocaml-dev"
+  "libssl-ocaml-dev" {>= "0.4.2-3"}
+  "ocaml-nox"
+]
+extra-source "libldap-ocaml-dev_2.1.8-10+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocamldap/libldap-ocaml-dev_2.1.8-10+b6_amd64.deb"
+}

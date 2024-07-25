@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libompl-dev_1.5.2+ds1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libompl-dev"]
+]
+depends: [
+  "libboost-dev"
+  "libeigen3-dev"
+  "libode-dev"
+  "libompl16" {= "1.5.2+ds1-1"}
+]
+extra-source "libompl-dev_1.5.2+ds1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ompl/libompl-dev_1.5.2+ds1-1_amd64.deb"
+}

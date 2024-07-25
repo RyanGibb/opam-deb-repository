@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqtmirserver2_0.8.0~git20230223.bd21224-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqtmirserver2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libegl1"
+  "libgcc-s1" {>= "3.0"}
+  "liblomiri-url-dispatcher0" {>= "0.1.0"}
+  "liblttng-ust1" {>= "2.13.0"}
+  "libmiral5" {>= "3.6.0"}
+  "libmircore2" {>= "2.8.0"}
+  "libmiroil3" {>= "2.11.0"}
+  "libmirwayland4" {>= "2.12.0+dfsg"}
+  "libqt5core5a"
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5qml5"
+  "libqt5qml5" {>= "5.0.2"}
+  "libqt5sensors5" {>= "5.6.0"}
+  "libstdc++6" {>= "11"}
+  "libwayland-server0" {>= "1.2.0"}
+  "libxkbcommon0" {>= "0.5.0"}
+  ("libqt5gui5" {>= "5.6.0~beta"} | "libqt5gui5-gles" {>= "5.6.0~beta"})
+  ("libqt5quick5" {>= "5.0.2"} | "libqt5quick5-gles" {>= "5.0.2"})
+]
+extra-source "libqtmirserver2_0.8.0~git20230223.bd21224-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtmir/libqtmirserver2_0.8.0~git20230223.bd21224-3_amd64.deb"
+}

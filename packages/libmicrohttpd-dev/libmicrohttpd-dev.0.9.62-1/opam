@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmicrohttpd-dev_0.9.62-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmicrohttpd-dev"]
+]
+depends: [
+  "libgcrypt20-dev"
+  "libgnutls28-dev"
+  "libmicrohttpd12" {= "0.9.62-1"}
+]
+extra-source "libmicrohttpd-dev_0.9.62-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmicrohttpd/libmicrohttpd-dev_0.9.62-1_amd64.deb"
+}

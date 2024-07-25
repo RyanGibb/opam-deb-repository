@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-scalene_1.5.16-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-scalene"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libjs-bootstrap4"
+  "libjs-jquery"
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-cloudpickle"
+  "python3-jinja2"
+  "python3-rich"
+  "python3-wheel"
+]
+extra-source "python3-scalene_1.5.16-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scalene/python3-scalene_1.5.16-1+b1_amd64.deb"
+}

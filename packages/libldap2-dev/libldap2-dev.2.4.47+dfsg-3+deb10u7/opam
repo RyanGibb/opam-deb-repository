@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libldap2-dev_2.4.47+dfsg-3+deb10u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libldap2-dev"]
+]
+depends: [
+  "libldap-2-4-2" {= "2.4.47+dfsg-3+deb10u7"}
+]
+conflicts: [
+  "libldap-dev"
+  "libopenldap-dev"
+]
+extra-source "libldap2-dev_2.4.47+dfsg-3+deb10u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openldap/libldap2-dev_2.4.47+dfsg-3+deb10u7_amd64.deb"
+}

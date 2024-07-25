@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pylama_7.4.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pylama"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-mccabe"
+  "python-pycodestyle"
+  "python-pyflakes"
+]
+extra-source "python-pylama_7.4.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pylama/python-pylama_7.4.3-2_all.deb"
+}

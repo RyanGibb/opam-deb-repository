@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-pangocairo+purge-lgpl-docs-dev_0.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-pangocairo+purge-lgpl-docs-dev"]
+]
+depends: [
+  "librust-cairo-rs-0-5+purge-lgpl-docs-dev"
+  "librust-gtk-rs-lgpl-docs-dev"
+  "librust-pangocairo-dev" {= "0.6.0-1"}
+]
+extra-source "librust-pangocairo+purge-lgpl-docs-dev_0.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-pangocairo/librust-pangocairo+purge-lgpl-docs-dev_0.6.0-1_amd64.deb"
+}

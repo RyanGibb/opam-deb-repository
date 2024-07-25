@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfoma0_1:0.10.0+s311-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfoma0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "zlib1g" {>= "1-1.2.2.3"}
+]
+extra-source "libfoma0_1:0.10.0+s311-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/foma/libfoma0_0.10.0+s311-1_amd64.deb"
+}

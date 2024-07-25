@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libunix-processors-perl_2.046-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libunix-processors-perl"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libunix-processors-perl_2.046-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libunix-processors-perl/libunix-processors-perl_2.046-3+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblog4c3_1.2.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblog4c3"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libexpat1" {>= "2.0.1"}
+]
+extra-source "liblog4c3_1.2.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/log4c/liblog4c3_1.2.4-3_amd64.deb"
+}

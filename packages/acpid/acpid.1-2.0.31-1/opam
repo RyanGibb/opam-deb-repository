@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i acpid_1:2.0.31-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r acpid"]
+]
+depends: [
+  "kmod"
+  "libc6" {>= "2.27"}
+  "lsb-base" {>= "3.2-14"}
+]
+extra-source "acpid_1:2.0.31-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/acpid/acpid_2.0.31-1_amd64.deb"
+}

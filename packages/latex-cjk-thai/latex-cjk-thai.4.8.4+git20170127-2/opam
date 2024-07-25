@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i latex-cjk-thai_4.8.4+git20170127-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r latex-cjk-thai"]
+]
+depends: [
+  "emacsen-common" {>= "2.0.8"}
+  "latex-cjk-common" {>= "4.8.4+git20170127-2"}
+  "tex-common" {>= "6"}
+  "texlive-lang-other" {>= "2013.20130523-1"}
+  "texlive-latex-base"
+]
+conflicts: [
+  "cjk-latex (<= 4.5.1)"
+]
+extra-source "latex-cjk-thai_4.8.4+git20170127-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cjk/latex-cjk-thai_4.8.4+git20170127-2_all.deb"
+}

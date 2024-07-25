@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i psi3_3.4.0-6+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r psi3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+  "libstdc++6" {>= "5.2"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "psi3_3.4.0-6+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/psicode/psi3_3.4.0-6+b3_amd64.deb"
+}

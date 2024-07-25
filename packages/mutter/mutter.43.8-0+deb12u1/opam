@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mutter_43.8-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mutter"]
+]
+depends: [
+  "adwaita-icon-theme"
+  "gnome-settings-daemon-common"
+  "gsettings-desktop-schemas" {>= "40~alpha"}
+  "libc6" {>= "2.34"}
+  "libgles2"
+  "libglib2-0-0" {>= "2.69.0"}
+  "libmutter-11-0" {>= "43.0"}
+  "libwayland-client0" {>= "1.21.0"}
+  "libx11-6"
+  "libxcomposite1" {>= "1-0.4.5"}
+  "mutter-common" {>= "43.8-0+deb12u1"}
+  "zenity"
+]
+extra-source "mutter_43.8-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mutter/mutter_43.8-0+deb12u1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-mechanize_1:0.2.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-mechanize"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.6.6-7~"}
+]
+extra-source "python-mechanize_1:0.2.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-mechanize/python-mechanize_0.2.5-3_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mod-gearman-tools_1.5.5-1+b8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mod-gearman-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgearman8" {>= "1.1.13"}
+  "libncurses6" {>= "6"}
+  "libperl5-28" {>= "5.28.0"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "mod-gearman-tools_1.5.5-1+b8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mod-gearman/mod-gearman-tools_1.5.5-1+b8_amd64.deb"
+}

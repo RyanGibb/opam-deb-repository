@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bpftool_5.10.218-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bpftool"]
+]
+depends: [
+  "libc6" {>= "2.26"}
+  "libcap2" {>= "1-2.10"}
+  "libelf1" {>= "0.142"}
+  "zlib1g" {>= "1-1.2.3.3"}
+]
+extra-source "bpftool_5.10.218-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linux/bpftool_5.10.218-1_amd64.deb"
+}

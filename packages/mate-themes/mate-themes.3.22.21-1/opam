@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mate-themes_3.22.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mate-themes"]
+]
+depends: [
+  "gtk2-engines"
+  "gtk2-engines-murrine"
+  "gtk2-engines-pixbuf"
+  "librsvg2-common"
+  "mate-icon-theme"
+]
+conflicts: [
+  "mate-themes-gnome"
+]
+extra-source "mate-themes_3.22.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mate-themes/mate-themes_3.22.21-1_all.deb"
+}

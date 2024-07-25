@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lldpad_1.0.1+git20180808.4e642bd-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lldpad"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libconfig9"
+  "libnl-3-200" {>= "3.2.7"}
+  "lsb-base"
+]
+extra-source "lldpad_1.0.1+git20180808.4e642bd-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lldpad/lldpad_1.0.1+git20180808.4e642bd-1_amd64.deb"
+}

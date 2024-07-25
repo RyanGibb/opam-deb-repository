@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclearsilver-perl_0.10.5-4+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclearsilver-perl"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libclearsilver-perl_0.10.5-4+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clearsilver/libclearsilver-perl_0.10.5-4+b5_amd64.deb"
+}

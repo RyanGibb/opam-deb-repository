@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-zip-archive-prof_0.4.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-zip-archive-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-digest-prof"
+  "libghc-zip-archive-dev" {= "0.4.2.2-1"}
+  "libghc-zlib-prof"
+]
+extra-source "libghc-zip-archive-prof_0.4.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-zip-archive/libghc-zip-archive-prof_0.4.2.2-1_amd64.deb"
+}

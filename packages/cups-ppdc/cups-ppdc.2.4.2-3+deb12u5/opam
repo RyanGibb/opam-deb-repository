@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cups-ppdc_2.4.2-3+deb12u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cups-ppdc"]
+]
+depends: [
+  "cups-common" {>= "2.4.2-3+deb12u5"}
+  "libc6" {>= "2.34"}
+  "libcups2" {>= "2.3~b6"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "cups-ppdc_2.4.2-3+deb12u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cups/cups-ppdc_2.4.2-3+deb12u5_amd64.deb"
+}

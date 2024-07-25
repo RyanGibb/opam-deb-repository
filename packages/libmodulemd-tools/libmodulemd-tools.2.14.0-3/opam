@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmodulemd-tools_2.14.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmodulemd-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.55.2"}
+  "libmodulemd2" {= "2.14.0-3"}
+  "libyaml-0-2"
+]
+extra-source "libmodulemd-tools_2.14.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmodulemd/libmodulemd-tools_2.14.0-3_amd64.deb"
+}

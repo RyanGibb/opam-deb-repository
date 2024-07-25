@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dvbackup_1:0.0.4-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dvbackup"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdv-bin" {>= "0.99"}
+  "libpopt0" {>= "1.14"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "dvbackup_1:0.0.4-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dvbackup/dvbackup_0.0.4-9+b1_amd64.deb"
+}

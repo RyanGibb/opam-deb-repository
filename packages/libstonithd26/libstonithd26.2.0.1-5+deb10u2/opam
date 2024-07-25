@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libstonithd26_2.0.1-5+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libstonithd26"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libcrmcommon34" {>= "1.1.18~rc4"}
+  "libglib2-0-0" {>= "2.28.0"}
+  "libpils2"
+  "libqb0" {>= "0.17.1"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libstonithd26_2.0.1-5+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pacemaker/libstonithd26_2.0.1-5+deb10u2_amd64.deb"
+}

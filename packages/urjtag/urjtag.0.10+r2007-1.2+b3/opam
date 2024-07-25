@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i urjtag_0.10+r2007-1.2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r urjtag"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libftdi1"
+  "libreadline8" {>= "6.0"}
+  "libusb-0-1-4" {>= "2-0.1.12"}
+]
+conflicts: [
+  "openwince-jtag"
+]
+extra-source "urjtag_0.10+r2007-1.2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/urjtag/urjtag_0.10+r2007-1.2+b3_amd64.deb"
+}

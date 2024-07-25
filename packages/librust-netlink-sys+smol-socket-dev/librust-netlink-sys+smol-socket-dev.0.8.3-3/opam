@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-netlink-sys+smol-socket-dev_0.8.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-netlink-sys+smol-socket-dev"]
+]
+depends: [
+  "librust-netlink-sys+async-io-dev" {= "0.8.3-3"}
+  "librust-netlink-sys+futures-dev" {= "0.8.3-3"}
+  "librust-netlink-sys-dev" {= "0.8.3-3"}
+]
+extra-source "librust-netlink-sys+smol-socket-dev_0.8.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-netlink-sys/librust-netlink-sys+smol-socket-dev_0.8.3-3_amd64.deb"
+}

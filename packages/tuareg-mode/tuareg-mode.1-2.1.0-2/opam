@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tuareg-mode_1:2.1.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tuareg-mode"]
+]
+depends: [
+  "emacsen-common" {>= "2.0.8"}
+  ("emacs" | "emacsen")
+]
+extra-source "tuareg-mode_1:2.1.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tuareg-mode/tuareg-mode_2.1.0-2_all.deb"
+}

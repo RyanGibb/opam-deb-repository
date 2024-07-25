@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i binutils-mingw-w64-i686_2.35.2-2+8.11+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r binutils-mingw-w64-i686"]
+]
+depends: [
+  "binutils-common" {>= "2.35.2"}
+  "libc6" {>= "2.14"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "binutils-mingw-w64-i686_2.35.2-2+8.11+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/binutils-mingw-w64/binutils-mingw-w64-i686_2.35.2-2+8.11+b3_amd64.deb"
+}

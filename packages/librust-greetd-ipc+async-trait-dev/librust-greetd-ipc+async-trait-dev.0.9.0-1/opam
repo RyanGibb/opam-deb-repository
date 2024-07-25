@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-greetd-ipc+async-trait-dev_0.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-greetd-ipc+async-trait-dev"]
+]
+depends: [
+  "librust-async-trait-0-1+default-dev"
+  "librust-greetd-ipc-dev" {= "0.9.0-1"}
+]
+extra-source "librust-greetd-ipc+async-trait-dev_0.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-greetd-ipc/librust-greetd-ipc+async-trait-dev_0.9.0-1_amd64.deb"
+}

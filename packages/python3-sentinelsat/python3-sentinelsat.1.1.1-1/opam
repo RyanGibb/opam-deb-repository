@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sentinelsat_1.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sentinelsat"]
+]
+depends: [
+  "python3-any"
+  "python3-click"
+  "python3-geojson" {>= "2"}
+  "python3-geomet"
+  "python3-html2text"
+  "python3-requests"
+  "python3-tqdm"
+]
+extra-source "python3-sentinelsat_1.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sentinelsat/python3-sentinelsat_1.1.1-1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libharfbuzz-bin_6.0.0+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libharfbuzz-bin"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.7.2"}
+  "libchafa0" {>= "1.6.0"}
+  "libfreetype6" {>= "2.2.1"}
+  "libglib2-0-0" {>= "2.67.3"}
+  "libharfbuzz-subset0" {>= "6.0.0"}
+  "libharfbuzz0b" {>= "5.1.0"}
+]
+extra-source "libharfbuzz-bin_6.0.0+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/harfbuzz/libharfbuzz-bin_6.0.0+dfsg-3_amd64.deb"
+}

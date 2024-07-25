@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-custodia_0.6.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-custodia"]
+]
+depends: [
+  "python3-any"
+  "python3-cryptography"
+  "python3-jwcrypto" {>= "0.4.2"}
+  "python3-requests"
+  "python3-six"
+  "python3-systemd"
+]
+extra-source "python3-custodia_0.6.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/custodia/python3-custodia_0.6.0-5_all.deb"
+}

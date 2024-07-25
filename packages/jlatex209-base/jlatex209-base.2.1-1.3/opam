@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jlatex209-base_2.1-1.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jlatex209-base"]
+]
+depends: [
+  ("texlive-binaries" | "texlive-base-bin")
+]
+conflicts: [
+  "jtex-base (<= 1.9.1-2)"
+]
+extra-source "jlatex209-base_2.1-1.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jtex-base/jlatex209-base_2.1-1.3_all.deb"
+}

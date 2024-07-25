@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblcas0_1.3.19-2.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblcas0"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libglobus-gssapi-gsi4" {>= "13"}
+  "libssl3" {>= "3.0.0"}
+  "sgml-base" {>= "1.28"}
+]
+extra-source "liblcas0_1.3.19-2.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lcas/liblcas0_1.3.19-2.1+b1_amd64.deb"
+}

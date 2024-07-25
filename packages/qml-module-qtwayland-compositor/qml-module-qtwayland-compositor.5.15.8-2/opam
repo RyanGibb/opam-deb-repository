@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-qtwayland-compositor_5.15.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-qtwayland-compositor"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a" {>= "5.15.8+dfsg~"}
+  "libqt5qml5"
+  "libqt5qml5" {>= "5.15.8+dfsg~"}
+  "libqt5waylandcompositor5"
+  "libqt5waylandcompositor5" {>= "5.14.1"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.8+dfsg~"} | "libqt5gui5-gles" {>= "5.15.8+dfsg~"})
+  ("libqt5quick5" {>= "5.15.8+dfsg~"} | "libqt5quick5-gles" {>= "5.15.8+dfsg~"})
+]
+extra-source "qml-module-qtwayland-compositor_5.15.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtwayland-opensource-src/qml-module-qtwayland-compositor_5.15.8-2_amd64.deb"
+}

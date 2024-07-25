@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libguestfs-jfs_1:1.48.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libguestfs-jfs"]
+]
+depends: [
+  "jfsutils"
+  "libguestfs0" {= "1-1.48.6-2"}
+]
+extra-source "libguestfs-jfs_1:1.48.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libguestfs/libguestfs-jfs_1.48.6-2_amd64.deb"
+}

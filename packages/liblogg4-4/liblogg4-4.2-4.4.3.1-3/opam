@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblogg4.4_2:4.4.3.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblogg4.4"]
+]
+depends: [
+  "liballegro4-4" {>= "2-4.4.3.1"}
+  "libc6" {>= "2.14"}
+  "libvorbisfile3" {>= "1.1.2"}
+]
+extra-source "liblogg4.4_2:4.4.3.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/allegro4.4/liblogg4.4_4.4.3.1-3_amd64.deb"
+}

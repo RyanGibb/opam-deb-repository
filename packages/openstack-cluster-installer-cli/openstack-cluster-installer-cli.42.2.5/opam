@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openstack-cluster-installer-cli_42.2.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openstack-cluster-installer-cli"]
+]
+depends: [
+  "csvkit"
+  "curl"
+  "gridsite-clients"
+  "python3-q-text-as-data"
+]
+extra-source "openstack-cluster-installer-cli_42.2.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openstack-cluster-installer/openstack-cluster-installer-cli_42.2.5_all.deb"
+}

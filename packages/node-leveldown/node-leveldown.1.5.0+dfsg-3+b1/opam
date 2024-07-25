@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-leveldown_1.5.0+dfsg-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-leveldown"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libleveldb1d"
+  "libnode64"
+  "libsnappy1v5"
+  "libstdc++6" {>= "5.2"}
+  "node-abstract-leveldown" {>= "2.4.0"}
+  "node-bindings"
+  "node-nan" {>= "2.0.0"}
+  "nodejs"
+]
+extra-source "node-leveldown_1.5.0+dfsg-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-leveldown/node-leveldown_1.5.0+dfsg-3+b1_amd64.deb"
+}

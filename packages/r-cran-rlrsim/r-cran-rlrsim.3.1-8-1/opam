@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rlrsim_3.1-8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rlrsim"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "4.1.3-1"}
+  "r-cran-lme4" {>= "1.1"}
+  "r-cran-mgcv"
+  "r-cran-nlme"
+  "r-cran-rcpp" {>= "0.11.1"}
+]
+extra-source "r-cran-rlrsim_3.1-8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-rlrsim/r-cran-rlrsim_3.1-8-1_amd64.deb"
+}

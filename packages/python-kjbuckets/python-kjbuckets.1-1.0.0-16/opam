@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-kjbuckets_1:1.0.0-16_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-kjbuckets"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+]
+conflicts: [
+  "python2.3-kjbuckets"
+  "python2.4-kjbuckets"
+]
+extra-source "python-kjbuckets_1:1.0.0-16_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gadfly/python-kjbuckets_1.0.0-16_amd64.deb"
+}

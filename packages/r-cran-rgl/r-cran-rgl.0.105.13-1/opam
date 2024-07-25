@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-rgl_0.105.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-rgl"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "4.9"}
+  "libx11-6"
+  "r-base-core"
+  "r-base-core" {>= "4.0.4-1"}
+  "r-cran-crosstalk"
+  "r-cran-htmltools"
+  "r-cran-htmlwidgets"
+  "r-cran-jsonlite" {>= "0.9.20"}
+  "r-cran-knitr"
+  "r-cran-magrittr"
+  "r-cran-manipulatewidgets"
+  "r-cran-shiny"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "r-cran-rgl_0.105.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rgl/r-cran-rgl_0.105.13-1_amd64.deb"
+}

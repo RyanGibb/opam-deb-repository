@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pskctool_2.6.7-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pskctool"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libpskc0" {>= "2.6.4"}
+]
+extra-source "pskctool_2.6.7-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oath-toolkit/pskctool_2.6.7-3.1_amd64.deb"
+}

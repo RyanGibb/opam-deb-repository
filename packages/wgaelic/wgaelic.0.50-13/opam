@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wgaelic_0.50-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wgaelic"]
+]
+depends: [
+  "debconf"
+  "dictionaries-common"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "wgaelic_0.50-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/igaelic/wgaelic_0.50-13_all.deb"
+}

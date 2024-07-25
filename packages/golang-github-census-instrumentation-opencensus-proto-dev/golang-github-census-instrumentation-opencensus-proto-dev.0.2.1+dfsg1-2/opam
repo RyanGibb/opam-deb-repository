@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-census-instrumentation-opencensus-proto-dev_0.2.1+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-census-instrumentation-opencensus-proto-dev"]
+]
+depends: [
+  "golang-github-grpc-ecosystem-grpc-gateway-dev"
+  "golang-google-grpc-dev"
+  "golang-goprotobuf-dev"
+]
+extra-source "golang-github-census-instrumentation-opencensus-proto-dev_0.2.1+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-census-instrumentation-opencensus-proto/golang-github-census-instrumentation-opencensus-proto-dev_0.2.1+dfsg1-2_all.deb"
+}

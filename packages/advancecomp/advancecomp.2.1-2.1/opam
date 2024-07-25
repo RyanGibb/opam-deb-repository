@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i advancecomp_2.1-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r advancecomp"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "advancecomp_2.1-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/advancecomp/advancecomp_2.1-2.1_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clangd-14_1:14.0.6-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clangd-14"]
+]
+depends: [
+  "libabsl20220623" {>= "0~20220623.0-1"}
+  "libc6" {>= "2.34"}
+  "libclang-common-14-dev" {= "1-14.0.6-12"}
+  "libclang-cpp14" {>= "1-14.0.6"}
+  "libgcc-s1" {>= "3.0"}
+  "libgrpc++1-51" {>= "1.51.1"}
+  "libgrpc29" {>= "1.51.1"}
+  "libllvm14"
+  "libprotobuf32" {>= "3.21.12"}
+  "libstdc++6" {>= "12"}
+]
+extra-source "clangd-14_1:14.0.6-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-14/clangd-14_14.0.6-12_amd64.deb"
+}

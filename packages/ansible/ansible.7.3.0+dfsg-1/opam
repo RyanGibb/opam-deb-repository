@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ansible_7.3.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ansible"]
+]
+depends: [
+  "ansible-core" {>= "2.11.5-1~"}
+  "python3-any"
+  "python3-distutils"
+  "python3-dnspython"
+  "python3-httplib2"
+  "python3-jinja2"
+  "python3-netaddr"
+  "python3-yaml"
+  ("openssh-client" | "python3-paramiko" {>= "2.6.0"})
+]
+extra-source "ansible_7.3.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ansible/ansible_7.3.0+dfsg-1_all.deb"
+}

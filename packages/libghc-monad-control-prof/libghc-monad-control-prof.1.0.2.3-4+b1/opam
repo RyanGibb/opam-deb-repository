@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-monad-control-prof_1.0.2.3-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-monad-control-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-monad-control-dev" {= "1.0.2.3-4+b1"}
+  "libghc-transformers-base-prof"
+  "libghc-transformers-compat-prof"
+]
+extra-source "libghc-monad-control-prof_1.0.2.3-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-monad-control/libghc-monad-control-prof_1.0.2.3-4+b1_amd64.deb"
+}

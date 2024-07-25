@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libntl44_11.5.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libntl44"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgf2x3"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libstdc++6" {>= "12"}
+]
+extra-source "libntl44_11.5.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ntl/libntl44_11.5.1-1+b2_amd64.deb"
+}

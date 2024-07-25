@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmono-profiler_5.18.0.240+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmono-profiler"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libmono-profiler_5.18.0.240+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mono/libmono-profiler_5.18.0.240+dfsg-3_amd64.deb"
+}

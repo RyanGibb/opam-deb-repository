@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-optparse_1.6.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-optparse"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "3.5.2-1"}
+  "r-cran-getopt" {>= "1.20.2"}
+]
+extra-source "r-cran-optparse_1.6.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-optparse/r-cran-optparse_1.6.1-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-equivalence-dev_0.3.5-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-equivalence-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-stmonadtrans-dev"
+  "libghc-transformers-compat-dev"
+  "libgmp10"
+]
+extra-source "libghc-equivalence-dev_0.3.5-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-equivalence/libghc-equivalence-dev_0.3.5-1+b1_amd64.deb"
+}

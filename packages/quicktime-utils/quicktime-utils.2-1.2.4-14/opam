@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i quicktime-utils_2:1.2.4-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r quicktime-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libquicktime2" {>= "2-1.2.2"}
+]
+extra-source "quicktime-utils_2:1.2.4-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libq/libquicktime/quicktime-utils_1.2.4-14_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i paxctld_1.2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r paxctld"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "lsb-base"
+]
+extra-source "paxctld_1.2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/paxctld/paxctld_1.2.1-1_amd64.deb"
+}

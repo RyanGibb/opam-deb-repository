@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpcp-mmv1-dev_6.0.3-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpcp-mmv1-dev"]
+]
+depends: [
+  "libpcp-mmv1" {= "6.0.3-1.1"}
+  "libpcp3" {= "6.0.3-1.1"}
+]
+extra-source "libpcp-mmv1-dev_6.0.3-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcp/libpcp-mmv1-dev_6.0.3-1.1_amd64.deb"
+}

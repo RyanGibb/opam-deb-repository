@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gri-el_2.12.27-1.1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gri-el"]
+]
+depends: [
+  "gri" {>= "2.12.1-2"}
+  ("emacs" | "emacsen")
+]
+conflicts: [
+  "gri (<= 2.12.1-1)"
+]
+extra-source "gri-el_2.12.27-1.1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gri/gri-el_2.12.27-1.1~deb11u1_all.deb"
+}

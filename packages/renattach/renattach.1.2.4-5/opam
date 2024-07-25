@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i renattach_1.2.4-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r renattach"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  ("exim4" | "mail-transport-agent")
+]
+extra-source "renattach_1.2.4-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/renattach/renattach_1.2.4-5_amd64.deb"
+}

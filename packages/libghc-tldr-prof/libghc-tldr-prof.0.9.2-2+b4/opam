@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-tldr-prof_0.9.2-2+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-tldr-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-ansi-terminal-prof"
+  "libghc-attoparsec-prof"
+  "libghc-cmark-prof"
+  "libghc-http-conduit-prof"
+  "libghc-optparse-applicative-prof"
+  "libghc-semigroups-prof"
+  "libghc-tldr-dev" {= "0.9.2-2+b4"}
+  "libghc-zip-archive-prof"
+]
+extra-source "libghc-tldr-prof_0.9.2-2+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-tldr/libghc-tldr-prof_0.9.2-2+b4_amd64.deb"
+}

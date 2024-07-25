@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-oras-oras-go-dev_1.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-oras-oras-go-dev"]
+]
+depends: [
+  "golang-github-containerd-containerd-dev"
+  "golang-github-docker-docker-dev"
+  "golang-github-opencontainers-go-digest-dev"
+  "golang-github-opencontainers-image-spec-dev"
+  "golang-github-pkg-errors-dev"
+  "golang-golang-x-sync-dev"
+]
+extra-source "golang-oras-oras-go-dev_1.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-oras-oras-go/golang-oras-oras-go-dev_1.1.1-1_all.deb"
+}

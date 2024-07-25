@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libignition-common-dev_4.5.1+ds-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libignition-common-dev"]
+]
+depends: [
+  "libignition-common-av-dev" {= "4.5.1+ds-2+b1"}
+  "libignition-common-core-dev" {= "4.5.1+ds-2+b1"}
+  "libignition-common-graphics-dev" {= "4.5.1+ds-2+b1"}
+  "libignition-common4-events4" {= "4.5.1+ds-2+b1"}
+  "libignition-common4-profiler4" {= "4.5.1+ds-2+b1"}
+]
+extra-source "libignition-common-dev_4.5.1+ds-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ignition-common/libignition-common-dev_4.5.1+ds-2+b1_amd64.deb"
+}

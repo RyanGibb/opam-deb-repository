@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-py-autopep8_2016.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-py-autopep8"]
+]
+depends: [
+  "dh-elpa-helper"
+  "emacsen-common"
+  "python3-autopep8" {> "1.4.4-1"}
+]
+extra-source "elpa-py-autopep8_2016.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/py-autopep8-el/elpa-py-autopep8_2016.1-3_all.deb"
+}

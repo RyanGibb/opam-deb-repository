@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzarchive0.1_0.1.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzarchive0.1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libstdc++6" {>= "11"}
+  "libzstd1" {>= "1.5.2"}
+]
+extra-source "libzarchive0.1_0.1.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zarchive/libzarchive0.1_0.1.2-2_amd64.deb"
+}

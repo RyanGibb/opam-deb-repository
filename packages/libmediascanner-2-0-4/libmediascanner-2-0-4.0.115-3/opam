@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmediascanner-2.0-4_0.115-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmediascanner-2.0-4"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libsqlite3-0" {>= "3.7.15"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "libmediascanner-2.0-4_0.115-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mediascanner2/libmediascanner-2.0-4_0.115-3_amd64.deb"
+}

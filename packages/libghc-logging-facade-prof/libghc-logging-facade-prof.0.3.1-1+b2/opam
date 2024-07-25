@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-logging-facade-prof_0.3.1-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-logging-facade-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-call-stack-prof"
+  "libghc-logging-facade-dev" {= "0.3.1-1+b2"}
+]
+extra-source "libghc-logging-facade-prof_0.3.1-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-logging-facade/libghc-logging-facade-prof_0.3.1-1+b2_amd64.deb"
+}

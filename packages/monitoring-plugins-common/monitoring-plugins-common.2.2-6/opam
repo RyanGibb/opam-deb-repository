@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i monitoring-plugins-common_2.2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r monitoring-plugins-common"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "ucf"
+]
+extra-source "monitoring-plugins-common_2.2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/monitoring-plugins/monitoring-plugins-common_2.2-6_amd64.deb"
+}

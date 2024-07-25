@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fortune-mod_1:1.99.1-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fortune-mod"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "librecode0" {>= "3.6"}
+]
+conflicts: [
+  "fortune"
+]
+extra-source "fortune-mod_1:1.99.1-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fortune-mod/fortune-mod_1.99.1-7+b1_amd64.deb"
+}

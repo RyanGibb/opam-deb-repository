@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i firebird-dev_3.0.5.33100.ds4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r firebird-dev"]
+]
+depends: [
+  "firebird3-0-common-doc" {= "3.0.5.33100.ds4-2"}
+  "libfbclient2" {>= "3.0.5.33100.ds4-2"}
+  "libib-util" {>= "3.0.5.33100.ds4-2"}
+]
+conflicts: [
+  "firebird2-dev"
+  "firebird2.1-dev"
+  "firebird2.5-dev"
+]
+extra-source "firebird-dev_3.0.5.33100.ds4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/firebird3.0/firebird-dev_3.0.5.33100.ds4-2_amd64.deb"
+}

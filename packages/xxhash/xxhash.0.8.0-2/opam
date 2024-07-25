@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xxhash_0.8.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xxhash"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libxxhash0" {>= "0.8.0-2"}
+]
+extra-source "xxhash_0.8.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xxhash/xxhash_0.8.0-2_amd64.deb"
+}

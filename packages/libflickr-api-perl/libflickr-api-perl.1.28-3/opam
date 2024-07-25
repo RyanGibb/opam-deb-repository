@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libflickr-api-perl_1.28-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libflickr-api-perl"]
+]
+depends: [
+  "libnet-oauth-perl"
+  "liburi-perl"
+  "libwww-perl"
+  "libxml-libxml-simple-perl"
+  "libxml-parser-lite-tree-perl"
+  "perl-any"
+  ("libhttp-message-perl" | "libwww-perl" {< "6"})
+]
+extra-source "libflickr-api-perl_1.28-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libflickr-api-perl/libflickr-api-perl_1.28-3_all.deb"
+}

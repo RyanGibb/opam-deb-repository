@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-meta-bus_22.11.5-1~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-meta-bus"]
+]
+depends: [
+  "librte-bus-auxiliary23" {= "22.11.5-1~deb12u1"}
+  "librte-bus-dpaa23" {= "22.11.5-1~deb12u1"}
+  "librte-bus-fslmc23" {= "22.11.5-1~deb12u1"}
+  "librte-bus-ifpga23" {= "22.11.5-1~deb12u1"}
+  "librte-bus-pci23" {= "22.11.5-1~deb12u1"}
+  "librte-bus-vdev23" {= "22.11.5-1~deb12u1"}
+  "librte-bus-vmbus23" {= "22.11.5-1~deb12u1"}
+]
+extra-source "librte-meta-bus_22.11.5-1~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-meta-bus_22.11.5-1~deb12u1_amd64.deb"
+}

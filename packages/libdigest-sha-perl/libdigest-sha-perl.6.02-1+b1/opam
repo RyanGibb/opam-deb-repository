@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdigest-sha-perl_6.02-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdigest-sha-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libdigest-sha-perl_6.02-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdigest-sha-perl/libdigest-sha-perl_6.02-1+b1_amd64.deb"
+}

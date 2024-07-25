@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i netscript-ipfilter_5.5.5+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r netscript-ipfilter"]
+]
+depends: [
+  "bash" {>= "2.03"}
+  "iptables"
+  "lsb-base"
+  "netbase"
+]
+conflicts: [
+  "netscript-2.4"
+]
+extra-source "netscript-ipfilter_5.5.5+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netscript-2.4/netscript-ipfilter_5.5.5+nmu1_all.deb"
+}

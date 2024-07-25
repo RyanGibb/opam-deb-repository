@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i signon-ui-x11_0.17+16.04.20151125-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r signon-ui-x11"]
+]
+depends: [
+  "libaccounts-qt5-1" {>= "1.13"}
+  "libc6" {>= "2.14"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libnotify4" {>= "0.7.0"}
+  "libproxy1v5" {>= "0.4.17"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.0.2+dfsg1"}
+  "libqt5network5" {>= "5.0.2+dfsg1"}
+  "libqt5qml5" {>= "5.0.2"}
+  "libqt5webkit5" {>= "5.212.0~alpha3"}
+  "libqt5widgets5" {>= "5.2.0~alpha1"}
+  "libsignon-qt5-1" {>= "8.57+20150423"}
+  "libstdc++6" {>= "5"}
+  "signon-ui-service"
+  ("libqt5gui5" {>= "5.2.0"} | "libqt5gui5-gles" {>= "5.2.0"})
+  ("libqt5quick5" {>= "5.15.1"} | "libqt5quick5-gles" {>= "5.15.1"})
+]
+extra-source "signon-ui-x11_0.17+16.04.20151125-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/signon-ui/signon-ui-x11_0.17+16.04.20151125-1_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i goxel_0.11.0-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r goxel"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libglfw3" {>= "3.2"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "goxel_0.11.0-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/goxel/goxel_0.11.0-1.1_amd64.deb"
+}

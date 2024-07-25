@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpsych-java_5.0.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpsych-java"]
+]
+depends: [
+  "libbytelist-java"
+  "libjcodings-java"
+  "libyaml-snake-java" {>= "1.23~"}
+]
+extra-source "libpsych-java_5.0.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-psych/libpsych-java_5.0.2-1_all.deb"
+}

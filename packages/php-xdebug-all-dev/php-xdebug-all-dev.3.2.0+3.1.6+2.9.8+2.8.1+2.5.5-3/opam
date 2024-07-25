@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-xdebug-all-dev_3.2.0+3.1.6+2.9.8+2.8.1+2.5.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-xdebug-all-dev"]
+]
+depends: [
+  "php-all-dev"
+  "php8-2-xdebug" {>= "3.2.0+3.1.6+2.9.8+2.8.1+2.5.5-3~"}
+  "ucf"
+]
+extra-source "php-xdebug-all-dev_3.2.0+3.1.6+2.9.8+2.8.1+2.5.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xdebug/php-xdebug-all-dev_3.2.0+3.1.6+2.9.8+2.8.1+2.5.5-3_all.deb"
+}

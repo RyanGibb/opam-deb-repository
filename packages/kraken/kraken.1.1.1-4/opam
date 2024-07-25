@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kraken_1.1.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kraken"]
+]
+depends: [
+  "jellyfish1"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgomp1" {>= "6"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "kraken_1.1.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kraken/kraken_1.1.1-4_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sqlformat_0.2.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sqlformat"]
+]
+depends: [
+  "python3-any"
+  "python3-sqlparse" {= "0.2.4-1"}
+]
+extra-source "sqlformat_0.2.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sqlparse/sqlformat_0.2.4-1_all.deb"
+}

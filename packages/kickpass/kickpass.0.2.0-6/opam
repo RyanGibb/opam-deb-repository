@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kickpass_0.2.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kickpass"]
+]
+depends: [
+  "libbsd0" {>= "0.7.0"}
+  "libc6" {>= "2.34"}
+  "libevent-core-2-1-7" {>= "2.1.8-stable"}
+  "libkickpass0" {>= "0.2.0"}
+  "libsodium23" {>= "0.7.0"}
+]
+extra-source "kickpass_0.2.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kickpass/kickpass_0.2.0-6_amd64.deb"
+}

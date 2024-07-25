@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i chai_4.2.0+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r chai"]
+]
+depends: [
+  "libjs-chai" {= "4.2.0+ds-3"}
+  "node-assertion-error" {>= "1.0.1"}
+  "node-check-error" {>= "1.0.1"}
+  "node-deep-eql" {>= "3.0~"}
+  "node-get-func-name"
+  "node-pathval" {>= "1.0.0"}
+  "node-type-detect" {>= "4.0.0"}
+  "nodejs" {>= "4"}
+]
+extra-source "chai_4.2.0+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-chai/chai_4.2.0+ds-3_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phpunit-object-enumerator_4.0.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phpunit-object-enumerator"]
+]
+depends: [
+  "php-common"
+  "phpunit-object-reflector" {< "3~~"}
+  "phpunit-object-reflector" {>= "2.0"}
+  "phpunit-recursion-context" {< "5~~"}
+  "phpunit-recursion-context" {>= "4.0"}
+]
+extra-source "phpunit-object-enumerator_4.0.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phpunit-object-enumerator/phpunit-object-enumerator_4.0.4-2_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i proftpd-mod-case_0.7+git73896501cf-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r proftpd-mod-case"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "proftpd-basic"
+]
+extra-source "proftpd-mod-case_0.7+git73896501cf-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/proftpd-mod-case/proftpd-mod-case_0.7+git73896501cf-1_amd64.deb"
+}

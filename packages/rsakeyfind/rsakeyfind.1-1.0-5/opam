@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rsakeyfind_1:1.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rsakeyfind"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "rsakeyfind_1:1.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rsakeyfind/rsakeyfind_1.0-5_amd64.deb"
+}

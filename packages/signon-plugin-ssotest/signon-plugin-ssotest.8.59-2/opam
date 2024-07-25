@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i signon-plugin-ssotest_8.59-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r signon-plugin-ssotest"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libqt5core5a" {>= "5.10.0"}
+  "libqt5gui5" {>= "5.0.2"}
+  "libsignon-plugins-common1" {>= "8.57+20150423"}
+  "libstdc++6" {>= "4.1.1"}
+  "signond"
+]
+extra-source "signon-plugin-ssotest_8.59-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/signond/signon-plugin-ssotest_8.59-2_amd64.deb"
+}

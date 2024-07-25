@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vdr-plugin-svdrposd_1.0.0-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vdr-plugin-svdrposd"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+  "vdr"
+]
+conflicts: [
+  "vdr-plugin-svdrpext (<< 0.1.0-1)"
+]
+extra-source "vdr-plugin-svdrposd_1.0.0-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vdr-plugin-svdrposd/vdr-plugin-svdrposd_1.0.0-9_amd64.deb"
+}

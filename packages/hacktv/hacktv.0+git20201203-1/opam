@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hacktv_0+git20201203-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hacktv"]
+]
+depends: [
+  "libavcodec-extra58"
+  "libavdevice58" {>= "7-4.0"}
+  "libavformat58" {>= "7-4.1"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.29"}
+  "libhackrf0"
+  "libosmo-fl2k0" {>= "0.1.1"}
+  "libsoapysdr0-7" {>= "0.7.2"}
+  "libswresample3" {>= "7-4.0"}
+  "libswscale5" {>= "7-4.0"}
+]
+extra-source "hacktv_0+git20201203-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hacktv/hacktv_0+git20201203-1_amd64.deb"
+}

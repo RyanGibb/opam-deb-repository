@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libofx7_1:0.9.15-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libofx7"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libosp5" {>= "1.5.2-1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libofx7_1:0.9.15-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libofx/libofx7_0.9.15-3_amd64.deb"
+}

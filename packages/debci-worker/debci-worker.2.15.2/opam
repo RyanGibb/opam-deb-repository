@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debci-worker_2.15.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debci-worker"]
+]
+depends: [
+  "autodep8" {>= "0.2~"}
+  "autopkgtest" {>= "5.5~"}
+  "debci" {= "2.15.2"}
+  ("lxc" | "schroot")
+]
+extra-source "debci-worker_2.15.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debci/debci-worker_2.15.2_all.deb"
+}

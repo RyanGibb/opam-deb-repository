@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vlc-plugin-notify_3.0.21-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vlc-plugin-notify"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libnotify4" {>= "0.7.0"}
+  "libvlccore9"
+  "libvlccore9" {>= "3.0.21"}
+]
+extra-source "vlc-plugin-notify_3.0.21-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vlc/vlc-plugin-notify_3.0.21-0+deb12u1_amd64.deb"
+}

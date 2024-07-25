@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i warmux_1:11.04.1+repack2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r warmux"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libfribidi0" {>= "0.19.2"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl-gfx1-2-5" {>= "2.0.25"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2"
+  "libsdl-net1-2"
+  "libsdl-ttf2-0-0"
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "5.2"}
+  "libx11-6"
+  "libxml2" {>= "2.7.4"}
+  "warmux-data" {= "1-11.04.1+repack2-4"}
+]
+extra-source "warmux_1:11.04.1+repack2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/warmux/warmux_11.04.1+repack2-4_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yaws-mail_2.0.8+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yaws-mail"]
+]
+depends: [
+  "erlang-crypto" {>= "1-23.2.6+dfsg"}
+  "yaws" {>= "2.0.8+dfsg-3"}
+  ("erlang-base" {>= "1-23.2.6+dfsg"} | "erlang-base-hipe" {>= "1-23.2.6+dfsg"})
+]
+extra-source "yaws-mail_2.0.8+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yaws/yaws-mail_2.0.8+dfsg-3_all.deb"
+}

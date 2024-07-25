@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-libsmdev_20190315-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-libsmdev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsmdev1" {= "20190315-2"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+]
+extra-source "python3-libsmdev_20190315-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsmdev/python3-libsmdev_20190315-2_amd64.deb"
+}

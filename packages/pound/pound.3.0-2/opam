@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pound_3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pound"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+  "libmbedcrypto3" {>= "2.13"}
+  "libmbedtls12" {>= "2.13"}
+  "libmbedx509-0" {>= "2.0"}
+  "libnanomsg5" {>= "1.1.5"}
+  "libpcre3"
+  "libyaml-0-2"
+  "lsb-base"
+  "sysuser-helper" {< "1.4"}
+]
+extra-source "pound_3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pound/pound_3.0-2_amd64.deb"
+}

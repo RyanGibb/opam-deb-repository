@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkeybinder-3.0-0_0.3.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkeybinder-3.0-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libx11-6"
+]
+extra-source "libkeybinder-3.0-0_0.3.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/keybinder-3.0/libkeybinder-3.0-0_0.3.2-1.1_amd64.deb"
+}

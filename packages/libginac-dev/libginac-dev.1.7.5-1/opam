@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libginac-dev_1.7.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libginac-dev"]
+]
+depends: [
+  "g++"
+  "libc6-dev"
+  "libcln-dev"
+  "libginac6" {= "1.7.5-1"}
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "libginac-dev_1.7.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/ginac/libginac-dev_1.7.5-1_amd64.deb"
+}

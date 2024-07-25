@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-hawk_9.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-hawk"]
+]
+depends: [
+  "node-cryptiles"
+  ("node-boom" | "node-boom")
+  ("node-hoek" | "node-hoek")
+]
+extra-source "node-hawk_9.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-hawk/node-hawk_9.0.1-1_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xarclock_1.0-17_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xarclock"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6"
+  "libxaw7"
+  "libxmu6"
+  "libxt6"
+]
+extra-source "xarclock_1.0-17_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xarclock/xarclock_1.0-17_amd64.deb"
+}

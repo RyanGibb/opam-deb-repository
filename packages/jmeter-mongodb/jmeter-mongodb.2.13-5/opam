@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jmeter-mongodb_2.13-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jmeter-mongodb"]
+]
+depends: [
+  "jmeter" {= "2.13-5"}
+  "libmongodb-java"
+]
+extra-source "jmeter-mongodb_2.13-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jakarta-jmeter/jmeter-mongodb_2.13-5_all.deb"
+}

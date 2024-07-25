@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-proxy-manager_2.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-proxy-manager"]
+]
+depends: [
+  "php-common"
+  "php-zend-code" {< "4~~"}
+  "php-zend-code" {>= "3.3.0"}
+]
+extra-source "php-proxy-manager_2.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-proxy-manager/php-proxy-manager_2.2.2-1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbusiness-isin-perl_0.20-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbusiness-isin-perl"]
+]
+depends: [
+  "perl"
+  ("liblocale-codes-perl" | "perl" {< "5.28"})
+]
+extra-source "libbusiness-isin-perl_0.20-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbusiness-isin-perl/libbusiness-isin-perl_0.20-2_all.deb"
+}

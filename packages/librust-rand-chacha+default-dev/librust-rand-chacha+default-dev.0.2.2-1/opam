@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-rand-chacha+default-dev_0.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-rand-chacha+default-dev"]
+]
+depends: [
+  "librust-rand-chacha+std-dev" {= "0.2.2-1"}
+  "librust-rand-chacha-dev"
+  "librust-rand-chacha-dev" {= "0.2.2-1"}
+]
+extra-source "librust-rand-chacha+default-dev_0.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-rand-chacha/librust-rand-chacha+default-dev_0.2.2-1_amd64.deb"
+}

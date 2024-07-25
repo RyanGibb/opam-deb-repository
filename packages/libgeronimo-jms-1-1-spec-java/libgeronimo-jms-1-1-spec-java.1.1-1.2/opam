@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgeronimo-jms-1.1-spec-java_1.1-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgeronimo-jms-1.1-spec-java"]
+]
+depends: [
+  ("default-jre-headless" | "java5-runtime-headless")
+]
+extra-source "libgeronimo-jms-1.1-spec-java_1.1-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/geronimo-jms-1.1-spec/libgeronimo-jms-1.1-spec-java_1.1-1.2_all.deb"
+}

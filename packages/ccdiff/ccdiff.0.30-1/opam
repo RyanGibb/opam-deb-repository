@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ccdiff_0.30-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ccdiff"]
+]
+depends: [
+  "libscalar-list-utils-perl"
+  "perl-any"
+  ("libalgorithm-diff-xs-perl" | "libalgorithm-diff-perl")
+]
+extra-source "ccdiff_0.30-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ccdiff/ccdiff_0.30-1_all.deb"
+}

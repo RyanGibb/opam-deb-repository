@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i luksipc_0.04-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r luksipc"]
+]
+depends: [
+  "cryptsetup-bin"
+  "dmsetup"
+  "libc6" {>= "2.14"}
+]
+extra-source "luksipc_0.04-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/luksipc/luksipc_0.04-3_amd64.deb"
+}

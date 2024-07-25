@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-networking-l2gw_1:19.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-networking-l2gw"]
+]
+depends: [
+  "python3-any"
+  "python3-neutron" {>= "2-17.0.0~"}
+  "python3-neutron-lib" {>= "2.0.0"}
+  "python3-neutronclient"
+  "python3-ovsdbapp" {>= "0.17.0"}
+  "python3-pbr"
+  "python3-psycopg2" {>= "2.8.5"}
+]
+extra-source "python3-networking-l2gw_1:19.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/networking-l2gw/python3-networking-l2gw_19.0.0-1_all.deb"
+}

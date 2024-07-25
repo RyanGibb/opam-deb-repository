@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i breathe-doc_4.34.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r breathe-doc"]
+]
+depends: [
+  "libjs-mathjax"
+  "libjs-sphinxdoc" {>= "4.3"}
+]
+extra-source "breathe-doc_4.34.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/breathe/breathe-doc_4.34.0-1_all.deb"
+}

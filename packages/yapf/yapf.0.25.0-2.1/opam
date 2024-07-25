@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yapf_0.25.0-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yapf"]
+]
+depends: [
+  "python-any"
+  "python-yapf" {= "0.25.0-2.1"}
+]
+extra-source "yapf_0.25.0-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yapf/yapf_0.25.0-2.1_all.deb"
+}

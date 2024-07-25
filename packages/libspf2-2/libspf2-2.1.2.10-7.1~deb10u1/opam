@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspf2-2_1.2.10-7.1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspf2-2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "libspf2-0"
+]
+extra-source "libspf2-2_1.2.10-7.1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libspf2/libspf2-2_1.2.10-7.1~deb10u1_amd64.deb"
+}

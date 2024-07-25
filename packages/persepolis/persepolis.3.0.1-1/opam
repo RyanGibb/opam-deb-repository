@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i persepolis_3.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r persepolis"]
+]
+depends: [
+  "aria2"
+  "libnotify-bin"
+  "libqt5svg5"
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-pyqt5"
+  "python3-requests"
+]
+extra-source "persepolis_3.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/persepolis/persepolis_3.0.1-1_all.deb"
+}

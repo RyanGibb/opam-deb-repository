@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gstreamer1.0-crystalizer-pulseeffects_4.8.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gstreamer1.0-crystalizer-pulseeffects"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libebur128-1" {>= "1.2.0"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.0.0"}
+  "libgstreamer1-0-0" {>= "1.8.0"}
+  "libstdc++6" {>= "5.2"}
+  "libzita-convolver4" {>= "4.0.3"}
+]
+extra-source "gstreamer1.0-crystalizer-pulseeffects_4.8.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pulseeffects/gstreamer1.0-crystalizer-pulseeffects_4.8.7-1_amd64.deb"
+}

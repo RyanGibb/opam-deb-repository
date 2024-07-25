@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i testrepository_0.0.20-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r testrepository"]
+]
+depends: [
+  "python3-testrepository" {>= "0.0.20-5"}
+]
+extra-source "testrepository_0.0.20-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/testrepository/testrepository_0.0.20-5_all.deb"
+}

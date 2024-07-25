@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ncftp_2:3.2.5-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ncftp"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "ncftp_2:3.2.5-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ncftp/ncftp_3.2.5-2.1_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnomekiss_2.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnomekiss"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libcanberra0" {>= "0.2"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgtk-3-0" {>= "3.21.4"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "gnomekiss_2.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnomekiss/gnomekiss_2.0-6_amd64.deb"
+}

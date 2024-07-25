@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dh-systemd_12.1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dh-systemd"]
+]
+depends: [
+  "debhelper" {>= "9.20160709"}
+]
+extra-source "dh-systemd_12.1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debhelper/dh-systemd_12.1.1_all.deb"
+}

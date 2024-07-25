@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-ol-notmuch_2.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-ol-notmuch"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-compat" {>= "28.1.1.0"}
+  "elpa-notmuch" {>= "0.32"}
+  "elpa-org" {>= "9.4.5"}
+  "emacsen-common"
+]
+extra-source "elpa-ol-notmuch_2.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ol-notmuch/elpa-ol-notmuch_2.0.0-2_all.deb"
+}

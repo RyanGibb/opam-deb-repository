@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libecpg6_11.16-0+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libecpg6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpgtypes3"
+  "libpq5" {>= "9.0~"}
+]
+extra-source "libecpg6_11.16-0+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-11/libecpg6_11.16-0+deb10u1_amd64.deb"
+}

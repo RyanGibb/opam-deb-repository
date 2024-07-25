@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tlp-rdw_1.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tlp-rdw"]
+]
+depends: [
+  "network-manager"
+  "tlp" {= "1.1-2"}
+]
+extra-source "tlp-rdw_1.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tlp/tlp-rdw_1.1-2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-nom-4+regexp-macros-dev_4.2.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-nom-4+regexp-macros-dev"]
+]
+depends: [
+  "librust-lazy-static-1+default-dev"
+  "librust-nom-4+regex-dev"
+  "librust-nom-4-dev" {= "4.2.3-3"}
+]
+extra-source "librust-nom-4+regexp-macros-dev_4.2.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-nom-4/librust-nom-4+regexp-macros-dev_4.2.3-3_amd64.deb"
+}

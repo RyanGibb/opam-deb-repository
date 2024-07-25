@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzim6_6.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzim6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libicu67" {>= "67.1-1~"}
+  "liblzma5" {>= "5.1.1alpha+20120614"}
+  "libstdc++6" {>= "9"}
+  "libxapian30" {>= "1.4.14~"}
+  "libzstd1" {>= "1.3.2"}
+]
+conflicts: [
+  "libzim0"
+  "libzim0v5"
+  "libzim2"
+  "libzim4"
+  "libzim5"
+]
+extra-source "libzim6_6.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zimlib/libzim6_6.3.0-2_amd64.deb"
+}

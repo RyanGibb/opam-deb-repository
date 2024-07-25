@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tgt_1:1.0.85-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tgt"]
+]
+depends: [
+  "libaio1" {>= "0.3.93"}
+  "libc6" {>= "2.34"}
+  "libconfig-general-perl"
+  "libibverbs1" {>= "1.1.6"}
+  "librdmacm1" {>= "1.0.16"}
+  "libsystemd0"
+  "lsb-base"
+  "sg3-utils"
+]
+extra-source "tgt_1:1.0.85-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tgt/tgt_1.0.85-1_amd64.deb"
+}

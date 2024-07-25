@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i info_6.5.0.dfsg.1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r info"]
+]
+depends: [
+  "install-info"
+  "libc6" {>= "2.15"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "info_6.5.0.dfsg.1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/texinfo/info_6.5.0.dfsg.1-4+b1_amd64.deb"
+}

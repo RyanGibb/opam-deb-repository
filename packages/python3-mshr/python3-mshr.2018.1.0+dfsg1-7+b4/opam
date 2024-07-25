@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-mshr_2018.1.0+dfsg1-7+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-mshr"]
+]
+depends: [
+  "dolfin-bin" {>= "2018.1"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libmshr-dev" {= "2018.1.0+dfsg1-7+b4"}
+  "libmshr2018-1" {= "2018.1.0+dfsg1-7+b4"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any" {>= "3.5~"}
+  "python3-dolfin" {>= "2018.1"}
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  "python3-pybind11" {< "2.2.5"}
+  "python3-pybind11" {>= "2.2.4"}
+]
+extra-source "python3-mshr_2018.1.0+dfsg1-7+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mshr/python3-mshr_2018.1.0+dfsg1-7+b4_amd64.deb"
+}

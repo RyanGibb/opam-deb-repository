@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-basement-prof_0.0.11-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-basement-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-basement-dev" {= "0.0.11-1.1"}
+]
+extra-source "libghc-basement-prof_0.0.11-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-basement/libghc-basement-prof_0.0.11-1.1_amd64.deb"
+}

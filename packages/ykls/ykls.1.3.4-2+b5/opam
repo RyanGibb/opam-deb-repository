@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ykls_1.3.4-2+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ykls"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libykpiv2" {>= "2.1.1"}
+  "pcscd"
+]
+extra-source "ykls_1.3.4-2+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-pault-go-ykpiv/ykls_1.3.4-2+b5_amd64.deb"
+}

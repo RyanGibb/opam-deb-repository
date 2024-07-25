@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kamailio-extra-modules_5.4.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kamailio-extra-modules"]
+]
+depends: [
+  "kamailio" {= "5.4.4-1"}
+  "libc6" {>= "2.8"}
+  "libev4" {>= "1-4.04"}
+  "libevent-2-1-7" {>= "2.1.8-stable"}
+  "libjansson4" {>= "2.0.1"}
+  "libuuid1" {>= "2.20.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "kamailio-extra-modules_5.4.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kamailio/kamailio-extra-modules_5.4.4-1_amd64.deb"
+}

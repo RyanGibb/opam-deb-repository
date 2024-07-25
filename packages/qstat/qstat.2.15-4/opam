@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qstat_2.15-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qstat"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+]
+extra-source "qstat_2.15-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qstat/qstat_2.15-4_amd64.deb"
+}

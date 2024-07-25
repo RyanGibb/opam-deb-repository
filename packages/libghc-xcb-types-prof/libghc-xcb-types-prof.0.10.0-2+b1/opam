@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-xcb-types-prof_0.10.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-xcb-types-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-xcb-types-dev" {= "0.10.0-2+b1"}
+  "libghc-xml-prof"
+]
+extra-source "libghc-xcb-types-prof_0.10.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-xcb-types/libghc-xcb-types-prof_0.10.0-2+b1_amd64.deb"
+}

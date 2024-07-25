@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i exiv2_0.27.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r exiv2"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libexiv2-27" {= "0.27.6-1"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libstdc++6" {>= "12"}
+]
+extra-source "exiv2_0.27.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/exiv2/exiv2_0.27.6-1_amd64.deb"
+}

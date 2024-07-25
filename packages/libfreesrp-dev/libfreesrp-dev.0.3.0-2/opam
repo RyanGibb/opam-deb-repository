@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfreesrp-dev_0.3.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfreesrp-dev"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfreesrp0" {= "0.3.0-2"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "libusb-1-0-0" {>= "2-1.0.8"}
+]
+extra-source "libfreesrp-dev_0.3.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfreesrp/libfreesrp-dev_0.3.0-2_amd64.deb"
+}

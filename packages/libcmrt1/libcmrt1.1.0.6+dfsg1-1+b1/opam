@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcmrt1_1.0.6+dfsg1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcmrt1"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libdrm-intel1" {>= "2.4.57"}
+  "libdrm2" {>= "2.4.3"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+  "libva2" {>= "1.0.3"}
+]
+extra-source "libcmrt1_1.0.6+dfsg1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcmrt/libcmrt1_1.0.6+dfsg1-1+b1_amd64.deb"
+}

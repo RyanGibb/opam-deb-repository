@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i easyssh_1.7.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r easyssh"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgee-0-8-2" {>= "0.8.3"}
+  "libglib2-0-0" {>= "2.45.7"}
+  "libgranite5" {>= "5.2.5"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libvte-2-91-0"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+conflicts: [
+  "com.github.muriloventuroso.easyssh"
+]
+extra-source "easyssh_1.7.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/easyssh/easyssh_1.7.6-1_amd64.deb"
+}

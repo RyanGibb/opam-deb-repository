@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-libart_10.0.0+r36-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-libart"]
+]
+depends: [
+  "android-libbacktrace" {>= "1-10.0.0+r36"}
+  "android-libbase" {>= "1-10.0.0+r36"}
+  "android-libnativebridge" {>= "1-10.0.0+r36"}
+  "android-libnativeloader" {>= "1-10.0.0+r36"}
+  "android-libziparchive" {>= "1-10.0.0+r36"}
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "liblz4-1" {>= "0.0~r113"}
+  "libstdc++6" {>= "9"}
+  "zlib1g" {>= "1-1.2.2"}
+]
+extra-source "android-libart_10.0.0+r36-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-art/android-libart_10.0.0+r36-3_amd64.deb"
+}

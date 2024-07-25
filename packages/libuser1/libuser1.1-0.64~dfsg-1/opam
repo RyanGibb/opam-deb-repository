@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libuser1_1:0.64~dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libuser1"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libglib2-0-0" {>= "2.16.0"}
+  "libselinux1" {>= "3.1~"}
+]
+extra-source "libuser1_1:0.64~dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libuser/libuser1_0.64~dfsg-1_amd64.deb"
+}

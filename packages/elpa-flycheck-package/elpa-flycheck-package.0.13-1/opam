@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-flycheck-package_0.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-flycheck-package"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-flycheck" {>= "0.22"}
+  "elpa-package-lint" {>= "0.2"}
+  "emacsen-common"
+]
+extra-source "elpa-flycheck-package_0.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flycheck-package/elpa-flycheck-package_0.13-1_all.deb"
+}

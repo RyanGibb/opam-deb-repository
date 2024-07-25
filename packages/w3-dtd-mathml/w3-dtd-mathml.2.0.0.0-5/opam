@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i w3-dtd-mathml_2.0.0.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r w3-dtd-mathml"]
+]
+depends: [
+  "sgml-base" {>= "1.26+nmu2"}
+  "xml-core" {>= "0.12"}
+]
+extra-source "w3-dtd-mathml_2.0.0.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/w3-dtd-mathml/w3-dtd-mathml_2.0.0.0-5_all.deb"
+}

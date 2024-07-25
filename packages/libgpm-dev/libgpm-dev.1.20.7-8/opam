@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgpm-dev_1.20.7-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgpm-dev"]
+]
+depends: [
+  "libgpm2" {= "1.20.7-8"}
+  ("libc6-dev" | "libc-dev")
+]
+conflicts: [
+  "libgpmg1-dev"
+]
+extra-source "libgpm-dev_1.20.7-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gpm/libgpm-dev_1.20.7-8_amd64.deb"
+}

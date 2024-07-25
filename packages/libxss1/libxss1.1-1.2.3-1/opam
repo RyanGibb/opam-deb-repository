@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxss1_1:1.2.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxss1"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libx11-6" {>= "2-1.4.99.1"}
+  "libxext6"
+  "x11-common"
+]
+extra-source "libxss1_1:1.2.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxss/libxss1_1.2.3-1_amd64.deb"
+}

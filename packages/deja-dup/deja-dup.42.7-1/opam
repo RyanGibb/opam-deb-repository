@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i deja-dup_42.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r deja-dup"]
+]
+depends: [
+  "duplicity" {>= "0.7.14"}
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.64"}
+  "libgpg-error0" {>= "1.14"}
+  "libgtk-3-0" {>= "3.22"}
+  "libhandy-1-0" {>= "0.82.0"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libpackagekit-glib2-18" {>= "1.1.0"}
+  "libsecret-1-0" {>= "0.18.6"}
+  "libsoup2-4-1" {>= "2.48"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "deja-dup_42.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/deja-dup/deja-dup_42.7-1_amd64.deb"
+}

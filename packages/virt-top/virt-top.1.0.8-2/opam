@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i virt-top_1.0.8-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r virt-top"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libncurses6" {>= "6"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  "libvirt0" {>= "0.9.10~rc1"}
+]
+extra-source "virt-top_1.0.8-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/virt-top/virt-top_1.0.8-2_amd64.deb"
+}

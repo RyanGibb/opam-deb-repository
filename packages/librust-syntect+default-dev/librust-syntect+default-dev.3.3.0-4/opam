@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-syntect+default-dev_3.3.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-syntect+default-dev"]
+]
+depends: [
+  "librust-syntect+dump-create-dev"
+  "librust-syntect+dump-create-dev" {= "3.3.0-4"}
+  "librust-syntect+html-dev" {= "3.3.0-4"}
+  "librust-syntect+parsing-dev" {= "3.3.0-4"}
+  "librust-syntect+yaml-load-dev" {= "3.3.0-4"}
+  "librust-syntect-dev"
+  "librust-syntect-dev" {= "3.3.0-4"}
+]
+extra-source "librust-syntect+default-dev_3.3.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-syntect/librust-syntect+default-dev_3.3.0-4_amd64.deb"
+}

@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyside2.qt3dextras_5.15.8-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyside2.qt3dextras"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpyside2-py3-5-15" {>= "5.15.8"}
+  "libqt53dcore5" {>= "5.15"}
+  "libqt53dextras5" {>= "5.15.1"}
+  "libqt53drender5" {>= "5.15"}
+  "libqt5core5a" {>= "5.15"}
+  "libshiboken2-py3-5-15" {>= "5.15.8"}
+  "libstdc++6" {>= "4.1.1"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-pyside2-qt3drender"
+  "python3-pyside2-qtcore"
+  "python3-pyside2-qtgui"
+  "python3-pyside2-qtnetwork"
+  ("libqt5gui5" {>= "5.15"} | "libqt5gui5-gles" {>= "5.15"})
+]
+extra-source "python3-pyside2.qt3dextras_5.15.8-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyside2/python3-pyside2.qt3dextras_5.15.8-2+b1_amd64.deb"
+}

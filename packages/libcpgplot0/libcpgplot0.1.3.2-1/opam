@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcpgplot0_1.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcpgplot0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgiza0" {>= "1.3.2"}
+]
+extra-source "libcpgplot0_1.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/giza/libcpgplot0_1.3.2-1_amd64.deb"
+}

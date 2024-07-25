@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblapack3_3.9.0-3+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblapack3"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgfortran5" {>= "8"}
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "liblapack3_3.9.0-3+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lapack/liblapack3_3.9.0-3+deb11u1_amd64.deb"
+}

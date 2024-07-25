@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i printer-driver-c2esp_27-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r printer-driver-c2esp"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcups2" {>= "1.4.0"}
+  "libcupsfilters1" {>= "1.0~b1"}
+  "libcupsimage2" {>= "1.4.0"}
+  "libjbig0" {>= "2.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "printer-driver-c2esp_27-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/c2esp/printer-driver-c2esp_27-4_amd64.deb"
+}

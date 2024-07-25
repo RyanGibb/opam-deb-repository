@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i looking-glass-client_0+a12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r looking-glass-client"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libconfig9"
+  "libegl1"
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgl1"
+  "libgmp10"
+  "libhogweed4"
+  "libnettle6"
+  "libsdl2-2-0-0" {>= "2.0.9"}
+  "libsdl2-ttf-2-0-0" {>= "2.0.14"}
+  "libx11-6"
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "looking-glass-client_0+a12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/looking-glass/looking-glass-client_0+a12-2_amd64.deb"
+}

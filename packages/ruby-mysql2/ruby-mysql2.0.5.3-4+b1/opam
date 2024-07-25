@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-mysql2_0.5.3-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-mysql2"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libmariadb3" {>= "3.0.0"}
+  "libruby" {< "1-3.2~"}
+  "libruby" {>= "1-3.1~0"}
+  "libruby3-1" {>= "3.1.2"}
+  "ruby-eventmachine"
+]
+extra-source "ruby-mysql2_0.5.3-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-mysql2/ruby-mysql2_0.5.3-4+b1_amd64.deb"
+}

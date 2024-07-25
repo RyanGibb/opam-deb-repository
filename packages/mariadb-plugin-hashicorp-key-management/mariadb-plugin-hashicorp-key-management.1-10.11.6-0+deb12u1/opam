@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mariadb-plugin-hashicorp-key-management_1:10.11.6-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mariadb-plugin-hashicorp-key-management"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libcurl4" {>= "7.16.2"}
+  "libstdc++6" {>= "11"}
+  "mariadb-server"
+]
+extra-source "mariadb-plugin-hashicorp-key-management_1:10.11.6-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mariadb/mariadb-plugin-hashicorp-key-management_10.11.6-0+deb12u1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfsapfs1_20190210-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfsapfs1"]
+]
+depends: [
+  "libbfio1" {>= "20120425"}
+  "libc6" {>= "2.17"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "libfsapfs1_20190210-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfsapfs/libfsapfs1_20190210-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-zope.exceptions_4.0.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-zope.exceptions"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-pkg-resources"
+  "python-zope-interface"
+]
+extra-source "python-zope.exceptions_4.0.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zope.exceptions/python-zope.exceptions_4.0.8-1_all.deb"
+}

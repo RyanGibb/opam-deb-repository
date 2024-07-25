@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i droidlysis_3.4.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r droidlysis"]
+]
+depends: [
+  "androguard"
+  "apktool"
+  "default-jre-headless"
+  "libsmali-java"
+  "procyon-decompiler"
+  "python3-any"
+  "python3-magic"
+  "python3-rarfile"
+  "python3-sqlalchemy"
+]
+extra-source "droidlysis_3.4.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/droidlysis/droidlysis_3.4.1-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libosmo-sigtran-dev_1.3.0+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libosmo-sigtran-dev"]
+]
+depends: [
+  "libosmo-netif-dev"
+  "libosmo-sigtran5" {= "1.3.0+dfsg1-3"}
+  "libosmocore-dev"
+]
+extra-source "libosmo-sigtran-dev_1.3.0+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libosmo-sccp/libosmo-sigtran-dev_1.3.0+dfsg1-3_amd64.deb"
+}

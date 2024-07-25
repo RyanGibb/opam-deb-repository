@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nagios4-core_4.3.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nagios4-core"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libltdl7" {>= "2.4.6"}
+  "nagios4-common" {= "4.3.4-3"}
+]
+extra-source "nagios4-core_4.3.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nagios4/nagios4-core_4.3.4-3_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglewmx-dev_1.13.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglewmx-dev"]
+]
+depends: [
+  "libglewmx1-13" {= "1.13.0-5"}
+]
+conflicts: [
+  "libglew-dev"
+  "libglewmx1.6-dev"
+]
+extra-source "libglewmx-dev_1.13.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glewmx/libglewmx-dev_1.13.0-5_amd64.deb"
+}

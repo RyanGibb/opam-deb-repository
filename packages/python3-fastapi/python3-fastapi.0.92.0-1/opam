@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-fastapi_0.92.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-fastapi"]
+]
+depends: [
+  "python3-any"
+  "python3-pydantic" {>= "1.8.2"}
+  "python3-starlette" {>= "0.25.0"}
+  "python3-uvicorn"
+]
+extra-source "python3-fastapi_0.92.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fastapi/python3-fastapi_0.92.0-1_all.deb"
+}

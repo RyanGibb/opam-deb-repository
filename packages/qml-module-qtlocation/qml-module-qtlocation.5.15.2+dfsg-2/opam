@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-qtlocation_5.15.2+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-qtlocation"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5location5" {>= "5.15.1"}
+  "libqt5location5-plugins" {= "5.15.2+dfsg-2"}
+  "libqt5positioningquick5" {= "5.15.2+dfsg-2"}
+  "libqt5qml5" {>= "5.15.2+dfsg~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5quick5" {>= "5.15.2+dfsg~"} | "libqt5quick5-gles" {>= "5.15.2+dfsg~"})
+]
+extra-source "qml-module-qtlocation_5.15.2+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtlocation-opensource-src/qml-module-qtlocation_5.15.2+dfsg-2_amd64.deb"
+}

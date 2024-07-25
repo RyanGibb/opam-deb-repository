@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzlui-qt4_0.12.10dfsg2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzlui-qt4"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libqtgui4" {>= "4-4.5.3"}
+  "libstdc++6" {>= "5.2"}
+  "libzlcore0-13" {= "0.12.10dfsg2-3"}
+]
+extra-source "libzlui-qt4_0.12.10dfsg2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fbreader/libzlui-qt4_0.12.10dfsg2-3_amd64.deb"
+}

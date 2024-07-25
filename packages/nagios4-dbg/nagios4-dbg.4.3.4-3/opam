@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nagios4-dbg_4.3.4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nagios4-dbg"]
+]
+depends: [
+  "nagios4-core" {= "4.3.4-3"}
+]
+extra-source "nagios4-dbg_4.3.4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nagios4/nagios4-dbg_4.3.4-3_amd64.deb"
+}

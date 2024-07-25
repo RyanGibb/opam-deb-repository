@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aravis-tools_0.8.26-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aravis-tools"]
+]
+depends: [
+  "libaravis-0-8-0" {= "0.8.26-1"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.51.5"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.0.0"}
+  "libgstreamer1-0-0" {>= "1.4.0"}
+  "libgtk-3-0" {>= "3.13.7"}
+]
+extra-source "aravis-tools_0.8.26-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aravis/aravis-tools_0.8.26-1_amd64.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i octave-biosig_1.9.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r octave-biosig"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcholmod3" {>= "1-4.5.2"}
+  "libdcmtk14"
+  "libgcc1" {>= "1-3.0"}
+  "libgomp1" {>= "4.2.1"}
+  "liboctave6"
+  "libstdc++6" {>= "5.2"}
+  "octave" {>= "4.4.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "octave-biosig_1.9.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/biosig4c++/octave-biosig_1.9.3-2_amd64.deb"
+}

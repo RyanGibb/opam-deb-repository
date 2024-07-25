@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfreetype6-dev_2.9.1-3+deb10u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfreetype6-dev"]
+]
+depends: [
+  "libfreetype6" {= "2.9.1-3+deb10u3"}
+  "libpng-dev"
+  ("libc6-dev" | "libc-dev")
+  ("zlib1g-dev" | "libz-dev")
+]
+extra-source "libfreetype6-dev_2.9.1-3+deb10u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freetype/libfreetype6-dev_2.9.1-3+deb10u3_amd64.deb"
+}

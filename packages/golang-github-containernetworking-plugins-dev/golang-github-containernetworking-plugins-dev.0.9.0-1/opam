@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-containernetworking-plugins-dev_0.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-containernetworking-plugins-dev"]
+]
+depends: [
+  "golang-github-alexflint-go-filemutex-dev"
+  "golang-github-appc-cni-dev" {>= "0.7.1~"}
+  "golang-github-coreos-go-iptables-dev" {>= "0.4.5~"}
+  "golang-github-safchain-ethtool-dev"
+  "golang-github-vishvananda-netlink-dev" {>= "1.1.0-2~"}
+  "golang-golang-x-sys-dev"
+]
+extra-source "golang-github-containernetworking-plugins-dev_0.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-containernetworking-plugins/golang-github-containernetworking-plugins-dev_0.9.0-1_all.deb"
+}

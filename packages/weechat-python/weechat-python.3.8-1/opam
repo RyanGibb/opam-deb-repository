@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i weechat-python_3.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r weechat-python"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libpython3-11" {>= "3.11.0"}
+  ("weechat-curses" {= "3.8-1"} | "weechat-headless" {= "3.8-1"})
+]
+extra-source "weechat-python_3.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/weechat/weechat-python_3.8-1_amd64.deb"
+}

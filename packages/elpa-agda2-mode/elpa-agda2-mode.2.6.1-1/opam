@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-agda2-mode_2.6.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-agda2-mode"]
+]
+depends: [
+  "agda-bin" {< "2.6.1-1.1~"}
+  "agda-bin" {>= "2.6.1-1"}
+  "dh-elpa-helper"
+  "emacsen-common"
+  "libghc-agda-dev" {< "2.6.1-1.1~"}
+  "libghc-agda-dev" {>= "2.6.1-1"}
+]
+extra-source "elpa-agda2-mode_2.6.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/agda/elpa-agda2-mode_2.6.1-1_all.deb"
+}

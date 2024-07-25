@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liblua5.1-luacsnd_1:6.12.2~dfsg-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liblua5.1-luacsnd"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcsnd6-6-0v5"
+  "libcsound64-6-0" {>= "1-6.11.0~dfsg"}
+  "libgcc1" {>= "1-3.0"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "liblua5.1-luacsnd_1:6.12.2~dfsg-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/csound/liblua5.1-luacsnd_6.12.2~dfsg-3.1_amd64.deb"
+}

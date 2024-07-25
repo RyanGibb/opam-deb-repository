@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fetch-crl_3.0.19-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fetch-crl"]
+]
+depends: [
+  "init-system-helpers" {>= "1.51"}
+  "libwww-perl"
+  "lsb-base" {>= "3.0-6"}
+  "openssl"
+  "perl-any"
+]
+extra-source "fetch-crl_3.0.19-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fetch-crl/fetch-crl_3.0.19-2_all.deb"
+}

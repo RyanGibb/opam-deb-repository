@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sndio-tools_1.9.0-0.3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sndio-tools"]
+]
+depends: [
+  "libbsd0" {>= "0.2.0"}
+  "libc6" {>= "2.34"}
+  "libsndio7-0" {>= "1.8.1"}
+]
+extra-source "sndio-tools_1.9.0-0.3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sndio/sndio-tools_1.9.0-0.3+b2_amd64.deb"
+}

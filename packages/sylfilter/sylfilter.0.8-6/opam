@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sylfilter_0.8-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sylfilter"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libqdbm14" {>= "1.8.74"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libsylfilter0"
+]
+extra-source "sylfilter_0.8-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sylfilter/sylfilter_0.8-6_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-th-orphans-dev_0.13.10-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-th-orphans-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-th-lift-dev"
+  "libghc-th-lift-instances-dev"
+  "libghc-th-reify-many-dev"
+  "libgmp10"
+]
+extra-source "libghc-th-orphans-dev_0.13.10-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-th-orphans/libghc-th-orphans-dev_0.13.10-1+b2_amd64.deb"
+}

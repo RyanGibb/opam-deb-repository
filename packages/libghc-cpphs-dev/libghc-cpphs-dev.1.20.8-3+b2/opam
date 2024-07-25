@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cpphs-dev_1.20.8-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cpphs-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-old-locale-dev"
+  "libghc-old-time-dev"
+  "libghc-polyparse-dev"
+  "libgmp10"
+]
+extra-source "libghc-cpphs-dev_1.20.8-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cpphs/libghc-cpphs-dev_1.20.8-3+b2_amd64.deb"
+}

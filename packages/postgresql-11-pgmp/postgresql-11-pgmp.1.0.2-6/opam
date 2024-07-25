@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-11-pgmp_1.0.2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-11-pgmp"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgmp10"
+  "postgresql-11"
+]
+extra-source "postgresql-11-pgmp_1.0.2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgresql-pgmp/postgresql-11-pgmp_1.0.2-6_amd64.deb"
+}

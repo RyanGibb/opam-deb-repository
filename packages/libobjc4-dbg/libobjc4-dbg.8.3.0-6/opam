@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libobjc4-dbg_8.3.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libobjc4-dbg"]
+]
+depends: [
+  "gcc-8-base" {= "8.3.0-6"}
+  "libgcc1-dbg" {>= "1-8.3.0-6"}
+  "libobjc4" {= "8.3.0-6"}
+]
+extra-source "libobjc4-dbg_8.3.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8/libobjc4-dbg_8.3.0-6_amd64.deb"
+}

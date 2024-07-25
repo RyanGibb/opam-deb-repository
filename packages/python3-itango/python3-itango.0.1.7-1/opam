@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-itango_0.1.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-itango"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-ipython"
+  "python3-tango" {>= "9.2.0"}
+]
+extra-source "python3-itango_0.1.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/itango/python3-itango_0.1.7-1_all.deb"
+}

@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i 389-ds-base-libs_2.3.1+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r 389-ds-base-libs"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcom-err2" {>= "1.43.9"}
+  "libcrack2" {>= "2.8.12"}
+  "libgcc-s1" {>= "3.3"}
+  "libjemalloc2"
+  "libjson-c5" {>= "0.15"}
+  "libkrb5-3" {>= "1.6.dfsg.2"}
+  "libldap-2-5-0" {>= "2.5.4"}
+  "libnspr4" {>= "2-4.10.9"}
+  "libnss3" {>= "2-3.66"}
+  "libpcre2-8-0" {>= "10.22"}
+  "libssl3" {>= "3.0.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "389-ds-base-libs_2.3.1+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/3/389-ds-base/389-ds-base-libs_2.3.1+dfsg1-1_amd64.deb"
+}

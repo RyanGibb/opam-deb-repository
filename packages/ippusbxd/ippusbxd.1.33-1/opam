@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ippusbxd_1.33-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ippusbxd"]
+]
+depends: [
+  "libavahi-client3" {>= "0.6.16"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libc6" {>= "2.15"}
+  "libusb-1-0-0" {>= "2-1.0.16"}
+]
+conflicts: [
+  "cups-filters-ippusbxd"
+]
+extra-source "ippusbxd_1.33-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ippusbxd/ippusbxd_1.33-1_amd64.deb"
+}

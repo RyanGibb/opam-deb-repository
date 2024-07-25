@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i userv-git-daemon_0.6.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r userv-git-daemon"]
+]
+depends: [
+  "adduser"
+  "git"
+  "perl-any"
+  "userv"
+]
+extra-source "userv-git-daemon_0.6.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/userv-utils/userv-git-daemon_0.6.1-2_all.deb"
+}

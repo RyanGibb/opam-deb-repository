@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i crossbuild-essential-mips64_12.9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r crossbuild-essential-mips64"]
+]
+depends: [
+  "dpkg-cross"
+  ("g++-mips64-linux-gnuabi64" {>= "4-10.2"} | "g++-mips64")
+  ("gcc-mips64-linux-gnuabi64" {>= "4-10.2"} | "gcc-mips64")
+]
+extra-source "crossbuild-essential-mips64_12.9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/build-essential-mipsen/crossbuild-essential-mips64_12.9_all.deb"
+}

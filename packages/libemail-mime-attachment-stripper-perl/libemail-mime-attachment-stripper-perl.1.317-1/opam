@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libemail-mime-attachment-stripper-perl_1.317-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libemail-mime-attachment-stripper-perl"]
+]
+depends: [
+  "libemail-abstract-perl"
+  "libemail-mime-contenttype-perl" {>= "1.016"}
+  "libemail-mime-perl"
+  "perl"
+]
+extra-source "libemail-mime-attachment-stripper-perl_1.317-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libemail-mime-attachment-stripper-perl/libemail-mime-attachment-stripper-perl_1.317-1_all.deb"
+}

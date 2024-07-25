@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i daemontools-run_1:0.76-8.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r daemontools-run"]
+]
+depends: [
+  "daemontools" {> "1-0.76"}
+]
+conflicts: [
+  "runit"
+]
+extra-source "daemontools-run_1:0.76-8.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/daemontools/daemontools-run_0.76-8.1_all.deb"
+}

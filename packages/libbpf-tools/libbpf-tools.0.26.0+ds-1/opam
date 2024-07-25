@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbpf-tools_0.26.0+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbpf-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libelf1" {>= "0.144"}
+  "zlib1g" {>= "1-1.2.3.3"}
+]
+extra-source "libbpf-tools_0.26.0+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bpfcc/libbpf-tools_0.26.0+ds-1_amd64.deb"
+}

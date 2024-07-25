@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ivtools-bin_2.0.11d.a1-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ivtools-bin"]
+]
+depends: [
+  "libace-7-0-8" {>= "7.0.8+dfsg"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libiv-unidraw2" {>= "2.0.11d.a1"}
+  "libiv2" {>= "2.0.11d.a1"}
+  "libstdc++6" {>= "5"}
+  ("xterm" | "x-terminal-emulator")
+]
+extra-source "ivtools-bin_2.0.11d.a1-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ivtools/ivtools-bin_2.0.11d.a1-1+b4_amd64.deb"
+}

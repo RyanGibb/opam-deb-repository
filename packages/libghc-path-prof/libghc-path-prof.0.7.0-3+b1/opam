@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-path-prof_0.7.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-path-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-exceptions-prof"
+  "libghc-hashable-prof"
+  "libghc-path-dev" {= "0.7.0-3+b1"}
+]
+extra-source "libghc-path-prof_0.7.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-path/libghc-path-prof_0.7.0-3+b1_amd64.deb"
+}

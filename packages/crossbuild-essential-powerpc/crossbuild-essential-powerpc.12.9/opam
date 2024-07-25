@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i crossbuild-essential-powerpc_12.9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r crossbuild-essential-powerpc"]
+]
+depends: [
+  "dpkg-cross"
+  ("g++-powerpc-linux-gnu" {>= "4-10.2"} | "g++-powerpc")
+  ("gcc-powerpc-linux-gnu" {>= "4-10.2"} | "gcc-powerpc")
+]
+extra-source "crossbuild-essential-powerpc_12.9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/build-essential/crossbuild-essential-powerpc_12.9_all.deb"
+}

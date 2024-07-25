@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vflib3_3.7.2+dfsg-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vflib3"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libfreetype6" {>= "2.2.1"}
+  "libkpathsea6" {>= "2022.20220321.62855"}
+]
+conflicts: [
+  "asiya24-vfont (<< 1-6.6)"
+  "watanabe-vfont (<< 1-6.6)"
+]
+extra-source "vflib3_3.7.2+dfsg-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vflib3/vflib3_3.7.2+dfsg-0.1_amd64.deb"
+}

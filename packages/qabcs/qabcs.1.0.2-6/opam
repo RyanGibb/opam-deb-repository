@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qabcs_1.0.2-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qabcs"]
+]
+depends: [
+  "espeak"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5multimedia5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.2.0~alpha1"}
+  "libstdc++6" {>= "5.2"}
+  "qabcs-data"
+  "sox"
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "qabcs_1.0.2-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qabcs/qabcs_1.0.2-6_amd64.deb"
+}

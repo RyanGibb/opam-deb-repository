@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i syncthingtray-kde-plasma_1.3.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r syncthingtray-kde-plasma"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libkf5configcore5" {>= "4.97.0"}
+  "libkf5coreaddons5" {>= "4.99.0"}
+  "libkf5kiocore5" {>= "5.69.0"}
+  "libkf5kiowidgets5" {>= "5.69.0"}
+  "libkf5plasma5" {>= "5.69.0"}
+  "libmartchus-c++utilities5" {>= "5.20.0"}
+  "libmartchus-qtforkawesome1" {>= "0.1.0"}
+  "libmartchus-qtutilities6" {>= "6.10.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.14.1"}
+  "libqt5qml5" {>= "5.9.0~beta"}
+  "libqt5widgets5" {>= "5.2.0~alpha1"}
+  "libstdc++6" {>= "11"}
+  "syncthingtray" {= "1.3.2-2"}
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+]
+extra-source "syncthingtray-kde-plasma_1.3.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/syncthingtray/syncthingtray-kde-plasma_1.3.2-2_amd64.deb"
+}

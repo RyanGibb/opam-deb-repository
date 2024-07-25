@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmirplatform24_2.12.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmirplatform24"]
+]
+depends: [
+  "libboost-program-options1-74-0" {>= "1.74.0+ds1"}
+  "libc6" {>= "2.32"}
+  "libdrm2" {>= "2.4.107"}
+  "libegl1"
+  "libgcc-s1" {>= "3.3.1"}
+  "libgles2"
+  "libmircommon9" {>= "2.12.1"}
+  "libmircore2" {>= "2.8.0"}
+  "libmirwayland4" {>= "2.12.1"}
+  "libstdc++6" {>= "12"}
+  "libudev1" {>= "183"}
+  "libwayland-server0" {>= "1.2.0"}
+]
+extra-source "libmirplatform24_2.12.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mir/libmirplatform24_2.12.1-1_amd64.deb"
+}

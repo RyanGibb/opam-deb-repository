@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-backup2swift_0.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-backup2swift"]
+]
+depends: [
+  "libpython2-7-stdlib"
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-pkg-resources"
+  "python-swiftsc" {>= "0.5"}
+]
+extra-source "python-backup2swift_0.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/backup2swift/python-backup2swift_0.8-1_all.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i obs-plugins_29.0.2+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r obs-plugins"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.30.0"}
+  "libobs0" {= "29.0.2+dfsg-1+b1"}
+  "libpipewire-0-3-0" {>= "0.3.6"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.14.1"}
+  "libstdc++6" {>= "5.2"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+  ("libqt5gui5" {>= "5.2.0~alpha1"} | "libqt5gui5-gles" {>= "5.2.0~alpha1"})
+]
+extra-source "obs-plugins_29.0.2+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/obs-studio/obs-plugins_29.0.2+dfsg-1+b1_amd64.deb"
+}

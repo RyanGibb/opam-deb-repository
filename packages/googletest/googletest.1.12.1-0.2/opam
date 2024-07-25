@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i googletest_1.12.1-0.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r googletest"]
+]
+conflicts: [
+  "google-mock (<< 1.8.0)"
+  "libgtest-dev (<< 1.8.0)"
+]
+extra-source "googletest_1.12.1-0.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/googletest/googletest_1.12.1-0.2_all.deb"
+}

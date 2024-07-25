@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglc0_0.7.2-7+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglc0"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libfribidi0" {>= "0.19.2"}
+  "libgl1"
+  "libglewmx1-13" {>= "1.12.0"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "libglc0_0.7.2-7+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/quesoglc/libglc0_0.7.2-7+b2_amd64.deb"
+}

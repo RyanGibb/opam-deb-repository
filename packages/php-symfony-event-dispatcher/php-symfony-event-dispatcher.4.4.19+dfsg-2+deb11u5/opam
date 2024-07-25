@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-event-dispatcher_4.4.19+dfsg-2+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-event-dispatcher"]
+]
+depends: [
+  "php-common"
+  "php-symfony-event-dispatcher-contracts" {< "2~~"}
+  "php-symfony-event-dispatcher-contracts" {>= "1.1"}
+]
+extra-source "php-symfony-event-dispatcher_4.4.19+dfsg-2+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/symfony/php-symfony-event-dispatcher_4.4.19+dfsg-2+deb11u5_all.deb"
+}

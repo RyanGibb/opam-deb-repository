@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libusb-ocaml_1.3.0-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libusb-ocaml"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "liblwt-ocaml"
+  "libresult-ocaml"
+  "libusb-1-0-0" {>= "2-1.0.8"}
+  "ocaml-base-nox"
+]
+extra-source "libusb-ocaml_1.3.0-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-usb/libusb-ocaml_1.3.0-4+b1_amd64.deb"
+}

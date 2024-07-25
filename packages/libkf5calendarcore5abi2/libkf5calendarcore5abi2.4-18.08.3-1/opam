@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5calendarcore5abi2_4:18.08.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5calendarcore5abi2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libical3" {>= "3.0.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.9.0~"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libkf5calendarcore5abi2_4:18.08.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kcalcore/libkf5calendarcore5abi2_18.08.3-1_amd64.deb"
+}

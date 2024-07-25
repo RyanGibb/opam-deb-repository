@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbd-mysql-perl_4.050-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbd-mysql-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdbi-perl"
+  "libgnutls30" {>= "3.6.5"}
+  "libmariadb3" {>= "3.0.0"}
+  "perl" {>= "5.28.1-4"}
+  "perl-base"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libdbd-mysql-perl_4.050-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdbd-mysql-perl/libdbd-mysql-perl_4.050-2_amd64.deb"
+}

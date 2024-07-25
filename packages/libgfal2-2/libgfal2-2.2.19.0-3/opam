@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgfal2-2_2.19.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgfal2-2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libjson-c5" {>= "0.15"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libpugixml1v5" {>= "1.4"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libgfal2-2_2.19.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gfal2/libgfal2-2_2.19.0-3_amd64.deb"
+}

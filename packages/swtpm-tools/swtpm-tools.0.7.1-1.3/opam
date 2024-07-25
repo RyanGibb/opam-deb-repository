@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i swtpm-tools_0.7.1-1.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r swtpm-tools"]
+]
+depends: [
+  "adduser"
+  "gnutls-bin"
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.43.2"}
+  "libgnutls30" {>= "3.7.3"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "libssl3" {>= "3.0.0"}
+  "libtasn1-6" {>= "4.14"}
+  "swtpm" {= "0.7.1-1.3"}
+]
+extra-source "swtpm-tools_0.7.1-1.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/swtpm/swtpm-tools_0.7.1-1.3_amd64.deb"
+}

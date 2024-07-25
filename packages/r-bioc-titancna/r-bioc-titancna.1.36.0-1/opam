@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-titancna_1.36.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-titancna"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.31.6"}
+  "r-bioc-genomeinfodb" {>= "1.8.7"}
+  "r-bioc-genomicranges" {>= "1.24.3"}
+  "r-bioc-iranges" {>= "2.6.1"}
+  "r-bioc-variantannotation" {>= "1.18.7"}
+  "r-cran-data-table" {>= "1.10.4"}
+  "r-cran-dplyr" {>= "0.5.0"}
+  "r-cran-foreach" {>= "1.4.3"}
+]
+extra-source "r-bioc-titancna_1.36.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-titancna/r-bioc-titancna_1.36.0-1_amd64.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i okular-backend-odt_1:3.1.0+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r okular-backend-odt"]
+]
+depends: [
+  "calligra-libs" {= "1-3.1.0+dfsg-5"}
+  "calligrawords"
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libkf5coreaddons5" {>= "4.99.0"}
+  "libkf5i18n5" {>= "4.97.0"}
+  "libokular5core8"
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5gui5" {>= "5.3.0"}
+  "libqt5xml5" {>= "5.3.0"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "okular-backend-odt_1:3.1.0+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/calligra/okular-backend-odt_3.1.0+dfsg-5_amd64.deb"
+}

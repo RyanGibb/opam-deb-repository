@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i isatapd_0.9.7-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r isatapd"]
+]
+depends: [
+  "init-system-helpers" {>= "1.18~"}
+  "libc6" {>= "2.15"}
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "isatapd_0.9.7-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/isatapd/isatapd_0.9.7-4_amd64.deb"
+}

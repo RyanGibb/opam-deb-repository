@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aspell-hsb_0.02.0-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aspell-hsb"]
+]
+depends: [
+  "aspell"
+  "dictionaries-common" {>= "1.23~"}
+]
+extra-source "aspell-hsb_0.02.0-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aspell-hsb/aspell-hsb_0.02.0-1.2_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwim15_1.13.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwim15"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libfuse2" {>= "2.8"}
+  "libntfs-3g883"
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libwim15_1.13.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wimlib/libwim15_1.13.0-1+b1_amd64.deb"
+}

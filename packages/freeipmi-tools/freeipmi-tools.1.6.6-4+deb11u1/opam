@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freeipmi-tools_1.6.6-4+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freeipmi-tools"]
+]
+depends: [
+  "freeipmi-common" {= "1.6.6-4+deb11u1"}
+  "libc6" {>= "2.15"}
+  "libfreeipmi17" {>= "1.6.2"}
+  "libipmiconsole2" {>= "1.4.4"}
+  "libipmidetect0" {>= "1.1.5"}
+]
+extra-source "freeipmi-tools_1.6.6-4+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeipmi/freeipmi-tools_1.6.6-4+deb11u1_amd64.deb"
+}

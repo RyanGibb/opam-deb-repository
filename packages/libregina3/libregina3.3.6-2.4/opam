@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libregina3_3.6-2.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libregina3"]
+]
+depends: [
+  "libc6" {>= "2.16"}
+  "libtinfo6" {>= "6"}
+]
+conflicts: [
+  "regina3"
+]
+extra-source "libregina3_3.6-2.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/regina-rexx/libregina3_3.6-2.4_amd64.deb"
+}

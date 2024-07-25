@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ifp-line-libifp_1.0.0.2-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ifp-line-libifp"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "libifp4"
+  "libusb-0-1-4" {>= "2-0.1.12"}
+]
+conflicts: [
+  "ifp-line"
+]
+extra-source "ifp-line-libifp_1.0.0.2-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libifp/ifp-line-libifp_1.0.0.2-5+b2_amd64.deb"
+}

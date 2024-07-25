@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-petsc4py-doc_3.18.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-petsc4py-doc"]
+]
+depends: [
+  "libjs-sphinxdoc"
+  "sphinx-common"
+]
+conflicts: [
+  "python-petsc"
+]
+extra-source "python-petsc4py-doc_3.18.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/petsc4py/python-petsc4py-doc_3.18.5-1_all.deb"
+}

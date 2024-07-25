@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmediastreamer-base10_1:2.16.1-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmediastreamer-base10"]
+]
+depends: [
+  "libbctoolbox1" {< "0.7.0"}
+  "libbctoolbox1" {>= "0.6.0"}
+  "libc6" {>= "2.14"}
+  "libortp13" {>= "1-1.0.1"}
+]
+extra-source "libmediastreamer-base10_1:2.16.1-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mediastreamer2/libmediastreamer-base10_2.16.1-4+b1_amd64.deb"
+}

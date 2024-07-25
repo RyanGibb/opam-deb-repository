@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-hdf5array_1.18.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-hdf5array"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libhdf5-103-1"
+  "libhdf5-hl-100"
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.31.5"}
+  "r-bioc-delayedarray" {>= "0.15.16"}
+  "r-bioc-iranges"
+  "r-bioc-rhdf5" {>= "2.31.6"}
+  "r-bioc-rhdf5lib"
+  "r-bioc-s4vectors" {>= "0.27.13"}
+  "r-cran-matrix"
+]
+extra-source "r-bioc-hdf5array_1.18.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-hdf5array/r-bioc-hdf5array_1.18.1-3_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-scoop_0.7.1.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-scoop"]
+]
+depends: [
+  "python3" {>= "3.2"}
+  "python3-any" {>= "3.2~"}
+  "python3-greenlet" {>= "0.3.4~"}
+  "python3-zmq" {>= "13.1.0~"}
+]
+extra-source "python3-scoop_0.7.1.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scoop/python3-scoop_0.7.1.1-3_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclc-15_1:15.0.6-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclc-15"]
+]
+depends: [
+  "libclang-common-15-dev"
+  "libclc-15-dev" {= "1-15.0.6-4"}
+]
+conflicts: [
+  "libclc-x.y"
+]
+extra-source "libclc-15_1:15.0.6-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-15/libclc-15_15.0.6-4_all.deb"
+}

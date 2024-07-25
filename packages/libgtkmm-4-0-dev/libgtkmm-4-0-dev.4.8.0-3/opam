@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgtkmm-4.0-dev_4.8.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgtkmm-4.0-dev"]
+]
+depends: [
+  "libglibmm-2-68-dev"
+  "libgtk-4-dev" {>= "4.7.2"}
+  "libgtkmm-4-0-0" {= "4.8.0-3"}
+  "libpangomm-2-48-dev" {>= "2.50.0"}
+  ("libgdk-pixbuf-2-0-dev" {>= "2.35.5"} | "libgdk-pixbuf2-0-dev" {>= "2.35.5"})
+]
+extra-source "libgtkmm-4.0-dev_4.8.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtkmm4.0/libgtkmm-4.0-dev_4.8.0-3_amd64.deb"
+}

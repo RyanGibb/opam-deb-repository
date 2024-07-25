@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypt-smime-perl_0.28-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypt-smime-perl"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libssl3" {>= "3.0.0"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+  "perl-openssl-defaults"
+]
+extra-source "libcrypt-smime-perl_0.28-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcrypt-smime-perl/libcrypt-smime-perl_0.28-1+b3_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhistoryservice0_0.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhistoryservice0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libphonenumber8"
+  "libqt5contacts5a" {>= "5.0~git20190618.8fec622c"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5sql5" {>= "5.0.2"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+  "libtelepathy-qt5-0" {>= "0.9.5"}
+]
+extra-source "libhistoryservice0_0.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lomiri-history-service/libhistoryservice0_0.4-2_amd64.deb"
+}

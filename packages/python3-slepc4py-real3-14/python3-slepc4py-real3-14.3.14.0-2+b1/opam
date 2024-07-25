@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-slepc4py-real3.14_3.14.0-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-slepc4py-real3.14"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libopenmpi3" {>= "4.0.5"}
+  "libpetsc-real3-14" {>= "3.14.1+dfsg1"}
+  "libslepc-real3-14" {>= "3.14.0+dfsg1"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.16.0~rc1"}
+  "python3-petsc4py-real3-14"
+]
+conflicts: [
+  "python3-slepc4py-real (<< 3.12.0-6~)"
+]
+extra-source "python3-slepc4py-real3.14_3.14.0-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/slepc4py/python3-slepc4py-real3.14_3.14.0-2+b1_amd64.deb"
+}

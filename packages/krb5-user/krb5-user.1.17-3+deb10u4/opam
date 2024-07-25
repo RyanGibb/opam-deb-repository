@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i krb5-user_1.17-3+deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r krb5-user"]
+]
+depends: [
+  "krb5-config"
+  "libc6" {>= "2.14"}
+  "libcom-err2" {>= "1.43.9"}
+  "libgssapi-krb5-2" {>= "1.6.dfsg.2"}
+  "libgssrpc4" {>= "1.6.dfsg.2"}
+  "libk5crypto3" {>= "1.9+dfsg~beta1"}
+  "libkadm5clnt-mit11" {>= "1.15~beta1"}
+  "libkadm5srv-mit11" {>= "1.15~beta1"}
+  "libkdb5-9"
+  "libkeyutils1" {>= "1.4"}
+  "libkrb5-3" {= "1.17-3+deb10u4"}
+  "libkrb5support0" {>= "1.17"}
+  "libss2" {>= "1.01"}
+]
+conflicts: [
+  "heimdal-clients"
+]
+extra-source "krb5-user_1.17-3+deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/krb5/krb5-user_1.17-3+deb10u4_amd64.deb"
+}

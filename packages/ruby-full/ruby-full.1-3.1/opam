@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-full_1:3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-full"]
+]
+depends: [
+  "ri"
+  "ruby"
+  "ruby-dev"
+]
+extra-source "ruby-full_1:3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-defaults/ruby-full_3.1_all.deb"
+}

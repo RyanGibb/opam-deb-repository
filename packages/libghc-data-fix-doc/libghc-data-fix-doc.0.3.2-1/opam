@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-data-fix-doc_0.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-data-fix-doc"]
+]
+depends: [
+  "ghc"
+  "sgml-base" {>= "1.28"}
+]
+extra-source "libghc-data-fix-doc_0.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-data-fix/libghc-data-fix-doc_0.3.2-1_all.deb"
+}

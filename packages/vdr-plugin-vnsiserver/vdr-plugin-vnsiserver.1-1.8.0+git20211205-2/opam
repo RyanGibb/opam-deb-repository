@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vdr-plugin-vnsiserver_1:1.8.0+git20211205-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vdr-plugin-vnsiserver"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "vdr"
+]
+extra-source "vdr-plugin-vnsiserver_1:1.8.0+git20211205-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vdr-plugin-vnsiserver/vdr-plugin-vnsiserver_1.8.0+git20211205-2_amd64.deb"
+}

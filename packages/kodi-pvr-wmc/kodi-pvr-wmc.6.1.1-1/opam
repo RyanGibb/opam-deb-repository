@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kodi-pvr-wmc_6.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kodi-pvr-wmc"]
+]
+depends: [
+  "kodi"
+  "libc6" {>= "2.15"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "kodi-pvr-wmc_6.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kodi-pvr-wmc/kodi-pvr-wmc_6.1.1-1_amd64.deb"
+}

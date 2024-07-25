@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibus-libpinyin_1.12.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibus-libpinyin"]
+]
+depends: [
+  "ibus"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.49.2"}
+  "libibus-1-0-5" {>= "1.5.14"}
+  "libjson-glib-1-0-0" {>= "1.5.2"}
+  "liblua5-4-0" {>= "5.4.2"}
+  "libopencc1-1" {>= "1.1.1~"}
+  "libpinyin13" {>= "2.1.0"}
+  "libsoup2-4-1" {>= "2.41.90"}
+  "libsqlite3-0" {>= "3.6.11"}
+  "libstdc++6" {>= "5.2"}
+  "python3-any"
+  "python3-gi"
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "ibus-libpinyin_1.12.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibus-libpinyin/ibus-libpinyin_1.12.0-3_amd64.deb"
+}

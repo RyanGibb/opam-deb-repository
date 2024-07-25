@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tilestache_1.51.5-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tilestache"]
+]
+depends: [
+  "fonts-dejavu-core"
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-modestmaps"
+  "python-pil"
+  "python-simplejson"
+  "python-werkzeug"
+]
+extra-source "tilestache_1.51.5-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tilestache/tilestache_1.51.5-4_all.deb"
+}

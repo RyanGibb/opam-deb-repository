@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i wcc_0.0.2+dfsg-4.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r wcc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcapstone4" {>= "4"}
+  "libelf1" {>= "0.142"}
+  "liblua5-3-0"
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "wcc_0.0.2+dfsg-4.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wcc/wcc_0.0.2+dfsg-4.1+b1_amd64.deb"
+}

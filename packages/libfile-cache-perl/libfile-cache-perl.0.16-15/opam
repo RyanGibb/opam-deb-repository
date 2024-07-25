@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfile-cache-perl_0.16-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfile-cache-perl"]
+]
+depends: [
+  "libdigest-md5-perl"
+  "perl"
+  ("perl" {>= "5.8.0"} | "libstorable-perl")
+]
+extra-source "libfile-cache-perl_0.16-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfile-cache-perl/libfile-cache-perl_0.16-15_all.deb"
+}

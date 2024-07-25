@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rasqal-utils_0.9.33-0.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rasqal-utils"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libraptor2-0" {>= "2.0.14"}
+  "librasqal3" {>= "0.9.31"}
+]
+extra-source "rasqal-utils_0.9.33-0.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rasqal/rasqal-utils_0.9.33-0.1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsignatures-perl_0.14-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsignatures-perl"]
+]
+depends: [
+  "libb-hooks-endofscope-perl"
+  "libb-hooks-op-check-perl"
+  "libb-hooks-op-ppaddr-perl"
+  "libb-hooks-parser-perl"
+  "libc6" {>= "2.4"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libsignatures-perl_0.14-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsignatures-perl/libsignatures-perl_0.14-2+b1_amd64.deb"
+}

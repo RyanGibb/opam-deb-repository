@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rs_20200313-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rs"]
+]
+depends: [
+  "libc6" {>= "2.26"}
+]
+extra-source "rs_20200313-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rs/rs_20200313-1_amd64.deb"
+}

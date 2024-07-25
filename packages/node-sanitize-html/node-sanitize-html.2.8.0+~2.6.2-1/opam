@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-sanitize-html_2.8.0+~2.6.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-sanitize-html"]
+]
+depends: [
+  "node-deepmerge"
+  "node-escape-string-regexp" {>= "4.0.0"}
+  "node-htmlparser2" {>= "6.0.0"}
+  "node-is-plain-object" {>= "5.0.0"}
+  "node-parse-srcset"
+  "node-postcss" {>= "8.3.11"}
+]
+extra-source "node-sanitize-html_2.8.0+~2.6.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-sanitize-html/node-sanitize-html_2.8.0+~2.6.2-1_all.deb"
+}

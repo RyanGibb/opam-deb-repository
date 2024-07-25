@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sweethome3d-textures-editor_1.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sweethome3d-textures-editor"]
+]
+depends: [
+  "icedtea-netx"
+  "java-wrappers"
+  "libbatik-java"
+  "libjava3d-java"
+  "libvecmath-java"
+  ("default-jre" | "java8-runtime")
+]
+extra-source "sweethome3d-textures-editor_1.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sweethome3d-textures-editor/sweethome3d-textures-editor_1.8-1_all.deb"
+}

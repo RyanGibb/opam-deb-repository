@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xkbind_2010.05.20-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xkbind"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libx11-6"
+]
+extra-source "xkbind_2010.05.20-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xkbind/xkbind_2010.05.20-1+b2_amd64.deb"
+}

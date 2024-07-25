@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kobodeluxe_0.5.1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kobodeluxe"]
+]
+depends: [
+  "kobodeluxe-data" {= "0.5.1-10"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "5"}
+]
+extra-source "kobodeluxe_0.5.1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kobodeluxe/kobodeluxe_0.5.1-10_amd64.deb"
+}

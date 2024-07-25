@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-z3950-simpleserver-perl_1.21-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-z3950-simpleserver-perl"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libyaz5" {>= "5.29.0"}
+  "perl" {>= "5.36.0-6"}
+  "perl-base"
+]
+extra-source "libnet-z3950-simpleserver-perl_1.21-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-z3950-simpleserver-perl/libnet-z3950-simpleserver-perl_1.21-3_amd64.deb"
+}

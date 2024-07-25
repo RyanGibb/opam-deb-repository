@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libzdb11_3.1-0.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libzdb11"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libmariadb3" {>= "3.0.0"}
+  "libpq5"
+  "libsqlite3-0" {>= "3.7.15"}
+  "libssl1-1" {>= "1.1.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libzdb11_3.1-0.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libz/libzdb/libzdb11_3.1-0.2+b1_amd64.deb"
+}

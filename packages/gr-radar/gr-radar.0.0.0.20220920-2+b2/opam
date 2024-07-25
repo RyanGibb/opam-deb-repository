@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gr-radar_0.0.0.20220920-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gr-radar"]
+]
+depends: [
+  "gnuradio-dev"
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libgnuradio-radar3-10-0" {= "0.0.0.20220920-2+b2"}
+  "libgnuradio-runtime3-10-5" {>= "3.10.5.0"}
+  "libstdc++6" {>= "11"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.22.0"}
+]
+extra-source "gr-radar_0.0.0.20220920-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gr-radar/gr-radar_0.0.0.20220920-2+b2_amd64.deb"
+}

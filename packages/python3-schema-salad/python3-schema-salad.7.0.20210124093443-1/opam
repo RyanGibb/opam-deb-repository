@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-schema-salad_7.0.20210124093443-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-schema-salad"]
+]
+depends: [
+  "libjs-bootstrap"
+  "python3-any"
+  "python3-cachecontrol"
+  "python3-lockfile"
+  "python3-mistune"
+  "python3-pkg-resources"
+  "python3-rdflib"
+  "python3-rdflib-jsonld"
+  "python3-requests"
+  "python3-ruamel-yaml"
+  "python3-typing-extensions"
+]
+conflicts: [
+  "python-schema-salad"
+]
+extra-source "python3-schema-salad_7.0.20210124093443-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-schema-salad/python3-schema-salad_7.0.20210124093443-1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i e2fsprogs-l10n_1.47.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r e2fsprogs-l10n"]
+]
+depends: [
+  "e2fsprogs" {< "1.47.0-2+c~"}
+  "e2fsprogs" {>= "1.47.0-2"}
+]
+extra-source "e2fsprogs-l10n_1.47.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs-l10n_1.47.0-2_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpython3-all-dev_3.11.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpython3-all-dev"]
+]
+depends: [
+  "libpython3-11-dev"
+  "libpython3-dev" {= "3.11.2-1+b1"}
+]
+extra-source "libpython3-all-dev_3.11.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python3-defaults/libpython3-all-dev_3.11.2-1+b1_amd64.deb"
+}

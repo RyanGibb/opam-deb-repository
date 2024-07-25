@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dhcpdump_1.8-2.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dhcpdump"]
+]
+depends: [
+  "libc6" {>= "2.3.4"}
+  "libpcap0-8" {>= "0.9.8"}
+  "tcpdump"
+]
+extra-source "dhcpdump_1.8-2.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dhcpdump/dhcpdump_1.8-2.2+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mpc_0.34-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mpc"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libmpdclient2" {>= "2.18"}
+]
+extra-source "mpc_0.34-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mpc/mpc_0.34-1+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspring-core-java_4.3.30-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspring-core-java"]
+]
+depends: [
+  "libactivation-java"
+  "libasm-java" {>= "5.0"}
+  "libcommons-logging-java"
+  "libjaxb-api-java"
+]
+extra-source "libspring-core-java_4.3.30-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libspring-java/libspring-core-java_4.3.30-2_all.deb"
+}

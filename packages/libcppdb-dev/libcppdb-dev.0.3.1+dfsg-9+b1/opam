@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcppdb-dev_0.3.1+dfsg-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcppdb-dev"]
+]
+depends: [
+  "libcppdb-mysql0" {= "0.3.1+dfsg-9+b1"}
+  "libcppdb-odbc0" {= "0.3.1+dfsg-9+b1"}
+  "libcppdb-postgresql0" {= "0.3.1+dfsg-9+b1"}
+  "libcppdb-sqlite3-0" {= "0.3.1+dfsg-9+b1"}
+  "libcppdb0" {= "0.3.1+dfsg-9+b1"}
+]
+extra-source "libcppdb-dev_0.3.1+dfsg-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cppdb/libcppdb-dev_0.3.1+dfsg-9+b1_amd64.deb"
+}

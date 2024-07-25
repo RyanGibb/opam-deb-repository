@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i expeyes-doc-en_4.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r expeyes-doc-en"]
+]
+depends: [
+  "expeyes-doc-common"
+]
+conflicts: [
+  "expeyes-doc-en (<< 4.3)"
+]
+extra-source "expeyes-doc-en_4.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/expeyes-doc/expeyes-doc-en_4.3-3_all.deb"
+}

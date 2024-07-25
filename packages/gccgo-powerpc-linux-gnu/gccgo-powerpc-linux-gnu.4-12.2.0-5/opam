@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gccgo-powerpc-linux-gnu_4:12.2.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gccgo-powerpc-linux-gnu"]
+]
+depends: [
+  "cpp-powerpc-linux-gnu" {>= "4-12.2.0-5"}
+  "g++-powerpc-linux-gnu" {>= "4-12.2.0-5"}
+  "gccgo-12-powerpc-linux-gnu" {>= "12.2.0-1~"}
+]
+extra-source "gccgo-powerpc-linux-gnu_4:12.2.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults-ports/gccgo-powerpc-linux-gnu_12.2.0-5_amd64.deb"
+}

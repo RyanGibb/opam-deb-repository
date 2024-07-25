@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librgw2_14.2.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librgw2"]
+]
+depends: [
+  "libboost-coroutine1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.30"}
+  "libcurl3-gnutls" {>= "7.28.0"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libnspr4" {>= "2-4.9-2~"}
+  "libnss3" {>= "2-3.13.4-2~"}
+  "librabbitmq4" {>= "0.6.0"}
+  "librados2" {= "14.2.21-1"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "librgw2_14.2.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/librgw2_14.2.21-1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i telnet-ssl_0.17.41+really0.17-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r telnet-ssl"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "5"}
+  "netbase"
+]
+extra-source "telnet-ssl_0.17.41+really0.17-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netkit-telnet-ssl/telnet-ssl_0.17.41+really0.17-3_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i myspell-tools_1:3.1-24.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r myspell-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+]
+conflicts: [
+  "hunspell-tools"
+]
+extra-source "myspell-tools_1:3.1-24.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/myspell/myspell-tools_3.1-24.2+b1_amd64.deb"
+}

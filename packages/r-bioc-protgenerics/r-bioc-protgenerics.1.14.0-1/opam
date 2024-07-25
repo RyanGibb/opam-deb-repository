@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-protgenerics_1.14.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-protgenerics"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-1"}
+]
+extra-source "r-bioc-protgenerics_1.14.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-protgenerics/r-bioc-protgenerics_1.14.0-1_all.deb"
+}

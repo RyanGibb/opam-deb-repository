@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32gfortran5-ppc64-cross_10.2.1-6cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32gfortran5-ppc64-cross"]
+]
+depends: [
+  "gcc-10-cross-base-ports" {= "10.2.1-6cross1"}
+  "lib32gcc-s1-ppc64-cross" {>= "4.2"}
+  "libc6-powerpc-ppc64-cross" {>= "2.31"}
+]
+conflicts: [
+  "libc6-i386 (<< 2.9-22)"
+]
+extra-source "lib32gfortran5-ppc64-cross_10.2.1-6cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-10-cross-ports/lib32gfortran5-ppc64-cross_10.2.1-6cross1_all.deb"
+}

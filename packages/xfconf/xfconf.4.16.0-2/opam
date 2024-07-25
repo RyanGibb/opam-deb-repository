@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xfconf_4.16.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xfconf"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libxfce4util7" {>= "4.10.0"}
+  ("default-dbus-session-bus" | "dbus-session-bus")
+]
+extra-source "xfconf_4.16.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xfconf/xfconf_4.16.0-2_amd64.deb"
+}

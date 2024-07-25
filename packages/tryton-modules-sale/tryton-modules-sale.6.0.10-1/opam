@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tryton-modules-sale_6.0.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tryton-modules-sale"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "5.2"}
+  "python3-any"
+  "python3-dateutil"
+  "python3-pkg-resources"
+  "python3-sql"
+  "tryton-modules-account" {>= "6.0"}
+  "tryton-modules-account-invoice" {>= "6.0"}
+  "tryton-modules-account-invoice-stock" {>= "6.0"}
+  "tryton-modules-account-product" {>= "6.0"}
+  "tryton-modules-company" {>= "6.0"}
+  "tryton-modules-country" {>= "6.0"}
+  "tryton-modules-currency" {>= "6.0"}
+  "tryton-modules-party" {>= "6.0"}
+  "tryton-modules-product" {>= "6.0"}
+  "tryton-modules-stock" {>= "6.0"}
+  "tryton-server"
+  "tryton-server" {>= "6.0"}
+]
+extra-source "tryton-modules-sale_6.0.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tryton-modules-sale/tryton-modules-sale_6.0.10-1_all.deb"
+}

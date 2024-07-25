@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-x3dh_0.5.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-x3dh"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-cryptography" {>= "1.7.1"}
+  "python-xeddsa"
+]
+extra-source "python-x3dh_0.5.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-x3dh/python-x3dh_0.5.8-1_all.deb"
+}

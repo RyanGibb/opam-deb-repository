@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdebug0_0.5.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdebug0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+extra-source "libdebug0_0.5.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdebug/libdebug0_0.5.3-4_amd64.deb"
+}

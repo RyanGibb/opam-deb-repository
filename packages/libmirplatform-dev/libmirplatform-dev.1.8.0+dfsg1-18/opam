@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmirplatform-dev_1.8.0+dfsg1-18_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmirplatform-dev"]
+]
+depends: [
+  "libboost-program-options-dev"
+  "libmircommon-dev" {= "1.8.0+dfsg1-18"}
+  "libmirplatform18" {= "1.8.0+dfsg1-18"}
+]
+extra-source "libmirplatform-dev_1.8.0+dfsg1-18_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mir/libmirplatform-dev_1.8.0+dfsg1-18_amd64.deb"
+}

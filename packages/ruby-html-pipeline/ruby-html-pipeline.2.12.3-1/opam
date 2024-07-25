@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-html-pipeline_2.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-html-pipeline"]
+]
+depends: [
+  "ruby-activesupport"
+  "ruby-commonmarker" {>= "0.20.2~"}
+  "ruby-nokogiri" {>= "1.4"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-html-pipeline_2.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-html-pipeline/ruby-html-pipeline_2.12.3-1_all.deb"
+}

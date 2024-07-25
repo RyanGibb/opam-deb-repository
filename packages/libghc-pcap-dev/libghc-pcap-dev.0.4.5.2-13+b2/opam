@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-pcap-dev_0.4.5.2-13+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-pcap-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libghc-network-dev"
+  "libgmp10"
+  "libpcap0-8" {>= "0.9.8"}
+]
+extra-source "libghc-pcap-dev_0.4.5.2-13+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-pcap/libghc-pcap-dev_0.4.5.2-13+b2_amd64.deb"
+}

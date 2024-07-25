@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-activipy_0.1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-activipy"]
+]
+depends: [
+  "python" {>= "2.7"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-pyld"
+  "python-pytest"
+  "python-sphinx"
+]
+extra-source "python-activipy_0.1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-activipy/python-activipy_0.1-6_all.deb"
+}

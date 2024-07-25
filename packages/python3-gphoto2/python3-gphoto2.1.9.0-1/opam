@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-gphoto2_1.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-gphoto2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgphoto2-6" {>= "2.5.10"}
+  "libgphoto2-port12" {>= "2.5.10"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+]
+extra-source "python3-gphoto2_1.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-gphoto2/python3-gphoto2_1.9.0-1_amd64.deb"
+}

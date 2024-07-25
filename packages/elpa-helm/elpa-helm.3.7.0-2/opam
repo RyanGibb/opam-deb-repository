@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i elpa-helm_3.7.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r elpa-helm"]
+]
+depends: [
+  "dh-elpa-helper"
+  "elpa-async" {>= "1.9.4"}
+  "elpa-helm-core" {>= "3.6.5"}
+  "elpa-popup" {>= "0.5.3"}
+  "emacsen-common" {>= "2.0.8"}
+]
+extra-source "elpa-helm_3.7.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/helm/elpa-helm_3.7.0-2_all.deb"
+}

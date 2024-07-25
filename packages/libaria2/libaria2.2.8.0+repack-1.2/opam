@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaria2_2.8.0+repack-1.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaria2"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libaria2_2.8.0+repack-1.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaria/libaria2_2.8.0+repack-1.2_amd64.deb"
+}

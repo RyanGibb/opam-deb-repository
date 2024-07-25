@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fai-nfsroot_5.8.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fai-nfsroot"]
+]
+depends: [
+  "fai-client" {>= "5.2"}
+  "fai-setup-storage"
+  "syslinux-efi"
+  ("pxelinux" | "syslinux-common")
+]
+extra-source "fai-nfsroot_5.8.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fai/fai-nfsroot_5.8.4_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxmlb-dev_0.1.15-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxmlb-dev"]
+]
+depends: [
+  "gir1-2-xmlb-1-0" {= "0.1.15-2"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.30.0"}
+  "libxmlb1" {>= "0.1.1"}
+]
+extra-source "libxmlb-dev_0.1.15-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxmlb/libxmlb-dev_0.1.15-2_amd64.deb"
+}

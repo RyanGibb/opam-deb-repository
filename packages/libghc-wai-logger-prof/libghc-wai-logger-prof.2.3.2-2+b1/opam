@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-wai-logger-prof_2.3.2-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-wai-logger-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-byteorder-prof"
+  "libghc-case-insensitive-prof"
+  "libghc-fast-logger-prof"
+  "libghc-http-types-prof"
+  "libghc-network-prof"
+  "libghc-unix-time-prof"
+  "libghc-wai-logger-dev" {= "2.3.2-2+b1"}
+  "libghc-wai-prof"
+]
+extra-source "libghc-wai-logger-prof_2.3.2-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-wai-logger/libghc-wai-logger-prof_2.3.2-2+b1_amd64.deb"
+}

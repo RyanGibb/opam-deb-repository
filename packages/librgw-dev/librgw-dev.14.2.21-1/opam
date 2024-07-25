@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librgw-dev_14.2.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librgw-dev"]
+]
+depends: [
+  "librados-dev" {= "14.2.21-1"}
+  "librgw2" {= "14.2.21-1"}
+]
+extra-source "librgw-dev_14.2.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/librgw-dev_14.2.21-1_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i twm_1:1.0.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r twm"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libice6" {>= "1-1.0.0"}
+  "libsm6"
+  "libx11-6"
+  "libxext6"
+  "libxmu6"
+  "libxt6"
+  "menu" {>= "2.1.26"}
+]
+extra-source "twm_1:1.0.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/twm/twm_1.0.10-1_amd64.deb"
+}

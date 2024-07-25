@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i catdvi_0.14-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r catdvi"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libkpathsea6" {>= "2022.20220321.62855"}
+  "texlive-base"
+  "texlive-binaries"
+]
+extra-source "catdvi_0.14-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/catdvi/catdvi_0.14-14_amd64.deb"
+}

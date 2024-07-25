@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcifpp5_5.0.7.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcifpp5"]
+]
+depends: [
+  "libboost-regex1-74-0"
+  "libc6" {>= "2.34"}
+  "libcifpp-data"
+  "libgcc-s1" {>= "4.0"}
+  "libstdc++6" {>= "11"}
+  "zlib1g" {>= "1-1.2.2"}
+]
+extra-source "libcifpp5_5.0.7.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcifpp/libcifpp5_5.0.7.1-1_amd64.deb"
+}

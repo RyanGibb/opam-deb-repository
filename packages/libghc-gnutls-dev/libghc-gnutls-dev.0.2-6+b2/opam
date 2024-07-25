@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-gnutls-dev_0.2-6+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-gnutls-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libghc-monads-tf-dev"
+  "libgmp10"
+  "libgnutls30" {>= "3.5.6"}
+  ("libgnutls28-dev" | "libgnutls-dev")
+]
+extra-source "libghc-gnutls-dev_0.2-6+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-gnutls/libghc-gnutls-dev_0.2-6+b2_amd64.deb"
+}

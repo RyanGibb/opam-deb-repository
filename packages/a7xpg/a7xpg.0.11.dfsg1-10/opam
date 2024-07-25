@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i a7xpg_0.11.dfsg1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r a7xpg"]
+]
+depends: [
+  "a7xpg-data" {= "0.11.dfsg1-10"}
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libgphobos76"
+  "libsdl-mixer1-2"
+  "libsdl1-2debian" {>= "1.2.11"}
+]
+extra-source "a7xpg_0.11.dfsg1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/a7xpg/a7xpg_0.11.dfsg1-10_amd64.deb"
+}

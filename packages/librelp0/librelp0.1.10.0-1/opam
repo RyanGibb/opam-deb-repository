@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librelp0_1.10.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librelp0"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgnutls30" {>= "3.7.0"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "librelp0_1.10.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librelp/librelp0_1.10.0-1_amd64.deb"
+}

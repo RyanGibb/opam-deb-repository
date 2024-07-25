@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmu-perl_1.191300-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmu-perl"]
+]
+depends: [
+  "libimport-into-perl"
+  "libmoo-perl"
+  "libmoox-shorthas-perl"
+  "libstrictures-perl" {>= "2"}
+  "perl"
+]
+extra-source "libmu-perl_1.191300-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmu-perl/libmu-perl_1.191300-2_all.deb"
+}

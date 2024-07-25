@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libextractor-plugin-gstreamer_1:1.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libextractor-plugin-gstreamer"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libextractor3"
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.0.0"}
+  "libgstreamer1-0-0" {>= "1.4.0"}
+]
+extra-source "libextractor-plugin-gstreamer_1:1.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libe/libextractor/libextractor-plugin-gstreamer_1.11-2_amd64.deb"
+}

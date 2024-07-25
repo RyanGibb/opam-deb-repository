@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i alevtd_3.107-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r alevtd"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libzvbi0" {>= "0.2.35"}
+]
+extra-source "alevtd_3.107-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xawtv/alevtd_3.107-1.1_amd64.deb"
+}

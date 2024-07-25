@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-warp-dev_3.2.25-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-warp-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.14"}
+  "libghc-async-dev"
+  "libghc-auto-update-dev"
+  "libghc-bsb-http-chunked-dev"
+  "libghc-case-insensitive-dev"
+  "libghc-hashable-dev"
+  "libghc-http-date-dev"
+  "libghc-http-types-dev"
+  "libghc-http2-dev"
+  "libghc-iproute-dev"
+  "libghc-network-dev"
+  "libghc-simple-sendfile-dev"
+  "libghc-streaming-commons-dev"
+  "libghc-unix-compat-dev"
+  "libghc-vault-dev"
+  "libghc-wai-dev"
+  "libghc-word8-dev"
+  "libgmp10"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-warp-dev_3.2.25-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-warp/libghc-warp-dev_3.2.25-2+b1_amd64.deb"
+}

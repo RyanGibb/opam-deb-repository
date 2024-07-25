@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libt3widget-dev_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libt3widget-dev"]
+]
+depends: [
+  "libpcre2-dev"
+  "libt3key-dev" {>= "0.2.0"}
+  "libt3widget2" {= "1.2.0-1"}
+  "libt3window-dev" {>= "0.4.0"}
+  "libtranscript-dev" {>= "0.2.2"}
+  "libunistring-dev"
+]
+extra-source "libt3widget-dev_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libt3widget/libt3widget-dev_1.2.0-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdigidoc-dev_3.10.5-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdigidoc-dev"]
+]
+depends: [
+  "libdigidoc2" {= "3.10.5-4"}
+  "libssl-dev"
+  "libxml2-dev"
+]
+extra-source "libdigidoc-dev_3.10.5-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdigidoc/libdigidoc-dev_3.10.5-4_amd64.deb"
+}

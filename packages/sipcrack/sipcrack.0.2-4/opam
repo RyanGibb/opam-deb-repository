@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sipcrack_0.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sipcrack"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpcap0-8" {>= "0.9.8"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "sipcrack_0.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sipcrack/sipcrack_0.2-4_amd64.deb"
+}

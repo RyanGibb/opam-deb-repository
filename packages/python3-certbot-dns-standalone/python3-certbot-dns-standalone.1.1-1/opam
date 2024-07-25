@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-certbot-dns-standalone_1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-certbot-dns-standalone"]
+]
+depends: [
+  "certbot"
+  "python3-acme"
+  "python3-acme-abi-2"
+  "python3-any"
+  "python3-certbot"
+  "python3-certbot-abi-2"
+  "python3-dnslib"
+  "python3-mock"
+  "python3-pkg-resources"
+]
+extra-source "python3-certbot-dns-standalone_1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-certbot-dns-standalone/python3-certbot-dns-standalone_1.1-1_all.deb"
+}

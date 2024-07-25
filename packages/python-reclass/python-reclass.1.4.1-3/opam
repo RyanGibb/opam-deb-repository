@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-reclass_1.4.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-reclass"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-any" {>= "2.6.6-7~"}
+  "python-pkg-resources"
+  "python-yaml"
+]
+extra-source "python-reclass_1.4.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/reclass/python-reclass_1.4.1-3_all.deb"
+}

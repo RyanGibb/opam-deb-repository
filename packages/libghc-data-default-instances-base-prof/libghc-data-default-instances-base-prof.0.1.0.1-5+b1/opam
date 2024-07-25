@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-data-default-instances-base-prof_0.1.0.1-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-data-default-instances-base-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-data-default-class-prof"
+  "libghc-data-default-instances-base-dev" {= "0.1.0.1-5+b1"}
+]
+extra-source "libghc-data-default-instances-base-prof_0.1.0.1-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-data-default-instances-base/libghc-data-default-instances-base-prof_0.1.0.1-5+b1_amd64.deb"
+}

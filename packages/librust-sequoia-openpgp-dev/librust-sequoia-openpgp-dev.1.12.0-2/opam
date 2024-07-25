@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-sequoia-openpgp-dev_1.12.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-sequoia-openpgp-dev"]
+]
+depends: [
+  "librust-anyhow-dev"
+  "librust-buffered-reader-1-dev"
+  "librust-dyn-clone-1+default-dev"
+  "librust-lalrpop-dev" {>= "0.17-~~"}
+  "librust-lalrpop-util-dev"
+  "librust-lazy-static-dev"
+  "librust-libc-dev"
+  "librust-memsec-dev" {>= "0.5-~~"}
+  "librust-regex-1+default-dev"
+  "librust-regex-syntax-0-6+default-dev"
+  "librust-sha1collisiondetection-dev"
+  "librust-thiserror-dev"
+  "librust-xxhash-rust-0-8+default-dev"
+  "librust-xxhash-rust-0-8+xxh3-dev"
+  ("librust-base64-0-13+default-dev" | "librust-base64-0-12+default-dev")
+  ("librust-idna-0-3+default-dev" | "librust-idna-0-2+default-dev")
+]
+extra-source "librust-sequoia-openpgp-dev_1.12.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-sequoia-openpgp/librust-sequoia-openpgp-dev_1.12.0-2_amd64.deb"
+}

@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcjs0_5.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcjs0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo-gobject2" {>= "1.10.0"}
+  "libcairo2" {>= "1.14.0"}
+  "libffi8" {>= "3.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libgirepository-1-0-1"
+  "libgirepository-1-0-1" {>= "1.66.0"}
+  "libglib2-0-0" {>= "2.66.0"}
+  "libmozjs-78-0" {>= "78.15.0"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "11"}
+  "libx11-6"
+]
+extra-source "libcjs0_5.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cjs/libcjs0_5.6.0-1_amd64.deb"
+}

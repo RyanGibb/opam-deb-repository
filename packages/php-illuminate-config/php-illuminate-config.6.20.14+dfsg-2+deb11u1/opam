@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-illuminate-config_6.20.14+dfsg-2+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-illuminate-config"]
+]
+depends: [
+  "php-common"
+  "php-illuminate-contracts" {< "7~~"}
+  "php-illuminate-contracts" {>= "6.0"}
+  "php-illuminate-support" {< "7~~"}
+  "php-illuminate-support" {>= "6.0"}
+]
+extra-source "php-illuminate-config_6.20.14+dfsg-2+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-laravel-framework/php-illuminate-config_6.20.14+dfsg-2+deb11u1_all.deb"
+}

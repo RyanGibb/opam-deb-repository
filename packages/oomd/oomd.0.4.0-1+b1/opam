@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i oomd_0.4.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r oomd"]
+]
+depends: [
+  "libc6" {>= "2.30"}
+  "libelogind0"
+  "libgcc-s1" {>= "3.0"}
+  "libjsoncpp24" {>= "1.9.4"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "oomd_0.4.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/oomd/oomd_0.4.0-1+b1_amd64.deb"
+}

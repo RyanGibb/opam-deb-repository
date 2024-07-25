@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmono-cairo4.0-cil_6.8.0.105+dfsg-3.3~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmono-cairo4.0-cil"]
+]
+depends: [
+  "libcairo2" {>= "1.8.0-2"}
+  "libmono-corlib4-5-cil" {>= "5.18.0.240"}
+]
+extra-source "libmono-cairo4.0-cil_6.8.0.105+dfsg-3.3~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mono/libmono-cairo4.0-cil_6.8.0.105+dfsg-3.3~deb11u1_all.deb"
+}

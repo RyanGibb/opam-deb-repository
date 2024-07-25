@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xsol_0.31-14+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xsol"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libx11-6"
+  "libxm4" {>= "2.3.4"}
+  "libxt6"
+]
+extra-source "xsol_0.31-14+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xsol/xsol_0.31-14+b1_amd64.deb"
+}

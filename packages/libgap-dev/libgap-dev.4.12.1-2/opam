@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgap-dev_4.12.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgap-dev"]
+]
+depends: [
+  "libc-dev"
+  "libgap8" {= "4.12.1-2"}
+]
+extra-source "libgap-dev_4.12.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gap/libgap-dev_4.12.1-2_amd64.deb"
+}

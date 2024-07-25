@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cg3_1.3.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cg3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcg3-1" {= "1.3.2-1"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libicu67" {>= "67.1-1~"}
+  "libstdc++6" {>= "5"}
+  "perl-any"
+]
+conflicts: [
+  "vislcg3"
+]
+extra-source "cg3_1.3.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cg3/cg3_1.3.2-1_amd64.deb"
+}

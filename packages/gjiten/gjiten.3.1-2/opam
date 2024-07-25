@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gjiten_3.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gjiten"]
+]
+depends: [
+  "edict"
+  "kanjidic"
+  "libc6" {>= "2.34"}
+  "libgdk-pixbuf-2-0-0" {>= "2.25.2"}
+  "libglib2-0-0" {>= "2.45.3"}
+  "libgtk-3-0" {>= "3.21.4"}
+]
+extra-source "gjiten_3.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gjiten/gjiten_3.1-2_amd64.deb"
+}

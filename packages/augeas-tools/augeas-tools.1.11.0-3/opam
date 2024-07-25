@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i augeas-tools_1.11.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r augeas-tools"]
+]
+depends: [
+  "libaugeas0" {>= "1.10.0"}
+  "libc6" {>= "2.8"}
+  "libgcc1" {>= "1-3.3.1"}
+  "libreadline7" {>= "6.0"}
+  "libselinux1" {>= "1.32"}
+  "libxml2" {>= "2.6.27"}
+]
+extra-source "augeas-tools_1.11.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/augeas/augeas-tools_1.11.0-3_amd64.deb"
+}

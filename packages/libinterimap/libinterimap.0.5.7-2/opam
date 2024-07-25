@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libinterimap_0.5.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libinterimap"]
+]
+depends: [
+  "libconfig-tiny-perl"
+  "libnet-ssleay-perl" {>= "1.83~"}
+  "perl-any"
+]
+extra-source "libinterimap_0.5.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/interimap/libinterimap_0.5.7-2_all.deb"
+}

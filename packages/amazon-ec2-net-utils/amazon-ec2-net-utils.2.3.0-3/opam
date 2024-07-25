@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i amazon-ec2-net-utils_2.3.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r amazon-ec2-net-utils"]
+]
+depends: [
+  "curl"
+  "iproute2"
+  "systemd"
+  "udev"
+]
+extra-source "amazon-ec2-net-utils_2.3.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/amazon-ec2-net-utils/amazon-ec2-net-utils_2.3.0-3_all.deb"
+}

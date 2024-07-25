@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nfdump-sflow_1.6.22-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nfdump-sflow"]
+]
+depends: [
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "nfdump" {= "1.6.22-2"}
+]
+extra-source "nfdump-sflow_1.6.22-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nfdump/nfdump-sflow_1.6.22-2_amd64.deb"
+}

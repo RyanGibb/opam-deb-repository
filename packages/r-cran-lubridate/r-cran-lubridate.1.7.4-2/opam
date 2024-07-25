@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-lubridate_1.7.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-lubridate"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.1-2"}
+  "r-cran-rcpp" {>= "0.12.13"}
+  "r-cran-stringr"
+]
+extra-source "r-cran-lubridate_1.7.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-lubridate/r-cran-lubridate_1.7.4-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i psfex_3.21.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r psfex"]
+]
+depends: [
+  "libatlas3-base"
+  "libc6" {>= "2.34"}
+  "libfftw3-single3" {>= "3.3.10"}
+  "libplplot17" {>= "5.15.0+dfsg"}
+]
+extra-source "psfex_3.21.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/psfex/psfex_3.21.1-1_amd64.deb"
+}

@@ -1,0 +1,46 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnucash_1:4.13-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnucash"]
+]
+depends: [
+  "gnucash-common" {= "1-4.13-1"}
+  "guile-3-0-libs"
+  "libaqbanking44" {>= "6.4.0"}
+  "libboost-filesystem1-74-0" {>= "1.74.0+ds1"}
+  "libboost-locale1-74-0" {>= "1.74.0+ds1"}
+  "libboost-program-options1-74-0" {>= "1.74.0+ds1"}
+  "libboost-regex1-74-0"
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libcrypt-ssleay-perl"
+  "libdate-manip-perl"
+  "libdbi1" {>= "0.9.0"}
+  "libfinance-quote-perl"
+  "libgcc-s1" {>= "3.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.45.3"}
+  "libgtk-3-0" {>= "3.21.5"}
+  "libgwengui-gtk3-79" {>= "5.4.0~"}
+  "libgwenhywfar79" {>= "4.1.0"}
+  "libhtml-tableextract-perl"
+  "libhtml-tree-perl"
+  "libicu72" {>= "72.1~rc-1~"}
+  "libofx7" {>= "0.9.14"}
+  "libpango-1-0-0" {>= "1.18.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpython3-11" {>= "3.11.0"}
+  "libsecret-1-0" {>= "0.7"}
+  "libstdc++6" {>= "11"}
+  "libwebkit2gtk-4-0-37" {>= "2.30.1~"}
+  "libwww-perl"
+  "libxml2" {>= "2.7.4"}
+  "perl-any"
+  "zlib1g" {>= "1-1.1.4"}
+  ("guile-3-0" | "guile-2-2" | "guile-2-0")
+]
+extra-source "gnucash_1:4.13-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnucash/gnucash_4.13-1_amd64.deb"
+}

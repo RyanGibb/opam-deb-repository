@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i os-prober_1.81_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r os-prober"]
+]
+depends: [
+  "grub-common"
+  "libc6" {>= "2.4"}
+  "mount"
+]
+extra-source "os-prober_1.81_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/os-prober/os-prober_1.81_amd64.deb"
+}

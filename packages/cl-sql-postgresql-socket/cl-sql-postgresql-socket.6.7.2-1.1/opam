@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cl-sql-postgresql-socket_6.7.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cl-sql-postgresql-socket"]
+]
+depends: [
+  "cl-md5"
+  "cl-sql" {= "6.7.2-1.1"}
+  "cl-sql-uffi" {>= "6.7.2-1.1"}
+  "libc6-dev"
+]
+extra-source "cl-sql-postgresql-socket_6.7.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cl-sql/cl-sql-postgresql-socket_6.7.2-1.1_all.deb"
+}

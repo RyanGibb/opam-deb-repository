@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i android-libandroidfw-dev_1:10.0.0+r36-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r android-libandroidfw-dev"]
+]
+depends: [
+  "android-libandroidfw" {= "1-10.0.0+r36-10"}
+  "android-libutils-dev" {>= "1-29"}
+  "android-platform-frameworks-native-headers" {>= "1-29"}
+]
+extra-source "android-libandroidfw-dev_1:10.0.0+r36-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/android-platform-frameworks-base/android-libandroidfw-dev_10.0.0+r36-10_amd64.deb"
+}

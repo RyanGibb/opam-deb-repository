@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsdformat9-9_9.3.0+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsdformat9-9"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libignition-math6-6" {>= "6.4.0+ds"}
+  "libstdc++6" {>= "9"}
+  "libtinyxml2-6-2v5"
+  "liburdfdom-model"
+  "sdformat-sdf" {>= "9.3.0+ds-3"}
+]
+extra-source "libsdformat9-9_9.3.0+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sdformat/libsdformat9-9_9.3.0+ds-3_amd64.deb"
+}

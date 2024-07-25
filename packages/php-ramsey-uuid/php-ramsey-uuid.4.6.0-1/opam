@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-ramsey-uuid_4.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-ramsey-uuid"]
+]
+depends: [
+  "php-brick-math"
+  "php-common"
+  "php-json"
+  "php-ramsey-collection" {< "2~~"}
+  "php-ramsey-collection" {>= "1.0"}
+]
+extra-source "php-ramsey-uuid_4.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-ramsey-uuid/php-ramsey-uuid_4.6.0-1_all.deb"
+}

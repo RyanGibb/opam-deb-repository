@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbtrfs0_5.10.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbtrfs0"]
+]
+depends: [
+  "libblkid1" {>= "2.16"}
+  "libc6" {>= "2.4"}
+  "libmount1" {>= "2.24.2"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "libbtrfs0_5.10.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/btrfs-progs/libbtrfs0_5.10.1-2_amd64.deb"
+}

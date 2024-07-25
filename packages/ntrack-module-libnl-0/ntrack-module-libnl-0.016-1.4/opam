@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ntrack-module-libnl-0_016-1.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ntrack-module-libnl-0"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libnl-3-200" {>= "3.2.21"}
+  "libnl-route-3-200" {>= "3.2.7"}
+  "libntrack0" {>= "005"}
+]
+extra-source "ntrack-module-libnl-0_016-1.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ntrack/ntrack-module-libnl-0_016-1.4_amd64.deb"
+}

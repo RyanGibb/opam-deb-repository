@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmath-tamuanova-perl_1.0.2-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmath-tamuanova-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libtamuanova-0-2" {>= "0.2"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+  ("libblas3" | "libblas-so-3")
+]
+extra-source "libmath-tamuanova-perl_1.0.2-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmath-tamuanova-perl/libmath-tamuanova-perl_1.0.2-3+b1_amd64.deb"
+}

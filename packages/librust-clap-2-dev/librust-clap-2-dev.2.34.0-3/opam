@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-clap-2-dev_2.34.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-clap-2-dev"]
+]
+depends: [
+  "librust-ansi-term-0-12+default-dev"
+  "librust-atty-dev"
+  "librust-bitflags-1+default-dev"
+  "librust-term-size-0-3+default-dev"
+  "librust-textwrap-0-16+default-dev"
+  "librust-textwrap-0-16+terminal-size-dev"
+  "librust-unicode-width-dev"
+  "librust-vec-map-0-8+default-dev"
+  ("librust-strsim-0-10+default-dev" | "librust-strsim-0-9+default-dev" | "librust-strsim-0-8+default-dev" | "librust-strsim-0-7+default-dev")
+  ("librust-yaml-rust-0-4+default-dev" | "librust-yaml-rust-0-3+default-dev" {>= "0.3.5-~~"})
+]
+extra-source "librust-clap-2-dev_2.34.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-clap-2/librust-clap-2-dev_2.34.0-3_amd64.deb"
+}

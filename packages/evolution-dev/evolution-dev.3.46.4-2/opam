@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i evolution-dev_3.46.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r evolution-dev"]
+]
+depends: [
+  "libcamel1-2-dev"
+  "libebackend1-2-dev"
+  "libedataserver1-2-dev"
+  "libedataserverui1-2-dev"
+  "libenchant-2-dev" {>= "2.2.0"}
+  "libevolution" {= "3.46.4-2"}
+  "libgnome-desktop-3-dev"
+  "libgtk-3-dev" {>= "3.10"}
+  "libwebkit2gtk-4-1-dev"
+]
+extra-source "evolution-dev_3.46.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/evolution/evolution-dev_3.46.4-2_amd64.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-other-ascat_3.1.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-other-ascat"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-genomicranges"
+  "r-bioc-iranges"
+  "r-cran-data-table"
+  "r-cran-doparallel"
+  "r-cran-foreach"
+  "r-cran-rcolorbrewer"
+]
+extra-source "r-other-ascat_3.1.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-other-ascat/r-other-ascat_3.1.1-1_all.deb"
+}

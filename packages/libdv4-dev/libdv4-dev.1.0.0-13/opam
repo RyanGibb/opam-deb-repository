@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdv4-dev_1.0.0-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdv4-dev"]
+]
+depends: [
+  "libdv4" {= "1.0.0-13"}
+  "libpopt-dev"
+]
+conflicts: [
+  "libdv-dev"
+]
+extra-source "libdv4-dev_1.0.0-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdv/libdv4-dev_1.0.0-13_amd64.deb"
+}

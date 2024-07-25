@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xmms2-client-avahi_0.8+dfsg-21_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xmms2-client-avahi"]
+]
+depends: [
+  "libavahi-client3" {>= "0.6.16"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libavahi-glib1" {>= "0.6.16"}
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libxmmsclient-glib1" {>= "0.6DrMattDestruction"}
+  "libxmmsclient6" {>= "0.7DrNo"}
+  "xmms2-core" {= "0.8+dfsg-21"}
+]
+extra-source "xmms2-client-avahi_0.8+dfsg-21_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmms2/xmms2-client-avahi_0.8+dfsg-21_amd64.deb"
+}

@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vagalume_0.8.6-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vagalume"]
+]
+depends: [
+  "gstreamer1-0-plugins-bad"
+  "gstreamer1-0-plugins-base"
+  "gstreamer1-0-plugins-good"
+  "libc6" {>= "2.14"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgstreamer1-0-0" {>= "1.0.0"}
+  "libgtk-3-0" {>= "3.0.0"}
+  "libnotify4" {>= "0.7.0"}
+  "libproxy1v5" {>= "0.4.17"}
+  "librsvg2-common"
+  "libxml2" {>= "2.7.4"}
+  ("default-dbus-session-bus" | "dbus-session-bus")
+]
+extra-source "vagalume_0.8.6-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vagalume/vagalume_0.8.6-3+b1_amd64.deb"
+}

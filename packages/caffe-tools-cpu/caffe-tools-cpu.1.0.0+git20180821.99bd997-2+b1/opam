@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i caffe-tools-cpu_1.0.0+git20180821.99bd997-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r caffe-tools-cpu"]
+]
+depends: [
+  "libboost-filesystem1-67-0"
+  "libboost-system1-67-0"
+  "libboost-thread1-67-0"
+  "libc6" {>= "2.27"}
+  "libcaffe-cpu1" {= "1.0.0+git20180821.99bd997-2+b1"}
+  "libgcc1" {>= "1-3.0"}
+  "libgflags2-2"
+  "libgoogle-glog0v5"
+  "libhdf5-103"
+  "libleveldb1d"
+  "libopencv-core3-2"
+  "libopencv-imgcodecs3-2"
+  "libopencv-imgproc3-2"
+  "libprotobuf17"
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "caffe-tools-cuda"
+]
+extra-source "caffe-tools-cpu_1.0.0+git20180821.99bd997-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/caffe/caffe-tools-cpu_1.0.0+git20180821.99bd997-2+b1_amd64.deb"
+}

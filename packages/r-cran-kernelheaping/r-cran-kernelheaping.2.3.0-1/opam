@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-kernelheaping_2.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-kernelheaping"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.1.2-2"}
+  "r-cran-dplyr"
+  "r-cran-fastmatch"
+  "r-cran-fitdistrplus"
+  "r-cran-gb2"
+  "r-cran-ks"
+  "r-cran-magrittr"
+  "r-cran-mass"
+  "r-cran-mvtnorm"
+  "r-cran-plyr"
+  "r-cran-sp"
+  "r-cran-sparr"
+]
+extra-source "r-cran-kernelheaping_2.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-kernelheaping/r-cran-kernelheaping_2.3.0-1_all.deb"
+}

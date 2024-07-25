@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i supercollider-dev_1:3.10.0+repack-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r supercollider-dev"]
+]
+depends: [
+  "libsndfile1-dev" {>= "1.0.16"}
+  "supercollider-language" {= "1-3.10.0+repack-1"}
+]
+conflicts: [
+  "supercollider-common-dev"
+  "supercollider-server-dev"
+]
+extra-source "supercollider-dev_1:3.10.0+repack-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/supercollider/supercollider-dev_3.10.0+repack-1_amd64.deb"
+}

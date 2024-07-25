@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreadline5-dbg_5.2+dfsg-3+b13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreadline5-dbg"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libreadline5" {= "5.2+dfsg-3+b13"}
+  "libtinfo6" {>= "6"}
+]
+conflicts: [
+  "libreadline-dbg"
+]
+extra-source "libreadline5-dbg_5.2+dfsg-3+b13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/readline5/libreadline5-dbg_5.2+dfsg-3+b13_amd64.deb"
+}

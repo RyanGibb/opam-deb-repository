@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-yoyo_7.3.1+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-yoyo"]
+]
+depends: [
+  "python3-any" {>= "3.6~"}
+  "python3-pkg-resources"
+  "python3-sqlparse"
+  "python3-tabulate"
+]
+extra-source "python3-yoyo_7.3.1+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yoyo/python3-yoyo_7.3.1+dfsg1-1_all.deb"
+}

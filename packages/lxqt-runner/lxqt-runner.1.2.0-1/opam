@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lxqt-runner_1.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lxqt-runner"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libkf5windowsystem5" {>= "4.96.0"}
+  "liblxqt-globalkeys-ui1" {>= "1.1.0~"}
+  "liblxqt-globalkeys1" {>= "1.1.0~"}
+  "liblxqt1" {>= "1.2.0~"}
+  "libmuparser2v5" {>= "2.3.3"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libqt5xdg3" {>= "3.10.0~"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+  ("libqt5gui5" {>= "5.10.0"} | "libqt5gui5-gles" {>= "5.10.0"})
+]
+extra-source "lxqt-runner_1.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxqt-runner/lxqt-runner_1.2.0-1_amd64.deb"
+}

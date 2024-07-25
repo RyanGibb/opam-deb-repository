@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sonata_1.7~b1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sonata"]
+]
+depends: [
+  "gir1-2-gdkpixbuf-2-0"
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-3-0"
+  "gir1-2-pango-1-0"
+  "python3-any"
+  "python3-dbus"
+  "python3-gi"
+  "python3-mpd" {>= "0.5.5"}
+]
+extra-source "sonata_1.7~b1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sonata/sonata_1.7~b1-3_all.deb"
+}

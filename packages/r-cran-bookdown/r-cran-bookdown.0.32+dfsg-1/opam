@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-bookdown_0.32+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-bookdown"]
+]
+depends: [
+  "fonts-font-awesome"
+  "libjs-jquery"
+  "libjs-lunr"
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-htmltools" {>= "0.3.6"}
+  "r-cran-jquerylib"
+  "r-cran-knitr" {>= "1.38"}
+  "r-cran-rmarkdown" {>= "2.14"}
+  "r-cran-tinytex" {>= "0.12"}
+  "r-cran-xfun" {>= "0.29"}
+  "r-cran-yaml" {>= "2.1.19"}
+]
+extra-source "r-cran-bookdown_0.32+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-bookdown/r-cran-bookdown_0.32+dfsg-1_all.deb"
+}

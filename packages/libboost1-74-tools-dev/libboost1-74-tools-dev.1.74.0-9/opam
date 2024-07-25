@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libboost1.74-tools-dev_1.74.0-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libboost1.74-tools-dev"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+]
+conflicts: [
+  "bjam"
+  "boost-build"
+  "libboost1.49-dev"
+  "libboost1.53-tools-dev"
+  "libboost1.54-tools-dev"
+  "libboost1.55-tools-dev"
+  "libboost1.57-tools-dev"
+  "libboost1.58-tools-dev"
+  "libboost1.60-tools-dev"
+  "libboost1.61-tools-dev"
+  "libboost1.62-tools-dev"
+  "libboost1.63-tools-dev"
+  "libboost1.65-tools-dev"
+  "libboost1.67-tools-dev"
+  "libboost1.70-tools-dev"
+  "libboost1.71-tools-dev"
+]
+extra-source "libboost1.74-tools-dev_1.74.0-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boost1.74/libboost1.74-tools-dev_1.74.0-9_amd64.deb"
+}

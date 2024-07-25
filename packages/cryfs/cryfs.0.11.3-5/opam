@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cryfs_0.11.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cryfs"]
+]
+depends: [
+  "fuse"
+  "libboost-chrono1-74-0" {>= "1.74.0"}
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libboost-thread1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.34"}
+  "libcurl4" {>= "7.16.2"}
+  "libfmt9" {>= "9.1.0+ds1"}
+  "libfuse2" {>= "2.8"}
+  "libgcc-s1" {>= "3.3"}
+  "libgomp1" {>= "4.9"}
+  "libspdlog1-10"
+  "libstdc++6" {>= "12.2.0-11"}
+]
+extra-source "cryfs_0.11.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cryfs/cryfs_0.11.3-5_amd64.deb"
+}

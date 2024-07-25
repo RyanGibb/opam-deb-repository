@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-rack-mount_0.8.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-rack-mount"]
+]
+depends: [
+  "ruby-rack" {>= "1.0.0"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-rack-mount_0.8.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-rack-mount/ruby-rack-mount_0.8.3-3_all.deb"
+}

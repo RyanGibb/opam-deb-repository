@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-sandi-prof_0.5-4+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-sandi-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-conduit-prof"
+  "libghc-sandi-dev" {= "0.5-4+b4"}
+]
+extra-source "libghc-sandi-prof_0.5-4+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-sandi/libghc-sandi-prof_0.5-4+b4_amd64.deb"
+}

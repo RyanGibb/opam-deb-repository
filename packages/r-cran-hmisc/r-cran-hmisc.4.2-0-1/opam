@@ -1,0 +1,38 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-hmisc_4.2-0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-hmisc"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgfortran5" {>= "8"}
+  "libquadmath0" {>= "4.6"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.2-1"}
+  "r-cran-acepack"
+  "r-cran-base64enc"
+  "r-cran-chron"
+  "r-cran-cluster"
+  "r-cran-data-table"
+  "r-cran-foreign"
+  "r-cran-formula"
+  "r-cran-ggplot2" {>= "2.2"}
+  "r-cran-gridextra"
+  "r-cran-gtable"
+  "r-cran-htmltable" {>= "1.11.0"}
+  "r-cran-htmltools"
+  "r-cran-lattice"
+  "r-cran-latticeextra"
+  "r-cran-nnet"
+  "r-cran-rpart"
+  "r-cran-survival" {>= "2.40-1"}
+  "r-cran-viridis"
+]
+conflicts: [
+  "r-noncran-hmisc"
+]
+extra-source "r-cran-hmisc_4.2-0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hmisc/r-cran-hmisc_4.2-0-1_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dpt-i2o-raidutils_0.0.6-22_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dpt-i2o-raidutils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5"}
+]
+conflicts: [
+  "raidutils (<< 0.0.6-6)"
+]
+extra-source "dpt-i2o-raidutils_0.0.6-22_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/raidutils/dpt-i2o-raidutils_0.0.6-22_amd64.deb"
+}

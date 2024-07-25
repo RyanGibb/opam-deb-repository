@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-arm-linux-gnueabi_4:8.3.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-arm-linux-gnueabi"]
+]
+depends: [
+  "cpp-arm-linux-gnueabi" {= "4-8.3.0-1"}
+  "gcc-8-arm-linux-gnueabi" {>= "8.3.0-1~"}
+]
+extra-source "gcc-arm-linux-gnueabi_4:8.3.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-defaults/gcc-arm-linux-gnueabi_8.3.0-1_amd64.deb"
+}

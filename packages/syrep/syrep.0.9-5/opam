@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i syrep_0.9-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r syrep"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libdb5-3"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "syrep_0.9-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/syrep/syrep_0.9-5_amd64.deb"
+}

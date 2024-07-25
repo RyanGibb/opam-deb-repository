@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librpm-dev_4.16.1.2+dfsg1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librpm-dev"]
+]
+depends: [
+  "libaudit-dev"
+  "libbz2-dev"
+  "libc6-dev"
+  "libdb-dev"
+  "libgcrypt20-dev"
+  "libpopt-dev"
+  "libreadline-dev"
+  "librpm9" {= "4.16.1.2+dfsg1-3"}
+  "librpmbuild9" {= "4.16.1.2+dfsg1-3"}
+  "librpmio9" {= "4.16.1.2+dfsg1-3"}
+  "librpmsign9" {= "4.16.1.2+dfsg1-3"}
+  "libselinux1-dev"
+  "libsqlite3-dev"
+  "libxml2-dev"
+  "libzstd-dev"
+  "zlib1g-dev"
+]
+extra-source "librpm-dev_4.16.1.2+dfsg1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rpm/librpm-dev_4.16.1.2+dfsg1-3_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-agatesql_0.5.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-agatesql"]
+]
+depends: [
+  "python3-agate"
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-sqlalchemy" {>= "1.0.8"}
+]
+extra-source "python3-agatesql_0.5.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-agate-sql/python3-agatesql_0.5.2-2_all.deb"
+}

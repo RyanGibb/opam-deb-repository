@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhtml-parser-perl_3.81-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhtml-parser-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libhtml-tagset-perl"
+  "liburi-perl"
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+]
+extra-source "libhtml-parser-perl_3.81-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhtml-parser-perl/libhtml-parser-perl_3.81-1_amd64.deb"
+}

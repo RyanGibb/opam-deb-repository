@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i btrfsmaintenance_0.5-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r btrfsmaintenance"]
+]
+depends: [
+  "btrfs-progs"
+  ("systemd" | "cron")
+]
+extra-source "btrfsmaintenance_0.5-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/btrfsmaintenance/btrfsmaintenance_0.5-4_all.deb"
+}

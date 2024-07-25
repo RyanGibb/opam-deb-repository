@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prometheus-node-exporter_0.17.0+ds-3+b11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prometheus-node-exporter"]
+]
+depends: [
+  "libc6" {>= "2.3.2"}
+  "moreutils"
+  ("daemon" | "systemd-sysv")
+]
+extra-source "prometheus-node-exporter_0.17.0+ds-3+b11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prometheus-node-exporter/prometheus-node-exporter_0.17.0+ds-3+b11_amd64.deb"
+}

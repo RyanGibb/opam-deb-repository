@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sendmail_8.15.2-22+deb11u3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sendmail"]
+]
+depends: [
+  "sendmail-base"
+  "sendmail-bin"
+  "sendmail-cf"
+  "sensible-mda"
+]
+extra-source "sendmail_8.15.2-22+deb11u3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sendmail/sendmail_8.15.2-22+deb11u3_all.deb"
+}

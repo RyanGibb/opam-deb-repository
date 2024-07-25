@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sqlalchemy-utils_0.32.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sqlalchemy-utils"]
+]
+depends: [
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-anyjson"
+  "python3-arrow"
+  "python3-babel"
+  "python3-six"
+  "python3-sqlalchemy" {>= "1.0"}
+]
+extra-source "python3-sqlalchemy-utils_0.32.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-sqlalchemy-utils/python3-sqlalchemy-utils_0.32.21-1_all.deb"
+}

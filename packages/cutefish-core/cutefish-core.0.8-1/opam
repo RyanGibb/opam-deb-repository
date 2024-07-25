@@ -1,0 +1,50 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cutefish-core_0.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cutefish-core"]
+]
+depends: [
+  "accountsservice"
+  "appmenu-gtk2-module"
+  "appmenu-gtk3-module"
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libkf5coreaddons5" {>= "4.97.0"}
+  "libkf5idletime5" {>= "4.96.0"}
+  "libkf5windowsystem5" {>= "5.25.0"}
+  "libpolkit-qt5-1-1" {>= "0.112.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5dbus5" {>= "5.14.1"}
+  "libqt5qml5" {>= "5.1.0"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libqt5x11extras5" {>= "5.6.0"}
+  "libstdc++6" {>= "5"}
+  "libx11-6" {>= "2-1.2.99.901"}
+  "libx11-xcb1" {>= "2-1.7.2"}
+  "libxcb-composite0"
+  "libxcb-damage0"
+  "libxcb-dpms0"
+  "libxcb-image0" {>= "0.2"}
+  "libxcb-record0"
+  "libxcb-shape0"
+  "libxcb-util1" {>= "0.4.0"}
+  "libxcb1" {>= "1.6"}
+  "libxcursor1" {> "1.1.2"}
+  "libxi6" {>= "2-1.2.99.4"}
+  "libxtst6"
+  "qml-module-qt-labs-platform"
+  "qml-module-qt-labs-settings"
+  "qml-module-qtqml"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick-shapes"
+  "qml-module-qtquick-window2"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.10.0"} | "libqt5gui5-gles" {>= "5.10.0"})
+  ("libqt5quick5" {>= "5.15.1"} | "libqt5quick5-gles" {>= "5.15.1"})
+]
+extra-source "cutefish-core_0.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cutefish-core/cutefish-core_0.8-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i argonaut-quota_1.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r argonaut-quota"]
+]
+depends: [
+  "argonaut-common"
+  "libquota-perl"
+  "quota"
+]
+extra-source "argonaut-quota_1.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/argonaut/argonaut-quota_1.3-2_all.deb"
+}

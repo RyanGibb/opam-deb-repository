@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxcb-xkb-dev_1.14-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxcb-xkb-dev"]
+]
+depends: [
+  "libxcb-xkb1" {= "1.14-3"}
+  "libxcb1-dev"
+]
+extra-source "libxcb-xkb-dev_1.14-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libx/libxcb/libxcb-xkb-dev_1.14-3_amd64.deb"
+}

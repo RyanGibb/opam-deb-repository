@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i capi4hylafax_1:01.03.00.99.svn.300-20+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r capi4hylafax"]
+]
+depends: [
+  "capiutils"
+  "libc6" {>= "2.15"}
+  "libcapi20-3"
+  "libgcc1" {>= "1-4.1.1"}
+  "libstdc++6" {>= "4.1.1"}
+  "libtiff5" {>= "4.0.3"}
+]
+extra-source "capi4hylafax_1:01.03.00.99.svn.300-20+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/capi4hylafax/capi4hylafax_01.03.00.99.svn.300-20+b1_amd64.deb"
+}

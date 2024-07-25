@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-tzinfo_1.2.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-tzinfo"]
+]
+depends: [
+  "ruby-thread-safe" {>= "0.1~"}
+  "tzdata"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-tzinfo_1.2.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-tzinfo/ruby-tzinfo_1.2.5-1_all.deb"
+}

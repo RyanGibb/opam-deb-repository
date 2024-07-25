@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-memory-profiler_0.52-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-memory-profiler"]
+]
+depends: [
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7.5-5~"}
+  "python-psutil"
+]
+extra-source "python-memory-profiler_0.52-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-memory-profiler/python-memory-profiler_0.52-1_all.deb"
+}

@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i irqbalance_1.9.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r irqbalance"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcap-ng0" {>= "0.7.9"}
+  "libglib2-0-0" {>= "2.35.8"}
+  "libncursesw6" {>= "6"}
+  "libnuma1" {>= "2.0.11"}
+  "libsystemd0"
+  "libtinfo6" {>= "6"}
+  "runit-helper" {>= "2.14.0~"}
+]
+conflicts: [
+  "runit (<< 2.1.2-51~)"
+]
+extra-source "irqbalance_1.9.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/irqbalance/irqbalance_1.9.2-1_amd64.deb"
+}

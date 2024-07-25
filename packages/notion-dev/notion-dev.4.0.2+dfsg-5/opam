@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i notion-dev_4.0.2+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r notion-dev"]
+]
+depends: [
+  "gcc" {> "3"}
+  "libsm-dev"
+  "libx11-dev"
+  "lua5-3"
+]
+extra-source "notion-dev_4.0.2+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/notion/notion-dev_4.0.2+dfsg-5_all.deb"
+}

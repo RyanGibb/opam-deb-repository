@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ax25-xtools_0.0.10-rc4-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ax25-xtools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfltk1-3" {>= "1.3.1"}
+  "libgcc1" {>= "1-3.0"}
+  "libgl1"
+  "libice6" {>= "1-1.0.0"}
+  "libsm6"
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  "libxext6"
+  "libxi6"
+]
+conflicts: [
+  "ax25-utils"
+]
+extra-source "ax25-xtools_0.0.10-rc4-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ax25-tools/ax25-xtools_0.0.10-rc4-3_amd64.deb"
+}

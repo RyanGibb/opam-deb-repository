@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxcb-image0-dev_0.4.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxcb-image0-dev"]
+]
+depends: [
+  "libxcb-image0" {= "0.4.0-1+b2"}
+  "libxcb-shm0-dev"
+  "libxcb1-dev"
+]
+extra-source "libxcb-image0-dev_0.4.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xcb-util-image/libxcb-image0-dev_0.4.0-1+b2_amd64.deb"
+}

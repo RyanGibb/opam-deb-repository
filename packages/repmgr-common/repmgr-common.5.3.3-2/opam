@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i repmgr-common_5.3.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r repmgr-common"]
+]
+depends: [
+  "lsb-base"
+  "postgresql-common"
+]
+extra-source "repmgr-common_5.3.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/repmgr/repmgr-common_5.3.3-2_all.deb"
+}

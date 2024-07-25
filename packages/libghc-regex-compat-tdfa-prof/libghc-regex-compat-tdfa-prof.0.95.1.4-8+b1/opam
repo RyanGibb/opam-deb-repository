@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-regex-compat-tdfa-prof_0.95.1.4-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-regex-compat-tdfa-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-regex-base-prof"
+  "libghc-regex-compat-tdfa-dev" {= "0.95.1.4-8+b1"}
+  "libghc-regex-tdfa-prof"
+]
+extra-source "libghc-regex-compat-tdfa-prof_0.95.1.4-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-regex-compat-tdfa/libghc-regex-compat-tdfa-prof_0.95.1.4-8+b1_amd64.deb"
+}

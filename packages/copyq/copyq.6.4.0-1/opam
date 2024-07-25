@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i copyq_6.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r copyq"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libkf5notifications5" {>= "5.69.0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.15.1"}
+  "libqt5qml5" {>= "5.12.2"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5waylandclient5" {>= "5.15.4"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libqt5x11extras5" {>= "5.6.0"}
+  "libstdc++6" {>= "11"}
+  "libwayland-client0" {>= "1.20.0"}
+  "libx11-6"
+  "libxtst6"
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "copyq_6.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/copyq/copyq_6.4.0-1_amd64.deb"
+}

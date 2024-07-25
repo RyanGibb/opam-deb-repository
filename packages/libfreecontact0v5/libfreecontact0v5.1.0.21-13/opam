@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfreecontact0v5_1.0.21-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfreecontact0v5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgfortran5" {>= "8"}
+  "libgomp1" {>= "6"}
+  "libstdc++6" {>= "11"}
+  ("libblas3" | "libblas-so-3")
+  ("liblapack3" | "liblapack-so-3")
+]
+conflicts: [
+  "libfreecontact0"
+]
+extra-source "libfreecontact0v5_1.0.21-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freecontact/libfreecontact0v5_1.0.21-13_amd64.deb"
+}

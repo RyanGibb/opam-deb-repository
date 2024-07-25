@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcpprest-dev_2.10.10-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcpprest-dev"]
+]
+depends: [
+  "libboost-atomic-dev"
+  "libboost-chrono-dev"
+  "libboost-filesystem-dev"
+  "libboost-random-dev"
+  "libboost-regex-dev"
+  "libboost-system-dev"
+  "libboost-thread-dev"
+  "libbrotli-dev"
+  "libcpprest2-10" {= "2.10.10-1"}
+  "libssl-dev"
+  "libwebsocketpp-dev"
+  "zlib1g-dev"
+]
+extra-source "libcpprest-dev_2.10.10-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cpprest/libcpprest-dev_2.10.10-1_amd64.deb"
+}

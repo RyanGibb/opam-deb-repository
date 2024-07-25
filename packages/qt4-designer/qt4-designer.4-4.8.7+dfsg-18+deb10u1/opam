@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qt4-designer_4:4.8.7+dfsg-18+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qt4-designer"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt4-designer" {= "4-4.8.7+dfsg-18+deb10u1"}
+  "libqt4-network" {= "4-4.8.7+dfsg-18+deb10u1"}
+  "libqt4-xml" {= "4-4.8.7+dfsg-18+deb10u1"}
+  "libqtcore4" {= "4-4.8.7+dfsg-18+deb10u1"}
+  "libqtgui4" {= "4-4.8.7+dfsg-18+deb10u1"}
+  "libstdc++6" {>= "4.1.1"}
+  "qtchooser" {>= "55-gc9562a1-1~"}
+]
+extra-source "qt4-designer_4:4.8.7+dfsg-18+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qt4-x11/qt4-designer_4.8.7+dfsg-18+deb10u1_amd64.deb"
+}

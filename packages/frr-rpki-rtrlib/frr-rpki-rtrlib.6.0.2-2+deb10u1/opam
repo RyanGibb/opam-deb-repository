@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i frr-rpki-rtrlib_6.0.2-2+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r frr-rpki-rtrlib"]
+]
+depends: [
+  "frr" {= "6.0.2-2+deb10u1"}
+  "libc6" {>= "2.4"}
+  "libjson-c3" {>= "0.10"}
+  "librtr0" {>= "0.6.0"}
+  "libssh-4" {>= "0.8.0"}
+  "libsystemd0"
+]
+extra-source "frr-rpki-rtrlib_6.0.2-2+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/frr/frr-rpki-rtrlib_6.0.2-2+deb10u1_amd64.deb"
+}

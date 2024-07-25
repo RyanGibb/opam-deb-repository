@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libuuseg-ocaml-dev_15.0.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libuuseg-ocaml-dev"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libuucp-ocaml-dev"
+  "libuuseg-ocaml"
+  "libuutf-ocaml-dev"
+  "ocaml"
+]
+extra-source "libuuseg-ocaml-dev_15.0.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-uuseg/libuuseg-ocaml-dev_15.0.0-1+b1_amd64.deb"
+}

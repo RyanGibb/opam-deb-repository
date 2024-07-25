@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gstreamer0.10-qapt_3.0.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gstreamer0.10-qapt"]
+]
+depends: [
+  "gstreamer-qapt" {>= "3.0.4-1"}
+]
+extra-source "gstreamer0.10-qapt_3.0.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libq/libqapt/gstreamer0.10-qapt_3.0.4-1_all.deb"
+}

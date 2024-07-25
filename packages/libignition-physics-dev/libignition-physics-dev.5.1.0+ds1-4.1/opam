@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libignition-physics-dev_5.1.0+ds1-4.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libignition-physics-dev"]
+]
+depends: [
+  "libbullet-dev"
+  "libdart-collision-bullet-dev" {>= "6.12.1+dfsg4"}
+  "libdart-collision-ode-dev" {>= "6.12.1+dfsg4"}
+  "libdart-dev" {>= "6.12.1+dfsg4"}
+  "libdart-external-convhull-3d-dev" {>= "6.12.1+dfsg4"}
+  "libdart-external-ikfast-dev" {>= "6.12.1+dfsg4"}
+  "libdart-external-odelcpsolver-dev" {>= "6.12.1+dfsg4"}
+  "libdart-utils-dev" {>= "6.12.1+dfsg4"}
+  "libdart-utils-urdf-dev" {>= "6.12.1+dfsg4"}
+  "libignition-common-dev" {>= "4.0.0"}
+  "libignition-math-dev" {>= "6.0.0"}
+  "libignition-physics-core-dev"
+  "libignition-physics-mesh-dev"
+  "libignition-physics-sdf-dev"
+  "libignition-physics-tpe-dev"
+  "libignition-physics5-bullet-plugin5" {= "5.1.0+ds1-4.1"}
+  "libignition-physics5-dartsim-plugin5" {= "5.1.0+ds1-4.1"}
+  "libignition-plugin-dev" {>= "1.1.0"}
+  "libsdformat-dev" {>= "12.0.0"}
+]
+extra-source "libignition-physics-dev_5.1.0+ds1-4.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ignition-physics/libignition-physics-dev_5.1.0+ds1-4.1_amd64.deb"
+}

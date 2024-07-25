@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmatroska-dev_1.6.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmatroska-dev"]
+]
+depends: [
+  "libebml-dev" {>= "1.4.0"}
+  "libmatroska7" {= "1.6.2-1"}
+]
+extra-source "libmatroska-dev_1.6.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmatroska/libmatroska-dev_1.6.2-1_amd64.deb"
+}

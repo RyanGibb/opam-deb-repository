@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kuserfeedback-bin_1.0.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kuserfeedback-bin"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkuserfeedbackcore1" {>= "1.0.0"}
+  "libkuserfeedbackwidgets1" {>= "1.0.0"}
+  "libqt5charts5" {>= "5.14.1"}
+  "libqt5core5a" {>= "5.14.1"}
+  "libqt5network5" {>= "5.8.0~"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.8.0~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.8.0~"} | "libqt5gui5-gles" {>= "5.8.0~"})
+]
+extra-source "kuserfeedback-bin_1.0.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kuserfeedback/kuserfeedback-bin_1.0.0-3_amd64.deb"
+}

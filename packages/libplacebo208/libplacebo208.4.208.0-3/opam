@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplacebo208_4.208.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplacebo208"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libepoxy0" {>= "1.4.3"}
+  "libgcc-s1" {>= "3.4"}
+  "liblcms2-2" {>= "2.6"}
+  "libstdc++6" {>= "11"}
+  "libvulkan1" {>= "1.2.131.2"}
+]
+extra-source "libplacebo208_4.208.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libplacebo/libplacebo208_4.208.0-3_amd64.deb"
+}

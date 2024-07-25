@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cen64_0.3+git20200723-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cen64"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgl1"
+  "libopenal1" {>= "1.14"}
+  "libx11-6"
+]
+extra-source "cen64_0.3+git20200723-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cen64/cen64_0.3+git20200723-1_amd64.deb"
+}

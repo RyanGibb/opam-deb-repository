@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5mediaplayer5_5.54.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5mediaplayer5"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libkf5mediaplayer-data" {= "5.54.0-1"}
+  "libkf5parts5" {>= "4.96.0"}
+  "libkf5xmlgui5" {>= "4.96.0"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5dbus5" {>= "5.9.0~"}
+  "libqt5widgets5" {>= "5.9.0~"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libkf5mediaplayer5_5.54.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kmediaplayer/libkf5mediaplayer5_5.54.0-1_amd64.deb"
+}

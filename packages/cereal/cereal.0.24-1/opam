@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cereal_0.24-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cereal"]
+]
+depends: [
+  "adduser"
+  "procmail"
+  "runit" {>= "1.8.0-3"}
+  "screen"
+]
+extra-source "cereal_0.24-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cereal/cereal_0.24-1_all.deb"
+}

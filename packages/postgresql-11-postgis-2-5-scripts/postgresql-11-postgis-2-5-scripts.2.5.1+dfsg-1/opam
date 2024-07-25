@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-11-postgis-2.5-scripts_2.5.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-11-postgis-2.5-scripts"]
+]
+depends: [
+  "perl-any"
+]
+conflicts: [
+  "postgresql-11-postgis-2.2-scripts"
+  "postgresql-11-postgis-2.3-scripts"
+  "postgresql-11-postgis-2.4-scripts"
+]
+extra-source "postgresql-11-postgis-2.5-scripts_2.5.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/postgis/postgresql-11-postgis-2.5-scripts_2.5.1+dfsg-1_all.deb"
+}

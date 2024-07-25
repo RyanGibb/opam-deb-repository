@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libndpi-wireshark_2.6-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libndpi-wireshark"]
+]
+depends: [
+  "libndpi-bin" {>= "2.6-3"}
+]
+extra-source "libndpi-wireshark_2.6-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ndpi/libndpi-wireshark_2.6-3_amd64.deb"
+}

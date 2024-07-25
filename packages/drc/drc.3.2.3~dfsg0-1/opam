@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i drc_3.2.3~dfsg0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r drc"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libstdc++6" {>= "4.9"}
+]
+extra-source "drc_3.2.3~dfsg0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/drc/drc_3.2.3~dfsg0-1_amd64.deb"
+}

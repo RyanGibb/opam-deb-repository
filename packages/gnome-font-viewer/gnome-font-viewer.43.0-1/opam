@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-font-viewer_43.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-font-viewer"]
+]
+depends: [
+  "libadwaita-1-0" {>= "1.2~alpha"}
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.14.0"}
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libfribidi0" {>= "0.19.2"}
+  "libglib2-0-0" {>= "2.56"}
+  "libgraphene-1-0-0" {>= "1.5.4"}
+  "libgtk-4-1" {>= "4.5.0"}
+  "libharfbuzz0b" {>= "0.9.9"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  "libpangocairo-1-0-0" {>= "1.22.0"}
+]
+extra-source "gnome-font-viewer_43.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gnome-font-viewer/gnome-font-viewer_43.0-1_amd64.deb"
+}

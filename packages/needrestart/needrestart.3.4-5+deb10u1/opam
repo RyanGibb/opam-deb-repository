@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i needrestart_3.4-5+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r needrestart"]
+]
+depends: [
+  "binutils"
+  "dpkg" {>= "1.16.0"}
+  "gettext-base"
+  "libintl-perl"
+  "libmodule-find-perl"
+  "libmodule-scandeps-perl"
+  "libproc-processtable-perl"
+  "libsort-naturally-perl"
+  "libterm-readkey-perl"
+  "perl"
+  "xz-utils"
+]
+extra-source "needrestart_3.4-5+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/needrestart/needrestart_3.4-5+deb10u1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdart-utils-urdf6_6.9.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdart-utils-urdf6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdart-utils6" {>= "6.9.5"}
+  "libdart6" {>= "6.9.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtinyxml2-8" {>= "8.0.0"}
+  "liburdfdom-model"
+]
+extra-source "libdart-utils-urdf6_6.9.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dart/libdart-utils-urdf6_6.9.5-3_amd64.deb"
+}

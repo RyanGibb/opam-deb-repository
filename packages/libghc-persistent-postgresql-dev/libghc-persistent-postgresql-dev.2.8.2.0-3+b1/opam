@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-persistent-postgresql-dev_2.8.2.0-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-persistent-postgresql-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.2.5"}
+  "libghc-aeson-dev"
+  "libghc-blaze-builder-dev"
+  "libghc-conduit-dev"
+  "libghc-monad-logger-dev"
+  "libghc-persistent-dev"
+  "libghc-postgresql-libpq-dev"
+  "libghc-postgresql-simple-dev"
+  "libghc-resource-pool-dev"
+  "libghc-resourcet-dev"
+  "libghc-unliftio-core-dev"
+  "libgmp10"
+  "libpq5"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libghc-persistent-postgresql-dev_2.8.2.0-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-persistent-postgresql/libghc-persistent-postgresql-dev_2.8.2.0-3+b1_amd64.deb"
+}

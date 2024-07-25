@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libregf-utils_20201007-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libregf-utils"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libfuse2" {>= "2.6"}
+  "libregf1" {>= "20150704"}
+]
+extra-source "libregf-utils_20201007-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libregf/libregf-utils_20201007-2_amd64.deb"
+}

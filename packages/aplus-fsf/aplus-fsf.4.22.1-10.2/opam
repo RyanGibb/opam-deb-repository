@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aplus-fsf_4.22.1-10.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aplus-fsf"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libgcc-s1" {>= "3.0"}
+  "libnsl2" {>= "1.0"}
+  "libstdc++6" {>= "5.2.1"}
+  "libx11-6"
+]
+extra-source "aplus-fsf_4.22.1-10.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aplus-fsf/aplus-fsf_4.22.1-10.2_amd64.deb"
+}

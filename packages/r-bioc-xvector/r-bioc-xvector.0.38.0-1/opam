@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-xvector_0.38.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-xvector"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.37.0"}
+  "r-bioc-iranges" {>= "2.23.9"}
+  "r-bioc-s4vectors" {>= "0.27.12"}
+  "r-bioc-zlibbioc"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "r-bioc-xvector_0.38.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-xvector/r-bioc-xvector_0.38.0-1_amd64.deb"
+}

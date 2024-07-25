@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-blocking-dev_1.3.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-blocking-dev"]
+]
+depends: [
+  "librust-async-channel-1+default-dev"
+  "librust-async-lock-2+default-dev"
+  "librust-async-task-4+default-dev"
+  "librust-atomic-waker-1+default-dev"
+  "librust-fastrand-1+default-dev"
+  "librust-futures-lite-1+default-dev"
+]
+extra-source "librust-blocking-dev_1.3.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-blocking/librust-blocking-dev_1.3.0-3_all.deb"
+}

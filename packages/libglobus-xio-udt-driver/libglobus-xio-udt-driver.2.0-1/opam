@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglobus-xio-udt-driver_2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglobus-xio-udt-driver"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libgcc1" {>= "1-3.0"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libglobus-common0" {>= "17"}
+  "libglobus-xio0" {>= "5"}
+  "libnice10" {>= "0.1.5"}
+  "libstdc++6" {>= "4.1.1"}
+  "libudt0"
+]
+extra-source "libglobus-xio-udt-driver_2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/globus-xio-udt-driver/libglobus-xio-udt-driver_2.0-1_amd64.deb"
+}

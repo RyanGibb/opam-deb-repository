@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-sqlalchemy-doc_1.2.18+ds1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-sqlalchemy-doc"]
+]
+depends: [
+  "libjs-jquery"
+  "libjs-underscore"
+]
+conflicts: [
+  "python-sqlalchemy (<= 0.3.0-1)"
+]
+extra-source "python-sqlalchemy-doc_1.2.18+ds1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sqlalchemy/python-sqlalchemy-doc_1.2.18+ds1-2_all.deb"
+}

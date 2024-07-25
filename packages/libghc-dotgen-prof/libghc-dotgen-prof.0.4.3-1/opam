@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-dotgen-prof_0.4.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-dotgen-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-dotgen-dev" {= "0.4.3-1"}
+]
+extra-source "libghc-dotgen-prof_0.4.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-dotgen/libghc-dotgen-prof_0.4.3-1_amd64.deb"
+}

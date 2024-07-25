@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmrpt-tfest-dev_1:2.1.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmrpt-tfest-dev"]
+]
+depends: [
+  "libmrpt-common-dev"
+  "libmrpt-poses-dev"
+  "libmrpt-tfest2-1" {= "1-2.1.7-2"}
+]
+extra-source "libmrpt-tfest-dev_1:2.1.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mrpt/libmrpt-tfest-dev_2.1.7-2_amd64.deb"
+}

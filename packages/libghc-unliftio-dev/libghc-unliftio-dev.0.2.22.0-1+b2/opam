@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-unliftio-dev_0.2.22.0-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-unliftio-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.17"}
+  "libghc-async-dev"
+  "libghc-unliftio-core-dev"
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "libghc-unliftio-dev_0.2.22.0-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-unliftio/libghc-unliftio-dev_0.2.22.0-1+b2_amd64.deb"
+}

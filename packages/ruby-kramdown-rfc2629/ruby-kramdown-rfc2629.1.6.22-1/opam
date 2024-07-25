@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-kramdown-rfc2629_1.6.22-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-kramdown-rfc2629"]
+]
+depends: [
+  "libruby3-1"
+  "ruby"
+  "ruby-kramdown" {>= "2.4.0"}
+  "ruby-kramdown-parser-gfm" {>= "1.1"}
+]
+extra-source "ruby-kramdown-rfc2629_1.6.22-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-kramdown-rfc2629/ruby-kramdown-rfc2629_1.6.22-1_all.deb"
+}

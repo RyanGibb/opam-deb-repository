@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librdf-query-perl_2.918-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librdf-query-perl"]
+]
+depends: [
+  "libdatetime-format-w3cdtf-perl"
+  "liberror-perl"
+  "libjson-perl"
+  "libossp-uuid-perl"
+  "libparse-recdescent-perl"
+  "librdf-trine-perl" {>= "1.004"}
+  "libset-scalar-perl"
+  "liburi-perl" {>= "1.52"}
+  "perl-any"
+  "sgml-base" {>= "1.28"}
+  ("libcgi-pm-perl" | "perl" {< "5.19"})
+  ("libmodule-pluggable-perl" | "perl" {< "5.17.0"})
+  ("perl" {>= "5.12"} | "libfile-spec-perl")
+]
+extra-source "librdf-query-perl_2.918-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/librdf-query-perl/librdf-query-perl_2.918-3_all.deb"
+}

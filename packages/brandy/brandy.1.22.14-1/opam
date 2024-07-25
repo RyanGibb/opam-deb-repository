@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i brandy_1.22.14-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r brandy"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libsdl1-2-compat-shim"
+  "libx11-6"
+]
+extra-source "brandy_1.22.14-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/brandy/brandy_1.22.14-1_amd64.deb"
+}

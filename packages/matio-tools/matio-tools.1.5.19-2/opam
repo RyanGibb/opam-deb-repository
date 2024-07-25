@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i matio-tools_1.5.19-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r matio-tools"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmatio11" {>= "1.5.4"}
+]
+extra-source "matio-tools_1.5.19-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmatio/matio-tools_1.5.19-2_amd64.deb"
+}

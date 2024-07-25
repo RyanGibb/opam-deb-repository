@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ironic-lib_4.4.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ironic-lib"]
+]
+depends: [
+  "python3-any"
+  "python3-bcrypt"
+  "python3-oslo-concurrency"
+  "python3-oslo-config"
+  "python3-oslo-i18n"
+  "python3-oslo-log"
+  "python3-oslo-serialization"
+  "python3-oslo-utils"
+  "python3-pbr"
+  "python3-requests"
+  "python3-tenacity" {>= "6.2.0"}
+  "python3-webob"
+  "python3-zeroconf" {>= "0.24.0"}
+]
+extra-source "python3-ironic-lib_4.4.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-ironic-lib/python3-ironic-lib_4.4.0-3_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvecgeom-dev_1.2.1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvecgeom-dev"]
+]
+depends: [
+  "libembree-dev"
+  "libvecgeom1-2" {= "1.2.1+dfsg-1"}
+  "vc-dev"
+  "veccore-dev"
+]
+extra-source "libvecgeom-dev_1.2.1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vecgeom/libvecgeom-dev_1.2.1+dfsg-1_amd64.deb"
+}

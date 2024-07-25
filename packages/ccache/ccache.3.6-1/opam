@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ccache_3.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ccache"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "ccache_3.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ccache/ccache_3.6-1_amd64.deb"
+}

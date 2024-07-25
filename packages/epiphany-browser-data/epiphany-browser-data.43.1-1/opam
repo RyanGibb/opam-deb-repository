@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i epiphany-browser-data_43.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r epiphany-browser-data"]
+]
+depends: [
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "epiphany-browser-data_43.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/epiphany-browser/epiphany-browser-data_43.1-1_all.deb"
+}

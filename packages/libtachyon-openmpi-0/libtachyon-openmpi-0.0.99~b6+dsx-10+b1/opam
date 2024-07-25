@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtachyon-openmpi-0_0.99~b6+dsx-10+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtachyon-openmpi-0"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgomp1" {>= "9"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libopenmpi3" {>= "4.1.4"}
+  "libpng16-16" {>= "1.6.2-1"}
+]
+extra-source "libtachyon-openmpi-0_0.99~b6+dsx-10+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tachyon/libtachyon-openmpi-0_0.99~b6+dsx-10+b1_amd64.deb"
+}

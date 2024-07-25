@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfalcosecurity0_0.1.1dev+git20220316.e5c53d64-5.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfalcosecurity0"]
+]
+depends: [
+  "libabsl20220623" {>= "0~20220623.0-1"}
+  "libb64-0d" {>= "1.2"}
+  "libc-ares2" {>= "1.7.0"}
+  "libc6" {>= "2.34"}
+  "libcurl4" {>= "7.28.0"}
+  "libelf1" {>= "0.131"}
+  "libgcc-s1" {>= "3.0"}
+  "libgrpc++1-51" {>= "1.51.1"}
+  "libgrpc29" {>= "1.51.1"}
+  "libjq1" {>= "1.5"}
+  "libjsoncpp25" {>= "1.9.5"}
+  "libprotobuf32" {>= "3.21.12"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "12"}
+  "libtbb12" {>= "2021.4.0"}
+  "zlib1g" {>= "1-1.2.6"}
+  ("libluajit-5-1-2" {>= "2.0.4+dfsg"} | "libluajit2-5-1-2" {>= "2.1~"})
+]
+extra-source "libfalcosecurity0_0.1.1dev+git20220316.e5c53d64-5.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/falcosecurity-libs/libfalcosecurity0_0.1.1dev+git20220316.e5c53d64-5.1_amd64.deb"
+}

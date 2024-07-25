@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-pretty-assertions-dev_0.6.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-pretty-assertions-dev"]
+]
+depends: [
+  "librust-ctor-dev"
+  "librust-difference-2+default-dev"
+  "librust-output-vt100-dev"
+  ("librust-ansi-term-0-12+default-dev" | "librust-ansi-term-0-11+default-dev")
+]
+extra-source "librust-pretty-assertions-dev_0.6.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-pretty-assertions/librust-pretty-assertions-dev_0.6.1-3_amd64.deb"
+}

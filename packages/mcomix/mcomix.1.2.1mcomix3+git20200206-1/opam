@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mcomix_1.2.1mcomix3+git20200206-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mcomix"]
+]
+depends: [
+  "gir1-2-gtk-3-0"
+  "python3-any"
+  "python3-cairo"
+  "python3-gi"
+  "python3-gi-cairo"
+  "python3-pil"
+]
+conflicts: [
+  "comix"
+]
+extra-source "mcomix_1.2.1mcomix3+git20200206-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mcomix/mcomix_1.2.1mcomix3+git20200206-1_all.deb"
+}

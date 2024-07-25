@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-hxt-http-prof_9.1.5.2-11+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-hxt-http-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-http-prof"
+  "libghc-hxt-http-dev" {= "9.1.5.2-11+b2"}
+  "libghc-hxt-prof"
+  "libghc-network-prof"
+  "libghc-network-uri-prof"
+]
+extra-source "libghc-hxt-http-prof_9.1.5.2-11+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-hxt-http/libghc-hxt-http-prof_9.1.5.2-11+b2_amd64.deb"
+}

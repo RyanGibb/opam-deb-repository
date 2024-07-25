@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i playmidi_2.4debian-11+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r playmidi"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libncurses6" {>= "6"}
+  "libtinfo6" {>= "6"}
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+conflicts: [
+  "suidmanager (<< 0.50)"
+]
+extra-source "playmidi_2.4debian-11+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/playmidi/playmidi_2.4debian-11+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-resampy_0.4.2+ds-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-resampy"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "5.2"}
+  "python3-any"
+  "python3-numba" {>= "0.53"}
+  "python3-numpy"
+]
+extra-source "python3-resampy_0.4.2+ds-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/resampy/python3-resampy_0.4.2+ds-3_all.deb"
+}

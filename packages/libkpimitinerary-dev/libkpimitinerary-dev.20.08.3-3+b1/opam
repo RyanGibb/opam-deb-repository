@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkpimitinerary-dev_20.08.3-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkpimitinerary-dev"]
+]
+depends: [
+  "libkf5calendarcore-dev" {>= "5-5.71.0~"}
+  "libkf5contacts-dev" {>= "5-5.71.0~"}
+  "libkf5i18n-dev" {>= "5.71.0~"}
+  "libkf5mime-dev" {>= "20.08.3~"}
+  "libkpimitinerary5" {= "20.08.3-3+b1"}
+  "libkpimpkpass-dev" {>= "20.08.3~"}
+  "qtbase5-dev" {>= "5.13.0~"}
+  "qtdeclarative5-dev" {>= "5.13.0~"}
+]
+extra-source "libkpimitinerary-dev_20.08.3-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kitinerary/libkpimitinerary-dev_20.08.3-3+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ceph-mgr-k8sevents_14.2.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ceph-mgr-k8sevents"]
+]
+depends: [
+  "ceph-mgr" {>= "14.2.21-1"}
+  "python3-kubernetes"
+]
+extra-source "ceph-mgr-k8sevents_14.2.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/ceph/ceph-mgr-k8sevents_14.2.21-1_all.deb"
+}

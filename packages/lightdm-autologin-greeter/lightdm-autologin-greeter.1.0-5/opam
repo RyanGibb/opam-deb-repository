@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lightdm-autologin-greeter_1.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lightdm-autologin-greeter"]
+]
+depends: [
+  "gir1-2-lightdm-1"
+  "liblightdm-gobject-1-0"
+  "lightdm"
+  "python3"
+  "python3-gi"
+]
+extra-source "lightdm-autologin-greeter_1.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lightdm-autologin-greeter/lightdm-autologin-greeter_1.0-5_all.deb"
+}

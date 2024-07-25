@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-diaspora-federation-rails_0.2.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-diaspora-federation-rails"]
+]
+depends: [
+  "ruby-actionpack" {>= "4.2~"}
+  "ruby-diaspora-federation" {>= "0.2.5~"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-diaspora-federation-rails_0.2.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-diaspora-federation-rails/ruby-diaspora-federation-rails_0.2.5-3_all.deb"
+}

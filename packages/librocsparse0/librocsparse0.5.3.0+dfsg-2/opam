@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librocsparse0_5.3.0+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librocsparse0"]
+]
+depends: [
+  "libamdhip64-5" {>= "4.5.2"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "librocsparse0_5.3.0+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rocsparse/librocsparse0_5.3.0+dfsg-2_amd64.deb"
+}

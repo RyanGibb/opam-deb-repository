@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i colortest_20110624-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r colortest"]
+]
+depends: [
+  "bash" {>= "3"}
+  "perl" {>= "5"}
+  "perl-any"
+]
+extra-source "colortest_20110624-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/colortest/colortest_20110624-6_all.deb"
+}

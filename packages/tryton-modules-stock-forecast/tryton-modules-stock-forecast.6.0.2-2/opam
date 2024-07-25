@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tryton-modules-stock-forecast_6.0.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tryton-modules-stock-forecast"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "5.2"}
+  "python3-any"
+  "python3-dateutil"
+  "python3-pkg-resources"
+  "python3-sql"
+  "tryton-modules-company" {>= "6.0"}
+  "tryton-modules-product" {>= "6.0"}
+  "tryton-modules-stock" {>= "6.0"}
+  "tryton-server"
+  "tryton-server" {>= "6.0"}
+]
+extra-source "tryton-modules-stock-forecast_6.0.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tryton-modules-stock-forecast/tryton-modules-stock-forecast_6.0.2-2_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pygfarm_2.0.18.5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pygfarm"]
+]
+depends: [
+  "pygopherd" {>= "2.0.18.5"}
+  "python-dictclient" {>= "1.0.1"}
+]
+extra-source "pygfarm_2.0.18.5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pygopherd/pygfarm_2.0.18.5_all.deb"
+}

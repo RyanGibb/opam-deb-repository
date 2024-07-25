@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gri_2.12.26-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gri"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libnetcdf13" {>= "3.6.1"}
+  "libreadline7" {>= "6.0"}
+  "libstdc++6" {>= "5.2"}
+  "perl"
+  ("dpkg" {>= "1.15.4"} | "install-info")
+]
+extra-source "gri_2.12.26-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gri/gri_2.12.26-1+b1_amd64.deb"
+}

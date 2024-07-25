@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtiff-opengl_4.2.0-1+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtiff-opengl"]
+]
+depends: [
+  "freeglut3" {>= "2.8.1"}
+  "libc6" {>= "2.3.4"}
+  "libgl1"
+  "libtiff5" {>= "4.0.3"}
+]
+extra-source "libtiff-opengl_4.2.0-1+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tiff/libtiff-opengl_4.2.0-1+deb11u5_amd64.deb"
+}

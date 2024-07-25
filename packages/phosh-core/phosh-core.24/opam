@@ -1,0 +1,39 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phosh-core_24_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phosh-core"]
+]
+depends: [
+  "dconf-gsettings-backend"
+  "evolution-data-server"
+  "feedbackd" {>= "0.0.2"}
+  "fonts-cantarell"
+  "glib-networking"
+  "gnome-backgrounds"
+  "gnome-control-center" {>= "1-43"}
+  "gnome-keyring"
+  "gnome-online-accounts"
+  "gnome-session-bin"
+  "gnome-session-common"
+  "gnome-settings-daemon" {>= "43"}
+  "gsettings-desktop-schemas"
+  "gstreamer1-0-packagekit"
+  "gstreamer1-0-plugins-base"
+  "gstreamer1-0-plugins-good"
+  "gvfs-backends"
+  "gvfs-fuse"
+  "libglib2-0-bin"
+  "libpam-gnome-keyring"
+  "network-manager"
+  "phosh" {>= "0.24.0"}
+  "phosh-mobile-tweaks"
+  "sound-theme-freedesktop"
+  ("libspa-0-2-bluetooth" | "libspa-0-2-bluetooth")
+  ("pipewire-pulse" | "pulseaudio")
+  ("squeekboard" {>= "1.20.0"} | "phosh-osk-stub" {>= "0.24.0"})
+]
+extra-source "phosh-core_24_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/meta-phosh/phosh-core_24_amd64.deb"
+}

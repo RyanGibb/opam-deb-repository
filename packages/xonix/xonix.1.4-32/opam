@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xonix_1.4-32_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xonix"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libx11-6"
+  "libxaw7"
+  "libxpm4"
+  "libxt6"
+]
+extra-source "xonix_1.4-32_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xonix/xonix_1.4-32_amd64.deb"
+}

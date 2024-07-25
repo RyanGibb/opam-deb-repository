@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i monitoring-plugins_2.3.3-5+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r monitoring-plugins"]
+]
+depends: [
+  "monitoring-plugins-basic"
+  "monitoring-plugins-standard"
+]
+extra-source "monitoring-plugins_2.3.3-5+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/monitoring-plugins/monitoring-plugins_2.3.3-5+deb12u2_all.deb"
+}

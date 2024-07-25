@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libalog6-dev_0.6.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libalog6-dev"]
+]
+depends: [
+  "gnat"
+  "gnat-10"
+  "libalog0-6-2" {= "0.6.1-4"}
+]
+extra-source "libalog6-dev_0.6.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libalog/libalog6-dev_0.6.1-4_amd64.deb"
+}

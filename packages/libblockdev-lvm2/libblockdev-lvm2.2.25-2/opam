@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libblockdev-lvm2_2.25-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libblockdev-lvm2"]
+]
+depends: [
+  "libblockdev-utils2" {>= "2.20"}
+  "libc6" {>= "2.29"}
+  "libdevmapper1-02-1" {>= "2-1.02.97"}
+  "libglib2-0-0" {>= "2.42.2"}
+  "lvm2" {>= "2.02.116"}
+  "thin-provisioning-tools"
+]
+extra-source "libblockdev-lvm2_2.25-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libblockdev/libblockdev-lvm2_2.25-2_amd64.deb"
+}

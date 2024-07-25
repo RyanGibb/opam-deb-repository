@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgfortran-7-dev_7.4.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgfortran-7-dev"]
+]
+depends: [
+  "gcc-7-base" {= "7.4.0-6"}
+  "libgcc-7-dev" {= "7.4.0-6"}
+  "libgfortran4" {>= "7.4.0-6"}
+]
+extra-source "libgfortran-7-dev_7.4.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-7/libgfortran-7-dev_7.4.0-6_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libjte-dev_1.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libjte-dev"]
+]
+depends: [
+  "libbz2-dev"
+  "libjte1" {= "1.21-1"}
+  "zlib1g-dev"
+]
+extra-source "libjte-dev_1.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jigit/libjte-dev_1.21-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libace-inet-ssl-dev_6.4.5+dfsg-1+b12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libace-inet-ssl-dev"]
+]
+depends: [
+  "libace-inet-dev" {= "6.4.5+dfsg-1+b12"}
+  "libace-inet-ssl-6-4-5" {= "6.4.5+dfsg-1+b12"}
+  "libace-ssl-dev" {= "6.4.5+dfsg-1+b12"}
+]
+extra-source "libace-inet-ssl-dev_6.4.5+dfsg-1+b12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ace/libace-inet-ssl-dev_6.4.5+dfsg-1+b12_amd64.deb"
+}

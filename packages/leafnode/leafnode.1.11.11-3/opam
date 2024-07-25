@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i leafnode_1.11.11-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r leafnode"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libpcre3"
+  "logrotate"
+  "netbase"
+  "tcpd"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+  ("openbsd-inetd" | "inet-superserver")
+]
+conflicts: [
+  "news-transport-system"
+  "newsx"
+]
+extra-source "leafnode_1.11.11-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/leafnode/leafnode_1.11.11-3_amd64.deb"
+}

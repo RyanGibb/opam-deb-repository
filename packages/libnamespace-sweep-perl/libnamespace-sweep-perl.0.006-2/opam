@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnamespace-sweep-perl_0.006-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnamespace-sweep-perl"]
+]
+depends: [
+  "libb-hooks-endofscope-perl" {>= "0.09"}
+  "libpackage-stash-perl" {>= "0.33"}
+  "libsub-identify-perl"
+  "perl"
+]
+extra-source "libnamespace-sweep-perl_0.006-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnamespace-sweep-perl/libnamespace-sweep-perl_0.006-2_all.deb"
+}

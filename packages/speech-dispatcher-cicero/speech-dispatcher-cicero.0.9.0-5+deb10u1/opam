@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i speech-dispatcher-cicero_0.9.0-5+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r speech-dispatcher-cicero"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdotconf0" {>= "1.0.13"}
+  "libglib2-0-0" {>= "2.36"}
+  "libltdl7" {>= "2.4.6"}
+  "libsndfile1" {>= "1.0.20"}
+  "speech-dispatcher" {= "0.9.0-5+deb10u1"}
+]
+extra-source "speech-dispatcher-cicero_0.9.0-5+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/speech-dispatcher/speech-dispatcher-cicero_0.9.0-5+deb10u1_amd64.deb"
+}

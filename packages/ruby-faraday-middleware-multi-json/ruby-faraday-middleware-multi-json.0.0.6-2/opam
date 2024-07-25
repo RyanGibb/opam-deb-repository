@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-faraday-middleware-multi-json_0.0.6-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-faraday-middleware-multi-json"]
+]
+depends: [
+  "ruby-faraday-middleware"
+  "ruby-multi-json"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-faraday-middleware-multi-json_0.0.6-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-faraday-middleware-multi-json/ruby-faraday-middleware-multi-json_0.0.6-2_all.deb"
+}

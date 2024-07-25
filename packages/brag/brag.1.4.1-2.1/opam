@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i brag_1.4.1-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r brag"]
+]
+depends: [
+  "uudeview"
+  ("tcl8-3" | "tclsh")
+]
+extra-source "brag_1.4.1-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/brag/brag_1.4.1-2.1_all.deb"
+}

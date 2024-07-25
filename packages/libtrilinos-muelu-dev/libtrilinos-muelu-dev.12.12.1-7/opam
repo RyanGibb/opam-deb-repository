@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtrilinos-muelu-dev_12.12.1-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtrilinos-muelu-dev"]
+]
+depends: [
+  "libtrilinos-muelu12" {= "12.12.1-7"}
+  "libtrilinos-trilinosss-dev"
+  "trilinos-dev"
+]
+extra-source "libtrilinos-muelu-dev_12.12.1-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/trilinos/libtrilinos-muelu-dev_12.12.1-7_amd64.deb"
+}

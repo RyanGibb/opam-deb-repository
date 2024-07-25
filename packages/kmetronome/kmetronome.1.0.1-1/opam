@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kmetronome_1.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kmetronome"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.29"}
+  "libdrumstick-alsa1" {>= "1.1.3"}
+  "libgcc-s1"
+  "libqt5core5a" {>= "5.12.2"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.7.0"} | "libqt5gui5-gles" {>= "5.7.0"})
+]
+extra-source "kmetronome_1.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kmetronome/kmetronome_1.0.1-1_amd64.deb"
+}

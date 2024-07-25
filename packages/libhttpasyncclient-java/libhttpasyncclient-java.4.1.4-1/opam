@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhttpasyncclient-java_4.1.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhttpasyncclient-java"]
+]
+depends: [
+  "libcommons-logging-java" {>= "1.2"}
+  "libhttpclient-java" {>= "4.5.6"}
+  "libhttpcore-java" {>= "4.4.10"}
+]
+extra-source "libhttpasyncclient-java_4.1.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/httpcomponents-asyncclient/libhttpasyncclient-java_4.1.4-1_all.deb"
+}

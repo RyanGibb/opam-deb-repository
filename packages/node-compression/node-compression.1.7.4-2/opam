@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-compression_1.7.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-compression"]
+]
+depends: [
+  "node-accepts"
+  "node-bytes" {>= "3.0.0"}
+  "node-compressible"
+  "node-debug" {>= "2.6.9"}
+  "node-on-headers"
+  "node-safe-buffer"
+  "node-vary"
+  "nodejs"
+]
+extra-source "node-compression_1.7.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-compression/node-compression_1.7.4-2_all.deb"
+}

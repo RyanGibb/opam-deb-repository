@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i csladspa_1:6.11.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r csladspa"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcsound64-6-0" {>= "1-6.11.0~dfsg"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "csladspa_1:6.11.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/csladspa/csladspa_6.11.1-1+b1_amd64.deb"
+}

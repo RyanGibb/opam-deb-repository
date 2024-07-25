@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-email-spec_1.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-email-spec"]
+]
+depends: [
+  "ruby-launchy-shim" {>= "2.1"}
+  "ruby-mail" {>= "2.2"}
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-email-spec_1.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-email-spec/ruby-email-spec_1.6.0-1_all.deb"
+}

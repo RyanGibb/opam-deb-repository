@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i containerd_1.6.20~ds1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r containerd"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "runc" {>= "0.1.0~"}
+]
+extra-source "containerd_1.6.20~ds1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/containerd/containerd_1.6.20~ds1-1+b1_amd64.deb"
+}

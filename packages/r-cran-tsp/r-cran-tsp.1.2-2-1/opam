@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-tsp_1.2-2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-tsp"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-foreach"
+]
+extra-source "r-cran-tsp_1.2-2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-tsp/r-cran-tsp_1.2-2-1_amd64.deb"
+}

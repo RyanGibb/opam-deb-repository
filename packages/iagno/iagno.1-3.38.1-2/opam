@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iagno_1:3.38.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iagno"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.25.2"}
+  "libglib2-0-0" {>= "2.43.92"}
+  "libgsound0" {>= "1.0.2"}
+  "libgtk-3-0" {>= "3.24.0"}
+  "librsvg2-2" {>= "2.32.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "iagno_1:3.38.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/iagno/iagno_3.38.1-2_amd64.deb"
+}

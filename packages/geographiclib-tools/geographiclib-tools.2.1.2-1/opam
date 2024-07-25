@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i geographiclib-tools_2.1.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r geographiclib-tools"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgeographiclib23" {>= "2.0"}
+  "libstdc++6" {>= "9"}
+  "wget"
+]
+extra-source "geographiclib-tools_2.1.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/geographiclib/geographiclib-tools_2.1.2-1_amd64.deb"
+}

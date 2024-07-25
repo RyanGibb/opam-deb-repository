@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pd-aubio_0.4-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pd-aubio"]
+]
+depends: [
+  "libaubio5"
+  "libc6" {>= "2.2.5"}
+  "puredata-core"
+]
+extra-source "pd-aubio_0.4-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pd-aubio/pd-aubio_0.4-1+b1_amd64.deb"
+}

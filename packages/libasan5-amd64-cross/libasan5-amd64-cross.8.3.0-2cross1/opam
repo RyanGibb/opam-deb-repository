@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libasan5-amd64-cross_8.3.0-2cross1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libasan5-amd64-cross"]
+]
+depends: [
+  "gcc-8-cross-base" {>= "8.3.0-2"}
+  "libc6" {>= "2.23"}
+  "libgcc1-amd64-cross" {>= "1-3.3"}
+  "libstdc++6-amd64-cross"
+]
+extra-source "libasan5-amd64-cross_8.3.0-2cross1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8-cross/libasan5-amd64-cross_8.3.0-2cross1_all.deb"
+}

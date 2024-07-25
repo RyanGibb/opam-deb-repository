@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i phosh-mobile-settings_0.24.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r phosh-mobile-settings"]
+]
+depends: [
+  "feedbackd"
+  "libadwaita-1-0" {>= "1.2~alpha"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.63.1"}
+  "libgtk-4-1" {>= "4.0.0"}
+  "libsensors5" {>= "1-3.5.0"}
+  "libwayland-client0" {>= "1.20.0"}
+  "phoc" {>= "0.21.0~beta1"}
+  "phosh" {>= "0.16.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "phosh-mobile-settings_0.24.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/phosh-mobile-settings/phosh-mobile-settings_0.24.1-1_amd64.deb"
+}

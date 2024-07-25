@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qmail_1.06-6.2~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qmail"]
+]
+depends: [
+  "libc6" {>= "2.2.5"}
+  "qmail-uids-gids" {> "1.06"}
+]
+extra-source "qmail_1.06-6.2~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/netqmail/qmail_1.06-6.2~deb10u1_amd64.deb"
+}

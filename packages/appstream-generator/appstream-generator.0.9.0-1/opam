@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i appstream-generator_0.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r appstream-generator"]
+]
+depends: [
+  "libappstream-compose0" {>= "0.16.0"}
+  "libappstream4" {>= "0.16.0"}
+  "libarchive13" {>= "3.2.1"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libgdk-pixbuf-2-0-0" {>= "2.39.2"}
+  "libglib2-0-0" {>= "2.37.0"}
+  "libglibd-2-0-0" {>= "2.3.0"}
+  "libjs-highlight-js"
+  "libjs-jquery-flot"
+  "liblmdb0" {>= "0.9.7"}
+  "libphobos2-ldc-shared100" {>= "1-1.30.0"}
+]
+extra-source "appstream-generator_0.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/appstream-generator/appstream-generator_0.9.0-1_amd64.deb"
+}

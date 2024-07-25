@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i liboglappth-dev_1.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r liboglappth-dev"]
+]
+depends: [
+  "liboglappth2" {= "1.0.0-2"}
+  ("libgl1-mesa-dev" | "libgl-dev")
+  ("libglu1-mesa-dev" | "libglu-dev")
+]
+extra-source "liboglappth-dev_1.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/liboglappth/liboglappth-dev_1.0.0-2_amd64.deb"
+}

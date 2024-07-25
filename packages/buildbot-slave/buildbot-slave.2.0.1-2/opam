@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i buildbot-slave_2.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r buildbot-slave"]
+]
+depends: [
+  "buildbot-worker"
+]
+extra-source "buildbot-slave_2.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/buildbot/buildbot-slave_2.0.1-2_all.deb"
+}

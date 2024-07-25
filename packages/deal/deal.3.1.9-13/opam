@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i deal_3.1.9-13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r deal"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libstdc++6" {>= "4.1.1"}
+  "libtcl8-6" {>= "8.6.0"}
+]
+extra-source "deal_3.1.9-13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/deal/deal_3.1.9-13_amd64.deb"
+}

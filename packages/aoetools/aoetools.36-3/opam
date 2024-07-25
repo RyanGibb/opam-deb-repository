@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i aoetools_36-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r aoetools"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "lsb-base"
+]
+extra-source "aoetools_36-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/aoetools/aoetools_36-3_amd64.deb"
+}

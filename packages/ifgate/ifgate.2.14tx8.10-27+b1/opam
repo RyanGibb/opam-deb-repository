@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ifgate_2.14tx8.10-27+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ifgate"]
+]
+depends: [
+  "ifmail"
+  "libc6" {>= "2.34"}
+  "libgdbm-compat4" {>= "1.16"}
+  ("default-mta" | "mail-transport-agent")
+  ("inn" | "inn2" | "news-transport-system")
+]
+extra-source "ifgate_2.14tx8.10-27+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ifmail/ifgate_2.14tx8.10-27+b1_amd64.deb"
+}

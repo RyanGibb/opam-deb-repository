@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i thinkfan_1.3.1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r thinkfan"]
+]
+depends: [
+  "libatasmart4" {>= "0.13"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libyaml-cpp0-7" {>= "0.7.0"}
+]
+conflicts: [
+  "zcfan"
+]
+extra-source "thinkfan_1.3.1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/thinkfan/thinkfan_1.3.1-4_amd64.deb"
+}

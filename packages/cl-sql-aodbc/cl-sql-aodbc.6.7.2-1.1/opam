@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cl-sql-aodbc_6.7.2-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cl-sql-aodbc"]
+]
+depends: [
+  "cl-sql" {= "6.7.2-1.1"}
+  "cl-sql-mysql"
+  "cl-sql-postgresql"
+]
+extra-source "cl-sql-aodbc_6.7.2-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cl-sql/cl-sql-aodbc_6.7.2-1.1_all.deb"
+}

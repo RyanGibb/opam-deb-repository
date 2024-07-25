@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i firehol-tools_3.1.7+ds-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r firehol-tools"]
+]
+depends: [
+  "curl"
+  "firehol-common" {= "3.1.7+ds-2"}
+  "jq"
+  "screen"
+  "wget"
+  "whois"
+]
+extra-source "firehol-tools_3.1.7+ds-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/firehol/firehol-tools_3.1.7+ds-2_all.deb"
+}

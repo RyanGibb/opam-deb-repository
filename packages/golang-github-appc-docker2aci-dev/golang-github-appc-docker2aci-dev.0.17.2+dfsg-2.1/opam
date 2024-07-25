@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-github-appc-docker2aci-dev_0.17.2+dfsg-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-github-appc-docker2aci-dev"]
+]
+depends: [
+  "golang-github-appc-spec-dev" {>= "0.8.11~"}
+  "golang-github-coreos-ioprogress-dev"
+  "golang-github-coreos-pkg-dev" {>= "2~"}
+  "golang-github-docker-distribution-dev" {>= "2.3.1~"}
+  "golang-github-klauspost-pgzip-dev"
+  "golang-github-opencontainers-image-spec-dev"
+  "golang-go"
+]
+extra-source "golang-github-appc-docker2aci-dev_0.17.2+dfsg-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-appc-docker2aci/golang-github-appc-docker2aci-dev_0.17.2+dfsg-2.1_all.deb"
+}

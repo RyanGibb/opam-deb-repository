@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-alsaaudio_0.8.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-alsaaudio"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.4"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-alsaaudio_0.8.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pyalsaaudio/python-alsaaudio_0.8.4-1_amd64.deb"
+}

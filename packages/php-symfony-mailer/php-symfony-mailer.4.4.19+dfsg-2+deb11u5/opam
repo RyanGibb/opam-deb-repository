@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-mailer_4.4.19+dfsg-2+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-mailer"]
+]
+depends: [
+  "php-common"
+  "php-email-validator" {< "3~~"}
+  "php-email-validator" {>= "2.1.10"}
+  "php-psr-log" {< "2~~"}
+  "php-psr-log" {>= "1.0"}
+  "php-symfony-event-dispatcher" {< "5~~"}
+  "php-symfony-event-dispatcher" {>= "4.3"}
+  "php-symfony-mime"
+  "php-symfony-service-contracts"
+]
+extra-source "php-symfony-mailer_4.4.19+dfsg-2+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/symfony/php-symfony-mailer_4.4.19+dfsg-2+deb11u5_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhtml-copy-perl_1.31-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhtml-copy-perl"]
+]
+depends: [
+  "libclass-accessor-perl"
+  "libhtml-parser-perl"
+  "liburi-perl"
+  "perl-any"
+  ("libhttp-message-perl" | "libwww-perl" {< "6"})
+]
+extra-source "libhtml-copy-perl_1.31-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhtml-copy-perl/libhtml-copy-perl_1.31-2_all.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libisoburn1_1.5.4-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libisoburn1"]
+]
+depends: [
+  "libburn4" {>= "1.5.4"}
+  "libc6" {>= "2.34"}
+  "libisofs6" {>= "1.5.4"}
+  "libjte2"
+  "libreadline8" {>= "6.0"}
+]
+extra-source "libisoburn1_1.5.4-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libisoburn/libisoburn1_1.5.4-4_amd64.deb"
+}

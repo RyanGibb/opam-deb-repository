@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libignition-common-dev_3.5.0+dfsg1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libignition-common-dev"]
+]
+depends: [
+  "libavcodec-dev"
+  "libavdevice-dev"
+  "libavformat-dev"
+  "libavutil-dev"
+  "libignition-cmake-dev" {>= "2"}
+  "libignition-common3-3" {= "3.5.0+dfsg1-5"}
+  "libignition-common3-av3" {= "3.5.0+dfsg1-5"}
+  "libignition-common3-events3" {= "3.5.0+dfsg1-5"}
+  "libignition-common3-graphics3" {= "3.5.0+dfsg1-5"}
+  "libignition-common3-profiler3" {= "3.5.0+dfsg1-5"}
+  "libswscale-dev"
+  "libtinyobjloader-dev"
+  "uuid-dev"
+]
+extra-source "libignition-common-dev_3.5.0+dfsg1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ignition-common/libignition-common-dev_3.5.0+dfsg1-5_amd64.deb"
+}

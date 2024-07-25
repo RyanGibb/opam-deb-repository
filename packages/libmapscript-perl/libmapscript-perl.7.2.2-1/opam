@@ -1,0 +1,37 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmapscript-perl_7.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmapscript-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.2.4"}
+  "libcurl3-gnutls" {>= "7.16.2"}
+  "libfreetype6" {>= "2.2.1"}
+  "libfribidi0" {>= "0.19.2"}
+  "libgdal20" {>= "1.10.1-0~"}
+  "libgeos-c1v5" {>= "3.4.2"}
+  "libgif7" {>= "5.1"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libharfbuzz0b" {>= "0.6.0"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libmapserver2" {>= "7.0.0"}
+  "libperl5-28" {>= "5.28.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libpq5"
+  "libproj13" {>= "4.8.0"}
+  "libprotobuf-c1" {>= "1.0.0"}
+  "librsvg2-2" {>= "2.14.4"}
+  "libxml2" {>= "2.6.27"}
+  "perl" {>= "5.28.1-4"}
+  "perl-base"
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "perl-mapscript"
+]
+extra-source "libmapscript-perl_7.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mapserver/libmapscript-perl_7.2.2-1_amd64.deb"
+}

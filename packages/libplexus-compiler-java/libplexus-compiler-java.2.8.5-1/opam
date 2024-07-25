@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplexus-compiler-java_2.8.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplexus-compiler-java"]
+]
+depends: [
+  "libcommons-lang-java" {>= "2.6"}
+  "libmaven3-core-java"
+  "libplexus-container-default-java"
+  "libplexus-utils2-java"
+]
+extra-source "libplexus-compiler-java_2.8.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plexus-compiler/libplexus-compiler-java_2.8.5-1_all.deb"
+}

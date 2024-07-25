@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pixelize_2.0.0~git20220108.d1f9da9-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pixelize"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libcairo2" {>= "1.2.4"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.31.8"}
+  "libgtk-3-0" {>= "3.0.0"}
+]
+extra-source "pixelize_2.0.0~git20220108.d1f9da9-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pixelize/pixelize_2.0.0~git20220108.d1f9da9-1_amd64.deb"
+}

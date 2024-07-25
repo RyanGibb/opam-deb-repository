@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sdaps_1.2.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sdaps"]
+]
+depends: [
+  "gir1-2-poppler-0-18"
+  "libc6" {>= "2.4"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.24.0"}
+  "libtiff5" {>= "4.0.3"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+  "python-cairo"
+  "python-gi"
+  "python-gi-cairo"
+  "python-opencv"
+  "python-zbar"
+]
+extra-source "sdaps_1.2.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sdaps/sdaps_1.2.1-2_amd64.deb"
+}

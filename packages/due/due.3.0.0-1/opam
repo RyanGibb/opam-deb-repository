@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i due_3.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r due"]
+]
+depends: [
+  "bsdutils" {>= "1-2.25.2-6"}
+  "curl"
+  "git"
+  "jq"
+  "rsync"
+  ("docker-io" | "docker-ce" | "podman")
+]
+extra-source "due_3.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/due/due_3.0.0-1_all.deb"
+}

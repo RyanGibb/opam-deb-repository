@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-apcu_5.1.22+4.0.11-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-apcu"]
+]
+depends: [
+  "php8-2-apcu"
+]
+conflicts: [
+  "php-xcache"
+  "php-yac"
+]
+extra-source "php-apcu_5.1.22+4.0.11-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-apcu/php-apcu_5.1.22+4.0.11-2_amd64.deb"
+}

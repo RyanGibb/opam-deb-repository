@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libterm-ttyrec-plus-perl_0.09-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libterm-ttyrec-plus-perl"]
+]
+depends: [
+  "perl-any"
+  ("perl" {>= "5.10.1"} | "libio-compress-perl" | "libio-compress-bzip2-perl")
+]
+extra-source "libterm-ttyrec-plus-perl_0.09-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libterm-ttyrec-plus-perl/libterm-ttyrec-plus-perl_0.09-1.1_all.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxrdhttputils2_5.0.3-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxrdhttputils2"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "5.2"}
+  "libxrdcrypto2" {>= "5.0.3"}
+  "libxrdserver3" {>= "5.0.3"}
+  "libxrdutils3" {>= "5.0.3"}
+]
+extra-source "libxrdhttputils2_5.0.3-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xrootd/libxrdhttputils2_5.0.3-4_amd64.deb"
+}

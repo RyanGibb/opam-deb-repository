@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-memcached-all-dev_3.2.0+2.2.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-memcached-all-dev"]
+]
+depends: [
+  "php-all-dev"
+  "php-igbinary-all-dev"
+  "php-msgpack-all-dev"
+  "php8-2-memcached" {>= "3.2.0+2.2.0-4~"}
+  "ucf"
+]
+extra-source "php-memcached-all-dev_3.2.0+2.2.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-memcached/php-memcached-all-dev_3.2.0+2.2.0-4_all.deb"
+}

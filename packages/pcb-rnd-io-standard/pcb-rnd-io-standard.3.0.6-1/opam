@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pcb-rnd-io-standard_3.0.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pcb-rnd-io-standard"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libfungw1"
+  "pcb-rnd-core" {= "3.0.6-1"}
+  "pcb-rnd-lib-io" {= "3.0.6-1"}
+]
+extra-source "pcb-rnd-io-standard_3.0.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pcb-rnd/pcb-rnd-io-standard_3.0.6-1_amd64.deb"
+}

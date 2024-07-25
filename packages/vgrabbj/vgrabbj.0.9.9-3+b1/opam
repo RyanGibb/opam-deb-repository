@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vgrabbj_0.9.9-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vgrabbj"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libftp4" {>= "3.1"}
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libv4l-0" {>= "0.5.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "vgrabbj_0.9.9-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vgrabbj/vgrabbj_0.9.9-3+b1_amd64.deb"
+}

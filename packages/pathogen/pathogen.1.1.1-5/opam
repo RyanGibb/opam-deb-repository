@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pathogen_1.1.1-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pathogen"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2"
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "5.2"}
+  ("libgl1-mesa-glx" | "libgl1")
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "pathogen_1.1.1-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pathogen/pathogen_1.1.1-5_amd64.deb"
+}

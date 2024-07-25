@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ncbi-acc-download_0.2.8-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ncbi-acc-download"]
+]
+depends: [
+  "python3-any"
+  "python3-requests"
+]
+extra-source "ncbi-acc-download_0.2.8-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ncbi-acc-download/ncbi-acc-download_0.2.8-1_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcommons-configuration2-java_2.8.0-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcommons-configuration2-java"]
+]
+depends: [
+  "libcommons-lang3-java" {>= "3.11"}
+  "libcommons-logging-java" {>= "1.2"}
+  "libcommons-text-java" {>= "1.9"}
+]
+extra-source "libcommons-configuration2-java_2.8.0-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/commons-configuration2/libcommons-configuration2-java_2.8.0-1~deb11u1_all.deb"
+}

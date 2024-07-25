@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dh-r_20190121_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dh-r"]
+]
+depends: [
+  "dctrl-tools"
+  "debhelper" {>= "9"}
+  "libfile-which-perl"
+  "libswitch-perl"
+  "r-base-dev"
+]
+extra-source "dh-r_20190121_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dh-r/dh-r_20190121_all.deb"
+}

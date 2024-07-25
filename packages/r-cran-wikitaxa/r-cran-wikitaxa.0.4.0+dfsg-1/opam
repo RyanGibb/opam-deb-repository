@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-wikitaxa_0.4.0+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-wikitaxa"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  "r-cran-crul" {>= "0.3.4"}
+  "r-cran-curl"
+  "r-cran-data-table"
+  "r-cran-jsonlite"
+  "r-cran-tibble"
+  "r-cran-wikidatar"
+  "r-cran-xml2"
+]
+extra-source "r-cran-wikitaxa_0.4.0+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-wikitaxa/r-cran-wikitaxa_0.4.0+dfsg-1_all.deb"
+}

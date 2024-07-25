@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtopic-tools-dev_1.15.9+ds1-7+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtopic-tools-dev"]
+]
+depends: [
+  "librosconsole-dev"
+  "libroscpp-core-dev"
+  "libroscpp-dev"
+  "libstd-msgs-dev"
+  "libtopic-tools2d" {= "1.15.9+ds1-7+deb11u1"}
+]
+extra-source "libtopic-tools-dev_1.15.9+ds1-7+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-ros-comm/libtopic-tools-dev_1.15.9+ds1-7+deb11u1_amd64.deb"
+}

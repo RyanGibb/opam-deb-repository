@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkpublictransport1_22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkpublictransport1"]
+]
+depends: [
+  "kpublictransport-data" {>= "22.12.3-1"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.4"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.15"}
+  "libstdc++6" {>= "11"}
+  "zlib1g" {>= "1-1.1.4"}
+  ("libqt5gui5" {>= "5.15"} | "libqt5gui5-gles" {>= "5.15"})
+]
+extra-source "libkpublictransport1_22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kpublictransport/libkpublictransport1_22.12.3-1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libasm1_0.188-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libasm1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdw1" {= "0.188-2.1"}
+  "libelf1" {= "0.188-2.1"}
+]
+extra-source "libasm1_0.188-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/elfutils/libasm1_0.188-2.1_amd64.deb"
+}

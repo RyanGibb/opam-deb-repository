@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhfst-dev_3.15.0-1.1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhfst-dev"]
+]
+depends: [
+  "hfst" {= "3.15.0-1.1~deb10u1"}
+  "libhfst52" {= "3.15.0-1.1~deb10u1"}
+]
+conflicts: [
+  "libhfst3-dev"
+]
+extra-source "libhfst-dev_3.15.0-1.1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hfst/libhfst-dev_3.15.0-1.1~deb10u1_amd64.deb"
+}

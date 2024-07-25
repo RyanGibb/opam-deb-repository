@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i eiskaltdcpp-qt_2.2.10+340+g44d8aea4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r eiskaltdcpp-qt"]
+]
+depends: [
+  "eiskaltdcpp-common"
+  "eiskaltdcpp-qt-data" {= "2.2.10+340+g44d8aea4-1"}
+  "libaspell15"
+  "libboost-system1-67-0"
+  "libc6" {>= "2.14"}
+  "libeiskaltdcpp2-4" {>= "2.2.10+340+g44d8aea4"}
+  "libgcc1" {>= "1-3.0"}
+  "libqt5concurrent5" {>= "5.6.0~rc"}
+  "libqt5core5a" {>= "5.11.0~rc1"}
+  "libqt5dbus5" {>= "5.0.2"}
+  "libqt5gui5" {>= "5.3.0"}
+  "libqt5multimedia5" {>= "5.6.0~beta"}
+  "libqt5script5" {>= "5.6.0~beta"}
+  "libqt5sql5" {>= "5.0.2"}
+  "libqt5sql5-sqlite"
+  "libqt5widgets5" {>= "5.11.0~rc1"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libstdc++6" {>= "5.2"}
+]
+conflicts: [
+  "eiskaltdcpp-qt-mini"
+]
+extra-source "eiskaltdcpp-qt_2.2.10+340+g44d8aea4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/eiskaltdcpp/eiskaltdcpp-qt_2.2.10+340+g44d8aea4-1_amd64.deb"
+}

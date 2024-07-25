@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5kdegames-dev_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5kdegames-dev"]
+]
+depends: [
+  "libkf5completion-dev" {>= "5.98.0~"}
+  "libkf5configwidgets-dev" {>= "5.98.0~"}
+  "libkf5kdegames7" {= "4-22.12.3-1"}
+  "libkf5kdegamesprivate7" {= "4-22.12.3-1"}
+  "libkf5widgetsaddons-dev" {>= "5.98.0~"}
+  "qtbase5-dev" {>= "5.15.0~"}
+  "qtdeclarative5-dev" {>= "5.15.0~"}
+]
+extra-source "libkf5kdegames-dev_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkdegames/libkf5kdegames-dev_22.12.3-1_amd64.deb"
+}

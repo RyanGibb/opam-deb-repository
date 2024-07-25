@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libisc-export1100_1:9.11.5.P4+dfsg-5.1+deb10u7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libisc-export1100"]
+]
+depends: [
+  "libc6" {>= "2.25"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "libisc-export1100_1:9.11.5.P4+dfsg-5.1+deb10u7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bind9/libisc-export1100_9.11.5.P4+dfsg-5.1+deb10u7_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lxctl_0.3.1+debian-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lxctl"]
+]
+depends: [
+  "libipc-system-simple-perl"
+  "liblinux-lvm-perl"
+  "libnet-ssh2-perl"
+  "libossp-uuid-perl"
+  "libyaml-tiny-perl"
+  "lxc"
+]
+extra-source "lxctl_0.3.1+debian-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxctl/lxctl_0.3.1+debian-4_all.deb"
+}

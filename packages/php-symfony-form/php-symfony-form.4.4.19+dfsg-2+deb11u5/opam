@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-symfony-form_4.4.19+dfsg-2+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-symfony-form"]
+]
+depends: [
+  "php-common"
+  "php-mbstring"
+  "php-symfony-event-dispatcher" {< "5~~"}
+  "php-symfony-event-dispatcher" {>= "4.3"}
+  "php-symfony-intl"
+  "php-symfony-options-resolver"
+  "php-symfony-property-access"
+  "php-symfony-service-contracts"
+]
+extra-source "php-symfony-form_4.4.19+dfsg-2+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/symfony/php-symfony-form_4.4.19+dfsg-2+deb11u5_all.deb"
+}

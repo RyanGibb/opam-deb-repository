@@ -1,0 +1,31 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hydrogen_1.2.0~beta1+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hydrogen"]
+]
+depends: [
+  "hydrogen-data" {= "1.2.0~beta1+dfsg-1"}
+  "libarchive13" {>= "3.0.4"}
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "liblo7" {>= "0.27"}
+  "libportaudio2" {>= "19+svn20101113"}
+  "libportmidi0"
+  "libpulse0" {>= "0.99.1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5network5" {>= "5.14.1"}
+  "libqt5svg5" {>= "5.6.0~beta"}
+  "libqt5widgets5" {>= "5.15.1"}
+  "libqt5xml5" {>= "5.0.2"}
+  "libqt5xmlpatterns5" {>= "5.0.2"}
+  "libsndfile1" {>= "1.0.20"}
+  "libstdc++6" {>= "11"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+]
+extra-source "hydrogen_1.2.0~beta1+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hydrogen/hydrogen_1.2.0~beta1+dfsg-1_amd64.deb"
+}

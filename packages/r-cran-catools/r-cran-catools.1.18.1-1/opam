@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-catools_1.18.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-catools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libstdc++6" {>= "4.1.1"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.3-1"}
+  "r-cran-bitops"
+]
+extra-source "r-cran-catools_1.18.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-catools/r-cran-catools_1.18.1-1_amd64.deb"
+}

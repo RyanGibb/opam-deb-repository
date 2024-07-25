@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-adios_1.13.1-31+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-adios"]
+]
+depends: [
+  "libblosc1" {>= "1.7.0"}
+  "libbz2-1-0"
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libhdf5-openmpi-103-1" {>= "1.8.14"}
+  "liblz4-1" {>= "0.0~r130"}
+  "libnetcdf-mpi-19"
+  "libopenmpi3" {>= "4.1.4"}
+  "libstdc++6" {>= "5"}
+  "libsz2" {>= "1.0.6"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "python3-adios_1.13.1-31+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/adios/python3-adios_1.13.1-31+b1_amd64.deb"
+}

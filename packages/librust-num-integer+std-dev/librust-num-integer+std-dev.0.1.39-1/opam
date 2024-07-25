@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-num-integer+std-dev_0.1.39-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-num-integer+std-dev"]
+]
+depends: [
+  "librust-num-integer-dev" {= "0.1.39-1"}
+  "librust-num-traits-dev"
+]
+extra-source "librust-num-integer+std-dev_0.1.39-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-num-integer/librust-num-integer+std-dev_0.1.39-1_amd64.deb"
+}

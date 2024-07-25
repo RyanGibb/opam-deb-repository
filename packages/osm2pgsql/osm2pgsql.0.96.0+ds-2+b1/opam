@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i osm2pgsql_0.96.0+ds-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r osm2pgsql"]
+]
+depends: [
+  "libboost-filesystem1-67-0"
+  "libboost-system1-67-0"
+  "libbz2-1-0"
+  "libc6" {>= "2.14"}
+  "libexpat1" {>= "2.0.1"}
+  "libgcc1" {>= "1-3.0"}
+  "liblua5-2-0"
+  "libpq5"
+  "libproj13" {>= "4.8.0"}
+  "libstdc++6" {>= "7"}
+  "zlib1g" {>= "1-1.2.6"}
+]
+extra-source "osm2pgsql_0.96.0+ds-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/osm2pgsql/osm2pgsql_0.96.0+ds-2+b1_amd64.deb"
+}

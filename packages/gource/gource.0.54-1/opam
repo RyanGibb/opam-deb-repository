@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gource_0.54-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gource"]
+]
+depends: [
+  "fonts-freefont-ttf"
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.34"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libglew2-2" {>= "2.2.0-4+b1"}
+  "libpcre2-8-0" {>= "10.22"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl2-2-0-0" {>= "2.0.12"}
+  "libsdl2-image-2-0-0" {>= "2.0.5"}
+  "libstdc++6" {>= "11"}
+  "libtinyxml2-6-2v5" {>= "2.6.2"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "gource_0.54-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gource/gource_0.54-1_amd64.deb"
+}

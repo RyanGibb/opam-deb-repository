@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-rrdtool-dbg_1.7.2-3+b7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-rrdtool-dbg"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "librrd8" {>= "1.7.0"}
+  "python3-dbg" {< "3.10"}
+  "python3-dbg" {>= "3.9~"}
+  "python3-rrdtool" {= "1.7.2-3+b7"}
+]
+extra-source "python3-rrdtool-dbg_1.7.2-3+b7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rrdtool/python3-rrdtool-dbg_1.7.2-3+b7_amd64.deb"
+}

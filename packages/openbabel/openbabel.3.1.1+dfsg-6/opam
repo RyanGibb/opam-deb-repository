@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openbabel_3.1.1+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openbabel"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libopenbabel7" {>= "3.1.1+dfsg"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "openbabel_3.1.1+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openbabel/openbabel_3.1.1+dfsg-6_amd64.deb"
+}

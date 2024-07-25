@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dt-schema_2022.08.2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dt-schema"]
+]
+depends: [
+  "python3-any"
+  "python3-jsonschema"
+  "python3-libfdt"
+  "python3-rfc3987"
+  "python3-ruamel-yaml"
+]
+extra-source "dt-schema_2022.08.2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dt-schema/dt-schema_2022.08.2-5_all.deb"
+}

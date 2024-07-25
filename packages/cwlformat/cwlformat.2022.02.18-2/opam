@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cwlformat_2022.02.18-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cwlformat"]
+]
+depends: [
+  "python3-any"
+  "python3-ruamel-yaml"
+  ("python3-importlib-resources" | "python3" {> "3.7"})
+]
+extra-source "cwlformat_2022.02.18-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cwlformat/cwlformat_2022.02.18-2_all.deb"
+}

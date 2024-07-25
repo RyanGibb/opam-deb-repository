@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i varnish_7.1.1-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r varnish"]
+]
+depends: [
+  "adduser"
+  "gcc"
+  "libc6" {>= "2.34"}
+  "libedit2" {>= "2.11-20080614-0"}
+  "libjemalloc2" {>= "2.1.1"}
+  "libncursesw6" {>= "6"}
+  "libpcre2-8-0" {>= "10.32"}
+  "libtinfo6" {>= "6"}
+  "libvarnishapi3" {>= "7.1.0"}
+  "lsb-base"
+  ("libc6-dev" | "libc6-1-dev" | "libc-dev")
+]
+extra-source "varnish_7.1.1-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/varnish/varnish_7.1.1-1.1_amd64.deb"
+}

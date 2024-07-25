@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhipi-perl_0.88-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhipi-perl"]
+]
+depends: [
+  "libbit-vector-perl"
+  "libc6" {>= "2.17"}
+  "libdevice-serialport-perl"
+  "libdigest-sha-perl"
+  "libfile-slurp-perl"
+  "libimage-imlib2-perl"
+  "libjson-perl"
+  "libtry-tiny-perl"
+  "libuniversal-require-perl"
+  "libwww-perl"
+  "libxml-libxml-perl"
+  "perl" {>= "5.36.0-7"}
+  "perl-base"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "libhipi-perl_0.88-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libh/libhipi-perl/libhipi-perl_0.88-1_amd64.deb"
+}

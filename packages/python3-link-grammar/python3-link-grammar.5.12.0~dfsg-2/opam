@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-link-grammar_5.12.0~dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-link-grammar"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "liblink-grammar5" {>= "5.12.0~dfsg"}
+  "libpython3-11" {>= "3.11.0"}
+  "libstdc++6" {>= "5"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+]
+extra-source "python3-link-grammar_5.12.0~dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/link-grammar/python3-link-grammar_5.12.0~dfsg-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ack_2.24-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ack"]
+]
+depends: [
+  "libfile-next-perl" {>= "1.10"}
+  "perl"
+]
+extra-source "ack_2.24-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/ack/ack_2.24-1_all.deb"
+}

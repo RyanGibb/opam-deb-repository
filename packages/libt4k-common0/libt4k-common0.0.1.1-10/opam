@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libt4k-common0_0.1.1-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libt4k-common0"]
+]
+depends: [
+  "libc6" {>= "2.11"}
+  "libcairo2" {>= "1.2.4"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "librsvg2-2" {>= "2.26.0"}
+  "libsdl-image1-2" {>= "1.2.10"}
+  "libsdl-mixer1-2"
+  "libsdl-pango1"
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "libt4k-common0_0.1.1-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/t4kcommon/libt4k-common0_0.1.1-10_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openxr-layer-corevalidation_1.0.14~dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openxr-layer-corevalidation"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "9"}
+]
+extra-source "openxr-layer-corevalidation_1.0.14~dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openxr-sdk-source/openxr-layer-corevalidation_1.0.14~dfsg1-1_amd64.deb"
+}

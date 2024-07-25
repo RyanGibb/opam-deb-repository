@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gstreamer-qapt_3.0.5-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gstreamer-qapt"]
+]
+depends: [
+  "kio"
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libgstreamer1-0-0" {>= "1.2.0"}
+  "libkf5coreaddons5" {>= "5.0.0"}
+  "libkf5i18n5" {>= "5.0.0"}
+  "libkf5kiocore5" {>= "5.69.0"}
+  "libkf5widgetsaddons5" {>= "5.0.0"}
+  "libkf5windowsystem5" {>= "5.0.0"}
+  "libqapt3" {>= "3.0.0"}
+  "libqapt3-runtime" {= "3.0.5-2"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.8.0"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.8.0"} | "libqt5gui5-gles" {>= "5.8.0"})
+]
+extra-source "gstreamer-qapt_3.0.5-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libq/libqapt/gstreamer-qapt_3.0.5-2_amd64.deb"
+}

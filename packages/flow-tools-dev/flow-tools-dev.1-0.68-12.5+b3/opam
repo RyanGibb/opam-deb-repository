@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i flow-tools-dev_1:0.68-12.5+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r flow-tools-dev"]
+]
+depends: [
+  "flow-tools" {= "1-0.68-12.5+b3"}
+  ("libc6-dev" | "libc-dev")
+]
+extra-source "flow-tools-dev_1:0.68-12.5+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/flow-tools/flow-tools-dev_0.68-12.5+b3_amd64.deb"
+}

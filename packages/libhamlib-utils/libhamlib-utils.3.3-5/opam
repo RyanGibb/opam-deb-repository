@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libhamlib-utils_3.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libhamlib-utils"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libhamlib2" {>= "3.3"}
+  "libreadline7" {>= "6.0"}
+]
+extra-source "libhamlib-utils_3.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hamlib/libhamlib-utils_3.3-5_amd64.deb"
+}

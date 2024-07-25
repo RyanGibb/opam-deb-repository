@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plplot-driver-xwin_5.14.0+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plplot-driver-xwin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libplplot16"
+  "libx11-6"
+]
+conflicts: [
+  "plplot12-driver-xwin"
+]
+extra-source "plplot-driver-xwin_5.14.0+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plplot/plplot-driver-xwin_5.14.0+dfsg-3_amd64.deb"
+}

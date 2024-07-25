@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-gssdp-1.6_1.6.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-gssdp-1.6"]
+]
+depends: [
+  "gir1-2-glib-2-0" {>= "0.9.12"}
+  "gir1-2-soup-3-0"
+  "libgssdp-1-6-0" {>= "1.6.0"}
+]
+extra-source "gir1.2-gssdp-1.6_1.6.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gssdp/gir1.2-gssdp-1.6_1.6.2-2_amd64.deb"
+}

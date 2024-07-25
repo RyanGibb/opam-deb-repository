@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i api-sanity-checker_1.98.7-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r api-sanity-checker"]
+]
+depends: [
+  "abi-compliance-checker" {>= "1.99"}
+  "perl-any"
+]
+extra-source "api-sanity-checker_1.98.7-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/api-sanity-checker/api-sanity-checker_1.98.7-2.1_all.deb"
+}

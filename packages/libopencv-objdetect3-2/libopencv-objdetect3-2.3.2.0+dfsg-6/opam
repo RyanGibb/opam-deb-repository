@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libopencv-objdetect3.2_3.2.0+dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libopencv-objdetect3.2"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc1" {>= "1-3.0"}
+  "libopencv-core3-2"
+  "libopencv-highgui3-2" {= "3.2.0+dfsg-6"}
+  "libopencv-imgcodecs3-2"
+  "libopencv-imgproc3-2"
+  "libopencv-ml3-2" {= "3.2.0+dfsg-6"}
+  "libopencv-videoio3-2"
+  "libstdc++6" {>= "6"}
+  "libtbb2" {>= "2017~U7"}
+]
+extra-source "libopencv-objdetect3.2_3.2.0+dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/opencv/libopencv-objdetect3.2_3.2.0+dfsg-6_amd64.deb"
+}

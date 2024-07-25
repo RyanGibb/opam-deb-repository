@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ecb_2.40+git20140216-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ecb"]
+]
+depends: [
+  ("dpkg" {>= "1.15.4"} | "install-info")
+  ("emacs" | "emacsen")
+]
+conflicts: [
+  "cedet"
+  "cedet-common"
+  "cogre"
+]
+extra-source "ecb_2.40+git20140216-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/ecb/ecb_2.40+git20140216-2_all.deb"
+}

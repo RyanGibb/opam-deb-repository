@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libffmpeg-ocaml-dev_0.4.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libffmpeg-ocaml-dev"]
+]
+depends: [
+  "libavcodec-dev"
+  "libavdevice-dev"
+  "libavformat-dev"
+  "libavutil-dev"
+  "libffmpeg-ocaml"
+  "libffmpeg-ocaml" {= "0.4.3-1+b1"}
+  "libswscale-dev"
+  "ocaml-findlib"
+  "ocaml-nox"
+]
+extra-source "libffmpeg-ocaml-dev_0.4.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-ffmpeg/libffmpeg-ocaml-dev_0.4.3-1+b1_amd64.deb"
+}

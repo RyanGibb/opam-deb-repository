@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libinventor1_2.1.5-10-23.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libinventor1"]
+]
+depends: [
+  "gsfonts-x11"
+  "libc6" {>= "2.29"}
+  "libfreetype6" {>= "2.2.1"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libstdc++6" {>= "5"}
+  "libx11-6"
+  "libxi6"
+  "libxm4" {>= "2.3.4"}
+  "libxt6"
+  "xfonts-scalable"
+  ("libglu1-mesa" | "libglu1")
+]
+conflicts: [
+  "libinventor0"
+]
+extra-source "libinventor1_2.1.5-10-23.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/inventor/libinventor1_2.1.5-10-23.1_amd64.deb"
+}

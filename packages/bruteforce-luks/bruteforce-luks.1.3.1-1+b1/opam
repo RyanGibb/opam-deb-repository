@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i bruteforce-luks_1.3.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r bruteforce-luks"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libcryptsetup12" {>= "2-1.4"}
+]
+extra-source "bruteforce-luks_1.3.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/bruteforce-luks/bruteforce-luks_1.3.1-1+b1_amd64.deb"
+}
