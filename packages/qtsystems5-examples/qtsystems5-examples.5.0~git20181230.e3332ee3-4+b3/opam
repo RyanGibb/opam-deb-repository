@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qtsystems5-examples_5.0~git20181230.e3332ee3-4+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qtsystems5-examples"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5systeminfo5" {>= "5.0~git20181230.e3332ee3"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.5.1~"} | "libqt5gui5-gles" {>= "5.5.1~"})
+  ("libqt5quick5" {>= "5.5.1~"} | "libqt5quick5-gles" {>= "5.5.1~"})
+]
+extra-source "qtsystems5-examples_5.0~git20181230.e3332ee3-4+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtsystems-opensource-src/qtsystems5-examples_5.0~git20181230.e3332ee3-4+b3_amd64.deb"
+}

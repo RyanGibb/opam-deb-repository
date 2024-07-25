@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i validns_0.8+git20160720-3.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r validns"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libjudydebian1"
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "validns_0.8+git20160720-3.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/validns/validns_0.8+git20160720-3.1_amd64.deb"
+}

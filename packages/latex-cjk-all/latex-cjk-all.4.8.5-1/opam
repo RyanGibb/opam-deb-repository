@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i latex-cjk-all_4.8.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r latex-cjk-all"]
+]
+depends: [
+  "fonts-arphic-uming"
+  "latex-cjk-chinese" {>= "4.8.5-1"}
+  "latex-cjk-chinese-arphic-bkai00mp"
+  "latex-cjk-chinese-arphic-bsmi00lp"
+  "latex-cjk-chinese-arphic-gbsn00lp"
+  "latex-cjk-chinese-arphic-gkai00mp"
+  "latex-cjk-common" {>= "4.8.5-1"}
+  "latex-cjk-japanese" {>= "4.8.5-1"}
+  "latex-cjk-japanese-wadalab"
+  "latex-cjk-korean" {= "4.8.5-1"}
+  "latex-cjk-thai" {= "4.8.5-1"}
+]
+extra-source "latex-cjk-all_4.8.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cjk/latex-cjk-all_4.8.5-1_all.deb"
+}

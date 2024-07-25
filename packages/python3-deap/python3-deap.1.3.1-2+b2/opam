@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-deap_1.3.1-2+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-deap"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libstdc++6" {>= "4.9"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-any"
+  "python3-numpy"
+]
+extra-source "python3-deap_1.3.1-2+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/deap/python3-deap_1.3.1-2+b2_amd64.deb"
+}

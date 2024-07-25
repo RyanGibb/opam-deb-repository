@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libvtk9-java_9.1.0+really9.1.0+dfsg2-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libvtk9-java"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtbb12" {>= "2021.4.0"}
+  "libvtk9-1" {>= "9.1.0+really9.1.0+dfsg2"}
+  "libvtk9-1-qt" {>= "9.1.0+really9.1.0+dfsg2"}
+]
+extra-source "libvtk9-java_9.1.0+really9.1.0+dfsg2-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vtk9/libvtk9-java_9.1.0+really9.1.0+dfsg2-5_amd64.deb"
+}

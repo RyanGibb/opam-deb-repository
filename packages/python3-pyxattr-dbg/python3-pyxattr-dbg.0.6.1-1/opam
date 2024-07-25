@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-pyxattr-dbg_0.6.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-pyxattr-dbg"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python3-dbg" {< "3.8"}
+  "python3-dbg" {>= "3.6~"}
+  "python3-pyxattr" {= "0.6.1-1"}
+]
+extra-source "python3-pyxattr-dbg_0.6.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-pyxattr/python3-pyxattr-dbg_0.6.1-1_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vulkan-tools_1.2.162.0+dfsg1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vulkan-tools"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libvulkan1" {>= "1.2.162.0"}
+  "libwayland-client0" {>= "1.9.91"}
+  "libx11-6"
+  "libxcb1"
+]
+extra-source "vulkan-tools_1.2.162.0+dfsg1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vulkan-tools/vulkan-tools_1.2.162.0+dfsg1-1_amd64.deb"
+}

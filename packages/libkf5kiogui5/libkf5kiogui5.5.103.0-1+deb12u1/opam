@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5kiogui5_5.103.0-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5kiogui5"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libkf5configcore5" {>= "5.103.0~"}
+  "libkf5coreaddons5" {>= "5.103.0~"}
+  "libkf5i18n5" {>= "5.103.0~"}
+  "libkf5kiocore5" {>= "5.80.0"}
+  "libkf5service-bin"
+  "libkf5service5" {>= "5.103.0~"}
+  "libkf5windowsystem5" {>= "5.103.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5dbus5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "libkf5kiogui5_5.103.0-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kio/libkf5kiogui5_5.103.0-1+deb12u1_amd64.deb"
+}

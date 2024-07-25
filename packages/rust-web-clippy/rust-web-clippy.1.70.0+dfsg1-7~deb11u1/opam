@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rust-web-clippy_1.70.0+dfsg1-7~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rust-web-clippy"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstd-rust-web-1-70" {= "1.70.0+dfsg1-7~deb11u1"}
+]
+conflicts: [
+  "rust-clippy"
+]
+extra-source "rust-web-clippy_1.70.0+dfsg1-7~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rustc-web/rust-web-clippy_1.70.0+dfsg1-7~deb11u1_amd64.deb"
+}

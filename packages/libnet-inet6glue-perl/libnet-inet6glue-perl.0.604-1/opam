@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libnet-inet6glue-perl_0.604-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libnet-inet6glue-perl"]
+]
+depends: [
+  "perl-any"
+  ("libio-socket-ip-perl" | "libio-socket-inet6-perl")
+]
+extra-source "libnet-inet6glue-perl_0.604-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libn/libnet-inet6glue-perl/libnet-inet6glue-perl_0.604-1_all.deb"
+}

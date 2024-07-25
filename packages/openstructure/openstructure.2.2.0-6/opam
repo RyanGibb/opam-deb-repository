@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openstructure_2.2.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openstructure"]
+]
+depends: [
+  "libboost-filesystem1-74-0" {>= "1.74.0"}
+  "libboost-iostreams1-74-0" {>= "1.74.0"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libost-base2-2" {>= "2.2.0"}
+  "libost-conop2-2" {>= "2.2.0"}
+  "libost-gui2-2" {>= "2.2.0"}
+  "libost-io2-2" {>= "2.2.0"}
+  "libost-mol-alg2-2" {>= "2.2.0"}
+  "libost-mol2-2" {>= "2.2.0"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libstdc++6" {>= "9"}
+  "python3-any"
+  "python3-ost"
+  ("libqt5gui5" {>= "5.0.2"} | "libqt5gui5-gles" {>= "5.0.2"})
+]
+extra-source "openstructure_2.2.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openstructure/openstructure_2.2.0-6_amd64.deb"
+}

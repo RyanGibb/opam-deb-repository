@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmsv-java_2009.1+dfsg1-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmsv-java"]
+]
+depends: [
+  "ant"
+  "libisorelax-java" {>= "20041111"}
+  "librelaxng-datatype-java" {>= "1.0"}
+  "libxerces2-java" {>= "2.11.0"}
+  "libxml-commons-resolver1-1-java" {>= "1.2"}
+]
+extra-source "libmsv-java_2009.1+dfsg1-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/msv/libmsv-java_2009.1+dfsg1-6_all.deb"
+}

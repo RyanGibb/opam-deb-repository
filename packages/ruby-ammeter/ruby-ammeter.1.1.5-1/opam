@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-ammeter_1.1.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-ammeter"]
+]
+depends: [
+  "ruby-activesupport" {>= "2-3.0"}
+  "ruby-railties" {>= "2-3.0"}
+  "ruby-rspec-rails" {>= "2.2"}
+]
+extra-source "ruby-ammeter_1.1.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-ammeter/ruby-ammeter_1.1.5-1_all.deb"
+}

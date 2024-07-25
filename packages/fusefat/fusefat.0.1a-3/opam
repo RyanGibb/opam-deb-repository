@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fusefat_0.1a-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fusefat"]
+]
+depends: [
+  "fuse"
+  "libc6" {>= "2.14"}
+  "libfuse2" {>= "2.8"}
+  "libglib2-0-0" {>= "2.12.0"}
+]
+extra-source "fusefat_0.1a-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fuse-umfuse-fat/fusefat_0.1a-3_amd64.deb"
+}

@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libc6-dev-mipsn32el-cross_2.28-7cross2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libc6-dev-mipsn32el-cross"]
+]
+depends: [
+  "libc6-mipsn32el-cross" {= "2.28-7cross2"}
+  "linux-libc-dev-mipsn32el-cross"
+]
+conflicts: [
+  "libc0.1-dev-mipsn32el-cross"
+  "libc0.3-dev-mipsn32el-cross"
+  "libc6.1-dev-mipsn32el-cross"
+]
+extra-source "libc6-dev-mipsn32el-cross_2.28-7cross2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cross-toolchain-base-mipsen/libc6-dev-mipsn32el-cross_2.28-7cross2_all.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-rio-prettyprint-prof_0.1.1.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-rio-prettyprint-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-aeson-prof"
+  "libghc-annotated-wl-pprint-prof"
+  "libghc-ansi-terminal-prof"
+  "libghc-colour-prof"
+  "libghc-path-prof"
+  "libghc-rio-prettyprint-dev" {= "0.1.1.0-1+b1"}
+  "libghc-rio-prof"
+]
+extra-source "libghc-rio-prettyprint-prof_0.1.1.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-rio-prettyprint/libghc-rio-prettyprint-prof_0.1.1.0-1+b1_amd64.deb"
+}

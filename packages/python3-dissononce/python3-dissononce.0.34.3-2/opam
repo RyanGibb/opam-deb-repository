@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-dissononce_0.34.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-dissononce"]
+]
+depends: [
+  "python3-any"
+  "python3-cryptography" {>= "2.5"}
+  "python3-transitions"
+]
+extra-source "python3-dissononce_0.34.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dissononce/python3-dissononce_0.34.3-2_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdata-guid-perl_0.051-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdata-guid-perl"]
+]
+depends: [
+  "libsub-exporter-perl"
+  "libsub-install-perl"
+  "perl-any"
+  ("libossp-uuid-perl" | "libdata-uuid-perl")
+]
+extra-source "libdata-guid-perl_0.051-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdata-guid-perl/libdata-guid-perl_0.051-1_all.deb"
+}

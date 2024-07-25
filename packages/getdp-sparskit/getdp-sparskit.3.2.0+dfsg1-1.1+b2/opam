@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i getdp-sparskit_3.2.0+dfsg1-1.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r getdp-sparskit"]
+]
+depends: [
+  "libarpack2" {>= "2.1"}
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "4.0"}
+  "libgfortran5" {>= "8"}
+  "libgsl25" {>= "2.6"}
+  "libopenmpi3" {>= "4.0.5"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libstdc++6" {>= "9"}
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "getdp-sparskit_3.2.0+dfsg1-1.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/getdp/getdp-sparskit_3.2.0+dfsg1-1.1+b2_amd64.deb"
+}

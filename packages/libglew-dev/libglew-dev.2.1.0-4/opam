@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglew-dev_2.1.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglew-dev"]
+]
+depends: [
+  "libglew2-1" {= "2.1.0-4"}
+  ("libgl1-mesa-dev" | "libgl-dev")
+  ("libglu1-mesa-dev" | "libglu-dev")
+]
+conflicts: [
+  "libglew1.6-dev"
+]
+extra-source "libglew-dev_2.1.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/glew/libglew-dev_2.1.0-4_amd64.deb"
+}

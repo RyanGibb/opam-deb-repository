@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i linux-kbuild-4.19_4.19.249-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r linux-kbuild-4.19"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libelf1" {>= "0.142"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "linux-kbuild-4.19_4.19.249-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/linux/linux-kbuild-4.19_4.19.249-2_amd64.deb"
+}

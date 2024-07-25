@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libretro-beetle-psx_0.9.38.6+git20151019-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libretro-beetle-psx"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtrio2" {>= "1.16"}
+  ("retroarch" | "libretro-frontend")
+]
+extra-source "libretro-beetle-psx_0.9.38.6+git20151019-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libretro-beetle-psx/libretro-beetle-psx_0.9.38.6+git20151019-2_amd64.deb"
+}

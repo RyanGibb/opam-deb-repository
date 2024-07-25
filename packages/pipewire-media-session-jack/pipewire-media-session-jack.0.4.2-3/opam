@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pipewire-media-session-jack_0.4.2-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pipewire-media-session-jack"]
+]
+depends: [
+  "pipewire-jack"
+  "pipewire-media-session"
+]
+conflicts: [
+  "wireplumber"
+]
+extra-source "pipewire-media-session-jack_0.4.2-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pipewire-media-session/pipewire-media-session-jack_0.4.2-3_all.deb"
+}

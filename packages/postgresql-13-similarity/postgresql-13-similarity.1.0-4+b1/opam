@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i postgresql-13-similarity_1.0-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r postgresql-13-similarity"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "postgresql-13"
+]
+extra-source "postgresql-13-similarity_1.0-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pg-similarity/postgresql-13-similarity_1.0-4+b1_amd64.deb"
+}

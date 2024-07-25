@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcwidget3v5_0.5.17-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcwidget3v5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc1" {>= "1-3.0"}
+  "libncursesw6" {>= "6"}
+  "libsigc++-2-0-0v5" {>= "2.8.0"}
+  "libstdc++6" {>= "5.2"}
+  "libtinfo6" {>= "6"}
+]
+conflicts: [
+  "libcwidget3"
+]
+extra-source "libcwidget3v5_0.5.17-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cwidget/libcwidget3v5_0.5.17-11_amd64.deb"
+}

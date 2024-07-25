@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-zlib-bindings-prof_0.1.1.5-11+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-zlib-bindings-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-zlib-bindings-dev" {= "0.1.1.5-11+b2"}
+  "libghc-zlib-prof"
+]
+extra-source "libghc-zlib-bindings-prof_0.1.1.5-11+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-zlib-bindings/libghc-zlib-bindings-prof_0.1.1.5-11+b2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ldap-account-manager-lamdaemon_8.0.1-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ldap-account-manager-lamdaemon"]
+]
+depends: [
+  "libquota-perl"
+  "libsys-syslog-perl"
+  "perl"
+  "sudo"
+]
+extra-source "ldap-account-manager-lamdaemon_8.0.1-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/ldap-account-manager/ldap-account-manager-lamdaemon_8.0.1-0+deb11u1_all.deb"
+}

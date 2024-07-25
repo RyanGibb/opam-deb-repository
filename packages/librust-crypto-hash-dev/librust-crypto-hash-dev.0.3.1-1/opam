@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-crypto-hash-dev_0.3.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-crypto-hash-dev"]
+]
+depends: [
+  "librust-commoncrypto-0-2+default-dev"
+  "librust-hex-0-3+default-dev"
+  "librust-openssl-0-10+default-dev"
+  "librust-winapi-0-3+default-dev"
+  "librust-winapi-0-3+minwindef-dev"
+  "librust-winapi-0-3+wincrypt-dev"
+]
+extra-source "librust-crypto-hash-dev_0.3.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-crypto-hash/librust-crypto-hash-dev_0.3.1-1_amd64.deb"
+}

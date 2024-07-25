@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qsopt-ex_2.5.10.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qsopt-ex"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgmp10"
+  "libqsopt-ex2" {= "2.5.10.3-2"}
+]
+extra-source "qsopt-ex_2.5.10.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qsopt-ex/qsopt-ex_2.5.10.3-2_amd64.deb"
+}

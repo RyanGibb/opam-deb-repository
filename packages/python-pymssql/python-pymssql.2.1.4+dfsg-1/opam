@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-pymssql_2.1.4+dfsg-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-pymssql"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsybdb5" {>= "0.63"}
+  "python" {< "2.8"}
+  "python" {>= "2.7~"}
+  "python-any" {< "2.8"}
+  "python-any" {>= "2.7~"}
+]
+extra-source "python-pymssql_2.1.4+dfsg-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pymssql/python-pymssql_2.1.4+dfsg-1_amd64.deb"
+}

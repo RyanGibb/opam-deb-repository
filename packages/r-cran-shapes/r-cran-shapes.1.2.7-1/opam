@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-shapes_1.2.7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-shapes"]
+]
+depends: [
+  "r-base-core"
+  "r-base-core" {>= "4.2.2.20221110-2"}
+  "r-cran-mass"
+  "r-cran-minpack-lm"
+  "r-cran-rgl"
+  "r-cran-scatterplot3d"
+]
+extra-source "r-cran-shapes_1.2.7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-cran-shapes/r-cran-shapes_1.2.7-1_all.deb"
+}

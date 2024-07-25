@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-gupnpdlna-2.0_0.10.5-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-gupnpdlna-2.0"]
+]
+depends: [
+  "gir1-2-glib-2-0" {>= "0.9.12"}
+  "gir1-2-gst-plugins-base-1-0" {>= "1.0"}
+  "gir1-2-gstreamer-1-0" {>= "1.0"}
+  "libgupnp-dlna-2-0-3" {>= "0.10.1"}
+]
+conflicts: [
+  "gir1.0-gupnp-1.0"
+  "gir1.2-gupnp-dlna-1.0 (<< 0.6.6~)"
+]
+extra-source "gir1.2-gupnpdlna-2.0_0.10.5-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gupnp-dlna/gir1.2-gupnpdlna-2.0_0.10.5-4_amd64.deb"
+}

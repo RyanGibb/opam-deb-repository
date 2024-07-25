@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libclc-16_1:16.0.6-15~deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libclc-16"]
+]
+depends: [
+  "libclang-common-16-dev"
+  "libclc-16-dev" {= "1-16.0.6-15~deb12u1"}
+]
+conflicts: [
+  "libclc-x.y"
+]
+extra-source "libclc-16_1:16.0.6-15~deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-16/libclc-16_16.0.6-15~deb12u1_all.deb"
+}

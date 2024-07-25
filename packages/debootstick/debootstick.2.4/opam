@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debootstick_2.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debootstick"]
+]
+depends: [
+  "dosfstools"
+  "e2fsprogs"
+  "gdisk"
+  "grub-efi-amd64-bin"
+  "grub-efi-ia32-bin"
+  "kpartx"
+  "lvm2"
+  "qemu-user-static"
+  "uuid-runtime"
+]
+extra-source "debootstick_2.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debootstick/debootstick_2.4_amd64.deb"
+}

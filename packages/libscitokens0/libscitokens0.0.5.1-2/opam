@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libscitokens0_0.5.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libscitokens0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl4" {>= "7.16.2"}
+  "libgcc-s1" {>= "3.0"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libssl1-1" {>= "1.1.0"}
+  "libstdc++6" {>= "9"}
+  "libuuid1" {>= "2.16"}
+]
+extra-source "libscitokens0_0.5.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scitokens-cpp/libscitokens0_0.5.1-2_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcdt5_2.40.1-6+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcdt5"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+conflicts: [
+  "libgraphviz4"
+]
+extra-source "libcdt5_2.40.1-6+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/graphviz/libcdt5_2.40.1-6+deb10u1_amd64.deb"
+}

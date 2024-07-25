@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-sphere_3.2-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-sphere"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libsphere0d" {= "3.2-11"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.6~"}
+  "python3-any" {>= "3.3.2-2~"}
+  "python3-numpy"
+  "python3-numpy" {>= "1-1.14.3"}
+]
+extra-source "python3-sphere_3.2-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spherepack/python3-sphere_3.2-11_amd64.deb"
+}

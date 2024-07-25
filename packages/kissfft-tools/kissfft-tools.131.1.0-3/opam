@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i kissfft-tools_131.1.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r kissfft-tools"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libkissfft-float131" {>= "131+git20201106.cc862cb"}
+  "libpng16-16" {>= "1.6.2-1"}
+]
+extra-source "kissfft-tools_131.1.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kissfft/kissfft-tools_131.1.0-3_amd64.deb"
+}

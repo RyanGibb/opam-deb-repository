@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkactivities6_4:4.13.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkactivities6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkdecore5" {>= "4-4.11"}
+  "libqt4-dbus" {>= "4-4.6.1"}
+  "libqtcore4" {>= "4-4.7.0~beta1"}
+  "libstdc++6" {>= "4.1.1"}
+]
+extra-source "libkactivities6_4:4.13.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/k/kactivities/libkactivities6_4.13.3-2_amd64.deb"
+}

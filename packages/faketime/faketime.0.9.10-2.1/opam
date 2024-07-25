@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i faketime_0.9.10-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r faketime"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libfaketime" {= "0.9.10-2.1"}
+]
+extra-source "faketime_0.9.10-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/faketime/faketime_0.9.10-2.1_amd64.deb"
+}

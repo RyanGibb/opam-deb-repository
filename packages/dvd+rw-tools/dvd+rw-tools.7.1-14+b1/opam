@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dvd+rw-tools_7.1-14+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dvd+rw-tools"]
+]
+depends: [
+  "genisoimage"
+  "growisofs" {>= "7.1-9"}
+  "libc6" {>= "2.4"}
+  "libgcc-s1"
+  "libstdc++6" {>= "5"}
+]
+extra-source "dvd+rw-tools_7.1-14+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dvd+rw-tools/dvd+rw-tools_7.1-14+b1_amd64.deb"
+}

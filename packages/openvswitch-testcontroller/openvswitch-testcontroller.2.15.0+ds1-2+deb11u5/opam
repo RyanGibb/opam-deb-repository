@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i openvswitch-testcontroller_2.15.0+ds1-2+deb11u5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r openvswitch-testcontroller"]
+]
+depends: [
+  "lsb-base"
+  "openvswitch-common" {= "2.15.0+ds1-2+deb11u5"}
+  "openvswitch-pki" {< "2.15.0+ds1-2+deb11u5.1~"}
+  "openvswitch-pki" {>= "2.15.0+ds1-2+deb11u5"}
+]
+extra-source "openvswitch-testcontroller_2.15.0+ds1-2+deb11u5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/openvswitch/openvswitch-testcontroller_2.15.0+ds1-2+deb11u5_amd64.deb"
+}

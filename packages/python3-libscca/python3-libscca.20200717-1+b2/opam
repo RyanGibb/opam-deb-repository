@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-libscca_20200717-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-libscca"]
+]
+depends: [
+  "libbfio1" {>= "20120425"}
+  "libc6" {>= "2.33"}
+  "libscca1" {= "20200717-1+b2"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+]
+extra-source "python3-libscca_20200717-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libscca/python3-libscca_20200717-1+b2_amd64.deb"
+}

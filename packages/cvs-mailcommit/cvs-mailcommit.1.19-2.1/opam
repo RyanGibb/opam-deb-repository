@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cvs-mailcommit_1.19-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cvs-mailcommit"]
+]
+depends: [
+  "rcs"
+  ("postfix" | "mail-transport-agent")
+]
+extra-source "cvs-mailcommit_1.19-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cvs-mailcommit/cvs-mailcommit_1.19-2.1_all.deb"
+}

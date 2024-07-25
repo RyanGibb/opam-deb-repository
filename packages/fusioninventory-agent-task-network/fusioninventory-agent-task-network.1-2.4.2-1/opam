@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fusioninventory-agent-task-network_1:2.4.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fusioninventory-agent-task-network"]
+]
+depends: [
+  "fusioninventory-agent" {>= "1-2.4.2-1"}
+  "libcrypt-des-perl"
+  "libnet-ip-perl"
+  "libnet-nbname-perl"
+  "libnet-snmp-perl"
+  "perl-any"
+]
+extra-source "fusioninventory-agent-task-network_1:2.4.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fusioninventory-agent/fusioninventory-agent-task-network_2.4.2-1_all.deb"
+}

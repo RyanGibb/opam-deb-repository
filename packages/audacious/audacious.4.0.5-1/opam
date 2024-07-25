@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i audacious_4.0.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r audacious"]
+]
+depends: [
+  "audacious-plugins" {>= "4.0.5"}
+  "gtk2-engines-pixbuf"
+  "libaudcore5" {= "4.0.5-1"}
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libstdc++6" {>= "6"}
+  ("default-dbus-session-bus" | "dbus-session-bus" | "dbus-x11")
+]
+extra-source "audacious_4.0.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/audacious/audacious_4.0.5-1_amd64.deb"
+}

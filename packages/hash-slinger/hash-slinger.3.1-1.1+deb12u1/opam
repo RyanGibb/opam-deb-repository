@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i hash-slinger_3.1-1.1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r hash-slinger"]
+]
+depends: [
+  "ca-certificates"
+  "dns-root-data"
+  "openssh-client"
+  "python3-any"
+  "python3-dnspython"
+  "python3-gnupg" {>= "0.3.7"}
+  "python3-m2crypto" {>= "0.24.0"}
+  "python3-unbound"
+]
+conflicts: [
+  "sshfp"
+]
+extra-source "hash-slinger_3.1-1.1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/hash-slinger/hash-slinger_3.1-1.1+deb12u1_amd64.deb"
+}

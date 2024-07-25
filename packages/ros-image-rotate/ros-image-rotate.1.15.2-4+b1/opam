@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ros-image-rotate_1.15.2-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ros-image-rotate"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libimage-rotate0d"
+  "libnodeletlib1d" {>= "1.10.0"}
+  "librosconsole3d" {>= "1.14.3"}
+  "libroscpp3d" {>= "1.15.9+ds1"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "ros-image-rotate_1.15.2-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-image-pipeline/ros-image-rotate_1.15.2-4+b1_amd64.deb"
+}

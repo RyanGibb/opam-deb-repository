@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i rust-all_1.63.0+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r rust-all"]
+]
+depends: [
+  "cargo"
+  "rust-clippy" {>= "1.63.0+dfsg1-2"}
+  "rustc-web"
+  "rustfmt" {>= "1.63.0+dfsg1-2"}
+  ("rust-gdb" {>= "1.63.0+dfsg1-2"} | "rust-lldb" {>= "1.63.0+dfsg1-2"})
+]
+extra-source "rust-all_1.63.0+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rustc/rust-all_1.63.0+dfsg1-2_all.deb"
+}

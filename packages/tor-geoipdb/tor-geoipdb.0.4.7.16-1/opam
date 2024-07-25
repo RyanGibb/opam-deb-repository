@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tor-geoipdb_0.4.7.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tor-geoipdb"]
+]
+depends: [
+  "tor" {>= "0.4.7.16-1"}
+]
+extra-source "tor-geoipdb_0.4.7.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tor/tor-geoipdb_0.4.7.16-1_all.deb"
+}

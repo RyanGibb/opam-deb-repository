@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i jalv_1.6.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r jalv"]
+]
+depends: [
+  "libc6" {>= "2.27"}
+  "libgcc-s1" {>= "3.0"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgtk-3-0" {>= "3.21.4"}
+  "liblilv-0-0" {>= "0.24.0~dfsg0"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5widgets5" {>= "5.0.2"}
+  "libserd-0-0" {>= "0.24.0~"}
+  "libsratom-0-0" {>= "0.6.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "libsuil-0-0" {>= "0.10.0"}
+  ("libjack-jackd2-0" {>= "1.9.10+20150825"} | "libjack-0-125")
+  ("libqt5gui5" {>= "5.11.0~rc1"} | "libqt5gui5-gles" {>= "5.11.0~rc1"})
+]
+extra-source "jalv_1.6.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jalv/jalv_1.6.6-1_amd64.deb"
+}

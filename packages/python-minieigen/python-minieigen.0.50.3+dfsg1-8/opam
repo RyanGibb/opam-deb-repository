@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-minieigen_0.50.3+dfsg1-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-minieigen"]
+]
+depends: [
+  "libboost-python1-67-0"
+  "libc6" {>= "2.14"}
+  "libdouble-conversion1" {>= "2.0.0"}
+  "libgcc1" {>= "1-4.0"}
+  "libjs-sphinxdoc" {>= "1.0"}
+  "libstdc++6" {>= "5.2"}
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+]
+extra-source "python-minieigen_0.50.3+dfsg1-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/minieigen/python-minieigen_0.50.3+dfsg1-8_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ironic-doc_1:11.1.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ironic-doc"]
+]
+depends: [
+  "libjs-sphinxdoc" {>= "1.0"}
+]
+extra-source "ironic-doc_1:11.1.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ironic/ironic-doc_11.1.0-6_all.deb"
+}

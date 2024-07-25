@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i environment-modules_5.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r environment-modules"]
+]
+depends: [
+  "less"
+  "libc6" {>= "2.34"}
+  "procps"
+  "python3"
+  "tcl8-6"
+]
+conflicts: [
+  "lmod"
+]
+extra-source "environment-modules_5.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/modules/environment-modules_5.2.0-1_amd64.deb"
+}

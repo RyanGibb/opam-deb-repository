@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-cracknum-dev_2.2-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-cracknum-dev"]
+]
+depends: [
+  "ghc"
+  "libatomic1" {>= "4.8"}
+  "libc6" {>= "2.27"}
+  "libghc-floatinghex-dev"
+  "libghc-ieee754-dev"
+  "libghc-reinterpret-cast-dev"
+  "libgmp10"
+]
+extra-source "libghc-cracknum-dev_2.2-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-cracknum/libghc-cracknum-dev_2.2-1+b1_amd64.deb"
+}

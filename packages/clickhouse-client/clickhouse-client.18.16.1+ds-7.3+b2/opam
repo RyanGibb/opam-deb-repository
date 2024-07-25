@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clickhouse-client_18.16.1+ds-7.3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clickhouse-client"]
+]
+depends: [
+  "clickhouse-common" {= "18.16.1+ds-7.3+b2"}
+  "libboost-program-options1-74-0" {>= "1.74.0"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.3.1"}
+  "libjemalloc2" {>= "5.0.0"}
+  "libpocofoundation80" {>= "1.11.0"}
+  "libpoconet80" {>= "1.11.0"}
+  "libpoconetssl80" {>= "1.11.0"}
+  "libpocoutil80" {>= "1.11.0"}
+  "libreadline8" {>= "6.0"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "clickhouse-client_18.16.1+ds-7.3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/clickhouse/clickhouse-client_18.16.1+ds-7.3+b2_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfsxfs-utils_20201117-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfsxfs-utils"]
+]
+depends: [
+  "libbfio1" {>= "20120425"}
+  "libc6" {>= "2.14"}
+  "libfsxfs1" {>= "20201117"}
+]
+extra-source "libfsxfs-utils_20201117-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfsxfs/libfsxfs-utils_20201117-1+b2_amd64.deb"
+}

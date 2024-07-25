@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-chrono+serde-dev_0.4.6-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-chrono+serde-dev"]
+]
+depends: [
+  "librust-chrono-dev" {= "0.4.6-1"}
+  "librust-serde-1+default-dev"
+]
+extra-source "librust-chrono+serde-dev_0.4.6-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-chrono/librust-chrono+serde-dev_0.4.6-1_amd64.deb"
+}

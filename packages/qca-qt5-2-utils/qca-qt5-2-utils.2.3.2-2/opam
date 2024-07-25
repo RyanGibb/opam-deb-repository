@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qca-qt5-2-utils_2.3.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qca-qt5-2-utils"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libqca-qt5-2" {= "2.3.2-2"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qca-qt5-2-utils_2.3.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qca2/qca-qt5-2-utils_2.3.2-2_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i live-tools_1:20190831.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r live-tools"]
+]
+depends: [
+  "initramfs-tools"
+  "lsb-base"
+]
+extra-source "live-tools_1:20190831.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/live-tools/live-tools_20190831.1_all.deb"
+}

@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-gio2_3.4.3-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-gio2"]
+]
+depends: [
+  "gir1-2-glib-2-0"
+  "libc6" {>= "2.4"}
+  "libglib2-0-0" {>= "2.30.0"}
+  "libruby2-7" {>= "2.7.0~preview1"}
+  "ruby" {< "1-2.8~"}
+  "ruby" {>= "1-2.7~0"}
+  "ruby-glib2" {= "3.4.3-1+b1"}
+  "ruby-gobject-introspection" {= "3.4.3-1+b1"}
+]
+extra-source "ruby-gio2_3.4.3-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-gnome/ruby-gio2_3.4.3-1+b1_amd64.deb"
+}

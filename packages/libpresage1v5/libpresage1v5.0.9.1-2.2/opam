@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpresage1v5_0.9.1-2.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpresage1v5"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1"
+  "libpresage-data" {= "0.9.1-2.2"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "5.2"}
+  "libtinyxml2-6-2v5"
+]
+extra-source "libpresage1v5_0.9.1-2.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/presage/libpresage1v5_0.9.1-2.2_amd64.deb"
+}

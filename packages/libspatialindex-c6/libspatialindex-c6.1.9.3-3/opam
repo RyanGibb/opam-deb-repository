@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspatialindex-c6_1.9.3-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspatialindex-c6"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libspatialindex6" {>= "1.8.5"}
+  "libstdc++6" {>= "11"}
+]
+extra-source "libspatialindex-c6_1.9.3-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spatialindex/libspatialindex-c6_1.9.3-3_amd64.deb"
+}

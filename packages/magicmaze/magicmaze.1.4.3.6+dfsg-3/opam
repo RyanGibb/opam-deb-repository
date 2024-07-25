@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i magicmaze_1.4.3.6+dfsg-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r magicmaze"]
+]
+depends: [
+  "fonts-isabella"
+  "ruby-sdl"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "magicmaze_1.4.3.6+dfsg-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/magicmaze/magicmaze_1.4.3.6+dfsg-3_all.deb"
+}

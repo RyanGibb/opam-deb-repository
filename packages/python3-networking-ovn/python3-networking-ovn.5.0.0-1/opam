@@ -1,0 +1,26 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-networking-ovn_5.0.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-networking-ovn"]
+]
+depends: [
+  "python3-any"
+  "python3-babel"
+  "python3-futurist" {>= "1.2.0"}
+  "python3-netaddr" {>= "0.7.13"}
+  "python3-neutron" {>= "2-13.0.0~rc1"}
+  "python3-neutron-lib" {>= "1.18.0"}
+  "python3-openssl" {>= "17.1.0"}
+  "python3-openvswitch" {>= "2.8.0"}
+  "python3-oslo-config" {>= "1-5.2.0"}
+  "python3-ovsdbapp" {>= "0.10.0"}
+  "python3-pbr" {>= "2.0.0"}
+  "python3-six" {>= "1.10.0"}
+  "python3-sqlalchemy" {>= "1.2.0"}
+  "python3-tenacity" {>= "4.4.0"}
+]
+extra-source "python3-networking-ovn_5.0.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/networking-ovn/python3-networking-ovn_5.0.0-1_all.deb"
+}

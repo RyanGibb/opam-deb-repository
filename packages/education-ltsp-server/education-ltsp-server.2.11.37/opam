@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i education-ltsp-server_2.11.37_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r education-ltsp-server"]
+]
+depends: [
+  "education-tasks" {= "2.11.37"}
+  "tftpd-hpa"
+]
+extra-source "education-ltsp-server_2.11.37_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debian-edu/education-ltsp-server_2.11.37_amd64.deb"
+}

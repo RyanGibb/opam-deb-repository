@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmsv1_1.1.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmsv1"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcurl3-nss" {>= "7.23.1"}
+  "libjansson4" {>= "2.0.1"}
+]
+extra-source "libmsv1_1.1.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmsv/libmsv1_1.1.1-3_amd64.deb"
+}

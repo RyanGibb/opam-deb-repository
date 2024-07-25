@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i uml-utilities_20070815.4-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r uml-utilities"]
+]
+depends: [
+  "adduser"
+  "libc6" {>= "2.14"}
+  "libfuse2" {>= "2.5"}
+  "libreadline8" {>= "6.0"}
+  "sysvinit-utils"
+]
+extra-source "uml-utilities_20070815.4-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uml-utilities/uml-utilities_20070815.4-1_amd64.deb"
+}

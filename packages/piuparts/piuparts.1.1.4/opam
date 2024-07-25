@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i piuparts_1.1.4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r piuparts"]
+]
+depends: [
+  "debootstrap" {>= "1.0.89~"}
+  "debsums" {>= "2.2.2~"}
+  "libjs-sphinxdoc"
+  "lsb-release"
+  "lsof"
+  "mount"
+  "piuparts-common" {= "1.1.4"}
+  "python3-any"
+  "python3-debian"
+]
+extra-source "piuparts_1.1.4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/piuparts/piuparts_1.1.4_all.deb"
+}

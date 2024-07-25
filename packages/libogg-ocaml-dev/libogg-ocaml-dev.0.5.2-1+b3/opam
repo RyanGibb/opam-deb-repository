@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libogg-ocaml-dev_0.5.2-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libogg-ocaml-dev"]
+]
+depends: [
+  "libogg-dev"
+  "libogg-ocaml"
+  "libogg-ocaml" {= "0.5.2-1+b3"}
+  "ocaml-findlib"
+  "ocaml-nox"
+]
+extra-source "libogg-ocaml-dev_0.5.2-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/o/ocaml-ogg/libogg-ocaml-dev_0.5.2-1+b3_amd64.deb"
+}

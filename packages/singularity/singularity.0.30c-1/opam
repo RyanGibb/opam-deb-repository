@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i singularity_0.30c-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r singularity"]
+]
+depends: [
+  "python-numpy"
+  "python-pygame"
+  "ttf-dejavu-core"
+]
+conflicts: [
+  "singularity-data"
+]
+extra-source "singularity_0.30c-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/singularity/singularity_0.30c-1_all.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ukwm_1.2.0-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ukwm"]
+]
+depends: [
+  "gsettings-desktop-schemas" {>= "3.21.4"}
+  "libc6" {>= "2.34"}
+  "libglib2-0-0" {>= "2.53.2"}
+  "libukwm-1-0" {>= "1.1.6"}
+  "libx11-6"
+  "libxcomposite1" {>= "1-0.4.5"}
+  "libxrandr2" {>= "2-1.5.0"}
+  "ukui-settings-daemon"
+  "ukwm-common" {>= "1.2.0-1"}
+  "zenity"
+]
+extra-source "ukwm_1.2.0-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/ukwm/ukwm_1.2.0-1+b4_amd64.deb"
+}

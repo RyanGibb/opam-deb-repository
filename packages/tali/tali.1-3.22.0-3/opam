@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tali_1:3.22.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tali"]
+]
+depends: [
+  "libatk1-0-0" {>= "1.12.4"}
+  "libc6" {>= "2.7"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.11.5"}
+  "libpango-1-0-0" {>= "1.14.0"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "tali_1:3.22.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tali/tali_3.22.0-3_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-micromatch_4.0.2+repack+~4.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-micromatch"]
+]
+depends: [
+  "node-anymatch" {>= "3.1.1+~2.1.1"}
+  "node-braces" {>= "3.0.2"}
+  "nodejs"
+]
+extra-source "node-micromatch_4.0.2+repack+~4.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-micromatch/node-micromatch_4.0.2+repack+~4.0.1-1_all.deb"
+}

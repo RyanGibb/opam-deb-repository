@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libglib-object-introspection-perl_0.049-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libglib-object-introspection-perl"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libffi8" {>= "3.4"}
+  "libgirepository-1-0-1"
+  "libgirepository-1-0-1" {>= "1.62.0-4~"}
+  "libglib-perl"
+  "libglib2-0-0" {>= "2.24.0"}
+  "perl" {>= "5.36.0-4"}
+  "perl-base"
+]
+extra-source "libglib-object-introspection-perl_0.049-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libg/libglib-object-introspection-perl/libglib-object-introspection-perl_0.049-3_amd64.deb"
+}

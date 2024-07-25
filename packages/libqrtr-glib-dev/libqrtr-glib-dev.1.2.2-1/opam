@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libqrtr-glib-dev_1.2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libqrtr-glib-dev"]
+]
+depends: [
+  "gir1-2-qrtr-1-0" {= "1.2.2-1"}
+  "libglib2-0-dev"
+  "libqrtr-glib0" {= "1.2.2-1"}
+]
+extra-source "libqrtr-glib-dev_1.2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libq/libqrtr-glib/libqrtr-glib-dev_1.2.2-1_amd64.deb"
+}

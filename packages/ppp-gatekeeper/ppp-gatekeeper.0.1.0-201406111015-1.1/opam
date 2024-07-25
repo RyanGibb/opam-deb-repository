@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ppp-gatekeeper_0.1.0-201406111015-1.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ppp-gatekeeper"]
+]
+depends: [
+  "conntrack"
+  "iptables"
+  "libconfig-inifiles-perl"
+  "libio-pty-perl"
+  "perl-any"
+  "ppp"
+]
+extra-source "ppp-gatekeeper_0.1.0-201406111015-1.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/ppp-gatekeeper/ppp-gatekeeper_0.1.0-201406111015-1.1_all.deb"
+}

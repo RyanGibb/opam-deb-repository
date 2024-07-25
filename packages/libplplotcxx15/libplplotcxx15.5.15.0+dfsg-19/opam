@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libplplotcxx15_5.15.0+dfsg-19_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libplplotcxx15"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libplplot17" {>= "5.15.0+dfsg"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "libplplotcxx15_5.15.0+dfsg-19_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plplot/libplplotcxx15_5.15.0+dfsg-19_amd64.deb"
+}

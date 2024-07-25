@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librte-pmd-qat18.11_18.11.11-1~deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librte-pmd-qat18.11"]
+]
+depends: [
+  "libbsd0" {>= "0.0"}
+  "libc6" {>= "2.14"}
+  "libnuma1" {>= "2.0.11"}
+  "librte-bus-pci18-11" {>= "17.11"}
+  "librte-compressdev18-11" {>= "18.05"}
+  "librte-cryptodev18-11" {>= "17.11"}
+  "librte-eal18-11" {>= "17.08"}
+  "librte-kvargs18-11" {>= "16.04"}
+  "librte-mbuf18-11" {>= "16.04"}
+  "librte-mempool18-11" {>= "16.07~rc1"}
+  "librte-pci18-11" {>= "17.11"}
+  "librte-ring18-11" {>= "16.04"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "librte-pmd-qat18.11_18.11.11-1~deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dpdk/librte-pmd-qat18.11_18.11.11-1~deb10u1_amd64.deb"
+}

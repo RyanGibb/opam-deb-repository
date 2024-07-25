@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i seccomp_2.5.4-1+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r seccomp"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libseccomp2" {>= "2.2.1"}
+]
+extra-source "seccomp_2.5.4-1+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libseccomp/seccomp_2.5.4-1+deb12u1_amd64.deb"
+}

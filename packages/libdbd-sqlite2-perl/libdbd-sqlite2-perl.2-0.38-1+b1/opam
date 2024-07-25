@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdbd-sqlite2-perl_2:0.38-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdbd-sqlite2-perl"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libdbi-perl"
+  "libdbi-perl" {>= "1.625"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+extra-source "libdbd-sqlite2-perl_2:0.38-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libd/libdbd-sqlite2-perl/libdbd-sqlite2-perl_0.38-1+b1_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-mako_1.2.4+ds-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-mako"]
+]
+depends: [
+  "python3-any"
+  "python3-markupsafe"
+  "python3-pkg-resources"
+  ("python3-importlib-metadata" | "python3" {> "3.8"})
+]
+extra-source "python3-mako_1.2.4+ds-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mako/python3-mako_1.2.4+ds-1_all.deb"
+}

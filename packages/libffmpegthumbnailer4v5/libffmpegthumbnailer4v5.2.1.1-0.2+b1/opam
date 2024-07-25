@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libffmpegthumbnailer4v5_2.1.1-0.2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libffmpegthumbnailer4v5"]
+]
+depends: [
+  "libavformat58" {>= "7-4.0"}
+  "libavutil56" {>= "7-4.0"}
+  "libc6" {>= "2.14"}
+  "libgcc-s1"
+  "libjpeg62-turbo" {>= "1.3.1"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libstdc++6" {>= "5.2"}
+  ("libavcodec58" {>= "7-4.0"} | "libavcodec-extra58" {>= "7-4.0"})
+  ("libavfilter7" {>= "7-4.0"} | "libavfilter-extra7" {>= "7-4.0"})
+]
+conflicts: [
+  "libffmpegthumbnailer4"
+]
+extra-source "libffmpegthumbnailer4v5_2.1.1-0.2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/ffmpegthumbnailer/libffmpegthumbnailer4v5_2.1.1-0.2+b1_amd64.deb"
+}

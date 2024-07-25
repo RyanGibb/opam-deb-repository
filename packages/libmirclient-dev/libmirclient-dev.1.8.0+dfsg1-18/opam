@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmirclient-dev_1.8.0+dfsg1-18_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmirclient-dev"]
+]
+depends: [
+  "libmirclient9" {= "1.8.0+dfsg1-18"}
+  "libmircommon-dev" {= "1.8.0+dfsg1-18"}
+  "libmircookie-dev" {= "1.8.0+dfsg1-18"}
+  "libprotobuf-dev" {>= "2.4.1"}
+]
+extra-source "libmirclient-dev_1.8.0+dfsg1-18_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mir/libmirclient-dev_1.8.0+dfsg1-18_amd64.deb"
+}

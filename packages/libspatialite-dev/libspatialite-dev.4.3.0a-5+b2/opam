@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libspatialite-dev_4.3.0a-5+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libspatialite-dev"]
+]
+depends: [
+  "libspatialite7" {= "4.3.0a-5+b2"}
+  "libsqlite3-dev"
+  "zlib1g-dev"
+]
+extra-source "libspatialite-dev_4.3.0a-5+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spatialite/libspatialite-dev_4.3.0a-5+b2_amd64.deb"
+}

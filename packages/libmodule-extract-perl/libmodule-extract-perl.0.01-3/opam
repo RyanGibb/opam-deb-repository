@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmodule-extract-perl_0.01-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmodule-extract-perl"]
+]
+depends: [
+  "perl-any"
+  ("libarchive-extract-perl" | "perl" {< "5.17.0"})
+]
+extra-source "libmodule-extract-perl_0.01-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libm/libmodule-extract-perl/libmodule-extract-perl_0.01-3_all.deb"
+}

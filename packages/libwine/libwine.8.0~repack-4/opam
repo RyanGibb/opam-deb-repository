@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libwine_8.0~repack-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libwine"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.35"}
+  "libcapi20-3"
+  "libfontconfig1" {>= "2.12.6"}
+  "libfreetype6" {>= "2.2.1"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgphoto2-6" {>= "2.5.10"}
+  "libgphoto2-port12" {>= "2.5.10"}
+  "libgstreamer-plugins-base1-0-0" {>= "1.0.0"}
+  "libgstreamer1-0-0" {>= "1.4.0"}
+  "libpcap0-8" {>= "1.5.1"}
+  "libpulse0" {>= "0.99.1"}
+  "libudev1" {>= "183"}
+  "libunwind8"
+  "libusb-1-0-0" {>= "2-1.0.21"}
+  "libx11-6"
+  "libxext6"
+  "libz-mingw-w64" {>= "1.2.11+dfsg-4"}
+  ("ocl-icd-libopencl1" {>= "1.0"} | "libopencl-1-2-1")
+  ("ocl-icd-libopencl1" | "libopencl1")
+]
+extra-source "libwine_8.0~repack-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wine/libwine_8.0~repack-4_amd64.deb"
+}

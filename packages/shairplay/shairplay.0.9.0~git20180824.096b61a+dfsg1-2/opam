@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shairplay_0.9.0~git20180824.096b61a+dfsg1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shairplay"]
+]
+depends: [
+  "libao4" {>= "1.1.0"}
+  "libc6" {>= "2.29"}
+  "libshairplay0" {= "0.9.0~git20180824.096b61a+dfsg1-2"}
+]
+extra-source "shairplay_0.9.0~git20180824.096b61a+dfsg1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shairplay/shairplay_0.9.0~git20180824.096b61a+dfsg1-2_amd64.deb"
+}

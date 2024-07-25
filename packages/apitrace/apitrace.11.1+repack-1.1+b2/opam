@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apitrace_11.1+repack-1.1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apitrace"]
+]
+depends: [
+  "apitrace-tracers" {= "11.1+repack-1.1+b2"}
+  "libbrotli1" {>= "0.6.0"}
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "4.2"}
+  "libmd0" {>= "0.0.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libproc2-0" {>= "2-4.0.2"}
+  "libstdc++6" {>= "12"}
+  "libwaffle-1-0" {>= "1.6.1"}
+  "libx11-6"
+  "python3"
+  "python3-pil"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "apitrace_11.1+repack-1.1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apitrace/apitrace_11.1+repack-1.1+b2_amd64.deb"
+}

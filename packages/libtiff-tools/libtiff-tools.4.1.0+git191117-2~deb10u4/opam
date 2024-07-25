@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtiff-tools_4.1.0+git191117-2~deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtiff-tools"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libtiff5" {>= "4.0.3"}
+]
+extra-source "libtiff-tools_4.1.0+git191117-2~deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tiff/libtiff-tools_4.1.0+git191117-2~deb10u4_amd64.deb"
+}

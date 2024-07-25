@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i freeradius-common_3.2.1+dfsg-4+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r freeradius-common"]
+]
+depends: [
+  "adduser"
+]
+conflicts: [
+  "radiusd-livingston"
+  "xtradius"
+  "yardradius"
+]
+extra-source "freeradius-common_3.2.1+dfsg-4+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/freeradius/freeradius-common_3.2.1+dfsg-4+deb12u1_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libbpp-seq-omics-dev_2.4.1-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libbpp-seq-omics-dev"]
+]
+depends: [
+  "libbpp-seq-dev" {>= "2.4.1"}
+  "libbpp-seq-omics3" {= "2.4.1-3"}
+]
+extra-source "libbpp-seq-omics-dev_2.4.1-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libb/libbpp-seq-omics/libbpp-seq-omics-dev_2.4.1-3_amd64.deb"
+}

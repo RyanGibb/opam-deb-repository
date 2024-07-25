@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i monodoc-gtk2.0-manual_2.12.40-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r monodoc-gtk2.0-manual"]
+]
+depends: [
+  "monodoc-manual"
+]
+conflicts: [
+  "monodoc-gtk-manual"
+  "monodoc-manual (<= 1.0.6-1)"
+]
+extra-source "monodoc-gtk2.0-manual_2.12.40-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtk-sharp2/monodoc-gtk2.0-manual_2.12.40-2_all.deb"
+}

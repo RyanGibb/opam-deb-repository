@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-savitar_4.8-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-savitar"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libpython3-9" {>= "3.9.0~b4"}
+  "libsavitar0" {= "4.8-1+b1"}
+  "libstdc++6" {>= "5.2"}
+  "python3" {< "3.10"}
+  "python3" {>= "3.9~"}
+  "python3-sip"
+]
+extra-source "python3-savitar_4.8-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libs/libsavitar/python3-savitar_4.8-1+b1_amd64.deb"
+}

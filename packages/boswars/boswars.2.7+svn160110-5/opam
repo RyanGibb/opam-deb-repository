@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i boswars_2.7+svn160110-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r boswars"]
+]
+depends: [
+  "boswars-data" {= "2.7+svn160110-5"}
+  "libc6" {>= "2.15"}
+  "libgcc-s1"
+  "libgl1"
+  "liblua5-1-0"
+  "libogg0" {>= "1.0rc3"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl1-2-compat-shim"
+  "libstdc++6" {>= "5.2"}
+  "libtheora0" {>= "0.0.0.alpha7.dfsg"}
+  "libvorbis0a" {>= "1.1.2"}
+  "libx11-6"
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "boswars_2.7+svn160110-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boswars/boswars_2.7+svn160110-5_amd64.deb"
+}

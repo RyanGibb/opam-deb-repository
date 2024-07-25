@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdlt-examples_2.18.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdlt-examples"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdlt2"
+]
+extra-source "libdlt-examples_2.18.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dlt-daemon/libdlt-examples_2.18.0-1_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-math-functions-prof_0.3.4.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-math-functions-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-data-default-class-prof"
+  "libghc-math-functions-dev" {= "0.3.4.0-1"}
+  "libghc-primitive-prof"
+  "libghc-vector-prof"
+]
+extra-source "libghc-math-functions-prof_0.3.4.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-math-functions/libghc-math-functions-prof_0.3.4.0-1_amd64.deb"
+}

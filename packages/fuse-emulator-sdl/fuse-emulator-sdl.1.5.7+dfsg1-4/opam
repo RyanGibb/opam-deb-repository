@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i fuse-emulator-sdl_1.5.7+dfsg1-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r fuse-emulator-sdl"]
+]
+depends: [
+  "fuse-emulator-common" {= "1.5.7+dfsg1-4"}
+  "libc6" {>= "2.29"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "libspectrum8" {>= "1.4.3"}
+  "libxml2" {>= "2.7.4"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "fuse-emulator-sdl_1.5.7+dfsg1-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fuse-emulator/fuse-emulator-sdl_1.5.7+dfsg1-4_amd64.deb"
+}

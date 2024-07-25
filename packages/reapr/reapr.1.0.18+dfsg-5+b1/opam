@@ -1,0 +1,24 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i reapr_1.0.18+dfsg-5+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r reapr"]
+]
+depends: [
+  "bamtools"
+  "libbamtools2-5-2" {>= "2.5.2+dfsg"}
+  "libc6" {>= "2.34"}
+  "libfile-copy-link-perl"
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "11"}
+  "libtabixpp0" {>= "1.0.0"}
+  "r-base"
+  "samtools" {>= "1.3"}
+  "smalt"
+  "snpomatic"
+  "tabix"
+]
+extra-source "reapr_1.0.18+dfsg-5+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/reapr/reapr_1.0.18+dfsg-5+b1_amd64.deb"
+}

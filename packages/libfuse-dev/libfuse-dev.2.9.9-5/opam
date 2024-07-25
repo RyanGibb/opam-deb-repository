@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfuse-dev_2.9.9-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfuse-dev"]
+]
+depends: [
+  "libfuse2" {= "2.9.9-5"}
+  "libselinux1-dev"
+]
+extra-source "libfuse-dev_2.9.9-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fuse/libfuse-dev_2.9.9-5_amd64.deb"
+}

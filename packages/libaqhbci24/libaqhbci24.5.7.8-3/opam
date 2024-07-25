@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libaqhbci24_5.7.8-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libaqhbci24"]
+]
+depends: [
+  "libaqbanking-data" {>= "5.7.8-3"}
+  "libaqbanking35" {>= "5.7.6beta"}
+  "libc6" {>= "2.4"}
+  "libgwenhywfar60" {>= "4.17.0"}
+]
+extra-source "libaqhbci24_5.7.8-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libaqbanking/libaqhbci24_5.7.8-3_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmap-msgs-dev_1.13.0-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmap-msgs-dev"]
+]
+depends: [
+  "libnav-msgs-dev"
+  "libsensor-msgs-dev"
+  "ros-message-generation"
+  "ros-message-runtime"
+]
+extra-source "libmap-msgs-dev_1.13.0-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ros-navigation-msgs/libmap-msgs-dev_1.13.0-8_amd64.deb"
+}

@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i parlatype_2.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r parlatype"]
+]
+depends: [
+  "gstreamer1-0-plugins-good"
+  "libc6" {>= "2.7"}
+  "libglib2-0-0" {>= "2.49.3"}
+  "libgtk-3-0" {>= "3.22.0"}
+  "libparlatype3" {>= "2.1"}
+  ("dconf-gsettings-backend" | "gsettings-backend")
+]
+extra-source "parlatype_2.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/parlatype/parlatype_2.1-1_amd64.deb"
+}

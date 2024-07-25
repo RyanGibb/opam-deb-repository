@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-clang-13_1:13.0.1-6~deb10u4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-clang-13"]
+]
+depends: [
+  "libclang-13-dev"
+  "python3"
+]
+conflicts: [
+  "python-clang-x.y"
+]
+extra-source "python3-clang-13_1:13.0.1-6~deb10u4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-13/python3-clang-13_13.0.1-6~deb10u4_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-fprintd_1.94.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-fprintd"]
+]
+depends: [
+  "fprintd" {= "1.94.2-2"}
+  "libc6" {>= "2.17"}
+  "libelogind0"
+  "libpam-runtime" {>= "1.1.3-2~"}
+  "libpam0g" {>= "0.99.7.1"}
+]
+extra-source "libpam-fprintd_1.94.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/f/fprintd/libpam-fprintd_1.94.2-2_amd64.deb"
+}

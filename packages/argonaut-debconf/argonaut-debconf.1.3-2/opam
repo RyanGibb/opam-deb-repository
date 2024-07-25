@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i argonaut-debconf_1.3-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r argonaut-debconf"]
+]
+depends: [
+  "argonaut-common" {= "1.3-2"}
+  "debconf"
+]
+extra-source "argonaut-debconf_1.3-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/argonaut/argonaut-debconf_1.3-2_all.deb"
+}

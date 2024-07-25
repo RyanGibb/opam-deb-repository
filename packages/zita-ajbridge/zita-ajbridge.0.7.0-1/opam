@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i zita-ajbridge_0.7.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r zita-ajbridge"]
+]
+depends: [
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.4"}
+  "libgcc1" {>= "1-3.0"}
+  "libstdc++6" {>= "5"}
+  "libzita-alsa-pcmi0" {>= "0.2.0"}
+  "libzita-resampler1"
+  ("libjack-jackd2-0" {>= "1.9.5~dfsg-14"} | "libjack-0-116")
+]
+extra-source "zita-ajbridge_0.7.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zita-ajbridge/zita-ajbridge_0.7.0-1_amd64.deb"
+}

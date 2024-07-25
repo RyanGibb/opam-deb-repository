@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-cssparser-dev_0.29.6-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-cssparser-dev"]
+]
+depends: [
+  "librust-cssparser-macros-0-6+default-dev"
+  "librust-dtoa-short-0-3+default-dev"
+  "librust-itoa-1+default-dev"
+  "librust-matches-0-1+default-dev"
+  "librust-proc-macro2-1+default-dev"
+  "librust-quote-1+default-dev"
+  "librust-smallvec-1+default-dev"
+  "librust-syn-1+default-dev"
+  "librust-syn-1+extra-traits-dev"
+  "librust-syn-1+fold-dev"
+  "librust-syn-1+full-dev"
+  ("librust-phf-0-10+default-dev" | "librust-phf-0-9+default-dev" | "librust-phf-0-8+default-dev")
+  ("librust-phf-0-10+macros-dev" | "librust-phf-0-9+macros-dev" | "librust-phf-0-8+macros-dev")
+]
+extra-source "librust-cssparser-dev_0.29.6-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-cssparser/librust-cssparser-dev_0.29.6-3_amd64.deb"
+}

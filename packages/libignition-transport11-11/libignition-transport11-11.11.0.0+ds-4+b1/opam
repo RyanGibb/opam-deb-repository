@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libignition-transport11-11_11.0.0+ds-4+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libignition-transport11-11"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgcc-s1" {>= "3.0"}
+  "libignition-msgs8-8"
+  "libprotobuf32" {>= "3.21.9"}
+  "libsqlite3-0" {>= "3.5.9"}
+  "libstdc++6" {>= "12"}
+  "libuuid1" {>= "2.16"}
+  "libzmq5" {>= "4.0.1+dfsg"}
+]
+extra-source "libignition-transport11-11_11.0.0+ds-4+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ignition-transport/libignition-transport11-11_11.0.0+ds-4+b1_amd64.deb"
+}

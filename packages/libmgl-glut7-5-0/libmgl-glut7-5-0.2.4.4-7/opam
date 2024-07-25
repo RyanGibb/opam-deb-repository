@@ -1,0 +1,27 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmgl-glut7.5.0_2.4.4-7_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmgl-glut7.5.0"]
+]
+depends: [
+  "freeglut3" {>= "2.8.1"}
+  "libc6" {>= "2.4"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libmgl-data"
+  "libmgl7-5-0" {>= "2.4.4"}
+  "libstdc++6" {>= "5"}
+]
+conflicts: [
+  "libmgl-glut5"
+  "libmgl-glut6.0.0"
+  "libmgl-glut7.1.0"
+  "libmgl-glut7.2.0"
+  "libmgl-glut7.4.0"
+  "libmgl-glut7.4.1"
+]
+extra-source "libmgl-glut7.5.0_2.4.4-7_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mathgl/libmgl-glut7.5.0_2.4.4-7_amd64.deb"
+}

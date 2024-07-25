@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i multitail_6.5.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r multitail"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libncursesw6" {>= "6"}
+  "libtinfo6" {>= "6"}
+]
+extra-source "multitail_6.5.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/multitail/multitail_6.5.0-5_amd64.deb"
+}

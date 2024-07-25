@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libllvmspirvlib-14-dev_14.0.0-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libllvmspirvlib-14-dev"]
+]
+depends: [
+  "libllvmspirvlib14" {= "14.0.0-5"}
+]
+conflicts: [
+  "libllvmspirvlib-x.y-dev"
+]
+extra-source "libllvmspirvlib-14-dev_14.0.0-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/spirv-llvm-translator-14/libllvmspirvlib-14-dev_14.0.0-5_amd64.deb"
+}

@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcapi20-3_1:3.27-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcapi20-3"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+]
+extra-source "libcapi20-3_1:3.27-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcapi20-3/libcapi20-3_3.27-3+b1_amd64.deb"
+}

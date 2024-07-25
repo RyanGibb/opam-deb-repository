@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i terminfo_0.0~git20210125.ca9a967-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r terminfo"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+extra-source "terminfo_0.0~git20210125.ca9a967-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-xo-terminfo/terminfo_0.0~git20210125.ca9a967-1_amd64.deb"
+}

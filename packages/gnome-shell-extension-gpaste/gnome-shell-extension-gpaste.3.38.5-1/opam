@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gnome-shell-extension-gpaste_3.38.5-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gnome-shell-extension-gpaste"]
+]
+depends: [
+  "gir1-2-gpaste-1-0" {>= "3.38.5-1"}
+  "gnome-shell" {>= "3.24"}
+  "gpaste" {>= "3.38.5-1"}
+]
+extra-source "gnome-shell-extension-gpaste_3.38.5-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gpaste/gnome-shell-extension-gpaste_3.38.5-1_all.deb"
+}

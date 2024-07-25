@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lib32stdc++6_8.3.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lib32stdc++6"]
+]
+depends: [
+  "gcc-8-base" {= "8.3.0-6"}
+  "lib32gcc1" {>= "1-4.2"}
+  "libc6-i386" {>= "2.18"}
+]
+conflicts: [
+  "libc6-i386 (<< 2.9-22)"
+]
+extra-source "lib32stdc++6_8.3.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-8/lib32stdc++6_8.3.0-6_amd64.deb"
+}

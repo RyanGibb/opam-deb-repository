@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i shellcheck_0.9.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r shellcheck"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libffi8" {>= "3.4"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+]
+extra-source "shellcheck_0.9.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shellcheck/shellcheck_0.9.0-1_amd64.deb"
+}

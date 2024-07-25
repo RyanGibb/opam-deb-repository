@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gcc-m68hc1x_1:3.3.6+3.1+dfsg-3+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gcc-m68hc1x"]
+]
+depends: [
+  "binutils-m68hc1x" {>= "1-2.15+2.92"}
+  "libc6" {>= "2.14"}
+]
+extra-source "gcc-m68hc1x_1:3.3.6+3.1+dfsg-3+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-m68hc1x/gcc-m68hc1x_3.3.6+3.1+dfsg-3+b2_amd64.deb"
+}

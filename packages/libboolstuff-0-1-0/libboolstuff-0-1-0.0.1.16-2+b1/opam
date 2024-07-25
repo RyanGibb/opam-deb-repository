@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libboolstuff-0.1-0_0.1.16-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libboolstuff-0.1-0"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "libboolstuff-0.1-0_0.1.16-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/b/boolstuff/libboolstuff-0.1-0_0.1.16-2+b1_amd64.deb"
+}

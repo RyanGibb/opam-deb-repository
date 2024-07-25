@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i clang-tidy-14_1:14.0.6-12_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r clang-tidy-14"]
+]
+depends: [
+  "clang-tools-14"
+  "libc6" {>= "2.34"}
+  "libclang-common-14-dev"
+  "libclang-cpp14" {>= "1-14.0.6"}
+  "libgcc-s1" {>= "3.0"}
+  "libllvm14" {= "1-14.0.6-12"}
+  "libstdc++6" {>= "11"}
+  "python3"
+  "python3-yaml"
+]
+extra-source "clang-tidy-14_1:14.0.6-12_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/llvm-toolchain-14/clang-tidy-14_14.0.6-12_amd64.deb"
+}

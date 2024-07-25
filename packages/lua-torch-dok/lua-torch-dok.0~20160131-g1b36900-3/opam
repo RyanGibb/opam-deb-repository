@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lua-torch-dok_0~20160131-g1b36900-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lua-torch-dok"]
+]
+depends: [
+  "lua-torch-sundown"
+  ("lua5-1" | "luajit")
+]
+extra-source "lua-torch-dok_0~20160131-g1b36900-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lua-torch-dok/lua-torch-dok_0~20160131-g1b36900-3_all.deb"
+}

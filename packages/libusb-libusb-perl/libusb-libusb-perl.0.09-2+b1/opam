@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libusb-libusb-perl_0.09-2+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libusb-libusb-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libmoo-perl"
+  "libusb-1-0-0" {>= "2-1.0.16"}
+  "perl" {>= "5.32.0-4"}
+  "perl-base"
+]
+extra-source "libusb-libusb-perl_0.09-2+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libu/libusb-libusb-perl/libusb-libusb-perl_0.09-2+b1_amd64.deb"
+}

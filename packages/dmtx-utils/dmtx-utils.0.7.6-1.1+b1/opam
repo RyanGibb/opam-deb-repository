@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dmtx-utils_0.7.6-1.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dmtx-utils"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdmtx0b" {>= "0.7.5"}
+  "libgomp1" {>= "4.2.1"}
+  "libmagickcore-6-q16-6" {>= "8-6.9.10.2"}
+  "libmagickwand-6-q16-6" {>= "8-6.9.10.2"}
+]
+extra-source "dmtx-utils_0.7.6-1.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dmtx-utils/dmtx-utils_0.7.6-1.1+b1_amd64.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cl-sql-uffi_6.7.0-1.1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cl-sql-uffi"]
+]
+depends: [
+  "cl-sql" {= "6.7.0-1.1"}
+  "cl-uffi" {>= "1.5.11"}
+  "libc6" {>= "2.2.5"}
+]
+extra-source "cl-sql-uffi_6.7.0-1.1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cl-sql/cl-sql-uffi_6.7.0-1.1+b1_amd64.deb"
+}

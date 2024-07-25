@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtest-corpus-audio-mpd-perl_1.120990-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtest-corpus-audio-mpd-perl"]
+]
+depends: [
+  "libfile-sharedir-perl"
+  "libpath-class-perl"
+  "libreadonly-perl"
+  "mpd" {>= "0.16"}
+  "perl"
+  "procps"
+]
+extra-source "libtest-corpus-audio-mpd-perl_1.120990-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libt/libtest-corpus-audio-mpd-perl/libtest-corpus-audio-mpd-perl_1.120990-2_all.deb"
+}

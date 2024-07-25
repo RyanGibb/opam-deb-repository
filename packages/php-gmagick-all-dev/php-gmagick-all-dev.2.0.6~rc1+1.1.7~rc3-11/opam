@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-gmagick-all-dev_2.0.6~rc1+1.1.7~rc3-11_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-gmagick-all-dev"]
+]
+depends: [
+  "php-all-dev"
+  "php8-2-gmagick" {>= "2.0.6~rc1+1.1.7~rc3-11~"}
+]
+conflicts: [
+  "php-imagick"
+]
+extra-source "php-gmagick-all-dev_2.0.6~rc1+1.1.7~rc3-11_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-gmagick/php-gmagick-all-dev_2.0.6~rc1+1.1.7~rc3-11_all.deb"
+}

@@ -1,0 +1,21 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libshadowsocks-libev2_3.3.5+ds-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libshadowsocks-libev2"]
+]
+depends: [
+  "libbloom1" {>= "1.6"}
+  "libc6" {>= "2.14"}
+  "libcork16" {>= "0.15.0+ds-8"}
+  "libcorkipset1" {>= "1.1.1"}
+  "libev4" {>= "1-4.04"}
+  "libjsonparser1-1" {>= "1.1.0"}
+  "libmbedcrypto3" {>= "2.13"}
+  "libpcre3"
+  "libsodium23" {>= "1.0.12"}
+]
+extra-source "libshadowsocks-libev2_3.3.5+ds-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/shadowsocks-libev/libshadowsocks-libev2_3.3.5+ds-4_amd64.deb"
+}

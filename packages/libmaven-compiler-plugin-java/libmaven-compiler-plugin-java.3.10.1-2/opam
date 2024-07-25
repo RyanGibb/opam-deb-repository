@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmaven-compiler-plugin-java_3.10.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmaven-compiler-plugin-java"]
+]
+depends: [
+  "libmaven-parent-java" {>= "35"}
+  "libmaven-shared-incremental-java"
+  "libmaven-shared-utils-java" {>= "3.3.4"}
+  "libplexus-compiler-java" {>= "2.12.1"}
+  "libplexus-languages-java" {>= "1.1.1"}
+]
+extra-source "libmaven-compiler-plugin-java_3.10.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maven-compiler-plugin/libmaven-compiler-plugin-java_3.10.1-2_all.deb"
+}

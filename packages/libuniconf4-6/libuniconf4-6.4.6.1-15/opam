@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libuniconf4.6_4.6.1-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libuniconf4.6"]
+]
+depends: [
+  "libc6" {>= "2.7"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "libwvstreams4-6-base"
+  "libwvstreams4-6-extras"
+]
+extra-source "libuniconf4.6_4.6.1-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/wvstreams/libuniconf4.6_4.6.1-15_amd64.deb"
+}

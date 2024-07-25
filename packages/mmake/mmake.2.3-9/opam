@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mmake_2.3-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mmake"]
+]
+depends: [
+  "findutils" {>= "4.0"}
+  "java-common"
+  "perl-any"
+]
+extra-source "mmake_2.3-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mmake/mmake_2.3-9_all.deb"
+}

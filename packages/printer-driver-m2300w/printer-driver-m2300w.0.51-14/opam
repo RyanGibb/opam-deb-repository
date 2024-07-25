@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i printer-driver-m2300w_0.51-14_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r printer-driver-m2300w"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3-any"
+  "xz-utils"
+  ("cups-filters" {>= "1.0.42"} | "foomatic-filters" {>= "4.0.0~bzr156"})
+]
+extra-source "printer-driver-m2300w_0.51-14_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/m2300w/printer-driver-m2300w_0.51-14_amd64.deb"
+}

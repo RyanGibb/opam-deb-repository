@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-bioc-rtracklayer_1.42.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-bioc-rtracklayer"]
+]
+depends: [
+  "libc6" {>= "2.28"}
+  "r-base-core"
+  "r-base-core" {>= "3.5.2-1"}
+  "r-bioc-biocgenerics"
+  "r-bioc-biocgenerics" {>= "0.25.1"}
+  "r-bioc-biostrings" {>= "2.47.6"}
+  "r-bioc-genomeinfodb" {>= "1.15.2"}
+  "r-bioc-genomicalignments" {>= "1.15.6"}
+  "r-bioc-genomicranges" {>= "1.31.8"}
+  "r-bioc-iranges" {>= "2.13.13"}
+  "r-bioc-rsamtools" {>= "1.31.2"}
+  "r-bioc-s4vectors" {>= "0.19.22"}
+  "r-bioc-xvector" {>= "0.19.7"}
+  "r-bioc-zlibbioc"
+  "r-cran-rcurl" {>= "1.4-2"}
+  "r-cran-xml" {>= "1.98-0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "r-bioc-rtracklayer_1.42.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/r-bioc-rtracklayer/r-bioc-rtracklayer_1.42.1-2_amd64.deb"
+}

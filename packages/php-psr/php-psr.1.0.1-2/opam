@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i php-psr_1.0.1-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r php-psr"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  ("libapache2-mod-php7-4" | "libphp7-4-embed" | "php7-4-cgi" | "php7-4-cli" | "php7-4-fpm" | "php7-4-phpdbg")
+]
+extra-source "php-psr_1.0.1-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/php-psr/php-psr_1.0.1-2_amd64.deb"
+}

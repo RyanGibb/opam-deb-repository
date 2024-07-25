@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i litmus_0.13-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r litmus"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libneon27-gnutls"
+]
+extra-source "litmus_0.13-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/litmus/litmus_0.13-5_amd64.deb"
+}

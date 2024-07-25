@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xmakemol-gl_5.16-9+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xmakemol-gl"]
+]
+depends: [
+  "freeglut3"
+  "libc6" {>= "2.14"}
+  "libx11-6"
+  "libxm4" {>= "2.3.4"}
+  "libxpm4"
+  "libxt6"
+  ("libgl1-mesa-glx" | "libgl1")
+  ("libglu1-mesa" | "libglu1")
+]
+conflicts: [
+  "xmakemol"
+]
+extra-source "xmakemol-gl_5.16-9+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xmakemol/xmakemol-gl_5.16-9+b1_amd64.deb"
+}

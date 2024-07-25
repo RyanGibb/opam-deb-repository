@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgimp2.0-dev_2.10.34-1+deb12u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgimp2.0-dev"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libgegl-dev" {>= "1-0.4.38"}
+  "libgimp2-0" {= "2.10.34-1+deb12u2"}
+  "libglib2-0-0" {>= "2.56.2"}
+  "libgtk2-0-dev" {>= "2.12.5"}
+  "pkg-config"
+]
+extra-source "libgimp2.0-dev_2.10.34-1+deb12u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gimp/libgimp2.0-dev_2.10.34-1+deb12u2_amd64.deb"
+}

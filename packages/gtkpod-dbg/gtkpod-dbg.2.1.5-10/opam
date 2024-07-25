@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtkpod-dbg_2.1.5-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtkpod-dbg"]
+]
+depends: [
+  "gtkpod" {= "2.1.5-10"}
+  "libatomicparsley0" {= "2.1.5-10"}
+  "libgtkpod1" {= "2.1.5-10"}
+]
+extra-source "gtkpod-dbg_2.1.5-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtkpod/gtkpod-dbg_2.1.5-10_amd64.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i golang-chroma_0.8.2-3+b5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r golang-chroma"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+]
+conflicts: [
+  "chroma (<< 0.8.2-2~)"
+]
+extra-source "golang-chroma_0.8.2-3+b5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/golang-github-alecthomas-chroma/golang-chroma_0.8.2-3+b5_amd64.deb"
+}

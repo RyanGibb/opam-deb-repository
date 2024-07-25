@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-socks_2.7.1+dfsg-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-socks"]
+]
+depends: [
+  "node-ip" {>= "2.0.0"}
+  "node-smart-buffer" {>= "4.2.0"}
+]
+extra-source "node-socks_2.7.1+dfsg-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-socks/node-socks_2.7.1+dfsg-2_all.deb"
+}

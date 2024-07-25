@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpam-encfs_0.1.4.4-15_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpam-encfs"]
+]
+depends: [
+  "encfs"
+  "libc6" {>= "2.33"}
+  "libpam-runtime" {>= "1.0.1-6"}
+  "libpam0g" {>= "0.99.7.1"}
+]
+extra-source "libpam-encfs_0.1.4.4-15_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpam-encfs/libpam-encfs_0.1.4.4-15_amd64.deb"
+}

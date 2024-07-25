@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mariadb-client-core_1:10.11.6-0+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mariadb-client-core"]
+]
+depends: [
+  "libc6" {>= "2.35"}
+  "libedit2" {>= "2.11-20080614-0"}
+  "libmariadb3" {>= "10.5.4"}
+  "libncurses6" {>= "6"}
+  "libssl3" {>= "3.0.0"}
+  "libstdc++6" {>= "4.1.1"}
+  "libtinfo6" {>= "6"}
+  "mariadb-common" {>= "1-10.11.6-0+deb12u1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "mysql-client-5.5"
+  "mysql-client-5.6"
+  "mysql-client-5.7"
+  "mysql-client-8.0"
+  "virtual-mysql-client-core"
+]
+extra-source "mariadb-client-core_1:10.11.6-0+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mariadb/mariadb-client-core_10.11.6-0+deb12u1_amd64.deb"
+}

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libxerces-c-dev_3.2.2+debian-1+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libxerces-c-dev"]
+]
+depends: [
+  "libicu-dev"
+  "libxerces-c3-2" {= "3.2.2+debian-1+deb10u1"}
+  ("libc6-dev" | "libc-dev")
+]
+conflicts: [
+  "libxerces-c2-dev"
+  "libxerces25-dev"
+  "libxerces26-dev"
+  "libxerces27-dev"
+  "libxerces28-dev"
+]
+extra-source "libxerces-c-dev_3.2.2+debian-1+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xerces-c/libxerces-c-dev_3.2.2+debian-1+deb10u1_amd64.deb"
+}

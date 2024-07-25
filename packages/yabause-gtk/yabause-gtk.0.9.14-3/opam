@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yabause-gtk_0.9.14-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yabause-gtk"]
+]
+depends: [
+  "freeglut3"
+  "libc6" {>= "2.14"}
+  "libgdk-pixbuf2-0-0" {>= "2.22.0"}
+  "libgl1"
+  "libglib2-0-0" {>= "2.12.0"}
+  "libgtk2-0-0" {>= "2.18.0"}
+  "libgtkglext1"
+  "libmini18n1" {>= "0.2.1"}
+  "libopenal1" {>= "1.14"}
+  "libsdl1-2debian" {>= "1.2.11"}
+  "yabause-common" {= "0.9.14-3"}
+]
+extra-source "yabause-gtk_0.9.14-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yabause/yabause-gtk_0.9.14-3_amd64.deb"
+}

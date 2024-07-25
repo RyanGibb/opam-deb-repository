@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i dcap-tunnel-telnet_2.47.12-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r dcap-tunnel-telnet"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libdcap1" {= "2.47.12-2"}
+]
+extra-source "dcap-tunnel-telnet_2.47.12-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dcap/dcap-tunnel-telnet_2.47.12-2_amd64.deb"
+}

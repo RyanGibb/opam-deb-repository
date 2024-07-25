@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apparmor-profiles_2.13.6-10_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apparmor-profiles"]
+]
+depends: [
+  "apparmor" {>= "2.8.96~2535-0ubuntu1~"}
+]
+extra-source "apparmor-profiles_2.13.6-10_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apparmor/apparmor-profiles_2.13.6-10_all.deb"
+}

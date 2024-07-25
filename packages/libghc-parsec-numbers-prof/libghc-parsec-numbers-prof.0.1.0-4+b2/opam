@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-parsec-numbers-prof_0.1.0-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-parsec-numbers-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-parsec-numbers-dev" {= "0.1.0-4+b2"}
+]
+extra-source "libghc-parsec-numbers-prof_0.1.0-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-parsec-numbers/libghc-parsec-numbers-prof_0.1.0-4+b2_amd64.deb"
+}

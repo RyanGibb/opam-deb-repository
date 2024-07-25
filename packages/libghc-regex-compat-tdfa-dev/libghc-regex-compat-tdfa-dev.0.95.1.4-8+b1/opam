@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-regex-compat-tdfa-dev_0.95.1.4-8+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-regex-compat-tdfa-dev"]
+]
+depends: [
+  "ghc"
+  "libc6" {>= "2.2.5"}
+  "libghc-regex-base-dev"
+  "libghc-regex-tdfa-dev"
+  "libgmp10"
+]
+extra-source "libghc-regex-compat-tdfa-dev_0.95.1.4-8+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-regex-compat-tdfa/libghc-regex-compat-tdfa-dev_0.95.1.4-8+b1_amd64.deb"
+}

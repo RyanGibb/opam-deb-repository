@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libtls-dev_3.7.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libtls-dev"]
+]
+depends: [
+  "libtls26" {= "3.7.0-4"}
+]
+extra-source "libtls-dev_3.7.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libretls/libtls-dev_3.7.0-4_amd64.deb"
+}

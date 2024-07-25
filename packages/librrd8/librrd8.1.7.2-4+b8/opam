@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librrd8_1.7.2-4+b8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librrd8"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libcairo2" {>= "1.2.4"}
+  "libdbi1" {>= "0.8.4"}
+  "libglib2-0-0" {>= "2.28.0"}
+  "libpango-1-0-0" {>= "1.22.0"}
+  "libpangocairo-1-0-0" {>= "1.14.0"}
+  "libpng16-16" {>= "1.6.2-1"}
+  "libxml2" {>= "2.7.4"}
+]
+extra-source "librrd8_1.7.2-4+b8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rrdtool/librrd8_1.7.2-4+b8_amd64.deb"
+}

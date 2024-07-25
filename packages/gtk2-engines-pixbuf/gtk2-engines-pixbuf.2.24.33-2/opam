@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtk2-engines-pixbuf_2.24.33-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtk2-engines-pixbuf"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libcairo2" {>= "1.6.4-6.1"}
+  "libgdk-pixbuf-2-0-0" {>= "2.22.1"}
+  "libglib2-0-0" {>= "2.27.3"}
+]
+extra-source "gtk2-engines-pixbuf_2.24.33-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtk+2.0/gtk2-engines-pixbuf_2.24.33-2_amd64.deb"
+}

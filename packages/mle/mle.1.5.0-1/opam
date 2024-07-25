@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mle_1.5.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mle"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "liblua5-4-0" {>= "5.4.4"}
+  "libpcre3"
+]
+extra-source "mle_1.5.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/mle/mle_1.5.0-1_amd64.deb"
+}

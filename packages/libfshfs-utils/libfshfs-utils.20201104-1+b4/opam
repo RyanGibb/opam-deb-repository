@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libfshfs-utils_20201104-1+b4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libfshfs-utils"]
+]
+depends: [
+  "libbfio1" {>= "20120425"}
+  "libc6" {>= "2.34"}
+  "libfshfs1" {>= "20201104"}
+]
+extra-source "libfshfs-utils_20201104-1+b4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libf/libfshfs/libfshfs-utils_20201104-1+b4_amd64.deb"
+}

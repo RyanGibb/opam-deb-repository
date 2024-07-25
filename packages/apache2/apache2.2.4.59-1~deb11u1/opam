@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i apache2_2.4.59-1~deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r apache2"]
+]
+depends: [
+  "apache2-bin" {= "2.4.59-1~deb11u1"}
+  "apache2-data" {= "2.4.59-1~deb11u1"}
+  "apache2-utils" {= "2.4.59-1~deb11u1"}
+  "lsb-base"
+  "mime-support"
+  "perl-any"
+  "procps"
+]
+conflicts: [
+  "apache2.2-bin"
+  "apache2.2-common"
+]
+extra-source "apache2_2.4.59-1~deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/a/apache2/apache2_2.4.59-1~deb11u1_amd64.deb"
+}

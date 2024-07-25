@@ -1,0 +1,30 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i whipper_0.10.0-2+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r whipper"]
+]
+depends: [
+  "cd-paranoia"
+  "cdrdao"
+  "flac"
+  "libc6" {>= "2.4"}
+  "libsndfile1" {>= "1.0.20"}
+  "python3" {< "3.12"}
+  "python3" {>= "3.11~"}
+  "python3-any"
+  "python3-cdio"
+  "python3-distutils"
+  "python3-gi"
+  "python3-libdiscid"
+  "python3-musicbrainzngs"
+  "python3-mutagen"
+  "python3-pil"
+  "python3-requests"
+  "python3-ruamel-yaml"
+  "sox"
+]
+extra-source "whipper_0.10.0-2+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/whipper/whipper_0.10.0-2+b3_amd64.deb"
+}

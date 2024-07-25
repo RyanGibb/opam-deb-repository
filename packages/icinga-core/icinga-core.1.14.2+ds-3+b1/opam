@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i icinga-core_1.14.2+ds-3+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r icinga-core"]
+]
+depends: [
+  "icinga-common" {= "1.14.2+ds-3"}
+  "libc6" {>= "2.14"}
+  "libperl5-28" {>= "5.28.0"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+extra-source "icinga-core_1.14.2+ds-3+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/icinga/icinga-core_1.14.2+ds-3+b1_amd64.deb"
+}

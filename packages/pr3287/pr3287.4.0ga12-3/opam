@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pr3287_4.0ga12-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pr3287"]
+]
+depends: [
+  "3270-common" {= "4.0ga12-3"}
+  "libc6" {>= "2.15"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "pr3287_4.0ga12-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibm-3270/pr3287_4.0ga12-3_amd64.deb"
+}

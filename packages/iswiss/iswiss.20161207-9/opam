@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i iswiss_20161207-9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r iswiss"]
+]
+depends: [
+  "dictionaries-common" {>= "1.23~"}
+  "ispell"
+  ("debconf" {>= "0.5"} | "debconf-2-0")
+]
+extra-source "iswiss_20161207-9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/igerman98/iswiss_20161207-9_all.deb"
+}

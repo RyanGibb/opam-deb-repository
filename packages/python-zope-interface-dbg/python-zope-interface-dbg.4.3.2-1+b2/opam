@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-zope.interface-dbg_4.3.2-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-zope.interface-dbg"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "python-dbg"
+  "python-zope-interface" {= "4.3.2-1+b2"}
+]
+conflicts: [
+  "python-zopeinterface-dbg"
+]
+extra-source "python-zope.interface-dbg_4.3.2-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/z/zope.interface/python-zope.interface-dbg_4.3.2-1+b2_amd64.deb"
+}

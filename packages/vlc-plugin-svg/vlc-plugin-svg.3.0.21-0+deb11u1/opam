@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i vlc-plugin-svg_3.0.21-0+deb11u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r vlc-plugin-svg"]
+]
+depends: [
+  "libc6" {>= "2.8"}
+  "libcairo2" {>= "1.13.1"}
+  "libglib2-0-0" {>= "2.12.0"}
+  "librsvg2-2" {>= "2.14.4"}
+  "libvlccore9"
+  "libvlccore9" {>= "3.0.21"}
+]
+extra-source "vlc-plugin-svg_3.0.21-0+deb11u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/v/vlc/vlc-plugin-svg_3.0.21-0+deb11u1_amd64.deb"
+}

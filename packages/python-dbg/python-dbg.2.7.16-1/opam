@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-dbg_2.7.16-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-dbg"]
+]
+depends: [
+  "libpython-dbg" {= "2.7.16-1"}
+  "python" {= "2.7.16-1"}
+  "python2-7-dbg" {>= "2.7.16-1~"}
+  "python2-dbg" {= "2.7.16-1"}
+]
+extra-source "python-dbg_2.7.16-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-defaults/python-dbg_2.7.16-1_amd64.deb"
+}

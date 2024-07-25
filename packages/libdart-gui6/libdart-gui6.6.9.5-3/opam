@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libdart-gui6_6.9.5-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libdart-gui6"]
+]
+depends: [
+  "freeglut3" {>= "2.8.1"}
+  "libassimp5" {>= "5.0.1~ds0"}
+  "libc6" {>= "2.14"}
+  "libdart-external-lodepng6" {>= "6.9.5"}
+  "libdart-utils6" {>= "6.9.5"}
+  "libdart6" {>= "6.9.5"}
+  "libgcc-s1" {>= "3.0"}
+  "libgl1"
+  "libstdc++6" {>= "5.2"}
+  ("libglu1-mesa" | "libglu1")
+]
+extra-source "libdart-gui6_6.9.5-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/dart/libdart-gui6_6.9.5-3_amd64.deb"
+}

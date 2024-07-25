@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i librust-gettext-rs-dev_0.7.0-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r librust-gettext-rs-dev"]
+]
+depends: [
+  "librust-gettext-sys-0-21+default-dev"
+  "librust-gettext-sys-0-21+gettext-system-dev"
+  ("librust-locale-config-0-3+default-dev" | "librust-locale-config-0-2+default-dev" {>= "0.2.2-~~"})
+]
+extra-source "librust-gettext-rs-dev_0.7.0-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/rust-gettext-rs/librust-gettext-rs-dev_0.7.0-3_amd64.deb"
+}

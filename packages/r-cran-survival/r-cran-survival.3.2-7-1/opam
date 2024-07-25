@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i r-cran-survival_3.2-7-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r r-cran-survival"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "r-base-core"
+  "r-base-core" {>= "4.0.2-1"}
+  "r-cran-matrix"
+]
+extra-source "r-cran-survival_3.2-7-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/survival/r-cran-survival_3.2-7-1_amd64.deb"
+}

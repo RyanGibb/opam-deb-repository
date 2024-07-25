@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i plast_2.3.2+dfsg-7+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r plast"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libgcc-s1" {>= "3.0"}
+  "libpcre3"
+  "libstdc++6" {>= "9"}
+]
+extra-source "plast_2.3.2+dfsg-7+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/plast/plast_2.3.2+dfsg-7+b1_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i pymacs_0.25-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r pymacs"]
+]
+depends: [
+  "emacsen-common" {>= "2.0.8"}
+  "python3-any"
+]
+extra-source "pymacs_0.25-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/pymacs/pymacs_0.25-3_all.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-germinate_2.31_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-germinate"]
+]
+depends: [
+  "python3-any" {>= "3.2~"}
+  "python3-apt" {>= "0.7.93.2~"}
+]
+extra-source "python3-germinate_2.31_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/germinate/python3-germinate_2.31_all.deb"
+}

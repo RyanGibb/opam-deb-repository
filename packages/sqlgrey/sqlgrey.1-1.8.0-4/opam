@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sqlgrey_1:1.8.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sqlgrey"]
+]
+depends: [
+  "adduser"
+  "libdate-calc-perl"
+  "libnet-server-perl"
+  "lsb-base"
+  "perl"
+  "perl-any"
+  ("libdbd-pg-perl" | "libdbd-mysql-perl" | "libdbd-sqlite3-perl")
+]
+extra-source "sqlgrey_1:1.8.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sqlgrey/sqlgrey_1.8.0-4_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i cython3_0.29.2-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r cython3"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "python3" {< "3.8"}
+  "python3" {>= "3.7~"}
+  "python3-any"
+]
+extra-source "cython3_0.29.2-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/cython/cython3_0.29.2-2_amd64.deb"
+}

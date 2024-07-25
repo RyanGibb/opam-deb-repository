@@ -1,0 +1,33 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-org-kde-qqc2desktopstyle_5.103.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-org-kde-qqc2desktopstyle"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5configcore5" {>= "5.103.0~"}
+  "libkf5configwidgets5" {>= "5.94.0"}
+  "libkf5iconthemes5" {>= "5.103.0~"}
+  "libkf5kirigami2-5" {>= "5.103.0~"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5dbus5" {>= "5.15.2~"}
+  "libqt5qml5" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "5"}
+  "qml-module-org-kde-kirigami2" {>= "5.70.0~"}
+  "qml-module-org-kde-sonnet"
+  "qml-module-qtgraphicaleffects"
+  "qml-module-qtqml-models2"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick-templates2"
+  "qml-module-qtquick-window2"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+  ("libqt5quick5" {>= "5.15.2~"} | "libqt5quick5-gles" {>= "5.15.2~"})
+]
+extra-source "qml-module-org-kde-qqc2desktopstyle_5.103.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qqc2-desktop-style/qml-module-org-kde-qqc2desktopstyle_5.103.0-1_amd64.deb"
+}

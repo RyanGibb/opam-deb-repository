@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-squaremap_1:1.0.4-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-squaremap"]
+]
+depends: [
+  "python" {< "2.8"}
+  "python" {>= "2.7"}
+  "python-wxgtk3-0"
+]
+extra-source "python-squaremap_1:1.0.4-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/squaremap/python-squaremap_1.0.4-2_all.deb"
+}

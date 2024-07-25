@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i puppet-module-designate_13.1.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r puppet-module-designate"]
+]
+depends: [
+  "puppet-common"
+  "puppet-module-cinder" {>= "13.1.0"}
+  "puppet-module-duritong-sysctl"
+  "puppet-module-glance" {>= "13.1.0"}
+  "puppet-module-ironic" {>= "13.1.0"}
+  "puppet-module-joshuabaird-ipaclient"
+  "puppet-module-keystone" {>= "13.1.0"}
+  "puppet-module-openstacklib" {>= "13.1.0"}
+  "puppet-module-oslo" {>= "13.1.0"}
+  "puppet-module-puppetlabs-apache"
+  "puppet-module-puppetlabs-inifile"
+  "puppet-module-puppetlabs-rabbitmq"
+  "puppet-module-puppetlabs-stdlib"
+]
+extra-source "puppet-module-designate_13.1.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/puppet-module-designate/puppet-module-designate_13.1.0-1_all.deb"
+}

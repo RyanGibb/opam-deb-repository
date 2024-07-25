@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libgm2-17-mipsr6el-cross_12.2.0-14cross5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libgm2-17-mipsr6el-cross"]
+]
+depends: [
+  "gcc-12-cross-base-mipsen" {= "12.2.0-14cross5"}
+  "libc6-mipsr6el-cross" {>= "2.36"}
+]
+extra-source "libgm2-17-mipsr6el-cross_12.2.0-14cross5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gcc-12-cross-mipsen/libgm2-17-mipsr6el-cross_12.2.0-14cross5_all.deb"
+}

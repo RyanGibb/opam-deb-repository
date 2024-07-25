@@ -1,0 +1,28 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcurl4_7.64.0-4+deb10u2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcurl4"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libcom-err2" {>= "1.43.9"}
+  "libgssapi-krb5-2" {>= "1.17"}
+  "libidn2-0" {>= "0.6"}
+  "libk5crypto3" {>= "1.6.dfsg.2"}
+  "libkrb5-3" {>= "1.6.dfsg.2"}
+  "libldap-2-4-2" {>= "2.4.7"}
+  "libnghttp2-14" {>= "1.12.0"}
+  "libpsl5" {>= "0.16.0"}
+  "librtmp1" {>= "2.4+20131018.git79459a2-3~"}
+  "libssh2-1" {>= "1.7.0"}
+  "libssl1-1" {>= "1.1.1"}
+  "zlib1g" {>= "1-1.1.4"}
+]
+conflicts: [
+  "libcurl3"
+]
+extra-source "libcurl4_7.64.0-4+deb10u2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/c/curl/libcurl4_7.64.0-4+deb10u2_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i sntp_1:4.2.8p12+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r sntp"]
+]
+depends: [
+  "libc6" {>= "2.17"}
+  "libevent-core-2-1-6" {>= "2.1.8-stable"}
+  "libevent-pthreads-2-1-6" {>= "2.1.8-stable"}
+  "libopts25" {>= "1-5.18.12"}
+  "libssl1-1" {>= "1.1.0"}
+]
+extra-source "sntp_1:4.2.8p12+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/ntp/sntp_4.2.8p12+dfsg-4_amd64.deb"
+}

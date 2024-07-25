@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i mlock_8:2007f~dfsg-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r mlock"]
+]
+depends: [
+  "libc6" {>= "2.3"}
+]
+extra-source "mlock_8:2007f~dfsg-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/u/uw-imap/mlock_2007f~dfsg-6_amd64.deb"
+}

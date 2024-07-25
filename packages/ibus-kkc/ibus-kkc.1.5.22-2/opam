@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ibus-kkc_1.5.22-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ibus-kkc"]
+]
+depends: [
+  "ibus" {>= "1.5"}
+  "libc6" {>= "2.4"}
+  "libgee-0-8-2" {>= "0.8.3"}
+  "libglib2-0-0" {>= "2.37.3"}
+  "libgtk-3-0" {>= "3.9.10"}
+  "libibus-1-0-5" {>= "1.5.1"}
+  "libjson-glib-1-0-0" {>= "0.12.0"}
+  "libkkc2" {>= "0.3.2"}
+]
+extra-source "ibus-kkc_1.5.22-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibus-kkc/ibus-kkc_1.5.22-2_amd64.deb"
+}

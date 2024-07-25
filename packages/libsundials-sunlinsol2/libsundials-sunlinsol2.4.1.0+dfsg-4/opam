@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libsundials-sunlinsol2_4.1.0+dfsg-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libsundials-sunlinsol2"]
+]
+depends: [
+  "libc6" {>= "2.29"}
+  "libklu1" {>= "1-4.5.2"}
+  "libsundials-nvecserial4" {>= "4.1.0"}
+  "libsundials-sunmatrix2" {>= "4.1.0"}
+  ("liblapack3" | "liblapack-so-3")
+]
+extra-source "libsundials-sunlinsol2_4.1.0+dfsg-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/sundials/libsundials-sunlinsol2_4.1.0+dfsg-4_amd64.deb"
+}

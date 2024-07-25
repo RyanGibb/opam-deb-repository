@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-blaze-markup-prof_0.8.2.8-1+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-blaze-markup-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-blaze-markup-dev" {= "0.8.2.8-1+b2"}
+]
+extra-source "libghc-blaze-markup-prof_0.8.2.8-1+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-blaze-markup/libghc-blaze-markup-prof_0.8.2.8-1+b2_amd64.deb"
+}

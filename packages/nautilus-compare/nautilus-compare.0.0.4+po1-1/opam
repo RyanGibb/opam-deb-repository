@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i nautilus-compare_0.0.4+po1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r nautilus-compare"]
+]
+depends: [
+  "nautilus" {>= "3"}
+  "python"
+  "python-nautilus" {>= "1.0"}
+  "python-xdg"
+]
+extra-source "nautilus-compare_0.0.4+po1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/nautilus-compare/nautilus-compare_0.0.4+po1-1_all.deb"
+}

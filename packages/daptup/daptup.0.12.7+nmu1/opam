@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i daptup_0.12.7+nmu1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r daptup"]
+]
+depends: [
+  "liblocale-gettext-perl"
+  "perl-any"
+  ("apt" | "cupt")
+]
+extra-source "daptup_0.12.7+nmu1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/daptup/daptup_0.12.7+nmu1_all.deb"
+}

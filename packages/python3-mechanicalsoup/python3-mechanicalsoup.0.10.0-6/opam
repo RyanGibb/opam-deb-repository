@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-mechanicalsoup_0.10.0-6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-mechanicalsoup"]
+]
+depends: [
+  "python3-any"
+  "python3-bs4"
+  "python3-lxml"
+  "python3-requests"
+  "python3-six" {>= "1.4"}
+]
+extra-source "python3-mechanicalsoup_0.10.0-6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/python-mechanicalsoup/python3-mechanicalsoup_0.10.0-6_all.deb"
+}

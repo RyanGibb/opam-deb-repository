@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i tasksel-data_3.73_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r tasksel-data"]
+]
+depends: [
+  "tasksel" {= "3.73"}
+]
+extra-source "tasksel-data_3.73_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/t/tasksel/tasksel-data_3.73_all.deb"
+}

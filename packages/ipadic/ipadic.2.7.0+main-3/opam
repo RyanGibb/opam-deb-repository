@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ipadic_2.7.0+main-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ipadic"]
+]
+depends: [
+  "ipadic-common" {= "2.7.0+main-3"}
+]
+extra-source "ipadic_2.7.0+main-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ipadic/ipadic_2.7.0+main-3_amd64.deb"
+}

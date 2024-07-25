@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i node-read-pkg-up_7.0.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r node-read-pkg-up"]
+]
+depends: [
+  "node-find-up" {>= "4.1.0~"}
+  "node-read-pkg" {>= "5.2.0~"}
+]
+extra-source "node-read-pkg-up_7.0.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/n/node-read-pkg-up/node-read-pkg-up_7.0.1-1_all.deb"
+}

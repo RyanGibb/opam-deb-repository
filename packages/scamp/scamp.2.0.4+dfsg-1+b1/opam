@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i scamp_2.0.4+dfsg-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r scamp"]
+]
+depends: [
+  "curl"
+  "libatlas3-base"
+  "libc6" {>= "2.14"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libplplot16"
+]
+extra-source "scamp_2.0.4+dfsg-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/s/scamp/scamp_2.0.4+dfsg-1+b1_amd64.deb"
+}

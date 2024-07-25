@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i xprobe_0.3-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r xprobe"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+  "libgcc-s1" {>= "3.0"}
+  "libpcap0-8" {>= "0.9.8"}
+  "libstdc++6" {>= "5.2"}
+]
+extra-source "xprobe_0.3-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xprobe/xprobe_0.3-5_amd64.deb"
+}

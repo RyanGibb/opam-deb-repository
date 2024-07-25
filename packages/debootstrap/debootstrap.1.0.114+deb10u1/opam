@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i debootstrap_1.0.114+deb10u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r debootstrap"]
+]
+depends: [
+  "wget"
+]
+extra-source "debootstrap_1.0.114+deb10u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/d/debootstrap/debootstrap_1.0.114+deb10u1_all.deb"
+}

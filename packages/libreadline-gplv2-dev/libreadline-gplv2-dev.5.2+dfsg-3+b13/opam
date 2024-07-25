@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreadline-gplv2-dev_5.2+dfsg-3+b13_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreadline-gplv2-dev"]
+]
+depends: [
+  "libreadline5" {= "5.2+dfsg-3+b13"}
+  "libtinfo-dev"
+]
+conflicts: [
+  "libreadline-dev"
+  "libreadline5-dev"
+  "libreadline6-dev"
+]
+extra-source "libreadline-gplv2-dev_5.2+dfsg-3+b13_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/readline5/libreadline-gplv2-dev_5.2+dfsg-3+b13_amd64.deb"
+}

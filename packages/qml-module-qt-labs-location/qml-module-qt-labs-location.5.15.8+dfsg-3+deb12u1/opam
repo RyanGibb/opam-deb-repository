@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i qml-module-qt-labs-location_5.15.8+dfsg-3+deb12u1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r qml-module-qt-labs-location"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5location5"
+  "libqt5positioning5" {>= "5.6.0"}
+  "libqt5positioning5-plugins" {= "5.15.8+dfsg-3+deb12u1"}
+  "libqt5qml5" {>= "5.15.8+dfsg~"}
+  "libstdc++6" {>= "5"}
+]
+extra-source "qml-module-qt-labs-location_5.15.8+dfsg-3+deb12u1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/q/qtlocation-opensource-src/qml-module-qt-labs-location_5.15.8+dfsg-3+deb12u1_amd64.deb"
+}

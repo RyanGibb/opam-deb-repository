@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libpulse-jni_2.4.7-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libpulse-jni"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libpulse0" {>= "0.99.1"}
+]
+extra-source "libpulse-jni_2.4.7-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libp/libpulse-java/libpulse-jni_2.4.7-2_amd64.deb"
+}

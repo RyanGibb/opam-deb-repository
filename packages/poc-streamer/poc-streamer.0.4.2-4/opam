@@ -1,0 +1,13 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i poc-streamer_0.4.2-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r poc-streamer"]
+]
+depends: [
+  "libc6" {>= "2.15"}
+]
+extra-source "poc-streamer_0.4.2-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/poc-streamer/poc-streamer_0.4.2-4_amd64.deb"
+}

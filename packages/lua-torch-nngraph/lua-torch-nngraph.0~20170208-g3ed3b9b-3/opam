@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lua-torch-nngraph_0~20170208-g3ed3b9b-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lua-torch-nngraph"]
+]
+depends: [
+  "lua-torch-graph"
+  "lua-torch-nn"
+  "lua-torch-torch7"
+  ("lua5-1" | "luajit")
+]
+extra-source "lua-torch-nngraph_0~20170208-g3ed3b9b-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lua-torch-nngraph/lua-torch-nngraph_0~20170208-g3ed3b9b-3_all.deb"
+}

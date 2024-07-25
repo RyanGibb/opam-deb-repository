@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python3-ironic-ui_6.0.0-2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python3-ironic-ui"]
+]
+depends: [
+  "openstack-dashboard" {>= "3-20.0.0+git2020.09.21.27036cc0eb"}
+  "python3-any"
+  "python3-django"
+  "python3-django-horizon"
+  "python3-ironicclient"
+  "python3-pbr"
+  "python3-six"
+]
+extra-source "python3-ironic-ui_6.0.0-2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ironic-ui/python3-ironic-ui_6.0.0-2_all.deb"
+}

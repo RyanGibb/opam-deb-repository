@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i electric_9.07+dfsg-5_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r electric"]
+]
+depends: [
+  "java-wrappers"
+  "jython"
+  "libbsh-java"
+  "libjava3d-java"
+  "libslf4j-java"
+  "libvecmath-java"
+  ("default-jre" | "java7-runtime")
+]
+extra-source "electric_9.07+dfsg-5_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/e/electric/electric_9.07+dfsg-5_all.deb"
+}

@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gir1.2-libxfce4panel-2.0_4.18.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gir1.2-libxfce4panel-2.0"]
+]
+depends: [
+  "gir1-2-glib-2-0"
+  "gir1-2-gtk-3-0"
+  "gir1-2-libxfce4util-1-0" {>= "4.17.2"}
+  "libxfce4panel-2-0-4" {>= "4.17.2"}
+]
+extra-source "gir1.2-libxfce4panel-2.0_4.18.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/x/xfce4-panel/gir1.2-libxfce4panel-2.0_4.18.2-1_amd64.deb"
+}

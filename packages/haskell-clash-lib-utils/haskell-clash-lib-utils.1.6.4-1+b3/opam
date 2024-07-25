@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i haskell-clash-lib-utils_1.6.4-1+b3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r haskell-clash-lib-utils"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libffi8" {>= "3.4"}
+  "libgmp10" {>= "2-6.2.1+dfsg1"}
+  "libtinfo6" {>= "6"}
+  "libyaml-0-2"
+]
+extra-source "haskell-clash-lib-utils_1.6.4-1+b3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-clash-lib/haskell-clash-lib-utils_1.6.4-1+b3_amd64.deb"
+}

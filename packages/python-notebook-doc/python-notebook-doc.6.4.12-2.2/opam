@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i python-notebook-doc_6.4.12-2.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r python-notebook-doc"]
+]
+depends: [
+  "libjs-mathjax"
+  "libjs-sphinxdoc" {>= "5.2"}
+  "sphinx-rtd-theme-common" {>= "1.2.0+dfsg"}
+]
+extra-source "python-notebook-doc_6.4.12-2.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/j/jupyter-notebook/python-notebook-doc_6.4.12-2.2_all.deb"
+}

@@ -1,0 +1,15 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libmaven-invoker-java_3.2.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libmaven-invoker-java"]
+]
+depends: [
+  "libatinject-jsr330-api-java"
+  "libmaven-parent-java" {>= "35"}
+  "libmaven-shared-utils-java" {>= "3.3.4"}
+]
+extra-source "libmaven-invoker-java_3.2.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/m/maven-invoker/libmaven-invoker-java_3.2.0-1_all.deb"
+}

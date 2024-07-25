@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i gtans_1.99.0-2.1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r gtans"]
+]
+depends: [
+  "libc6" {>= "2.33"}
+  "libglib2-0-0" {>= "2.35.9"}
+  "libgtk2-0-0" {>= "2.14.0"}
+  "sgml-base" {>= "1.28"}
+]
+extra-source "gtans_1.99.0-2.1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/g/gtans/gtans_1.99.0-2.1_amd64.deb"
+}

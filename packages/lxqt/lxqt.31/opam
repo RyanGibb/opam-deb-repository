@@ -1,0 +1,29 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i lxqt_31_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r lxqt"]
+]
+depends: [
+  "featherpad"
+  "lximage-qt"
+  "lxqt-about"
+  "lxqt-admin"
+  "lxqt-core" {= "31"}
+  "lxqt-openssh-askpass"
+  "lxqt-powermanagement"
+  "lxqt-sudo"
+  "qps"
+  "qterminal"
+  "qttranslations5-l10n"
+  ("lxqt-branding-debian" | "lxqt-branding")
+  ("pavucontrol-qt" | "pavucontrol")
+  ("qlipper" | "clipit" | "xfce4-clipman")
+  ("sddm-theme-debian-elarun" | "sddm-theme" | "x-display-manager")
+  ("xarchiver" | "ark" | "engrampa")
+  ("xfwm4" | "x-window-manager")
+]
+extra-source "lxqt_31_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/l/lxqt-metapackages/lxqt_31_amd64.deb"
+}

@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libghc-mime-mail-prof_0.4.14-4+b2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libghc-mime-mail-prof"]
+]
+depends: [
+  "ghc-prof"
+  "libghc-base64-bytestring-prof"
+  "libghc-blaze-builder-prof"
+  "libghc-mime-mail-dev" {= "0.4.14-4+b2"}
+  "libghc-random-prof"
+]
+extra-source "libghc-mime-mail-prof_0.4.14-4+b2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/h/haskell-mime-mail/libghc-mime-mail-prof_0.4.14-4+b2_amd64.deb"
+}

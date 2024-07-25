@@ -1,0 +1,18 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libauthen-smb-perl_0.91-6+b6_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libauthen-smb-perl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "perl" {>= "5.28.0-3"}
+  "perl-base"
+]
+conflicts: [
+  "libapache2-authenntlm-perl"
+]
+extra-source "libauthen-smb-perl_0.91-6+b6_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/liba/libauthen-smb-perl/libauthen-smb-perl_0.91-6+b6_amd64.deb"
+}

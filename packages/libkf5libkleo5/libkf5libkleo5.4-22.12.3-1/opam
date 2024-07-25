@@ -1,0 +1,32 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5libkleo5_4:22.12.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5libkleo5"]
+]
+depends: [
+  "libc6" {>= "2.32"}
+  "libgcc-s1" {>= "3.0"}
+  "libgpgme11" {>= "1.2.0"}
+  "libgpgmepp6" {>= "1.18.0"}
+  "libkf5codecs5" {>= "5.99.0~"}
+  "libkf5completion5" {>= "5.99.0~"}
+  "libkf5configcore5" {>= "5.99.0~"}
+  "libkf5configwidgets5" {>= "5.99.0~"}
+  "libkf5coreaddons5" {>= "5.99.0~"}
+  "libkf5i18n5" {>= "5.99.0~"}
+  "libkf5itemmodels5" {>= "5.99.0~"}
+  "libkf5libkleo-data" {= "4-22.12.3-1"}
+  "libkf5pimtextedit5abi2"
+  "libkf5pimtextedit5abi2" {>= "22.12.3"}
+  "libkf5widgetsaddons5" {>= "5.99.0~"}
+  "libqgpgme15" {>= "1.18.0"}
+  "libqt5core5a" {>= "5.15.2~"}
+  "libqt5widgets5" {>= "5.15.2~"}
+  "libstdc++6" {>= "11"}
+  ("libqt5gui5" {>= "5.15.2~"} | "libqt5gui5-gles" {>= "5.15.2~"})
+]
+extra-source "libkf5libkleo5_4:22.12.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkf5libkleo/libkf5libkleo5_22.12.3-1_amd64.deb"
+}

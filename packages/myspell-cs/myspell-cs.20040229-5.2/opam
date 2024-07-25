@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i myspell-cs_20040229-5.2_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r myspell-cs"]
+]
+depends: [
+  ("dictionaries-common" {>= "0.10"} | "openoffice-org-updatedicts")
+]
+conflicts: [
+  "myspell-cs-cz"
+  "openoffice.org (<= 1.0.3-2)"
+]
+extra-source "myspell-cs_20040229-5.2_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ispell-czech/myspell-cs_20040229-5.2_all.deb"
+}

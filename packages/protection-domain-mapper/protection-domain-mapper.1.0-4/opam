@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i protection-domain-mapper_1.0-4_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r protection-domain-mapper"]
+]
+depends: [
+  "libc6" {>= "2.34"}
+  "libqrtr1" {>= "0.3"}
+]
+extra-source "protection-domain-mapper_1.0-4_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/protection-domain-mapper/protection-domain-mapper_1.0-4_amd64.deb"
+}

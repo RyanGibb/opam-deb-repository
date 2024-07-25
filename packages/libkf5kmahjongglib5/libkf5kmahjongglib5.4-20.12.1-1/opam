@@ -1,0 +1,23 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libkf5kmahjongglib5_4:20.12.1-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libkf5kmahjongglib5"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libkf5completion5" {>= "5.46.0~"}
+  "libkf5configcore5" {>= "5.46.0~"}
+  "libkf5configwidgets5" {>= "5.46.0~"}
+  "libkf5i18n5" {>= "5.46.0~"}
+  "libkf5widgetsaddons5" {>= "5.46.0~"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5svg5" {>= "5.9.0~"}
+  "libqt5widgets5" {>= "5.9.0~"}
+  "libstdc++6" {>= "4.1.1"}
+  ("libqt5gui5" {>= "5.9.0~"} | "libqt5gui5-gles" {>= "5.9.0~"})
+]
+extra-source "libkf5kmahjongglib5_4:20.12.1-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libk/libkf5kmahjongg/libkf5kmahjongglib5_20.12.1-1_amd64.deb"
+}

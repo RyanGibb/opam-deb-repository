@@ -1,0 +1,25 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libreoffice-report-builder-bin-nogui_1:7.0.4-4+deb11u9_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libreoffice-report-builder-bin-nogui"]
+]
+depends: [
+  "libc6" {>= "2.14"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "5"}
+  "libuno-cppu3" {>= "4.4.0~alpha"}
+  "libuno-cppuhelpergcc3-3" {>= "4.0.0~alpha"}
+  "libuno-sal3" {>= "5.1.0~alpha"}
+  "libuno-salhelpergcc3-3" {>= "1.4.0"}
+  "uno-libs-private"
+  ("libreoffice-base-nogui" | "libreoffice-base")
+  ("libreoffice-core-nogui" | "libreoffice-core")
+]
+conflicts: [
+  "libreoffice-report-builder-bin"
+]
+extra-source "libreoffice-report-builder-bin-nogui_1:7.0.4-4+deb11u9_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libr/libreoffice/libreoffice-report-builder-bin-nogui_7.0.4-4+deb11u9_amd64.deb"
+}

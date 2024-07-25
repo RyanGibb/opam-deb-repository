@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libiptcdata-bin_1.0.5-2.3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libiptcdata-bin"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libiptcdata0" {= "1.0.5-2.3"}
+]
+extra-source "libiptcdata-bin_1.0.5-2.3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libi/libiptcdata/libiptcdata-bin_1.0.5-2.3_amd64.deb"
+}

@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ruby-css-parser_1.6.0-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ruby-css-parser"]
+]
+depends: [
+  "ruby-addressable"
+  ("ruby" | "ruby-interpreter")
+]
+extra-source "ruby-css-parser_1.6.0-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/ruby-css-parser/ruby-css-parser_1.6.0-1_all.deb"
+}

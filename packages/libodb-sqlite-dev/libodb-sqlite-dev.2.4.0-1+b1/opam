@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libodb-sqlite-dev_2.4.0-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libodb-sqlite-dev"]
+]
+depends: [
+  "libodb-dev" {>= "2.4.0"}
+  "libodb-sqlite-2-4" {= "2.4.0-1+b1"}
+]
+extra-source "libodb-sqlite-dev_2.4.0-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libo/libodb-sqlite/libodb-sqlite-dev_2.4.0-1+b1_amd64.deb"
+}

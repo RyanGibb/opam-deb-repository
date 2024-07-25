@@ -1,0 +1,16 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i yorick-ygsl_1.2.1-1+b1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r yorick-ygsl"]
+]
+depends: [
+  "libc6" {>= "2.4"}
+  "libgsl23"
+  "libgslcblas0"
+  "yorick" {>= "1.6.02"}
+]
+extra-source "yorick-ygsl_1.2.1-1+b1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/y/yorick-ygsl/yorick-ygsl_1.2.1-1+b1_amd64.deb"
+}

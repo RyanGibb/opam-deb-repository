@@ -1,0 +1,17 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i prayer-accountd_1.3.5-dfsg1-8_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r prayer-accountd"]
+]
+depends: [
+  "init-system-helpers" {>= "1.51"}
+  "libc6" {>= "2.15"}
+  "libcrypt1" {>= "1-4.1.0"}
+  "libpam0g" {>= "0.99.7.1"}
+  "lsb-base" {>= "3.0-6"}
+]
+extra-source "prayer-accountd_1.3.5-dfsg1-8_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/p/prayer/prayer-accountd_1.3.5-dfsg1-8_amd64.deb"
+}

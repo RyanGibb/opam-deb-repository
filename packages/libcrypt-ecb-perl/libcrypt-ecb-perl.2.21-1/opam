@@ -1,0 +1,14 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i libcrypt-ecb-perl_2.21-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r libcrypt-ecb-perl"]
+]
+depends: [
+  "perl"
+  ("libcrypt-blowfish-perl" | "libcrypt-cast5-perl" | "libcrypt-des-ede3-perl" | "libcrypt-des-perl" | "libcrypt-eksblowfish-perl" | "libcrypt-twofish-perl")
+]
+extra-source "libcrypt-ecb-perl_2.21-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/libc/libcrypt-ecb-perl/libcrypt-ecb-perl_2.21-1_all.deb"
+}

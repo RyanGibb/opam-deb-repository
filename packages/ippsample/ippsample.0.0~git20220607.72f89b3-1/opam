@@ -1,0 +1,20 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i ippsample_0.0~git20220607.72f89b3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r ippsample"]
+]
+depends: [
+  "ippsample-data"
+  "libavahi-client3" {>= "0.6.16"}
+  "libavahi-common3" {>= "0.6.16"}
+  "libc6" {>= "2.33"}
+  "libcups2"
+]
+conflicts: [
+  "cups-ipp-utils"
+]
+extra-source "ippsample_0.0~git20220607.72f89b3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ippsample/ippsample_0.0~git20220607.72f89b3-1_amd64.deb"
+}

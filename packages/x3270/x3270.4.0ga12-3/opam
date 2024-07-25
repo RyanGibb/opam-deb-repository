@@ -1,0 +1,19 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i x3270_4.0ga12-3_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r x3270"]
+]
+depends: [
+  "3270-common" {= "4.0ga12-3"}
+  "libc6" {>= "2.15"}
+  "libssl1-1" {>= "1.1.0"}
+  "libx11-6"
+  "libxaw7"
+  "libxmu6"
+  "libxt6"
+]
+extra-source "x3270_4.0ga12-3_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/i/ibm-3270/x3270_4.0ga12-3_amd64.deb"
+}

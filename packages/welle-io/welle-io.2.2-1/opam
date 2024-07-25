@@ -1,0 +1,45 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i welle.io_2.2-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r welle.io"]
+]
+depends: [
+  "libairspy0" {>= "1.0.9~"}
+  "libasound2" {>= "1.0.16"}
+  "libc6" {>= "2.30"}
+  "libfaad2" {>= "2.7"}
+  "libfftw3-single3" {>= "3.3.5"}
+  "libgcc-s1" {>= "4.0"}
+  "libmp3lame0" {>= "3.100"}
+  "libmpg123-0" {>= "1.14.0"}
+  "libqt5charts5" {>= "5.7.1"}
+  "libqt5core5a" {>= "5.15.1"}
+  "libqt5multimedia5" {>= "5.6.0~beta"}
+  "libqt5multimedia5-plugins"
+  "libqt5qml5" {>= "5.10.0"}
+  "libqt5quick5"
+  "libqt5quickcontrols2-5" {>= "5.9.0~rc"}
+  "libqt5widgets5" {>= "5.9.0~beta"}
+  "librtlsdr0" {>= "0.6.0"}
+  "libsoapysdr0-7" {>= "0.7.2"}
+  "libstdc++6" {>= "9"}
+  "qml-module-qt-labs-settings"
+  "qml-module-qtcharts"
+  "qml-module-qtgraphicaleffects"
+  "qml-module-qtquick-controls"
+  "qml-module-qtquick-controls2"
+  "qml-module-qtquick-dialogs"
+  "qml-module-qtquick-layouts"
+  "qml-module-qtquick-localstorage"
+  "qml-module-qtquick-privatewidgets"
+  "qml-module-qtquick-templates2"
+  "qml-module-qtquick-window2"
+  "qml-module-qtquick2"
+  ("libqt5gui5" {>= "5.14.1"} | "libqt5gui5-gles" {>= "5.14.1"})
+  ("libqt5quick5" {>= "5.6.1"} | "libqt5quick5-gles" {>= "5.6.1"})
+]
+extra-source "welle.io_2.2-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/w/welle.io/welle.io_2.2-1_amd64.deb"
+}

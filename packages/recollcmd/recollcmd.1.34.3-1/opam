@@ -1,0 +1,22 @@
+opam-version: "2.0"
+build: [
+  ["sh" "-c" "sudo dpkg -i recollcmd_1.34.3-1_amd64.deb"]
+]
+remove: [
+  ["sh" "-c" "sudo dpkg -r recollcmd"]
+]
+depends: [
+  "libaspell15" {>= "0.60.8"}
+  "libc6" {>= "2.34"}
+  "libchm1" {>= "0.40"}
+  "libgcc-s1" {>= "3.0"}
+  "libstdc++6" {>= "12"}
+  "libx11-6"
+  "libxapian30" {>= "1.4.19~"}
+  "libxml2" {>= "2.7.4"}
+  "libxslt1-1" {>= "1.1.25"}
+  "zlib1g" {>= "1-1.2.0"}
+]
+extra-source "recollcmd_1.34.3-1_amd64.deb" {
+  src: "http://ftp.debian.org/debian/pool/main/r/recoll/recollcmd_1.34.3-1_amd64.deb"
+}
