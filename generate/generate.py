@@ -35,6 +35,13 @@ def convert_dep_to_opam(dep):
     else:
         return f'"{sanitize_package_name(dep).strip()}"'
 
+def parse_dependency(dep):
+    if ' (' in dep:
+        pkg, ver = dep.split(' (')
+        return pkg.strip(), ver.replace(')', '').strip()
+    else:
+        return dep.strip(), None
+
 def process_packages_file(debian_version):
     packages_path = os.path.join(cache_dir, f"{debian_version}/Packages")
     repo_url = f"http://ftp.debian.org/debian/"
@@ -66,6 +73,9 @@ def process_packages_file(debian_version):
         elif line.startswith('Filename:') and pkg:
             filename = line[len('Filename:'):].strip()
             packages[pkg]["filename"] = filename
+
+    if "libgcc-s1" in packages:
+        del packages["libgcc-s1"]
     
     package_provides = {}
     for pkg in packages.keys():
@@ -91,11 +101,13 @@ def process_packages_file(debian_version):
                 package_conflicts.append(convert_dep_to_opam(dep))
             elif '|' in dep:
                 alternatives = dep.split('|')
-                opam_alternatives = [convert_dep_to_opam(alt.strip()) for alt in alternatives if alt.strip() != pkg]
+                opam_alternatives = [convert_dep_to_opam(alt) for alt in alternatives if parse_dependency(alt)[0] != 'libgcc-s1']
                 if opam_alternatives:
                     package_depends.append(f"({' | '.join(opam_alternatives)})")
             else:
                 dep_name = dep.split('=')[0].split('>=')[0].split('<=')[0].split('<')[0].split('>')[0].split('~')[0].split('<<')[0].strip()
+                if dep_name == "libgcc-s1":
+                    continue
                 if dep_name in packages:
                     package_depends.append(convert_dep_to_opam(dep))
                 elif dep_name in package_provides:
