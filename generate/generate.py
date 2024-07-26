@@ -35,9 +35,6 @@ def convert_dep_to_opam(dep):
     else:
         return f'"{sanitize_package_name(dep).strip()}"'
 
-def handle_conflicts(dep):
-    return f'"{dep.strip()}"'
-
 def process_packages_file(debian_version):
     packages_path = os.path.join(cache_dir, f"{debian_version}/Packages")
     repo_url = f"http://ftp.debian.org/debian/"
@@ -91,7 +88,7 @@ def process_packages_file(debian_version):
 
         for dep in deps:
             if dep.startswith('!'):
-                package_conflicts.append(handle_conflicts(dep))
+                package_conflicts.append(convert_dep_to_opam(dep))
             elif '|' in dep:
                 alternatives = dep.split('|')
                 opam_alternatives = [convert_dep_to_opam(alt.strip()) for alt in alternatives if alt.strip() != pkg]
@@ -112,7 +109,7 @@ def process_packages_file(debian_version):
                     package_depends.append(convert_dep_to_opam(dep))
 
         for conf in confs:
-            package_conflicts.append(handle_conflicts(conf))
+            package_conflicts.append(convert_dep_to_opam(conf))
         
         package_depends = sorted(set(package_depends))
         package_conflicts = sorted(set(package_conflicts))
